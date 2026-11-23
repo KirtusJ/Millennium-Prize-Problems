@@ -56,3 +56,5 @@ Positive-time correlation limits can also replace weak convergence of finite spe
 For several zero-energy states, the transfer projection above acts on the orthogonal complement of the full kernel of the reconstructed Hamiltonian. Centering against a single vacuum suffices when that vacuum spans the kernel in the chosen sector. A fixed physical time difference gives a test that allows arbitrary zero-energy multiplicity. [Gap above the vacuum sector](positive-time/vacuum/README.md)
 
 The directly measured $SU(2)$ adjoint plaquette retains a positive-energy component at all finite couplings, uniformly in box size at fixed spatial mesh. Its lower window endpoint is at least $\kappa/576$. A selected simultaneous Wilson-time and spatial-volume limit inherits the witness. [Adjoint spectral band and scope](adjoint-band/)
+
+At weak magnetic coupling, three physical-time plaquette readings exclude a proposed gap of $4\kappa$, uniformly in box size. At all fixed couplings, local spin tails give a two-sided finite-dimensional approximation to the finite-volume gap. [Measured gap test, exact completion and spin cutoff](finite-readings/)

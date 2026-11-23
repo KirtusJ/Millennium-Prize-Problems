@@ -1,0 +1,245 @@
+Director D4, November 22, 2026 (PCT, UTC−07:00).
+
+Initial measured generation, SHA-256
+843aca209575764c854c7fa919321f6f6ce4afaaa24c8e4616a328ff9db86349  factor.out
+f33d3c12f55e3f90db2573ce2ce820b126d417e2847e6be16eb6270663106c1b  certificate
+974b4663a8f26a4b11868e967c4e0a3bda96b766e9b9d1a022113a180b71450d  d4.elf
+029ce009e020212b7f7dbd45bcb574b80a7e831c2de8bf137eda55c9857aee68  FiniteReadings.lean
+162c408bb5ccd2700746815e20ae2d17ae9a74949c2a554625ddb20d9de26b09  factor.serial
+0c14966fe2535b8fbdf24f02acf5c48fd7732892d580889e7174a0b70722c37e  moments.serial
+995eb65d1862eb1292d7b64a6a0257257bf5ad96c025c7b12ac853ed8098f1ce  assemble.serial
+
+Lean 4.19.0 on final measured source
+'Millennium.YangMills.D4.FiniteReadings.factorGram' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.gramTransfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.openWindow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.softMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.quadraticReadings' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.threeReadingError' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.recoverDifferences' depends on axioms: [propext, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.shiftPowers' depends on axioms: [propext, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.polynomialChain' depends on axioms: [propext, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.oddMomentRecovery' depends on axioms: [propext, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.endpointSquare' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.windowMinorant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.excludeInterior' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.polarizedSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.diagonalCompletion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.freeWitness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.residualTail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.weakMagneticBand' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.interactingMargin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.coreKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.adverseKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.localLinkKinetic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.tailProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.casimirProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.rayleighCut' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.gapEnclosure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.sturmCounts' depends on axioms: [propext]
+'Millennium.YangMills.D4.FiniteReadings.rotorCutError' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.positiveTimeKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.positiveTimeMargin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.FiniteReadings.generatedReadings' depends on axioms: [propext]
+
+Seven false source changes, one full kernel check per change
+missing null-space control Negative.lean:43:22: error: application type mismatch
+overstated open-window mass Negative.lean:60:4: error: linarith failed to find a contradiction
+unearned local kinetic constant Negative.lean:285:2: error: linarith failed to find a contradiction
+reversed measured cross term Negative.lean:374:111: error: tactic 'decide' proved that the proposition
+wrong inertia Negative.lean:342:102: error: tactic 'decide' proved that the proposition
+insufficient Ritz allowance Negative.lean:352:34: error: unsolved goals
+overstated positive-time margin Negative.lean:369:30: error: linarith failed to find a contradiction
+
+Exact Gaussian-rational moment realizations
+SU(2): both individual channels fit q=1/16; joint reading fails at degrees 2 and 3.
+Polarized excess 7/128; certified raw mass at least 56/225 strictly between q and 1.
+Vacuum-only, null input subspaces and forced/optional zero transfer distinguished.
+Exact complex rank-deficient matrices: 7 truncations reproduced; undersized bands and nonpositive input rejected.
+Independent odd-order constructions agree on 12 accepted and 24 rejected rational trials.
+
+Isolated-cycle control at 48 and 80 characters
+length=4 g=0  K_link=0  residuals=(0,0)  band masses=(1,1)  D_F=0.0546875
+length=4 g=0.0001  K_link=8.33333333e-10  residuals=(3.3333333e-05,0.0001490712)  band masses=(0.999999999,1)  D_F=0.0546874999
+length=4 g=0.003  K_link=7.49999648e-07  residuals=(0.0010000003,0.0044721338)  band masses=(0.999999398,0.999999716)  D_F=0.0546873908
+length=4 g=0.1  K_link=0.000832899596  residuals=(0.033342864,0.14899288)  band masses=(0.999331111,0.999684443)  D_F=0.0545662965
+length=6 g=0  K_link=0  residuals=(0,0)  band masses=(1,1)  D_F=0.0546875
+length=6 g=0.0001  K_link=3.7037037e-10  residuals=(3.3333333e-05,0.0001490712)  band masses=(1,1)  D_F=0.0546874999
+length=6 g=0.003  K_link=3.33333264e-07  residuals=(0.0010000001,0.004472135)  band masses=(0.999999732,0.999999874)  D_F=0.0546874515
+length=6 g=0.1  K_link=0.000370284662  residuals=(0.033337574,0.14903638)  band masses=(0.999702579,0.999859716)  D_F=0.0546335993
+length=12 g=0  K_link=0  residuals=(0,0)  band masses=(1,1)  D_F=0.0546875
+length=12 g=0.0001  K_link=9.25925926e-11  residuals=(3.3333333e-05,0.0001490712)  band masses=(1,1)  D_F=0.0546875
+length=12 g=0.003  K_link=8.3333329e-08  residuals=(0.001,0.0044721357)  band masses=(0.999999933,0.999999968)  D_F=0.0546874879
+length=12 g=0.1  K_link=9.25872346e-05  residuals=(0.033334394,0.14906249)  band masses=(0.999925624,0.999964924)  D_F=0.05467402
+False stronger kinetic constant and exact interacting single-energy support rejected.
+
+Exact infinite-cycle Ritz enclosure and numerical coupled-link checks
+single square at g=1, highest label 8; rational Ritz brackets
+ground 57378636039/62500000000 7344465413/8000000000 excited 403192198813/100000000000 4031921988131/1000000000000
+common Ritz error <= 4/6953764855522223076923
+infinite-cycle gap, outward integer endpoints over 10^12: 3113863811504 3113863811508
+coupled two-label control, J=2, rank=4, Ritz error=5.4425e-05, bound=4.4440e-02
+coupled two-label control, J=3, rank=4, Ritz error=1.3885e-08, bound=1.1343e-04
+coupled two-label control, J=4, rank=4, Ritz error=1.4175e-12, bound=9.9792e-08
+coupled two-label control, J=5, rank=4, Ritz error=6.2172e-15, bound=3.8938e-11
+Two-label jump rejected the nearest-neighbor tail estimate.
+
+Independent B4 replay at 5d25ad9, BlockedTime.lean Git blob faa11382f5c956803186aa0bb7baff258db179fb
+'Millennium.YangMills.BlockedTime.crossingFace' depends on axioms: [propext]
+'Millennium.YangMills.BlockedTime.fourierBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.BlockedTime.spatialShell' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.BlockedTime.groupRowAtTilt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.BlockedTime.mixtureWindow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.BlockedTime.haarVariance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.BlockedTime.blockDenominator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.BlockedTime.weightedBridge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.BlockedTime.rowAtTilt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.BlockedTime.rowAtOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.BlockedTime.rowMargin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.BlockedTime.iterateInfluence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.BlockedTime.finitePropagation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.BlockedTime.physicalRate' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+Fresh native rerun of finite-readings mode
+guest ELF 974b4663a8f26a4b11868e967c4e0a3bda96b766e9b9d1a022113a180b71450d
+Lean source 029ce009e020212b7f7dbd45bcb574b80a7e831c2de8bf137eda55c9857aee68 (19442 bytes)
+factor 5f713507e45b94d2f4192031fc5b3b450439dbdc7c686f5a9a7bbe156ff71c63
+moments 3d2f76df2250b09a3f03432038ad1f2c34e52a38ce4f1fbccc5f7b7a1eae6f53
+assemble a207c8943b519b036580185a4caee6999bca6fc4e2eb94059f495c015b138826
+
+Regression replay of adjoint mode
+guest ELF 215b28f7d03d4f722a75bc86123ecdb6966b1d9f9a49865ad1ff6b1e13d32128
+Lean source e03ee1d3bef8f6fca3b41b74e08c2f70bdbc524a63161a68633c0bdd1ecef508 (9637 bytes)
+factor 576591649ecce36beb22d7b1a65e00b1a0daded1755e2df99c083d54dab658dc
+divergence 8af6ac3bdd139f9853f07333ba6094a136c9cc318d66a327e89d0aeaf2449703
+assemble 1a64b7bda328e4eb6e15dfbfdcbead1d8bc8fff96f75e18dd92052003afa71f7
+
+Regression replay of positive-time mode
+guest ELF aeb03ab77f4f9ca4ba7d877d55e55d76f1e02243b742acd9a552791dc29850b6
+Lean source 1fd54f3cb4f7bf54bfcdfbae55fd03c66e2cfe9f3f7282c9680087d9b605e391 (12919 bytes)
+factor 44939e798e110a80afb4d53b83cd482e049530a6876b18c2ab721bb774e4e52e
+square 2f614bcd62eb74d04419b4ce129a608b1c2e65cca6e05464fc1e1ad8e192ce55
+assemble 145728b98c7b05086030d32655a7d4a3bf974c9e7bdb010aecc863df7932607f
+
+Regression replay of vacuum-filter mode
+guest ELF 81ee0657560726917fcae43810d3faac7e2827c2a3250bcff4a481369552d198
+Lean source 2002c660d00ff94e5714aa7e3f3c69fa8946181174dc518fbee21e13845ad6d8 (5873 bytes)
+factor d107812ea4e89f61517c7b7f7a838334161fcafcd37a2395b95258f25a78bdf6
+square fa74b4ae53916f291868d2d4493a756c984bdb5feefb39be9e078a8a8a7db515
+assemble 8286c8aa7da483fd4a265977b2a6e50fb9ffbcdd2bbc655d2614769b5869826e
+
+Final PCP OS 1.0.22 register verification
+chain intact: 387 events, head b18a7d0f062e6139b8c209b9865403b24d44252b60df1dd4062c938873806b18
+guards replayed: 0 problem(s)
+The guards are those of pcpos 1.0.22. A register is read under the rules of the program that reads it: an event an earlier build accepted may be reported here, and its bytes are unchanged.
+register file SHA-256: edd56cbd5e01b2f18f6a8db3185586238e348b7863b5cde72bde5f895ccea630
+A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.
+
+B4 independent controls
+{
+  "magnetic_incidence_by_time_offset": {
+    "2": [
+      16,
+      24,
+      16
+    ],
+    "3": [
+      16,
+      24,
+      16
+    ],
+    "4": [
+      16,
+      24,
+      16
+    ],
+    "5": [
+      16,
+      24,
+      16
+    ]
+  },
+  "tilt_three_row": "569/576",
+  "tilt_four_row": "2311/1920",
+  "endpoint_density": [
+    [
+      4.0,
+      12,
+      0.9736508826047021,
+      1.026395128795431
+    ],
+    [
+      4.1,
+      13,
+      0.9800180721625211,
+      1.0200040001252701
+    ],
+    [
+      8.0,
+      24,
+      0.9666057836854196,
+      1.0334520723561167
+    ],
+    [
+      16.0,
+      48,
+      0.9614971583224137,
+      1.0385803121986799
+    ],
+    [
+      32.0,
+      96,
+      0.9586475149324677,
+      1.0414445442065818
+    ],
+    [
+      128.0,
+      384,
+      0.9563925279342542,
+      1.043713026878997
+    ],
+    [
+      1024.0,
+      3072,
+      0.9557165403919622,
+      1.0443934096718108
+    ]
+  ],
+  "finite_bridge": {
+    "matrix_size": 16,
+    "bridge_error": 9.30216950843825e-17,
+    "endpoint_potential_only_error": 0.11758476978833605,
+    "separately_averaged_faces_error": 0.0022784425989492707
+  },
+  "SO3_and_lift": [
+    [
+      4.0,
+      6.661338147750939e-16,
+      0.9999689495467963,
+      1.0000931513671028,
+      1.0489626379718574e-17
+    ],
+    [
+      16.0,
+      9.992007221626409e-16,
+      0.9990932253383963,
+      1.0027203252083228,
+      -3.3062386751801894e-17
+    ],
+    [
+      64.0,
+      1.0547118733938987e-14,
+      0.9985516730169458,
+      1.0043449854705604,
+      -9.068792367491148e-17
+    ],
+    [
+      256.0,
+      5.0737192225369654e-14,
+      0.9983949438535643,
+      1.0048151745667901,
+      -1.1070470859046445e-16
+    ]
+  ]
+}
+

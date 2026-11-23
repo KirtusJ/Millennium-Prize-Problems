@@ -18,6 +18,9 @@ ADJOINT_MARKER = b"-- BEGIN PCP OS generated spherical divergence\n"
 
 
 def result_spec(mode):
+    if mode == "finite":
+        return (HERE.parent / "finite-readings/FiniteReadings.lean",
+                b"-- BEGIN PCP OS generated electric readings\n", "moments")
     if mode == "adjoint":
         return HERE.parent / "adjoint-band/AdjointBand.lean", ADJOINT_MARKER, "divergence"
     if mode == "difference":
@@ -29,7 +32,7 @@ def launch(stage, folder, config):
     command = [sys.executable, "-I", __file__, "--worker", stage, str(folder)]
     if config["dispatcher"]:
         register = config["register"] if stage == "factor" else "-"
-        prefix = "adjoint-" if config["mode"] == "adjoint" else "positive-"
+        prefix = {"adjoint": "adjoint-", "finite": "readings-"}.get(config["mode"], "positive-")
         command = [config["dispatcher"], "--register", register, config["actor"],
                    prefix + stage, "--", *command]
     subprocess.run(command, check=True)
@@ -39,7 +42,7 @@ def worker(stage, folder):
     config = json.loads((folder / "config.json").read_text())
     mode = config["mode"]
     filename, marker, intermediate = result_spec(mode)
-    coefficient = {"positive": 2, "difference": 1, "adjoint": 3}[mode]
+    coefficient = {"positive": 2, "difference": 1, "adjoint": 3, "finite": 4}[mode]
     if stage == "factor":
         request = b"F" + bytes([coefficient])
     elif stage == intermediate:
@@ -53,7 +56,8 @@ def worker(stage, folder):
     output, serial = boot_guest(folder, config["kernel"], config["qemu"], config["firmware"], modules)
     (folder / (stage + ".serial")).write_bytes(serial)
     if stage == "factor":
-        expected_factor = bytes([3, 3, 4]) if mode == "adjoint" else bytes([1, coefficient])
+        expected_factor = {"adjoint": bytes([3, 3, 4]), "finite": bytes([3, 8])}.get(
+            mode, bytes([1, coefficient]))
         if output != expected_factor:
             raise ValueError("unexpected guest coefficient vector")
         (folder / "factor.out").write_bytes(output)
@@ -68,14 +72,17 @@ def worker(stage, folder):
 
 
 def generate(folder, kernel, pcp_source, qemu, firmware, template, dispatcher=None,
-             register=None, actor="Director-D4", difference=False, adjoint=False):
-    mode = "adjoint" if adjoint else ("difference" if difference else "positive")
+             register=None, actor="Director-D4", difference=False, adjoint=False, mode=None):
+    if mode is None:
+        mode = "adjoint" if adjoint else ("difference" if difference else "positive")
     filename, _, _ = result_spec(mode)
     package = kernel_package(kernel, pcp_source)
     flags = ["-DD4_POSITIVE_TIME"]
-    if adjoint:
+    if mode == "finite":
+        flags.append("-DD4_FINITE_READINGS")
+    elif mode == "adjoint":
         flags.append("-DD4_ADJOINT_BAND")
-    elif difference:
+    elif mode == "difference":
         flags.append("-DD4_DIFFERENCE")
     build_guest(folder, package, flags)
     config = dict(kernel=str(kernel), qemu=qemu, firmware=str(firmware) if firmware else None,
@@ -88,7 +95,7 @@ def generate(folder, kernel, pcp_source, qemu, firmware, template, dispatcher=No
 
 
 def main():
-    if len(sys.argv) == 4 and sys.argv[1] == "--worker" and sys.argv[2] in (*STAGES, "divergence"):
+    if len(sys.argv) == 4 and sys.argv[1] == "--worker" and sys.argv[2] in (*STAGES, "divergence", "moments"):
         worker(sys.argv[2], Path(sys.argv[3]))
         return
     p = argparse.ArgumentParser(description=__doc__)
@@ -100,12 +107,14 @@ def main():
     p.add_argument("--register", type=Path)
     p.add_argument("--actor", default="Director-D4")
     modes = p.add_mutually_exclusive_group()
-    modes.add_argument("--adjoint", action="store_true", help="replay the adjoint plaquette module")
-    modes.add_argument("--difference", action="store_true", help="replay the gap-above-vacuum module")
+    modes.add_argument("--finite-readings", dest="mode", action="store_const", const="finite",
+                       help="replay the finite correlation-matrix module")
+    modes.add_argument("--adjoint", dest="mode", action="store_const", const="adjoint", help="replay the adjoint plaquette module")
+    modes.add_argument("--difference", dest="mode", action="store_const", const="difference", help="replay the gap-above-vacuum module")
     args = p.parse_args()
     if bool(args.dispatcher) != bool(args.register):
         p.error("--dispatcher and --register must be supplied together")
-    mode = "adjoint" if args.adjoint else ("difference" if args.difference else "positive")
+    mode = args.mode or "positive"
     filename, marker, intermediate = result_spec(mode)
     expected = filename.read_bytes()
     if expected.count(marker) != 1:
@@ -115,7 +124,7 @@ def main():
         actual = generate(folder, args.kernel.resolve(), args.pcp_source.resolve(), args.qemu,
                           args.firmware.resolve() if args.firmware else None, expected.split(marker)[0],
                           args.dispatcher.resolve() if args.dispatcher else None,
-                          args.register.resolve() if args.register else None, args.actor, args.difference, args.adjoint)
+                          args.register.resolve() if args.register else None, args.actor, mode=mode)
         if actual != expected:
             raise ValueError("native pipeline produced different Lean bytes")
         print("guest ELF", digest((folder / "d4.elf").read_bytes()))
