@@ -66,3 +66,7 @@ Along spatial refinement the actual vacuum occupies a growing range of electric 
 ## Holonomies on fixed physical graphs
 
 In the original isotropic four-dimensional Wilson law, coarse rectilinear holonomies converge jointly to independent Haar variables under $b(1+\beta)\to0$. The strictly positive-time graph-cylinder reflection form then has rank one. A compensated $SU(2)$ path has an interacting Brownian crossover in its number of links, and admits a deterministic mean-normalized test at fixed physical length. [Graph law, crossover and positive-time results](graph-holonomies/)
+
+## Ordinary signed Wilson traces at fixed physical size
+
+For the original four-dimensional isotropic $SU(2)$ Wilson transfer vacuum, ordinary fixed-size square traces have a positive connected reading after multiplying each centered trace by $\beta$ on explicit rapidly weakening trajectories. The measured two-time ratio has a positive limit even without that multiplication. A difference of two orderings of three loops detects the cubic color singlet. Together their limiting energy measures have low-energy powers eight and twelve. The sharp-time variance diverges for the rescaled square. [Contour computation, checked identities and scope](ordinary-loop/)
