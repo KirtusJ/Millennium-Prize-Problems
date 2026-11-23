@@ -1,0 +1,17 @@
+{
+  "pid": 12228,
+  "start_ns": 1795421910130903600,
+  "exit_observed_ns": 1795421959426623800,
+  "returncode": 0,
+  "prompt_sha256": "7885a399fd5a426719300e2517136e23b461f8bac1e7a8f0f14ebd159a0f0aff",
+  "unexpected_item_types": [],
+  "event_types": [
+    "thread.started",
+    "turn.started",
+    "item.completed",
+    "item.completed",
+    "turn.completed"
+  ],
+  "output_sha256": "a5140957c51d40a2fd57fa1ffeae7df7db62bf715e5e5a0317458c3dabed789c",
+  "post_exit_readback_ns": 1795421959427608200
+}

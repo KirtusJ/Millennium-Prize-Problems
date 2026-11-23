@@ -1,0 +1,62 @@
+{
+  "source_sha256": "f966ffb08b17520ca5756ac078603a9d7821d6d3d0828f56b132b36af07542bf",
+  "source": "C:\\Users\\donke\\OneDrive\\Documents\\ChatGPT\\From Prephysical Hypotheses to Physical_Models\\Session\\Millennium_G4\\yang-mills\\g4\\periodic\\PeriodicReflectionPositivity.lean",
+  "records": [
+    {
+      "label": "child",
+      "pid": 9404,
+      "command": [
+        "C:\\Program Files\\Python314\\python.exe",
+        "-B",
+        "C:\\Users\\donke\\OneDrive\\Documents\\ChatGPT\\From Prephysical Hypotheses to Physical_Models\\Session\\Millennium_G4\\yang-mills\\g4\\periodic\\check_periodic.py",
+        "--child",
+        "--runtime",
+        "C:\\Users\\donke\\pcp-os\\PCP_OS_Python",
+        "--method",
+        "C:\\Users\\donke\\OneDrive\\Documents\\ChatGPT\\From Prephysical Hypotheses to Physical_Models\\PCP\\Method",
+        "--mathlib",
+        "C:\\Users\\donke\\OneDrive\\Documents\\ChatGPT\\From Prephysical Hypotheses to Physical_Models\\Session\\G4_runtime\\mathlib4",
+        "--leanbin",
+        "C:\\Users\\donke\\AppData\\Local\\PCP-Toolchains\\lean-4.19.0\\lean-4.19.0-windows\\bin",
+        "--source",
+        "C:\\Users\\donke\\OneDrive\\Documents\\ChatGPT\\From Prephysical Hypotheses to Physical_Models\\Session\\Millennium_G4\\yang-mills\\g4\\periodic\\PeriodicReflectionPositivity.lean",
+        "--namespace",
+        "Millennium.G4.PeriodicRP",
+        "--extra-lean-path",
+        "C:\\Users\\donke\\OneDrive\\Documents\\ChatGPT\\From Prephysical Hypotheses to Physical_Models\\Session\\G4_runtime\\periodic-dependency1",
+        "--mutations",
+        "C:\\Users\\donke\\OneDrive\\Documents\\ChatGPT\\From Prephysical Hypotheses to Physical_Models\\Session\\Millennium_G4\\yang-mills\\g4\\periodic\\mutations.json",
+        "--out",
+        "C:\\Users\\donke\\OneDrive\\Documents\\ChatGPT\\From Prephysical Hypotheses to Physical_Models\\Session\\G4_runtime\\periodic-final-check1\\child"
+      ],
+      "exit_code": 0,
+      "start_ns": 1795421625835187600,
+      "exit_observed_ns": 1795422026946597400,
+      "post_exit_readback_ns": 1795422026969323300,
+      "output_sha256": "68fc3cb1c57e95f0f374cb5d54ae9c49ba14fcfa6930e7a73be08fa68bfe2b4c",
+      "expected_success": true,
+      "control_passed": true
+    }
+  ],
+  "passed": true,
+  "verification": {
+    "events": 9,
+    "head": "667bfcaf50a93324ddd0b92bf1415854972768872c419c9ec50f96b141c3e0c7",
+    "guard_problems": [],
+    "altered_objects": [],
+    "objects_by_reference_only": 0,
+    "anchor": null,
+    "ok": true
+  },
+  "native_execution": false,
+  "worker_kind": "PROGRAM",
+  "depth": 2,
+  "namespace": "Millennium.G4.PeriodicRP",
+  "checker_sha256": "79d2b398598841d2e166fcc05a9001d7d43bda59fa6b06225b6109f5d18eba43",
+  "mutations_sha256": "94ee131a8f5aabacacc24174e3c448e0d09de78dd44cb3050567ea4a0d0a3b02",
+  "dependency_olean_sha256": {
+    "ComplexReflectionPositivity.olean": "e813aff6c86181bf9493cf9ce3264df5827e1c0c0ecbd845a6a0d2a3ef52e74a",
+    "IntegralReflectionPositivity.olean": "0c3173bd7d655d0d4bfe4b4a530c531b47ff1acaff01d975f8e18fc62974e083",
+    "WilsonReflectionPositivity.olean": "ee80f441e8f5a4c92262cef07f2fee22bd33da7b302fc1a29f731b5b19ac7272"
+  }
+}

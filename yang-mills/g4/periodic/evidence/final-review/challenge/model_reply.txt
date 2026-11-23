@@ -1,0 +1,33 @@
+**Focused finding.** The mathematical claim is **SUPPORTED_IN_SCOPE** for the finite compact boundary graph and the stated period-two specialization, using the imported lemmas through the interfaces shown in the submission. Lean acceptance is **UNRESOLVED**. I found a likely redundant `rfl` in `fullExponent_relative_eq_split` that could prevent the file from compiling as written.
+
+### Relative Haar transport and normalization
+
+- The source first splits the product of the two \((x,p)\) and \((y,q)\) laws, then splits the inner \((y,q)\) law at each fixed \((x,p)\). Both Fubini applications have continuous integrands on compact products with finite measures. For fixed \(x,y,p\), the change \(q\mapsto p^{-1}q\) preserves \(\eta\) by left invariance. This step requires neither right invariance nor inversion invariance.
+- After the change of variables the integrand is independent of \(p\). The projection integral contributes the mass \(\eta(H)=1\). On the target side, continuity on the compact product gives integrability of \(\Phi\), and `integral_prod_left` supplies integrability of \((x,y)\mapsto\int\Phi((x,y),h)\,d\eta(h)\). That discharges the Fubini obligation for regrouping \(x,y\). The final product integral is again covered by compact continuity.
+- Tilted transport uses the unweighted transport twice, for \(e^S\) and \(e^SP\). Both are continuous and integrable. The partition integrals therefore agree, and each lies strictly between zero and infinity because \(e^S\) is bounded above and bounded away from zero on the compact domain and each reference law has mass one. The finite product of the \(m\) laws is a probability law. It is left invariant under coordinatewise multiplication, as follows by checking product rectangles and extending to the product σ-algebra. These are the inputs to transport and the tilt-probability lemma. There is no hypothesis assuming the desired tilted identity or the probability of the resulting tilted law.
+
+### Character, features, and reflection
+
+Write \(h_s=p_s^{-1}q_s\) and \(h_d=p_d^{-1}q_d\). The relative product of the two gauged links is
+\[
+p_d\bigl(a^{-1}h_s b h_d^{-1}\bigr)p_d^{-1}.
+\]
+Conjugation drops out of the real character. With \(t=h_s b h_d^{-1}\), the real-character identity \(\chi(a^{-1}t)=\chi(at^{-1})\) follows from inversion invariance and cyclicity of trace. Substitution gives \(\chi(a h_d b^{-1}h_s^{-1})\) in exactly that order. The adjoint in `trace_relative` is the inverse of the unitary matrix, as required.
+
+The feature coefficients are nonnegative because \(\beta_c\ge0\). The matrix entries and their real and imaginary parts can have either sign. The feature identity represents each \(\beta_c\operatorname{Re}\operatorname{tr}(A_c^*B_c)\) as a real dot product with \(\sqrt{\beta_c}\)-weighted coordinates. It is the exponential dot-product kernel that yields a nonnegative quadratic form. This argument requires no pointwise sign condition on the character or the dot product.
+
+`halfTest F` evaluates \(F(y)\), and its reflected conjugate evaluates \(\overline{F(x)}\) under \((x,y,h)\mapsto(y,x,h^{-1})\). The pullback is exactly \(\overline{F(x)}F(y)\) on the auxiliary product space, while the pulled-back action is the split exponent. Both \(s\) and \(F\) depend only on the original half variables. The change of variables acts on the auxiliary gauge coordinates and leaves those arguments untouched, so gauge invariance of \(s\) and \(F\) is unnecessary. The proof transfers the split-law nonnegativity back to the **original tilted law**. It also establishes probability and integrability there.
+
+### Period two and scope
+
+`periodTwo_reflection_positive` uses `Bool × E` for the crossing terms and `Bool × V` for the seam variables. The two link evaluations agree at a fixed half configuration because both read `U c.2`. The seam coordinates remain distinct because their Boolean tags differ. `twoSeamEndpoint_distinct` proves this for each endpoint map, and the same first-coordinate argument separates \((\mathrm{false},v)\) from \((\mathrm{true},w)\) for any \(v,w\). Within one tag, source and destination can coincide for a loop. The proof allows this. The seam coordinates are independent under the product reference law. The tilted law can correlate them.
+
+For \(W=a h_d b^{-1}h_s^{-1}\), the opposite-seam word is \(b h_d^{-1}a^{-1}h_s=h_s^{-1}W^{-1}h_s\). Conjugation and inversion invariance give exactly the stated character identity. The final theorem does not call this lemma because its exponent already uses the common orientation convention. The identity justifies that convention for a term written in the opposite orientation, using the coordinates of that term’s own seam label.
+
+The generic result covers continuous half-tests for the explicit finite compact boundary-graph law. The period-two result instantiates it with two spatial edge configurations and the two tagged collections of temporal links. It makes no assertion about a larger periodic lattice before its inventory and factorization are supplied. It claims no continuum result, gap, strict reflection positivity, positivity for arbitrary seam-touching observables, or transfer trace.
+
+### Source-level issue and review limits
+
+In `fullExponent_relative_eq_split`, after unfolding `splitExponent`, `rw [dot_gaugedBoundary …]` appears to make both sides definitionally equal by unfolding `relativeMap` and `crossingExponent`. Lean’s `rw` normally closes such a goal, so the following standalone `rfl` would then fail with `no goals to be solved`. Remove the trailing `rfl` if compilation confirms this. This is a proof-script issue and does not affect the exponent identity.
+
+The source delegates compact integrability, tilt normalization and probability, and the split positivity result to imports. The visible uses do not assume the desired original-law conclusion as an input. I did not inspect the imported implementations, run Lean or the `#print axioms` commands, or obtain independent-party validation. The PCP skill file and additional ACR clauses were unavailable through the tools in this session. This was a reasoned review of the supplied source, with no ACR conformance claim.

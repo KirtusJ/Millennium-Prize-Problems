@@ -1,0 +1,30 @@
+# A representation-uniform estimate from one conditional link
+
+Use a fixed bi-invariant metric and normalized Haar measure on a compact connected positive-dimensional Lie group. Choose a finite-dimensional unitary representation for the Wilson action $v(h)=1-\operatorname{Re}\operatorname{Tr}\rho(h)/\dim\rho$. Let $B=1+\beta$. In four dimensions each bond occurs in six distinct plaquettes on a periodic lattice of side lengths at least three. With the other links fixed the bond density is $p=\exp(L)/Z$, where $L$ is a sum of six translated or inverted smooth Wilson trace functions times $\beta$. Bi-invariance and compactness give $|X^2 L|\le C\beta$ for every unit left-invariant vector field $X$, and the analogous right-invariant bound. All constants below may depend on the group, metric and action.
+
+## Fourier contraction
+
+Haar integration by parts gives $\int |X\log p|^2p=-\int X^2 L\,p\le C\beta$. Thus $\int|Xp|\le\sqrt{C\beta}$. The total variation distance from $p$ to the right translate $p(\cdot\exp(sX))$ is at most $|s|\sqrt{C\beta}/2$. Choose $s_0=c/\sqrt B$ so their density overlap is at least $1/2$ for $|s|\le s_0$. Separately, at a maximizer of $L$ its gradient vanishes. In a geodesic ball of radius $c/\sqrt B$ the drop of $L$ is bounded by a constant by Taylor's theorem. The Haar volume of that ball is bounded below by $c'B^{-d/2}$, $d=\dim G$. Consequently $\|p\|_\infty\le C'B^{d/2}$ and $\|p\|_2^2\le C'B^{d/2}$.
+
+For an irreducible unitary representation $\pi$, let $M=\int\pi(h)p(h)dh$. For a unit vector $v$ and $m=Mv$, the integral of $\|\pi(h)v-m\|^2p(h)$ equals $1-\|m\|^2$. Compare it with the translated integral using the smaller of the two densities. For $u=\exp(sX)$, $|s|\le s_0$,
+$$\tfrac12\|\pi(u)v-v\|^2\le4(1-\|Mv\|^2).$$
+Indeed $\|\pi(hu)v-\pi(h)v\|$ is constant in $h$. Bound its square by twice the two squared distances to $m$, and translate the second term back using the common-density bound.
+
+For an orthonormal Lie-algebra basis let $J_j=-i\,d\pi(X_j)$, $\sum_j J_j^2=C_\pi I$. The nontrivial irreps have $C_\pi>0$ by connectedness and $\|J_j\|\le\sqrt{C_\pi}$. Use $s=\min(s_0,1/\sqrt{C_\pi})$ in each direction. On $[-1,1]$, $|e^{i x}-1|^2\ge c_1x^2$. Summing over $j$ therefore yields
+$$\|M\|_{\rm op}\le\exp[-c_2\min(C_\pi/B,1)].$$
+This is uniform over staple configurations and all nontrivial irreps, including those on which the Wilson action's chosen representation may have a kernel. The estimate for a reversed bond follows by adjoint. Left and right deterministic multipliers preserve all these norm bounds.
+
+## A path with private bonds
+
+Condition on every link except $k$ selected bonds, each used exactly once in the path and no two in the same action face. Their conditional distributions factor. Each deterministic interposed matrix is unitary in every representation. For the ordered product $H$ let $w$ be its conditional density relative to Haar. There are constants $C,c>0$ such that whenever $k\ge\max(4,B)$,
+$$\|w-1\|_\infty\le C e^{-c k/B}.$$
+
+For the proof, Fourier inversion bounds the low-frequency contribution, $0<C_\pi\le B$, by $\sum d_\pi^2 e^{-c_2 k C_\pi/B}$. The compact-group heat trace is $\sum d_\pi^2e^{-t C_\pi}$, finite at every $t>0$. Factor out the contribution $e^{-c_2 k C_{\min}/(2B)}$ of the first positive Laplacian eigenvalue, and use the heat trace at $t=c_2/2$ for the rest. On $C_\pi>B$ save the first and last density factors in Hilbert–Schmidt norm. The trace norm of their product with the intermediate matrices is at most the product of the two Hilbert–Schmidt norms times $e^{-c_2(k-2)}$. Cauchy–Schwarz in $\pi$ with weights $d_\pi$ and Peter–Weyl Plancherel bound the sum by $\|p_1\|_2\|p_k\|_2 e^{-c_2(k-2)}\le C B^{d/2} e^{-c_2(k-2)}$. This is absorbed by the asserted exponential for $k\ge\max(4,B)$. The summability also justifies uniform Fourier inversion. Arbitrary exterior-dependent interposed factors remain fixed during this calculation.
+
+## Sharp conditional exponential for defining SU(2)
+
+A six-staple sum is a real quaternion. Writing $r$ for $\beta$ times its norm gives $0\le r\le6\beta$. Conditional on the other links a bond is the unit quaternion in its mean direction times an independent central noise with density proportional to $e^{r\cos\theta}$. At $r=0$ its law is Haar. By the character formula, Haar angle density and the Bessel recurrence, the scalar Fourier multiplier in shell $n=2j$ is $q_n(r)=I_{n+1}(r)/I_1(r)$; $q_0=1$. In particular $q_1(r)=\mathbb E_r\cos\theta$ increases with $r$ since its derivative is a variance.
+
+For completeness $q_n(r)\le q_1(r)^n$. The two-sided sequence proportional to $I_{|k|}(r)$ is the law of the difference of independent Poisson variables of mean $r/2$, by their generating functions. Poisson probabilities and their reversals have log-concave contiguous support. Their Toeplitz matrices have all two-by-two minors nonnegative, by ordering successive ratios. Products preserve this property by two-by-two Cauchy–Binet, first truncating and then passing to the limit. The convolution is therefore log-concave. Multiplying consecutive Bessel ratios gives the bound. [Bessel integral](https://dlmf.nist.gov/10.32) · [Recurrences](https://dlmf.nist.gov/10.29)
+
+Set $z=q_1(6\beta)^k$. Then $\|w-1\|_\infty\le(1+z)/(1-z)^3-1$ by summing $(n+1)^2z^n$. For a straight path with all exterior links equal to identity the density at identity is at least $1+4z$ because every shell term there is nonnegative. Thus as $z\to0$ the worst exterior error has leading value $4z$ with an $O(z^2)$ remainder. The large-$r$ expansion gives $\log q_1(6\beta)=-1/(4\beta)+O(\beta^{-2})$. This establishes the worst conditional exponential rate. It does not assert the same sharp asymptotic for an unconditional Wilson-loop expectation. [Large-argument expansion](https://dlmf.nist.gov/10.40) · [Simon and Yaffe's perimeter estimate](https://doi.org/10.1016/0370-2693(82)90815-2) · [Earlier scalar conditional bounds](../positive-time/thin-loops.md)

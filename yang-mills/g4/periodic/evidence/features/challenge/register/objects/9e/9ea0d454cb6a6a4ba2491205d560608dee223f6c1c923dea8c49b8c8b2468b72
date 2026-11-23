@@ -1,0 +1,28 @@
+The relative-gauge identity has the correct noncommutative order. The real part of the trace is essential to the character step. The \(\sqrt{\beta}\) normalization and continuity arguments are mathematically sound under the stated hypotheses. The excerpt preserves independent seam coordinates at the level of its types.
+
+### Matrix and character identity
+
+Write \(a=U_c(x)\), \(b=U_c(y)\), \(r_s=p_s^{-1}q_s\), and \(r_d=p_d^{-1}q_d\). The two gauged links are \(A=p_s a p_d^{-1}\) and \(D=q_s b q_d^{-1}\). Expanding the inverse in order gives
+\[
+A^{-1}D
+=p_d a^{-1}p_s^{-1}q_s b q_d^{-1}
+=p_d\bigl(a^{-1}r_s b r_d^{-1}\bigr)p_d^{-1}.
+\]
+Applying \(\rho\) gives the matrix identity because \(\rho(A)^\dagger=\rho(A^{-1})\). Conjugation invariance then removes the outer \(p_d\) factors inside the character.
+
+Set \(w=r_s b r_d^{-1}\) and \(\chi(g)=\operatorname{Re}\operatorname{tr}\rho(g)\). Unitarity gives \(\operatorname{tr}\rho(g^{-1})=\overline{\operatorname{tr}\rho(g)}\), so \(\chi(g^{-1})=\chi(g)\). Inversion followed by a cyclic trace permutation gives
+\[
+\chi(a^{-1}w)=\chi(w^{-1}a)=\chi(aw^{-1}),
+\qquad
+aw^{-1}=a r_d b^{-1}r_s^{-1}.
+\]
+That is exactly the order in `crossingBoundary`. The cyclic permutation is inside the trace, and the inversion step uses the real part. The pointwise product `p⁻¹ * q` supplies \(r_s\) and \(r_d\) at the respective endpoints.
+
+### Features, seams, and hypotheses
+
+- **Feature normalization.** For complex entries \(m,k\), the dot product of their real and imaginary coordinates is \(\operatorname{Re}(\overline m k)\). Summing over the matrix entries gives \(\operatorname{Re}\operatorname{tr}(M^\dagger N)\). Scaling each coordinate on both sides by \(\sqrt{\beta_c}\) gives the coefficient \(\beta_c\) for \(\beta_c\ge 0\), including zero. This checks the mathematical formula used by `dot_matrixFeatures`. The imported definition and lemma were outside the supplied excerpt.
+- **Independent seams.** With \(B=\mathrm{Bool}\times V\), the gauge space is equivalent to \((V\to G)\times(V\to G)\). Values at \((\mathrm{false},v)\) and \((\mathrm{true},v)\) can be chosen independently even when the corresponding link maps agree. The generic theorem preserves the labels supplied through `src` and `dst`. The concrete period-two endpoint maps were outside the excerpt, so whether that instantiation uses both tags as intended remains unresolved.
+- **Hypotheses and gauge fixing.** The identity holds for arbitrary \(p,q\). A common pointwise left multiplier \(p^{-1}\) sends the pair to \((1,p^{-1}q)\), retaining the full relative gauge on both seam labels. Sending both \(p\) and \(q\) to \(1\) by that common action would require \(p=q\). The proof makes no such assumption and does not need to choose gauges that set either seam’s links to the identity. Nonnegativity supplies the square-root normalization, and the continuity hypotheses supply continuity of the input maps. None assumes the target identity.
+- **Continuity.** Coordinate evaluation on \(B\to G\) is continuous in the product topology. Together with projections, the continuity of each \(U_c\), and continuous multiplication and inversion in \(G\), this proves continuity of both boundary maps. Entrywise continuity of \(\rho\) gives continuity of the real trace and of each real and imaginary feature coordinate. The exponent is a finite sum with constant coefficients, and each \(\sqrt{\beta_c}\) is constant in the feature input. The relative-gauge map \((p,q)\mapsto p^{-1}q\) is also continuous pointwise.
+
+**ACR finding.** `SUPPORTED_IN_SCOPE` for the mathematical identity, normalization, and continuity under the displayed hypotheses, and for independence in the stated `Bool × V` representation. `UNRESOLVED` for the concrete period-two endpoint assignment. This was a focused review commissioned directly by you, using the supplied `acr.core` 1.0 extracts and Lean excerpt. The checks were reasoned from inspectable supplied text. The remaining Core clauses and Wilson declarations were unavailable for inspection. No compiler or axiom result is asserted, and no independent-party validation was performed.

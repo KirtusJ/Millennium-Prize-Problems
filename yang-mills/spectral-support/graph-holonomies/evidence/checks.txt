@@ -1,0 +1,156 @@
+Director D4 · graph holonomies · 23 November 2026
+
+599 cumulative register events, 292 admissions, all matched by releases. Previous 502 events identical.
+
+chain intact: 599 events, head 175c0e941ca735d65dd01c9aab9ad37c21485f43d64f52712c63a5736cfef2e3
+guards replayed: 0 problem(s)
+The guards are those of pcpos 1.0.22. A register is read under the rules of the program that reads it: an event an earlier build accepted may be reported here, and its bytes are unchanged.
+register file SHA-256: 3126a797a1468042c6b70690e22bad38f8d15c67f858d166d08c8ee6abf68325
+A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.
+
+
+SHA-256 hashes of original producing serial receipts
+3c074271f930ff059f49f00a3ce81af259adee5526d9326df3ca3e0d04fa1546  assemble.serial.txt
+4639cd150c8585bcd96d60cd3708425ceb5b5af617c7e7bfe0804ff9e0f88ba7  factor.serial.txt
+3b1d1ec9a6d9ef52a2f984d6fe88a05bfff906f9eddf3322c3292dad86f95c58  words.serial.txt
+
+lean3
+'Millennium.YangMills.D4.GraphHolonomies.reciprocalSecant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.GraphHolonomies.reciprocalMean' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.GraphHolonomies.reverseTest' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.GraphHolonomies.explainedVariance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.GraphHolonomies.independentChannels' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.GraphHolonomies.spectralThreshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.GraphHolonomies.casimirLoss' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.GraphHolonomies.goodClock' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.GraphHolonomies.discardedClock' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.GraphHolonomies.varianceBudget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.GraphHolonomies.reflectionDoubling' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.GraphHolonomies.sixStapleTime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.GraphHolonomies.survivalAtMostOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.GraphHolonomies.lossExpansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.GraphHolonomies.stapleDispersion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.GraphHolonomies.reciprocalDispersion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Millennium.YangMills.D4.GraphHolonomies.limitingBias' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.GraphHolonomies.productError' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.GraphHolonomies.tableComposes' does not depend on any axioms
+'Millennium.YangMills.D4.GraphHolonomies.sharedWord' does not depend on any axioms
+
+
+controls3
+Sharp binary channel, rare copied bit and 1–9 conditional outputs checked.
+Haar subdivision and nonabelian commutator histogram checked by permutations.
+Site reflection (4, 4, 4, 4): 256 copies, 64 distinct bad faces.
+Site reflection (4, 8, 4, 8): 1024 copies, 256 distinct bad faces.
+All-axis plaquette enumeration confirms the winding-line selection on both tori.
+Wilson 4^4 held exterior n=1: conditional prediction 0.580847, sample 0.581946, SE 0.002361
+Wilson 4^4 held exterior n=2: conditional prediction 0.236259, sample 0.237115, SE 0.002974
+Nonlinear thick-block polar means transform at the partial star; Wilson action is affine in its quaternion.
+beta=  5 k=beta: max six-shell log multiplier error 0.049018
+beta= 20 k=beta: max six-shell log multiplier error 0.0156334
+beta= 80 k=beta: max six-shell log multiplier error 0.00410331
+beta=320 k=beta: max six-shell log multiplier error 0.00103773
+All-shell envelope controls and critical clock checked.
+Thirty independent six-quaternion traces reproduce the exact dispersion.
+Fourier torus 4^4: variance of oriented six-face sum 6.000000; staple coefficient 0.49707031.
+Fourier torus 6^4: variance of oriented six-face sum 6.000000; staple coefficient 0.49942130.
+Fourier torus 8^4: variance of oriented six-face sum 6.000000; staple coefficient 0.49981689.
+beta=   32  first correction=0.5087214  critical relative mean=0.8793049 (limit 0.8824969)
+beta=  128  first correction=0.5007543  critical relative mean=0.8817151 (limit 0.8824969)
+beta=  512  first correction=0.4994983  critical relative mean=0.8823024 (limit 0.8824969)
+beta= 2048  first correction=0.4995296  critical relative mean=0.8824483 (limit 0.8824969)
+beta= 8192  first correction=0.4997099  critical relative mean=0.8824848 (limit 0.8824969)
+Shared exterior control: second-scale relative covariance 0.0599852; a local mean alone fails.
+
+
+mutations
+reversed density budget: rejected at reciprocalSecant
+discarding cheaply: rejected at discardedClock
+doubling the path heat time: rejected at sixStapleTime
+independent duplicated path: rejected at sharedWord
+incorrect next mean: rejected at limitingBias
+
+
+replay-graph-holonomies
+guest ELF d6dc835b7ff0acf67d21882bf6106964d120861a9ea3f821c0e396496169efdc
+Lean source 988a04e72b0d28189958b60f586600607a6fca58e528b525f8e9e1a7772dd580 (9242 bytes)
+factor 311bac2bcfcde3aa2e39d4e0b95adcd3333b7950c3072991cf228b094593950d
+words ea9199ceeefe9f1ea50e25d66c1f8d232486b27508158d735adb73e8ab3dd12a
+assemble 08d1d38b5afdde0d3a09943e8105719a5d95d20bb46b73ac40fafb3ed5c613e4
+
+
+replay-electric-scale
+guest ELF 9a0c055625830f7377cbd54bbc3e4e2fa0e86d23df35bb5a471160673c69381c
+Lean source d8b44086b7234ac94b9d4acb4d71c868b8a888ddb3645d4ac0e3962295bcd792 (9001 bytes)
+factor 3326c88ae964e02234c1ae26b8e60a559bd8da0751922c72697b63cd7548b53d
+flux b325612c8175ddfd65cf36c8fb78ed633e310c52a91f7ae33af1d83b1bc96e00
+assemble 808e5bbcc4193069b9debeda64b26bfe6de8d3b020fb45d311a972518928aa9d
+
+
+replay-finite-readings
+guest ELF 974b4663a8f26a4b11868e967c4e0a3bda96b766e9b9d1a022113a180b71450d
+Lean source 029ce009e020212b7f7dbd45bcb574b80a7e831c2de8bf137eda55c9857aee68 (19442 bytes)
+factor 6bb30d54a15cfbbafbe63f62d318397710b10eb3e16c17ca77ec9c8b253c6c34
+moments 3bfaf06af6d739627868ee58221e96953eae519ea4257e6e2069913a15a81b96
+assemble 12378888597913372a3c5819c4bbfe6bc627acca2cc00e9191db1f4975d75d30
+
+
+replay-adjoint
+guest ELF 215b28f7d03d4f722a75bc86123ecdb6966b1d9f9a49865ad1ff6b1e13d32128
+Lean source e03ee1d3bef8f6fca3b41b74e08c2f70bdbc524a63161a68633c0bdd1ecef508 (9637 bytes)
+factor 7f51435eab2ac20e62b336c454ccce5f012312008322c8b78680d34b09157d5c
+divergence 7a64ad3a17d112c2c3fc4fc7ce14a0e81d410d5ab2f9098bb5d455ba16cc1ce3
+assemble 792b50399d8668a7be5fcf6f7d14cd53e3a2070b439399f4e269adaf9867491f
+
+
+replay-difference
+guest ELF 81ee0657560726917fcae43810d3faac7e2827c2a3250bcff4a481369552d198
+Lean source 2002c660d00ff94e5714aa7e3f3c69fa8946181174dc518fbee21e13845ad6d8 (5873 bytes)
+factor 8723f6048f4e72f4fc647142dbd753b66f057543d1de497f818c20223dccdd3e
+square 7a2a458a9df151322b620d854ff6b9a38a1fdd6bf75ff1a53c836a724fbf9086
+assemble b39879fc7eb163845040e539ce0b4d863489256900271efaad6875409904c925
+
+
+replay-basic
+guest ELF aeb03ab77f4f9ca4ba7d877d55e55d76f1e02243b742acd9a552791dc29850b6
+Lean source 1fd54f3cb4f7bf54bfcdfbae55fd03c66e2cfe9f3f7282c9680087d9b605e391 (12919 bytes)
+factor 226c3913d390f5ec37f2e751e255e2bea68a36e66456b6104621f6db74c62667
+square 313dcf70e2c52c392878b86b2fd72243eddbfe80baa68c5d6c260f707d2a237c
+assemble cebfff1943492f351d32a99b93594633e65183e7319bc60ee57d3682f5ff2a4c
+
+
+peer
+'YangMills.TangentCurvature.fourCubeCounts' does not depend on any axioms
+'YangMills.TangentCurvature.cubeRanks' depends on axioms: [propext, Quot.sound]
+'YangMills.TangentCurvature.exactFaceCount' does not depend on any axioms
+'YangMills.TangentCurvature.squareGradient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.TangentCurvature.quaternionDeficit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.TangentCurvature.temporalTilt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.TangentCurvature.edgeVariance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.TangentCurvature.wardCharacteristic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.TangentCurvature.residualFactor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.TangentCurvature.projectionDiagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.TangentCurvature.traceOfProjection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.TangentCurvature.colorFloor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.TangentCurvature.harmonicDifference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.TangentCurvature.greenInterior' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.TangentCurvature.greenSource' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.TangentCurvature.radialCoefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.TangentCurvature.doubledThreshold' depends on axioms: [propext]
+'YangMills.TangentCurvature.oddReflectionVanishes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.TangentCurvature.singleFaceCoefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.TangentCurvature.faceThreshold' depends on axioms: [propext]
+'YangMills.TangentCurvature.iterateReflection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.TangentCurvature.actionMoments' depends on axioms: [propext, Classical.choice, Quot.sound]
+signed real boundary ranks [np.int64(15), np.int64(17), np.int64(7), np.int64(1)] all successive products zero
+conditional Haar Ward left/right and flipped inverse (np.float64(-0.07781563346649062), np.float64(-0.07781563346648901), np.float64(1.2195431706006086))
+rank-three complex projections and periodic temporal Green coefficients passed
+C(0), C(1), C(2) [0.86225051 0.09790424 0.0121039 ] n^6 C(n) [0.4066753  0.40563138 0.40537133] limit 0.4052847345693511
+bounded spectral asymptotic ratio at n=256 1.0004273937643375 simplex factor 2.087675698786816e-09
+even and odd site reflection forms 975.4360202889976 7834.651137886627 odd direct sum 7834.651137886627
+all six face orientations in dyadic subblocks of three mixed-parity boxes passed
+reflected sine pair with forbidden constant offset -0.2315020123008622
+single face C(0), C(1) [0.5        0.06887475] n^4 C(n) [0.10144512 0.10135212 0.10132891] limit 0.10132118364233778
+bounded spectral asymptotic ratio at n=256 1.0001526132748484 simplex factor 2.4801587301587315e-05

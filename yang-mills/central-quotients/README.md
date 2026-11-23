@@ -82,3 +82,7 @@ A finite-time spectral filter bounds the connected spacetime correlation predict
 ## Electric center shifts at weak bare coupling
 
 On the cubic $SU(2)$ Hamiltonian the vacuum shifted by a central link sign concentrates at energy $8\lambda$. A pattern affecting $n$ plaquettes concentrates at $2\lambda n$, uniformly in the box and the pattern. On the original Wilson transfer every spacing $0<a\le b$, including $a=b$, excludes all energies below a fixed fraction of this scale in the weak bare-coupling limit. The full upper tail requires time resolution of the shift. [Central-shift spectrum](electric-disorder/) · [Isotropic Wilson bound](electric-disorder/wilson-readings.md)
+
+## Microscopic curvature on the original isotropic Wilson law
+
+In the $SU(2)$ vacuum, rooted plaquettes scaled by $\sqrt\beta$ have a joint Gaussian curvature limit on fixed lattice cells. The scaled Wilson action has limiting mean $3/4$ and variance $3/8$. Its low-energy spectral weight is of order $\epsilon^8$ in lattice units, and its mean-normalized connected correlation vanishes at fixed positive physical time. [Local Wilson curvature and spectral measure](tangent-curvature/)

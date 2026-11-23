@@ -1,0 +1,76 @@
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\periodic\PeriodicReflectionPositivity.lean:23:0: warning: automatically included section variable(s) unused in theorem 'Millennium.G4.PeriodicRP.continuous_relativeMap':
+  [CompactSpace X]
+  [SecondCountableTopology X]
+  [MeasurableSpace X]
+  [BorelSpace X]
+  [CompactSpace H]
+  [SecondCountableTopology H]
+  [MeasurableSpace H]
+  [BorelSpace H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CompactSpace
+  X] [SecondCountableTopology
+  X] [MeasurableSpace
+  X] [BorelSpace X] [CompactSpace H] [SecondCountableTopology H] [MeasurableSpace H] [BorelSpace H] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\periodic\PeriodicReflectionPositivity.lean:30:0: warning: automatically included section variable(s) unused in theorem 'Millennium.G4.PeriodicRP.integral_prod_continuous':
+  [CompleteSpace K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CompleteSpace K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'Millennium.G4.PeriodicRP.relativeMap' depends on axioms: [propext]
+'Millennium.G4.PeriodicRP.continuous_relativeMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.integral_prod_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.integral_relativeMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.integral_relativeMap_tilted' depends on axioms: [propext, Classical.choice, Quot.sound]
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\periodic\PeriodicReflectionPositivity.lean:201:0: warning: automatically included section variable(s) unused in theorem 'Millennium.G4.PeriodicRP.continuous_gaugedBoundary':
+  [Fintype C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype C] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\periodic\PeriodicReflectionPositivity.lean:211:0: warning: automatically included section variable(s) unused in theorem 'Millennium.G4.PeriodicRP.continuous_crossingBoundary':
+  [Fintype C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype C] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'Millennium.G4.PeriodicRP.gaugedBoundary' depends on axioms: [propext]
+'Millennium.G4.PeriodicRP.crossingBoundary' depends on axioms: [propext]
+'Millennium.G4.PeriodicRP.crossingExponent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.gauge_covariance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.character_gauged_relative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.trace_relative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.dot_gaugedBoundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.continuous_gaugedBoundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.continuous_crossingBoundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.continuous_crossingExponent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.continuous_gaugedFeatures' depends on axioms: [propext, Classical.choice, Quot.sound]
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\periodic\PeriodicReflectionPositivity.lean:329:0: warning: automatically included section variable(s) unused in theorem 'Millennium.G4.PeriodicRP.continuous_fullExponent':
+  [CompactSpace G]
+  [SecondCountableTopology G]
+  [MeasurableSpace G]
+  [BorelSpace G]
+  [CompactSpace X]
+  [SecondCountableTopology X]
+  [MeasurableSpace X]
+  [BorelSpace X]
+  [Fintype B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CompactSpace
+  G] [SecondCountableTopology
+  G] [MeasurableSpace
+  G] [BorelSpace
+  G] [CompactSpace X] [SecondCountableTopology X] [MeasurableSpace X] [BorelSpace X] [Fintype B] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'Millennium.G4.PeriodicRP.seamReflection' depends on axioms: [propext]
+'Millennium.G4.PeriodicRP.seamReflection_involutive' depends on axioms: [propext]
+'Millennium.G4.PeriodicRP.halfTest' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.fullExponent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.fullExponent_relative_eq_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.opposite_seam_character' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.continuous_fullExponent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.boundary_wilson_reflection_positive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.PeriodicRP.twoSeamEndpoint' does not depend on any axioms
+'Millennium.G4.PeriodicRP.twoSeamEndpoint_distinct' depends on axioms: [propext]
+'Millennium.G4.PeriodicRP.periodTwo_reflection_positive' depends on axioms: [propext, Classical.choice, Quot.sound]

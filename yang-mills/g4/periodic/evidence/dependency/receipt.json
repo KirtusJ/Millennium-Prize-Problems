@@ -1,0 +1,34 @@
+{
+  "dependency_olean_sha256": {
+    "ComplexReflectionPositivity.olean": "e813aff6c86181bf9493cf9ce3264df5827e1c0c0ecbd845a6a0d2a3ef52e74a",
+    "IntegralReflectionPositivity.olean": "0c3173bd7d655d0d4bfe4b4a530c531b47ff1acaff01d975f8e18fc62974e083"
+  },
+  "source_sha256": "465d565057c6b5a1b0b196cf24a1bb3285eaf63c41f75141d2959ef9bf906f3f",
+  "module_sha256": "ee80f441e8f5a4c92262cef07f2fee22bd33da7b302fc1a29f731b5b19ac7272",
+  "module_bytes": 1641488,
+  "exit_code": 0,
+  "pid": 4404,
+  "command": [
+    "C:\\Users\\donke\\AppData\\Local\\PCP-Toolchains\\lean-4.19.0\\lean-4.19.0-windows\\bin\\lake.exe",
+    "env",
+    "lean",
+    "--root=C:\\Users\\donke\\OneDrive\\Documents\\ChatGPT\\From Prephysical Hypotheses to Physical_Models\\Session\\Millennium_G4\\yang-mills\\g4\\wilson",
+    "-o",
+    "C:\\Users\\donke\\OneDrive\\Documents\\ChatGPT\\From Prephysical Hypotheses to Physical_Models\\Session\\G4_runtime\\periodic-dependency1\\WilsonReflectionPositivity.olean",
+    "C:\\Users\\donke\\OneDrive\\Documents\\ChatGPT\\From Prephysical Hypotheses to Physical_Models\\Session\\Millennium_G4\\yang-mills\\g4\\wilson\\WilsonReflectionPositivity.lean"
+  ],
+  "start_ns": 1795421132668205300,
+  "exit_observed_ns": 1795421281387578200,
+  "readback_ns": 1795421281437572400,
+  "log_sha256": "abeb3441e2a22de8de24f21bf2c1515612bdceb3a616821f1266299b1868a198",
+  "passed": true,
+  "verification": {
+    "events": 8,
+    "head": "8fdf3860cb886263a42c971d5808b6caff26967c1e54c640ffc03b99b52b215d",
+    "guard_problems": [],
+    "altered_objects": [],
+    "objects_by_reference_only": 0,
+    "anchor": null,
+    "ok": true
+  }
+}

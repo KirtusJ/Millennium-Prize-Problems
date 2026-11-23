@@ -1,6 +1,6 @@
 # Gauge-invariant electric probes on the spatial mesh clock
 
-The central sign produces a nonzero charge law on the magnetic clock and loses its connected signal at positive physical time. There is a different family on the same link with a nonzero *absolute* signal on the longer spatial mesh clock. Fix $SU(2)$, its defining Wilson action and the [shell conventions](shells.md). Let $A_\theta$ be left translation of one link averaged over the conjugacy class at angle $\theta$ with its invariant probability measure. This is a self-adjoint contraction commuting with all site gauge transformations. On electric shell $n$ its eigenvalue is
+For fixed $\tau>0$, $b\downarrow0$ and $\beta\to\infty$, the connected central-sign signal at $t=\tau b$ vanishes. The [center estimate](center.md) bounds it by $8u+e^{-\tau\beta k}$ for $k$ frustrated faces. On that same shrinking physical clock, class-averaged probes on the link retain a nonzero absolute signal. Fix $SU(2)$, its defining Wilson action and the [shell conventions](shells.md). Let $A_\theta$ be left translation of one link averaged over the conjugacy class at angle $\theta$ with its invariant probability measure. This is a self-adjoint contraction commuting with all site gauge transformations. On electric shell $n$ its eigenvalue is
 $$m_n(\theta)=\frac{\sin((n+1)\theta)}{(n+1)\sin\theta}.$$
 This follows by averaging each representation matrix under conjugation and taking its trace. At $0$ the multiplier is one; at $\pi$ it is $(-1)^n$.
 

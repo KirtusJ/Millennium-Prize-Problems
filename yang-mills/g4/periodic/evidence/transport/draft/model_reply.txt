@@ -1,0 +1,136 @@
+The source below proves the transport by Fubini and left invariance. The tilted theorem uses `integral_tilted_complex_normalized` to expose the numerator and partition function, then transports each separately. I could not compile against Lean 4.19.0, Mathlib `c44e0c8e`, or the published Wilson module. The main API uncertainties are the argument order of `MeasurePreserving.integral_comp`, the statement of `integral_prod`, and the exact signature and normal form of `integral_tilted_complex_normalized`. I did not inspect any additional ACR clauses.
+
+```lean
+import WilsonReflectionPositivity
+import Mathlib.MeasureTheory.Group.Integral
+import Mathlib.MeasureTheory.Integral.Prod
+
+open MeasureTheory
+open scoped Topology
+
+namespace Millennium.G4.PeriodicRP
+
+variable {X H K : Type*}
+variable [TopologicalSpace X] [CompactSpace X] [SecondCountableTopology X]
+variable [MeasurableSpace X] [BorelSpace X]
+variable [Group H] [TopologicalSpace H] [IsTopologicalGroup H]
+variable [CompactSpace H] [SecondCountableTopology H]
+variable [MeasurableSpace H] [BorelSpace H]
+variable [NormedAddCommGroup K] [NormedSpace ℝ K] [CompleteSpace K]
+
+def relativeMap (z : (X × H) × (X × H)) : (X × X) × H :=
+  ((z.1.1, z.2.1), z.1.2⁻¹ * z.2.2)
+
+theorem continuous_relativeMap :
+    Continuous (relativeMap : (X × H) × (X × H) → (X × X) × H) := by
+  unfold relativeMap
+  exact
+    (continuous_fst.fst.prodMk continuous_snd.fst).prodMk
+      (continuous_fst.snd.inv.mul continuous_snd.snd)
+
+theorem integral_prod_continuous
+    {A B : Type*}
+    [TopologicalSpace A] [CompactSpace A] [SecondCountableTopology A]
+    [MeasurableSpace A] [BorelSpace A]
+    [TopologicalSpace B] [CompactSpace B] [SecondCountableTopology B]
+    [MeasurableSpace B] [BorelSpace B]
+    (α : Measure A) (β : Measure B)
+    [IsFiniteMeasure α] [IsFiniteMeasure β]
+    (f : A × B → K) (hf : Continuous f) :
+    (∫ z, f z ∂(α.prod β)) = ∫ a, (∫ b, f (a, b) ∂β) ∂α := by
+  exact integral_prod f
+    (Millennium.G4.IntegralRP.integrable_continuous_compact
+      (α.prod β) f hf)
+
+theorem integral_relativeMap
+    (μ : Measure X) (η : Measure H)
+    [IsProbabilityMeasure μ] [IsProbabilityMeasure η]
+    [Measure.IsMulLeftInvariant η]
+    (Φ : (X × X) × H → K) (hΦ : Continuous Φ) :
+    (∫ z, Φ (relativeMap z) ∂((μ.prod η).prod (μ.prod η))) =
+      ∫ z, Φ z ∂((μ.prod μ).prod η) := by
+  have hleft (x y : X) (p : H) :
+      (∫ q, Φ ((x, y), p⁻¹ * q) ∂η) =
+        ∫ h, Φ ((x, y), h) ∂η := by
+    let e : H ≃ᵐ H := MeasurableEquiv.mulLeft p⁻¹
+    have he : MeasurePreserving e η η := by
+      simpa only [e, MeasurableEquiv.mulLeft_apply] using
+        (measurePreserving_mul_left η p⁻¹)
+    change (∫ q, Φ ((x, y), e q) ∂η) = ∫ h, Φ ((x, y), h) ∂η
+    exact he.integral_comp e.measurableEmbedding (fun h => Φ ((x, y), h))
+  have hfiber (a : X × H) :
+      (∫ b, Φ (relativeMap (a, b)) ∂(μ.prod η)) =
+        ∫ y, (∫ h, Φ ((a.1, y), h) ∂η) ∂μ := by
+    rw [integral_prod_continuous μ η
+      (fun b => Φ (relativeMap (a, b)))
+      ((hΦ.comp continuous_relativeMap).comp
+        (continuous_const.prodMk continuous_id))]
+    exact integral_congr_ae (Filter.Eventually.of_forall
+      (fun y => hleft a.1 y a.2))
+  rw [integral_prod_continuous (μ.prod η) (μ.prod η)
+    (Φ ∘ relativeMap) (hΦ.comp continuous_relativeMap)]
+  calc
+    (∫ a, (∫ b, Φ (relativeMap (a, b)) ∂(μ.prod η)) ∂(μ.prod η)) =
+        ∫ a, (∫ y, (∫ h, Φ ((a.1, y), h) ∂η) ∂μ) ∂(μ.prod η) :=
+      integral_congr_ae (Filter.Eventually.of_forall hfiber)
+    _ = ∫ xy, (∫ h, Φ (xy, h) ∂η) ∂(μ.prod μ) := by
+      have hf : Integrable (fun xy : X × X => ∫ h, Φ (xy, h) ∂η)
+          (μ.prod μ) :=
+        (Millennium.G4.IntegralRP.integrable_continuous_compact
+          ((μ.prod μ).prod η) Φ hΦ).integral_prod_left
+      have hg :
+          Integrable (fun x : X => ∫ y, (∫ h, Φ ((x, y), h) ∂η) ∂μ) μ :=
+        hf.integral_prod_left
+      rw [integral_prod _ (hg.comp_fst (ν := η)), integral_prod _ hf]
+      simp
+    _ = ∫ z, Φ z ∂((μ.prod μ).prod η) :=
+      (integral_prod_continuous (μ.prod μ) η Φ hΦ).symm
+
+theorem integral_relativeMap_tilted
+    (μ : Measure X) (η : Measure H)
+    [IsProbabilityMeasure μ] [IsProbabilityMeasure η]
+    [Measure.IsMulLeftInvariant η]
+    (S : (X × X) × H → ℝ) (hS : Continuous S)
+    (P : (X × X) × H → ℂ) (hP : Continuous P) :
+    (∫ z, P z ∂((μ.prod μ).prod η).tilted S) =
+      ∫ z, P (relativeMap z) ∂
+        ((μ.prod η).prod (μ.prod η)).tilted (S ∘ relativeMap) := by
+  have hweight : Continuous (fun z => Real.exp (S z)) :=
+    Real.continuous_exp.comp hS
+  have hpartition := integral_relativeMap μ η
+    (fun z => Real.exp (S z)) hweight
+  have hnum := integral_relativeMap μ η
+    (fun z => Real.exp (S z) • P z) (hweight.smul hP)
+  have hnumComplex := integral_relativeMap μ η
+    (fun z => (Real.exp (S z) : ℂ) * P z)
+    ((Complex.continuous_ofReal.comp hweight).mul hP)
+  have hnumComplex' := integral_relativeMap μ η
+    (fun z => P z * (Real.exp (S z) : ℂ))
+    (hP.mul (Complex.continuous_ofReal.comp hweight))
+  have hSrel : Continuous (S ∘ relativeMap) :=
+    hS.comp continuous_relativeMap
+  have hPrel : Continuous (P ∘ relativeMap) :=
+    hP.comp continuous_relativeMap
+  simp only [Function.comp_apply] at hpartition hnum hnumComplex hnumComplex'
+  rw [Millennium.G4.WilsonRP.integral_tilted_complex_normalized,
+    Millennium.G4.WilsonRP.integral_tilted_complex_normalized]
+  all_goals
+    first
+    | assumption
+    | solve_by_elim
+    | exact Millennium.G4.IntegralRP.integrable_continuous_compact _ _ (by
+        first | exact hweight | exact hP | exact hPrel |
+          exact hweight.comp continuous_relativeMap |
+          exact hweight.smul hP |
+          exact (hweight.smul hP).comp continuous_relativeMap)
+    | (simp only [Function.comp_apply]
+       simp only [hpartition, hnum, hnumComplex, hnumComplex'])
+
+#print axioms relativeMap
+#print axioms continuous_relativeMap
+#print axioms integral_prod_continuous
+#print axioms integral_relativeMap
+#print axioms integral_relativeMap_tilted
+
+end Millennium.G4.PeriodicRP
+```

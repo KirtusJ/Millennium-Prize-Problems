@@ -1,0 +1,32 @@
+[
+  {
+    "label": "negative_relative_collapse",
+    "find": "((z.1.1, z.2.1), z.1.2⁻¹ * z.2.2)",
+    "replace": "((z.1.1, z.2.1), 1)",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_boundary_inverse",
+    "find": "U c z.1.1 * z.2 (dst c) * (U c z.1.2)⁻¹ * (z.2 (src c))⁻¹",
+    "replace": "U c z.1.1 * z.2 (dst c) * (U c z.1.2)⁻¹ * z.2 (src c)",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_seam_tags",
+    "find": "(c.1,src c.2)",
+    "replace": "(false,src c.2)",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_coupling_sign",
+    "find": "theorem dot_gaugedBoundary\n    (src dst : C → B) (U : C → X → G)\n    (β : C → ℝ) (hβ : ∀ c, 0 ≤ β c)",
+    "replace": "theorem dot_gaugedBoundary\n    (src dst : C → B) (U : C → X → G)\n    (β : C → ℝ) (hβ : ∀ c, β c ≤ 0)",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_conjugation",
+    "find": "(Millennium.G4.IntegralRP.reflectedIntegral ν seamReflection (halfTest F) (halfTest F)) := by\n  dsimp only",
+    "replace": "(Millennium.G4.IntegralRP.reflectedIntegral ν seamReflection (halfTest (fun x => conj (F x))) (halfTest F)) := by\n  dsimp only",
+    "diagnostic": "error:"
+  }
+]

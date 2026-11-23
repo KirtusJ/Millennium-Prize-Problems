@@ -8,6 +8,8 @@ On a fixed periodic cube, the conserved total Hamiltonian is the unique null sme
 
 In the free Maxwell benchmark the sharp-time variance of a fixed smooth total-energy test diverges as $b^{-1}$. The complementary scalar variance diverges as $b^{-5}$. Two positive-time readings distinguish their squared contributions at nonzero momentum. [Conserved and scalar Maxwell benchmark](maxwell-benchmark/)
 
+For a covariant candidate containing both conserved energy and a scalar, positive-time readings at three momentum bands separate their two contributions and the real cross correlation. The fixed-size packet test includes finite time-grid errors and a two-field invariant-mass test. [Momentum transport and scalar mixing](momentum-transport/)
+
 ## Observable and finite-volume identity
 
 Take the periodic cubic SU(2) Hamiltonian of side at least three. In unit-round convention write

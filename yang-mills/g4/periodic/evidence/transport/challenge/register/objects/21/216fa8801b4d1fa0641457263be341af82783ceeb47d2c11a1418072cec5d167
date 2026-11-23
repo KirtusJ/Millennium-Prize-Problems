@@ -1,0 +1,43 @@
+**The relative-Haar integral identity and normalized tilt are mathematically supported. The Lean implementation remains unresolved.** The transport argument uses left invariance in the correct order, supplies the mathematical integrability needed for each Fubini step, and derives the tilted equality by transporting the numerator and partition function separately. The displayed source proves a continuous-test identity if its Lean steps elaborate. A separate measure-level pushforward statement can be derived directly on measurable rectangles.
+
+## Relative-Haar transport
+
+Write the input as \(((x,p),(y,q))\). The relative variable is \(p^{-1}q\). For fixed \(p\), the substitution \(h=p^{-1}q\) is left translation by \(p^{-1}\), with inverse \(q=ph\). Left invariance of \(\eta\) therefore gives the equality in `hleft` for every \(x,y,p\). Neither right invariance nor invariance under inversion is needed.
+
+The continuity argument is sound. The coordinate projections are continuous, as are inversion and multiplication in \(H\). Pairing these maps gives `continuous_relativeMap`. Fixing \(a\) gives the continuous map \(b\mapsto(a,b)\). The finite products used here are compact and second countable, and their product measurable structures agree with their Borel structures. Thus the continuous integrands on the compact products are measurable and bounded. The completeness assumption on \(K\) supplies the Banach-space hypothesis for the Bochner integration argument. Both \(\mathbb R\) and \(\mathbb C\) satisfy it in the tilt proof.
+
+Every Fubini application has an integrability argument:
+
+| Step | Integrability justification |
+|---|---|
+| Split the full source integral over \(a,b\) | \(\Phi\circ\mathrm{relativeMap}\) is continuous on the compact source product, with finite product measure. |
+| Split the \(b=(y,q)\) integral for each \(a\) | The fixed-\(a\) integrand is continuous on the compact space \(X\times H\), so it is integrable for **every** \(a\). The fixed-\(x,y,p\) integrands in `hleft` are likewise continuous on compact \(H\). |
+| Form \(F(x,y)=\int_H\Phi((x,y),h)\,d\eta(h)\) | Integrability of \(\Phi\) on the compact target product gives \(F\in L^1(\mu\otimes\mu)\) by Fubini. This is `hf`. |
+| Form \(G(x)=\int_X F(x,y)\,d\mu(y)\) | Integrability of \(F\) gives \(G\in L^1(\mu)\) by Fubini. This is `hg`. Its lift \((x,p)\mapsto G(x)\) is integrable under \(\mu\otimes\eta\) because \(\eta\) is finite. |
+| Reassemble the target integral | The same integrability of \(\Phi\) on the target product justifies the final reverse Fubini step. |
+
+The normalization occurs when integrating \(G(x)\) over \(p\). That inner integral is \(\eta(H)G(x)=G(x)\). The source and target measures both have mass one because \(\mu\) and \(\eta\) are probabilities. The cancellation in the transport itself uses \(\eta(H)=1\). Finite mass of \(\mu\) suffices for the unnormalized transport identity.
+
+## Pushforward and tilt
+
+The code derives its integral equality from Fubini and measure preservation of **each fixed left translation**. It never invokes measure preservation of `relativeMap`. If the intended result also includes the actual pushforward equality, there is a direct derivation. For measurable \(A,B\subseteq X\) and \(C\subseteq H\), the preimage of \((A\times B)\times C\) has source mass
+\[
+\int \mathbf 1_A(x)\mathbf 1_B(y)\mathbf 1_C(p^{-1}q)\,
+    d\big((\mu\otimes\eta)\otimes(\mu\otimes\eta)\big)
+=\mu(A)\mu(B)\eta(C).
+\]
+Tonelli applies to the nonnegative measurable indicators. Left invariance evaluates the \(q\) integral as \(\eta(C)\), and \(\eta(H)=1\) removes the \(p\) integral. These rectangles generate the product \(\sigma\)-algebra, so uniqueness of finite measures gives the pushforward equality. This rectangle argument is additional to the supplied Lean source.
+
+For the tilt with density proportional to \(e^S\), continuity on the compact target gives real bounds \(m\le S\le M\). The pullback satisfies the same bounds. Under either base probability measure,
+\[
+0<e^m\le Z=\int e^S\,d\nu\le e^M<\infty,
+\]
+with \(S\) replaced by \(S\circ\mathrm{relativeMap}\) on the source. The weighted complex observable is continuous and bounded on each compact product, so each numerator is integrable. Applying transport to \(e^S\) identifies the partition functions, and applying it to \(e^S P\) identifies the numerators. Division by the common positive partition function yields the claimed equality and each normalized tilt has mass one. The real scalar action and the two complex multiplication orders express the same numerator.
+
+## Lean verification gaps
+
+- `MeasurePreserving.integral_comp` must accept the measurable embedding and integrand in the supplied order and produce the composition equality in the needed orientation. A measurable equivalence gives the mathematical change of variables.
+- `integral_prod`, `.integral_prod_left`, and `hg.comp_fst (ν := η)` must have the expected signatures and product orientations. The two rewrites followed by `simp` must also discharge the constant integral using the probability instance on \(\eta\). The compact-integrability helper and the relevant finite-product and product-Borel instances are separate elaboration dependencies.
+- `integral_tilted_complex_normalized` is the main unresolved dependency. Its statement must implement the normalized exponential tilt and its hypotheses must be discharged for both base measures. The script has no explicit positivity proof for either partition function. If the lemma asks for positivity or nonvanishing explicitly, the compactness bound above supplies the missing argument. If it asks for integrability in a complex multiplication normal form, the fallback currently supplies scalar-action continuity but does not explicitly supply continuity for either complex multiplication order. The three numerator equalities address possible rewrite forms, while side-goal discharge remains to be checked against the actual declaration.
+
+The mathematical assessment used the supplied source and ACR excerpts. No compiler checks were run, and the pinned Mathlib declarations, published Wilson declaration, and additional ACR clauses were not inspected.
