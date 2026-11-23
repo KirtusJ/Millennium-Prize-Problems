@@ -8,6 +8,7 @@ Run with Python 3.10 or newer and NumPy. The numerical programs can run without 
 python checks.py
 python retraction.py
 python spectrum.py
+python coarse_time.py
 python disk.py
 python pilot.py
 python fixed.py

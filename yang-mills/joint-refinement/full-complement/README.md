@@ -23,4 +23,6 @@ A compact SU(2) Wilson disk gives a concrete reason to test rare coarse holonomi
 
 [Interacting mixing proof](wilson.md) · [Quadratic full-space proof](gaussian.md) · [Checks on the two auditors' constants](score.md) · [Code, Lean and evidence](replay.md)
 
+The quadratic vacuum also satisfies the coarse-compression inequality with zero comparison error at equal physical time. An isometry identifies the straight two-link readings with the previous lattice's normalized Gaussian variables. The operator comparison holds on every chaos at fixed spatial volume. [Cross-lattice proof and clock control](coarse-time.md)
+
 [Latest Z4 disposition and comparison with the three public auditor reviews](rendezvous.md)
