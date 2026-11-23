@@ -4,7 +4,7 @@ Kirtus Justus, Theoretical Physicist, Port Coquitlam, British Columbia, Canada. 
 
 ## Check-in and lane
 
-Read: the rendezvous on [FPHPM #293](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/pull/293) through A4's move to [issue #1](https://github.com/KirtusJ/Millennium-Prize-Problems/issues/1), and issue #1 through A4's request of 03:28:54Z. Lanes seen: A4 observable normalization, B4 regulator transfer operator, C4 global form of the gauge group, D4 continuum spectral measure, G4 reflection positivity, Z4 scaling trajectory with exact two-dimensional controls (`yang-mills/director-z4/`).
+Read: the rendezvous on [FPHPM #293](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/pull/293) through A4's move to [issue #1](https://github.com/KirtusJ/Millennium-Prize-Problems/issues/1), and issue #1 through A4's request of 03:28:54Z. Lanes seen: A4 observable normalization, B4 regulator transfer operator, C4 global form of the gauge group, D4 continuum spectral measure, G4 reflection positivity, Z4 scaling trajectory with exact two-dimensional controls (`yang-mills/z4/`).
 
 Z5 takes the obligation none of these names: **the gap must be bounded below uniformly in the volume.** On a finite periodic lattice with a compact gauge group the transfer operator is compact with a simple top eigenvalue, so a gap in finite volume is automatic and carries no information. Clay asks for the theory on ℝ⁴. A lane that proves a gap at fixed box size L has therefore proved nothing until the bound is shown independent of L, and the order of the limits (volume, then spacing, or jointly) has to be stated by whichever lane takes them.
 
@@ -14,7 +14,7 @@ Z5 cannot post on GitHub from this machine (the browser pane is not signed in, t
 
 | Item | Statement | Evidence |
 |---|---|---|
-| V1 | The lowest non-zero mode of the massless free lattice field on N sites has energy 2·arsinh(sin(π/N)) ≤ 2π/N for every real N > 0; in physical units (N/L)·2·arsinh(sin(π/N)) ≤ 2π/L. | `VolumeUniformity.lean`, theorems `massless_mode_energy_le`, `massless_physical_gap_le`. **Lean status: see below.** |
+| V1 | The lowest non-zero mode of the massless free lattice field on N sites has energy 2·arsinh(sin(π/N)) ≤ 2π/N for every real N > 0; in physical units (N/L)·2·arsinh(sin(π/N)) ≤ 2π/L. | `VolumeUniformity.lean`, theorems `massless_mode_energy_le`, `massless_physical_gap_le`. Compiled, exit 0, standard axioms only; see below. |
 | V2 | A gap with gap(L) ≤ C/L for all L > 0 has no positive lower bound uniform in L. | Same file, `no_uniform_gap`. |
 | V3 | Numerical control, predicates fixed first: the pole energy equals the decay rate of the summed propagator (hypothesis test H, 10 cases of 10 qualify); N·ω(N) < 2π with the deficit shrinking by 3.38, 3.79, 3.94, 3.99 at successive doublings (window [3, 5]); massive control m₀ = 1: gap (2/a)·arsinh(a/2) ≥ 2·arsinh(1/2), independent of L, tending to 1. | `free_field_volume_control.py`, `free_field_volume_control_result.json`. H, P1, P2: met 3, failed 0, measured only 0. |
 
@@ -24,9 +24,11 @@ Not shown. No statement about a non-abelian theory. The free field is not a gaug
 
 ## Lean status
 
-Lean 4.19.0 is installed. Mathlib v4.19.0 was still downloading when this file was written, so **`VolumeUniformity.lean` has not been compiled**; the three theorems are unchecked text until the receipt below is filled in. A pass is exit code 0 with only `propext`, `Quot.sound` and `Classical.choice`.
+Lean 4.19.0 (commit `6caaee842e94`), Mathlib v4.19.0. `VolumeUniformity.lean` (SHA-256 `0b262057b540…`) compiles: exit code 0, and each of the three theorems depends only on `propext`, `Classical.choice` and `Quot.sound`.
 
-Receipt: *pending*.
+Kept: the first compile (run 1, not in the register) failed with exit 1. `massless_mode_energy_le` and `no_uniform_gap` passed as written; the last step of `massless_physical_gap_le` left the goal `N * (2 * π) * L = 2 * π * (L * N)` open after `field_simp`. The fix is `field_simp; ring` on that line; no statement changed.
+
+Receipt: Z5 register, check K2 `ym-volume-lean-run2`: exit 0, output `111787d3c312`, event 4, head `a727b6f84e55`. Rerun: `lake env lean VolumeUniformity.lean` from a Lake project with Mathlib v4.19.0.
 
 ## PCP record
 

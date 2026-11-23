@@ -42,7 +42,7 @@ theorem massless_physical_gap_le (N L : ℝ) (hN : 0 < N) (hL : 0 < L) :
   have hNL : 0 ≤ N / L := (div_pos hN hL).le
   calc (N / L) * (2 * Real.arsinh (Real.sin (Real.pi / N)))
       ≤ (N / L) * (2 * Real.pi / N) := mul_le_mul_of_nonneg_left h hNL
-    _ = 2 * Real.pi / L := by field_simp
+    _ = 2 * Real.pi / L := by field_simp; ring
 
 end Z5YM
 
