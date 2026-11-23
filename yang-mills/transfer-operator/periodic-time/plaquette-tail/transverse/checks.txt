@@ -1,0 +1,3 @@
+parallel squares and unique lateral faces on a transverse patch
+exact free-boundary capacity equations at radii one and two
+charged-cube minimum on the pi-over-five angle grid
