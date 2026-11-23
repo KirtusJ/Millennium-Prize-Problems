@@ -1,0 +1,38 @@
+[
+  {
+    "label": "negative_drop_staggered_sign",
+    "find": "else (-(1 : Int)) ^ (lowerBits x.val j)",
+    "replace": "else (1 : Int)",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_delete_wrapped_bond",
+    "find": "= 2 * 2 * (if x = y then 3 else 0)",
+    "replace": "= 2 * (if x = y then 3 else 0)",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_lose_square",
+    "find": "2*a*(c+b)+(a-b)^2",
+    "replace": "2*a*(c+b)",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_reverse_radius",
+    "find": "s ≤ q*v := by",
+    "replace": "s ≤ q*v/2 := by",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_reverse_jensen",
+    "find": "w i * angle i) ≤ ∑ i ∈ t, w i * (1 - Real.cos",
+    "replace": "w i * angle i) ≥ ∑ i ∈ t, w i * (1 - Real.cos",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_shrinking_physical_box",
+    "find": "(hbox : d ≤ a*L) (hgap : m*L ≤ C*h)",
+    "replace": "(hbox : a*L ≤ d) (hgap : m*L ≤ C*h)",
+    "diagnostic": "error:"
+  }
+]

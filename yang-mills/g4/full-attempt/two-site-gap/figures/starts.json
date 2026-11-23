@@ -1,0 +1,42 @@
+{
+  "title": "SU(2) open slab: hot and cold starts",
+  "provenance": "observed",
+  "source": "Wilson simulation, spatial side 2, time 96, beta 64. One batch standard error.",
+  "x_label": "1-2 short, 3-4 long, cold then hot",
+  "y_label": "mean normalized adjoint loop",
+  "x_domain": [
+    1,
+    4
+  ],
+  "y_domain": [
+    "13/20",
+    "19/20"
+  ],
+  "series": [
+    {
+      "name": "Central half of slab",
+      "data": [
+        [
+          1,
+          "229841/250000",
+          "14379/15625"
+        ],
+        [
+          2,
+          "345987/500000",
+          "139463/200000"
+        ],
+        [
+          3,
+          "919421/1000000",
+          "460017/500000"
+        ],
+        [
+          4,
+          "459453/500000",
+          "919533/1000000"
+        ]
+      ]
+    }
+  ]
+}
