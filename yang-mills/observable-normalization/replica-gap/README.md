@@ -34,3 +34,5 @@ Della Morte and Giusti used symmetry-resolved partition functions to compute the
 The [ordinary total plaquette](spectral-weight/) measures the first scalar state with an explicit quadratic loss of overlap. The same three intermediate energies determine its finite-lag effective-mass bias and give an independent continuous-time check.
 
 On an [open Wilson cube](thermal-count/) three trace periods distinguish a cluster of six states from its single lowest state, with certified bounds including all spins.
+
+[Exterior-power traces](exterior/) resolve the splitting between individual excited levels using several independent histories. A three-copy measurement separates the two lowest excitations on the finite Wilson cube.
