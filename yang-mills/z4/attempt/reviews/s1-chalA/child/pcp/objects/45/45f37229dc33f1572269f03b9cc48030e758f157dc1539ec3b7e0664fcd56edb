@@ -1,0 +1,8 @@
+/home/user/z4-workers/s1-chalA/child/run_main.py:47: RuntimeWarning: overflow encountered in expm1
+  -c*np.exp(-beta*a2**2/2)*(-np.expm1(beta*delta/2)))
+/home/user/z4-workers/s1-chalA/child/run_main.py:47: RuntimeWarning: invalid value encountered in multiply
+  -c*np.exp(-beta*a2**2/2)*(-np.expm1(beta*delta/2)))
+/home/user/z4-workers/s1-chalA/child/run_main.py:46: RuntimeWarning: overflow encountered in expm1
+  out=np.where(pos, c*np.exp(-beta*a1**2/2)*(-np.expm1(-beta*delta/2)),
+/home/user/z4-workers/s1-chalA/child/run_main.py:46: RuntimeWarning: invalid value encountered in multiply
+  out=np.where(pos, c*np.exp(-beta*a1**2/2)*(-np.expm1(-beta*delta/2)),
