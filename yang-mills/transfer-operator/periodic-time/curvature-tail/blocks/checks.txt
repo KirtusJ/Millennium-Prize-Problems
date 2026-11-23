@@ -1,0 +1,3 @@
+7776 vertex gauge transforms preserve the joint two-loop orbit
+576 two-face covariance minors checked with a shared-edge cross term
+24 proper color rotations cancel linear readings and preserve oriented volume
