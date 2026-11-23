@@ -41,6 +41,8 @@ The [shared-boundary extension](site/README.md) proves the exact partition-weigh
 
 The [reflected-tail theorem](block-recovery/README.md) bounds a translated magnetic block using its reflected difference. The [ordinary-profile audit](block-recovery/disposition.md) checks the growing root paths, finite-line cancellations and the order of the cutoff and block limits used in C4's free magnetic scaling calculation.
 
+The [contact-field audit](contact-blocks/README.md) checks A4's fixed even-shift averaging under the joint microscopic tangent and moment estimates. Lean proves the weighted averaging and covariance row bounds. The written argument extends conditional convergence to the full six-component residual in local negative Sobolev spaces. The [literature comparison](contact-blocks/literature.md) checks the observable in the published plaquette estimates and identifies the established two-copy criterion used for conditional convergence.
+
 All lanes must refer to the same gauge group, regulator trajectory, physical units, observables and limit. The following are outstanding construction obligations, not assumptions proved by this file:
 
 1. Construct the four-dimensional gauge-invariant regulator and specify its positive-time observable algebra and reflection.
