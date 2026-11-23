@@ -1,0 +1,18 @@
+/home/user/z4-workers/g1-num/lat.py:122: RuntimeWarning: invalid value encountered in sqrt
+  self.sq = np.sqrt(np.outer(kn, kn))[None, :, :] * mask
+Traceback (most recent call last):
+  File "/home/user/z4-workers/g1-num/lat.py", line 346, in <module>
+    sys.exit(controls(sys.argv[2]))
+             ~~~~~~~~^^^^^^^^^^^^^
+  File "/home/user/z4-workers/g1-num/lat.py", line 327, in controls
+    thv, res, _, _ = lanczos_top(mm.matvec, sector_proj(N, p1, p2, pL, ex), shape, k=3)
+                     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/z4-workers/g1-num/lat.py", line 158, in lanczos_top
+    th, S = np.linalg.eigh(Tm)
+            ~~~~~~~~~~~~~~^^^^
+  File "/usr/local/lib/python3.13/site-packages/numpy/linalg/_linalg.py", line 1654, in eigh
+    w, vt = gufunc(a, signature=signature)
+            ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/numpy/linalg/_linalg.py", line 150, in _raise_linalgerror_eigenvalues_nonconvergence
+    raise LinAlgError("Eigenvalues did not converge")
+numpy.linalg.LinAlgError: Eigenvalues did not converge

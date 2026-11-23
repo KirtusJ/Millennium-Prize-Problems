@@ -1,0 +1,2 @@
+check K78: exit 0 (expected 0) in 2875612 ms | output 8542bdb094f5 | event 80 head 0588838f091a
+  /home/user/z4-workers/g1-num/report.md — verdicts: STANDS 12, DEFECT 0, NOT CHECKED 2 (predicates: met 119, failed 3, measured only 21).

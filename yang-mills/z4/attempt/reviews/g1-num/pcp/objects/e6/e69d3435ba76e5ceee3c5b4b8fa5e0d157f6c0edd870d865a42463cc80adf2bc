@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/g1-num/lat.py", line 367, in <module>
+    print(s['center'], s['Lpar'], s['exch'], ['%.10f' % (-np.log(l / lam0)) for l in s['lam']],
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          'maxres/lam0 %.1e' % (max(s['res']) / lam0), 'it', s['iters'])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/user/z4-workers/g1-num/lat.py", line 367, in <module>
+    print(s['center'], s['Lpar'], s['exch'], ['%.10f' % (-np.log(l / lam0)) for l in s['lam']],
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          'maxres/lam0 %.1e' % (max(s['res']) / lam0), 'it', s['iters'])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+BrokenPipeError: [Errno 32] Broken pipe

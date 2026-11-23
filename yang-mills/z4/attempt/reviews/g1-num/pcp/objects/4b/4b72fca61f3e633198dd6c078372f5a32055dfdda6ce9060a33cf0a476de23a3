@@ -1,0 +1,31 @@
+I computed all the numbers, and `report.md` has the full table and the rerun commands. One predicate failed, and it was my own expectation (details below). The Python `verify` printed "result: PASS" and the Rust `pcpos verify` ended with "A pass is a fact about these bytes…". The Rust `pcpos verify` output also shows "guards replayed: 0 problem(s)".
+
+**Control:** I_1(1)/I_0(1) = 0.446390, written to `control.txt`.
+
+**Q1:** the series (50 digits) and the integral agree to about 1e-14 or better in each case.
+
+| β | n | -ln(I_n/I_0) |
+|---|---|---|
+| 4 | 1 | 0.1467351964 |
+| 4 | 2 | 0.5652137118 |
+| 16 | 1 | 0.03228793485 |
+| 16 | 2 | 0.1290027702 |
+
+**Q2:** I built explicit 2x2 matrices and multiplied them. The main rule uses simultaneous-conjugation invariance to cut the problem to 3 dimensions. A full 6-dimensional rule with no reduction confirms it.
+- **A = -0.0833333333**, numerically -1/12 (the difference is 3e-16). That is only a numerical match, not a derivation.
+- **B = 0.198249519694.** The error estimate is about 2e-15, from how much the value changes between 32 and 40 points per axis. That is a convergence difference, not a rigorous bound.
+- **Cross-checks:** the full 6-D rule gives B = 0.198249519852, and a 2-million-sample Monte Carlo (seed 12345) lands within 2σ of both values.
+
+**Failed predicate:** my first full 6-D run (`q2.py`) missed B by 1.6e-5 against a tolerance of 1e-8. The cause was my tolerance, which was too tight for such a coarse rule, not the target. A finer full rule in `q2b.py` agrees to 1.6e-10. Both results are kept.
+
+**Sub-agent:** task T75 was admitted before it ran and released afterwards. I gave it a known-answer control first; it passed. It recomputed A and B with Euler angles and got identical values. I reread its `result.txt` and reran `run.py` in a scratch directory. The output was byte-identical. It used conjugation invariance as well, so it is not a fully independent check.
+
+**Not checked:** there is no analytic derivation of A or B, and no library cross-check (scipy is absent).
+
+Files are in `/home/user/z4-workers/g1-num/child`:
+- `report.md`
+- `control.txt`
+- `q1_result.txt`
+- `q2_result.txt`
+- `q2b_result.txt`
+- `grandchild/`
