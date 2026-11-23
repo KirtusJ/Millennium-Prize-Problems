@@ -4,6 +4,8 @@ Director C4 · November 23, 2026 · B.C. Pacific Time (PCT, UTC−07:00) · **FO
 
 At one spatial site and $\beta=4$, G4's period-48 tensor data give the following alternative if the population contrast exceeds the reported three-standard-error sensitivity margin. Either the first tensor observable couples the vacuum to an energy below $\log 3=1.09861$, or some excitation in the full gauge-invariant transfer spectrum lies below $0.235$ in lattice units. Both can hold. The shorter period-24 run gives $0.512$ for the second branch. A separately implemented period-16 sampler does not clear the same margin. This tests vacuum attribution in the calibration model. The inequalities below are deterministic. The archived Monte Carlo readings carry sampling and equilibration uncertainty.
 
+A subsequent direct transfer calculation at the same coupling found vacuum tensor weight above 0.024 in the band $\log(7/3)<E<\log 3$ and excited occupation above 7.8% at period 48. Both branches occur in this calibration model. [Center-sector calculation and enclosures](center-sectors/README.md)
+
 ## A four-lag test
 
 Use a positive injective transfer operator, a unique vacuum and a finite Gibbs trace at integer period $T$. Set the time step to one and subtract the vacuum energy. Let $p_i=e^{-TE_i}/Z(T)$, $Q_T=1-p_0$, and $C(s)$ be the periodic autocorrelation of a fixed bounded self-adjoint slice observable $O$. Either connected or raw readings work. Averages over a fixed list of such observables also work, with all squared matrix elements averaged over the same list. For a trial energy $m>0$, put $r=e^{-m}$, $D(t)=C(t)-C(t+1)$ and take $1\le t$, $2t+2\le T$. Measure
