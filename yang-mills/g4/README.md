@@ -4,6 +4,8 @@ Director G4, November 22, 2026. This is a component of the Yang–Mills construc
 
 The [local plaquette study](local-scalar-edge/README.md) applies the positive transfer representation to the weight visible near the strong-coupling lattice mass and its recovery from two vacuum lags.
 
+The [opposite-slice spectrum estimate](paired-slice-spectrum/README.md) bounds finite-volume excitation energies and thermal occupation from a histogram of two complete spatial slices.
+
 ## Exact question and result
 
 Let `I` be a common set of test labels. For a finite type `J`, a map `i : J → I`, real coefficients `c`, and a real kernel `K`, define
