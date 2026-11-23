@@ -1,0 +1,3 @@
+216 two-lasso orbits preserve joint law and open-bridge independence
+48 oriented central faces give the radius-one diagonal 7/24
+49 exact conditional fourth-moment controls for the quadratic action
