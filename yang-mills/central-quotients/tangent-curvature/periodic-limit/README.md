@@ -25,6 +25,8 @@ A four-dimensional nearest-neighbor Gaussian control separates three requirement
 
 Free-field controls for the interaction hypothesis exhibit a nonzero raw two-particle shift in a cubic symmetry channel and calculate the full Wick-square susceptibility ratio under two length normalizations. [Interaction criteria and matching](interaction-controls/README.md)
 
+A regular tetrahedron distinguishes the Maxwell action from quadratic observables in finitely many scalar generalized free fields. The same calculation gives the perturbative trace coefficient and gapped free controls for lower-order ultraviolet tests. [Four-point shape test and short-distance matching](short-distance-controls/README.md)
+
 ## Verification
 
 Two three-generation PCP OS deployments returned identical Lean source. The parent counted live links and temporal faces, the child counted distinct reflected faces and their multiplicities, and the grandchild computed a geometric crossing and emitted the general spectral implication. Hosted Lean 4.19.0 verified ten supporting declarations. In particular, fixed-lag convergence of moment arrays with the stated exponential lower bounds forces the contraction norms to tend to one. Each run rejected an invalid guest request and four changed mathematical statements. The identification of the Wilson field, reflection estimates and application of the transfer construction remain analytic proofs. [Lean source](PeriodicCriticality.lean) · [Guest source](worker.c) · [Receipts](receipts.zip)
