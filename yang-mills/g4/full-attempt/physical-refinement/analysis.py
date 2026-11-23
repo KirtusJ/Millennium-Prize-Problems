@@ -103,7 +103,8 @@ def plaquette_stats(selected,n,t,margin):
             yield "ratio","plaq_cell",label,*estimates(joint,lambda v:connected(v[...,:split],k)/connected(v[...,split:],0))
 
 def rows(path,incomplete=False):
-    for (n,phase),(t,streams) in sorted(read_streams(path,incomplete).items()):
+    ensembles=read_streams(path,incomplete)
+    for (n,phase),(t,streams) in sorted(ensembles.items()):
         groups=[("all",streams)]
         if len(streams)>1:
             groups += [(tag,[s for s in streams if s[0]==i]) for i,tag in enumerate(("cold","hot"))]
@@ -138,6 +139,23 @@ def rows(path,incomplete=False):
                                 return (np.log(u[...,0])-np.log(u[...,1]))/(end-start)
                         val=metric([(p,start),(p,end)],logratio)
                         yield (*prefix,margin,"eff",p,f"{start}-{end}",*val)
+    for (n,phase),(t,streams) in sorted(ensembles.items()):
+        if phase!="smoothed" or (n,"production") not in ensembles:continue
+        bare={seed:a for _,seed,a in ensembles[n,"production"][1]}
+        pairs=[(bare[seed][:len(a)],a) for _,seed,a in streams if seed in bare]
+        if not pairs:continue
+        prefix=n,"paired",t,"all",len(pairs),len(pairs[0][0])
+        for margin in (1,2):
+            for p in PROBES:
+                stats=[]
+                for x,y in pairs:
+                    values=[]
+                    for a in (x,y):
+                        obs=a[:,margin*n:t+1-margin*n,SLICES[p]]
+                        values.extend((corr(obs,obs,n),corr(obs,obs,0)))
+                    stats.append(np.stack(values,axis=-1))
+                def gain(v):return v[...,2]/v[...,3]-v[...,0]/v[...,1]
+                yield (*prefix,margin,"gain",p,1.,*estimates(stats,gain))
 
 HEADER=("N","phase","T","starts","streams","samples_per_stream","margin_L","stat","probe","tau_over_L","value","se")
 def write(path,out,incomplete=False):

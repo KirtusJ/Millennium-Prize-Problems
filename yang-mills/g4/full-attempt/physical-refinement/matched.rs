@@ -340,6 +340,30 @@ mod wilson {
     }
     pub fn run() {
         let args: Vec<_> = env::args().collect();
+        if args.get(1).map(String::as_str) == Some("holonomies") {
+            use std::io::BufRead;
+            let mut rng = Rng { state: 1 };
+            let mut lat = Lattice::new(4, 4, true, false, &mut rng);
+            for line in std::io::stdin().lock().lines() {
+                let values: Vec<f64> = line
+                    .unwrap()
+                    .split_whitespace()
+                    .map(|s| s.parse().unwrap())
+                    .collect();
+                assert_eq!(values.len(), 12);
+                for row in &mut lat.links {
+                    for axis in 0..3 {
+                        row[axis].copy_from_slice(&values[4 * axis..4 * axis + 4]);
+                    }
+                }
+                let s = lat.probes()[0];
+                println!(
+                    "{:.16} {:.16} {:.16} {:.16} {:.16} {:.16}",
+                    s[2], s[3], s[4], s[8], s[9], s[10]
+                );
+            }
+            return;
+        }
         if args.get(1).map(String::as_str) == Some("check") {
             checks();
             return;
