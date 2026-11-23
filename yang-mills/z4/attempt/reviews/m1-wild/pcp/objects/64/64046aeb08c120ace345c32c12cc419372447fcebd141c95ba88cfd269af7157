@@ -1,0 +1,40 @@
+Waiting for the sub-agent to finish; nothing else to do until its result arrives.
+
+I've finished the work and written `report.md`. Within n ≤ 8, all three claims hold numerically. The accuracy rests on grid-extrapolation spread, not a rigorous bound.
+
+| n | G(n) | π²n⁴G | n²(π²n⁴G − 1) |
+|---|---|---|---|
+| 0 | 0.5000000000 | | |
+| 1 | 6.8874745841e-02 | 0.6798 | −0.32 |
+| 2 | 1.1152717660e-02 | 1.7612 | 3.04 |
+| 3 | 2.2622376448e-03 | 1.8085 | 7.28 |
+| 4 | 6.0539626230e-04 | 1.5296 | 8.47 |
+| 5 | 2.1313129258e-04 | 1.3147 | 7.87 |
+| 6 | 9.3343333444e-05 | 1.1940 | 6.98 |
+| 7 | 4.7648158258e-05 | 1.1291 | 6.33 |
+| 8 | 2.7023207362e-05 | 1.0924 | 5.92 |
+
+- **(a) G(0) = 1/2:** stands numerically. I got 0.500000000000, but that is not a proof.
+- **(b) G(n) > 0 for 1 ≤ n ≤ 8:** stands. The smallest value is 2.7e-5, against an error of about 1e-12.
+- **(c) π²n⁴G → 1:** stands as a trend only. The values for n = 3 to 8 fall steadily toward 1, but n = 2 to 3 rises (1.76 to 1.81). I did not check the n → ∞ limit or the O(n⁻⁶) correction analytically.
+- **(c) n²(π²n⁴G − 1) bounded:** stands. The maximum is 8.47 at n = 4, and it falls to 5.9 by n = 8.
+
+**Tolerance:** the midpoint-grid results (N = 48 to 384, Richardson extrapolation assuming h⁴ error) agree across levels to about 6e-14. I claim 1e-12. This is a spread between grid levels, not an analytic error bound.
+
+**Hint:** I used it, and checked it against a brute-force 4D grid at n = 0, 1, 2. They agree to the 8 digits printed, limited by that coarse grid.
+
+**Delegated check (task T131, admitted and released):** the sub-agent computed G(1) by a Bessel-function (Schwinger) integral and got 0.0688747458405 (error estimate about 1e-12). That matches mine. Its known-answer control was 1.000000. I reread its notes and reran its script in a fresh directory, with the same output.
+
+**Failed predicates:** none. The tolerances (1e-6, 1e-3, 10) were my own choices, not derived. The "decreasing toward 1" predicate was judged by eye from the table, not tested in code.
+
+**Not checked:** a rigorous error bound, n > 8, and an analytic proof of (a) or of the n⁻⁴ coefficient.
+
+**PCP record:** the register holds one check, `g130`, with exit 0. The grandchild rerun is not in it, because the harness blocked the shell wrapper I tried. I also moved the first `g130_result.txt` aside (copy at `/tmp/claude-0/g130_result_keep.txt`) so the program could be rerun under `check`. The two are identical by `diff`.
+
+Last lines of the two verifies:
+- **Python:** `result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)`
+- **Rust:** `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.`
+
+My counts are 5 met, 0 failed, 1 measured only (the n → ∞ asymptotics).
+
+Everything is in `/home/user/z4-workers/m1-wild/child/`. Open `report.md` first; it also has the rerun commands.

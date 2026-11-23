@@ -1,0 +1,2 @@
+check K96: exit 0 (expected 0) in 543629 ms | output 7eab26ddd1bf | event 98 head 66cb85ebd66c
+  /home/user/z4-workers/m1-wild/report.md: 5 STANDS, 0 DEFECT, 3 NOT CHECKED (predicates: 11 met, 0 failed, 2 measured only).

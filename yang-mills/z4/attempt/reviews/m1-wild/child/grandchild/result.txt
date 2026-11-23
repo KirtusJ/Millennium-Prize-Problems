@@ -1,0 +1,11 @@
+G1 = 0.0688747458
+err_est = 1.00e-12
+predicates = PASS
+P2 max err = np.float64(2.643718577388654e-15)
+G = np.float64(0.06887474584050395)
+body = np.float64(0.0688712178463684)
+tail = np.float64(3.5279941355388217e-06)
+P3 = np.float64(1.3877787807814457e-17)
+P4 spread = np.float64(1.249000902703301e-16)
+P5 rel = np.float64(0.00016679183568246714)
+P6 cos->1 value = np.float64(0.5000000000000006)
