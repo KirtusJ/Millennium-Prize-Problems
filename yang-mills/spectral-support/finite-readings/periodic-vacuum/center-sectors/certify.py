@@ -125,12 +125,13 @@ def radial(n,l,x):
     return (1-x.square())**(l//2)*g/I.rational(norm).sqrt()
 
 
-def interval_matrices(bases,kinetics):
+def interval_matrices(bases,kinetics, *, include_square=False):
     labels=sorted({ls for basis in bases for _,ls,_ in basis},key=lambda x:(sum(x),x))
     index={l:i for i,l in enumerate(labels)}
     max_n=max(max(ns) for basis in bases for ns,_,_ in basis)
     max_l=max(max(l) for l in labels)
-    assert 2*max_n+2*DEGREE+2<=2*ORDER-1 and 2*max_l+2*DEGREE<=2*ORDER-1
+    observable_degree = 4 if include_square else 2
+    assert 2*max_n+2*DEGREE+observable_degree<=2*ORDER-1 and 2*max_l+2*DEGREE<=2*ORDER-1
 
     v,w=rule("P")
     z,wz=rule("T")
@@ -163,6 +164,7 @@ def interval_matrices(bases,kinetics):
         lo[sl],hi[sl]=val.lo,val.hi
     integral=I(lo,hi)
     obs=(s[0]-s[1])/I(2).sqrt()
+    factors=(1,obs,obs.square()) if include_square else (1,obs)
     results=[]
     for basis,kin in zip(bases,kinetics):
         tags=np.array([index[ls] for _,ls,_ in basis])
@@ -170,14 +172,14 @@ def interval_matrices(bases,kinetics):
                for i,(n,l) in enumerate(zip(ns,ls))}
         radial_basis=stack([wr*kin[ns]*cache[0,ns[0],ls[0]]*cache[1,ns[1],ls[1]]
                             *cache[2,ns[2],ls[2]] for ns,ls,_ in basis])
-        shape=(2,len(basis),len(basis))
+        shape=(len(factors),len(basis),len(basis))
         lower,upper=np.empty(shape),np.empty(shape)
         for i in np.unique(tags):
             rows=np.flatnonzero(tags==i)
             for j in np.unique(tags[tags<=i]):
                 cols=np.flatnonzero(tags==j)
                 block=integral[:,slots[i,j]]*radial_basis[rows]
-                for k,fac in enumerate((1,obs)):
+                for k,fac in enumerate(factors):
                     val=mat(block*fac,radial_basis[cols].T)
                     ij,ji=np.ix_(rows,cols),np.ix_(cols,rows)
                     lower[k][ij],upper[k][ij]=val.lo,val.hi
