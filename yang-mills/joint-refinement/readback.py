@@ -76,7 +76,7 @@ def fixed_windows(ana,data):
         values.append((float(avg),float(error)))
     return values
 
-def audit(sampler=None):
+def audit(sampler=None,scipy=False):
     with ZipFile(ROOT/"z4-controls.zip") as arch,TemporaryDirectory() as tmp:
         manifest=json.loads(arch.read("manifest.json"))
         assert manifest["revision"]==PIN
@@ -91,6 +91,11 @@ def audit(sampler=None):
                 assert h==manifest["git_blobs"][k]
         arch.extractall(tmp)
         root=Path(tmp)
+        source=(root/"fixed-box/check_global.py").read_bytes()
+        assert hashlib.sha1(f"blob {len(source)}".encode()+bytes([0])+source).hexdigest()=="fd89f0fea8e3483ab1bb7a03e580d42be9084304"
+        if scipy:
+            observed=subprocess.check_output([sys.executable,"-B",root/"fixed-box/check_global.py"],text=True)
+            assert observed.splitlines()==(root/"fixed-box/output.txt").read_text().splitlines()
         module=load(root/"author/i1-mc3/mc3.py","z4_mc3")
         tests=bridge(module,sampler)
         ana=load(root/"author/i1-mc3/analyse3.py","z4_analysis")
@@ -139,5 +144,6 @@ def audit(sampler=None):
 if __name__=="__main__":
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--sampler",type=Path)
+    p.add_argument("--scipy",action="store_true",help="also replay A4's fixed-exterior numerical checks")
     a=p.parse_args()
-    audit(a.sampler.resolve() if a.sampler else None)
+    audit(a.sampler.resolve() if a.sampler else None,a.scipy)
