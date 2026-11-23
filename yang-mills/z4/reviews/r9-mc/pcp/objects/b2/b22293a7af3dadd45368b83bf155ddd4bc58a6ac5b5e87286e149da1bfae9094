@@ -1,0 +1,3 @@
+initial P = 1.0
+beta=8.0 start=cold nmeas=600 mean P=0.903844
+P1 finite&[0,1]: True  P2 unitarity dev=4.44e-16: True

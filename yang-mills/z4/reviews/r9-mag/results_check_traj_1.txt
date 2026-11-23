@@ -1,0 +1,5 @@
+T1: MET | m=1 ratios L,beta: 6.3,4; 46,22; 3.8e+02,1.4e+02; 3.3e+03,1.1e+03; 2.9e+04,8.7e+03; 2.7e+05,7.2e+04
+T2: MET | beta_AF/(r^12 l): 3.4e-13, 3.7e-25, 3.7e-37, 3.7e-49, 3.7e-61, 3.7e-73
+T3: FAILED | error: 1.55e+00, 1.14e+00, 8.25e-01, 5.92e-01, 4.25e-01, 3.08e-01
+T4: MET | qualifying 9841/10000, violations 0
+M: MEASURED | r=10: beta/beta_AF=1.2e+17, g^2=4.0e-17; r=100: beta/beta_AF=5.8e+33, g^2=4.0e-34; r=1000: beta/beta_AF=3.9e+50, g^2=4.0e-51; unscaled plaquette covariance factor 1/beta^2 at r=10: 1.0e-34

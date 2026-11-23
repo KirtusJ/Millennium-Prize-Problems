@@ -1,0 +1,25 @@
+B1 qualifying 20000 of 24811 draws
+   min ratio in random sample: 6.396767
+B4 L=1 A=1 D=0.5: min nu/w = inf at band atom e=1.00000, upper atom E=2.00000 (U=2.0)
+B4 L=1 A=1 D=1.0: min nu/w = inf at band atom e=1.00000, upper atom E=4.00000 (U=4.0)
+B4 L=1 A=1 D=2.0: min nu/w = inf at band atom e=1.00000, upper atom E=8.00000 (U=8.0)
+B4 L=1 A=1 D=5.0: min nu/w = 6.831511 at band atom e=5.39143, upper atom E=21021.00000 (U=20.0)
+B4 L=1 A=1 D=20.0: min nu/w = 4.747984 at band atom e=26.27417, upper atom E=84084.00000 (U=80.0)
+B4 L=1 A=1 D=100.0: min nu/w = 3.882753 at band atom e=155.53820, upper atom E=420420.00000 (U=400.0)
+   overall min ratio over D grid: 3.882753
+B5 generic random search min ratio: 6.961193
+B6 first g with k/18 >= A/16: 0.26669 (17/64=0.26562); at g=1e-4: A/16=0.07031k vs k/18=0.05556k
+B7 (report only) A/(4K_F)<=k/18 for g>=17/64: True; max A/(4K_F)/(k/18) over g>=17/64: 0.9992; over all g: 1.2655; large-g A/(4K_F)=0.00774k
+   g=0.01      A/16=0.06962  A/(4K_F)=0.06962  k/18=0.05556
+   g=0.1       A/16=0.06392  A/(4K_F)=0.06392  k/18=0.05556
+   g=0.2656    A/16=0.05556  A/(4K_F)=0.05556  k/18=0.05556
+   g=1         A/16=0.03516  A/(4K_F)=0.03516  k/18=0.05556
+   g=10        A/16=0.00889  A/(4K_F)=0.00889  k/18=0.05556
+   g=100       A/16=0.00313  A/(4K_F)=0.00731  k/18=0.05556
+   g=1e+04     A/16=0.00033  A/(4K_F)=0.00774  k/18=0.05556
+B1 PASS
+B2 PASS
+B3 PASS
+B4 PASS
+B5 PASS
+B6 PASS

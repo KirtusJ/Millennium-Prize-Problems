@@ -1,0 +1,2 @@
+check K40: exit 0 (expected 0) in 1904887 ms | output 596ae446d347 | event 46 head 81d307330d95
+  C:/Users/donke/z4-workers/r9-mc/report.md — items: STANDS 5, DEFECT 1 (the brief's strong-coupling formula), NOT CHECKED 2; predicates (met, failed, measured only) = 23, 5, 26, where the 5 failures are runs I stopped early for time.

@@ -1,0 +1,8 @@
+E1 PASS
+  99/32 - q* = 39167/442368 0.08853940610532407
+E2 PASS
+E3 PASS
+E4 PASS
+E5 PASS
+  instances: 20000  max (2u-u^2)/S seen: 5.31753 (bound 5.5)
+ALL PASS

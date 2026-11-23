@@ -1,0 +1,81 @@
+
+=== beta=0.5  configs=600 (segments [600])  bin B=30 ===
+  binning, error of plaq / of VarW_1: B=1: 1.3e-04/9.4e-05 | B=5: 1.3e-04/9.6e-05 | B=10: 1.2e-04/9.2e-05 | B=25: 1.3e-04/1.2e-04 | B=50: 1.3e-04/1.2e-04
+  binning, error of C_1(1): B=1: 8.40e-05 | B=5: 8.33e-05 | B=10: 7.54e-05 | B=25: 8.50e-05 | B=50: 9.85e-05
+  plaq = 0.12375 +- 0.00012
+  P1b I2/I1=0.123718 diff 0.000030 tol 0.000575 MET
+      measured only: beta/4-beta^3/96=0.123698 (diff 0.000050); brief's beta/4-(beta/4)^3/6=0.124674 (diff -0.000927, -7.4 sigma)
+  P1e halves 0.12371 vs 0.12379 : 0.3 sigma MET
+  R=1: <W>=0.12371+-0.00022 (free LO -0.4996, ratio -0.248)  VarW=2.423e-01+-1.1e-04 (free LO 1.499e+00, ratio 0.162+-0.000)
+    n=1 C=1.127e-04+-9.2e-05  Cfree(L8)=2.837e-02 (inf-vol 2.846e-02)  C/Cfree=0.004+-0.003  rho/rho_free=0.259+-0.212  corr/corr_free=0.025+-0.020  (corr=0.0005)
+    n=2 C=-2.984e-05+-6.7e-05  Cfree(L8)=7.392e-04 (inf-vol 7.463e-04)  C/Cfree=-0.040+-0.091  rho/rho_free=-2.638+-5.947  corr/corr_free=-0.250+-0.563  (corr=-0.0001)
+    n=3 C=-5.616e-05+-7.5e-05  Cfree(L8)=3.278e-05 (inf-vol 3.070e-05)  C/Cfree=-1.713+-2.300  rho/rho_free=-111.946+-150.322  corr/corr_free=-10.600+-14.235  (corr=-0.0002)
+  R=2: <W>=0.00038+-0.00015 (free LO -3.1013, ratio -0.000)  VarW=2.500e-01+-7.1e-05 (free LO 1.121e+01, ratio 0.022+-0.000)
+    n=1 C=2.582e-05+-8.8e-05  Cfree(L8)=4.123e-01 (inf-vol 4.184e-01)  C/Cfree=0.000+-0.000  rho/rho_free=428.443+-1698.778  corr/corr_free=0.003+-0.010  (corr=0.0001)
+    n=2 C=-8.428e-05+-1.0e-04  Cfree(L8)=2.179e-02 (inf-vol 2.265e-02)  C/Cfree=-0.004+-0.005  rho/rho_free=-26460.330+-44957.683  corr/corr_free=-0.173+-0.208  (corr=-0.0003)
+    n=3 C=9.739e-05+-1.0e-04  Cfree(L8)=1.942e-03 (inf-vol 1.868e-03)  C/Cfree=0.050+-0.051  rho/rho_free=343019.705+-375310.909  corr/corr_free=2.249+-2.299  (corr=0.0004)
+
+=== beta=2.2  configs=400 (segments [400])  bin B=20 ===
+  binning, error of plaq / of VarW_1: B=1: 1.9e-04/1.2e-04 | B=5: 3.0e-04/1.6e-04 | B=10: 2.8e-04/1.5e-04 | B=25: 2.7e-04/1.7e-04 | B=50: 2.6e-04/1.5e-04
+  binning, error of C_1(1): B=1: 5.03e-05 | B=5: 5.27e-05 | B=10: 5.13e-05 | B=25: 5.04e-05 | B=50: 4.62e-05
+  plaq = 0.56922 +- 0.00022
+  P1a lit 0.5688 diff 0.00042 tol 0.00167 MET
+  P1e halves 0.56913 vs 0.56931 : 0.4 sigma MET
+  R=1: <W>=0.56925+-0.00022 (free LO 0.6592, ratio 0.864)  VarW=1.068e-01+-1.2e-04 (free LO 7.744e-02, ratio 1.379+-0.002)
+    n=1 C=3.617e-03+-5.4e-05  Cfree(L8)=1.466e-03 (inf-vol 1.470e-03)  C/Cfree=2.468+-0.037  rho/rho_free=7.616+-0.116  corr/corr_free=1.789+-0.026  (corr=0.0339)
+    n=2 C=2.235e-04+-3.9e-05  Cfree(L8)=3.818e-05 (inf-vol 3.855e-05)  C/Cfree=5.854+-1.033  rho/rho_free=18.064+-3.191  corr/corr_free=4.244+-0.747  (corr=0.0021)
+    n=3 C=-3.671e-05+-4.0e-05  Cfree(L8)=1.693e-06 (inf-vol 1.586e-06)  C/Cfree=-21.680+-23.715  rho/rho_free=-66.906+-73.180  corr/corr_free=-15.718+-17.198  (corr=-0.0003)
+  R=2: <W>=0.13621+-0.00052 (free LO 0.0679, ratio 2.007)  VarW=2.363e-01+-1.1e-04 (free LO 5.792e-01, ratio 0.408+-0.000)
+    n=1 C=4.622e-03+-1.1e-04  Cfree(L8)=2.129e-02 (inf-vol 2.161e-02)  C/Cfree=0.217+-0.005  rho/rho_free=11.699+-0.283  corr/corr_free=0.532+-0.013  (corr=0.0196)
+    n=2 C=1.957e-04+-1.2e-04  Cfree(L8)=1.125e-03 (inf-vol 1.170e-03)  C/Cfree=0.174+-0.111  rho/rho_free=9.375+-5.957  corr/corr_free=0.426+-0.271  (corr=0.0008)
+    n=3 C=1.521e-04+-9.0e-05  Cfree(L8)=1.003e-04 (inf-vol 9.648e-05)  C/Cfree=1.517+-0.900  rho/rho_free=81.747+-48.619  corr/corr_free=3.718+-2.205  (corr=0.0006)
+
+=== beta=2.3  configs=800 (segments [400, 400])  bin B=40 ===
+  binning, error of plaq / of VarW_1: B=1: 1.3e-04/7.7e-05 | B=5: 2.1e-04/1.1e-04 | B=10: 2.5e-04/1.2e-04 | B=25: 2.8e-04/1.4e-04 | B=50: 3.3e-04/1.6e-04 | B=100: 2.5e-04/1.5e-04
+  binning, error of C_1(1): B=1: 3.10e-05 | B=5: 3.13e-05 | B=10: 3.26e-05 | B=25: 2.96e-05 | B=50: 3.14e-05 | B=100: 3.20e-05
+  plaq = 0.60189 +- 0.00026
+  P1a lit 0.6024 diff 0.00051 tol 0.00179 MET
+  P1d seeds 0.60219+-0.00045 vs 0.60160+-0.00027 : 1.1 sigma MET
+  P1e halves 0.60276 vs 0.60162 : 1.3 sigma MET
+  P1e halves 0.60183 vs 0.60136 : 0.9 sigma MET
+  R=1: <W>=0.60177+-0.00026 (free LO 0.6740, ratio 0.893)  VarW=9.294e-02+-1.3e-04 (free LO 7.085e-02, ratio 1.312+-0.002)
+    n=1 C=3.066e-03+-3.4e-05  Cfree(L8)=1.341e-03 (inf-vol 1.345e-03)  C/Cfree=2.286+-0.025  rho/rho_free=6.313+-0.072  corr/corr_free=1.743+-0.019  (corr=0.0330)
+    n=2 C=1.587e-04+-2.6e-05  Cfree(L8)=3.493e-05 (inf-vol 3.527e-05)  C/Cfree=4.543+-0.753  rho/rho_free=12.546+-2.081  corr/corr_free=3.464+-0.574  (corr=0.0017)
+    n=3 C=4.219e-06+-3.4e-05  Cfree(L8)=1.549e-06 (inf-vol 1.451e-06)  C/Cfree=2.723+-22.051  rho/rho_free=7.520+-60.887  corr/corr_free=2.076+-16.813  (corr=0.0000)
+  R=2: <W>=0.17928+-0.00048 (free LO 0.1084, ratio 1.654)  VarW=2.272e-01+-1.4e-04 (free LO 5.300e-01, ratio 0.429+-0.000)
+    n=1 C=5.671e-03+-7.8e-05  Cfree(L8)=1.948e-02 (inf-vol 1.977e-02)  C/Cfree=0.291+-0.004  rho/rho_free=9.057+-0.116  corr/corr_free=0.679+-0.009  (corr=0.0250)
+    n=2 C=4.230e-04+-8.3e-05  Cfree(L8)=1.030e-03 (inf-vol 1.071e-03)  C/Cfree=0.411+-0.081  rho/rho_free=12.784+-2.539  corr/corr_free=0.958+-0.188  (corr=0.0019)
+    n=3 C=7.014e-06+-5.9e-05  Cfree(L8)=9.177e-05 (inf-vol 8.827e-05)  C/Cfree=0.076+-0.648  rho/rho_free=2.378+-20.160  corr/corr_free=0.178+-1.510  (corr=0.0000)
+
+=== beta=2.5  configs=400 (segments [400])  bin B=20 ===
+  binning, error of plaq / of VarW_1: B=1: 1.4e-04/7.9e-05 | B=5: 2.0e-04/1.0e-04 | B=10: 2.3e-04/1.1e-04 | B=25: 2.4e-04/1.2e-04 | B=50: 2.2e-04/1.3e-04
+  binning, error of C_1(1): B=1: 3.28e-05 | B=5: 3.57e-05 | B=10: 3.70e-05 | B=25: 3.16e-05 | B=50: 2.42e-05
+  plaq = 0.65255 +- 0.00022
+  P1a lit 0.6522 diff 0.00035 tol 0.00166 MET
+  P1e halves 0.65241 vs 0.65269 : 0.6 sigma MET
+  R=1: <W>=0.65249+-0.00025 (free LO 0.7001, ratio 0.932)  VarW=7.200e-02+-1.1e-04 (free LO 5.997e-02, ratio 1.201+-0.002)
+    n=1 C=2.012e-03+-4.1e-05  Cfree(L8)=1.135e-03 (inf-vol 1.139e-03)  C/Cfree=1.773+-0.036  rho/rho_free=4.163+-0.086  corr/corr_free=1.476+-0.029  (corr=0.0279)
+    n=2 C=1.218e-04+-2.7e-05  Cfree(L8)=2.957e-05 (inf-vol 2.985e-05)  C/Cfree=4.121+-0.911  rho/rho_free=9.680+-2.135  corr/corr_free=3.433+-0.761  (corr=0.0017)
+    n=3 C=-4.691e-05+-4.0e-05  Cfree(L8)=1.311e-06 (inf-vol 1.228e-06)  C/Cfree=-35.775+-30.166  rho/rho_free=-84.030+-70.864  corr/corr_free=-29.799+-25.124  (corr=-0.0007)
+  R=2: <W>=0.25993+-0.00065 (free LO 0.1797, ratio 1.446)  VarW=2.046e-01+-1.8e-04 (free LO 4.486e-01, ratio 0.456+-0.000)
+    n=1 C=5.410e-03+-8.9e-05  Cfree(L8)=1.649e-02 (inf-vol 1.674e-02)  C/Cfree=0.328+-0.005  rho/rho_free=4.856+-0.083  corr/corr_free=0.719+-0.012  (corr=0.0264)
+    n=2 C=3.361e-04+-6.5e-05  Cfree(L8)=8.715e-04 (inf-vol 9.061e-04)  C/Cfree=0.386+-0.075  rho/rho_free=5.707+-1.105  corr/corr_free=0.846+-0.164  (corr=0.0016)
+    n=3 C=-4.028e-05+-9.9e-05  Cfree(L8)=7.768e-05 (inf-vol 7.471e-05)  C/Cfree=-0.519+-1.270  rho/rho_free=-7.674+-18.781  corr/corr_free=-1.137+-2.786  (corr=-0.0002)
+
+=== beta=8.0  configs=800 (segments [400, 400])  bin B=40 ===
+  binning, error of plaq / of VarW_1: B=1: 2.4e-05/5.2e-06 | B=5: 2.5e-05/5.2e-06 | B=10: 2.7e-05/5.2e-06 | B=25: 2.6e-05/5.0e-06 | B=50: 2.3e-05/5.9e-06 | B=100: 1.7e-05/4.6e-06
+  binning, error of C_1(1): B=1: 2.00e-06 | B=5: 2.05e-06 | B=10: 2.10e-06 | B=25: 1.99e-06 | B=50: 2.23e-06 | B=100: 2.24e-06
+  plaq = 0.90355 +- 0.00003
+  P1c 1-3/(4b)=0.90625 diff 0.00270 tol 0.00634 MET ; measured only beta^2(1-3/4b-plaq)=0.173 +- 0.002
+  P1d seeds 0.90356+-0.00004 vs 0.90354+-0.00005 : 0.3 sigma MET
+  P1e halves 0.90357 vs 0.90356 : 0.1 sigma MET
+  P1e halves 0.90352 vs 0.90357 : 0.5 sigma MET
+  R=1: <W>=0.90356+-0.00003 (free LO 0.9063, ratio 0.997)  VarW=6.033e-03+-5.8e-06 (free LO 5.857e-03, ratio 1.030+-0.001)
+    n=1 C=1.226e-04+-2.2e-06  Cfree(L8)=1.108e-04 (inf-vol 1.112e-04)  C/Cfree=1.106+-0.020  rho/rho_free=1.355+-0.024  corr/corr_free=1.074+-0.019  (corr=0.0203)
+    P2 C(1)/Cfree(1)=1.106+-0.020 (resolution 2.0%) MET
+    n=2 C=6.564e-06+-2.4e-06  Cfree(L8)=2.887e-06 (inf-vol 2.915e-06)  C/Cfree=2.273+-0.843  rho/rho_free=2.785+-1.033  corr/corr_free=2.207+-0.819  (corr=0.0011)
+    n=3 C=1.261e-06+-2.0e-06  Cfree(L8)=1.280e-07 (inf-vol 1.199e-07)  C/Cfree=9.848+-15.242  rho/rho_free=12.062+-18.669  corr/corr_free=9.560+-14.798  (corr=0.0002)
+  R=2: <W>=0.75301+-0.00012 (free LO 0.7437, ratio 1.013)  VarW=3.507e-02+-3.7e-05 (free LO 4.380e-02, ratio 0.801+-0.001)
+    n=1 C=1.225e-03+-1.3e-05  Cfree(L8)=1.610e-03 (inf-vol 1.634e-03)  C/Cfree=0.761+-0.008  rho/rho_free=1.341+-0.014  corr/corr_free=0.950+-0.009  (corr=0.0349)
+    n=2 C=5.674e-05+-9.5e-06  Cfree(L8)=8.510e-05 (inf-vol 8.849e-05)  C/Cfree=0.667+-0.112  rho/rho_free=1.176+-0.197  corr/corr_free=0.833+-0.140  (corr=0.0016)
+    n=3 C=-7.496e-06+-9.3e-06  Cfree(L8)=7.586e-06 (inf-vol 7.296e-06)  C/Cfree=-0.988+-1.230  rho/rho_free=-1.743+-2.169  corr/corr_free=-1.234+-1.536  (corr=-0.0002)

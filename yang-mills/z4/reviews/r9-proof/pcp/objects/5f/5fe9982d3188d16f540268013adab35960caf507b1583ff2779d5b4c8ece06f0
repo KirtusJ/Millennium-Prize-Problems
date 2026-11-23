@@ -1,0 +1,5 @@
+'R9.jordan_khat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'R9.keep_terms' depends on axioms: [propext, Classical.choice, Quot.sound]
+'R9.keep_terms_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'R9.factor_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'R9.window_from_two_sided' depends on axioms: [propext, Classical.choice, Quot.sound]

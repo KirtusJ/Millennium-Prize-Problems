@@ -1,0 +1,63 @@
+MET   P0 N=8 t=0.05: C_pos=3.504042403907e+01 C_mom=3.504042403907e+01 rel=2.03e-16
+MET   P0 N=8 t=0.1: C_pos=5.455578188044e+00 C_mom=5.455578188044e+00 rel=1.95e-15
+MET   P0 N=8 t=0.2: C_pos=2.114363390052e-01 C_mom=2.114363390052e-01 rel=5.51e-15
+MET   P1 N=16: min w = 0.000e+00
+MET   P2 N=16: componentwise Jordan on all BZ modes
+MET   P3 N=16: fhat(0)/A-1 = 0.000e+00, eps_N=0.000e+00, max|fhat|/fhat(0)=1.000000000000000
+MET   P4 N=16 t=0.05: S_b=7.5868e+03 bound=1.8620e+05 ratio=24.54
+MET   P4 N=16 t=0.1: S_b=1.3392e+03 bound=1.4594e+04 ratio=10.90
+MET   P4 N=16 t=0.2: S_b=8.6464e+01 bound=1.4232e+03 ratio=16.46
+MET   P5 N=16 tau=0.05: v=4.7381e-03 <= C(2tau)=7.856139e+00 ; C(tau)=1.807619e+02 <= V=1.7202e+07
+MET   P6 N=16 t=0.05: C=1.8076e+02 <= 2F^2 S^2=2.8556e+04
+MET   P6 N=16 t=0.1: C=7.8561e+00 <= 2F^2 S^2=8.8981e+02
+MET   P5 N=16 tau=0.1: v=1.5865e-03 <= C(2tau)=1.363564e-01 ; C(tau)=7.856139e+00 <= V=1.0567e+05
+MET   P6 N=16 t=0.1: C=7.8561e+00 <= 2F^2 S^2=8.8981e+02
+MET   P6 N=16 t=0.2: C=1.3636e-01 <= 2F^2 S^2=3.7090e+00
+MET   P1 N=24: min w = 0.000e+00
+MET   P2 N=24: componentwise Jordan on all BZ modes
+MET   P3 N=24: fhat(0)/A-1 = -4.441e-16, eps_N=0.000e+00, max|fhat|/fhat(0)=1.000000000000000
+MET   P4 N=24 t=0.05: S_b=1.5710e+04 bound=1.8620e+05 ratio=11.85
+MET   P4 N=24 t=0.1: S_b=1.5169e+03 bound=1.4594e+04 ratio=9.62
+MET   P4 N=24 t=0.2: S_b=7.2531e+01 bound=1.4232e+03 ratio=19.62
+MET   P5 N=24 tau=0.05: v=4.7381e-03 <= C(2tau)=6.370839e+00 ; C(tau)=2.647727e+02 <= V=1.7202e+07
+MET   P6 N=24 t=0.05: C=2.6477e+02 <= 2F^2 S^2=1.2244e+05
+MET   P6 N=24 t=0.1: C=6.3708e+00 <= 2F^2 S^2=1.1416e+03
+MET   P5 N=24 tau=0.1: v=1.5865e-03 <= C(2tau)=1.233415e-01 ; C(tau)=6.370839e+00 <= V=1.0567e+05
+MET   P6 N=24 t=0.1: C=6.3708e+00 <= 2F^2 S^2=1.1416e+03
+MET   P6 N=24 t=0.2: C=1.2334e-01 <= 2F^2 S^2=2.6100e+00
+MET   P1 N=32: min w = 0.000e+00
+MET   P2 N=32: componentwise Jordan on all BZ modes
+MET   P3 N=32: fhat(0)/A-1 = 0.000e+00, eps_N=0.000e+00, max|fhat|/fhat(0)=1.000000000000000
+MET   P4 N=32 t=0.05: S_b=2.1436e+04 bound=1.8620e+05 ratio=8.69
+MET   P4 N=32 t=0.1: S_b=1.3908e+03 bound=1.4594e+04 ratio=10.49
+MET   P4 N=32 t=0.2: S_b=6.7493e+01 bound=1.4232e+03 ratio=21.09
+MET   P5 N=32 tau=0.05: v=4.7381e-03 <= C(2tau)=5.624381e+00 ; C(tau)=2.658404e+02 <= V=1.7202e+07
+MET   P6 N=32 t=0.05: C=2.6584e+02 <= 2F^2 S^2=2.2797e+05
+MET   P6 N=32 t=0.1: C=5.6244e+00 <= 2F^2 S^2=9.5970e+02
+MET   P5 N=32 tau=0.1: v=1.5865e-03 <= C(2tau)=1.197481e-01 ; C(tau)=5.624381e+00 <= V=1.0567e+05
+MET   P6 N=32 t=0.1: C=5.6244e+00 <= 2F^2 S^2=9.5970e+02
+MET   P6 N=32 t=0.2: C=1.1975e-01 <= 2F^2 S^2=2.2600e+00
+MET   P1 N=48: min w = 0.000e+00
+MET   P2 N=48: componentwise Jordan on all BZ modes
+MET   P3 N=48: fhat(0)/A-1 = -4.441e-16, eps_N=0.000e+00, max|fhat|/fhat(0)=1.000000000000000
+MET   P4 N=48 t=0.05: S_b=2.4279e+04 bound=1.8620e+05 ratio=7.67
+MET   P4 N=48 t=0.1: S_b=1.1679e+03 bound=1.4594e+04 ratio=12.50
+MET   P4 N=48 t=0.2: S_b=6.4672e+01 bound=1.4232e+03 ratio=22.01
+MET   P5 N=48 tau=0.05: v=4.7381e-03 <= C(2tau)=5.202153e+00 ; C(tau)=2.192743e+02 <= V=1.7202e+07
+MET   P6 N=48 t=0.05: C=2.1927e+02 <= 2F^2 S^2=2.9244e+05
+MET   P6 N=48 t=0.1: C=5.2022e+00 <= 2F^2 S^2=6.7670e+02
+MET   P5 N=48 tau=0.1: v=1.5865e-03 <= C(2tau)=1.173906e-01 ; C(tau)=5.202153e+00 <= V=1.0567e+05
+MET   P6 N=48 t=0.1: C=5.2022e+00 <= 2F^2 S^2=6.7670e+02
+MET   P6 N=48 t=0.2: C=1.1739e-01 <= 2F^2 S^2=2.0750e+00
+MET   P1 N=64: min w = 0.000e+00
+MET   P2 N=64: componentwise Jordan on all BZ modes
+MET   P3 N=64: fhat(0)/A-1 = 0.000e+00, eps_N=0.000e+00, max|fhat|/fhat(0)=1.000000000000000
+MET   P4 N=64 t=0.05: S_b=2.2261e+04 bound=1.8620e+05 ratio=8.36
+MET   P4 N=64 t=0.1: S_b=1.0873e+03 bound=1.4594e+04 ratio=13.42
+MET   P4 N=64 t=0.2: S_b=6.3833e+01 bound=1.4232e+03 ratio=22.30
+MET   P5 N=64 tau=0.05: v=4.7381e-03 <= C(2tau)=5.084593e+00 ; C(tau)=1.954588e+02 <= V=1.7202e+07
+MET   P6 N=64 t=0.05: C=1.9546e+02 <= 2F^2 S^2=2.4586e+05
+MET   P6 N=64 t=0.1: C=5.0846e+00 <= 2F^2 S^2=5.8650e+02
+MET   P5 N=64 tau=0.1: v=1.5865e-03 <= C(2tau)=1.165994e-01 ; C(tau)=5.084593e+00 <= V=1.0567e+05
+MET   P6 N=64 t=0.1: C=5.0846e+00 <= 2F^2 S^2=5.8650e+02
+MET   P6 N=64 t=0.2: C=1.1660e-01 <= 2F^2 S^2=2.0215e+00

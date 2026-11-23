@@ -1,0 +1,2 @@
+check K39: exit 0 (expected 0) in 1132977 ms | output 232db79813fa | event 45 head 726bb93d4da1
+  C:/Users/donke/z4-workers/r9-proof/report.md: 9 STANDS, 0 DEFECT, 1 NOT CHECKED; predicates 83 met, 1 failed (my program crashed in run K1), 31 measured only.

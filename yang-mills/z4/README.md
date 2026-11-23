@@ -372,3 +372,58 @@ Counts, as met, failed, measured only: contact 7, 0, 6 and its sub-agent 7, 0, 3
 At leading order the four lanes are describing one object from four sides: the free lattice gauge field with three colours. C4 has its curvature law at cutoff scale; A4 has a lower bound on its contact variance; D4 has the square-loop covariance; this folder has its positive-time correlators at fixed physical size. All constants now agree where they can be compared. What none of them has is the first quantity that is not free: a correction of relative order g² to any positive-time correlator at fixed physical size, with control of its logarithm. That logarithm is where the running coupling, and so any physical scale, would first appear.
 
 Director, workers and sub-agents are one model family; this is not independent review.
+
+
+## Eighth round: literature grounding, the free bounds proved, a first non-free measurement, C4's physical-time limit
+
+23 November 2026. Three workers (register checks K38, K39, K40), each with a sub-agent and its own register; all six replay. Reports: [`reviews/r9-proof/`](reviews/r9-proof/), [`reviews/r9-mc/`](reviews/r9-mc/), [`reviews/r9-mag/`](reviews/r9-mag/). The director reread the three reports, read the proof through, and recompiled the new Lean file (K41, exit 0, standard axioms).
+
+### External grounding
+
+At the principal's direction the work is now checked against the literature as it proceeds: [`LITERATURE.md`](LITERATURE.md). From search summaries and abstracts only; no paper was read in full. What it changes:
+
+- "The literature has none in four dimensions" (`OVERALL_DISPOSITION.md`, section 5) is too strong: Bałaban's ultraviolet stability bounds are weak-coupling results in four dimensions. What is not available is control of correlation functions in the continuum limit.
+- The convergence of the free benchmark is not new: Driver (1987) proves the harder compact U(1) case in four dimensions. The benchmark stays what it was called, a known-answer test.
+- The established fixed-physical-size observable is the action density at positive gradient-flow time (Lüscher; Lüscher and Weisz), which needs no renormalization beyond the coupling. S6′ of `fixed-size/STATEMENT.md` should use it in place of the time-evolved plaquette density, which mixes magnetic and electric parts.
+- Reflection positivity and a strong-coupling gap on the lattice are Osterwalder and Seiler (1978); uniform bounds on scaled plaquette correlations are Faria da Veiga and O'Carroll; a preprint of this month (arXiv:2611.11534) appears to overlap D4's entropy and electric-cutoff results. The other directors are told on the thread.
+
+### The free-benchmark bounds, proved
+
+[`fixed-size/PROOF_FREE_BOUNDS.md`](fixed-size/PROOF_FREE_BOUNDS.md) and [`lean/Z4YM/R9Bounds.lean`](lean/Z4YM/R9Bounds.lean). In the free lattice Maxwell benchmark, for f real, C⁴, periodic with ∫f ≠ 0, N ≥ 3 and b ≤ b₀: v(τ) ≤ C_b(2τ) and C_b(τ) ≤ V(τ), with v, V, b₀ explicit and independent of b. With S5 (e) this gives, uniformly in b, at least v/2 of the regularized spectral mass in [0, (1/τ)·log(2V/v)]: a nonzero vector with energy in a fixed physical window, for the free theory.
+
+- Route: momentum representation with every term nonnegative (checked against the position-space definition at N = 8 to 5·10⁻¹⁵ by two programs); upper bound by Jordan's inequality on the lattice momenta and a lattice-sum lemma; lower bound by keeping the four lowest pairs. In Lean: the Jordan bounds, the term-keeping and factorized bounds, and the corollary through S5 (e). In text only: the aliasing lemma, the lattice-sum lemma, the spectral identification.
+- Changes to the suggested route, all the worker's: the bound on the sampled Fourier coefficient comes from aliasing with ‖Δ²f‖₁, not from the inequality the brief suggested; N ≥ 3 is needed; modes along the third axis carry no weight and must not be the ones kept.
+- The bounds bracket the measured values in 10 of 10 cases and are loose: the window is [0, 187] at τ = 0.1 and [0, 454] at τ = 0.05 against a lowest energy near 12.57.
+- Not proved: convergence of C_b to C with a rate; uniformity in τ (v decays like e^(−8πτ/ℓ), V grows like τ⁻⁸); infinite volume (v → 0).
+- This proof has not yet been attacked by a challenger. It is a theorem about a Gaussian theory whose continuum limit is in the literature.
+
+### A first non-free number (measured only)
+
+A heat-bath simulation of SU(2) with the Wilson action on 8⁴ ([report](reviews/r9-mc/report.md)); one volume, one or two seeds, no continuum limit. Controls first: average plaquette 0.56935(16), 0.60226(11), 0.65251(8) at β = 2.2, 2.3, 2.5 against 0.5688, 0.6024, 0.6522 (values from memory, to about ±0.001; no table was found by search, see `LITERATURE.md` section 4); strong coupling 0.12375(12) against I₂/I₁ = 0.123718; an independent serial implementation on 4⁴ agrees.
+
+Connected covariance of a spatial square loop between time slices one step apart, against the free leading order (3/2)K²/β² of the seventh round:
+
+| β | loop | measured / free |
+|---|---|---|
+| 8.0 | 1×1 | 1.121(7) |
+| 8.0 | 2×2 | 0.784(3) |
+| 2.5 | 1×1 | 1.795(11) |
+| 2.5 | 2×2 | 0.338(2) |
+| 2.3 | 1×1 | 2.244(8) |
+| 2.3 | 2×2 | 0.284(1) |
+| 2.2 | 1×1 | 2.455(14) |
+| 2.2 | 2×2 | 0.212(2) |
+
+The free prediction holds to 12% at β = 8, with the excess resolved at 17 standard errors and of the size of an order-g² correction (not computed). At the couplings where lattice simulations are done it is wrong by factors of 2 to 5, in opposite directions for the two loop sizes. The mean-normalized covariance is 6 to 11 times the free value there, mostly because the mean is small. All of this is at fixed lattice size; the quantity the seventh round named, a correction at fixed physical size with its logarithm, was not measured and would need matched couplings and larger lattices. Time separation three was not resolved.
+
+Defect of the director's brief, found by the measurement: the strong-coupling check was written as β/4 − (β/4)³/6; the series of I₂/I₁ is β/4 − β³/96. The brief's form is 7 standard errors from the data.
+
+### C4's magnetic smearing and A4's adopted endpoint
+
+- C4 `magnetic-smearing`: the theorems stand as read. The limit is joint, with β growing at least like the twelfth power of the smearing radius in lattice units (sixteenth in the general case): a free three-colour field by construction. A logarithmic β fails the conditions by many orders of magnitude, and C4's third paragraph says the logarithmic trajectory lies outside. The limit is gapless: spectral mass below ε of order ε⁸, and a transfer gap tending to zero in physical units. C4's printed kernel and constants reproduce the continuum Maxwell values to 10⁻⁶. The linear rooted field is not gauge invariant; its norm is.
+- Two wordings read stronger than the theorems: the commit title "positive physical-time magnetic spectrum" (the theorems give weight down to zero energy, of a free field), and the README's first paragraph, which leaves the rescaling by powers of β, the rooting and the freeness to its third paragraph.
+- A4 `electric-endpoint`: A4 adopted the sharpened band of the sixth round and improved the lower edge from κ/153 to κ/18 by a better first-moment bound; the arithmetic checks and the bound holds on 20 000 random measures. One wording: "stronger uniform choice" is not stronger for g < 17/64, where A4's old edge A/16 is higher; the statement should be the maximum of the two.
+
+Counts, as met, failed, measured only: proof programs 63, 0, 31 and sub-agent 18, 0, 0; simulation controls and comparisons, the worker's five long runs stopped early for time and recorded as failed checks, blocks kept; magnetic 11, 1, 2 (one failure the worker's own expectation of a rate).
+
+Director, workers and sub-agents are one model family; this is not independent review.

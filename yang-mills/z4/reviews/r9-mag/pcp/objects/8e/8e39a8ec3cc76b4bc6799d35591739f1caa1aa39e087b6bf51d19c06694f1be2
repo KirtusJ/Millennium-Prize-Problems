@@ -1,0 +1,9 @@
+P1: MEASURED | max rel err 2.75e-14
+P2: MET | max rel err 1.13e-06 (C4 C0~J^2/(pi^2 t^4) = Z4 kernel at x=0)
+P3: MEASURED | max rel err 3.44e-15
+P4: MEASURED | MC 0.24067 vs 3Ct^2/2=0.24000, SE 1.3e-03
+P5: MEASURED | MC 0.006388 vs formula 0.006337, SE 4.5e-05
+P6: MET | 8B(1)=0.02029850 8B(2)=0.00180930 ratio=0.0891347; max rel err 1.5e-06
+P7: MEASURED | mass 1.341483e-10 vs claim 1.341483e-10
+P8: MEASURED | C0cont(1)=6.181138e-01; rel err r=4,8,16: 4.73e-03, 1.19e-03, 2.88e-04
+M1: MEASURED | guessed-profile C0(0,1,2) = 0.01973513, 0.00455721, 0.00137391 vs printed 0.01972957, 0.00455193, 0.00136940

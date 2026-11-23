@@ -1,0 +1,4 @@
+check K38: exit 0 (expected 0) in 900375 ms | output 455eb0133121 | event 44 head 887964e55d29
+  The sub-agent is still checking A4's κ/18 endpoint. I'll add its result to the report when it finishes.
+  
+  C:/Users/donke/z4-workers/r9-mag/report.md: 7 STANDS, 3 DEFECT (all wording: C4's limit is free by construction since β ≫ r¹⁶, so its spectrum is gapless, not a "positive spectrum"; A4's κ/18 beats A/16 only for g ≥ 17/64), 1 NOT CHECKED; predicates 11 met, 1 failed (T3, my own expectation), 2 measured only; PCP verify PASS.
