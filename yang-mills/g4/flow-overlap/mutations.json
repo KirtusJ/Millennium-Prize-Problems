@@ -1,0 +1,5 @@
+[
+  {"label":"negative_tilt","find":"= 5*k/(4+k)^2 := by","replace":"= 6*k/(4+k)^2 := by","diagnostic":"error:"},
+  {"label":"negative_score","find":"h^2/(4*score) ≤ error := by","replace":"h^2/(2*score) ≤ error := by","diagnostic":"error:"},
+  {"label":"negative_moments","find":"c₃-2*c₂+c₁ ≤ 4*d := by","replace":"c₃-2*c₂+c₁ ≤ 3*d := by","diagnostic":"error:"}
+]
