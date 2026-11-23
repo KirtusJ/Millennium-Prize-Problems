@@ -1,0 +1,2 @@
+check K41: exit 0 (expected 0) in 720808 ms | output e124735ac73c | event 43 head e0687a13b57b
+  /home/user/z4-workers/a6-Bfull/report.md — STANDS 10, DEFECT 2, NOT CHECKED 2, NOT NEEDED 1. PROOF_B_v2.md is not yet a complete proof: Theorem B′ (L = 2^k, every periodic limit state) holds modulo two CLAIMED steps, L3 (Laplace limit) and L4 (limit field); predicates met 18, failed 3, measured only 5.

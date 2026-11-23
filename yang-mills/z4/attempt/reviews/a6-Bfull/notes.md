@@ -1,0 +1,13 @@
+# notes a6-Bfull
+
+## step0 control
+control.txt = 0.272341. Lean READY exists. Register pcp initialised. Child control answer (computed first): I = 1/sqrt(5) = 0.447214.
+
+## step1 child launched (child-run1, background) with question: Dirichlet curvature covariance N=4,6,8 vs G(n); sign of conditional cov of squares.
+## step2 key idea for S3c bypass: reverse martingale. For the limit field F and decreasing sigma-algebras G_R = sigma(F_q, q not touching interior of R): h^R = E[F|G_R] -> h = E[F|G_inf] in L2 (Levy downward); xi^R = F - h^R is N(0,C^R) independent of G_R; C^R increasing (sup formula) -> P (projection on exact 2-forms) = G. So F = xi + h, xi indep of h. h: dh=0, d*h=0 (limit of Euler-Lagrange), second-order stationary since E[FF]-P is. Spectral: Delta h = 0, symbol khat^2 vanishes only at 0 => h constant. No classification of Gibbs states needed.
+## step3 S3a: chessboard re-proved by dyadic halving for L = 2^k (one block function, closed unit-cube blocks). Z lower bound with temporal gauge; D* = 48 + 3 log((pi/2)^{5/2} 2^{3/2}) - 3 log(2 sin^2 1/(3 pi)) ~ 60.2, beta >= 1.
+## step4 test_newsteps (K1): G1 met, G2 12/12, G3 12/12, G4 12/12, M1 met (C^N_pp = 0.2917, 0.4927, 0.4992 for N=2,4,6), H1 3/3, H2 3/3. Measured: G(1)=0.068875, C^6(p0,p1)=0.06811; H3 physical pins (global axial tree spatial part inside the box) = 2, 12, 36 for N=2,3,4 -> the global axial gauge is NOT a pure interior gauge choice inside a box: confirms the challenger's circularity concern; v2 uses gauge-invariant conditioning + shell-only tree instead.
+## step5 literature: Biskup, "Reflection positivity and phase transitions in lattice spin models", arXiv:math-ph/0610025 (2006/2009; LNM 1970). Read: abs page in full; HTML v2 verbatim Sections 1-3.4 only (via web-fetch agent; text not stored here). Chessboard theorem (reported as Thm 5.2, Sec 5.3) NOT read verbatim: hypotheses unverified. It is a site-spin framework. Hence v2 re-proves the chessboard estimate it needs (dyadic L) and cites nothing for it.
+## step6 PROOF_B_v2.md written (B' proved modulo L3 Laplace uniformity and L4 limit-field bookkeeping; L=2^k only).
+## step7 child returned (K2, exit 0, ~131 s). Control 0.447214 graded CORRECT first. Child numbers: C^N(p0,p0)=0.49267,0.49916,0.49978 (N=4,6,8); C(p0,p1)=0.06374,0.06811,0.06867; G(1)=0.0688747, G(2)=0.0111527. Its (c): conditional Cov of squares can be negative (-0.009278 with m=(1,-C01)) -> confirms that a naive DLR positivity route fails; v2 uses the tail decomposition instead. Child failed predicates (own expectation: p2 on shell at N=4). Grandchild: G(1),G(2) by 4D grid, control G(0)=0.5 correct, agrees to 1e-8.
+## step8 reran child cov.py in scratch (K3): 90/90 numeric fields identical.

@@ -1,0 +1,13 @@
+C0 trace P_inv(V1/2^x4) = 2.000000000000  expect 2  MET
+C1 d=2 L=1 A(0.5) = 0.500000000000 expect 0.500000000000 MET
+C1 d=2 L=1 A(1) = 0.333333333333 expect 0.333333333333 MET
+C1 d=2 L=1 A(1.5) = 0.250000000000 expect 0.250000000000 MET
+C2 d=3 L=1 A(0.5,0,0) = 0.500000000000 expect 0.500000000000 MET
+C2 d=3 L=1 A(1,0,0) = 0.333333333333 expect 0.333333333333 MET
+K1 beta=0.5 j=4.0 quad=3.808142e-10 formula=3.808142e-10 FAILED
+K1 beta=0.5 j=4.5 quad=1.057218e-11 formula=1.057217e-11 FAILED
+K1 beta=0.5 j=5.0 quad=2.642437e-13 formula=2.641792e-13 FAILED
+K1 beta=1 j=5.0 quad=2.747753e-10 formula=2.747752e-10 FAILED
+K1 c_j(beta)>0 and = (2j+1)2I_(2j+1)(beta)/beta *[see note] : FAILED
+H case Ls=(1, 1, 1) plaquettes=3 configs=27: A<0: 0, A>0: 27, A=0: 0; min A = 0.333333333333 at spins (0, 1, 1); max|Im A| = 0.0e+00
+H case Ls=(2, 1, 1) plaquettes=6 configs=729: A<0: 4, A>0: 141, A=0: 584; min A = -0.003086419753 at spins (0, 1, 1, 1, 0, 0.5); max|Im A| = 0.0e+00

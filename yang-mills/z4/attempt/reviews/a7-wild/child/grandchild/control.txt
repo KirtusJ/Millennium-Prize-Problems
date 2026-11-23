@@ -1,0 +1,1 @@
+E[(trU)^2] MC=1.00188 SE=0.00100 exact=1 z=1.88 within3SE=True

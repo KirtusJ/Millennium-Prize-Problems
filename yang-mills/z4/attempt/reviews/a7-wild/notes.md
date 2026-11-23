@@ -1,0 +1,12 @@
+# a7-wild notes (append-only)
+- 12:24 control.txt = 0.272341 (-ln tanh 1). Lean READY exists. Register pcp initialised (method not found: expected).
+- Read ledger, reduction, grounding. Seed "sign". Chosen route: positive dual (plaquette-character / spin-foam) representation of SU(2) at every beta -> probabilistic random-surface model -> gap from absence of a percolation-type transition. First unproved step: nonnegativity of the dual amplitudes A({j_p}) = int prod_p chi_{j_p}(U_p) dU. For U(1), Z2 it is an indicator (>=0). Test on smallest lattices (1-site torus d=3,4) exactly by invariant-projector contraction.
+- Child control question: int_SU(2) chi_{1/2}(U)^4 dU = 2 (Catalan C_2; dim of invariants of V^{x4}). Child task: MC estimate of A(a,b,c) on 1-site 3-torus.
+- 12:40 dual_sign_results1.txt partial: controls C0,C1,C2 MET. K1 FAILED on 4 entries (c_j ~1e-10..1e-13 at small beta): relative tol 1e-8 too tight for midpoint quadrature with absolute error ~1e-16; my tolerance, not the target. Positivity c_j = 2(2j+1)I_{2j+1}(beta)/beta > 0 is PROVED (positive Bessel series).
+- H d=3 L=1: 27/27 positive. H d=3 (2,1,1): 4 of 729 configurations NEGATIVE, min A = -0.003086419753 (= -1/324?) at spins (0,1,1,1,0,1/2). Hypothesis of the route FAILS. 4D L=1 running.
+- Child control.txt = 2 : correct (graded before reading anything else).
+- 12:46 Literature (web search snippets only, not full text): Cherrington, Christensen, Khavkine arXiv:0705.2629 (dual 3D SU(2), sign expectation drops below 1 at larger beta); Cherrington arXiv:0910.1890 (4D SU(2) dual, negative amplitudes make results noisy from beta~1.8); Oeckl-Pfeiffer hep-lat/0110034 (dual spin foam for general compact G). Consistent with my H failure: the sign problem of the SU(2) dual is known.
+- Child report read: 8/8 one-site 3D amplitudes positive by MC; grandchild boundary case A(1/2,0,0)=1/2 ok. mc_check.py written (M1 independent MC of negative config; M2 exact vs child).
+- 12:52 killed dual-sign-run1 during the d=4 L=1 enumeration (over the 5-min rule; 729-dim projector eigh per spec too slow). d=3 results stand in dual_sign_results1.txt; d=4 negativity follows by embedding (spin-0 plaquettes leave 4th-direction links uncoupled).
+- 12:58 mc_check: M1 MET (A_MC=-0.002892+-0.000237, exact -1/324 within 4SE), M2 8/8 MET (child MC vs my exact). Child mc.py rerun in child_rerun/: identical numbers. Exact one-site values 5/9, 5/12, 13/36, 92/225 (floats 0.555556,0.416667,0.361111,0.408889).
+- 13:02 report.md written. Verdicts: STANDS 4, DEFECT 2, NOT CHECKED 1.

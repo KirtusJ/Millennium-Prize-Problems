@@ -1,0 +1,2 @@
+check K42: exit 0 (expected 0) in 850821 ms | output 11de9e286506 | event 44 head 6c7d97fa7dde
+  /home/user/z4-workers/a7-wild/report.md: 4 items stand, 2 defects, 1 not checked. The positive-dual route fails at its first unproved step: an exact SU(2) dual amplitude of −1/324 on the d=3 2×1×1 lattice (independent Monte Carlo −0.00289 ± 0.00024); it carries to d=4 by embedding, though the direct d=4 run was stopped for time.

@@ -1,0 +1,4 @@
+# SU(2) plaquette correlators (Haar MC, N=2000000, seed 12345)
+- A(1/2,0) = 0.49938 +/- 0.00074; expected 0.5; z=-0.85; compatible at 4SE: True
+- A(1/2,1/2) = 0.50109 +/- 0.00094; z vs 0 = 535.8; verdict: positive
+(Analytic cross-check: E[(trU)^4]/4 = 1/2.)

@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/a6-Bfull/child/cov.py", line 66, in <module>
+    R={N:run(N,N<=6) for N in (4,6,8)}
+         ~~~^^^^^^^^
+  File "/home/user/z4-workers/a6-Bfull/child/cov.py", line 49, in run
+    Dg=max(abs(mv(D,mv(tr(g),np.eye(1,1)[0]*0+np.random.default_rng(1).standard_normal(S['ns']) if False else np.zeros(S['ns']),nl),S['np_'])).max(),0)
+                    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/z4-workers/a6-Bfull/child/cov.py", line 37, in mv
+    return np.bincount(T[0],weights=T[2]*x[T[1]],minlength=nout)
+                                         ~^^^^^^
+IndexError: index 81 is out of bounds for axis 0 with size 81

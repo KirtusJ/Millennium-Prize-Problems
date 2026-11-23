@@ -1,0 +1,2 @@
+/home/user/z4-workers/a6-Bfull/child/cov.py:42: RuntimeWarning: invalid value encountered in scalar divide
+  Ap=A(p);a=rs/(p@Ap);x+=a*p;r-=a*Ap;rn=r@r
