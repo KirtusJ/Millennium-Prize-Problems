@@ -1,0 +1,15 @@
+s5num results  seed=12345  N=2000  TOL=1e-12
+claim  qualifying  met  failed  max_ratio
+(a)      2000    2000     0   0.999827886921070
+(b)      2000    2000     0   0.998465859379449
+(d)     19778   19778     0   0.999833860050584
+(e)      1972    1972     0   0.532542234548657
+note (d): qualifying = atom sets x E0 values (1 random + each positive atom energy)
+note (e): ratio = (v/2)/LHS; <=1 means met
+max x e^-x   at x=1.0000000120 value=0.36787944117144228  e^-1 =0.36787944117144233  rel diff=-1.110e-16
+max x^2e^-x  at x=2.0000000236 value=0.54134113294645081  4e^-2=0.54134113294645081  rel diff=0.000e+00
+sharpness tau=0.01: (a) single atom E=1/tau ratio=1.0000000000000002 ; (b) single atom E=2/tau ratio=0.99999999999999989
+sharpness tau=1: (a) single atom E=1/tau ratio=1 ; (b) single atom E=2/tau ratio=0.99999999999999978
+sharpness tau=37: (a) single atom E=1/tau ratio=1 ; (b) single atom E=2/tau ratio=0.99999999999999989
+TOTAL FAILURES: 0
+wrote C:\Users\donke\z4-workers\r5-lean\child\results_2.txt

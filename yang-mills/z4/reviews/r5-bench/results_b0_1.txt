@@ -1,0 +1,6 @@
+Q1 ker dim = 66 (expect 66), phys = 126 : MET
+Q2 frequency multiset max rel dev = 7.69e-16 : MET
+Q3 t=0.0: max|direct-formula| = 1.137e-13, max|D| = 2.031190e+02, D(0) direct=203.1190009030 formula=203.1190009030 : MET
+Q4 t=0.0: translation-invariance dev = 1.24e-13 : MET
+Q3 t=0.3: max|direct-formula| = 1.243e-14, max|D| = 1.169719e+01, D(0) direct=11.6971939690 formula=11.6971939690 : MET
+Q4 t=0.3: translation-invariance dev = 1.35e-14 : MET

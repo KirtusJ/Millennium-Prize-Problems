@@ -1,0 +1,6 @@
+C:\Users\donke\z4-workers\r5-bench\child\corr.py:75: DeprecationWarning: `axes` should not be `None` if `s` is not `None` (Deprecated in NumPy 2.0). In a future version of NumPy, this will raise an error and `s[i]` will correspond to the size along the transformed axis specified by `axes[i]`. To retain current behaviour, pass a sequence [0, ..., k-1] to `axes` for an array of dimension k.
+  D = np.fft.irfftn(d, s=s) * N ** 3
+C:\Users\donke\z4-workers\r5-bench\child\corr.py:78: DeprecationWarning: `axes` should not be `None` if `s` is not `None` (Deprecated in NumPy 2.0). In a future version of NumPy, this will raise an error and `s[i]` will correspond to the size along the transformed axis specified by `axes[i]`. To retain current behaviour, pass a sequence [0, ..., k-1] to `axes` for an array of dimension k.
+  D1 = np.fft.irfftn(-kk * d, s=s) * N ** 3
+C:\Users\donke\z4-workers\r5-bench\child\corr.py:83: DeprecationWarning: `axes` should not be `None` if `s` is not `None` (Deprecated in NumPy 2.0). In a future version of NumPy, this will raise an error and `s[i]` will correspond to the size along the transformed axis specified by `axes[i]`. To retain current behaviour, pass a sequence [0, ..., k-1] to `axes` for an array of dimension k.
+  w = np.fft.irfftn(W, s=s) * N ** 3

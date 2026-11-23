@@ -247,3 +247,7 @@ Director, workers and sub-agents are one model family; this is not independent r
 ## Overall disposition
 
 Gathered on 23 November 2026 at the principal's request: [`OVERALL_DISPOSITION.md`](OVERALL_DISPOSITION.md), covering every lane of this problem and the two external claims, with the extraction reports in `reviews/r4-a`, `r4-b`, `r4-c` (register checks K18 to K20; the register now holds 27 events).
+
+## Fourth round: an observable of fixed physical size
+
+Direction chosen by the principal after the overall disposition. Statements, benchmark, Lean file and review record: [`fixed-size/STATEMENT.md`](fixed-size/STATEMENT.md). In short: on the free lattice Maxwell benchmark the sharp-time smeared action density has variance growing like b^-5 and no limit as a vector, while its time-regularized version converges with energy moments bounded in physical units, and shows no gap; `lean/Z4YM/HeatRegularized.lean` proves that for such vectors norm, moments and a bounded energy window follow from two values of the positive-time correlator. Six defects of the draft were found by the workers and are corrected there with the draft kept. Register checks K21 to K25; the register holds 32 events. No estimate for the interacting theory.

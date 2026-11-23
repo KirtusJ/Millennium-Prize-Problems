@@ -1,0 +1,2 @@
+check K22: exit 0 (expected 0) in 600419 ms | output ebe61da35ba8 | event 28 head 690e80c5c969
+  C:/Users/donke/z4-workers/r5-lean/report.md — 9 STANDS (S5 a–e and f–g all proved in Lean), 0 DEFECT, 1 NOT CHECKED (measure version); predicates: 7 met, 0 failed, max ratios and sharpness measured only.

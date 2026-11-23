@@ -1,0 +1,26 @@
+C:/Users/donke/z4-workers/r5-lean/mut/S5_mut_b.lean:78:85: error: unsolved goals
+case h.calc.step
+ι : Type u_1
+inst✝ : Fintype ι
+w E : ι → ℝ
+hw : ∀ (i : ι), 0 ≤ w i
+hE : ∀ (i : ι), 0 ≤ E i
+τ : ℝ
+hτ : 0 < τ
+i : ι
+a✝ : i ∈ univ
+key : E i ^ 2 * rexp (-τ * E i) ≤ 4 / (rexp 1 ^ 2 * τ ^ 2)
+⊢ 4 * (w i * rexp (-τ * E i)) / (rexp 1 ^ 2 * τ ^ 2) ≤ 3 * (w i * rexp (-τ * E i)) / (rexp 1 ^ 2 * τ ^ 2)
+'S5.mul_exp_neg_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'S5.sq_mul_exp_neg_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'S5.sq_mul_exp_neg_fails_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'S5.S5a' depends on axioms: [propext, Classical.choice, Quot.sound]
+'S5.S5b' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'S5.S5c' depends on axioms: [propext, Classical.choice, Quot.sound]
+'S5.S5d' depends on axioms: [propext, Classical.choice, Quot.sound]
+'S5.S5d_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'S5.S5e' depends on axioms: [propext, Classical.choice, Quot.sound]
+'S5.S5e_E0_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'S5.S5f' depends on axioms: [propext, Classical.choice, Quot.sound]
+'S5.S5g_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'S5.S5g' depends on axioms: [propext, Classical.choice, Quot.sound]

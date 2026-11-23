@@ -1,0 +1,44 @@
+Smeared squared two-point function C(t) on the periodic unit box.
+numpy 2.5.5
+t=0.2 K=50 nmax=7 N=30 C(R=0.1)=1.155961386167969e-01 C(R=0.05)=7.735885493590098e-03  [0.0s]
+t=0.2 K=75 nmax=11 N=48 C(R=0.1)=1.156056924719515e-01 C(R=0.05)=7.740638651967282e-03  [0.0s]
+t=0.2 K=100 nmax=15 N=64 C(R=0.1)=1.156056947881007e-01 C(R=0.05)=7.740640883084593e-03  [0.1s]
+t=0.2 K=125 nmax=19 N=80 C(R=0.1)=1.156056947884539e-01 C(R=0.05)=7.740640883549253e-03  [0.2s]
+  P1 t=0.2 R=0.1: rel change last two K (100->125) = 3.055e-12 -> PASS
+  P1 t=0.2 R=0.05: rel change last two K (100->125) = 6.003e-11 -> PASS
+  P2 t=0.2 R=0.1: N=80 vs N2=120: C=1.156056947884538e-01 rel=9.604e-16 -> PASS
+  P2b t=0.2 R=0.1: small grid Ns=72: C=1.156056947884537e-01 rel=1.441e-15 -> PASS
+  P2 t=0.2 R=0.05: N=80 vs N2=120: C=7.740640883549245e-03 rel=1.008e-15 -> PASS
+t=0.1 K=100 nmax=15 N=64 C(R=0.1)=4.948273830030445e+00 C(R=0.05)=4.774192885335372e-01  [0.1s]
+t=0.1 K=150 nmax=23 N=96 C(R=0.1)=4.948433838585037e+00 C(R=0.05)=4.774571196185972e-01  [0.2s]
+t=0.1 K=200 nmax=31 N=128 C(R=0.1)=4.948433874169418e+00 C(R=0.05)=4.774571289716562e-01  [0.5s]
+  P1 t=0.1 R=0.1: rel change last two K (150->200) = 7.191e-09 -> FAIL
+  P1 t=0.1 R=0.05: rel change last two K (150->200) = 1.959e-08 -> FAIL
+  P2 t=0.1 R=0.1: N=128 vs N2=160: C=4.948433874169419e+00 rel=1.795e-16 -> PASS
+  P2b t=0.1 R=0.1: small grid Ns=90: C=4.948433874169417e+00 rel=1.795e-16 -> PASS
+  P2 t=0.1 R=0.05: N=128 vs N2=160: C=4.774571289716562e-01 rel=1.163e-16 -> PASS
+  P2b t=0.1 R=0.05: small grid Ns=120: C=4.774571289716558e-01 rel=8.138e-16 -> PASS
+t=0.05 K=200 nmax=31 N=128 C(R=0.1)=1.738382043690040e+02 C(R=0.05)=1.983845100800252e+01  [0.5s]
+t=0.05 K=300 nmax=47 N=192 C(R=0.1)=1.738421029301493e+02 C(R=0.05)=1.983909141908908e+01  [2.1s]
+t=0.05 K=400 nmax=63 N=256 C(R=0.1)=1.738421037811584e+02 C(R=0.05)=1.983909156313592e+01  [5.7s]
+  P1 t=0.05 R=0.1: rel change last two K (300->400) = 4.895e-09 -> FAIL
+  P1 t=0.05 R=0.05: rel change last two K (300->400) = 7.261e-09 -> FAIL
+  P2 t=0.05 R=0.1: N=256 vs N2=288: C=1.738421037811583e+02 rel=8.175e-16 -> PASS
+  P2b t=0.05 R=0.1: small grid Ns=160: C=1.738421037811585e+02 rel=6.540e-16 -> PASS
+  P2 t=0.05 R=0.05: N=256 vs N2=288: C=1.983909156313590e+01 rel=7.163e-16 -> PASS
+  P2b t=0.05 R=0.05: small grid Ns=180: C=1.983909156313592e+01 rel=3.582e-16 -> PASS
+  P3 R=0.1: -dlogC/dt analytic=28.506317845069 FD(h=1e-3)=28.506524095545 rel=7.24e-06 -> PASS
+     analytic at K=100: 28.506317844560  rel change=1.787e-11
+  P3 R=0.05: -dlogC/dt analytic=31.965706380447 FD(h=1e-3)=31.965901541267 rel=6.11e-06 -> PASS
+     analytic at K=100: 31.965706372067  rel change=2.622e-10
+
+FINAL TABLE  C(t)  (last K setting; rel change vs previous K)
+R=0.1   t=0.05  K=400    N=256  C=1.738421037812e+02  relchg=4.90e-09
+R=0.1   t=0.1   K=200    N=128  C=4.948433874169e+00  relchg=7.19e-09
+R=0.1   t=0.2   K=125    N=80   C=1.156056947885e-01  relchg=3.06e-12
+R=0.1   -dlogC/dt at t=0.2 (analytic derivative of truncated sum) = 28.5063178451
+R=0.05  t=0.05  K=400    N=256  C=1.983909156314e+01  relchg=7.26e-09
+R=0.05  t=0.1   K=200    N=128  C=4.774571289717e-01  relchg=1.96e-08
+R=0.05  t=0.2   K=125    N=80   C=7.740640883549e-03  relchg=6.00e-11
+R=0.05  -dlogC/dt at t=0.2 (analytic derivative of truncated sum) = 31.9657063804
+ALL PREDICATES: FAIL

@@ -1,0 +1,2 @@
+check K21: exit 0 (expected 0) in 356843 ms | output 8ece2b3f8021 | event 27 head 3ddc0e03d0fa
+  C:/Users/donke/z4-workers/r5-bench/report.md: 6 STANDS (D_t, S1, S2, S3, S4 no-gap and decay rate, B3 map) · 1 DEFECT (S4 wording: the lowest two-photon energy on the lattice is just below 2·(2π/ℓ), not at or above it) · 2 NOT CHECKED (S5, S6); predicates met 56, failed 4, measured only 17.

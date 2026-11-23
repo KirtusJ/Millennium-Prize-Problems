@@ -1,0 +1,1 @@
+2.0000000000000000000000000000 (mpmath quad of x^2 e^-x on [0,inf), dps=30; expected 2)

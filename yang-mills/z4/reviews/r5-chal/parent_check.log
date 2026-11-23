@@ -1,0 +1,6 @@
+check K23: exit 0 (expected 0) in 901767 ms | output cbcbbbccb378 | event 29 head 0f13b8a00e86
+  The report is drafted. I'm waiting for the sub-agent's result before I fill in §5 and run verify.
+  
+  The sub-agent's derivation gives the same constants as mine. Its numerical runs are still going, and I'm waiting for them to finish.
+  
+  C:/Users/donke/z4-workers/r5-chal/report.md: 13 STANDS, 3 DEFECT, 1 NOT CHECKED (S4 missing hypothesis, S6(b) one Z not enough, S6(c) misleading summary of A4's 1/b scale; S2's O(b²) not checked); own predicates 9 met, 2 failed (my own errors), 2 measured only; PCP verify PASS.
