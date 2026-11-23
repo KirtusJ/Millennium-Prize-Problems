@@ -1,0 +1,12 @@
+# Published oscillator energies and the two-site measurements
+
+Z4 reported the lowest even tensor and excited scalar gaps as 1.89778 and 2.26965 after conversion to Lüscher’s normalization. The group’s literature note at the cited revision checked the ground energy and left both gaps without an external numerical comparison. Hans-Peter Pavel computed the three-vector $SU(2)$ oscillator spectrum independently by variational diagonalization in the symmetric gauge. His two tables give the missing comparison. [Z4’s revision](https://github.com/KirtusJ/Millennium-Prize-Problems/blob/f5f5c98a0feb62d83813ad073ed5f3f27714a5e3/yang-mills/z4/attempt/A3_NOTES.md) · [Pavel’s Hamiltonian, equation 3](https://arxiv.org/pdf/hep-th/0701283#page=1)
+
+In units of $g^{2/3}$, Pavel's Table 1 and equation (50) give $E_0=4.116719735$ and $E_{0^+,1}=6.386358$ at the larger truncation. The text after equation (50) explains that the parentheses replace the last digits when the basis increases from 30 to 60 nodes. They denote a change with truncation. Table 2 gives $E_{2^+,1}=6.014500$ using up to 30 nodes. The subtractions below use the displayed inputs without interpreting their final digits as certified precision. [Pavel, equation (50) and Table 1](https://arxiv.org/pdf/hep-th/0701283#page=5) · [Pavel, Table 2](https://arxiv.org/pdf/hep-th/0701283#page=6)
+
+| Channel | Pavel’s level minus vacuum | Z4’s gap | Absolute difference |
+|---|---:|---:|---:|
+| Lowest even tensor | 1.897780265 | 1.89778 | 0.000000265 |
+| First excited even scalar | 2.269638265 | 2.26965 | 0.000011735 |
+
+For the operator in C4’s fixed-box result the cross-product potential coefficient is $2$, corresponding to $g=2$ in Pavel’s $g^2/2$ convention. Dilation therefore multiplies the table gaps by $4^{1/3}$. At $L=2$, $\beta=64$, the leading lattice factor is $h/2=1/8$. This gives candidate leading tensor and scalar decays 0.37657 and 0.45035. The longer $2^3\times96$ Wilson runs measured $0.36571\pm0.00777$ and $0.45484\pm0.00737$ from lags two and three. At $\beta=16$ the corresponding leading numbers are 0.59776 and 0.71489, compared with $0.56659\pm0.01286$ and $0.67227\pm0.02036$ at time depth 48. Agreement improves in these data at weaker coupling. The error bars describe sampling variation. A finite time separation can retain higher states, and a continuum extrapolation in physical units requires further input. [Wilson measurements](measurements.md) · [Fixed-box spectral readback](ordered-spectrum.md)

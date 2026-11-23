@@ -22,7 +22,8 @@ BUILDERS=("valley","freeze","full-kernel","signed-cube","integration","cube-lean
           "electric-gap","open-boundary","flat-slab","refinement")
 REVIEWS={"kernel-review":("kernel.md",),"fast-review":("fast-vacuum.md",),
          "slab-review":("flat-slab.md",),"data-review":("measurements.md",),
-         "chain-review":("README.md","flat-slab.md"),"refinement-review":("ordered-spectrum.md",)}
+         "chain-review":("README.md","flat-slab.md"),"refinement-review":("ordered-spectrum.md",),
+         "oscillator-review":("oscillator-reference.md",)}
 ORDERED="yang-mills/central-quotients/tangent-curvature/periodic-limit/two-site-ordered-spectrum/README.md"
 EXTERIOR="yang-mills/central-quotients/tangent-curvature/periodic-limit/two-site-exterior/README.md"
 PATCH="yang-mills/observable-normalization/second-box/joint-spectrum/README.md"
@@ -31,7 +32,7 @@ PEER_BLOBS={ORDERED:"987377c1298ae4caba32d3264151bff7ae3ae989",
             EXTERIOR:"531e72ada941ac6df0e3ec461387e027693f42e9",
             PATCH:"7581dd01cf040b71fd5e20f3bf7e3eb0512d403d"}
 SOURCES=(".gitattributes","README.md","kernel.md","flat-slab.md","fast-vacuum.md","measurements.md","checks.md","ordered-spectrum.md",
-         "TwoSite.lean","mutations.json","coefficients.csv","cube.py","quadrature.py","harmonic.py","controls.py",
+         "oscillator-reference.md","TwoSite.lean","mutations.json","coefficients.csv","cube.py","quadrature.py","harmonic.py","controls.py",
          "wilson_mc.rs","measurements.py","wilson-blocks.zip","verify.py",
          "figures/starts.json","figures/starts.svg","figures/starts.receipt.txt",
          "../all-readings/verify.py","../../contact-blocks/verify.py","../../site/check_site.py","../../exterior/verify.py")
