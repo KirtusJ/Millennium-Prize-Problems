@@ -115,7 +115,7 @@ form with the wells as end sets would need a lower bound on $|\int_{B_0}h\,d\nu_
 available for $\SU(2)^2$; the point-start form above avoids it.
 
 \begin{corollary}[Chains of balls, Corollary B]\label{tu:L-B}
-Let $X$ be a metric measure space, $r_\beta>0$, $v:=\inf_c|B(c,r_\beta)|>0$. For each $x\in S$ let
+Let $X$ be a metric measure space, $r_\beta>0$, $v:=\inf_c|B(c,r_\beta)|>0$, and let $n\ge2$. For each $x\in S$ let
 $c_1(x),\dots,c_{n-1}(x)$ be measurable centres, and under $P_x$ let $z_1,\dots,z_{n-1}$ be
 independent and uniform on $B(c_k(x),r_\beta)$, with $z_0=x$, $z_n=\sigma x$. Let $U$ be the union
 of the supports of the $\pi_k$, and $Q_{\min}:=\inf_U T(z,z')g(z)g(z')$. Then
@@ -128,6 +128,14 @@ In particular, with $T_{\min}:=\inf_UT$,
 -\log\Delta\le 2\sup_{\rm balls\cup S}(-\log g)+\log\frac{n^2\sup_Sg^2\max(1/v,|S|/v^2)}{T_{\min}}-\log\Big(2\int_Sf^2\Big).
 \]
 \end{corollary}
+
+\begin{remark}\label{tu:L-B-n}
+The hypothesis $n\ge2$ is needed: the proof draws an interior point, and for $n=1$ the displayed bound is false
+(two equally weighted points exchanged by $\sigma$, the symmetric Markov matrix with diagonal $3/4$, $S=X$, $v=1$: $\Delta=1/2$
+while the right-hand side equals $1$). Lemma~\ref{tu:L-Pc} itself holds for $n\ge1$. The chains of Section~\ref{tu:L-sec-assembly} have
+$n$ of order $\sqrt\beta$. This restriction was found by a session of a second model lineage; an earlier version stated the
+corollary for all $n\ge1$.
+\end{remark}
 
 \begin{proof}
 Let $p_k$ be the density of $\pi_k$ with respect to $dz\,dz'$. For $1\le k\le n-2$,
@@ -587,7 +595,7 @@ Assume Lemma~\ref{tu:L-ansatz-props}(i),(ii). For $x\in\mathcal T$ and $L>0$ wit
 \Delta_3(x,\beta)&=\min_L\log\Big[\frac{e^{{\rm Err}_3-{\rm gap}_3}}{\varrho(\beta)^2(1-r_b^2)}+e^{(h-2)|b|^2+e(S)-\Psi'^2/2}Q\Big],
 \end{align*}
 where ${\rm Err}_3,{\rm gap}_3$ are ${\rm Err},{\rm gap}$ without the $\Theta$ terms. Then (E1) and (E3) hold
-with these $\Delta_1,\Delta_3$, and with $L=\sqrt{C\log\beta}$,
+with these $\Delta_1,\Delta_3$, and with $L=\sqrt{C\log\beta}$ for a fixed $C>\pi^2/4$,
 $\sup_{\mathcal T}\Delta_i=O((\log\beta)^{3/2}\beta^{-1/2})\to0$. The constants depend only on
 $(\eta',r_0,\theta_0,\ell,M,H_\Psi,\Lambda)$.
 \end{proposition}
@@ -608,7 +616,7 @@ $r_b'-r_b\le0.17\,r_b^3$ for $r_b\le\frac18$:
 \begin{equation}\label{tu:L-err-explicit}
 {\rm Err}\le\frac1{\sqrt\beta}\Big[L(M+2L)^2\Big(2.2\,h_-+\frac{6.4}{s_-^2}\Big)+L^2\big(0.51(H_\Psi+H_\Theta)+0.03(\Lambda+\theta_0)\big)\Big].
 \end{equation}
-With $L=\sqrt{C\log\beta}$ this is $O((\log\beta)^{3/2}\beta^{-1/2})$; $|{\rm gap}|,|{\rm gap}_3|$ are bounded by
+With $L=\sqrt{C\log\beta}$, $C>\pi^2/4$, this is $O((\log\beta)^{3/2}\beta^{-1/2})$ (the outer term is $Q\le\beta^{-2C/\pi^2+o(1)}$ by Lemma~\ref{tu:L-tails}(b) and the tail of (a) is $\beta^{-C/2+o(1)}$; for $C\le\pi^2/4$ these still tend to $0$ but $Q$ is then not $O((\log\beta)^{3/2}\beta^{-1/2})$, and for $C=1$ it is in fact at least a constant times $L\beta^{-1/2}e^{\Lambda L}$); $|{\rm gap}|,|{\rm gap}_3|$ are bounded by
 \eqref{tu:L-gap-unif}, $O(\beta^{-1/2})$; ${\rm Tail}/J$ and $Q$ are $O(\beta^{-c})$, $L^4/\beta\to0$, and
 $\log\varrho=O(\beta^{-2/3})$, $-\log\varrho\le-\log D_\beta=O(1/\beta)$. On $\mathcal T$: $S\ge s_-$, so
 $h\le h_-=1+\sqrt{1+s_-^2}/s_-$; no lower bound on $\sigma_w$ is used (the bounds of Lemma~\ref{tu:L-gauss} have $D_w\ge1$
@@ -955,7 +963,7 @@ $s_\infty=1$ for $t\ge1$:
 $\chi(a):=s_\infty\big(\frac{a-a_-/2}{a_-/2}\big)\,s_\infty\big(\frac{\pi-a_-/4-a}{a_-/4}\big)$ and
 $\tilde\Theta(a):=\int_0^a\frac{\theta_0b}{\sqrt{b^2+\ell^2}}\,s_\infty\big(\frac{3\pi/4-b}{\pi/4}\big)\,db$; they have the properties
 required in Section~\ref{tu:L-ansatz} ($\tilde\Theta=\Theta$ on $[0,\pi/2]$, $\tilde\Theta'=0$ on $[3\pi/4,\pi]$);
-\item $C=1$ in $L=\sqrt{C\log\beta}$ of Proposition~\ref{tu:L-E13} (any fixed $C>0$ would do).
+\item $C=4$ in $L=\sqrt{C\log\beta}$ of Proposition~\ref{tu:L-E13}. (Any fixed $C>0$ gives $\Delta_i\to0$, which is all the assembly uses; the rate stated in Proposition~\ref{tu:L-E13} needs $C>\pi^2/4$. An earlier version chose $C=1$ and claimed the rate; the error was found by a session of a second model lineage.)
 \end{itemize}
 The amplitude $\mu:=\exp\big(-35(a_-+r_0)\sqrt\beta-R_\beta\big)$ (Corollary~\ref{tu:L-H4cor}) is not among the fixed parameters:
 it depends on $\beta$ (through $\sqrt\beta$ and $R_\beta$). No threshold below depends on it.

@@ -21,3 +21,11 @@ Two gap-closing workers report all six items closed, with replacement text now m
 `main.tex` (32 pages; `main.pdf`) is a complete written proof of lim (−log m_eo)/√β = c* = 4.6054132: no step refers to anything off the page. The six gaps were closed in writing and merged; two referees who were given only the note read it line by line ([`../reviews/v1-chU/report.md`](../reviews/v1-chU/report.md): 31 statements stand, 3 defects, all in the status paragraph or in measured remarks; [`../reviews/v1-chL/report.md`](../reviews/v1-chL/report.md): 26 stand, 1 gap, 1 defect, both bookkeeping); their 29 repairs are applied (`CHANGES_referee_repairs.md`).
 
 What that is worth: authors, gap-closers, challengers and referees are all sessions of one model family. The same family had earlier passed over the six gaps until the text was written out linearly. The note has not been read by a session of another lineage or by a person. The explicit thresholds are beyond any computable β; the only numerical support for the constant is the measurement to β = 256 (fits 4.599 to 4.616) and a one-dimensional model. Lean covers scalar lemmas only and is not part of the note.
+
+## First reading by another lineage (G4, 23 November, `2009f6c`: `yang-mills/joint-refinement/rare-coarse-fields/z4-review.md`)
+
+Two defects found, both real, both repaired in `tun_lower.tex`:
+1. Corollary B is false for a one-step chain (exact two-point counterexample); it now requires n ≥ 2. The assembly's chains have n of order √β.
+2. The choice C = 1 in L = √(C log β) does not give the error rate stated in the proposition on the local estimates (the outer term is then at least of order L β^(−1/2) e^(ΛL)); the rate needs C > π²/4, and C = 4 is now chosen. The assembly only uses that the errors tend to zero, which holds for any C.
+
+G4 also checked the Schur step, the weighted bound for sign-changing eigenfunctions and the corner algebra, found no obstruction to the exponent, and states that this is not a complete independent review. Two same-lineage referees had passed both defects.
