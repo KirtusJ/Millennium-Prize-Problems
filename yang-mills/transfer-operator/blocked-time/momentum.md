@@ -1,0 +1,28 @@
+# Every momentum in the small magnetic-coupling regime
+
+For a fixed spatial mesh, take a finite list of bounded, gauge-invariant local multiplication observables and their translates. Include complex conjugation at the left insertion when forming mixed spectral measures. In the SU(2) range $z\le1/384$, the normalized Wilson and Hamiltonian connected correlation matrices have vanishing difference at **each individual spatial momentum, uniformly over the allowed momenta and the volume**. For fixed $t\ge0$ and fixed couplings the bound is $O(a^{1/3}(1+|\log(a/t_0)|)^3)$ in fixed units. Here $t_0$ is a fixed time unit. Renormalizations growing with the spatial cutoff are outside the estimate. [Spatial and time bounds](local-limit.md) · [C4's momentum measures and common-clock comparison](../../central-quotients/momentum/wilson-time.md)
+
+## Uniform spatial tail
+
+In a torus of $N=L^3$ sites, write $C_L(x,t)$ for the connected correlation between an insertion anchored at zero and one anchored at $x$. The Dobrushin covariance inequality on the lifted slab, using its unweighted row sum, gives
+$$
+|C_L(x,t)|\le A q^{(d_L(x)-c_*)_+},\qquad q=647/960,
+$$
+where $d_L$ is the periodic sup-norm distance and $c_*$ covers the two supports. To see this, each nonzero influence step changes a spatial anchor by at most one. For a row in the first support, every term of the Green series landing in the second support therefore has degree at least $(d_L(x)-c_*)_+$. The geometric series and the two sup-norm oscillations give a constant $A$ depending on the fixed insertions. The estimate holds for the open temporal slab, its vacuum limit, and both equal time and separated fine slices. Passing to the fixed-box Hamiltonian gives the same bound there. The number of displacements at distance $r\ge1$ is at most $(2r+1)^3-(2r-1)^3=24r^2+2$, also on even tori where some representatives coincide.
+
+For the Fourier sum normalized by $N^{-1/2}$ at each insertion, translation invariance gives its connected covariance at an allowed momentum $k$ as $\sum_x e^{ik\cdot x}C_L(x,t)$, up to the fixed Fourier sign convention. In particular the total variation of the displacement sum is bounded independently of $L$ and $k$. For $d_L(x)\le d$, the proof of the [local comparison](local-limit.md) uses a reference box of side $O(d+1)$ containing both supports with another $d$ layers of padding. When $L$ is smaller the comparison uses the original box. All constants in the cutoff comparison for one pair are uniform over these displacements, since the insertion norms and the number of edges observed remain fixed. Products of the two one-point expectations obey the same comparison. For $d_L(x)>d$, sum the exponential tail for both correlations. Consequently
+$$
+\sup_{L,k}\left|\widehat C_{a,L}(k,t)-\widehat C_{H,L}(k,t)\right|
+\le A_t\big[(1+d)^3(q^d+a^{1/3}+a(1+d)^6)+(1+d)^2q^d\big].
+$$
+Taking $d=\lceil\log(t_0/a)/|\log q|\rceil$ proves the rate. It holds entrywise and hence in matrix norm for a fixed finite list. For the general faithful-character case the unweighted row bound is $2/3$. Truncate the sum at fixed $d$, use qualitative finite-volume time convergence in a larger fixed padded box, and then remove both truncations. This gives uniform convergence without a rate. [Compact groups](compact-groups.md)
+
+## Limits of the momentum and energy laws
+
+For any $a_n\downarrow0$, $L_n\to\infty$ and allowed $k_n\to k$ in the momentum torus, the covariance sum tends to $\sum_{x\in\mathbb Z^3}e^{ik\cdot x}C_\infty(x,t)$. First truncate its tail uniformly and then pass to the limit at the finitely many fixed displacements. The exponential tail gives a real-analytic function of momentum at each fixed time (indeed absolute convergence for complex momentum with $\|\operatorname{Im} k\|_1<|\log q|$). The same statement applies to the matrix of equal-time total spectral masses.
+
+For smooth local multipliers the centered Hamiltonian first energy moment for a site-normalized Fourier sum is bounded uniformly in $k,L$. From the ground-state Dirichlet identity it equals $(2\kappa)^{-1}\langle|\nabla F_k|^2\rangle$. On a particular edge only finitely many translates have a nonzero derivative, each bounded by a fixed constant times $N^{-1/2}$. There are $3N$ edges. This gives a bound $M$ with $0\le C_H(k,0)-C_H(k,t)\le Mt$ for each diagonal or polarized positive measure. [Dirichlet identity](../../observable-normalization/hamiltonian-variance/README.md)
+
+For the Wilson log-energy measure one may replace the fine-slice time $a\lfloor t/a\rfloor$ by $t$ in its Laplace transform at fixed $t>0$. The supremum of the change of $e^{-uE}$ over $E\ge0$ is at most $2a/t$ for $a\le t/2$, and the equal-time mass is uniformly bounded. The mass beyond $R$ is bounded by $[C(k,0)-C(k,t)]/(1-e^{-tR})$. Along the joint sequence, first use equal-time and positive-time convergence at a fixed small $t$, then take large $R$. The moment bound excludes loss of mass at infinity. Tightness and uniqueness of the Laplace transform identify the weak limit for every such $k_n$, including zero momentum. Polarization gives the off-diagonal matrix measures. Spectral windows with endpoints carrying atoms still need continuous tests or enlarged windows.
+
+Exponential spatial control is essential to the uniform momentum conclusion. If each of the $N$ displacement covariances differs by $1/N$, every individual difference tends to zero. Their sum at momentum zero is exactly one. C4's Parseval-based averaged comparison remains applicable under the different hypotheses stated there. The individual-mode improvement here uses the explicit small magnetic-coupling region.
