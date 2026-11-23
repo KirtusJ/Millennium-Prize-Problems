@@ -101,6 +101,47 @@ theorem noDiagonalContraction {ι : Type*} [Fintype ι] [Nonempty ι]
     _ = ∑ j, C i j * w i := Finset.sum_mul ..
     _ ≤ step C w i := Finset.sum_le_sum fun j _ => mul_le_mul_of_nonneg_left (hi j) (hC i j)
 
+/-- Row and column control of a nonnegative Green kernel bounds its quadratic form. -/
+theorem schurForm {ι : Type*} [Fintype ι] (D : ι → ι → ℝ) (v : ι → ℝ) (K : ℝ)
+    (hD : ∀ i j, 0 ≤ D i j) (hr : ∀ i, ∑ j, D i j ≤ K)
+    (hc : ∀ j, ∑ i, D i j ≤ K) :
+    ∑ i, ∑ j, D i j * (v i * v j) ≤ K * ∑ i, (v i)^2 := by
+  let sq := fun i => (v i)^2
+  have row : ∑ i, ∑ j, D i j * sq i ≤ K * ∑ i, sq i := by
+    rw [Finset.mul_sum]
+    apply Finset.sum_le_sum
+    intro i _
+    rw [← Finset.sum_mul]
+    exact mul_le_mul_of_nonneg_right (hr i) (sq_nonneg _)
+  have col : ∑ i, ∑ j, D i j * sq j ≤ K * ∑ j, sq j := by
+    rw [Finset.sum_comm, Finset.mul_sum]
+    apply Finset.sum_le_sum
+    intro j _
+    rw [← Finset.sum_mul]
+    exact mul_le_mul_of_nonneg_right (hc j) (sq_nonneg _)
+  have both : ∑ i, ∑ j, (D i j * (v i * v j) + D i j * (v i * v j)) ≤
+      ∑ i, ∑ j, (D i j * sq i + D i j * sq j) := by
+    apply Finset.sum_le_sum
+    intro i _
+    apply Finset.sum_le_sum
+    intro j _
+    dsimp [sq]
+    nlinarith only [mul_nonneg (hD i j) (sq_nonneg (v i - v j))]
+  simp only [Finset.sum_add_distrib] at both
+  change _ ≤ K * ∑ i, sq i
+  linarith only [row, col, both]
+
+/-- The squared one-edge oscillation bound for two incident smeared traces. -/
+theorem pairOscillation (c d : ℝ) :
+    (4*(|c|+|d|))^2 ≤ 32*(c^2+d^2) := by
+  nlinarith only [sq_nonneg (|c|-|d|), sq_abs c, sq_abs d]
+
+/-- At an earlier positive time the correlator itself controls the late moment. -/
+theorem laterMomentPoint {x r : ℝ} (hx : 0 ≤ x) (hr : x ≤ r) (n k : ℕ) :
+    x^(n+k) ≤ r^k * x^n := by
+  rw [pow_add, mul_comm (x^n)]
+  exact mul_le_mul_of_nonneg_right (pow_le_pow_left₀ hx hr _) (pow_nonneg hx _)
+
 open Filter Topology
 
 /-- A fixed transfer contraction loses every uniformly bounded connected
@@ -119,5 +160,8 @@ theorem continuumVanishes (C : ℕ → ℝ) (N : ℕ → ℕ) (B : ℝ)
 #print axioms noRowsFour
 #print axioms obstructionAtTwoFifteenths
 #print axioms noDiagonalContraction
+#print axioms schurForm
+#print axioms pairOscillation
+#print axioms laterMomentPoint
 #print axioms continuumVanishes
 end Millennium.YangMills.WilsonInfluence

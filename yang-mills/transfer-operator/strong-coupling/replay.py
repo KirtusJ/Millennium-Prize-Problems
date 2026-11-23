@@ -16,7 +16,8 @@ from replay import AXIOMS, KERNEL_SHA, MATHLIB, PCP, digest, guest
 SOURCE = HERE / "WilsonInfluence.lean"
 ASSEMBLER = "1cb649a9954be008a7f74ada3fb1494f1949d7947b85bf221875c655ea59afcd"
 THEOREMS = {"likelihoodBound", "greenBound", "rowsThree", "noRowsFour",
-            "obstructionAtTwoFifteenths", "noDiagonalContraction", "continuumVanishes"}
+            "obstructionAtTwoFifteenths", "noDiagonalContraction", "schurForm",
+            "pairOscillation", "laterMomentPoint", "continuumVanishes"}
 
 
 def run(args, **opts):
@@ -41,14 +42,14 @@ def native(cfg, out):
     (out / "witness").write_bytes(raw)
 
 
-def lean(cfg, path, rejection=False):
+def lean(cfg, path, expected_error=None):
     result = subprocess.run([cfg["lake"], "env", "lean", str(path)], cwd=cfg["mathlib"],
                             capture_output=True, text=True, timeout=180)
     log = result.stdout + result.stderr
     path.with_suffix(".log").write_text(log)
-    if rejection:
-        if not result.returncode or "error: linarith failed" not in log:
-            raise RuntimeError(f"expected failed row certificate in {path.name}")
+    if expected_error is not None:
+        if not result.returncode or expected_error not in log:
+            raise RuntimeError(f"missing expected rejection in {path.name}")
         return
     reports = re.findall(r"'Millennium\.YangMills\.WilsonInfluence\.(\w+)' depends on axioms: \[([^\]]+)\]", log)
     if (result.returncode or "warning:" in log or len(reports) != len(THEOREMS)
@@ -82,14 +83,18 @@ def task(node, out):
         if checked.read_bytes() != SOURCE.read_bytes():
             raise ValueError("native output differs from tracked source")
         lean(cfg, checked)
-        for name, old, new in [("UnitHeight", "height : ℝ := 26/15", "height : ℝ := 1"),
-                               ("LargerTilt", " 3 height", " 4 height")]:
+        for name, old, new, error in [
+                ("UnitHeight", "height : ℝ := 26/15", "height : ℝ := 1", "error: linarith failed"),
+                ("LargerTilt", " 3 height", " 4 height", "error: linarith failed"),
+                ("SmallPairBound", "≤ 32*(c^2+d^2)", "≤ 16*(c^2+d^2)", "error: linarith failed"),
+                ("ReversedTime", "x^(n+k) ≤ r^k * x^n", "x^(n+k) ≥ r^k * x^n", "type mismatch"),
+        ]:
             src = checked.read_text()
             if old not in src:
                 raise ValueError("missing mutation target")
             path = out / (name + ".lean")
             path.write_text(src.replace(old, new))
-            lean(cfg, path, rejection=True)
+            lean(cfg, path, expected_error=error)
     else:
         raise ValueError(node)
 
