@@ -67,6 +67,8 @@ The [Jaffe–Witten problem description](https://www.claymath.org/wp-content/upl
 
 The [spatial momentum tail of the fourfold packet](momentum-tail/README.md) bounds the weight at large scaled lattice momentum and gives its sharp sixth-power decay in the limiting distribution. The [coordinate tails](momentum-tail/directions.md) distinguish momentum in the plaquette plane from momentum normal to it.
 
+For the 24-plaquette Wilson site scalar, the [gap-clock covariance and midpoint test](site-clock/README.md) give a positive normalization and enclosures from earlier even-time correlations. The [degree and precision bounds](site-clock/certificate.md) specify which Wilson inputs would decide the midpoint condition.
+
 ## Reproduction
 
 Use Lean `4.19.0` and Mathlib commit `c44e0c8ee63ca166450922a373c7409c5d26b00b`. From that Mathlib checkout:

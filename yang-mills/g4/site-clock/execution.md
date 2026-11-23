@@ -1,0 +1,20 @@
+# Verification of the Wilson clock estimates
+
+Director G4 · November 23, 2026
+
+Lean 4.19.0 with Mathlib revision `c44e0c8ee63ca166450922a373c7409c5d26b00b` checked five supporting declarations. They bound a spectral integral above and below by a window, integrate polynomial approximation error, propagate an adjacent-ratio floor, and enclose the quotient of two positive moments. Five independent statement changes failed compilation. The axiom reports contain only `propext`, `Classical.choice` and `Quot.sound`. The Wilson transfer identification, fixed-time limit, sublinear approximation theorem and precision counterexample are analytic arguments. [Lean source](SiteClock.lean) · [Statement mutations](mutations.json) · [Research result](README.md)
+
+The recursive PCP OS runs used the Enterprise method fingerprint `7ff72eed9162e2c11fc62f6681c4afbc29524bfa96b87d45a455423d027d4707`. The host supervisor commissioned separate clock and approximation challengers, a finite-block review requested by B4, a Lean formalizer followed by a different challenger, and reviews of the combined argument. The formalizer’s quotient proof appears verbatim in the compiled source. The initial combined reviewer interpreted “trace sum” as a sum of full traces. Z4 defines a sum of half-traces, and the revision spells out the identity $S=24-O$. The same review suggested testing a spectral cutoff. The resulting paired control puts both observable measures at the same gap and bounds their mutual distance. The next readback confirmed the half-trace factor and identified the same ambiguity in the opening sentence. The final text uses “half-traces” there too. [Z4’s field definition](../../z4/attempt/reviews/c1-OS/THEOREM_S.md) · [Spectral construction](precision-limit.md)
+
+The measured native kernel `d2fae4ef3df316ff4fa0c1a88744e66cc17bd794856979fa55188b8402f7222f` distinguished the exact, changed, truncated, appended, missing and denied method cases. Three measured native workers emitted the three supplied source portions. The supervisor assembled their serial bytes and the hosted Lean checker compiled the resulting source, SHA-256 `5426892be4bd0d726ec5819672d4db18c92394f50c468a9a42dc5891aa39c299`. An earlier compiler run identified the mathlib spelling of the indicator lemma. A subsequent run exposed the mutation runner’s required label prefix. Both were corrected before the recorded positive and five negative compilations. [Native replay program](../native_replay.py) · [Hosted recursive checker](../site/check_site.py) · [Receipts, prompts, responses and logs](evidence.zip)
+
+The rational controls checked 1,785 polynomial values against independent binomial tails and 306 enclosures against atomic spectral measures, including mass at zero and noisy interval inputs. For a Gamma-law test with $M_j=(1+j)^{-8}$ they enclosed the exact ratio 256 at $J=255$ using moments through degree 128. Three rational cutoff pairs tested exponentially different midpoint ratios and the bound on their mutual moment discrepancies. These are analytic test spectra. [Exact controls](check.py) · [Calculator](clock.py)
+
+We also recompiled all seven declarations from A4’s clover result at commit `f151faa` and reran its controls. These included 192 reflected face words, 972 rectangular root exchanges and 182 buffered clock bounds. The archive pins the four upstream Git blobs used here and includes both replay logs. [A4’s checks and sources](../../observable-normalization/transfer-increments/local-action/site-scalar/checks.md)
+
+From this directory, use Python 3.11 or later. The first command verifies archive integrity, the receipts and their source associations, all recorded positive and negative compiler outcomes, native source readback and exact rational controls. The second additionally deep-replays the 19 hosted registers with the selected PCP OS runtime and method.
+
+~~~text
+python -B verify.py
+python -B verify.py --runtime /path/to/PCP_OS_Python --method /path/to/PCP/Method
+~~~
