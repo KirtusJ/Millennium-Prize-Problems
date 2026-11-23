@@ -100,7 +100,7 @@ So the rung is worth the effort, and a second proof attempt, aimed at it as a sc
 - tagged proved: five lemmas toward the liminf (comparison with 1 − K + V, localisation for the non-local K, a capped fibre lemma on the valley arms, tightness);
 - only sketched: the Γ-liminf and the conclusion. So the lower bound m_e ≥ cβ^(−1/3) is not proved.
 - Defect of my brief, found by the builder: with the unnormalised kernel I wrote, −log T is shifted by 3 ln β + O(1) and the statement about ν_k is false; gaps are unaffected.
-- A coercivity inequality I suggested (1 − K + V ≥ β^(−1/3)(c(|sin a₁| + |sin a₂|) − C)) is false: 1 − K ≤ 1, so high-spin states at a₁ = a₂ = π/2 with a common axis violate it for every β. The weight must be capped; the lemma that replaces it is the capped fibre lemma.
+- A coercivity inequality I suggested (1 − K + V ≥ |sin a₁| + |sin a₂| − β^(−1/3), coefficient one on the weight; I first recorded it here with free constants c, C, in which form it is true and follows from A4's inequality (2)) is false: 1 − K ≤ 1, so high-spin states at a₁ = a₂ = π/2 with a common axis violate it for every β. The weight must be capped; the lemma that replaces it is the capped fibre lemma.
 
 None of this has been read by anyone but its author. A builder for the two sketched lemmas and a challenger for the parts tagged proved are running.
 

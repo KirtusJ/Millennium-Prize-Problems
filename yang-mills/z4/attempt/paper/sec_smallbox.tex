@@ -1,0 +1,188 @@
+
+\section{A lower bound at fixed volume, and why it does not reach Hypothesis (A)}\label{sec:smallbox}
+
+Every result proved in this paper bounds the gap from above. This section records one lower bound
+at weak coupling. It holds at fixed spatial volume, namely one spatial site, and in one symmetry sector.
+Its proof was written by a session of a second model lineage (OpenAI Codex), not by the sessions that
+wrote this paper, and has not been read by a person. We report it with its provenance and explain why it gives nothing for
+Hypothesis~\ref{hyp:A}.
+
+\subsection{Setting}
+Fix one spatial site with periodic identification in $k=2$ or $k=3$ spatial directions, and infinite
+time. The spatial links are $U_1,\dots,U_k\in\SU(2)$. Write a unit quaternion as $U=(u_0,\mathbf u)$ with
+$\mathbf u\in\R^3$ its imaginary part. The spatial plaquettes give the potential
+\[
+V=2\beta\sum_{i<j}|\mathbf u_i\times\mathbf u_j|^2 .
+\]
+Let $K$ be the product of independent convolutions, one per link, by the Wilson increment whose
+density with respect to probability Haar measure is proportional to $e^{\beta\operatorname{Re}\Tr U/2}$,
+normalised so that $K1=1$. The transfer operator is $T=e^{-V/2}Ke^{-V/2}$ on $L^2(\SU(2)^k)$. With the
+unnormalised kernel $e^{\beta(\frac12\operatorname{Re}\Tr U-1)}$, $-\log T$ is shifted by a
+$\beta$-dependent constant; gaps are unaffected, absolute energies are not.
+
+The \emph{center-even sector} consists of the functions invariant under simultaneous conjugation of all
+links (gauge invariance at the single site) and even under each independent center flip
+$U_i\mapsto-U_i$. On it the temporal gauge projector acts as the identity. Let
+$\lambda_0\ge\lambda_1\ge\cdots$ be the eigenvalues of $T$ there, counted with multiplicity, and
+$h=\beta^{-1/3}$. The limiting operator is
+\[
+h_k=-\tfrac12\sum_{i=1}^k\Delta_i+2\sum_{i<j}|x_i\times x_j|^2
+\qquad\text{on the rotation-invariant subspace of }L^2((\R^3)^k),
+\]
+rotations acting simultaneously on $x_1,\dots,x_k$. Its eigenvalues, ordered and counted with
+multiplicity, are $e_0\le e_1\le\cdots$. The potential vanishes on the commuting configurations
+(all $x_i$ parallel), the valley.
+
+\subsection{The reported statement}
+
+\medskip\noindent\textbf{Reported} (one-site limit in the center-even sector). \emph{For $k=2$ or $3$ and
+each fixed $j$, as $\beta\to\infty$,}
+\[
+\frac{1-\lambda_j}{h}\longrightarrow e_j,\qquad
+\frac{\log(\lambda_0/\lambda_1)}{h}\longrightarrow e_1-e_0>0,\qquad h=\beta^{-1/3}.
+\]
+
+\noindent\emph{Status.} Written proof by a session of a second model lineage (OpenAI Codex);
+checked step by step by a session of the first lineage (Claude), which found $27$ of $30$ items
+standing, none defective and $3$ not checked, and one wording slip in the companion proof of the vacuum
+energy; not read by a person; the Lean files cover scalar lemmas only. It is not a theorem of this paper and is
+not proved here. The full text is in the research repository named in~\cite{Repo} (a different folder from
+the one cited there), folder \url{yang-mills/observable-normalization/one-site-vacuum/} and its
+subfolders, at commits \repo{c5c1ea9} (vacuum energy), \repo{4966c89} (the statement above) and
+\repo{dd2927a} (Remark~\ref{sb:rem-center}).
+The proof does not give a numerical value for $e_1-e_0$. A companion statement by the same author
+gives $c\beta^{-1/3}\le-\log\lambda_0\le C\beta^{-1/3}$ for the vacuum energy alone.
+
+\emph{Proof sketch} (as written by its author; numbering of the steps ours).
+\begin{enumerate}
+\item \emph{Fibre inequality.} Fix $i$, pick $j\ne i$, freeze every link except $U_j$, and let
+$r=|\mathbf u_i|\ge h$. Then $I-K_j+V_{ij}\ge c\,r$ uniformly in the frozen variables. The proof runs the
+one-link walk for $m=\lceil 8/r\rceil$ steps, uses the smoothing estimate of the vacuum-energy proof and a
+tube estimate for the transverse component, and bounds the survival of the walk killed at rate $V_{ij}$.
+Since $K\le K_j$ and $V\ge V_{ij}$, this gives
+$c\int|\mathbf u_i|\,|g|^2\le\langle g,(I-K+V)g\rangle+ch\|g\|^2$ for every $g$.
+\item \emph{Compactness.} For a unit vector $F$ with $\langle F,(I-T)F\rangle\le Ch$ put $g=e^{-V/2}F$.
+Step~1 bounds the mass of $g$ outside $\{\max_i\theta_i\le Rh\}$ ($\theta_i$ the distance of $U_i$ to
+the nearer center) by $C'/R$. This is where the valley arms are handled: Step~1 penalises every link
+away from a center whatever the other links do, including configurations with a common axis, so the
+escape along the commuting valley is controlled. A kinetic bound $1-K\ge c'\min(D/\beta,1)$ by Bessel
+ratios ($D$ the product Laplacian), an isometry $J_h$ onto Euclidean $L^2$ in the scaled variables
+$U_i=\exp(hx_i)$, and Rellich's theorem on balls give strong $L^2$ compactness of $J_hF$.
+\item \emph{Consistency on test functions.} For smooth compactly supported invariant $\psi$,
+$J_h(I-T)J_h^*\psi/h\to h_k\psi$ in $L^2$: the potential from $V/h$, the Laplacian from the second
+moment of one increment ($\beta\,\E\,\xi_a\xi_b\to\delta_{ab}$), with a third-order remainder
+$O(\beta^{-3/2}h^{-3})=O(h^{3/2})$.
+\item \emph{Min--max.} Trial spaces from Step~3 give $\limsup(1-\lambda_j)/h\le e_j$. Eigenvectors of
+$(I-T)/h$ have strong limits by Step~2 that remain orthonormal and are weak eigenfunctions of $h_k$, which
+gives the $\liminf$. The operator $h_k$ has compact resolvent and a simple positive ground state, so
+$e_1>e_0$; finally $-\log\lambda_j=(1-\lambda_j)+O(h^2)$.
+\end{enumerate}
+
+A second proof of the case $k=2$, with a different architecture (a partition into four center boxes and
+capped valley arms in place of the walk estimate), was written by sessions of the first lineage and
+challenged once by a session of the same lineage: $11$ steps stood, one sign defect was corrected (the
+bound used survives), one constant was rederived and one partition function replaced. It has not been read
+by a person, and it is not reproduced here.
+
+\begin{remark}[All center sectors]\label{sb:rem-center}
+With all $2^k$ center characters restored to the gauge-invariant space, the same author reports that for
+some $0<c<C$ depending on $k$, for all large $\beta$ and every nontrivial character $\chi$,
+$e^{-C\sqrt\beta}\le\log(\lambda_0/\lambda_\chi)\le e^{-c\sqrt\beta}$, where $\lambda_\chi$ is the largest
+eigenvalue in the sector $\chi$. The first gap on the full gauge-invariant space is then between
+$e^{-C\sqrt\beta}$ and $e^{-c\sqrt\beta}$ for large $\beta$, and the $\beta^{-1/3}$ statement above holds in
+the center-even sector only. Status: written proof by a session of the second lineage; it was not part of
+the step-by-step check above; not read by a person. Measured center-odd splittings do not fix the form
+$e^{-c\sqrt\beta}$: they fall below double precision from $\beta=128$.
+\end{remark}
+
+\subsection{Numbers}
+Table~\ref{sb:tab-num} collects exact numerics for both models. All entries are measured, none is proved.
+The lattice values are logarithms of ratios of transfer eigenvalues in the center-even sector, in lattice
+units; the continuum values are Rayleigh--Ritz computations for $h_k$.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{@{}p{0.43\textwidth}p{0.49\textwidth}@{}}
+\toprule
+Quantity & Value (status: measured) \\
+\midrule
+\multicolumn{2}{@{}l}{\emph{Two directions}} \\
+$e_0$, $e_1$ of $h_2$ & $3.3505330$, $5.3254970$; $e_1-e_0=1.974964$ \\
+$\log(\lambda_0/\lambda_1)\,\beta^{1/3}$, $\beta=32,64,128$ & $1.636$, $1.760$, $1.837$ \\
+$\log(\lambda_0/\lambda_1)\,\beta^{1/3}$, $\beta=256,512,1024$ & $1.887$, $1.919$, $1.939$ \\
+two-term fit in $\beta^{-2/3}$, $\beta^{-1}$ & $1.97496$ (endpoint deletion: $1.97503$, $1.97489$) \\
+\midrule
+\multicolumn{2}{@{}l}{\emph{Three directions}} \\
+$e_0$ of $h_3$ & $6.534885$ \\
+first gap of $h_3$ (five-fold, $J=2$) & $3.012539$ \\
+first scalar gap of $h_3$ & $3.602838$ \\
+$e_0$ in the normalisation of~\cite{vB00} & $4.1167196$ (published: $4.116719735$) \\
+lattice $\log(\lambda_0/\lambda_1)$, $\beta=1,2,4$ & $2.876117$, $1.621505$, $0.968930$ \\
+the same times $\beta^{1/3}$ & $2.88$, $2.04$, $1.54$ (not asymptotic) \\
+\bottomrule
+\end{tabular}
+\caption{Exact numerics for the one-site model, center-even sector. Measured, not proved.}\label{sb:tab-num}
+\end{table}
+
+\emph{Two directions.} The model has an $\mathrm{O}(2)$ symmetry mixing $x_1$ and $x_2$, and $e_1=e_2$ is an
+exact doublet of charge two. That the lowest non-scalar branch is this doublet is proved; that it lies
+below the first excited scalar level rests on the numerics. The lattice symmetry splits the doublet
+($0.19238$ against $0.19331$ at $\beta=1024$); the square group permits but does not force this splitting.
+The lattice values approach $e_1-e_0$ from below; at $\beta=1024$, $(1-\lambda_j)/h$ is still $16$ to
+$23$ per cent below $e_j$, while $-\log\lambda_j/h$ is within $1.3$ per cent.
+The fitted limit $1.97496$ is a four-point fit with one residual degree of freedom; deleting either endpoint
+moves it to $1.97503$ or $1.97489$. It is a comparison with $e_1-e_0$, not a certified limit. A three-point
+geometric extrapolation gives $1.97583$.
+The lattice spectrum was computed by two methods (a Peter--Weyl diagonalization and a Nystr\"om
+discretization with Lanczos), which agree to $4.6\cdot10^{-9}$ or better.
+
+\emph{Three directions.} The lattice model was converged only up to $\beta=4$; at $\beta=8$ it is not
+converged, and the computed range is not asymptotic. Nothing is measured about the three-direction limit.
+In the normalisation of the small-volume literature, $-\tfrac12\Delta+\tfrac12\sum_{i<j}|x_i\times x_j|^2$
+(energies divided by $4^{1/3}$), $e_0=4.1167196$. The published value is $4.116719735$
+\cite[text after eq.~(12)]{vB00}; the difference, $1.5\cdot10^{-7}$, is within the rounding of
+$6.534885$. That source calls the number the lowest-order mass of the scalar glueball; in its own
+eq.~(12), and here, it is a ground energy, not a gap. The two gaps, $1.89778$ and $2.26965$ in that
+normalisation, were not compared with the literature: the paper that gives them~\cite{LM84} was reached
+as an abstract only.
+
+\subsection{Why it does not reach Hypothesis~\ref{hyp:A}}\label{sb:sub-why}
+The following derivation is heuristic. The reported statement is for one spatial site ($L=1$) only.
+
+On the periodic box of side $L$ restrict to constant spatial links $U_i=\exp(\tfrac{i}{2}A_i\cdot\sigma)$
+and to small $A_i$. Each spatial plaquette gives $1-\tfrac12\Tr U_P=\tfrac18|A_i\times A_j|^2(1+O(A^2))$ and
+there are $L^3$ of them per plane; the temporal plaquettes give the kinetic term
+$\tfrac{\beta L^3}{8}\sum_i|\dot A_i|^2$. Treating the transfer operator as $e^{-H}$,
+\[
+H=-\frac{2}{\beta L^3}\Delta_A+\frac{\beta L^3}{8}\sum_{i<j}|A_i\times A_j|^2,
+\qquad A=2(\beta L^3)^{-1/3}Y \ \Longrightarrow\ H=(\beta L^3)^{-1/3}h_3 .
+\]
+So the constant modes predict a gap $m\approx e\,\beta^{-1/3}/L$ in lattice units, with $e=3.012539$ the
+first gap of $h_3$ (a measured number). At fixed $\beta$ this tends to zero as $L\to\infty$.
+With $\beta=4/g^2$ this is $mL=e'g^{2/3}$, $e'=4^{-1/3}e$: the $g^{2/3}/L$ form of the small-volume
+expansion of L\"uscher~\cite{Lu83}, with the leading-order effective Hamiltonian of~\cite[eq.~(9)]{vB00}
+(the agreement of coefficients was checked against~\cite{vB00}, not against~\cite{Lu83}); the bare coupling $g$ here agrees with the
+renormalised $g(L)$ of the literature at leading order only. The derivation neglects the non-constant
+modes and assumes the replacement of $T$ by $e^{-H}$ on the box, which is the box analogue of the reported
+statement and is not proved for $L>1$.
+The literature on this expansion places the end of its regime at $z=mL$ of order one: effects of the
+boundary of the fundamental domain from $z>0.9$ \cite[pp.~11--12]{vB00}, and a crossover near $z\approx2$
+(\cite{LM84}, abstract). The route therefore gives no lower bound uniform in the volume, and no lower bound
+of the kind Hypothesis~\ref{hyp:A} requires. It is the lattice form of a known regime, at one site.
+
+In a limited search we did not find a proof, in the literature, of the discrete-time one-site limit stated
+above, nor a theorem giving a lower bound on the gap on a finite torus at weak coupling that is uniform in
+any parameter, nor a published spectrum of $h_2$. The searches were limited (catalogue phrase queries
+returned nothing even where they should have), so ``not found'' is weak evidence.
+Of the sources, \cite{vB00} was read in full; \cite{Lu83} and~\cite{LM84} were read as abstracts only.
+
+\subsection{A false start}
+For $k=2$ the first form of coercivity suggested in this work was
+$1-K+V\ge|\sin a_1|+|\sin a_2|-\beta^{-1/3}$ ($a_i$ the class angles), with coefficient one on the weight.
+It is false: $1-K\le1$, while $V$ is small on high-spin states concentrated near $a_1=a_2=\pi/2$ with a
+common axis, where the weight equals $2$; numerically the infimum of the spectrum of the difference, times
+$\beta^{1/3}$, was below $-2.39$ at $\beta=16$ and below $-3.35$ at $\beta=64$. A weight of this kind must be
+capped, or carry a small coefficient as in Step~1 of the sketch above; the second proof uses a capped fibre
+lemma.
+

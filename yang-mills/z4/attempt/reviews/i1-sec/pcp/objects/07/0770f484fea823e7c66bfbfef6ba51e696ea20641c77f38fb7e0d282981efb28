@@ -1,0 +1,30 @@
+The fidelity check is finished and `report.md` is written. Of the 50 items checked, no number in the section or table is wrong. Three items need fixing: an overstated provenance word, an overstated attribution to Lüscher 1983, and wrong trace comments for `numerics3.md`.
+
+**Control:** −ln tanh(1/2) = 0.771937, written to `control.txt`.
+
+**Problems found in the section**
+- **Provenance:** the intro says the one-site limit "was proved" by a Codex session. The inputs only say "written proof", "submitted for independent review" and "not read by anyone but its author". The section's own Status paragraph says this correctly. I marked the intro word OVERSTATED.
+- **Lüscher 1983:** the section says the result matches Lüscher's small-volume expansion "with the same leading coefficients". That reference was read as an abstract only, and the abstract gives no numbers. The coefficient match was made against van Baal's paper, and only for the ground energy, since the two gaps were never compared. I marked this OVERSTATED.
+- **Trace comments:** several comments cite lines of `numerics3.md` that don't exist (l.225-227, 242, 272). l.162-165 point at unrelated text about the grandchild's Monte Carlo. The values themselves are right; the real lines are 18-21, 81-83, 95 and 128. I marked these WRONG (trace).
+- **Repository path:** the folder `yang-mills/observable-normalization/one-site-vacuum/` appears in no input, so it is UNSUPPORTED. `\cite{Repo}` has no entry in `refs_add.tex`; whether `main.tex` defines it I did not check.
+- **False start:** the wording copies `A3_NOTES.md` l.103, so it is faithful to the source. The argument itself is incomplete, as the writer's own note says.
+
+**Everything else is FAITHFUL.** That includes the 27 of 30 review result, the one wording slip in the vacuum-energy proof, the center-sector remark, all table numbers, the conversion by 4^(−1/3), and the full-text vs abstract-only marks.
+
+**Programs**
+- **`check_sec.py`:** my first version reported met 10, failed 0, but its line-number check passed wrongly. The cause was my own parser bug: it skipped comments that follow table-row text. The result file is kept.
+- **`check_sec_v2.py`:** the fixed version gives met 9, failed 1, measured only 1. The one failure is the trace-line check, which is a defect of the target, not of my expectation. Of 54 cited line references, 3 are out of range.
+- **Sub-agent (T106):** it was admitted and released. It reproduced the ground-energy conversion (4.1167195851, 1.5e-7 below the published value, within the 3.2e-7 rounding of 6.534885) and both gap conversions. I reread and reran its program; the values match, though the rerun's last line hit the mode "x" rule on an existing results file. Its own control, −ln tanh 3 = 0.004958, was correct.
+- **PCP register:** `pcp_os.py verify` returned PASS, and so did `pcpos verify pcp/register.jsonl`. Both last lines are quoted in `report.md`.
+
+**Not checked:** `main.tex`, the primary literature (I used only the grounding record), whether the proofs are sound, and the raw eigenvalue data behind the quoted numbers. The report lists the rerun commands.
+
+Files are in `/home/user/z4-workers/i1-sec/child`:
+- `report.md`
+- `notes.md`
+- `control.txt`
+- `check_sec.py`
+- `check_sec_v2.py`
+- `results_check_sec.txt`
+- `results_check_sec_v2.txt`
+- `grandchild/report.md`
