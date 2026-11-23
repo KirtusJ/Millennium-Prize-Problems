@@ -16,6 +16,8 @@ The centered single-plaquette vector has spectral weight of order $n^{-8}$ at la
 
 For the [hypercubic sum of all 24 incident plaquettes](site-scalar/README.md), the mixed-orientation extension gives all fixed-order scalar Schwinger functions on a common growing scale.
 
+The [parity-odd clover](odd-clover/README.md) has a positive lattice variance per unit volume at weak coupling. Its free contact cancellation controls a surface term and gives a decaying upper bound on that variance.
+
 ## A finite-coupling bound on a straight average
 
 Order the root path along time, spatial axes 2 and 3, then axis 1. Denote the transported $\sqrt\beta\operatorname{Im}U_{12}$ by $F$. Every spatial line along axis 1 uses a common prefix and then straight paths. Changing the common root to any site of that line conjugates every transported face along it by the same quaternion, by free cancellation. Products of different color components will be evaluated in the original frame; the vector norm of a line average can be bounded in any of these frames.
