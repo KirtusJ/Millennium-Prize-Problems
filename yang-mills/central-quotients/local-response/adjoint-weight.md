@@ -21,3 +21,14 @@ Choosing \(d=[8\pi^2(1+4B)]^{-1}\) leaves at least half the probability outside.
 With the same generator normalization and the four distinct plaquette links, the ground-state Dirichlet form for \(F_k\) is \(4\kappa k^2 E[\sin^2(k\theta)]\). For each incident link the radial gradient of \(\theta\) in the three generator directions has squared norm \(1/4\) away from the two poles, a Haar-null set. At \(k=2\) the form is \(16\kappa E[\sin^2(2\theta)]\), bounded above by \(16\kappa\). It is also \(64\kappa E[x_p^2(1-x_p^2)]\le128\kappa E[1-x_p]\le128\kappa B/g\) for \(g>0\). Jensen's inequality for the normalized centered spectral measure now gives the stated autocorrelation. At \(g=0\) the adjoint trace has Haar variance one and is an exact eigenfunction of energy \(8\kappa\), providing a normalization check.
 
 The result concerns a single directly measurable observable at fixed regulator parameters. Along a spatial continuum trajectory the constants can deteriorate, and a lower bound on an autocorrelation gives no lower mass-gap bound. The argument extends A4's published radial proof analytically. The measured Lean certificates in this directory cover the declarations listed in the [execution record](execution.md).
+
+## A bounded positive energy band where the fixed-mesh gap applies
+
+B4 obtains a volume-independent lower gap \(\Delta>0\) for the continuous-time Hamiltonian when \(z=\kappa_B\lambda\) is sufficiently small for the cited perturbation theorem. Here the coefficient of the unit-round Laplacian is \(1/(2\kappa_B)\), so \(\kappa=2/\kappa_B\) in A4's convention and \(g=z/2\). The centered adjoint plaquette lies in the exact winding-neutral sector. Its spectral measure \(\mu_A\) on each finite periodic graph has total mass at least \(v_*\), first moment at most \(M_A\) and support above or at \(\Delta\). Set \(R=2M_A/v_*\). Markov's inequality bounds \(\mu_A((R,\infty))\le v_*/2\), hence
+\[
+ \mu_A([\Delta,R])\ge v_*/2,\qquad
+ C_A(t)-2C_A(t+s)+C_A(t+2s)
+ \ge \tfrac12 v_*e^{-tR}(1-e^{-s\Delta})^2
+ \quad(t\ge0,\ s>0).
+\]
+Both endpoints and the positive weight are independent of spatial volume at fixed Hamiltonian coefficients in this perturbative regime. B4's time-limit comparison at fixed spatial mesh and volume applies to these bounded quotient multipliers by pulling them back to the cover. A bulk gap on a spatial refinement trajectory and the same positive band there remain open. [B4's Hamiltonian normalization and local stability argument](https://github.com/KirtusJ/Millennium-Prize-Problems/tree/6c086a6c4dd605a99869ed8c8c2ae3a1eaa6a2aa/yang-mills/transfer-operator/hamiltonian-time) · [D4's positive-time vacuum filter](https://github.com/KirtusJ/Millennium-Prize-Problems/tree/4fdd79bb39e710287e8fd278ce9abfff6177a572/yang-mills/spectral-support/positive-time/vacuum)
