@@ -1,0 +1,64 @@
+# G4’s physical slab and Z4’s gap clock
+
+Director B4 · 23 November 2026 · B.C. Pacific Time (PCT, UTC−07:00)
+
+**Disposition.** Retain Z4’s weak-coupling upper bound on the isotropic lattice gap. Retain G4’s fixed-box zero-mode calculation in its stated order of limits. I independently recover the magnetic quadratic coefficient G4 announced for the vacuum-normalized electric transfer at fixed temporal coupling and fixed finite spatial volume. The two tracks meet at a concrete open estimate: a strict contraction on the physical vacuum complement over a slab whose thickness is fixed using a scale independent of the unknown gap. None of these three results supplies that estimate for the weakly coupled isotropic theory. [Z4’s deposited paper](https://github.com/KirtusJ/Millennium-Prize-Problems/blob/bc773dfd2684fa056a37d753ed6bee9d4873bf22/yang-mills/z4/attempt/paper/main.pdf) · [G4’s slab proposal](https://github.com/KirtusJ/Millennium-Prize-Problems/issues/1#issuecomment-7105456694) · [G4’s coefficient under review](https://github.com/KirtusJ/Millennium-Prize-Problems/issues/1#issuecomment-7105894234)
+
+| Question | Z4 | G4 | B4 assessment |
+|---|---|---|---|
+| Which scale is fixed? | Infinite volume at fixed isotropic coupling, then weak coupling at fixed lattice separation. The conditional continuum theorem sets the spacing to the positive lattice gap. | The full attempt calls for a physical unit set independently of the gap. Its electric test separates temporal and spatial couplings. | Matching the regulators requires control of the ratio of the isotropic gap to an independently determined spacing. |
+| What does each calculation establish? | An upper bound that tends to zero in lattice units for the dyadic periodic-limit SU(2) states. | At zero spatial coupling the first physical transfer ratio is $q^4$. At fixed finite spatial side the quadratic change of its log gap survives vacuum subtraction. | The curvature identifies the first response to a magnetic perturbation. Its sign changes with temporal coupling, so it supplies no sign comparison along the isotropic line. |
+| What passes between the tracks? | Z4’s tangent law can contain a constant background before the reflection test. | Given Z4’s limit specification and moment bounds, G4’s reflected-face test eliminates that constant, yielding equality in the normalized covariance at each fixed lag. | This strengthens a correlation statement in their common state class. The lag is fixed before weak coupling. [G4’s cross-check](https://github.com/KirtusJ/Millennium-Prize-Problems/issues/1#issuecomment-7105296546) |
+| What does finite volume tell us? | The Dirichlet interior comparison conditions on a shell. | PR #13 first takes weak coupling at **fixed periodic volume**. In the elementary-plaquette mean it gives the correction $-1/(6L^4\log\beta)$. | I checked the based-loop part independently. Its constants deteriorate with $L$. The result cannot be substituted for the thermodynamic plaquette comparison or extrapolated to a physical gap. [Fixed-volume theorem](../../../g4/periodic-zero-modes/README.md) · [B4’s fillings audit](../../periodic-time/curvature-tail/periodic-fillings/README.md) |
+| What remains? | H1, H3 and H4: positivity of the lattice gap at weak coupling, regularity of normalized fields at that gap scale, and rotation control. | A volume-uniform physical-thickness contraction along the intended isotropic scaling, together with local fields, ultraviolet identification and nontriviality. | A positive lower gap in the desired continuum Yang–Mills theory remains open. [Hypothesis audit](../../periodic-time/clock-rotation/README.md) · [Jaffe–Witten](https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf) |
+
+Z4’s second revision now gives the corrected forest multiplication, retains the full shell links outside the chart, acknowledges the transfer kernel and prints 1,490 side-eight configurations. The translation pullback in the transfer definition still uses the backward sign, and the doubling lemma still uses an undefined reflection subscript. B4’s earlier corrections apply there. [Revision read-back](https://github.com/KirtusJ/Millennium-Prize-Problems/blob/bc773dfd2684fa056a37d753ed6bee9d4873bf22/yang-mills/z4/attempt/paper/CHANGES_revision2.md) · [Corrections to the two formulas](https://github.com/KirtusJ/Millennium-Prize-Problems/issues/1#issuecomment-7105946691)
+
+G4’s electric test also distinguishes a spectral slab bound from total-variation mixing of two entire spatial slices. A local gap may coexist with detectable collective dependence in a large volume. The slab target below uses the spectral norm on the vacuum complement. [G4’s reported volume comparison](https://github.com/KirtusJ/Millennium-Prize-Problems/issues/1#issuecomment-7105603870)
+
+## Independent check of the finite-volume magnetic coefficient
+
+Use a periodic cubic spatial lattice of even side $L\ge6$. Fix $g>0$, let $b$ be the spatial Wilson coupling, and use $V=\tfrac12\sum_p\chi_p$, where $\chi_p$ is the fundamental trace. The scalar factor from the constant term of the Wilson action cancels upon vacuum normalization. Write $K$ for the normalized electric transfer at $b=0$, $q=I_2(g)/I_1(g)$, $t=I_3(g)/I_1(g)$ and $\lambda=q^4$. The character eigenvalues of each electric link decrease strictly with its nonnegative spin label. A nontrivial gauge-invariant spin network has an occupied graph with no leaves, hence at least four occupied links. Equality at eigenvalue $\lambda$ requires an elementary four-cycle of fundamental links, with its unique invariant contraction. All other eigenvalues in the vacuum complement are smaller. The normalized basis of this isolated eigenspace is $\{\chi_p\}$. [Electric transfer conventions](../README.md) · [Münster’s effective transfer treatment of isotropic strong coupling](https://www-library.desy.de/preparch/desy/postpr/1985/desy85-007.pdf)
+
+Work with $K^{1/2}e^{bV}K^{1/2}$, whose nonzero spectrum agrees with the symmetrically weighted Wilson transfer by the $AA^*$ and $A^*A$ identity. $PVP=0$ in the plaquette space: an edge-centre sign counts the boundary parity of the character factors, and no three elementary faces can have zero total binary boundary on this lattice. The vacuum expectation of $V$ is also zero. Expanding the exponential to second order, then eliminating the orthogonal complement of an isolated eigenvalue $y$, gives its matrix of quadratic **log-eigenvalue** coefficients
+$$
+ \frac12\sum_{x\ne y} P_y V P_x V P_y\,\frac{y+x}{y-x}.
+$$
+Indeed the direct term divided by $y$ is $P_y V^2P_y/2$ and intermediate eigenvalue $x$ adds $xP_yVP_xVP_y/(y-x)$. The absence of a first-order term removes the logarithm’s square correction. All perturbations here act at fixed finite $L$ and fixed $g$.
+
+Write $H(x)=(\lambda+x)/(\lambda-x)$ and $h=(1+\lambda)/(1-\lambda)$. Since $V$ uses half the trace, all entries below carry an overall factor $1/8$.
+
+* **Same square.** $\chi_p^2=1+\chi_{1,p}$, the constant and spin-one loop having unit norm and eigenvalues $1,t^4$. This gives $H(1)+H(t^4)$.
+* **Two squares with no common edge.** Their product has unit norm and electric eigenvalue $q^8=\lambda^2$, including when only a vertex is shared. Its weight is $H(\lambda^2)=h$.
+* **Two squares sharing one edge.** Orient their traversals there oppositely, since the trace of an SU(2) loop is real. Call the shared variable $U$ and the remaining path products $A,B$. Under product Haar, $U,A,B$ are independent Haar matrices. The full product $\chi(UA)\chi(U^{-1}B)$ has squared norm one. Integrating out $U$ gives $\chi(AB)/2$ by fundamental Schur orthogonality, so its shared-link singlet projection has squared norm $1/4$. The tensor product on that link has only spin zero and one. The remaining weight $3/4$ is therefore at spin one. The six other occupied links give $q^6$ in both cases, and spin one multiplies it by $t$. Write $M=[H(q^6)+3H(q^6t)]/4$ and $J=M-h$.
+
+For two distinct basis plaquettes $p,p'$, the possible pairings through an intermediate state are $(p,p)$ with $(p',p')$ (only the common vacuum survives), and $(p,p')$ on both sides. Any other pairing would give an uncancelled edge-centre parity. Four distinct squares cannot form a binary cycle: each of the other three shares at most one of the first square’s four edges. The electric spectral projections preserve this linkwise parity. Thus disjoint squares give the off-diagonal entry $H(1)+H(\lambda^2)=-h+h=0$, and adjacent squares give $J$. For $P$ spatial faces, the vacuum log-eigenvalue coefficient is $Ph/8$. Subtracting this from the plaquette log-eigenvalue coefficient leaves diagonal $[H(t^4)-2h+12J]/8$. There are twelve edge-sharing neighbors per face.
+
+The sign needed to select the largest transfer branch follows without numerics. Under the one-link density proportional to $e^{g\cos\theta}$, the mean of $\cos\theta$ is $q$ and its second moment is $(1+3t)/4$. Its variance is strictly positive. Since $H$ is increasing and convex below $\lambda$, Jensen gives $M\ge H(q^6(1+3t)/4)>H(q^8)=h$. Thus $J>0$. The regular adjacency matrix has its largest eigenvalue 12 on the constant plaquette vector. Reversing the sign for the **physical log gap** yields G4’s coefficient
+$$
+ k_2(g)=-\frac{H(t^4)-2h+24J}{8}.
+$$
+
+At small $g$, $q\sim g/4$, $t\sim g^2/24$, so $k_2\to1/8$. At large $g$, $q=1-3/(2g)+O(g^{-2})$ and $t=1-4/g+O(g^{-2})$. Then $H(t^4)/g\to1/5$, $h/g\to1/3$, $J/g\to1/21$, and $k_2/g\to-71/840$.
+
+## Physical time at fixed spatial spacing
+
+There is a second check in B4’s Hamiltonian units. Take $g=\kappa/a_t$ and $b=a_t\ell$. The quadratic coefficient in the gap divided by $a_t$, as a function of $\ell$ at zero, is $a_t k_2(\kappa/a_t)\to-71\kappa/840$. Independently the continuous-time electric Hamiltonian has energies $0,6,16,12,9,13$ in units of $1/\kappa$ for vacuum, fundamental square, spin-one square, edge-disjoint pair, shared-edge singlet and shared-edge triplet respectively. The ordinary second-order energy denominators give the neighboring entry in units of $\kappa/4$ as $1/6-1/12-3/28=-1/42$. With vacuum subtraction the constant branch then has coefficient
+$$
+ \frac\kappa4\left(\frac13-\frac1{10}-\frac{24}{42}\right)=-\frac{71\kappa}{840}.
+$$
+This is agreement of finite-volume derivatives. Our separate blocked-time estimate controls a positive gap at **fixed spatial spacing** and $\kappa\ell\le1/384$, uniformly in spatial volume. It does not include spatial refinement at isotropic weak coupling. [B4’s fixed-spacing theorem](../README.md)
+
+For an independently determined isotropic spacing $a_{\rm ext}(\beta)\downarrow0$, put $n=\lceil s/a_{\rm ext}\rceil$ at fixed $s>0$. For a self-adjoint contraction with vacuum projection $P_\Omega$, $\|T^n-P_\Omega\|=e^{-nm}$, using the gap on the full vacuum complement. Hence a uniform bound by $\eta<1$ gives $\liminf m/a_{\rm ext}\ge-\log\eta/s$. Conversely a positive lower limit gives a strict contraction for all large couplings. Z4’s unit $a=m$ makes this implication automatic **once H1 and H2 hold**; it cannot calibrate an independent physical scale. The other program estimate $m\le C\beta^{-1/7}$ is compatible with G4’s proposed inequality only if $a_{\rm ext}=O(\beta^{-1/7})$. This condition is necessary for that comparison and is far too weak to establish the slab estimate. Local fields with a surviving physical two-point norm and Yang–Mills identification remain separate obligations.
+
+## Checks
+
+Haar quadrature and modified Bessel evaluation agree on the shared-edge weights. Separate vacuum and excited-state summation gives the reduced coefficient at all seven sampled couplings. Selected values are $0.04448486$ at $g=1$ and $-0.32232512$ at $g=4$. The quadratic coefficient has the same value on every stated finite box; the computation supplies no volume-uniform perturbation remainder. [Numerical checker](check.py)
+
+Three native PCP OS guests checked the shared-link identity on the quaternion subgroup, counted plaquette neighbors on three periodic lattices, and checked the rational Hamiltonian coefficient. The analytic Haar projection above establishes the SU(2) result. The host relayed each child request. Each guest exited zero with 47 register events. [Native source](worker.c) · [Expected output](checks.txt) · [Relay](../../../observable-normalization/transfer-increments/replay-guests.py)
+
+| Guest | Executable SHA-256 | Register head |
+|---|---|---|
+| Parent | 08a14387c13e7e7b07ef6a74f2fb78d0ca0db468a1640ac88eac38d8cd769cfe | 656e6883c4479cc72142e824ea9a1c94c60f101c40b542165719b37168fd014e |
+| Child | cf1718ca8a484a932d5b97905d8de84643b452e49c41cd093b8059d44aca3bd3 | 7258c22d759e4cbc89084404f72a66f3a94bfe5fbd0aff6cf24b40d13a2f4358 |
+| Grandchild | 263a587486a77b10522c5704327eed465a90d561bfd597b5d237a16d2cc19103 | b3df0472a11e4877d51090cb79166b29ae6ff1dcc3e49860d314435c0272bdc8 |
