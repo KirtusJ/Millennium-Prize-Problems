@@ -10,9 +10,10 @@ The generation child stripped both marked regions from the source basis and boot
 | Both product estimates on arbitrary finite sets, kinetic inequalities and free scalar resolvent bound | Peter–Weyl diagonalization and the physical high-label circuit |
 | Noncommutative common-potential identity, its operator-norm estimate and the sum of the three perturbation errors | Wilson factorization, exponential remainder and resolvent norm estimates |
 | Reciprocal inversion at low energy, logarithmic conversion, individual energy and two-level gap arithmetic | Variational principle, two-dimensional trial space and identification of transfer eigenvalues |
+| Finite residual-row range under common minorization and the lower gap implied by oscillation contraction | Heat-kernel bounds, ground-state transform, and its continuous-measure application |
 | Failure of both possible sandwich form orders on explicit vectors | The test matrix has eigenvalues $1/2,1$ |
 
-Vacuum eigenspace stability, positive-time evolution estimates, and their applications to spatial paths are proved analytically in the two notes. The formal file contains twelve declarations. The ring identity uses only `propext`. The other eleven print `propext`, `Classical.choice` and `Quot.sound`. Four independent mutations test the physical-energy constant, sign of the free resolvent difference, order of noncommuting factors and the form-order witness. Lean rejected each changed proof. [Lean source](JointCutoff.lean) · [Energy and vacuum](README.md) · [Evolution](evolution.md)
+Vacuum eigenspace stability, positive-time evolution estimates, and their applications to spatial paths are proved analytically in the accompanying notes. The formal file contains fourteen declarations. The ring identity uses only `propext`. The other thirteen print `propext`, `Classical.choice` and `Quot.sound`. Five independent mutations test the physical-energy constant, sign of the free resolvent difference, order of noncommuting factors, the form-order witness and the direction of row minorization. Lean rejected each changed proof. [Lean source](JointCutoff.lean) · [Energy and vacuum](README.md) · [Evolution](evolution.md)
 
 ## Numerical checks
 
@@ -26,6 +27,8 @@ The control worker evaluated 750 Bessel products with three independently varyin
 | 4096 | 0.000131 | 0.000706 | 0.0000190 | 0.0000276 |
 
 The finite circuit tests transfer normalization, the order of the magnetic factors and the link multiplicity. The analytic estimates themselves apply to all labels and finite torus sizes.
+
+The heat control sampled 513 class angles including both poles. Labels through 18 gave the one-link kernel range 0.803866 to 1.202172. On a nine-state cycle with a nonconstant potential, the computed common row mass was 0.00351091 against an actual minimum row-density ratio of 0.0542090. The resulting spectral floor was 0.00175545 and the exact finite-matrix gap to the displayed precision was 0.82657931. The control checks the direction of kernel domination, row normalization and the resulting eigenvalue inequality. [Finite-volume vacuum bound](finite-volume-vacuum.md)
 
 ## Replay
 

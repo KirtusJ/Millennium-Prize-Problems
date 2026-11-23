@@ -177,6 +177,31 @@ theorem gapError {E₀ E₁ A₀ A₁ b : ℝ}
   apply abs_le.mpr
   constructor <;> linarith
 
+/-- A transition row after removing its common minorizing measure.
+    The integral counterpart uses the same pointwise order and linearity. -/
+theorem residualRange {ι : Type*} [Fintype ι] (p q f : ι → ℝ) (ε lo hi : ℝ)
+    (unitP : ∑ i, p i = 1) (unitQ : ∑ i, q i = 1)
+    (dom : ∀ i, ε*q i ≤ p i) (rangeF : ∀ i, lo ≤ f i ∧ f i ≤ hi) :
+    (1-ε)*lo ≤ ∑ i, (p i-ε*q i)*f i ∧
+    ∑ i, (p i-ε*q i)*f i ≤ (1-ε)*hi := by
+  have mass : (∑ i, (p i-ε*q i)) = 1-ε := by
+    rw [Finset.sum_sub_distrib, ← Finset.mul_sum, unitP, unitQ, mul_one]
+  rw [← mass, Finset.sum_mul, Finset.sum_mul]
+  exact ⟨Finset.sum_le_sum fun i _ => mul_le_mul_of_nonneg_left (rangeF i).1 (sub_nonneg.mpr (dom i)),
+         Finset.sum_le_sum fun i _ => mul_le_mul_of_nonneg_left (rangeF i).2 (sub_nonneg.mpr (dom i))⟩
+
+/-- A nonconstant eigenfunction loses the common part upon taking its oscillation. -/
+theorem oscillationGap {ε s Δ lo hi shared : ℝ} (timePos : 0 < s) (varies : lo < hi)
+    (upper : Real.exp (-s*Δ)*hi ≤ shared+(1-ε)*hi)
+    (lower : shared+(1-ε)*lo ≤ Real.exp (-s*Δ)*lo) :
+    ε/s ≤ Δ := by
+  have diff : Real.exp (-s*Δ)*(hi-lo) ≤ (1-ε)*(hi-lo) := by linarith
+  have decay := (mul_le_mul_iff_of_pos_right (sub_pos.mpr varies)).1 diff
+  apply (div_le_iff₀ timePos).2
+  linarith only [Real.add_one_le_exp (-s*Δ), decay]
+
+#print axioms residualRange
+#print axioms oscillationGap
 #print axioms commonPotential
 #print axioms commonPotentialNorm
 #print axioms wilsonResolventError

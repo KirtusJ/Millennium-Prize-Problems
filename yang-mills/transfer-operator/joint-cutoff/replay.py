@@ -16,7 +16,7 @@ from replay import AXIOMS, KERNEL_SHA, MATHLIB, PCP, digest, guest
 SOURCE = HERE / "JointCutoff.lean"
 ASSEMBLER = "1cb649a9954be008a7f74ada3fb1494f1949d7947b85bf221875c655ea59afcd"
 THEOREMS = {"ratioFromScore", "productBounds", "kineticBounds", "freeResolvent", "commonPotential",
-            "commonPotentialNorm", "wilsonResolventError", "energyFromResolvent", "logLift", "combinedError", "sandwichControl", "gapError"}
+            "residualRange", "oscillationGap", "commonPotentialNorm", "wilsonResolventError", "energyFromResolvent", "logLift", "combinedError", "sandwichControl", "gapError"}
 
 
 def run(args, **opts):
@@ -85,6 +85,7 @@ def task(node, out):
         lean(cfg, checked)
         for name, old, new, error in [
                 ("TooSmallEnergy", "≤ 90*a*c^2 := by", "≤ 89*a*c^2 := by", "error: linarith failed"),
+                ("ReverseMinorization", "ε*q i ≤ p i", "p i ≤ ε*q i", "error: application type mismatch"),
                 ("FalseProbe", "have bad := h 1 0", "have bad := h 0 1", "unsolved goals"),
                 ("ReversedFreeOrder", "0 ≤ 1/(c+d)-1/(c+x) ∧", "0 ≤ 1/(c+x)-1/(c+d) ∧", "error: linarith failed"),
                 ("WrongInnerOrder", "(1-u*w)*(x-y)*(1-w*v) = u-v", "(1-w*u)*(x-y)*(1-w*v) = u-v", "error: tactic 'rewrite' failed"),

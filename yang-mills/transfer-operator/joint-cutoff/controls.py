@@ -5,7 +5,7 @@ import math
 from pathlib import Path
 
 import numpy as np
-from scipy.linalg import eigh
+from scipy.linalg import eigh, expm
 from scipy.special import ive
 
 
@@ -69,6 +69,45 @@ def rotor_check():
             "g_resolvent_gap_vacuum_evolution_errors": rows}
 
 
+def heat_controls():
+    # Haar probability normalization. Use the continuous endpoint values of
+    # the character recurrence to test the two poles as well as interior angles.
+    angles = np.linspace(0., np.pi, 513)
+    cosine = np.cos(angles)
+    previous = np.zeros_like(angles)
+    char = np.ones_like(angles)
+    kernel = np.zeros_like(angles)
+    for n in range(19):
+        kernel += (n+1)*np.exp(-n*(n+2))*char
+        previous, char = char, 2*cosine*char-previous
+    if kernel.min() < 2/3 or kernel.max() > 4/3:
+        raise ArithmeticError("one-link heat window")
+
+    # Independent finite-space comparison with a nonconstant potential.
+    size, time = 9, 2.
+    shift = np.roll(np.eye(size), 1, axis=0)
+    kinetic = 2*np.eye(size)-shift-shift.T
+    potential = 1-np.cos(2*np.pi*np.arange(size)/size)
+    H = kinetic+np.diag(potential)
+    free_kernel = expm(-time*kinetic)
+    full_kernel = expm(-time*H)
+    values, vectors = eigh(H)
+    omega = np.abs(vectors[:, 0])
+    q = omega/sum(omega)
+    weighted = full_kernel*omega
+    transition = weighted/weighted.sum(axis=1, keepdims=True)
+    minor = np.exp(-time*max(potential))*free_kernel.min()/free_kernel.max()
+    if (np.min(full_kernel-np.exp(-time*max(potential))*free_kernel) < -1e-12
+            or np.max(full_kernel-free_kernel) > 1e-12
+            or np.min(transition-minor*q) < -1e-12
+            or np.exp(-time*(values[1]-values[0])) > 1-minor+1e-12):
+        raise ArithmeticError("positive-kernel minorization")
+    return {"single_link_kernel_range": [float(kernel.min()), float(kernel.max())],
+            "finite_cycle_minorization": float(minor),
+            "finite_cycle_actual_min_row_density_ratio": float(np.min(transition/q)),
+            "finite_cycle_gap_floor_and_gap": [float(minor/time), float(values[1]-values[0])]}
+
+
 def generate(out: Path):
     # Positive contraction M has eigenvalues 1/2 and 1. Test both possible
     # incorrect orderings using the smallest nonnegative coordinate probes.
@@ -83,5 +122,6 @@ def generate(out: Path):
     for x, y in (neg, pos):
         proof += f"  · intro h\n    have bad := h {x} {y}\n    norm_num at bad\n"
     (out/"control").write_text(proof)
-    results = {"opposite_sign_probes": [neg, pos], "bessel": bessel_check(), "rotor": rotor_check()}
+    results = {"opposite_sign_probes": [neg, pos], "bessel": bessel_check(), "rotor": rotor_check(),
+               "heat": heat_controls()}
     (out/"controls.json").write_text(json.dumps(results, indent=2)+"\n")
