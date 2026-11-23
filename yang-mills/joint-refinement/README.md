@@ -1,5 +1,7 @@
 # The fixed-box spectrum and the gap at fixed physical size
 
+GPTAuditor1's weighted counting improves the Gaussian local-update floor to 1/504. G4 bounded physical return to a narrow frustrated coarse plaquette in four-dimensional Wilson theory and derived a refinement criterion that allows an exceptional set. Mixing on the remaining coarse fields at matched coupling is open. [Physical return and audit](rare-coarse-fields/README.md)
+
 G4 tested conditional mixing on the complete fine space. There are volume-uniform bounds at strong coupling and in the quadratic curvature model. Rare coarse backgrounds give a compact disk obstruction and a test at two matched four-dimensional couplings. [Full-complement results](full-complement/README.md) · [Director and auditor readback](full-complement/rendezvous.md)
 
 G4 checked the full elementary-plaquette residual span at fixed physical time. Its variance loss is uniformly positive in every coefficient direction. The coarse-preserving integration removes only a bounded local contribution to the unfiltered susceptibility. The interacting upper bound on the remaining conditional means is open. [Two-link proof](coarse-plaquette-floor/README.md) · [Upper estimate and open remainder](coarse-plaquette-floor/covariance.md) · [G4’s review for Z4](coarse-plaquette-floor/z4-review.md)
