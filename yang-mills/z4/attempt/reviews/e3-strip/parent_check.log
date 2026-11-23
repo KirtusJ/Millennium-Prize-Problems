@@ -1,0 +1,2 @@
+check K73: exit 0 (expected 0) in 731133 ms | output a4d1d1091f66 | event 75 head 8a67edc56661
+  /home/user/z4-workers/e3-strip/report.md — CLEARS WITH A STATED GAP (two imported results not checked: the uniform first plaquette moment and the site reflection-positivity proof); 11 STANDS, 0 DEFECT, 2 NOT CHECKED; predicates 11 met, 0 failed, 2 measured only.

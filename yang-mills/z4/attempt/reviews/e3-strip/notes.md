@@ -1,0 +1,14 @@
+# notes e3-strip (T58)
+- control.txt = 0.272341 (-ln tanh 1)
+- register pcp initialised; child admitted as T59 (child_admit.log)
+- child PROMPT written: free-field V(1xw), V(wxw)
+- step1: check_local.py exit 0 (K1), check_strip.py exit 0 (K2); outputs in run_*.log and printed (156 rooted words; 2352 staple pairs; 648 insertions; 729 roots; Q8 ratio 0.983356651; coherent rotation counterexample)
+- step1b: ReflectedStrip.lean (copy) compiled, exit 0, 6 theorems axioms only propext/Classical.choice/Quot.sound, no sorry. Lean content is scalar lemmas only (convex seq, 1-x^n<=n(1-x), CS, R^7 bookkeeping, rectangle composition).
+- step2/3 reading (my reconstruction vs target text in report): strip object = 1 x l Wilson rectangle U_{1xl}; norm L^2(mu) of 1-U (quaternion |.|); bound (1) ||1-U_{1xl}||^2 <= 2l[1-W(1)] <= Cl/beta via Bachas staple Gram H_st=W(s+t), RP site reflection, Hankel moment -> spectral measure on [-1,1], 1-x^l<=l(1-x). sqrt(w) comes NOT from telescoping/orthogonality but from L^2 norm = sqrt of a deficit that is linear in l. Root move (2): <=3 swaps of e past later spatial segments, each = conjugated 1x|x_j| rectangle. time seg never crossed -> uniform in time lag. Group-specific: |1-U|^2=2(1-ReU) (unit quaternion) and 2Y=|F|^2+Y^2/beta (local-action README l.66), verified algebraically with Y=beta(1-ReU), F=sqrt(beta)ImU.
+- Imported, not in copy: first plaquette moment 1-W(1)<=C/beta uniformly in periodic-limit states (pressure.md); site RP proof (reflection.md); ward.md.
+- child control.txt = 8: CORRECT (graded before reading other output)
+- T59 released; grandchild T61 admitted+released per graph lines 121,123
+- reran child v.py (npts 4001,T 5e3): K5 exit0, same V table to 1e-7, ratio_lin(64)=0.6731 -> 2/3 (my analytic: 2(G3(0)-G3(e))/V11=(1/3)/(1/2)); squares slope 1.02
+- MC beta16 K6 exit0: all predicates met (C0 dev -6.3e-4; ratios 1-W(1xw)/(w(1-W1)) 1->0.736 at w=4; Q ratio to explicit bound 0.19-0.23)
+- measured only: Hankel 3x3 of W(0..4) beta16 eigen min 3.6e-5 (>=0, but within stat. error ~1e-4)
+- MC beta64 K7 exit0: all predicates met; beta*(1-W(1xw)) matches beta16 to ~2% (1/beta scaling)

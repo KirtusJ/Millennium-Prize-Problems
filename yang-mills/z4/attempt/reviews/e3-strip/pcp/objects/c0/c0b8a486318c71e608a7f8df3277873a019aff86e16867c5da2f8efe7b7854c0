@@ -1,0 +1,34 @@
+All four claims hold in this free-field test, and the report is in `report.md`. Control: a 1 x 8 strip has 8 plaquettes (`control.txt`).
+
+**Checks.** The Green function and plaquette values pass the known-answer tests. The two main runs, with different quadrature grids and tail cutoffs, agree to 1.2e-7 on every V.
+
+| Quantity | Result | Tolerance |
+|---|---|---|
+| G(0) | 0.1549333892 | 5e-6, from the 6 digits quoted |
+| G(0) − G(e1) | 0.124999999 | 1e-8, from quadrature |
+| V(1x1) | 0.499999996 | 1e-8, from quadrature |
+
+**Verdicts**
+- **(i) V(1x1) = 1/2:** STANDS.
+- **(ii) V(1xw) ≤ w·V(1x1):** STANDS. All 7 of 7 widths qualify, and V/(w·V11) falls from 1 to 0.673 at w=64.
+- **(iii) V(wxw) ≤ w²·V(1x1):** STANDS, but it is far from sharp. All 7 of 7 squares qualify, and V/(w²·V11) falls to 0.031.
+- **(iv) Exponents:** the log-log slope between w=32 and w=64 is a = 0.986 for the strip and a = 1.024 for the square. So the L² norm sqrt(V) scales as w^0.493 and w^0.512, close to w^(1/2). V grows roughly with the perimeter, not the area. I did not test a pure power law, so these are local slopes, not asymptotic exponents.
+
+**Failed predicates.** None of the statement's predicates failed.
+- **v_run1:** scipy is not installed, which is an environment gap. I wrote my own Bessel routine instead.
+- **v_run2:** it crashed on a numpy bool in the JSON dump, which was a defect in my code. The numbers were fine and reproduce in run 3.
+
+**Grandchild.** Task T61 was admitted and released. It recomputed V(1x2) on a periodic lattice with FFT: 0.862219 at L=16 and 0.862249 at L=32. I reread its `results.txt`. My infinite-volume value is 0.8622505, so the two agree at the expected finite-size level. Its control G(0) − G(e1) = (1/8)(1 − L⁻⁴) matched to all printed digits.
+
+**Verify lines**
+- **Python `verify`:** `result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)`
+- **Rust `pcpos verify`:** `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.`
+
+Exact rerun commands are in `report.md`. Files are in `/home/user/z4-workers/e3-strip/child`:
+- report.md
+- control.txt
+- notes.md
+- v.py
+- res_run3.json
+- res_run4.json
+- grandchild/

@@ -1,0 +1,6 @@
+'YangMills.ReflectedStrip.shiftContraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ReflectedStrip.stripDeficit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ReflectedStrip.halfWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ReflectedStrip.squaredBudget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ReflectedStrip.errorAtScale' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ReflectedStrip.rectangleDeficit' depends on axioms: [propext, Classical.choice, Quot.sound]
