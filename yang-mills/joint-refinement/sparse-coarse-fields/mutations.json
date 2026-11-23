@@ -1,0 +1,14 @@
+[
+  {
+    "label": "negative_oscillation",
+    "find": "upper-lower ≤ 12*b*dist",
+    "replace": "upper-lower ≤ 11*b*dist",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_tail",
+    "find": "13*q^r ≤ 13*(1/2:ℝ)^r",
+    "replace": "13*q^r ≤ 12*(1/2:ℝ)^r",
+    "diagnostic": "error:"
+  }
+]

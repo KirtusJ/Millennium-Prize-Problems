@@ -1,0 +1,17 @@
+# Physical return to backgrounds with many bad plaquettes
+
+Let $M=3(N/2)^3$ count coarse spatial plaquettes and $m$ count those with holonomy within $\theta$ of $-I$. At a positive integer time separation the uniform conditional probability for one marked later plaquette is bounded by $p=p_{6\beta}(\theta)$ from [PR #27](../rare-coarse-fields/return.md). In particular,
+$$p\le \min\{1,C_0(1+6\beta)^{3/2}\theta^3\},\qquad C_0=\pi^2\sqrt e/4.$$
+For any positive integer $r$, let $D=\{m\ge13r\}$. For the stationary physical transfer at such a lag,
+$$\|\mathbf1_D S_\tau\mathbf1_D\|\le \min\{1,13\binom Mr p^r\}\le \min\{1,13(eMp/r)^r\}.$$
+
+**Proof.** Join two coarse faces if they share a coarse edge. Each face has four edges and each edge meets at most three other faces. Greedy colouring therefore needs at most 13 colours, on odd or even coarse sides of at least three. In one colour, loops use disjoint sets of fine edges, since straight coarse edges have distinct half-links. For distinct faces of that colour, retain one fine edge of the last face. All the other events and the earlier test slice are measurable in its raw exterior. Conditional on this exterior the last event has probability at most $p$. Iterate the tower property to bound any $r$-fold intersection by $p^r$, conditional on the earlier slice. The staples may be correlated. No independence assumption enters. If $m\ge13r$, at least one colour has $r$ hits. The union bound, followed by the elementary binomial bound, now gives the conditional probability ceiling from any earlier slice (almost surely). For $r>M$ the event is empty. Reversibility of the two-slice vacuum law gives the operator bound by exchanging endpoints in $2|g(x)g(y)|\le |g(x)|^2+|g(y)|^2$. The exceptional fine projection $B=\mathbf1_DQ$ has range in $\mathbf1_D$, so the same ceiling controls $\|BS_\tau B\|$.
+
+**A wider gate under dyadic refinement.** Put $N=N_0\,2^n$, $b_\beta=1+6\beta$, and choose
+$$\theta=c\,b_\beta^{-5/8}N^{-3/4},\qquad
+r=\lceil 2eMp+A\log N\rceil,$$
+for fixed $A,c>0$, restricting to $\theta\le\pi/4$. On $D^c$, $m\le13r-1$. The [skeleton comparison](comparison.md) gives a floor $\gamma_{\rm clear}\exp[-24\beta\theta(13r-1)]$. On $D$, the physical return costs at most $13N^{-A\log2}$. This is summable on dyadic sides for every $A>0$.
+
+The count and the choice of width give $\beta\theta Mp\le(3C_0/8)c^4\beta/b_\beta$. The part of the exponent due to rounding and $A\log N$ is bounded when $\beta b_\beta^{-5/8}N^{-3/4}(1+\log N)$ is bounded; in particular this holds for any sequence with $\beta=O(\log N)$. Hence the loss in the sparse-background comparison is bounded independently of refinement in this regime. The logarithmic growth is an explicit hypothesis for this example. At arbitrary matched couplings the finite-regulator bounds above can be used with their actual parameters. For logarithmic growth these radii are asymptotically wider than the sufficient radii $c\,b_\beta^{-1/2}N^{-4/3}$ obtained by treating even one bad face as exceptional.
+
+For a full refinement argument one still needs the clear-field floor uniformly for *all* gauge-invariant tests, a summable short-time loss $a_n/\gamma_n$, and a coarse comparison with weighted total errors plus return costs below the initial deficit. Summability alone does not set the latter budget. This result enlarges the class of configurations allowed to have isolated frustrated faces. The compact disk [control](disk.md) tests whether removing a narrow neighbourhood of $-I$ addresses an actual slow local mode.
