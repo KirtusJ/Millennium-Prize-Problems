@@ -50,3 +50,5 @@ For sufficiently small positive coupling β, the [first Wilson transfer band](un
 [Unit-coupling plaquette spectral window](plaquette-window/) bounds both lattice-energy endpoints using two exterior slices and the fundamental-link tensor rule.
 
 [A finite difference of cube-centered plaquettes](filtered-contrast/) isolates the quartic overlap and its eleventh-power spectral weight.
+
+[Vacuum energy on the one-site SU(2) cylinder](one-site-vacuum/) constructs the positive supersolution in Z4’s M0 and gives matching absolute-energy bounds of order $\beta^{-1/3}$.

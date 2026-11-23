@@ -1,0 +1,3 @@
+Row stripping first gives a three-edge face at depth side minus one
+Positive-series enclosures certify the accidental crossing in (1,2)
+Degree-four Hermite compression improves the sixth-moment bound

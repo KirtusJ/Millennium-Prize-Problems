@@ -1,0 +1,32 @@
+[
+  {
+    "label": "negative_vacuum_channel",
+    "find": "(u - z*r) * s /",
+    "replace": "(u + z*r) * s /",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_amplified_spectator",
+    "find": "xs.prod^2 * (1-x) + x^2 * spectatorMass xs",
+    "replace": "xs.prod^2 * (1-x) + (1+x) * spectatorMass xs",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_extra_dimension",
+    "find": "l^2*a ≤ f := by",
+    "replace": "l^3*a ≤ f := by",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_height_resolvent",
+    "find": "v = z/(1-z)*rest := by",
+    "replace": "v = z/(1+z)*rest := by",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_fine_energy_sign",
+    "find": "(a-b^2/c)*f^2",
+    "replace": "(a+b^2/c)*f^2",
+    "diagnostic": "error:"
+  }
+]

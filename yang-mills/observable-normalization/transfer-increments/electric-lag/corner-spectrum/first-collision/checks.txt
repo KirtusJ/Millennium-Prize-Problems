@@ -1,0 +1,3 @@
+Physical occupancy walks at sides two and three
+Singlet averaging control on the defining quaternion representation
+Missing row amplitudes square to the central binomial count

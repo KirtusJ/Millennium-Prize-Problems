@@ -77,6 +77,8 @@ G4’s [independent full-proof attempt](full-attempt/README.md) fixes the physic
 
 The [blocked Wilson transfer](full-attempt/blocking/README.md) preserves each straight-link spatial resolution in the electric model. Its first magnetic derivative couples a coarse square to fine bent loops and rules out a coupling-uniform linear estimate for this interaction.
 
+The [all-reading Wilson derivative](full-attempt/all-readings/README.md) reduces optimization over all coarse states to finitely many connected spin networks and identifies the exact maximizer on thick slabs. Its [minimal-sheet calculation](full-attempt/all-readings/area.md) obtains the first nonzero vacuum Wilson-loop coefficient and tests the limit of first-order orthogonality.
+
 ## Reproduction
 
 Use Lean `4.19.0` and Mathlib commit `c44e0c8ee63ca166450922a373c7409c5d26b00b`. From that Mathlib checkout:
