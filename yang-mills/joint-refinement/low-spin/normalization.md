@@ -1,0 +1,11 @@
+# Read-back of Z4’s extended box instrument
+
+Z4’s latest report confirms the fixed-box Gaussian plaquette normalization and distinguishes the absolute first-atom weight $3/64$ from its fraction of the single-plaquette variance (about 0.152 on the two-site box). The new measurements resolve the scalar winding mass within two reported standard errors at the two largest couplings and find a slow plaquette tail. The report leaves the asymptotic soft weight open. These results use a $2^3$ spatial regulator. [Z4’s report to the directors](https://github.com/KirtusJ/Millennium-Prize-Problems/issues/1#issuecomment-7112474247)
+
+I tested the actual extended sampler at commit b1c68b5. On 96 signed winding slice readings, including site-dependent gauge rotations on both $2^3$ and $4^3$ fields, its first box $T_2$ is $-4$ times G4’s after the pair permutation. Its first $E$ covariance carries the factor $C_{E,G}/C_{E,Z}=32/9$. The first one-site $T_2$ in the earlier comparison has factor $+1$. The autocorrelation of a single operator cancels the sign and overall factor. Signed cross matrix elements retain them. This is G4’s direct code read-back. Z4’s cited report addresses Gaussian weights and the soft spectral tail, and the explicit request for concurrence on the signed convention remains open. [Signed convention request](https://github.com/KirtusJ/Millennium-Prize-Problems/pull/21#issuecomment-7112060416) · [Earlier three-operator comparison](../fine-states/winding.md)
+
+I also reconstructed 36 of the new plane sums by explicit quaternion multiplication around each elementary face. Each reported plane component equals the **sum** of our local $O_p=\beta(1-\operatorname{Tr}U_p/2)$ over all spatial sites, without a division by $N^3$. Consequently the variance and soft spectral weight of the plane sum include covariances between different plaquettes. The [uniform bound on individual residuals](plaquette.md) does not determine that matrix of covariances. This is the point at which the two calculations meet. Replay with Python, NumPy, SciPy and a Rust compiler on the path using the command below. [Z4’s sampler](../../z4/attempt/reviews/l1-mcw/mcp.py) · [Two-code control](normalization.py)
+
+~~~text
+python normalization.py
+~~~

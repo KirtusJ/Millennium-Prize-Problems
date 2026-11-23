@@ -1,0 +1,40 @@
+# A local low-spin residual with a refinement-uniform bound
+
+Take any fundamental spatial plaquette. Its opposite parallel edges have transverse coordinates of different parity in the other face direction, so at least one edge lies on an erased line. When every recorded segment has length at least two, that edge has a consecutive neighbor in its own segment. The neighbor may precede the measured edge. Put $Y=\operatorname{Tr}U_p/2$, $O=\beta(1-Y)$, and $B=(C,W)$ from the [path estimate](README.md). For either $\mathcal A=\sigma(C)$ or $\sigma(B)$, let $f=O-\mathbb E[O\mid\mathcal A]$ in true vacuum coordinates. Set $s=8(60.2)$, $K=64(s^2+2s+2)$ and $\delta=2^{-22}/169$. For **every even $N\ge6$, every $\beta\ge1$**, and $S=(T/\lambda)^N$,
+$$
+ \|f\|^2\ge\delta,\qquad
+ 0\le\frac{\langle f,Sf\rangle}{\|f\|^2}\le1-\delta/K,\qquad
+ \frac{\|PSf\|}{\|f\|}\le\sqrt{a(1-\delta/K)}.
+$$
+Here $a=\|PSP\|$ for the centered coarse projection. The uniform deficit is small. Its significance is that it stays positive as the number of links and the bare coupling grow independently. This controls the **one-dimensional span of a specified residual**. Translating the construction gives a bound for each such plaquette individually. It does not establish a common norm bound on the span of all their translates.
+
+### A two-link conditional variance
+
+At both insertions retain the entire spacetime field except the two chosen links $(u,v)$, and retain their ordered product $b=uv$. This common exterior fixes $C,W$ at both times. Normalized Haar disintegrates as $du\,db$ since $v=u^{-1}b$. No face contains both collinear links. At fixed exterior, each of their at most twelve incident Wilson terms is a scalar product on $\mathbb R^4$ linear in the unit quaternion $u$, since quaternionic conjugation and multiplication by fixed units are real orthogonal maps. The conditional density on $S^3$ is proportional to $\exp(x\,e\cdot u)$ for a unit $e$ and $0\le x\le12\beta$. The two insertion sets are independent under this conditioning. The normalized plaquette trace is $d\cdot u$ for an exterior-measurable unit quaternion $d$.
+
+Here is an elementary lower bound for its conditional variance in **every** direction $d$. Put $h=1+x$, $t=e\cdot u$ and $v_0=h(1-t)$. The latter variable has density proportional to $e^{-xv_0/h}\sqrt{v_0(2-v_0/h)}$ on $[0,2h]$. Its normalizing integral is at most 8. For $x\le1$ integrate $\sqrt{2v_0}$ up to 4, and for $x\ge1$ integrate $e^{-v_0/2}\sqrt{2v_0}$ to infinity. Both $[1/8,1/4]$ and $[3/4,1]$ have probability at least $2^{-10}$, by the lower density numerator $e^{-1}/\sqrt8$ on those intervals. Two independent copies then give $\operatorname{Var}(v_0)\ge 2^{-22}$, hence $\operatorname{Var}(t)\ge 2^{-22}/h^2$. Each perpendicular coordinate has mean zero and variance $\mathbb E(1-t^2)/3\ge 2^{-10}/(4h)$ by the second interval. Cross covariances vanish by rotational symmetry around $e$. Thus $\operatorname{Var}(Y\mid\mathrm{ext})\ge2^{-22}/(1+12\beta)^2$ and $\operatorname{Var}(O\mid\mathrm{ext})\ge\delta$ for $\beta\ge1$. Fixing $b$ is essential to keep the whole erased segment product fixed. [One-link Wilson integration](https://doi.org/10.1016/0370-2693(83)90930-9)
+
+### Z4’s pressure comparison on a spatially fixed cylinder
+
+Use a periodic $N^3\times M$ box with dyadic time period $M\ge4$. Let $D_M$ be the difference of normalized log partition functions $f(\beta/2)-f(\beta)$ for the action $\sum_p(1-Y_p)$, with $f$ divided by $N^3M$. Z4’s temporal forest proof works at these aspect ratios. Fix the time links on the $M-1$ open steps of each of $N^3$ time lines. For the upper bound retain only the resulting $3N^3$ chains of $M-1$ plaquettes, each giving $\hat z(\beta/2)^{M-1}$. For the lower bound restrict each of the $(3M+1)N^3$ free links to angle at most $\beta^{-1/2}$. Each plaquette then costs at most 8, and the Haar probability per restricted link is at least $c_H\beta^{-3/2}$, $c_H=2\sin^2(1)/(3\pi)$. Using $\hat z(b)\le(\pi/2)^{5/2}b^{-3/2}$ yields
+$$
+ D_M\le48+3(1-M^{-1})\log((\pi/2)^{5/2}2^{3/2})
+ -(3+M^{-1})\log c_H+6M^{-1}\log\beta .
+$$
+At each fixed $N,\beta$, $\limsup_{M\to\infty}D_M<60.2$. The time limit precedes any variation in coupling. [Z4’s proof, chessboard and free-energy lemmas](https://github.com/KirtusJ/Millennium-Prize-Problems/blob/46d59730c0d4cf01ca14d9a526f611dc95ad1a17/yang-mills/z4/attempt/paper/sec_proof.tex)
+
+For even $N$ put $d=2^{\lfloor\log_2N\rfloor}$. Start with one block marked by $O_p>t$ on a specified face. In one direction double the contiguous string of occupied blocks by a site reflection through its end. If its length is $2^j\le N/2$ it fits in the closed half, the reflected **blocks** have disjoint interiors, and Cauchy–Schwarz with the constant 1 bounds the square of the old event probability by the extended event probability. Reflected face labels are carried with their blocks. Do this to length $d$ in each spatial direction and to $M$ in time. There are $D=d^3M$ marked blocks. Every physical face belongs to at most four unit 4-cubes and hence occurs at most four times. On the extended event the action times $\beta$ is at least $tD/4$. Trading half the coupling for this cost gives
+$$
+ \Pr(O_p>t)^D\le [Z(\beta/2)/Z(\beta)]e^{-tD/8}.
+$$
+Thus the pressure penalty in the log tail is $(N/d)^3D_M$ and $(N/d)^3<8$. For dyadic $N$ the factor is one. This derivation uses partial spatial dissemination and needs no chessboard lemma on a non-dyadic side beyond site reflection and Cauchy–Schwarz. [Fröhlich, Israel, Lieb and Simon](https://www.math.caltech.edu/SimonPapers/93.pdf)
+
+For fixed $N,\beta$ the Wilson transfer restricted to gauge-invariant functions has a simple positive top eigenvector and is Hilbert–Schmidt. Its thermal trace moment for any bounded one-slice insertion $g$ is $\operatorname{Tr}(gT^M)/\operatorname{Tr}(T^M)$. The normalized powers converge in trace norm to the vacuum projector, since the ratios below one have summable squares and go to zero termwise. This also covers indicator insertions, for any fixed $t$. Consequently the vacuum obeys $\Pr(O_p>t)\le\min(1,e^{s-t/8})$. Integration of $2t$ against this tail gives $\mathbb E O_p^2\le K$, uniformly in $\beta,N$. [Lüscher’s transfer matrix](https://bib-pubdb1.desy.de/record/396349)
+
+### Combining the two estimates
+
+With $r_f=\|f\|^2$, total variance gives $\delta\le r_f\le K$ and $\|\mathbb E[f\mid\mathrm{ext}]\|^2\le r_f-\delta$. The common two-end exterior factors the transfer pairing. Cauchy–Schwarz at the two endpoints gives $\langle f,Sf\rangle\le r_f-\delta$; transfer positivity gives the lower bound and the coarse-coupling inequality. These estimates also hold for a single plaquette with $\mathcal A=\sigma(C,W)$ even when the path theorem gives a weak bound for $W$ at that regulator.
+
+For $k$ plaquettes one can select a pair for each at each time, provided no plaquette in the action contains links from two pairs, and each measured loop meets only its own pair. The conditional variables then factor, and the innovation for a linear combination with coefficients $c_i$ is at least $\delta\sum|c_i|^2$. Cauchy–Schwarz bounds the marginal variance above by $kK\sum|c_i|^2$, giving a common deficit $\delta/(kK)$ for the residual span of such a fixed-size collection. For growing $k$, a uniform spectral upper bound on the covariance matrix of these projected readings would replace $kK$. The argument supplies neither that bound nor a frame inequality for arbitrary retained spin networks. Those are concrete places where extending the result to the entire low-spin sector could fail.
+
+[Collective covariance test, finite counterexample and coupling ceiling](growing-families.md)
