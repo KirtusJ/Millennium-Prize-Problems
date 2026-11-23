@@ -6,6 +6,8 @@ The zero-momentum magnetic action has fluctuations. The zero-momentum **total en
 
 On a fixed periodic cube, the conserved total Hamiltonian is the unique null smearing throughout a small positive magnetic-coupling interval and away from a discrete exceptional set. The first two excitation channels give an exact leading spatial response for balanced tests. [Finite-box vacuum response and sharp spatial bound](plaquette-response/)
 
+In the free Maxwell benchmark the sharp-time variance of a fixed smooth total-energy test diverges as $b^{-1}$. The complementary scalar variance diverges as $b^{-5}$. Two positive-time readings distinguish their squared contributions at nonzero momentum. [Conserved and scalar Maxwell benchmark](maxwell-benchmark/)
+
 ## Observable and finite-volume identity
 
 Take the periodic cubic SU(2) Hamiltonian of side at least three. In unit-round convention write

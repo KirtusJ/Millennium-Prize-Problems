@@ -78,3 +78,7 @@ For compact-group Wilson Hamiltonians the commutator of separated loops obeys a 
 ## Spatial correlations and a proposed mass threshold
 
 A finite-time spectral filter bounds the connected spacetime correlation predicted by a gap and gives a lower bound on the mass in a compact positive-energy band from three Euclidean readings. In the established small-magnetic-coupling interval it yields a spatial and Euclidean-time clustering bound even for bounded electric projectors. [Filter and inverse test](clustering/) · [Physical constants](clustering/strong-coupling.md)
+
+## Electric center shifts at weak bare coupling
+
+On the cubic $SU(2)$ Hamiltonian the vacuum shifted by a central link sign concentrates at energy $8\lambda$. A pattern affecting $n$ plaquettes concentrates at $2\lambda n$, uniformly in the box and the pattern. On the original Wilson transfer every spacing $0<a\le b$, including $a=b$, excludes all energies below a fixed fraction of this scale in the weak bare-coupling limit. The full upper tail requires time resolution of the shift. [Central-shift spectrum](electric-disorder/) · [Isotropic Wilson bound](electric-disorder/wilson-readings.md)
