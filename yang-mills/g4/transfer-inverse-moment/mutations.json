@@ -1,0 +1,6 @@
+[
+  {"label":"negative_cancellation","find":"numer/den ≤ H/k := by","replace":"numer/den ≤ H/(2*k) := by","diagnostic":"error:"},
+  {"label":"negative_window","find":"rho / 2 ≤ inside := by","replace":"rho ≤ inside := by","diagnostic":"error:"},
+  {"label":"negative_constant","find":"4^4 = 2^34 ∧","replace":"4^4 = 2^33 ∧","diagnostic":"error:"},
+  {"label":"negative_radial","find":"(45*k+60)/(2*k*(k+4)^3) := by","replace":"(45*k+61)/(2*k*(k+4)^3) := by","diagnostic":"error:"}
+]

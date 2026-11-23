@@ -1,0 +1,4 @@
+*.lean -text
+*.py -text
+*.json -text
+*.zip binary
