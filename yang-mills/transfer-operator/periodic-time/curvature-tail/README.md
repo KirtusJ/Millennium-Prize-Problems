@@ -13,3 +13,5 @@ For the original Wilson plaquette, the fixed-radius kernel now gives the same li
 The total variation conclusion extends to all links in any fixed central block, including intersecting loops with observable relative color orientations. A squared Gaussian loop combination gives the best invariant reading of the exterior in the tangent experiment. [Fixed-block result](blocks/README.md)
 
 For an explicit shell tree, full rooted plaquette matrices recover every shell link by ordered square operations. The maximum class-angle amplification is of order the square of the side length. [Construction, upper bound and matching Cartan example](shell-frame/README.md)
+
+For Z4's six specified connectors, the first rescaled additive Bianchi defect has an explicit, non-Gaussian one-colour law in the tangent limit. [Cube calculation and checks](bianchi/README.md)
