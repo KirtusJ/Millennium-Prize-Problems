@@ -34,7 +34,7 @@ The walks are independent at fixed $j$ given their starting pair. Conditional on
 
 Define $B=(1+V)^{-1}K$ and $\phi=\sum_{i=0}^{m-1}B^i1$. These functions are continuous, invariant under conjugation and center-even, and $1\le\phi\le m$. The killed walk has
 $$B^m1(x)=\mathbb E_x\prod_{j=0}^{m-1}(1+V(X_j))^{-1}.$$
-If $N$ counts visited late times with $V\ge a/m$, then $\mathbb E_x N\ge m/6$ for large $m$. The product is bounded by $\exp[-aN/((1+a)m)]$ since $\log(1+a/m)\ge a/((1+a)m)$. Concavity on $0\le N/m\le1$ gives $1-B^m1(x)\ge\kappa=(1-e^{-a/(1+a)})/6$. This uses no independence across different times. Telescoping now gives pointwise
+If $N$ counts visited late times with $V\ge a/m$, then $\mathbb E_x N\ge m/6$ for large $m$. The product is bounded by $\exp[-aN/((1+a)m)]$ since $\log(1+a/m)\ge a/((1+a)m)$. With $c=a/(1+a)$, convexity gives the upper chord bound $e^{-ct}\le 1-t(1-e^{-c})$ for $0\le t=N/m\le1$. Taking expectations gives $1-B^m1(x)\ge\kappa=(1-e^{-a/(1+a)})/6$. This uses no independence across different times. Telescoping now gives pointwise
 $$
 (1+V)\phi-K\phi=(1+V)(1-B^m1)\ge\kappa\ge (\kappa/m)\phi .
 $$
