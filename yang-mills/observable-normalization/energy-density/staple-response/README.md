@@ -59,4 +59,6 @@ $$
 $$
 Let $K(n)$ be the single-color $6\times6$ cross-covariance between the signed faces at the two links. For $P=I-\mathbf1\mathbf1^T/6$, Wick contraction in the three independent colors gives $\operatorname{Cov}(\delta_e^G,\delta_{e+n}^G)=\tfrac32\|P K(n)P\|_F^2$. Therefore $c(n)=\|P K(n)P\|_F^2/1536$. The calculation uses true covariance subtraction of the random environment. Retaining only the two independent gamma coordinates extracted in the [contact calculation](../contact-law/radial.md) gives zero separated covariance at every cutoff.
 
+The same finite-cutoff transfer insertion can be read using one bounded function of the sum of the six ordinary plaquette traces. Its conditional error is minimized among readings of that scalar and its weak-coupling noise has an explicit coefficient. [Reconstruction and equal-time variance](../star-reconstruction/)
+
 [Time kernel, physical-time selection and spectral consequences](positive-time.md) · [Execution and negative controls](execution.md)
