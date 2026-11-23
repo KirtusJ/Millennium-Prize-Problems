@@ -6,6 +6,8 @@ The [local plaquette study](local-scalar-edge/README.md) applies the positive tr
 
 The [opposite-slice spectrum estimate](paired-slice-spectrum/README.md) bounds finite-volume excitation energies and thermal occupation from a histogram of two complete spatial slices.
 
+The [finite-size gap test](relative-slice-gap/README.md) controls the ratio even when vacuum occupation vanishes exponentially in the spatial volume. Its tests include an interacting four-dimensional fixed-mesh family and simultaneous spatial and time refinement on an SU(2) cylinder.
+
 ## Exact question and result
 
 Let `I` be a common set of test labels. For a finite type `J`, a map `i : J → I`, real coefficients `c`, and a real kernel `K`, define

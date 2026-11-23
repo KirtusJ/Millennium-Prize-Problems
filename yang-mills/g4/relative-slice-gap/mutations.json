@@ -1,0 +1,5 @@
+[
+  {"label":"negative_residual","find":"residual^2 ≤ (1-h^2)*size^2 := by","replace":"residual^2 ≤ (1-h^2)*size^2/2 := by","diagnostic":"error:"},
+  {"label":"negative_compressions","find":"u ≤ c + 2 * t^2 := by","replace":"u ≤ c + t^2 := by","diagnostic":"error:"},
+  {"label":"negative_volume","find":"= 7/3200 := by","replace":"= 8/3200 := by","diagnostic":"error:"}
+]
