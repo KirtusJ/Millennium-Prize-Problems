@@ -1,0 +1,73 @@
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\complex-check3\child\negative_reality.lean:38:57: error: application type mismatch
+  Set.mem_singleton_iff.mpr ha.left
+argument
+  ha.left
+has type
+  True : Prop
+but is expected to have type
+  (Complex.im ∘ f) x✝ = 0 : Prop
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\complex-check3\child\negative_reality.lean:39:4: error: type mismatch
+  Set.mem_singleton_iff.mp hz
+has type
+  z.im = 0 : Prop
+but is expected to have type
+  True : Prop
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\complex-check3\child\negative_reality.lean:158:28: error: type mismatch
+  h.left
+has type
+  True : Prop
+but is expected to have type
+  1 = 0 : Prop
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\complex-check3\child\negative_reality.lean:273:15: error: application type mismatch
+  And.intro rfl
+argument
+  rfl
+has type
+  ?m.16434 = ?m.16434 : Prop
+but is expected to have type
+  True : Prop
+'Millennium.G4.ComplexRP.NonnegativeComplex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.pairing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.Q' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.nonnegativeComplex_of_tendsto' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.ComplexRP.pairing_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.Q_nonnegative_of_entrywise_tendsto' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.ComplexRP.all_finite_tests_nonnegative_of_entrywise_tendsto' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.ComplexRP.pairing_add_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.pairing_add_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.pairing_mul_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.pairing_mul_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.Q_pullback' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.pullback_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.pairing_zero_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.zero_kernel_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.one_point_identity_control' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.one_point_imaginary_control' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.ComplexRP.reflectedPairing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.reflectedKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.reflectedPairing_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.reflected_regulator_limit' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.pushforwardWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.reflectedPairing_pushforward' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.pushforward_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.complexOnlyKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.complexOnlyKernel_hermitian' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.real_coefficients_control' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.complex_coefficients_negative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.swap' depends on axioms: [propext]
+'Millennium.G4.ComplexRP.alternating' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.swap_involutive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.positive_weights_normalized' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.reflection_sensitive_control' depends on axioms: [propext, Classical.choice, Quot.sound]

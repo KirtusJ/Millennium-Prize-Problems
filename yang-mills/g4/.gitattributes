@@ -1,2 +1,3 @@
 ReflectionPositivity.lean -text whitespace=cr-at-eol
+check_proof.py -text whitespace=cr-at-eol
 evidence/** -text -whitespace

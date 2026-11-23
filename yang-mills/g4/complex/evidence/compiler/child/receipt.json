@@ -1,0 +1,107 @@
+{
+  "source_sha256": "47c67d26f29d0f47eade1e9505b78b33112f8ef896957a2cc952ce5bef0f5cc6",
+  "source": "C:\\Users\\donke\\OneDrive\\Documents\\ChatGPT\\From Prephysical Hypotheses to Physical_Models\\Session\\Millennium_G4\\yang-mills\\g4\\complex\\ComplexReflectionPositivity.lean",
+  "records": [
+    {
+      "label": "positive",
+      "pid": 22808,
+      "command": [
+        "C:\\Users\\donke\\AppData\\Local\\PCP-Toolchains\\lean-4.19.0\\lean-4.19.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "C:\\Users\\donke\\OneDrive\\Documents\\ChatGPT\\From Prephysical Hypotheses to Physical_Models\\Session\\Millennium_G4\\yang-mills\\g4\\complex\\ComplexReflectionPositivity.lean"
+      ],
+      "exit_code": 0,
+      "start_ns": 1795406651598704100,
+      "exit_observed_ns": 1795406674526642700,
+      "post_exit_readback_ns": 1795406674537448000,
+      "output_sha256": "9cbc279973d4923908c62d4824ca16f67df64ab9a72bc55bd732a74a76c9889a",
+      "expected_success": true,
+      "control_passed": true
+    },
+    {
+      "label": "negative_conjugation",
+      "pid": 15060,
+      "command": [
+        "C:\\Users\\donke\\AppData\\Local\\PCP-Toolchains\\lean-4.19.0\\lean-4.19.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "C:\\Users\\donke\\OneDrive\\Documents\\ChatGPT\\From Prephysical Hypotheses to Physical_Models\\Session\\G4_runtime\\complex-check3\\child\\negative_conjugation.lean"
+      ],
+      "exit_code": 1,
+      "start_ns": 1795406674586883100,
+      "exit_observed_ns": 1795406714368896700,
+      "post_exit_readback_ns": 1795406714399615200,
+      "output_sha256": "74f3df8f5566206bb400cd09423e03e0f58eb52391ccf38106ef4115a0511b69",
+      "expected_success": false,
+      "control_passed": true
+    },
+    {
+      "label": "negative_reality",
+      "pid": 19120,
+      "command": [
+        "C:\\Users\\donke\\AppData\\Local\\PCP-Toolchains\\lean-4.19.0\\lean-4.19.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "C:\\Users\\donke\\OneDrive\\Documents\\ChatGPT\\From Prephysical Hypotheses to Physical_Models\\Session\\G4_runtime\\complex-check3\\child\\negative_reality.lean"
+      ],
+      "exit_code": 1,
+      "start_ns": 1795406714550171500,
+      "exit_observed_ns": 1795406747661828000,
+      "post_exit_readback_ns": 1795406747674633000,
+      "output_sha256": "b828fcd7cb78d734e43f269aa26fb531a9a0eb1859106333690b162e055954ea",
+      "expected_success": false,
+      "control_passed": true
+    },
+    {
+      "label": "negative_reflection",
+      "pid": 21924,
+      "command": [
+        "C:\\Users\\donke\\AppData\\Local\\PCP-Toolchains\\lean-4.19.0\\lean-4.19.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "C:\\Users\\donke\\OneDrive\\Documents\\ChatGPT\\From Prephysical Hypotheses to Physical_Models\\Session\\G4_runtime\\complex-check3\\child\\negative_reflection.lean"
+      ],
+      "exit_code": 1,
+      "start_ns": 1795406747726268500,
+      "exit_observed_ns": 1795406772634082300,
+      "post_exit_readback_ns": 1795406772646272700,
+      "output_sha256": "549f696b1ed193292cf512cdc7872c422eb547e297d4ae170215d8edf03afe5a",
+      "expected_success": false,
+      "control_passed": true
+    },
+    {
+      "label": "negative_complex_test",
+      "pid": 17900,
+      "command": [
+        "C:\\Users\\donke\\AppData\\Local\\PCP-Toolchains\\lean-4.19.0\\lean-4.19.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "C:\\Users\\donke\\OneDrive\\Documents\\ChatGPT\\From Prephysical Hypotheses to Physical_Models\\Session\\G4_runtime\\complex-check3\\child\\negative_complex_test.lean"
+      ],
+      "exit_code": 1,
+      "start_ns": 1795406772699676000,
+      "exit_observed_ns": 1795406797352275600,
+      "post_exit_readback_ns": 1795406797364226800,
+      "output_sha256": "937df95b3f26be4723ba30531855e5bc0a17030620bee7fd08d82e1a9dd5a1c6",
+      "expected_success": false,
+      "control_passed": true
+    }
+  ],
+  "passed": true,
+  "verification": {
+    "events": 20,
+    "head": "65fb106cd71bff7219489926d52310a48c81d30875a91aae64a3753709bcb6f1",
+    "guard_problems": [],
+    "altered_objects": [],
+    "objects_by_reference_only": 0,
+    "anchor": null,
+    "ok": true
+  },
+  "native_execution": false,
+  "worker_kind": "PROGRAM",
+  "depth": 3,
+  "namespace": "Millennium.G4.ComplexRP",
+  "checker_sha256": "aae806fff4379d782f2596b5ccc73c3d9529ad802c2dc7aa7c657685a190b1e3",
+  "mutations_sha256": "9bb7dcc724819e17d5c7f651fb25f9b443ca17189cdfa1c369f918cf0ea93643"
+}

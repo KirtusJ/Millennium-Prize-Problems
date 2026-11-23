@@ -1,0 +1,46 @@
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\complex\ComplexReflectionPositivity.lean:19:4: error: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Complex.instNormedAddCommGroup', and it does not have executable code
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\complex\ComplexReflectionPositivity.lean:23:4: error: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Millennium.G4.ComplexRP.pairing', and it does not have executable code
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\complex\ComplexReflectionPositivity.lean:161:4: error: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Complex.instNormedAddCommGroup', and it does not have executable code
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\complex\ComplexReflectionPositivity.lean:165:4: error: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Millennium.G4.ComplexRP.reflectedPairing', and it does not have executable code
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\complex\ComplexReflectionPositivity.lean:227:17: error: type mismatch, term
+  add_nonneg (sq_nonneg a) (sq_nonneg b)
+after simplification has type
+  0 ≤ a ^ 2 + b ^ 2 : Prop
+but is expected to have type
+  (↑a ^ 2).im + (↑b ^ 2).im = 0 ∧ 0 ≤ (↑a ^ 2).re + (↑b ^ 2).re : Prop
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\complex\ComplexReflectionPositivity.lean:230:85: error: unsolved goals
+⊢ 1 + Complex.I * (2 * Complex.I) + (Complex.I * (2 * Complex.I) + 1) = -2
+'Millennium.G4.ComplexRP.NonnegativeComplex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.pairing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.Q' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.nonnegativeComplex_of_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.pairing_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.Q_nonnegative_of_entrywise_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.all_finite_tests_nonnegative_of_entrywise_tendsto' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.ComplexRP.pairing_add_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.pairing_add_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.pairing_mul_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.pairing_mul_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.Q_pullback' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.pullback_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.pairing_zero_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.zero_kernel_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.one_point_identity_control' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.one_point_imaginary_control' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.reflectedPairing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.reflectedKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.reflectedPairing_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.complexOnlyKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.complexOnlyKernel_hermitian' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.real_coefficients_control' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.complex_coefficients_negative' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.ComplexRP.swap' depends on axioms: [propext]
+'Millennium.G4.ComplexRP.alternating' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.swap_involutive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.positive_weights_normalized' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.reflection_sensitive_control' depends on axioms: [propext, Classical.choice, Quot.sound]

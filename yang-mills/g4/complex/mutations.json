@@ -1,0 +1,26 @@
+[
+  {
+    "label": "negative_conjugation",
+    "find": "starRingEnd ℂ (c i) * d j * K (idx i) (idx j)",
+    "replace": "c i * d j * K (idx i) (idx j)",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_reality",
+    "find": "z.im = 0 ∧ 0 ≤ z.re",
+    "replace": "True ∧ 0 ≤ z.re",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_reflection",
+    "find": "starRingEnd ℂ (F (theta x))",
+    "replace": "starRingEnd ℂ (F x)",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_complex_test",
+    "find": "Q complexOnlyKernel id (fun i : Fin 2 => if i = 0 then 1 else Complex.I) = -2",
+    "replace": "Q complexOnlyKernel id (fun i : Fin 2 => if i = 0 then 1 else Complex.I) = 2",
+    "diagnostic": "error:"
+  }
+]

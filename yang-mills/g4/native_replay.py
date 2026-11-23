@@ -17,6 +17,8 @@ import urllib.request
 p = argparse.ArgumentParser()
 for key in ('native','leanbin','method','source','out'):
     p.add_argument('--'+key,type=Path,required=True)
+p.add_argument('--split-markers',nargs=2,
+    default=['theorem kernel_limit_nonneg','-- Every squared test norm'])
 a = p.parse_args()
 a.out.mkdir(parents=True,exist_ok=False)
 PIN = '92623fa6759bbb4e4f27ce5aa381de213a55ae0c'
@@ -125,7 +127,9 @@ __asm__(".global _start\n_start:\nandq $-16,%rsp\ncall emit\nud2");
 '''
 (a.out/'emit.c').write_text(wrapper)
 source=a.source.read_bytes()
-cuts=[0,source.index(b'theorem kernel_limit_nonneg'),source.index(b'-- Every squared test norm'),len(source)]
+cuts=[0,*(source.index(marker.encode('utf8')) for marker in a.split_markers),len(source)]
+if not all(left < right for left,right in zip(cuts,cuts[1:])):
+    raise ValueError('Source split markers must be distinct and ordered')
 parts=[]
 for role in range(3):
     command(flags+[f'-DROLE={role}','emit.c','-o',f'emit{role}.o'])
@@ -139,7 +143,7 @@ for role in range(3):
     parts.append(emitted)
     print('PASS source-emitter',role,sha(emitted),flush=True)
 assembled=b''.join(parts)
-(a.out/'ReflectionPositivity.lean').write_bytes(assembled)
+(a.out/a.source.name).write_bytes(assembled)
 if assembled!=source:
     raise AssertionError('Native source assembly mismatch')
 receipt={'kernel_sha256':EXPECTED_KERNEL,'kernel_measurement':MEASUREMENT,

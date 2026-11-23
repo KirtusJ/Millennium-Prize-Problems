@@ -17,6 +17,8 @@ p = argparse.ArgumentParser()
 for key in ('runtime','method','mathlib','leanbin','source','out'):
     p.add_argument('--'+key, type=Path, required=True)
 p.add_argument('--child', action='store_true')
+p.add_argument('--namespace',default='Millennium.G4')
+p.add_argument('--mutations',type=Path)
 a = p.parse_args()
 sys.path.insert(0, str(a.runtime))
 from pcpos.ops import Ops
@@ -37,7 +39,7 @@ ops = Ops(ops.ws, 'checker')
 ops.adopt('Kirtus', 'RELAYED by G4: authorized 2026-11-22 PCP/Lean research commission. This local register uses DECLARED actor attribution.')
 records = []
 
-def execute(label, argv, expected_success, cwd):
+def execute(label, argv, expected_success, cwd, diagnostic='error:'):
     ev, _ = ops._write('TASK_STARTED', {'label':label, 'worker':'PROGRAM',
         'quiet_limit':0, 'budget':900 if a.child else 1900, 'budget_units':'wall seconds'})
     started = time.time_ns()
@@ -52,18 +54,19 @@ def execute(label, argv, expected_success, cwd):
     (a.out/(label+'.log')).write_bytes(output)
     readback = (a.out/(label+'.log')).read_bytes()
     success = (proc.returncode == 0) == expected_success
+    success = success and a.source.read_bytes() == source_bytes
     if label == 'positive':
         expected = re.findall(r'^#print axioms (\w+)\r?$', source_bytes.decode(), re.M)
-        found = re.findall(r"'Millennium\.G4\.(\w+)' depends on axioms: \[([^\]]*)\]",
-                           output.decode(errors='replace'))
+        found = [(m.group(1),m.group(2) or '') for m in re.finditer(
+            "'"+re.escape(a.namespace)+r"\.(\w+)' (?:depends on axioms: \[([^\]]*)\]|does not depend on any axioms)",
+            output.decode(errors='replace'))]
         allowed = {'propext', 'Classical.choice', 'Quot.sound'}
         success = success and bool(expected) and [name for name, _ in found] == expected
-        success = success and all(set(x.strip() for x in axioms.split(',')) <= allowed
+        success = success and all(set(x.strip() for x in axioms.split(',') if x.strip()) <= allowed
                                   for _, axioms in found)
         success = success and b'sorryAx' not in output and b'error:' not in output
-    if label == 'negative':
-        success = success and b'error:' in output and b'has type' in output
-        success = success and b'but is expected to have type' in output
+    if label.startswith('negative'):
+        success = success and b'error:' in output and diagnostic.encode() in output
     rec = {'label':label, 'pid':proc.pid, 'command':argv, 'exit_code':proc.returncode,
         'start_ns':started, 'exit_observed_ns':exited, 'post_exit_readback_ns':time.time_ns(),
         'output_sha256':sha(readback), 'expected_success':expected_success, 'control_passed':success}
@@ -82,17 +85,26 @@ if a.child:
     lake = str(a.leanbin/'lake.exe')
     okay = execute('positive', [lake,'env','lean',str(a.source)], True, a.mathlib)
     if okay:
-        # Deliberately reverse the first claimed limit sign, preserving its nonnegative inputs.
-        bad = source_bytes.decode().replace('∀ t, 0 ≤ qlim t := by', '∀ t, qlim t < 0 := by', 1)
-        if bad == source_bytes.decode():
-            raise AssertionError('Negative mutation target missing')
-        bad_path = a.out/'RejectedSignMutation.lean'
-        bad_path.write_bytes(bad.encode('utf8'))
-        okay = execute('negative', [lake,'env','lean',str(bad_path)], False, a.mathlib) and okay
+        mutations = json.loads(a.mutations.read_bytes()) if a.mutations else [
+            {'label':'negative','find':'∀ t, 0 ≤ qlim t := by','replace':'∀ t, qlim t < 0 := by',
+             'diagnostic':'but is expected to have type'}]
+        for mutation in mutations:
+            if not re.fullmatch(r'negative(?:_[a-z0-9]+)*',mutation['label']):
+                raise ValueError('Invalid mutation label')
+            if source_bytes.decode().count(mutation['find'])!=1:
+                raise AssertionError('Mutation target must occur exactly once')
+            bad = source_bytes.decode().replace(mutation['find'],mutation['replace'],1)
+            bad_path = a.out/(mutation['label']+'.lean')
+            bad_path.write_bytes(bad.encode('utf8'))
+            okay = execute(mutation['label'],[lake,'env','lean',str(bad_path)],False,a.mathlib,
+                           mutation.get('diagnostic','error:')) and okay
 else:
     argv = [sys.executable,'-B',str(Path(__file__).resolve()),'--child']
     for key in ('runtime','method','mathlib','leanbin','source'):
         argv += ['--'+key,str(getattr(a,key))]
+    argv += ['--namespace',a.namespace]
+    if a.mutations:
+        argv += ['--mutations',str(a.mutations)]
     argv += ['--out',str(a.out/'child')]
     okay = execute('child',argv,True,Path(__file__).parent)
     child_file = a.out/'child'/'receipt.json'
@@ -108,7 +120,9 @@ else:
 verification = ops.verify(deep=True)
 receipt = {'source_sha256':sha(source_bytes), 'source':str(a.source), 'records':records,
     'passed':bool(okay and verification['ok']), 'verification':verification,
-    'native_execution':False, 'worker_kind':'PROGRAM', 'depth':3 if a.child else 2}
+    'native_execution':False, 'worker_kind':'PROGRAM', 'depth':3 if a.child else 2,
+    'namespace':a.namespace, 'checker_sha256':sha(Path(__file__).read_bytes()),
+    'mutations_sha256':sha(a.mutations.read_bytes()) if a.mutations else None}
 save(a.out/'receipt.json',receipt)
 print(json.dumps(receipt))
 raise SystemExit(0 if receipt['passed'] else 1)

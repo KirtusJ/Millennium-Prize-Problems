@@ -1,0 +1,14 @@
+Director G4 commission: extend the verified real finite-kernel reflection-positivity limit result to COMPLEX sesquilinear pairings. Return a complete Lean 4.19.0 source file and a short precise scope statement, no hidden reasoning transcript. Mathlib pin c44e0c8ee63ca166450922a373c7409c5d26b00b. You cannot execute tools; mark uncertain APIs rather than inventing a successful check. The parent will run Lean.
+
+Use namespace Millennium.G4.ComplexRP. Narrow imports, likely Mathlib.Analysis.Complex.Basic, Mathlib.Topology.Algebra.Monoid, Mathlib.Tactic.NormNum, Mathlib.Tactic.Ring, Mathlib.Algebra.BigOperators.Fin. Define nonnegative complex numbers explicitly as z.im = 0 AND 0 <= z.re; do not replace this with a real-part inequality. Define the finite sesquilinear pairing as sum_i sum_j conj(c_i)*d_j*K(idx_i,idx_j) for arbitrary finite J, arbitrary label type I, repeated labels permitted; define Q by c=d.
+
+Required results:
+1. Full nonnegative-complex condition passes through a limit when each fixed test satisfies it eventually (threshold may depend on test). Use continuity of re/im and closed sets.
+2. Finite pairings converge under entrywise complex kernel convergence; conclude positivity for every finite complex test on one common label space, with a test-dependent eventual cutoff. State convergence and coefficient finiteness explicitly.
+3. At least the elementary sesquilinear laws: additivity and scalar multiplication in each coefficient slot, conjugating the scalar in the first slot.
+4. Pullback of labels preserves positivity (composition of the test-label map), with no claim of measure or dynamics identification.
+5. Checked controls: identity one-point kernel with coefficient I has sesquilinear Q=1 but the unconjugated bilinear expression = -1; one-point kernel I has real part zero but imaginary part one, so real-part-only testing is insufficient; zero kernel is positive and trivial. A real-test-only adverse Hermitian two-by-two kernel [[1,2I],[-2I,1]] is optional: real tests positive, complex vector (1,I) gives -2.
+
+If feasible add a finite reflected-function expansion bridge: on a finite configuration set X, weighted pairing sum_x w_x*conj(F(theta x))*G(x); show pairing of finite complex linear combinations equals the kernel sesquilinear sum. This is a finite identity only, not continuum integration. Do not assume every positive weight is reflection positive; the reflection theta must appear inside the conjugated first test.
+
+Use no sorry, axioms, admit, unsafe, native_decide, or custom trust extensions. Print axioms of every named theorem/definition used as the certificate. Include explicit source split comments '-- NATIVE CHILD 1' and '-- NATIVE CHILD 2' between complete declarations for a three-guest source emission chain. No Yang-Mills existence, mass gap, OS reconstruction, or complex test-algebra completeness claim follows from this file.

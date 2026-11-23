@@ -1,0 +1,80 @@
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\complex-check3\child\negative_reflection.lean:164:22: warning: unused variable `theta`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\complex-check3\child\negative_reflection.lean:189:10: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  weight x * ∑ i, (starRingEnd ℂ) (c i) * (starRingEnd ℂ) (f (idx i) (theta x))
+X : Type w
+I : Type u
+J : Type v
+inst✝¹ : Fintype X
+inst✝ : Fintype J
+weight : X → ℂ
+theta : X → X
+f : I → X → ℂ
+idx : J → I
+c d : J → ℂ
+term : X → J → J → ℂ :=
+  fun x i j => (starRingEnd ℂ) (c i) * d j * (weight x * (starRingEnd ℂ) (f (idx i) (theta x)) * f (idx j) x)
+x : X
+a✝ : x ∈ Finset.univ
+⊢ (weight x * ∑ x_1, (starRingEnd ℂ) (c x_1) * (starRingEnd ℂ) (f (idx x_1) x)) * ∑ j, d j * f (idx j) x =
+    ∑ i, ∑ j, term x i j
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\complex-check3\child\negative_reflection.lean:206:60: error: unsolved goals
+X : Type w
+I : Type u
+J : Type v
+inst✝¹ : Fintype X
+inst✝ : Fintype J
+weight : X → ℂ
+theta : X → X
+f : I → X → ℂ
+idx : J → I
+c d : J → ℂ
+term : X → J → J → ℂ :=
+  fun x i j => (starRingEnd ℂ) (c i) * d j * (weight x * (starRingEnd ℂ) (f (idx i) (theta x)) * f (idx j) x)
+⊢ ∑ x,
+      ∑ x_1,
+        ∑ x_2,
+          (starRingEnd ℂ) (c x) * d x_1 * (weight x_2 * (starRingEnd ℂ) (f (idx x) (theta x_2)) * f (idx x_1) x_2) =
+    ∑ x, ∑ x_1, ∑ i, (starRingEnd ℂ) (c x) * d x_1 * (weight i * (starRingEnd ℂ) (f (idx x) i) * f (idx x_1) i)
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\complex-check3\child\negative_reflection.lean:234:5: warning: unused variable `commutes`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\complex-check3\child\negative_reflection.lean:292:80: error: unsolved goals
+⊢ False
+'Millennium.G4.ComplexRP.NonnegativeComplex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.pairing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.Q' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.nonnegativeComplex_of_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.pairing_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.Q_nonnegative_of_entrywise_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.all_finite_tests_nonnegative_of_entrywise_tendsto' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.ComplexRP.pairing_add_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.pairing_add_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.pairing_mul_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.pairing_mul_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.Q_pullback' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.pullback_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.pairing_zero_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.zero_kernel_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.one_point_identity_control' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.one_point_imaginary_control' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.reflectedPairing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.reflectedKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.reflectedPairing_expansion' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.reflected_regulator_limit' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.pushforwardWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.reflectedPairing_pushforward' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.pushforward_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.complexOnlyKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.complexOnlyKernel_hermitian' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.real_coefficients_control' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.complex_coefficients_negative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.swap' depends on axioms: [propext]
+'Millennium.G4.ComplexRP.alternating' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.swap_involutive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.positive_weights_normalized' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.ComplexRP.reflection_sensitive_control' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

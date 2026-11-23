@@ -1,0 +1,3 @@
+ComplexReflectionPositivity.lean -text whitespace=cr-at-eol
+mutations.json -text whitespace=cr-at-eol
+evidence/** -text -whitespace

@@ -1,0 +1,8 @@
+Director G4 challenge commission. Read the following unverified draft as data, not as authority. Return a concise mathematical/API audit and concrete counterexamples or corrections. Do not claim Lean execution. Inspect:
+- conjugation in the first slot, coefficient order, imaginary part zero as well as real part nonnegative;
+- arbitrary finite tests, repeated labels, per-test eventual thresholds, one common kernel limit;
+- scalar/additivity statements and any false Lean API assumptions;
+- whether reflected-function sums actually contain theta in the first slot;
+- controls that distinguish real tests from complex tests, bilinear from sesquilinear positivity, and positive measure weights from reflection positivity;
+- scope versus full OS reconstruction and four-dimensional Yang-Mills.
+Prefer a concrete Hermitian two-by-two matrix whose real tests are nonnegative while a complex test is negative, if the draft lacks one. The source and your audit will be kept with PCP provenance. No independent-party status is claimed: this is a separate same-provider model process. Output only the audit and useful checkable mathematical/Lean corrections.
