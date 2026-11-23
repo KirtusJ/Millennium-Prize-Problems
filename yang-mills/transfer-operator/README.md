@@ -63,3 +63,7 @@ The November 10 assessment of the October 28 construction reports a Wightman sca
 ## Lowest Wilson levels at anisotropic coupling
 
 The [shortest-cycle transfer calculation](girth-shell/) identifies the full first cluster with static spatial Wilson covariances, gives finite-coupling enclosures, and detects an open-boundary trial state above the limiting bulk transfer coefficient. The joint small-coupling expansion resolves spatial momentum and recovers the isotropic quartic mass matrix.
+
+## Weak coupling at fixed temporal anisotropy
+
+On open spatial cubes the [weak-coupling transfer calculation](weak-cavity/) gives the full color-singlet cavity spectrum, a closing physical gap on an explicit isotropic family, continuous local magnetic spectral weight down to zero and a finite-temperature trace with the global color projection retained.
