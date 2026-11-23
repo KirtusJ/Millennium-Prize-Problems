@@ -1,0 +1,23 @@
+{
+  "pid": 5616,
+  "start_ns": 1795417124493276100,
+  "exit_observed_ns": 1795417164823965700,
+  "returncode": 0,
+  "prompt_sha256": "dd8a17f66f4b4078836aba2ab14c0cd670f7baed85da56af889418907395624c",
+  "unexpected_item_types": [
+    "mcp_tool_call",
+    "mcp_tool_call"
+  ],
+  "event_types": [
+    "thread.started",
+    "turn.started",
+    "item.completed",
+    "item.started",
+    "item.started",
+    "item.completed",
+    "item.completed",
+    "item.completed",
+    "turn.completed"
+  ],
+  "error_events": []
+}

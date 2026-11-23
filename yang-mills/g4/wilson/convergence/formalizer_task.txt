@@ -1,0 +1,20 @@
+Director G4 PCP Lean commission. G4 is a director moniker. Return Lean 4.19.0 / Mathlib c44e0c8e source, no sorry/axioms/native_decide, in namespace Millennium.G4.WilsonRP. No compiler execution is available to you; clearly mark uncompiled. Parent has actual compiler. Work only on actual exponential convergence, not assumptions named convergence.
+
+Imports available: IntegralReflectionPositivity (previous G4 module), Mathlib.Analysis.SpecialFunctions.Exponential, Mathlib.MeasureTheory.Integral.DominatedConvergence, Mathlib.Algebra.BigOperators.Ring.Finset. Use noncomputable section, open MeasureTheory Filter, scoped BigOperators Topology ComplexConjugate.
+Use these exact definitions (include them in your returned code):
+def partialExp (N : ℕ) (z : ℝ) : ℝ := ∑ k ∈ Finset.range N, z ^ k / (k.factorial : ℝ)
+def dotKernel {D X : Type*} [Fintype D] (v : D → X → ℝ) (x y : X) : ℝ := ∑ r, v r x * v r y
+def splitExponent {D X : Type*} [Fintype D] (s : X → ℝ) (v : D → X → ℝ) (p : X × X) : ℝ := s p.1 + s p.2 + dotKernel v p.1 p.2
+def taylorWeight {D X : Type*} [Fintype D] (s : X → ℝ) (v : D → X → ℝ) (N : ℕ) (p : X × X) : ℝ := Real.exp (s p.1 + s p.2) * partialExp N (dotKernel v p.1 p.2)
+def testedTaylor {D X : Type*} [Fintype D] (s : X → ℝ) (v : D → X → ℝ) (F : X → ℂ) (N : ℕ) (p : X × X) : ℂ := (taylorWeight s v N p : ℂ) * (conj (F p.1) * F p.2)
+def testedWilson {D X : Type*} [Fintype D] (s : X → ℝ) (v : D → X → ℝ) (F : X → ℂ) (p : X × X) : ℂ := (Real.exp (splitExponent s v p) : ℂ) * (conj (F p.1) * F p.2)
+
+Prove tendsto_partialExp (z): Tendsto (fun N=>partialExp N z) atTop (nhds (Real.exp z)); abs_partialExp_le (N z): |partialExp N z|≤Real.exp |z|. API: NormedSpace.expSeries_div_hasSum_exp ℝ z : HasSum (fun n=>z^n/n!) (NormedSpace.exp ℝ z); real specialization has simp bridge NormedSpace.exp_eq_real or similar, inspect best guess; .tendsto_sum_nat works. Real.summable_pow_div_factorial z exists. Nonnegative terms at |z| let sum_le_tsum bound absolute partial sums.
+
+Prove continuity helpers continuous_dotKernel and continuous_splitExponent under hv : ∀r,Continuous(v r), hs:Continuous s. Prove continuous_testedTaylor and continuous_testedWilson for continuous complex F. Prove pointwise testedTaylor convergence and bound
+‖testedTaylor s v F N p‖ ≤ Real.exp(s p.1+s p.2)*Real.exp(|dotKernel v p.1 p.2|)*‖F p.1‖*‖F p.2‖.
+
+Then theorem tendsto_testedTaylor_integral: X compact second-countable Borel, μ : Measure (X×X) finite, s/v/F continuous -> Tendsto (fun N => ∫p, testedTaylor s v F N p ∂μ) atTop (nhds (∫p,testedWilson s v F p ∂μ)). Prove the actual bound is continuous and integrable on compact X×X; do NOT assume domination/convergence as hypotheses. Parent lemma Millennium.G4.IntegralRP.integrable_continuous_compact μ g hg proves Integrable g μ for compact Borel domain, finite measure and normed additive codomain.
+
+Pinned DCT API: MeasureTheory.tendsto_integral_of_dominated_convergence (bound : α→ℝ) (F_measurable : ∀n,AEStronglyMeasurable (F n) μ) (bound_integrable : Integrable bound μ) (h_bound : ∀n,∀ᵐa ∂μ,‖F n a‖≤bound a) (h_lim : ∀ᵐa ∂μ,Tendsto (fun n=>F n a) atTop (nhds (f a))). Pointwise hypotheses yield ae via Filter.Eventually.of_forall.
+Include #print axioms for each named theorem/definition. Keep the proof explicit and finite polynomial/series facts genuine.

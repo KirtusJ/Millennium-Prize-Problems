@@ -1,0 +1,204 @@
+Audit this uncompiled Lean candidate for actual exponential-series convergence and integral dominated convergence. Check complex conjugation, absolute partial-sum bound, finite-measure/compactness assumptions, continuity and measurable domination, and that convergence is proved rather than supplied under another name. No compiler claim or independent-party review. Identify concrete mathematical/API defects; G4 is a director moniker.
+
+
+SOURCE TO AUDIT:
+Uncompiled Lean 4.19.0 source targeting Mathlib `c44e0c8e`. The integral proof derives its dominating function from the absolute Taylor bound and proves its integrability by continuity on the compact product.
+
+```lean
+import IntegralReflectionPositivity
+import Mathlib.Analysis.SpecialFunctions.Exponential
+import Mathlib.MeasureTheory.Integral.DominatedConvergence
+import Mathlib.Algebra.BigOperators.Ring.Finset
+
+noncomputable section
+
+open MeasureTheory Filter
+open scoped BigOperators Topology ComplexConjugate
+
+namespace Millennium.G4.WilsonRP
+
+def partialExp (N : ℕ) (z : ℝ) : ℝ := ∑ k ∈ Finset.range N, z ^ k / (k.factorial : ℝ)
+
+def dotKernel {D X : Type*} [Fintype D] (v : D → X → ℝ) (x y : X) : ℝ := ∑ r, v r x * v r y
+
+def splitExponent {D X : Type*} [Fintype D] (s : X → ℝ) (v : D → X → ℝ) (p : X × X) : ℝ := s p.1 + s p.2 + dotKernel v p.1 p.2
+
+def taylorWeight {D X : Type*} [Fintype D] (s : X → ℝ) (v : D → X → ℝ) (N : ℕ) (p : X × X) : ℝ := Real.exp (s p.1 + s p.2) * partialExp N (dotKernel v p.1 p.2)
+
+def testedTaylor {D X : Type*} [Fintype D] (s : X → ℝ) (v : D → X → ℝ) (F : X → ℂ) (N : ℕ) (p : X × X) : ℂ := (taylorWeight s v N p : ℂ) * (conj (F p.1) * F p.2)
+
+def testedWilson {D X : Type*} [Fintype D] (s : X → ℝ) (v : D → X → ℝ) (F : X → ℂ) (p : X × X) : ℂ := (Real.exp (splitExponent s v p) : ℂ) * (conj (F p.1) * F p.2)
+
+private theorem hasSum_real_exp_terms (z : ℝ) :
+    HasSum (fun k : ℕ => z ^ k / (k.factorial : ℝ)) (Real.exp z) := by
+  have h := NormedSpace.expSeries_div_hasSum_exp ℝ z
+  first
+  | simpa only [Real.exp_eq_exp_ℝ] using h
+  | simpa only [NormedSpace.exp_eq_real] using h
+  | simpa using h
+
+theorem tendsto_partialExp (z : ℝ) :
+    Tendsto (fun N => partialExp N z) atTop (nhds (Real.exp z)) := by
+  simpa only [partialExp] using (hasSum_real_exp_terms z).tendsto_sum_nat
+
+theorem abs_partialExp_le (N : ℕ) (z : ℝ) :
+    |partialExp N z| ≤ Real.exp |z| := by
+  have hterm (k : ℕ) :
+      |z ^ k / (k.factorial : ℝ)| = |z| ^ k / (k.factorial : ℝ) := by
+    have hk : 0 ≤ (k.factorial : ℝ) := by positivity
+    rw [abs_div, abs_pow, abs_of_nonneg hk]
+  have hfinite (n : ℕ) : |partialExp n z| ≤ partialExp n |z| := by
+    induction n with
+    | zero => simp [partialExp]
+    | succ n ih =>
+        simp only [partialExp, Finset.sum_range_succ]
+        exact (abs_add_le _ _).trans (add_le_add ih (hterm n).le)
+  have hsum := hasSum_real_exp_terms |z|
+  have hnonneg (k : ℕ) : 0 ≤ |z| ^ k / (k.factorial : ℝ) := by
+    positivity
+  have hle : partialExp N |z| ≤
+      ∑' k : ℕ, |z| ^ k / (k.factorial : ℝ) := by
+    unfold partialExp
+    first
+    | exact Summable.sum_le_tsum (Finset.range N)
+        (fun k _ => hnonneg k) hsum.summable
+    | exact hsum.summable.sum_le_tsum (Finset.range N) (fun k _ => hnonneg k)
+  exact (hfinite N).trans (hsum.tsum_eq ▸ hle)
+
+section Continuity
+
+variable {D X : Type*} [Fintype D] [TopologicalSpace X]
+variable {s : X → ℝ} {v : D → X → ℝ} {F : X → ℂ}
+
+theorem continuous_dotKernel (hv : ∀ r, Continuous (v r)) :
+    Continuous (fun p : X × X => dotKernel v p.1 p.2) := by
+  unfold dotKernel
+  exact continuous_finset_sum _ fun r _ =>
+    ((hv r).comp continuous_fst).mul ((hv r).comp continuous_snd)
+
+theorem continuous_splitExponent (hs : Continuous s)
+    (hv : ∀ r, Continuous (v r)) : Continuous (splitExponent s v) := by
+  exact ((hs.comp continuous_fst).add (hs.comp continuous_snd)).add
+    (continuous_dotKernel hv)
+
+private theorem continuous_partialExp (N : ℕ) : Continuous (partialExp N) := by
+  unfold partialExp
+  exact continuous_finset_sum _ fun k _ =>
+    (continuous_id.pow k).div_const (k.factorial : ℝ)
+
+private theorem continuous_testFactor (hF : Continuous F) :
+    Continuous (fun p : X × X => conj (F p.1) * F p.2) := by
+  have hconj : Continuous (fun z : ℂ => conj z) := by
+    first
+    | exact Complex.continuous_conj
+    | exact continuous_star
+  exact (hconj.comp (hF.comp continuous_fst)).mul (hF.comp continuous_snd)
+
+theorem continuous_testedTaylor (hs : Continuous s)
+    (hv : ∀ r, Continuous (v r)) (hF : Continuous F) (N : ℕ) :
+    Continuous (testedTaylor s v F N) := by
+  have hweight : Continuous (taylorWeight s v N) := by
+    exact (Real.continuous_exp.comp
+      ((hs.comp continuous_fst).add (hs.comp continuous_snd))).mul
+      ((continuous_partialExp N).comp (continuous_dotKernel hv))
+  exact (Complex.continuous_ofReal.comp hweight).mul (continuous_testFactor hF)
+
+theorem continuous_testedWilson (hs : Continuous s)
+    (hv : ∀ r, Continuous (v r)) (hF : Continuous F) :
+    Continuous (testedWilson s v F) := by
+  exact (Complex.continuous_ofReal.comp
+    (Real.continuous_exp.comp (continuous_splitExponent hs hv))).mul
+    (continuous_testFactor hF)
+
+end Continuity
+
+section Convergence
+
+variable {D X : Type*} [Fintype D]
+
+theorem tendsto_testedTaylor (s : X → ℝ) (v : D → X → ℝ)
+    (F : X → ℂ) (p : X × X) :
+    Tendsto (fun N => testedTaylor s v F N p) atTop
+      (nhds (testedWilson s v F p)) := by
+  have hweight :
+      Tendsto (fun N => taylorWeight s v N p) atTop
+        (nhds (Real.exp (splitExponent s v p))) := by
+    rw [splitExponent, Real.exp_add]
+    exact tendsto_const_nhds.mul (tendsto_partialExp (dotKernel v p.1 p.2))
+  have hcast :
+      Tendsto (fun N => (taylorWeight s v N p : ℂ)) atTop
+        (nhds (Real.exp (splitExponent s v p) : ℂ)) :=
+    (Complex.continuous_ofReal.tendsto _).comp hweight
+  simpa only [testedTaylor, testedWilson] using hcast.mul tendsto_const_nhds
+
+theorem norm_testedTaylor_le (s : X → ℝ) (v : D → X → ℝ)
+    (F : X → ℂ) (N : ℕ) (p : X × X) :
+    ‖testedTaylor s v F N p‖ ≤
+      Real.exp (s p.1 + s p.2) * Real.exp |dotKernel v p.1 p.2| *
+        ‖F p.1‖ * ‖F p.2‖ := by
+  have hconj : ‖conj (F p.1)‖ = ‖F p.1‖ := by
+    first
+    | exact Complex.norm_conj _
+    | exact norm_star _
+    | simp
+  have hweight :
+      |taylorWeight s v N p| ≤
+        Real.exp (s p.1 + s p.2) * Real.exp |dotKernel v p.1 p.2| := by
+    rw [taylorWeight, abs_mul, abs_of_pos (Real.exp_pos _)]
+    exact mul_le_mul_of_nonneg_left (abs_partialExp_le N _) (Real.exp_nonneg _)
+  rw [testedTaylor, norm_mul, norm_mul, hconj, Complex.norm_real, Real.norm_eq_abs]
+  rw [← mul_assoc]
+  exact mul_le_mul_of_nonneg_right
+    (mul_le_mul_of_nonneg_right hweight (norm_nonneg _)) (norm_nonneg _)
+
+theorem tendsto_testedTaylor_integral
+    [TopologicalSpace X] [CompactSpace X] [SecondCountableTopology X]
+    [MeasurableSpace X] [BorelSpace X]
+    (μ : Measure (X × X)) [IsFiniteMeasure μ]
+    (s : X → ℝ) (v : D → X → ℝ) (F : X → ℂ)
+    (hs : Continuous s) (hv : ∀ r, Continuous (v r)) (hF : Continuous F) :
+    Tendsto (fun N => ∫ p, testedTaylor s v F N p ∂μ) atTop
+      (nhds (∫ p, testedWilson s v F p ∂μ)) := by
+  let bound : X × X → ℝ := fun p =>
+    Real.exp (s p.1 + s p.2) * Real.exp |dotKernel v p.1 p.2| *
+      ‖F p.1‖ * ‖F p.2‖
+  have houter : Continuous (fun p : X × X => Real.exp (s p.1 + s p.2)) :=
+    Real.continuous_exp.comp ((hs.comp continuous_fst).add (hs.comp continuous_snd))
+  have hinner : Continuous (fun p : X × X => Real.exp |dotKernel v p.1 p.2|) :=
+    Real.continuous_exp.comp ((continuous_dotKernel hv).abs)
+  have hbound_continuous : Continuous bound :=
+    ((houter.mul hinner).mul (hF.comp continuous_fst).norm).mul
+      (hF.comp continuous_snd).norm
+  have hbound_integrable : Integrable bound μ :=
+    Millennium.G4.IntegralRP.integrable_continuous_compact μ bound hbound_continuous
+  exact MeasureTheory.tendsto_integral_of_dominated_convergence bound
+    (fun N => (continuous_testedTaylor hs hv hF N).aestronglyMeasurable)
+    hbound_integrable
+    (fun N => Filter.Eventually.of_forall (norm_testedTaylor_le s v F N))
+    (Filter.Eventually.of_forall (tendsto_testedTaylor s v F))
+
+end Convergence
+
+#print axioms partialExp
+#print axioms dotKernel
+#print axioms splitExponent
+#print axioms taylorWeight
+#print axioms testedTaylor
+#print axioms testedWilson
+#print axioms hasSum_real_exp_terms
+#print axioms tendsto_partialExp
+#print axioms abs_partialExp_le
+#print axioms continuous_dotKernel
+#print axioms continuous_splitExponent
+#print axioms continuous_partialExp
+#print axioms continuous_testFactor
+#print axioms continuous_testedTaylor
+#print axioms continuous_testedWilson
+#print axioms tendsto_testedTaylor
+#print axioms norm_testedTaylor_le
+#print axioms tendsto_testedTaylor_integral
+
+end Millennium.G4.WilsonRP
+
+end
+```

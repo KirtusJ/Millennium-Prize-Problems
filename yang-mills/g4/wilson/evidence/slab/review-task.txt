@@ -1,0 +1,188 @@
+Audit this Lean temporal-gauge and Haar-integral reduction draft. Check noncommutative multiplication order, finite product actual measure preservation, product/Fubini order, no temporal periodic closure assumption, gauge-invariant total density and half-test support. Detect circular replacement of the reduction by a hypothesis asserting its conclusion. Identify whether the normalized tilted-law transport truly derives partition and numerator identities. No claimed compiler execution or independent review.
+
+
+SOURCE TO AUDIT:
+The source below proves the temporal gauge identities, constructs the finite-product Haar-preserving measurable equivalence, and uses Fubini to remove the temporal variables. The transport theorem works for real and complex integrands through a common real normed-space formulation.
+
+I could not compile against Lean 4.19.0 and Mathlib `c44e0c8e`. The calls to `measurePreserving_pi`, `MeasurePreserving.integral_comp'`, and `integral_prod_symm` need confirmation at that pin. The optional theorem proves transport of the normalized weighted expectation in quotient form. Identifying that quotient with the integral against the sibling’s `tilted` measure still requires its defining lemma.
+
+```lean
+import IntegralReflectionPositivity
+import Mathlib.MeasureTheory.Group.Measure
+import Mathlib.MeasureTheory.Constructions.Pi
+import Mathlib.MeasureTheory.Integral.Prod
+
+open MeasureTheory
+
+namespace Millennium.G4.WilsonRP
+
+noncomputable section
+
+section GaugeAlgebra
+
+variable {V G : Type*} [Group G]
+
+def temporalGauge (h : V → ℕ → G) (x : V) : ℕ → G
+  | 0 => 1
+  | t + 1 => temporalGauge h x t * h x t
+
+theorem temporalGauge_cancel (h : V → ℕ → G) (x : V) (t : ℕ) :
+    temporalGauge h x t * h x t * (temporalGauge h x (t + 1))⁻¹ = 1 := by
+  change
+    (temporalGauge h x t * h x t) *
+      (temporalGauge h x t * h x t)⁻¹ = 1
+  exact mul_inv_cancel _
+
+theorem spatialGauge_inverse (a u b : G) :
+    (a * u * b⁻¹)⁻¹ = b * u⁻¹ * a⁻¹ := by
+  group
+
+theorem plaquette_covariance (g₀ g₁ k₀ k₁ u h₁ v h₀ : G) :
+    (g₀ * u * g₁⁻¹) * (g₁ * h₁ * k₁⁻¹) *
+        (k₁ * v⁻¹ * k₀⁻¹) * (k₀ * h₀⁻¹ * g₀⁻¹) =
+      g₀ * (u * h₁ * v⁻¹ * h₀⁻¹) * g₀⁻¹ := by
+  group
+
+end GaugeAlgebra
+
+section HaarCoordinates
+
+variable {E G : Type*} [Group G] [MeasurableSpace G]
+  [MeasurableMul G] [MeasurableInv G]
+
+def gaugeMap (l r : E → G) (U : E → G) : E → G :=
+  fun e => l e * U e * r e
+
+def gaugeEquiv (l r : E → G) : (E → G) ≃ᵐ (E → G) where
+  toFun := gaugeMap l r
+  invFun := gaugeMap (fun e => (l e)⁻¹) (fun e => (r e)⁻¹)
+  left_inv U := by
+    funext e
+    simp only [gaugeMap]
+    group
+  right_inv U := by
+    funext e
+    simp only [gaugeMap]
+    group
+  measurable_toFun := by
+    apply measurable_pi_lambda
+    intro e
+    exact (measurable_const.mul (measurable_pi_apply e)).mul measurable_const
+  measurable_invFun := by
+    apply measurable_pi_lambda
+    intro e
+    exact (measurable_const.mul (measurable_pi_apply e)).mul measurable_const
+
+variable [Fintype E]
+variable (m : Measure G) [IsProbabilityMeasure m]
+  [Measure.IsMulLeftInvariant m] [Measure.IsMulRightInvariant m]
+
+theorem measurePreserving_gaugeMap (l r : E → G) :
+    MeasurePreserving (gaugeMap l r)
+      (Measure.pi (fun _ : E => m)) (Measure.pi (fun _ : E => m)) := by
+  have hcoord (e : E) :
+      MeasurePreserving (fun u : G => l e * u * r e) m m :=
+    (measurePreserving_mul_right m (r e)).comp
+      (measurePreserving_mul_left m (l e))
+  exact measurePreserving_pi (fun _ : E => m) (fun _ : E => m) hcoord
+
+variable {B : Type*} [NormedAddCommGroup B] [NormedSpace ℝ B]
+
+theorem integral_gaugeMap (l r : E → G) (φ : (E → G) → B) :
+    (∫ U, φ (gaugeMap l r U) ∂(Measure.pi (fun _ : E => m))) =
+      ∫ U, φ U ∂(Measure.pi (fun _ : E => m)) := by
+  have hpres :
+      MeasurePreserving (gaugeEquiv l r)
+        (Measure.pi (fun _ : E => m)) (Measure.pi (fun _ : E => m)) :=
+    measurePreserving_gaugeMap m l r
+  exact hpres.integral_comp' φ
+
+section TemporalIntegration
+
+variable {H : Type*} [MeasurableSpace H]
+variable (η : Measure H) [IsProbabilityMeasure η]
+variable (l r : H → E → G)
+
+local notation "μ" => Measure.pi (fun _ : E => m)
+
+theorem integral_temporalGauge
+    (Φ : (E → G) × H → B) (φ : (E → G) → B)
+    (hΦ : Integrable Φ (μ.prod η))
+    (hpoint : ∀ U h, Φ (U, h) = φ (gaugeMap (l h) (r h) U)) :
+    (∫ z, Φ z ∂(μ.prod η)) = ∫ U, φ U ∂μ := by
+  have hfiber (h : H) :
+      (∫ U, Φ (U, h) ∂μ) = ∫ U, φ U ∂μ := by
+    calc
+      (∫ U, Φ (U, h) ∂μ) =
+          ∫ U, φ (gaugeMap (l h) (r h) U) ∂μ :=
+        integral_congr_ae (Filter.Eventually.of_forall (fun U => hpoint U h))
+      _ = ∫ U, φ U ∂μ := integral_gaugeMap m (l h) (r h) φ
+  calc
+    (∫ z, Φ z ∂(μ.prod η)) =
+        ∫ h, (∫ U, Φ (U, h) ∂μ) ∂η :=
+      integral_prod_symm Φ hΦ
+    _ = ∫ _ : H, (∫ U, φ U ∂μ) ∂η :=
+      integral_congr_ae (Filter.Eventually.of_forall hfiber)
+    _ = ∫ U, φ U ∂μ := by simp
+
+/-- Transport of the partition and the normalized weighted expectation
+for the density convention `exp S`. -/
+theorem normalized_weighted_temporalGauge
+    (S : (E → G) × H → ℝ) (S₀ : (E → G) → ℝ)
+    (P : (E → G) × H → B) (P₀ : (E → G) → B)
+    (hS : ∀ U h, S (U, h) = S₀ (gaugeMap (l h) (r h) U))
+    (hP : ∀ U h, P (U, h) = P₀ (gaugeMap (l h) (r h) U))
+    (hDensity : Integrable (fun z => Real.exp (S z)) (μ.prod η))
+    (hWeighted : Integrable (fun z => Real.exp (S z) • P z) (μ.prod η))
+    (hDensity₀ : Integrable (fun U => Real.exp (S₀ U)) μ)
+    (hWeighted₀ : Integrable (fun U => Real.exp (S₀ U) • P₀ U) μ)
+    (hPositive₀ : 0 < ∫ U, Real.exp (S₀ U) ∂μ) :
+    (∫ z, Real.exp (S z) ∂(μ.prod η)) =
+        (∫ U, Real.exp (S₀ U) ∂μ) ∧
+    0 < (∫ z, Real.exp (S z) ∂(μ.prod η)) ∧
+    (∫ z, Real.exp (S z) • P z ∂(μ.prod η)) =
+        (∫ U, Real.exp (S₀ U) • P₀ U ∂μ) ∧
+    (∫ z, Real.exp (S z) ∂(μ.prod η))⁻¹ •
+        (∫ z, Real.exp (S z) • P z ∂(μ.prod η)) =
+      (∫ U, Real.exp (S₀ U) ∂μ)⁻¹ •
+        (∫ U, Real.exp (S₀ U) • P₀ U ∂μ) := by
+  have hPartition :
+      (∫ z, Real.exp (S z) ∂(μ.prod η)) =
+        ∫ U, Real.exp (S₀ U) ∂μ :=
+    integral_temporalGauge m η l r
+      (fun z => Real.exp (S z)) (fun U => Real.exp (S₀ U))
+      hDensity (fun U h => congrArg Real.exp (hS U h))
+  have hNumerator :
+      (∫ z, Real.exp (S z) • P z ∂(μ.prod η)) =
+        ∫ U, Real.exp (S₀ U) • P₀ U ∂μ :=
+    integral_temporalGauge m η l r
+      (fun z => Real.exp (S z) • P z)
+      (fun U => Real.exp (S₀ U) • P₀ U) hWeighted (by
+        intro U h
+        rw [hS U h, hP U h])
+  refine ⟨hPartition, hPartition.symm ▸ hPositive₀, hNumerator, ?_⟩
+  rw [hPartition, hNumerator]
+
+end TemporalIntegration
+end HaarCoordinates
+end
+
+#print axioms temporalGauge
+#print axioms temporalGauge_cancel
+#print axioms spatialGauge_inverse
+#print axioms plaquette_covariance
+#print axioms gaugeMap
+#print axioms gaugeEquiv
+#print axioms measurePreserving_gaugeMap
+#print axioms integral_gaugeMap
+#print axioms integral_temporalGauge
+#print axioms normalized_weighted_temporalGauge
+
+end Millennium.G4.WilsonRP
+```
+
+The reduced-side integrability hypotheses in the optional theorem record the analytic conditions on the reduced density and weighted test. The proof of the equalities uses joint integrability on the original side. Compact continuity can supply these integrability conditions once the topology and continuity of the concrete slabs and integrands are established.
+
+For the slab application, index each spatial link by its time and oriented endpoints. For a link \(e:x\to y\) at time \(t\), take \(l_h(e)=g_h(x,t)\) and \(r_h(e)=g_h(y,t)^{-1}\). The open-chain identity sets each transformed temporal link to \(1\). For a periodic chain, \(g_h(x,N)=1\) is an additional holonomy constraint.
+
+The finite-graph proof still has to check that oriented link reversal is represented by inversion, that the enumerated plaquette words transform by conjugation, and that the resulting gauge-fixed words give the sibling’s \(S_0\). Conjugation invariance of each concrete plaquette term \(s\) then gives \(S(U,h)=S_0(T_h U)\). Gauge invariance of the half-test \(F\), together with the concrete reflection action on links and complex conjugation, must give the corresponding identity for the reflected test product \(P\). This requires checking how the reflected test evaluates on the gauge-fixed field and which coordinates each reduced test uses. Arbitrary original half-coordinate functions need not satisfy that identity. Optional end weights must be gauge invariant and half-local. The final reflection-positivity step uses the sibling’s result for the split \(S_0\) after those representation obligations are discharged.

@@ -1,0 +1,32 @@
+[
+  {
+    "label": "negative_exponential_limit",
+    "find": "Tendsto (fun N => partialExp N z) atTop (nhds (Real.exp z)) := by",
+    "replace": "Tendsto (fun N => partialExp N z) atTop (nhds (-Real.exp z)) := by",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_missing_conjugation",
+    "find": "def testedTaylor {D X : Type*} [Fintype D] (s : X → ℝ) (v : D → X → ℝ) (F : X → ℂ) (N : ℕ) (p : X × X) : ℂ := (taylorWeight s v N p : ℂ) * (conj (F p.1) * F p.2)",
+    "replace": "def testedTaylor {D X : Type*} [Fintype D] (s : X → ℝ) (v : D → X → ℝ) (F : X → ℂ) (N : ℕ) (p : X × X) : ℂ := (taylorWeight s v N p : ℂ) * (F p.1 * F p.2)",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_missing_partition",
+    "find": "(((∫ x, Real.exp (S x) ∂μ)⁻¹ : ℝ) : ℂ) *\n        (∫ x, (Real.exp (S x) : ℂ) * P x ∂μ) := by",
+    "replace": "(∫ x, (Real.exp (S x) : ℂ) * P x ∂μ) := by",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_coupling_sign",
+    "find": "(w : I → ℝ) (hw : ∀ i, 0 ≤ w i) (a : I → X → ℂ) (x y : X) :",
+    "replace": "(w : I → ℝ) (hw : ∀ i, w i ≤ 0) (a : I → X → ℂ) (x y : X) :",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_boundary_orientation",
+    "find": "U0 (edge c) * h (bdst c) * (U1 (edge c))⁻¹ * (h (bsrc c))⁻¹",
+    "replace": "U0 (edge c) * h (bdst c) * (U1 (edge c))⁻¹ * h (bsrc c)",
+    "diagnostic": "error:"
+  }
+]

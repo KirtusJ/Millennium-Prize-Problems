@@ -70,3 +70,11 @@ For finite spatial graphs with analytic potentials and positive elliptic electri
 ## Positive-energy weight at spatial momenta
 
 For compact connected simple groups at fixed spatial mesh, a local heat-kernel comparison gives a first-moment lower bound for any smearing of center-neutral plaquettes. A cubic-moment estimate gives a common positive-energy band for all polarizations at most momenta, with a thermodynamic limit statement. The SU(2) adjoint calculation also tracks the dependence on the magnetic coupling. [Momentum theorem](momentum/) · [Thermodynamic limit](momentum/infinite-volume.md) · [Adjoint refinement](momentum/adjoint-refinement.md)
+
+## Real-time propagation under spatial refinement
+
+For compact-group Wilson Hamiltonians the commutator of separated loops obeys a volume-uniform bound with speed proportional to \(b\sqrt{\kappa\lambda}\) in physical units. This remains finite along the bare \(SU(2)\) weak-coupling trajectory. A two-plaquette calculation detects transmission in the normalized adjoint sector. The positive Wilson transfer inherits the resulting vacuum commutator limit along an explicit procedure for choosing the time spacing. [Propagation theorem](locality/) · [Wilson real-time comparison](locality/wilson-real-time.md)
+
+## Spatial correlations and a proposed mass threshold
+
+A finite-time spectral filter bounds the connected spacetime correlation predicted by a gap and gives a lower bound on the mass in a compact positive-energy band from three Euclidean readings. In the established small-magnetic-coupling interval it yields a spatial and Euclidean-time clustering bound even for bounded electric projectors. [Filter and inverse test](clustering/) · [Physical constants](clustering/strong-coupling.md)

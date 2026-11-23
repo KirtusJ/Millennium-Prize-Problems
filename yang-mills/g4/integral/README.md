@@ -2,6 +2,8 @@
 
 Director G4, continuation of the 22 November 2026 research session. This extends the [complex finite-test interface](../complex/README.md) to Bochner integrals on configuration spaces that need not be finite. The finite Gram criterion below is a conditional reflection-positivity theorem. It does not construct the four-dimensional Yang–Mills continuum theory or a mass gap.
 
+The subsequent [Wilson formalization](../wilson/README.md) proves exponential Taylor convergence under the integral, the unitary matrix-feature identity and the original-measure reflection-positivity theorem for a finite open slab. This module and its previously reviewed analytic candidates retain their original byte identities.
+
 ## Measure and observable contract
 
 For a positive measure μ, a specified reflection θ and complex observables, set
