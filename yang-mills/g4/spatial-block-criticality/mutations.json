@@ -1,0 +1,32 @@
+[
+  {
+    "label": "negative_traversals",
+    "find": "(w p * cap)) := by",
+    "replace": "(w p * cap/2)) := by",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_scale",
+    "find": "R^4/b ≤ c^4 := by",
+    "replace": "R^4/b ≤ c^4/2 := by",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_gap",
+    "find": "m ≤ -Real.log b/R := by",
+    "replace": "m ≥ -Real.log b/R := by",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_window",
+    "find": "y*(1-y) ≤ 1/4 := by",
+    "replace": "y*(1-y) ≤ 1/5 := by",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_harmonic",
+    "find": "v i = center := by",
+    "replace": "v i ≠ center := by",
+    "diagnostic": "error:"
+  }
+]
