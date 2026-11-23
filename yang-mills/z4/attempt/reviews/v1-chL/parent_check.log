@@ -1,0 +1,2 @@
+check K113: exit 0 (expected 0) in 724747 ms | output c90f4ad747de | event 115 head e200f4eeda9a
+  /home/user/z4-workers/v1-chL/report.md: the second half proves limsup ≤ c* after minor repairs; 26 STANDS, 1 GAP (Lemma M4), 1 DEFECT (the §8.1 parameter list, which never fixes δ, τ), 0 NOT CHECKED.

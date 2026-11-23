@@ -1,0 +1,4 @@
+/home/user/z4-workers/v1-chL/prog1_constants.py:71: RuntimeWarning: overflow encountered in exp
+  k=exp(b*cos(th))*b/(2*I1s(b)*exp(b)); kmin=sqrt(2/pi)*b**1.5*exp(-R*R/2)
+/home/user/z4-workers/v1-chL/prog1_constants.py:71: RuntimeWarning: invalid value encountered in scalar divide
+  k=exp(b*cos(th))*b/(2*I1s(b)*exp(b)); kmin=sqrt(2/pi)*b**1.5*exp(-R*R/2)

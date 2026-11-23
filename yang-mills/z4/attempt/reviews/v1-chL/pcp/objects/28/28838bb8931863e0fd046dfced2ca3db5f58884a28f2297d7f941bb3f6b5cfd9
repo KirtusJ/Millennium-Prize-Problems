@@ -1,0 +1,31 @@
+All six questions (Q1–Q7, with Q2's two parts and Q5's several facts) AGREE with the claimed values. The control integral is 1.570796, and `report.md` has the full table.
+
+- **Q1:** c\* is 4.6054131945. Three quadratures agree to 3e-14. The grandchild's independent recomputation got 4.605413194531.
+- **Q2:** e(S) = log A(S) holds to 2e-16 on a log grid from 1e-6 to 1e6. The (h-2)(1+2S²h) = h identity needs high precision at large S.
+- **Q3:**
+  - The five MA2 values match.
+  - η·MA2 tends to 3.4968.
+  - m switches branch at exactly η = 1/12.
+  - The max() inside MA2 never switches on the grid. The first branch wins everywhere.
+- **Q4:** The five Mc12 values match. The minimum of Mc12 − MA2 is 5.9866, at η = 0.4.
+- **Q5:** All the scalar facts hold.
+- **Q6:** The margin values hold. m/2 at η = 0.4 is 0.0151.
+- **Q7:** There are 0 violations in 1,929,600 grid evaluations. The smallest slack is 2.5e-5, at η = 1e-3, so it narrows as η shrinks.
+
+**Failed predicate:** the double-precision test of the h identity (error under 1e-9) failed, reaching 6.5e-4 at S around 1e6. That was my own expectation: h−2 cancels in floating point. In 60-digit Decimal the worst relative error is 1.1e-48 on 25 points, so the identity holds. No other predicate failed.
+
+**Grandchild:** T183 recomputed c\* with a known-answer control, boundary checks and the a↔π−a symmetry check, and passed all its predicates. I reread its result, reran its program through the register, and released T183.
+
+**Register:** the last lines of the two verify commands are:
+- `pcp_os.py verify --ws pcp`: `result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)`
+- `pcpos verify pcp/register.jsonl`: `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.`
+
+Files are in `/home/user/z4-workers/v1-chL/child`:
+- `report.md`
+- `control.txt`
+- `notes.md`
+- `results_q.txt`
+- `pcp_q.py`
+- `q2_hp.py`
+- `grandchild/`
+- `rerun_gc/`

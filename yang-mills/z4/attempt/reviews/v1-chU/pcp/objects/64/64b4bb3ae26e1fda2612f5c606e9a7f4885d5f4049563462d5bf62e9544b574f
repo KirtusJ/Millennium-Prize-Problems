@@ -1,0 +1,7 @@
+/home/user/z4-workers/v1-chU/prog2_weight_schur.py:125: RuntimeWarning: overflow encountered in exp
+  tot += (hi - lo) / 2 * np.sum(w * (2 / np.pi) * np.sin(th) ** 2 * np.exp(logf(th)))
+Traceback (most recent call last):
+  File "/home/user/z4-workers/v1-chU/prog2_weight_schur.py", line 146, in <module>
+    math.exp(-b * (1 - math.cos(eta)) + sb * (pp * math.pi + H * math.pi ** 2 / 2)))
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: math range error

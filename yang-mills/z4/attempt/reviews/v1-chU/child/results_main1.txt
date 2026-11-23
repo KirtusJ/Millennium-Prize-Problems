@@ -1,0 +1,37 @@
+(1) c* np.float64(4.605413194530977) np.float64(4.605413194530983) np.float64(4.60541319453095) conv 2.6645352591003757e-14
+(1) verdict MET diff to claim -5.469023456328159e-09
+(2) L 1.877629981673219 MET
+(3) D(1) 0.038931495552105455 MET
+(3) monotone: grid points 2000, violations 0 MET (analytic: D'=1/(2b^2)+sqrt(2pi)e^-b(sqrt b-1/(2sqrt b))/2>0 for b>=1/2)
+(4) cases 40000 qualify(all grid points are in hypothesis) 40000 violations 0 min margin/t^2 2.604175346367218e-07 MET
+(5) bessel sanity (quad vs series z=5): I0 -8.326672684688674e-17 I1 -8.326672684688674e-17
+(5) points 600 max quad err 2.255140518769849e-16 min margin 2.6889966123818526e-06 at z 699.9999999999998 violations 0 MET
+(6) cases 30000 violations 0 min margin,delta,z (8.741528952369362e-07, np.float64(0.06666666666666667), 10000.00000000001) MET
+(7) cases 11110 violations 0 min margin (r,c) (np.float64(-0.0), np.float64(0.0), np.float64(0.0)) MET
+(8) 1.5842221158530005 MET
+(9) A(1) 5.82842712474619 A(s)-(1+2s) min 0.0 MET
+(10) pts 2000 min margin 0.011781027465193605 min rel margin 2.083828171579923e-05 violations 0 MET
+(11) max rel err A 3.4373248217172915e-16 max abs err alpha 2.7755575615628914e-16 MET
+(12) deficit(0.1,1e12) 24.93517304921519 claim 24.9; deficit(1,1e11) 0.0005388084709302064 claim 5e-4
+(12) beta=1e2 (np.float64(8.832988538509118), np.float64(1.0))
+(12) beta=1e3 (np.float64(12.203485312584405), np.float64(1.0))
+(12) beta=1e4 (np.float64(15.486995906597919), np.float64(1.0))
+(12) beta=1e5 (np.float64(18.574753634347882), np.float64(1.0))
+(12) beta=1e6 (np.float64(21.239942287487377), np.float64(1.0))
+(12) beta=1e7 (np.float64(24.237710351589964), np.float64(0.1))
+(12) beta=1e8 (np.float64(27.270343172042598), np.float64(0.1))
+(12) beta=1e9 (np.float64(29.816676452850633), np.float64(0.1))
+(12) beta=1e10 (np.float64(31.315309052497188), np.float64(0.1))
+(12) beta=1e11 (np.float64(30.556738951558966), np.float64(0.1))
+(12) beta=1e12 (np.float64(24.93517304921519), np.float64(0.1))
+(12) beta=1e13 (np.float64(8.836600294760666), np.float64(0.1))
+(12) beta=1e14 (5.386286421432406e-05, np.float64(0.1))
+(12) beta=1e15 (2.5000430219686087e-05, np.float64(0.1))
+(12) beta=1e16 (1.1604064770731716e-05, np.float64(0.1))
+(12) first beta (scan upward from 1e10) with max_s deficit<0.2: 20278973254593.887 (np.float64(0.19999999999999046), np.float64(0.1))
+(12) beta<=4096 range over s in [0.1,1], beta in 100..4096 (valid beta>64):
+   min (np.float64(7.330365956655534), np.float64(0.1), np.float64(100.00000000000004)) max (np.float64(14.22981184234364), np.float64(1.0), np.float64(4095.999999999997))
+   beta 100 min 7.330365956655534 max 8.832988538509118
+   beta 300 min 8.971463215398941 max 10.447348965122519
+   beta 1000 min 10.77065573582291 max 12.203485312584405
+   beta 4096 min 12.87513192926965 max 14.22981184234364

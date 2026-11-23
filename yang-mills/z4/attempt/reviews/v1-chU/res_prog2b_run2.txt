@@ -1,0 +1,28 @@
+c* = np.float64(4.60541319453095)
+eta=0.5 tau=0.5: W1=True W2=True (max|g'|sqrt(2eta)/3=0.6649) W3=True W4=True (|ft''|/bnd=0.478, cot/bnd=0.226) glue=0.0e+00 W5=True (c^rho=2.667426, c*-c^rho=1.9380 <= pi sqrt(6eta)=5.4414) W6=True W7=True H_actual=8.495 H_lemma_bound=17.776
+eta=0.5 tau=0.1: W1=True W2=True (max|g'|sqrt(2eta)/3=0.6649) W3=True W4=True (|ft''|/bnd=0.735, cot/bnd=0.226) glue=0.0e+00 W5=True (c^rho=2.667426, c*-c^rho=1.9380 <= pi sqrt(6eta)=5.4414) W6=True W7=True H_actual=42.890 H_lemma_bound=58.333
+eta=0.5 tau=0.02: W1=True W2=True (max|g'|sqrt(2eta)/3=0.6649) W3=True W4=True (|ft''|/bnd=0.822, cot/bnd=0.226) glue=0.0e+00 W5=True (c^rho=2.667426, c*-c^rho=1.9380 <= pi sqrt(6eta)=5.4414) W6=True W7=True H_actual=214.536 H_lemma_bound=261.117
+eta=0.2 tau=0.5: W1=True W2=True (max|g'|sqrt(2eta)/3=0.6649) W3=True W4=True (|ft''|/bnd=0.426, cot/bnd=0.225) glue=0.0e+00 W5=True (c^rho=3.947568, c*-c^rho=0.6578 <= pi sqrt(6eta)=3.4414) W6=True W7=True H_actual=9.469 H_lemma_bound=22.214
+eta=0.2 tau=0.1: W1=True W2=True (max|g'|sqrt(2eta)/3=0.6649) W3=True W4=True (|ft''|/bnd=0.760, cot/bnd=0.225) glue=0.0e+00 W5=True (c^rho=3.947568, c*-c^rho=0.6578 <= pi sqrt(6eta)=3.4414) W6=True W7=True H_actual=47.718 H_lemma_bound=62.771
+eta=0.2 tau=0.02: W1=True W2=True (max|g'|sqrt(2eta)/3=0.6649) W3=True W4=True (|ft''|/bnd=0.899, cot/bnd=0.225) glue=0.0e+00 W5=True (c^rho=3.947568, c*-c^rho=0.6578 <= pi sqrt(6eta)=3.4414) W6=True W7=True H_actual=238.664 H_lemma_bound=265.555
+eta=0.05 tau=0.5: W1=True W2=True (max|g'|sqrt(2eta)/3=0.6649) W3=True W4=True (|ft''|/bnd=0.467, cot/bnd=0.119) glue=0.0e+00 W5=True (c^rho=4.456390, c*-c^rho=0.1490 <= pi sqrt(6eta)=1.7207) W6=True W7=True H_actual=15.997 H_lemma_bound=45.053
+eta=0.05 tau=0.1: W1=True W2=True (max|g'|sqrt(2eta)/3=0.6649) W3=True W4=True (|ft''|/bnd=0.667, cot/bnd=0.119) glue=0.0e+00 W5=True (c^rho=4.456390, c*-c^rho=0.1490 <= pi sqrt(6eta)=1.7207) W6=True W7=True H_actual=49.957 H_lemma_bound=74.846
+eta=0.05 tau=0.02: W1=True W2=True (max|g'|sqrt(2eta)/3=0.6649) W3=True W4=True (|ft''|/bnd=0.900, cot/bnd=0.119) glue=0.0e+00 W5=True (c^rho=4.456390, c*-c^rho=0.1490 <= pi sqrt(6eta)=1.7207) W6=True W7=True H_actual=249.856 H_lemma_bound=277.630
+Lemma K first bound: worst log(lhs/rhs) = -0.013935687590222038
+Lemma K radial: worst lhs/rhs = 0.9819642393077478  limit E e^{L|N|} at L=1.8776: 52.65717974249986
+Schur: eta=0.5 tau=0.5 delta=0.1 H_actual=8.4948
+Schur b=4096: omega=2819.75533, max_a1 (log w - Phi'^2/2)=0.01274, quad conv=1.9e-12, log tail bound=-312.0
+Schur b=16384: omega=5416.81637, max_a1 (log w - Phi'^2/2)=0.00331, quad conv=4.9e-12, log tail bound=-309.9
+Schur b=1000000.0: omega=32069.88766, max_a1 (log w - Phi'^2/2)=0.00005, quad conv=2.6e-11, log tail bound=-303.8
+Schur b=100000000.0: omega=0.00618, max_a1 (log w - Phi'^2/2)=0.00000, quad conv=1.4e-09, log tail bound=-296.9
+MC1 Z: mc=2.633401 exact=2.635580 se=2.6e-03 True
+MC2 n=0: mc=0.999173 exact I_(n+1)/I_1=1.000000 se=9.9e-04 True
+MC2 n=1: mc=0.567290 exact I_(n+1)/I_1=0.567924 se=8.7e-04 True
+MC2 n=2: mc=0.242410 exact I_(n+1)/I_1=0.242768 se=6.9e-04 True
+MC2 n=3: mc=0.082215 exact I_(n+1)/I_1=0.082387 se=5.4e-04 True
+MC2 n=4: mc=0.022920 exact I_(n+1)/I_1=0.023071 se=4.4e-04 True
+MC3 P(r<=.3)=0.30016 True
+MC4 P(theta<=1)=0.17345 exact=0.17359 True
+MC5 conj to s e3 err=1.0e-14, max|V-V_a|=3.4e-15 True
+MC6 max|Tr/2 - <,>|=5.6e-16 max|V(gauge)-V|=1.7e-15 True
+counts [met, failed, not qualifying]: {'W1': [9, 0, 0], 'W2': [9, 0, 0], 'W3': [9, 0, 0], 'W4': [9, 0, 0], 'W4glue': [9, 0, 0], 'W5': [9, 0, 0], 'W6': [9, 0, 0], 'W7': [9, 0, 0], 'K': [180, 0, 12], 'KR': [36, 0, 0], 'S': [480, 0, 0], 'MC1': [1, 0, 0], 'MC2': [5, 0, 0], 'MC3': [1, 0, 0], 'MC4': [1, 0, 0], 'MC5': [1, 0, 0], 'MC6': [1, 0, 0]}

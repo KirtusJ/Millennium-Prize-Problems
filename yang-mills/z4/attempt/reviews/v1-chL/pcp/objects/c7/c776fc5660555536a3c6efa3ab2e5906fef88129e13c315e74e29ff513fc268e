@@ -1,0 +1,15 @@
+M1: MET 20000 cases, worst |r|/bound=0.877
+M2: MET 20000 cases
+  eta=0.4: a_-=0.4233 r0=0.2027 H_Psi~23.523 Lambda~2.080 MA2=12.061
+  eta=0.1: a_-=0.1003 r0=0.0500 H_Psi~49.112 Lambda~1.930 MA2=37.915
+M3: MET 6000 cases, worst |F-M|/Err=0.332
+M4: MET 20000 cases; worst rel |formula-det|=3.58e-14; worst |gap_exact-gap|=1.38e-11; MC/J-1=7.40e-04 (se 2.8e-03)
+M5: MET 20000 cases, worst lhs/rhs=1.0000
+M6: MET  eta=0.4 sqrt(beta)=19.0: slackG=0.3587 slackE=0.2041; eta=0.4 sqrt(beta)=189.8: slackG=0.3592 slackE=0.4951; eta=0.1 sqrt(beta)=76.9: slackG=0.3586 slackE=0.2041; eta=0.1 sqrt(beta)=768.7: slackG=0.3587 slackE=0.4951;
+M7 (measured) x: a1=0.728 a2=0.1521 |b|^2=0.13: d1=logA1-log r1=+0.0367  d3=log r3-logA3=-0.0260  margin m/2=0.0151
+M7 (measured) x: a1=1.113 a2=0.0747 |b|^2=0.38: d1=logA1-log r1=+0.0508  d3=log r3-logA3=-0.0336  margin m/2=0.0151
+M7 (measured) x: a1=1.159 a2=0.1162 |b|^2=7.01: d1=logA1-log r1=-0.1062  d3=log r3-logA3=+0.0051  margin m/2=0.0151
+M7 (measured) x: a1=1.045 a2=0.1801 |b|^2=4.29: d1=logA1-log r1=-0.1842  d3=log r3-logA3=+0.2089  margin m/2=0.0151
+M7 (measured) x: a1=0.867 a2=0.0475 |b|^2=0.48: d1=logA1-log r1=+0.0364  d3=log r3-logA3=-0.0193  margin m/2=0.0151
+M7 (measured) x: a1=0.646 a2=0.0264 |b|^2=0.05: d1=logA1-log r1=+0.0499  d3=log r3-logA3=-0.0016  margin m/2=0.0151
+FAILED: []

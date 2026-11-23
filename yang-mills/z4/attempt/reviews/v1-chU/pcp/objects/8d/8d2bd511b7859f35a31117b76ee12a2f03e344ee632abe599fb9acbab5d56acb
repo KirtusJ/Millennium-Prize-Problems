@@ -1,0 +1,25 @@
+bessel selfcheck ive0 asym vs np.i0: 5.377783860404054e-16
+b=64 a=0.0500 s=0.0500 eps=0.09991677 effN=0.0836968316 effL=0.0836968316 dN=-2.7e-14 dL=-4.0e-13 P1c=True P1=True P2=True master_deficit=nan P3=None b(eps-eff)=1.0381 claim=0.98 P4=False
+b=64 a=0.1000 s=0.0998 eps=0.19933664 effN=0.1840241980 effL=0.1840241980 dN=-2.7e-14 dL=-1.1e-12 P1c=True P1=True P2=True master_deficit=nan P3=None b(eps-eff)=0.9800 claim=0.95 P4=False
+b=64 a=0.3000 s=0.2955 eps=0.58275910 effN=0.5691517814 effL=0.5691517814 dN=-2.7e-14 dL=-3.7e-12 P1c=True P1=True P2=True master_deficit=nan P3=None b(eps-eff)=0.8709 claim=0.86 P4=True
+b=64 a=0.6000 s=0.5646 eps=1.07654130 effN=1.0646337639 effL=1.0646337639 dN=-2.6e-14 dL=-7.9e-12 P1c=True P1=True P2=True master_deficit=nan P3=None b(eps-eff)=0.7621 claim=0.76 P4=True
+b=64 a=1.0000 s=0.8415 eps=1.52945031 effN=1.5187608017 effL=1.5187608018 dN=-2.6e-14 dL=-1.3e-11 P1c=True P1=True P2=True master_deficit=nan P3=None b(eps-eff)=0.6841 claim=0.68 P4=True
+b=64 a=1.5708 s=1.0000 eps=1.76274717 effN=1.7525609199 effL=1.7525609199 dN=-2.5e-14 dL=-1.7e-11 P1c=True P1=True P2=True master_deficit=nan P3=None b(eps-eff)=0.6519 claim=0.65 P4=True
+b=256 a=0.0500 s=0.0500 eps=0.09991677 effN=0.0960600777 effL=0.0960600777 dN=-2.6e-14 dL=-2.4e-12 P1c=True P1=True P2=True master_deficit=8.642 P3=True b(eps-eff)=0.9873 claim=0.98 P4=True
+b=256 a=0.1000 s=0.0998 eps=0.19933664 effN=0.1955978905 effL=0.1955978905 dN=-2.6e-14 dL=-4.9e-12 P1c=True P1=True P2=True master_deficit=8.734 P3=True b(eps-eff)=0.9571 claim=0.95 P4=True
+b=256 a=0.3000 s=0.2955 eps=0.58275910 effN=0.5793944107 effL=0.5793944107 dN=-2.6e-14 dL=-1.5e-11 P1c=True P1=True P2=True master_deficit=9.081 P3=True b(eps-eff)=0.8614 claim=0.86 P4=True
+b=256 a=0.6000 s=0.5646 eps=1.07654130 effN=1.0735877386 effL=1.0735877386 dN=-3.0e-14 dL=-3.1e-11 P1c=True P1=True P2=True master_deficit=9.545 P3=True b(eps-eff)=0.7561 claim=0.76 P4=True
+b=256 a=1.0000 s=0.8415 eps=1.52945031 effN=1.5267957419 effL=1.5267957419 dN=-3.3e-14 dL=-5.1e-11 P1c=True P1=True P2=True master_deficit=9.985 P3=True b(eps-eff)=0.6796 claim=0.68 P4=True
+b=256 a=1.5708 s=1.0000 eps=1.76274717 effN=1.7602167091 effL=1.7602167091 dN=-3.4e-14 dL=-6.5e-11 P1c=True P1=True P2=True master_deficit=10.215 P3=True b(eps-eff)=0.6478 claim=0.65 P4=True
+b=1024 a=0.0500 s=0.0500 eps=0.09991677 effN=0.0989617103 effL=0.0989617103 dN=1.1e-13 dL=-9.7e-12 P1c=True P1=True P2=True master_deficit=10.718 P3=True b(eps-eff)=0.9780 claim=0.98 P4=True
+b=1024 a=0.1000 s=0.0998 eps=0.19933664 effN=0.1984069588 effL=0.1984069589 dN=8.9e-14 dL=-1.9e-11 P1c=True P1=True P2=True master_deficit=10.806 P3=True b(eps-eff)=0.9520 claim=0.95 P4=True
+b=1024 a=0.3000 s=0.2955 eps=0.58275910 effN=0.5819201724 effL=0.5819201725 dN=5.0e-14 dL=-5.7e-11 P1c=True P1=True P2=True master_deficit=11.132 P3=True b(eps-eff)=0.8591 claim=0.86 P4=True
+b=1024 a=0.6000 s=0.5646 eps=1.07654130 effN=1.0758043373 effL=1.0758043374 dN=2.4e-14 dL=-1.2e-10 P1c=True P1=True P2=True master_deficit=11.577 P3=True b(eps-eff)=0.7546 claim=0.76 P4=True
+b=1024 a=1.0000 s=0.8415 eps=1.52945031 effN=1.5287877624 effL=1.5287877626 dN=-1.1e-15 dL=-1.9e-10 P1c=True P1=True P2=True master_deficit=12.010 P3=True b(eps-eff)=0.6784 claim=0.68 P4=True
+b=1024 a=1.5708 s=1.0000 eps=1.76274717 effN=1.7621155493 effL=1.7621155495 dN=-2.0e-14 dL=-2.5e-10 P1c=True P1=True P2=True master_deficit=12.238 P3=True b(eps-eff)=0.6468 claim=0.65 P4=True
+counts [met,failed(,not-qualifying)]: {'P1': [18, 0], 'P1c': [18, 0], 'P2': [18, 0], 'P3': [12, 0, 6], 'P4': [16, 2]}
+P5 b=4096 s=0.1 eps_eff=0.19943606 -log supB=0.19926197 (-log supB - eps)=-4.062e-04 P5a(supB>=||F||)=True P5(in claimed range)=True argmax r=0.0025
+P5 b=4096 s=0.3 eps_eff=0.59113699 -log supB=nan (-log supB - eps)=nan P5a(supB>=||F||)=False P5(in claimed range)=False argmax r=0.5559
+P5 b=4096 s=0.6 eps_eff=1.13746843 -log supB=nan (-log supB - eps)=nan P5a(supB>=||F||)=False P5(in claimed range)=False argmax r=0.2489
+P5 b=4096 s=1.0 eps_eff=1.76258933 -log supB=nan (-log supB - eps)=nan P5a(supB>=||F||)=False P5(in claimed range)=False argmax r=0.1232
+done

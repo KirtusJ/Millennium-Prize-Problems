@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/v1-chU/prog2b_weight_schur.py", line 195, in <module>
+    (b / (2 * math.pi)) ** 1.5 * 2 * math.pi ** 2 * math.exp(-b * (1 - math.cos(et)) + sb * (L * math.pi + Hact * math.pi ** 2 / 2))) \
+                                                    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: math range error

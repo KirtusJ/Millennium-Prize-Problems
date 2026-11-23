@@ -1,0 +1,4 @@
+/home/user/z4-workers/v1-chU/prog1_fibre.py:119: RuntimeWarning: overflow encountered in exp
+  B = (ker * wr[None, :] * np.exp(-b * alpha * (r[None, :] - r[:, None]) / 2)).sum(1)
+/home/user/z4-workers/v1-chU/prog1_fibre.py:119: RuntimeWarning: invalid value encountered in multiply
+  B = (ker * wr[None, :] * np.exp(-b * alpha * (r[None, :] - r[:, None]) / 2)).sum(1)

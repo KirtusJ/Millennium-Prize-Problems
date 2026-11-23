@@ -1,0 +1,5 @@
+s=0.1 eps=0.19966816 eps_eff=0.19943606 -log supB=0.19926196 diff=-4.062e-04 P5a=True P5c=True P5=True argmax r=0.00251; -log sup_(r<=tau) B=0.199262, -log sup_(r>tau) B=0.403817
+s=0.3 eps=0.59134610 eps_eff=0.59113699 -log supB=0.59104023 diff=-3.059e-04 P5a=True P5c=True P5=True argmax r=0.00090; -log sup_(r<=tau) B=0.591040, -log sup_(r>tau) B=1.560929
+s=0.6 eps=1.13764980 eps_eff=1.13746843 -log supB=1.13741513 diff=-2.347e-04 P5a=True P5c=True P5=True argmax r=0.00048; -log sup_(r<=tau) B=1.137415, -log sup_(r>tau) B=2.785118
+s=1.0 eps=1.76274717 eps_eff=1.76258933 -log supB=1.76255208 diff=-1.951e-04 P5a=True P5c=True P5=True argmax r=0.00036; -log sup_(r<=tau) B=1.762552, -log sup_(r>tau) B=3.698052
+counts {'P5a': [4, 0], 'P5': [4, 0], 'P5c': [4, 0]}

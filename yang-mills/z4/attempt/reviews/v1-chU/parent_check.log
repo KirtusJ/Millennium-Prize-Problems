@@ -1,0 +1,2 @@
+check K114: exit 0 (expected 0) in 777550 ms | output fe2e0a60c08f | event 116 head 416d1a22c856
+  /home/user/z4-workers/v1-chU/report.md — first half proves liminf ≥ c* once the Section 1 status paragraph and two measured remarks are fixed: 31 STANDS, 3 DEFECT, 0 GAP, 0 NOT CHECKED (predicates: 872 met, 5 failed, 7 measured only; 2 failures are in the note's remarks, 3 in my own code).

@@ -1,0 +1,42 @@
+Items 1–11 are MET and item 12 is MEASURED ONLY: 11 met, 0 failed, 1 measured only. Full table and rerun commands are in `report.md`.
+
+Control values in `control.txt` are 9.000000 and 1.762747. scipy and mpmath aren't installed, so I used numpy and stdlib only. The Bessel values come from a periodic trapezoid, which agrees with the power series to about 1e-16.
+
+| Item | Verdict | Evidence |
+|---|---|---|
+| 1 c* | MET | 4.6054131945, within 5.5e-9 of the claimed 4.6054132. Three Gauss-Legendre orders agree to 3e-14. |
+| 2 L | MET | 1.8776300 |
+| 3 D(1), D increasing | MET | D(1)=0.0389315. D' > 0 on 2000 log-spaced points in [1,1e8], and also analytically. |
+| 4 | MET | All 40000 grid cases qualify, with no violations. |
+| 5 | MET | 600 points on z in [0.01,700], minimum margin 2.69e-6 at z=700. |
+| 6 | MET | 30000 cases, no violations. |
+| 7 | MET | 11110 (r,c) cases, no violations. The minimum margin is 0, with equality at r=0, c=0. |
+| 8 | MET | 1.5842 > 1.3 |
+| 9 | MET | A(1)=5.828427 < 5.83. A(s) ≥ 1+2s on 10001 points, with equality at s=0. |
+| 10 | MET | 2000 points on beta in [1,1e12], no violations. |
+| 11 | MET | Both identities hold to about 3e-16. |
+| 12 | MEASURED ONLY | See below. |
+
+Item 12 is only partly reproduced:
+- **Reproduced:**
+  - deficit(0.1, 1e12) = 24.935, against the claimed 24.9.
+  - deficit(1, 1e11) = 5.39e-4, against the claimed 5e-4.
+- **Crossing point:** the maximum over s in [0.1,1] first falls below 0.2 at beta ≈ 2.03e13, with the worst s at 0.1. The claim was near 2.2e13, so this is about 8% lower.
+- **Range at beta ≤ 4096:**
+  - I measured 7.33 to 14.23, against the claimed 8.6 to 14.
+  - The lower end only holds above about beta 200. The upper end is slightly exceeded.
+  - Min needs beta > 64 to be defined, because 1−4τ is negative below that.
+
+No predicate failed, so there are no failed-predicate records to explain.
+
+**Grandchild:** task T184 checked item 5 independently at small z (1e-6) and large z (up to 700). It found no violation, with a minimum margin of 2.69e-6 at z=700. I released T184 and reran its `check.py` in `rerun_gc/`, which gave the same verdict. Its sin control was a trapezoid value of 1.9999996, rounded to 2.000000 in `grandchild/control.txt`.
+
+**PCP verification:** the last line of each verify command is just the disclaimer "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right." The Python `verify` printed `result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)` on the line above it. I only captured the last line of the Rust verify, which was the same disclaimer, so I didn't see a PASS line from the Rust verifier.
+
+Files are in `/home/user/z4-workers/v1-chU/child`:
+- report.md
+- notes.md
+- t181_main.py
+- results_main1.txt
+- control.txt
+- grandchild/

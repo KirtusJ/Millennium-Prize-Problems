@@ -1,0 +1,6 @@
+/home/user/z4-workers/v1-chU/referee_scalar.lean:12:34: warning: unused variable `hη`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+'outer_taylor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'propB_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'propB_stepI' depends on axioms: [propext, Classical.choice, Quot.sound]
+'exp_eighth_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]
