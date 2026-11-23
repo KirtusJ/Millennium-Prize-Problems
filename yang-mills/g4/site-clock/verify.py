@@ -1,5 +1,6 @@
 """Verify the site-clock evidence and optionally replay the PCP OS registers."""
 import argparse
+from difflib import unified_diff
 import hashlib
 import json
 from pathlib import Path
@@ -26,7 +27,23 @@ def sha(data):
     return hashlib.sha256(data).hexdigest()
 
 
+def verify_release_delta(archive):
+    baseline = archive.read("inputs/spectra.txt").decode()
+    remaining = baseline.split("\n\n" + PAPERS[0] + "\n\n", 1)[1]
+    changes = []
+    for index, name in enumerate(PAPERS):
+        if index + 1 < len(PAPERS):
+            previous, remaining = remaining.split("\n\n" + PAPERS[index + 1] + "\n\n", 1)
+        else:
+            previous = remaining
+        current = (ROOT / name).read_bytes().decode().replace("\r\n", "\n")
+        changes.extend(unified_diff(previous.splitlines(keepends=True), current.splitlines(keepends=True),
+                                    fromfile="previous/" + name, tofile="release/" + name, n=3))
+    assert changes and archive.read("inputs/final.txt").decode().split("\n", 1)[1] == "".join(changes)
+
+
 def verify_workers(archive, source):
+    verify_release_delta(archive)
     folders = []
     for name in (*REVIEWS, "formalizer"):
         generated = name == "formalizer"
@@ -35,11 +52,6 @@ def verify_workers(archive, source):
             assert candidate.decode().replace("\r\n", "\n").strip() in source.decode()
         else:
             candidate = archive.read("inputs/" + name + ".txt")
-        if name == "final":
-            parts = []
-            for path in PAPERS:
-                parts.extend([path.encode(), (ROOT / path).read_bytes().replace(b"\r\n", b"\n")])
-            assert candidate.endswith(b"\n\n".join(parts))
         parent = json.loads(archive.read(name + "/receipt.json"))
         assert parent["passed"] and parent["method"]["matches_required"]
         assert parent["method"]["release_fingerprint"] == FINGERPRINT
