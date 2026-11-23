@@ -40,3 +40,5 @@ For a candidate transfer Hamiltonian and centered vector, the two inputs are the
 [Uniform isolation of the first Wilson transfer band](uniform-band/) gives the volume-independent spectral estimate and its strong-coupling mass expansion.
 
 [Boundary weight above the bulk static spectrum](boundary-weight/) bounds the fraction carried by a fixed open-cube boundary layer.
+
+[Periodic thermal transition frequencies](thermal-transitions/) tests the number of nonzero energy differences visible in the matched slice-flow measurements.
