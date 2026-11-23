@@ -1,0 +1,3 @@
+interpolation derivatives consume two distinct endpoints at each of three sites
+two-endpoint bounds survive nonuniform capped site weights
+no-self Wick pairings and three-color cycles at orders two through six
