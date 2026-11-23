@@ -1,0 +1,6 @@
+[
+  {"label":"negative_fourier","find":"≤ c * e := by","replace":"≤ c * e / 2 := by","diagnostic":"error:"},
+  {"label":"negative_floor","find":"(3/4 : ℝ)^4 ≤ (1-y)^4 := by","replace":"(3/4 : ℝ)^4 < (1-y)^4 := by","diagnostic":"error:"},
+  {"label":"negative_pareto","find":"/A^8 ≤ 4/A^6 := by","replace":"/A^8 ≤ 1/A^6 := by","diagnostic":"error:"},
+  {"label":"negative_measure","find":"μ.real S*(3/4 : ℝ)^4 ≤ ∫","replace":"μ.real S*(3/4 : ℝ)^4 ≥ ∫","diagnostic":"error:"}
+]
