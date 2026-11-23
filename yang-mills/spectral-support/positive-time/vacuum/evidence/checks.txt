@@ -1,0 +1,24 @@
+'Millennium.YangMills.D4.differenceNullSets' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.differenceCorrelation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.positiveGapAboveKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.shrinkingFilter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.differenceShapeControl' depends on axioms: [propext, Classical.choice, Quot.sound]
+include-zero :92:24: error: Application type mismatch: The argument
+zero-filter :37:62: error: Invalid field `ne'`: The environment does not contain `Real.le.ne'`
+incorrect-sign :116:42: error: unsolved goals
+overstate-decay :107:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+guest ELF aeb03ab77f4f9ca4ba7d877d55e55d76f1e02243b742acd9a552791dc29850b6
+Lean source 1fd54f3cb4f7bf54bfcdfbae55fd03c66e2cfe9f3f7282c9680087d9b605e391 (12919 bytes)
+factor 6ea002787539147ffd32cbb568806949628ff96d4b1d5668f4cde4b62129c2f3
+square d3163531a6ce2d65b207eb2e08c605845e9456f2aa3f0a47c382d938eb40629b
+assemble 166fc43a4551caab29af6fbde3c76da98c2c090961802530e0715c3b98514ac3
+guest ELF 81ee0657560726917fcae43810d3faac7e2827c2a3250bcff4a481369552d198
+Lean source 2002c660d00ff94e5714aa7e3f3c69fa8946181174dc518fbee21e13845ad6d8 (5873 bytes)
+factor a4c9b2d8a199288d3dafb7e680f2f0aff92173c3d08ce88dd4b94854b33ae3df
+square 1c58200a6cf78e4415b78eb89c12d4b35ab037ba3724a554e012a91d244a807f
+assemble d2c2eac642b918f01d1afdac2fa2fffdce3257dbbf305c261da335a84785c5aa
+chain intact: 193 events, head 9e9d8da25913e4539c37eb47af3d5c0dcf88a04ad7b7d0b1c22e7722918e760c
+guards replayed: 0 problem(s)
+The guards are those of pcpos 1.0.22. A register is read under the rules of the program that reads it: an event an earlier build accepted may be reported here, and its bytes are unchanged.
+register file SHA-256: 664a2684d608984cefb04fb88b19a3470871847613e0035d82856d79ed289cef
+A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.
