@@ -1,0 +1,3 @@
+even buffers and geometric interior-time energy bound
+signed two-mode example loses the Lipschitz rate
+unique one-step repair and exact norm-preserving rotation
