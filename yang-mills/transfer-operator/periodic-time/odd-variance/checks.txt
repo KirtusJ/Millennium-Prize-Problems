@@ -1,0 +1,3 @@
+every interior-axis corner toggle preserves its boundary coefficient
+separated side-two slabs and adjacent shared site planes
+exact taper translation costs and dominating box correlations
