@@ -1,0 +1,139 @@
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\periodic-final-check1\child\negative_coupling_sign.lean:23:0: warning: automatically included section variable(s) unused in theorem 'Millennium.G4.PeriodicRP.continuous_relativeMap':
+  [CompactSpace X]
+  [SecondCountableTopology X]
+  [MeasurableSpace X]
+  [BorelSpace X]
+  [CompactSpace H]
+  [SecondCountableTopology H]
+  [MeasurableSpace H]
+  [BorelSpace H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CompactSpace
+  X] [SecondCountableTopology
+  X] [MeasurableSpace
+  X] [BorelSpace X] [CompactSpace H] [SecondCountableTopology H] [MeasurableSpace H] [BorelSpace H] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\periodic-final-check1\child\negative_coupling_sign.lean:30:0: warning: automatically included section variable(s) unused in theorem 'Millennium.G4.PeriodicRP.integral_prod_continuous':
+  [CompleteSpace K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CompleteSpace K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'Millennium.G4.PeriodicRP.relativeMap' depends on axioms: [propext]
+'Millennium.G4.PeriodicRP.continuous_relativeMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.integral_prod_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.integral_relativeMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.integral_relativeMap_tilted' depends on axioms: [propext, Classical.choice, Quot.sound]
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\periodic-final-check1\child\negative_coupling_sign.lean:186:50: error: application type mismatch
+  WilsonRP.dot_matrixFeatures β hβ
+argument
+  hβ
+has type
+  ∀ (c : C), β c ≤ 0 : Prop
+but is expected to have type
+  ∀ (c : C), 0 ≤ β c : Prop
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\periodic-final-check1\child\negative_coupling_sign.lean:184:60: error: unsolved goals
+G : Type u_1
+B : Type u_2
+C : Type u_3
+X : Type u_4
+n : Type u_5
+inst✝³ : Group G
+inst✝² : Fintype C
+inst✝¹ : Fintype n
+inst✝ : DecidableEq n
+src dst : C → B
+U : C → X → G
+β : C → ℝ
+hβ : ∀ (c : C), β c ≤ 0
+ρ : G →* ↥(Matrix.unitaryGroup n ℂ)
+x y : X
+p q : B → G
+⊢ WilsonRP.dotKernel (WilsonRP.matrixFeatures β fun c z => ↑(ρ (gaugedBoundary src dst U c z))) (x, p) (y, q) =
+    ∑ c, β c * WilsonRP.unitaryCharacter ρ (crossingBoundary src dst U c ((x, y), p⁻¹ * q))
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\periodic-final-check1\child\negative_coupling_sign.lean:201:0: warning: automatically included section variable(s) unused in theorem 'Millennium.G4.PeriodicRP.continuous_gaugedBoundary':
+  [Fintype C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype C] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\periodic-final-check1\child\negative_coupling_sign.lean:211:0: warning: automatically included section variable(s) unused in theorem 'Millennium.G4.PeriodicRP.continuous_crossingBoundary':
+  [Fintype C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype C] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'Millennium.G4.PeriodicRP.gaugedBoundary' depends on axioms: [propext]
+'Millennium.G4.PeriodicRP.crossingBoundary' depends on axioms: [propext]
+'Millennium.G4.PeriodicRP.crossingExponent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.gauge_covariance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.character_gauged_relative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.trace_relative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.dot_gaugedBoundary' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.continuous_gaugedBoundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.continuous_crossingBoundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.continuous_crossingExponent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.continuous_gaugedFeatures' depends on axioms: [propext, Classical.choice, Quot.sound]
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\periodic-final-check1\child\negative_coupling_sign.lean:308:37: error: application type mismatch
+  dot_gaugedBoundary src dst U β hβ
+argument
+  hβ
+has type
+  ∀ (c : C), 0 ≤ β c : Prop
+but is expected to have type
+  ∀ (c : C), β c ≤ 0 : Prop
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\periodic-final-check1\child\negative_coupling_sign.lean:304:77: error: unsolved goals
+case h
+G : Type u_1
+B : Type u_2
+C : Type u_3
+X : Type u_4
+n : Type u_5
+inst✝³ : Group G
+inst✝² : Fintype C
+inst✝¹ : Fintype n
+inst✝ : DecidableEq n
+src dst : C → B
+U : C → X → G
+β : C → ℝ
+hβ : ∀ (c : C), 0 ≤ β c
+ρ : G →* ↥(Matrix.unitaryGroup n ℂ)
+s : X → ℝ
+z : (X × (B → G)) × X × (B → G)
+⊢ s z.1.1 + s z.2.1 + crossingExponent src dst U β ρ (relativeMap z) =
+    (fun z => s z.1) z.1 + (fun z => s z.1) z.2 +
+      WilsonRP.dotKernel (WilsonRP.matrixFeatures β fun c z => ↑(ρ (gaugedBoundary src dst U c z))) z.1 z.2
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\periodic-final-check1\child\negative_coupling_sign.lean:329:0: warning: automatically included section variable(s) unused in theorem 'Millennium.G4.PeriodicRP.continuous_fullExponent':
+  [CompactSpace G]
+  [SecondCountableTopology G]
+  [MeasurableSpace G]
+  [BorelSpace G]
+  [CompactSpace X]
+  [SecondCountableTopology X]
+  [MeasurableSpace X]
+  [BorelSpace X]
+  [Fintype B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CompactSpace
+  G] [SecondCountableTopology
+  G] [MeasurableSpace
+  G] [BorelSpace
+  G] [CompactSpace X] [SecondCountableTopology X] [MeasurableSpace X] [BorelSpace X] [Fintype B] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'Millennium.G4.PeriodicRP.seamReflection' depends on axioms: [propext]
+'Millennium.G4.PeriodicRP.seamReflection_involutive' depends on axioms: [propext]
+'Millennium.G4.PeriodicRP.halfTest' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.fullExponent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.fullExponent_relative_eq_split' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.PeriodicRP.opposite_seam_character' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.continuous_fullExponent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.PeriodicRP.boundary_wilson_reflection_positive' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.PeriodicRP.twoSeamEndpoint' does not depend on any axioms
+'Millennium.G4.PeriodicRP.twoSeamEndpoint_distinct' depends on axioms: [propext]
+'Millennium.G4.PeriodicRP.periodTwo_reflection_positive' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,2 @@
+run R1 by G4-formalizer: 6197 characters returned, stored as 216fa8801b4d | exposure: 2 item(s), each by digest | event 8 head c89a45621e83
+  read it with: pcpos show positivity-draft

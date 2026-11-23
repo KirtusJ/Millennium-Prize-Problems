@@ -1,0 +1,157 @@
+Audit the exact matrix/character relative-gauge identity, noncommutative order, real-character inversion, √β features, preservation of independent seam labels and continuity. Verify the hypothesis does not assume the result or require false simultaneous fixing of both seams. No compiler claim or independent-party validation.
+
+
+SOURCE TO AUDIT:
+The two seam labels can be represented by `B := Bool × V`. The gauge variable has type `(Bool × V) → G`, so the two labels at a vertex can carry independent values even if their link maps coincide at period two.
+
+I used the Wilson declarations as supplied. The local PCP skill and Lean toolchain were inaccessible, so the code and `#print axioms` commands are unverified against Mathlib `c44e0c8e`.
+
+```lean
+import WilsonReflectionPositivity
+
+open scoped BigOperators
+
+namespace Millennium.G4.PeriodicRP
+
+variable {G B C X n : Type*}
+variable [Group G] [Fintype C] [Fintype n] [DecidableEq n]
+
+def gaugedBoundary (src dst : C → B) (U : C → X → G)
+    (c : C) (z : X × (B → G)) : G :=
+  z.2 (src c) * U c z.1 * (z.2 (dst c))⁻¹
+
+def crossingBoundary (src dst : C → B) (U : C → X → G)
+    (c : C) (z : (X × X) × (B → G)) : G :=
+  U c z.1.1 * z.2 (dst c) * (U c z.1.2)⁻¹ * (z.2 (src c))⁻¹
+
+def crossingExponent (src dst : C → B) (U : C → X → G)
+    (β : C → ℝ) (ρ : G →* Matrix.unitaryGroup n ℂ)
+    (z : (X × X) × (B → G)) : ℝ :=
+  ∑ c, β c * Millennium.G4.WilsonRP.unitaryCharacter ρ
+    (crossingBoundary src dst U c z)
+
+private theorem gauge_covariance (pₛ p_d qₛ q_d a b : G) :
+    (pₛ * a * p_d⁻¹)⁻¹ * (qₛ * b * q_d⁻¹) =
+      p_d * (a⁻¹ * ((pₛ⁻¹ * qₛ) * b * (p_d⁻¹ * q_d)⁻¹)) * p_d⁻¹ := by
+  group
+
+private theorem character_gauged_relative
+    (ρ : G →* Matrix.unitaryGroup n ℂ)
+    (pₛ p_d qₛ q_d a b : G) :
+    Millennium.G4.WilsonRP.unitaryCharacter ρ
+        ((pₛ * a * p_d⁻¹)⁻¹ * (qₛ * b * q_d⁻¹)) =
+      Millennium.G4.WilsonRP.unitaryCharacter ρ
+        (a * (p_d⁻¹ * q_d) * b⁻¹ * (pₛ⁻¹ * qₛ)⁻¹) := by
+  have hcross :
+      a * ((pₛ⁻¹ * qₛ) * b * (p_d⁻¹ * q_d)⁻¹)⁻¹ =
+        a * (p_d⁻¹ * q_d) * b⁻¹ * (pₛ⁻¹ * qₛ)⁻¹ := by
+    group
+  rw [gauge_covariance]
+  rw [Millennium.G4.WilsonRP.unitaryCharacter_conjugate]
+  rw [← Millennium.G4.WilsonRP.unitaryCharacter_relative ρ
+    a ((pₛ⁻¹ * qₛ) * b * (p_d⁻¹ * q_d)⁻¹)]
+  rw [hcross]
+
+open Matrix in
+private theorem trace_relative (ρ : G →* Matrix.unitaryGroup n ℂ)
+    (a b : G) :
+    (Matrix.trace
+      ((ρ a : Matrix n n ℂ)ᴴ * (ρ b : Matrix n n ℂ))).re =
+      Millennium.G4.WilsonRP.unitaryCharacter ρ (a⁻¹ * b) := by
+  unfold Millennium.G4.WilsonRP.unitaryCharacter
+  simp only [map_mul, map_inv, Matrix.UnitaryGroup.mul_val,
+    Matrix.UnitaryGroup.inv_val, Matrix.star_eq_conjTranspose]
+
+theorem dot_gaugedBoundary
+    (src dst : C → B) (U : C → X → G)
+    (β : C → ℝ) (hβ : ∀ c, 0 ≤ β c)
+    (ρ : G →* Matrix.unitaryGroup n ℂ)
+    (x y : X) (p q : B → G) :
+    let v := Millennium.G4.WilsonRP.matrixFeatures β
+      (fun c z => (ρ (gaugedBoundary src dst U c z) : Matrix n n ℂ))
+    Millennium.G4.WilsonRP.dotKernel v (x, p) (y, q) =
+      ∑ c, β c * Millennium.G4.WilsonRP.unitaryCharacter ρ
+        (crossingBoundary src dst U c ((x, y), p⁻¹ * q)) := by
+  dsimp only
+  rw [Millennium.G4.WilsonRP.dot_matrixFeatures β hβ
+    (fun c z => (ρ (gaugedBoundary src dst U c z) : Matrix n n ℂ))
+    (x, p) (y, q)]
+  refine Finset.sum_congr rfl ?_
+  intro c _
+  rw [trace_relative]
+  exact congrArg (fun t : ℝ => β c * t)
+    (character_gauged_relative ρ
+      (p (src c)) (p (dst c)) (q (src c)) (q (dst c))
+      (U c x) (U c y))
+
+section Continuity
+
+variable [TopologicalSpace G] [IsTopologicalGroup G] [TopologicalSpace X]
+
+theorem continuous_gaugedBoundary
+    (src dst : C → B) (U : C → X → G)
+    (hU : ∀ c, Continuous (U c)) (c : C) :
+    Continuous (gaugedBoundary src dst U c) := by
+  have hs : Continuous (fun z : X × (B → G) => z.2 (src c)) :=
+    (continuous_apply (src c)).comp continuous_snd
+  have hd : Continuous (fun z : X × (B → G) => z.2 (dst c)) :=
+    (continuous_apply (dst c)).comp continuous_snd
+  exact (hs.mul ((hU c).comp continuous_fst)).mul hd.inv
+
+theorem continuous_crossingBoundary
+    (src dst : C → B) (U : C → X → G)
+    (hU : ∀ c, Continuous (U c)) (c : C) :
+    Continuous (crossingBoundary src dst U c) := by
+  have hs : Continuous (fun z : (X × X) × (B → G) => z.2 (src c)) :=
+    (continuous_apply (src c)).comp continuous_snd
+  have hd : Continuous (fun z : (X × X) × (B → G) => z.2 (dst c)) :=
+    (continuous_apply (dst c)).comp continuous_snd
+  have hx : Continuous (fun z : (X × X) × (B → G) => U c z.1.1) :=
+    (hU c).comp (continuous_fst.comp continuous_fst)
+  have hy : Continuous (fun z : (X × X) × (B → G) => U c z.1.2) :=
+    (hU c).comp (continuous_snd.comp continuous_fst)
+  exact ((hx.mul hd).mul hy.inv).mul hs.inv
+
+theorem continuous_crossingExponent
+    (src dst : C → B) (U : C → X → G)
+    (hU : ∀ c, Continuous (U c))
+    (β : C → ℝ) (ρ : G →* Matrix.unitaryGroup n ℂ)
+    (hρ : ∀ i j, Continuous (fun g : G => (ρ g : Matrix n n ℂ) i j)) :
+    Continuous (crossingExponent src dst U β ρ) := by
+  have hχ := Millennium.G4.WilsonRP.continuous_unitaryCharacter ρ hρ
+  unfold crossingExponent
+  refine continuous_finset_sum Finset.univ ?_
+  intro c _
+  exact continuous_const.mul
+    (hχ.comp (continuous_crossingBoundary src dst U hU c))
+
+theorem continuous_gaugedFeatures
+    (src dst : C → B) (U : C → X → G)
+    (hU : ∀ c, Continuous (U c))
+    (β : C → ℝ) (ρ : G →* Matrix.unitaryGroup n ℂ)
+    (hρ : ∀ i j, Continuous (fun g : G => (ρ g : Matrix n n ℂ) i j)) :
+    ∀ r, Continuous (fun z =>
+      Millennium.G4.WilsonRP.matrixFeatures β
+        (fun c z => (ρ (gaugedBoundary src dst U c z) : Matrix n n ℂ))
+        z r) := by
+  have hentry (c : C) (i j : n) :
+      Continuous (fun z : X × (B → G) =>
+        (ρ (gaugedBoundary src dst U c z) : Matrix n n ℂ) i j) :=
+    (hρ i j).comp (continuous_gaugedBoundary src dst U hU c)
+  intro r
+  refine Millennium.G4.WilsonRP.continuous_matrixFeatures β
+    (fun c z => (ρ (gaugedBoundary src dst U c z) : Matrix n n ℂ)) ?_ r
+  first
+  | exact hentry
+  | exact fun c => continuous_pi (fun i => continuous_pi (hentry c i))
+
+end Continuity
+
+#print axioms dot_gaugedBoundary
+#print axioms continuous_gaugedBoundary
+#print axioms continuous_crossingBoundary
+#print axioms continuous_crossingExponent
+#print axioms continuous_gaugedFeatures
+
+end Millennium.G4.PeriodicRP
+```

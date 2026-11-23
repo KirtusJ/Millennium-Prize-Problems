@@ -1,0 +1,20 @@
+{
+  "source_sha256": "cb8d6841a02095d886f97443a7c2cae635b02e6055bf40c3ab83e9760a8ffe57",
+  "exit_code": 0,
+  "pid": 3472,
+  "start_ns": 1795421446482937500,
+  "exit_observed_ns": 1795421446562069500,
+  "readback_ns": 1795421446570064400,
+  "output_sha256": "6c5d089fdaf8ec0fb0c8ebf774dd38e202a7055d96b88b458ca074806c4aa299",
+  "verification": {
+    "events": 8,
+    "head": "ccd3f57f77f530db5a4cc1a958ed0cc3d0faaac4298561653afa1091fd487498",
+    "guard_problems": [],
+    "altered_objects": [],
+    "objects_by_reference_only": 0,
+    "anchor": null,
+    "ok": true
+  },
+  "passed": true,
+  "scope": "Floating-point exhaustive finite sign-cycle control, not a Lean theorem."
+}

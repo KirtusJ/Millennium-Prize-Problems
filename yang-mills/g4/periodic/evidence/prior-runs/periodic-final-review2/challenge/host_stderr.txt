@@ -1,0 +1,2 @@
+pcpos: the model request failed: RuntimeError: provider command failed: 
+  next: check the credential, the model identifier and the network; nothing was recorded for this request

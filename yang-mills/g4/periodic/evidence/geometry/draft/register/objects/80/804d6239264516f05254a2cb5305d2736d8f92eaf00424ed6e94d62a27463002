@@ -1,0 +1,140 @@
+The reflection-positivity statement holds for the weight \(e^{s(x)+s(y)+\text{crossing terms}}\), with every \(\beta_c\ge 0\) and \(\rho\) a continuous finite-dimensional unitary representation. A continuous finite-dimensional representation of a compact group can be made unitary without changing its traces. The sign of the weight matters. If “action” means the quantity in an \(e^{-S}\) weight, the crossing terms in \(S\) need the opposite sign.
+
+Both periodic seams fit the proposed kernel, with the seam from time \(P-1\) to time \(0\) using the inverse of the positively oriented temporal link. At \(P=2\) the two seams use the same spatial boundary functions and distinct temporal links. I checked the argument and finite examples algebraically. The Python script below is unrun. I used the supplied ACR extract and did not inspect the remaining Core clauses.
+
+## Split kernel and normalization
+
+Write \(U_c(x)=U(c)(x)\), \(a=\operatorname{src}(c)\), and \(b=\operatorname{dst}(c)\). On \(X\times G^B\), define
+\[
+M_c(x,p)=\rho\!\left(p_a U_c(x)p_b^{-1}\right).
+\]
+Cyclicity of trace and unitarity give, for \(h_v=p_v^{-1}q_v\),
+\[
+\operatorname{ReTr}\bigl(M_c(x,p)M_c(y,q)^*\bigr)
+=\operatorname{ReTr}\rho\!\left(
+U_c(x)h_b U_c(y)^{-1}h_a^{-1}\right).
+\]
+For independent \(p,q\) with law \(m^B\), conditional on \(p\) the variable \(h=p^{-1}q\) has law \(m^B\). This change of variables leaves \(s(x)\), \(s(y)\), and the observable untouched.
+
+Let \(\Phi(x,p)\) concatenate the real and imaginary entries of each \(M_c(x,p)\), scaled by \(\sqrt{\beta_c}\). The split crossing factor is \(e^{\Phi(x,p)\cdot\Phi(y,q)}\). With \(d\nu(x,p)=e^{s(x)}\,d\mu(x)\,dm^B(p)\), the unnormalized reflected expectation is
+\[
+\begin{aligned}
+N_F
+&=\iint \overline{F(x)}F(y)
+  e^{\Phi(x,p)\cdot\Phi(y,q)}\,d\nu(x,p)\,d\nu(y,q)\\
+&=\sum_{n=0}^{\infty}\frac{1}{n!}
+  \left\|\int F(x)\Phi(x,p)^{\otimes n}\,d\nu(x,p)\right\|^2
+  \ \ge 0 .
+\end{aligned}
+\]
+The exponential series converges absolutely and uniformly because the features are bounded. Compactness and continuity bound the original real exponent, so \(0<Z=N_1<\infty\), the normalized tilted measure is a probability, and \(N_F/Z\ge 0\). The same proof gives positive semidefiniteness of every finite Gram matrix of the Haar-projected kernel by replacing the half integral with a finite weighted sum.
+
+The original involution is \((x,y,h)\mapsto(y,x,h^{-1})\), with inversion componentwise. Each crossing word goes to a cyclic permutation of its inverse, which preserves the real trace. Haar inversion preserves the reference measure. This proves the reflected inequality for the stated class of half observables \(F(x)\), with no gauge-invariance premise on \(s\) or \(F\).
+
+## Both periodic seams
+
+Use time coordinates modulo \(P=2m\) and reflection \(t\mapsto P-1-t\). Take the \(x\) half to be \(0,\ldots,m-1\), and define \(y_j\) from physical time \(P-1-j\) for \(j=0,\ldots,m-1\). Retain the spatial edge orientation in both halves. In the reflected coordinates, the temporal link from \(j\) to \(j+1\) in \(y\) is \(T_{P-2-j}^{-1}\), where \(T_t(v)\) is the physical temporal link from \((t,v)\) to \((t+1,v)\).
+
+For a spatial edge \(e:a\to b\), let \(L_t(e)\) denote its link at time \(t\). The forward-time plaquette word is
+\[
+W_t(e)=L_t(e)T_t(b)L_{t+1}(e)^{-1}T_t(a)^{-1}.
+\]
+Take \(B=\{0,1\}\times V\), \(C=\{0,1\}\times E\), and set the endpoints of \((i,e)\) to \((i,a)\) and \((i,b)\).
+
+| Boundary | Spatial functions in the two halves | Seam variable | Comparison with the physical plaquette |
+|---|---|---|---|
+| \(0\), between \(P-1\) and \(0\) | \(U_{0,e}(x)=L_0(e)\), \(U_{0,e}(y)=L_{P-1}(e)\) | \(h_{0,v}=T_{P-1}(v)^{-1}\) | The split word \(L_0(e)T_{P-1}(b)^{-1}L_{P-1}(e)^{-1}T_{P-1}(a)\) is a cyclic permutation of \(W_{P-1}(e)^{-1}\). |
+| \(1\), between \(m-1\) and \(m\) | \(U_{1,e}(x)=L_{m-1}(e)\), \(U_{1,e}(y)=L_m(e)\) | \(h_{1,v}=T_{m-1}(v)\) | The split word is \(W_{m-1}(e)\) in the displayed orientation. |
+
+These seam variables are independent under the product Haar **reference** measure. For \(P=2\), \(U_{0,e}=U_{1,e}\) as functions on the common half space, while \(h_0\) and \(h_1\) still come from distinct physical links. Both plaquette layers enter the action. At larger periods, the temporal links internal to each half remain in \(X\). At every period the coordinates retain the full temporal holonomy. In particular, at \(P=2\) the forward Polyakov product at \(v\) is \(h_{1,v}h_{0,v}^{-1}\).
+
+## Period-two four-edge sign cycle
+
+Use \(G=\{\pm1\}\) with the sign representation, uniform independent reference links, \(s=0\), and common coupling \(\beta\). Write \(\chi(x)=\prod_{e=0}^3x_e\) and \(t=\tanh\beta\). Expanding the four plaquette factors in one seam, the Haar average keeps the empty edge set and the full cycle. All other edge subsets contain a vertex with odd incidence, whose sign averages to zero. The two seams therefore give
+\[
+K(x,y)=\cosh^8\beta\,\bigl(1+t^4\chi(x)\chi(y)\bigr)^2 .
+\]
+In the uniform-measure kernel operator on the 16 spatial configurations, the constant and \(\chi\) eigenvalues are respectively \(\cosh^8\beta(1+t^8)\) and \(2\cosh^8\beta\,t^4\). The other 14 eigenvalues are zero. Thus zeros occur even at \(\beta=.8\).
+
+A negative-coupling control is to flip the sign of exactly one plaquette coupling in **each** seam. The projected kernel then has \(1-t^4\chi(x)\chi(y)\) in place of the positive-sign factor. Its quadratic value on \(F=\chi\) is \(-2\cosh^8\beta\,t^4<0\) for \(\beta=.8\). Flipping one plaquette in just one seam of this symmetric example would give a constant kernel and miss the failure.
+
+After dividing each reference-measure partition function by the common \(\cosh^8\beta\), the projected value is \(1+t^8\). Setting every temporal link to \(1\) gives \((1+t^2)^4\), since each spatial edge then has an independent sign product with weight \(e^{2\beta x_e y_e}\). Flipping all four temporal links on one seam leaves the physical plaquette weight invariant and reverses the Polyakov sign at every vertex. The physical Polyakov moment is consequently \(0\), while in the all-ones model it is \(1\).
+
+The script enumerates both independent temporal layers by convolving their one-seam sums. The observable-weighted one-seam sums give the Polyakov numerator, and the spatial parity gives the Gram quadratic check.
+
+```python
+from itertools import product
+from math import cosh, exp, fsum, isclose, prod, tanh
+
+beta = 0.8
+configs = tuple(product((-1, 1), repeat=4))
+next_vertex = (1, 2, 3, 0)
+scale = cosh(beta) ** 8
+
+
+def seam_average(edge_products, couplings, polyakov_factor=False):
+    terms = []
+    for temporal in configs:
+        exponent = sum(
+            coupling * edge_sign * temporal[a] * temporal[b]
+            for a, (b, edge_sign, coupling) in enumerate(
+                zip(next_vertex, edge_products, couplings)
+            )
+        )
+        observable = temporal[0] if polyakov_factor else 1
+        terms.append(observable * exp(exponent))
+    return fsum(terms) / len(configs)
+
+
+def close(actual, expected):
+    assert isclose(actual, expected, rel_tol=1e-12, abs_tol=1e-12), (
+        actual, expected
+    )
+
+
+positive = (beta,) * 4
+negative_control = (-beta, beta, beta, beta)
+projected_weights = []
+naive_weights = []
+polyakov_weights = []
+positive_quadratic = []
+negative_quadratic = []
+
+for x, y in product(configs, repeat=2):
+    edge_products = tuple(a * b for a, b in zip(x, y))
+    parity = prod(edge_products)
+    seam = seam_average(edge_products, positive)
+    seam_with_sign = seam_average(edge_products, positive, polyakov_factor=True)
+    seam_negative = seam_average(edge_products, negative_control)
+    projected_weights.append(seam**2)
+    naive_weights.append(exp(2 * beta * sum(edge_products)))
+    polyakov_weights.append(seam_with_sign**2)
+    positive_quadratic.append(parity * seam**2)
+    negative_quadratic.append(parity * seam_negative**2)
+
+pair_count = len(configs) ** 2
+projected_ratio = fsum(projected_weights) / pair_count / scale
+naive_ratio = fsum(naive_weights) / pair_count / scale
+projected_polyakov = fsum(polyakov_weights) / fsum(projected_weights)
+naive_polyakov = fsum(naive_weights) / fsum(naive_weights)
+q_positive = fsum(positive_quadratic) / pair_count / scale
+q_negative = fsum(negative_quadratic) / pair_count / scale
+
+t = tanh(beta)
+close(projected_ratio, 1 + t**8)
+close(naive_ratio, (1 + t**2) ** 4)
+close(projected_polyakov, 0.0)
+close(naive_polyakov, 1.0)
+close(q_positive, 2 * t**4)
+close(q_negative, -2 * t**4)
+
+print("Normalized partition functions", projected_ratio, naive_ratio)
+print("Polyakov moments", projected_polyakov, naive_polyakov)
+print("Normalized parity quadratics", q_positive, q_negative)
+```
+
+## Proposed README scope and remaining geometry
+
+> We prove reflection positivity for continuous half-configuration observables of a normalized finite-lattice compact-group measure. The two reflected halves have identical reference measures and within-half weights. The crossing weight is the exponential of a finite sum of real representation traces with nonnegative coefficients, and each boundary site carries an independently Haar-distributed seam variable in the reference measure. For an even periodic time direction, the two seam families represent the two physical temporal boundaries, including at period two. The construction retains the temporal holonomy. The result concerns the finite lattice and establishes neither a continuum Yang–Mills construction nor a mass gap.
+
+For the concrete periodic geometry, the remaining obligations are to verify the full link and plaquette inventory in the project’s conventions, including both temporal layers at \(P=2\), and to check the multiplicities if the geometry data structure identifies coincident incidences. Verify that the actual reference measure factors into the identical half laws and the two seam Haar families, and that the actual within-half terms become \(s(x)+s(y)\) under the reflected link coordinates. If a later construction changes variables by temporal gauge fixing, it needs its own measure and observable identification, with an explicit variable for the surviving temporal holonomy.

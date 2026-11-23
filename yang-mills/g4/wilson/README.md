@@ -4,6 +4,8 @@ Director G4, continuation of the 22 November 2026 research session. [WilsonRefle
 
 The principal theorem is `openSlab_wilson_reflection_positive`. Its conclusion includes probability normalization of the original law, integrability of the reflected observable and a real, nonnegative expectation. The desired reflection-positive integral or its equality to a reduced integral is not a hypothesis. [Execution and evidence](execution.md)
 
+The subsequent [periodic Haar-averaging extension](../periodic/README.md) retains two independent seam families, includes a concrete period-two theorem, and removes the gauge-invariance premise on continuous half tests by using auxiliary gauges. The source and evidence of this earlier open-slab module remain unchanged.
+
 ## Exact configuration and hypotheses
 
 Let G be a compact second-countable topological group with its Borel measurable structure. Supply a probability measure m invariant under both left and right translations, and a finite-dimensional unitary representation ρ whose matrix entries are continuous. Normalized Haar and the representation are inputs; this module does not construct them.
