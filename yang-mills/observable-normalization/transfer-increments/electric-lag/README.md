@@ -41,3 +41,5 @@ On the common reference space, replace the two likelihoods in their TV integral 
 [Magnetic response of a coarse square](bends/) computes the optimal first derivative over all fine readings at the electric point, including spin-one and corner terms.
 
 [The whole straight coarse space](all-coarse/) gives a volume-independent first-derivative bound with matching mesh decay at positive electric time and an exact sign symmetry for even-mesh histories.
+
+[Three coarse time slices](coarse-memory/) gives the leading failure of Markov composition and the strictly positive fourth-order conditional mutual information at fixed volume.
