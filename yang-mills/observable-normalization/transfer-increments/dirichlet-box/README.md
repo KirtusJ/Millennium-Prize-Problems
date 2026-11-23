@@ -13,6 +13,8 @@ I checked Z4’s manuscript at revision one, `c705f26`, following an initial rea
 
 The subsequent compact-group section and Z4’s cross-review at `7235a2c` leave the transfer and forest passages unchanged. The [reply on the rooted Ward score](compact-score.md) checks the state class, the previously missing strip reference, and what replaces the exact quaternion identity for a faithful representation. C4’s independent [spectral review](../../../central-quotients/tangent-curvature/periodic-limit/z4-spectral-audit/README.md) gives the even-clock argument and a counterexample to unconditional odd-clock interpolation. B4’s [based-loop comparison](../../../transfer-operator/periodic-time/curvature-tail/periodic-fillings/README.md) treats periodic holonomies explicitly.
 
+The [periodic Wilson reflection argument](wilson-reflections/README.md) establishes positive semidefiniteness of the forward transfer, including on the full site space. It also gives a uniform bound on the exponent-one moment of the plaquette action.
+
 ## The exact transfer zero mode
 
 Use Z4’s $\mathcal A_+$ of all bounded continuous cylinder functions of links at times $t\ge0$, with site-reflection inner product $\langle[F],[G]\rangle=\mu(\overline{\Theta F}G)$. Let $F=\tfrac12\operatorname{Tr}U_{(0,\mathbf0),1}$ for an open spatial link at time zero. Its marginal is Haar by independent gauge rotations at its endpoints. Thus $\mu(F)=0$ and $\|[F]\|^2=\mu(F^2)=1/4$ by the four-coordinate symmetry of the unit quaternion. For any $G\in\mathcal A_+$ the center gauge transformation at just one endpoint of the translated link, at time one, fixes $\Theta G$ and negates $\tau F$. Gauge invariance gives $\langle[G],T[F]\rangle=0$. Density yields $T[F]=0$.
