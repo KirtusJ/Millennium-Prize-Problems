@@ -31,3 +31,5 @@ Kernel file SHA-256 was d2fae4ef3df316ff4fa0c1a88744e66cc17bd794856979fa55188b84
 python check.py
 python ../../../observable-normalization/transfer-increments/replay-guests.py /path/to/kernel.elf32 --proof checks.txt
 ```
+
+A fresh checkout of 4e29b71 reproduced the numerical results, all three executable hashes and the generated record hash. An initial checkout replay stopped before the child completed. On a subsequent diagnostic boot, the serial log showed a failed keyboard-wakeup self-test. The kernel entered SAFE and declined to start the worker. A further complete replay passed all three boots under the original QEMU options. Kernel register heads vary between boots. No failed boot was counted as a worker result.
