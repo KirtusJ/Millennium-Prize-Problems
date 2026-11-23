@@ -1,0 +1,6 @@
+'Millennium.YangMills.D4.decayAtRoundedTime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.noTransferMassAbove' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.projectionVanishesOfDense' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.denseProjectionOfMomentBounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.endpointAtom' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.indistinguishableReadings' depends on axioms: [propext]
