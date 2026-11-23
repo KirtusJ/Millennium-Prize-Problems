@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/h1-a4/target_runs/check_excitation.py", line 6, in <module>
+    from scipy.integrate import cumulative_trapezoid, trapezoid
+ModuleNotFoundError: No module named 'scipy'

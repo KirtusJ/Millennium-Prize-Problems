@@ -1,0 +1,72 @@
+{
+ "predicates": {
+  "Q0": {
+   "met": 9,
+   "failed": 0,
+   "min_slack": null,
+   "where": null
+  },
+  "Q1": {
+   "met": 5614,
+   "failed": 0,
+   "min_slack": 9.668615475853247e-10,
+   "where": [
+    400,
+    0.5
+   ]
+  },
+  "Q2": {
+   "met": 5614,
+   "failed": 0,
+   "min_slack": 2.5002494564058266e-09,
+   "where": [
+    0,
+    10000
+   ]
+  },
+  "Q3": {
+   "met": 11228,
+   "failed": 0,
+   "min_slack": 0.0002000087536618716,
+   "where": [
+    1,
+    10000
+   ]
+  },
+  "Q4": {
+   "met": 2984,
+   "failed": 0,
+   "min_slack": 0.0028463094824276907,
+   "where": [
+    0.05,
+    10000,
+    5,
+    5
+   ]
+  },
+  "Q5": {
+   "met": 4418218,
+   "failed": 0,
+   "min_slack": 0.0006991565136617641,
+   "where": [
+    0.05,
+    10000,
+    6,
+    0
+   ]
+  },
+  "Q6": {
+   "met": 4004001,
+   "failed": 0,
+   "min_slack": 0.0,
+   "where": null
+  },
+  "Q7": {
+   "met": 200000,
+   "failed": 0,
+   "min_slack": 1.6666526120207105e-21,
+   "where": null
+  }
+ },
+ "all_met": true
+}

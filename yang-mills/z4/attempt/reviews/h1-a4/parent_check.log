@@ -1,0 +1,2 @@
+check K84: exit 0 (expected 0) in 1307478 ms | output 8b796dd6255a | event 86 head 81295d2a9f24
+  /home/user/z4-workers/h1-a4/report.md — STANDS 27, DEFECT 0, NOT CHECKED 3 (M0 and M1 stand as written proofs; predicates met 141, failed 2, measured only 60).

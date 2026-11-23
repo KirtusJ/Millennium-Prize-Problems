@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/h1-a4/target_runs/check_vacuum.py", line 65, in <module>
+    spectral(beta)
+    ~~~~~~~~^^^^^^
+  File "/home/user/z4-workers/h1-a4/target_runs/check_vacuum.py", line 54, in spectral
+    assert 0.5 < scaled < 4
+           ^^^^^^^^^^^^^^^^
+AssertionError

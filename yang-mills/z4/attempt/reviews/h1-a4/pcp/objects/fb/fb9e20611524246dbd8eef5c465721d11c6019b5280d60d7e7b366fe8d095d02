@@ -1,0 +1,6 @@
+'YangMills.ToronVacuum.twoStep' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ToronVacuum.fundamental' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ToronVacuum.productScale' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ToronVacuum.occupation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ToronVacuum.superSolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ToronVacuum.finiteSurvival' depends on axioms: [propext, Classical.choice, Quot.sound]

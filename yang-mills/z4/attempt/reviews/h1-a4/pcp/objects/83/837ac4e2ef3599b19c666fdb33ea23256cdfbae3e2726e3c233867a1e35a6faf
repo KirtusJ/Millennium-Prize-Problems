@@ -1,0 +1,12 @@
+scaled identity density partial sum=1.2644810
+beta=64, m=4, min sampled late fraction=0.9817, mean survival=0.401073, SE=0.003967
+beta=64, m=4, min sampled late fraction=0.9995, mean survival=0.017583, SE=0.000621
+beta=64, m=4, min sampled late fraction=1.0000, mean survival=0.000000, SE=0.000000
+scaled identity density partial sum=1.2556674
+beta=1000, m=10, min sampled late fraction=0.9819, mean survival=0.263368, SE=0.003736
+beta=1000, m=10, min sampled late fraction=0.9998, mean survival=0.000002, SE=0.000001
+beta=1000, m=10, min sampled late fraction=1.0000, mean survival=0.000000, SE=0.000000
+scaled identity density partial sum=1.2535930
+beta=32768, m=32, min sampled late fraction=0.9814, mean survival=0.214746, SE=0.003578
+beta=32768, m=32, min sampled late fraction=0.9998, mean survival=0.000000, SE=0.000000
+beta=32768, m=32, min sampled late fraction=1.0000, mean survival=0.000000, SE=0.000000

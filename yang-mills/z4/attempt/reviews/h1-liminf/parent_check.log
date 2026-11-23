@@ -1,0 +1,2 @@
+check K82: exit 0 (expected 0) in 619751 ms | output 0043e13f03ef | event 84 head 26f082949e9e
+  /home/user/z4-workers/h1-liminf/report.md — 9 STANDS (2 with minor slips: L3 sign, L4 constant), 1 DEFECT (L5 partition not Lipschitz, repaired), 1 NOT CHECKED (the m_e corollary, which still needs §2 for k = 0 and C2); L6 and L7 are proved for every k, and numerical and Lean checks are 12 met, 0 failed, 0 measured only.

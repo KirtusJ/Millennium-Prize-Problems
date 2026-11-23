@@ -1,0 +1,22 @@
+cf_vs_quadrature_worst_rel 0.995549753178097
+P1 {"cases": 18361, "qualify": 18361, "failed": 0, "min_rel_slack": 9.134915046615788e-13, "holds": true}
+P2 {"cases": 18361, "qualify": 18361, "failed": 0, "min_rel_slack": 2.5002493408976534e-09, "holds": true}
+P3 {"cases": 2807, "failed": 0, "min_abs_slack": 3.0514784115088695e-05, "holds": true}
+P4 {"cases": 2807, "failed": 0, "min_abs_slack": 1.1175145766945918e-08, "holds": true}
+P5 {"cases": 71407, "failed": 0, "holds": true}
+P6 {"failed": 0, "rows": [{"beta": 4, "one_minus_I2I1_times_b": 1.3678109305625616, "b_times_E_d2": 3.068523578482311, "logZ": 1.5850904185380106, "logZlb": -0.21664791262703043}, {"beta": 16, "one_minus_I2I1_times_b": 1.474962465907991, "b_times_E_d2": 3.0301815463600743, "logZ": 11.591111953844415, "logZlb": 9.769868513484932}, {"beta": 64, "one_minus_I2I1_times_b": 1.4940471426230815, "b_times_E_d
+P7 {"failed": 0, "holds": true}
+P8 {"max_abs_err": 1.1102230246251565e-15, "holds": 1.0}
+P9 {"a_prime": 2.3371074104621132, "E0_lower": 2.944570822306514, "holds": false}
+P10 {"lhs": 0.0706689741614639, "plus_term": -0.0706689741614422, "holds": 0.0}
+P11 {"lhs": 0.0706689741614639, "minus_term": 0.0706689741614422, "holds": 1.0}
+P12 {"abs_term": 0.0706689741614422, "bound": 26.93264597772027, "ratio": 0.0026239150145107287, "holds": 1.0}
+P10_positive_g_measured {"lhs": -2.0762942131562596, "note": "negative => localisation lowers energy estimate; '+' form would make it positive"}
+P13_trunc_b1000 {"lam_nmax": 0.0028839748251590133, "lam_1p5nmax": 0.002883974825159012, "diff": 1.3010426069826053e-18}
+P13_trunc_b10000 {"lam_nmax": 0.0038956902803612735, "lam_1p5nmax": 0.003895690280361283, "diff": 9.540979117872439e-18}
+P13_trunc_b100000 {"lam_nmax": 0.0039860276006531675, "lam_1p5nmax": 0.003986027600653154, "diff": 1.3877787807814457e-17}
+P13_trunc_b1e+06 {"lam_nmax": 0.003995002432007684, "lam_1p5nmax": 0.003995002432007545, "diff": 1.3877787807814457e-16}
+P13 {"cases": 48, "qualify": 48, "failed": 0, "holds": true, "rows": [{"beta": 1000.0, "sigma": 0.0004999999999999999, "lam": 0.00024478882222772375, "sector": [0, 0], "bound": -0.0005000000000000001, "lam_over_sigma": 0.4895776444554476, "in_claim": 1.0, "ok": true}, {"beta": 1000.0, "sigma": 0.0005671562610977312, "lam": 0.00031304446854772694, "sector": [0, 0], "bound": -0.00043284373890226883, "la
+E_trial_R4 {"E_trial": 3.5716531574725114, "gaussian_value": 3.571652366928449}
+P14 {"E_trial": 3.5716531574725114, "failed": 0, "cases": 4, "holds": true, "rows": [{"beta": 64, "parseval": 1.000000000000005, "one_minus_K": 0.41565030213729637, "U1_bound": 0.6748766991180156, "lat_D": 37.60095384674857, "flat_D_over": 57.146525212717776, "W": 708.1845416489346, "V": 0.27177954840321444, "Q": 0.9991760258951725, "b13_nu": 28.405485818915402, "b13_nu_chain": Infinity, "d": 24.83383
+wrote results/chal_run3.json

@@ -1,0 +1,6 @@
+# notes
+- control: written control.txt (2 and 0.697775) via Gauss-Laguerre and periodic-trapezoid Bessel (no scipy available; numpy only).
+- t93 run 1 (result_t93.json, exit 1): FAILED P6 (kappa_0=0.9767, my own index bug: used I[1:] instead of I[0:]), and P3 (Q=1.0/nan): <g,Wg> = 1.5e8 at beta=64, 2e97 at 256, overflow at 1024. The W blow-up is real, not my bug: exponent 2beta - 7.84 beta^(2/3) >0 at a1=a2=pi/2 for beta>=64ish, so literal W=e^V-1 is not suppressed by Gaussian g. A defect of the statement as written (no cutoff R), not of my expectation.
+- next: t93b.py fixes kappa bug, log-space W, plus measured-only R-cutoff variant (a<=R or >=pi-R).
+- t93b (result_t93b.json, exit 1): P1,P6 now pass (parseval<1e-15, kap0=1). Literal W: logGW=18.8/224/1301 at beta=64/256/1024; Q rounds to 1; beta^(1/3)nu = 120.87/1512.5/13279.7 (>> E_trial=3.5717). P2 FAILS: literal beta=1024 change 0.128 (integrand dominated by a~pi/2 corner with e^V dynamic range ~1e500; GL grid not converged); R-cutoff variants fail P2 because mask-on-nodes cutoff is discontinuous - my own defect (use R-aware nodes). Hand-estimate: W blows up where a^2 > 2*alpha*beta^(-1/3), i.e. definition-level, not quadrature.
+- grandchild T94 done+released; report.md written; verify PASS

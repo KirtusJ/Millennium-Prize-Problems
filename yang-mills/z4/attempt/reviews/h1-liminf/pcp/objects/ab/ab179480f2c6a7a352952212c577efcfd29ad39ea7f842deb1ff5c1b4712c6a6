@@ -1,0 +1,21 @@
+/home/user/z4-workers/h1-liminf/lean/Liminf.lean:19:50: error: linarith failed to find a contradiction
+case a
+y : ℝ
+hy : 0 ≤ y
+hpos : 0 < 1 + y
+h : -log (1 + y) + 1 ≤ (1 + y)⁻¹
+a✝ : 1 - log (1 + y) > 1 / (1 + y)
+⊢ False failed
+/home/user/z4-workers/h1-liminf/lean/Liminf.lean:67:22: warning: unused variable `hx`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/user/z4-workers/h1-liminf/lean/Liminf.lean:67:57: warning: unused variable `hu`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+'G1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'G2' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'G3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'G4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'G5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'G6a' depends on axioms: [propext, Classical.choice, Quot.sound]
+'G6b' depends on axioms: [propext, Classical.choice, Quot.sound]
+'G7' depends on axioms: [propext, Classical.choice, Quot.sound]
+'G8' depends on axioms: [propext, Classical.choice, Quot.sound]

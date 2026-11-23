@@ -1,0 +1,2 @@
+check K3: exit -15 (expected 0) in 93442 ms | output e3b0c44298fc | event 4 head 2a890bbe5a3b
+exit 1

@@ -1,0 +1,35 @@
+The claim is not supported by the statement as written. With the definitions taken literally, β^{1/3}·ν_trial is far above E_trial and grows with β. The exact parts (⟨g,g⟩, ⟨g,Kg⟩) are well converged.
+
+**Control:** `control.txt` holds `2.000000` and `0.697775`.
+
+**Results** (E_trial = 3.571652, E_0 = 3.3505330):
+
+| β | β^{1/3}ν | − E_trial | × β^{1/3} | − E_0 |
+|---|---|---|---|---|
+| 64 | 120.87 | 117.30 | 469 | 117.52 |
+| 256 | 1512.5 | 1508.9 | 9581 | 1509.2 |
+| 1024 | 13279.7 | 13276.2 | 133815 | 13276.4 |
+
+- **Cause:** ⟨g,Wg⟩ is huge, with ln⟨g,Wg⟩ = 18.8, 224 and 1301 at β = 64, 256 and 1024. W = exp(V) − 1 is not suppressed by the Gaussian g once a² > 2αβ^{-1/3}, so the region a ≈ π/2 dominates.
+- **Q:** it is 1 to double precision at all three β, so I took ν from logs.
+- **Cutoff:** a fixed R=0.8 does not fix this (ln⟨g,Wg⟩ = 39 at β=256). A cutoff shrinking like β^{-1/6} or faster might, but I did not test one.
+
+**Quadrature tolerances:** the exact ⟨g,g⟩ and ⟨g,Kg⟩ pass the Parseval check at under 1e-15. The numbers above are good to about 15 digits at β=64, about 9 at β=256 and about 4 at β=1024. The source is the change between the 200/100/40000/300 grid and the doubled grid. The P2 predicate (change under 1e-9) therefore failed at β=1024, where the change is 0.128.
+
+**Failed predicates (kept in the register):**
+- **First run:** failed because of my own index bug in κ_n, plus an overflow of e^V.
+- **Second run:** fixed the bug and failed P2 as above.
+- **R-cutoff rows (R=0.8, 1.0):** they fail P2 because my cutoff on quadrature nodes isn't grid-converged. That is my defect, so those rows are not quoted as results.
+
+**Grandchild:** task T94 (admitted, then released). It independently recomputed ⟨g1,g1⟩ and Σκ_n c_n² at β=64 using κ from the power series. It matched my values to about 1e-13 (S/N0 = 0.7644285272), and all four of its predicates were met. I reread its program and reran it in a scratch copy. The output was identical. It checks only ⟨g,g⟩ and ⟨g,Kg⟩, not W.
+
+**Register verify:** both verifies pass (Python `result: PASS`; the Rust verifier prints only its "a pass is a fact about these bytes" line, with no explicit PASS).
+
+Rerun commands are in `report.md`. The files are in `/home/user/z4-workers/h1-chal/child`:
+- report.md
+- control.txt
+- t93.py
+- t93b.py
+- result_t93.json
+- result_t93b.json
+- notes.md

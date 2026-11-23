@@ -1,0 +1,2 @@
+check K83: exit 0 (expected 0) in 1286847 ms | output 656d772e014f | event 85 head 34a26059ceee
+  /home/user/z4-workers/h1-chal/report.md — STANDS 11, DEFECT 1 (L3 sign), NOT CHECKED 0; predicates met 13, failed 3, measured only 4.

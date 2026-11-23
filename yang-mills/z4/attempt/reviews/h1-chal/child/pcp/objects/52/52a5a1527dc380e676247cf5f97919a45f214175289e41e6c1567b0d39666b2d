@@ -1,0 +1,2 @@
+/home/user/z4-workers/h1-chal/child/t93.py:38: RuntimeWarning: overflow encountered in expm1
+  wW=np.einsum('i,j,k,ijk->',wt,wt,wu,np.expm1(V))*4   # factor 2 per angle

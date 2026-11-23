@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/h1-a4/target_runs/check_vacuum.py", line 5, in <module>
+    from scipy.special import ive
+ModuleNotFoundError: No module named 'scipy'

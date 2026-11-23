@@ -1,0 +1,15 @@
+N0 np.float64(0.004322087038731838)
+S np.float64(0.0033039266294994265)
+S_over_N0 np.float64(0.7644285272119014)
+parseval_residual np.float64(5.828670879282072e-16)
+kappa0_minus1 np.float64(0.0)
+kappa_max_diff np.float64(-5.6909386181340254e-99)
+dN0_800_to_1600 np.float64(4.40619762898109e-16)
+dN0_1600_to_3200 np.float64(-1.5308934675495323e-15)
+dS_800_to_1600 np.float64(6.982261990806649e-16)
+dS_1600_to_3200 np.float64(-2.336238841271765e-15)
+parseval_3200 np.float64(9.48026379621325e-16)
+pred_parseval_lt1e-10 np.True_
+pred_S_le_N0 np.True_
+pred_kappa0 np.True_
+pred_kappa_strict_dec True

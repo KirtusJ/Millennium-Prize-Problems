@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/h1-a4/target_runs/check_vacuum.py", line 65, in <module>
+    spectral(beta)
+    ~~~~~~~~^^^^^^
+  File "/home/user/z4-workers/h1-a4/target_runs/check_vacuum.py", line 52, in spectral
+    coeff = ive(k,beta)/ive(1,beta)
+            ~~~^^^^^^^^
+  File "/home/user/z4-workers/h1-a4/target_runs/shim/scipy/special.py", line 6, in ive
+    k = int(k); v = float(ive0(np.array([float(x)]))[0])
+TypeError: only 0-dimensional arrays can be converted to Python scalars
