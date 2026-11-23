@@ -1,0 +1,9 @@
+c* = 4.6054131
+beta Nx n Delta E(h) Bflow Bcrude Delta/Bflow log(D/Bflow)/log(b) -logD/sqb -logBflow/sqb -logBcrude/sqb lam_e
+16 104 13 6.003928e-07 6.003928e-07 8.170530e-09 4.834206e-11 73.48 1.550 3.5814 4.6557 5.9382 0.613718
+64 208 26 2.047078e-14 2.047078e-14 1.166515e-16 2.322212e-19 175.5 1.243 3.9400 4.5859 5.3633 0.729812
+F0: MET 5.3e-15,8.2e-15
+F1: MET 2/2
+F2: MET 2/2
+F3: MET 1/1
+SUMMARY met=4 failed=0

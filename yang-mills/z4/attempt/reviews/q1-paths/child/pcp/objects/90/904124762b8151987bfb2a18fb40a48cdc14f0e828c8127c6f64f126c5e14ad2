@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/q1-paths/child/chain.py", line 164, in <module>
+    r = run(b); res.append(r); print(json.dumps(r), flush=True)
+  File "/home/user/z4-workers/q1-paths/child/chain.py", line 115, in run
+    rho_b = (1/(2*sb))/dx; U = int(rho_b + 1.5)
+                                   ~~~~~~^~~~~
+TypeError: unsupported operand type(s) for +: 'decimal.Decimal' and 'float'

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/q1-E13/e13_bounds.py", line 328, in <module>
+    sys.exit(main(sys.argv[1]))
+             ~~~~^^^^^^^^^^^^^
+  File "/home/user/z4-workers/q1-E13/e13_bounds.py", line 260, in main
+    E = err_terms(U1, U2, beta, lam, wt)
+  File "/home/user/z4-workers/q1-E13/e13_bounds.py", line 129, in err_terms
+    dh = dS2 / (2 * sm ** 2 * math.sqrt(1 + 1 / sm))
+                              ~~~~~~~~~^^^^^^^^^^^^
+ValueError: math domain error

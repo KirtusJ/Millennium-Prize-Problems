@@ -1,0 +1,2 @@
+check K103: exit 0 (expected 0) in 559891 ms | output 615f11deada0 | event 105 head c5b47c74fd95
+  /home/user/z4-workers/q1-harnack/report.md: Harnack chain (H4) closed given Lemma M4, with an absolute constant; target limsup ≤ c* still not proved (E1, E3, continuum P' missing). Verdicts: STANDS 7, DEFECT 1, NOT CHECKED 2. Predicates: mine 9 met, 0 failed, 6 measured only; child 24 met, 0 failed, 36 measured only; both verifies PASS.

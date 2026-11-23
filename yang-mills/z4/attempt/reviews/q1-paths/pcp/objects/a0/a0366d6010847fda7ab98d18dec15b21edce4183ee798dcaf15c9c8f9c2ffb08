@@ -1,0 +1,22 @@
+I wrote `/home/user/z4-workers/q1-paths/child/report.md`. The chain inequality L ≤ M ≤ R holds at all 7 β tested, from 16 to 256. The counts below are cases met (the P-numbers are the predicates fixed in the `chain.py` docstring).
+
+- **Met:**
+  - Positivity of g and ∫_A f g > 0: 7/7.
+  - Δ(identity) = Δ(E(h)) to 1e-49: 7/7.
+  - L ≤ M: 7/7.
+  - M ≤ R: 7/7.
+  - Δ > 0 and decreasing: 7/7.
+  - Δ/λ_e < 1e-16, only from β ≈ 100: 4/6 at β ≥ 36.
+- **Failed:**
+  - The statement's "h odd" is wrong: h is even under x→−x and σ-odd. This is a defect of the statement, and the chain argument is unaffected.
+  - Δ at κ = 0.125 differs from κ = 0.25 by 1.5% at β = 16 and 36. That was my own expectation. M and R shift by about 1%, and the ordering is unaffected.
+  - My own earlier bugs: a TypeError, and a g-sign error that made ρ_CB nonsense in a run I kept as a record.
+- **Measured only:**
+  - ρ_CB (6e7 to 1e23, grid maximum, so only a lower bound on the true maximum) dominates R, which is 38 to 64 times M.
+  - log(R/L)/log β falls from 1.98 to 1.28.
+- **Control:** 1.648721 (= exp(1/2)).
+- **Grandchild:** T155 gave Δ = 6.00393e-07 at β = 16 by both direct subtraction and the identity, agreeing to 1.4e-10; its control gave 7.389056. My rerun in a scratch copy gave identical numbers, and T155 is released.
+- **Tail accuracy of h near π/2:** I used 50-digit Decimal inverse iteration for g and f, with float64 only for the starting vector.
+- **PCP verify:**
+  - Python: "result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)"
+  - Rust: "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."

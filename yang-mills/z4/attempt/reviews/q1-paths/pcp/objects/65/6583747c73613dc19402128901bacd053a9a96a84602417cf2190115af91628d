@@ -1,0 +1,5 @@
+'path_cs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'telescope' depends on axioms: [propext, Classical.choice, Quot.sound]
+'close_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'tilt_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'odd_sq' depends on axioms: [propext, Classical.choice, Quot.sound]

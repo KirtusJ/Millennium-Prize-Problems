@@ -1,0 +1,22 @@
+P1 max|l l^T - formula| = 8.88e-16 MET
+P2 max residual (eigvec w, l p || w) = 7.49e-16 MET
+P3 max|svd-det| = 3.55e-15, valley/identity max err = 2.66e-15 MET
+P4 beta=256 L=2.0 points=200 vacuous(E1,E3)=[0, 0] samples=200000 fails(E1,E3)=[0, 0] max|F-M|/Err = 0.237, 0.213 MET
+P4 beta=256 L=3.0 points=200 vacuous(E1,E3)=[38, 38] samples=200000 fails(E1,E3)=[0, 0] max|F-M|/Err = 0.130, 0.128 MET
+P4 beta=1024 L=2.0 points=200 vacuous(E1,E3)=[0, 0] samples=200000 fails(E1,E3)=[0, 0] max|F-M|/Err = 0.329, 0.296 MET
+P4 beta=1024 L=3.0 points=200 vacuous(E1,E3)=[0, 0] samples=200000 fails(E1,E3)=[0, 0] max|F-M|/Err = 0.255, 0.246 MET
+P4 beta=4096 L=2.0 points=200 vacuous(E1,E3)=[0, 0] samples=200000 fails(E1,E3)=[0, 0] max|F-M|/Err = 0.401, 0.325 MET
+P4 beta=4096 L=3.0 points=200 vacuous(E1,E3)=[0, 0] samples=200000 fails(E1,E3)=[0, 0] max|F-M|/Err = 0.325, 0.289 MET
+P4 beta=16384 L=2.0 points=200 vacuous(E1,E3)=[0, 0] samples=200000 fails(E1,E3)=[0, 0] max|F-M|/Err = 0.433, 0.364 MET
+P4 beta=16384 L=3.0 points=200 vacuous(E1,E3)=[0, 0] samples=200000 fails(E1,E3)=[0, 0] max|F-M|/Err = 0.371, 0.337 MET
+P6 beta=256 rho=0.99853336 D=0.99804688 MET
+P6 beta=1024 rho=0.99963368 D=0.99951172 MET
+P6 beta=4096 rho=0.99990844 D=0.99987793 MET
+P6 beta=16384 rho=0.99997711 D=0.99996948 MET
+P6 beta=65536 rho=0.99999428 D=0.99999237 MET
+P6 beta=262144 rho=0.99999857 D=0.99999809 MET
+P6 beta=1048576 rho=0.99999964 D=0.99999952 MET
+P6 beta=4194304 rho=0.99999991 D=0.99999988 MET
+P6 beta=16777216 rho=0.99999998 D=0.99999997 MET
+P6 beta=67108864 rho=0.99999999 D=0.99999999 MET
+P6 beta=268435456 rho=0.99999999 D=1.00000000 FAILED

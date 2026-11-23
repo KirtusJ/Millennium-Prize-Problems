@@ -1,0 +1,1 @@
+check K8: exit 1 (expected 0) in 6260 ms | output 867a14d6f201 | event 9 head 495ffd107011

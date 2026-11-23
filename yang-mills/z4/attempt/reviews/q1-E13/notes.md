@@ -1,0 +1,13 @@
+# notes.md (worker q1-E13, task T149)
+- step 0: control.txt = 0.272341 (-ln tanh 1). Lean READY exists.
+- step 1: read TUNNEL_LOWER2 (E1,E3 statements), LEMMA_F (I1,I2,I5,I6,I7), TUNNEL_THEOREM (Lemma K), tube_ratio.py.
+- plan: ambient coords g=(g0,xi), xi=sin(theta) xhat; exact algebra u1'xu2' = w + l(xi) + rho; exact identity l l^T = S^2 I - u1u1^T - u2u2^T - 2ww^T; exact 6-dim Gaussian via SVD; tilts by geodesic Taylor (Riemannian Hessian).
+- step 2: child T156 admitted; PROMPT.txt written (control: E[Z^2]=1.000000; check delta1, delta3 on 12 pts x beta 256..16384)
+- step 3: child returned after 135 s, exit 0; control.txt = 1.000000 (correct, E[Z^2]=1). GRADED PASS before reading further.
+- step 4: e13_bounds.py run1 crashed (my code defect: vacuous h-bound at beta=256,L=3 -> sqrt of negative). v2 fix: Err=inf, counted as non-qualifying. Child MC read and checked: log-ratio formula correct.
+- step 5: reran child mc.py in child_rerun/ (recorded child-rerun-mc); compared deltas; released T156.
+- step 6: run2: P1-P4 MET (P4: 0 fails / 1.6e6 samples; 38 vacuous points at beta=256,L=3), P6 FAILED at beta=2.7e8 (my quadrature), crash overflow. v3 fixes.
+- step 7: run3: P6 now MET at all 11 betas; crash overflow exp(e3>709). v4 log-sum-exp.
+- step 8: run4: P1-P4,P6 MET; P5 FAILED 9/11 (my cross-term bound wrong; Delta values use exact gap so unaffected); P7 final <=0.1 FAILED (0.167,0.204 at 2.7e8: bound decays but slowly). p5fix.py with corrected bound.
+- step 9: Lean E13.lean pass (K9). E13.md written.
+- step 10: report.md written; verify PASS (python), rust verify ok. Done.

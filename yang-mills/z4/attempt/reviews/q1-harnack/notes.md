@@ -1,0 +1,11 @@
+# notes q1-harnack (T150)
+- step0: control.txt = 0.272341 (-ln tanh 1). Read TUNNEL_LOWER2/TUNNEL_LOWER/TUNNEL_THEOREM/LEMMA_F.
+- step1: register pcp init; child admission attempted (see below).
+- Plan for H4: chain of balls of radius rho/sqrt(beta), steps d/sqrt(beta); path geometry x -> (rotate axis of smaller-s link, V nonincreasing, O(beta^{1/4}) steps) -> shrink U2 along 1-param subgroup (V=0) -> move U1 with U2=1 (V=0) -> grow U2 to y (V <= V(y) <= K since sin monotone on [0,pi/2]). Uses only lambda<=1, positivity, sup g <= k_sup^2/lambda, M4 mass.
+- step2: child admitted as T152; PROMPT.txt written (1D model: Q1 sqrt(b)L<=sqrt(b)J+log b; Q2 L<=10a; control c*=4.6054). Reduced 2-direction model NOT delegated (not feasible in 6 min).
+- step3: harnack_check run1 FAILED exit 1: scipy not installed (defect of my program, not target). Replaced ive by own trapezoid quadrature (400001 nodes), z grid 401 pts.
+- step4: harnack_check run2: 9 met, 0 failed (P1-P8); measured: min l(K0)/d = 8.35 (d=3.65, rho=0.265); C_tot(eta) = 1.50, 3.00, 6.06, 12.6 for eta = .05,.1,.2,.4 (linear in eta).
+- step5: child T152 returned; control 4.6054 graded CORRECT first. Q1 12/12, Q2 12/12; grandchild T154 recomputed sqrt(b)L(0.1)=0.375048 at b=256. My rerun of child main.py (K4) reproduced. T152 released.
+- step6: Harnack.lean: 5 lemmas (phase0_len, one_sub_cos_ge_jordan, x_sub_sin_ge, cos_ge_quad, phase3_mono), exit 0, axioms propext/Classical.choice/Quot.sound. First attempt failed (unknown identifier cos_sq_half; my error), fixed.
+- step7: HARNACK.md written (H4 PROVED given M4; abs constant 35).
+- step8: report.md written; verifies PASS (python + rust). Done.

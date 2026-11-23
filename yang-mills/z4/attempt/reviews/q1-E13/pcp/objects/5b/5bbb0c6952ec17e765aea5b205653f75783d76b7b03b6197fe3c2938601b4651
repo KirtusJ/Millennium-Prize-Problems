@@ -1,0 +1,4 @@
+'flat_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'sqrt_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'one_sub_sqrt_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'cross_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

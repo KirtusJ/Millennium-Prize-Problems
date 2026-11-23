@@ -1,0 +1,25 @@
+P1: MET max I1/bound = 0.636617 at z=1e+05; cases 401
+P2: MET min v/bound = 1.383526; cases 5001
+  P2b r=0.3: MC 0.005428 +- 1.2e-04, formula 0.005627
+  P2b r=0.5: MC 0.025163 +- 2.5e-04, formula 0.025231
+P2b: MET 
+P3: MET cases 24
+P7: MET max ksup/bound = 0.999999
+P4: MET mono True, end V=0 True, length bound True; cases 20000; max (s psi)/((pi/2)(V/2b)^(1/4)) = 0.9974
+P5: MET phase1 V=0 True, phase3 V<=V(y) True; cases 20000 each
+P6: MET max(lhs-rhs) = -3.592e-03; cases 180000
+  P8 beta=64 a1=0.05: log T2 (MC) = 10.292 (-4SE: 10.292), log bound = -4.490, gap = 14.78 nats ok
+  P8 beta=64 a1=0.1: log T2 (MC) = 10.278 (-4SE: 10.277), log bound = -4.504, gap = 14.78 nats ok
+  P8 beta=64 a1=0.3: log T2 (MC) = 10.142 (-4SE: 10.141), log bound = -4.618, gap = 14.76 nats ok
+  P8 beta=256 a1=0.05: log T2 (MC) = 14.487 (-4SE: 14.486), log bound = -0.297, gap = 14.78 nats ok
+  P8 beta=256 a1=0.1: log T2 (MC) = 14.469 (-4SE: 14.468), log bound = -0.315, gap = 14.78 nats ok
+  P8 beta=256 a1=0.3: log T2 (MC) = 14.299 (-4SE: 14.298), log bound = -0.464, gap = 14.76 nats ok
+P8: MET cases 6
+MEASURED: min over (d, rho<=1/2) of l(K0)/d = 8.3459 at d = 3.650, rho = 0.265
+MEASURED: l(K_K)/d with K = 1: 9.0850
+eta, a_-, r0, C_tot = [l0 (2a_- + r0) + lK a_-]/d, C_tot/c*   (c* = 4.6054)
+  0.05  0.0500  0.0250  1.4986  0.3254
+  0.1  0.1003  0.0500  3.0039  0.6523
+  0.2  0.2027  0.1003  6.0629  1.3165
+  0.4  0.4233  0.2027  12.6022  2.7364
+SUMMARY {'P1': np.True_, 'P2': np.True_, 'P2b': np.True_, 'P3': True, 'P7': np.True_, 'P4': True, 'P5': True, 'P6': True, 'P8': np.True_} met 9 failed 0

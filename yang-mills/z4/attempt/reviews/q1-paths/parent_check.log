@@ -1,0 +1,2 @@
+check K104: exit 0 (expected 0) in 581349 ms | output 9aa6a5143702 | event 106 head 9750019e2f93
+  /home/user/z4-workers/q1-paths/report.md — verdicts: STANDS 6, DEFECT 2, NOT CHECKED 2. The continuum path lemma and the 1D continuum theorem (limsup ≤ c*, no grid) are proved in writing, unreviewed. The SU(2)² target is still not proved.

@@ -1,0 +1,2 @@
+check K105: exit 0 (expected 0) in 791434 ms | output 0713347502a8 | event 107 head 1c3f4549824b
+  /home/user/z4-workers/q1-E13/report.md — STANDS 4, DEFECT 3, NOT CHECKED 1. (E1) and (E3) are proved in writing (unreviewed), with o(1) uniform on the tube, but the explicit bound is useless at β ≤ 16384 (13.8 against a measured 0.06).

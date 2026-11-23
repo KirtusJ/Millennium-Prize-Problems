@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/q1-harnack/harnack_check.py", line 32, in <module>
+    from scipy.special import ive
+ModuleNotFoundError: No module named 'scipy'

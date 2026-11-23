@@ -1,0 +1,4 @@
+P1 max|l l^T - formula| = 8.88e-16 MET
+P2 max residual (eigvec w, l p || w) = 7.49e-16 MET
+P3 max|svd-det| = 3.55e-15, valley/identity max err = 2.66e-15 MET
+P4 beta=256 L=2.0 samples=200000 fails(E1,E3)=[0, 0] max|F-M|/Err = 0.237, 0.213 MET

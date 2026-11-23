@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/q1-E13/child/mc.py", line 14, in <module>
+    from scipy.special import ive
+ModuleNotFoundError: No module named 'scipy'

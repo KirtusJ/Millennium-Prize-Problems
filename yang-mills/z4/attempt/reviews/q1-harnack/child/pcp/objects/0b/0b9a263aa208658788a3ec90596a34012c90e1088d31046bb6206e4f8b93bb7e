@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/q1-harnack/child/main.py", line 22, in <module>
+    g/=np.sqrt(h*np.sum(g**2)); assert g.min()>0, g.min()
+                                       ^^^^^^^^^
+AssertionError: -6.130211955687226e-16

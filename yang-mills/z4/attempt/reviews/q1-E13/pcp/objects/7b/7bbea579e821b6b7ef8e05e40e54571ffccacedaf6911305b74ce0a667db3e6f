@@ -1,0 +1,34 @@
+I ran the 48-case check and wrote `report.md`. C1 failed at 6 points; C2 and the sampler check passed in every case.
+
+- **Control:** the integral gives 1.000000, written to `control.txt`.
+- **Counts:** all 48 cases qualified.
+  - C1 (delta1 ≥ −4/√β − 4 SE): 42 met, 6 failed.
+  - C2 (delta3 ≤ 4/√β + 4 SE): 48 met, 0 failed.
+  - C3 (measured only): max √β·|delta1| is 7.7, 12.8, 19.4, 18.2 at β = 256, 1024, 4096, 16384. For delta3 it is 3.1, 3.3, 3.4, 4.6.
+  - Sampler: mean Re g matches I₂(β)/I₁(β) at all 4 betas (z between −1.06 and 0.85).
+- **The 6 C1 failures:** all are at a1 = 0.5 with y = 0. With c = 0, delta1 is −0.403, −0.226, −0.115, −0.059 at β = 256 to 16384. It shrinks like β^(−1/2), but √β·delta1 is about −6.5 to −7.6, which is above the constant 4 I fixed beforehand. So the data fit "delta1 ≥ −o(1)", and the failure is my own too-small constant. That scaling is only tested up to β = 16384, and the constant still creeps up slowly. delta1 is also positive elsewhere, up to +0.48 at a1 = 0.5 with y = 1.5.
+- **Failed runs kept:**
+  - The first run of `mc.py` failed because scipy is missing here (environment). I replaced the Bessel ratio with quadrature.
+  - `results_mc.json` is invalid. I caught my own bug before evaluating any predicate: the E-factor offset was counted twice in delta1. The fixed run wrote `results_mc2.json`.
+- **Grandchild (T157, released):**
+  - Question: recompute delta1 and delta3 at a1 = π/2, c = 0, y = 0, β = 1024 with independent code and seed.
+  - Its result: delta1 = −0.087 ± 0.020 and delta3 = +0.028 ± 0.019.
+  - It failed its own bound |√β·delta| ≤ 1 for delta1, which was its expectation, not a defect of the target.
+  - I reread and reran it and got identical numbers.
+  - My values at that point are delta1 = −0.113 ± 0.017 and delta3 = −0.001 ± 0.016, about 1σ apart from its values.
+  - Its first `result.md` is stale because of its own NaN bug; use `grandchild/run2/result.md`.
+- **PCP register:** both `verify` commands passed. The last lines are:
+  - Python: "result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)"
+  - Rust: "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+
+Files are in /home/user/z4-workers/q1-E13/child:
+- report.md
+- control.txt
+- mc.py
+- evalp.py
+- results_mc2.json
+- report_table.md
+- notes.md
+- grandchild/
+
+`report.md` also has the full per-point delta1/delta3 table and the rerun commands.

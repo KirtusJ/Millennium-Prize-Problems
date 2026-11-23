@@ -1,0 +1,1 @@
+N=204 h=0.03079993 idx0=102 idx=105 x=0.09239978 sqrtbeta*L(0.1)=0.375048 L(0)=np.float64(-0.0) lambda=0.8193455397 gap=7.772e-16 gmin_pos_region=-1.977e-16

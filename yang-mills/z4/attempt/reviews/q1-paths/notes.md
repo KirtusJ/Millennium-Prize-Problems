@@ -1,0 +1,15 @@
+# notes.md — worker q1-paths (T151)
+- step 0: control.txt = 0.272341 (-ln tanh 1). PCP register pcp/ initialised (method not found: expected). Lean READY exists.
+- step 1: read TUNNEL_LOWER.md, TUNNEL_LOWER2.md, oned_split.py, oned_paths.py. P' (discrete) uses each x in S, path x -> sigma x, CS along path; h = f/g odd so h(x)-h(sigma x) = 2h(x); no sign of f needed.
+- plan: Lemma P'c (flow form on an arbitrary measure space): random paths z_0=x, z_n=sigma x; pi_k = law of (z_k,z_{k+1}) under g^2 1_S dx; if sum_k pi_k <= rho Q (Q = T g g dz dz') then Delta >= 2 int_S f^2 / (n rho). Chain-of-balls construction: z_k = c_k(x) + uniform noise in a ball of radius r/sqrt(beta).
+  Remark to make: the brief's ball-to-ball form (mean_{B0} h - mean_{BN} h)^2 <= ... needs a lower bound on |mean_{B0} h|, i.e. a sign/concentration fact about f in the well; the flow form starting at each point x avoids it.
+- step 2: child admitted as T153 (parent T151); child/PROMPT.txt written (control: Gaussian tilt integral beta=4,rho=1, known e^{1/2}=1.648721). Launching child-run1 in background.
+- step 3: flow_paths.py (predicates F0-F5 fixed in docstring). K1 smoke (16,64): 4 met. K2 main (16..4096): F1 (Lemma P'c, Bflow <= Delta) MET 5/5; F2 (crude explicit bound <= Bflow) MET 5/5; F3 (loss <= beta^3) MET 4/4; F5 MET.
+  F0 FAILED (beta >= 256): my direct evaluation of E(h) = 1/2 sum T (f_i g_j - f_j g_i)^2/(g_i g_j) has a rounding floor ~1e-29 from well-well pairs (h ~ 1, f g - f g cancels to 1e-16 relative). Defect of MY program (numerics), not of the target; the identity value of Delta agrees at beta 16, 64 to 1e-14.
+  F4 FAILED: my expectation. -log Bflow/sqrt(beta) = 4.656, 4.586, 4.548, 4.540, 4.546 crosses below c*=4.6054 and comes back: -log Delta/sqrt(beta) -> c* from below (4.43 at 4096), the path loss log(Delta/Bflow) ~ 0.9-1.5 log beta from above. Not monotone; consistent with limsup <= c*.
+  Delta/Bflow = 73, 176, 366, 758, 1583: ~ beta^{0.9..1.5}, polynomial (the brief's requirement).
+- step 4: Paths.lean (path_cs, telescope, close_bound, tilt_square, odd_sq): first try failed (tilt_square unsolved goal -> sorryAx; my proof defect), fixed via s=sqrt beta; exit 0, axioms propext/Classical.choice/Quot.sound, recorded as check lean-paths.
+- step 5: PATHS.md written (P'c, Cor B, CB + why insufficient, 1D continuum theorem, SU(2)^2 transfer table).
+- step 6: child T153 returned (check K4 exit 0, 224 s). Control 1.648721 = e^{1/2}: CORRECT (graded first). Released T153. Child: L<=M<=R 7/7 betas (16..256); Delta(identity)=Delta(E(h)) to 1e-49 (Decimal) -> confirms my F0 failure is my float numerics. Child P7 "h odd under x->-x" failed: my prompt said "odd" meaning sigma-odd; wording defect of MY prompt, h is sigma-odd. P10 Delta moves 1.5% kappa 0.25->0.125 (grid quadrature; exponent unaffected). Grandchild T155: control e^2 correct; Delta direct vs identity at beta=16 rel 1.4e-10.
+- step 7: reran child's chain.py (check K5, betas 16,64): identical L, M, R, Delta to all printed digits.
+- step 8: report.md written; pcp verify PASS (python + rust). Done.
