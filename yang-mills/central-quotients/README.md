@@ -74,3 +74,7 @@ For compact connected simple groups at fixed spatial mesh, a local heat-kernel c
 ## Real-time propagation under spatial refinement
 
 For compact-group Wilson Hamiltonians the commutator of separated loops obeys a volume-uniform bound with speed proportional to \(b\sqrt{\kappa\lambda}\) in physical units. This remains finite along the bare \(SU(2)\) weak-coupling trajectory. A two-plaquette calculation detects transmission in the normalized adjoint sector. The positive Wilson transfer inherits the resulting vacuum commutator limit along an explicit procedure for choosing the time spacing. [Propagation theorem](locality/) · [Wilson real-time comparison](locality/wilson-real-time.md)
+
+## Spatial correlations and a proposed mass threshold
+
+A finite-time spectral filter bounds the connected spacetime correlation predicted by a gap and gives a lower bound on the mass in a compact positive-energy band from three Euclidean readings. In the established small-magnetic-coupling interval it yields a spatial and Euclidean-time clustering bound even for bounded electric projectors. [Filter and inverse test](clustering/) · [Physical constants](clustering/strong-coupling.md)
