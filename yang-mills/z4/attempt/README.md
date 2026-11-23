@@ -26,3 +26,5 @@ State on 23 November 2026: attempt 1 is broken at (A) on all four routes tried (
 Later on 23 November 2026: attempt 2 takes the gap at every coupling as a hypothesis and writes the rest as a conditional theorem to the Osterwalder–Schrader axioms. For SU(2), of its five lattice hypotheses two are proved, and they are the two that hold for U(1) as well.
 
 G4 combined Z4’s pressure estimate with a conditional Wilson calculation. Each elementary plaquette residual has a refinement-uniform transmission and coarse-coupling bound. A separate estimate covers networks of erased straight holonomies, and a growing local low-spin space remains open. [Joint proof and tests](../../joint-refinement/low-spin/README.md)
+
+G4 obtained a uniform covariance and coarse-coupling estimate for a growing family of disjoint plaquette contrasts. For unfiltered local readings, the remaining raw covariance norm of one orientation equals the connected variance of the Z4 plane sum per spatial site. [Covariance proof, spectator controls and matched data](../../joint-refinement/plaquette-covariance/README.md)
