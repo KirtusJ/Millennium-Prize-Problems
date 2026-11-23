@@ -616,7 +616,7 @@ $r_b'-r_b\le0.17\,r_b^3$ for $r_b\le\frac18$:
 \begin{equation}\label{tu:L-err-explicit}
 {\rm Err}\le\frac1{\sqrt\beta}\Big[L(M+2L)^2\Big(2.2\,h_-+\frac{6.4}{s_-^2}\Big)+L^2\big(0.51(H_\Psi+H_\Theta)+0.03(\Lambda+\theta_0)\big)\Big].
 \end{equation}
-With $L=\sqrt{C\log\beta}$, $C>\pi^2/4$, this is $O((\log\beta)^{3/2}\beta^{-1/2})$ (the outer term is $Q\le\beta^{-2C/\pi^2+o(1)}$ by Lemma~\ref{tu:L-tails}(b) and the tail of (a) is $\beta^{-C/2+o(1)}$; for $C\le\pi^2/4$ these still tend to $0$ but $Q$ is then not $O((\log\beta)^{3/2}\beta^{-1/2})$, and for $C=1$ it is in fact at least a constant times $L\beta^{-1/2}e^{\Lambda L}$); $|{\rm gap}|,|{\rm gap}_3|$ are bounded by
+With $L=\sqrt{C\log\beta}$, $C>\pi^2/4$, this is $O((\log\beta)^{3/2}\beta^{-1/2})$ (the global envelope of Lemma~\ref{tu:L-tails}(b) gives $Q\le\beta^{-2C/\pi^2+o(1)}$, which guarantees the rate for $C>\pi^2/4$, and the tail of (a) is $\beta^{-C/2+o(1)}$; for smaller $C$ the envelope does not decide, and for $C=1$ the rate fails, $Q$ being then at least a constant times $L\beta^{-1/2}e^{\Lambda L}$); $|{\rm gap}|,|{\rm gap}_3|$ are bounded by
 \eqref{tu:L-gap-unif}, $O(\beta^{-1/2})$; ${\rm Tail}/J$ and $Q$ are $O(\beta^{-c})$, $L^4/\beta\to0$, and
 $\log\varrho=O(\beta^{-2/3})$, $-\log\varrho\le-\log D_\beta=O(1/\beta)$. On $\mathcal T$: $S\ge s_-$, so
 $h\le h_-=1+\sqrt{1+s_-^2}/s_-$; no lower bound on $\sigma_w$ is used (the bounds of Lemma~\ref{tu:L-gauss} have $D_w\ge1$
@@ -989,7 +989,7 @@ Proposition~\ref{tu:L-E13} and $R_\beta$, all fixed before $\beta\to\infty$. The
 \begin{enumerate}
 \item Lemma~\ref{tu:L-L4} gives $\lambda,\lambda_{eo}\ge e^{-\eta/4}$; (B) (Proposition~\ref{tu:U-B}) and Lemma~\ref{tu:L-M4} give
 $\int_{\mathcal S}f^2\ge\frac12$ and $m_B\ge\frac18$, where $\mathcal S:=C_\eta\cap\{V\le1\}$ (a set; not the radius $S$).
-\item Corollary~\ref{tu:L-H4cor} gives $g\ge\mu$ on $D_M\cup\sigma_1D_M\supset R_{\rm well}$ and on $\mathcal S$.
+\item Corollary~\ref{tu:L-H4cor} gives $g\ge\mu$ on $R_{\rm well}$ and on $\mathcal S$ (using the center symmetries). It does not give this on all of $D_M\cup\sigma_1D_M$: the coefficient $35(a_-+r_0)$ is derived on the junction and the corners only, and nothing more is used below.
 \item Proposition~\ref{tu:L-sub} gives $g\ge\varphi$ on $X$.
 \end{enumerate}
 
