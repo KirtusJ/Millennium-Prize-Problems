@@ -1,0 +1,2 @@
+check K36: exit 0 (expected 0) in 304507 ms | output 56b54681e747 | event 42 head 3591257666b7
+  C:\Users\donke\z4-workers\r8-contact\report.md: 9 STANDS, 1 DEFECT (wording), 2 NOT CHECKED. Predicates: 14 met, 0 failed, 9 measured only. Free check on the 4D lattice: 1/18 is 13% of the free total of 0.422 and 41% of the free removable part of 0.134.

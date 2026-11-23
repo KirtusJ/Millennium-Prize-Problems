@@ -1,0 +1,4 @@
+G(0) Schwinger/trapezoid = 0.154932559  (main 0.154932242 + tail 3.17e-07; M=8192, 6000 u-nodes, T=20000.0)
+midpoint n=48: 0.1549029  n=64: 0.1549162  Richardson(h^2): 0.1549334
+known: 0.15493339
+PREDICATE |G-0.15493339|<2e-6: PASS

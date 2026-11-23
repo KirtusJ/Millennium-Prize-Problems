@@ -325,3 +325,50 @@ This is the form A4, C4 and D4 use (positive measures, not finite sums). The gap
 Counts, as met, failed, measured only: wildcard 6, 0, 2 and its sub-agent 2, 0, 0; measure-form Lean 4, 0, 0 on the final file with failed intermediate compiles kept; repair 11 of 13 register checks as expected (two the worker's own defect, kept).
 
 Director, workers and sub-agents are one model family; this is not independent review.
+
+
+## Seventh round: free-field known answers for A4's, C4's and D4's weak-coupling statements
+
+23 November 2026. Three workers (register checks K35, K36, K37), each with a sub-agent and its own register; all six replay. Reports: [`reviews/r8-contact/`](reviews/r8-contact/), [`reviews/r8-graphs/`](reviews/r8-graphs/), [`reviews/r8-tangent/`](reviews/r8-tangent/). The director reread the three reports and reran the two free-propagator programs (same numbers to the printed digits). The other directors' notes were read, not replayed: their Lean files and programs were not supplied to the workers.
+
+By now four lanes have statements at weak bare coupling on the four-dimensional Wilson lattice. Each has a leading-order free-field prediction that can be computed exactly. That is what this round supplies. Agreement with a free-field value checks constants and conventions; it is not evidence for the interacting statement beyond leading order.
+
+Free four-dimensional lattice numbers used below (periodic lattice, zero modes removed, per colour, unit coupling): plaquette variance 1/2 exactly in infinite volume and (1 − L⁻⁴)/2 on an L⁴ torus (equipartition, 2/d); parallel plaquettes one step apart 0.06887475; plaquettes sharing a link −0.06887475 coplanar and +0.10778131 perpendicular; lattice Green function at the origin 0.15493339 as the programs' control.
+
+### A4, removable contact variance (`observable-normalization/energy-density/wilson-contact`)
+
+- The theorem, restated: on the isotropic SU(2) Wilson measure, for O_b = (β/b)·Σ f·(1 − x_p) on one slice, an explicit conditional link average removes at least D_b of the variance, exactly at fixed cutoff, and b⁵D_b → (1/36)∫Σ_i(Σ_{j≠i} f)², which is ‖f‖²/18 for one orientation, as β and L → ∞. It bounds the variance removed and the error of any predictor built from outside the slice; it does not give the variance. Readings at time distance two or more are unchanged; distance two is 2b in physical time.
+- Conversion, unambiguous: β(1 − x_p) = Σ_a θ_a²/(2g²) + O(g²), so A4's observable is three colours at prefactor ½ of this folder's smeared B². Free total coefficient of b⁻⁵ on the four-dimensional lattice: 0.75·c₄ with c₄ = 0.56258, that is 0.4219·∫f². On the Hamiltonian lattice of this folder c_H = 1.45682: the coefficient changes by a factor 2.59 between the two regularizations, as a contact term may.
+- A4's 1/18 = 0.0556 is 13% of the free total. Exact Gaussian conditioning on A4's mask removes 0.13407 = 0.05556 (radial) + 0.07851 (transverse); the radial part is 1/18 to the digits computed. So A4's coefficient is exactly the radial part of the free removable variance, and the transverse part, dropped by A4's estimate, would raise it about 2.4-fold. That is a possible strengthening for A4, not a defect.
+- A4's 4⁴ run at β = 2.2 checks the variance identity (3.706 against 2.063 + 1.622, residual 0.021 ± 0.043) and nothing about the asymptotic coefficient; its two-step residual has an error bar a hundred times the signal.
+- One sentence of A4's README overreaches: "interacting counterpart of the free magnetic benchmark". The benchmark has an asymptotic equality; A4 has a lower bound on a removable part of a different observable on a different lattice. It is the counterpart of "at least b⁻⁵".
+- A side result for this folder: the benchmark constant 8.110·10⁻³ of `fixed-size/STATEMENT.md` equals c_H·(πσ²)^(3/2) = 8.112·10⁻³ for the Gaussian of width 0.1 used there, from an exact lattice sum by a different program: agreement to 0.03%.
+
+### C4, tangent curvature (`central-quotients/tangent-curvature`)
+
+Nine items stand, none broken.
+
+- The theorem, restated: time period to infinity first at fixed β and L, then β and L to infinity jointly; cells fixed in lattice units; the rescaled curvature √β·Im U_p converges, in finite-dimensional distributions and all polynomial moments, to a Gaussian field with covariance the projection onto exact 2-cochains. b never tends to zero. Fixed L with β → ∞ is not covered.
+- Known answers: C4's single-face law N(0, I₃/2) against the free value 1/2; C4's time-step covariance 0.06887475 against 0.06887475; C4's single-edge variance 6 against 6.000000; the plaquette action β(1 − x) → χ²₃/4 with mean 3/4 and variance 3/8; the spectral constants 3ε⁸/(2π⁴·8!) and the dipole coefficients rederived by hand. No factor of disagreement anywhere.
+- What C4 does not say and could: its limit is the free lattice Maxwell curvature field with three colours. Saying so makes plain that the vanishing gap in lattice units is the photon's, and carries no information about the Yang–Mills gap. C4's own scope sentences are correct: the physical gap is left open and no rate for a physical-time limit is established.
+- Not checked: the tightness and Ward-identity steps, the odd-period reflection-positivity construction, the weak convergence of spectral measures, and the two estimates imported from files outside the folder.
+
+### D4 graph holonomies and B4 coarse holonomies
+
+- D4's main theorem, as read: on a graph of fixed positive physical edge lengths, with b(1 + β) → 0, the holonomies converge to product Haar and unit-variance correlations with any other slice vanish. This is a statement at fixed physical size. Its mean-normalization result is for a staple-compensated path, not an ordinary Wilson loop; D4 says it gives no answer for the uncompensated loop.
+- D4's thread statement β²C(t) → (3/2)K(t)² for the centered trace of a fixed lattice square is confirmed at leading order: ½Tr W = cos(g|Φ|/2) gives covariance (3/32)g⁴K² = (3/2)K²/β², with K the flux kernel per colour in lattice units (simulation ratios 0.989 and 0.997). The three-loop statement 6·det K(t) is confirmed as the unnormalized covariance. Neither statement was in D4's committed notes at the snapshot read. Free values of K for D4's setting, four-dimensional lattice time n = 1..4: unit square 0.068875, 0.011153, 0.002262, 0.000605; 2×2 square 0.264069, 0.061446, 0.017644, 0.006224. This folder's Hamiltonian-time kernel differs (ratio 0.94 at n = 1, above 1.19 for n ≥ 2) and must not be used for D4's lattice.
+- B4's bounds hold at any coupling on a fixed finite lattice for a contour of m lattice links and are independent of the time separation, so they show no decay. Two wordings stronger than the theorems: "sharp uniform threshold" (sharpness is shown for two chosen exteriors) and the physical-unit scaling, which assumes B = O(log(1/b)).
+- Coverage, both lanes: no result yet for an ordinary loop of fixed physical size under mean normalization, the object of `fixed-size/WILSON_LOOP.md`.
+
+### Defects of the director's own briefs, kept
+
+- The brief asked the worker to locate D4's (3/2)K² claim "in the notes"; it was on the thread only. The brief also assumed strong-coupling statements in B4's folder that were announced on the thread and not yet committed.
+- The brief said the mean-normalized covariance of the SU(2) trace should vanish "like 1/β" at weak coupling. Wrong: the real trace has no linear term, so it is (3/2)K²/β², of order 1/β². The U(1) loop of `WILSON_LOOP.md` has the linear term; SU(2) does not.
+
+Counts, as met, failed, measured only: contact 7, 0, 6 and its sub-agent 7, 0, 3; graphs 12, 2, 5 (the two failures are the brief's wrong premises above) and its sub-agent 4, 0, 0; tangent 9, 1, 6 (one failure the worker's own lattice Green function, corrected and kept).
+
+### Reading
+
+At leading order the four lanes are describing one object from four sides: the free lattice gauge field with three colours. C4 has its curvature law at cutoff scale; A4 has a lower bound on its contact variance; D4 has the square-loop covariance; this folder has its positive-time correlators at fixed physical size. All constants now agree where they can be compared. What none of them has is the first quantity that is not free: a correction of relative order g² to any positive-time correlator at fixed physical size, with control of its logarithm. That logarithm is where the running coupling, and so any physical scale, would first appear.
+
+Director, workers and sub-agents are one model family; this is not independent review.

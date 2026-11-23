@@ -1,0 +1,8 @@
+# notes (r8-graphs challenger)
+
+- step0: control.txt = 0.272341 (-ln tanh 1). PCP register pcp initialised.
+- step1: read D4 README, graphs, mean-normalization, second-scale, reconstruction, execution, parts of crossover/mixing. The claim 'beta^2 C(t)=(3/2)K(t)^2' and '6 det K(t)' is NOT FOUND in any D4 file (grep for 3/2, det, K(t), square, Gaussian). D4 main theorem regime: b(1+beta)->0, fixed physical graph (joint limit). D4 explicitly says (second-scale end) its coefficients refer to WP^-1, not the uncompensated loop.
+- step2: analytic G2: (1/2)TrW = cos(g|Phi|/2) at Gaussian order; centered X=-(g^2/8)(|Phi|^2-E); Cov = (g^4/64)*3*2*G^2 = (3/32)g^4 G^2 = (3/2)G^2/beta^2 with beta=4/g^2. So 3/2 holds iff K=G (g-independent flux kernel, Z4's normalization; per colour theta_a = g*Phi_a). Mean-normalized covariance -> same, O(1/beta^2) NOT O(1/beta): SU(2) trace is real, no linear term (contrast U(1) benchmark g^2 G). Order-difference observable ~ eps_abc Phi1_a Phi2_b Phi3_c: cross-time Wick sum = sum_sigma sgn(sigma) prod K * eps.eps = 6 det K. Writing g2_check.py.
+- step3: g2_check.py run (K1 exit 1 because P3c failed). results_g2_20261123_013922.txt: met 12 failed 2 measured 5. P3c failure = my expectation (K4/KH ratio not monotone to 1 for n<=4; crosses 1). K4(0)=0.5 = 1/(2beta) equipartition; gives SU(2) plaquette mean 3/4 matching D4 second-scale. Sub-agent returned: B4 has no strong-coupling statement.
+- step4: verified child rows README:41, :45, :55 verbatim; grep confirms no strong/tube in B4. Rerun of child/check_b4.py: K2,K3 exit 1 = my own invocation with python -I (numpy in user site, not importable); K4 without -I.
+- step5: report.md written. verify PASS.

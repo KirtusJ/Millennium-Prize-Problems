@@ -1,0 +1,9 @@
+k0 formula check err 1.11e-16
+n=64 {'G4_0': np.float64(0.5000000077907497), 'G4_e2': np.float64(-0.0688747380150043), 'c4': np.float64(0.5625797293229118), 'cH': np.float64(1.456824968161596), 'GH_0': np.float64(0.7958674220737332)}
+n=96 {'G4_0': np.float64(0.5000000015373838), 'G4_e2': np.float64(-0.06887474430007512), 'c4': np.float64(0.5625797320922167), 'cH': np.float64(1.4568249709309005), 'GH_0': np.float64(0.7958674158236034)}
+c4 0.562580 cH 1.456825 c4/cH 0.3862
+G4(e2) -0.068875  E(thb_p-thb_p')^2 0.471083
+A4 total free coeff T=0.75 c4 = 0.421935; Hamiltonian analogue 0.75 cH = 1.092619
+free removable R = 0.134069 (radial 0.055556 + transverse 0.078514)
+A4 1/18 = 0.055556;  (1/18)/R = 0.4144; (1/18)/T = 0.1317; R/T = 0.3177
+predicates P1=met P2=met P3=met P4=met P5=met P6=met P7=met

@@ -1,0 +1,4 @@
+PASS P1: 4D grid n=32 G4(0)=0.500000000000000
+PASS P2: 3D reduced n=256 G4(0)=0.5000000000
+PASS P3: max rel err k4 formula = 6.66e-16
+wrote control_result_20261123_014002.txt

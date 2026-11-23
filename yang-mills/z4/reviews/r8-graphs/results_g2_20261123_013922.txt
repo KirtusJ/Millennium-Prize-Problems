@@ -1,0 +1,20 @@
+P0: MET | max err 1.11e-16
+P1(K=0.3): MET | beta^2 Cov=0.13356 pred 1.5K^2=0.13500 ratio=0.9893 tol=0.0548
+P1b(K=0.3): MET | ratio with K=g^2G: 9.893e+03
+MEASURED: K=0.3: mean-normalized Cov/M^2 * beta^2 = 0.13456 (O(1/beta^2), not 1/beta)
+P1(K=0.6): MET | beta^2 Cov=0.53830 pred 1.5K^2=0.54000 ratio=0.9969 tol=0.0383
+P1b(K=0.6): MET | ratio with K=g^2G: 9.969e+03
+MEASURED: K=0.6: mean-normalized Cov/M^2 * beta^2 = 0.54236 (O(1/beta^2), not 1/beta)
+P2: MET | E[O0 Ot]=0.7559 6detK=0.7435 SE=0.0086
+P3a(R=1): MET | max rel change M=96->160: 2.69e-06
+P3b(R=1): MET | K4(n)=[0.068875 0.011153 0.002262 0.000605]
+P3c(R=1): FAILED | |K4/KH-1|=[0.0638 0.1907 0.2818 0.2339]
+P3d(R=1): MET | K4(1)/KH(1)=0.9362
+MEASURED: R=1: KH(t)=[0.073569 0.009367 0.001765 0.000491]; (3/2)K4(n)^2=[7.11559596e-03 1.86574673e-04 7.67658009e-06 5.49757312e-07]
+P3a(R=2): MET | max rel change M=96->160: 3.74e-06
+P3b(R=2): MET | K4(n)=[0.264069 0.061446 0.017644 0.006224]
+P3c(R=2): FAILED | |K4/KH-1|=[0.086  0.0521 0.1023 0.0997]
+P3d(R=2): MET | K4(1)/KH(1)=0.9140
+MEASURED: R=2: KH(t)=[0.288909 0.058403 0.016007 0.00566 ]; (3/2)K4(n)^2=[1.04598671e-01 5.66343633e-03 4.66953204e-04 5.81137690e-05]
+MEASURED: R=1 K4(0) (per-colour equal-time flux variance, lattice units) = 0.500000 (exact free value 1/4 for theta_12 with 4D Feynman propagator -> check: 2*(1/4)... see notes)
+met=12 failed=2 measured=5

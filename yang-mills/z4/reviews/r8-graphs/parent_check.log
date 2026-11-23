@@ -1,0 +1,2 @@
+check K35: exit 0 (expected 0) in 270191 ms | output f6249276632d | event 41 head ec4129ec75a5
+  C:/Users/donke/z4-workers/r8-graphs/report.md — STANDS 9, DEFECT 4, NOT CHECKED 2 (predicates met, failed, measured only: 12, 2, 5; both failures were my wrong expectation, not a target defect).

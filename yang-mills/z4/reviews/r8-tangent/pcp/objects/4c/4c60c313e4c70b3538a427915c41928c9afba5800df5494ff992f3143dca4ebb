@@ -1,0 +1,74 @@
+P0 G(0) M=48: 0.31941533 (known 0.15493339) -> False
+P1 max|P^2-P|=6.66e-16, max|trP-3|=1.78e-15 -> True
+P2 torus L=4: <th12^2>=0.498046875000000 expected 0.498046875000000 diff -5.6e-17
+P2 torus L=8: <th12^2>=0.499877929687500 expected 0.499877929687500 diff -5.6e-17
+P2 torus L=16: <th12^2>=0.499992370605469 expected 0.499992370605469 diff -5.6e-17
+P3 inf vol <th12^2> M=48: 0.50000000 (M=32 0.50000000); 2/d=0.5 -> True
+P4 cov(th12(0),th12(e4)) = 0.06887475 (M=32 0.06887474); C4 C1(1)=0.06887475 -> True
+P5 edge variance = 6.000000 (expect 6) -> True
+   P6 case i=1 j=2 n=0: cov(sep 1 e_1) = -0.068875 ok
+   P6 case i=1 j=2 n=1: cov(sep 3 e_1) = -0.002262 ok
+   P6 case i=1 j=2 n=2: cov(sep 5 e_1) = -0.000213 ok
+   P6 case i=1 j=2 n=3: cov(sep 7 e_1) = -0.000048 ok
+   P6 case i=1 j=2 n=4: cov(sep 9 e_1) = -0.000017 ok
+   P6 case i=1 j=3 n=0: cov(sep 1 e_1) = -0.068875 ok
+   P6 case i=1 j=3 n=1: cov(sep 3 e_1) = -0.002262 ok
+   P6 case i=1 j=3 n=2: cov(sep 5 e_1) = -0.000213 ok
+   P6 case i=1 j=3 n=3: cov(sep 7 e_1) = -0.000048 ok
+   P6 case i=1 j=3 n=4: cov(sep 9 e_1) = -0.000017 ok
+   P6 case i=1 j=4 n=0: cov(sep 1 e_1) = -0.068875 ok
+   P6 case i=1 j=4 n=1: cov(sep 3 e_1) = -0.002262 ok
+   P6 case i=1 j=4 n=2: cov(sep 5 e_1) = -0.000213 ok
+   P6 case i=1 j=4 n=3: cov(sep 7 e_1) = -0.000048 ok
+   P6 case i=1 j=4 n=4: cov(sep 9 e_1) = -0.000017 ok
+   P6 case i=2 j=1 n=0: cov(sep 1 e_2) = -0.068875 ok
+   P6 case i=2 j=1 n=1: cov(sep 3 e_2) = -0.002262 ok
+   P6 case i=2 j=1 n=2: cov(sep 5 e_2) = -0.000213 ok
+   P6 case i=2 j=1 n=3: cov(sep 7 e_2) = -0.000048 ok
+   P6 case i=2 j=1 n=4: cov(sep 9 e_2) = -0.000017 ok
+   P6 case i=2 j=3 n=0: cov(sep 1 e_2) = -0.068875 ok
+   P6 case i=2 j=3 n=1: cov(sep 3 e_2) = -0.002262 ok
+   P6 case i=2 j=3 n=2: cov(sep 5 e_2) = -0.000213 ok
+   P6 case i=2 j=3 n=3: cov(sep 7 e_2) = -0.000048 ok
+   P6 case i=2 j=3 n=4: cov(sep 9 e_2) = -0.000017 ok
+   P6 case i=2 j=4 n=0: cov(sep 1 e_2) = -0.068875 ok
+   P6 case i=2 j=4 n=1: cov(sep 3 e_2) = -0.002262 ok
+   P6 case i=2 j=4 n=2: cov(sep 5 e_2) = -0.000213 ok
+   P6 case i=2 j=4 n=3: cov(sep 7 e_2) = -0.000048 ok
+   P6 case i=2 j=4 n=4: cov(sep 9 e_2) = -0.000017 ok
+   P6 case i=3 j=1 n=0: cov(sep 1 e_3) = -0.068875 ok
+   P6 case i=3 j=1 n=1: cov(sep 3 e_3) = -0.002262 ok
+   P6 case i=3 j=1 n=2: cov(sep 5 e_3) = -0.000213 ok
+   P6 case i=3 j=1 n=3: cov(sep 7 e_3) = -0.000048 ok
+   P6 case i=3 j=1 n=4: cov(sep 9 e_3) = -0.000017 ok
+   P6 case i=3 j=2 n=0: cov(sep 1 e_3) = -0.068875 ok
+   P6 case i=3 j=2 n=1: cov(sep 3 e_3) = -0.002262 ok
+   P6 case i=3 j=2 n=2: cov(sep 5 e_3) = -0.000213 ok
+   P6 case i=3 j=2 n=3: cov(sep 7 e_3) = -0.000048 ok
+   P6 case i=3 j=2 n=4: cov(sep 9 e_3) = -0.000017 ok
+   P6 case i=3 j=4 n=0: cov(sep 1 e_3) = -0.068875 ok
+   P6 case i=3 j=4 n=1: cov(sep 3 e_3) = -0.002262 ok
+   P6 case i=3 j=4 n=2: cov(sep 5 e_3) = -0.000213 ok
+   P6 case i=3 j=4 n=3: cov(sep 7 e_3) = -0.000048 ok
+   P6 case i=3 j=4 n=4: cov(sep 9 e_3) = -0.000017 ok
+   P6 case i=4 j=1 n=0: cov(sep 1 e_4) = -0.068875 ok
+   P6 case i=4 j=1 n=1: cov(sep 3 e_4) = -0.002262 ok
+   P6 case i=4 j=1 n=2: cov(sep 5 e_4) = -0.000213 ok
+   P6 case i=4 j=1 n=3: cov(sep 7 e_4) = -0.000048 ok
+   P6 case i=4 j=1 n=4: cov(sep 9 e_4) = -0.000017 ok
+   P6 case i=4 j=2 n=0: cov(sep 1 e_4) = -0.068875 ok
+   P6 case i=4 j=2 n=1: cov(sep 3 e_4) = -0.002262 ok
+   P6 case i=4 j=2 n=2: cov(sep 5 e_4) = -0.000213 ok
+   P6 case i=4 j=2 n=3: cov(sep 7 e_4) = -0.000048 ok
+   P6 case i=4 j=2 n=4: cov(sep 9 e_4) = -0.000017 ok
+   P6 case i=4 j=3 n=0: cov(sep 1 e_4) = -0.068875 ok
+   P6 case i=4 j=3 n=1: cov(sep 3 e_4) = -0.002262 ok
+   P6 case i=4 j=3 n=2: cov(sep 5 e_4) = -0.000213 ok
+   P6 case i=4 j=3 n=3: cov(sep 7 e_4) = -0.000048 ok
+   P6 case i=4 j=3 n=4: cov(sep 9 e_4) = -0.000017 ok
+P6 reflection sign: 60 of 60 cases <= 0 -> True
+P7 dipole C(0)=0.86225051 vs 2(diag-par)=0.86225051 -> True
+measured: parallel e3 0.06887475; at 3e3 0.00226224; coplanar e1 -0.06887475; perpendicular th12.th13 0.10778131
+measured L=16 torus (k=0 dropped): 0.49999237, 0.06886731, 0.06886731, 0.00225647, -0.06888257, 0.10778126
+P8 moments formula ok=True; MC E Y=0.74999 (3/4), Var Y=0.37512 (3/8) -> True
+SUMMARY P0:FAILED P1:met P2:met P3:met P4:met P5:met P6:met P7:met P8:met
