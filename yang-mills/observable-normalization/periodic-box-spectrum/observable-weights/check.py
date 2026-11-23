@@ -84,6 +84,11 @@ def loop_check():
         if prev is not None:
             assert np.max(err) < .65*np.max(prev)
         prev = err
+    expected_cross = 2*curl@np.cross(x[0],x[1])
+    for h in (1e-3,1e-4,1e-5,1e-6):
+        measured = (sample(h,x,z)[0]-expect[0])/np.sqrt(h)
+        assert abs(measured-expected_cross)<0.13*np.sqrt(h)
+    print("last rescaled plaquette correction",measured,"predicted",expected_cross)
 
 
 def threshold_check():
