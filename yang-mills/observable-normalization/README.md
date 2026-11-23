@@ -38,3 +38,5 @@ For a candidate transfer Hamiltonian and centered vector, the two inputs are the
 [Three periodic Wilson partition functions](replica-gap/) bound the full finite-box transfer gap. At the SU(2) electric endpoint the first multiplet gives an explicit magnetic susceptibility, dispersion, and two-copy measurement variance.
 
 [Uniform isolation of the first Wilson transfer band](uniform-band/) gives the volume-independent spectral estimate and its strong-coupling mass expansion.
+
+[Boundary weight above the bulk static spectrum](boundary-weight/) bounds the fraction carried by a fixed open-cube boundary layer.
