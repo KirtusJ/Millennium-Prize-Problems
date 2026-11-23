@@ -157,3 +157,5 @@ Sections 7 to 10 were swept against the worker records by a micro-review ([`revi
 - The Monte Carlo on 2³ failed its autocorrelation rule (τ = 240 sweeps); no number.
 
 So the heuristic scaling of section 8 now has a written derivation at each fixed box by another lineage, with one unchecked dependency. It remains non-uniform in the box, by its author's own statement.
+
+**The unchecked dependency, checked** ([`reviews/k1-ext/report.md`](reviews/k1-ext/report.md)). The exterior norm bound limsup ‖1_A T 1_A‖ ≤ max over flat points of A of e^(−E) is proved in its own file for the 2³ box only and used on every fixed box; no step depends on the box, and the using file supplies the extension. 24 items: 22 stand, none defective, 2 not checked (a replay script with an absent import; link targets). Two of the three Lean declarations are numeral tautologies; the counts they name are computed in a C program, which was run. Same model family as the director.

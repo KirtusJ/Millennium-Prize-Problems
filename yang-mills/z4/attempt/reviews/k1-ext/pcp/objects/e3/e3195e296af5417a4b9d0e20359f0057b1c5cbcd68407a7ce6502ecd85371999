@@ -1,0 +1,7 @@
+LEAN-BEGIN
+import Mathlib.Tactic.Ring
+import Mathlib.Data.Real.Basic
+namespace TwoSiteExterior
+theorem centralRank : (42 : ℕ) = 42 := by decide
+LEAN-END
+NEXT 1 4 3

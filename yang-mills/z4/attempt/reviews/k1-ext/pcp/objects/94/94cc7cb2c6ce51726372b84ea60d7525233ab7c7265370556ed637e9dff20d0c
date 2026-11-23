@@ -1,0 +1,25 @@
+MET  A.eig sigma=0.2500 grid=0.7807764064 exact=0.7807764064 diff=0.00e+00
+MET  A.vec sigma=0.2500 positive=True logquad_resid=8.88e-16 alpha=0.128847
+MET  A.eig sigma=1.0000 grid=0.4142135624 exact=0.4142135624 diff=1.67e-16
+MET  A.vec sigma=1.0000 positive=True logquad_resid=1.78e-15 alpha=0.707107
+MET  A.eig sigma=1.4142 grid=0.3178372452 exact=0.3178372452 diff=-1.11e-16
+MET  A.vec sigma=1.4142 positive=True logquad_resid=5.33e-15 alpha=1.224745
+MET  A.eig sigma=1.7321 grid=0.2679491924 exact=0.2679491924 diff=0.00e+00
+MET  A.vec sigma=1.7321 positive=True logquad_resid=2.66e-15 alpha=1.732051
+MET  A.eig sigma=3.0000 grid=0.1622776602 exact=0.1622776602 diff=1.11e-16
+MET  A.vec sigma=3.0000 positive=True logquad_resid=6.22e-14 alpha=4.743416
+B L=5 lam=0.88034376 1-lam=1.197e-01  2pi^2*?/Ltot^2 est=1.974e-01
+B L=10 lam=0.96154370 1-lam=3.846e-02  2pi^2*?/Ltot^2 est=4.935e-02
+B L=20 lam=0.98909678 1-lam=1.090e-02  2pi^2*?/Ltot^2 est=1.234e-02
+B L=40 lam=0.99709924 1-lam=2.901e-03  2pi^2*?/Ltot^2 est=3.084e-03
+MET  B.lt1_monotone [np.float64(0.8803437604199297), np.float64(0.9615437039744141), np.float64(0.9890967795266606), np.float64(0.9970992395257194)]
+MET  B.L40_within_1e-2 1-lam=2.901e-03
+MET  C.centered b=0.7 diff=-3.33e-16
+MET  C.fixedbox b=0.7 diff=3.33e-16
+MET  C.centered b=3.0 diff=0.00e+00
+MET  C.fixedbox b=3.0 diff=3.33e-16
+MET  D1.range c (dense 2D h=0.35,L=7) grid=0.192574 exact=0.192574 diff=-1.11e-10 (tol: h=0.35 midpoint error, measured by 1D at same h below)
+   1D product at same h, L: 0.19257377355966607
+MET  D2.dense vs product-form (same box) dense=0.17303838 product=0.17303838
+MET  D2.large box approaches claim from below prod_L40=0.185193 claim=0.185732
+MET  D2.orth ratio=exp(-|c|^2/2) ratio=0.5460744266 exact=0.5460744266

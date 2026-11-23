@@ -1,0 +1,6 @@
+alpha=0.7071067812 A=0.7285533906 resid=-5.55e-17
+lambda_analytic=0.414213562373 claimed=0.414213562373 diff=-5.55e-17
+L=10 h=0.2 grid=0.414213562373 grid-analytic=1.50e-15
+L=12 h=0.1 grid=0.414213562373 grid-analytic=1.50e-15
+L=12 h=0.05 grid=0.414213562373 grid-analytic=-5.83e-15
+L=14 h=0.05 grid=0.414213562373 grid-analytic=-5.83e-15
