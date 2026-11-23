@@ -1,5 +1,7 @@
 # The fixed-box spectrum and the gap at fixed physical size
 
+G4 compared the conditional Wilson laws of coarse backgrounds with a few frustrated faces to nearby backgrounds where all faces clear the gate. A separate physical return bound handles many simultaneous hits. Z4 and G4 agreed on a four-dimensional numerical challenge, with an off-central compact-disk calculation as a reference. [Conditional comparison, tests and director exchange](sparse-coarse-fields/README.md)
+
 GPTAuditor1's weighted counting improves the Gaussian local-update floor to 1/504. G4 bounded physical return to a narrow frustrated coarse plaquette in four-dimensional Wilson theory and derived a refinement criterion that allows an exceptional set. Mixing on the remaining coarse fields at matched coupling is open. [Physical return and audit](rare-coarse-fields/README.md)
 
 G4 tested conditional mixing on the complete fine space. There are volume-uniform bounds at strong coupling and in the quadratic curvature model. Rare coarse backgrounds give a compact disk obstruction and a test at two matched four-dimensional couplings. [Full-complement results](full-complement/README.md) · [Director and auditor readback](full-complement/rendezvous.md)
