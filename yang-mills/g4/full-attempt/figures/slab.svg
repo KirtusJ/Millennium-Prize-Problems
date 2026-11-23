@@ -1,0 +1,73 @@
+<svg width="900" height="540" viewBox="0 0 900 540" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="900" height="540" opacity="1" fill="#FFFFFF" stroke="none"/>
+<text x="24" y="29" dy="0.5ex" text-anchor="start" font-family="monospace" font-size="16.935483870967744" opacity="1" fill="#1E2A3A">
+Two correlation tests in a massive free field
+</text>
+<text x="24" y="58" dy="0.5ex" text-anchor="start" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+Finite model calculation | Exact Gaussian formulas, m = s = 1. Points rounded to six decimals.
+</text>
+<text x="24" y="92" dy="0.5ex" text-anchor="start" font-family="monospace" font-size="12.096774193548388" opacity="1" fill="#1E2A3A">
+maximal correlation
+</text>
+<text x="155" y="111" dy="0.5ex" text-anchor="start" font-family="monospace" font-size="12.096774193548388" opacity="1" fill="#1E2A3A">
+Even and odd spatial sites
+</text>
+<line opacity="1" stroke="#D4DCE2" stroke-width="1" x1="155" y1="126" x2="775" y2="126"/>
+<text x="146" y="126" dy="0.5ex" text-anchor="end" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+1
+</text>
+<line opacity="1" stroke="#D4DCE2" stroke-width="1" x1="155" y1="234" x2="775" y2="234"/>
+<text x="146" y="234" dy="0.5ex" text-anchor="end" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+0
+</text>
+<circle cx="155" cy="173" r="3" opacity="1" fill="#046379" stroke="none" stroke-width="1"/>
+<circle cx="233" cy="153" r="3" opacity="1" fill="#046379" stroke="none" stroke-width="1"/>
+<circle cx="310" cy="141" r="3" opacity="1" fill="#046379" stroke="none" stroke-width="1"/>
+<circle cx="388" cy="134" r="3" opacity="1" fill="#046379" stroke="none" stroke-width="1"/>
+<circle cx="465" cy="130" r="3" opacity="1" fill="#046379" stroke="none" stroke-width="1"/>
+<circle cx="543" cy="128" r="3" opacity="1" fill="#046379" stroke="none" stroke-width="1"/>
+<circle cx="620" cy="127" r="3" opacity="1" fill="#046379" stroke="none" stroke-width="1"/>
+<circle cx="698" cy="126" r="3" opacity="1" fill="#046379" stroke="none" stroke-width="1"/>
+<circle cx="775" cy="126" r="3" opacity="1" fill="#046379" stroke="none" stroke-width="1"/>
+<text x="155" y="251" dy="0.5ex" text-anchor="middle" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+0
+</text>
+<text x="775" y="251" dy="0.5ex" text-anchor="middle" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+8
+</text>
+<text x="155" y="276" dy="0.5ex" text-anchor="start" font-family="monospace" font-size="12.096774193548388" opacity="1" fill="#1E2A3A">
+One physical time slab
+</text>
+<line opacity="1" stroke="#D4DCE2" stroke-width="1" x1="155" y1="291" x2="775" y2="291"/>
+<text x="146" y="291" dy="0.5ex" text-anchor="end" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+1
+</text>
+<line opacity="1" stroke="#D4DCE2" stroke-width="1" x1="155" y1="399" x2="775" y2="399"/>
+<text x="146" y="399" dy="0.5ex" text-anchor="end" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+0
+</text>
+<circle cx="155" cy="359" r="3" opacity="1" fill="#046379" stroke="none" stroke-width="1"/>
+<circle cx="233" cy="359" r="3" opacity="1" fill="#046379" stroke="none" stroke-width="1"/>
+<circle cx="310" cy="359" r="3" opacity="1" fill="#046379" stroke="none" stroke-width="1"/>
+<circle cx="388" cy="359" r="3" opacity="1" fill="#046379" stroke="none" stroke-width="1"/>
+<circle cx="465" cy="359" r="3" opacity="1" fill="#046379" stroke="none" stroke-width="1"/>
+<circle cx="543" cy="359" r="3" opacity="1" fill="#046379" stroke="none" stroke-width="1"/>
+<circle cx="620" cy="359" r="3" opacity="1" fill="#046379" stroke="none" stroke-width="1"/>
+<circle cx="698" cy="359" r="3" opacity="1" fill="#046379" stroke="none" stroke-width="1"/>
+<circle cx="775" cy="359" r="3" opacity="1" fill="#046379" stroke="none" stroke-width="1"/>
+<text x="155" y="416" dy="0.5ex" text-anchor="middle" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+0
+</text>
+<text x="775" y="416" dy="0.5ex" text-anchor="middle" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+8
+</text>
+<text x="465" y="465" dy="0.5ex" text-anchor="middle" font-family="monospace" font-size="12.096774193548388" opacity="1" fill="#1E2A3A">
+spatial refinements k, a = 2^-k
+</text>
+<text x="24" y="495" dy="0.5ex" text-anchor="start" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+Filled dot: point. Bar: interval. Open circle: nonzero interval with coincident rounded endpoints.
+</text>
+<text x="24" y="520" dy="0.5ex" text-anchor="start" font-family="monospace" font-size="9.67741935483871" opacity="1" fill="#1E2A3A">
+Input SHA-256  d5108238b5ecf0ffa7a7a568c1ed3306be8ebe072124b1e8d8d3a59829d6fb93
+</text>
+</svg>

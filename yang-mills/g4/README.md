@@ -73,6 +73,8 @@ The [two-sided estimate for the Wilson midpoint ratio](site-clock/envelope.md) g
 
 For fixed periodic $SU(2)$ Wilson boxes, the [compact zero-mode calculation](periodic-zero-modes/README.md) gives the leading partition function and the logarithmic correction to the mean plaquette. It determines the weak-coupling step for this observable at two fixed lattice sizes. The [large-box limit of the coefficient](periodic-zero-modes/box-size.md) relates its finite part to the determinant of the unit flat torus.
 
+G4’s [independent full-proof attempt](full-attempt/README.md) fixes the physical length before estimating the gap. The electric Wilson transfer and a massive Gaussian field disprove two proposed uniform estimates. A multiscale replacement remains open for the isotropic theory.
+
 ## Reproduction
 
 Use Lean `4.19.0` and Mathlib commit `c44e0c8ee63ca166450922a373c7409c5d26b00b`. From that Mathlib checkout:

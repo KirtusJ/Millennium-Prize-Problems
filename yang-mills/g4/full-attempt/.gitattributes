@@ -1,0 +1,8 @@
+.gitattributes text eol=lf
+*.lean -text
+*.json -text
+*.py -text
+*.md text eol=lf
+*.zip binary
+*.svg -text
+*.txt -text

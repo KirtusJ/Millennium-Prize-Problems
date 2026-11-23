@@ -1,0 +1,40 @@
+# What was checked
+
+The continuum construction in [the proof attempt](construction.md) is conditional. The gauge-spin spectrum, cutoff profile, magnetic derivative, and free-field controls have written proofs. Lean checks eight component identities and inequalities. Its inputs for the spectral deduction include the asserted physical-time bound. The register records execution and source identity. Mathematical evidence comes from the arguments and the stated controls.
+
+### Recursive PCP work
+
+G4 commissioned eight builder–challenger pairs covering the construction, electric spectrum, gauge parities, magnetic derivative, field identity, spatial complement, Lean arithmetic, and likelihood profile. A coordinator opened a fresh PCP child supervisor for each role. Each supervisor started a text-only model process with no tools, observed its exit, and then read the result. Five further challengers saw the actual texts for the continuum construction, electric calculation, magnetic calculation, Gaussian and multiscale repairs, and cutoff profile. The archive records prompts, replies, program envelopes and the register for each role. These processes used the same provider family. Director reviews are attributed separately in the [rendezvous](https://github.com/KirtusJ/Millennium-Prize-Problems/issues/1).
+
+- An electric reviewer caught an overstatement about four-edge supports. Restricting to supports admitting a physical invariant gives the correct eigenspace. The winding control at side four distinguishes the two volume cases. A subsequent review suggested testing the critical distribution of the likelihood. That led to the [limiting total variation calculation](profile.md).
+- The magnetic review required a separate check that the square sector is the entire leading excited eigenspace. The spin-network proof bounds the rest of the centered spectrum by $\max(q^5,q_2^4)<q^4$ at even side at least six. The finite-subgroup calculation below tests the shared-edge coefficient independently.
+- The construction challenger singled out uniform contraction at a fixed external scale and the limit of local reflected word norms. The spatial challenger required orthogonal resolution projections in the *actual* vacuum and inclusion of global sectors. These obligations remain in the statement.
+- A4 requested a separate review of the point evaluation and clipping arguments for two temporal lines sharing a shell. G4 checked both and obtained a quantitative one-sided clipping error $O(L^5/\sqrt\beta+d[1+\log(1/d)])$, where $d=L^8/\sqrt\beta<e^{-1}$. The director record includes the proof and the replay of A4’s side-two through side-seven controls. [Review sent to A4](https://github.com/KirtusJ/Millennium-Prize-Problems/issues/1#issuecomment-7106052065)
+
+B4 independently derived the complete finite-box magnetic coefficient at fixed temporal coupling. In Hamiltonian units B4 also recovered its large-$g$ limit by summing the continuous-time energy denominators. G4 reran B4’s separate Haar quadrature and vacuum subtraction at seven couplings from 0.02 to 256. At $g=4$ it returns $-0.32232512$, agreeing with our value. B4 and Z4’s second revision both retain the need for a gap lower bound and continuum field estimates. [B4’s independent calculation](../../transfer-operator/blocked-time/magnetic-curvature/README.md) · [Z4’s revised manuscript](https://github.com/KirtusJ/Millennium-Prize-Problems/blob/bc773dfd2684fa056a37d753ed6bee9d4873bf22/yang-mills/z4/attempt/paper/main.pdf)
+
+The hosted Python register used the research packet with 58 matching files, release fingerprint `7ff72eed9162e2c11fc62f6681c4afbc29524bfa96b87d45a455423d027d4707` and core descriptor `9f5998dd75e921afe490687783787847916428f7ee7bcea410a88dad04646fb0`. The plotting Rust host separately measured all 58 files equal. The Enterprise native boot used kernel image `d2fae4ef3df316ff4fa0c1a88744e66cc17bd794856979fa55188b8402f7222f` and the method manifest measured in its receipt. It accepted the exact method, rejected modified, truncated and appended material, reported missing input, and denied the inadmissible request. Three additional measured native children emitted the pre-authored Lean byte fragments. A hosted child compiled the reassembled source and six deliberately damaged variants. There are 36 hosted registers and nine native cases in the verification run. [Evidence archive](evidence.zip) · [Verifier](verify.py)
+
+### Lean and numerical controls
+
+The Lean source hash is `82efd7941ca672121610edbc23fee1d7ca568739a1a1eca30aeb713ae4d849c6`. The checked constants cover finite submeasure discrimination, conversion from a time-slab norm to energy, the weighted cross-resolution sum and its coercive consequence, magnetic resolvent and remote-channel cancellation, and the checkerboard defect. The final source compiles without warnings or placeholder axioms under Lean 4.19.0 and Mathlib `c44e0c8ee63ca166450922a373c7409c5d26b00b`. The first positive build had linter warnings. Its log remains in the archive. The compiler rejects all six negative controls with their expected diagnostics. [Lean source](FullAttempt.lean) · [Mutations](mutations.json)
+
+| Independent calculation | Output or discrimination |
+| --- | --- |
+| Periodic graph cycles | 27 triangles at $L=3$, 240 squares and straight four-link windings together at $L=4$, 648 squares at $L=6$. |
+| Massive free Gaussian on an $8^3$ grid | At $m=s=1$, halving $a$ from 1 to $1/16$ raises the checkerboard correlation from 0.5657415 to 0.9645608. The physical-slab value stays at 0.3678794. |
+| Free Wick contractions | Labeled pairings give 24 for two insertions, 1,728 for the three-point triangle, and 20,736 for the connected four-cycle with two lines on each edge. |
+| Electric likelihood projection | An eleven-link $\mathbb Z_2$ patch gives the exact squared residual $u^{12}(1+u^8)$ after dropping the neighboring-pair perimeter, where $u$ is the single-link multiplier at the chosen lag. |
+| Magnetic derivative | Continuous $SU(2)$ single-square diagonalization at two character cutoffs, then a 76-orbit adjacent-square binary tetrahedral transfer, agree with the matching formulas at $g=1.3,2.2,4$. The full cubic coefficients calculated from the analytic neighbor count are $+0.0009551,-0.1297048,-0.3223251$. |
+
+[Graph, Wick and Gaussian controls](controls.py) · [Physical likelihood controls](profile_check.py) · [Magnetic transfer matrices](transfer_check.py)
+
+### Figure
+
+The Gaussian comparison uses the PCP OS Rust host’s `plot` command on Director G’s `director-g/science-math-svg` branch at `e8d62e4b00b7bcb404b67fbba9151c50814f1d70`. It draws 18 formula evaluations, rounded to six decimals, in two panels on the same axes. The host’s `visualization.ranges` instrument rerendered 4,926 SVG bytes and matched SHA-256 `ee825aa5b1309c7b56d5b90c0aadd0b079d68d5a663deb5fbff6a8eed60432cd`. These points illustrate the exact calculation for a massive free field. [Plot input](figures/slab.json) · [SVG](figures/slab.svg) · [Rust host receipt](figures/slab.receipt.txt) · [Pinned plot host](https://github.com/KirtusJ/pcp-os/tree/e8d62e4b00b7bcb404b67fbba9151c50814f1d70/PCP_OS_Rust)
+
+### Reproduction
+
+From this directory use Python 3.10 or later with NumPy and run `python -B verify.py`. The verifier checks artifact hashes, mathematical control outputs, delivered worker prompts, compiler receipts and native source reassembly. With the corresponding Python host and method packet, `python -B verify.py --runtime /path/to/PCP_OS_Python --method /path/to/PCP/Method` also replays the hash chain and objects of all 36 registers. Pass `--plot-host /path/to/pcpos` to additionally regenerate the figure and compare the complete range receipt. The pinned Rust workspace builds it with `cargo build --locked --release -p pcpos-host --bin pcpos`.
+
+To recompile the checked file directly, from the pinned Mathlib checkout run `lake env lean /absolute/path/to/FullAttempt.lean`. Each `#print axioms` reports the dependencies of one declaration. [Source](FullAttempt.lean)
