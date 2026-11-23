@@ -8,6 +8,8 @@ $$
 $$
 The constant and the onset are uniform in the choice of state. Moreover, for any fixed positive integer $d$ and $0<a<b$, there are $c,\eta>0$ so that at even $R=2\lfloor c\beta^{1/7}/2\rfloor$ the Gram matrix of B4’s $d$ centered magnetic packets projected to the lattice energy interval $(a/R,b/R)$ dominates $\eta I_d$. This locates strictly positive spectral weight even in a state with multiple vacua. The physical lattice spacing, positivity of the gap at fixed coupling, and the existence and mass gap of a continuum Yang–Mills theory remain open.
 
+The same argument for [rectangles of arbitrary width](rectangles.md) improves the range of C4’s joint energy and spatial momentum theorem to the seventh-root scale.
+
 ## A strip estimate from reflection positivity
 
 Fix distinct axes $i,j$. Write $W(l)$ for the expectation of half the fundamental trace around a rectangle one step wide along $i$ and $l$ steps long along $j$. Set $W(0)=1$. Translation, reflection and axis permutations preserve the state by the periodic construction. For $s\ge0$, let $\Gamma_s$ be the open path from $0$ to $e_i$ consisting of $s$ positive $j$ steps, one positive $i$ step and $s$ negative $j$ steps. Let $\theta$ reflect in the site plane $x_j=0$. For $s,t\ge0$ the product of the inverse reflected path and the other path is a rectangle of height $s+t$ up to cyclic choice of base point and cancellation. This includes the tangent link $\Gamma_0$. Thus

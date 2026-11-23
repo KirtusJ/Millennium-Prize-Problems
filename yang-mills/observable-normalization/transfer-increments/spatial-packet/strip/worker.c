@@ -127,12 +127,25 @@ __attribute__((used,noreturn)) static void run(void) {
     emit("A4 LEAN   apply (div_le_iff₀ (pow_pos hs 7)).mpr\n");
     emit("A4 LEAN   simpa only [mul_pow] using pow_le_pow_left₀ hR h 7\n");
     emit("A4 LEAN \n");
+    emit("A4 LEAN /-- Fix one side, bound its deficit by its value at length one, then\n");
+    emit("A4 LEAN apply the same estimate in the perpendicular direction. -/\n");
+    emit("A4 LEAN theorem rectangleDeficit (W : ℕ → ℕ → ℝ)\n");
+    emit("A4 LEAN     (along : ∀ m n, 1-W m n ≤ (n:ℝ)*(1-W m 1))\n");
+    emit("A4 LEAN     (across : ∀ m, 1-W m 1 ≤ (m:ℝ)*(1-W 1 1)) (m n : ℕ) :\n");
+    emit("A4 LEAN     1-W m n ≤ ((m:ℝ)*(n:ℝ))*(1-W 1 1) := by\n");
+    emit("A4 LEAN   calc\n");
+    emit("A4 LEAN     1-W m n ≤ (n:ℝ)*(1-W m 1) := along m n\n");
+    emit("A4 LEAN     _ ≤ (n:ℝ)*((m:ℝ)*(1-W 1 1)) :=\n");
+    emit("A4 LEAN       mul_le_mul_of_nonneg_left (across m) (Nat.cast_nonneg n)\n");
+    emit("A4 LEAN     _ = _ := by ring\n");
+    emit("A4 LEAN \n");
     emit("A4 LEAN end YangMills.ReflectedStrip\n");
     emit("A4 LEAN #print axioms YangMills.ReflectedStrip.shiftContraction\n");
     emit("A4 LEAN #print axioms YangMills.ReflectedStrip.stripDeficit\n");
     emit("A4 LEAN #print axioms YangMills.ReflectedStrip.halfWeight\n");
     emit("A4 LEAN #print axioms YangMills.ReflectedStrip.squaredBudget\n");
     emit("A4 LEAN #print axioms YangMills.ReflectedStrip.errorAtScale\n");
+    emit("A4 LEAN #print axioms YangMills.ReflectedStrip.rectangleDeficit\n");
 #endif
     emit("A4 FINISHED\n");
     sys(60,0,0,0);__builtin_unreachable();

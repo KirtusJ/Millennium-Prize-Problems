@@ -69,9 +69,22 @@ theorem errorAtScale {R c s : ℝ} (hR : 0 ≤ R) (hs : 0 < s) (h : R ≤ c*s) :
   apply (div_le_iff₀ (pow_pos hs 7)).mpr
   simpa only [mul_pow] using pow_le_pow_left₀ hR h 7
 
+/-- Fix one side, bound its deficit by its value at length one, then
+apply the same estimate in the perpendicular direction. -/
+theorem rectangleDeficit (W : ℕ → ℕ → ℝ)
+    (along : ∀ m n, 1-W m n ≤ (n:ℝ)*(1-W m 1))
+    (across : ∀ m, 1-W m 1 ≤ (m:ℝ)*(1-W 1 1)) (m n : ℕ) :
+    1-W m n ≤ ((m:ℝ)*(n:ℝ))*(1-W 1 1) := by
+  calc
+    1-W m n ≤ (n:ℝ)*(1-W m 1) := along m n
+    _ ≤ (n:ℝ)*((m:ℝ)*(1-W 1 1)) :=
+      mul_le_mul_of_nonneg_left (across m) (Nat.cast_nonneg n)
+    _ = _ := by ring
+
 end YangMills.ReflectedStrip
 #print axioms YangMills.ReflectedStrip.shiftContraction
 #print axioms YangMills.ReflectedStrip.stripDeficit
 #print axioms YangMills.ReflectedStrip.halfWeight
 #print axioms YangMills.ReflectedStrip.squaredBudget
 #print axioms YangMills.ReflectedStrip.errorAtScale
+#print axioms YangMills.ReflectedStrip.rectangleDeficit

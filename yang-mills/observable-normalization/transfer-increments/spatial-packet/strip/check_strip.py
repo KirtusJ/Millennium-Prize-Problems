@@ -47,16 +47,16 @@ def staple_checks():
     for normal, width in product(range(1, 5), repeat=2):
         if normal == width:
             continue
-        for s, t in product(range(7), repeat=2):
-            lower, end_a = path(origin, [-normal]*s + [width] + [normal]*s)
-            upper, end_b = path(origin, [normal]*t + [width] + [-normal]*t)
+        for s, t, m in product(range(7), range(7), (0, 1, 2, 5)):
+            lower, end_a = path(origin, [-normal]*s + [width]*m + [normal]*s)
+            upper, end_b = path(origin, [normal]*t + [width]*m + [-normal]*t)
             assert end_a == end_b
             _, base = path(origin, [-normal]*s)
-            boundary, end = path(base, [normal]*(s+t) + [width] + [-normal]*(s+t) + [-width])
+            boundary, end = path(base, [normal]*(s+t) + [width]*m + [-normal]*(s+t) + [-width]*m)
             assert base == end
             assert trace_word(invert(lower) + upper) == trace_word(boundary)
             count += 1
-    print(f"{count} reflected staple pairs equal the rectangle trace word")
+    print(f"{count} reflected staple pairs at four widths equal the rectangle trace word")
 
 
 def segments(x):
@@ -86,6 +86,29 @@ def path_checks():
             assert reduced(final)==path(zero,sum(segments(target),[]))[0]
             count+=1
     print(f"{count} signed edge insertions, including crossings of negative coordinate runs")
+
+
+def translated_roots():
+    origin = (0, 0, 0)
+    count = 0
+    for pair in product((-2, 0, 3), repeat=6):
+        z, v = pair[:3], pair[3:]
+        blocks = segments(z) + segments(v)
+        # Move B1 past A3,A2, then B2 past A3 in A1 A2 A3 B1 B2 B3.
+        for i in (2, 1, 3):
+            before, _ = path(origin, sum(blocks, []))
+            prefix, base = path(origin, sum(blocks[:i], []))
+            a, b = blocks[i:i+2]
+            loop, end = path(base, a + b + [-d for d in reversed(a)] + [-d for d in reversed(b)])
+            blocks[i:i+2] = [b, a]
+            after, _ = path(origin, sum(blocks, []))
+            assert base == end
+            assert reduced(before + invert(after)) == reduced(prefix + loop + invert(prefix))
+        final, end = path(origin, sum(blocks, []))
+        assert end == tuple(i+j for i, j in zip(z, v))
+        assert reduced(final) == path(origin, sum(segments(end), []))[0]
+        count += 1
+    print(f"{count} signed translated roots agree after three rectangular interchanges")
 
 
 def qmul(a,b):
@@ -129,5 +152,6 @@ def no_reflection():
 if __name__=="__main__":
     staple_checks()
     path_checks()
+    translated_roots()
     strip_law()
     no_reflection()
