@@ -1,0 +1,38 @@
+'Millennium.YangMills.D4.tiltedWindow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.positiveTimeTransfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.subrateOfEnvelope' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.energySupportOfEnvelope' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.supportFromPositiveAnchor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.towerAtZero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.towerAtPositiveTime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.towerLateBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.laterMomentBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.collapseAfterPositiveTime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.exteriorPairBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.renormalizedPairVanishes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.scaledLowEnergyBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.signedShapeControl' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.signedReflectionWitness' depends on axioms: [propext, Classical.choice, Quot.sound]
+reverse-window :43:4: error: Type mismatch
+closed-spectral-endpoint :113:26: error: Application type mismatch: The argument
+signed-coefficient :228:23: error: unsolved goals
+exterior-sign :191:13: error: unsolved goals
+unpaid-step :157:15: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+3^4: same-slice neighbors 12, planar neighbors 6; cross-slice conflicts only at +/-1
+4^4: same-slice neighbors 12, planar neighbors 6; cross-slice conflicts only at +/-1
+5^4: same-slice neighbors 12, planar neighbors 6; cross-slice conflicts only at +/-1
+conditional-product equality, covariance = 24/35
+guest ELF 2f920f7d9dd19e99b2807e614b4565dbefb3a74096786857ad490179288359bd
+Lean source bc65f44f95de9855558b34c2a523a0768df41139a7297e887cfddecba52e3cb4 (6518 bytes)
+guest ELF 9cfb0ab9a111f2d2795415a30d1ba8d0ae8ec2b51738df4497eba1f4f839fb4d
+Lean source 02ebd938be4c8b41b3837c5f2dba783c214d54761c5e49ba5a1ccaf4d2a73435 (6157 bytes)
+guest ELF aeb03ab77f4f9ca4ba7d877d55e55d76f1e02243b742acd9a552791dc29850b6
+Lean source 1fd54f3cb4f7bf54bfcdfbae55fd03c66e2cfe9f3f7282c9680087d9b605e391 (12919 bytes)
+factor ff887fa846a91a69ba3edf23513e75784b97bfa64c2982089956bd87cca71ff5
+square b0b7172468153b75a50c3fa104a747ce8ddac5cef4124e7ab1d4cf7ccc246d41
+assemble f9bd9b2491a4b1e5708dca23b179ca0212ceb1979771e8fd87d706b5c7d7b90e
+chain intact: 174 events, head 1dd08037aea2552df2dbfa2d503ecba55586b60353b00d75c26c6545ceb64b1a
+guards replayed: 0 problem(s)
+The guards are those of pcpos 1.0.22. A register is read under the rules of the program that reads it: an event an earlier build accepted may be reported here, and its bytes are unchanged.
+register file SHA-256: bac4800762486a5cfafa14fc80038ffdcd922c810caf5d40a671e53d06a75934
+A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.

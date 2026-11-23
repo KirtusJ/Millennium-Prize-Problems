@@ -33,6 +33,7 @@ static void number(unsigned n) {
     if (n >= 10) number(n / 10);
     emit((char)('0' + n % 10));
 }
+#ifndef D4_POSITIVE_TIME
 static void weights(const int change[7]) {
     text("[");
     for (int j = 0; j <= 6; ++j) {
@@ -44,6 +45,10 @@ static void weights(const int change[7]) {
     text("]");
 }
 #endif
+#endif
+#ifdef D4_POSITIVE_TIME
+#include "positive-time/guest.h"
+#else
 __attribute__((used,noreturn)) static void run(void) {
     char buf[256];
     long fd = os(2, (long)"template", 0, 0);
@@ -99,4 +104,5 @@ __attribute__((used,noreturn)) static void run(void) {
 #endif
     flush(); finish(0);
 }
+#endif
 __asm__(".global _start\n_start:\nandq $-16,%rsp\ncall run\nud2");
