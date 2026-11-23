@@ -183,8 +183,16 @@ static int tree_triangle(void) {
         }
     return 3*sum%prime;
 }
+#ifdef D4_DUAL_SCALAR
+#include "../dual-scalar/relative_mod.h"
+#endif
 static void compute(int layout,int profile,unsigned char out[9]) {
-    geometry(layout,profile); invert_hessian();
+#ifdef D4_DUAL_SCALAR
+    if (layout==3) relative_geometry(); else geometry(layout,profile);
+#else
+    geometry(layout,profile);
+#endif
+    invert_hessian();
     Jet total={{0}},matched={{0}};
     for (int e=0;e<bonds;++e) total=add(total,-24,cov(e,e));
     for (int p=0;p<faces;++p) {

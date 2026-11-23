@@ -1,0 +1,251 @@
+Director D4 · complementary scalar triangles · 23 November 2026
+
+1249 cumulative events, 615 admissions, every admission released. Previous 1032 events identical.
+
+chain intact: 1249 events, head 8f4fca36e9733c0872c8efbeb9749b139588939f6e654df97c76a1da16af8431
+guards replayed: 0 problem(s)
+The guards are those of pcpos 1.0.22. A register is read under the rules of the program that reads it: an event an earlier build accepted may be reported here, and its bytes are unchanged.
+register file SHA-256: 5dfffbcd11fd774f5cc1262fcc74315c6bfa8ef637625080307bad2e5369f063
+A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.
+
+
+Producing serial SHA-256
+fab336881fbf1cf97fa715cedb41ccae77e26a0b4c1c0b76ce7021c3a67f9d4c  assemble.serial.txt
+f4b4a185a3cb320e04af5d25ad6a73fcee4f99aa97405d50e0c84a6ebcf7ce78  factor.serial.txt
+3bd46899de367896bf65c4dee40f3ddc44f8a0b23ffc3fc065355dd77b757a0b  fourier.serial.txt
+
+final-lean
+'Millennium.YangMills.D4.DualScalar.schurReciprocity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.DualScalar.sourceComplement' depends on axioms: [propext]
+'Millennium.YangMills.D4.DualScalar.oddCycle' depends on axioms: [propext]
+'Millennium.YangMills.D4.DualScalar.complementaryKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.DualScalar.generalAction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.DualScalar.squaredDeficit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.DualScalar.centeredEven' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.DualScalar.radialDifference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.DualScalar.localMixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.DualScalar.halfDiagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.DualScalar.actionDependence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.DualScalar.asymptoticRatio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.DualScalar.uniqueNumerator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.DualScalar.certifiedCube' depends on axioms: [propext]
+'Millennium.YangMills.D4.DualScalar.certifiedStar' depends on axioms: [propext]
+'Millennium.YangMills.D4.DualScalar.twistedSignal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.DualScalar.measuredBoundary' does not depend on any axioms
+'Millennium.YangMills.D4.DualScalar.measuredTwist' does not depend on any axioms
+'Millennium.YangMills.D4.DualScalar.certifiedSkewCube' depends on axioms: [propext]
+'Millennium.YangMills.D4.DualScalar.certifiedSkewStar' depends on axioms: [propext]
+'Millennium.YangMills.D4.DualScalar.skewSignal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.DualScalar.measuredSkew' does not depend on any axioms
+
+
+boxes
+reciprocal nonconstant rational weights: full covariance and normalized determinant agree
+(5, 1, 1, 1) (0, 2, 4) R1 Wilson, circle, improved 0.22180481610541058 0.05047176598335691 0.1713330501220537
+(7, 1, 1, 1) (1, 3, 5) R1 Wilson, circle, improved 0.22084204736435645 0.049935429715577136 0.17090661764877932
+(7, 1, 1, 1) (0, 2, 6) R1 Wilson, circle, improved 0.23917409596656308 0.04997049066546447 0.18920360530109862
+(5, 2, 1, 1) (0, 2, 4) R1 Wilson, circle, improved 0.21380812842619795 0.049304797197775606 0.16450333122842234
+
+
+frame-final
+twisted one-face compact quadrature and six two-dimensional gauge-slice source tests passed
+exact two frames (6, 1, 1, 1) paired Wilson R1 0.032035753082362665
+exact two frames (6, 2, 1, 1) paired Wilson R1 0.04457342635342329
+cube pairwise shared links [0, 0, 0]
+star pairwise shared links [6, 6, 6]
+cube opposite frame mod 193 123 49
+star opposite frame mod 193 70 12
+6 x 2 x 2 x 2 paired  wilson T1 41476067929301557483797449/107675270584976855666505600000 R1 0.014404357490859594
+6 x 2 x 2 x 2 paired  abelian T1 1932371081494058279/12647584113121077120000 R1 0.00571340800731235
+skew-cube pairwise shared links [0, 0, 0]
+skew-star pairwise shared links [0, 0, 0]
+skew-cube opposite frame mod 193 175 186
+skew-star opposite frame mod 193 18 123
+6 x 2 x 2 x 2 paired skew- wilson T1 68613860614186142491609811/807564529387326417498792000000 R1 0.04105600324260663
+6 x 2 x 2 x 2 paired skew- abelian T1 202946807006718881/28457064254522423520000 R1 0.0034461499972905023
+
+
+cube-rechecked
+cube prime 999983 certified modulus bits 20
+cube prime 999979 certified modulus bits 40
+cube prime 999961 certified modulus bits 60
+cube prime 999959 certified modulus bits 80
+cube prime 999953 certified modulus bits 100
+cube prime 999931 certified modulus bits 120
+cube prime 999917 certified modulus bits 140
+cube prime 999907 certified modulus bits 160
+exact cube T0 13420141639117/21058248606595200 T1 336160425392856154089090109/153821815121395508095008000000
+cube prime 999983 certified modulus bits 20
+cube prime 999979 certified modulus bits 40
+cube prime 999961 certified modulus bits 60
+cube prime 999959 certified modulus bits 80
+cube prime 999953 certified modulus bits 100
+cube prime 999931 certified modulus bits 120
+cube prime 999917 certified modulus bits 140
+cube prime 999907 certified modulus bits 160
+exact cube T0 -13711313008171/315873729098928000 T1 -12168391210385646769328591/58731965773623739454457600000
+
+
+star-rechecked
+star prime 999983 certified modulus bits 20
+star prime 999979 certified modulus bits 40
+star prime 999961 certified modulus bits 60
+star prime 999959 certified modulus bits 80
+star prime 999953 certified modulus bits 100
+star prime 999931 certified modulus bits 120
+star prime 999917 certified modulus bits 140
+star prime 999907 certified modulus bits 160
+exact star T0 -13420141639117/21058248606595200 T1 -507867206387987309649227261/358917568616589518888352000000
+star prime 999983 certified modulus bits 20
+star prime 999979 certified modulus bits 40
+star prime 999961 certified modulus bits 60
+star prime 999959 certified modulus bits 80
+star prime 999953 certified modulus bits 100
+star prime 999931 certified modulus bits 120
+star prime 999917 certified modulus bits 140
+star prime 999907 certified modulus bits 160
+exact star T0 13711313008171/315873729098928000 T1 406057467161566570748650331/1076752705849768556665056000000
+
+
+action
+twisted action derivative per unit lambda -2033288938340421211/1626117957401281344000 normalized -0.04675836730051684
+finite-twist departure from -10 Abelian 0.010375712772606658
+normalized response for D+D^2/10 0.009728520760807909
+
+
+bulk-final
+ordinary finite torus paired free triangle and harmonic prediction -0.0003189362519944864 -0.0003189362519944858
+collinear 2 r^4 R1 0.32343908775804603 ratio to asymptotic 1.187801244286935
+collinear 4 r^4 R1 0.49039749206168354 ratio to asymptotic 1.8009411147665768
+collinear 8 r^4 R1 0.30627575985557837 ratio to asymptotic 1.1247704511321315
+collinear 16 r^4 R1 0.2790977006906303 ratio to asymptotic 1.0249614493284334
+collinear 32 r^4 R1 0.2739210238612993 ratio to asymptotic 1.0059505647078633
+skew 2 r^4 R1 0.17290188702586257 ratio to asymptotic 3.761206292160974
+skew 4 r^4 R1 0.10228209072025499 ratio to asymptotic 2.2249846419250403
+skew 8 r^4 R1 0.054081094941338316 ratio to asymptotic 1.176448436042174
+skew 16 r^4 R1 0.04767052308106456 ratio to asymptotic 1.0369966137864393
+skew 32 r^4 R1 0.046379556097161025 ratio to asymptotic 1.0089136748066942
+squeezed 2 r^4 R1 0.1316809003424692 ratio to asymptotic 3.050968240765521
+squeezed 4 r^4 R1 0.08727966755488764 ratio to asymptotic 2.022218051987704
+squeezed 8 r^4 R1 0.04923080417849406 ratio to asymptotic 1.140648489076965
+squeezed 16 r^4 R1 0.044408310042028054 ratio to asymptotic 1.028914164559361
+squeezed 32 r^4 R1 0.04345991073640832 ratio to asymptotic 1.0069403160096888
+
+
+mutations
+lose the inverse determinant: rejected at schurReciprocity
+reverse cycle parity: rejected at oddCycle
+alter reciprocal source contact: rejected at radialDifference
+erase surviving Abelian weight: rejected at halfDiagonal
+halve radial action response: rejected at actionDependence
+change leading distance coefficient: rejected at asymptoticRatio
+alter a reconstructed cube residue: rejected at certifiedCube
+reverse twisted Wilson comparison: rejected at twistedSignal
+reverse link-disjoint Wilson bound: rejected at skewSignal
+negate the reconstructed link-disjoint cube numerator: rejected at certifiedSkewCube
+change dual Gaussian triangle: rejected at measuredBoundary
+omit the finite-twist diagonal term: rejected at measuredTwist
+
+
+regression
+sphere weights [1.0, 1.0, 1.0, 1.0, 1.0, 1.0] A 0.10416666666666667 extrapolation error 1.0581892032207607e-06
+sphere weights [0.7, 1.3, 2.0, 0.8, 1.2, 0.9] A 0.05840413843360124 extrapolation error 1.5570222024127722e-06
+5x1x1x1@0,2,4 R0 0.10314454838605827 Wilson R1 0.16823349373591834 matched R1 -0.03501020855703388
+7x1x1x1@1,3,5 R0 0.10302685637662684 Wilson R1 0.16819369021670766 matched R1 -0.03496493373204121
+7x1x1x1@0,2,6 R0 0.11008586122554496 Wilson R1 0.14045456352298055 matched R1 -0.028896452042409097
+5x2x1x1@0,2,4 R0 0.11085962974256883 Wilson R1 0.16440610137003514 matched R1 -0.03408243771272857
+2x2x2x2 corners R0 -0.5012146795097412 Wilson R1 -0.1869500211186036 matched R1 -0.08345109102855494
+Exact local and integrated responses, gauge-tree invariance and source controls passed.
+relative source weights [0.16477115017235122, -0.6647969959293997, 1.0]
+unscaled integer-source T1 -2163371292976720482949353550804927043839127224389342806578453800923697620809658154768695067496088877/4603692617714223699086508340883662795288287602500
+variance-normalized Wilson response -8.301578440385579e-16 tree and both Abelian responses exactly zero
+relative response of endpoint covariance -0.0003065565536996879
+relative source weights [-0.0028104281023822687, -1.0, 0.7867963963123211]
+unscaled integer-source T1 -7595866708986133349925514852923774256656066516448911654132452424218337456027295247739774008610367794576603844597599118222823864840598170361883887274554984832203369925088476444227667367883942828569484871631711/7023473508862556476292922291336137141848111791430476531145544043817461010704000
+variance-normalized Wilson response -1.9638999334289654e-07 tree and both Abelian responses exactly zero
+relative response of endpoint covariance -0.03944515743044874
+reciprocal nonconstant rational weights: full covariance and normalized determinant agree
+(5, 1, 1, 1) (0, 2, 4) R1 Wilson, circle, improved 0.22180481610541058 0.05047176598335691 0.1713330501220537
+(7, 1, 1, 1) (1, 3, 5) R1 Wilson, circle, improved 0.22084204736435645 0.049935429715577136 0.17090661764877932
+(7, 1, 1, 1) (0, 2, 6) R1 Wilson, circle, improved 0.23917409596656308 0.04997049066546447 0.18920360530109862
+(5, 2, 1, 1) (0, 2, 4) R1 Wilson, circle, improved 0.21380812842619795 0.049304797197775606 0.16450333122842234
+
+
+replay-dual-scalar
+guest ELF e21e0b5837c5dcdd5a108e1ed2bd1cd89c0447db31c2b5374f61ee3b682fe06d
+Lean source 0565c917e76598e286c07daa80b4652eafcf8e442d273e0cc4068828e56a79a2 (8956 bytes)
+factor ff16f33f2969761a89255c0e61b37d20be3e063c27ce298d1206fe98707186cf
+fourier 315f6bcddeb5eb9891397eb4e966f979507831bbb5a409caac5ca5a1c801eda7
+assemble 26943d716d4b7418e7179e8f75c45caff0bfa8a7db31ec6de625c7b0966a3423
+
+
+replay-scalar-response
+guest ELF fbef68827e33f0d6d7b988f427d998e79264b207f71103721cba20c416cad8d0
+Lean source e00513d0e0693aa0b7c6c745bcd56e96d8173377e0487e5f9818f68e6cb68e68 (13211 bytes)
+factor 40cc9a7d5aef594fc5451592ef092b9ff7fc0d1b3e4901e7a3f398fdb316606d
+residues 35f0538e121e66e1c8ebccf7464fb633ca7072bcd8151a288e8645c4fae65c2f
+assemble 0610ed4cf0f89a3ee8f3180339775b9aa9cc57ded0d0f2955a53c85b8cd5c34e
+
+
+replay-electric-slab
+guest ELF 5421565fe5e86cf5ee2929f527756c23ca55ce67165795af956b19afa251f5cf
+Lean source 459f0bcfdd4488208748fdbbd9bc087f18ce2e5778a4c86c3aa22dff8416f22e (6375 bytes)
+factor 74c158175858833defd0bab120db67107970b433a267666a9d459ebd3301402a
+faces 8154e96ae09c2673b6439fbc9ca22bd91864b7aa1cb9a814006577cc02fc01c9
+assemble 2df627f40466a270f580ed309326144651f8f08806c545ae2107da633c625585
+
+
+replay-ordinary-loop
+guest ELF 31ef074312c1e517cefab984318c0128e50242a89118fda5a0eb8963d68ec87b
+Lean source 886c0b6b0453e135ad1cd4df6ddb359af6f7a9b8f764001fc10f8eb4260fbdd1 (7272 bytes)
+factor fe47f2448b36e950a260f144404241fe409d3beff9e139e868b075d7d010bcd1
+wick 7d8e2d9964bd4e1feea80dc7a9d248662b71d4e99892c2c245dbedb3e517fed1
+assemble dd1522cd0864ae3f4274e45d3f613f0bf71a37ce649077691226aadf2f8aed00
+
+
+replay-graph-holonomies
+guest ELF d6dc835b7ff0acf67d21882bf6106964d120861a9ea3f821c0e396496169efdc
+Lean source 988a04e72b0d28189958b60f586600607a6fca58e528b525f8e9e1a7772dd580 (9242 bytes)
+factor e3b1cdfd2157b26103470b663b4d5e93a580c6ca3b2fbc57d35231d5fc63c6b3
+words 25dc9eba13fd30e7ce43592c6ec57acdb96ae266af69b8943de5a10a3eff46c0
+assemble 52d235d150b0bfe912b8a1658a2b5a84f0419f2935d33d5515d2f390ccfb105a
+
+
+replay-electric-scale
+guest ELF 9a0c055625830f7377cbd54bbc3e4e2fa0e86d23df35bb5a471160673c69381c
+Lean source d8b44086b7234ac94b9d4acb4d71c868b8a888ddb3645d4ac0e3962295bcd792 (9001 bytes)
+factor 293a53c8312e7efd4dc93ded9fb09456e51d79c0b66381d5024c78428752298d
+flux afd850c858ec9056a7219955189437a7a28ebfad0d186d5ea233c6fe19400eda
+assemble 474d37d282ac0d320735e7f2609e08d752eda4b0ba088c1eccc387b0afac29fc
+
+
+replay-finite-readings
+guest ELF 974b4663a8f26a4b11868e967c4e0a3bda96b766e9b9d1a022113a180b71450d
+Lean source 029ce009e020212b7f7dbd45bcb574b80a7e831c2de8bf137eda55c9857aee68 (19442 bytes)
+factor 68766283b97b48842e345aa6434133df06094818df7c29ddb6da4785b10aa189
+moments ea3094ae8e020eb9b840370a53f648dc7345cce49689e08e20b154ba452e1c51
+assemble f08f9311dc335a35d728ce1181399556050e0d6e704401c484113767a2f50e13
+
+
+replay-adjoint
+guest ELF 215b28f7d03d4f722a75bc86123ecdb6966b1d9f9a49865ad1ff6b1e13d32128
+Lean source e03ee1d3bef8f6fca3b41b74e08c2f70bdbc524a63161a68633c0bdd1ecef508 (9637 bytes)
+factor 124eb788b68cbebd03f665398d5fda5266f1180db8fcce32a0042beb5bd4064a
+divergence 239d17d85f43c30e3d8c6df7c499fa9fd827f815ebc2f0b70e263be631a0073e
+assemble 7d0f2fb331d91ab2f8becbeb9192bb205090e3a5038b50c2d81612c92754fa73
+
+
+replay-difference
+guest ELF 81ee0657560726917fcae43810d3faac7e2827c2a3250bcff4a481369552d198
+Lean source 2002c660d00ff94e5714aa7e3f3c69fa8946181174dc518fbee21e13845ad6d8 (5873 bytes)
+factor 7fc8baf272cb63d6bdfd1d0b69244a2f0a612f53b512d6ffe3a3660a069113df
+square 6336b346caa9375d228d03d4da44ebb7841dac67c8299c37feab997004633729
+assemble ebb0a534180ab7020a7a46d70d7532e04ee001b08358452bf3d6b7311008458f
+
+
+replay-basic
+guest ELF aeb03ab77f4f9ca4ba7d877d55e55d76f1e02243b742acd9a552791dc29850b6
+Lean source 1fd54f3cb4f7bf54bfcdfbae55fd03c66e2cfe9f3f7282c9680087d9b605e391 (12919 bytes)
+factor cf2b3452c148ec15253db1159195246267a60ee4d81a61ed107a6343fb0da7ab
+square 50d77b07ba4c01cf408d7a65ff047f36c51deead267dcfd027c6250dbeb5a0ab
+assemble 15f8a25cf3385d079892ef1a5689235141ed0f34e20eea7bb10529b4b941ac0d

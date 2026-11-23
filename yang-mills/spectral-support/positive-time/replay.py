@@ -18,6 +18,9 @@ ADJOINT_MARKER = b"-- BEGIN PCP OS generated spherical divergence\n"
 
 
 def result_spec(mode):
+    if mode == "dual":
+        return (HERE.parent / "dual-scalar/DualScalar.lean",
+                b"-- BEGIN PCP OS generated dual response checks\n", "fourier")
     if mode == "response":
         return (HERE.parent / "scalar-response/ScalarResponse.lean",
                 b"-- BEGIN PCP OS generated Wilson response residues\n", "residues")
@@ -47,7 +50,7 @@ def launch(stage, folder, config):
     command = [sys.executable, "-I", __file__, "--worker", stage, str(folder)]
     if config["dispatcher"]:
         register = config["register"] if stage == "factor" else "-"
-        prefix = {"adjoint": "adjoint-", "finite": "readings-", "scale": "electric-", "graph": "graph-", "loop": "loop-", "slab": "slab-", "response": "response-"}.get(config["mode"], "positive-")
+        prefix = {"adjoint": "adjoint-", "finite": "readings-", "scale": "electric-", "graph": "graph-", "loop": "loop-", "slab": "slab-", "response": "response-", "dual": "dual-"}.get(config["mode"], "positive-")
         command = [config["dispatcher"], "--register", register, config["actor"],
                    prefix + stage, "--", *command]
     subprocess.run(command, check=True)
@@ -57,7 +60,7 @@ def worker(stage, folder):
     config = json.loads((folder / "config.json").read_text())
     mode = config["mode"]
     filename, marker, intermediate = result_spec(mode)
-    coefficient = {"positive": 2, "difference": 1, "adjoint": 3, "finite": 4, "scale": 6, "graph": 7, "loop": 8, "slab": 9, "response": 10}[mode]
+    coefficient = {"positive": 2, "difference": 1, "adjoint": 3, "finite": 4, "scale": 6, "graph": 7, "loop": 8, "slab": 9, "response": 10, "dual": 11}[mode]
     if stage == "factor":
         request = b"F" + bytes([coefficient])
     elif stage == intermediate:
@@ -103,6 +106,14 @@ def worker(stage, folder):
             values.extend([Fraction(c[0], c[2]), Fraction(c[1], c[2]), Fraction(0), Fraction(0),
                            Fraction(nulls["combined_wilson_T1"]) / c[2]])
             expected_factor = bytes(v.numerator * pow(v.denominator, -1, 101) % 101 for v in values)
+        if mode == "dual":
+            from fractions import Fraction
+            source = HERE.parent / "dual-scalar/evidence/box-pairs.json"
+            case = json.loads(source.read_text())["5x1x1x1@0,2,4"]
+            values = [case[key + "_T0"] for key in ("cube", "star")]
+            values += [case[m][key + "_T1"] for m in ("wilson", "matched") for key in ("cube", "star")]
+            expected_factor = bytes(v.numerator * pow(v.denominator, -1, 101) % 101
+                                    for v in map(Fraction, values))
         if output != expected_factor:
             raise ValueError("unexpected guest coefficient vector")
         (folder / "factor.out").write_bytes(output)
@@ -123,7 +134,9 @@ def generate(folder, kernel, pcp_source, qemu, firmware, template, dispatcher=No
     filename, _, _ = result_spec(mode)
     package = kernel_package(kernel, pcp_source)
     flags = ["-DD4_POSITIVE_TIME"]
-    if mode == "response":
+    if mode == "dual":
+        flags.append("-DD4_DUAL_SCALAR")
+    elif mode == "response":
         flags.append("-DD4_SCALAR_RESPONSE")
     elif mode == "slab":
         flags.append("-DD4_ELECTRIC_SLAB")
@@ -150,7 +163,7 @@ def generate(folder, kernel, pcp_source, qemu, firmware, template, dispatcher=No
 
 
 def main():
-    if len(sys.argv) == 4 and sys.argv[1] == "--worker" and sys.argv[2] in (*STAGES, "divergence", "moments", "flux", "words", "wick", "faces", "residues"):
+    if len(sys.argv) == 4 and sys.argv[1] == "--worker" and sys.argv[2] in (*STAGES, "divergence", "moments", "flux", "words", "wick", "faces", "residues", "fourier"):
         worker(sys.argv[2], Path(sys.argv[3]))
         return
     p = argparse.ArgumentParser(description=__doc__)
@@ -162,6 +175,8 @@ def main():
     p.add_argument("--register", type=Path)
     p.add_argument("--actor", default="Director-D4")
     modes = p.add_mutually_exclusive_group()
+    modes.add_argument("--dual-scalar", dest="mode", action="store_const", const="dual",
+                       help="replay the complementary boundary and twisted Fourier checks")
     modes.add_argument("--scalar-response", dest="mode", action="store_const", const="response",
                        help="recompute finite Wilson response residues and replay the Lean module")
     modes.add_argument("--electric-slab", dest="mode", action="store_const", const="slab",

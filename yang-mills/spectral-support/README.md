@@ -78,3 +78,5 @@ A single time-oriented link-star insertion has a continuum energy–momentum den
 ## A separated first interaction coefficient in the Wilson measure
 
 On finite open four-dimensional boxes a signed sum of scalar four-cube actions cancels both the free triangle and the first correction of an isolated-plaquette-matched Abelian model. The compact $SU(2)$ Wilson triangle has a nonzero first correction on the same supports. On a transverse three-cube profile the fractional response of the endpoint covariance has coefficient $-0.03944515743\ldots$ per inverse bare $\beta$. Exact rationals, independent character controls and a native modular calculation identify the size and sign. [Scalar response, physical scope and Lean checks](scalar-response/)
+
+On a spatially twisted compact Wilson box the average of a cube triangle and its dual vertex-star triangle cancels at Gaussian order. The first interacting coefficient is positive even with fully disjoint link supports. A bulk estimate bounds the effect of changing the single-plaquette action on this coefficient. [Complementary scalar triangles](dual-scalar/README.md)

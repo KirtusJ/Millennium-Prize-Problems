@@ -144,7 +144,11 @@ def actions(B, words, W, C, D):
 
 def evaluate(lengths, make_sources, reverse=False):
     faces, words, B = box(lengths, reverse)
-    sources = make_sources(faces)
+    return evaluate_words(faces, words, B, make_sources(faces))
+
+
+def evaluate_words(faces, words, B, sources):
+    """Evaluate a gauge-fixed compact link integral with a nonsingular face Hessian."""
     assert sources.shape == (3,len(faces))
     D,C,step = inverse_jets(B,sources)
     W = np.zeros((8,len(faces)),dtype=object)
