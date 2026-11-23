@@ -1,0 +1,3 @@
+Four connected weights reproduce the four published moments
+Scalar double pole and vacuum residue agree with the rational values
+Single-face and cube cumulants reproduce the published sixth moment
