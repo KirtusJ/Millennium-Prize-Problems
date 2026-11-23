@@ -1,0 +1,183 @@
+/* A bounded proof-template worker for the PCP OS user ABI. ROLE selects a subgoal. */
+#ifndef ROLE
+#error ROLE required
+#endif
+__attribute__((used)) static volatile int worker_role = ROLE + 1;
+static long sys(long n,long a,long b,long c) {
+    long result;
+    __asm__ volatile("syscall":"=a"(result):"a"(n),"D"(a),"S"(b),"d"(c):"rcx","r11","memory");
+    return result;
+}
+static void emit(const char *s) {
+    unsigned len=0;
+    while(s[len]) ++len;
+    while(len){
+        long k=sys(1,1,(long)s,len);
+        if(k<=0 || (unsigned long)k>len){sys(60,1,0,0);__builtin_unreachable();}
+        len-=(unsigned)k;s+=k;
+    }
+}
+__attribute__((used,noreturn)) static void run(void) {
+#if ROLE == 0
+    emit("A4 CHILD spectrum\n");
+    emit("A4 LEAN import Mathlib.Analysis.SpecialFunctions.Integrals\n");
+    emit("A4 LEAN import Mathlib.Analysis.SpecialFunctions.ImproperIntegrals\n");
+    emit("A4 LEAN import Mathlib.Analysis.SpecialFunctions.Sqrt\n");
+    emit("A4 LEAN import Mathlib.Tactic.Linarith\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN open Real Set MeasureTheory\n");
+    emit("A4 LEAN open scoped ENNReal\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN namespace YangMills.MomentumTransport\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN noncomputable def shell (s u t : ℝ) : ℝ := exp (-t*sqrt (s+u))/(2*sqrt (s+u))\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN theorem timeDerivative {s u : ℝ} (h : 0 < s+u) (t : ℝ) :\n");
+    emit("A4 LEAN     HasDerivAt (shell s u) (-exp (-t*sqrt (s+u))/2) t := by\n");
+    emit("A4 LEAN   have hv := sqrt_pos.mpr h\n");
+    emit("A4 LEAN   unfold shell\n");
+    emit("A4 LEAN   convert ((((hasDerivAt_id t).neg.mul_const (sqrt (s+u))).exp).div_const\n");
+    emit("A4 LEAN     (2*sqrt (s+u))) using 1\n");
+    emit("A4 LEAN   simp\n");
+    emit("A4 LEAN   field_simp\n");
+    emit("A4 LEAN   ring\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN /-- For one Lorentz shell, differentiating first in physical time then\n");
+    emit("A4 LEAN in squared spatial momentum gives t/2 times the original shell. -/\n");
+    emit("A4 LEAN theorem mixedDerivative {s u : ℝ} (h : 0 < s+u) (t : ℝ) :\n");
+    emit("A4 LEAN     HasDerivAt (fun v : ℝ => -exp (-t*sqrt (s+v))/2) (t/2*shell s u t) u := by\n");
+    emit("A4 LEAN   have hd := ((hasDerivAt_id u).const_add s).sqrt h.ne'\n");
+    emit("A4 LEAN   convert (((hd.const_mul (-t)).exp).neg.div_const 2) using 1\n");
+    emit("A4 LEAN   unfold shell\n");
+    emit("A4 LEAN   simp\n");
+    emit("A4 LEAN   ring\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN /-- The integrated shell equation also applies to the derivative of a\n");
+    emit("A4 LEAN finite positive spectral sum by linearity. -/\n");
+    emit("A4 LEAN theorem atomSum {ι : Type*} (S : Finset ι) (mass wt : ι → ℝ) {u : ℝ}\n");
+    emit("A4 LEAN     (pos : ∀ i ∈ S, 0 < mass i + u) (t : ℝ) :\n");
+    emit("A4 LEAN     HasDerivAt (fun v : ℝ => ∑ i ∈ S, wt i * (-exp (-t*sqrt (mass i+v))/2))\n");
+    emit("A4 LEAN       (t/2 * ∑ i ∈ S, wt i*shell (mass i) u t) u := by\n");
+    emit("A4 LEAN   rw [Finset.mul_sum]\n");
+    emit("A4 LEAN   apply HasDerivAt.sum\n");
+    emit("A4 LEAN   intro i hi\n");
+    emit("A4 LEAN   convert (mixedDerivative (pos i hi) t).const_mul (wt i) using 1\n");
+    emit("A4 LEAN   ring\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN /-- The positive heat-parameter expansion shifts the squared momentum under\n");
+    emit("A4 LEAN an arbitrary nonnegative measure, even when the target integral is infinite. -/\n");
+    emit("A4 LEAN theorem heatShiftSeries (μ : Measure ℝ) (support : ∀ᵐ z ∂μ, 0 ≤ z)\n");
+    emit("A4 LEAN     {a : ℝ} (ha : 0 ≤ a) (u : ℝ) :\n");
+    emit("A4 LEAN     (∑' n : ℕ, ∫⁻ z : ℝ, ENNReal.ofReal (exp (-u*z)) *\n");
+    emit("A4 LEAN       ENNReal.ofReal ((a*z)^n/(n.factorial : ℝ)) ∂μ) =\n");
+    emit("A4 LEAN     ∫⁻ z : ℝ, ENNReal.ofReal (exp (-(u-a)*z)) ∂μ := by\n");
+    emit("A4 LEAN   have hm (n : ℕ) : Measurable (fun z : ℝ => ENNReal.ofReal (exp (-u*z)) *\n");
+    emit("A4 LEAN       ENNReal.ofReal ((a*z)^n/(n.factorial : ℝ))) := by fun_prop\n");
+    emit("A4 LEAN   rw [← lintegral_tsum (fun n => (hm n).aemeasurable)]\n");
+    emit("A4 LEAN   apply lintegral_congr_ae\n");
+    emit("A4 LEAN   filter_upwards [support] with z hz\n");
+    emit("A4 LEAN   have hs : HasSum (fun n : ℕ => (a*z)^n/(n.factorial : ℝ)) (Real.exp (a*z)) :=\n");
+    emit("A4 LEAN     by simpa only [Real.exp_eq_exp_ℝ] using NormedSpace.expSeries_div_hasSum_exp ℝ (a*z)\n");
+    emit("A4 LEAN   rw [ENNReal.tsum_mul_left, ← ENNReal.ofReal_tsum_of_nonneg (fun n => by positivity)\n");
+    emit("A4 LEAN     hs.summable, hs.tsum_eq, ← ENNReal.ofReal_mul (exp_pos _).le, ← exp_add]\n");
+    emit("A4 LEAN   ring_nf\n");
+    emit("A4 LEAN \n");
+#elif ROLE == 1
+    emit("A4 CHILD limit\n");
+    emit("A4 LEAN /-- A measured time cell is integrated against a positive polynomial weight. -/\n");
+    emit("A4 LEAN theorem cellPrimitive (a b t : ℝ) (n : ℕ) :\n");
+    emit("A4 LEAN     (∫ x in a..b, x/2*((x^2-t^2)/4)^n) =\n");
+    emit("A4 LEAN     ((((b^2-t^2)/4)^(n+1))-(((a^2-t^2)/4)^(n+1)))/(n+1) := by\n");
+    emit("A4 LEAN   let f := fun x : ℝ => ((x^2-t^2)/4)^(n+1)/((n:ℝ)+1)\n");
+    emit("A4 LEAN   have dn : (n:ℝ)+1 ≠ 0 := by positivity\n");
+    emit("A4 LEAN   have hd (x : ℝ) : HasDerivAt f (x/2*((x^2-t^2)/4)^n) x := by\n");
+    emit("A4 LEAN     unfold f\n");
+    emit("A4 LEAN     convert (((((hasDerivAt_pow 2 x).sub_const (t^2)).div_const 4).pow (n+1)).div_const\n");
+    emit("A4 LEAN       ((n:ℝ)+1)) using 1\n");
+    emit("A4 LEAN     simp\n");
+    emit("A4 LEAN     field_simp\n");
+    emit("A4 LEAN     ring\n");
+    emit("A4 LEAN   rw [intervalIntegral.integral_eq_sub_of_hasDerivAt (fun x _ => hd x)\n");
+    emit("A4 LEAN     ((by fun_prop : Continuous (fun x : ℝ => x/2*((x^2-t^2)/4)^n)).intervalIntegrable _ _)]\n");
+    emit("A4 LEAN   dsimp [f]\n");
+    emit("A4 LEAN   ring\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN def quadratic (A X B u : ℝ) : ℝ := u^2*A+2*u*X+B\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN theorem recoverTensor (A X B u h : ℝ) (hh : h ≠ 0) :\n");
+    emit("A4 LEAN     (quadratic A X B (u+2*h)-2*quadratic A X B (u+h)+quadratic A X B u)/\n");
+    emit("A4 LEAN       (2*h^2) = A := by unfold quadratic; field_simp; ring\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN theorem recoverCross (A X B u h : ℝ) (hh : h ≠ 0) :\n");
+    emit("A4 LEAN     (quadratic A X B (u+h)-quadratic A X B u-(2*u*h+h^2)*A)/(2*h)=X := by\n");
+    emit("A4 LEAN   unfold quadratic\n");
+    emit("A4 LEAN   field_simp\n");
+    emit("A4 LEAN   ring\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN theorem recoverScalar (A X B u : ℝ) : quadratic A X B u-u^2*A-2*u*X=B := by\n");
+    emit("A4 LEAN   unfold quadratic\n");
+    emit("A4 LEAN   ring\n");
+    emit("A4 LEAN \n");
+#elif ROLE == 2
+    emit("A4 LEAN /-- Perturbing a polynomial by a multiple of (v-u)(v-w) preserves\n");
+    emit("A4 LEAN its readings at u and w. -/\n");
+    emit("A4 LEAN theorem twoMomentumAmbiguity (A X B u w d v : ℝ) :\n");
+    emit("A4 LEAN     quadratic (A+d) (X-d*(u+w)/2) (B+d*u*w) v =\n");
+    emit("A4 LEAN     quadratic A X B v+d*(v-u)*(v-w) := by unfold quadratic; ring\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN theorem tensorError {e₀ e₁ e₂ η h : ℝ} (hh : h ≠ 0)\n");
+    emit("A4 LEAN     (h₀ : |e₀| ≤ η) (h₁ : |e₁| ≤ η) (h₂ : |e₂| ≤ η) :\n");
+    emit("A4 LEAN     |(e₂-2*e₁+e₀)/(2*h^2)| ≤ 2*η/h^2 := by\n");
+    emit("A4 LEAN   have hp : 0 < 2*h^2 := by positivity\n");
+    emit("A4 LEAN   obtain ⟨lo₀,hi₀⟩ := abs_le.mp h₀\n");
+    emit("A4 LEAN   obtain ⟨lo₁,hi₁⟩ := abs_le.mp h₁\n");
+    emit("A4 LEAN   obtain ⟨lo₂,hi₂⟩ := abs_le.mp h₂\n");
+    emit("A4 LEAN   rw [abs_div, abs_of_pos hp, div_le_div_iff₀ hp (sq_pos_of_ne_zero hh)]\n");
+    emit("A4 LEAN   have bound : |e₂-2*e₁+e₀| ≤ 4*η := by\n");
+    emit("A4 LEAN     apply abs_le.mpr\n");
+    emit("A4 LEAN     constructor <;> linarith\n");
+    emit("A4 LEAN   nlinarith [mul_nonneg (sub_nonneg.mpr bound) (sq_nonneg h)]\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN theorem scalarAbsent {A X B : ℝ} (gram : X^2 ≤ A*B) (h : B=0) : X=0 := by\n");
+    emit("A4 LEAN   subst B\n");
+    emit("A4 LEAN   nlinarith only [gram, sq_nonneg X]\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN /-- Expanding each bin before integrating shows why the packet method needs\n");
+    emit("A4 LEAN first and second powers of the base squared momentum. -/\n");
+    emit("A4 LEAN theorem packetShift (A X B v d : ℝ) :\n");
+    emit("A4 LEAN     quadratic A X B (v+d)=quadratic A X B v+2*d*(v*A+X)+d^2*A := by\n");
+    emit("A4 LEAN   unfold quadratic\n");
+    emit("A4 LEAN   ring\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN theorem packetRecovery (A₁ A₂ X₀ X₁ B₀ : ℝ) :\n");
+    emit("A4 LEAN     (A₁+X₀)-A₁=X₀ ∧ (A₂+2*X₁+B₀)-2*(A₂+X₁)+A₂=B₀ := by\n");
+    emit("A4 LEAN   constructor <;> ring\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN /-- A strict excess over a trial mass threshold forces finite below-threshold\n");
+    emit("A4 LEAN weight in the regularized measure of the tested channel. -/\n");
+    emit("A4 LEAN theorem lowMassWeight {total low next fast slow : ℝ} (gap : fast < slow)\n");
+    emit("A4 LEAN     (split : next ≤ slow*low+fast*(total-low)) :\n");
+    emit("A4 LEAN     (next-fast*total)/(slow-fast) ≤ low := by\n");
+    emit("A4 LEAN   apply (div_le_iff₀ (sub_pos.mpr gap)).2\n");
+    emit("A4 LEAN   linarith only [split]\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN end YangMills.MomentumTransport\n");
+    emit("A4 LEAN #print axioms YangMills.MomentumTransport.timeDerivative\n");
+    emit("A4 LEAN #print axioms YangMills.MomentumTransport.mixedDerivative\n");
+    emit("A4 LEAN #print axioms YangMills.MomentumTransport.atomSum\n");
+    emit("A4 LEAN #print axioms YangMills.MomentumTransport.cellPrimitive\n");
+    emit("A4 LEAN #print axioms YangMills.MomentumTransport.recoverTensor\n");
+    emit("A4 LEAN #print axioms YangMills.MomentumTransport.recoverCross\n");
+    emit("A4 LEAN #print axioms YangMills.MomentumTransport.recoverScalar\n");
+    emit("A4 LEAN #print axioms YangMills.MomentumTransport.twoMomentumAmbiguity\n");
+    emit("A4 LEAN #print axioms YangMills.MomentumTransport.tensorError\n");
+    emit("A4 LEAN #print axioms YangMills.MomentumTransport.scalarAbsent\n");
+    emit("A4 LEAN #print axioms YangMills.MomentumTransport.packetShift\n");
+    emit("A4 LEAN #print axioms YangMills.MomentumTransport.packetRecovery\n");
+    emit("A4 LEAN #print axioms YangMills.MomentumTransport.heatShiftSeries\n");
+    emit("A4 LEAN #print axioms YangMills.MomentumTransport.lowMassWeight\n");
+#endif
+    emit("A4 FINISHED\n");
+    sys(60,0,0,0);__builtin_unreachable();
+}
+__asm__(".global _start\n_start:\nandq $-16,%rsp\ncall run\nud2");
