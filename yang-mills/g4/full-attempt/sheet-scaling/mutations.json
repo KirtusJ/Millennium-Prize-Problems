@@ -1,0 +1,26 @@
+[
+  {
+    "label": "negative_lost_endpoint",
+    "find": "abs (|x - y| - |a - b|) ≤ |x - a| + |y - b| := by",
+    "replace": "abs (|x - y| - |a - b|) ≤ |x - a| := by",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_area_budget",
+    "find": "err ≤ 2*tiles*eps := by",
+    "replace": "err ≤ tiles*eps := by",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_sign_runs",
+    "find": "=h/(2-h) := by",
+    "replace": "=(h-1)/(2-h) := by",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_pole_residue",
+    "find": "= 2/(v^2-1) := by",
+    "replace": "= 1/(v^2-1) := by",
+    "diagnostic": "error:"
+  }
+]
