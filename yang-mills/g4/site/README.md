@@ -32,6 +32,8 @@ The normalized mixture and positivity results require continuity, so their integ
 
 ## Application to site reflection
 
+The [even-torus proof](even-torus/README.md) evaluates the positive fiber square for all four coordinate directions and applies it to the plaquette tail and the weak-coupling lattice-gap upper bound in periodic infinite-volume states.
+
 For even periodic extents, `Y` can contain both fixed tangent-link layers. For odd extents it can contain the site-fixed layer while `Q` retains the far-cut variables. The [periodic Wilson module](../periodic/README.md) supplies related finite boundary-graph positive forms. Combining it with this mixture theorem requires an explicit identification of the original link product, action, test and reflection with the chosen fiber data. This release does **not** encode the complete even/odd lattice inventory or discharge that application premise automatically.
 
 If the reflected plaquette has word `e⁻¹ p⁻¹ e` and the straight root paths obey `r_a=r_b e⁻¹`, the source proves in every group
