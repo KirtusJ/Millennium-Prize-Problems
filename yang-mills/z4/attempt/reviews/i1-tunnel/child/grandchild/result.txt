@@ -1,0 +1,15 @@
+beta=50 a=pi/2 s=1.000000000000 L=1.414214
+  h=0.00141421 N=2001 lambda=0.4142135624
+  h=0.00070711 N=4001 lambda=0.4142135624
+  convergence |diff|=1.110e-16
+  formula=0.4142135624  rel diff (numeric-formula)/formula=3.551418e-14
+beta=50 a=0.3 s=0.295520206661 L=1.414214
+  h=0.00141421 N=2001 lambda=0.7472320134
+  h=0.00070711 N=4001 lambda=0.7472320134
+  convergence |diff|=4.441e-16
+  formula=0.7472320134  rel diff (numeric-formula)/formula=3.521301e-14
+beta=200 a=pi/2 s=1.000000000000 L=0.707107
+  h=0.00070711 N=2001 lambda=0.4142135624
+  h=0.00035355 N=4001 lambda=0.4142135624
+  convergence |diff|=1.110e-16
+  formula=0.4142135624  rel diff (numeric-formula)/formula=3.551418e-14

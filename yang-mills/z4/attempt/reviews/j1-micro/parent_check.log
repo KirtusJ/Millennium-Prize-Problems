@@ -1,0 +1,2 @@
+check K89: exit 0 (expected 0) in 338868 ms | output 481c1f29bfac | event 91 head a7d39199c343
+  /home/user/z4-workers/j1-micro/report.md — WRONG 5, OVERSTATED 12, MATCHES 46, not checkable here 19; predicates: met 14, failed 4 (all defects of the target), measured only 0.

@@ -1,0 +1,2 @@
+check K88: exit 0 (expected 0) in 1964654 ms | output 589e51b308a8 | event 90 head 14e2652e3a70
+  /home/user/z4-workers/i1-mc3/report.md: controls 5 STANDS, 1 DEFECT (my periodic-time method at β=4, raw correlator), 1 NOT CHECKED (β=1); all 12 main channel×β rows have plateaus and support 3.0125 (E, T2) and 3.6028 (A1), approached from below; predicates met 171, failed 38, measured only 6 groups.

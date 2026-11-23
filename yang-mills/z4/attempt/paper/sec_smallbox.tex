@@ -80,9 +80,10 @@ $e_1>e_0$; finally $-\log\lambda_j=(1-\lambda_j)+O(h^2)$.
 
 A second proof of the case $k=2$, with a different architecture (a partition into four center boxes and
 capped valley arms in place of the walk estimate), was written by sessions of the first lineage and
-challenged once by a session of the same lineage: $11$ steps stood, one sign defect was corrected (the
-bound used survives), one constant was rederived and one partition function replaced. It has not been read
-by a person, and it is not reproduced here.
+Its upper half and its lemmas up to tightness were challenged once by a session of the same lineage
+($11$ of $12$ items stood; one sign defect, the bound used survives). The concluding steps of the lower half,
+written in full by another session of that lineage, which also rederived one constant and replaced one
+partition of unity, have not been challenged. It has not been read by a person, and it is not reproduced here.
 
 \begin{remark}[All center sectors]\label{sb:rem-center}
 With all $2^k$ center characters restored to the gauge-invariant space, the same author reports that for
@@ -91,8 +92,9 @@ $e^{-C\sqrt\beta}\le\log(\lambda_0/\lambda_\chi)\le e^{-c\sqrt\beta}$, where $\l
 eigenvalue in the sector $\chi$. The first gap on the full gauge-invariant space is then between
 $e^{-C\sqrt\beta}$ and $e^{-c\sqrt\beta}$ for large $\beta$, and the $\beta^{-1/3}$ statement above holds in
 the center-even sector only. Status: written proof by a session of the second lineage; it was not part of
-the step-by-step check above; not read by a person. Measured center-odd splittings do not fix the form
-$e^{-c\sqrt\beta}$: they fall below double precision from $\beta=128$.
+the step-by-step check above; not read by a person. Measured center-odd splittings for $k=2$ (double precision up to $\beta=64$, double-double arithmetic up to
+$\beta=256$) are fitted by $-\log m\approx c\sqrt\beta+q\beta^{1/6}$ with $c\approx4.60$; a heuristic gives
+$c=\int_0^\pi\sqrt{2\operatorname{arccosh}(1+2\sin^2a)}\,da=4.6054$. Six points do not establish the form.
 \end{remark}
 
 \subsection{Numbers}
@@ -134,11 +136,12 @@ $23$ per cent below $e_j$, while $-\log\lambda_j/h$ is within $1.3$ per cent.
 The fitted limit $1.97496$ is a four-point fit with one residual degree of freedom; deleting either endpoint
 moves it to $1.97503$ or $1.97489$. It is a comparison with $e_1-e_0$, not a certified limit. A three-point
 geometric extrapolation gives $1.97583$.
-The lattice spectrum was computed by two methods (a Peter--Weyl diagonalization and a Nystr\"om
-discretization with Lanczos), which agree to $4.6\cdot10^{-9}$ or better.
+The lowest center-even gap was computed by two methods (a Peter--Weyl diagonalization and a Nystr\"om
+discretization with Lanczos), which agree to $4.6\cdot10^{-9}$ or better at $\beta=2,\dots,1024$; the second
+level agrees to $1.1\cdot10^{-8}$.
 
 \emph{Three directions.} The lattice model was converged only up to $\beta=4$; at $\beta=8$ it is not
-converged, and the computed range is not asymptotic. Nothing is measured about the three-direction limit.
+converged, and the computed range is not asymptotic. The limit was therefore tested by Monte Carlo instead (32 independent chains per $\beta$, a variational analysis of center-even operators in the channels $E$, $T_2$, $A_1$ of the cubic group, plateau rule fixed in advance for the main runs; controls: the exact gaps at $\beta=2$ and $4$, which failed the rule fixed in advance and were reproduced only by analyses chosen afterwards (an earlier reference time; a differenced correlator removing a constant floor), and the two-direction value at $\beta=256$, which came out $1.8$ standard errors high). The products $\log(\lambda_0/\lambda)\,\beta^{1/3}$ are, for $E$, $T_2$, $A_1$: $2.747(10)$, $2.813(13)$, $3.225(36)$ at $\beta=64$; $2.955(9)$, $2.973(8)$, $3.524(17)$ at $\beta=1024$; $2.992(13)$, $2.989(13)$, $3.544(27)$ at $\beta=4096$; $2.988(23)$, $2.984(23)$, $3.568(48)$ at $\beta=16384$; against $3.0125$, $3.0125$, $3.6028$. The approach is from below, as for two directions, and the $E$--$T_2$ splitting falls to $0.018(11)$ at $\beta=1024$ and vanishes within errors at $\beta=4096$ and $16384$. This is a measurement at one to two per cent.
 In the normalisation of the small-volume literature, $-\tfrac12\Delta+\tfrac12\sum_{i<j}|x_i\times x_j|^2$
 (energies divided by $4^{1/3}$), $e_0=4.1167196$. The published value is $4.116719735$
 \cite[text after eq.~(12)]{vB00}; the difference, $1.5\cdot10^{-7}$, is within the rounding of
