@@ -61,3 +61,5 @@ At zero magnetic coupling the character is an exact eigenfunction of excitation 
 For large $g$, the estimate gives $v_*^{-1}=O(g)$ and $M_*/v_*=O(\kappa\sqrt g)$. In particular this result cannot by itself provide a finite continuum energy scale as $\kappa$ and $\lambda$ are retuned with the spatial cutoff. Matching Hamiltonian time to a discrete Wilson step requires a separate limit. Matching the regulators, removing the spatial cutoff, reconstructing the field theory and proving a positive lower gap for all compact simple groups remain open.
 
 B4 independently checked the radial change of variables and obtained a complementary exponential one-link product trial for the cubic Hamiltonian. When B4 uses the unit-round Laplacian with coefficient $1/(2\kappa_B)$, the kinetic coefficient in this note is $\kappa=2/\kappa_B$. Thus $g=\kappa_B\lambda/2$. [B4’s independent calculation](https://github.com/KirtusJ/Millennium-Prize-Problems/issues/1#issuecomment-7091287505)
+
+The [positive-energy interval estimate](excited-band/) proves that a definite part of the plaquette spectrum also stays separated from zero in arbitrarily large boxes at each fixed coupling.
