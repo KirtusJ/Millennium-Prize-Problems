@@ -1,0 +1,3 @@
+shell vertex and tree edge counts through side 32
+both ordered square inverses on 4096 quaternion assignments
+quadratic word budget and Cartan seam accumulation through side 128
