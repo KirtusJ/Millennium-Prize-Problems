@@ -1,0 +1,3 @@
+4096 exact dispersion comparisons; equality only at a zero leg
+eight corner orders and the rest angular coefficient
+4095 six-leg controls for soft-energy localization

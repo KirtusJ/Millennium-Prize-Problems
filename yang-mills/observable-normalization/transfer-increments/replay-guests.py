@@ -37,10 +37,12 @@ def run_worker(args, directory, role, request):
     try:
         deadline = time.monotonic() + args.timeout
         while True:
+            # After a reported exit, read the final serial bytes before judging completion.
+            exited = proc.poll() is not None
             lines = serial.read_bytes().splitlines() if serial.exists() else []
             if any(line.startswith(b"ALL SELF-TESTS PASS.") for line in lines):
                 break
-            if proc.poll() is not None or time.monotonic() >= deadline:
+            if exited or time.monotonic() >= deadline:
                 raise RuntimeError(f"{name} terminated early or timed out")
             time.sleep(0.1)
     finally:
