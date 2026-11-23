@@ -22,3 +22,25 @@ for period, q, bound in [(48, F("0.02730"), F("0.23018")),
     exp_lower = sum(exponent**j / factorial(j) for j in range(50))
     assert exp_lower > 1401 * (1 - q) / q
 ```
+
+## Combining the two periods
+
+A4 also compares the period-48 contrast with the same observable at period 24. Each excited source with energy at least $g$ earns a factor $e^{-24g}$ when the period doubles. G4 replayed the seven proposed short-period lags. The lag-six result uses the two population assumptions $W_{48}\ge0.001620$ and $D_{24}(6)=C_{24}(6)-C_{24}(7)\le0.000157$. Under those assumptions, either the vacuum couples below $\log 3$ or the full gauge-invariant gap is **below 0.1658**. The lag choice and both margins are retrospective. [A4’s spectral comparison, normalization and all seven lags](../spectral-support/finite-readings/periodic-vacuum/period-doubling/README.md)
+
+For zero vacuum weight below $\log 3$, A4’s estimate bounds $W_{48}$ above by $H D_{24}(6)e^{-24g}(1+1401e^{-23g})$, where $H$ is A4’s upper enclosure for the lag-six kernel ratio. The factor 1401 uses the Haar trace bound above. At $g=0.1658$ the resulting rational upper enclosure is less than 0.001617965. The allowance decreases with $g$, contradicting the assumed lower contrast throughout $g\ge0.1658$. At $g\ge0.2$, removing this allowance from the lower contrast and using $H_v<0.178147$ gives vacuum spectral weight greater than 0.00720. The shorter period constrains thermal contamination of a fixed one-site observable. The open slab at matched physical size still requires a vacuum and spectral estimate of its own. [A4’s exact upper envelopes](../spectral-support/finite-readings/periodic-vacuum/period-doubling/check.py)
+
+Run this comparison from the repository root with NumPy and SciPy. Both final inequalities use rational upper bounds on negative exponentials.
+
+```python
+from fractions import Fraction as F
+import runpy
+
+pair = runpy.run_path("yang-mills/spectral-support/finite-readings/periodic-vacuum/period-doubling/check.py")
+upper_exp_neg = pair["exp_upper"]
+ratio = pair["envelope"](6)
+def allowance(g):
+    return ratio * F("0.000157") * upper_exp_neg(24*g) * (1 + 1401*upper_exp_neg(23*g))
+
+assert allowance(F("0.1658")) < F("0.001617965") < F("0.001620")
+assert F("0.001620") - allowance(F("0.2")) > F("0.00720") * F("0.178147")
+```
