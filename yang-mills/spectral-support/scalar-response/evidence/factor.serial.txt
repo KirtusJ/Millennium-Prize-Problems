@@ -1,0 +1,83 @@
+PCP OS kernel 0.3.1 | x86_64 | new kernel, written in Rust | early
+memory reported by the loader: 639 KiB below 1 MiB, 31740 KiB above
+kernel image: code 0x101000..0x15f000, read-only data 0x15f000..0x181000, end 0x1227000
+protections: paging true, supervisor write protection true, no-execute true, long mode true
+memory for programs: 2560 frames of 4 KiB, 0x1400000..0x1e00000
+file from the loader: d4.elf (93152 bytes at 0x1228000)
+file from the loader: request (2 bytes at 0x123f000)
+command line: /workspace/scratch/37d126f1c36d/run/image-kernel.elf32 auto=d4.elf then=off image=0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3
+further protections: supervisor execution prevention on, supervisor access prevention on, user-mode instruction prevention on
+running image (code and read-only data), SHA-256: 0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3 (measured; equal to the value the loader named)
+memory map replaced, read back from the page tables: 4385 pages of the kernel image, 24 pages of the loader's files, 10240 KiB of frame memory, 0 KiB of device memory; writable and executable at once: 0
+self-test:
+  pass the kernel opens its own register and records the native method by measurement
+  pass the running image measures as the value the loader named
+  pass a register written by the Python implementation verifies to the same head
+  pass the register of the research-baseline exercise verifies to the same head
+  pass one changed byte in an earlier event is refused
+  pass an incomplete final line is refused
+  pass the kernel appends events and its own register verifies
+  pass an event with a malformed time or an undefined authority is refused and nothing is written
+  pass a derived capability has the same rights or fewer, and revocation reaches everything derived
+  pass the draft compact record form round-trips every event
+  note the same 13 events: 6027 bytes as JSON, 2962 bytes in the draft compact form
+  pass every state machine is a complete, well-formed table, equal to the published tables
+  pass from every running state an integrity fault leads to SAFE, and SAFE is left only by stopping
+  pass a task becomes DONE only from EXITED by a verified result
+  pass the native ACR guards replay the scenario register (82 events, every kind) without a problem
+  pass no combination of roles hands a model or a program the means to start ACR use, administer or change the system
+  pass revoking a grant takes back what was handed on from it, in every holder
+  pass no memory is both writable and executable
+  pass code is executable and not writable
+  pass read-only data is neither writable nor executable
+  pass data is writable and not executable
+  pass address zero is not mapped, nor anything below the image
+  pass what is mapped is the kernel image, the loader's files read-only, and frame memory that is never executable; nothing else, each at its own address, none of it for user mode
+  pass every further protection the processor offers is on
+  pass a frame is handed out to one holder, comes back zeroed, cannot be given back twice, and memory outside the pool is not a frame
+  pass the kernel's heap gives each holder its own block and uses freed blocks again instead of new memory
+  pass a write to kernel code is refused by the processor
+  pass a write to read-only data is refused by the processor
+  pass executing an instruction that lies in writable data is refused by the processor
+  pass a read near address zero is refused by the processor
+  pass control: a write to ordinary data is allowed, so the probe can tell the difference
+  pass a write to the interrupt table is refused by the processor
+  pass a write to the segment table and task state segment is refused by the processor
+  pass a read of the page below each of the six stacks is refused by the processor
+  pass memory the kernel does not use is not mapped: the text display, the low mebibyte, what lies above the frame memory, and where devices are
+  pass frame memory is writable by the kernel and an instruction in it is refused by the processor
+  pass the timer interrupts and the tick count advances
+  pass a task not heard from within its quiet limit is LOST at the next sweep; one that reports is not; a claimed result that differs is FAILED
+  pass the system is OPERATIONAL after a verification that passed, and only then
+  pass an event the guards refuse leaves the register unchanged
+  note 13 processes ran for 78 timer periods; the timer took the processor back 78 times
+  pass a program runs in user mode in its own address space, writes through a system call and exits; the kernel kept what it wrote
+  pass a program that yields is resumed where it left off, three times
+  pass two programs that never yield are each preempted by the timer, at least three times, and each finishes
+  pass each of the two wrote its own number at the same address and found it unchanged: their memory is separate
+  pass a program's read of kernel memory is refused by the processor and ends that program only
+  pass a program's write to kernel memory is refused by the processor
+  pass an instruction reserved to the kernel is refused in user mode
+  pass a program reaches no device port
+  pass a program cannot execute its own writable data
+  pass a program that exhausts its stack meets the absent page below it and is ended
+  pass a system call that names kernel memory, unmapped memory or an impossible length is refused, and so is an undefined call
+  pass a program without a capability for the console cannot write to it
+  pass a program that never yields and never ends is stopped by the kernel when its budget is spent
+  pass in every address space a program reaches three pages, none both writable and executable, no kernel page, and the page below its stack is absent
+  pass no page of memory belongs to two processes
+  pass after all of it the kernel is in its own address space and its code and read-only data measure as before
+  pass every process is a task in the kernel's register: six DONE by the kernel's own reading of the output, six FAILED, one STOPPED
+  pass a task is not DONE on a claim: completion that names no result in the record is refused
+display: none this kernel can drive
+keyboard: no controller
+sound: no device this kernel drives
+music: no FM synthesiser
+the asynchronous self-tests were not run: there is no keyboard controller
+starting d4.elf (93152 bytes, SHA-256 fbef68827e33f0d6d7b988f427d998e79264b207f71103721cba20c416cad8d0)
+D4 01170154292a2946111c00001c
+d4.elf ended DONE: exit 0 after 21 s; 7 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 698 pages at the end, 0 of them the display's, 0 both writable and executable; 704 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
+  pass the kernel's register of its own start, verification and stop verifies and replays without a problem
+kernel register: 48 events, head 6400c5cafe824152b5ab760f31e6031f5c13478badda959c5476d07c4164e865
+kernel heap: 105760 bytes in use, 851968 bytes ever carved; frames: 2560 of 2560 free, 3361 handed out and 3361 given back since the start
+ALL SELF-TESTS PASS. Guest Ethernet support is compiled in. Access requires a matching image grant and a supported NIC.

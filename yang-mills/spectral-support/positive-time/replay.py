@@ -18,6 +18,9 @@ ADJOINT_MARKER = b"-- BEGIN PCP OS generated spherical divergence\n"
 
 
 def result_spec(mode):
+    if mode == "response":
+        return (HERE.parent / "scalar-response/ScalarResponse.lean",
+                b"-- BEGIN PCP OS generated Wilson response residues\n", "residues")
     if mode == "slab":
         return (HERE.parent / "electric-slab/ElectricSlab.lean",
                 b"-- BEGIN PCP OS generated slab controls\n", "faces")
@@ -44,7 +47,7 @@ def launch(stage, folder, config):
     command = [sys.executable, "-I", __file__, "--worker", stage, str(folder)]
     if config["dispatcher"]:
         register = config["register"] if stage == "factor" else "-"
-        prefix = {"adjoint": "adjoint-", "finite": "readings-", "scale": "electric-", "graph": "graph-", "loop": "loop-", "slab": "slab-"}.get(config["mode"], "positive-")
+        prefix = {"adjoint": "adjoint-", "finite": "readings-", "scale": "electric-", "graph": "graph-", "loop": "loop-", "slab": "slab-", "response": "response-"}.get(config["mode"], "positive-")
         command = [config["dispatcher"], "--register", register, config["actor"],
                    prefix + stage, "--", *command]
     subprocess.run(command, check=True)
@@ -54,7 +57,7 @@ def worker(stage, folder):
     config = json.loads((folder / "config.json").read_text())
     mode = config["mode"]
     filename, marker, intermediate = result_spec(mode)
-    coefficient = {"positive": 2, "difference": 1, "adjoint": 3, "finite": 4, "scale": 6, "graph": 7, "loop": 8, "slab": 9}[mode]
+    coefficient = {"positive": 2, "difference": 1, "adjoint": 3, "finite": 4, "scale": 6, "graph": 7, "loop": 8, "slab": 9, "response": 10}[mode]
     if stage == "factor":
         request = b"F" + bytes([coefficient])
     elif stage == intermediate:
@@ -89,6 +92,17 @@ def worker(stage, folder):
             expected_factor = bytes(payload)
         if mode == "slab":
             expected_factor = bytes([6, 0, 1, 23, 16, 8, 16])
+        if mode == "response":
+            from fractions import Fraction
+            cases = json.loads((HERE.parent / "scalar-response/evidence/coefficients.json").read_text())
+            case = cases["cases"]["5x1x1x1@0,2,4"]
+            values = [Fraction(v) for model in ("wilson", "matched")
+                      for v in [*case[model]["V1"], case[model]["T1"]]]
+            nulls = json.loads((HERE.parent / "scalar-response/evidence/null.json").read_text())["time"]
+            c = list(map(int, nulls["coefficients"]))
+            values.extend([Fraction(c[0], c[2]), Fraction(c[1], c[2]), Fraction(0), Fraction(0),
+                           Fraction(nulls["combined_wilson_T1"]) / c[2]])
+            expected_factor = bytes(v.numerator * pow(v.denominator, -1, 101) % 101 for v in values)
         if output != expected_factor:
             raise ValueError("unexpected guest coefficient vector")
         (folder / "factor.out").write_bytes(output)
@@ -109,7 +123,9 @@ def generate(folder, kernel, pcp_source, qemu, firmware, template, dispatcher=No
     filename, _, _ = result_spec(mode)
     package = kernel_package(kernel, pcp_source)
     flags = ["-DD4_POSITIVE_TIME"]
-    if mode == "slab":
+    if mode == "response":
+        flags.append("-DD4_SCALAR_RESPONSE")
+    elif mode == "slab":
         flags.append("-DD4_ELECTRIC_SLAB")
     elif mode == "loop":
         flags.append("-DD4_ORDINARY_LOOP")
@@ -134,7 +150,7 @@ def generate(folder, kernel, pcp_source, qemu, firmware, template, dispatcher=No
 
 
 def main():
-    if len(sys.argv) == 4 and sys.argv[1] == "--worker" and sys.argv[2] in (*STAGES, "divergence", "moments", "flux", "words", "wick", "faces"):
+    if len(sys.argv) == 4 and sys.argv[1] == "--worker" and sys.argv[2] in (*STAGES, "divergence", "moments", "flux", "words", "wick", "faces", "residues"):
         worker(sys.argv[2], Path(sys.argv[3]))
         return
     p = argparse.ArgumentParser(description=__doc__)
@@ -146,6 +162,8 @@ def main():
     p.add_argument("--register", type=Path)
     p.add_argument("--actor", default="Director-D4")
     modes = p.add_mutually_exclusive_group()
+    modes.add_argument("--scalar-response", dest="mode", action="store_const", const="response",
+                       help="recompute finite Wilson response residues and replay the Lean module")
     modes.add_argument("--electric-slab", dest="mode", action="store_const", const="slab",
                        help="replay the temporal-slab and energy–momentum module")
     modes.add_argument("--ordinary-loop", dest="mode", action="store_const", const="loop",
