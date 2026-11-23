@@ -1,0 +1,5 @@
+C=[0. 0. 0.]; positive rank 42, frozen energy 44.3983569740
+C=[6.28318531 0.         6.28318531]; positive rank 42, frozen energy 44.3983569740
+C=[3.14159265 0.         0.        ]; positive rank 46, frozen energy 46.4863353847
+C=[ 0.4 -1.2  2.3]; positive rank 46, frozen energy 46.6097785291
+Eight Wilson derivatives, max singular-value error 2e-15; six oscillator checks passed

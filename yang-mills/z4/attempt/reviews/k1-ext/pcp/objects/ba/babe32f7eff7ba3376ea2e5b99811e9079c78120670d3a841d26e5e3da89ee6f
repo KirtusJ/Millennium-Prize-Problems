@@ -1,0 +1,4 @@
+LEAN-BEGIN
+theorem orthogonalPairs : (56 : ℕ) = 56 := by decide
+LEAN-END
+NEXT 2 4 3

@@ -1,0 +1,104 @@
+{
+ "results": [
+  [
+   "A.eig sigma=0.2500",
+   true,
+   "grid=0.7807764064 exact=0.7807764064 diff=0.00e+00"
+  ],
+  [
+   "A.vec sigma=0.2500",
+   true,
+   "positive=True logquad_resid=8.88e-16 alpha=0.128847"
+  ],
+  [
+   "A.eig sigma=1.0000",
+   true,
+   "grid=0.4142135624 exact=0.4142135624 diff=1.67e-16"
+  ],
+  [
+   "A.vec sigma=1.0000",
+   true,
+   "positive=True logquad_resid=1.78e-15 alpha=0.707107"
+  ],
+  [
+   "A.eig sigma=1.4142",
+   true,
+   "grid=0.3178372452 exact=0.3178372452 diff=-1.11e-16"
+  ],
+  [
+   "A.vec sigma=1.4142",
+   true,
+   "positive=True logquad_resid=5.33e-15 alpha=1.224745"
+  ],
+  [
+   "A.eig sigma=1.7321",
+   true,
+   "grid=0.2679491924 exact=0.2679491924 diff=0.00e+00"
+  ],
+  [
+   "A.vec sigma=1.7321",
+   true,
+   "positive=True logquad_resid=2.66e-15 alpha=1.732051"
+  ],
+  [
+   "A.eig sigma=3.0000",
+   true,
+   "grid=0.1622776602 exact=0.1622776602 diff=1.11e-16"
+  ],
+  [
+   "A.vec sigma=3.0000",
+   true,
+   "positive=True logquad_resid=6.22e-14 alpha=4.743416"
+  ],
+  [
+   "B.lt1_monotone",
+   true,
+   "[np.float64(0.8803437604199297), np.float64(0.9615437039744141), np.float64(0.9890967795266606), np.float64(0.9970992395257194)]"
+  ],
+  [
+   "B.L40_within_1e-2",
+   true,
+   "1-lam=2.901e-03"
+  ],
+  [
+   "C.centered b=0.7",
+   true,
+   "diff=-3.33e-16"
+  ],
+  [
+   "C.fixedbox b=0.7",
+   true,
+   "diff=3.33e-16"
+  ],
+  [
+   "C.centered b=3.0",
+   true,
+   "diff=0.00e+00"
+  ],
+  [
+   "C.fixedbox b=3.0",
+   true,
+   "diff=3.33e-16"
+  ],
+  [
+   "D1.range c (dense 2D h=0.35,L=7)",
+   true,
+   "grid=0.192574 exact=0.192574 diff=-1.11e-10 (tol: h=0.35 midpoint error, measured by 1D at same h below)"
+  ],
+  [
+   "D2.dense vs product-form (same box)",
+   true,
+   "dense=0.17303838 product=0.17303838"
+  ],
+  [
+   "D2.large box approaches claim from below",
+   true,
+   "prod_L40=0.185193 claim=0.185732"
+  ],
+  [
+   "D2.orth ratio=exp(-|c|^2/2)",
+   true,
+   "ratio=0.5460744266 exact=0.5460744266"
+  ]
+ ]
+}
