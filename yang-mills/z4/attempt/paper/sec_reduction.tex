@@ -1,18 +1,18 @@
 \section{Setting and two reductions}\label{sec:reduction}
 
-This section states the lattice setting and two conditional theorems. Theorem~\ref{thm:reduction} treats one two-point function. Theorem~\ref{thm:conditional} carries a family of local fields to the Osterwalder--Schrader axioms. Both theorems are proved here, with one exception: Step~9 of the proof of Theorem~\ref{thm:conditional} uses the reconstruction theorem as cited and a description of the reconstructed space that is recalled, not read. Neither theorem proves a property of four-dimensional Yang--Mills theory: each moves the whole difficulty into its hypotheses. Table~\ref{red:status} at the end of the section gives the status of each hypothesis for $\SU(2)$.
+This section states the lattice setting and two conditional theorems. Theorem~\ref{thm:reduction} treats one two-point function. Theorem~\ref{thm:conditional} carries a family of local fields to the Osterwalder--Schrader axioms. Both theorems are proved here, with one exception: Step~9 of the proof of Theorem~\ref{thm:conditional} uses the reconstruction theorem as cited and a description of the reconstructed space that is recalled, not read. Neither theorem proves a property of four-dimensional Yang--Mills theory: each moves the whole difficulty into its hypotheses. Table~\ref{intro:status} in the Introduction gives the status of each hypothesis for $\SU(2)$.
 
 \subsection{The lattice theory}\label{red:setting}
 
-Let $\Lambda_k=(\Z/2^k\Z)^4$ be the periodic box of side $2^k$ and let $\mathcal{P}_k$ be its set of plaquettes. A configuration assigns $U_b\in\SU(2)$ to each oriented edge $b$, with $U_{-b}=U_b^{-1}$. For a plaquette $p$ let $U_p$ be the ordered product of the four edge variables around $p$. The Wilson action at coupling $\beta>0$ is
+Let $\Lambda_L=(\Z/L\Z)^4$, $L=2^k$ with $k\ge2$, be the periodic box of side $L$ and let $\mathcal{P}_k$ be its set of plaquettes. A configuration assigns $U_b\in\SU(2)$ to each oriented edge $b$, with $U_{-b}=U_b^{-1}$. For a plaquette $p$ let $U_p$ be the ordered product of the four edge variables around $p$. The Wilson action at coupling $\beta>0$ is
 \begin{equation}\label{red:action}
   A_{\beta,k}(U)=\beta\sum_{p\in\mathcal{P}_k}\Bigl(1-\tfrac12\Tr U_p\Bigr),
 \end{equation}
-and the periodic Wilson state is the probability measure $Z^{-1}e^{-A_{\beta,k}(U)}\prod_b dU_b$, with $dU_b$ the Haar measure. Let $\cL_\beta$ be the set of weak limit points, as $k\to\infty$, of these states, regarded as measures on $\SU(2)^{E(\Z^4)}$, where $E(\Z^4)$ is the set of edges of $\Z^4$. The space $\SU(2)^{E(\Z^4)}$ is compact and metrizable, so $\cL_\beta$ is not empty. For each $\beta$ we choose one $\mu_\beta\in\cL_\beta$ and write $\langle\cdot\rangle_\beta$ for its expectation. Nothing below depends on the choice beyond the hypotheses stated.
+and the periodic Wilson state is the probability measure $Z^{-1}e^{-A_{\beta,k}(U)}\prod_b dU_b$, with $dU_b$ the Haar measure. Let $\cL_\beta$ be the set of weak limit points, as $k\to\infty$ ($k\ge2$), of these states, regarded as measures on $\SU(2)^{E(\Z^4)}$, where $E(\Z^4)$ is the set of edges of $\Z^4$. The space $\SU(2)^{E(\Z^4)}$ is compact and metrizable, so $\cL_\beta$ is not empty. For each $\beta$ we choose one $\mu_\beta\in\cL_\beta$ and write $\langle\cdot\rangle_\beta$ for its expectation. Nothing below depends on the choice beyond the hypotheses stated.
 
-Coordinates are $x=(x_0,x_1,x_2,x_3)$, with $x_0=t$ the time. Let $W_4$ be the hypercubic group: the $384$ signed permutation matrices acting on $\R^4$ and on $\Z^4$. For $c\in\Z$ the reflection in the site hyperplane $\{x_\mu=c\}$ acts on configurations, and $\Theta$ denotes the induced map on functions of the configuration. We write $\theta$ for the reflection $(t,\vec x)\mapsto(-t,\vec x)$ in the plane $\{t=0\}$.
+Coordinates are $x=(x_0,x_1,x_2,x_3)$, with $x_0=t$ the time. Let $W_4$ be the hypercubic group: the $384$ signed permutation matrices acting on $\R^4$ and on $\Z^4$. For $j\in\{0,1,2,3\}$ and $c\in\Z$ the reflection in the site hyperplane $\{x_j=c\}$ acts on configurations, and $\Theta$ denotes the induced map on functions of the configuration. We write $\theta$ for the reflection $(t,\vec x)\mapsto(-t,\vec x)$ in the plane $\{t=0\}$.
 
-\emph{Reflection positivity and the transfer matrix.} Hypothesis~\ref{hyp:H0} below states reflection positivity of $\mu_\beta$ in site hyperplanes. Given it, the standard construction \cite{OS78} produces the following objects; we cite it and do not repeat it, and \cite{OS78} was not read for this section. Let $\mathcal{A}_+$ be the bounded functions of the edge variables of edges with both endpoints in $\{t\ge0\}$. The form $(F,G)\mapsto\langle\overline{\Theta F}\,G\rangle_\beta$ is positive semidefinite on $\mathcal{A}_+$. Let $\cH_\beta$ be the completion of $\mathcal{A}_+$ modulo its null space, $[F]$ the class of $F$, and $\Omega_\beta=[1]$. Let $\tau_n$ be the translation by $n$ lattice steps in the time direction. Then $T_\beta[F]:=[\tau_1F]$ defines an operator with the following properties: $T_\beta$ is self-adjoint by translation invariance; $\langle v,T_\beta^2v\rangle\ge0$ by reflection positivity in the site plane $\{t=1\}$; $\|T_\beta\|\le1$; and $T_\beta\Omega_\beta=\Omega_\beta$. Site-plane reflection positivity alone does not give $T_\beta\ge0$. For the Wilson action $T_\beta\ge0$ is a theorem of \cite{Lu77}, recalled and not read for this section. This paper does not use it.
+\emph{Reflection positivity and the transfer matrix.} Hypothesis~\ref{hyp:H0} below states reflection positivity of $\mu_\beta$ in site hyperplanes. Given it, the standard construction \cite{OS78} produces the following objects; we cite it and do not repeat it, and \cite{OS78} was not read for this section. Let $\mathcal{A}_+$ be the closure, in the supremum norm, of the bounded continuous functions of finitely many edge variables of edges with both endpoints in $\{t\ge0\}$. The form $(F,F')\mapsto\langle\overline{\Theta F}\,F'\rangle_\beta$ is positive semidefinite on the continuous local functions by H0, and hence on $\mathcal{A}_+$, since it is continuous in the supremum norm. Let $\cH_\beta$ be the completion of $\mathcal{A}_+$ modulo its null space, $[F]$ the class of $F$, and $\Omega_\beta=[1]$. Let $\tau_n$ be the translation by $n$ lattice steps in the time direction. Then $T_\beta[F]:=[\tau_1F]$ defines an operator with the following properties: $T_\beta$ is self-adjoint by translation invariance; $\langle v,T_\beta^2v\rangle\ge0$ by reflection positivity in the site plane $\{t=1\}$; $\|T_\beta\|\le1$; and $T_\beta\Omega_\beta=\Omega_\beta$. Site-plane reflection positivity alone does not give $T_\beta\ge0$. For the Wilson action $T_\beta\ge0$ is a theorem of \cite{Lu77}, recalled and not read for this section. This paper does not use it.
 
 \begin{definition}\label{red:def-gap}
 The \emph{gap in lattice units} is $m(\beta):=-\log\|T_\beta|_{\Omega_\beta^\perp}\|\in[0,\infty]$. When $0<m(\beta)<\infty$, the \emph{correlation length} is $\xi(\beta):=1/m(\beta)$ and the \emph{unit of length} is
@@ -38,7 +38,7 @@ The gap is $m(\beta):=\inf\operatorname{spec}(H_\beta|_{\Omega_\beta^\perp})$, w
 \end{equation}
 In the application $\psi_\beta=(O-\langle O\rangle_\beta)\Omega_\beta$ for a bounded gauge-invariant function $O$ of the edges of one time slice near the origin, and $C_\beta(n)$ is its connected correlation at time separation $n$. It is a lattice correlation only at integer $n$; at other $n$ it is defined by the functional calculus. To apply the theorem to the Wilson transfer matrix one needs $0<T_\beta$, which is the theorem of \cite{Lu77}. Theorem~\ref{thm:conditional} does not need it.
 
-\begin{hypothesis}[(A): gap at every coupling]\label{hyp:A}
+\begin{hypothesis}[(A): a gap at all large couplings]\label{hyp:A}
 $m(\beta)>0$ for all $\beta\ge\beta_1$.
 \end{hypothesis}
 
@@ -49,68 +49,74 @@ $m(\beta)\to0$ as $\beta\to\infty$.
 Under (A) and (B), after enlarging $\beta_1$, $\xi(\beta)=1/m(\beta)\in(1,\infty)$ for $\beta\ge\beta_1$.
 
 \begin{hypothesis}[(C): bounded energy at the correlation time]\label{hyp:C}
-There are $c\in(0,1)$ and $D<\infty$ such that $C_\beta(c\,\xi)\le D\,C_\beta(\xi)$ for all $\beta\ge\beta_1$.
+There are $c\in(0,1)$ and $K_C<\infty$ such that $C_\beta(c\,\xi)\le K_C\,C_\beta(\xi)$ for all $\beta\ge\beta_1$.
 \end{hypothesis}
 
 The source first stated (C) with $c=\tfrac12$. Every $c\in(0,1)$ gives the same proof, and we state that form. In Theorem~\ref{thm:conditional}, Hypothesis~(A) is called H1 and Hypothesis~(B) is called H2. There $m(\beta)$ is the gap of Definition~\ref{red:def-gap}.
 
-Let $E:=\varepsilon\,\xi$ be the energy in units of the gap. Let $\tilde\nu_\beta$ be the image of $\nu_\beta$ under $\varepsilon\mapsto\varepsilon\xi$; it is carried by $[1,\infty)$. Define the probability measure $\mu_\beta$ on $[1,\infty)$ by
+Let $E:=\varepsilon\,\xi$ be the energy in units of the gap. Let $\tilde\nu_\beta$ be the image of $\nu_\beta$ under $\varepsilon\mapsto\varepsilon\xi$; it is carried by $[1,\infty)$. Define the probability measure $\varpi_\beta$ on $[1,\infty)$ by
 \begin{equation}\label{red:mu}
-  d\mu_\beta(E):=\frac{e^{-E}\,d\tilde\nu_\beta(E)}{\int e^{-E'}\,d\tilde\nu_\beta(E')},
+  d\varpi_\beta(E):=\frac{e^{-E}\,d\tilde\nu_\beta(E)}{\int e^{-E'}\,d\tilde\nu_\beta(E')},
   \qquad
-  G_\beta(t):=\frac{C_\beta(t\xi)}{C_\beta(\xi)}\quad(t\ge0).
+  \Gamma_\beta(t):=\frac{C_\beta(t\xi)}{C_\beta(\xi)}\quad(t\ge0).
 \end{equation}
-Hypothesis~(C) says exactly that $\int e^{(1-c)E}\,d\mu_\beta(E)\le D$.
+Hypothesis~(C) says exactly that $\int e^{(1-c)E}\,d\varpi_\beta(E)\le K_C$.
 
 \begin{theorem}[Theorem R$'$]\label{thm:reduction}
-Assume Hypotheses~\ref{hyp:A}, \ref{hyp:B} and~\ref{hyp:C}, with constants $c\in(0,1)$ and $D$. Then:
+Assume Hypotheses~\ref{hyp:A}, \ref{hyp:B} and~\ref{hyp:C}, with constants $c\in(0,1)$ and $K_C$. Then:
 \begin{enumerate}
-\item[(R1)] For every $\beta\ge\beta_1$, $\mu_\beta$ is a probability measure on $[1,\infty)$ and $G_\beta(t)=\int e^{-(t-1)E}\,d\mu_\beta(E)$ for every $t\ge0$.
-\item[(R2)] $\mu_\beta((K,\infty))\le D\,e^{-(1-c)K}$ for every $K\ge0$, and $\int E\,d\mu_\beta\le \log D/(1-c)$, for every $\beta\ge\beta_1$.
-\item[(R3)] Every sequence $\beta_k\to\infty$ has a subsequence along which $\mu_{\beta}$ converges weakly to a probability measure $\mu$ on $[1,\infty)$, and $G_\beta(t)\to G(t):=\int e^{-(t-1)E}\,d\mu(E)$ for every $t>c$.
-\item[(R4)] $G(1)=1$; $0<G(t)\le e^{-(t-1)}$ for $t\ge1$; $\int E\,d\mu\le\log D/(1-c)$; and $G(t)\ge D^{-(t-1)/(1-c)}$ for $t\ge1$.
+\item[(R1)] For every $\beta\ge\beta_1$, $\varpi_\beta$ is a probability measure on $[1,\infty)$ and $\Gamma_\beta(t)=\int e^{-(t-1)E}\,d\varpi_\beta(E)$ for every $t\ge0$.
+\item[(R2)] $\varpi_\beta((K,\infty))\le K_C\,e^{-(1-c)K}$ for every $K\ge0$, and $\int E\,d\varpi_\beta\le \log K_C/(1-c)$, for every $\beta\ge\beta_1$.
+\item[(R3)] Every sequence $\beta_k\to\infty$ has a subsequence along which $\varpi_{\beta}$ converges weakly to a probability measure $\varpi$ on $[1,\infty)$, and $\Gamma_\beta(t)\to \Gamma(t):=\int e^{-(t-1)E}\,d\varpi(E)$ for every $t>c$.
+\item[(R4)] $\Gamma(1)=1$; $0<\Gamma(t)\le e^{-(t-1)}$ for $t\ge1$; $\int E\,d\varpi\le\log K_C/(1-c)$; and $\Gamma(t)\ge K_C^{-(t-1)/(1-c)}$ for $t\ge1$.
 \item[(R5)] The unit of length $a(\beta)=m(\beta)$ tends to $0$.
 \end{enumerate}
 \end{theorem}
 
 \begin{proof}
-(R1). By (A), $\xi<\infty$ and $\tilde\nu_\beta$ is carried by $[1,\infty)$. The denominator in \eqref{red:mu} equals $C_\beta(\xi)=\int e^{-\xi\varepsilon}\,d\nu_\beta>0$, because $\nu_\beta\ne0$ and the integrand is positive. So $\mu_\beta$ is a probability measure on the closed set $[1,\infty)$. For $t\ge0$,
+(R1). By (A), $\xi<\infty$ and $\tilde\nu_\beta$ is carried by $[1,\infty)$. The denominator in \eqref{red:mu} equals $C_\beta(\xi)=\int e^{-\xi\varepsilon}\,d\nu_\beta>0$, because $\nu_\beta\ne0$ and the integrand is positive. So $\varpi_\beta$ is a probability measure on the closed set $[1,\infty)$. For $t\ge0$,
 \[
-  \frac{C_\beta(t\xi)}{C_\beta(\xi)}=\frac{\int e^{-tE}\,d\tilde\nu_\beta}{\int e^{-E}\,d\tilde\nu_\beta}=\int e^{-(t-1)E}\,d\mu_\beta(E).
+  \frac{C_\beta(t\xi)}{C_\beta(\xi)}=\frac{\int e^{-tE}\,d\tilde\nu_\beta}{\int e^{-E}\,d\tilde\nu_\beta}=\int e^{-(t-1)E}\,d\varpi_\beta(E).
 \]
 Both integrals are finite at fixed $\beta$ because $\tilde\nu_\beta$ is finite and $e^{-tE}\le1$. Hypothesis~(C) is used only for bounds uniform in $\beta$.
 
 (R2). For $E>K$ we have $e^{-E}\le e^{-(1-c)K}e^{-cE}$. Hence
 \[
-  \int_{(K,\infty)}e^{-E}\,d\tilde\nu_\beta\le e^{-(1-c)K}\int e^{-cE}\,d\tilde\nu_\beta=e^{-(1-c)K}C_\beta(c\xi)\le D\,e^{-(1-c)K}C_\beta(\xi).
+  \int_{(K,\infty)}e^{-E}\,d\tilde\nu_\beta\le e^{-(1-c)K}\int e^{-cE}\,d\tilde\nu_\beta=e^{-(1-c)K}C_\beta(c\xi)\le K_C\,e^{-(1-c)K}C_\beta(\xi).
 \]
-Divide by $C_\beta(\xi)$. For the mean, Jensen's inequality for the convex function $\exp$ gives $\exp\bigl((1-c)\int E\,d\mu_\beta\bigr)\le\int e^{(1-c)E}\,d\mu_\beta=C_\beta(c\xi)/C_\beta(\xi)\le D$.
+Divide by $C_\beta(\xi)$. For the mean, Jensen's inequality for the convex function $\exp$ gives $\exp\bigl((1-c)\int E\,d\varpi_\beta\bigr)\le\int e^{(1-c)E}\,d\varpi_\beta=C_\beta(c\xi)/C_\beta(\xi)\le K_C$.
 
-(R3). By (R2) the family $(\mu_\beta)$ is tight on $[1,\infty)$. Prokhorov's theorem gives a weakly convergent subsequence. Its limit $\mu$ has mass $1$, and it is carried by $[1,\infty)$ because that set is closed. For $t\ge1$ the function $E\mapsto e^{-(t-1)E}$ is bounded and continuous on $[1,\infty)$, so the integrals converge. For $c<t<1$ the integrand $e^{(1-t)E}$ is continuous and uniformly integrable:
+(R3). By (R2) the family $(\varpi_\beta)$ is tight on $[1,\infty)$. Prokhorov's theorem gives a weakly convergent subsequence. Its limit $\varpi$ has mass $1$, and it is carried by $[1,\infty)$ because that set is closed. For $t\ge1$ the function $E\mapsto e^{-(t-1)E}$ is bounded and continuous on $[1,\infty)$, so the integrals converge. For $c<t<1$ the integrand $e^{(1-t)E}$ is continuous and uniformly integrable:
 \[
-  \int_{(K,\infty)}e^{(1-t)E}\,d\mu_\beta\le e^{-(t-c)K}\int e^{(1-c)E}\,d\mu_\beta\le D\,e^{-(t-c)K}.
+  \int_{(K,\infty)}e^{(1-t)E}\,d\varpi_\beta\le e^{-(t-c)K}\int e^{(1-c)E}\,d\varpi_\beta\le K_C\,e^{-(t-c)K}.
 \]
-Truncation at $K$ and weak convergence then give $G_\beta(t)\to G(t)$.
+Truncation at $K$ and weak convergence then give $\Gamma_\beta(t)\to \Gamma(t)$.
 
-(R4). $G(1)=\mu([1,\infty))=1$. For $t\ge1$ and $E\ge1$ we have $0<e^{-(t-1)E}\le e^{-(t-1)}$, and the integral of a positive function against a probability measure is positive. The function $E\mapsto E$ is continuous and bounded below, so $\int E\,d\mu\le\liminf\int E\,d\mu_\beta\le\log D/(1-c)$ along the subsequence. Jensen's inequality gives $G(t)\ge\exp\bigl(-(t-1)\int E\,d\mu\bigr)\ge D^{-(t-1)/(1-c)}$ for $t\ge1$.
+(R4). $\Gamma(1)=\varpi([1,\infty))=1$. For $t\ge1$ and $E\ge1$ we have $0<e^{-(t-1)E}\le e^{-(t-1)}$, and the integral of a positive function against a probability measure is positive. The function $E\mapsto E$ is continuous and bounded below, so $\int E\,d\varpi\le\liminf\int E\,d\varpi_\beta\le\log K_C/(1-c)$ along the subsequence. Jensen's inequality gives $\Gamma(t)\ge\exp\bigl(-(t-1)\int E\,d\varpi\bigr)\ge K_C^{-(t-1)/(1-c)}$ for $t\ge1$.
 
 (R5). This is Definition~\ref{red:def-gap} and Hypothesis~\ref{hyp:B}.
 \end{proof}
 
 Hypothesis~(B) enters only in (R5). Theorem~\ref{thm:reduction} is Prokhorov's theorem and properties of Laplace transforms. The conclusions ``gap at least $1$'' and ``not zero'' hold by construction: the unit is the gap, and the correlation is normalized at one correlation length.
 
-Every admissible constant in Hypothesis~\ref{hyp:C} satisfies $D\ge e^{1-c}$, so $D\ge\sqrt e$ when $c=\tfrac12$. Indeed $\mu_\beta$ is a probability measure carried by $E\ge1$, so $D\ge\int e^{(1-c)E}\,d\mu_\beta\ge e^{1-c}$.
-
-\emph{What Theorem~\ref{thm:reduction} does not give.} It gives one two-point function of one observable along one time axis, along subsequences. It gives no Euclidean invariance and no interaction: a free massive lattice field satisfies its hypotheses, and the theorem returns a free field. The lowest energy that $\psi_\beta$ sees in the limit can exceed $1$, so the theorem shows a gap of at least $1$, not equal to $1$. The limit can be $\mu=\delta_1$, a pure exponential, which a local relativistic field does not produce at a fixed spatial point. The normalization $C_\beta(\xi)$ tends to zero, and nothing in the theorem makes the normalizations of different observables consistent.
+\emph{What Theorem~\ref{thm:reduction} does not give.} It gives one two-point function of one observable along one time axis, along subsequences. It gives no Euclidean invariance and no interaction: a free massive lattice field satisfies its hypotheses, and the theorem returns a free field. The lowest energy that $\psi_\beta$ sees in the limit can exceed $1$, so the theorem shows a gap of at least $1$, not equal to $1$. The limit can be $\varpi=\delta_1$, a pure exponential, which a local relativistic field does not produce at a fixed spatial point. The normalization $C_\beta(\xi)$ tends to zero, and nothing in the theorem makes the normalizations of different observables consistent.
 
 Hypothesis~\ref{hyp:C} is not a statement about locality alone. It also asks that the observable overlap the lightest states, as the following example shows.
 
 \begin{observation}\label{red:twomass}
-Let the data be two decoupled free massive lattice scalar fields on $\Z^4$ with masses $m_1$ fixed and $m_2=m_2(\beta)\to0$, and let $\psi_\beta=\varphi_1(0)\Omega_\beta$, the first field at one site. Then Hypotheses~\ref{hyp:A} and~\ref{hyp:B} hold, and Hypothesis~\ref{hyp:C} fails for every $c\in(0,1)$ and every $D<\infty$.
+Let the data be two decoupled free massive lattice scalar fields on $\Z^4$ with masses $m_1$ fixed and $m_2=m_2(\beta)\to0$, and let $\psi_\beta=\varphi_1(0)\Omega_\beta$, the first field at one site. Then Hypotheses~\ref{hyp:A} and~\ref{hyp:B} hold, and Hypothesis~\ref{hyp:C} fails for every $c\in(0,1)$ and every $K_C<\infty$.
 \end{observation}
 
 \begin{proof}
-For one free field of mass $m$ the one-particle energies are $2\operatorname{asinh}\bigl(\tfrac12(m^2+\sum_{i=1}^3 4\sin^2(p_i/2))^{1/2}\bigr)\ge E_0(m):=2\operatorname{asinh}(m/2)$, and $\varphi(0)\Omega$ lies in the one-particle space. For the decoupled pair the gap is $m(\beta)=\min(E_0(m_1),E_0(m_2))=E_0(m_2)$, which is positive and tends to $0$. The spectral measure of $\psi_\beta$ is carried by $[E_0(m_1),\infty)$. Hence
+For one free field of mass $m$ the one-particle energies are
+\[
+2\operatorname{asinh}\Bigl(\tfrac12\bigl(m^2+\textstyle\sum_{i=1}^3 4\sin^2(p_i/2)\bigr)^{1/2}\Bigr)\ge E_0(m):=2\operatorname{asinh}(m/2),
+\]
+and $\varphi(0)\Omega$ lies in the one-particle space. For the decoupled pair the gap is
+\[
+m(\beta)=\min\bigl(E_0(m_1),E_0(m_2)\bigr)=E_0(m_2),
+\]
+which is positive and tends to $0$. The spectral measure of $\psi_\beta$ is carried by $[E_0(m_1),\infty)$. Hence
 \[
   \frac{C_\beta(c\xi)}{C_\beta(\xi)}=\frac{\int e^{-c\xi\varepsilon}\,d\nu_\beta}{\int e^{-\xi\varepsilon}\,d\nu_\beta}\ge e^{(1-c)\xi E_0(m_1)}\to\infty
 \]
@@ -121,7 +127,7 @@ The free-field dispersion relation used here is standard; Section~\ref{red:free}
 
 \subsection{Fields and hypotheses for the full chain}\label{red:S-setting}
 
-Fix a finite family $O_1,\dots,O_r$ of \emph{site-scalar} observables. Each $O_i(n)$ is a bounded, real, gauge-invariant function of the edges with both endpoints within lattice distance $1$ of the site $n$, and it is invariant under $W_4$ acting about $n$. An example is $O(n)=\sum_p\tfrac12\Tr U_p$ over the $24$ plaquettes having $n$ as a corner. Write $\hat O_i(n):=O_i(n)-\langle O_i\rangle_\beta$. A reflection $\theta'$ in any site hyperplane maps $\hat O_i(n)$ to $\hat O_i(\theta'n)$ exactly, with no shift of the base point. That is the reason for site-scalar fields.
+Fix a finite family $O_1,\dots,O_r$ of \emph{site-scalar} observables. Each $O_i(n)$ is a bounded, continuous, real, gauge-invariant function of the edges with both endpoints within lattice distance $1$ of the site $n$, and it is invariant under $W_4$ acting about $n$. An example is $O(n)=\sum_p\tfrac12\Tr U_p$ over the $24$ plaquettes having $n$ as a corner. Write $\hat O_i(n):=O_i(n)-\langle O_i\rangle_\beta$. A reflection $\theta'$ in any site hyperplane maps $\hat O_i(n)$ to $\hat O_i(\theta'n)$ exactly, with no shift of the base point. That is the reason for site-scalar fields.
 
 Let $N_\beta:=2\lfloor\xi/2\rfloor$ and define the normalization
 \[
@@ -140,21 +146,21 @@ A configuration with two coinciding points contributes $0$, because $f$ vanishes
 There is no smoothing flow. Every point carries a local composite field, renormalized multiplicatively by $Z_i(\beta)$ and evaluated only at non-coinciding points, which is what ${}^0\mathcal S$ allows. All short-distance control is placed in Hypothesis~\ref{hyp:H3}.
 
 \begin{hypothesis}[H0: lattice axioms]\label{hyp:H0}
-$\mu_\beta$ is invariant under the translations $\Z^4$ and under $W_4$. It is reflection positive for reflections in every site hyperplane $\{x_\mu=c\}$, $c\in\Z$: $\langle\overline{\Theta F}\,F\rangle_\beta\ge0$ for every bounded $F$ depending only on edges in $\{x_\mu\ge c\}$.
+$\mu_\beta$ is invariant under the translations $\Z^4$ and under $W_4$. It is reflection positive for reflections in the site hyperplanes $\{x_j=c\}$ of all four coordinate directions $j\in\{0,1,2,3\}$, $c\in\Z$: $\langle\overline{\Theta F}\,F\rangle_\beta\ge0$ for every bounded continuous $F$ depending only on finitely many edges in the closed half-space $\{x_j\ge c\}$.
 \end{hypothesis}
 
 H1 is Hypothesis~\ref{hyp:A} and H2 is Hypothesis~\ref{hyp:B}, both for the gap $m(\beta)$ of Definition~\ref{red:def-gap} of the state $\mu_\beta$.
 
 \begin{hypothesis}[H3: uniform regularity in units of the gap]\label{hyp:H3}
-There are constants $\alpha,\gamma,b,D<\infty$, and for each $k$ and $\delta>0$ a constant $L_{k,\delta}$, such that for all $\beta\ge\beta_1$, all $k$ and all $\iota$:
+There are constants $\alpha,\gamma,b,q<\infty$, and for each $k$ and $\delta>0$ a constant $L_{k,\delta}$, such that for all $\beta\ge\beta_1$, all $k$ and all $\iota$:
 \begin{enumerate}
 \item[(a)] $Z_i(\beta)>0$;
-\item[(b)] (growth) $|S^\beta_\iota(x)|\le\alpha\gamma^k(k!)^b\prod_{j=1}^k\max(1,\rho_j(x)^{-D})$ for $x\in(a\Z^4)^k$ with distinct points;
+\item[(b)] (growth) $|S^\beta_\iota(x)|\le\alpha\gamma^k(k!)^b\prod_{j=1}^k\max(1,\rho_j(x)^{-q})$ for $x\in(a\Z^4)^k$ with distinct points;
 \item[(c)] (equicontinuity) $|S^\beta_\iota(x)-S^\beta_\iota(y)|\le L_{k,\delta}|x-y|$ for $x,y\in(a\Z^4)^k$ with all pairwise distances at least $\delta$.
 \end{enumerate}
 \end{hypothesis}
 
-Increasing $D$ weakens (b), so we take $D\ge1$.
+Increasing $q$ weakens (b), so we take $q\ge1$ an integer, so that $s=q+6$ below is an integer.
 
 \begin{hypothesis}[H4: asymptotic rotation invariance, one rotation]\label{hyp:H4}
 For one angle $\vartheta$ with $\vartheta/\pi$ irrational, let $R_\vartheta$ be the rotation by $\vartheta$ in the $(x_1,x_2)$-plane, and let $[y]_a$ be the nearest point of $a\Z^4$ to $y$ (ties broken lexicographically). For every $k$, $\iota$, $\delta>0$ and $R<\infty$,
@@ -201,7 +207,7 @@ By H2, after enlarging $\beta_1$, $a(\beta)\le1$ for $\beta\ge\beta_1$; by H1, $
 \[
   K_\ell:=\{x\in(\R^4)^k:\ |x_j|\le\ell\text{ for all }j,\ r(x)\ge1/\ell\}.
 \]
-If $a\le1/(4\ell)$, then for $x\in K_\ell$ the rounded configuration has pairwise distances at least $1/\ell-2a\ge1/(2\ell)$. By H3(b), $|\tilde S^\beta_\iota|\le\alpha\gamma^k(k!)^b(2\ell)^{Dk}$ on $K_\ell$. By H3(c), for $x,y\in K_\ell$,
+If $a\le1/(4\ell)$, then for $x\in K_\ell$ the rounded configuration has pairwise distances at least $1/\ell-2a\ge1/(2\ell)$. By H3(b), $|\tilde S^\beta_\iota|\le\alpha\gamma^k(k!)^b(2\ell)^{qk}$ on $K_\ell$. By H3(c), for $x,y\in K_\ell$,
 \begin{equation}\label{red:asym-eq}
   |\tilde S^\beta_\iota(x)-\tilde S^\beta_\iota(y)|\le L_{k,1/(2\ell)}\bigl(|x-y|+2a\sqrt k\bigr).
 \end{equation}
@@ -216,7 +222,7 @@ Let $Q\subset K$ be countable and dense. A diagonal argument gives a subsequence
 
 Apply Lemma~\ref{red:AA} on each $K_\ell$ with $\varepsilon=2aL_{k,1/(2\ell)}\sqrt k$, and extract diagonally over the countably many triples $(k,\iota,\ell)$. This gives $\beta_j\to\infty$ and functions $S_\iota$ on the set of configurations of distinct points, Lipschitz on each $K_\ell$, with $\tilde S^{\beta_j}_\iota\to S_\iota$ uniformly on each $K_\ell$. Every compact set of configurations with pairwise distances at least $\delta$ lies in some $K_\ell$. Since $\rho_j([x]_a)\ge\rho_j(x)-2a$, H3(b) passes to the limit:
 \begin{equation}\label{red:growth-limit}
-  |S_\iota(x)|\le\alpha\gamma^k(k!)^b\prod_{j}\max(1,\rho_j(x)^{-D})\quad\text{for distinct points.}
+  |S_\iota(x)|\le\alpha\gamma^k(k!)^b\prod_{j}\max(1,\rho_j(x)^{-q})\quad\text{for distinct points.}
 \end{equation}
 
 \emph{Step 2: the distribution property and E0$'$.}
@@ -238,33 +244,36 @@ Choose $i<j$ with $|x_i-x_j|=r(x)$. Let $z$ agree with $x$ except that $z_i=z_j=
 Now $|(x-z)^\alpha|\le|x-z|^M\le r(x)^M$ and $\sum_{|\alpha|=M}M!/\alpha!=(4k)^M$. Every point $y$ of the segment satisfies $|y-x|<1$, so $1+|x|\le2(1+|y|)$ and $|\partial^\alpha f(y)|\le|f|_N(1+|y|)^{-P}\le2^P|f|_N(1+|x|)^{-P}$. Combining, $|f(x)|\le\frac{1}{M!}(4k)^M r(x)^M2^P|f|_N(1+|x|)^{-P}$.
 \end{proof}
 
-Take $M:=Dk+1$ and $P:=4k+2$. Then $N:=(D+6)k\ge\max(M,P)$. Put
+Take $M:=qk+1$ and $P:=4k+2$. Then $N:=(q+6)k\ge\max(M,P)$. Put
 \[
-  A_k:=\alpha\gamma^k(k!)^b\,2^{4k+2}\,(4e)^{Dk+1}.
+  A_k:=\alpha\gamma^k(k!)^b\,2^{4k+2}\,(4e)^{qk+1}.
 \]
-Since $M!\ge(M/e)^M$ and $D\ge1$, we have $(4k)^M/M!\le(4ek/M)^M\le(4e)^{M}$.
+Since $M!\ge(M/e)^M$ and $q\ge1$, we have $(4k)^M/M!\le(4ek/M)^M\le(4e)^{M}$.
 
 \emph{Claim.} Let $x$ have distinct points, and let $S$ be either $S^\beta_\iota$ (for $x$ in the lattice) or $S_\iota$. Then
 \begin{equation}\label{red:pointwise}
-  |S(x)f(x)|\le A_k\,|f|_{(D+6)k}\,\min(1,r(x))\,(1+|x|)^{-(4k+2)} .
+  |S(x)f(x)|\le A_k\,|f|_{(q+6)k}\,\min(1,r(x))\,(1+|x|)^{-(4k+2)} .
 \end{equation}
-If $r(x)\ge1$, every $\rho_j\ge1$, so $|S(x)|\le\alpha\gamma^k(k!)^b$ by H3(b) or \eqref{red:growth-limit}, and $|f(x)|\le|f|_N(1+|x|)^{-P}$. If $r(x)<1$, then $\prod_j\max(1,\rho_j^{-D})\le r(x)^{-Dk}$, and Lemma~\ref{red:taylor} gives $|f(x)|\le(4e)^M2^P|f|_Nr(x)^{Dk+1}(1+|x|)^{-P}$. The product is at most the right side of \eqref{red:pointwise}.
+If $r(x)\ge1$, every $\rho_j\ge1$, so $|S(x)|\le\alpha\gamma^k(k!)^b$ by H3(b) or \eqref{red:growth-limit}, and $|f(x)|\le|f|_N(1+|x|)^{-P}$. If $r(x)<1$, then $\prod_j\max(1,\rho_j^{-q})\le r(x)^{-qk}$, and Lemma~\ref{red:taylor} gives
+\[
+|f(x)|\le(4e)^M2^P|f|_N\,r(x)^{qk+1}(1+|x|)^{-P}.
+\] The product is at most the right side of \eqref{red:pointwise}.
 
 Let $I_k:=\int_{\R^{4k}}(1+|y|)^{-(4k+2)}\,dy=|S^{4k-1}|/\bigl(4k(4k+1)\bigr)$ and $I'_k:=\int_{\R^{4k}}(1+|y|)^{-(4k+1)}\,dy$; both are finite. If $a\sqrt{4k}\le1$, then each lattice point $x$ is within distance $1$ of every point $y$ of the cube $x+[0,a)^{4k}$, so $1+|y|\le2(1+|x|)$ and
 \begin{equation}\label{red:riemann}
   a^{4k}\sum_{x\in(a\Z^4)^k}(1+|x|)^{-P}\le2^P\int_{\R^{4k}}(1+|y|)^{-P}\,dy .
 \end{equation}
 
-\emph{E0$'$.} Integrating \eqref{red:pointwise} gives $|S_\iota(f)|\le A_kI_k|f|_{(D+6)k}$. With $|S^{4k-1}|=2\pi^{2k}/\Gamma(2k)\le3\pi^{2k}$ and $4k(4k+1)\ge20$,
+\emph{E0$'$.} Integrating \eqref{red:pointwise} gives $|S_\iota(f)|\le A_kI_k|f|_{(q+6)k}$. With $|S^{4k-1}|=2\pi^{2k}/\Gamma(2k)\le3\pi^{2k}$ and $4k(4k+1)\ge20$,
 \[
-  A_kI_k\le7\alpha\,\Gamma^k(k!)^b,\qquad \Gamma:=16\gamma(4e)^D\pi^2,
+  A_kI_k\le7\alpha\,c_\gamma^k(k!)^b,\qquad c_\gamma:=16\gamma(4e)^q\pi^2,
 \]
-and $\Gamma^k\le e^\Gamma k!$. This is E0$'$ with $s=D+6$ and $\sigma_k\le7\alpha e^{\Gamma}(k!)^{b+1}$. For the lattice functions, \eqref{red:pointwise} and \eqref{red:riemann} give
+and $c_\gamma^k\le e^{c_\gamma} k!$. This is E0$'$ with $s=q+6$ and $\sigma_k\le7\alpha e^{c_\gamma}(k!)^{b+1}$. For the lattice functions, \eqref{red:pointwise} and \eqref{red:riemann} give
 \begin{equation}\label{red:uniform}
-  |S^\beta_\iota(f)|\le2^{4k+2}A_kI_k\,|f|_{(D+6)k}\qquad\text{whenever }a\le1/(2\sqrt k).
+  |S^\beta_\iota(f)|\le2^{4k+2}A_kI_k\,|f|_{(q+6)k}\qquad\text{whenever }a\le1/(2\sqrt k).
 \end{equation}
 
-\emph{Convergence of $S^{\beta_j}_\iota(f)$.} Fix $f$, $\delta\in(0,1)$ and $R\ge1$. Let $\mathsf A:=\{x:|x|\le R,\ r(x)\ge\delta\}$ and let $\mathsf B$ be its complement. On $\mathsf B$, either $r(x)<\delta$, or $|x|>R$ and then $(1+|x|)^{-(4k+2)}\le(1+R)^{-1}(1+|x|)^{-(4k+1)}$. By \eqref{red:pointwise} and \eqref{red:riemann}, the contributions of $\mathsf B$ to $S^{\beta_j}_\iota(f)$ and to $\int S_\iota f$ are each at most $2^{4k+2}A_k|f|_{(D+6)k}(\delta I_k+(1+R)^{-1}I'_k)$, uniformly in $j$ large. The set $\mathsf A$ is compact and lies in some $K_\ell$, on which $\tilde S^{\beta_j}_\iota\to S_\iota$ uniformly; at lattice points $\tilde S^{\beta_j}_\iota=S^{\beta_j}_\iota$. So $a^{4k}\sum_{x\in\mathsf A}|S^{\beta_j}_\iota-S_\iota||f|\to0$. Finally $S_\iota f$ is continuous on a neighbourhood of $\mathsf A$, and the boundary of $\mathsf A$ has Lebesgue measure zero, so the Riemann sums $a^{4k}\sum_{x\in\mathsf A}S_\iota(x)f(x)$ converge to $\int_{\mathsf A}S_\iota f$. Letting $j\to\infty$, then $\delta\to0$ and $R\to\infty$, gives $S^{\beta_j}_\iota(f)\to S_\iota(f)$. This proves part~1 of the theorem and E0$'$.
+\emph{Convergence of $S^{\beta_j}_\iota(f)$.} Fix $f$, $\delta\in(0,1)$ and $R\ge1$. Let $\mathsf A:=\{x:|x|\le R,\ r(x)\ge\delta\}$ and let $\mathsf B$ be its complement. On $\mathsf B$, either $r(x)<\delta$, or $|x|>R$ and then $(1+|x|)^{-(4k+2)}\le(1+R)^{-1}(1+|x|)^{-(4k+1)}$. By \eqref{red:pointwise} and \eqref{red:riemann}, the contributions of $\mathsf B$ to $S^{\beta_j}_\iota(f)$ and to $\int S_\iota f$ are each at most $2^{4k+2}A_k|f|_{(q+6)k}(\delta I_k+(1+R)^{-1}I'_k)$, uniformly in $j$ large. The set $\mathsf A$ is compact and lies in some $K_\ell$, on which $\tilde S^{\beta_j}_\iota\to S_\iota$ uniformly; at lattice points $\tilde S^{\beta_j}_\iota=S^{\beta_j}_\iota$. So $a^{4k}\sum_{x\in\mathsf A}|S^{\beta_j}_\iota-S_\iota||f|\to0$. Finally $S_\iota f$ is continuous on a neighbourhood of $\mathsf A$, and the boundary of $\mathsf A$ has Lebesgue measure zero, so the Riemann sums $a^{4k}\sum_{x\in\mathsf A}S_\iota(x)f(x)$ converge to $\int_{\mathsf A}S_\iota f$. Letting $j\to\infty$, then $\delta\to0$ and $R\to\infty$, gives $S^{\beta_j}_\iota(f)\to S_\iota(f)$. This proves part~1 of the theorem and E0$'$.
 
 \emph{Step 3: translations.} By H0, $S^\beta_\iota(x+an)=S^\beta_\iota(x)$ for $n\in\Z^4$, and $[x+an]_a=[x]_a+an$. Let $y\in\R^4$ and choose $n_j\in\Z^4$ with $|a_jn_j-y|\le a_j$. By \eqref{red:asym-eq}, $|\tilde S^{\beta_j}_\iota(x+y)-\tilde S^{\beta_j}_\iota(x+a_jn_j)|\le L(a_j\sqrt k+2a_j\sqrt k)\to0$ on each $K_\ell$, and $\tilde S^{\beta_j}_\iota(x+a_jn_j)=\tilde S^{\beta_j}_\iota(x)$. Hence $S_\iota(x+y)=S_\iota(x)$.
 
@@ -275,17 +284,17 @@ Let $\vartheta/\pi$ be irrational. The closed subgroup $\mathcal K$ of $O(4)$ ge
 \end{lemma}
 
 \begin{proof}
-For $0\le\mu<\nu\le3$ let $L_{\mu\nu}:=E_{\mu\nu}-E_{\nu\mu}$, where $E_{\mu\nu}$ is the matrix unit, and let $R^{\mu\nu}_\varphi:=\exp(\varphi L_{\mu\nu})$, the rotation by $\varphi$ in the $(x_\mu,x_\nu)$-plane. So $R_\vartheta=R^{12}_\vartheta$.
+For $0\le i<j\le3$ let $L_{ij}:=E_{ij}-E_{ji}$, where $E_{ij}$ is the matrix unit, and let $R^{ij}_\varphi:=\exp(\varphi L_{ij})$, the rotation by $\varphi$ in the $(x_i,x_j)$-plane. So $R_\vartheta=R^{12}_\vartheta$.
 
 (i) Kronecker. Since $\vartheta/(2\pi)$ is irrational, the multiples $n\vartheta$, $n\in\N$, are dense modulo $2\pi$. So the powers $R_\vartheta^n=R^{12}_{n\vartheta}$ are dense in $\{R^{12}_\varphi:\varphi\in\R\}$, and $\mathcal K$, being closed, contains every $R^{12}_\varphi$.
 
-(ii) Conjugation. For $\mu<\nu$ let $\sigma\in W_4$ be a permutation matrix with $\sigma e_1=e_\mu$ and $\sigma e_2=e_\nu$. Then $\sigma R^{12}_\varphi\sigma^{-1}=R^{\mu\nu}_\varphi$, so $\mathcal K$ contains the six one-parameter groups $\{R^{\mu\nu}_\varphi\}$.
+(ii) Conjugation. For $i<j$ let $\sigma\in W_4$ be a permutation matrix with $\sigma e_1=e_i$ and $\sigma e_2=e_j$. Then $\sigma R^{12}_\varphi\sigma^{-1}=R^{ij}_\varphi$, so $\mathcal K$ contains the six one-parameter groups $\{R^{ij}_\varphi\}$.
 
-(iii) The six matrices $L_{\mu\nu}$ form a basis of the antisymmetric $4\times4$ matrices, which is the Lie algebra $\mathfrak{so}(4)$, of dimension $6$. Let $\Phi(\varphi_1,\dots,\varphi_6)$ be the product of the six $\exp(\varphi_pL_p)$ in a fixed order. Then $\Phi:\R^6\to SO(4)$ is smooth with $\Phi(0)=1$, and its differential at $0$ is $(\varphi_p)\mapsto\sum_p\varphi_pL_p$, an isomorphism onto $\mathfrak{so}(4)$. By the inverse function theorem $\Phi$ maps a neighbourhood of $0$ onto a neighbourhood $U$ of $1$ in $SO(4)$, and $U\subset\mathcal K$ by (ii).
+(iii) The six matrices $L_{ij}$ form a basis of the antisymmetric $4\times4$ matrices, which is the Lie algebra $\mathfrak{so}(4)$, of dimension $6$. Let $\Phi(\varphi_1,\dots,\varphi_6)$ be the product of the six $\exp(\varphi_pL_p)$ in a fixed order. Then $\Phi:\R^6\to SO(4)$ is smooth with $\Phi(0)=1$, and its differential at $0$ is $(\varphi_p)\mapsto\sum_p\varphi_pL_p$, an isomorphism onto $\mathfrak{so}(4)$. By the inverse function theorem $\Phi$ maps a neighbourhood of $0$ onto a neighbourhood $U$ of $1$ in $SO(4)$, and $U\subset\mathcal K$ by (ii).
 
 (iv) Connectedness. The subgroup generated by $U$ is a union of open sets, hence open; an open subgroup is also closed, since its complement is a union of cosets. $SO(4)$ is connected, so this subgroup is $SO(4)$, and $SO(4)\subset\mathcal K$.
 
-(v) Reflection. $W_4$ contains $\operatorname{diag}(-1,1,1,1)$, of determinant $-1$. So $\mathcal K\supset SO(4)\cup\operatorname{diag}(-1,1,1,1)SO(4)=O(4)$.
+(v) Reflection. $W_4$ contains $I^-:=\operatorname{diag}(-1,1,1,1)$, of determinant $-1$. So $\mathcal K\supset SO(4)\cup I^-SO(4)=O(4)$.
 \end{proof}
 
 \emph{Step 5: symmetry (E3) and reality.} The lattice fields are commuting real random variables. So $S^\beta_\iota(x)$ is real and invariant under simultaneous permutation of points and indices. Both properties pass to pointwise limits.
@@ -294,7 +303,7 @@ For $0\le\mu<\nu\le3$ let $L_{\mu\nu}:=E_{\mu\nu}-E_{\nu\mu}$, where $E_{\mu\nu}
 \[
   F_\beta:=\sum_\iota a^{4k}\sum_{x\in(a\Z^4)^k}f_\iota(x)\prod_{j}Z_{i_j}(\beta)^{-1}\hat O_{i_j}(x_j/a).
 \]
-A lattice point with some $t(x_j)=0$ lies outside the closed support of $f_\iota$, so only sites with time coordinate at least $1$ contribute. Each such $\hat O_i(n)$ depends on edges in $\{t\ge0\}$. The series converges absolutely in the supremum norm, because the $\hat O_i$ are bounded and $f_\iota$ is a Schwartz function. So $F_\beta$ is bounded and depends only on edges in $\{t\ge0\}$. Since $\Theta\hat O_i(n)=\hat O_i(\theta n)$ and the $\hat O_i$ are real,
+A lattice point with some $t(x_j)=0$ lies outside the closed support of $f_\iota$, so only sites with time coordinate at least $1$ contribute. Each such $\hat O_i(n)$ depends on edges in $\{t\ge0\}$. The series converges absolutely in the supremum norm, because the $\hat O_i$ are bounded and $f_\iota$ is a Schwartz function. Its partial sums are bounded continuous functions of finitely many edges in $\{t\ge0\}$, because the $\hat O_i$ are continuous. So $F_\beta$ is a uniform limit of such functions, and $F_\beta\in\mathcal A_+$. The form $F\mapsto\langle\overline{\Theta F}\,F\rangle_\beta$ is continuous in the supremum norm, so H0, which is stated for continuous local functions, gives positivity for $F_\beta$. Since $\Theta\hat O_i(n)=\hat O_i(\theta n)$ and the $\hat O_i$ are real,
 \[
   0\le\langle\overline{\Theta F_\beta}\,F_\beta\rangle_\beta=\sum_{\iota,\iota'}S^\beta_{(\iota',\iota)}\bigl((\Theta f_{\iota'})^*\otimes f_\iota\bigr)
 \]
@@ -343,13 +352,13 @@ The repaired step is this lemma. The source stated instead the monotone form $F(
 
 \emph{Mass hyperboloid.} The Wightman theory carries a unitary representation of the Poincar\'e group, so the joint spectrum of $(H,\vec P)$ on $\Omega^\perp$ is a closed Lorentz-invariant subset of the closed forward cone. If it contained a point $p$ with $0<p^2<1$, a boost would carry $p$ to a point with energy $\sqrt{p^2}<1$. If it contained $p\ne0$ with $p^2=0$, boosts would give points of arbitrarily small energy. If it contained $p=0$, the energy $0$ would be in $\operatorname{spec}(H|_{\Omega^\perp})$. Each contradicts the gap. So the joint spectrum on $\Omega^\perp$ lies in $\{p^2\ge1,\ p^0>0\}$. This proves part~4 and completes the proof of Theorem~\ref{thm:conditional}. \qed
 
-\emph{Where each hypothesis enters.} Step~1: H3(b), H3(c), H2. Step~2: H3(b), Step~1. Step~3: H0, H2, H3(c). Step~4: H0, H4, H3(c), Lemma~\ref{red:dense}. Step~5: reality and commutativity of the fields. Step~6: H0, site-scalarity, boundedness of the fields, Step~2. Step~7: H0 (self-adjointness of $T_\beta$), H1 with $a=m$, Steps~2 and~6, E1. Step~8: H3(a), H3(c), the normalization. Step~9: Theorem~\ref{red:OS} and the recalled description of the reconstructed space.
+\emph{Where each hypothesis enters.} Step~1: H3(b), H3(c), H2. Step~2: H3(b), Step~1. Step~3: H0, H2, H3(c). Step~4: H0, H4, H3(c), Lemma~\ref{red:dense}. Step~5: reality and commutativity of the fields. Step~6: H0 for the plane $\{t=0\}$, site-scalarity, boundedness and continuity of the fields, Step~2. Step~7: H0 (self-adjointness of $T_\beta$), H1 with $a=m$, Steps~2 and~6, E1. Step~8: H3(a), H3(c), the normalization. Step~9: Theorem~\ref{red:OS} and the recalled description of the reconstructed space.
 
 \subsection{What Theorem~\ref{thm:conditional} does not give}\label{red:not}
 
 \begin{itemize}
 \item \emph{Uniqueness.} The limit is taken along a subsequence. Different subsequences, or different choices of $\mu_\beta\in\cL_\beta$, need not give the same limit.
-\item \emph{Interaction.} Nothing in H0--H4 excludes a free theory; Section~\ref{red:free} shows that the free lattice field satisfies the analogues of all of them. A test on composite fields does not detect interaction in the form ``the limit is not a generalized free field'': for the free field the Wick square $:\!\varphi^2\!:$ has non-zero truncated four-point function. A correct form would be a statement about the reconstructed theory, such as a non-trivial scattering matrix. It is not formulated here.
+\item \emph{Interaction.} Nothing in H0--H4 excludes a free theory; Section~\ref{red:free} shows that the free lattice field satisfies, numerically, the analogues of them. A test on composite fields does not detect interaction in the form ``the limit is not a generalized free field'': for the free field the Wick square $:\!\varphi^2\!:$ has non-zero truncated four-point function. A correct form would be a statement about the reconstructed theory, such as a non-trivial scattering matrix. It is not formulated here.
 \item \emph{Short-distance behaviour.} The theorem says nothing about agreement with asymptotic freedom at short distances.
 \item \emph{Other groups.} The proof uses no property of $\SU(2)$. For another compact simple group it requires H0--H4 for that group, and nothing is claimed about them here.
 \end{itemize}
@@ -357,9 +366,7 @@ The official problem statement \cite{JW} remarks, in substance, that existence b
 
 \subsection{A test of the chain on a free field}\label{red:free}
 
-The lattice free massive scalar field on $\Z^4$, with mass parameter $m\to0$, gives an analogue of the setting of Theorem~\ref{thm:conditional}. The unit is the exact gap $a=E_0(m)=2\operatorname{asinh}(m/2)$, and the fields are $\varphi$ and $:\!\varphi^2\!:$. It is an analogue and not an instance: the fields are unbounded, there is no gauge group, and boundedness is used in Step~6. Moment bounds replace boundedness. We do not prove a version of Theorem~\ref{thm:conditional} for this analogue. The test checks that no hypothesis of the chain fails on a model whose answer is known, and that the chain then returns the free field of mass $1$, with two-point function $S_2(x)=K_1(|x|)/(|x|K_1(1))$.
-
-Two separately written programs computed the numbers in Table~\ref{red:freetab}. Program~II uses a Bessel--Schwinger representation of the lattice Green function. Mass parameters are $m=\tfrac14,\tfrac18,\tfrac1{16},\tfrac1{32}$ unless a column says otherwise. These are numerical results, not proofs.
+The lattice free massive scalar field on $\Z^4$, with mass parameter $m\to0$, unit $a=E_0(m)=2\operatorname{asinh}(m/2)$ and fields $\varphi$ and $:\!\varphi^2\!:$, is an analogue of the setting of Theorem~\ref{thm:conditional}, not an instance: the fields are unbounded and there is no gauge group. We do not prove a version of Theorem~\ref{thm:conditional} for it. Two separately written programs checked numerically that no hypothesis of the chain fails on it and that the chain returns the free field of mass $1$, with two-point function $K_1(|x|)/(|x|K_1(1))$; Table~\ref{red:freetab} gives three of the rows ($m=\tfrac14,\dots,\tfrac1{32}$). These are numerical results, not proofs. The free field is not interacting in the sense of Section~\ref{red:not}: the truncated four-point function of $\varphi$ vanishes.
 
 \begin{table}[ht]
 \centering
@@ -368,38 +375,14 @@ Two separately written programs computed the numbers in Table~\ref{red:freetab}.
 \toprule
 Item & Program I & Program II \\
 \midrule
-H0 & RP matrix on 40 random points (seed 12345): least eigenvalue $+3.1\cdot10^{-10}$ & -- \\
 H1 & zero-momentum correlator equals $e^{-E_0n}/(2\sinh E_0)$ to $10^{-13}$ ($n\ge1$), 4 of 4 masses & gap $2\operatorname{asinh}(m/2)$ to $10^{-15}$, 12 of 12 \\
 H3(b), $\varphi$ & $\sup|x|^2S_2=1.64,\ 2.00,\ 2.11,\ 2.15$ & $1.636,\ 2.001,\ 2.114,\ 2.149$ \\
-H3(b), $:\!\varphi^2\!:$ & -- & $\sup|x|^4S_{\varphi^2}\le4.62$ \\
-H3(c) & Lipschitz constant on the axis, $|x|\ge\tfrac12$: $5.1,\ 10.0,\ 15.0,\ 19.1$ (continuum $25.1$) & -- \\
-H4 & $|S(0,\cos1,\sin1,0)-S(0,1,0,0)|=3.9\cdot10^{-2},\ 2.7\cdot10^{-2},\ 6.7\cdot10^{-3}$; $|S(1,0,0,0)-S(\tfrac12,\tfrac12,\tfrac12,\tfrac12)|=3.7\cdot10^{-2},\ 9.0\cdot10^{-3},\ 2.2\cdot10^{-3}$ ($m=\tfrac18,\tfrac1{16},\tfrac1{32}$) & rotation differences agree with program I \\
-Limit & relative error against $K_1(|x|)/(|x|K_1(1))$ at $m=\tfrac1{32}$: $\le2.4\cdot10^{-3}$ at 8 points, on and off axis & $\le2.3\cdot10^{-3}$ at 6 points; $a^{-2}G$ against $K_1(|x|)/(4\pi^2|x|)$: $\le1.4\cdot10^{-3}$ \\
-$:\!\varphi^2\!:$, truncated 4-point & -- & Monte Carlo $1.54\cdot10^{-5}\pm2.1\cdot10^{-6}$; Wick $1.60\cdot10^{-5}$ \\
+Limit & relative error against $K_1(|x|)/(|x|K_1(1))$ at $m=\tfrac1{32}$: $\le2.4\cdot10^{-3}$ at 8 points & $\le2.3\cdot10^{-3}$ at 6 points \\
 \bottomrule
 \end{tabular}
-\caption{Free-field analogue of the chain: numerical values.}\label{red:freetab}
+\caption{Free-field analogue of the chain: three numerical checks.}\label{red:freetab}
 \end{table}
-
-\emph{Status of each line.} Wick's theorem for Gaussian measures is a theorem; with it, the truncated four-point function of $:\!\varphi^2\!:$ is $16$ times a sum of three cycle products of the positive two-point function, hence positive. The dispersion relation behind H1 and the gap $2\operatorname{asinh}(m/2)$ is a standard computation; here it is checked numerically. Reflection positivity of the nearest-neighbour Gaussian measure in site planes is standard and is not proved here; the eigenvalue in the table illustrates it. H3(b) for $\varphi$ follows from Wick's theorem, the inequality $|x_i-x_j|^{-2}\le\rho_i^{-1}\rho_j^{-1}$ and the bound $G_m(n)\le C/|n|^2$ on the lattice Green function, uniform in $m$; that bound is recalled from the literature on Green-function asymptotics, and we do not prove it here. Isotropy of the limit (H4) is supported by numerics only; its proof by a local central limit theorem is recalled and not written out. The convergence to $K_1(|x|)/(|x|K_1(1))$ is numerical. With these qualifications the free field satisfies the analogues of H0--H4, and the chain returns the free field of mass $1$. Interaction, in the sense of Section~\ref{red:not}, fails for $\varphi$ (its truncated four-point function vanishes).
 
 \subsection{Status of the hypotheses for \texorpdfstring{$\SU(2)$}{SU(2)}}\label{red:statussec}
 
-\begin{table}[ht]
-\centering
-\small
-\begin{tabular}{@{}lll@{}}
-\toprule
-Hypothesis & Content & Status for $\SU(2)$ \\
-\midrule
-H0 (Hypothesis~\ref{hyp:H0}) & lattice axioms & proved \\
-H1 = (A) (Hypothesis~\ref{hyp:A}) & gap at every coupling & open: it is the problem \\
-H2 = (B) (Hypothesis~\ref{hyp:B}) & $m(\beta)\to0$ & proved (Theorem~\ref{thm:main}) \\
-H3 (Hypothesis~\ref{hyp:H3}) & uniform regularity & open \\
-H4 (Hypothesis~\ref{hyp:H4}) & one irrational rotation & open \\
-\bottomrule
-\end{tabular}
-\caption{Status of the hypotheses of Theorem~\ref{thm:conditional} for $\SU(2)$.}\label{red:status}
-\end{table}
-
-For H0, translation and $W_4$ invariance of the periodic states pass to weak limits, and site-plane reflection positivity of the periodic Wilson states \cite{OS78} passes to weak limits. Hypothesis~(C) of Theorem~\ref{thm:reduction} is open for $\SU(2)$ as well.
+Table~\ref{intro:status} gives the status. H0 is proved in Section~\ref{sec:proof}: translation and $W_4$ invariance of every $\mu\in\cL_\beta$ is Lemma~\ref{pf:lem-limit}(1), and reflection positivity in the site planes of all four coordinate directions, for bounded continuous local functions, is Lemma~\ref{pf:lem-rp} on the periodic boxes and Lemma~\ref{pf:lem-limit}(2) in the limit. Hypothesis~(C) of Theorem~\ref{thm:reduction} is open for $\SU(2)$ as well.

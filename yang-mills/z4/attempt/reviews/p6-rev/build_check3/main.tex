@@ -1,0 +1,111 @@
+\input{preamble}
+\title[An upper bound on the lattice mass gap at weak coupling]{An upper bound on the lattice mass gap at weak coupling,\\ and routes to a lower bound that fail}
+\author{Kirtus Justus}
+\address{Theoretical Physicist, Port Coquitlam, British Columbia, Canada}
+\date{23 November 2026. Working draft; not reviewed by a mathematician. See Section~\ref{sec:provenance}.}
+\begin{document}
+\begin{abstract}
+For $\SU(2)$ Wilson lattice gauge theory in four dimensions, let the states be the infinite-volume limits of periodic states along boxes of side $2^k$; we prove that, for every sequence of couplings $\beta\to\infty$ and of such states, every subsequential limit in finite-dimensional distributions of the rescaled curvature field is a free lattice Maxwell field, in three independent colours, plus an independent random constant, and consequently that, uniformly over these states, the limit inferior as $\beta\to\infty$ of the normalized correlation of rescaled plaquette energies at time separation $n$ is at least $(G(n)/G(0))^2$, with $G$ the free field-strength correlation, so that the mass gap of the transfer matrix in lattice units tends to zero or is zero. This is an upper bound and does not address whether the gap is positive. We also record a conditional reduction of the continuum problem to five lattice hypotheses, H0 to H4, of which two are proved; four routes to the principal one, each failing at a stated step, and an argument by exclusion that fails; and six properties shared with $\U(1)$ and $\Z_2$ lattice gauge theories that therefore cannot prove a gap. The paper was written and checked by sessions of artificial-intelligence systems and has not been reviewed by a mathematician.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+Lattice gauge theory with the Wilson action is reflection positive and has a self-adjoint transfer matrix at every coupling~\cite{OS78,Lu77}. At strong coupling the transfer matrix has a gap above the vacuum, for every compact gauge group~\cite{OS78}. A continuum limit requires the opposite at weak coupling: the gap, measured in lattice units, must close. We prove this necessary condition; it is an upper bound on the gap and holds whether or not the gap is positive.
+
+Let $\beta>0$. On the periodic box $\Lambda_L=(\Z/L\Z)^4$ let $\mu_{\beta,L}$ be the probability measure on $\SU(2)$-valued link variables with density proportional to $\exp\bigl(-\beta\sum_p(1-\cos\alpha_p)\bigr)$ with respect to Haar measure, where the sum runs over plaquettes and $\tfrac12\Tr U_p=\cos\alpha_p$, $\alpha_p\in[0,\pi]$. Let $\cL_\beta$ be the set of weak limit points of $\mu_{\beta,2^k}$ as $k\to\infty$ ($k\ge2$). Each $\mu\in\cL_\beta$ is translation invariant and reflection positive, and has a self-adjoint transfer matrix $T_\mu$ with $\|T_\mu\|\le 1$ and invariant vector $\Omega$ (Section~\ref{sec:proof}). Put $m_\mu(\beta)=-\log\|T_\mu|_{\Omega^\perp}\|\in[0,\infty]$.
+
+\begin{theorem}\label{thm:main}
+Let $O_p=\beta(1-\cos\alpha_p)$, let $p_0$ be a plaquette in a spatial coordinate plane at time $0$ and $p_n$ its translate by $n$ lattice steps in time. For every $n\ge 1$,
+\[
+\liminf_{\beta\to\infty}\ \inf_{\mu\in\cL_\beta}\ \frac{\Cov_\mu(O_{p_0},O_{p_n})}{\Var_\mu(O_{p_0})}\ \ge\ \Bigl(\frac{G(n)}{G(0)}\Bigr)^{2},
+\]
+where $G(n)$ is the correlation of one field-strength component of the free lattice Maxwell field in four dimensions at time separation $n$; $G(0)=\tfrac12$, $G(n)>0$, and $G(n)=\pi^{-2}n^{-4}+O(n^{-6})$. Consequently $\sup_{\mu\in\cL_\beta}m_\mu(\beta)\to 0$ as $\beta\to\infty$.
+\end{theorem}
+
+The limits are taken in this order: the box, then the coupling, then the separation. The statement allows $m_\mu(\beta)=0$. The proof (Section~\ref{sec:proof}) shows that every limit of the rescaled curvature field is a free lattice Maxwell field plus an independent random constant (Proposition~\ref{pf:prop-L4} and Lemma~\ref{pf:lem-R}); the inequality follows from Wick's theorem.
+
+\subsection*{Relation to the mass gap problem}
+The official problem statement~\cite[p.~6]{JW} asks: ``Prove that for any compact simple gauge group $G$, a non-trivial quantum Yang--Mills theory exists on $\R^4$ and has a mass gap $\Delta>0$.'' The next sentence there requires axiomatic properties at least as strong as those of Osterwalder--Schrader and Wightman, and the mass gap means that the Hamiltonian has no spectrum in $(0,\Delta)$. Theorem~\ref{thm:main} is not the mass gap; it is an upper bound and closes in the direction opposite to what the problem asks. It is not a step of a proof of that statement. What the mass gap problem needs on the lattice is the opposite inequality at all large couplings, Hypothesis~\ref{hyp:A} below ($m(\beta)>0$ for all $\beta\ge\beta_1$; at small $\beta$ the gap is known~\cite{OS78}), and this paper does not prove it.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{@{}p{0.27\textwidth}p{0.33\textwidth}p{0.32\textwidth}@{}}
+\toprule
+Hypothesis & Content & Status for $\SU(2)$ \\
+\midrule
+H0 (Hyp.~\ref{hyp:H0}) & lattice symmetries; site-plane reflection positivity & proved: Lemmas~\ref{pf:lem-rp}, \ref{pf:lem-limit} \\
+H1 = (A) (Hyp.~\ref{hyp:A}) & a gap at all large couplings & open: it is the lattice form of the problem \\
+H2 = (B) (Hyp.~\ref{hyp:B}) & $m(\beta)\to0$ & proved: Theorem~\ref{thm:main} \\
+H3 (Hyp.~\ref{hyp:H3}) & uniform regularity & open \\
+H4 (Hyp.~\ref{hyp:H4}) & one irrational rotation & open \\
+--- & interaction and short-distance behaviour (Section~\ref{red:not}) & not reached \\
+\bottomrule
+\end{tabular}
+\caption{Hypotheses of Theorem~\ref{thm:conditional} and their status for $\SU(2)$.}\label{intro:status}
+\end{table}
+
+\subsection*{What else is in the paper}
+The work reported here began as an attempt at the whole problem, written with the expectation that it would fail, in order to record where it fails. It fails at Hypothesis~\ref{hyp:A}. Section~\ref{sec:reduction} states a conditional reduction: five hypotheses on the lattice theories imply limit Schwinger functions that satisfy the Osterwalder--Schrader axioms with a gap. Two of the five are proved for $\SU(2)$ (Table~\ref{intro:status}). Section~\ref{sec:proof} proves Theorem~\ref{thm:main}. Section~\ref{sec:routes} records four routes to Hypothesis~\ref{hyp:A} and an argument by exclusion, and the step at which each fails. Section~\ref{sec:shared} lists six properties, each proved or cited, that $\SU(2)$, $\U(1)$ and $\Z_2$ lattice gauge theories share in four dimensions; since $\U(1)$ has no gap at weak coupling, no argument using only these properties can prove Hypothesis~\ref{hyp:A}. Section~\ref{sec:CE} discusses two further hypotheses. Section~\ref{sec:notclaimed} lists what is not claimed. Section~\ref{sec:provenance} states how the paper was produced and checked.
+
+\emph{Other gauge groups.} The proof of Theorem~\ref{thm:main} uses the non-abelian structure of $\SU(2)$ only in error terms of order $\beta^{-1/2}$ and in explicit constants (the Weyl density, $c_H$, $D^*$). We expect the argument to adapt to $\U(1)$ and have not written it. For $\U(1)$ the conclusion is in any case known in a stronger form, since the four-dimensional theory has a massless phase at weak coupling~\cite{Guth80,FS82} (as stated in their abstracts).
+
+\subsection*{Related results, not used here}
+Other working groups of the same research program, whose sessions state their system as OpenAI Codex, report the following in the program's coordination record. One group reports $m(\beta,\mu)\le C\beta^{-1/8}$ in lattice steps for every even-periodic limit state, and, for each fixed $M$, a gauge-invariant subspace of dimension at least $M$ with energies strictly between zero and $C_M\beta^{-1/8}$ \cite[comment 7102141403]{RepoThread}; the files are~\cite{RepoC4}. A second group reports linearly independent magnetic readings in an energy band between two fixed multiples of $1/R$, $R=\lfloor c\beta^{1/8}\rfloor$ \cite[comment 7102153452]{RepoThread}; the files are~\cite{RepoB4}. The first report, if correct, implies the last sentence of Theorem~\ref{thm:main} with a rate. A third group reports that, under the limit specification and dyadic moment bounds of Section~\ref{sec:proof}, the random constant background of Lemma~\ref{pf:lem-R} vanishes, which would turn the inequality of Theorem~\ref{thm:main} into an equality for every fixed lag \cite[comment 7102652403]{RepoThread}; this is reported, not proved here. Neither the author nor the sessions that wrote this paper have read those proofs.
+
+\subsection*{Disclosure}
+Every statement and proof in this paper was written by sessions of one artificial-intelligence model family (Claude, Anthropic), working as a director with subordinate workers, at the direction of the author, who is accountable for the paper. Each proof was then attacked by other sessions of the same family. Agreement among them is not independent review. Sessions of a second model lineage (OpenAI Codex) checked parts of Section~\ref{sec:proof}: Lemma~\ref{pf:lem-R} and the Wick inequality that follows it, by two groups with different arguments \cite[comments 7102490558, 7102590992]{RepoThread}; the asymptotics of $G$, by one \cite[comment 7102490558]{RepoThread}; and the arithmetic of the tail constant $D^*$, by one \cite[comment 7102590992]{RepoThread}. They did not check the identification of the limit of the Wilson measures (Theorem~\ref{pf:thm-L3} and Proposition~\ref{pf:prop-L4}). No mathematician has read the paper. It should be read as a claim awaiting review.
+
+\tableofcontents
+
+\section{What is not claimed}\label{sec:notclaimed}
+
+\begin{enumerate}
+\item No statement is made about the existence of a mass gap, on the lattice or in the continuum. Hypothesis~\ref{hyp:A} is open.
+\item No continuum theory is constructed. Theorem~\ref{thm:conditional} is conditional on hypotheses that contain the whole difficulty.
+\item Theorem~\ref{thm:main} is restricted to limits of periodic states along boxes of side $2^k$, $k\ge2$. Other boundary conditions, other sequences of boxes and other Gibbs states are not covered.
+\item Theorem~\ref{thm:main} gives no rate.
+\item The proof of Theorem~\ref{thm:main} uses ten standard facts of measure theory, and Weyl's integration formula, Plancherel's theorem and Isserlis' theorem, without proof or citation. They are listed in Section~\ref{pf:sec-standard}.
+\item Nothing is proved about gauge groups other than $\SU(2)$. The proof of Theorem~\ref{thm:main} uses the non-abelian structure only in error terms of order $\beta^{-1/2}$ and in explicit constants (the Weyl density, $c_H$, $D^*$). We expect the argument to adapt to $\U(1)$ and have not written it; for $\U(1)$ the conclusion is known in a stronger form~\cite{Guth80,FS82} (as stated in their abstracts).
+\item The numerical statements of Sections~\ref{sec:routes}--\ref{sec:CE} are measurements on small lattices. None is used in a proof.
+\item The observations of Sections~\ref{sec:routes} and~\ref{sec:shared} say that particular arguments fail. They do not say that Hypothesis~\ref{hyp:A} is false, or that no argument of a similar kind can succeed.
+\item The paper has not been independently reviewed (Section~\ref{sec:provenance}).
+\end{enumerate}
+
+\subsection*{Notation}
+Each symbol below has one meaning in the paper; the only exceptions are the generic local letters listed in the last row.
+
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.22\textwidth}p{0.72\textwidth}@{}}
+\toprule
+Symbol & Meaning \\
+\midrule
+$\Lambda_L$ & the periodic box $(\Z/L\Z)^4$, $L=2^k$, $k\ge2$ \\
+$\mu$, $\mu_{\beta,L}$, $\mu_\beta$, $\mu_k$, $\mu_\infty$ & a state (probability measure) on link variables, or the limit law of the curvature field; a Greek index in $e_\mu$, $x_\mu$, $(\mu,\nu)$ is a coordinate direction \\
+$\varpi_\beta$, $\varpi$ & the probability measures on $[1,\infty)$ in Theorem~\ref{thm:reduction} \\
+$a=a(\beta)$ & the unit of length of Definition~\ref{red:def-gap} \\
+$G(n)$ & the free field-strength correlation (Definition~\ref{pf:def-G}) \\
+$\Gamma_\beta(t)$, $\Gamma(t)$ & the normalized correlation of Theorem~\ref{thm:reduction} and its limit \\
+$\mathbb G$ & an arbitrary group (Lemmas~\ref{pf:lem-flat}, \ref{pf:lem-shell}) \\
+$D$ & the restricted coboundary in the proofs of Proposition~\ref{pf:prop-L4} and Lemma~\ref{pf:lem-D} \\
+$D^*$ & the free-energy constant $60.1922\ldots$ of Lemma~\ref{pf:lem-free} \\
+$K_C$ & the constant of Hypothesis~\ref{hyp:C} \\
+$q$ & the singularity exponent in Hypothesis~\ref{hyp:H3}(b) \\
+H0--H4 & the hypotheses of Theorem~\ref{thm:conditional}; (A) $=$ H1, (B) $=$ H2 \\
+(U1)--(U4) & the hypotheses of Lemma~\ref{neg:lem-usc} \\
+$f$, $g$, $F$, $r$, $s$, $t$ & generic local letters (functions, gauge transformations, test functions, radii, times), defined where used \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\input{sec_reduction}
+\input{sec_proof}
+\input{sec_negative}
+\input{sec_provenance}
+
+\begin{thebibliography}{99}
+\input{refs}
+\end{thebibliography}
+\end{document}

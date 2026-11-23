@@ -1,0 +1,32 @@
+n= 0 G=inf diff(120,180)=inf pi2n4G=nan
+n= 1 G=inf diff(120,180)=inf pi2n4G=inf
+n= 2 G=inf diff(120,180)=inf pi2n4G=inf
+n= 3 G=inf diff(120,180)=inf pi2n4G=inf
+n= 4 G=inf diff(120,180)=inf pi2n4G=inf
+n= 5 G=inf diff(120,180)=inf pi2n4G=inf
+n= 6 G=inf diff(120,180)=inf pi2n4G=inf
+n= 7 G=inf diff(120,180)=inf pi2n4G=inf
+n= 8 G=inf diff(120,180)=inf pi2n4G=inf
+n= 9 G=inf diff(120,180)=inf pi2n4G=inf
+n=10 G=inf diff(120,180)=inf pi2n4G=inf
+n=11 G=inf diff(120,180)=inf pi2n4G=inf
+n=12 G=inf diff(120,180)=inf pi2n4G=inf
+n=13 G=inf diff(120,180)=inf pi2n4G=inf
+n=14 G=inf diff(120,180)=inf pi2n4G=inf
+n=15 G=inf diff(120,180)=inf pi2n4G=inf
+n=16 G=inf diff(120,180)=inf pi2n4G=inf
+Q1: FAILED  G(0)=inf
+Q2: FAILED  G(1)=inf
+Q3: MET  16/16 cases qualify
+Q4: FAILED  |pi^2n^4G-1| n=4..16: [inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf]
+Q5: MET  c_H=0.150258 D*=60.192240
+Q6: MET  200001/200001 grid points qualify (slack 1e-15 = float rounding)
+Q7: MET  sections=8
+Q8:a2-chalR.report.md: MET  'STANDS 16 / DEFECT 8 / NOT CHECKED 1'
+Q8:a5-chalB.report.md: MET  'STANDS 17, DEFECT 1, NOT CHECKED 1'
+Q8:a8-chalB2.report.md: MET  'STANDS 12, DEFECT 2, NOT CHECKED 2'
+Q8:a9-chalL34.report.md: MET  '11 STANDS, 1 DEFECT'
+Q8:c2-chalS.report.md: MET  '12 STANDS, 3 DEFECT, 2 NOT CHECKED'
+Q9: MET  ledger micro-review counts
+Q10: FAILED  sec_paperreview.tex = '(to be filled after the review of the assembled paper)'
+TOTAL met 10, failed 4, measured only 17 (G table rows)

@@ -1,0 +1,7 @@
+P1: MET :: D*=60.192240 c_H=0.1502578
+P2: MET :: G0=0.50000000 G1=0.06887475 griddiff=4.4e-16
+P3: MET :: pi^2 8^4 G(8)=1.09244 (griddiff 1.2e-18) mono=True bound_ok=True; n=1 G=6.887475e-02 pi2n4G=0.6798 n6dev=0.0324 bound/dev=4.5e+04 | n=2 G=1.115272e-02 pi2n4G=1.7612 n6dev=0.3085 bound/dev=4.8e+03 | n=3 G=2.262238e-03 pi2n4G=1.8085 n6dev=0.7373 bound/dev=2.1e+03 | n=4 G=6.053963e-04 pi2n4G=1.5296 n6dev=0.8586 bound/dev=1.9e+03 | n=5 G=2.131313e-04 pi2n4G=1.3147 n6dev=0.7971 bound/dev=2.3e+03 | n=6 G=9.334333e-05 pi2n4G=1.1940 n6dev=0.7075 bound/dev=2.8e+03 | n=7 G=4.764816e-05 pi2n4G=1.1291 n6dev=0.6410 bound/dev=3.4e+03 | n=8 G=2.702321e-05 pi2n4G=1.0924 n6dev=0.5994 bound/dev=3.9e+03 | n=9 G=1.652315e-05 pi2n4G=1.0699 n6dev=0.5741 bound/dev=4.2e+03 | n=10 G=1.069020e-05 pi2n4G=1.0551 n6dev=0.5581 bound/dev=4.3e+03
+P4: MET :: N=1: C=0.2916666667 (7/24=0.2916666667) lam=0.8377223 links=8 plaq=24; N=2: C=0.4926748 lam=0.1471218 links=432 plaq=864
+P5: MET :: reduced word length 0: []
+P6: MET :: violations=[]
+P7: MET :: A_MC=-0.003176 +- 0.000717 (-1/324=-0.003086), samples=4000000

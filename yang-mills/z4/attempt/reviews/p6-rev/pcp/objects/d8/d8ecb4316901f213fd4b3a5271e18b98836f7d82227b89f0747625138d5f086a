@@ -1,0 +1,4 @@
+P1: MET  -ln tanh 1 = 0.272341469, control.txt = 0.272341
+P2 beta=1.8: F4-F2 = -0.2000 +- 0.4665 (printed -0.20 +- 0.47) ok=True
+P2 beta=2.4: F4-F2 = -0.2500 +- 1.0387 (printed -0.25 +- 1.04) ok=True
+P2: MET  cases qualifying 2 of 2; also printed in text: True

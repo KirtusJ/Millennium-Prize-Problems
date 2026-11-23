@@ -3,7 +3,7 @@
 
 \section{Routes to Hypothesis (A) that fail}\label{sec:routes}
 
-Five routes to Hypothesis~(A) were written out as chains of steps. Each step was tagged
+Four routes to Hypothesis~(A), and an argument by exclusion, were written out as chains of steps. Each step was tagged
 proved, cited, claimed or missing, and the first unproved step was tested. This section
 states, for each route, what is proved and where the route fails. All programs were written
 by workers of one AI model family; no program was run by anyone outside it.
@@ -57,8 +57,8 @@ Bakry--\'Emery argument \cite[Thm.~1.4 and (4.7)]{SZZ23} gives the inequality.
 
 The gain over the full tensor is not small. On the periodic $3^4$ lattice the minimum of $B$
 over all directions was $-6.4$, $-9.0$, $-12.2$ at $\beta=12,24,48$, against $\kappa_H=-1.6$,
-$-2.0$, $-1.5$ (Monte Carlo by one program). The lemma was rechecked by a second worker by
-argument only.
+$-2.0$, $-1.5$ (Monte Carlo by one program). The lemma was checked a second time, by argument
+only.
 
 \begin{proposition}\label{neg:prop-flat}
 \textup{(i)} At every flat configuration ($Q_p=1$ for all $p$), $\kappa_H=1$ on the periodic torus.
@@ -80,8 +80,7 @@ eigenvalues $1-2\beta$ are horizontal.
 (iii) $\U(1)$ is flat, so $\mathrm{Ric}=0$.
 \end{proof}
 
-Part (ii) was computed exactly and confirmed by finite differences in three separate programs
-(builder, challenger, and the builder's child). Part (i) is the one place in the route where
+Part (ii) was computed exactly and confirmed by finite differences in three separate programs. Part (i) is the one place in the route where
 non-abelian structure enters. The cited criterion $\kappa_H\ge1-12\beta$ \cite[(4.2), (4.8),
 Thm.~1.4]{SZZ23} gives (A) for $\beta<1/12$. On the four-dimensional periodic $3^4$ lattice,
 the configuration with all links $1$ except one link $-1$ gives $\kappa_H=1-4.31\beta$ for
@@ -90,19 +89,27 @@ $\beta=1,\dots,6$ (computed in floating point by one program).
 The route needs a step that carries the curvature to large $\beta$. The step written was:
 
 \begin{hypothesis}[Step S6]\label{neg:hyp-S6}
-For large $\beta$, $\kappa_H(U)\ge 1/2$ except on configurations containing plaquettes with
-$\operatorname{Re}\Tr Q_p<0$; such configurations have density $e^{-c\beta}$, so a local
-perturbation argument applies.
+There is $\beta_0<\infty$ such that, for every $\beta\ge\beta_0$, every box and every configuration
+$U$ with $\operatorname{Re}\Tr Q_p\ge0$ for all plaquettes $p$, $\kappa_H(U)\ge 1/2$.
 \end{hypothesis}
 
+As written in the source, S6 also asserted that configurations with a plaquette of negative trace
+have density $e^{-c\beta}$, ``so a local perturbation argument applies''; that part is not a
+precise statement and is not tested here. The form above is the part that can be tested.
+
 \begin{observation}\label{neg:obs-curv}
-Step S6 is false on every periodic box tested. On the periodic lattices $3^4$ and $4^4$ at
-$\beta\in\{4,6,12,24,48\}$, $\kappa_H$ of equilibrium configurations lies in
-$[-2.30,-1.12]$ (Table~\ref{neg:tab-curv}). No sample of either program has $\kappa_H\ge1/2$:
-$0$ of $32$ (builder) and $0$ of $24$ (challenger). At $\beta=4$ and $6$ the fraction of
-plaquettes with $\operatorname{Re}\Tr Q_p<0$ is $0.002$ and $0.000$. Status: Monte Carlo by two
-separate programs. The sources do not give the seeds. Thermalization was short ($30+4k$
-sweeps in the builder's program; cold start plus $300$ sweeps in the challenger's).
+Status: Monte Carlo by two separate programs, measured only. On the periodic lattices $3^4$ and
+$4^4$ at $\beta\in\{4,6,12,24,48\}$, $\kappa_H<0$ in every equilibrium sample: $56$ of $56$
+($32$ from program~1 and $24$ from program~2), with values in $[-2.30,-1.12]$
+(Table~\ref{neg:tab-curv}). Relation to Step~S6: S6 is a statement about $\beta\ge\beta_0$ with
+$\beta_0$ unspecified. The samples at $\beta=4$ and $6$ do not bear on it; at $\beta=4$ the
+fraction of plaquettes with $\operatorname{Re}\Tr Q_p<0$ is $0.002$, about one plaquette of the
+$486$ of a $3^4$ torus per sample. The samples at $\beta=12$, $24$, $48$ do bear on it: if their
+configurations have no plaquette of negative trace (this fraction is recorded only at $\beta=4$
+and $6$, where it is $0.002$ and $0.000$), they show that S6 fails on these boxes for every
+$\beta_0\le48$. No sample bears on $\beta>48$ or on larger boxes. The sources do not give the
+seeds. Thermalization was short ($30+4k$ sweeps in program~1; cold start plus $300$ sweeps in
+program~2).
 \end{observation}
 
 \begin{table}[ht]
@@ -112,31 +119,32 @@ sweeps in the builder's program; cold start plus $300$ sweeps in the challenger'
 \toprule
 program & box & $\beta$ & samples & $\kappa_H$ \\
 \midrule
-builder & $3^4$ periodic & $4$, $6$ & $8$ each & $-2.2$ to $-1.5$ \\
-builder & $3^4$ periodic & $12$, $24$, $48$ & $4$ each & $-2.30$ to $-1.17$ \\
-builder & $4^4$ periodic & $4$ & $2$ & $-1.60$, $-1.88$ \\
-builder & $4^4$ periodic & $6$ & $2$ & $-1.53$, $-1.58$ \\
-challenger & $3^4$ periodic & $4$ & & $-1.79$ to $-1.46$ \\
-challenger & $3^4$ periodic & $6$ & & $-1.96$ to $-1.39$ \\
-challenger & $3^4$ periodic & $12$ & & $-1.52$ to $-1.12$ \\
-challenger & $3^4$ periodic & $24$ & & $-1.93$ to $-1.12$ \\
-challenger & $3^4$ periodic & $48$ & & $-2.04$ to $-1.55$ \\
-challenger & $4^4$ periodic & $6$ & $2$ & $-1.77$, $-1.26$ \\
-challenger & $4^4$ periodic & $24$ & $2$ & $-1.15$, $-1.67$ \\
+1 & $3^4$ periodic & $4$, $6$ & $8$ each & $-2.2$ to $-1.5$ \\
+1 & $3^4$ periodic & $12$, $24$, $48$ & $4$ each & $-2.30$ to $-1.17$ \\
+1 & $4^4$ periodic & $4$ & $2$ & $-1.60$, $-1.88$ \\
+1 & $4^4$ periodic & $6$ & $2$ & $-1.53$, $-1.58$ \\
+2 & $3^4$ periodic & $4$ & not recorded & $-1.79$ to $-1.46$ \\
+2 & $3^4$ periodic & $6$ & not recorded & $-1.96$ to $-1.39$ \\
+2 & $3^4$ periodic & $12$ & not recorded & $-1.52$ to $-1.12$ \\
+2 & $3^4$ periodic & $24$ & not recorded & $-1.93$ to $-1.12$ \\
+2 & $3^4$ periodic & $48$ & not recorded & $-2.04$ to $-1.55$ \\
+2 & $4^4$ periodic & $6$ & $2$ & $-1.77$, $-1.26$ \\
+2 & $4^4$ periodic & $24$ & $2$ & $-1.15$, $-1.67$ \\
 \midrule
-challenger & $4^4$ open & $4$ & & $-2.40$ to $-1.67$ \\
-challenger & $4^4$ open & $6$ & $3$ & $+0.16$, $-0.32$, $-0.04$ \\
-challenger & $4^4$ open & $12$, $24$, $48$ & & $+3$, $+9.6$, $+23$ \\
+2 & $4^4$ open & $4$ & $3$ & $-2.40$ to $-1.67$ \\
+2 & $4^4$ open & $6$ & $3$ & $+0.16$, $-0.32$, $-0.04$ \\
+2 & $4^4$ open & $12$, $24$, $48$ & $9$ in total & $+3$, $+9.6$, $+23$ \\
 \bottomrule
 \end{tabular}
-\caption{Horizontal curvature $\kappa_H$ of equilibrium configurations, $\SU(2)$. The
-challenger ran $20$ periodic samples on $3^4$ in total. The builder's own summary row gives
-$[-2.3,-1.2]$ and the director's ledger gives $-1.1$ to $-2.3$; the union of the per-run values
+\caption{Horizontal curvature $\kappa_H$ of equilibrium configurations, $\SU(2)$. Program~2 ran
+$20$ periodic samples on $3^4$ in total; the source does not record them per row. The open-box
+count at $\beta=4$ is $6$ (at $\beta=4$ and $6$ together) minus $3$. Program~1's own summary row
+gives $[-2.3,-1.2]$ and an earlier summary gives $-1.1$ to $-2.3$; the union of the per-run values
 of both programs is $[-2.30,-1.12]$.}
 \label{neg:tab-curv}
 \end{table}
 
-The challenger found the mechanism, measured only. On the torus the negative directions are
+Program~2 also measured a mechanism (measured only, not proved). On the torus the negative directions are
 the constant (toron) modes: the lowest eigenvector has zero-momentum weight $0.96$ to $0.99$ in
 Landau gauge. On a one-loop ensemble without toron fluctuations, $\kappa_H\to\mathrm{Ric}-k\,c$
 with $c=\beta\varepsilon^2$ and $c=1$ at equilibrium; $k=2.62$ and $2.51$ for $\SU(2)$,
@@ -194,7 +202,7 @@ $\langle W[C]\rangle\le2e^{-\sigma RT}$.
 \end{proposition}
 
 \begin{proof}
-The inequality is \cite[(11)]{KT02}, read in full text by the worker; \cite{KT02} attribute it
+The inequality is \cite[(11)]{KT02}, read in full text; \cite{KT02} attribute it
 to \cite{TY85}, which was not read. Since $F_L\ge0$, $\frac12(1-e^{-F_L})\le F_L/2$, so
 $\ln\langle W\rangle_{\Lambda_L}\le\ln2+\frac{RT}{L^2}\bigl(\ln(KL^2/2)-\sigma L^2\bigr)\to\ln2-\sigma RT$.
 $W$ is local, so the bound passes to weak limits.
@@ -218,16 +226,19 @@ The route fails at two independent steps.
 missing; it is the confinement problem. The step meant to approach it, $F_{L'}\le F_L$ for
 $L\mid L'$, is claimed by a renormalization-group comparison that is exactly the step
 \cite{IS07,IS08} object to in \cite{To07}, and is not closed. It is false for $\Z_2$ at
-$\beta=0.6$ (Table~\ref{neg:tab-vort}). For $\SU(2)$ the data neither support nor refute it:
-the errors are as large as the differences, and at $\beta=2.4$,
-$F_4-F_3=+1.26\pm1.05$, the wrong sign at $1.2$ standard errors.
+$\beta=0.6$ (Table~\ref{neg:tab-vort}). For $\SU(2)$ the comparison the step concerns is $F_4$
+against $F_2$ ($2\mid4$): $F_4-F_2=-0.20\pm0.47$ at $\beta=1.8$ and $-0.25\pm1.04$ at
+$\beta=2.4$ (errors combined in quadrature, treating the runs as independent). Both differences
+have the sign the step predicts, and neither is resolved from zero. The data neither support nor
+refute the step. (The value $F_3$, with $3\nmid4$, does not bear on it.)
 \textup{(2)} The implication ``area law $\Rightarrow$ gap in the zero-flux sector'' is missing
 and false as an abstract implication (Proposition~\ref{neg:prop-noarea}); the theorem of
 \cite{Ch21} goes the other way. The flux free energy controls the sectors of nonzero electric
 flux, not the neutral sector.
 Status: $\SU(2)$ values, Monte Carlo by one program (Metropolis with a step size adapted during
 the run, so not strictly detailed balance); $\Z_2$ values, Monte Carlo by one program, rerun bit
-for bit by a second worker; the three-dimensional $\Z_2$ check on $L=2$ was computed exactly by
+for bit by a second session. The $\Z_2$ coupling convention is not stated in the source (it
+quotes a transition at $\beta_c\approx0.44$); the three-dimensional $\Z_2$ check on $L=2$ was computed exactly by
 two separate programs ($F(0.3)=0.0325242683$, $F(0.6)=0.6912790067$, agreement to $10^{-10}$).
 The sources do not give the seeds.
 \end{observation}
@@ -289,15 +300,16 @@ The route fails at two missing steps.
 \textup{(1)} For every $\beta>0$, $\sup_Lz(L,\beta)=\infty$. This follows from a positive string
 tension at every $\beta$, which is open \cite{Ch21}; it is a confinement statement.
 \textup{(2)} There are $z^*<\infty$, $k\in\N$ and $\gamma<1$ such that for every $\beta$ and $L$,
-$z(L,\beta)\ge z^*$ implies $K(kL,\beta,\gamma)$. No inequality of any kind is known connecting
-a periodic-box, one-sector number to a condition uniform over exterior configurations, even at
-strong coupling.
+$z(L,\beta)\ge z^*$ implies $K(kL,\beta,\gamma)$. No inequality connecting a periodic-box,
+one-sector number to a condition uniform over exterior configurations, even at strong coupling,
+was found in the sources read for this route (those cited in this section); no systematic
+literature search was made.
 The claimed monotonicity of $z$ rests on the sign of the one-loop coefficient
 $b_0=11\cdot2/(48\pi^2)$ and on Table~\ref{neg:tab-fs}. Status: Monte Carlo by one program, one
 $\beta$, three sizes, effective mass at $t=1$ (for $\SU(2)$, $m_{\mathrm{eff}}(2)<m_{\mathrm{eff}}(1)$,
 so $z$ is overestimated). The sources do not give the seeds. The predicate ``$z_{\U(1)}$ within a
-factor $2$ of $1/(2\beta)=0.217$ at $L=4,6$'' failed; that was the worker's expectation, which
-ignored the finite temporal extent. A rotor model fitted afterwards reproduces the drift with
+factor $2$ of $1/(2\beta)=0.217$ at $L=4,6$'' failed; that was an expectation of the program's
+author, which ignored the finite temporal extent. A rotor model fitted afterwards reproduces the drift with
 residuals of $1.5$ to $2.6$ standard errors.
 \end{observation}
 
@@ -353,13 +365,16 @@ $Z=\sum_{\{j_p\}}\prod_pc_{j_p}(\beta)\,A(\{j_p\})$. For an abelian group $\prod
 is a character of the group of link variables, so $A\in\{0,1\}$.
 
 \begin{observation}\label{neg:obs-dual}
-Not every $\SU(2)$ amplitude is nonnegative. On the periodic $2\times1\times1$ lattice in three
-dimensions, $4$ of the $729$ spin configurations considered have $A<0$, $141$ have $A>0$ and
-$584$ have $A=0$. The minimum is $A=-0.003086419753$, at spins $(j_{01},j_{02},j_{12})=(0,1,1)$ on
+Not every $\SU(2)$ amplitude is nonnegative. Take the periodic $2\times1\times1$ lattice in three
+dimensions: side $2$ in direction $0$ and side $1$ in directions $1$ and $2$, so two sites, $0$ and
+$1$, each the corner of three plaquettes $(01)$, $(02)$, $(12)$. The $729=3^6$ configurations
+considered assign a spin in $\{0,\tfrac12,1\}$ to each of the six plaquettes (this reading of the
+source's ``$2\times1\times1$'' and of its count $729$ is ours; the source does not spell it out).
+Of them, $4$ have $A<0$, $141$ have $A>0$ and $584$ have $A=0$. The minimum is $A=-0.003086419753$, at spins $(j_{01},j_{02},j_{12})=(0,1,1)$ on
 site $0$ and $(1,0,\frac12)$ on site $1$. A separate Monte Carlo program gives
 $-0.002892\pm0.000237$ (seed $7$, $4\cdot10^7$ samples), $12$ standard errors below zero.
 Setting every plaquette that touches a fourth direction to spin $0$ embeds the configuration in
-four dimensions with the same amplitude (proved by the worker: those links occur in no character).
+four dimensions with the same amplitude (proved: those links occur in no character).
 Status: computed in floating point by one program (intertwiner contraction), confirmed by a
 second program by a different method. The value agrees with $-1/324$ to the digits printed;
 the rational value is not proved. On the one-site three-torus all $27$ amplitudes are positive,
@@ -385,33 +400,46 @@ zero set of $m$ were closed, the correlation length diverged at its infimum, and
 were non-analytic there.
 
 \begin{lemma}\label{neg:lem-usc}
-Assume \textup{(H1)} a unique infinite-volume Gibbs state $\mu_\beta$ for every $\beta$;
-\textup{(H2)} the specification is continuous in $\beta$ and in the boundary condition;
-\textup{(H3)} reflection positivity, so that $C_F(n)=\langle\psi_F,T^n\psi_F\rangle$;
-\textup{(H4)} vectors of local positive-time observables are dense. Then
+Assume \textup{(U1)} a unique infinite-volume Gibbs state $\mu_\beta$ for every $\beta$, or, more
+generally, a choice of state $\beta\mapsto\mu_\beta$ that is weakly continuous in $\beta$;
+\textup{(U2)} the specification is continuous in $\beta$ and in the boundary condition;
+\textup{(U3)} reflection positivity, so that $C_F(n)=\langle\psi_F,T^n\psi_F\rangle$;
+\textup{(U4)} vectors of local positive-time observables are dense. Then
 $m(\beta)=\inf_F\inf_k\bigl(-\tfrac1{2k}\log(C_F(2k)/C_F(0))\bigr)$ is upper semicontinuous in
 $\beta$. In particular $\{\beta:m(\beta)\ge c\}$ is closed for every $c$.
 \end{lemma}
 
 \begin{proof}
-(H1), (H2) and compactness give weak continuity of $\beta\mapsto\mu_\beta$, so each $C_F(n)$ is
-continuous. By the Lyapunov inequality, $-\frac1{2k}\log(C_F(2k)/C_F(0))$ is nonincreasing in $k$
-with limit $-\log\|T|_{\overline{\mathrm{span}}}\|$. By (H4) the infimum over $F$ is $m$. An
+(U1), (U2) and compactness give weak continuity of $\beta\mapsto\mu_\beta$ (under the second
+form of (U1) it is assumed), so each $C_F(n)$ is continuous. By the Lyapunov inequality, the quantity
+$-\frac1{2k}\log(C_F(2k)/C_F(0))$ is nonincreasing in $k$
+with limit $-\log\|T|_{\overline{\mathrm{span}}}\|$. By (U4) the infimum over $F$ is $m$. An
 infimum of continuous functions is upper semicontinuous.
 \end{proof}
 
-(H1) is the standing assumption of the paper and is not known at large $\beta$; (H2) is claimed
-as standard, with no source read.
+(U1) is a hypothesis of this lemma only; the rest of the paper works with arbitrary limit points
+in $\cL_\beta$ and does not assume it. Uniqueness is not known at large $\beta$, and no continuous
+choice of limit point is known either. (U2) is claimed as standard, with no source read.
 
 \begin{observation}\label{neg:obs-usc}
-Under \textup{(H1)--(H4)} nothing beyond upper semicontinuity follows from continuity of the
-correlations. An abstract continuous family of spectral measures has zero set
-$\{m=0\}=(1,\infty)$, which is not closed, and a correlation length equal to $1$ up to the
-transition and infinite after it (checked by one program). It is not a lattice model. No theorem
-of the form ``the gap vanishes $\Rightarrow$ the free energy is non-analytic'' was found.
+Continuity of every correlation in $\beta$ does not give more than upper semicontinuity of the
+gap. For $\beta>0$ let $\nu_\beta$ be the measure on $[0,1]$
+\[
+\nu_\beta:=\delta_{e^{-1}}+\max(0,\beta-1)\,2\,\mathbf 1_{[1/2,1)}(x)\,dx,
+\]
+read as the spectral measure of $T$ for one vector. Its moments
+\[
+a_n(\beta)=\int x^n\,d\nu_\beta=e^{-n}+\max(0,\beta-1)\,\frac{2(1-2^{-n-1})}{n+1}
+\]
+are continuous in $\beta$ for every $n$, while $m(\beta)=-\log\max\operatorname{supp}\nu_\beta$ is $1$ for $\beta\le1$
+and $0$ for $\beta>1$. So $\{m=0\}=(1,\infty)$ is not closed, and the correlation length is $1$ up
+to $\beta=1$ and infinite after it. Status: exact for this family; a grid check by one program
+agrees. The family is abstract, not a lattice model, and it does not show that $\SU(2)$ has such a
+jump. No theorem of the form ``the gap vanishes $\Rightarrow$ the free energy is non-analytic''
+was found in the sources read.
 \end{observation}
 
-The principle itself is false; the counterexamples are Observation~\ref{neg:obs-excl}.
+The principle itself fails, by the cited example of Observation~\ref{neg:obs-excl}(1).
 
 \emph{Discriminators.} For $\U(1)$ the route is consistent but uninformative (it has a continuous
 one-form symmetry and no gap); the finite groups $\Z_N$ with large $N$ are the counterexample to
@@ -441,7 +469,9 @@ compact finite-volume transfer operator.
 Elementary.
 \end{enumerate}
 Compact $\U(1)$ in four dimensions has P1--P6 and no gap at weak coupling \cite{Guth80,FS82}
-(as stated in their abstracts). Consequently no argument that uses only P1--P6 proves (A).
+(as stated in their abstracts). Consequently an argument that derives (A) for $\SU(2)$ from
+P1--P6 alone, and from nothing else, would apply verbatim to $\U(1)$ and give a gap there at weak
+coupling, which is false; no such argument exists.
 \end{observation}
 
 The observation does not exclude an argument that uses a property outside the list. It does
@@ -457,7 +487,8 @@ $\U(1)$. Elementary.
 indicators (Observation~\ref{neg:obs-dual}). Computed in floating point and confirmed by Monte
 Carlo; not proved in exact arithmetic.
 \end{enumerate}
-All three are local. None has a known global consequence for the gap. The official problem
+All three are local. For none of them did the sources read for this section give a global
+consequence for the gap. The official problem
 statement records the same absence: there is no known idea for a gap uniform in the volume
 \cite{JW}. In the routes of
 Section~\ref{sec:routes} the second enters only at flat configurations and is outweighed on
@@ -465,12 +496,15 @@ typical ones (Observation~\ref{neg:obs-curv}); the third enters as cancellation,
 the positivity tools. Three other candidates meet the same wall. Analyticity in $\beta$ is
 proved only at small $\beta$, and at all $\beta$ it would exclude a transition that $\U(1)$ has.
 A uniform gap of the Langevin generator is the strong mixing of
-Observation~\ref{neg:obs-curv-missing}. No inequality monotone in the dimension is known, and
+Observation~\ref{neg:obs-curv-missing}. No inequality monotone in the dimension was found in the
+sources read, and
 $\U(1)$ has a gap in three dimensions \cite{GM82} (as stated in its abstract) and none in four.
 
 \begin{observation}\label{neg:obs-excl}
-The principle ``a lattice gauge theory with no continuous global or one-form symmetry has a
-gap except at isolated couplings'' fails.
+Status: item~(1) is cited from an abstract; item~(2) is numerical, and the masslessness of its
+weak-coupling phase is not established. The principle ``a lattice gauge theory with no continuous
+global or one-form symmetry has a gap except at isolated couplings'' fails, by item~(1) as cited;
+item~(2) is consistent with this but does not establish it.
 \begin{enumerate}
 \item Four-dimensional $\Z_N$ lattice gauge theory with $N$ large has an intermediate massless
 phase, on an interval of couplings, in which local $\U(1)$ invariance is restored dynamically
@@ -481,7 +515,7 @@ $\beta_c\approx1.64$ into a phase with zero string tension \cite[\S3 and Fig.~1]
 credited there to \cite{Cr79} (as stated in its abstract). Status: numerical. That the
 weak-coupling phase is massless is perturbative expectation; it was not found stated in the
 text read, and it is not proved. A Monte Carlo by one program on $4^5$ (200 Metropolis sweeps,
-one seed per start, written by a sub-worker and rerun bit-identical by the worker) gives a
+one seed per start, rerun bit-identically by a second session) gives a
 hot--cold hysteresis gap of $0.090\pm0.003$ at $\beta=1.6$, $0.018$ at $\beta=1.7$ (still
 drifting), and below $0.0015$ at $\beta=1.3$, $1.5$, $1.9$ and $2.2$ (the same report's summary
 table says below $0.002$). Its weak-coupling plaquette approaches the one-loop value
@@ -504,14 +538,14 @@ coupling.
 Let $T=e^{-H}$ be the transfer matrix at $\beta$, $\psi\perp\Omega$ the vector of a local
 observable, $\nu$ its spectral measure, $C(n)=\langle\psi,T^n\psi\rangle=\int e^{-n\varepsilon}\,d\nu(\varepsilon)$
 for real $n\ge0$, $m=m(\beta)$ and $\xi=1/m$. We write (C) in the form
-$C(\xi/2)\le D\,C(\xi)$ with $D$ independent of $\beta\ge\beta_1$. The effective mass
+$C(\xi/2)\le K_C\,C(\xi)$ with $K_C$ independent of $\beta\ge\beta_1$. The effective mass
 $u(n)=-\frac{d}{dn}\log C(n)$ is the mean energy of $e^{-nH/2}\psi$; (C) is equivalent, up to
 constants and a change of time from $\xi/2$ to $\xi$, to $u(\xi/2)\le K\,m$.
 
 \begin{proposition}\label{neg:prop-Cprime}
 Assume \textup{(C$'$)}: $1-C_\beta(1)/C_\beta(0)\le K'm(\beta)$ for all $\beta\ge\beta_1$. Then for
 every $j\ge0$ with $\xi/2^j\ge1$ and $\xi\ge2K'$,
-$C(\xi/2^j)\le e^{2K'}C(\xi)$. In particular (C) holds with $D=e^{2K'}$.
+$C(\xi/2^j)\le e^{2K'}C(\xi)$. In particular (C) holds with $K_C=e^{2K'}$.
 \end{proposition}
 
 \begin{proof}
@@ -567,10 +601,9 @@ In a three-spacing $\SU(2)$ measurement of the slice-flowed magnetic density
 $1.40$. It increases, roughly like $\xi^{0.75}$, over the factor $1.9$ available. Status: Monte
 Carlo by one set of programs, measured only. Caveats: the correlation lengths are about one lattice
 step, the worst place to ask the question; $\xi$ is taken from a published glueball mass, not
-measured; each of the two added seeds at $N=12$ repeats three configurations (IDs $40$--$42$)
-after a restart, found by another director's audit, and the table gives the original
-row-based estimates (according to the ledger, with the repeats removed the estimates move
-within their errors); the boxes are matched in physical size only to $3$ to $7$ per cent.
+measured; each of the two added seeds at $N=12$ repeats three configurations after a restart,
+and the table gives the original row-based estimates (according to an earlier summary, with the
+repeats removed the estimates move within their errors); the boxes are matched in physical size only to $3$ to $7$ per cent.
 \end{observation}
 
 \begin{table}[ht]
@@ -620,11 +653,14 @@ when its covariance is. (ii) $2O$ is $\sigma^2\chi^2_k$, whose cumulants are
 $\kappa_n=2^{n-1}(n-1)!\,k$ in units of $\sigma^{2n}$; so $\kappa_2=2k$, $\kappa_4=48k$.
 \end{proof}
 
-Part (ii) applies to the rescaled plaquette energy used in the program's proof of (B),
+Part (ii) applies to the rescaled plaquette energy used in the proof of (B),
 Theorem~\ref{thm:main}. At fixed lattice distance and
-$\beta\to\infty$ the limit of $\beta(1-\cos\alpha_p)$ is $\frac12\sum_{a=1}^3(F^a_p)^2$ (a claimed
-step); if the three colour components are independent with equal variance (not checked), it
-has $\kappa_4/\kappa_2^2=4$. A test ``$\kappa_4\ne0\Rightarrow$ interacting'' applied to it would
+$\beta\to\infty$ the limit in law and in moments of $\beta(1-\cos\alpha_p)$ is
+$\frac12\sum_{a=1}^3(F^a_p)^2$ (Proposition~\ref{pf:prop-L4}(d)), and $F=\xi+f$ with $\xi$ a free
+field in three independent colours and $f$ an independent constant background whose colours may be
+correlated (Lemma~\ref{pf:lem-R}). For the free-field part $\xi$, whose colours are independent
+with equal variance, $\frac12|\xi_p|^2$ has $\kappa_4/\kappa_2^2=4$; this computation is an
+illustration and does not cover the background. A test ``$\kappa_4\ne0\Rightarrow$ interacting'' applied to it would
 declare the free Maxwell limit interacting. A second mass, or any mass ratio, does not
 distinguish either: a GFF with measure $\delta_{m_1^2}+\delta_{m_2^2}$ has any ratio.
 
@@ -637,37 +673,11 @@ Hamiltonians, so $E_2(L)=2m$ exactly; hence (E$^*$) excludes every free algebra.
 isolated one-particle shell, which a gap does not give. Its relation to the scattering length
 through \cite{LW86} is claimed from memory; the source was not read.
 
-\begin{table}[ht]
-\centering
-\small
-\begin{tabular}{@{}lll@{}}
-\toprule
-model & quantity & values \\
-\midrule
-free field, $d=4$, $L=8$, $m=0.25$ & $U_4$; $g_R$; block $\kappa_4/\kappa_2^2$ & $0.007\pm0.025$; $0.34\pm1.20$; $-0.19\pm0.07$ \\
-Ising, $d=4$, $\xi_2/L=0.25$ & $g_R$ at $L=6,8,12$ & $67\pm9$, $46\pm8$, $32\pm7$ \\
-Ising, $d=4$, $\xi_2/L\approx0.33$ & $g_R$ at $L=6,8,12,16$ & $36\pm2$, $\approx29$, $22\pm2$, $20\pm3$ \\
-Ising, $d=2$, $K_c$ & $U_4$ at $L=16,32$ & $0.6111\pm0.0005$, $0.6098\pm0.0007$ \\
-\bottomrule
-\end{tabular}
-\caption{Calibration on known answers. Free field: $4000$ exact Gaussian samples, $\xi_2=4.023\pm0.046$
-against the exact $4$. Four-dimensional Ising: Wolff cluster algorithm, $17$ runs, seeds
-$2001$--$2017$, $15000$ measurements each. Two-dimensional Ising: seeds $31$, $32$; a separate
-program (the worker's child) gives $0.6115$, $0.6107$. Monte Carlo, measured only. The
-renormalized coupling is $g_R=3U_4(L/\xi_2)^4$ with $U_4=1-\langle M^4\rangle/(3\langle M^2\rangle^2)$.}
-\label{neg:tab-ising}
-\end{table}
-
-\begin{observation}\label{neg:obs-ising}
-On the calibration of Table~\ref{neg:tab-ising}, the free field gives $U_4$ and $g_R$ compatible
-with zero (the block cumulant sits $3$ standard errors from zero and was not rerun with a second
-seed). In four-dimensional Ising, $g_R$ at fixed $\xi_2/L$ decreases with $L$, consistent with
-the Gaussian scaling limit of \cite{ADC21} (as stated in its abstract); a logarithmic law was not
-tested, and the predicate ``$g_R(12)$ exceeds zero by five standard errors at $\xi_2/L=0.25$''
-failed at $4.6$. In two-dimensional Ising at criticality $U_4\approx0.61$, far from zero. The
-critical $U_4$ on a periodic torus is nonzero also for models with Gaussian limits, because of
-the zero mode, so only $g_R$ at fixed $L/\xi_2$ calibrates the test.
-\end{observation}
+The test was calibrated on models with known answers (a free field, and Ising models in two and
+four dimensions; Monte Carlo by one program, measured only): the free field gives a renormalized
+coupling compatible with zero, and in four-dimensional Ising it decreases with $L$ at fixed
+$\xi_2/L$, consistent with the Gaussian scaling limit of \cite{ADC21} (as stated in its abstract).
+These calibrations do not bear on the claims of this paper.
 
 What is not known. No rigorous non-Gaussian scaling limit of a lattice gauge theory in three or
 more dimensions is known to the workers; no search establishing absence was made. The constant

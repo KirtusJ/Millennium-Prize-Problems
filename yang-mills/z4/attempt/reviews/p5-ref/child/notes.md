@@ -1,0 +1,12 @@
+# notes
+- control written: 0.006333
+- pcp register created (method not found, expected). Grandchild admitted as T34 (label p5-ref-child-grandchild), launched in grandchild/.
+- Plan: testA.py (3-d quadrature, spherical-face graded grid), testB.py (dense eigh), testC.py (Fourier/GL). Predicates fixed in docstrings.
+- testA r1 crashed in my A6 code (n=0 division; own bug, no result file written; A1-A5 passed). Fixed, rerun tag r2.
+- testA r2 all PASS (A1-A8). grandchild returned G(1)=0.0688747458 err~1e-10 (its own claim 2.8e-17)
+- grandchild G(1) reread+rerun by own code (rerun_grandchild.py): 0.06887474584, matches to 4e-11. Releasing T34.
+- testB r1 all PASS (B1-B5); clean spectral gap (zero eig <2e-14 vs kept >=0.8). T34 released. Note: numpy BLAS threads not pinned in A/B runs (short). Next testC.
+- testC r1 too slow (>2 min; chat() loop recomputed per point): killed by me at ~2 min, no result file; optimizing with cached FFT coefficients (own performance defect, not a predicate failure).
+- results/A_parentrerun.json, B_parentrerun.json appeared (not written by me; presumably the parent's rerun of my programs). testC r1 (cached FFT) still killed by my timeout 170 with no output: profiling.
+- testC r2 (after caching leggauss; earlier r1 attempts killed by me for slowness): C1 144/144, C2 144/144 (26 C1 points are ties within 1e-9; C2 vacuous (rhs>=1) at 38 points). Parent reruns A/B identical up to roundoff.
+- report.md written

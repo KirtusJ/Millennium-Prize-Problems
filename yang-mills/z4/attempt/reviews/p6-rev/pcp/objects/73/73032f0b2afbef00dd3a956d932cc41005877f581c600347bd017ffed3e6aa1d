@@ -1,0 +1,15 @@
+P1: MET  -ln tanh 1 = 0.272341469, control.txt = 0.272341
+P2 beta=1.8: F4-F2 = -0.2000 +- 0.4665 (printed -0.20 +- 0.47) ok=True
+P2 beta=2.4: F4-F2 = -0.2500 +- 1.0387 (printed -0.25 +- 1.04) ok=True
+P2: MET  cases qualifying 2 of 2; also printed in text: True
+P3: MET  program1=32, program2=24 (incl. 20 for 5 not-recorded rows), total=56
+P4: MET  max rel diff closed form vs quadrature 6.64e-10; continuity True; jump True
+P5: MET  exit codes [0, 0, 0]; errors 0; undefined 0; multiply 0; overfull widths []
+P5-pages: MEASURED  pages = 45
+P6: MET  14 phrases checked; hits: []
+P7: MET  
+P8: MET  quote normalized: 'Prove that for any compact simple gauge group G, a non-trivial quantum Yang–Mills theory exists on R4 and has a mass gap ∆ > 0.'
+P9: MEASURED  9 hits: ['main.tex:5:reviewed', 'main.tex:8:reviewed', 'main.tex:59:Director', 'main.tex:72:reviewed', 'refs.tex:116:Z4', 'sec_paperreview.tex:7:reviewed', 'sec_provenance.tex:6:Director', 'sec_provenance.tex:21:Director', 'sec_provenance.tex:24:Z4']
+P10: MEASURED  sec_proof.tex changed lines (+/-): 56
+P11: MET  4 sentences
+COUNTS: met 9, failed 0, measured only 3

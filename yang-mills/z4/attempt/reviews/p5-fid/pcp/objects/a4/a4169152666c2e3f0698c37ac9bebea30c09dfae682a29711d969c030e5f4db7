@@ -1,0 +1,32 @@
+n= 0 G=0.5000000000 diff(120,180)=8.88e-16 pi2n4G=0.000000
+n= 1 G=0.0688747458 diff(120,180)=1.25e-16 pi2n4G=0.679766
+n= 2 G=0.0111527177 diff(120,180)=6.42e-17 pi2n4G=1.761167
+n= 3 G=0.0022622376 diff(120,180)=2.04e-17 pi2n4G=1.808519
+n= 4 G=0.0006053963 diff(120,180)=6.72e-18 pi2n4G=1.529606
+n= 5 G=0.0002131313 diff(120,180)=2.60e-18 pi2n4G=1.314701
+n= 6 G=0.0000933433 diff(120,180)=1.14e-18 pi2n4G=1.193955
+n= 7 G=0.0000476482 diff(120,180)=5.83e-19 pi2n4G=1.129115
+n= 8 G=0.0000270232 diff(120,180)=3.25e-19 pi2n4G=1.092437
+n= 9 G=0.0000165232 diff(120,180)=1.93e-19 pi2n4G=1.069948
+n=10 G=0.0000106902 diff(120,180)=1.24e-19 pi2n4G=1.055080
+n=11 G=0.0000072294 diff(120,180)=8.30e-20 pi2n4G=1.044652
+n=12 G=0.0000050671 diff(120,180)=5.68e-20 pi2n4G=1.037007
+n=13 G=0.0000036583 diff(120,180)=4.02e-20 pi2n4G=1.031210
+n=14 G=0.0000027079 diff(120,180)=3.01e-20 pi2n4G=1.026699
+n=15 G=0.0000020477 diff(120,180)=2.20e-20 pi2n4G=1.023114
+n=16 G=0.0000015773 diff(120,180)=1.76e-20 pi2n4G=1.020213
+Q1: MET  G(0)=0.5000000000
+Q2: MET  G(1)=0.0688747458
+Q3: MET  16/16 cases qualify
+Q4: MET  |pi^2n^4G-1| n=4..16: [0.5296, 0.3147, 0.194, 0.1291, 0.0924, 0.0699, 0.0551, 0.0447, 0.037, 0.0312, 0.0267, 0.0231, 0.0202]
+Q5: MET  c_H=0.150258 D*=60.192240
+Q6: MET  200001/200001 grid points qualify (slack 1e-15 = float rounding)
+Q7: MET  sections=8
+Q8:a2-chalR.report.md: MET  'STANDS 16 / DEFECT 8 / NOT CHECKED 1'
+Q8:a5-chalB.report.md: MET  'STANDS 17, DEFECT 1, NOT CHECKED 1'
+Q8:a8-chalB2.report.md: MET  'STANDS 12, DEFECT 2, NOT CHECKED 2'
+Q8:a9-chalL34.report.md: MET  '11 STANDS, 1 DEFECT'
+Q8:c2-chalS.report.md: MET  '12 STANDS, 3 DEFECT, 2 NOT CHECKED'
+Q9: MET  ledger micro-review counts
+Q10: FAILED  sec_paperreview.tex = '(to be filled after the review of the assembled paper)'
+TOTAL met 13, failed 1, measured only 17 (G table rows)

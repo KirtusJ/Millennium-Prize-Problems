@@ -1,0 +1,54 @@
+A1 overfull:
+  34.41pt ? in paragraph at lines 113--114 (>10)
+  57.50pt ? in paragraph at lines 288--289 (>10)
+  3.78pt ? in paragraph at lines 135--136 (<=10)
+  104.70pt ? in paragraph at lines 24--25 (>10)
+  count >10pt: 3
+A2 undefined: none
+A3 multiply defined (log): none
+A3 duplicate labels (sources): none
+A4 bibitems: 31 cited keys: 31
+  bibitem never cited: none
+  cited without bibitem: none
+A5a hyps in Theorem S: ['hyp:A', 'hyp:B', 'hyp:H0', 'hyp:H3', 'hyp:H4'] theorem at line 185
+   def hyp:A sec_reduction.tex:41
+   def hyp:B sec_reduction.tex:45
+   def hyp:H0 sec_reduction.tex:142
+   def hyp:H3 sec_reduction.tex:148
+   def hyp:H4 sec_reduction.tex:159
+   status row line 371: H0 & RP matrix on 40 random points (seed 12345): least eigenvalue $+3.1\cdot10^{-10}$ & -- \\
+   status row line 372: H1 & zero-momentum correlator equals $e^{-E_0n}/(2\sinh E_0)$ to $10^{-13}$ ($n\ge1$), 4 of 4 masses & gap $2\operatorname{asinh}(m/2)$ to $10^{-15}$, 12 of 12 \\
+   status row line 373: H3(b), $\varphi$ & $\sup|x|^2S_2=1.64,\ 2.00,\ 2.11,\ 2.15$ & $1.636,\ 2.001,\ 2.114,\ 2.149$ \\
+   status row line 374: H3(b), $:\!\varphi^2\!:$ & -- & $\sup|x|^4S_{\varphi^2}\le4.62$ \\
+   status row line 375: H3(c) & Lipschitz constant on the axis, $|x|\ge\tfrac12$: $5.1,\ 10.0,\ 15.0,\ 19.1$ (continuum $25.1$) & -- \\
+   status row line 376: H4 & $|S(0,\cos1,\sin1,0)-S(0,1,0,0)|=3.9\cdot10^{-2},\ 2.7\cdot10^{-2},\ 6.7\cdot10^{-3}$; $|S(1,0,0,0)-S(\tfrac12,\tfrac12,\tfrac12,\tfrac12)|=3.7\cdot10^{-2},\ 9.0\cdot10^{-3},\ 2.2\cdot10^{-3}$ ($m=\tfrac18,\tfrac1{16},\tfrac1{32}$) & rotation differences agree with program I \\
+   status row line 395: H0 (Hypothesis~\ref{hyp:H0}) & lattice axioms & proved \\
+   status row line 396: H1 = (A) (Hypothesis~\ref{hyp:A}) & gap at every coupling & open: it is the problem \\
+   status row line 397: H2 = (B) (Hypothesis~\ref{hyp:B}) & $m(\beta)\to0$ & proved (Theorem~\ref{thm:main}) \\
+   status row line 398: H3 (Hypothesis~\ref{hyp:H3}) & uniform regularity & open \\
+   status row line 399: H4 (Hypothesis~\ref{hyp:H4}) & one irrational rotation & open \\
+A5b routes (subsections in sec:routes): 5
+   negative.tex:28 \subsection{Positive curvature}\label{neg:sub-curv}
+   negative.tex:167 \subsection{Center vortices}\label{neg:sub-vort}
+   negative.tex:263 \subsection{A finite-size criterion}\label{neg:sub-fs}
+   negative.tex:328 \subsection{Positivity of the character expansion}\label{neg:sub-dual}
+   negative.tex:379 \subsection{Exclusion}\label{neg:sub-excl}
+A5c properties P-items in sec:shared: 6
+   negative.tex:426 \item[P1] Reflection positivity at every
+   negative.tex:427 \item[P2] A strictly positive self-adjoi
+   negative.tex:431 \item[P3] Positive character coefficient
+   negative.tex:434 \item[P4] A gap and analyticity at small
+   negative.tex:437 \item[P5] A positive gap in every finite
+   negative.tex:440 \item[P6] A nontrivial center: $\Z_2\sub
+A5d standard facts: 10
+   proof.tex:543 \item \emph{Prokhorov's theorem} (tight famil
+   proof.tex:544 \item \emph{Diagonal extraction}: existence i
+   proof.tex:545 \item \emph{Portmanteau theorem}, including t
+   proof.tex:546 \item \emph{Uniform integrability and converg
+   proof.tex:547 \item \emph{Monotone class ($\pi$--$\lambda$)
+   proof.tex:548 \item \emph{Slutsky's lemma}: Proposition~\re
+   proof.tex:549 \item \emph{Regular conditional distributions
+   proof.tex:550 \item \emph{Kolmogorov's extension theorem}: 
+   proof.tex:551 \item \emph{Scheff\'e's lemma}: the total-var
+   proof.tex:552 \item \emph{L\'evy's downward martingale theo
+sections: 8

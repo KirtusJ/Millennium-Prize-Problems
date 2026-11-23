@@ -1,0 +1,18 @@
+E = [
+(r"""Lemma~\ref{pf:lem-rp} with $G=1$ gives""", r"""Lemma~\ref{pf:lem-rp} with $F'=1$ gives"""),
+(r"""of $(\mu_{\beta,2^k})_{k\ge1}$.""", r"""of $(\mu_{\beta,2^k})_{k\ge2}$; boxes of side $2$ are excluded, which changes no limit point."""),
+(r"""we re-prove the case we use. Fix $j\in\{0,1,2,3\}$ and even $L$.""", r"""we re-prove the case we use. Fix $j\in\{0,1,2,3\}$ and even $L\ge4$."""),
+(r"""For even $L$, every $j$ and all $F,F'\in\cH_+$:""", r"""For even $L\ge4$, every $j$ and all $F,F'\in\cH_+$:"""),
+(r"""Let $L=2^k$ and let $f\ge0$ be a bounded measurable function of the links of block $0$.""", r"""Let $L=2^k$, $k\ge2$, and let $f\ge0$ be a bounded measurable function of the links of block $0$."""),
+(r"""\item For the reflection $\vartheta$ in $\{x_0=0\}$ and every bounded continuous $F$ depending on finitely many links in $\{x_0\ge0\}$: $\mu(\theta F\cdot F)\ge0$.""",
+ r"""\item For every coordinate direction $j\in\{0,1,2,3\}$, every $c\in\Z$, the reflection $\vartheta$ in the site plane $\{x_j=c\}$ and every bounded continuous $F$ depending on finitely many links in $\{x_j\ge c\}$: $\mu(\theta F\cdot F)\ge0$."""),
+(r"""For (2), once $L_i$ is large, $F\in\cH_+$ on the torus, and $\nu\mapsto\nu(\theta F\cdot F)$ is weakly continuous.""",
+ r"""For (2), once $L_i$ is large, $F\in\cH_+$ on the torus for the reflection $x_j\mapsto2c-x_j$ of Lemma~\ref{pf:lem-rp}, and $\nu\mapsto\nu(\theta F\cdot F)$ is weakly continuous, since $\theta F\cdot F$ is bounded, continuous and local."""),
+(r"""\item[(e)] \emph{(Gaussian DLR.)} For every box $R$, let $\cG_R:=\sigma(F_q:q\notin P_R)$, $F_{\rm in}:=(F_p)_{p\in P_R}$ and $F_{\rm sh}:=(F_q)_{q\text{ shell plaquette}}$, which is $\cG_R$-measurable. Let $\mathsf L$ be a fixed linear left inverse of $d$ on the shell $1$-forms vanishing on $T_s$. Then a regular conditional law of $F_{\rm in}$ given $\cG_R$ is the law of $d(A+\Psi)|_{P_R}$, where $\Psi:=\mathsf LF_{\rm sh}$ and $A\sim K_\infty(\cdot|\Psi)$.""",
+ r"""\item[(e)] \emph{(Gaussian DLR.)} For every box $R$, let $\cG_R:=\sigma(F_q:q\notin P_R)$, the $\sigma$-field of the limit curvatures outside the box only (no link variables enter), $F_{\rm in}:=(F_p)_{p\in P_R}$ and $F_{\rm sh}:=(F_q)_{q\text{ shell plaquette}}$, which is $\cG_R$-measurable. Let $\mathsf L$ be a fixed linear left inverse of $d$ on the shell $1$-forms vanishing on $T_s$. Then a regular conditional law of $F_{\rm in}$ given $\cG_R$ is the law of $d(A+\Psi)|_{P_R}$, where the shell potential $\Psi:=\mathsf LF_{\rm sh}$ is this fixed linear image of the shell curvature and $A\sim K_\infty(\cdot|\Psi)$."""),
+(r"""At finite $\beta$ the conditioning is on links modulo gauge; in the limit it is on curvatures only. Lemma~\ref{pf:lem-shell}""",
+ r"""At finite $\beta$ the conditioning is on links modulo gauge; in the limit, as (e) states, it is on curvatures only. Lemma~\ref{pf:lem-shell}"""),
+(r"""\emph{Constancy.} The following argument for constancy was supplied by an independent check of this lemma.""",
+ r"""\emph{Constancy.} The following argument for constancy was supplied by an independent check of this lemma by a session of a second model lineage \cite[comment 7102490558]{RepoThread}."""),
+(r"""We also use Weyl's integration formula for $\SU(2)$""", r"""We also use, without proof or citation, Weyl's integration formula for $\SU(2)$"""),
+]

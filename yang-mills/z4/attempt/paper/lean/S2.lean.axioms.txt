@@ -1,0 +1,2 @@
+'s2_gap_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'s2_power' depends on axioms: [propext, Classical.choice, Quot.sound]

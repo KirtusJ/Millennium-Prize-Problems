@@ -43,7 +43,7 @@ We write $\alpha_p:=\alpha(U_p)$; it does not depend on the base point or orient
 \]
 with normalised Haar measure $dU$. By Weyl's formula, the law of $\alpha(U)$ under Haar measure has density $\tfrac2\pi\sin^2\alpha$ on $[0,\pi]$.
 We embed $\Lambda_L$ in $\Z^4$ around the origin and regard $\mu_{\beta,L}$ as a measure on $\SU(2)^{E(\Z^4)}$ for local questions.
-$\cL_\beta$ is the set of weak limit points of $(\mu_{\beta,2^k})_{k\ge1}$. It is nonempty because $\SU(2)^{E(\Z^4)}$ is compact.
+$\cL_\beta$ is the set of weak limit points of $(\mu_{\beta,2^k})_{k\ge2}$; boxes of side $2$ are excluded, which changes no limit point. It is nonempty because $\SU(2)^{E(\Z^4)}$ is compact.
 $O_p:=\beta(1-\cos\alpha_p)\in[0,2\beta]$. $p_0:=(0;1,2)$ and $p_n:=p_0+ne_0$.
 
 \emph{Lie algebra.} We identify $\R^3$ with $\mathfrak{su}(2)$ through $x\mapsto\sigma\cdot x$ (Pauli matrices). For $|x|\le\pi$, $U=e^{i\sigma\cdot x}=\cos|x|+i\sin|x|\,\hat x\cdot\sigma$ and $\alpha(U)=|x|$. For $\alpha(U)<\pi$ we write $\log U$ for the unique $x$ with $|x|<\pi$ and $U=e^{i\sigma\cdot x}$; for $\alpha(U)=\pi$ we set $\log U:=(\pi,0,0)$. In all cases $|\log U|=\alpha(U)$. $\mathrm{Ad}(U)\in\mathrm{SO}(3)$ is defined by $\sigma\cdot(\mathrm{Ad}(U)x)=U(\sigma\cdot x)U^{-1}$; it is the rotation by the angle $2\alpha(U)$, so $\|\mathrm{Ad}(U)-I\|\le2|\sin\alpha(U)|\le2\alpha(U)$.
@@ -72,11 +72,11 @@ Two constants are obtained by compactness and are not explicit: $\eta(\delta)$ i
 
 \subsection{Reflection positivity and limit states}\label{pf:sec-rp}
 
-Reflection positivity of the Wilson action is due to Osterwalder and Seiler~\cite{OS78}, and the transfer matrix of lattice gauge theory to L\"uscher~\cite{Lu77}; we re-prove the case we use. Fix $j\in\{0,1,2,3\}$ and even $L$. Let $\vartheta$ be the reflection $x_j\mapsto-x_j$ of $\Lambda_L$. It fixes the two site planes $\pi=\{x_j=0\}\cup\{x_j=L/2\}$. On configurations it acts by $(\vartheta U)_{b}=U_{\vartheta b}$, where a link in direction $j$ is mapped to a reversed link, whose variable is the inverse. For a function $F$ put $\theta F:=\overline{F\circ\vartheta}$.
+Reflection positivity of the Wilson action is due to Osterwalder and Seiler~\cite{OS78}, and the transfer matrix of lattice gauge theory to L\"uscher~\cite{Lu77}; we re-prove the case we use. Fix $j\in\{0,1,2,3\}$ and even $L\ge4$. Let $\vartheta$ be the reflection $x_j\mapsto-x_j$ of $\Lambda_L$. It fixes the two site planes $\pi=\{x_j=0\}\cup\{x_j=L/2\}$. On configurations it acts by $(\vartheta U)_{b}=U_{\vartheta b}$, where a link in direction $j$ is mapped to a reversed link, whose variable is the inverse. For a function $F$ put $\theta F:=\overline{F\circ\vartheta}$.
 Let $E_0$ be the set of links in $\pi$; $E_+$ (resp. $E_-$) the set of links not in $E_0$ with both endpoints in $\{0\le x_j\le L/2\}$ (resp. $\{L/2\le x_j\le L\}$). These three sets partition the links, and $\vartheta$ fixes $E_0$ pointwise and exchanges $E_+$ and $E_-$. Let $\cH_+$ be the bounded measurable functions of the links in $E_0\cup E_+$.
 
 \begin{lemma}[site-plane reflection positivity]\label{pf:lem-rp}
-For even $L$, every $j$ and all $F,G\in\cH_+$: $\mu_{\beta,L}(\theta F\cdot F)\ge0$, $\mu_{\beta,L}(\theta F\cdot G)=\overline{\mu_{\beta,L}(\theta G\cdot F)}$, and $|\mu_{\beta,L}(\theta F\cdot G)|^2\le\mu_{\beta,L}(\theta F\cdot F)\,\mu_{\beta,L}(\theta G\cdot G)$. The same holds for the reflection $x_j\mapsto2a-x_j$ for every $a\in\Z/L\Z$, with the corresponding half-spaces.
+For even $L\ge4$, every $j$ and all $F,F'\in\cH_+$: $\mu_{\beta,L}(\theta F\cdot F)\ge0$, $\mu_{\beta,L}(\theta F\cdot F')=\overline{\mu_{\beta,L}(\theta F'\cdot F)}$, and $|\mu_{\beta,L}(\theta F\cdot F')|^2\le\mu_{\beta,L}(\theta F\cdot F)\,\mu_{\beta,L}(\theta F'\cdot F')$. The same holds for the reflection $x_j\mapsto2r-x_j$ for every $r\in\Z/L\Z$, with the corresponding half-spaces.
 \end{lemma}
 
 \begin{proof}
@@ -84,32 +84,32 @@ A plaquette has extent at most one in direction $j$, so all its sites lie in $\{
 \[
 Z_L(\beta)\,\mu_{\beta,L}(\theta F\cdot F)=e^{-6\beta|\Lambda_L|}\int\prod_{E_0}dU\ \overline{I(U_{E_0})}\,I(U_{E_0})\ \ge0 .
 \]
-So $(F,G)\mapsto\mu_{\beta,L}(\theta F\cdot G)$ is a positive semidefinite Hermitian form on $\cH_+$, which gives the other two claims. Translation invariance of $\mu_{\beta,L}$ gives the version at $a$.
+So $(F,F')\mapsto\mu_{\beta,L}(\theta F\cdot F')$ is a positive semidefinite Hermitian form on $\cH_+$, which gives the other two claims. Translation invariance of $\mu_{\beta,L}$ gives the version at $r$.
 \end{proof}
 
 \begin{lemma}[limit states]\label{pf:lem-limit}
 Let $\beta>0$ and $\mu\in\cL_\beta$. Then:
 \begin{enumerate}
 \item $\mu$ is invariant under the translations, rotations and reflections of $\Z^4$, and under every gauge transformation $g$ (each local function depends on finitely many $g_x$).
-\item For the reflection $\vartheta$ in $\{x_0=0\}$ and every bounded continuous $F$ depending on finitely many links in $\{x_0\ge0\}$: $\mu(\theta F\cdot F)\ge0$.
+\item For every coordinate direction $j\in\{0,1,2,3\}$, every $c\in\Z$, the reflection $\vartheta$ in the site plane $\{x_j=c\}$ and every bounded continuous $F$ depending on finitely many links in $\{x_j\ge c\}$: $\mu(\theta F\cdot F)\ge0$.
 \item (DLR) For every finite set $\Lambda$ of links and every bounded measurable $g$, $\mu(g)=\mu(\gamma_\Lambda g)$, where $\gamma_\Lambda g$ integrates $U_\Lambda$ against $Z^{-1}\exp(-\beta\sum_{p\cap\Lambda\ne\emptyset}(1-\cos\alpha_p))\prod_\Lambda dU$, the other links fixed.
 \end{enumerate}
 \end{lemma}
 
 \begin{proof}
-Let $\mu=\lim_i\mu_{\beta,L_i}$ weakly. Each $\mu_{\beta,L}$ has the symmetries in (1) for the torus, and for a local continuous function only finitely many of them matter once $L$ is large; weak limits preserve the identities $\mu_L(h\circ s)=\mu_L(h)$ for continuous local $h$. For (2), once $L_i$ is large, $F\in\cH_+$ on the torus, and $\nu\mapsto\nu(\theta F\cdot F)$ is weakly continuous. For (3), let first $g$ be continuous and local. Then $\gamma_\Lambda g$ is continuous and local, and $\mu_{L_i}(\gamma_\Lambda g)=\mu_{L_i}(g)$ for large $L_i$; pass to the limit. The two finite measures $\mu$ and $\mu\gamma_\Lambda$ agree on continuous local functions, hence they are equal, which is the claim for bounded measurable $g$.
+Let $\mu=\lim_i\mu_{\beta,L_i}$ weakly. Each $\mu_{\beta,L}$ has the symmetries in (1) for the torus, and for a local continuous function only finitely many of them matter once $L$ is large; weak limits preserve the identities $\mu_L(h\circ s)=\mu_L(h)$ for continuous local $h$. For (2), once $L_i$ is large, $F\in\cH_+$ on the torus for the reflection $x_j\mapsto2c-x_j$ of Lemma~\ref{pf:lem-rp}, and $\nu\mapsto\nu(\theta F\cdot F)$ is weakly continuous, since $\theta F\cdot F$ is bounded, continuous and local. For (3), let first $g$ be continuous and local. Then $\gamma_\Lambda g$ is continuous and local, and $\mu_{L_i}(\gamma_\Lambda g)=\mu_{L_i}(g)$ for large $L_i$; pass to the limit. The two finite measures $\mu$ and $\mu\gamma_\Lambda$ agree on continuous local functions, hence they are equal, which is the claim for bounded measurable $g$.
 \end{proof}
 
 \subsection{The transfer matrix and the spectral bound}\label{pf:sec-transfer}
 
-Fix $\mu\in\cL_\beta$. Let $\mathcal A_+$ be the bounded continuous functions of finitely many links in $\{x_0\ge0\}$, $\langle F,G\rangle:=\mu(\theta F\cdot G)$, $\cH$ the completion of $\mathcal A_+$ modulo null vectors, $[F]$ the class of $F$, and $\Omega:=[1]$. Let $\tau$ be the unit time translation, $(\tau F)(U)=F(U_{\cdot-e_0})$, so that $\tau\mathcal A_+\subset\mathcal A_+$ and $\theta\tau=\tau^{-1}\theta$.
+Fix $\mu\in\cL_\beta$. Let $\mathcal A_+$ be the bounded continuous functions of finitely many links in $\{x_0\ge0\}$, $\langle F,F'\rangle:=\mu(\theta F\cdot F')$, $\cH$ the completion of $\mathcal A_+$ modulo null vectors, $[F]$ the class of $F$, and $\Omega:=[1]$. Let $\tau$ be the unit time translation, $(\tau F)(U)=F(U_{\cdot-e_0})$, so that $\tau\mathcal A_+\subset\mathcal A_+$ and $\theta\tau=\tau^{-1}\theta$.
 
 \begin{lemma}[transfer matrix]\label{pf:lem-transfer}
 $T[F]:=[\tau F]$ defines a self-adjoint contraction $T=T_\mu$ on $\cH$ with $T\Omega=\Omega$ and $T\Omega^\perp\subset\Omega^\perp$.
 \end{lemma}
 
 \begin{proof}
-By translation invariance, $\langle G,\tau F\rangle=\mu(\theta G\cdot\tau F)=\mu(\tau^{-1}\theta G\cdot F)=\mu(\theta(\tau G)\cdot F)=\langle\tau G,F\rangle$; likewise $\langle\tau^aF,\tau^bF\rangle=\langle F,\tau^{a+b}F\rangle$. Put $a_m:=\|\tau^mF\|$. Cauchy--Schwarz gives $a_{2^i}^2=\langle F,\tau^{2^{i+1}}F\rangle\le a_0a_{2^{i+1}}$, hence $a_1\le a_0^{1-2^{-j}}a_{2^j}^{2^{-j}}$ for every $j$. Since $a_m\le\|F\|_\infty$, letting $j\to\infty$ gives $a_1\le a_0$ (if $a_0=0$ then $a_1=0$). So $\tau$ maps null vectors to null vectors and defines a symmetric contraction on a dense subspace, which extends to a self-adjoint contraction. $T\Omega=\Omega$ is clear, and $\langle\Omega,TF\rangle=\mu(\tau F)=\mu(F)=\langle\Omega,F\rangle$ gives invariance of $\Omega^\perp$.
+By translation invariance, $\langle F',\tau F\rangle=\mu(\theta F'\cdot\tau F)=\mu(\tau^{-1}\theta F'\cdot F)=\mu(\theta(\tau F')\cdot F)=\langle\tau F',F\rangle$; likewise $\langle\tau^aF,\tau^bF\rangle=\langle F,\tau^{a+b}F\rangle$. Put $a_m:=\|\tau^mF\|$. Cauchy--Schwarz gives $a_{2^i}^2=\langle F,\tau^{2^{i+1}}F\rangle\le a_0a_{2^{i+1}}$, hence $a_1\le a_0^{1-2^{-j}}a_{2^j}^{2^{-j}}$ for every $j$. Since $a_m\le\|F\|_\infty$, letting $j\to\infty$ gives $a_1\le a_0$ (if $a_0=0$ then $a_1=0$). So $\tau$ maps null vectors to null vectors and defines a symmetric contraction on a dense subspace, which extends to a self-adjoint contraction. $T\Omega=\Omega$ is clear, and $\langle\Omega,TF\rangle=\mu(\tau F)=\mu(F)=\langle\Omega,F\rangle$ gives invariance of $\Omega^\perp$.
 \end{proof}
 
 We define $m_\mu(\beta):=-\log\|T_\mu|_{\Omega^\perp}\|\in[0,\infty]$.
@@ -132,10 +132,10 @@ For the reduction, fix $n$ and $\varepsilon\in(0,c(n))$. For $\beta$ large and e
 
 \subsection{The chessboard estimate for dyadic sides}\label{pf:sec-chess}
 
-The chessboard estimate is due to Fr\"ohlich, Israel, Lieb and Simon~\cite{FILS78}; we re-prove the case we use. Let $L=2^k$. A block is a closed unit cube $[t,t+1]$, $t\in\Lambda_L$, with all its links and faces. For $t\in\Lambda_L$ let $\vartheta_t$ be the lattice map that is, in each direction $j$, the translation $x_j\mapsto x_j+t_j$ if $t_j$ is even and the reflection $x_j\mapsto t_j+1-x_j$ if $t_j$ is odd. It maps block $0$ onto block $t$. For a function $f$ of the links of block $0$ put $(f\circ\vartheta_t)(U):=f(\vartheta_t^*U)$, $(\vartheta_t^*U)_b:=U_{\vartheta_tb}$. Let $\theta_a$ denote the reflection $x_j\mapsto2a-x_j$ in one direction $j$.
+The chessboard estimate is due to Fr\"oh\-lich, Israel, Lieb and Simon~\cite{FILS78}; we re-prove the case we use. Let $L=2^k$. A block is a closed unit cube $[t,t+1]$, $t\in\Lambda_L$, with all its links and faces. For $t\in\Lambda_L$ let $\vartheta_t$ be the lattice map that is, in each direction $j$, the translation $x_j\mapsto x_j+t_j$ if $t_j$ is even and the reflection $x_j\mapsto t_j+1-x_j$ if $t_j$ is odd. It maps block $0$ onto block $t$. For a function $f$ of the links of block $0$ put $(f\circ\vartheta_t)(U):=f(\vartheta_t^*U)$, $(\vartheta_t^*U)_b:=U_{\vartheta_tb}$. Let $\theta_r$ denote the reflection $x_j\mapsto2r-x_j$ in one direction $j$.
 
 \begin{lemma}[chessboard estimate]\label{pf:lem-chess}
-Let $L=2^k$ and let $f\ge0$ be a bounded measurable function of the links of block $0$. Then
+Let $L=2^k$, $k\ge2$, and let $f\ge0$ be a bounded measurable function of the links of block $0$. Then
 \[
 \mu_{\beta,L}(f)\le\mu_{\beta,L}\Big(\prod_{t\in\Lambda_L}f\circ\vartheta_t\Big)^{1/|\Lambda_L|}.
 \]
@@ -143,14 +143,14 @@ Let $L=2^k$ and let $f\ge0$ be a bounded measurable function of the links of blo
 
 \begin{proof}
 For a set $S$ of blocks put $Z(S):=\mu_{\beta,L}(\prod_{t\in S}f\circ\vartheta_t)$, so $Z(\emptyset)=1$.
-In direction $j$, $\theta_a\circ\vartheta_t=\vartheta_{t'}$ with $t'_j=2a-1-t_j$ and $t'_i=t_i$ for $i\ne j$. Indeed, if $t_j$ is even, $x\mapsto2a-x-t_j$ is the reflection $x\mapsto t'_j+1-x$ with $t'_j$ odd; if $t_j$ is odd, $x\mapsto2a-(t_j+1-x)$ is the translation by the even number $t'_j$. Hence $(f\circ\vartheta_t)\circ\theta_a=f\circ\vartheta_{t'}$, and $\theta(f\circ\vartheta_t)=f\circ\vartheta_{t'}$ since $f$ is real.
+In direction $j$, $\theta_r\circ\vartheta_t=\vartheta_{t'}$ with $t'_j=2r-1-t_j$ and $t'_i=t_i$ for $i\ne j$. Indeed, if $t_j$ is even, $x\mapsto2r-x-t_j$ is the reflection $x\mapsto t'_j+1-x$ with $t'_j$ odd; if $t_j$ is odd, $x\mapsto2r-(t_j+1-x)$ is the translation by the even number $t'_j$. Hence $(f\circ\vartheta_t)\circ\theta_r=f\circ\vartheta_{t'}$, and $\theta(f\circ\vartheta_t)=f\circ\vartheta_{t'}$ since $f$ is real.
 
-\emph{Doubling step.} Let $S\subset H_+:=\{t:a\le t_j\le a+L/2-1\}$. Blocks in $H_+$ have all their sites in $\{a\le x_j\le a+L/2\}$, so $F:=\prod_{t\in S}f\circ\vartheta_t$ lies in $\cH_+$ for the reflection $\theta_a$. The set $\theta_aS$ lies in $\{a-L/2\le t_j\le a-1\}$ and is disjoint from $S$. Lemma~\ref{pf:lem-rp} with $G=1$ gives
+\emph{Doubling step.} Let $S\subset H_+:=\{t:r\le t_j\le r+L/2-1\}$. Blocks in $H_+$ have all their sites in $\{r\le x_j\le r+L/2\}$, so $F:=\prod_{t\in S}f\circ\vartheta_t$ lies in $\cH_+$ for the reflection $\theta_r$. The set $\theta_aS$ lies in $\{r-L/2\le t_j\le r-1\}$ and is disjoint from $S$. Lemma~\ref{pf:lem-rp} with $F'=1$ gives
 \[
 Z(S)^2=|\mu(\theta1\cdot F)|^2\le\mu(\theta F\cdot F)\,\mu(1)=Z(S\cup\theta_aS).
 \]
 
-\emph{Iteration.} In direction $1$ take $a=-2^i+1$ for $i=0,\dots,k-1$, starting from $S=\{0\}$. If $S=\{t:t_1\in[-2^i+1,0],\,t_2=t_3=t_0=0\}$, then $S\subset H_+$ because $0\le a+L/2-1$ is $2^i\le L/2$, and $\theta_aS$ has $t_1\in[-2^{i+1}+1,-2^i]$. So $S\cup\theta_aS$ has $t_1\in[-2^{i+1}+1,0]$. After $k$ steps $t_1$ runs over $\Z/L\Z$. Repeat in directions $2,3,0$ with slabs. After $4k$ doublings, $Z(\{0\})^{2^{4k}}\le Z(\Lambda_L)$, and $2^{4k}=|\Lambda_L|$.
+\emph{Iteration.} In direction $1$ take $r=-2^i+1$ for $i=0,\dots,k-1$, starting from $S=\{0\}$. If $S=\{t:t_1\in[-2^i+1,0],\,t_2=t_3=t_0=0\}$, then $S\subset H_+$ because $0\le r+L/2-1$ is $2^i\le L/2$, and $\theta_aS$ has $t_1\in[-2^{i+1}+1,-2^i]$. So $S\cup\theta_aS$ has $t_1\in[-2^{i+1}+1,0]$. After $k$ steps $t_1$ runs over $\Z/L\Z$. Repeat in directions $2,3,0$ with slabs. After $4k$ doublings, $Z(\{0\})^{2^{4k}}\le Z(\Lambda_L)$, and $2^{4k}=|\Lambda_L|$.
 \end{proof}
 
 \subsection{Free-energy bounds and the uniform tail}\label{pf:sec-free}
@@ -225,10 +225,10 @@ The event $\{O_p>t\}$ is open, so for $\mu=\lim\mu_{\beta,L_i}$ we get $\mu(O_p>
 
 We also use three elementary inequalities: $1-\cos x\ge2x^2/\pi^2$ on $[-\pi,\pi]$; $\tfrac12(a-b)_+^2\ge a^2/4-b^2/2$ for $a,b\ge0$ (if $a\ge b$ the difference is $(a/2-b)^2$; otherwise the right side is negative); and $\|u+v\|^2\ge\tfrac12\|u\|^2-\|v\|^2$.
 
-A $G$-connection on a $2$-complex $X$ of the lattice is an assignment of $U_{xy}\in G$ to its links with $U_{yx}=U_{xy}^{-1}$; it is \emph{flat} if $U_p=1$ for every plaquette of $X$, and \emph{pure gauge} if $U_{xy}=g_xg_y^{-1}$ for some $g$. The $2$-complex of a box $R$ consists of all links and plaquettes with all sites in $R$; the shell $2$-complex of all links and plaquettes with all sites in $\partial R$.
+A $\mathbb G$-connection on a $2$-complex $X$ of the lattice is an assignment of $U_{xy}\in\mathbb G$ to its links with $U_{yx}=U_{xy}^{-1}$; it is \emph{flat} if $U_p=1$ for every plaquette of $X$, and \emph{pure gauge} if $U_{xy}=g_xg_y^{-1}$ for some $g$. The $2$-complex of a box $R$ consists of all links and plaquettes with all sites in $R$; the shell $2$-complex of all links and plaquettes with all sites in $\partial R$.
 
 \begin{lemma}[flat connections on a box]\label{pf:lem-flat}
-Let $G$ be any group, $d'\ge1$, and $R'$ a box in $\Z^{d'}$. Every flat $G$-connection on the $2$-complex of $R'$ is pure gauge. If $d'=4$, $R'=R$, and moreover $U=1$ on the shell links and on $T_{\rm int}$, then $U\equiv1$.
+Let $\mathbb G$ be any group, $d'\ge1$, and $R'$ a box in $\Z^{d'}$. Every flat $\mathbb G$-connection on the $2$-complex of $R'$ is pure gauge. If $d'=4$, $R'=R$, and moreover $U=1$ on the shell links and on $T_{\rm int}$, then $U\equiv1$.
 \end{lemma}
 
 \begin{proof}
@@ -238,7 +238,7 @@ For the second claim, write $U_{xy}=g_xg_y^{-1}$. $U=1$ on shell links makes $g$
 \end{proof}
 
 \begin{lemma}[the shell is simply connected]\label{pf:lem-shell}
-Let $G$ be any group. Every flat $G$-connection on the shell $2$-complex of $R$ is pure gauge. Consequently there is a finite integer $K_N$ such that, for every $\SU(2)$-connection on the shell and every shell link $l\notin T_s$, the variable of $l$ in the $T_s$-gauge (the gauge with $g_b=1$ and $U=1$ on $T_s$) is a product of at most $K_N$ conjugates of shell plaquette holonomies and their inverses; in particular its class angle is at most $K_N\max_q\alpha_q$, the maximum over shell plaquettes.
+Let $\mathbb G$ be any group. Every flat $\mathbb G$-connection on the shell $2$-complex of $R$ is pure gauge. Consequently there is a finite integer $K_N$ such that, for every $\SU(2)$-connection on the shell and every shell link $l\notin T_s$, the variable of $l$ in the $T_s$-gauge (the gauge with $g_b=1$ and $U=1$ on $T_s$) is a product of at most $K_N$ conjugates of shell plaquette holonomies and their inverses; in particular its class angle is at most $K_N\max_q\alpha_q$, the maximum over shell plaquettes.
 \end{lemma}
 
 \begin{proof}
@@ -338,7 +338,7 @@ Let $\beta_k\ge1$, $\beta_k\to\infty$, and let $\mu_k\in\cL_{\beta_k}$ be arbitr
 \item[(b)] \emph{(Bianchi.)} $(dF)_c=0$ for every $3$-cube $c$, $\mu_\infty$-almost surely.
 \item[(c)] \emph{(Invariances.)} $\mu_\infty$ is invariant under $F\mapsto\mathrm{Ad}(\mathcal R)F$ for each $\mathcal R\in\SU(2)$, and under lattice translations.
 \item[(d)] \emph{(Moments.)} $\mu_\infty(\tfrac12|F_p|^2>t)\le e^{60.2-t/8}$ for all $p,t$, so $F$ has moments of all orders. Along the subsequence, $(O_p)_{p\in\mathcal P}$ under $\mu_k$ converges in finite-dimensional laws to $(\tfrac12|F_p|^2)_{p\in\mathcal P}$, and $\mu_k(O_p)\to\E_\infty\tfrac12|F_p|^2$ and $\mu_k(O_pO_q)\to\E_\infty\tfrac14|F_p|^2|F_q|^2$ for all $p,q$.
-\item[(e)] \emph{(Gaussian DLR.)} For every box $R$, let $\cG_R:=\sigma(F_q:q\notin P_R)$, $F_{\rm in}:=(F_p)_{p\in P_R}$ and $F_{\rm sh}:=(F_q)_{q\text{ shell plaquette}}$, which is $\cG_R$-measurable. Let $\mathsf L$ be a fixed linear left inverse of $d$ on the shell $1$-forms vanishing on $T_s$. Then a regular conditional law of $F_{\rm in}$ given $\cG_R$ is the law of $d(A+\Psi)|_{P_R}$, where $\Psi:=\mathsf LF_{\rm sh}$ and $A\sim K_\infty(\cdot|\Psi)$.
+\item[(e)] \emph{(Gaussian DLR.)} For every box $R$, let $\cG_R:=\sigma(F_q:q\notin P_R)$, the $\sigma$-field of the limit curvatures outside the box only (no link variables enter), $F_{\rm in}:=(F_p)_{p\in P_R}$ and $F_{\rm sh}:=(F_q)_{q\text{ shell plaquette}}$, which is $\cG_R$-measurable. Let $\mathsf L$ be a fixed linear left inverse of $d$ on the shell $1$-forms vanishing on $T_s$. Then a regular conditional law of $F_{\rm in}$ given $\cG_R$ is the law of $d(A+\Psi)|_{P_R}$, where the shell potential $\Psi:=\mathsf LF_{\rm sh}$ is this fixed linear image of the shell curvature and $A\sim K_\infty(\cdot|\Psi)$.
 \end{enumerate}
 \end{proposition}
 
@@ -413,7 +413,7 @@ $|\E_\infty[w_{\rm in}(F_{\rm in})w_{\rm out}]-\E_\infty[\Phi(\mathsf LF_{\rm sh
 \emph{Step 7: conditional law.} The functions $w_{\rm out}$ generate $\cG_R$ and form a class closed under products, so by the monotone class theorem $\E_\infty[w_{\rm in}(F_{\rm in})|\cG_R]=\Phi_{w_{\rm in}}(\mathsf LF_{\rm sh})$ a.s. A regular conditional law of $F_{\rm in}$ given $\cG_R$ exists because $(\R^3)^{P_R}$ is Polish. A countable family of bounded Lipschitz $w_{\rm in}$ determines probability measures on $(\R^3)^{P_R}$, so this regular conditional law equals the law of $d(A+\Psi)|_{P_R}$, $A\sim K_\infty(\cdot|\Psi)$, $\Psi=\mathsf LF_{\rm sh}$, almost surely.
 \end{proof}
 
-At finite $\beta$ the conditioning is on links modulo gauge; in the limit it is on curvatures only. Lemma~\ref{pf:lem-shell} and the injectivity of $d$ on $T_s$-gauge shell forms show that nothing is lost: shell curvatures determine shell links modulo gauge, exactly for the group and linearly in the limit.
+At finite $\beta$ the conditioning is on links modulo gauge; in the limit, as (e) states, it is on curvatures only. Lemma~\ref{pf:lem-shell} and the injectivity of $d$ on $T_s$-gauge shell forms show that nothing is lost: shell curvatures determine shell links modulo gauge, exactly for the group and linearly in the limit.
 
 \subsection{The increasing Dirichlet covariances}\label{pf:sec-D}
 
@@ -462,7 +462,7 @@ The colours of $f$ may be correlated.
 
 \emph{Stationarity.} Since $\xi$ is centred and independent of $h$, $\E[h^a_ph^a_q]=\E[F^a_pF^a_q]-P_{pq}$. Both terms are invariant under lattice translations (Proposition~\ref{pf:prop-L4}(c), and $P$ commutes with translations). So $h$ is second-order stationary.
 
-\emph{Constancy.} The following argument for constancy was supplied by an independent check of this lemma. On $\Z^4$ the Hodge Laplacian $dd^*+d^*d$ on $2$-forms acts on each component $\omega_{\mu\nu}$ as the scalar operator $8-\sum_{e}\mathsf S_e$, the sum over the eight unit vectors $e=\pm e_\lambda$ and $\mathsf S_e\omega(x)=\omega(x+e)$. (Both sides are finite-range, translation-invariant operators; on finitely supported forms their Fourier symbols agree, because $\hat d=\sum_\lambda\hat e_\lambda\,e^\lambda\wedge$ and $\hat d^*=\sum_\lambda\overline{\hat e_\lambda}\,\iota_\lambda$ with $\hat e_\lambda=e^{ik_\lambda}-1$, and $e^\lambda\wedge\iota_\kappa+\iota_\kappa e^\lambda\wedge=\delta_{\lambda\kappa}$, so the symbol is $\sum_\lambda|\hat e_\lambda|^2=\sum_\lambda(2-2\cos k_\lambda)$.) Since $dh=0$ and $d^*h=0$ almost surely, every component is harmonic: $\sum_eh(x+e)=8h(x)$ for each fixed type $(\mu,\nu)$ and colour, writing $h(x)$ for that component at the plaquette with corner $x$. Fix $x$ and put $u:=h(x)$, $v_e:=h(x+e)$ in real $L^2(\mu_\infty)$. By stationarity, $\|v_e\|=\|u\|$ for all $e$. Hence
+\emph{Constancy.} The following argument for constancy was supplied by an independent check of this lemma by a session of a second model lineage \cite[comment 7102490558]{RepoThread}. On $\Z^4$ the Hodge Laplacian $dd^*+d^*d$ on $2$-forms acts on each component $\omega_{\mu\nu}$ as the scalar operator $8-\sum_{e}\mathsf S_e$, the sum over the eight unit vectors $e=\pm e_\lambda$ and $\mathsf S_e\omega(x)=\omega(x+e)$. (Both sides are finite-range, translation-invariant operators; on finitely supported forms their Fourier symbols agree, because $\hat d=\sum_\lambda\hat e_\lambda\,e^\lambda\wedge$ and $\hat d^*=\sum_\lambda\overline{\hat e_\lambda}\,\iota_\lambda$ with $\hat e_\lambda=e^{ik_\lambda}-1$, and $e^\lambda\wedge\iota_\kappa+\iota_\kappa e^\lambda\wedge=\delta_{\lambda\kappa}$, so the symbol is $\sum_\lambda|\hat e_\lambda|^2=\sum_\lambda(2-2\cos k_\lambda)$.) Since $dh=0$ and $d^*h=0$ almost surely, every component is harmonic: $\sum_eh(x+e)=8h(x)$ for each fixed type $(\mu,\nu)$ and colour, writing $h(x)$ for that component at the plaquette with corner $x$. Fix $x$ and put $u:=h(x)$, $v_e:=h(x+e)$ in real $L^2(\mu_\infty)$. By stationarity, $\|v_e\|=\|u\|$ for all $e$. Hence
 \[
 \sum_e\|v_e-u\|^2=\sum_e\|v_e\|^2-2\Big\langle\sum_ev_e,u\Big\rangle+8\|u\|^2=16\|u\|^2-16\|u\|^2=0 .
 \]
@@ -473,7 +473,7 @@ A constant background matters: for a background with $f_{p_n}=-f_{p_0}$ the cova
 
 \subsection{The free correlation}\label{pf:sec-G}
 
-Write $\hat k_\lambda^2:=4\sin^2(k_\lambda/2)$ and $\hat k^2:=\sum_{\lambda=0}^3\hat k_\lambda^2$, and for $\vec k=(k_1,k_2,k_3)\in[-\pi,\pi]^3$ let $a(\vec k):=\sum_{i=1}^3\hat k_i^2$ and $m(\vec k)>0$ with $\cosh m=1+a/2$.
+Write $\hat k_\lambda^2:=4\sin^2(k_\lambda/2)$ and $\hat k^2:=\sum_{\lambda=0}^3\hat k_\lambda^2$, and for $\vec k=(k_1,k_2,k_3)\in[-\pi,\pi]^3$ let $\varsigma (\vec k):=\sum_{i=1}^3\hat k_i^2$ and $m(\vec k)>0$ with $\cosh m=1+\varsigma /2$.
 
 \begin{lemma}[the free correlation; Lemma G]\label{pf:lem-G}
 \leavevmode
@@ -489,17 +489,17 @@ Consequently $c(n)=4G(n)^2=\frac4{\pi^4n^8}\big(1+O(n^{-2})\big)$, and $-\log c(
 \end{lemma}
 
 \begin{proof}
-(1) In Fourier, with $\hat d$ as above, $\hat d\hat d^*+\hat d^*\hat d=\hat k^2$ on forms of every degree. For $k\ne0$, the range of $\hat d$ on $2$-forms equals the kernel of $\hat d$, and $\hat d\hat d^*/\hat k^2$ is the identity on it and vanishes on the range of $\hat d^*$; so $\hat P(k)=\hat d\hat d^*/\hat k^2$. The closure of the range of $d$ is the set of $\omega\in\ell^2$ with $\hat\omega(k)\in\mathrm{ran}\,\hat d(k)$ for almost every $k$: this set is closed and contains the range; conversely, for such $\omega$ and $\varepsilon>0$, $\mathbf 1\{|k|>\varepsilon\}\hat\omega=\hat d\hat A_\varepsilon$ with $\hat A_\varepsilon:=\mathbf 1\{|k|>\varepsilon\}\hat d^*\hat\omega/\hat k^2\in L^2$, and $A_\varepsilon$ is an $\ell^2$-limit of finitely supported forms, on which $d$ is bounded. So $P$ is multiplication by $\hat P(k)$. Its diagonal entry at the type $(1,2)$ is $|\hat e_1|^2+|\hat e_2|^2=\hat k_1^2+\hat k_2^2$. Since $p_n=p_0+ne_0$, Plancherel gives the first formula. For $a>0$, $\int_{-\pi}^\pi e^{ik_0n}/(2+a-2\cos k_0)\,dk_0/(2\pi)=e^{-m|n|}/(2\sinh m)$ (residues), which gives the second; the integrand is integrable because $\hat k_1^2+\hat k_2^2\le a$ and $\sinh m\ge m\ge c\sqrt a$ near $0$.
+(1) In Fourier, with $\hat d$ as above, $\hat d\hat d^*+\hat d^*\hat d=\hat k^2$ on forms of every degree. For $k\ne0$, the range of $\hat d$ on $2$-forms equals the kernel of $\hat d$, and $\hat d\hat d^*/\hat k^2$ is the identity on it and vanishes on the range of $\hat d^*$; so $\hat P(k)=\hat d\hat d^*/\hat k^2$. The closure of the range of $d$ is the set of $\omega\in\ell^2$ with $\hat\omega(k)\in\mathrm{ran}\,\hat d(k)$ for almost every $k$: this set is closed and contains the range; conversely, for such $\omega$ and $\varepsilon>0$, $\mathbf 1\{|k|>\varepsilon\}\hat\omega=\hat d\hat A_\varepsilon$ with $\hat A_\varepsilon:=\mathbf 1\{|k|>\varepsilon\}\hat d^*\hat\omega/\hat k^2\in L^2$, and $A_\varepsilon$ is an $\ell^2$-limit of finitely supported forms, on which $d$ is bounded. So $P$ is multiplication by $\hat P(k)$. Its diagonal entry at the type $(1,2)$ is $|\hat e_1|^2+|\hat e_2|^2=\hat k_1^2+\hat k_2^2$. Since $p_n=p_0+ne_0$, Plancherel gives the first formula. For $\varsigma >0$, $\int_{-\pi}^\pi e^{ik_0n}/(2+\varsigma -2\cos k_0)\,dk_0/(2\pi)=e^{-m|n|}/(2\sinh m)$ (residues), which gives the second; the integrand is integrable because $\hat k_1^2+\hat k_2^2\le \varsigma $ and $\sinh m\ge m\ge c\sqrt \varsigma $ near $0$.
 
 (2) By the symmetry $k_1\leftrightarrow k_3$ and so on, $\int(\hat k_1^2+\hat k_2^2)/\hat k^2=2\cdot\frac14$. The integrand of the second formula is positive almost everywhere and strictly decreasing in $|n|$.
 
-(3) On the cube $|k_i|\le r$ we have $a\le|\vec k|^2\le1/n^2$. Since $a=4\sinh^2(m/2)\ge m^2$, $m\le1/n$, so $e^{-mn}\ge e^{-1}$ and $\sinh m\le\sinh1$. Also $\hat k_i^2\ge4k_i^2/\pi^2$, and $\int_{\text{cube}}(k_1^2+k_2^2)\,d\vec k=16r^5/3$. Drop the rest of the (positive) integrand.
+(3) On the cube $|k_i|\le r$ we have $\varsigma \le|\vec k|^2\le1/n^2$. Since $\varsigma =4\sinh^2(m/2)\ge m^2$, $m\le1/n$, so $e^{-mn}\ge e^{-1}$ and $\sinh m\le\sinh1$. Also $\hat k_i^2\ge4k_i^2/\pi^2$, and $\int_{\text{cube}}(k_1^2+k_2^2)\,d\vec k=16r^5/3$. Drop the rest of the (positive) integrand.
 
-(4) Let $g:=(\hat k_1^2+\hat k_2^2)/(2\sinh m)$ and $g_0:=(k_1^2+k_2^2)/(2|\vec k|)\le|\vec k|/2$. A direct computation in polar coordinates gives $\int_{\R^3}g_0e^{-n|\vec k|}d\vec k/(2\pi)^3=\frac{8\pi/3}{2(2\pi)^3}\int_0^\infty r^3e^{-nr}dr=\frac1{\pi^2n^4}$. For $|\vec k|\le1$ we use: $0\le x^2-\hat x^2\le x^4/12$; $|\vec k|-|\vec k|^3/8\le m\le|\vec k|$ (from $m=2\,\mathrm{arcsinh}(\sqrt a/2)$, $y-y^3/6\le\mathrm{arcsinh}\,y\le y$, and $|\vec k|^2-|\vec k|^4/12\le a\le|\vec k|^2$); $m\le\sinh m\le m+m^3$. These give $|g-g_0|\le3|\vec k|^3$ and $|e^{-nm}-e^{-n|\vec k|}|\le\frac n8|\vec k|^3e^{-n|\vec k|/2}$, so
+(4) Let $g:=(\hat k_1^2+\hat k_2^2)/(2\sinh m)$ and $g_0:=(k_1^2+k_2^2)/(2|\vec k|)\le|\vec k|/2$. A direct computation in polar coordinates gives $\int_{\R^3}g_0e^{-n|\vec k|}d\vec k/(2\pi)^3=\frac{8\pi/3}{2(2\pi)^3}\int_0^\infty r^3e^{-nr}dr=\frac1{\pi^2n^4}$. For $|\vec k|\le1$ we use: $0\le x^2-\hat x^2\le x^4/12$; $|\vec k|-|\vec k|^3/8\le m\le|\vec k|$ (from $m=2\,\mathrm{arcsinh}(\sqrt \varsigma /2)$, $y-y^3/6\le\mathrm{arcsinh}\,y\le y$, and $|\vec k|^2-|\vec k|^4/12\le \varsigma \le|\vec k|^2$); $m\le\sinh m\le m+m^3$. These give $|g-g_0|\le3|\vec k|^3$ and $|e^{-nm}-e^{-n|\vec k|}|\le\frac n8|\vec k|^3e^{-n|\vec k|/2}$, so
 \[
 \int_{|\vec k|\le1}|ge^{-nm}-g_0e^{-n|\vec k|}|\,\frac{d\vec k}{(2\pi)^3}\le\frac1{(2\pi)^3}\int_{\R^3}\Big(3|\vec k|^3+\frac n{16}|\vec k|^4\Big)e^{-n|\vec k|/2}d\vec k=\frac{14400}{\pi^2n^6}.
 \]
-For $|\vec k|>1$ in the cube, $a\ge4|\vec k|^2/\pi^2>4/\pi^2$, so $m\ge m_1>0$ and that part of $G(n)$ is at most $\tfrac12e^{-nm_1}$; the part of the $g_0$-integral over $|\vec k|>1$ is at most $\frac1{6\pi^2}\int_1^\infty r^3e^{-nr}dr$. This gives the bound in (4). Finally $c(n)=(G(n)/G(0))^2=4G(n)^2$, and (4) gives the asymptotics; (3) or (4) gives $-\log c(n)/n\to0$.
+For $|\vec k|>1$ in the cube, $\varsigma \ge4|\vec k|^2/\pi^2>4/\pi^2$, so $m\ge m_1>0$ and that part of $G(n)$ is at most $\tfrac12e^{-nm_1}$; the part of the $g_0$-integral over $|\vec k|>1$ is at most $\frac1{6\pi^2}\int_1^\infty r^3e^{-nr}dr$. This gives the bound in (4). Finally $c(n)=(G(n)/G(0))^2=4G(n)^2$, and (4) gives the asymptotics; (3) or (4) gives $-\log c(n)/n\to0$.
 \end{proof}
 
 For orientation only: $G(1)=0.0688747$, and $\pi^2n^4G(n)=1.092$ at $n=8$.
@@ -551,4 +551,4 @@ The proof uses the following textbook facts without proof.
 \item \emph{Scheff\'e's lemma}: the total-variation convergence in Theorem~\ref{pf:thm-L3} is of this type; the proof there bounds the $L^1$ distance of the densities directly.
 \item \emph{L\'evy's downward martingale theorem} (a.s.\ and $L^2$): Lemma~\ref{pf:lem-R}.
 \end{enumerate}
-We also use Weyl's integration formula for $\SU(2)$ (\S\ref{pf:sec-setting}), Plancherel's theorem on $\Z^4$ and a residue computation (Lemma~\ref{pf:lem-G}), and Isserlis' theorem for Gaussian moments (Lemma~\ref{pf:lem-wick}).
+We also use, without proof or citation, Weyl's integration formula for $\SU(2)$ (\S\ref{pf:sec-setting}), Plancherel's theorem on $\Z^4$ and a residue computation (Lemma~\ref{pf:lem-G}), and Isserlis' theorem for Gaussian moments (Lemma~\ref{pf:lem-wick}).

@@ -1,0 +1,7 @@
+/home/user/z4-workers/p6-rev/revcheck.py:25: SyntaxWarning: invalid escape sequence '\s'
+  P7  "Consequently $\sup" appears inside the theorem environment thm:main in main.tex.
+Traceback (most recent call last):
+  File "/home/user/z4-workers/p6-rev/revcheck.py", line 76, in <module>
+    prog, betas, cnt = cells[0], cells[2], cells[3]
+                                 ~~~~~^^^
+IndexError: list index out of range

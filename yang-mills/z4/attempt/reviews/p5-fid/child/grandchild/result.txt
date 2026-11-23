@@ -1,0 +1,15 @@
+P1 = 10 lines [543, 544, 545, 546, 547, 548, 549, 550, 551, 552]
+P2 italic-lead = 10  all \item regex = 10
+agree: True
+543 \item \emph{Prokhorov's theorem} (tight families in $\R^m$ are relativ
+544 \item \emph{Diagonal extraction}: existence in Proposition~\ref{pf:pro
+545 \item \emph{Portmanteau theorem}, including that bounded Lipschitz fun
+546 \item \emph{Uniform integrability and convergence of moments}: Proposi
+547 \item \emph{Monotone class ($\pi$--$\lambda$) theorem}: Lemma~\ref{pf:
+548 \item \emph{Slutsky's lemma}: Proposition~\ref{pf:prop-L4}(a) (paths a
+549 \item \emph{Regular conditional distributions} on Polish spaces: Propo
+550 \item \emph{Kolmogorov's extension theorem}: existence of $\mu_\infty$
+551 \item \emph{Scheff\'e's lemma}: the total-variation convergence in The
+552 \item \emph{L\'evy's downward martingale theorem} (a.s.\ and $L^2$): L
+We also use at line 554
+prose facts after list: 3 (Weyl integration formula; Plancherel on Z^4 plus residue computation (counted as one entry by the sentence list as written: Weyl, Plancherel+residue, Isserlis))

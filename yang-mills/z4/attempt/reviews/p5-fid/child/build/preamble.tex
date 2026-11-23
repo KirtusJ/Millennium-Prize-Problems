@@ -1,0 +1,33 @@
+% Shared preamble for the paper. Section files are \input into main.tex and must compile with exactly this.
+\documentclass[11pt]{amsart}
+\usepackage[utf8]{inputenc}
+% T1 encoding omitted: without Latin Modern installed it selects bitmap fonts; the default encoding gives Type 1 Computer Modern.
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array,longtable}
+\usepackage[margin=1.15in]{geometry}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\E}{\mathbb{E}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\repo}[1]{\texttt{#1}}

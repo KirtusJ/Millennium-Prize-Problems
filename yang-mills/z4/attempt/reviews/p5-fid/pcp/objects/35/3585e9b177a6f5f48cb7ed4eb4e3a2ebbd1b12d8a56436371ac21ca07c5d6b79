@@ -1,0 +1,2 @@
+/home/user/z4-workers/p5-fid/fidcheck.py:39: RuntimeWarning: divide by zero encountered in divide
+  base = W * (S1 + S2) / (2 * np.sinh(m))

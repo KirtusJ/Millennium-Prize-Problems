@@ -1,0 +1,12 @@
+N=1: links 8 plaq 24 kernel dim 1 max|zero eig|=1.81e-15 min kept=6.0000e+00 C=0.2916666667
+   B5 N=1: |Lambda''|=7 min eig Q=0.837722
+N=2: links 432 plaq 864 kernel dim 81 max|zero eig|=6.08e-15 min kept=1.7574e+00 C=0.4926748048
+   B5 N=2: |Lambda''|=351 min eig Q=0.147122
+N=3: links 3000 plaq 5400 kernel dim 625 max|zero eig|=1.73e-14 min kept=8.0385e-01 C=0.4991559926
+   B5 N=3: |Lambda''|=2375 min eig Q=0.054070
+B1 PASS C1=0.291666666667 7/24=0.291666666667
+B2 PASS C2=0.4926748
+B3 PASS C3=0.4991560
+B4 PASS 0.291667<=0.492675<=0.499156<0.5
+B5a PASS N=1 min eig 0.8377223
+B5b PASS N=2 min eig 0.1471218; N=3 0.054070 (unclaimed)

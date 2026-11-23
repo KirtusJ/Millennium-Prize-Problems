@@ -1,0 +1,36 @@
+The paper has 8 sections, and every count in the abstract matches the sources. The 5-hypotheses, 5-routes, 6-properties and 10-facts claims all check out. I wrote everything to `report.md` in the child directory.
+
+**Control:** `control.txt` holds 8.
+
+**Q1 (two `pdflatex` runs, both exit 0):**
+- Three Overfull hboxes exceed 10pt:
+  - 34.41pt at `sec_reduction.tex:113–114`
+  - 57.50pt at `sec_reduction.tex:288–289`
+  - 104.70pt at `sec_provenance.tex:24–25`
+- A fourth is 3.78pt, at `sec_proof.tex:135–136`, below the threshold.
+- There are no undefined references or citations.
+- No label is multiply defined, in the log or in a separate scan of the sources.
+- All 31 bibliography keys are cited, and every cited key has a `\bibitem`.
+
+**Q2:** Claimed and counted agree for all four.
+
+| Item | Claimed / counted | Where |
+|---|---|---|
+| (a) hypotheses Theorem S uses | 5 / 5 | `sec_reduction.tex`: H0 :142, A :41, B :45, H3 :148, H4 :159 |
+| (a) stated proved | 2 / 2 | H0 and B, status table :395 and :397 |
+| (b) routes (unit: subsection) | 5 / 5 | `sec_negative.tex`: 28, 167, 263, 328, 379 |
+| (c) properties (unit: `\item[P_n]`) | 6 / 6 | `sec_negative.tex`: 426, 427, 431, 434, 437, 440 |
+| (d) standard facts (unit: `\item`) | 10 / 10 | `sec_proof.tex`: 543–552 |
+
+Theorem R′ (`thm:reduction`) uses a different set of three hypotheses: A, B and C. Line 554 of `sec_proof.tex` also names Weyl's formula, Plancherel/residue and Isserlis, which sit outside the ten.
+
+**Failed predicates:**
+- My parser could not attribute the Overfull boxes to files, because the log's parentheses are unbalanced. I checked all four against the source lines by hand instead.
+- My status-row regex also matched the free-field table at `sec_reduction.tex:371–376`. That was my loose pattern, not a defect in the paper.
+- The sub-agent's "3 further facts" line is hardcoded in its script, not parsed from the source.
+
+**Sub-agent:** It ran as task T32, parent T31. Its known-answer control (6 `\input` lines in `main.tex`) matched. It counted 10 items on lines 543–552 by two methods that agree. I reread its script and reran it through `pcp check` with the same output, then released T32.
+
+**Verify lines:**
+- `pcp_os.py verify`: `result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)`
+- `pcpos verify pcp/register.jsonl`: `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.`

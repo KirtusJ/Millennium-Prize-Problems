@@ -1,0 +1,95 @@
+MET    R1a                    main.tex  /with the same proof, for \$?\\U|Both hold for \$?\\U/
+MET    R1b                    main.tex:53-53  /have not written it/
+MET    R2a                    sec_provenance.tex  /paper itself has had the corresponding review/
+MET    R2b                    sec_paperreview.tex  /to be filled/
+MET    R2c                    sec_paperreview.tex:7-7  /has not been re-reviewed/
+MET    R3a                    main.tex:8-8  /plus an independent random constant/
+MET    R3b                    main.tex:8-8  /G\(n\)/G\(0\)\)\^\{?2/
+MET    R3c                    main.tex:8-8  /has not been reviewed by a mathematician/
+MET    R3d                    main.tex:8-8  /H0 to H4/
+FAILED R4                     sec_negative.tex hits=[('sec_negative.tex', 296)]  /a claimed step|not checked/
+MET    R4b                    sec_negative.tex:655-665  /Proposition~\\ref\{pf:prop-L4\}\(d\)/
+MET    R4c                    sec_negative.tex:655-665  /Lemma~\\ref\{pf:lem-R\}/
+MET    R5a                    sec_negative.tex  /F_4-F_3|wrong sign/
+MET    R5b                    sec_negative.tex:229-233  /F_4-F_2/
+MET    R6a                    sec_reduction.tex:148-150  /all four coordinate directions/
+MET    R6b                    sec_proof.tex:94-100  /\\theta F\\cdot F\)\\ge0/
+MET    R7a                    sec_negative.tex:402-410  /\\textup\{\(U1\)\}/
+MET    R7b                    sec_negative.tex  /standing assumption/
+MET    R7c                    sec_negative.tex  /\(H1\)/
+MET    R8a                    sec_negative.tex:100-113  /56\$? of \$?56/
+MET    R8b                    sec_negative.tex:91-94  /\\kappa_H\(U\)\\ge 1/2/
+MET    R8c                    sec_negative.tex  /\bfalse\b.*S6|S6.*\bfalse\b/
+MET    R9                     sec_negative.tex:424-440  /\\delta_\{e\^\{-1\}\}/
+FAILED R10                    sec_proof.tex:410-420  /limit curvatures outside the box only/
+FAILED R10b                   sec_proof.tex:410-420  /\\Psi:=\\mathsf LF_\{\\rm sh\}/
+MET    R11a                   main.tex:55-56  /Related results, not used here|not read those proofs|have read those proofs/
+MET    R11b                   main.tex:56-56  /RepoC4/
+MET    R11c                   main.tex  /three groups|Ward identity/
+MET    R12a                   main.tex  /We prove that it does/
+MET    R12b                   main.tex:15-15  /necessary condition; it is an upper bound/
+MET    R12c                   main.tex:32-47  /Hypothesis & Content & Status/
+MET    R12d                   main.tex:75-100  /Symbol & Meaning/
+MET    R13                    sec_reduction.tex:185-185  /as read in \\cite\{KQR21\}/
+MET    R13b                   sec_reduction.tex  /Theorem\s*\d+\s*of\s*\\cite\{OS7[35]\}|\\cite\[Theorem[^\]]*\]\{OS7[35]\}/
+MET    R14a                   sec_proof.tex:79-79  /even \$L\\ge4\$/
+MET    R14b                   sec_proof.tex:46-46  /k\\ge2/
+MET    R15a                   sec_negative.tex:676-680  /Ising/
+MET    R15b                   sec_negative.tex,sec_reduction.tex,sec_proof.tex  /\bbuilder|\bchallenger|\bledger/
+MET    R15c                   sec_reduction.tex:367-384  /A test of the chain on a free field|red:freetab/
+MET    R15d                   sec_reduction.tex  /Every admissible constant/
+MET    F1                     sec_provenance.tex  /paper itself has had the corresponding review/
+MET    F2                     sec_provenance.tex:15-15  /\$6\$ wrong, \$10\$ overstated, \$3\$ unsupported and \$9\$ omitted/
+MET    F3                     main.tex:56-56  /\\beta\^\{-1/8\}/
+MET    F3b                    main.tex:56-56  /comment 7102141403/
+MET    F4                     main.tex:56-56  /reported, not proved here/
+MET    F5                     main.tex:56-56  /Neither the author nor the sessions/
+MET    F6                     main.tex:53-53  /have not written it/
+MET    F7                     sec_provenance.tex:17-19  /comments? 7102590992/
+MET    F8                     main.tex:59-59  /tail constant/
+MET    F9                     sec_provenance.tex:9-9  /Eight defects/
+MET    F9b                    sec_provenance.tex:9-9  /not re-challenged/
+MET    F10                    sec_provenance.tex:11-11  /two undefined symbols/
+MET    F11                    sec_provenance.tex:11-11  /not a re-audit|did not re-audit/
+MET    F12                    sec_provenance.tex:13-13  /three defects/
+MET    F12b                   sec_provenance.tex:13-13  /discriminators and the joint satisfiability/
+MET    F14                    sec_provenance.tex:31-31  /general \$c\$ is not formalized/
+MET    F15                    sec_provenance.tex,sec_proof.tex  /s2\\_power|s2_power/
+MET    F16                    sec_provenance.tex  /NO-SUCH-TEXT-checks-of-c44e0c8-against-src/
+MET    F21                    sec_proof.tex:554-554  /Weyl's integration formula.*Plancherel.*Isserlis/
+MET    F22                    main.tex:24-24  /Consequently/
+MET    F24                    sec_reduction.tex:41-41  /gap at all large couplings/
+MET    F24b                   main.tex  /gap at every coupling/
+MET    C:1 main:69            main.tex:69-69  /Nothing is proved about gauge groups/
+MET    C:11 main:58-59        main.tex:58-59  /Disclosure/
+FAILED C:14 main:79           main.tex:79-79  /k\\ge ?2/
+MET    C:14 main:66           main.tex:66-66  /k\\ge2/
+MET    C:14 main:17           main.tex:17-17  /k\\ge2/
+FAILED C:24 main:41           main.tex:41-41  /m\(\\beta\)>0|large couplings/
+FAILED C:25 main:41           main.tex:41-41  /lem-rp|H0/
+MET    C:6 reduction:15       sec_reduction.tex:15-15  /sup-norm|supremum|closure/
+MET    C:6 reduction:130      sec_reduction.tex:130-130  /continuous/
+MET    C:6 proof:94           sec_proof.tex:94-94  /continuous/
+MET    C:6 proof:100          sec_proof.tex:100-100  /continuous|lem-rp/
+MET    C:10 proof:341         sec_proof.tex:341-341  /limit curvatures outside the box only|Gaussian DLR/
+MET    C:10 proof:416         sec_proof.tex:416-416  /as \(e\) states|Psi|conditioning|curvatures only/
+MET    C:proof:465            sec_proof.tex:465-465  /7102490558/
+MET    C:21 proof:554         sec_proof.tex:554-554  /without proof or citation/
+MET    C:15 neg:676-680       sec_negative.tex:676-680  /two and/
+MET    C:26 neg:142           sec_negative.tex:142-142  /earlier summary/
+MET    C:26 neg:605           sec_negative.tex:605-605  /earlier summary|ledger|director/
+MET    C:28 neg:367-374       sec_negative.tex:367-374  /729/
+MET    C:29 neg:303-306       sec_negative.tex:303-306  /no systematic literature search|sources read/
+MET    C:29 neg:471-474       sec_negative.tex:471-474  /U\(1\)|\\U\(1\)/
+MET    C:29 neg:490-491       sec_negative.tex:490-491  /sources read|systematic/
+MET    C:29 neg:499-500       sec_negative.tex:499-500  /sources read|systematic|Status/
+MET    C:29 neg:504-508       sec_negative.tex:504-508  /not establish|massless/
+MET    C:19 neg:6             sec_negative.tex:6-6  /four|exclusion/
+MET    C:19 main:51           main.tex:51-51  /four routes/
+FAILED C:15 reduction:100-104 sec_reduction.tex:100-104  /D\s*\\ge/
+MET    C:2 prov:15            sec_provenance.tex:15-15  /wrong/
+MET    C:12 main:15           main.tex:15-15  /necessary condition/
+MET    C:5 neg:240            sec_negative.tex:240-240  /not stated in the source/
+MET    C:3 main:2,7-9         main.tex:2-2  /upper bound/
+TOTAL predicates 93: met 86, failed 7, measured only 0
+
