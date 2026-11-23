@@ -1,0 +1,32 @@
+[
+  {
+    "label": "negative_word",
+    "find": "len words.prod ≤ (words.map len).sum",
+    "replace": "len words.prod = (words.map len).sum",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_sheet",
+    "find": "u*v-t^2 = (u-t)*v+t*(v-t)",
+    "replace": "u*v-t^2 = (u-t)*v-t*(v-t)",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_det",
+    "find": "1+a^2+b^2] = (1+a^2+b^2+c^2)^2",
+    "replace": "1+a^2+b^2] = (1+a^2+b^2+c^2)^3",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_tree",
+    "find": "(V*τ)^3/(τ*V^2) = V*τ^2",
+    "replace": "(V*τ)^3/(τ*V^2) = V*τ",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_step",
+    "find": ": 0 < 1/p-1/q :=",
+    "replace": ": 0 < 1/q-1/p :=",
+    "diagnostic": "error:"
+  }
+]
