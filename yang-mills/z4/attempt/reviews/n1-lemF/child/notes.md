@@ -1,0 +1,79 @@
+# notes
+- control Z(1)=1.130318 (scipy absent: own Bessel via periodic trapezoid)
+- P0 own Bessel vs trapezoid: PASS
+- P3 beta=64 rel err Z=0.00e+00
+- P3 beta=256 rel err Z=0.00e+00
+- P3 beta=1024 rel err Z=0.00e+00
+- P3 beta=4096 rel err Z=0.00e+00
+- P3 PASS
+- run1 (res1.csv): P0 PASS, P3 PASS(rel 0.0 - suspicious, rechecked below) but main loop OOM-killed (series 120xN arrays). Own defect (memory), not target. Fix: chunk the series. res1.csv is partial/empty, kept; new run -> res2.csv.
+- P0 own Bessel vs trapezoid: PASS
+- P3 beta=64 rel err Z=0.00e+00
+- P3 beta=256 rel err Z=0.00e+00
+- P3 beta=1024 rel err Z=0.00e+00
+- P3 beta=4096 rel err Z=0.00e+00
+- P3 PASS
+- beta=64 s=0.01 Bsup=1.0071457 -logB=-0.00712032 2asinh=0.01999967 diff=-2.712e-02 rho*=1.00000 B0=0.980647 P1chg=0.0e+00
+- run2 too slow (log/exp series; killed at 170s, check records the failure = my own performance defect). Replacing series by Horner recurrence, fewer refinement points; run3 -> res3.csv. Grandchild T139 admitted and launched meanwhile.
+- P0 own Bessel vs trapezoid: PASS
+- P3 beta=64 rel err Z=0.00e+00
+- P3 beta=256 rel err Z=0.00e+00
+- P3 beta=1024 rel err Z=0.00e+00
+- P3 beta=4096 rel err Z=0.00e+00
+- P3 PASS
+- beta=64 s=0.01 Bsup=1.0071457 -logB=-0.00712032 2asinh=0.01999967 diff=-2.712e-02 rho*=1.00000 B0=0.980647 P1chg=0.0e+00
+- beta=64 s=0.03 Bsup=0.9710486 -logB=0.02937877 2asinh=0.05999100 diff=-3.061e-02 rho*=0.73551 B0=0.943007 P1chg=6.7e-16
+- beta=64 s=0.1 Bsup=0.8412771 -logB=0.17283419 2asinh=0.19966816 diff=-2.683e-02 rho*=0.40518 B0=0.82207 P1chg=1.8e-15
+- beta=64 s=0.3 Bsup=0.56475874 -logB=0.57135665 2asinh=0.59134610 diff=-1.999e-02 rho*=0.23911 B0=0.557695 P1chg=0.0e+00
+- beta=64 s=0.6 Bsup=0.32548969 -logB=1.12242450 2asinh=1.13764980 diff=-1.523e-02 rho*=0.17766 B0=0.3234 P1chg=0.0e+00
+- beta=64 s=1.0 Bsup=0.17375186 -logB=1.75012709 2asinh=1.76274717 diff=-1.262e-02 rho*=0.15031 B0=0.173083 P1chg=0.0e+00
+- beta=256 s=0.01 Bsup=0.98780843 -logB=0.01226649 2asinh=0.01999967 diff=-7.733e-03 rho*=0.62819 B0=0.980311 P1chg=7.5e-15
+- beta=256 s=0.03 Bsup=0.94880202 -logB=0.05255512 2asinh=0.05999100 diff=-7.436e-03 rho*=0.36351 B0=0.942082 P1chg=8.9e-16
+- beta=256 s=0.1 Bsup=0.82438205 -logB=0.19312120 2asinh=0.19966816 diff=-6.547e-03 rho*=0.20071 B0=0.819767 P1chg=1.3e-15
+- beta=256 s=0.3 Bsup=0.55631104 -logB=0.58642772 2asinh=0.59134610 diff=-4.918e-03 rho*=0.11891 B0=0.554601 P1chg=8.9e-16
+- beta=256 s=0.6 Bsup=0.3217814 -logB=1.13388283 2asinh=1.13764980 diff=-3.767e-03 rho*=0.08854 B0=0.321272 P1chg=2.7e-15
+- beta=256 s=1.0 Bsup=0.17211067 -logB=1.75961760 2asinh=1.76274717 diff=-3.130e-03 rho*=0.07495 B0=0.171947 P1chg=8.9e-16
+- beta=1024 s=0.01 Bsup=0.98208213 -logB=0.01808034 2asinh=0.01999967 diff=-1.919e-03 rho*=0.31319 B0=0.980227 P1chg=4.6e-14
+- beta=1024 s=0.03 Bsup=0.94351329 -logB=0.05814483 2asinh=0.05999100 diff=-1.846e-03 rho*=0.18126 B0=0.94185 P1chg=1.6e-14
+- beta=1024 s=0.1 Bsup=0.82033623 -logB=0.19804099 2asinh=0.19966816 diff=-1.627e-03 rho*=0.10013 B0=0.819193 P1chg=4.2e-14
+- beta=1024 s=0.3 Bsup=0.55426008 -logB=0.59012125 2asinh=0.59134610 diff=-1.225e-03 rho*=0.05938 B0=0.553836 P1chg=6.2e-15
+- beta=1024 s=0.6 Bsup=0.32087281 -logB=1.13671046 2asinh=1.13764980 diff=-9.393e-04 rho*=0.04423 B0=0.320746 P1chg=2.7e-14
+- beta=1024 s=1.0 Bsup=0.1717069 -logB=1.76196634 2asinh=1.76274717 diff=-7.808e-04 rho*=0.03745 B0=0.171666 P1chg=1.4e-14
+- beta=4096 s=0.01 Bsup=0.9806686 -logB=0.01952069 2asinh=0.01999967 diff=-4.790e-04 rho*=0.15648 B0=0.980206 P1chg=1.2e-13
+- beta=4096 s=0.03 Bsup=0.94220703 -logB=0.05953025 2asinh=0.05999100 diff=-4.608e-04 rho*=0.09057 B0=0.941792 P1chg=2.1e-14
+- beta=4096 s=0.1 Bsup=0.81933524 -logB=0.19926196 2asinh=0.19966816 diff=-4.062e-04 rho*=0.05004 B0=0.81905 P1chg=1.2e-13
+- beta=4096 s=0.3 Bsup=0.55375099 -logB=0.59104018 2asinh=0.59134610 diff=-3.059e-04 rho*=0.02968 B0=0.553645 P1chg=7.2e-14
+- beta=4096 s=0.6 Bsup=0.32064679 -logB=1.13741511 2asinh=1.13764980 diff=-2.347e-04 rho*=0.02211 B0=0.320615 P1chg=2.1e-13
+- beta=4096 s=1.0 Bsup=0.17160635 -logB=1.76255206 2asinh=1.76274717 diff=-1.951e-04 rho*=0.01872 B0=0.171596 P1chg=2.3e-13
+- P1: 24/24 cases change<1e-6; P2 measured: diff>0 in 0/24 cases
+- P0 own Bessel vs trapezoid: PASS
+- P3 beta=64 rel err Z=0.00e+00
+- P3 beta=256 rel err Z=0.00e+00
+- P3 beta=1024 rel err Z=0.00e+00
+- P3 beta=4096 rel err Z=0.00e+00
+- P3 PASS
+- beta=64 s=0.01 Bsup=1.0071457 -logB=-0.00712032 2asinh=0.01999967 diff=-2.712e-02 rho*=1.00000 B0=0.980647 P1chg=0.0e+00
+- beta=64 s=0.03 Bsup=0.9710486 -logB=0.02937877 2asinh=0.05999100 diff=-3.061e-02 rho*=0.73551 B0=0.943007 P1chg=6.7e-16
+- beta=64 s=0.1 Bsup=0.8412771 -logB=0.17283419 2asinh=0.19966816 diff=-2.683e-02 rho*=0.40518 B0=0.82207 P1chg=1.8e-15
+- beta=64 s=0.3 Bsup=0.56475874 -logB=0.57135665 2asinh=0.59134610 diff=-1.999e-02 rho*=0.23911 B0=0.557695 P1chg=0.0e+00
+- beta=64 s=0.6 Bsup=0.32548969 -logB=1.12242450 2asinh=1.13764980 diff=-1.523e-02 rho*=0.17766 B0=0.3234 P1chg=0.0e+00
+- beta=64 s=1.0 Bsup=0.17375186 -logB=1.75012709 2asinh=1.76274717 diff=-1.262e-02 rho*=0.15031 B0=0.173083 P1chg=0.0e+00
+- beta=256 s=0.01 Bsup=0.98780843 -logB=0.01226649 2asinh=0.01999967 diff=-7.733e-03 rho*=0.62819 B0=0.980311 P1chg=7.5e-15
+- beta=256 s=0.03 Bsup=0.94880202 -logB=0.05255512 2asinh=0.05999100 diff=-7.436e-03 rho*=0.36351 B0=0.942082 P1chg=8.9e-16
+- beta=256 s=0.1 Bsup=0.82438205 -logB=0.19312120 2asinh=0.19966816 diff=-6.547e-03 rho*=0.20071 B0=0.819767 P1chg=1.3e-15
+- beta=256 s=0.3 Bsup=0.55631104 -logB=0.58642772 2asinh=0.59134610 diff=-4.918e-03 rho*=0.11891 B0=0.554601 P1chg=8.9e-16
+- beta=256 s=0.6 Bsup=0.3217814 -logB=1.13388283 2asinh=1.13764980 diff=-3.767e-03 rho*=0.08854 B0=0.321272 P1chg=2.7e-15
+- beta=256 s=1.0 Bsup=0.17211067 -logB=1.75961760 2asinh=1.76274717 diff=-3.130e-03 rho*=0.07495 B0=0.171947 P1chg=8.9e-16
+- beta=1024 s=0.01 Bsup=0.98208213 -logB=0.01808034 2asinh=0.01999967 diff=-1.919e-03 rho*=0.31319 B0=0.980227 P1chg=4.6e-14
+- beta=1024 s=0.03 Bsup=0.94351329 -logB=0.05814483 2asinh=0.05999100 diff=-1.846e-03 rho*=0.18126 B0=0.94185 P1chg=1.6e-14
+- beta=1024 s=0.1 Bsup=0.82033623 -logB=0.19804099 2asinh=0.19966816 diff=-1.627e-03 rho*=0.10013 B0=0.819193 P1chg=4.2e-14
+- beta=1024 s=0.3 Bsup=0.55426008 -logB=0.59012125 2asinh=0.59134610 diff=-1.225e-03 rho*=0.05938 B0=0.553836 P1chg=6.2e-15
+- beta=1024 s=0.6 Bsup=0.32087281 -logB=1.13671046 2asinh=1.13764980 diff=-9.393e-04 rho*=0.04423 B0=0.320746 P1chg=2.7e-14
+- beta=1024 s=1.0 Bsup=0.1717069 -logB=1.76196634 2asinh=1.76274717 diff=-7.808e-04 rho*=0.03745 B0=0.171666 P1chg=1.4e-14
+- beta=4096 s=0.01 Bsup=0.9806686 -logB=0.01952069 2asinh=0.01999967 diff=-4.790e-04 rho*=0.15648 B0=0.980206 P1chg=1.2e-13
+- beta=4096 s=0.03 Bsup=0.94220703 -logB=0.05953025 2asinh=0.05999100 diff=-4.608e-04 rho*=0.09057 B0=0.941792 P1chg=2.1e-14
+- beta=4096 s=0.1 Bsup=0.81933524 -logB=0.19926196 2asinh=0.19966816 diff=-4.062e-04 rho*=0.05004 B0=0.81905 P1chg=1.2e-13
+- beta=4096 s=0.3 Bsup=0.55375099 -logB=0.59104018 2asinh=0.59134610 diff=-3.059e-04 rho*=0.02968 B0=0.553645 P1chg=7.2e-14
+- beta=4096 s=0.6 Bsup=0.32064679 -logB=1.13741511 2asinh=1.13764980 diff=-2.347e-04 rho*=0.02211 B0=0.320615 P1chg=2.1e-13
+- beta=4096 s=1.0 Bsup=0.17160635 -logB=1.76255206 2asinh=1.76274717 diff=-1.951e-04 rho*=0.01872 B0=0.171596 P1chg=2.3e-13
+- P1: 24/24 cases change<1e-6; P2 measured: diff>0 in 0/24 cases

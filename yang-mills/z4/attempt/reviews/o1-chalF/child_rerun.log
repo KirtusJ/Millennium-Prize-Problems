@@ -1,0 +1,3 @@
+check K9: exit 1 (expected 0) in 115 ms | output e3b0c44298fc | event 10 head 4798ea230ab4
+check K10: exit 0 (expected 0) in 214 ms | output b1daf063981f | event 11 head b4b5b1c5ac26
+check K11: exit 0 (expected 0) in 10669 ms | output cd4d9f59d2a8 | event 12 head b78ef6a9dd81

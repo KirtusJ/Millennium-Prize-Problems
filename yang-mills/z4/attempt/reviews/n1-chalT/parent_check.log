@@ -1,0 +1,2 @@
+check K98: exit 0 (expected 0) in 455525 ms | output de3648dfd185 | event 100 head 6e1e72fe442a
+  /home/user/z4-workers/n1-chalT/report.md: 14 STANDS, 1 DEFECT (in §5 the sign-trial identity should end in 4⟨g1_A, T g1_{A^c}⟩, not 2⟨…⟩; prefactor only, the constant c* is unaffected), 1 NOT CHECKED (Lemma R(iii) numbers); predicates 15 met, 6 failed (all from my own tolerances, none a defect of the target), 5 measured only.

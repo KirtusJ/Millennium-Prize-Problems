@@ -1,0 +1,7 @@
+/home/user/z4-workers/o1-chalF/lean/LemmaF_copy.lean:6:35: warning: unused variable `hs`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+'two_arsinh_eq_log' depends on axioms: [propext, Classical.choice, Quot.sound]
+'fixed_point' depends on axioms: [propext, Classical.choice, Quot.sound]
+'weak_duality' depends on axioms: [propext, Classical.choice, Quot.sound]
+'amgm_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'quad_step' depends on axioms: [propext, Classical.choice, Quot.sound]

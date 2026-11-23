@@ -1,0 +1,7 @@
+P0 own Bessel vs trapezoid: PASS
+P3 beta=64 rel err Z=0.00e+00
+P3 beta=256 rel err Z=0.00e+00
+P3 beta=1024 rel err Z=0.00e+00
+P3 beta=4096 rel err Z=0.00e+00
+P3 PASS
+beta=64 s=0.01 Bsup=1.0071457 -logB=-0.00712032 2asinh=0.01999967 diff=-2.712e-02 rho*=1.00000 B0=0.980647 P1chg=0.0e+00

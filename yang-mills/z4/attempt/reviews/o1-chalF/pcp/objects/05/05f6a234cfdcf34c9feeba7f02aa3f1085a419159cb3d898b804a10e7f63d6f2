@@ -1,0 +1,23 @@
+scalar predicates done {}
+beta=   64 s=0.02 qual=False epsN=0.0222592309 epsL=0.0222592309 eps=0.039997 beta*diff=-1.135 -logBsup=0.008763 deficit=inf valid=True in=True out=True
+beta=   64 s=0.05 qual=False epsN=0.0837391603 epsL=0.0837391603 eps=0.099958 beta*diff=-1.038 -logBsup=0.070526 deficit=inf valid=True in=True out=True
+beta=   64 s=0.10 qual=False epsN=0.1843577007 epsL=0.1843577007 eps=0.199668 beta*diff=-0.980 -logBsup=0.172836 deficit=inf valid=True in=True out=True
+beta=   64 s=0.30 qual=False epsN=0.5777717058 epsL=0.5777717058 eps=0.591346 beta*diff=-0.869 -logBsup=0.571358 deficit=inf valid=True in=True out=True
+beta=   64 s=0.60 qual=False epsN=1.1259257014 epsL=1.1259257014 eps=1.137650 beta*diff=-0.750 -logBsup=1.122428 deficit=inf valid=True in=True out=True
+beta=   64 s=1.00 qual=False epsN=1.7525609199 epsL=1.7525609199 eps=1.762747 beta*diff=-0.652 -logBsup=1.750133 deficit=inf valid=True in=True out=True
+beta=  256 s=0.02 qual=True epsN=0.0360086778 epsL=0.0360086778 eps=0.039997 beta*diff=-1.021 -logBsup=0.032416 deficit=8.585 valid=True in=True out=True
+beta=  256 s=0.05 qual=True epsN=0.0961017460 epsL=0.0961017460 eps=0.099958 beta*diff=-0.987 -logBsup=0.092799 deficit=8.642 valid=True in=True out=True
+beta=  256 s=0.10 qual=True epsN=0.1959297623 epsL=0.1959297623 eps=0.199668 beta*diff=-0.957 -logBsup=0.193122 deficit=8.734 valid=True in=True out=True
+beta=  256 s=0.30 qual=True epsN=0.5879892362 epsL=0.5879892362 eps=0.591346 beta*diff=-0.859 -logBsup=0.586428 deficit=9.089 valid=True in=True out=True
+beta=  256 s=0.60 qual=True epsN=1.1347411194 epsL=1.1347411194 eps=1.137650 beta*diff=-0.745 -logBsup=1.133883 deficit=9.603 valid=True in=True out=True
+beta=  256 s=1.00 qual=True epsN=1.7602167091 epsL=1.7602167091 eps=1.762747 beta*diff=-0.648 -logBsup=1.759619 deficit=10.215 valid=True in=True out=True
+beta= 1024 s=0.02 qual=True epsN=0.0390238735 epsL=0.0390238735 eps=0.039997 beta*diff=-0.997 -logBsup=0.038115 deficit=10.663 valid=True in=True out=True
+beta= 1024 s=0.05 qual=True epsN=0.0990033310 epsL=0.0990033310 eps=0.099958 beta*diff=-0.978 -logBsup=0.098180 deficit=10.718 valid=True in=True out=True
+beta= 1024 s=0.10 qual=True epsN=0.1987385571 epsL=0.1987385571 eps=0.199668 beta*diff=-0.952 -logBsup=0.198041 deficit=10.806 valid=True in=True out=True
+beta= 1024 s=0.30 qual=True epsN=0.5905091041 epsL=0.5905091041 eps=0.591346 beta*diff=-0.857 -logBsup=0.590121 deficit=11.139 valid=True in=True out=True
+beta= 1024 s=0.60 qual=True epsN=1.1369239988 epsL=1.1369239988 eps=1.137650 beta*diff=-0.743 -logBsup=1.136711 deficit=11.634 valid=True in=True out=True
+beta= 1024 s=1.00 qual=True epsN=1.7621155493 epsL=1.7621155493 eps=1.762747 beta*diff=-0.647 -logBsup=nan deficit=12.238 valid=True in=True out=True
+beta= 4096 s=0.02 qual=True epsN=0.0397552290 epsL=0.0397552290 eps=0.039997 beta*diff=-0.992 -logBsup=0.039528 deficit=12.741 valid=True in=True out=True
+beta= 4096 s=0.05 qual=True epsN=0.0997201578 epsL=0.0997201578 eps=0.099958 beta*diff=-0.976 -logBsup=0.099515 deficit=12.794 valid=True in=True out=True
+beta= 4096 s=0.10 qual=True epsN=0.1994360626 epsL=0.1994360626 eps=0.199668 beta*diff=-0.951 -logBsup=0.199262 deficit=12.875 valid=True in=True out=True
+beta= 4096 s=0.30 qual=True epsN=0.5911369853 epsL=0.5911369853 eps=0.591346 beta*diff=-0.857 -logBsup=nan deficit=13.174 valid=True in=True out=True

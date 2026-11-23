@@ -1,0 +1,7 @@
+/home/user/z4-workers/o1-chalF/chal_F.py:139: RuntimeWarning: invalid value encountered in divide
+  B = (K @ (wt*psi))/psi
+Traceback (most recent call last):
+  File "/home/user/z4-workers/o1-chalF/chal_F.py", line 252, in <module>
+    pw.append(dict(rho=rho, region='out', B=b, log_bound_pt=lpt, log_Mout=lMout, log_ratio_pt=math.log(b)-lpt))
+                                                                                              ~~~~~~~~^^^
+ValueError: math domain error

@@ -1,0 +1,2 @@
+'valley_energy_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'one_sub_cos_ge' depends on axioms: [propext, Classical.choice, Quot.sound]

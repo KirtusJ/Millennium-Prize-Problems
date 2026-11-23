@@ -1,0 +1,2 @@
+check K101: exit 0 (expected 0) in 1077833 ms | output b16a6b623f71 | event 103 head 561c1a833b39
+  /home/user/z4-workers/o1-chalF/report.md: 17 steps STAND, 1 DEFECT (the header wrongly says M_in → 0; it tends to 1, and §3(b) already says so), 1 NOT CHECKED (the §5 rate claim); predicates 172 met, 1 failed (my own quadrature at β=4096), 36 measured only.

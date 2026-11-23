@@ -1,0 +1,30 @@
+**Verdict: STANDS (consistent with the claim, not proven).** The ratio rises monotonically toward c* but is still 0.176 below it at β=4096. The fitted c is 4.5635, about 0.9% under c* = 4.6054132, so I did not reach the limit.
+
+The control integral is 4.605413 (`control.txt`), which matches c*.
+
+I got m from the exact identity λe−λo = 2⟨g_o,B g_e⟩/⟨g_o,g_e⟩ on the half interval. The eigenvectors come from repeated squaring of the transfer matrix, so no eigenvalue difference is ever taken. The grid step is at most 1/(5√β), and I repeated every run at half that step.
+
+| β | log m | −log m / √β |
+|---|---|---|
+| 64 | −31.18520 | 3.898150 |
+| 256 | −66.64787 | 4.165492 |
+| 1024 | −138.50948 | 4.328421 |
+| 4096 | −283.48296 | 4.429421 |
+
+- **Fit:** −log m = c√β + b·log β + c0 gives c = 4.5635 and b = −0.789. Residuals reach 0.034, so the log-correction form isn't exact and the fitted c carries real uncertainty. A solve using only the three largest β gives c = 4.569.
+- **Predicates:** all met, none failed. Halving the grid moves the ratio by at most 5.8e-4. Squarings 60 vs 75 agree to printed digits. The fit lands within 0.03·c* of c*. The tolerances are my own choices.
+- **Not tested:** the limit β→∞ itself, and any β above 4096.
+- **β=64 cross-check:** the naive eigenvalue difference is 2.109e-14, against 2.094e-14 from the identity. That is 0.7% off already at β=64 and useless beyond it, as the task warned.
+- **Sub-agent T137 (released):** it passed its known-answer control (the top eigenvalue of [[2,1],[1,2]] came out as 3). It then recomputed β=64 in 90-digit `decimal` arithmetic and got log m = −31.180578395507449. Mine is −31.18057839550745, so they agree to about 1e-14. I reread its script and reran it in `gc_rerun/`, and it reproduced the same number.
+- **PCP OS:** the method-not-found note on init was expected, and checks K1–K4 were recorded. The last line of `pcp_os.py verify --ws pcp` is "result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)". The last line of `pcpos verify pcp/register.jsonl` is "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+
+`report.md` has the full predicate list and the exact rerun commands.
+
+Files are in `/home/user/z4-workers/n1-chalT/child`:
+- `report.md`
+- `notes.md`
+- `control.txt`
+- `split.py`
+- `fit.py`
+- `split_results.json`
+- `fit_out.txt`

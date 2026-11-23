@@ -1,0 +1,25 @@
+I finished the computation and wrote `report.md`. One predicate failed, my own refinement check on B values that underflow, and I kept it on record. Both PCP verifies pass.
+
+- **Control:** `control.txt` is 1.266066, the value of I₀(1). scipy isn't installed here, so I wrote my own scaled Bessel routine in numpy.
+- **Results:** `res1.csv` holds B for all 108 cases. The table of sup B, −log sup B and −log sup B − log A is in `report.md` and `summary.csv`.
+  - **Sup B at beta=4096:** about 0.819 at s=0.1, 0.5536 at s=0.3, and 0.1716 at s=1.
+  - **−log sup B − log A:** negative in every row, shrinking from about −0.02 at beta=64 to about −1e-4 at beta=4096.
+  - **Grid caveat:** these are sups over the 9-point rho grid only. For beta ≤ 256 the true sup could lie between grid points.
+- **Failed predicate P4:** "refinement changes B by less than 1e-9 relative for all cases" held in 103 of 108 cases. The 5 failures are at beta=4096, where B underflows to 0 or denormal values, so a relative change is meaningless. This was my predicate's defect, not the target's. Rows in `res1.csv` for those 5 cases mean "below 1e-300".
+- **Log-form recheck:** I reran the check on log B (`barta2.py`). It passes for all 108 cases, and agrees with `res1.csv` wherever B > 1e-250. Those printed numbers weren't captured, so they are attested only by the run's exit 0.
+- **Sub-agent T143:** it returned B(0; beta=64, s=0.3) = 0.5576952560 by a different method, using the integral representation of I₀ in two dimensions, with a control of 0.333333. I reread its files and reran its script in a copy of its directory, and got the same output. My value is 0.5576952560002162, a relative difference of 3.9e-13, so they agree. I gave it the 1-D reduction of B(0), so it checks the numerics, not my reading of the definition.
+- **Task ids:** T143 was admitted as event 285 and released as event 286.
+- **Verifies:** `pcp_os.py verify --ws pcp` passes, and `pcpos verify pcp/register.jsonl` exits 0. Both end with the same last line: "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+
+Files are in `/home/user/z4-workers/o1-chalF/child/`:
+- `report.md`
+- `res1.csv`
+- `summary.csv`
+- `res_log.csv`
+- `res_conv.csv`
+- `barta.py`
+- `barta2.py`
+- `notes.md`
+- `control.txt`
+
+The rerun commands are at the end of `report.md`.

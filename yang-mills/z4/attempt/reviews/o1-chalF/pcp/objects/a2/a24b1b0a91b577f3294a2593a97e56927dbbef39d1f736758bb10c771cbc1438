@@ -1,0 +1,13 @@
+/home/user/z4-workers/o1-chalF/chal_F.py:162: RuntimeWarning: invalid value encountered in sqrt
+  M = np.sqrt(l)[:, None]*G*np.sqrt(l)[None, :]
+Traceback (most recent call last):
+  File "/home/user/z4-workers/o1-chalF/chal_F.py", line 230, in <module>
+    eL1 = legendre(beta, s, J, 400); eL2 = legendre(beta, s, J+60, 800)
+  File "/home/user/z4-workers/o1-chalF/chal_F.py", line 163, in legendre
+    return -math.log(np.linalg.eigvalsh(M)[-1])
+                     ~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/local/lib/python3.13/site-packages/numpy/linalg/_linalg.py", line 1359, in eigvalsh
+    w = gufunc(a, signature=signature)
+  File "/usr/local/lib/python3.13/site-packages/numpy/linalg/_linalg.py", line 150, in _raise_linalgerror_eigenvalues_nonconvergence
+    raise LinAlgError("Eigenvalues did not converge")
+numpy.linalg.LinAlgError: Eigenvalues did not converge

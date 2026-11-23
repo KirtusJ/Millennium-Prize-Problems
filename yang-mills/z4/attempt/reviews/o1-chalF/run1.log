@@ -1,0 +1,2 @@
+check K4: exit 1 (expected 0) in 115 ms | output e3b0c44298fc | event 5 head 4acfbeb97e25
+exit 1

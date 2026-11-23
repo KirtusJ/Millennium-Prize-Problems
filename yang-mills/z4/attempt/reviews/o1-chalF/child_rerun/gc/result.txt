@@ -1,0 +1,7 @@
+nu=100 nt=400 B0=0.55769525600022 rel_diff_prev=nan
+nu=200 nt=800 B0=0.55769525600022 rel_diff_prev=7.764e-15
+nu=400 nt=1600 B0=0.55769525600023 rel_diff_prev=1.772e-14
+nu=800 nt=3200 B0=0.55769525600023 rel_diff_prev=7.565e-15
+P1 control pass: True
+P2 convergence pass: True
+B(0)=0.5576952560

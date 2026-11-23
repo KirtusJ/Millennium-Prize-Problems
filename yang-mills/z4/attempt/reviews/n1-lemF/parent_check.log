@@ -1,0 +1,2 @@
+check K99: exit 0 (expected 0) in 883981 ms | output faf436bb859c | event 101 head 6da821e30714
+  /home/user/z4-workers/n1-lemF/report.md: 7 STANDS (Lemma F in the η-form, uniform in s, proved; the proved β₀ is about 10¹⁴), 2 DEFECT (both in the suggested route, not in the lemma), 3 NOT CHECKED (explicit (log β/β)^{1/4} rate claimed only).

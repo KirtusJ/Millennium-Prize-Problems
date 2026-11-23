@@ -1,0 +1,10 @@
+c* = 4.6054131
+beta N hfac lam_e Delta_id Delta_direct LB UB Delta/LB UB/Delta -logD/sqrtb fApos rmin(eta=.25) -log(g_cut/gmax)/sqrtb
+16 104 0.25 0.613717558291 6.003928e-07 6.003928e-07 3.970830e-07 8.392933e-07 1.5120 1.3979 3.58142 True 1.08235 1.69726
+64 204 0.25 0.729841403946 2.045693e-14 1.920686e-14 1.407873e-14 2.769441e-14 1.4530 1.3538 3.94006 False 1.25456 1.91834
+P1 beta=16: MET  rel=2.92e-09
+P2 hypothesis f_A>0 qualifies in 1/2 cases
+P2: FAILED  1/2
+P3: MET  LB<=Delta all cases
+P4: MET  Delta<=UB all cases
+SUMMARY met=3 failed=1

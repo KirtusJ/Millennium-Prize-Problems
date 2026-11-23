@@ -1,0 +1,67 @@
+Q1 1 0.4158208306992861 0.4158208306994683
+Q1 64 0.0015491920100092454 0.0015491920100113897
+Q1 1024 2.4340584640587286e-05 2.4340584640624945e-05
+Q2 0.05 min slack ratio 1.000123033228294
+Q2 0.2 min slack ratio 1.0010002499166302
+Q2 0.5 min slack ratio 1.0010002499166302
+Q2 1.0 min slack ratio 1.0010002499166302
+Q3 min(I1e - low) 4.986722238484523e-11
+Q4 worst Phi-bound -1.616797998281149e-08
+beta=64 s=0.01 Bsup=1.00715 rho_star=1 mlogB=-0.00712032 eps=0.0199997 barta_minus_eps=-0.02712 beta_times=-1.73568 eps_eff=0.0061837 epseff_minus_eps=-0.013816 master_deficit=6.49192 logMin=2.65152 logAMout=6.49192 conv=4.44089e-16
+beta=64 s=0.03 Bsup=0.971049 rho_star=0.736 mlogB=0.0293788 eps=0.059991 barta_minus_eps=-0.0306122 beta_times=-1.95918 eps_eff=0.0425728 epseff_minus_eps=-0.0174182 master_deficit=6.53166 logMin=2.64959 logAMout=6.53166 conv=0
+beta=64 s=0.1 Bsup=0.841277 rho_star=0.406 mlogB=0.172835 eps=0.199668 barta_minus_eps=-0.0268336 beta_times=-1.71735 eps_eff=0.184358 epseff_minus_eps=-0.0153105 master_deficit=6.66919 logMin=2.64491 logAMout=6.66919 conv=2.22045e-16
+beta=64 s=0.3 Bsup=0.564758 rho_star=0.24 mlogB=0.571357 eps=0.591346 barta_minus_eps=-0.0199887 beta_times=-1.27928 eps_eff=0.577772 epseff_minus_eps=-0.0135744 master_deficit=7.05248 logMin=2.64106 logAMout=7.05248 conv=2.22045e-16
+beta=64 s=0.6 Bsup=0.32549 rho_star=0.178 mlogB=1.12242 eps=1.13765 barta_minus_eps=-0.0152252 beta_times=-0.974413 eps_eff=1.12593 epseff_minus_eps=-0.0117241 master_deficit=7.5915 logMin=2.64081 logAMout=7.5915 conv=2.22045e-16
+beta=64 s=1 Bsup=0.173752 rho_star=0.15 mlogB=1.75013 eps=1.76275 barta_minus_eps=-0.01262 beta_times=-0.807681 eps_eff=1.75256 epseff_minus_eps=-0.0101863 master_deficit=8.21351 logMin=2.64081 logAMout=8.21351 conv=0
+beta=256 s=0.01 Bsup=0.987808 rho_star=0.628 mlogB=0.0122665 eps=0.0199997 barta_minus_eps=-0.00773317 beta_times=-1.97969 eps_eff=0.015798 epseff_minus_eps=-0.00420169 master_deficit=8.56537 logMin=2.99175 logAMout=8.56537 conv=1.11022e-15
+beta=256 s=0.03 Bsup=0.948802 rho_star=0.364 mlogB=0.0525552 eps=0.059991 barta_minus_eps=-0.00743583 beta_times=-1.90357 eps_eff=0.0560648 epseff_minus_eps=-0.00392617 master_deficit=8.60435 logMin=2.99175 logAMout=8.60435 conv=4.44089e-16
+beta=256 s=0.1 Bsup=0.824382 rho_star=0.2 mlogB=0.193121 eps=0.199668 barta_minus_eps=-0.00654667 beta_times=-1.67595 eps_eff=0.19593 epseff_minus_eps=-0.0037384 master_deficit=8.73543 logMin=2.99175 logAMout=8.73543 conv=5.55112e-16
+beta=256 s=0.3 Bsup=0.556311 rho_star=0.118 mlogB=0.586428 eps=0.591346 barta_minus_eps=-0.00491766 beta_times=-1.25892 eps_eff=0.587989 epseff_minus_eps=-0.00335686 master_deficit=9.09357 logMin=2.99175 logAMout=9.09357 conv=1.33227e-15
+beta=256 s=0.6 Bsup=0.321781 rho_star=0.088 mlogB=1.13388 eps=1.13765 barta_minus_eps=-0.00376673 beta_times=-0.964283 eps_eff=1.13474 epseff_minus_eps=-0.00290868 master_deficit=9.61071 logMin=2.99175 logAMout=9.61071 conv=4.44089e-16
+beta=256 s=1 Bsup=0.172111 rho_star=0.074 mlogB=1.75962 eps=1.76275 barta_minus_eps=-0.00312897 beta_times=-0.801016 eps_eff=1.76022 epseff_minus_eps=-0.00253046 master_deficit=10.2235 logMin=2.99175 logAMout=10.2235 conv=0
+beta=1024 s=0.01 Bsup=0.982082 rho_star=0.314 mlogB=0.0180804 eps=0.0199997 barta_minus_eps=-0.00191928 beta_times=-1.96534 eps_eff=0.0190146 epseff_minus_eps=-0.000985065 master_deficit=10.6432 logMin=2.04153 logAMout=10.6432 conv=1.77636e-15
+beta=1024 s=0.03 Bsup=0.943513 rho_star=0.182 mlogB=0.058145 eps=0.059991 barta_minus_eps=-0.00184605 beta_times=-1.89036 eps_eff=0.0590245 epseff_minus_eps=-0.000966458 master_deficit=10.6815 logMin=2.04153 logAMout=10.6815 conv=1.77636e-15
+beta=1024 s=0.1 Bsup=0.820336 rho_star=0.1 mlogB=0.198041 eps=0.199668 barta_minus_eps=-0.00162716 beta_times=-1.66621 eps_eff=0.198739 epseff_minus_eps=-0.000929601 master_deficit=10.8061 logMin=2.04153 logAMout=10.8061 conv=1.55431e-15
+beta=1024 s=0.3 Bsup=0.55426 rho_star=0.06 mlogB=0.590122 eps=0.591346 barta_minus_eps=-0.0012245 beta_times=-1.25389 eps_eff=0.590509 epseff_minus_eps=-0.000836991 master_deficit=11.1391 logMin=2.04153 logAMout=11.1391 conv=1.9984e-15
+beta=1024 s=0.6 Bsup=0.320873 rho_star=0.044 mlogB=1.13671 eps=1.13765 barta_minus_eps=-0.000939298 beta_times=-0.961841 eps_eff=1.13692 epseff_minus_eps=-0.000725799 master_deficit=11.6344 logMin=2.04153 logAMout=11.6344 conv=1.9984e-15
+beta=1024 s=1 Bsup=0.171707 rho_star=0.038 mlogB=1.76197 eps=1.76275 barta_minus_eps=-0.000780627 beta_times=-0.799362 eps_eff=1.76212 epseff_minus_eps=-0.000631625 master_deficit=12.2379 logMin=2.04153 logAMout=12.2379 conv=2.22045e-16
+beta=4096 s=0.01 Bsup=0.980669 rho_star=0.156 mlogB=0.0195207 eps=0.0199997 barta_minus_eps=-0.000478955 beta_times=-1.9618 eps_eff=0.019756 epseff_minus_eps=-0.000243709 master_deficit=12.7222 logMin=0.615094 logAMout=12.7222 conv=8.77076e-15
+beta=4096 s=0.03 Bsup=0.942207 rho_star=0.09 mlogB=0.0595303 eps=0.059991 barta_minus_eps=-0.000460685 beta_times=-1.88697 eps_eff=0.0597502 epseff_minus_eps=-0.000240759 master_deficit=12.7594 logMin=0.615094 logAMout=12.7594 conv=2.59792e-14
+beta=4096 s=0.1 Bsup=0.819335 rho_star=0.05 mlogB=0.199262 eps=0.199668 barta_minus_eps=-0.000406201 beta_times=-1.6638 eps_eff=0.199436 epseff_minus_eps=-0.000232095 master_deficit=12.8751 logMin=0.615094 logAMout=12.8751 conv=1.4877e-14
+beta=4096 s=0.3 Bsup=0.553751 rho_star=0.03 mlogB=0.59104 eps=0.591346 barta_minus_eps=-0.000305826 beta_times=-1.25266 eps_eff=0.591137 epseff_minus_eps=-0.00020911 master_deficit=13.1737 logMin=0.615094 logAMout=13.1737 conv=3.44169e-15
+beta=4096 s=0.6 Bsup=0.320647 rho_star=0.022 mlogB=1.13742 eps=1.13765 barta_minus_eps=-0.000234676 beta_times=-0.961234 eps_eff=1.13747 epseff_minus_eps=-0.000181364 master_deficit=13.639 logMin=0.615094 logAMout=13.639 conv=2.87548e-14
+beta=4096 s=1 Bsup=0.171606 rho_star=0.018 mlogB=1.76255 eps=1.76275 barta_minus_eps=-0.000194772 beta_times=-0.797785 eps_eff=1.76259 epseff_minus_eps=-0.000157844 master_deficit=14.2298 logMin=0.615094 logAMout=14.2298 conv=1.77636e-15
+master {'beta': 100.0, 's': 0.1, 'master_deficit': 7.330365956655533}
+master {'beta': 100.0, 's': 0.3, 'master_deficit': 7.695020247420568}
+master {'beta': 100.0, 's': 1.0, 'master_deficit': 8.832988538509117}
+master {'beta': 1000.0, 's': 0.1, 'master_deficit': 10.770655735822908}
+master {'beta': 1000.0, 's': 0.3, 'master_deficit': 11.104112991544}
+master {'beta': 1000.0, 's': 1.0, 'master_deficit': 12.203485312584403}
+master {'beta': 10000.0, 's': 0.1, 'master_deficit': 14.204530801128392}
+master {'beta': 10000.0, 's': 0.3, 'master_deficit': 14.47077608232467}
+master {'beta': 10000.0, 's': 1.0, 'master_deficit': 15.486995906597919}
+master {'beta': 100000.0, 's': 0.1, 'master_deficit': 17.616238961978077}
+master {'beta': 100000.0, 's': 0.3, 'master_deficit': 17.73768043367256}
+master {'beta': 100000.0, 's': 1.0, 'master_deficit': 18.57475363434788}
+master {'beta': 1000000.0, 's': 0.1, 'master_deficit': 20.979357666038467}
+master {'beta': 1000000.0, 's': 0.3, 'master_deficit': 20.78882878729351}
+master {'beta': 1000000.0, 's': 1.0, 'master_deficit': 21.239942287487377}
+master {'beta': 10000000.0, 's': 0.1, 'master_deficit': 24.237710351589964}
+master {'beta': 10000000.0, 's': 0.3, 'master_deficit': 23.375061727596876}
+master {'beta': 10000000.0, 's': 1.0, 'master_deficit': 22.99465026011918}
+master {'beta': 100000000.0, 's': 0.1, 'master_deficit': 27.270343172042598}
+master {'beta': 100000000.0, 's': 0.3, 'master_deficit': 24.959656453031553}
+master {'beta': 100000000.0, 's': 1.0, 'master_deficit': 22.787778749574603}
+master {'beta': 1000000000.0, 's': 0.1, 'master_deficit': 29.816676452850633}
+master {'beta': 1000000000.0, 's': 0.3, 'master_deficit': 24.386286229445204}
+master {'beta': 1000000000.0, 's': 1.0, 'master_deficit': 18.354811521173705}
+master {'beta': 10000000000.0, 's': 0.1, 'master_deficit': 31.315309052497184}
+master {'beta': 10000000000.0, 's': 0.3, 'master_deficit': 19.16372137661047}
+master {'beta': 10000000000.0, 's': 1.0, 'master_deficit': 4.816996991623352}
+master {'beta': 100000000000.0, 's': 0.1, 'master_deficit': 30.55673895155896}
+master {'beta': 100000000000.0, 's': 0.3, 'master_deficit': 3.924770325492638}
+master {'beta': 100000000000.0, 's': 1.0, 'master_deficit': 0.0005388084709302331}
+master {'beta': 1000000000000.0, 's': 0.1, 'master_deficit': 24.935173049215187}
+master {'beta': 1000000000000.0, 's': 0.3, 'master_deficit': 0.0002500430321700539}
+master {'beta': 1000000000000.0, 's': 1.0, 'master_deficit': 0.0002500430321700539}
+met 102 failed 0 []

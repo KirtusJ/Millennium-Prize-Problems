@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/n1-lemF/check_lemF.py", line 164, in <module>
+    mb, lmin, lout = master(beta, s, tau, delta)
+                     ~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/z4-workers/n1-lemF/check_lemF.py", line 110, in master
+    Min = (((1 - tau) * (1 - 4 * tau) * k) ** -0.5 + sq * math.exp(-beta * (1 - 5 * tau) * (1 - math.cos(delta)))
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^~~~~~
+ZeroDivisionError: 0.0 cannot be raised to a negative power

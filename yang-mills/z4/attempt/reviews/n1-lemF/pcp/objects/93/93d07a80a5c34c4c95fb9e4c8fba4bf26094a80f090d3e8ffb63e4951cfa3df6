@@ -1,0 +1,7 @@
+The report is finished and both PCP verifications pass; it is at `/home/user/z4-workers/n1-lemF/child/report.md`.
+
+- **Control:** Z(1) = 1.130318, written to `control.txt`.
+- **Result:** -log Bsup is below 2 asinh(s) in all 24 (beta, s) cases (measured only, not a required predicate), and the gap shrinks roughly like 1/beta.
+- **Predicates:** P0 (my own Bessel check), P1 (grid doubling, 24/24) and P3 all pass. scipy is not installed, so I wrote the Bessel functions myself. Two earlier runs failed on my own memory and speed problems; the report keeps them.
+- **Boundary case:** at beta=64, s=0.01 the sup sits at rho=1 and Bsup is 1.007, so -log Bsup is negative.
+- **Grandchild T139 (admitted, then released):** its direct S^3 quadrature at beta=64, s=0.3 gives B(0)=0.5576952560 and B(0.2)=0.5641050417. My reduced formula agrees to 8 digits.

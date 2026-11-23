@@ -1,0 +1,68 @@
+control symmetric max|T-T^T| = 6.939e-18
+control top eig T = 0.457607855536719, top eig even sector = 0.457607855536719, diff=1.665e-16
+control agree to 1e-12: True
+main symmetric max|T-T^T| = 1.388e-17
+unclassified eigvec 0 w=-1.085821e-15 pe=1.66e+00 po=1.11e+00
+unclassified eigvec 1 w=-5.551066e-17 pe=1.24e+00 po=1.57e+00
+unclassified eigvec 2 w=-5.250697e-17 pe=1.33e+00 po=1.49e+00
+unclassified eigvec 3 w=-4.710831e-17 pe=1.27e+00 po=1.54e+00
+unclassified eigvec 4 w=-3.762403e-17 pe=1.59e+00 po=1.21e+00
+unclassified eigvec 5 w=-2.401702e-17 pe=1.26e+00 po=1.55e+00
+unclassified eigvec 6 w=-2.217017e-17 pe=1.34e+00 po=1.49e+00
+unclassified eigvec 7 w=-1.904715e-17 pe=1.29e+00 po=1.53e+00
+unclassified eigvec 8 w=-1.443269e-17 pe=1.57e+00 po=1.24e+00
+unclassified eigvec 9 w=-1.411860e-17 pe=1.35e+00 po=1.48e+00
+unclassified eigvec 10 w=-1.251226e-17 pe=1.60e+00 po=1.20e+00
+unclassified eigvec 11 w=-1.193828e-17 pe=1.21e+00 po=1.59e+00
+unclassified eigvec 12 w=-8.517450e-18 pe=1.41e+00 po=1.42e+00
+unclassified eigvec 13 w=-7.276643e-18 pe=1.60e+00 po=1.20e+00
+unclassified eigvec 14 w=-6.767200e-18 pe=1.72e+00 po=1.03e+00
+unclassified eigvec 15 w=-5.735781e-18 pe=1.44e+00 po=1.39e+00
+unclassified eigvec 16 w=-3.191316e-18 pe=1.66e+00 po=1.11e+00
+unclassified eigvec 17 w=-1.308035e-18 pe=1.25e+00 po=1.56e+00
+unclassified eigvec 18 w=-7.099432e-19 pe=1.07e+00 po=1.69e+00
+unclassified eigvec 19 w=-3.106960e-19 pe=1.46e+00 po=1.37e+00
+unclassified eigvec 20 w=1.722488e-18 pe=1.22e+00 po=1.58e+00
+unclassified eigvec 21 w=3.194785e-18 pe=1.46e+00 po=1.37e+00
+unclassified eigvec 22 w=4.620056e-18 pe=1.33e+00 po=1.50e+00
+unclassified eigvec 23 w=4.797345e-18 pe=1.37e+00 po=1.45e+00
+unclassified eigvec 24 w=8.014829e-18 pe=1.44e+00 po=1.38e+00
+unclassified eigvec 25 w=8.940331e-18 pe=1.54e+00 po=1.28e+00
+unclassified eigvec 26 w=1.033325e-17 pe=1.60e+00 po=1.20e+00
+unclassified eigvec 27 w=1.041567e-17 pe=1.51e+00 po=1.31e+00
+unclassified eigvec 28 w=1.836402e-17 pe=1.38e+00 po=1.45e+00
+unclassified eigvec 29 w=2.261059e-17 pe=1.54e+00 po=1.28e+00
+unclassified eigvec 30 w=2.657376e-17 pe=1.44e+00 po=1.39e+00
+unclassified eigvec 31 w=3.192669e-17 pe=1.51e+00 po=1.31e+00
+unclassified eigvec 32 w=3.503687e-17 pe=1.37e+00 po=1.46e+00
+unclassified eigvec 33 w=5.139270e-17 pe=1.00e+00 po=1.73e+00
+unclassified eigvec 34 w=6.268192e-17 pe=6.54e-01 po=1.89e+00
+unclassified eigvec 35 w=1.390800e-16 pe=1.70e+00 po=1.05e+00
+unclassified eigvec 36 w=1.823568e-16 pe=1.36e+00 po=1.46e+00
+unclassified eigvec 37 w=1.829321e-16 pe=1.40e+00 po=1.42e+00
+unclassified eigvec 38 w=5.268246e-16 pe=1.99e+00 po=1.72e-01
+unclassified eigvec 39 w=3.928581e-15 pe=5.51e-02 po=2.00e+00
+unclassified eigvec 40 w=4.249678e-15 pe=3.98e-01 po=1.96e+00
+unclassified eigvec 41 w=2.782038e-14 pe=1.98e+00 po=2.74e-01
+unclassified eigvec 42 w=2.820524e-14 pe=2.00e+00 po=2.31e-03
+unclassified eigvec 43 w=1.885125e-13 pe=1.23e-02 po=2.00e+00
+unclassified eigvec 44 w=1.902623e-13 pe=3.37e-04 po=2.00e+00
+unclassified eigvec 45 w=1.199253e-12 pe=2.00e+00 po=4.04e-05
+unclassified eigvec 46 w=1.202280e-12 pe=2.00e+00 po=1.61e-04
+unclassified eigvec 47 w=7.119687e-12 pe=9.27e-06 po=2.00e+00
+unclassified eigvec 48 w=7.137061e-12 pe=2.25e-04 po=2.00e+00
+unclassified eigvec 49 w=3.970563e-11 pe=2.00e+00 po=1.70e-06
+unclassified eigvec 50 w=3.980051e-11 pe=2.00e+00 po=7.25e-06
+unclassified eigvec 51 w=2.080109e-10 pe=1.07e-06 po=2.00e+00
+unclassified eigvec 52 w=2.084982e-10 pe=2.59e-07 po=2.00e+00
+unclassified eigvec 53 w=1.023672e-09 pe=2.00e+00 po=5.12e-08
+unclassified eigvec 54 w=1.026040e-09 pe=2.00e+00 po=8.45e-08
+unclassified eigvec 55 w=4.732322e-09 pe=1.31e-08 po=2.00e+00
+unclassified eigvec 56 w=4.743211e-09 pe=3.15e-07 po=2.00e+00
+unclassified eigvec 57 w=2.055058e-08 pe=2.00e+00 po=3.94e-07
+unclassified eigvec 58 w=2.059792e-08 pe=2.00e+00 po=8.84e-08
+top overall index 103; ke=103 ko=102
+lambda_e=0.61371755829115215 lambda_o=0.61371695789831415
+Delta (a) = 6.0039283800161769e-07
+Delta (b) = 6.003928380885328e-07
+rel diff = 1.448e-10

@@ -1,0 +1,2 @@
+check K100: exit 0 (expected 0) in 783852 ms | output 058983071700 | event 102 head 8386c17e9949
+  /home/user/z4-workers/o1-lower/report.md — verdicts: 6 STANDS, 2 DEFECT, 1 NOT CHECKED (the SU(2)² target limsup ≤ c* is not proved; it is proved in writing only for the 1-D grid model, up to an error term of at most 7·10⁻⁴); predicates: 11 met, 3 failed, 3 measured only.

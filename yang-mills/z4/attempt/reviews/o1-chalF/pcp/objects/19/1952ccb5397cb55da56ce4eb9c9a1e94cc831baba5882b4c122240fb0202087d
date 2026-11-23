@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/o1-chalF/chal_F.py", line 40, in <module>
+    from scipy.special import ive, i0e, i1e
+ModuleNotFoundError: No module named 'scipy'

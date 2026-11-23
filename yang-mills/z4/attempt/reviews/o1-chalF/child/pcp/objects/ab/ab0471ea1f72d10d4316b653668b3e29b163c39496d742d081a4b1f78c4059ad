@@ -1,0 +1,2 @@
+/home/user/z4-workers/o1-chalF/child/barta.py:72: RuntimeWarning: invalid value encountered in scalar divide
+  rel = abs(v-v2)/abs(v2); maxrel = max(maxrel, rel)

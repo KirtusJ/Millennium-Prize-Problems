@@ -1,0 +1,4 @@
+top eig [[2,1],[1,2]] = 3
+error vs 3 = 0.000E+3
+conv change=0.000E+3
+PASS
