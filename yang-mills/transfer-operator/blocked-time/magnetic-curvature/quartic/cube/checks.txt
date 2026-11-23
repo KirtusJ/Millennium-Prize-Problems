@@ -1,0 +1,3 @@
+minimum cuts of the face adjacency graph of the cube
+exact finite rational four-layer sum at fundamental multiplier one half
+scaled continuous-time limit from strictly ordered layers
