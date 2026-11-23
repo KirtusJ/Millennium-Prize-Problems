@@ -1,0 +1,3 @@
+total chord filling area for all sites through side eight
+based square transport on 1296 permutation assignments
+double-wrap multiplicities and isolated-cycle action counts
