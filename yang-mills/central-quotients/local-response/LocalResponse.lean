@@ -156,6 +156,36 @@ theorem fibreSeparation {K : Type*} [Field K] (u v a b x y : K)
   have hy : (u*b-v*a)*y = 0 := by linear_combination u*k - a*h
   exact ⟨(mul_eq_zero.mp hx).resolve_left det, (mul_eq_zero.mp hy).resolve_left det⟩
 
+/-- Constant deck coefficients with total one fix every stabilizer-invariant test. -/
+theorem deckSumFixes {G E : Type*} [AddCommMonoid E] [Module ℂ E]
+    (D : Finset G) (a : G → ℂ) (U : G → E → E) (f : E)
+    (total : (∑ d ∈ D, a d) = 1) (hf : ∀ d ∈ D, U d f = f) :
+    (∑ d ∈ D, a d • U d f) = f := by
+  calc _ = ∑ d ∈ D, a d • f := Finset.sum_congr rfl (fun d hd => by rw [hf d hd])
+       _ = (∑ d ∈ D, a d) • f := (Finset.sum_smul ..).symm
+       _ = f := by rw [total, one_smul]
+
+/-- The principal-symbol pairing detects each real component of a coefficient gradient. -/
+theorem gradientSeparation {E : Type*} [NormedAddCommGroup E] [InnerProductSpace ℝ E]
+    (g : E) (h : ∀ v, inner (𝕜 := ℝ) g v = 0) : g = 0 :=
+  inner_self_eq_zero.mp (h g)
+
+private def torusFace (i : ℕ) : ℕ :=
+  let x := i % 3
+  let y := i / 3
+  let right := (x+1)%3 + 3*y
+  let up := x + 3*((y+1)%3)
+  2^(2*i) + 2^(2*right+1) + 2^(2*up) + 2^(2*i+1)
+
+def closedTorusFaces : List ℕ :=
+  (List.range 512).filter fun mask =>
+    (List.range 9).foldl (fun acc i => if mask.testBit i then acc ^^^ torusFace i else acc) 0 == 0
+
+/- All mod-two relations among the nine boundaries on the 3 by 3 periodic square graph. -/
+set_option maxRecDepth 20000 in
+set_option maxHeartbeats 0 in
+theorem torusRelations : closedTorusFaces = [0, 511] := by decide +kernel
+
 end YangMills.CentralQuotient.LocalResponse
 
 open YangMills.CentralQuotient.LocalResponse
@@ -173,3 +203,6 @@ open YangMills.CentralQuotient.LocalResponse
 #print axioms twoStepEnergy
 #print axioms fluxDerivative
 #print axioms fibreSeparation
+#print axioms deckSumFixes
+#print axioms gradientSeparation
+#print axioms torusRelations

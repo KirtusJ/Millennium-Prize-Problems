@@ -82,18 +82,19 @@ def main():
     status, log = verify("LocalResponse", proof)
     reports = re.findall(r"'[\w.]+'.*?(?:does not depend on any axioms|depends on axioms: \[([^\]]*)\])", log, re.S)
     allowed = {"propext", "Classical.choice", "Quot.sound"}
-    if (status or len(reports) != 14 or "warning:" in log or "sorryAx" in log or
+    if (status or len(reports) != 17 or "warning:" in log or "sorryAx" in log or
             any(a.strip() not in allowed for report in reports if report for a in report.split(","))):
         raise RuntimeError("proof or axiom audit failed, see LocalResponse.log")
     for old, new, name, diagnostic in (
             (b"false = 353", b"false = 354", "WrongParity", "is false"),
-            (b"(32/91", b"(33/91", "WrongChannel", "unsolved goals")):
+            (b"(32/91", b"(33/91", "WrongChannel", "unsolved goals"),
+            (b"Faces = [0, 511]", b"Faces = [0, 510]", "WrongTorus", "is false")):
         if proof.count(old) != 1:
             raise RuntimeError("mutation target missing or duplicated")
         code, message = verify(name, proof.replace(old, new))
         if code == 0 or diagnostic not in message:
             raise RuntimeError(f"unexpected {name} result")
-    print(f"14 theorems accepted, three nodes closed, three adverse controls rejected. {digest(proof)}")
+    print(f"17 theorems accepted, three nodes closed, four adverse controls rejected. {digest(proof)}")
 
 
 if __name__ == "__main__":

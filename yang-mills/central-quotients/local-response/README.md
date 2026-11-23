@@ -55,3 +55,9 @@ At \(\beta=\log4\), direct multiplication of the oriented quaternion links and f
 | 3 | 8192 | \(10713818144485170090000/1092785674092291848518369\) |
 
 The full covariance also contains \(\operatorname{Cov}_{\bar U}(E[T_i\mid\bar U],E[T_j\mid\bar U])\), which this bound leaves open. The strip restricts the transverse geometry. Its rate in lattice units obeys \(-\log q\sim 8e^{-2\beta}\) as \(\beta\to\infty\). A four-dimensional continuum mass gap requires physical time, a nontrivial continuum theory and uniform estimates on its vacuum complement. The separate transfer calculation identifies one obstacle to reading a single-slice projection as the quotient dynamics. [Transfer calculation](transfer.md) · [Generated Lean and replay coverage](execution.md)
+
+## Finite spatial graphs
+
+Complete quotient histories recover the cover states fixed by the center symmetries of the potential. On a simply connected open spatial box with fundamental Wilson action this recovers the full physical Hamiltonian spectrum for \(SU(N)\). The argument works on any fixed positive time mesh. [Smooth \(SU(2)\) theorem](finite-graph.md) · [Analytic potentials for all compact connected groups](analytic-groups.md)
+
+A4's radial estimate also gives an explicit volume-uniform positive-time correlation floor for a single adjoint quotient plaquette at fixed Hamiltonian coefficients. [Adjoint plaquette estimate](adjoint-weight.md)

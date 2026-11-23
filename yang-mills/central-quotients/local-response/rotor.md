@@ -50,3 +50,5 @@ For the center-even adjoint observation \(U_2=4t^2-1\), \(U_2U_1=U_3+U_1\) gives
 At \(\kappa=1,\lambda=0.001\), character cutoffs 18 and 32 both gave gap \(3.00000011667\) and amplitude \(0.00026666666\). The check also exercises zero and negative coupling. The cutoff comparison is numerical. The full-space conclusion uses the differential identity and density argument. [Numerical check](check_rotor.py) · [Formal coverage](execution.md)
 
 This one-square result identifies a loss of spectral weight that an equal-time projection can conceal. Extending it to a spatial lattice with shared plaquettes requires controlling many coupled sign sectors. Even an exact finite-volume observability result would still require quantitative bounds uniform in regulator, volume and physical time for a continuum conclusion.
+
+The finite-graph extension identifies the sector exactly under the stated hypotheses, including Gauss' law. [Finite spatial graphs](finite-graph.md) · [Analytic compact-group extension](analytic-groups.md)

@@ -186,6 +186,28 @@ static void transfer(unsigned signs, unsigned faces) {
     unsigned order_two = 0, order_three = 0;
     for (unsigned k = 0; k < 2; ++k) order_two += twice_cos_2[k]*twice_cos_2[k];
     for (unsigned k = 0; k < 3; ++k) order_three += twice_cos_3[k]*twice_cos_3[k];
+
+    /* A dual-lattice traversal toggles the four surrounding edges of each
+       selected face. Independently count subsets with no residual edge. */
+    unsigned nonempty_relation = 0, relations = 0;
+    for (unsigned mask = 0; mask < 512; ++mask) {
+        unsigned horizontal[9] = {0}, vertical[9] = {0};
+        for (unsigned k = 0; k < 9; ++k) {
+            if (!(mask & (1u << k))) continue;
+            unsigned x = k % 3, y = k / 3;
+            horizontal[k] ^= 1;
+            horizontal[x + 3*((y+1)%3)] ^= 1;
+            vertical[k] ^= 1;
+            vertical[(x+1)%3 + 3*y] ^= 1;
+        }
+        unsigned residual = 0;
+        for (unsigned k = 0; k < 9; ++k) residual |= horizontal[k] | vertical[k];
+        if (!residual) {
+            ++relations;
+            if (mask) nonempty_relation = mask;
+        }
+    }
+    if (relations != 2) stop(6);
     emit("LEAN-BEGIN\n"
          "/-- The missing two-step return through the orthogonal complement.\n"
          "The algebraic identity needs only idempotence. -/\n"
@@ -254,6 +276,38 @@ static void transfer(unsigned signs, unsigned faces) {
          "  have hy : (u*b-v*a)*y = 0 := by linear_combination u*k - a*h\n"
          "  exact ⟨(mul_eq_zero.mp hx).resolve_left det, (mul_eq_zero.mp hy).resolve_left det⟩\n"
          "\n"
+         "/-- Constant deck coefficients with total one fix every stabilizer-invariant test. -/\n"
+         "theorem deckSumFixes {G E : Type*} [AddCommMonoid E] [Module ℂ E]\n"
+         "    (D : Finset G) (a : G → ℂ) (U : G → E → E) (f : E)\n"
+         "    (total : (∑ d ∈ D, a d) = 1) (hf : ∀ d ∈ D, U d f = f) :\n"
+         "    (∑ d ∈ D, a d • U d f) = f := by\n"
+         "  calc _ = ∑ d ∈ D, a d • f := Finset.sum_congr rfl (fun d hd => by rw [hf d hd])\n"
+         "       _ = (∑ d ∈ D, a d) • f := (Finset.sum_smul ..).symm\n"
+         "       _ = f := by rw [total, one_smul]\n"
+         "\n"
+         "/-- The principal-symbol pairing detects each real component of a coefficient gradient. -/\n"
+         "theorem gradientSeparation {E : Type*} [NormedAddCommGroup E] [InnerProductSpace ℝ E]\n"
+         "    (g : E) (h : ∀ v, inner (𝕜 := ℝ) g v = 0) : g = 0 :=\n"
+         "  inner_self_eq_zero.mp (h g)\n"
+         "\n"
+         "private def torusFace (i : ℕ) : ℕ :=\n"
+         "  let x := i % 3\n"
+         "  let y := i / 3\n"
+         "  let right := (x+1)%3 + 3*y\n"
+         "  let up := x + 3*((y+1)%3)\n"
+         "  2^(2*i) + 2^(2*right+1) + 2^(2*up) + 2^(2*i+1)\n"
+         "\n"
+         "def closedTorusFaces : List ℕ :=\n"
+         "  (List.range 512).filter fun mask =>\n"
+         "    (List.range 9).foldl (fun acc i => if mask.testBit i then acc ^^^ torusFace i else acc) 0 == 0\n"
+         "\n"
+         "/- All mod-two relations among the nine boundaries on the 3 by 3 periodic square graph. -/\n"
+         "set_option maxRecDepth 20000 in\n"
+         "set_option maxHeartbeats 0 in\n"
+         "theorem torusRelations : closedTorusFaces = [0, ");
+    number(nonempty_relation);
+    emit("] := by decide +kernel\n"
+         "\n"
          "end YangMills.CentralQuotient.LocalResponse\n"
          "\n"
          "open YangMills.CentralQuotient.LocalResponse\n"
@@ -271,6 +325,9 @@ static void transfer(unsigned signs, unsigned faces) {
          "#print axioms twoStepEnergy\n"
          "#print axioms fluxDerivative\n"
          "#print axioms fibreSeparation\n"
+         "#print axioms deckSumFixes\n"
+         "#print axioms gradientSeparation\n"
+         "#print axioms torusRelations\n"
          "LEAN-END\n");
 }
 
