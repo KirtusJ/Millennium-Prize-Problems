@@ -42,3 +42,5 @@ $$
  0\le\sum_z K(z)\prod_i A_v(z_i)\le C h^{-2}.
 $$
 A4’s local Wilson comparison changes each coarse covariance by $O(\beta^{-1/8})$ for separations of order $h\le c\beta^{1/4}$, with only a fixed number of fine cells per pair. The squared $\ell^1$ norm of $f$ is at most $h^4$ by its unit $\ell^2$ norm and support size. Thus $16\chi_\beta\le C(h^{-2}+h^4\beta^{-1/8})$. Choosing $h=\lfloor\beta^{1/48}\rfloor$ proves the stated uniform upper bound. [Computational checks](checks.md)
+
+Near product Haar measure the raw clover covariance has an explicit quadratic correction at contact and a summable fourth-order remainder. [Strong-coupling contact coefficient and review of the local dual](haar-expansion/README.md)

@@ -1,0 +1,3 @@
+spherical Haar moments and the negative connected face insertion
+exact conditional neighborhood of the eight selected links
+influence-path distance and total row mass on a periodic graph
