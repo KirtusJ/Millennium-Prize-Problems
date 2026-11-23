@@ -18,6 +18,9 @@ ADJOINT_MARKER = b"-- BEGIN PCP OS generated spherical divergence\n"
 
 
 def result_spec(mode):
+    if mode == "graph":
+        return (HERE.parent / "graph-holonomies/GraphHolonomies.lean",
+                b"-- BEGIN PCP OS generated shared-path control\n", "words")
     if mode == "scale":
         return (HERE.parent / "electric-scale/ElectricScale.lean",
                 b"-- BEGIN PCP OS generated star flux\n", "flux")
@@ -35,7 +38,7 @@ def launch(stage, folder, config):
     command = [sys.executable, "-I", __file__, "--worker", stage, str(folder)]
     if config["dispatcher"]:
         register = config["register"] if stage == "factor" else "-"
-        prefix = {"adjoint": "adjoint-", "finite": "readings-", "scale": "electric-"}.get(config["mode"], "positive-")
+        prefix = {"adjoint": "adjoint-", "finite": "readings-", "scale": "electric-", "graph": "graph-"}.get(config["mode"], "positive-")
         command = [config["dispatcher"], "--register", register, config["actor"],
                    prefix + stage, "--", *command]
     subprocess.run(command, check=True)
@@ -45,7 +48,7 @@ def worker(stage, folder):
     config = json.loads((folder / "config.json").read_text())
     mode = config["mode"]
     filename, marker, intermediate = result_spec(mode)
-    coefficient = {"positive": 2, "difference": 1, "adjoint": 3, "finite": 4, "scale": 6}[mode]
+    coefficient = {"positive": 2, "difference": 1, "adjoint": 3, "finite": 4, "scale": 6, "graph": 7}[mode]
     if stage == "factor":
         request = b"F" + bytes([coefficient])
     elif stage == intermediate:
@@ -64,6 +67,10 @@ def worker(stage, folder):
         if mode == "scale":
             expected_factor = bytes((1 << i) | (1 << j) for i in range(6)
                                     for j in range(i + 1, 6) if i // 2 != j // 2)
+        if mode == "graph":
+            expected_factor = bytes((a % 3 + (-1 if a >= 3 else 1) * (b % 3)) % 3
+                                    + 3 * ((a // 3 + b // 3) % 2)
+                                    for a in range(6) for b in range(6))
         if output != expected_factor:
             raise ValueError("unexpected guest coefficient vector")
         (folder / "factor.out").write_bytes(output)
@@ -84,7 +91,9 @@ def generate(folder, kernel, pcp_source, qemu, firmware, template, dispatcher=No
     filename, _, _ = result_spec(mode)
     package = kernel_package(kernel, pcp_source)
     flags = ["-DD4_POSITIVE_TIME"]
-    if mode == "scale":
+    if mode == "graph":
+        flags.append("-DD4_GRAPH_HOLONOMIES")
+    elif mode == "scale":
         flags.append("-DD4_ELECTRIC_SCALE")
     elif mode == "finite":
         flags.append("-DD4_FINITE_READINGS")
@@ -103,7 +112,7 @@ def generate(folder, kernel, pcp_source, qemu, firmware, template, dispatcher=No
 
 
 def main():
-    if len(sys.argv) == 4 and sys.argv[1] == "--worker" and sys.argv[2] in (*STAGES, "divergence", "moments", "flux"):
+    if len(sys.argv) == 4 and sys.argv[1] == "--worker" and sys.argv[2] in (*STAGES, "divergence", "moments", "flux", "words"):
         worker(sys.argv[2], Path(sys.argv[3]))
         return
     p = argparse.ArgumentParser(description=__doc__)
@@ -115,6 +124,8 @@ def main():
     p.add_argument("--register", type=Path)
     p.add_argument("--actor", default="Director-D4")
     modes = p.add_mutually_exclusive_group()
+    modes.add_argument("--graph-holonomies", dest="mode", action="store_const", const="graph",
+                       help="replay the coarse holonomy and shared-path module")
     modes.add_argument("--electric-scale", dest="mode", action="store_const", const="scale",
                        help="replay the electric flux and shell module")
     modes.add_argument("--finite-readings", dest="mode", action="store_const", const="finite",

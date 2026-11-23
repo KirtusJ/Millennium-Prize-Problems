@@ -62,3 +62,7 @@ At weak magnetic coupling, three physical-time plaquette readings exclude a prop
 ## Electric representations at weak bare coupling
 
 Along spatial refinement the actual vacuum occupies a growing range of electric representations. For compact connected simple groups the minimum local dimension capturing fixed vacuum weight is of order $g_G^{\dim G/4}$. For $SU(2)$ the six-link center flux has a uniform even-parity law and explicit magnetic-scale dynamics. The full bounded local center-flux algebra loses connected weight at fixed positive physical times. Class-averaged probes at angles of order $g^{-1/4}$ retain a nonzero correlation matrix at times proportional to the spatial mesh. [Proofs, Lean module and checks](electric-scale/)
+
+## Holonomies on fixed physical graphs
+
+In the original isotropic four-dimensional Wilson law, coarse rectilinear holonomies converge jointly to independent Haar variables under $b(1+\beta)\to0$. The strictly positive-time graph-cylinder reflection form then has rank one. A compensated $SU(2)$ path has an interacting Brownian crossover in its number of links, and admits a deterministic mean-normalized test at fixed physical length. [Graph law, crossover and positive-time results](graph-holonomies/)

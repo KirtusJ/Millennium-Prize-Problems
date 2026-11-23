@@ -1,0 +1,45 @@
+# A Brownian fluctuation in a string of interacting SU(2) links
+
+Use the four-dimensional isotropic plaquette weight $\exp[-\beta(1-\operatorname{Tr}U_p/2)]$ and unit round metric on $SU(2)=S^3$. Choose one oriented straight lattice line of distinct bonds, long enough for $k=\lfloor\beta T\rfloor$ steps for each fixed $T>0$ under consideration. It may wrap once without repeating a bond. Assume every box side is at least three. On general boxes the theorem below uses a specified correction on weak staples. On boxes with all side lengths powers of two at least four it holds for the ordinary polar-staple transport.
+
+## What is subtracted
+
+Fix all bonds off the string. Distinct string bonds are noncofacial. The six three-link staples of bond $j$, oriented from its start to its end, have quaternion sum $S_j$. Put $r_j=\beta|S_j|$, $D_j=S_j/|S_j|$ where nonzero. Conditional on the exterior, a forward string bond has the exact form $U_j=D_jV_j$ with independent central $V_j$ of density proportional to $\exp(r_j\cos\theta)$. The trace identity is $\sum_{p\ni j}x_p=\operatorname{Re}(U_j S_j^*)\le |S_j|$. A zero staple can use the actual link as $D_j$ in the corrected construction; for the uncorrected version any measurable convention on this null set suffices. The finite-volume Wilson density is smooth relative to product Haar and $|S_j|^2$ is a nonzero real analytic function. [Conditional link integration in lattice gauge theory](https://doi.org/10.1016/0370-2693(83)90930-9)
+
+On a general box, determine the bad indices $r_j<3\beta$ from the exterior and additionally expose those actual bonds. Use $D_j=U_j$ at those indices. Denote this enlarged exterior by $Y$. With $P_m=D_1\cdots D_m$, the compensated path is
+$$N_0=I,\qquad N_m=(U_1\cdots U_m)P_m^{-1}.$$
+At good indices its successive right-multiplicative increments are $P_j V_jP_j^{-1}$. Conditional on $Y$ these have the central $r_j$ laws and are independent. At bad indices the increments are identity. A site gauge transformation conjugates $N_m$ at its starting point; character and joint conjugation-invariant readings are gauge invariant. This is a measurement involving both the string and its neighboring links.
+
+## How much time the Wilson noise accumulates
+
+If there are $N$ lattice sites, the partition function with normalized Haar and the nonnegative action satisfies
+$$Z_\beta\ge[c_0^4\beta^{-6}e^{-48}]^N,\quad c_0=8/(3\pi^3),\quad\beta\ge1.$$
+Restrict all $4N$ links to the identity ball of radius $1/\sqrt\beta$. Its Haar probability is at least $c_0\beta^{-3/2}$ by the $S^3$ angle density. Each of $6N$ plaquettes then costs at most 8 in the exponent, by the bi-invariant triangle inequality and $1-\cos x\le x^2/2$. Nonnegative relative entropy against Haar gives $\beta\mathbb E\sum_p(1-x_p)\le-\log Z_\beta$. Translation invariance inside each orientation and nonnegative terms imply $u=\max_p\mathbb E(1-x_p)\le C(1+\log\beta)/\beta$, even if the periods differ. The estimate need not be optimal for this purpose.
+
+Let $x_j=r_j/(6\beta)$. From the staple trace identity, $\mathbb E(1-x_j)\le u$. For $x\ge1/2$ one has $0\le1/x-1\le2(1-x)$; for $x<1/2$ the error from omitting one unit is also at most $2(1-x)$. Thus the conditional heat time satisfies
+$$\mathbb E\max_{m\le k}\left|\sum_{j\le m,\,\mathrm{good}}\frac1{2r_j}-\frac m{12\beta}\right|
+\le\frac{k u}{6\beta}.$$
+The expected fraction of omitted bonds is at most $2u$. This proof uses no independence of the staple values. On strings of arbitrary length the same computation bounds the relative error in the cumulative clock in $L^1$.
+
+For a fixed shell $n$ the large-argument Bessel expansion gives
+$$\log q_n(r)=-\frac{n(n+2)}{2r}+O_n(r^{-2}),\qquad r\ge3\beta,\quad\beta\to\infty.$$
+Indeed the first correction to $I_\nu(r)e^{-r}\sqrt{2\pi r}$ is $-(4\nu^2-1)/(8r)$. On an interval with $O(\beta)$ terms the total expansion error is $O_{n,T}(1/\beta)$. At every finite set of path parameters the conditional increment laws therefore converge in probability to independent group heat kernels at times $(t_i-t_{i-1})/12$, by Peter–Weyl. The conditional convergence is with respect to the Wilson law for $Y$ and the limit is deterministic. In particular any bounded, cutoff-dependent exterior test may multiply a bounded continuous path test without changing the limiting factorization error.
+
+At strictly positive fixed increment duration the conditional laws even converge in mean total variation. With probability tending to one the interval has at least half its bonds good. Below a Casimir cutoff $B=1+\beta$, the [contraction bound](mixing.md) gives a summable envelope $(n+1)^2\exp[-c(t_i-t_{i-1})n(n+2)]$ on that event. Above the cutoff the first and last good factors give a polynomial in $\beta$ times an exponentially small bound in the number of good factors by the same Plancherel argument. Fixed-shell convergence, Fourier tail truncation and boundedness of TV imply the claim. Several positive intervals follow by product comparison.
+
+For path-space convergence use the step process $N_{\lfloor\beta t\rfloor}$ in the space of right-continuous paths with left limits. On every good bond $\mathbb E|V_j-I|^2=2(1-q_1(r_j))\le C/\beta$ and $\mathbb E|V_j-I|^4\le C/\beta^2$ in quaternion norm. The latter follows by integration: $d=1-\cos\theta$ has density proportional to $e^{-rd}d^{1/2}(2-d)^{1/2}$ on $[0,2]$. The numerator for its second moment is $O(r^{-7/2})$ and the denominator is bounded below by $c r^{-3/2}$. For any $m$ successive steps the conditional mean squared displacement is $2(1-\prod q_1)\le C m/\beta$ by centrality. This bound also applies starting at a stopping index with a fixed forward increment, conditional on the index and history. The stopping-time tightness criterion applies; the union bound on fourth moments makes the largest jump tend to zero in probability. These estimates are uniform in $Y$. Subsequence extraction for the clocks plus the finite-dimensional laws identifies the unique continuous limit, Brownian motion started at identity with generator $\Delta_{S^3}/12$. Equivalently, the conditional path laws converge weakly in probability to this law. A fixed physical time does not enter this construction.
+
+## Ordinary polar transport on dyadic tori
+
+For periods $2^{m_i}\ge4$, site reflections give the single-plaquette tail
+$$\Pr(1-x_p>\eta)\le c_0^{-4}e^{48}\beta^6 e^{-\beta\eta/4}.$$
+For clarity, take a unit four-cube having $p$ as one of its faces. For any indicator $F$ supported in a closed half torus bounded by two opposite site planes, Cauchy–Schwarz in the site-reflection form gives $(\mathbb EF)^2\le\mathbb E(F\,\Theta F)$. Given the links lying within the two boundary planes, opposite half interiors are conditionally independent reflected copies, since no face crosses a site plane into both interiors. This proves the required reflection inequality directly. Repeatedly reflect the current rectangular block across its end plane to double its length. Do this in each coordinate while the block fits a half torus. After $\log_2 N$ doublings the bad event has a copy in every unit cube. A single plaquette is incident on only four unit four-cubes, so the product indicator forces at least $N/4$ **distinct** bad plaquettes. The unnormalized integral is at most $e^{-\beta\eta N/4}$. Divide by the partition lower bound and take the $N$th root. This proof also handles copies on the reflecting boundary. [Gauge-theory chessboard estimates](https://repo-archives.ihes.fr/FONDS_IHES/I_Prepublications/FROHLICH/1978-1980/P_78_237/P_78_237_web.pdf)
+
+If any one of $k$ staples has $r_j<3\beta$, at least one of its six incident plaquettes has $1-x_p>1/2$. The tail bound and union bound make this probability vanish for $k=O(\beta)$. Thus the corrected and ordinary polar processes agree with probability tending to one. The event of no weak staple is itself measurable in the original exterior. On those exteriors no further links were exposed. In fact a union bound at $\eta=A\log\beta/\beta$ makes all the $O(\beta)$ sampled deficits at most $\eta$ with probability tending to one for $A>28$. No dyadic restriction is needed for the corrected general-box result or for the macroscopic product-Haar result.
+
+## Exact conditional renormalization and its boundary
+
+For the corrected construction and any fixed representation shell, conditioning gives
+$$\mathbb E[\pi_n(U_1\cdots U_k)\mid Y]
+=\pi_n(P_k)\prod_{j\,\mathrm{good}}q_n(r_j).$$
+For $n>0$ the logarithm of this scalar attenuation, divided by $k/\beta$, tends in $L^1$ to $-n(n+2)/12$ for any positive string lengths, by the clock estimate and uniform expansion. Dividing out the recorded conditional factor exactly recovers the *polar product's* matrix in conditional expectation. At each finite cutoff the good radii are bounded below, so the inverse exists. This is an exterior-dependent observable; it supplies no lower bound on the separated-time correlation of $P_k$. In particular the heat-law crossover and macroscopic Haar graph limit do not determine a physical mass. [Wilson-field and heat-kernel controls](check_wilson.py)
