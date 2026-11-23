@@ -1,0 +1,12 @@
+P1 failures 0 P6 failures 0
+P3 cases met/failed/measured-only: 888/0/0
+per beta (met,fail): {2: [17, 0], 4: [33, 0], 8: [65, 0], 16: [129, 0], 32: [161, 0], 64: [161, 0], 128: [161, 0], 256: [161, 0]}
+C_emp (np.float64(1.0), 256, 0.0)
+beta=2 sup_t Pe^(t/8)=1.000000@t=0.0 t_ref=3.8 r=1.663875 sup|P-Q|=1.108901e-01 mean_quad=1.133745147 mean_exact=1.133745147 rel=7.83e-16 P2ok=True P4ok=True
+beta=4 sup_t Pe^(t/8)=1.000000@t=0.0 t_ref=7.6 r=1.226312 sup|P-Q|=3.818500e-02 mean_quad=1.367810931 mean_exact=1.367810931 rel=6.49e-16 P2ok=True P4ok=True
+beta=8 sup_t Pe^(t/8)=1.000000@t=0.0 t_ref=15.2 r=1.058188 sup|P-Q|=1.630112e-02 mean_quad=1.446004717 mean_exact=1.446004717 rel=1.23e-15 P2ok=True P4ok=True
+beta=16 sup_t Pe^(t/8)=1.000000@t=0.0 t_ref=20 r=0.943461 sup|P-Q|=7.651955e-03 mean_quad=1.474962466 mean_exact=1.474962466 rel=0.00e+00 P2ok=True P4ok=True
+beta=32 sup_t Pe^(t/8)=1.000000@t=0.0 t_ref=20 r=0.927225 sup|P-Q|=3.715927e-03 mean_quad=1.487899153 mean_exact=1.487899153 rel=9.55e-15 P2ok=True P4ok=True
+beta=64 sup_t Pe^(t/8)=1.000000@t=0.0 t_ref=20 r=0.922052 sup|P-Q|=1.831933e-03 mean_quad=1.494047143 mean_exact=1.494047143 rel=1.43e-14 P2ok=True P4ok=True
+beta=128 sup_t Pe^(t/8)=1.000000@t=0.0 t_ref=20 r=0.919857 sup|P-Q|=9.096291e-04 mean_quad=1.497047186 mean_exact=1.497047186 rel=1.42e-13 P2ok=True P4ok=True
+beta=256 sup_t Pe^(t/8)=1.000000@t=0.0 t_ref=20 r=0.918836 sup|P-Q|=4.532507e-04 mean_quad=1.498529405 mean_exact=1.498529405 rel=3.03e-13 P2ok=True P4ok=True

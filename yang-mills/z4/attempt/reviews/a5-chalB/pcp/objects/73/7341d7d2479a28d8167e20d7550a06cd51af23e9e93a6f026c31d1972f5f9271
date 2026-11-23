@@ -1,0 +1,17 @@
+The claim holds on every case I tested. In all 888 cases (8 values of beta, t up to min(40, 2·beta)), P_beta(O_p > t)·exp(t/8) is at most 2. The empirical constant is C_emp = 1.000000, reached at t = 0 where P = 1. The full write-up is in `report.md`.
+
+- **Control:** `control.txt` holds 0.240194, which matches I_2(1)/I_1(1) computed from the power series.
+- **Tail rate:** r(beta) is about 0.92 for beta ≥ 16 and larger for smaller beta (1.66 at beta=2). That is far above 1/8.
+- **Gamma(3/2) limit:** the maximum |P − Q| over t in [0, 20] roughly halves each time beta doubles. It goes from 1.1e-1 at beta=2 to 4.5e-4 at beta=256.
+- **Mean of O_p:** it agrees with beta·(1 − I_2/I_1) to a relative difference of 3e-13 or better for all eight beta.
+- **Not checked:** beta below 2 or above 256, t above 40, and any rigorous error bounds. I also did not check t between grid points; P e^{t/8} is largest at t = 0 and the observed decay is fast.
+- **Predicate counts:** every predicate was met and none failed. The 888-case predicate is "P·exp(t/8) ≤ 2", using C = 2 as my own test constant.
+- **Sub-agent:** its control answer, 1.570796, was correct. It returned P_8(O>4) = 0.039959 ± 0.000138 by Monte Carlo and 0.03988840 by a second quadrature. My own quadrature gives 0.0398884, so the quadrature matches to 8 digits and the Monte Carlo is within 0.5 standard errors.
+- **PCP OS:** Python `verify` printed "result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)". The Rust `verify` last line was "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+
+The defects below were all mine, not the target's:
+- **Slow first run:** it exceeded the 1-minute limit because I recomputed the quadrature nodes on every call. I killed it and reran with cached nodes.
+- **Output not retained:** the second run's output was not kept by `pcp check`. I reran identical code as `tail3.py` with the output redirected, and its CSV is byte-identical to the second run's.
+- **CSV format:** `results_tail3.csv` writes numbers as `np.float64(...)` text, but the values are intact.
+
+Everything is in `/home/user/z4-workers/a5-chalB/child/`. The main files are `report.md`, `results_tail3.csv` and `out_tail3.txt`.

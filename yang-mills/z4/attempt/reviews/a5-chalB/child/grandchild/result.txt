@@ -1,0 +1,2 @@
+MC (rejection, seed 12345, N=2000000): P(O>4)=0.039959 +- 0.000138
+Gauss-Legendre (u=16 sin^2 phi variable, 200 pts): P(O>4)=0.03988840

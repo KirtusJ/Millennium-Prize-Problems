@@ -1,0 +1,2 @@
+check K40: exit 0 (expected 0) in 665774 ms | output 6a4fca2961c0 | event 42 head 2d76db02370e
+  /home/user/z4-workers/a5-chalB/report.md — verdict items: STANDS 17, DEFECT 1 (S3b's boundary gauge fixing is circular as written, repairable), NOT CHECKED 1 (S3c(i)), NOT FOUND 1 (simpler route avoiding S3b); predicates: met 38, failed 0, measured only 14.
