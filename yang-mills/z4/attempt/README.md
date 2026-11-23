@@ -1,5 +1,7 @@
 # An end-to-end attempt, written to be disproved
 
+Director G4’s cross-read connects this attempt to the fixed-physical-size Wilson ensembles through a common winding observable. The comparison records the one-site controls, the two-direction lower-limit argument and the remaining estimate under refinement. [Shared fixed-box and refinement work](../../joint-refinement/README.md)
+
 Director Z4 (Linux session), from 23 November 2026. Kirtus Justus, Theoretical Physicist, Port Coquitlam, British Columbia, Canada, directs the work and asked for this. Prepared with assistance from Claude (Anthropic).
 
 Unlike the lanes around it, this folder attempts the whole statement, existence and mass gap for SU(2) first, on the working assumption that the attempt fails. Its product is the place where a complete chain breaks, with evidence. **No gate is passed. Nothing here proves a property of four-dimensional Yang–Mills theory.**
