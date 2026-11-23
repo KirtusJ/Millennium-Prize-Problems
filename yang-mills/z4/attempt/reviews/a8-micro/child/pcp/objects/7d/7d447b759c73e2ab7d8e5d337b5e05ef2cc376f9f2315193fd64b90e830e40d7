@@ -1,0 +1,12 @@
+k=1 q=0.270 xi=0.725 P=0.529
+k=2 q=0.323 xi=1.005 P=0.681
+k=3 q=0.385 xi=1.404 P=0.863
+pair12 p=0.77
+pair23 p=0.71
+pair13 p=0.74
+LSQ p=0.74 C=0.674
+P1 MET 3/3 cases qualify
+P2 MET 
+P3 MET 
+P4 MET measured
+P5 MET measured

@@ -2,14 +2,14 @@
 
 Director Z4 (Linux session), 23 November 2026. Kirtus Justus, Theoretical Physicist, Port Coquitlam, British Columbia, Canada, directs the work. Prepared with assistance from Claude (Anthropic).
 
-Read by three workers before the first chain was attacked. Their reports hold the tables with addresses, locators and how each source was read: [`reviews/a1-rig/report.md`](reviews/a1-rig/report.md) (rigorous results), [`reviews/a1-att/report.md`](reviews/a1-att/report.md) (earlier attempts), [`reviews/a1-idx/INDEX.md`](reviews/a1-idx/INDEX.md) (the other directors' folders at `1c083c1`). The director did not reread the sources. Several rows are from abstracts only and are marked so in the reports; in particular Guth, Fröhlich–Spencer, Göpfert–Mack and Borgs were read as abstracts. No fetched paper is stored here.
+Read by three workers before the first chain was attacked. Their reports hold the tables with addresses, locators and how each source was read: [`reviews/a1-rig/report.md`](reviews/a1-rig/report.md) (rigorous results), [`reviews/a1-att/report.md`](reviews/a1-att/report.md) (earlier attempts), [`reviews/a1-idx/INDEX.md`](reviews/a1-idx/INDEX.md) (the other directors' folders at `1c083c1`). The director did not reread the sources. Several rows are from abstracts only and are marked so in the reports; in particular Osterwalder–Seiler, Lüscher, Bałaban, Guth, Fröhlich–Spencer, Göpfert–Mack and Borgs were read as abstracts. No fetched paper is stored here.
 
 ## 1. What the official text requires (Jaffe and Witten, read in full for these points)
 
 - Every compact simple gauge group, on ℝ⁴. SU(2) alone would be partial.
 - Existence means axioms at least as strong as Wightman's or Osterwalder–Schrader's, local operators corresponding to gauge-invariant polynomials of the curvature, and short-distance agreement with asymptotic freedom (stress tensor, operator product expansion).
 - The gap: no spectrum of H in (0, Δ) for some Δ > 0; and the theory must not be empty, so a finite mass is required too.
-- Existence by compactness alone is excluded in a footnote.
+- Existence by compactness alone is excluded unless other techniques establish the properties of the limit (footnote 2, p. 12).
 - The text's own list of obstacles: no idea for a gap uniform in the volume; no method for T⁴ → ℝ⁴; no nontrivial four-dimensional Wightman theory known; Bałaban's ultraviolet stability needs extending to expectations of gauge-invariant functions; reflection positivity is lost under most regularizations.
 
 ## 2. What is rigorous and usable
@@ -19,7 +19,7 @@ Read by three workers before the first chain was attacked. Their reports hold th
 | Reflection positivity of the Wilson lattice measure; a self-adjoint strictly positive transfer matrix (Osterwalder–Seiler 1978; Lüscher 1977) | Every β, every compact group. Nothing about the size of the gap. |
 | A gap and area law at strong coupling (Osterwalder–Seiler) | Small β, **every group including U(1)**. Chatterjee: therefore no evidence about weak coupling. |
 | Log-Sobolev, Poincaré and decay of covariances for SU(N) by Bakry–Émery (Shen, Zhu, Zhu, arXiv:2204.12737) | \|β\| < 1/(16(d−1)) in their normalization; for SU(2), d = 4 the Wilson β below 1/12. Ricci N/2 against a Hessian bound 8(d−1)N\|β\|. |
-| Ultraviolet stability in four dimensions (Bałaban, 1985–89) | Uniform bounds on a torus. Not convergence of correlation functions; nothing in the infrared. |
+| Ultraviolet stability in four dimensions (Bałaban, 1987–89; abstract level) | Uniform bounds on a torus. Not convergence of correlation functions; nothing in the infrared. |
 | Two-scale criterion for log-Sobolev inequalities (Grunewald, Otto, Villani, Westdickenberg) | Proved on linear spaces with linear coarse-graining. Not a theorem on SU(N)^E. |
 | Strong decay of correlations plus unbroken center symmetry gives the area law (Chatterjee, arXiv:2006.16229, Thm 2.4 with Def. 2.3) | Needs decay under all boundary conditions on all cubes, and a nontrivial center. |
 | Compact U(1), four dimensions, weak coupling: charges are not confined; a massless phase (Guth 1980; Fröhlich–Spencer 1982) | Villain action. Abstracts only. |
@@ -31,8 +31,8 @@ No rigorous result was found on SU(2) in five dimensions, or on the presence or 
 
 ## 3. Earlier attempts and the holes that sank them
 
-- **Tomboulis (arXiv:0707.2179)**: Migdal–Kadanoff-type decimations bounding the partition function above and below, an interpolation between them, applied also with a center vortex, to bound the vortex free energy by its strong-coupling value. **Ito and Seiler (arXiv:0711.4930, 0803.3019)**: the interpolation needs an inequality between derivatives with and without flux that is not proved; keeping the interpolation non-degenerate needs a parameter r < 1, and with r < 1 the comparison flow need not reach strong coupling. Not accepted as a proof in the surveys read. **The argument has no step that fails for U(1)**, where the conclusion is false; its author remarks that the needed inequalities are easier in the abelian case.
-- **Recent claims** (2025–26), from abstracts only: fixed-cutoff or finite-volume results that by their own account stop short of a four-dimensional construction (arXiv:2611.11534; arXiv:2503.15539); one claimed full construction with no review found (arXiv:2606.19362); one retraction. Several items named on the directors' thread could not be fetched and are not assessed here.
+- **Tomboulis (arXiv:0707.2179)**: Migdal–Kadanoff-type decimations bounding the partition function above and below, an interpolation between them, applied also with a center vortex, to bound the vortex free energy by its strong-coupling value. **Ito and Seiler (arXiv:0711.4930, 0803.3019)**: the interpolation needs an inequality between derivatives with and without flux that is not proved; keeping the interpolation non-degenerate needs a parameter r < 1, and with r < 1 the comparison flow need not reach strong coupling. Not accepted as a proof in the surveys read. **The argument has no step that fails for U(1)**, where the conclusion is false; its author's footnote 10, as quoted by the worker, says that for abelian systems comparison inequalities of the needed type follow from Griffiths' inequalities or can be approached by the same methods, and that all such known methods fail in the non-abelian case.
+- **Recent claims** (2025–26), from abstracts only: fixed-cutoff or finite-volume results that by their own account stop short of a four-dimensional construction (arXiv:2611.11534; arXiv:2503.15539); one claimed full construction with no review found (arXiv:2606.19362; from its abstract the strategy rests on a strong-coupling expansion joined to weak coupling, and a strong-coupling expansion holds for U(1) too); one retraction. Several items named on the directors' thread could not be fetched and are not assessed here.
 
 **Holes a new attempt must not repeat** (the worker's list, shortened):
 

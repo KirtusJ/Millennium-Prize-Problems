@@ -1,0 +1,2 @@
+check K45: exit 0 (expected 0) in 254376 ms | output 45ea0e47790d | event 47 head d14b4529ef62
+  /home/user/z4-workers/a8-micro/report.md — verdicts: STANDS 3, DEFECT 6, NOT CHECKED 0; fidelity: WRONG 6, OVERSTATED 10, UNSUPPORTED 3, OMITTED 9; arithmetic predicates: met 4, failed 1, measured only 2.

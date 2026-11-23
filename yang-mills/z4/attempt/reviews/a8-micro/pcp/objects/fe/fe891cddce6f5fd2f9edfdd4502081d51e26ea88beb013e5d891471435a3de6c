@@ -1,0 +1,17 @@
+I finished the computation and wrote `report.md`. All five predicates I set before the first run were met, and no predicate failed. The control `1/(3.74*0.3690)` came out at 0.725 and is the single line of `control.txt`.
+
+| k | q | xi | P |
+|---|---|----|---|
+| 1 | 0.270 | 0.725 | 0.529 |
+| 2 | 0.323 | 1.005 | 0.681 |
+| 3 | 0.385 | 1.404 | 0.863 |
+
+- **Exponents:** the pairwise exponents are 0.77 for (1,2), 0.71 for (2,3) and 0.74 for (1,3). The log-log least-squares fit gives p = 0.74 with C = 0.674. P is only roughly a power law in xi, since the pairwise exponents range from 0.71 to 0.77.
+- **Sub-agent:** its control, 1.012/3.751, gave 0.270 as expected. Its q and xi values match mine. I reread its script and results, then reran its script in a fresh `rerun/` directory; the output was identical (check K2).
+- **Register:** `init` reported the method packet as not found, as you expected.
+  - `$P verify --ws pcp` last line: "result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)"
+  - `pcpos verify pcp/register.jsonl` last line: "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+
+`result.txt` is opened with mode "x", so a rerun has to copy `calc.py` into a fresh directory first. `report.md` has the exact commands.
+
+Everything is in `/home/user/z4-workers/a8-micro/child`; the grandchild's files are in `grandchild/`.
