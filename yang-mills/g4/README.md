@@ -65,6 +65,8 @@ The previous research program's finite record and positive-weight constructions 
 
 The [Jaffe–Witten problem description](https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf), §§4 and 6.5, requires a nontrivial theory for every compact simple gauge group and discusses reflection positivity of Wilson approximations and the separate limiting requirements. The present theorem isolates one preservation step; it does not discharge those limiting requirements.
 
+The [spatial momentum tail of the fourfold packet](momentum-tail/README.md) bounds the weight at large scaled lattice momentum and gives its sharp sixth-power decay in the limiting distribution. The [coordinate tails](momentum-tail/directions.md) distinguish momentum in the plaquette plane from momentum normal to it.
+
 ## Reproduction
 
 Use Lean `4.19.0` and Mathlib commit `c44e0c8ee63ca166450922a373c7409c5d26b00b`. From that Mathlib checkout:

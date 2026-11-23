@@ -10,6 +10,8 @@ At cutoff $n$, let $a_n>0$ be one step in common units. If $V_n\ge v>0$ and $D_n
 
 **B4’s sharp first-moment bound.** If total mass is at least $v>0$ and the energy first moment is at most $M\ge0$, the tangent line to $E\mapsto e^{-tE}$ at $M/v$ gives $C(t)\ge v\exp(-tM/v)$ for every $t\ge0$. The single atom $v\delta_{M/v}$ attains equality. Lean checks the finite-sum inequality for arbitrary nonnegative weights. Integrating the same tangent proves the positive-measure version under finite mass and finite first moment on nonnegative energies. This sharp bound applies directly at a time selected by another director. [B4’s derivation and independent replay of the earlier lemmas](https://github.com/KirtusJ/Millennium-Prize-Problems/issues/1#issuecomment-7090815043)
 
+The [single-plaquette action estimate](local-action/README.md) compares unfiltered four-dimensional Wilson covariances uniformly in time and resolves the centered action’s low-energy spectral weight at growing lags.
+
 ## A uniform estimate in the E2 transfer model
 
 Use E2’s normalized SU(2) central convolution on Haar space. In representation dimension $n$, its eigenvalue is $\lambda_{\gamma,n}=I_n(\gamma)/I_1(\gamma)$ for $\gamma>0$. Write $r_m=I_{m+1}(\gamma)/I_m(\gamma)$, so $\lambda_{\gamma,n}=\prod_{m=1}^{n-1}r_m$. E2 gives $0<r_m<1$ by its integral representation. [K. Justus, E2 §1](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/blob/aca29276aa180af3c81ccc9f3aa06b4e2ae4d404/edition/PAPERS/E2_Compact_Group_Transfer_Spectra_and_Ultraviolet_Operator_Limits/source/01_editable_Compact_Group_Transfer_Operators.md) · [NIST DLMF 10.32.2](https://dlmf.nist.gov/10.32.E2)

@@ -19,6 +19,14 @@ The energy and three spatial momenta of a single bounded packet can also be reso
 
 At growing time separation before one correlation length, the exponentially tilted packet has a joint energy and momentum limit. Its momentum-to-energy ratio is independent of the scaled energy and has an explicit degree-19 distribution function. [Tilted joint law](fourier-decay/README.md) · [Exact ratio law and the gap-scale test](momentum-ratio/README.md)
 
+For large scaled momenta in the untilted packet, the in-plane tail falls with the sixth power and the normal component with the eighth. An exact tail comparison also identifies the joint energy and direction for growing thresholds. [Directional tail theorem](directional-tail/README.md)
+
+A four-dimensional nearest-neighbor Gaussian control separates three requirements for a fixed local reading: a bounded midpoint ratio, control at every fixed dyadic clock, and a uniform polynomial short-distance bound. The latter can fail for a bounded hypercubic site scalar even when all fixed dyadic ratios stay finite. [Light-mode overlap and Theorem S](local-overlap/README.md)
+
+Free-field controls for the interaction hypothesis exhibit a nonzero raw two-particle shift in a cubic symmetry channel and calculate the full Wick-square susceptibility ratio under two length normalizations. [Interaction criteria and matching](interaction-controls/README.md)
+
+A regular tetrahedron distinguishes the Maxwell action from quadratic observables in finitely many scalar generalized free fields. The same calculation gives the perturbative trace coefficient and gapped free controls for lower-order ultraviolet tests. [Four-point shape test and short-distance matching](short-distance-controls/README.md)
+
 ## Verification
 
 Two three-generation PCP OS deployments returned identical Lean source. The parent counted live links and temporal faces, the child counted distinct reflected faces and their multiplicities, and the grandchild computed a geometric crossing and emitted the general spectral implication. Hosted Lean 4.19.0 verified ten supporting declarations. In particular, fixed-lag convergence of moment arrays with the stated exponential lower bounds forces the contraction norms to tend to one. Each run rejected an invalid guest request and four changed mathematical statements. The identification of the Wilson field, reflection estimates and application of the transfer construction remain analytic proofs. [Lean source](PeriodicCriticality.lean) · [Guest source](worker.c) · [Receipts](receipts.zip)

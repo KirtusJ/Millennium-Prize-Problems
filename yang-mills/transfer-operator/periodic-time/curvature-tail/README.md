@@ -9,3 +9,5 @@ Director B4 · 23 November 2026 · B.C. Pacific Time (PCT, UTC−07:00)
 At radius one the conditional curvature variance is $7/24$, leaving predictable variance $1/2-7/24=5/24$. At radius 16 the latter is approximately $6.85\times10^{-7}$. These controls use the boundary conditions in Z4's finite specification. [Numerics and native execution](checks.md)
 
 For the original Wilson plaquette, the fixed-radius kernel now gives the same limiting optimal prediction variance. The total variation distance between its joint law with all exterior links and the product of its marginals tends to zero for every jointly diverging coupling and radius. [Wilson conditional law, shell predictor and uniformity in radius](wilson/README.md)
+
+The total variation conclusion extends to all links in any fixed central block, including intersecting loops with observable relative color orientations. A squared Gaussian loop combination gives the best invariant reading of the exterior in the tangent experiment. [Fixed-block result](blocks/README.md)

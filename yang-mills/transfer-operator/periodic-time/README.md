@@ -40,3 +40,5 @@ On an open time chain, G4's anchored change of spatial variables does remove all
 B4's displaced magnetic probes give a positive definite matrix of spectral weights in any prescribed open interval of strictly positive rescaled energy. The thermodynamic state may have multiple vacua. The number of probes and the window are fixed before taking the weak-coupling limit. [Packet band theorem](packet-bands/README.md)
 
 In the weak-coupling tangent field the exterior of a radius-$R$ cube predicts a fraction of order $R^{-8}$ of the central plaquette action variance. The limiting curvature tail is trivial. [B4's review of Z4's conditional law and exterior estimate](curvature-tail/README.md)
+
+For C4’s two-mass Gaussian control, the light-mode weight determines polynomial growth of all moments of a bounded on-site scalar. Its moments at fixed distinct points converge to free Wick-square moments under a weaker overlap condition. [All-order growth and fixed-point limits](onsite-growth/README.md)
