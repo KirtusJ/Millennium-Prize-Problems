@@ -1,0 +1,25 @@
+beta=   64 a=0.3000 eps_eff=0.5691517814 eps=0.5827590969 diff=-1.361e-02 beta*diff=-0.8709 conv=1.7e-14
+beta=   64 a=0.6000 eps_eff=1.0646337639 eps=1.0765412970 diff=-1.191e-02 beta*diff=-0.7621 conv=1.0e-14
+beta=   64 a=1.0000 eps_eff=1.5187608017 eps=1.5294503080 diff=-1.069e-02 beta*diff=-0.6841 conv=2.0e-15
+beta=   64 a=1.5708 eps_eff=1.7525609199 eps=1.7627471740 diff=-1.019e-02 beta*diff=-0.6519 conv=2.2e-15
+beta=   64 a=2.2000 eps_eff=1.4677680197 eps=1.4785781849 diff=-1.081e-02 beta*diff=-0.6919 conv=3.1e-15
+beta=   64 a=2.8000 eps_eff=0.6447163593 eps=0.6580393144 diff=-1.332e-02 beta*diff=-0.8527 conv=1.6e-14
+beta=   64 a=0.0500 eps_eff=0.0836968316 eps=0.0999167706 diff=-1.622e-02 beta*diff=-1.0381 conv=1.9e-14
+beta=   64 a=0.1000 eps_eff=0.1840241980 eps=0.1993366418 diff=-1.531e-02 beta*diff=-0.9800 conv=2.2e-14
+beta=  256 a=0.3000 eps_eff=0.5793944107 eps=0.5827590969 diff=-3.365e-03 beta*diff=-0.8614 conv=4.4e-16
+beta=  256 a=0.6000 eps_eff=1.0735877386 eps=1.0765412970 diff=-2.954e-03 beta*diff=-0.7561 conv=1.2e-14
+beta=  256 a=1.0000 eps_eff=1.5267957419 eps=1.5294503080 diff=-2.655e-03 beta*diff=-0.6796 conv=2.0e-14
+beta=  256 a=1.5708 eps_eff=1.7602167091 eps=1.7627471740 diff=-2.530e-03 beta*diff=-0.6478 conv=2.4e-14
+beta=  256 a=2.2000 eps_eff=1.4758939084 eps=1.4785781849 diff=-2.684e-03 beta*diff=-0.6872 conv=1.9e-14
+beta=  256 a=2.8000 eps_eff=0.6547424923 eps=0.6580393144 diff=-3.297e-03 beta*diff=-0.8440 conv=3.0e-15
+beta=  256 a=0.0500 eps_eff=0.0960600777 eps=0.0999167706 diff=-3.857e-03 beta*diff=-0.9873 conv=2.0e-14
+beta=  256 a=0.1000 eps_eff=0.1955978905 eps=0.1993366418 diff=-3.739e-03 beta*diff=-0.9571 conv=1.4e-14
+beta= 1024 a=0.3000 eps_eff=0.5819201724 eps=0.5827590969 diff=-8.389e-04 beta*diff=-0.8591 conv=2.0e-14
+beta= 1024 a=0.6000 eps_eff=1.0758043373 eps=1.0765412970 diff=-7.370e-04 beta*diff=-0.7546 conv=2.0e-14
+beta= 1024 a=1.0000 eps_eff=1.5287877624 eps=1.5294503080 diff=-6.625e-04 beta*diff=-0.6784 conv=2.6e-14
+beta= 1024 a=1.5708 eps_eff=1.7621155493 eps=1.7627471740 diff=-6.316e-04 beta*diff=-0.6468 conv=2.2e-14
+beta= 1024 a=2.2000 eps_eff=1.4779082394 eps=1.4785781849 diff=-6.699e-04 beta*diff=-0.6860 conv=2.5e-14
+beta= 1024 a=2.8000 eps_eff=0.6572171681 eps=0.6580393144 diff=-8.221e-04 beta*diff=-0.8419 conv=1.9e-14
+beta= 1024 a=0.0500 eps_eff=0.0989617103 eps=0.0999167706 diff=-9.551e-04 beta*diff=-0.9780 conv=6.4e-15
+beta= 1024 a=0.1000 eps_eff=0.1984069588 eps=0.1993366418 diff=-9.297e-04 beta*diff=-0.9520 conv=4.7e-15
+met 64 failed 0 []

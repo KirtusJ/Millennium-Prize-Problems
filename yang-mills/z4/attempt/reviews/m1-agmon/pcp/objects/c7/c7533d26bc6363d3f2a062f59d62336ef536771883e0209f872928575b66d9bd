@@ -1,0 +1,57 @@
+b=   16 p=0.25 H=0.0 logR/(p^2/2)=1.0104 logBmin/(p^2/2)=30.1851 K1=True
+b=   16 p=0.25 H=1.0 logR/(p^2/2)=15.5258 logBmin/(p^2/2)=639.1952 K1=True
+b=   16 p=0.50 H=0.0 logR/(p^2/2)=1.0115 logBmin/(p^2/2)=27.4035 K1=True
+b=   16 p=0.50 H=1.0 logR/(p^2/2)=4.9293 logBmin/(p^2/2)=184.9316 K1=True
+b=   16 p=1.00 H=0.0 logR/(p^2/2)=1.0159 logBmin/(p^2/2)=19.3211 K1=True
+b=   16 p=1.00 H=1.0 logR/(p^2/2)=2.3003 logBmin/(p^2/2)=58.7993 K1=True
+b=   16 p=1.88 H=0.0 logR/(p^2/2)=1.0322 logBmin/(p^2/2)=11.7241 K1=True
+b=   16 p=1.88 H=1.0 logR/(p^2/2)=2.3185 logBmin/(p^2/2)=22.8939 K1=True
+b=   16 p=3.00 H=0.0 logR/(p^2/2)=1.0794 logBmin/(p^2/2)=7.7318 K1=True
+b=   16 p=3.00 H=1.0 logR/(p^2/2)=3.6535 logBmin/(p^2/2)=12.1183 K1=True
+b=16 radial p=0.25: logR_rad/(p^2/2) = 13.283
+b=   64 p=0.25 H=0.0 logR/(p^2/2)=1.0027 logBmin/(p^2/2)=4.8014 K1=True
+b=   64 p=0.25 H=1.0 logR/(p^2/2)=7.5827 logBmin/(p^2/2)=730.2661 K1=True
+b=   64 p=0.50 H=0.0 logR/(p^2/2)=1.0029 logBmin/(p^2/2)=2.3100 K1=True
+b=   64 p=0.50 H=1.0 logR/(p^2/2)=2.7578 logBmin/(p^2/2)=232.8320 K1=True
+b=   64 p=1.00 H=0.0 logR/(p^2/2)=1.0039 logBmin/(p^2/2)=4.8042 K1=True
+b=   64 p=1.00 H=1.0 logR/(p^2/2)=1.5532 logBmin/(p^2/2)=83.3407 K1=True
+b=   64 p=1.88 H=0.0 logR/(p^2/2)=1.0074 logBmin/(p^2/2)=13.7555 K1=True
+b=   64 p=1.88 H=1.0 logR/(p^2/2)=1.2709 logBmin/(p^2/2)=36.0951 K1=True
+b=   64 p=3.00 H=0.0 logR/(p^2/2)=1.0152 logBmin/(p^2/2)=11.6572 K1=True
+b=   64 p=3.00 H=1.0 logR/(p^2/2)=1.2159 logBmin/(p^2/2)=20.4302 K1=True
+b=64 radial p=0.25: logR_rad/(p^2/2) = 13.245
+b=  256 p=0.25 H=0.0 logR/(p^2/2)=1.0007 logBmin/(p^2/2)=2.4196 K1=True
+b=  256 p=0.25 H=1.0 logR/(p^2/2)=4.1680 logBmin/(p^2/2)=9.5021 K1=True
+b=  256 p=0.50 H=0.0 logR/(p^2/2)=1.0007 logBmin/(p^2/2)=1.5290 K1=True
+b=  256 p=0.50 H=1.0 logR/(p^2/2)=1.8428 logBmin/(p^2/2)=3.4527 K1=True
+b=  256 p=1.00 H=0.0 logR/(p^2/2)=1.0010 logBmin/(p^2/2)=1.2513 K1=True
+b=  256 p=1.00 H=1.0 logR/(p^2/2)=1.2618 logBmin/(p^2/2)=40.1744 K1=True
+b=  256 p=1.88 H=0.0 logR/(p^2/2)=1.0018 logBmin/(p^2/2)=1.1910 K1=True
+b=  256 p=1.88 H=1.0 logR/(p^2/2)=1.1240 logBmin/(p^2/2)=36.3970 K1=True
+b=  256 p=3.00 H=0.0 logR/(p^2/2)=1.0036 logBmin/(p^2/2)=9.2581 K1=True
+b=  256 p=3.00 H=1.0 logR/(p^2/2)=1.0931 logBmin/(p^2/2)=26.8040 K1=True
+b=256 radial p=0.25: logR_rad/(p^2/2) = 13.235
+b= 1024 p=0.25 H=0.0 logR/(p^2/2)=1.0002 logBmin/(p^2/2)=1.4943 K1=True
+b= 1024 p=0.25 H=1.0 logR/(p^2/2)=2.5567 logBmin/(p^2/2)=4.8683 K1=True
+b= 1024 p=0.50 H=0.0 logR/(p^2/2)=1.0002 logBmin/(p^2/2)=1.2265 K1=True
+b= 1024 p=0.50 H=1.0 logR/(p^2/2)=1.4135 logBmin/(p^2/2)=2.1280 K1=True
+b= 1024 p=1.00 H=0.0 logR/(p^2/2)=1.0002 logBmin/(p^2/2)=1.1079 K1=True
+b= 1024 p=1.00 H=1.0 logR/(p^2/2)=1.1278 logBmin/(p^2/2)=1.3865 K1=True
+b= 1024 p=1.88 H=0.0 logR/(p^2/2)=1.0005 logBmin/(p^2/2)=1.0848 K1=True
+b= 1024 p=1.88 H=1.0 logR/(p^2/2)=1.0597 logBmin/(p^2/2)=1.2356 K1=True
+b= 1024 p=3.00 H=0.0 logR/(p^2/2)=1.0009 logBmin/(p^2/2)=1.1028 K1=True
+b= 1024 p=3.00 H=1.0 logR/(p^2/2)=1.0439 logBmin/(p^2/2)=1.2059 K1=True
+b=1024 radial p=0.25: logR_rad/(p^2/2) = 13.233
+b= 4096 p=0.25 H=0.0 logR/(p^2/2)=1.0000 logBmin/(p^2/2)=1.2124 K1=True
+b= 4096 p=0.25 H=1.0 logR/(p^2/2)=1.7719 logBmin/(p^2/2)=2.8416 K1=True
+b= 4096 p=0.50 H=0.0 logR/(p^2/2)=1.0000 logBmin/(p^2/2)=1.0869 K1=True
+b= 4096 p=0.50 H=1.0 logR/(p^2/2)=1.2049 logBmin/(p^2/2)=1.5561 K1=True
+b= 4096 p=1.00 H=0.0 logR/(p^2/2)=1.0001 logBmin/(p^2/2)=1.0519 K1=True
+b= 4096 p=1.00 H=1.0 logR/(p^2/2)=1.0632 logBmin/(p^2/2)=1.1948 K1=True
+b= 4096 p=1.88 H=0.0 logR/(p^2/2)=1.0001 logBmin/(p^2/2)=1.0398 K1=True
+b= 4096 p=1.88 H=1.0 logR/(p^2/2)=1.0294 logBmin/(p^2/2)=1.1026 K1=True
+b= 4096 p=3.00 H=0.0 logR/(p^2/2)=1.0002 logBmin/(p^2/2)=1.0518 K1=True
+b= 4096 p=3.00 H=1.0 logR/(p^2/2)=1.0214 logBmin/(p^2/2)=1.0945 K1=True
+b=4096 radial p=0.25: logR_rad/(p^2/2) = 13.232
+K1 cases 50 qualifying (some eta with beta'>0) 50
+met 121 failed 4 ['K2 b=1024 p=0.25 H=1.0', 'K2 b=1024 p=0.5 H=1.0', 'K2 b=4096 p=0.25 H=1.0', 'K2 b=4096 p=0.5 H=1.0']

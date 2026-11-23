@@ -1,0 +1,18 @@
+Finished. I wrote `report.md` in `/home/user/z4-workers/m1-agmon/child/`.
+
+- **Control:** arccosh(3) = 1.762747.
+- **Result:** eps_eff − eps is negative in all 21 cases and of order 1/β.
+  - (eps_eff − eps)·β is roughly constant at fixed a, drifting about 2–3% between β = 256 and 1024. It is about −0.65 at a = π/2 and about −0.95 at a = 0.1 and 3.0.
+  - (eps_eff − eps)·√β is not constant. It halves each time β quadruples.
+- **Hint:** the numerical checks passed (V identity, Haar uniformity of t by Monte Carlo, orthonormality of P̃_j, the Bessel ratios l_j). I did not test kernel positivity or the commutation numerically. I took both from argument, so the reduction to the Legendre matrix is argued, not checked on the full operator.
+- **Convergence:** truncation and quadrature both met 1e-9 in 21 of 21 cases.
+- **Failed predicates, kept in the report:**
+  - Run 1 crashed with an overflow in my own Bessel series.
+  - "Smallest eigenvalue of M positive" failed in 6 of 21 cases (roundoff noise, about −1e-17).
+  - My expectation that eps_eff > eps was wrong (0 of 21).
+- **Grandchild T133:** it recomputed β = 64 with Simpson quadrature instead of Gauss-Legendre. It got 1.75256092 at a = π/2 and 0.18402420 at a = 0.1, matching mine to 8 digits. I reran its script and got identical output, then released T133.
+- **PCP verify:**
+  - The Python verify line ends "result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)".
+  - The Rust verify line ends "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+
+The exact rerun commands are at the end of `report.md`.

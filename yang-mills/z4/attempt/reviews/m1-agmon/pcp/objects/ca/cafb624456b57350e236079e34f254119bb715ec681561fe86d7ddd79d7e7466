@@ -1,0 +1,2 @@
+/home/user/z4-workers/m1-agmon/kernel_lemma.py:58: RuntimeWarning: overflow encountered in exp
+  outer = (beta/(2*np.pi))**1.5*2*np.pi**2*np.exp(-beta*(1-np.cos(eta)) + np.sqrt(beta)*(p*np.pi + H*np.pi**2/2))

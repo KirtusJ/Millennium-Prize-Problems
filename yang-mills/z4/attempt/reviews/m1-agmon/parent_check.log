@@ -1,0 +1,2 @@
+check K97: exit 0 (expected 0) in 1100207 ms | output 669f6a66681b | event 99 head d1631243b2f9
+  /home/user/z4-workers/m1-agmon/report.md — STANDS 5, DEFECT 3, NOT CHECKED 3; the upper bound on the splitting (liminf −log m_eo/√β ≥ c*) is proved only if the unproved Lemma F holds (fibre energy ε_eff(a) ≥ 2asinh(sin a) − o(1) uniformly), and the lower bound on the splitting (limsup ≤ c*) is missing.

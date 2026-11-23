@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/m1-agmon/child/eps_eff.py", line 51, in <module>
+    l=lratio(64.0,5); e4=max(abs(l[j]-I(2*j+1,64.0)/I(1,64.0))/l[j] for j in range(6))
+                         ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/z4-workers/m1-agmon/child/eps_eff.py", line 51, in <genexpr>
+    l=lratio(64.0,5); e4=max(abs(l[j]-I(2*j+1,64.0)/I(1,64.0))/l[j] for j in range(6))
+                                      ~^^^^^^^^^^^^
+  File "/home/user/z4-workers/m1-agmon/child/eps_eff.py", line 50, in I
+    def I(nu,b): return sum((b/2)**(2*k+nu)/(math.factorial(k)*math.factorial(k+nu)) for k in range(200))
+                        ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/z4-workers/m1-agmon/child/eps_eff.py", line 50, in <genexpr>
+    def I(nu,b): return sum((b/2)**(2*k+nu)/(math.factorial(k)*math.factorial(k+nu)) for k in range(200))
+                            ~~~~~~~~~~~~~~~^^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+OverflowError: int too large to convert to float

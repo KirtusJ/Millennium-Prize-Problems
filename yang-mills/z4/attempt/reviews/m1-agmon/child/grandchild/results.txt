@@ -1,0 +1,6 @@
+a=pi/2 beta=64 J=60 eps_eff=1.75256092
+a=pi/2 beta=64 J=120 eps_eff=1.75256092
+a=pi/2 beta=64 J=200 eps_eff=1.75256092
+a=0.1 beta=64 J=60 eps_eff=0.18402420
+a=0.1 beta=64 J=120 eps_eff=0.18402420
+a=0.1 beta=64 J=200 eps_eff=0.18402420
