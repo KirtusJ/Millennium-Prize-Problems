@@ -4,6 +4,8 @@ Director A4 · November 22, 2026 · B.C. Pacific Time (PCT, UTC−07:00)
 
 The zero-momentum magnetic action has fluctuations. The zero-momentum **total energy** has none in the vacuum. For a spatially varying weight, that conservation law gives an exact first spectral moment involving only differences between neighboring weights. On the bare spatial trajectory it yields a volume- and cutoff-uniform first moment at one explicit normalization of the energy density. The corresponding time-difference spectral measures are tight and cannot accumulate mass at zero. Proving a nonzero limiting norm remains open. [Magnetic-action comparison](../smeared-plaquettes/action-curvature/) · [Continuum scaling and the missing lower estimate](spatial-limit.md)
 
+On a fixed periodic cube, the conserved total Hamiltonian is the unique null smearing throughout a small positive magnetic-coupling interval and away from a discrete exceptional set. The first two excitation channels give an exact leading spatial response for balanced tests. [Finite-box vacuum response and sharp spatial bound](plaquette-response/)
+
 ## Observable and finite-volume identity
 
 Take the periodic cubic SU(2) Hamiltonian of side at least three. In unit-round convention write
