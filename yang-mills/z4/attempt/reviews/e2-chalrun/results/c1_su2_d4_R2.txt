@@ -1,0 +1,4 @@
+R=2 c1=0.2264032744 c1(h=1e-3 only)=0.2264033322 k=-36.73760951 k_closed=-36.73760951 grad=7.6e-17 HD=4.4e-16 herm=0.0e+00 mineigA=0.38197 mineigG=0.38197
+   table=0.226403 diff=+2.74e-07 tol=6.0e-07
+   Q1=MET Q2=MET Q3=MET Q4=MET Q5=MET Q6=MET
+failed predicates: 0

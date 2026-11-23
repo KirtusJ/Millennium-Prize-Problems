@@ -1,0 +1,21 @@
+R=2 c1=0.2287514820 c1(h=1e-3 only)=0.2287515004 k=-9.18440238 k_closed=-9.18440238 grad=1.1e-16 HD=1.8e-15 herm=0.0e+00 mineigA=0.38197 mineigG=0.38197 trace_formula=0.2113388123
+   table=0.228751 diff=+4.82e-07 tol=6.0e-07
+   Q1=MET Q2=MET Q3=MET Q4=MET Q5=MET Q7=MET Q8=FAILED Q9=MET
+R=3 c1=0.2293161128 c1(h=1e-3 only)=0.2293161158 k=-9.37700159 k_closed=-9.37700159 grad=1.1e-16 HD=3.6e-15 herm=2.2e-16 mineigA=0.19806 mineigG=0.19806 trace_formula=0.2258322858
+   table=0.229316 diff=+1.13e-07 tol=6.0e-07
+   Q1=MET Q2=MET Q3=MET Q4=MET Q5=MET Q7=MET Q8=FAILED Q9=MET
+R=4 c1=0.2330565641 c1(h=1e-3 only)=0.2330565650 k=-9.40964547 k_closed=-9.40964547 grad=5.6e-17 HD=2.2e-15 herm=2.2e-16 mineigA=0.12061 mineigG=0.12061 trace_formula=0.2319343331
+   table=0.233057 diff=-4.36e-07 tol=6.0e-07
+   Q1=MET Q2=MET Q3=MET Q4=MET Q5=MET Q7=MET Q8=FAILED Q9=MET
+R=5 c1=0.2360588832 c1(h=1e-3 only)=0.2360588836 k=-9.41857793 k_closed=-9.41857793 grad=5.6e-17 HD=5.2e-15 herm=2.2e-16 mineigA=0.08101 mineigG=0.08101 trace_formula=0.2355930750
+   table=0.236059 diff=-1.17e-07 tol=6.0e-07
+   Q1=MET Q2=MET Q3=MET Q4=MET Q5=MET Q7=MET Q8=FAILED Q9=MET
+R=6 c1=0.2382527857 c1(h=1e-3 only)=0.2382527859 k=-9.42178767 k_closed=-9.42178767 grad=1.1e-16 HD=5.0e-15 herm=8.9e-16 mineigA=0.05812 mineigG=0.05812 trace_formula=0.2380260219
+   table=0.238253 diff=-2.14e-07 tol=6.0e-07
+   Q1=MET Q2=MET Q3=MET Q4=MET Q5=MET Q7=MET Q8=FAILED Q9=MET
+R=7 c1=0.2398783493 c1(h=1e-3 only)=0.2398783493 k=-9.42316381 k_closed=-9.42316381 grad=8.3e-17 HD=4.6e-15 herm=8.9e-16 mineigA=0.04370 mineigG=0.04370 trace_formula=0.2397551035
+   Q1=MET Q2=MET Q3=MET Q4=MET Q5=MET Q8=FAILED Q9=MET
+R=8 c1=0.2411188372 c1(h=1e-3 only)=0.2411188376 k=-9.42383175 k_closed=-9.42383175 grad=2.8e-17 HD=5.8e-15 herm=8.9e-16 mineigA=0.03405 mineigG=0.03405 trace_formula=0.2410462172
+   table=0.241119 diff=-1.63e-07 tol=6.0e-07
+   Q1=MET Q2=MET Q3=MET Q4=MET Q5=MET Q7=MET Q8=FAILED Q9=MET
+failed predicates: 7

@@ -1,0 +1,3 @@
+arccos form: np.float64(0.45015819559821363)
+arcsin form (stable): np.float64(0.45015819559174136)
+exact sqrt(2)/pi=np.float64(0.4501581580785531)

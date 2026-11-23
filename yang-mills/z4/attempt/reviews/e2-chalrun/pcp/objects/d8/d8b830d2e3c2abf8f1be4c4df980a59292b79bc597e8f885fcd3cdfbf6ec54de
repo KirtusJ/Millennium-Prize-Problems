@@ -1,0 +1,7 @@
+R=10 c1=0.2428761130 c1(h=1e-3 only)=0.2428761137 k=-9.42439039 k_closed=-9.42439039 grad=8.3e-17 HD=5.6e-15 herm=4.4e-16 mineigA=0.02234 mineigG=0.02234 trace_formula=0.2428761160
+   Q1=MET Q2=MET Q3=MET Q4=MET Q5=MET Q8=MET Q9=MET
+R=12 c1=0.2440566116 c1(h=1e-3 only)=0.2440566098 k=-9.42459105 k_closed=-9.42459105 grad=5.6e-17 HD=6.8e-15 herm=8.9e-16 mineigA=0.01577 mineigG=0.01577 trace_formula=0.2440566073
+   Q1=MET Q2=MET Q3=MET Q4=MET Q5=MET Q8=MET Q9=MET
+R=16 c1=0.2455385825 c1(h=1e-3 only)=0.2455385360 k=-9.42471883 k_closed=-9.42471882 grad=2.8e-17 HD=6.7e-15 herm=8.9e-16 mineigA=0.00906 mineigG=0.00906 trace_formula=0.2455384420
+   Q1=MET Q2=MET Q3=MET Q4=MET Q5=MET Q8=FAILED Q9=MET
+failed predicates: 1

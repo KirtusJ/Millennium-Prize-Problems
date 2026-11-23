@@ -1,0 +1,12 @@
+QA1 sample Cov=0.61668 formula=0.61754 se=0.00347 -> MET
+QA2 cases with Var>0: 3000/3000; violations of ratio>=c(1)=1.897490e-02: 0 -> MET; worst ratio 1.897490e-02 at (d,case)=(4, 1058)
+QA3 d=1 ratio=1.897489720036e-02 c1=1.897489720036e-02 -> MET
+QA3 d=3 ratio=1.897489720036e-02 c1=1.897489720036e-02 -> MET
+QA3 d=4 ratio=1.897489720036e-02 c1=1.897489720036e-02 -> MET
+QA3 d=8 ratio=1.897489720036e-02 c1=1.897489720036e-02 -> MET
+QA3 d=248 ratio=1.897489720036e-02 c1=1.897489720036e-02 -> MET
+QB0 closed form vs matrix form, 200 random configs: max diff 1.07e-14 -> MET (tol 1e-12 roundoff)
+QB1 patterns with min S<1e-8: 1 [(1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)] -> MET
+QB2 smallest min S over the 127 other patterns = 6.000000000 -> MET
+distinct minima (rounded 1e-6): [0.0, 6.0, 10.0, 12.0, 14.0, 16.0]
+failures: 0

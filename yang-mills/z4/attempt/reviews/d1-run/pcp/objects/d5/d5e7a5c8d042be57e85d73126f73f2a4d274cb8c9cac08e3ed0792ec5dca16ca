@@ -1,0 +1,19 @@
+c1(4) = **+0.312997**. I did not run R = 6: the dense 13608-dimensional determinants would not fit the 6-minute budget.
+
+- **Control:** `control.txt` holds 3.698130.
+- **Value of c1(4):** the finite-difference step h = 0.01 gives 0.313009 and h = 0.02 gives 0.313044. The two differ by 1.1e-4 relative, so I took the Richardson combination.
+- **Intermediate numbers:** Γ1′(π/4) = 11.78078 and k = 4 dS0/dη = −37.638582.
+- **Finite-difference step:** I built H from plaquette-local central differences of the exact action with step 1e-4. Truncation error is about 1e-8 and roundoff about 1e-8.
+- **Checks, all passed:**
+  - Gradient of S at V: max 3e-12.
+  - S(V) matches the closed-form S0 to 1e-13.
+  - max |H D| is 1.6e-7, against a tolerance of 1e-6; this is finite-difference noise.
+  - The smallest eigenvalue of H + DD^T is 0.1457, so it is positive.
+  - D^T D has full rank (smallest eigenvalue 0.196, 577 gauge columns).
+- **Failed predicate, my own bug:** my program used k = +|4 dS0/dη|. S0 depends on π − 2η, so k is negative, and the first run's c1 came out as −0.312997. `result_R4.json` keeps that wrong-sign run. `fixsign.py` writes the corrected `result_R4_signfixed.json`.
+- **Grandchild T41:** I admitted and then released it. After its control (3.698130) it recomputed S(V) from the plaquettes; that agrees with the closed form to 1.4e-14. Its finite-difference k is −37.638582, and its magnitude matches 24R² sin(π/32) to 2.5e-11. Its predicate failed only on sign, because my brief gave the closed form as +24R² sin(u).
+- **PCP verify:** the Python line is "result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)". The Rust last line is "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+- **Not checked:** R = 6, and a second recomputation of Γ1 by another route.
+- **Rerun:** `OMP_NUM_THREADS=1 python3 sf1loop.py 4 new_R4.json; python3 fixsign.py`. Result files are never overwritten, so use new filenames (`fixsign.py` hard-codes its output name, so move the old one first).
+
+Everything is in `/home/user/z4-workers/d1-run/child`: `report.md`, `notes.md`, `sf1loop.py` and `grandchild/`.

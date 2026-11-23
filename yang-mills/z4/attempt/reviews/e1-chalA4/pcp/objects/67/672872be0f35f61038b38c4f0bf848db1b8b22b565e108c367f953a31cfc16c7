@@ -1,0 +1,6 @@
+'YangMills.LocalAction.pairReflection' depends on axioms: [propext, Quot.sound]
+'YangMills.LocalAction.blockSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.LocalAction.actionRemainder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.LocalAction.wickAction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.LocalAction.balance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.LocalAction.tiltError' depends on axioms: [propext, Classical.choice, Quot.sound]

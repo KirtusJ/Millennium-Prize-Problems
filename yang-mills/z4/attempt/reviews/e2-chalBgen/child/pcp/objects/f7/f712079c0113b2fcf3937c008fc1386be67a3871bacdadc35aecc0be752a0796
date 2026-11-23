@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/e2-chalBgen/child/scan.py", line 11, in <module>
+    from scipy.optimize import minimize
+ModuleNotFoundError: No module named 'scipy'

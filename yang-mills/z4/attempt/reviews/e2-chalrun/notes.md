@@ -1,0 +1,17 @@
+# notes e2-chalrun (T48)
+- step0: control.txt = 0.272341 (-ln tanh 1). Lean READY exists (not used).
+- step1: read RUNNING.md. Register pcp initialised (method not found, expected).
+- step2: child admitted as T51 (parent T48). child/PROMPT.txt written (U(1) c1 R=2..8, control 1/(2cos(pi/8))=0.541196). Child launched in background via $P check child-run1.
+- No scipy on machine; only numpy. Plan: own Fourier-block program for SU(2) and U(1), with dense full-lattice cross-check at R=2,3.
+- step3: c1chk.py written (predicates Q1-Q10 in docstring). su2 R=2: c1=0.2264032744 vs 0.226403 MET.
+- step4: SU(2) d=4 R=2,3,4,5,6,8: all agree with RUNNING.md table (R=6: 0.3542203018 vs 0.35422030; R=8: 0.3837042883 vs 0.38370429). Q1-Q6 MET.
+- step5: U(1) d=4 R=2..8: FD c1 agrees with table (Q7 MET all 6 listed R; R=7 = 0.2398783493 new). Q8 FAILED 7/7: my trace used the background Hessian of timelike plaquettes (= cos(theta) * Maxwell H_t), not Maxwell H_t. OWN DEFECT (implementation of the predicate), not target: trace/cos(theta) reproduces FD c1 (checked by hand, see below). Fix in v2 run.
+- step6: child T51 returned. Control 0.541196 CORRECT (graded first). Child c1(U1) R=2..8 match mine to 1e-9 (R=7 0.239878349 both). Released T51. Rerun of child program: K5 failed (exit 1: needs control.txt in cwd, my setup error); rerun K6 in child_rerun2 with control.txt copied.
+- step7: v2 U(1) run (K10): Q8 MET 7/7 after dividing by cos(theta); FD and trace formula agree <=1e-10. Dense cross-checks (K7-K9) su2 R=2,3, u1 R=3: dense = Fourier to <2e-12, Q10 MET.
+- step8: d=3 SU(2) R=4,6,8,12,16: 0.666685, 0.953044, 1.235642, 1.796349, 2.354139 -- agree with RUNNING.md d=3 values. Q5 FAILED 5/5: absolute 1e-7 tolerance assumed c1~0.3; here c1~1-2 and |k| small, h-spread 2e-7..9e-7 (rel ~4e-7). OWN EXPECTATION defect, not the target.
+- step9: web-fetch agent sent to arxiv hep-lat/9207009 for Table 1 / Theorem / c_t locators.
+- step10: d=5 SU(2) R=2,3,4 (K12): 0.165846, 0.190818, 0.199939 (measured only; file did not compute d=5). 2b0 ln2 = 0.0643780. Table diffs / (2b0 ln2) = 1.345,1.125,1.098,1.100,1.097,1.084 (R=4..16); non-monotone at R=10; 2-point a+b/R extrapolations give 0.067-0.069, not 0.0644.
+- step11: grandchild program rerun under my register (K13): R=2 U(1) c1=0.228751482, same as child/me.
+- step12: LNWW source (arXiv HTML v1, partly verbatim, rest model-extracted): Table 1 values for L/a=6..16 match the file (extraction-level); L/a=4,5 not in table. Theorem 1 sect 5.2, proof Appendix B; condition TL/a^2 > (N-1)pi^2 max(1,N/16) -> R>=4 for SU(2) (extraction). Sect 3.3 verbatim: zero modes "not discussed" (builder's statement confirmed). Lattice gauge transformations eq 4.5 (verbatim per fetch): Omega=Lambda at x0=0, 1 at x0=T (as reported); constant diagonal ghost modes allegedly treated in sect 6.5 (unverified). c_t used for Table 1: NOT FOUND. eq (5.11) cited by builder: NOT FOUND.
+- step13: SU(2) R=10: 0.4064416741 (table 0.40644167), R=12: 0.4248310666 (0.42483107). U(1) R=10 0.2428761130 (0.242876), R=12 0.2440566116 (0.244057). All agree. R=16 running.
+- step14: R=16: SU(2) 0.4534774457 (table 0.45347745) all met; U(1) 0.2455385825 (table 0.245539), Q8 FAILED (FD vs trace 1.4e-7 > 1e-7: own tolerance, roundoff grows with 4096 blocks). Register verified.

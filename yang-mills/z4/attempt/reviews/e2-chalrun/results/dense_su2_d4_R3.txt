@@ -1,0 +1,1 @@
+su2 d=4 R=3 dense=0.2817967447 fourier=0.2817967447 diff=-3.81e-13 Q10=MET

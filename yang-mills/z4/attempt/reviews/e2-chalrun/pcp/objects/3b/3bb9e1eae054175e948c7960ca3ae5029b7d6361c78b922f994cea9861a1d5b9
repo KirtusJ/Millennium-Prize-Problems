@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/e2-chalrun/child_rerun/c1_sf.py", line 110, in <module>
+    ctl = open("control.txt").read().strip()
+          ~~~~^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'control.txt'

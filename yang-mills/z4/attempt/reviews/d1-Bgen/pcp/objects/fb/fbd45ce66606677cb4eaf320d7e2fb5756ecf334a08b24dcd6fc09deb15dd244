@@ -1,0 +1,31 @@
+The sub-agent (task T39) is running its independent check of the SU(3) constant c. I'll finish report.md and the PCP OS verification once it returns.
+
+Both (A) and (B) held for SU(3) and U(1), with one failed predicate that was my own mistake. report.md has the full table.
+
+**Results**
+- **(A) U(1):** Monte Carlo matches the exact arccos(1−s)/π within 5σ at four values of s. The exact slope on [1e-3, 1e-2] is 0.5003.
+- **(A) SU(3):** The Weyl-formula slope on [1e-3, 1e-2] is 4.0008, and V/s⁴ settles at about 0.620. Direct Haar sampling agrees with Weyl at 8 points in s∈[0.15, 0.5], all within 1σ. The local slope there is 3.94 for direct sampling and 3.93 for Weyl. Slope 4 is only asymptotic.
+- **(B):** For 30 random X each, the relative error stays under 2t²‖X‖² at t=1e-2 and 1e-3. The error ratio between t=0.1 and t=0.01 has median 99.5, as expected for O(t²).
+- **Sampler:** QR of a complex Ginibre matrix with phase correction, then division by the principal cube root of the determinant. It gives max|det−1| = 1.7e-15 and E|trU|² = 0.999. The Weyl density normalizes to 0.99975 ± 0.0006.
+
+**Failed predicate:** P4 (direct SU(3) slope on s∈[0.02, 0.12], 4e6 samples) failed. V(s) is about 1e-7 at s=0.02, so there were 0 to 471 hits and the slope came out NaN. That was my own expectation, not a defect in the target. I kept it and added P4b on a larger window, declared after seeing P4 fail, so it is post-hoc. P4b passed. The register records the main run (t37_main) as exit 1 for the same reason.
+
+**Delegated check (task T39):** The sub-agent computed c = lim V(s)/s⁴ by deterministic quadrature and got 0.620245, which matches the closed form 9√3/(8π) and my Monte Carlo value. Its known-answer control gave 0.4501582 against √2/π = 0.4501581. I reread its result.md and reran control.py and su3.py in a copy, and the output was identical. I released T39 with task-release.
+
+**Not checked:** the two-sided bounds for every s, as opposed to the slope and the limit. Other groups and representations. Finite-s corrections to c.
+
+**PCP OS verify, last lines:**
+- Python: `result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)`
+- Rust: `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.`
+
+**Count:** 12 predicates met, 1 failed (P4), and the slope values and c are measured only.
+
+**Rerun:** `python3 t37.py`, `python3 t37b.py`, then `python3 control.py` and `python3 su3.py` in `grandchild/` after deleting their outputs. The exact PCP commands are in report.md.
+
+Files are in `/home/user/z4-workers/d1-Bgen/child`:
+- report.md
+- notes.md
+- control.txt
+- t37.py
+- t37b.py
+- grandchild/result.md

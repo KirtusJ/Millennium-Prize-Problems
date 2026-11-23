@@ -1,0 +1,9 @@
+- 14:52:35 control 0.272341 written; register init; child admitted T49, launched (O(2) minimal-box minimization).
+- Read THEOREM_B_GENERAL.md, general.tex, sec_proof_SU2.tex (all).
+- Analytic checks done by hand (details in report): C1-C3, injectivity radius pi/sqrt(N), Jordan Jacobian bound, Lemma V constants, counterexample U(1) charge1+chargek (lim V/sqrt t = 2/(pi sqrt(1+k^2)), V(1)~1/2), Vol_rho(SU(3)) = sqrt3 (2pi)^5/(2*81) from Macdonald's formula rescaled by 3^{-4}: gives 9sqrt3/(8pi) OK; N1 far region, N2 near region constants OK.
+- A1(i): box gauge fixes T_int (time link of x0 set to 1) + tree on shell; with that, Cor zero(1) gives unique zero for any group; gauge copies by reflection at x0 exist only without gauge fixing.
+- C_pp=7/24 rederived: R_1 is the cocktail-party graph K_{2,2,2,2} on 8 arms, Foster: sum of edge resistances = 7 over 24 edges.
+- Found: general.tex says d:=dim G and 'otherwise replace G by rho(G)' but never requires dim rho(G)>=1 nor says d means dim rho(G): with non-faithful rho, Var X0 >= d/8 is false (e.g. U(1)xSU(2), rho = SU(2) fundamental only: 3 colours, d=4). Minor statement defect; md H2 states it correctly.
+- Note: brief's example U(1)xSU(2), rho = charge3 + fund is NOT faithful (kernel Z_3 in U(1)); rho(G) iso to U(1)xSU(2), d=4 unchanged.
+- box_mc (K2) all P met; child report read, control 2 graded correct first; child scan + grandchild gc rerun identical (K3,K4); T49 released; ratio_check (K5) all met.
+- report.md written.

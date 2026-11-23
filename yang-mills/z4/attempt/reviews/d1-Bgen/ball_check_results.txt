@@ -1,0 +1,13 @@
+B1: MET V/s^4=0.62022 c_formula=0.620245 9sqrt3/(8pi)=0.620245
+B1': MET V/s^1.5=0.600211 formula=0.600211
+B2[k=1]: MET V(1e-4)/1e-2=0.450160 formula=0.450158 V(1)=0.5000
+B2[k=2]: MET V(1e-4)/1e-2=0.284710 formula=0.284705 V(1)=0.3333
+B2[k=5]: MET V(1e-4)/1e-2=0.124855 formula=0.124851 V(1)=0.5000
+B2[k=10]: MET V(1e-4)/1e-2=0.063345 formula=0.063346 V(1)=0.4949
+B2[k=50]: MET V(1e-4)/1e-2=0.012730 formula=0.012730 V(1)=0.4998
+B3: MET rho_50: V(1)/lim V(s)s^-1/2 = 39.26
+B4: MET violations su3=0 u1k=0
+B5: MET violations su3=0 (of 4745) u1k=0 (of 533)
+B6: MET adop violations=0, jacobian violations=0, min prod=0.5288 vs (2/pi)^8=0.0270
+B7: MET violations=0
+ALL PREDICATES MET

@@ -1,0 +1,28 @@
+I computed c1(R;U(1)) for R = 2 to 8, and every value agrees with the quoted ones to within 1e-6. R=7 has no quoted value.
+
+The control, 1/(2cos(π/8)), is 0.541196.
+
+| R | c1 | error estimate | matches quoted |
+|---|---|---|---|
+| 2 | 0.2287515 | 3e-13 | yes |
+| 3 | 0.2293161 | 2e-12 | yes |
+| 4 | 0.2330566 | 3e-11 | yes |
+| 5 | 0.2360589 | 1e-10 | yes |
+| 6 | 0.2382528 | 9e-11 | yes |
+| 7 | 0.2398783 | 2e-10 | no quoted value |
+| 8 | 0.2411188 | 4e-10 | yes |
+
+- **Error estimate:** it is the gap between two routes: the trace formula and a Richardson finite difference of Gamma1(η). I checked that identity numerically rather than assuming it. The quoted values differ from mine by 1e-7 to 5e-7, which fits their 6-decimal rounding.
+- **Failed predicates:** none. Every spatial-momentum block passed the Hermiticity, H·D≈0 and positive-definiteness checks.
+- **Grandchild:** task T52 recomputed R=2 independently with dense matrices. Its control, cos(π/3), was 0.500000. It got c1 = 0.2287515 by both routes, matching mine. I released T52 and reread and reran its code with the same output.
+- **PCP OS:** both verify commands report a pass. The Python one prints `result: PASS` just before its closing line. The last line of each is "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+
+My own scratch smoke run of R=2 and 3 wrote a `results.txt`, which I deleted before the real run. The rerun commands are at the end of `report.md`.
+
+Files are in /home/user/z4-workers/e2-chalrun/child:
+- report.md
+- results.txt
+- c1_sf.py
+- notes.md
+- control.txt
+- grandchild/

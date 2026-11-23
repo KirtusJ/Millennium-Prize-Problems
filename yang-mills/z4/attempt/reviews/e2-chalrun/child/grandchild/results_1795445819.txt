@@ -1,0 +1,15 @@
+N dyn links 40 plaquettes 72 rank D 9
+||H D||_F = 2.5510982866352577e-15 max|H-H^T|= 0.0 FD hess diff 4.440892098500626e-08 min eig A 0.8768943743823436
+h=1e-4 c1=0.228751482 dGamma=2.100945657 k=-9.184402373
+h=2e-4 c1=0.228751483 dGamma=2.100945662 k=-9.184402361
+k analytic (48*sin(delta)/2, delta=-pi/8) = -9.184402377
+c1 Richardson = 0.2287515
+timelike plaquettes 48 N_t formula 48
+c1_alt = 0.2287515
+P1 sym PASS
+P2 FDhess PASS
+P3 A posdef PASS
+P4 rank D PASS
+P5 Richardson PASS
+P6 c1==c1_alt PASS
+diff c1-c1_alt = 2.530e-12

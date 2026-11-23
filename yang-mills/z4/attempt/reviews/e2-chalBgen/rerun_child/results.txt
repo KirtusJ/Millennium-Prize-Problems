@@ -1,0 +1,14 @@
+total plaquettes containing a free link: 24
+S identity: 0.0
+plaquettes containing link ((0, 1, 1, 1), 0): 6
+plaquettes containing link ((1, 0, 1, 1), 1): 6
+plaquettes containing link ((1, 1, 0, 1), 2): 6
+plaquettes containing link ((1, 1, 1, 0), 3): 6
+plaquettes containing link ((1, 1, 1, 1), 0): 6
+plaquettes containing link ((1, 1, 1, 1), 1): 6
+plaquettes containing link ((1, 1, 1, 1), 2): 6
+plaquettes containing link ((1, 1, 1, 1), 3): 6
+S gauge h=diag(1,-1): 0.0
+S gauge h=R(0.7)*F: 0.0
+S only incoming mu=0 = F: 6.0
+S only outgoing mu=0 = F: 6.0

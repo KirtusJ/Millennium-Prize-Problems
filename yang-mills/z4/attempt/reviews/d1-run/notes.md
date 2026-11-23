@@ -1,0 +1,9 @@
+# d1-run notes (worker under T38)
+- step0: control.txt = 0.272341 (-ln tanh 1). Register pcp initialised. Lean READY file exists (not used).
+- step1: child admitted as T40 (pcpos task-admit, parent T38). Child PROMPT: dense/independent c1(R=4,6) SU(2); control S0=768(1-cos(pi/32))=3.698130 (my value computed before launch).
+- Definition chosen: SU(2)/U(1) Schrodinger functional (LWW/LNWW abelian boundary fields), Gamma1 = 1/2 logdet(H+DD^T) - logdet(D^T D), c1=-Gamma1'/k.
+- step2: c1sf.py written; smoke R=2,4,8 SU2 all checks pass; c1(8)-c1(4)=0.0707 vs 2b0ln2=0.0644. Launched registered runs su2-d4, u1-d4, su2-d3.
+- step3: child T40 returned (control 3.698130 correct, graded first). c1(4)=+0.312997 dense route (after its own sign fix, grandchild T41 found sign). Mine 0.313012; diff 1.5e-5 within child's Richardson error ~1.2e-5. T40 released. Rerunning child sf1loop.py R=4 under my register (child-rerun-R4).
+- step4: LNWW hep-lat/9207009 read (PDF via web-fetch agent, text extracted to scratchpad, outside dir): Thm 1 sect 5.2 (eqs 5.8,5.9), SU(2) premises eq 5.11 (0<eta<pi, L/a>=4), Table 1 p.46 m1(L) L=6..32, eqs 7.37-7.41 s0=11/(12pi^2), r0=0.202349(3), r1=-0.1084(11). My c1(6),c1(8),c1(10) = their m1 to all 8 digits. Torons: sect 5.1 p.30 refs [59] GJK 1981, [60] Luscher NPB219(1983)233 (not read). Child code rerun by me: c1_rich=-0.3129974 raw (=+0.312997 after sign fix) reproduced.
+- step5: all runs done (su2-d4 R=2..16, u1-d4, su2-d3 R=4..24); analyze.py: 97 met 0 failed on its predicates; BUT c1sf's original P6 (1e-7) failed in 18/24 rows (max 1.6e-6 in Gamma1', 4e-8 in c1): my tolerance guess, not target. c1(16)=0.45347745 = LNWW Table 1. RUNNING.md written.
+- step6: report.md written; counts verdict 13 STANDS/0 DEFECT/5 NOT CHECKED; predicates met 101, failed 18, measured 4. Registers verified (PASS).

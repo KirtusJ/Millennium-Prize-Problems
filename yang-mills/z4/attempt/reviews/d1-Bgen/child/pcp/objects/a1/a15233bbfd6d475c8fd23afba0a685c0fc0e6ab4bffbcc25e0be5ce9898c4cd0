@@ -1,0 +1,10 @@
+PASS  P1_U1_MC_vs_exact [(0.01, np.float64(0.04519925), np.float64(0.04505341364441213), np.float64(0.00010371065948517253)), (0.02, np.float64(0.06386875), np.float64(0.06376856085851988), np.float64(0.00012217009812608926)), (0.05, np.float64(0.10140175), np.float64(0.10108262410425992), np.float64(0.0001507190492343758)), (0.1, np.float64(0.14395625), np.float64(0.14356629312870625), np.float64(0.0001753247077610488))]
+PASS  P2_U1_slope slope=0.50031
+PASS  P3_haar_sanity max|det-1|=1.73e-15 E|trU|^2=0.99900
+FAIL  P4_SU3_direct_slope slope=nan counts=[0, 0, 0, 4, 12, 51, 160, 471] c_hat=[0.0, 0.0, 0.0, 0.2897, 0.3122, 0.4765, 0.537, 0.5679]
+PASS  P5a_weyl_norm 0.99975+-0.00061
+PASS  P5b_weyl_vs_direct [(0.05, np.float64(3.839392252504551e-06), np.float64(9.842100648042209e-09), np.float64(2e-06), np.float64(7.071060740794128e-07)), (0.1, np.float64(6.0966230187344695e-05), np.float64(1.564372485110818e-07), np.float64(5.3e-05), np.float64(3.6399584819060783e-06)), (0.15, np.float64(0.0003035767765403165), np.float64(7.816839739714066e-07), np.float64(0.0002865), np.float64(8.461943006041817e-06))]
+PASS  P5c_weyl_slope slope=4.0008 c_hat(V/s^4)=[0.617, 0.619, 0.62, 0.624, 0.622, 0.619, 0.62, 0.619]
+Weyl c_hat at s=1e-3,1e-4: [np.float64(0.6203984236638225), np.float64(0.6197043420908787)]
+PASS  P6_hessian max err/(t^2 F) U1=0.264 SU3=0.042
+PASS  P7_ratio median ratio=99.5
