@@ -1,0 +1,20 @@
+[
+  {
+    "label": "negative_jet",
+    "find": "a*(4*b)^k := by",
+    "replace": "a*(2*b)^k := by",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_edge",
+    "find": "edge ≤ energy / mass :=",
+    "replace": "edge < energy / mass :=",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_mass",
+    "find": "pos = (total+1)/2 ∧",
+    "replace": "pos = (total-1)/2 ∧",
+    "diagnostic": "error:"
+  }
+]
