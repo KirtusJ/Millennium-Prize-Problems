@@ -1,0 +1,32 @@
+[
+  {
+    "label": "negative_reversed_upper",
+    "find": "(∫ x, f x ∂μ) ≤ μ.real Set.univ * r + μ.real S",
+    "replace": "μ.real Set.univ * r + μ.real S ≤ (∫ x, f x ∂μ)",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_zero_window",
+    "find": "(hm : 0 < μ.real S)",
+    "replace": "(hm : 0 ≤ μ.real S)",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_zero_truncation",
+    "find": "| ≤ μ.real Set.univ * e := by",
+    "replace": "| ≤ 0 := by",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_reversed_ratio",
+    "find": "loA / hiB ≤ a / b ∧",
+    "replace": "a / b ≤ loA / hiB ∧",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_ratio_floor",
+    "find": "M r * q^t ≤ M (r+t) := by",
+    "replace": "M (r+t) ≤ M r * q^t := by",
+    "diagnostic": "error:"
+  }
+]
