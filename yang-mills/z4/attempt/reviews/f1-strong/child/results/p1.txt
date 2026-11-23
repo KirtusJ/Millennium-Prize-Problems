@@ -1,0 +1,7 @@
+control beta=1.0 eig=[-1.0, -1.0, -1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0] maxerr=3.33e-07 PASS
+control beta=2.5 eig=[-3.999999, -3.999999, -3.999999, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0] maxerr=8.33e-07 PASS
+case0 (random) FDerr=3.50e-04 FAIL; qform err=1.56e-13 PASS
+case1 (random) FDerr=2.75e-04 FAIL; qform err=1.74e-13 PASS
+case2 (random) FDerr=2.47e-04 FAIL; qform err=1.60e-13 PASS
+case3 (piflux) FDerr=7.50e-04 FAIL; qform err=1.59e-12 PASS
+SOME FAIL

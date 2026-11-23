@@ -1,0 +1,5 @@
+max |log I_n(trapz,reliable I>1e-3 scaled) - log I_n(series)| = 1.1368683772161603e-13
+A tested,met,failed,measured_only = [2211, 2211, 0, 0] worst slack,case,tol= (9.525305240745685e-12, (200, 0.5), 1.9912904670838618e-13)
+B tested,met,failed,measured_only = [2200, 2200, 0, 0] worst slack,case,tol= (np.float64(1.142040828280063e-05), (1, 512), 1.601e-10)
+C tested,met,failed,measured_only = [647, 647, 0, 0] worst slack,case,tol= (np.float64(0.001467706161690785), (1, 512), 1.601e-10)
+

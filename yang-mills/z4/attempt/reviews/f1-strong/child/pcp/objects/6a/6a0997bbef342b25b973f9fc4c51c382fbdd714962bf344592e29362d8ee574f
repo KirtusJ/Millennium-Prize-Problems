@@ -1,0 +1,6 @@
+case0 err(h=1e-3)=9.81e-09 err(h=5e-4)=5.02e-09 ratio=1.95 PASS
+case1 err(h=1e-3)=7.68e-09 err(h=5e-4)=6.03e-09 ratio=1.27 PASS
+case2 err(h=1e-3)=7.76e-09 err(h=5e-4)=3.79e-09 ratio=2.05 PASS
+case3 err(h=1e-3)=1.96e-08 err(h=5e-4)=3.61e-08 ratio=0.54 FAIL
+SOME FAIL
+

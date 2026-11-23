@@ -1,0 +1,11 @@
+h=1e-3, central FD polarization, 192x192
+sym asym check done by symmetrization
+full smallest5 [-7.99999866 -7.99999866 -7.99999866 -7.99999865 -7.99999865]
+full largest3 [1.88549207e-08 1.88549209e-08 1.88549221e-08]
+c_full=7.99999866
+full multiplicities (val,mult): [(np.float64(-7.999999), 9), (np.float64(-5.999999), 36), (np.float64(-3.999999), 54), (np.float64(-2.0), 36), (np.float64(-0.0), 57)]
+gauge rank 45, horizontal dim 147, |H*gauge|=1.02e-07
+horiz smallest5 [-7.99999866 -7.99999866 -7.99999866 -7.99999865 -7.99999865]
+horiz largest3 [5.10843243e-09 5.10843261e-09 5.10843625e-09]
+c_horiz=7.99999866
+horiz multiplicities: [(np.float64(-7.999999), 9), (np.float64(-5.999999), 36), (np.float64(-3.999999), 54), (np.float64(-2.0), 36), (np.float64(-0.0), 12)]

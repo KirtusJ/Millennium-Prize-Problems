@@ -1,0 +1,10 @@
+start 8: c_start=3.820888 c_final=6.542142 iters=29
+start 9: c_start=4.629521 c_final=6.527807 iters=29
+start 10: c_start=4.062317 c_final=6.979350 iters=29
+start 11: c_start=4.074048 c_final=6.822524 iters=29
+start 12: c_start=4.201069 c_final=6.748976 iters=29
+start 13: c_start=4.086009 c_final=7.227064 iters=29
+start 14: c_start=4.451449 c_final=7.005375 iters=29
+start 15: c_start=4.275172 c_final=7.173780 iters=29
+visited=248 qualifying(c<=12+1e-9)=248 max_c_seen=7.227064141
+

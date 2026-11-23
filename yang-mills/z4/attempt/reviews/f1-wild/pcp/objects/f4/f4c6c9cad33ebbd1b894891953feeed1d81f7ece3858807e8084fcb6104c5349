@@ -1,0 +1,2 @@
+/home/user/z4-workers/f1-wild/analyse.py:31: RuntimeWarning: Mean of empty slice
+  err = np.sqrt((R - 1) * np.nanmean((jk - full) ** 2, axis=0))

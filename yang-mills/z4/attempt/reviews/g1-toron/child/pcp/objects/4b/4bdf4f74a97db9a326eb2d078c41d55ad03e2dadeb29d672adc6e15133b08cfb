@@ -1,0 +1,56 @@
+(175, 512) MEASURED-ONLY unreliable slack=nan
+C (175, 512) MEASURED-ONLY unreliable slack=nan
+B (176, 512) MEASURED-ONLY unreliable slack=nan
+C (176, 512) MEASURED-ONLY unreliable slack=nan
+B (177, 512) MEASURED-ONLY unreliable slack=nan
+C (177, 512) MEASURED-ONLY unreliable slack=nan
+B (178, 512) MEASURED-ONLY unreliable slack=nan
+C (178, 512) MEASURED-ONLY unreliable slack=nan
+B (179, 512) MEASURED-ONLY unreliable slack=nan
+C (179, 512) MEASURED-ONLY unreliable slack=nan
+B (180, 512) MEASURED-ONLY unreliable slack=nan
+C (180, 512) MEASURED-ONLY unreliable slack=nan
+B (181, 512) MEASURED-ONLY unreliable slack=nan
+C (181, 512) MEASURED-ONLY unreliable slack=nan
+B (182, 512) MEASURED-ONLY unreliable slack=nan
+C (182, 512) MEASURED-ONLY unreliable slack=nan
+B (183, 512) MEASURED-ONLY unreliable slack=nan
+C (183, 512) MEASURED-ONLY unreliable slack=nan
+B (184, 512) MEASURED-ONLY unreliable slack=nan
+C (184, 512) MEASURED-ONLY unreliable slack=nan
+B (185, 512) MEASURED-ONLY unreliable slack=nan
+C (185, 512) MEASURED-ONLY unreliable slack=nan
+B (186, 512) MEASURED-ONLY unreliable slack=nan
+C (186, 512) MEASURED-ONLY unreliable slack=nan
+B (187, 512) MEASURED-ONLY unreliable slack=nan
+C (187, 512) MEASURED-ONLY unreliable slack=nan
+B (188, 512) MEASURED-ONLY unreliable slack=nan
+C (188, 512) MEASURED-ONLY unreliable slack=nan
+B (189, 512) MEASURED-ONLY unreliable slack=nan
+C (189, 512) MEASURED-ONLY unreliable slack=nan
+B (190, 512) MEASURED-ONLY unreliable slack=nan
+C (190, 512) MEASURED-ONLY unreliable slack=nan
+B (191, 512) MEASURED-ONLY unreliable slack=nan
+C (191, 512) MEASURED-ONLY unreliable slack=nan
+B (192, 512) MEASURED-ONLY unreliable slack=nan
+C (192, 512) MEASURED-ONLY unreliable slack=nan
+B (193, 512) MEASURED-ONLY unreliable slack=nan
+C (193, 512) MEASURED-ONLY unreliable slack=nan
+B (194, 512) MEASURED-ONLY unreliable slack=nan
+C (194, 512) MEASURED-ONLY unreliable slack=nan
+B (195, 512) MEASURED-ONLY unreliable slack=nan
+C (195, 512) MEASURED-ONLY unreliable slack=nan
+B (196, 512) MEASURED-ONLY unreliable slack=nan
+C (196, 512) MEASURED-ONLY unreliable slack=nan
+B (197, 512) MEASURED-ONLY unreliable slack=nan
+C (197, 512) MEASURED-ONLY unreliable slack=nan
+B (198, 512) MEASURED-ONLY unreliable slack=nan
+C (198, 512) MEASURED-ONLY unreliable slack=nan
+B (199, 512) MEASURED-ONLY unreliable slack=nan
+C (199, 512) MEASURED-ONLY unreliable slack=nan
+B (200, 512) MEASURED-ONLY unreliable slack=nan
+C (200, 512) MEASURED-ONLY unreliable slack=nan
+A tested,met,failed,measured_only = [2211, 482, 0, 1729] worst reliable slack,case,tol= (np.float64(9.546083790112903e-07), (0, 512), np.float64(2.023833147995572e-13))
+B tested,met,failed,measured_only = [2200, 471, 0, 1729] worst reliable slack,case,tol= (np.float64(1.1420408287857349e-05), (1, 512), np.float64(2.027836312761554e-13))
+C tested,met,failed,measured_only = [647, 408, 0, 239] worst reliable slack,case,tol= (np.float64(0.0014677061616958417), (1, 512), np.float64(2.027836312761554e-13))
+

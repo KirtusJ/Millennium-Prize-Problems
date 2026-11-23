@@ -1,0 +1,2 @@
+start 0: c_start=4.135958 c_final=7.215878 iters=59
+visited=61 qualifying(c<=12+1e-9)=61 max_c_seen=7.215877590

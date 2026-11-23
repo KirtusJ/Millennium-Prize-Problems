@@ -1,0 +1,22 @@
+P1 max|V_direct - V_formula| = 8.326672684688674e-16 MET
+jmax=5 n=40 N=146  P2 max|Gram-1| = 1.159e-14 MET
+  P3 V=0 gap - (-ln I3/I1) = 0.00e+00 MET
+  beta=  2.0 lam0=0.36274439 lam1=0.07053284 m_e=1.637620 m_e*b^(1/3)=2.0633 m_e*b=3.275 free_gap=2.011819 ratio=0.814 nu0=0.762256 nu0*b^(1/3)=0.9604
+  beta=  4.0 lam0=0.26962882 lam1=0.12569363 m_e=0.763199 m_e*b^(1/3)=1.2115 m_e*b=3.053 free_gap=1.073083 ratio=0.711 nu0=0.889568 nu0*b^(1/3)=1.4121
+  beta=  8.0 lam0=0.26773280 lam1=0.15987671 m_e=0.515587 m_e*b^(1/3)=1.0312 m_e*b=4.125 free_gap=0.526997 ratio=0.978 nu0=0.884022 nu0*b^(1/3)=1.7680
+  beta= 16.0 lam0=0.31554085 lam1=0.18350703 m_e=0.542035 m_e*b^(1/3)=1.3658 m_e*b=8.673 free_gap=0.257416 ratio=2.106 nu0=0.824761 nu0*b^(1/3)=2.0783
+jmax=6 n=48 N=231  P2 max|Gram-1| = 1.621e-14 MET
+  P3 V=0 gap - (-ln I3/I1) = 0.00e+00 MET
+  beta=  2.0 lam0=0.36274439 lam1=0.07053284 m_e=1.637620 m_e*b^(1/3)=2.0633 m_e*b=3.275 free_gap=2.011819 ratio=0.814 nu0=0.761245 nu0*b^(1/3)=0.9591
+  beta=  4.0 lam0=0.26962882 lam1=0.12569363 m_e=0.763199 m_e*b^(1/3)=1.2115 m_e*b=3.053 free_gap=1.073083 ratio=0.711 nu0=0.882628 nu0*b^(1/3)=1.4011
+  beta=  8.0 lam0=0.26773284 lam1=0.15987694 m_e=0.515585 m_e*b^(1/3)=1.0312 m_e*b=4.125 free_gap=0.526997 ratio=0.978 nu0=0.874843 nu0*b^(1/3)=1.7497
+  beta= 16.0 lam0=0.31555316 lam1=0.18361767 m_e=0.541471 m_e*b^(1/3)=1.3644 m_e*b=8.664 free_gap=0.257416 ratio=2.103 nu0=0.811274 nu0*b^(1/3)=2.0443
+P4 beta=2.0 rel diff 0.0000 MET
+P5 beta=2.0 m_e=1.637620 > free 2.011819 FAILED
+P4 beta=4.0 rel diff 0.0000 MET
+P5 beta=4.0 m_e=0.763199 > free 1.073083 FAILED
+P4 beta=8.0 rel diff 0.0000 MET
+P5 beta=8.0 m_e=0.515585 > free 0.526997 FAILED
+P4 beta=16.0 rel diff 0.0010 MET
+P5 beta=16.0 m_e=0.541471 > free 0.257416 MET
+P6 nu0*b^(1/3) over beta 4,8,16: [np.float64(1.4010842188792048), np.float64(1.7496864820739872), np.float64(2.0442819638057586)] MET

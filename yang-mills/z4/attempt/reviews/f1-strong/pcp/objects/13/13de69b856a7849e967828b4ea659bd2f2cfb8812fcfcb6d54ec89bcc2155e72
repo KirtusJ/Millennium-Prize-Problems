@@ -1,0 +1,3 @@
+The random-start search chunks (seeds 0–23) are still running in the background. I've queued a wait on the last chunk. After it finishes I'll run the special-configuration and horizontal program, then write report.md.
+
+/home/user/z4-workers/f1-strong/child/report.md

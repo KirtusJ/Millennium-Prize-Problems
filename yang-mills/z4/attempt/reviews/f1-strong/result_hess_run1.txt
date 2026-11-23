@@ -1,0 +1,21 @@
+P1 FD worst rel diff 9.713478325076022e-06 MET
+P2 per-plaquette max |lambda_max - h(th)| 4.884981308350689e-15 MET
+P3 L=2 pi-flux: all Q=-1: True; lambda_min=-8.000000000000; horizontal=-8.000000000000005
+P3 L=4 pi-flux: all Q=-1: True; lambda_min=-8.000000000000; horizontal=None
+P3 MET
+P4 haar0: -lambda_min=4.113920 local bound=9.008365
+P4 oneflip: -lambda_min=4.675624 local bound=12.000000
+P4 piflux: -lambda_min=8.000000 local bound=12.000000
+P4 qualifying cases 32/32 (all configs qualify); met 32/32 MET
+measured: Haar samples -lambda_min max 4.5428 mean 4.0905
+M1 L=2 one-link flip: -lambda_min=4.675624, horizontal -min=4.675624 (measured only)
+M1 L=3 one-link flip: -lambda_min=4.313684, horizontal -min=4.313684 (measured only)
+P5 start piflux: best -lambda_min after 300 steps = 8.000000
+P5 start haar_seed100: best -lambda_min after 300 steps = 5.559072
+P5 start haar_seed101: best -lambda_min after 300 steps = 5.482024
+P5 start haar_seed102: best -lambda_min after 300 steps = 5.510541
+P5 start haar_seed103: best -lambda_min after 300 steps = 5.931951
+P5 start haar_seed104: best -lambda_min after 300 steps = 5.593228
+P5 start haar_seed105: best -lambda_min after 300 steps = 5.641694
+P5 overall best 8.000000 from piflux MET time 257s
+COUNTS met 5, failed 0, measured only 2 (M1, Haar stats)

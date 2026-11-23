@@ -1,0 +1,13 @@
+# g1-toron (T71) notes
+- step 0: control.txt = 0.272341 (-ln tanh 1 = 0.2723414689). /home/user/z4-lean/READY exists.
+- step 1: read RUNG_REPORT.md (rung R1, chain steps 2,4 MISSING).
+- step 2: child admitted: ADMITTED T74
+- step 3: child T74 launched (Bessel ratio claims A,B,C; control I_3(4)/I_1(4)=0.341953 my value)
+- step 4: wrote prog/su2x2.py (predicates P1-P6 in docstring, before first run)
+- step 4b: cosmetic cleanup of projectors() (dead branch removed) before first run
+- step 5: child returned in 102 s; control 0.341953 == mine (graded correct); A,B,C STAND on grid; T74 released; grandchild T76
+- step 6: su2x2 run1: P1,P2,P3,P4,P6 met; P5 failed at beta=2,4,8 (my expectation; strong coupling), met at 16. m_e*b = 3.28,3.05,4.13,8.66
+- step 7: reran child check2.py in scratch copy (K3): identical output
+- step 8: wrote TORON_GAP.md
+- step 9: lean via check K4; verify done
+- step 10: wrote report.md (final)

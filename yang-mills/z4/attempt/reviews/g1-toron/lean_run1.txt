@@ -1,0 +1,6 @@
+'one_sub_mul_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'casimir_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'log_one_add_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'jacobi_min' depends on axioms: [propext, Classical.choice, Quot.sound]
+'quotient_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit 0

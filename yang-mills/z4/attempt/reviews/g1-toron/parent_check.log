@@ -1,0 +1,2 @@
+check K77: exit 0 (expected 0) in 587874 ms | output 629a75f07527 | event 79 head 61636f4833c4
+  /home/user/z4-workers/g1-toron/report.md — none of T1–T4 proved; 8 STANDS (one conditional on an unread citation), 1 DEFECT (my own expectation), 5 NOT CHECKED; predicates 11 met, 3 failed, 1 measured only.

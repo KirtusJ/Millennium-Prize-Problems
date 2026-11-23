@@ -1,0 +1,2 @@
+check K76: exit 0 (expected 0) in 968972 ms | output 16ec6faf35a2 | event 78 head cde0d60a700f
+  /home/user/z4-workers/f1-strong/report.md — 7 stand, 1 defect, 3 not checked. The proved range is β_W < 1/12, the same as Shen–Zhu–Zhu's published mass-gap range. Cao–Nissim–Sheffield's area-law range, β_W < 1/6, is larger. No full or horizontal pointwise Bakry–Émery argument can reach β_W ≥ 1/8, because the all-plaquettes-(−1) configuration has curvature exactly 1 − 8β.
