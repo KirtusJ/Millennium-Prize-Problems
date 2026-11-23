@@ -1,0 +1,32 @@
+[
+  {
+    "label": "negative_surface_scaling",
+    "find": "n * (p * n) * (s / n^2)",
+    "replace": "n * (p * n) * (s / n)",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_loop_minimum",
+    "find": "= 4*s/n := by",
+    "replace": "= 8*s/n := by",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_intertwining",
+    "find": "s * (b*p) / (b*n)",
+    "replace": "s * (b*p) / n",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_shell_margin",
+    "find": "(ha : a + eta ≤ q) (hb : b + eta ≤ q)",
+    "replace": "(ha : a ≤ q) (hb : b ≤ q)",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_complement",
+    "find": "eta^2 ≤ (q-a)*(q-b)",
+    "replace": "eta^2 ≥ (q-a)*(q-b)",
+    "diagnostic": "error:"
+  }
+]
