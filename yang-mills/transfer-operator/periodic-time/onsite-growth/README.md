@@ -50,3 +50,5 @@ $$
  -\frac{\sum_{c=1}^3 :\!\varphi_c^2\!:}{\sqrt6\,g(e_0)} ,
 $$
 where the three mass-one fields have covariance $g$. At $w=e^{-\sqrt d}$, times near $1/M$ still violate H3(b) for every finite field exponent by the two-point lower test. No exchange of the fixed-configuration limit with integration through a coincidence is used. [Execution record](checks.md)
+
+Convergence of the hierarchy on every Schwartz test flat at coincidences is equivalent to a polynomial lower bound on the light weight. For the square-root exponential weight, a one-parameter family of fixed two-point tests locates the transition explicitly. [Distributional criterion and sharp test threshold](flat-tests/README.md)

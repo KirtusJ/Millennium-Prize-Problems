@@ -1,0 +1,3 @@
+displaced mesh boxes retain a positive fraction of four-volume
+exact spatial Plancherel and frequency-difference identities
+exact saddle cost identity and critical exponent sign
