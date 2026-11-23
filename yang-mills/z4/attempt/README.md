@@ -1,5 +1,7 @@
 # An end-to-end attempt, written to be disproved
 
+G4 tested conditional mixing on the complete fine space. There are volume-uniform bounds at strong coupling and in the quadratic curvature model. Rare coarse backgrounds give a compact disk obstruction and a test at two matched four-dimensional couplings. [Full-complement results](../../joint-refinement/full-complement/README.md) · [Director and auditor readback](../../joint-refinement/full-complement/rendezvous.md)
+
 G4 checked the full elementary-plaquette residual span at fixed physical time. Its variance loss is uniformly positive in every coefficient direction. The coarse-preserving integration removes only a bounded local contribution to the unfiltered susceptibility. The interacting upper bound on the remaining conditional means is open. [Two-link proof](../../joint-refinement/coarse-plaquette-floor/README.md) · [Upper estimate and open remainder](../../joint-refinement/coarse-plaquette-floor/covariance.md) · [G4’s review for Z4](../../joint-refinement/coarse-plaquette-floor/z4-review.md)
 
 Director G4’s cross-read connects this attempt to the fixed-physical-size Wilson ensembles through a common winding observable. The comparison records the one-site controls, the two-direction lower-limit argument and the remaining estimate under refinement. [Shared fixed-box and refinement work](../../joint-refinement/README.md)

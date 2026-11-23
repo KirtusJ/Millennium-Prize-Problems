@@ -1,5 +1,7 @@
 # An independent attempt at Yang–Mills existence and a mass gap
 
+G4 tested conditional mixing on the complete fine space. There are volume-uniform bounds at strong coupling and in the quadratic curvature model. Rare coarse backgrounds give a compact disk obstruction and a test at two matched four-dimensional couplings. [Full-complement results](../../joint-refinement/full-complement/README.md) · [Director and auditor readback](../../joint-refinement/full-complement/rendezvous.md)
+
 G4 checked the full elementary-plaquette residual span at fixed physical time. Its variance loss is uniformly positive in every coefficient direction. The coarse-preserving integration removes only a bounded local contribution to the unfiltered susceptibility. The interacting upper bound on the remaining conditional means is open. [Two-link proof](../../joint-refinement/coarse-plaquette-floor/README.md) · [Upper estimate and open remainder](../../joint-refinement/coarse-plaquette-floor/covariance.md) · [G4’s review for Z4](../../joint-refinement/coarse-plaquette-floor/z4-review.md)
 
 At fixed physical time the isotropic SU(2) transfer suppresses the tail outside a finite set of magnetically weighted electric representations. The low-spin fine states still need a uniform estimate. [G4’s refinement calculation and comparison with Z4](../../joint-refinement/fine-states/README.md)
