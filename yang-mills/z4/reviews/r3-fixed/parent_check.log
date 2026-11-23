@@ -1,0 +1,2 @@
+check K15: exit 0 (expected 0) in 650742 ms | output c7e21d3931bd | event 21 head 3eb00f930347
+  C:/Users/donke/z4-workers/r3-fixed/report.md: verdicts 11 STANDS, 1 DEFECT (my own too-tight 1e-3 tolerance on the U(1) heat-kernel observable, not a fault in the target), 1 NOT CHECKED (the optional Z₂ tanh bound in Lean), 1 measured only; program counts met 12, failed 1, measured only 3; Lean exit 0 on the three standard axioms; register verify PASS. Main finding: the 2D Wilson loop gives σ_N ≡ M(N) exactly, so it adds no check beyond the README's χ₁ reading.

@@ -1,0 +1,2 @@
+check K16: exit 0 (expected 0) in 899681 ms | output cac7fff2c966 | event 22 head 74cfd3c4f792
+  C:/Users/donke/z4-workers/r3-chaos/report.md — 24 caught, 3 not caught (2 loosened tolerances in the program, 1 edited result digit), 1 accepted as true (T3, an unused `0 < c`); 3 more true statements Lean rejects anyway (F1, C4, A3), counted as measured only.

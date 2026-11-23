@@ -1,0 +1,547 @@
+{
+ "baseline": {
+  "Scaling": {
+   "exit": 0,
+   "first_error": null,
+   "sorry": false,
+   "axioms": [
+    "'Z4YM.lattice_gap_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Z4YM.physical_gap_tendsto_atTop' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Z4YM.not_uniform_lattice_gap_and_finite_physical_gap' depends on axioms: [propext, Classical.choice, Quot.sound]"
+   ],
+   "bad_axioms": [],
+   "unused": []
+  },
+  "FiniteGroupControl": {
+   "exit": 0,
+   "first_error": null,
+   "sorry": false,
+   "axioms": [
+    "'Z4YM.z2_gap_pos' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Z4YM.z2_physical_gap_le' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Z4YM.z2_physical_gap_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]"
+   ],
+   "bad_axioms": [],
+   "unused": []
+  },
+  "LevelsControl": {
+   "exit": 0,
+   "first_error": null,
+   "sorry": false,
+   "axioms": [
+    "'Z4YM.levels_gap_le' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Z4YM.levels_physical_gap_le' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Z4YM.levels_physical_gap_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]"
+   ],
+   "bad_axioms": [],
+   "unused": []
+  },
+  "TwoSided": {
+   "exit": 0,
+   "first_error": null,
+   "sorry": false,
+   "axioms": [
+    "'twoSided_cluster' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'twoSided_cluster_eventually' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'twoSided_of_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]"
+   ],
+   "bad_axioms": [],
+   "unused": [
+    "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\base_TwoSided\\TwoSided.lean:5:52: warning: unused variable `hc`",
+    "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\base_TwoSided\\TwoSided.lean:5:65: warning: unused variable `hcC`",
+    "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\base_TwoSided\\TwoSided.lean:7:17: warning: unused variable `hφ`",
+    "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\base_TwoSided\\TwoSided.lean:16:63: warning: unused variable `hc`",
+    "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\base_TwoSided\\TwoSided.lean:16:76: warning: unused variable `hcC`"
+   ]
+  },
+  "CharTransfer": {
+   "exit": 0,
+   "first_error": null,
+   "sorry": false,
+   "axioms": [
+    "'Z4Char.conv_char' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Z4Char.iterate_char' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Z4Char.iterate_eq_kern' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Z4Char.coeff_real_even' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Z4Char.coeff_eq_lam1' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Z4Char.coeff_one_eq_lam0' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Z4Char.iterate_eq_lam1_pow' depends on axioms: [propext, Classical.choice, Quot.sound]"
+   ],
+   "bad_axioms": [],
+   "unused": []
+  },
+  "TrajectoryAudit": {
+   "exit": 0,
+   "first_error": null,
+   "sorry": false,
+   "axioms": [
+    "'L_lower' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'w_upper' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'L_tendsto_top' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'w_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'L_bounded_forces' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'complementary_needs_b_bound' depends on axioms: [propext, Classical.choice, Quot.sound]"
+   ],
+   "bad_axioms": [],
+   "unused": []
+  }
+ },
+ "B0_qualify": 6,
+ "mutations": [
+  {
+   "name": "S1",
+   "file": "Scaling",
+   "theorem": "physical_gap_tendsto_atTop",
+   "old": "theorem physical_gap_tendsto_atTop {a m : ℕ → ℝ} {c : ℝ} (hc : 0 < c)",
+   "new": "theorem physical_gap_tendsto_atTop {a m : ℕ → ℝ} {c : ℝ}",
+   "prediction": "FALSE",
+   "why": "drop 0<c: c=-1, m=0 gives m/a=0, not ->atTop",
+   "A_unique": true,
+   "baseline_ok": true,
+   "exit": 1,
+   "first_error": "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\S1\\Scaling.lean:36:79: error: unknown identifier 'hc'",
+   "n_errors": 2,
+   "sorry": true,
+   "bad_axioms": [
+    "'Z4YM.physical_gap_tendsto_atTop' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]"
+   ],
+   "verdict": "CAUGHT"
+  },
+  {
+   "name": "S2",
+   "file": "Scaling",
+   "theorem": "lattice_gap_tendsto_zero",
+   "old": "    Tendsto m atTop (𝓝 0) := by",
+   "new": "    Tendsto m atTop (𝓝 1) := by",
+   "prediction": "FALSE",
+   "why": "limit 0 -> 1: a=1/n, m=0 is a counterexample",
+   "A_unique": true,
+   "baseline_ok": true,
+   "exit": 1,
+   "first_error": "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\S2\\Scaling.lean:28:8: error: application type mismatch",
+   "n_errors": 1,
+   "sorry": true,
+   "bad_axioms": [
+    "'Z4YM.lattice_gap_tendsto_zero' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]"
+   ],
+   "verdict": "CAUGHT"
+  },
+  {
+   "name": "S3",
+   "file": "Scaling",
+   "theorem": "lattice_gap_tendsto_zero",
+   "old": "(ha : Tendsto a atTop (𝓝 0)) (ha0 : ∀ n, a n ≠ 0)",
+   "new": "(ha : Tendsto a atTop (𝓝 0))",
+   "prediction": "FALSE",
+   "why": "drop a n != 0: a=0, m=1 gives m/a=0 (Lean x/0=0) but m->1",
+   "A_unique": true,
+   "baseline_ok": true,
+   "exit": 1,
+   "first_error": "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\S3\\Scaling.lean:28:48: error: unknown identifier 'ha0'",
+   "n_errors": 1,
+   "sorry": true,
+   "bad_axioms": [
+    "'Z4YM.lattice_gap_tendsto_zero' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]"
+   ],
+   "verdict": "CAUGHT"
+  },
+  {
+   "name": "T1",
+   "file": "TwoSided",
+   "theorem": "twoSided_cluster",
+   "old": "    c ≤ L ∧ L ≤ C := by\n  have h1",
+   "new": "    c < L ∧ L ≤ C := by\n  have h1",
+   "prediction": "FALSE",
+   "why": "strict: m = c*a gives L = c",
+   "A_unique": true,
+   "baseline_ok": true,
+   "exit": 1,
+   "first_error": "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\T1\\TwoSided.lean:14:9: error: application type mismatch",
+   "n_errors": 1,
+   "sorry": true,
+   "bad_axioms": [
+    "'twoSided_cluster' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]"
+   ],
+   "verdict": "CAUGHT"
+  },
+  {
+   "name": "T2",
+   "file": "TwoSided",
+   "theorem": "twoSided_of_tendsto",
+   "old": "∀ᶠ n in atTop, (M / 2) * a n ≤ m n",
+   "new": "∀ᶠ n in atTop, M * a n ≤ m n",
+   "prediction": "FALSE",
+   "why": "M/2 -> M: m/a = M - 1/n is a counterexample",
+   "A_unique": true,
+   "baseline_ok": true,
+   "exit": 1,
+   "first_error": "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\T2\\TwoSided.lean:36:39: error: linarith failed to find a contradiction",
+   "n_errors": 1,
+   "sorry": true,
+   "bad_axioms": [
+    "'twoSided_of_tendsto' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]"
+   ],
+   "verdict": "CAUGHT"
+  },
+  {
+   "name": "T3",
+   "file": "TwoSided",
+   "theorem": "twoSided_cluster",
+   "old": "theorem twoSided_cluster (a m : ℕ → ℝ) (c C L : ℝ) (hc : 0 < c) (hcC : c ≤ C)",
+   "new": "theorem twoSided_cluster (a m : ℕ → ℝ) (c C L : ℝ) (hcC : c ≤ C)",
+   "prediction": "TRUE",
+   "why": "0<c is not needed for pointwise bounds passing to a limit",
+   "A_unique": true,
+   "baseline_ok": true,
+   "exit": 0,
+   "first_error": null,
+   "n_errors": 0,
+   "sorry": false,
+   "bad_axioms": [],
+   "verdict": "ACCEPTED-AS-TRUE"
+  },
+  {
+   "name": "F1",
+   "file": "FiniteGroupControl",
+   "theorem": "z2_physical_gap_le",
+   "old": "x * (-Real.log (Real.tanh x)) ≤ 1 / (1 + x) := by",
+   "new": "x * (-Real.log (Real.tanh x)) ≤ 1 / (2 + x) := by",
+   "prediction": "TRUE",
+   "why": "numerically max of x(-log tanh x)(2+x) = 0.971 < 1 (sharpness.py), so still true",
+   "A_unique": true,
+   "baseline_ok": true,
+   "exit": 1,
+   "first_error": "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\F1\\FiniteGroupControl.lean:51:51: error: unsolved goals",
+   "n_errors": 1,
+   "sorry": true,
+   "bad_axioms": [
+    "'Z4YM.z2_physical_gap_le' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+    "'Z4YM.z2_physical_gap_tendsto_zero' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]"
+   ],
+   "verdict": "REJECTED-BUT-TRUE (proof no longer fits)"
+  },
+  {
+   "name": "F2",
+   "file": "FiniteGroupControl",
+   "theorem": "z2_gap_le",
+   "old": "-Real.log (Real.tanh x) ≤ 2 / (Real.exp (2 * x) - 1) := by",
+   "new": "-Real.log (Real.tanh x) ≤ 1 / (Real.exp (2 * x) - 1) := by",
+   "prediction": "FALSE",
+   "why": "-log tanh x ~ 2/(e^{2x}-1) as x->inf, so 1/(...) fails for large x",
+   "A_unique": true,
+   "baseline_ok": true,
+   "exit": 1,
+   "first_error": "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\F2\\FiniteGroupControl.lean:39:60: error: unsolved goals",
+   "n_errors": 2,
+   "sorry": true,
+   "bad_axioms": [
+    "'Z4YM.z2_physical_gap_le' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+    "'Z4YM.z2_physical_gap_tendsto_zero' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]"
+   ],
+   "verdict": "CAUGHT"
+  },
+  {
+   "name": "F3",
+   "file": "FiniteGroupControl",
+   "theorem": "z2_gap_pos",
+   "old": "theorem z2_gap_pos (x : ℝ) (hx : 0 < x) :",
+   "new": "theorem z2_gap_pos (x : ℝ) :",
+   "prediction": "FALSE",
+   "why": "x=0: tanh 0 = 0, log 0 = 0, 0<0 false",
+   "A_unique": true,
+   "baseline_ok": true,
+   "exit": 1,
+   "first_error": "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\F3\\FiniteGroupControl.lean:30:64: error: linarith failed to find a contradiction",
+   "n_errors": 2,
+   "sorry": true,
+   "bad_axioms": [
+    "'Z4YM.z2_gap_pos' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+    "'Z4YM.z2_physical_gap_tendsto_zero' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]"
+   ],
+   "verdict": "CAUGHT"
+  },
+  {
+   "name": "L1",
+   "file": "LevelsControl",
+   "theorem": "levels_gap_le",
+   "old": "theorem levels_gap_le (c χ : ι → ℝ) (i0 : ι) {d b : ℝ}\n    (hgap : ∀ j, j ≠ i0 → c j ≤ c i0 - d)\n",
+   "new": "theorem levels_gap_le (c χ : ι → ℝ) (i0 : ι) {d b : ℝ}\n",
+   "prediction": "FALSE",
+   "why": "drop spacing: d huge, c constant, chi=-1 off i0 gives lam1<=0",
+   "A_unique": true,
+   "baseline_ok": true,
+   "exit": 1,
+   "first_error": "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\L1\\LevelsControl.lean:54:39: error: unknown identifier 'hgap'",
+   "n_errors": 3,
+   "sorry": true,
+   "bad_axioms": [
+    "'Z4YM.levels_gap_le' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+    "'Z4YM.levels_physical_gap_le' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+    "'Z4YM.levels_physical_gap_tendsto_zero' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]"
+   ],
+   "verdict": "CAUGHT"
+  },
+  {
+   "name": "L2",
+   "file": "LevelsControl",
+   "theorem": "levels_gap_le",
+   "old": "    (hsmall : 2 * (Fintype.card ι : ℝ) * Real.exp (-b * d) ≤ 1) :\n    0 < lam1",
+   "new": "    :\n    0 < lam1",
+   "prediction": "FALSE",
+   "why": "drop smallness: b=0, chi=-1 off i0, K=3 gives lam1=-1<0",
+   "A_unique": true,
+   "baseline_ok": true,
+   "exit": 1,
+   "first_error": "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\L2\\LevelsControl.lean:75:37: error: linarith failed to find a contradiction",
+   "n_errors": 5,
+   "sorry": true,
+   "bad_axioms": [
+    "'Z4YM.levels_gap_le' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+    "'Z4YM.levels_physical_gap_le' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+    "'Z4YM.levels_physical_gap_tendsto_zero' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]"
+   ],
+   "verdict": "CAUGHT"
+  },
+  {
+   "name": "L3",
+   "file": "LevelsControl",
+   "theorem": "levels_gap_le",
+   "old": "≤ 4 * (Fintype.card ι : ℝ) * Real.exp (-b * d) := by",
+   "new": "≤ 2 * (Fintype.card ι : ℝ) * Real.exp (-b * d) := by",
+   "prediction": "FALSE",
+   "why": "4K->2K: K large, q=1/(2K), chi=-1, gap equality: -log ratio -> log 3 > 1 = 2Kq",
+   "A_unique": true,
+   "baseline_ok": true,
+   "exit": 1,
+   "first_error": "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\L3\\LevelsControl.lean:36:90: error: unsolved goals",
+   "n_errors": 2,
+   "sorry": true,
+   "bad_axioms": [
+    "'Z4YM.levels_gap_le' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+    "'Z4YM.levels_physical_gap_le' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+    "'Z4YM.levels_physical_gap_tendsto_zero' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]"
+   ],
+   "verdict": "CAUGHT"
+  },
+  {
+   "name": "L4",
+   "file": "LevelsControl",
+   "theorem": "levels_physical_gap_tendsto_zero",
+   "old": "(i0 : ι) {d : ℝ} (hd : 0 < d)",
+   "new": "(i0 : ι) {d : ℝ}",
+   "prediction": "FALSE",
+   "why": "d=0, c constant, ratio constant 1/2: b*log2 -> inf",
+   "A_unique": true,
+   "baseline_ok": true,
+   "exit": 1,
+   "first_error": "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\L4\\LevelsControl.lean:129:39: error: unknown identifier 'hd'",
+   "n_errors": 2,
+   "sorry": true,
+   "bad_axioms": [
+    "'Z4YM.levels_physical_gap_tendsto_zero' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]"
+   ],
+   "verdict": "CAUGHT"
+  },
+  {
+   "name": "C1",
+   "file": "CharTransfer",
+   "theorem": "conv_char",
+   "old": "theorem conv_char (w ψ : G → ℂ) (hψ : ∀ x y, ψ (x * y) = ψ x * ψ y) :",
+   "new": "theorem conv_char (w ψ : G → ℂ) :",
+   "prediction": "FALSE",
+   "why": "drop multiplicativity: w=delta_1, psi=delta_1 on Z2 non-eigen? (w=delta_1: conv = psi, coeff = psi(1); psi=delta_g, g!=1 gives psi = 0*psi false)",
+   "A_unique": true,
+   "baseline_ok": true,
+   "exit": 1,
+   "first_error": "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\C1\\CharTransfer.lean:58:54: error: unknown identifier 'hψ'",
+   "n_errors": 3,
+   "sorry": true,
+   "bad_axioms": [
+    "'Z4Char.conv_char' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+    "'Z4Char.iterate_char' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+    "'Z4Char.iterate_eq_lam1_pow' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]"
+   ],
+   "verdict": "CAUGHT"
+  },
+  {
+   "name": "C2",
+   "file": "CharTransfer",
+   "theorem": "coeff_real_even",
+   "old": "    (heven : ∀ y, w y⁻¹ = w y) :",
+   "new": "    :",
+   "prediction": "FALSE",
+   "why": "drop evenness: Z3, w=delta_g, psi nontrivial: coeff=psi(g^-1) not real",
+   "A_unique": true,
+   "baseline_ok": true,
+   "exit": 1,
+   "first_error": "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\C2\\CharTransfer.lean:110:10: error: unknown identifier 'heven'",
+   "n_errors": 3,
+   "sorry": true,
+   "bad_axioms": [
+    "'Z4Char.coeff_real_even' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+    "'Z4Char.coeff_eq_lam1' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+    "'Z4Char.iterate_eq_lam1_pow' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]"
+   ],
+   "verdict": "CAUGHT"
+  },
+  {
+   "name": "C3",
+   "file": "CharTransfer",
+   "theorem": "iterate_char",
+   "old": "(conv w)^[N] ψ = coeff w ψ ^ N • ψ := by",
+   "new": "(conv w)^[N] ψ = coeff w ψ ^ (N + 1) • ψ := by",
+   "prediction": "FALSE",
+   "why": "N=0: psi = coeff*psi, false for w=0, psi=1",
+   "A_unique": true,
+   "baseline_ok": true,
+   "exit": 1,
+   "first_error": "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\C3\\CharTransfer.lean:65:9: error: unsolved goals",
+   "n_errors": 3,
+   "sorry": true,
+   "bad_axioms": [
+    "'Z4Char.iterate_char' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+    "'Z4Char.iterate_eq_lam1_pow' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]"
+   ],
+   "verdict": "CAUGHT"
+  },
+  {
+   "name": "C4",
+   "file": "CharTransfer",
+   "theorem": "coeff_real_even",
+   "old": "    (hψ : ∀ x y, ψ (x * y) = ψ x * ψ y) (hu : ∀ y, ‖ψ y‖ = 1)\n    (heven : ∀ y, w y⁻¹ = w y)",
+   "new": "    (hψ : ∀ x y, ψ (x * y) = ψ x * ψ y)\n    (heven : ∀ y, w y⁻¹ = w y)",
+   "prediction": "TRUE",
+   "why": "on a finite group a multiplicative psi is 0 or unitary (psi(1)^2=psi(1), psi(g)^|G|=psi(1)); both cases keep the identity",
+   "A_unique": true,
+   "baseline_ok": true,
+   "exit": 1,
+   "first_error": "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\C4\\CharTransfer.lean:94:24: error: unknown identifier 'hu'",
+   "n_errors": 4,
+   "sorry": true,
+   "bad_axioms": [
+    "'Z4Char.coeff_real_even' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+    "'Z4Char.coeff_eq_lam1' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+    "'Z4Char.iterate_eq_lam1_pow' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]"
+   ],
+   "verdict": "REJECTED-BUT-TRUE (proof no longer fits)"
+  },
+  {
+   "name": "A1",
+   "file": "TrajectoryAudit",
+   "theorem": "w_upper",
+   "old": "(hb : 0 < b) (hD : 36 * kapA β b ^ 2 ≤ D) :\n    Aq β b ^ 2 / (8 * D) ≤",
+   "new": "(hb : 0 < b) :\n    Aq β b ^ 2 / (8 * D) ≤",
+   "prediction": "FALSE",
+   "why": "drop D>=36k^2: D -> 0+ makes LHS unbounded",
+   "A_unique": true,
+   "baseline_ok": true,
+   "exit": 1,
+   "first_error": "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\A1\\TrajectoryAudit.lean:73:25: error: linarith failed to find a contradiction",
+   "n_errors": 3,
+   "sorry": true,
+   "bad_axioms": [
+    "'w_upper' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+    "'w_tendsto_zero' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]"
+   ],
+   "verdict": "CAUGHT"
+  },
+  {
+   "name": "A2",
+   "file": "TrajectoryAudit",
+   "theorem": "L_lower",
+   "old": "(9 / 64) / (β * (1 + 2 * β) * b) ≤ Lq β b := by",
+   "new": "(10 / 64) / (β * (1 + 2 * β) * b) ≤ Lq β b := by",
+   "prediction": "FALSE",
+   "why": "(1+2b)/(1+B) -> 1 as beta->0, so 9/64 is sharp",
+   "A_unique": true,
+   "baseline_ok": true,
+   "exit": 1,
+   "first_error": "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\A2\\TrajectoryAudit.lean:65:2: error: linarith failed to find a contradiction",
+   "n_errors": 2,
+   "sorry": true,
+   "bad_axioms": [
+    "'L_lower' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+    "'L_tendsto_top' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]"
+   ],
+   "verdict": "CAUGHT"
+  },
+  {
+   "name": "A3",
+   "file": "TrajectoryAudit",
+   "theorem": "w_upper",
+   "old": "≤ 9 / (512 * (1 + β) ^ 2) := by",
+   "new": "≤ 8 / (512 * (1 + β) ^ 2) := by",
+   "prediction": "TRUE",
+   "why": "max ((1+b)/(2(1+B)))^2 = 0.4665 (sharpness.py): sharp constant ~ 9*0.4665/512, so 8/512 still true",
+   "A_unique": true,
+   "baseline_ok": true,
+   "exit": 1,
+   "first_error": "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\A3\\TrajectoryAudit.lean:79:2: error: linarith failed to find a contradiction",
+   "n_errors": 2,
+   "sorry": true,
+   "bad_axioms": [
+    "'w_upper' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+    "'w_tendsto_zero' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]"
+   ],
+   "verdict": "REJECTED-BUT-TRUE (proof no longer fits)"
+  },
+  {
+   "name": "A4",
+   "file": "TrajectoryAudit",
+   "theorem": "L_bounded_forces",
+   "old": "(hb : 0 < b) (hb0 : b ≤ b0)",
+   "new": "(hb : 0 < b)",
+   "prediction": "FALSE",
+   "why": "beta=1/n, b=n, b0=1, C=9/64: min(c/4,c^2/4)>0 but beta^2 b = 1/n",
+   "A_unique": true,
+   "baseline_ok": true,
+   "exit": 1,
+   "first_error": "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\A4\\TrajectoryAudit.lean:124:42: error: unknown identifier 'hb0'",
+   "n_errors": 2,
+   "sorry": true,
+   "bad_axioms": [
+    "'L_bounded_forces' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]"
+   ],
+   "verdict": "CAUGHT"
+  },
+  {
+   "name": "A5",
+   "file": "TrajectoryAudit",
+   "theorem": "L_tendsto_top",
+   "old": "Tendsto (fun n => Lq (β n) (b n)) atTop atTop := by",
+   "new": "Tendsto (fun n => Lq (β n) (b n)) atTop atBot := by",
+   "prediction": "FALSE",
+   "why": "limit direction flipped; L>0",
+   "A_unique": true,
+   "baseline_ok": true,
+   "exit": 1,
+   "first_error": "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\A5\\TrajectoryAudit.lean:85:6: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression",
+   "n_errors": 1,
+   "sorry": true,
+   "bad_axioms": [
+    "'L_tendsto_top' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]"
+   ],
+   "verdict": "CAUGHT"
+  },
+  {
+   "name": "A6",
+   "file": "TrajectoryAudit",
+   "theorem": "w_upper",
+   "old": "≤ 9 / (512 * (1 + β) ^ 2) := by",
+   "new": "≤ 9 / (512 * (1 + β) ^ 3) := by",
+   "prediction": "FALSE",
+   "why": "exponent 2->3: w ~ 9/(2048*(1.5 beta)^2) decays like beta^-2, beats beta^-3 for large beta",
+   "A_unique": true,
+   "baseline_ok": true,
+   "exit": 1,
+   "first_error": "C:\\Users\\donke\\z4-workers\\r3-chaos\\mut\\A6\\TrajectoryAudit.lean:79:2: error: linarith failed to find a contradiction",
+   "n_errors": 2,
+   "sorry": true,
+   "bad_axioms": [
+    "'w_upper' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+    "'w_tendsto_zero' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]"
+   ],
+   "verdict": "CAUGHT"
+  }
+ ]
+}

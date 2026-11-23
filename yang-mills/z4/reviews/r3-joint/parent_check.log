@@ -1,0 +1,4 @@
+check K14: exit 0 (expected 0) in 631152 ms | output 6249f2db4e9a | event 20 head 2e0819120a25
+  Waiting on the J1 v2 numerical run; report draft is written and only needs the J1 numbers.
+  
+  C:/Users/donke/z4-workers/r3-joint/report.md — verdicts: STANDS 15, DEFECT 2 (both wording), NOT CHECKED 1; predicates (met, failed, measured only): 59, 0, 2, plus one deliberate stress test that failed and is listed under §3.

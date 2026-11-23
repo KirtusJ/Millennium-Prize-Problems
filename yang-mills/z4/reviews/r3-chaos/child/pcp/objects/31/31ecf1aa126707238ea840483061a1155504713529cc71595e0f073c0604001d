@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "C:\Users\donke\z4-workers\r3-chaos\child\mut\a2_bessel_H\two_dim_control.py", line 139, in <module>
+    print("P1 factors", res["P1"]["factors"], "M", res["P1"]["M"][-1])
+                                                   ~~~~~~~~~~~~~~^^^^
+IndexError: list index out of range

@@ -1,0 +1,4 @@
+kappa=1.0 lam=1.0 c=8.0 E=0.958512,7.016485
+kappa=1.0 lam=5.0 c=16.0 E=4.049730,11.324110
+kappa=0.5 lam=2.0 c=16.0 E=1.917025,14.032970
+{"P1": {"qualifying": 3, "met": 3, "failed": 0}, "P2": {"qualifying": 15, "met": 15, "failed": 0}, "P3": {"qualifying": 6, "met": 6, "failed": 0}, "P4": {"qualifying": 6, "met": 6, "failed": 0}, "P5": {"qualifying": 6, "met": 6, "failed": 0}, "P6": {"qualifying": 3, "met": 3, "failed": 0}}

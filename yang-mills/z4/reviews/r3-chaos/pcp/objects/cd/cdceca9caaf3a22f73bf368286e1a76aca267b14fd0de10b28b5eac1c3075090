@@ -1,0 +1,35 @@
+B0 baseline qualifying: 6 / 6
+ base Scaling 0 unused: 0
+ base FiniteGroupControl 0 unused: 0
+ base LevelsControl 0 unused: 0
+ base TwoSided 0 unused: 5
+    C:\Users\donke\z4-workers\r3-chaos\mut\base_TwoSided\TwoSided.lean:5:52: warning: unused variable `hc`
+    C:\Users\donke\z4-workers\r3-chaos\mut\base_TwoSided\TwoSided.lean:5:65: warning: unused variable `hcC`
+    C:\Users\donke\z4-workers\r3-chaos\mut\base_TwoSided\TwoSided.lean:7:17: warning: unused variable `hφ`
+    C:\Users\donke\z4-workers\r3-chaos\mut\base_TwoSided\TwoSided.lean:16:63: warning: unused variable `hc`
+    C:\Users\donke\z4-workers\r3-chaos\mut\base_TwoSided\TwoSided.lean:16:76: warning: unused variable `hcC`
+ base CharTransfer 0 unused: 0
+ base TrajectoryAudit 0 unused: 0
+S1 Scaling physical_gap_tendsto_atTop FALSE 1 CAUGHT | C:\Users\donke\z4-workers\r3-chaos\mut\S1\Scaling.lean:36:79: error: unknown identifier 'hc'
+S2 Scaling lattice_gap_tendsto_zero FALSE 1 CAUGHT | C:\Users\donke\z4-workers\r3-chaos\mut\S2\Scaling.lean:28:8: error: application type mismatch
+S3 Scaling lattice_gap_tendsto_zero FALSE 1 CAUGHT | C:\Users\donke\z4-workers\r3-chaos\mut\S3\Scaling.lean:28:48: error: unknown identifier 'ha0'
+T1 TwoSided twoSided_cluster FALSE 1 CAUGHT | C:\Users\donke\z4-workers\r3-chaos\mut\T1\TwoSided.lean:14:9: error: application type mismatch
+T2 TwoSided twoSided_of_tendsto FALSE 1 CAUGHT | C:\Users\donke\z4-workers\r3-chaos\mut\T2\TwoSided.lean:36:39: error: linarith failed to find a contradiction
+T3 TwoSided twoSided_cluster TRUE 0 ACCEPTED-AS-TRUE | 
+F1 FiniteGroupControl z2_physical_gap_le TRUE 1 REJECTED-BUT-TRUE (proof no longer fits) | C:\Users\donke\z4-workers\r3-chaos\mut\F1\FiniteGroupControl.lean:51:51: error: unsolved goals
+F2 FiniteGroupControl z2_gap_le FALSE 1 CAUGHT | C:\Users\donke\z4-workers\r3-chaos\mut\F2\FiniteGroupControl.lean:39:60: error: unsolved goals
+F3 FiniteGroupControl z2_gap_pos FALSE 1 CAUGHT | C:\Users\donke\z4-workers\r3-chaos\mut\F3\FiniteGroupControl.lean:30:64: error: linarith failed to find a contradiction
+L1 LevelsControl levels_gap_le FALSE 1 CAUGHT | C:\Users\donke\z4-workers\r3-chaos\mut\L1\LevelsControl.lean:54:39: error: unknown identifier 'hgap'
+L2 LevelsControl levels_gap_le FALSE 1 CAUGHT | C:\Users\donke\z4-workers\r3-chaos\mut\L2\LevelsControl.lean:75:37: error: linarith failed to find a contradiction
+L3 LevelsControl levels_gap_le FALSE 1 CAUGHT | C:\Users\donke\z4-workers\r3-chaos\mut\L3\LevelsControl.lean:36:90: error: unsolved goals
+L4 LevelsControl levels_physical_gap_tendsto_zero FALSE 1 CAUGHT | C:\Users\donke\z4-workers\r3-chaos\mut\L4\LevelsControl.lean:129:39: error: unknown identifier 'hd'
+C1 CharTransfer conv_char FALSE 1 CAUGHT | C:\Users\donke\z4-workers\r3-chaos\mut\C1\CharTransfer.lean:58:54: error: unknown identifier 'hψ'
+C2 CharTransfer coeff_real_even FALSE 1 CAUGHT | C:\Users\donke\z4-workers\r3-chaos\mut\C2\CharTransfer.lean:110:10: error: unknown identifier 'heven'
+C3 CharTransfer iterate_char FALSE 1 CAUGHT | C:\Users\donke\z4-workers\r3-chaos\mut\C3\CharTransfer.lean:65:9: error: unsolved goals
+C4 CharTransfer coeff_real_even TRUE 1 REJECTED-BUT-TRUE (proof no longer fits) | C:\Users\donke\z4-workers\r3-chaos\mut\C4\CharTransfer.lean:94:24: error: unknown identifier 'hu'
+A1 TrajectoryAudit w_upper FALSE 1 CAUGHT | C:\Users\donke\z4-workers\r3-chaos\mut\A1\TrajectoryAudit.lean:73:25: error: linarith failed to find a contradiction
+A2 TrajectoryAudit L_lower FALSE 1 CAUGHT | C:\Users\donke\z4-workers\r3-chaos\mut\A2\TrajectoryAudit.lean:65:2: error: linarith failed to find a contradiction
+A3 TrajectoryAudit w_upper TRUE 1 REJECTED-BUT-TRUE (proof no longer fits) | C:\Users\donke\z4-workers\r3-chaos\mut\A3\TrajectoryAudit.lean:79:2: error: linarith failed to find a contradiction
+A4 TrajectoryAudit L_bounded_forces FALSE 1 CAUGHT | C:\Users\donke\z4-workers\r3-chaos\mut\A4\TrajectoryAudit.lean:124:42: error: unknown identifier 'hb0'
+A5 TrajectoryAudit L_tendsto_top FALSE 1 CAUGHT | C:\Users\donke\z4-workers\r3-chaos\mut\A5\TrajectoryAudit.lean:85:6: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expressi
+A6 TrajectoryAudit w_upper FALSE 1 CAUGHT | C:\Users\donke\z4-workers\r3-chaos\mut\A6\TrajectoryAudit.lean:79:2: error: linarith failed to find a contradiction

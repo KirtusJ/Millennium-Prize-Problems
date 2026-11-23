@@ -95,7 +95,7 @@ What ran, on the principal's Windows 11 machine:
 
 | Item | Status |
 |---|---|
-| PCP OS | Python implementation at pcp-os `59f26eb`, workspace created for this subproject; register of 20 events replays (15 at the first round) with every guard passing and all objects matching (`pcpos verify`: PASS). Copy in [`pcp/register.jsonl`](pcp/register.jsonl). |
+| PCP OS | Python implementation at pcp-os `59f26eb`, workspace created for this subproject; register of 24 events replays (15 at the first round, 20 at the second) with every guard passing and all objects matching (`pcpos verify`: PASS). Copy in [`pcp/register.jsonl`](pcp/register.jsonl). |
 | ACR method | Not pinned. The packet on this machine has fingerprint `6b6d3a680f3f`; this build requires `7ff72eed9162`. ACR is not in use; the register holds retrievals, inspections and checks only. |
 | Native Rust host, kernel guests | Not available on this machine (no Rust toolchain, no QEMU). Not used. |
 | PCP workers, recursive hierarchy | Run after the principal signed the `claude` program in. Three headless workers (challenger and builder on Opus, micro-review on Sonnet), each started by the director through `pcpos check` (register checks K6, K7, K8, exit 0) from [`reviews/launch.sh`](reviews/launch.sh), each with its own PCP register, and each with one sub-agent below it holding a register of its own: three levels, director, worker, sub-agent. All six worker registers replay (chain intact). Every worker answered the known-answer control correctly (key hashed before launch, `reviews/control_answer.sha256`). The first version of this folder (commit `a44dede`) was written before any worker ran. No chat, browser or app sub-agent was used by the director. |
@@ -194,5 +194,52 @@ Section 2 used, without proof, that the transfer eigenvalues are c_r^N. [`lean/Z
 Commutativity was not needed. Numerical check on Z₂×Z₄ (sub-agent, rerun, bytes identical): the 8 eigenvalues of T³ are the c_ψ³. Still not proved: that the characters exhaust the spectrum; the reduction from the lattice transfer operator to the N-fold convolution (gauge fixing, integrating the time links); anything for characters of dimension above one, so SU(2) remains a numerical check on one lattice.
 
 Counts for the round, as met, failed, measured only. Challenger programs 24, 1, 2 and its sub-agent 49, 0, 0; audit table program 36, 8, 8 (the 8 failures are one predicate the worker expected to fail: D_* < D on the grid) and its sub-agent 61, 0, 0; formalizer numerics 5, 0, 0. Lean: 13 new theorems, first drafts of both files failed and were fixed (the failed draft of `CharTransfer.lean` is kept in `reviews/r2-char/`). No mutation test was run.
+
+Director, workers and sub-agents are one model family; this is not independent review. Nothing here constructs a four-dimensional theory or bounds its gap.
+
+## Third round: mutation tests, a fixed-size observable in the control, B4's joint cutoff
+
+Later on 22 November 2026. Three workers (register checks K14, K15, K16), each with one sub-agent and its own register; all six replay. Reports and files: [`reviews/r3-chaos/`](reviews/r3-chaos/), [`reviews/r3-fixed/`](reviews/r3-fixed/), [`reviews/r3-joint/`](reviews/r3-joint/). The director reread each report, recompiled the new Lean file (K17, exit 0, standard axioms) and reran two of the challenger's programs in a fresh directory (bytes identical).
+
+### Correction to the director's comment on issue 1
+
+The comment summarizing the second round said that on every trajectory with β = o(b^(−1/2)), "including fixed β", the guaranteed weight vanishes. That is wrong for fixed β: there the lower endpoint diverges and the weight stays constant; the weight tends to zero only if β → ∞. A4 pointed this out on the thread. The table and the Lean statements in the section above were right; the summary sentence was not. Kept here; acknowledged on the thread.
+
+### Mutation tests of this folder (first time)
+
+Baseline: the six Lean files compile unchanged (6 of 6), the control program reproduces its result file byte for byte.
+
+- Lean, 23 single mutations of theorem statements over the six files: 19 rejected; 1 accepted and true (dropping 0 < c in `twoSided_cluster`, a hypothesis already known to be unused); 3 rejected although the mutated statement is true by the worker's numerical scan or argument (`z2_physical_gap_le` with 1/(2+x); `coeff_real_even` without ‖ψ‖ = 1; `w_upper` with 8/512). No false statement compiled.
+- Ten of the 19 rejections are "unknown identifier": the proof names the removed hypothesis. Such a rejection is mechanical and does not show the mutated statement false. The statements whose falsity rests on a counterexample are those with a changed constant or direction (for example 4K → 2K in `levels_gap_le`, 9/64 → 10/64 in `L_lower`).
+- Statements weaker than they could be, none false: `twoSided_cluster` (unused 0 < c, c ≤ C, StrictMono φ), `z2_physical_gap_le`, `coeff_real_even`, `w_upper`.
+- Control program, 7 mutations: 5 caught by the predicate expected (wrong Bessel order, β = N²+1, SU(2) coupling 2N², halved asymptote constant). **Not caught: 2**, both loosened tolerances (the H tolerance and the P3 tolerance each multiplied by 10⁶): exit 0 and a byte-identical result file. A changed digit in a copy of the result file is noticed by nothing except a rerun and byte comparison.
+
+Defect of this folder's check design, open: the tolerances are not written into the result file and the program has no negative control, so a loosened tolerance is invisible. To be fixed by writing the tolerances into the result and adding a perturbed closed form that must fail H and a ratio 1 + 10⁻⁵ that must fail P3. Not yet done; the published result file is unchanged.
+
+### A fixed-physical-size observable in the two-dimensional control
+
+"What is open" item 3 asked for the Wilson-loop reading. Outcome ([report](reviews/r3-fixed/report.md)):
+
+- The loop gives nothing new. W = (c₁/c₀)^(A·N²) exactly, so −log W/A = M₁(N) for every area: the string tension at each N is the gap of the table in section 2, by identity and not by a separate limit. 123 of 183 (N, A) cases qualify (A·N² an integer); all agree to 5·10⁻⁶¹. This confirms the table and does not test it independently. The loop formula itself is taken from the character expansion, not checked on a lattice.
+- Observables that are not eigenvectors do add something. For f = (χ₁+χ₂)/√2 and for a centered heat-kernel bump of fixed width, the first and second spectral moments in physical units decrease with N over N = 4..64 and converge: U(1) (5/4, 17/8), SU(2) (11/16, 73/128) for the first; (2.9735, 14.754) for the bump on SU(2). So A4's kind of condition holds with constants of order one in physical units at fixed physical size, in contrast with the single-plaquette bounds of the second round, which scale like 1/b. Boundedness beyond N = 64 is measured, not proved.
+- Why it works here and what would fail in four dimensions: on β ∝ 1/a² each c_r/c₀ → exp(−C_r g² a²/2), so a fixed combination of characters has fixed weights and convergent energies, with no renormalization factor. In four dimensions the loop has a perimeter self-energy, smeared observables need a factor Z(b), and the trajectory is logarithmic.
+- `lean/Z4YM/WilsonLimit.lean`, `wilson_area_limit`: if ρ_N > 0, N²·(−log ρ_N) → σ and n_N/N² → A, then ρ_N^(n_N) → exp(−σA). ρ ≤ 1 was not needed.
+- Finite groups: on β = N² the loop tends to 1 (Z₂ at N = 8, A = 1: 1 − 3.3·10⁻⁵⁴); on Z₂'s own trajectory β_N = artanh(exp(−1/(2N²))) the tension is exactly 1/2. Z₃'s own trajectory was measured only.
+
+One failed predicate, kept: the worker's 10⁻³ tolerance on the U(1) bump's second moment at N = 64 (observed 1.02·10⁻³); its own expectation, since the correction grows like r⁴/N² with the charge.
+
+### Challenge of B4's joint time and volume cutoff, as B4 invited
+
+Fifteen items stand, two minor defects of wording ([report](reviews/r3-joint/report.md)).
+
+- The bound 90·a·c² on the two lowest energies and 180·a·c² on the gap, c = 6λL³ + 6/κ, a·c ≤ 1/36: units consistent (κ a time, λ an energy), arithmetic rederived, and on an exactly solvable one-plaquette model 39 of 39 checks met, with the observed gap error at most 2.6·10⁻⁴ of the bound. The adaptation of c to one plaquette is not forced by B4's text, so that comparison is measured only.
+- Units, the statement addressed to Z4: on κ = βb, λ = β/b with physical side ℓ = Lb, c = 6βℓ³/b⁴ + 6/(βb). a·c² → 0 exactly when aβ²ℓ⁶/b⁸ → 0 and a/(β²b²) → 0. "aβ²/b⁸ → 0 suffices" is true when β is bounded below and ℓ is fixed; without a lower bound on β it fails (β = b⁴, a = b). B4's note has β → ∞.
+- The finite-volume gap floor d = e^(−sB)·2^(−N)/s is log d = −(12β² + 3 log 2)(ℓ/b)³ − log(2βb): at ℓ = 1 its decimal logarithm is about −219 at L = 2 and −1.7·10⁷ at L = 64. It tracks the gap; it is not a bound on the gap in physical units, as B4 says.
+- Heat density in [2/3, 4/3] at s = 2κ: 0.804 to 1.202 in the note's normalization; with the other eigenvalue convention n(n+2)/4 the window fails (0.0088 to 4.55), so the constants are tied to the stated metric.
+- The moving vacuum-energy shift is controlled by the same level bound and needs no separate hypothesis.
+- Defects for B4, minor: "fixed physical box size L = O(1/b)" conflates the lattice side with the physical side; the individual-energy bound needs the unnormalized transfer operator, whereas the earlier note normalizes by the leading eigenvalue (the gap bound is unaffected).
+- B4's `JointCutoff.lean` recompiles (exit 0, 14 declarations, standard axioms); it covers scalar and algebraic steps, and the min–max step, the kernel bounds, the heat density and the minorization are hypotheses there.
+
+Counts for the round, as met, failed, measured only: joint-cutoff programs 59, 0, 2; fixed-size program 12, 1, 3 and its sub-agent 3, 0, 0. Mutations: 24 caught, 3 not caught, 1 accepted as true, and 3 Lean mutations rejected though true.
 
 Director, workers and sub-agents are one model family; this is not independent review. Nothing here constructs a four-dimensional theory or bounds its gap.
