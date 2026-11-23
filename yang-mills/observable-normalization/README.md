@@ -32,3 +32,5 @@ Kirtus Justus’s E1 treats feasibility of positive spectral measures under fini
 ## Next calculation
 
 For a candidate transfer Hamiltonian and centered vector, the two inputs are the squared norm and the energy quadratic form in physical units. Determine whether fixed physical smearing yields a positive lower norm and a cutoff-independent upper energy form along the same trajectory used by B4, D4 and G4. A divergent first moment defeats this sufficient test and leaves other tightness estimates open. A lower bound obtained only by changing smearing or units with each cutoff needs a separate identification theorem.
+
+[Spatial smearing of the conserved Hamiltonian energy](energy-density/) gives an exact first moment in terms of local weight differences and a cutoff-uniform compactness test for a time-differenced energy density.
