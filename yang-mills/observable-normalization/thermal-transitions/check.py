@@ -1,11 +1,10 @@
 """Correlated post-hoc thermal transition diagnostics on Z4's frozen rows."""
 from fractions import Fraction
 from math import comb
-from pathlib import Path
+from matched_rows import arguments, circular_means, seed_rows
 
 import numpy as np
 
-DATA = Path(__file__).resolve().parents[2] / "z4/reviews/ext-match/predeclared"
 
 
 def moment(corr, t, j):
@@ -38,14 +37,14 @@ def evaluate(sums, n, side):
     return np.array([h[0]*h[2]-h[1]**2, q[0]*q[2]-q[1]**2])
 
 
-def check(side, block):
+def check(side, block, sample):
     blocks = []
-    for path in sorted(DATA.glob(f"meas_L{side}_*.txt")):
-        raw = np.loadtxt(path)[10:, -(side+1):-1]
-        raw = raw[:len(raw)//block*block]
+    chains = []
+    for raw in seed_rows(side, sample):
         stats = np.column_stack([raw.mean(1)] +
             [(raw*np.roll(raw, t, axis=1)).mean(1) for t in range(side)])
-        blocks.extend(stats.reshape(-1, block, side+1).sum(1))
+        chains.append(stats)
+        blocks.extend(stats[:len(stats)//block*block].reshape(-1, block, side+1).sum(1))
     blocks = np.array(blocks)
     total = blocks.sum(0)
     count = len(blocks)
@@ -53,11 +52,19 @@ def check(side, block):
     replicas = np.array([evaluate(total-b, (count-1)*block, side) for b in blocks])
     error = replicas.std(0)*np.sqrt(count-1)
     corrected = est - (count-1)*(replicas.mean(0)-est)
-    print(side, block, count, *[f"{a:.8g} ({b:.8g})" for a,b in zip(corrected,error)])
+    print("whole-block jackknife", side, block, count, *[f"{a:.8g} ({b:.8g})" for a,b in zip(corrected,error)])
+
+
+    if side == 12:
+        point, samples = circular_means(chains, block)
+        full = evaluate(point, 1, side)
+        draws = np.array([evaluate(row, 1, side) for row in samples])
+        print("all-row plug-in / bootstrap SE", side, block, full, draws.std(0,ddof=1))
 
 
 if __name__ == "__main__":
+    args = arguments()
     exact_control()
     for side, block in [(6,11), (8,17), (12,25)]:
-        check(side,block)
-        check(side,2*block)
+        check(side,block,args.sample)
+        check(side,2*block,args.sample)

@@ -1,21 +1,23 @@
 """Matched periodic ensembles: fixed threshold at opposite slices, chain-wise blocks."""
 from pathlib import Path
+import sys
 import numpy as np
 
-DATA = Path(__file__).resolve().parents[3] / "z4/reviews/ext-match/predeclared"
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "thermal-transitions"))
+from matched_rows import arguments, circular_means, seed_rows
 
 
-def read(side, threshold, block):
+def read(side, threshold, block, sample):
     blocks = []
-    for p in sorted(DATA.glob(f"meas_L{side}_*.txt")):
-        x = np.loadtxt(p)[10:, 2+2*side:2+3*side]
-        x = x[:len(x)//block*block]
+    chains = []
+    for x in seed_rows(side, sample):
         b = (x > threshold).astype(float)
         pair = b*np.roll(b, side//2, axis=1)
         lag = x*np.roll(x, 2, axis=1)
         rows = np.column_stack([b.mean(1),pair.mean(1),x.mean(1),lag.mean(1)])
-        blocks.extend(rows.reshape(-1,block,4).mean(1))
-    return np.array(blocks)
+        chains.append(rows)
+        blocks.extend(rows[:len(rows)//block*block].reshape(-1,block,4).mean(1))
+    return np.array(blocks), chains
 
 
 def quantities(row):
@@ -54,13 +56,19 @@ def controls():
 
 
 if __name__ == "__main__":
+    args = arguments()
     controls()
     for side,threshold,base in [(6,.09,11),(8,.027,17),(12,.0057,25)]:
         for block in (base,base*2):
-            blocks = read(side, threshold, block)
+            blocks, chains = read(side, threshold, block, args.sample)
             n = len(blocks)
             total = blocks.sum(0)
             point = quantities(total/n)
             replicas = np.array([quantities((total-b)/(n-1)) for b in blocks])
             error = np.sqrt(n-1)*replicas.std(0)
             print(side,block,n,*point,*error,2*point[0]**2)
+            if side == 12:
+                full, samples = circular_means(chains, block)
+                draws = np.array([quantities(row) for row in samples])
+                print("all-row plug-in / bootstrap SE", side, block,
+                      quantities(full), draws.std(0,ddof=1))

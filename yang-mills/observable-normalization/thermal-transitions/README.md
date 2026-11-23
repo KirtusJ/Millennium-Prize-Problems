@@ -36,9 +36,24 @@ Use Z4's dimensionless connected ratio $R(t)$ as $C(t)$. Compute $H_0$ at $t=2$ 
 | 6 | 22 | 135 | 2.72 ± 1.41 | 4.88 ± 5.24 |
 | 8 | 17 | 87 | 4.32 ± 1.65 | 0.97 ± 2.54 |
 | 8 | 34 | 43 | 4.32 ± 1.61 | 0.81 ± 2.61 |
-| 12 | 25 | 32 | 2.17 ± 1.33 | −0.24 ± 1.09 |
-| 12 | 50 | 15 | 1.48 ± 1.45 | −0.99 ± 0.98 |
+| 12 | 25 | 32 | 1.85 ± 1.33 | −0.46 ± 1.13 |
+| 12 | 50 | 15 | 1.35 ± 1.28 | −0.94 ± 0.97 |
 
-We use the previously frozen files, skip their first ten configurations and retain the last flow-time slice array. Blocks stay within a single seed. Each seed's incomplete final block is dropped. The base lengths for the coarse and middle ensembles match Z4's analysis. For the fine lattice the largest of Z4's seed-specific block lengths is used (25), followed by a doubled-length sensitivity check at each spacing. These are correlated sensitivity checks on the same configurations. The errors assume that the retained blocks give an adequate account of serial dependence. The six-step stencil subtracts several noisy quantities. Even the positive population identity allows negative sample estimates.
+We retain each configuration ID once per seed, skip its first ten configurations and use the final flow-time slice array. Blocks stay within a single seed. Each seed's incomplete final block is dropped. The base lengths for the coarse and middle ensembles match Z4's analysis. For the fine lattice the largest of Z4's seed-specific block lengths is used (25), followed by a doubled-length sensitivity check at each spacing. These are correlated sensitivity checks on the same configurations. The errors assume that the retained blocks give an adequate account of serial dependence. The six-step stencil subtracts several noisy quantities. Even the positive population identity allows negative sample estimates.
+
+## Fine-ensemble restart correction
+
+B4 identified repeated observations in the restarted fine chains. Configuration IDs 40, 41 and 42 appear twice in **each** of seeds 1206 and 1207. The plaquette and every stored flow-time slice reading coincide within each repeat. Seed 1205 and the coarse and middle files have no repeated IDs. After the ten-configuration exclusions, the frozen files therefore contain 840 fine rows representing 834 distinct seed–ID pairs (260, 287 and 287). The table above uses the latter sample. The [reader](matched_rows.py) rejects conflicting repeats and gaps among distinct IDs.
+
+A second selection restores IDs 297–299 from each of the two longer snapshots. Their frozen prefixes match exactly. The resulting 840 distinct configurations give the same whole-block estimates as the 834-configuration selection: neither set of restored rows reaches the next full block within its seed. The 25- and 50-configuration calculations use 800 and 750 distinct configurations, respectively.
+
+Retaining every distinct configuration gives the following direct estimates. Errors are the standard deviations of 4,000 circular moving-block bootstrap replications, drawing within each seed and restoring its original length. The direct estimates use the nonlinear statistic on the entire sample; the table above uses jackknife bias correction. All entries below are in units of $10^{-5}$.
+
+| Fine selection | $H_0(2)$ | Bootstrap errors, blocks 25 / 50 | $H_1(3)$ | Bootstrap errors, blocks 25 / 50 |
+|---|---:|---:|---:|---:|
+| 834 frozen unique IDs | 1.96 | 1.13 / 1.16 | −0.77 | 1.11 / 0.92 |
+| 840 declared IDs | 2.01 | 1.14 / 1.16 | −0.68 | 1.11 / 0.92 |
+
+Neither selection resolves two nonzero transition frequencies on the fine ensemble. The circular resampling assumes approximate stationarity within each retained chain. It adds a sensitivity check on the discarded tails. Both scripts default to `--sample frozen-unique`; `--sample declared-ids` selects the restored IDs and `--sample historical-rows` reproduces the earlier repeated-row calculation. [Effect on the opposite-slice purity diagnostic](../replica-gap/thermal-allowance/README.md)
 
 The [analysis script](check.py) uses only the committed measurements and NumPy. Run it from any directory with Python. It also checks all required stencils in rational arithmetic against periodic one- and two-frequency signals with a stationary term. Three PCP OS guests emitted the [Lean source](ThermalTransitions.lean) from [worker.c](worker.c). A fresh [guest replay](../transfer-increments/replay-guests.py) reproduced SHA-256 `71290ee429d095639479a3e83375d1860720b2da3bb4b974363c321b0b5687a4`. Lean 4.19.0 with Mathlib `c44e0c8ee63ca166450922a373c7409c5d26b00b` checked five supporting algebraic identities and inequalities using standard axioms. The thermal trace, general rank argument and statistical interpretation are given above.
