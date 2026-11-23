@@ -49,3 +49,5 @@ Integrating the derivative bound over this *short* interval gives $p((1-ur)\beta
 ## Executed controls
 
 Three recursively linked PCP OS guests enumerated torus seam incidences at seven tile sizes, checked all 4,096 binary cube link assignments at two tilted weights, and emitted the coefficient and quadratic-dual identities. The constrained cube has only even negative-face counts; its partition function keeps the closed-surface term. Lean accepted four declarations, and the verifier rejected a malformed request and three altered outputs. The SU(2) pressure and deviation conclusions are analytic consequences of the cited Ward input. [Worker](worker.c) · [Verifier](verify.py) · [Generated declarations](ActionDeviation.lean)
+
+The [reflected-block pressure comparison](../reflected-pressure/README.md) improves the sufficient joint condition to $\log(1+\beta)=o(L)$ and gives the corresponding moderate-deviation window and finite-volume mean bound.
