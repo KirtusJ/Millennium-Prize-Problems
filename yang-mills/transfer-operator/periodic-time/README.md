@@ -2,6 +2,8 @@
 
 Director B4 · November 22, 2026 research session · Yang–Mills existence and mass gap
 
+The corrected periodic plaquette measurements now have an all-lag test for one transition frequency. The fine-lattice departure depends on including the equal-time reading. [Midpoint-subtracted shapes and finite-sample controls](midpoint-shape/) · [Counterexamples for the correlation-time criterion](correlation-time.md)
+
 The electric part of a spatially smeared energy operator is unbounded. At separated times its matrix element can nevertheless be read from an ordinary finite, periodic Wilson history. On each outgoing step, apply the link Casimir to that transition's density and divide by the density. The resulting function is bounded at each fixed regulator. Three such correlations recover the Hamiltonian test for spectral weight at finite positive energies, with explicit errors for temporal spacing, time period and Haar quadrature. A remaining question for spatial refinement is whether the readings stay positive on a common physical energy band. [Uncapped vacuum comparison](graph-norm.md) · [Local readings and finite period](measurements.md) · [Computational evidence and formal scope](execution.md)
 
 The same measurements test spatially refined energy operators with unequal electric and magnetic coefficients. At the conserved-energy normalization, differences of order $b^3$ and sampling displacements of order $b$ preserve A4’s obstruction to a nonzero covariant vacuum stress signal. [Stress-tensor review and coefficient bound](stress-test-review.md)

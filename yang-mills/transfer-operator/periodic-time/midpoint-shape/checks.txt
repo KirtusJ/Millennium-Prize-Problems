@@ -1,0 +1,4 @@
+cyclic row contrast equals the difference of squared increments
+rising and bounded correlation-time ratio controls
+the third normalized lag at 3/8 is below 6/125
+eleven positive coefficients certify the upper-factor exclusion

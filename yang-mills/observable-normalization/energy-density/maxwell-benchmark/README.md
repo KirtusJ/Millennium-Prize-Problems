@@ -38,3 +38,5 @@ $$
 If $\widehat f(0)\ne0$, the large-time behavior of the conserved reading is $3|\widehat f(0)|^2/(\pi^4t^8)$, by rescaling $p$ by $1/t$. The $t^{-1}$ short-time law concerns a test at fixed physical size; the power for a local field at one point is different.
 
 For a mixed operator $aT+dU$ with real coefficients the covariance is $a^2 C_T+d^2 C_U$. At nonzero $q$ the two positive times $t_1\ne t_2$ determine both squared amplitudes in this free model. Specifically, $t e^{tq}C$ has a constant term $a^2q^4/(120\pi^2)$ and a term $d^2(3/t^4+3q/t^3+q^2/t^2)/(8\pi^2)$ with strictly decreasing clock dependence. Covariance of this one observable does not determine the relative sign. A scalar admixture of order $t^2$ already contributes at leading order to $t C(t,f)$ as $t\downarrow0$. These numerical factors and the vanishing cross covariance use free photons. The positive-time covariance of interacting four-dimensional Yang–Mills remains to be determined.
+
+[Logarithmic crossover of a filtered magnetic autocorrelation](interior-leakage/) gives the leading time for leaving a prescribed interior plateau and the momentum range in which a second plateau appears.

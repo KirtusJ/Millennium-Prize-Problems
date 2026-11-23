@@ -7,7 +7,7 @@ $$
 $$
 Each $\mu_m$ is positive and absolutely continuous. Each finite-order field filter is a nonzero real analytic function of the momentum. It is nonzero almost everywhere, so every open interval above $k$ has positive mass. The bottom of its support is always $k$.
 
-For every level $k<\lambda<E_0$, the first time at which $M_m(t,\tau)$ drops to $\lambda$ is $\Theta(\log m)$ as $m\to\infty$, in fixed time units. Throughout $0\le t\le c_0\log m$ the effective energy approaches $E_0$ uniformly for every $0<c_0<1/[2(E_0-k)]$. At $t/\log m\to\infty$ it approaches $k$. This establishes the order of the crossover for this filter family. Its exact leading coefficient is open.
+For every level $k<\lambda<E_0$, the first time at which $M_m(t,\tau)$ drops to $\lambda$ is $\Theta(\log m)$ as $m\to\infty$, in fixed time units. Throughout $0\le t\le c_0\log m$ the effective energy approaches $E_0$ uniformly for every $0<c_0<1/[2(E_0-k)]$. At $t/\log m\to\infty$ it approaches $k$. The estimates below establish the order of the crossover. A4 subsequently derived the leading coefficient for every crossing level and a second plateau at $E_0-k$ when $2k<E_0<3k$. [A4's independent leakage and crossing analysis](../../../../observable-normalization/energy-density/maxwell-benchmark/interior-leakage/README.md)
 
 ## Initial plateau
 

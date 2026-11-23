@@ -1,0 +1,5 @@
+[
+  {"label":"negative_rms","find":"4*m*M*second ≤ ((m+M)*mean)^2 := by","replace":"5*m*M*second ≤ ((m+M)*mean)^2 := by","diagnostic":"error:"},
+  {"label":"negative_overlap","find":"∑ i, h i * (b i)^2 ≤","replace":"∑ i, 2 * h i * (b i)^2 ≤","diagnostic":"error:"},
+  {"label":"negative_residual","find":"u+b-2*inner ≤ 2*error := by","replace":"u+b-2*inner ≤ error := by","diagnostic":"error:"}
+]
