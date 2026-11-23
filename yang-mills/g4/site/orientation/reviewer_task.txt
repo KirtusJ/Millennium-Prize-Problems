@@ -1,0 +1,149 @@
+Challenge the following audit against the original sources below. Correct false objections and detect missed defects. State a precise scoped disposition. No external access or claimed Lean execution.
+Director G4 commission under standing autonomous PCP research. You are a bounded text-only PCP worker; no tool or external access. Independently challenge the supplied source, do not invent execution. Return a concise mathematical audit with exact scope, supported statements, defects, and remaining assumptions.
+Audit ONLY the rooted orientation reversal and even/odd site-reflection arguments, particularly gauge-dependent half-tests sharing tangent plane links. Identify actual gaps or support with exact hypotheses. Separate finite lattice positivity, conditional limiting argument, and unverified upstream claims. No claims of full Yang-Mills solution.
+
+SOURCE reflection.md
+# Site reflection fixes the constant curvature
+
+The loop equations and closedness determine a candidate field $F=G+H$, where $G$ is centered Gaussian curvature and $H$ is an independent random constant two-form. In the original Wilson vacuum, reflection positivity forces $H=0$ for all six orientations and all three colors. The position of the color root and the reflected orientation are essential here. [Decomposition](gaussian.md)
+
+## Reflection at a layer of lattice sites
+
+Begin with a finite periodic lattice. Reflect an axis $i$ through its layer of sites $x_i=0$. Reflection maps an oriented link to the geometrically reflected link, taking its inverse when necessary. For every real bounded function $f$ of links on the positive side (it may use links tangent to layer zero), supported short of the opposite seam,
+$$
+                 \mathbb E[f\,\theta f]\ \ge\ 0.
+$$
+The function need not be gauge invariant. To prove this, treat $i$ as the transfer direction and call the variables on its transverse slices $U$. All measures on the original links are product Haar before weighting. For even extent $2m$, fix the tangential links at slices $0,m$ and give each half one half of the tangential action on those two slices. The remaining integrals then factor into identical real quantities by reflection, and their product is a square. This argument allows unequal extents in all the other directions.
+
+For odd extent $2m+1$, keep slice zero fixed and cut between slices $m$ and $-m$. Integrating the positive half up to $m$ with $f$ gives a real function of the last slice. Its reflected half gives the same function on $-m$. Conditional on slice zero the remaining quadratic form uses the kernel of the one step crossing the far cut, including its group integrations. More explicitly the endpoint tangential actions can be shared as positive multipliers $M$ and the middle operator, up to a positive constant, is $M K\Pi M$. Here $K$ is the product of identical one-link convolutions and $\Pi$ averages the site-gauge action on the transverse slice. This identity follows by integrating each normal link on that cut as the gauge variable at its transverse vertex. The one-link kernel is proportional to $\exp(\beta\,q\cdot q')$ on $S^3$; its power series has positive coefficients multiplying dot-product tensor powers. It defines a positive operator on the full link space. The tensor product commutes with $\Pi$ by invariance under simultaneous endpoint rotations, so $K\Pi=\Pi K\Pi$ is positive even on gauge-dependent endpoint functions. The two $M$ factors preserve positivity. The fixed slice-zero factors left outside the form are positive. This proves the inequality also for odd spatial sides. In the time direction one can always take even periods before the vacuum limit. The compact-link cylinder limit preserves the inequality. [Periodic transfer and gauge projection](../../transfer-operator/periodic-time/) · [Wilson reflection analysis](../../g4/wilson/)
+
+## The odd test
+
+Fix an orientation $ij$ and color $c$. Place the root at zero on the reflecting plane perpendicular to axis $i$. For $n\ge1$ take the positively oriented $ij$ plaquette based at $n e_i$, transported to the root by the straight positive half-axis path. Use
+$$
+ f=\sin\bigl(t [\sqrt\beta\,\operatorname{Im} U_p^{\rm rooted}]_c\bigr).
+$$
+For each fixed $n$ and real $t$, this is a bounded positive-half test at all sufficiently large extents. It transforms under a change of color frame at the root; the reflection inequality above applies to it before quotienting by gauge. Its reflected plaquette has the opposite orientation at the reflected square. Cyclically moving to the positively oriented base conjugates by a single edge. In the common rooted gauge the effect of this extra conjugation on scaled curvature vanishes in probability. The choice of the reflected root paths also has vanishing effect for fixed $n$. Inverting a unit quaternion negates its imaginary part exactly. Consequently, writing $p_n$ and $p_{-n-1}$ for the two positively oriented squares, the limiting inequality is
+$$
+ 0\ge \mathbb E[\sin(tF_{p_n,c})\sin(tF_{p_{-n-1},c})].
+$$
+Both factors are bounded, so weak convergence suffices. Now send $n\to\infty$ **in the already identified tangent law**. The Fourier multiplier of $G$ is bounded on the Brillouin torus. Its Fourier coefficients at this growing separation tend to zero by the Riemann–Lebesgue lemma. The two Gaussian components converge jointly to independent $N(0,1/2)$ variables and remain independent of $H$. Conditionally on $H$, the limiting mean of each sine is $e^{-t^2/4}\sin(tH_{ij,c})$. Hence
+$$
+           0\ge e^{-t^2/2}\mathbb E[\sin^2(tH_{ij,c})].
+$$
+Taking the countably many $t=1/m$, $m\ge1$, proves $H_{ij,c}=0$ almost surely: for any nonzero finite value, sufficiently large $m$ gives a nonzero sine. The finite set of components can be treated simultaneously. This proves the whole-sequence Gaussian law for every finite set of rooted faces.
+
+## Single-plaquette Wilson action
+
+The exact quaternion identity
+$$
+ 2\beta(1-x_p)=|F_p^\beta|^2+\beta(1-x_p)^2
+$$
+and tightness of $\beta(1-x_p)$ imply that the last term tends to zero in probability. Thus $\beta(1-x_p)$ converges in distribution to $\chi_3^2/4$ at any fixed face. Bounded functions of this local action have convergent expectations. The separate [uniform exponential moment bound](moments.md) proves convergence of its unbounded mean to $3/4$ and of all higher moments.
+
+For the bounded one-slice observable $O_s^\beta=\exp[-2s\beta(1-x_{12})]$, the same determinant and convolution formulas as for the [two-plaquette difference](dipole.md) apply with the factor $\widehat k_3^2$ **removed** from the spatial integral. Denote the resulting positive measure by $\mu_1$, its Laplace transform by $C_1(n)$, and put $D_1=1+2s C_1(0)=1+s$. The two-slice Gaussian limit now concerns the curvature of the single spatial face. Its centered correlation is
+$$
+ B_{s,1}(n)=[(1+s)^2-4s^2 C_1(n)^2]^{-3/2}-(1+s)^{-3}.
+$$
+The angular integral of $\theta_1^2+\theta_2^2$ is $8\pi/3$, giving $\mu_1(dE)=[E^3/(6\pi^2)+O(E^5)]dE$ at zero and $C_1(n)\sim1/(\pi^2 n^4)$. The positive convolution series with $\mu_1,D_1$ has no atoms. Its first term yields
+$$
+ B_{s,1}(n)\sim\frac{6s^2}{(1+s)^5\pi^4}n^{-8},\qquad
+ \rho_{s,1}([0,\epsilon])\sim\frac{6s^2}{(1+s)^5\pi^4\,8!}\epsilon^8.
+$$
+The weak convergence and successive limits have the same meaning as for the dipole. In particular, the gauge-invariant vacuum sector sampled by this *single* bounded Wilson action has spectral weight approaching arbitrarily small positive energies measured in lattice steps. A gap lower bound in physical units is still a separate question.
+
+## Fixed positive physical time and normalization
+
+There is also a conclusion at physical separations, without a rate. For either bounded observable let $B_\beta(n)$ denote its actual connected transfer correlation on the chosen finite box. Positivity of the normalized transfer gives $0\le B_\beta(n')\le B_\beta(n)$ for $n'\ge n$. On **every** admissible joint sequence and for **any** integers $n_\beta\to\infty$ this gives
+$$
+ 0\le \limsup B_\beta(n_\beta)\le B_s(N)\quad\text{for every fixed }N .
+$$
+The appropriate single-face or dipole limiting correlation tends to zero with $N$. Thus the connected correlation tends to zero whenever $n_\beta$ diverges, including $n_\beta=\lfloor t/b\rfloor$ for fixed physical $t>0$ and $b\downarrow0$. The mean tends to $D^{-3/2}>0$ and the variance tends to $B_s(0)>0$, with $D$ for the chosen probe. Hence both the variance-normalized correlation and $\langle O_s^\beta(0)O_s^\beta(n_\beta)\rangle/\langle O_s^\beta\rangle^2-1$ tend to zero. Equivalently, the raw connected spectral weight below any fixed physical energy tends to zero, by weak convergence and the absence of an atom at zero lattice energy. These statements concern these two specific local probes.
+
+If one normalizes by the connected reading at the positive time itself, its magnitude has just been shown to vanish. A fixed number of *additional lattice steps* has a well-defined ratio nevertheless. For any $\delta>0$ sufficiently small, the weight in $(\delta/4,\delta/2)$ tends to a positive number. After tilting the spectral measure by $\exp(-n_\beta E)$ and dividing by its mass, the fraction at $E\ge\delta$ is therefore at most $C_\delta e^{-n_\beta\delta/2}$ for sufficiently large regulators along the sequence. The tilted probability concentrates at zero in lattice units. For fixed $k\ge0$ this proves $B_\beta(n_\beta+k)/B_\beta(n_\beta)\to1$. A second separation differing by a fixed **physical** time corresponds to $k$ growing with the cutoff and is outside this ratio estimate.
+
+SOURCE gaussian.md
+# The microscopic law up to a constant mode
+
+Let $F$ be any joint limit from the [original Wilson measure](wilson-law.md). It is closed, has uniformly bounded component second moments, and satisfies the compactly supported Haar variation identity. For a finite real colored test $g$ on faces write $F(g)=\langle F,g\rangle$ and $\phi(g)=\mathbb E e^{iF(g)}$. For $u=dh$, inserting the characteristic function test with argument $g+tu$ into that identity and differentiating in $t$ gives
+$$
+ \frac d{dt}\phi(g+tu)=-(\langle g,u\rangle+t\|u\|_2^2)\phi(g+tu).
+$$
+The finite first moment of $F(u)$ justifies the derivative. Integration at zero gives $\phi(g+tu)=\phi(g)\exp[-t\langle g,u\rangle-t^2\|u\|_2^2/2]$. In particular all compact exact test variables are jointly centered Gaussian with covariance the ordinary $\ell^2$ inner product.
+
+Let $\mathcal E=\overline{d C_c^1}^{\,\ell^2}$ in three-color two-cochains and let $P$ be orthogonal projection onto $\mathcal E$. The isometry $Z(dh)=F(dh)$ extends into $L^2$ of the same probability space for all $u\in\mathcal E$. Its joint laws stay Gaussian by $L^2$ approximation. Put $G(g)=Z(Pg)$ and $R(g)=F(g)-G(g)$ for finite $g$. Then $d^*R=0$ since $R(dh)=0$. Also $dR=0$ since $F$ is closed and $P d^*k=0$ for every finite three-cochain $k$. These assertions hold simultaneously on all cells by countability.
+
+The cubical Hodge Laplacian $dd^*+d^*d$ is the scalar nearest-neighbor Laplacian on every component. Indeed the Fourier symbols of $d$ and $d^*$ are exterior multiplication by $p=(e^{ik_j}-1)_j$ and contraction with its conjugate. Their anticommutator is $|p|^2 I$. This is an identity of finite-difference operators and so applies to $R$ without any summability at infinity. Thus each component of $R$ is harmonic. Its coordinate second moments are uniformly bounded by the curvature estimate and $\|P\|\le1$.
+
+For any real $Y\in L^2$, the scalar function $x\mapsto\mathbb E[R_{ij,c}(x)Y]$ is bounded and harmonic on $\mathbb Z^4$, hence constant. One proof uses a lazy walk which chooses a coordinate uniformly and moves by $-1,0,1$ with probabilities $1/4,1/2,1/4$. Couple two walks starting at adjacent sites. Synchronize all other coordinates. When the differing coordinate is chosen, use increment pairs $(-1,0),(0,-1),(1,0),(0,1)$ equiprobably until meeting. The difference performs a recurrent one-dimensional simple walk at those updates. Synchronize after meeting. Bounded harmonic functions have the same mean at all times under this walk, and the probability of failure to meet tends to zero. Taking $Y=R_{ij,c}(x)-R_{ij,c}(0)$ proves $R_{ij,c}(x)=R_{ij,c}(0)$ almost surely. Write this random constant two-form as $H$.
+
+Passing the characteristic identity by $L^2$ approximation to $u\in\mathcal E$, then replacing $u$ by $u-Pg$, yields
+$$
+ \mathbb E e^{iR(g)+iZ(u)}
+   = \phi(g)e^{\|Pg\|^2/2}e^{-\|u\|^2/2}
+   = \mathbb E e^{iR(g)}\,\mathbb E e^{iZ(u)} .
+$$
+Taking arbitrary finite linear combinations proves independence of $H$ and the entire Gaussian field. Each subsequential law is therefore a lattice Gaussian curvature plus an independent constant random two-form. At this stage the law of $H$ is undetermined. [Site reflection](reflection.md) fixes it in the Wilson vacuum. Every finite group of tests whose coefficients sum to zero separately in each orientation and color has a unique limit along the **whole** sequence. For such tests the mean is zero and the joint limiting covariance is $\langle g,Pg'\rangle$. This is a statement of convergence in distribution. Unbounded moments along the cutoff sequence require separate uniform integrability.
+
+For $k\ne0$ the Fourier multiplier of $P$ is
+$$
+ P(k)=\frac{p\wedge\iota_{\bar p}}{|p|^2}.
+$$
+Its range is that of exterior multiplication by $p$ from one-forms and its rank is three per color. Projection onto the closure of the finite exact forms has precisely this multiplier. To see the reverse inclusion, first exclude a small neighborhood of $k=0$ from a square-integrable range section; there $(\iota_{\bar p}/|p|^2)$ supplies a bounded one-form preimage. Approximate that preimage in $L^2$ by trigonometric polynomials, apply the bounded exterior multiplier and then remove the excluded neighborhood. The diagonal multiplier in orientation $ij$ is $(|p_i|^2+|p_j|^2)/|p|^2$. Its normalized torus integral is $1/2$ by permutation symmetry. Thus each single-face limiting vector is $N(0,I_3/2)+H_{ij}$. Truncation and $2(1-x_p)\ge|\operatorname{Im}U_p|^2$ imply, for each spatial or temporal orientation,
+$$
+ \liminf_{\beta,L\to\infty}\beta\,\mathbb E(1-x_p)\ge 3/4 .
+$$
+For this inequality take a sequence realizing the liminf, extract a curvature limit and apply the lower semicontinuity of the second moment. Independence and centering of the Gaussian make the cross term zero.
+
+A second check uses $F(dh)$ with $h$ supported on a single oriented edge and one unit color. The six incident faces give variance six. For the resulting three-color vector $j$, $\mathbb E e^{-s|j^\beta|^2}\to(1+12s)^{-3/2}$ for $s\ge0$ when the incident faces are transported into the same local frame with their incidence signs. A bounded time-slice observable with a nonlocal-in-time spectral response is computed in the [dipole calculation](dipole.md).
+
+SOURCE wilson-law.md
+# Local equations for the original Wilson curvature
+
+Use the isotropic Wilson probability on a periodic spatial cubic lattice of side $L\ge3$ and periodic time of length $N$, with normalized product Haar measure on every original $SU(2)$ link. Write the group as unit quaternions. Put $x_p=\operatorname{Re}U_p=\operatorname{tr}(U_p)/2$, using positively oriented faces and the Wilson factor $\exp[-\beta(1-x_p)]$. The three standard unit imaginary quaternions have length one. First take $N\to\infty$ at fixed $\beta,L$ to obtain the transfer vacuum. Then take any sequence $\beta,L\to\infty$. Every patch or rooted path in a finite-dimensional distribution is kept fixed in lattice units in this second limit.
+
+## A temporal-face estimate
+
+More generally give the spatial and temporal faces respective couplings $\sigma=\beta a/b$ and $\gamma=\beta b/a$, $0<a\le b$. Let $P=3L^3$ and $z(\gamma)=\int \exp[-\gamma(1-\operatorname{Re}U)]\,dU$. The original periodic partition function is $z(\gamma)^{NP}\operatorname{Tr}_{\rm phys}(T_{\gamma,\sigma}^N)$. Integrating the temporal links supplies the gauge projection on each transfer step. The factor $z^{NP}$ restores the normalization of the one-link kinetic kernel. The normalized one-step operator $T=MKM$ is positive compact with a simple top eigenvalue and norm at most one. Its strictly positive top eigenfunction is gauge invariant. The logarithm of its physical trace per step tends to the log norm by this spectrum and trace class of a fixed positive power. The fixed-box Perron limit also gives the vacuum joint law of any bounded gauge-invariant cylinder observable. Equivalently, continuous cylinder observables in a compact-link subsequential time limit can first be averaged over local gauges. This determines their expectations from the gauge-invariant cylinder law. [Transfer conventions](../../transfer-operator/hamiltonian-time/) · [Original periodic history](../../transfer-operator/periodic-time/)
+
+Let $u_{t,N}$ be the mean of $1-x_p$ for any temporal face. Keeping $\sigma$ fixed, finite-volume Jensen applied to the ratio of Boltzmann weights gives
+$$
+ \gamma u_{t,N}/2
+ \le [\log {\cal Z}_{\gamma/2,\sigma}-\log {\cal Z}_{\gamma,\sigma}]/(NP).
+$$
+Send $N$ to infinity. The upper transfer norm at $\gamma/2$ is at most one. At $\gamma$ the product-bump estimate gives $-\log\|T_{\gamma,\sigma}\|/P\le C\sigma/\beta$ for sufficiently large $\beta$. In particular
+$$
+ u_t\le\frac{2}{\gamma}\left(\log\frac{z(\gamma/2)}{z(\gamma)}+C a/b\right).
+$$
+Integration with the radial Haar density proportional to $\sin^2\theta$, $0\le\theta\le\pi$, gives $c\gamma^{-3/2}\le z(\gamma)\le C'\gamma^{-3/2}$ for $\gamma\ge1$. Integrate over the cap $\theta\le1/\sqrt\gamma$ for the lower bound and use $1-\cos\theta\ge2\theta^2/\pi^2$ for the upper bound. Thus $u_t\le C''/\gamma$. The spatial result is $u_s\le C/\beta$. Both estimates are uniform in $L$. At $a=b$, all six types of faces have $\mathbb E[\beta(1-x_p)]\le C_0$. Spatial rotations and translations, and time translations, give the needed symmetry even though the time extent was taken to infinity first. [Spatial deficit and norm bound](../electric-disorder/wilson-readings.md)
+
+## Rooting and linearizing on a fixed patch
+
+Fix a root at the origin and compatible paths on a spanning tree of $\mathbb Z^4$, for instance paths moving the coordinates in order. At each site use the product along the root path as gauge change; write $U'_e$ for the resulting link. Every tree edge becomes one. At any other fixed edge $U'_e$ is the holonomy around a fixed closed walk. On a sufficiently large torus this walk lifts to a contractible walk and can be expressed as a finite product of conjugated elementary plaquettes and their inverses. Interchanging adjacent perpendicular unit steps and cancelling backtracks gives such an expression. For the bi-invariant angular distance, $d(1,q)^2\le(\pi^2/2)(1-\operatorname{Re}q)$. The triangle inequality and Cauchy–Schwarz therefore give $\mathbb E[\beta d(1,U'_e)^2]\le C_e$ with $C_e$ depending on the walk.
+
+The local vector $A_e^\beta=\sqrt\beta\log U'_e$ is tight. At the single cut point one can choose any logarithm of length $\pi$. The curvature $F_p^\beta=\sqrt\beta\,\operatorname{Im}U'_p$ has $\mathbb E|F_p^\beta|^2\le 2C_0$ at **every** face, since rooting preserves its norm. The difference between scaled logarithm and scaled imaginary part on a given face tends to zero in probability. Taylor expansion of the four-factor plaquette word on bounded sets of $A^\beta$ gives
+$$
+ F_p^\beta=(dA^\beta)_p+o_{\mathbb P}(1).
+$$
+Here $d$ is the ordinary oriented cubical coboundary. Tightness removes the truncation. Hence the signed sum around each fixed cube tends to zero. Every subsequential joint limit satisfies $dF=0$ on the countable lattice. Tightness on all finite sets and diagonal extraction yield a joint limit along a subsequence of any sequence. The curvature bound survives by truncation, uniformly in the face.
+
+Two different root paths to a face change its frame by the holonomy of a fixed closed walk, which tends to one by the same estimate. Conjugating a tight $F_p^\beta$ by this holonomy changes it by $o_{\mathbb P}(1)$. This applies jointly to any fixed finite set. The arbitrary gauge at the common root acts by the same global color rotation.
+
+## Haar variation and the limiting identity
+
+For a selected oriented edge $e$, choose a rooted tree avoiding that one edge. Such a choice exists since each lattice edge belongs to a square; a finite reroute and restriction to the finite patch suffice. Root paths for all endpoints, including the neighbors of $e$, are thus independent of the original variable $U_e$. Conditionally on other links, vary this one link so that $U'_e$ is multiplied on the left by $\exp(sX/\sqrt\beta)$, $X$ a fixed imaginary quaternion. This is a left Haar variation by a generator conjugated with a root path independent of $U_e$. It also leaves every other tree-gauged link fixed. Use it under the original finite periodic integral and then pass to the infinite-time vacuum at fixed $\beta,L$. The resulting terms are continuous bounded cylinder functions for these fixed parameters.
+
+For a bounded $C^1$ function $f$ of finitely many scaled imaginary face vectors, with bounded continuous first derivatives, differentiation under Haar gives
+$$
+ \mathbb E\left[\left.\frac d{ds}f(F^\beta(U(s)))\right|_0\right]
+ =\mathbb E\left[f(F^\beta)\sqrt\beta\sum_{p\ni e}D_{e,X}(1-x_p)\right].
+$$
+The operator $D$ here uses the unscaled generator. Write $\epsilon_{pe}$ for oriented incidence. Differentiating the plaquette word inserts $X$ at a positive occurrence and inserts $-X$ next to the inverse at a negative one. The resulting derivative of $\operatorname{Im}U'_p$ is bounded by $|X|$ and tends to $\epsilon_{pe}X$ in probability on the fixed patch. Cyclic scalar trace gives the **exact** scalar score
+$$
+ D_{e,X}(1-x_p)=\epsilon_{pe}\langle X,\operatorname{Im}(V_{pe}^{-1}U'_pV_{pe})\rangle.
+$$
+Indeed, for a positive occurrence written $A U B$ use $V=A$; for a negative occurrence $A U^{-1}B$ use $V=A U^{-1}$. This uses $\operatorname{Re}(Xq)=-X\cdot\operatorname{Im}q$. The short words $V$ tend to one. After multiplication by $\sqrt\beta$ each summand therefore differs from $\epsilon_{pe}X\cdot F_p^\beta$ by a term vanishing in probability. All these scores have uniform second-moment bounds. This gives the uniform integrability needed on the right; the left has bounded first derivatives and bounded insertions. Taking the subsequential limit in the rooted variables gives, by summing the single-edge identities,
+$$
+ \mathbb E[\partial_{dh} f(F)] = \mathbb E[\langle F,dh\rangle f(F)]
+$$
+for every compactly supported real three-color one-cochain $h$. The pairing sums over positively oriented cells and Euclidean colors. The avoidance tree may change between edge identities because all its limiting curvature marginals agree with those of the original root tree. [Identification of the limiting law](gaussian.md)

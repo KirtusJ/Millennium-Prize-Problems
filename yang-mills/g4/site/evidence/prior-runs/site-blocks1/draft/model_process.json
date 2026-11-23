@@ -1,0 +1,13 @@
+{
+  "pid": 2136,
+  "start_ns": 1795422780174369000,
+  "exit_observed_ns": 1795423020580662500,
+  "returncode": 1,
+  "prompt_sha256": "72665b2b632396dbca7e6871e3011383aff395a901250a205f163ff8e7e12f32",
+  "unexpected_item_types": [],
+  "event_types": [
+    "thread.started",
+    "turn.started"
+  ],
+  "error_events": []
+}

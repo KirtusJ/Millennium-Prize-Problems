@@ -1,0 +1,140 @@
+PCP OS kernel 0.3.1 | x86_64 | new kernel, written in Rust | early
+memory reported by the loader: 639 KiB below 1 MiB, 31740 KiB above
+kernel image: code 0x101000..0x15f000, read-only data 0x15f000..0x181000, end 0x1227000
+protections: paging true, supervisor write protection true, no-execute true, long mode true
+memory for programs: 2560 frames of 4 KiB, 0x1400000..0x1e00000
+file from the loader: g4-2.elf (140728 bytes at 0x1228000)
+file from the loader: core-spec.md (131574 bytes at 0x124b000)
+file from the loader: proof-part (2641 bytes at 0x126c000)
+command line: C:\Users\donke\g4-native-20261122\kernel\kernel.elf32 auto=g4-2.elf then=off image=0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3
+further protections: supervisor execution prevention on, supervisor access prevention on, user-mode instruction prevention on
+running image (code and read-only data), SHA-256: 0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3 (measured; equal to the value the loader named)
+memory map replaced, read back from the page tables: 4385 pages of the kernel image, 69 pages of the loader's files, 10240 KiB of frame memory, 0 KiB of device memory; writable and executable at once: 0
+self-test:
+  pass the kernel opens its own register and records the native method by measurement
+  pass the running image measures as the value the loader named
+  pass a register written by the Python implementation verifies to the same head
+  pass the register of the research-baseline exercise verifies to the same head
+  pass one changed byte in an earlier event is refused
+  pass an incomplete final line is refused
+  pass the kernel appends events and its own register verifies
+  pass an event with a malformed time or an undefined authority is refused and nothing is written
+  pass a derived capability has the same rights or fewer, and revocation reaches everything derived
+  pass the draft compact record form round-trips every event
+  note the same 13 events: 6027 bytes as JSON, 2962 bytes in the draft compact form
+  pass every state machine is a complete, well-formed table, equal to the published tables
+  pass from every running state an integrity fault leads to SAFE, and SAFE is left only by stopping
+  pass a task becomes DONE only from EXITED by a verified result
+  pass the native ACR guards replay the scenario register (82 events, every kind) without a problem
+  pass no combination of roles hands a model or a program the means to start ACR use, administer or change the system
+  pass revoking a grant takes back what was handed on from it, in every holder
+  pass no memory is both writable and executable
+  pass code is executable and not writable
+  pass read-only data is neither writable nor executable
+  pass data is writable and not executable
+  pass address zero is not mapped, nor anything below the image
+  pass what is mapped is the kernel image, the loader's files read-only, and frame memory that is never executable; nothing else, each at its own address, none of it for user mode
+  pass every further protection the processor offers is on
+  pass a frame is handed out to one holder, comes back zeroed, cannot be given back twice, and memory outside the pool is not a frame
+  pass the kernel's heap gives each holder its own block and uses freed blocks again instead of new memory
+  pass a write to kernel code is refused by the processor
+  pass a write to read-only data is refused by the processor
+  pass executing an instruction that lies in writable data is refused by the processor
+  pass a read near address zero is refused by the processor
+  pass control: a write to ordinary data is allowed, so the probe can tell the difference
+  pass a write to the interrupt table is refused by the processor
+  pass a write to the segment table and task state segment is refused by the processor
+  pass a read of the page below each of the six stacks is refused by the processor
+  pass memory the kernel does not use is not mapped: the text display, the low mebibyte, what lies above the frame memory, and where devices are
+  pass frame memory is writable by the kernel and an instruction in it is refused by the processor
+  pass the timer interrupts and the tick count advances
+  pass a task not heard from within its quiet limit is LOST at the next sweep; one that reports is not; a claimed result that differs is FAILED
+  pass the system is OPERATIONAL after a verification that passed, and only then
+  pass an event the guards refuse leaves the register unchanged
+  note 13 processes ran for 78 timer periods; the timer took the processor back 78 times
+  pass a program runs in user mode in its own address space, writes through a system call and exits; the kernel kept what it wrote
+  pass a program that yields is resumed where it left off, three times
+  pass two programs that never yield are each preempted by the timer, at least three times, and each finishes
+  pass each of the two wrote its own number at the same address and found it unchanged: their memory is separate
+  pass a program's read of kernel memory is refused by the processor and ends that program only
+  pass a program's write to kernel memory is refused by the processor
+  pass an instruction reserved to the kernel is refused in user mode
+  pass a program reaches no device port
+  pass a program cannot execute its own writable data
+  pass a program that exhausts its stack meets the absent page below it and is ended
+  pass a system call that names kernel memory, unmapped memory or an impossible length is refused, and so is an undefined call
+  pass a program without a capability for the console cannot write to it
+  pass a program that never yields and never ends is stopped by the kernel when its budget is spent
+  pass in every address space a program reaches three pages, none both writable and executable, no kernel page, and the page below its stack is absent
+  pass no page of memory belongs to two processes
+  pass after all of it the kernel is in its own address space and its code and read-only data measure as before
+  pass every process is a task in the kernel's register: six DONE by the kernel's own reading of the output, six FAILED, one STOPPED
+  pass a task is not DONE on a claim: completion that names no result in the record is refused
+display: none this kernel can drive
+keyboard: no controller
+sound: no device this kernel drives
+music: no FM synthesiser
+the asynchronous self-tests were not run: there is no keyboard controller
+starting g4-2.elf (140728 bytes, SHA-256 0a5b2085ece1dc924dda71c52409eb12565b9e31699034780e1c5fcd80b640a6)
+G4 LEANHEX 2d2d204e4154495645204348494c4420320a0a7468656f72656d207368617265645f626f756e646172795f6e6f6e6e65
+G4 LEANHEX 6761746976650a202020202850203a205920c397205120e2869220e284822920286850203a20436f6e74696e756f7573
+G4 LEANHEX 2050290a2020202028686669626572203a20e2888020792c204d696c6c656e6e69756d2e47342e436f6d706c65785250
+G4 LEANHEX 2e4e6f6e6e65676174697665436f6d706c6578202866696265724578706563746174696f6e20cebc2053205020792929
+G4 LEANHEX 203a0a202020204d696c6c656e6e69756d2e47342e436f6d706c657852502e4e6f6e6e65676174697665436f6d706c65
+G4 LEANHEX 782028e288ab207a2c2050207a20e2888228ceb72e70726f6420cebc292e74696c746564205329203a3d2062790a2020
+G4 LEANHEX 7277205b6e6f726d616c697a65645f626f756e646172795f6d69787475726520ceb720cebc205320685320502068505d
+G4 LEANHEX 0a20206170706c79206e6f6e6e65676174697665436f6d706c65785f696e74656772616c20ceb7205f20287765696768
+G4 LEANHEX 7465645f66696265724578706563746174696f6e5f696e7465677261626c6520ceb720cebc2053206853205020685029
+G4 LEANHEX 0a2020696e74726f20790a2020636f6e7374727563746f720a2020c2b72073696d70205b436f6d706c65782e6d756c5f
+G4 LEANHEX 696d2c20286866696265722079292e315d0a2020c2b72073696d7061205b436f6d706c65782e6d756c5f72655d207573
+G4 LEANHEX 696e670a2020202020206d756c5f6e6f6e6e65672028626f756e6461727944656e736974795f706f7320ceb720cebc20
+G4 LEANHEX 532068532079292e6c6520286866696265722079292e320a0a646566207368617265645265666c656374696f6e2028ce
+G4 LEANHEX b8203a205920e28692205120e2869220512920287a203a205920c397205129203a205920c3972051203a3d20287a2e31
+G4 LEANHEX 2c20ceb8207a2e31207a2e32290a0a7468656f72656d207368617265645f626f756e646172795f7265666c656374696f
+G4 LEANHEX 6e5f706f7369746976650a2020202028ceb8203a205920e28692205120e28692205129202868ceb8203a20436f6e7469
+G4 LEANHEX 6e756f757320287368617265645265666c656374696f6e20ceb829290a202020202846203a205920c397205120e28692
+G4 LEANHEX 20e284822920286846203a20436f6e74696e756f75732046290a2020202028686669626572203a20e2888020792c204d
+G4 LEANHEX 696c6c656e6e69756d2e47342e436f6d706c657852502e4e6f6e6e65676174697665436f6d706c65780a202020202020
+G4 LEANHEX 284d696c6c656e6e69756d2e47342e496e74656772616c52502e7265666c6563746564496e74656772616c0a20202020
+G4 LEANHEX 2020202028cebc2e74696c746564202866756e2071203d3e20532028792c20712929292028ceb8207929202866756e20
+G4 LEANHEX 71203d3e20462028792c20712929202866756e2071203d3e20462028792c207129292929203a0a20202020497350726f
+G4 LEANHEX 626162696c6974794d656173757265202828ceb72e70726f6420cebc292e74696c74656420532920e288a70a20202020
+G4 LEANHEX 2020496e7465677261626c65202866756e207a203d3e20636f6e6a20284620287368617265645265666c656374696f6e
+G4 LEANHEX 20ceb8207a2929202a2046207a29202828ceb72e70726f6420cebc292e74696c74656420532920e288a70a2020202020
+G4 LEANHEX 204d696c6c656e6e69756d2e47342e436f6d706c657852502e4e6f6e6e65676174697665436f6d706c65780a20202020
+G4 LEANHEX 20202020284d696c6c656e6e69756d2e47342e496e74656772616c52502e7265666c6563746564496e74656772616c20
+G4 LEANHEX 2828ceb72e70726f6420cebc292e74696c7465642053290a20202020202020202020287368617265645265666c656374
+G4 LEANHEX 696f6e20ceb8292046204629203a3d2062790a202068617665206850203a20436f6e74696e756f7573202866756e207a
+G4 LEANHEX 203d3e20636f6e6a20284620287368617265645265666c656374696f6e20ceb8207a2929202a2046207a29203a3d0a20
+G4 LEANHEX 20202028436f6d706c65782e636f6e74696e756f75735f636f6e6a2e636f6d70202868462e636f6d702068ceb829292e
+G4 LEANHEX 6d756c2068460a20206c657449203a20497350726f626162696c6974794d656173757265202828ceb72e70726f6420ce
+G4 LEANHEX bc292e74696c746564205329203a3d0a202020204d696c6c656e6e69756d2e47342e496e74656772616c52502e77696c
+G4 LEANHEX 736f6e5f74696c745f70726f626162696c6974792028ceb72e70726f6420cebc2920532068530a2020726566696e6520
+G4 LEANHEX e29fa8696e666572496e7374616e63652c204d696c6c656e6e69756d2e47342e496e74656772616c52502e696e746567
+G4 LEANHEX 7261626c655f636f6e74696e756f75735f636f6d70616374205f205f2068502c203f5fe29fa90a202065786163742073
+G4 LEANHEX 68617265645f626f756e646172795f6e6f6e6e6567617469766520ceb720cebc2053206853205f206850206866696265
+G4 LEANHEX 720a0a6f6d697420685320696e0a7468656f72656d20726f6f7465645f726576657273616c207b47203a20547970652a
+G4 LEANHEX 7d205b47726f757020475d20287220652070203a204729203a0a2020202072202a202865e281bbc2b9202a2070e281bb
+G4 LEANHEX c2b9202a206529202a2072e281bbc2b9203d20282872202a2065e281bbc2b929202a2070202a202872202a2065e281bb
+G4 LEANHEX c2b929e281bbc2b929e281bbc2b9203a3d2062790a202067726f75700a0a237072696e74206178696f6d732066696265
+G4 LEANHEX 72506172746974696f6e0a237072696e74206178696f6d7320746f74616c506172746974696f6e0a237072696e742061
+G4 LEANHEX 78696f6d7320626f756e6461727944656e736974790a237072696e74206178696f6d7320666962657245787065637461
+G4 LEANHEX 74696f6e0a237072696e74206178696f6d73206669626572506172746974696f6e5f706f730a237072696e7420617869
+G4 LEANHEX 6f6d7320746f74616c506172746974696f6e5f706f730a237072696e74206178696f6d7320626f756e6461727944656e
+G4 LEANHEX 736974795f706f730a237072696e74206178696f6d7320696e74656772616c5f6669626572506172746974696f6e0a23
+G4 LEANHEX 7072696e74206178696f6d7320626f756e6461727944656e736974795f696e7465677261626c650a237072696e742061
+G4 LEANHEX 78696f6d7320696e74656772616c5f626f756e6461727944656e736974790a237072696e74206178696f6d7320776569
+G4 LEANHEX 67687465645f66696265724578706563746174696f6e0a237072696e74206178696f6d732077656967687465645f6669
+G4 LEANHEX 6265724578706563746174696f6e5f696e7465677261626c650a237072696e74206178696f6d73206e6f726d616c697a
+G4 LEANHEX 65645f626f756e646172795f6d6978747572650a237072696e74206178696f6d73206e6f6e6e65676174697665436f6d
+G4 LEANHEX 706c65785f696e74656772616c0a237072696e74206178696f6d73207368617265645f626f756e646172795f6e6f6e6e
+G4 LEANHEX 656761746976650a237072696e74206178696f6d73207368617265645265666c656374696f6e0a237072696e74206178
+G4 LEANHEX 696f6d73207368617265645f626f756e646172795f7265666c656374696f6e5f706f7369746976650a237072696e7420
+G4 LEANHEX 6178696f6d7320726f6f7465645f726576657273616c0a0a656e64204d696c6c656e6e69756d2e47342e536974655250
+G4 LEANHEX 0a
+G4 COMPLETE
+g4-2.elf ended DONE: exit 0 after 0 s; 433 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 290 pages at the end, 0 of them the display's, 0 both writable and executable; 296 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
+  pass the kernel's register of its own start, verification and stop verifies and replays without a problem
+kernel register: 49 events, head bf82893b32440863ca60923fe44ed2ef74fbcb7dda22990a5cd61769d36d0b47
+kernel heap: 106096 bytes in use, 851968 bytes ever carved; frames: 2560 of 2560 free, 2953 handed out and 2953 given back since the start
+ALL SELF-TESTS PASS. Guest Ethernet support is compiled in. Access requires a matching image grant and a supported NIC.

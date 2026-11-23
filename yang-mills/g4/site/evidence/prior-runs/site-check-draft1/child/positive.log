@@ -1,0 +1,115 @@
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\site\SharedBoundaryPositivity.lean:34:5: error: unknown identifier 'hS.comp'
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\site\SharedBoundaryPositivity.lean:37:61: error: unknown identifier 'hS'
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\site\SharedBoundaryPositivity.lean:40:34: error: unknown identifier 'hS'
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\site\SharedBoundaryPositivity.lean:40:41: error: function expected at
+  totalPartition_pos η μ S
+term has type
+  0 < totalPartition η μ S
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\site\SharedBoundaryPositivity.lean:44:43: error: unknown identifier 'hS'
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\site\SharedBoundaryPositivity.lean:48:43: error: unknown identifier 'hS'
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\site\SharedBoundaryPositivity.lean:51:44: error: function expected at
+  integral_fiberPartition η μ S
+term has type
+  ∫ (y : Y), fiberPartition μ S y ∂η = totalPartition η μ S
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\site\SharedBoundaryPositivity.lean:52:28: error: function expected at
+  totalPartition_pos η μ S
+term has type
+  0 < totalPartition η μ S
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\site\SharedBoundaryPositivity.lean:65:65: error: unknown identifier 'hS'
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\site\SharedBoundaryPositivity.lean:59:58: error: unsolved goals
+Y : Type u_1
+Q : Type u_2
+inst✝¹¹ : TopologicalSpace Y
+inst✝¹⁰ : CompactSpace Y
+inst✝⁹ : SecondCountableTopology Y
+inst✝⁸ : MeasurableSpace Y
+inst✝⁷ : BorelSpace Y
+inst✝⁶ : TopologicalSpace Q
+inst✝⁵ : CompactSpace Q
+inst✝⁴ : SecondCountableTopology Q
+inst✝³ : MeasurableSpace Q
+inst✝² : BorelSpace Q
+η : Measure Y
+μ : Measure Q
+inst✝¹ : IsProbabilityMeasure η
+inst✝ : IsProbabilityMeasure μ
+S : Y × Q → ℝ
+P : Y × Q → ℂ
+y : Y
+hz : ↑(fiberPartition μ S y) ≠ 0
+⊢ (↑(fiberPartition μ S y) * ∫ (x : Q), Complex.exp ↑(S (y, x)) * P (y, x) ∂μ) /
+      (↑(totalPartition η μ S) * ↑(fiberPartition μ S y)) =
+    (∫ (x : Q), Complex.exp ↑(S (y, x)) * P (y, x) ∂μ) / ↑(totalPartition η μ S)
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\site\SharedBoundaryPositivity.lean:74:63: error: unknown identifier 'hS'
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\site\SharedBoundaryPositivity.lean:78:44: error: unknown identifier 'hS'
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\site\SharedBoundaryPositivity.lean:88:76: error: unknown identifier 'hS'
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\site\SharedBoundaryPositivity.lean:85:74: error: unsolved goals
+Y : Type u_1
+Q : Type u_2
+inst✝¹¹ : TopologicalSpace Y
+inst✝¹⁰ : CompactSpace Y
+inst✝⁹ : SecondCountableTopology Y
+inst✝⁸ : MeasurableSpace Y
+inst✝⁷ : BorelSpace Y
+inst✝⁶ : TopologicalSpace Q
+inst✝⁵ : CompactSpace Q
+inst✝⁴ : SecondCountableTopology Q
+inst✝³ : MeasurableSpace Q
+inst✝² : BorelSpace Q
+η : Measure Y
+μ : Measure Q
+inst✝¹ : IsProbabilityMeasure η
+inst✝ : IsProbabilityMeasure μ
+S : Y × Q → ℝ
+P : Y × Q → ℂ
+hP : Continuous P
+⊢ ↑(∫ (x : Y × Q), Real.exp (S x) ∂η.prod μ)⁻¹ * ∫ (x : Y × Q), ↑(Real.exp (S x)) * P x ∂η.prod μ =
+    ∫ (y : Y), ↑(boundaryDensity η μ S y) * fiberExpectation μ S P y ∂η
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\site\SharedBoundaryPositivity.lean:114:40: error: unknown identifier 'hS'
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\site\SharedBoundaryPositivity.lean:113:82: error: unsolved goals
+Y : Type u_1
+Q : Type u_2
+inst✝¹¹ : TopologicalSpace Y
+inst✝¹⁰ : CompactSpace Y
+inst✝⁹ : SecondCountableTopology Y
+inst✝⁸ : MeasurableSpace Y
+inst✝⁷ : BorelSpace Y
+inst✝⁶ : TopologicalSpace Q
+inst✝⁵ : CompactSpace Q
+inst✝⁴ : SecondCountableTopology Q
+inst✝³ : MeasurableSpace Q
+inst✝² : BorelSpace Q
+η : Measure Y
+μ : Measure Q
+inst✝¹ : IsProbabilityMeasure η
+inst✝ : IsProbabilityMeasure μ
+S : Y × Q → ℝ
+P : Y × Q → ℂ
+hP : Continuous P
+hfiber : ∀ (y : Y), ComplexRP.NonnegativeComplex (fiberExpectation μ S P y)
+⊢ ComplexRP.NonnegativeComplex (∫ (z : Y × Q), P z ∂(η.prod μ).tilted S)
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\site\SharedBoundaryPositivity.lean:138:66: error: unknown identifier 'hS'
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\site\SharedBoundaryPositivity.lean:140:42: error: unknown identifier 'hS'
+'Millennium.G4.SiteRP.fiberPartition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.totalPartition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.boundaryDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.fiberExpectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.fiberPartition_pos' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.totalPartition_pos' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.boundaryDensity_pos' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.integral_fiberPartition' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.boundaryDensity_integrable' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.integral_boundaryDensity' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.weighted_fiberExpectation' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.weighted_fiberExpectation_integrable' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.SiteRP.normalized_boundary_mixture' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.nonnegativeComplex_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.shared_boundary_nonnegative' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.sharedReflection' does not depend on any axioms
+'Millennium.G4.SiteRP.shared_boundary_reflection_positive' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

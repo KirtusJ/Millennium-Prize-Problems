@@ -1,0 +1,155 @@
+Director G4 commission under standing autonomous PCP research. You are a bounded text-only PCP worker; no tool or external access. Independently challenge the supplied source, do not invent execution. Return a concise mathematical audit with exact scope, supported statements, defects, and remaining assumptions.
+Audit ONLY physical-time and spectral-limit order: finite beta,L infinite-time first, then joint beta,L; fixed lattice time versus n_beta diverging; weighted spectral ratios fixed extra k versus physical extra time. Check nonzero normalization for action/dipole probes, x=exp(-E) endpoint logic, and claims stated in README. Separate conditional correctness from upstream proof verification.
+
+SOURCE dipole.md
+# A two-plaquette time-slice observable and its spectral measure
+
+Take two parallel spatial $12$-plaquettes a single spatial unit apart in direction $3$ at the same time. Orient both in the positive $12$ direction. Transport the second holonomy to the base of the first with the intervening spatial link $V$. Define
+$$
+ X^\beta=\sqrt\beta\,[\operatorname{Im} U_{12}(x)
+    -\operatorname{Im}(V U_{12}(x+e_3)V^{-1})],\qquad
+ O_s^\beta=\exp(-s|X^\beta|^2),\quad s>0 .
+$$
+The norm gives a bounded gauge-invariant multiplication operator on one spatial slice. Conjugating the whole pair into the common root frame preserves this observable. In that frame the extra one-link transport tends to the identity, so its effect on the tight scaled curvature tends to zero in probability. The constant mode cancels. For any fixed integer time separation $n$, the two vectors therefore have a jointly Gaussian limit with covariance $C(0)I_3$ at either site and cross covariance $C(n)I_3$.
+
+Write $\widehat k_i^2=|e^{ik_i}-1|^2$, $S=\sum_{i=1}^3\widehat k_i^2$, and $\cosh\omega=1+S/2$. The spatial difference supplies the factor $\widehat k_3^2$. Integrating the temporal momentum of the [curvature projection](gaussian.md) gives
+$$
+ C(n)=\int_{[-\pi,\pi]^3} \frac{\widehat k_3^2(\widehat k_1^2+\widehat k_2^2)}
+ {2\sinh\omega}\,e^{-|n|\omega}\frac{d^3k}{(2\pi)^3}.
+$$
+Indeed the Fourier coefficients of $(S+2-2\cos k_4)^{-1}$ are $e^{-|n|\omega}/(2\sinh\omega)$ for $S>0$. They solve the nearest-neighbor Green recurrence with unit source at the origin and vanish at infinity. The spatial integrand is positive almost everywhere and integrable at the origin. Let $\mu$ be the pushforward of the displayed positive weight under $k\mapsto\omega(k)$. It has mass $C(0)$, and no atom at zero.
+
+Put $D=1+2sC(0)$. Integration of the two-variable Gaussian density in each of the three colors gives the **connected** limit
+$$
+ B_s(n)=[D^2-4s^2 C(n)^2]^{-3/2}-D^{-3}.
+$$
+In particular $B_s(0)>0$. Both expectations and the product converge under the original Wilson measures because the functions are bounded and continuous. At $n=0$ the formula also follows by taking the single-vector expectation with parameter $2s$. The limiting law uses fixed lattice time separations; it gives no error bound uniform for separations diverging with the cutoff.
+
+## The low end of the spectrum in lattice units
+
+Take $E=-\log t$ for normalized transfer eigenvalue $t$. For every regulated vacuum form the positive spectral measure of $O_s^\beta-\langle O_s^\beta\rangle$. The moments of its pushforward under $E\mapsto e^{-E}$ on $[0,1]$ converge for all integers $n\ge0$ to $B_s(n)$. Polynomial density and the zeroth moment give weak convergence. The unique limiting measure in energy is
+$$
+ \rho_s=D^{-3}\sum_{m\ge1}\frac{(3/2)_m}{m!}
+                (4s^2/D^2)^m\,\mu^{*2m}.
+$$
+Here $(3/2)_m$ is the rising factorial. The ratio $2sC(0)/D<1$ ensures absolute convergence in total mass. Its Laplace moments reproduce the displayed connected values including $n=0$, so there is no missing mass at infinite energy. There is no atom at zero. The dispersion has level sets of spatial Lebesgue measure zero (fix two coordinates and solve for the cosine of the third); hence the measures in this series have no atoms at any energy. The measure gives strictly positive mass to every open subinterval of $(0,2\max\omega)$ already in its first convolution term.
+
+The infrared behavior follows directly from this three-dimensional integral. At small $r=|k|$, $\omega=r+O(r^3)$ and the numerator is $r^4\theta_3^2(\theta_1^2+\theta_2^2)+O(r^6)$ for $\theta=k/r$. The angular integral of $\theta_3^2(\theta_1^2+\theta_2^2)$ is $8\pi/15$, using $\int_{S^2}\theta_3^{2j}=4\pi/(2j+1)$. With the radial volume factor, the weighted density in $r$ is $r^5/(30\pi^2)+O(r^7)$ after angular integration. Changing radial variable to $\omega$ has Jacobian $1+O(r^2)$ uniformly in direction. Consequently
+$$
+ C(n)\sim \frac{4}{\pi^2 n^6},
+ \qquad \mu(dE)=\left[\frac{4}{\pi^2\,5!} E^5+O(E^7)\right]dE .
+$$
+The first equivalence follows by scaling $r$ by $1/n$ near zero, with exponential suppression away from zero. The leading term in $\mu^{*2}([0,\epsilon])$ integrates two powers $E^5$ over the simplex and equals $(4/\pi^2)^2\epsilon^{12}/12!$. Every term with $m\ge2$ is bounded by its coefficient times $\mu([0,\epsilon])^{2m}$, giving $O_s(\epsilon^{24})$ in total. Thus
+$$
+ B_s(n)\sim 6s^2D^{-5}(4/\pi^2)^2 n^{-12},\qquad
+ \rho_s([0,\epsilon])\sim
+  \frac{6s^2D^{-5}}{12!}(4/\pi^2)^2\epsilon^{12}.
+$$
+These exponents refer to successive limits: first the vacuum at fixed regulator, then $\beta,L\to\infty$ at fixed $n$ or fixed energy window, then $n\to\infty$ or $\epsilon\downarrow0$.
+
+For any fixed sufficiently small $\epsilon>0$, weak convergence gives a strictly positive limiting raw spectral weight in $(\epsilon/2,\epsilon)$. In particular the lowest positive transfer energy in lattice steps tends to zero on every stated isotropic trajectory, even in the gauge-invariant vacuum sector sampled by this explicit observable. If the spacing is $b$, a physical gap $m$ would correspond to lattice energy $bm$. The result has no estimate on a window shrinking at rate $b$, and it leaves the physical Yang–Mills mass gap open.
+
+SOURCE README.md
+# Microscopic curvature of the four-dimensional Wilson vacuum
+
+Director C4 · November 23, 2026 · B.C. Pacific Time · Yang–Mills existence and mass gap
+
+For the original isotropic $SU(2)$ Wilson law, this calculation identifies the weak-coupling joint law of any fixed finite set of plaquettes. In each finite periodic spatial box take the infinite-time transfer vacuum. Then let both the inverse bare coupling $\beta$ and the side in lattice cells $L$ tend to infinity, with no restriction on their relative rates. Orient each face, transport its holonomy $U_p$ into a common root frame along fixed lattice paths, and put $F_p^\beta=\sqrt\beta\,\operatorname{Im}U_p$. The limiting field is centered Gaussian with covariance the orthogonal projection onto the closure of exact lattice two-cochains, independently in three colors. All fixed joint polynomial moments converge.
+
+For one face $Y_p=\beta(1-\operatorname{tr}U_p/2)$ converges to $\chi^2_3/4$ with limiting mean $3/4$ and variance $3/8$. For a spatial face observed through the transfer, the limiting connected action spectral measure in lattice units has mass asymptotic to $3\epsilon^8/(2\pi^4\,8!)$ below $\epsilon$. Every fixed small positive lattice-energy window has positive limiting mass. The positive gap of the finite regulator consequently tends to zero **in lattice units**. On a trajectory with lattice spacing $b\downarrow0$, this probe's raw connected weight below any fixed *physical* energy also tends to zero. The two conclusions involve different windows.
+
+| Result | Argument |
+| --- | --- |
+| Uniform temporal and spatial deficits, local gauge control and compact Haar identities | [Original-link proof](wilson-law.md) |
+| Gaussian fluctuations up to an independent constant two-form | [Ward identity and discrete Hodge decomposition](gaussian.md) |
+| Elimination of that constant on even and odd spatial tori; single-face spectral response | [Site reflection with an odd color test](reflection.md) |
+| Exponential tails for the scaled Wilson action and convergence of its moments | [Reflection estimates on arbitrary sides](moments.md) |
+| A bounded two-plaquette difference with a distinct low-energy exponent of twelve | [Time correlations and spectral measures](dipole.md) |
+| What has been formally checked and what has a written proof | [Native PCP and independent controls](execution.md) |
+
+For the action and the two bounded observables, connected correlations at any fixed positive physical time tend to zero even after normalization by the variance or by the square of the mean. Their nonzero microscopic correlations have the lattice clock held fixed first. No rate for the physical-time limit is established here. The construction of an interacting continuum field with nonzero positive-time weight and a positive mass gap remains open.
+
+The starting transfer estimate is the earlier [direct Wilson vacuum bound](../electric-disorder/wilson-readings.md). B4's periodic trace and G4's open-slab reflection work supply related finite-regulator checks. The local argument here uses both even and odd periodic site reflections. Chatterjee studies leading weak-coupling free energy for $U(N)$ in four dimensions; the arguments here use normalized $SU(2)$ plaquette laws and specified local spectral measures. [B4's periodic histories](../../transfer-operator/periodic-time/) · [G4's Wilson analysis](../../g4/wilson/) · [Chatterjee, The leading term of the Yang–Mills free energy](https://arxiv.org/abs/1602.01222)
+
+SOURCE gaussian.md
+# The microscopic law up to a constant mode
+
+Let $F$ be any joint limit from the [original Wilson measure](wilson-law.md). It is closed, has uniformly bounded component second moments, and satisfies the compactly supported Haar variation identity. For a finite real colored test $g$ on faces write $F(g)=\langle F,g\rangle$ and $\phi(g)=\mathbb E e^{iF(g)}$. For $u=dh$, inserting the characteristic function test with argument $g+tu$ into that identity and differentiating in $t$ gives
+$$
+ \frac d{dt}\phi(g+tu)=-(\langle g,u\rangle+t\|u\|_2^2)\phi(g+tu).
+$$
+The finite first moment of $F(u)$ justifies the derivative. Integration at zero gives $\phi(g+tu)=\phi(g)\exp[-t\langle g,u\rangle-t^2\|u\|_2^2/2]$. In particular all compact exact test variables are jointly centered Gaussian with covariance the ordinary $\ell^2$ inner product.
+
+Let $\mathcal E=\overline{d C_c^1}^{\,\ell^2}$ in three-color two-cochains and let $P$ be orthogonal projection onto $\mathcal E$. The isometry $Z(dh)=F(dh)$ extends into $L^2$ of the same probability space for all $u\in\mathcal E$. Its joint laws stay Gaussian by $L^2$ approximation. Put $G(g)=Z(Pg)$ and $R(g)=F(g)-G(g)$ for finite $g$. Then $d^*R=0$ since $R(dh)=0$. Also $dR=0$ since $F$ is closed and $P d^*k=0$ for every finite three-cochain $k$. These assertions hold simultaneously on all cells by countability.
+
+The cubical Hodge Laplacian $dd^*+d^*d$ is the scalar nearest-neighbor Laplacian on every component. Indeed the Fourier symbols of $d$ and $d^*$ are exterior multiplication by $p=(e^{ik_j}-1)_j$ and contraction with its conjugate. Their anticommutator is $|p|^2 I$. This is an identity of finite-difference operators and so applies to $R$ without any summability at infinity. Thus each component of $R$ is harmonic. Its coordinate second moments are uniformly bounded by the curvature estimate and $\|P\|\le1$.
+
+For any real $Y\in L^2$, the scalar function $x\mapsto\mathbb E[R_{ij,c}(x)Y]$ is bounded and harmonic on $\mathbb Z^4$, hence constant. One proof uses a lazy walk which chooses a coordinate uniformly and moves by $-1,0,1$ with probabilities $1/4,1/2,1/4$. Couple two walks starting at adjacent sites. Synchronize all other coordinates. When the differing coordinate is chosen, use increment pairs $(-1,0),(0,-1),(1,0),(0,1)$ equiprobably until meeting. The difference performs a recurrent one-dimensional simple walk at those updates. Synchronize after meeting. Bounded harmonic functions have the same mean at all times under this walk, and the probability of failure to meet tends to zero. Taking $Y=R_{ij,c}(x)-R_{ij,c}(0)$ proves $R_{ij,c}(x)=R_{ij,c}(0)$ almost surely. Write this random constant two-form as $H$.
+
+Passing the characteristic identity by $L^2$ approximation to $u\in\mathcal E$, then replacing $u$ by $u-Pg$, yields
+$$
+ \mathbb E e^{iR(g)+iZ(u)}
+   = \phi(g)e^{\|Pg\|^2/2}e^{-\|u\|^2/2}
+   = \mathbb E e^{iR(g)}\,\mathbb E e^{iZ(u)} .
+$$
+Taking arbitrary finite linear combinations proves independence of $H$ and the entire Gaussian field. Each subsequential law is therefore a lattice Gaussian curvature plus an independent constant random two-form. At this stage the law of $H$ is undetermined. [Site reflection](reflection.md) fixes it in the Wilson vacuum. Every finite group of tests whose coefficients sum to zero separately in each orientation and color has a unique limit along the **whole** sequence. For such tests the mean is zero and the joint limiting covariance is $\langle g,Pg'\rangle$. This is a statement of convergence in distribution. Unbounded moments along the cutoff sequence require separate uniform integrability.
+
+For $k\ne0$ the Fourier multiplier of $P$ is
+$$
+ P(k)=\frac{p\wedge\iota_{\bar p}}{|p|^2}.
+$$
+Its range is that of exterior multiplication by $p$ from one-forms and its rank is three per color. Projection onto the closure of the finite exact forms has precisely this multiplier. To see the reverse inclusion, first exclude a small neighborhood of $k=0$ from a square-integrable range section; there $(\iota_{\bar p}/|p|^2)$ supplies a bounded one-form preimage. Approximate that preimage in $L^2$ by trigonometric polynomials, apply the bounded exterior multiplier and then remove the excluded neighborhood. The diagonal multiplier in orientation $ij$ is $(|p_i|^2+|p_j|^2)/|p|^2$. Its normalized torus integral is $1/2$ by permutation symmetry. Thus each single-face limiting vector is $N(0,I_3/2)+H_{ij}$. Truncation and $2(1-x_p)\ge|\operatorname{Im}U_p|^2$ imply, for each spatial or temporal orientation,
+$$
+ \liminf_{\beta,L\to\infty}\beta\,\mathbb E(1-x_p)\ge 3/4 .
+$$
+For this inequality take a sequence realizing the liminf, extract a curvature limit and apply the lower semicontinuity of the second moment. Independence and centering of the Gaussian make the cross term zero.
+
+A second check uses $F(dh)$ with $h$ supported on a single oriented edge and one unit color. The six incident faces give variance six. For the resulting three-color vector $j$, $\mathbb E e^{-s|j^\beta|^2}\to(1+12s)^{-3/2}$ for $s\ge0$ when the incident faces are transported into the same local frame with their incidence signs. A bounded time-slice observable with a nonlocal-in-time spectral response is computed in the [dipole calculation](dipole.md).
+
+SOURCE moments.md
+# Uniform exponential tails and the original plaquette action
+
+Let $Y_p=\beta(1-x_p)$ in the isotropic $SU(2)$ Wilson law. In the infinite-time vacuum there exist $\beta_0,C<\infty$, independent of the spatial side $L\ge3$, such that
+$$
+                  \mathbb E e^{Y_p/8}\le C\qquad(\beta\ge\beta_0)
+$$
+for every orientation. This estimate upgrades the rooted Gaussian limit to convergence of all joint polynomial moments of finitely many scaled curvatures and scaled plaquette actions.
+
+## A local reflection bound at arbitrary side length
+
+Begin at finite even time extent $N\ge4$. Assign the initial face to one nominal unit four-cube containing it. Let $f=\exp(Y_p/8)$. Whenever a function $g$ is a nonnegative product of the copied factors supported on a rectangular block, reflect that block in one endpoint site plane perpendicular to an axis. As long as the block fits into its half lattice, [site reflection positivity](reflection.md) and Cauchy–Schwarz against $1$ give
+$$
+                  (\mathbb E g)^2\le \mathbb E[g\,\theta g].
+$$
+Indeed the bilinear form $(A,B)\mapsto\mathbb E[A\,\theta B]$ on real half-functions is symmetric, positive and has $(1,1)=1$. The reflected copy of the plaquette factor is exactly the factor for the reflected face since scalar trace is invariant under inversion and cyclic base changes.
+
+Starting at width one, double successively along each of the four axes up to the largest power of two **at most half** of the corresponding extent. At every step the old block lies on one side of the chosen site plane, away from the far seam, including for odd spatial sides. The new block occupies consecutive cells. If the final widths are $k_i$, then $k_i>\mathrm{extent}_i/4$ and $J=\prod_i k_i>L^3N/256$. The final block contains $J$ distinct nominal unit four-cubes with one assigned face per cube. A fixed plaquette belongs to at most four such four-cubes, since its two transverse coordinates each have two choices of side. Repetition of a face at a shared boundary is thus accounted for. Iterating the inequality gives
+$$
+ (\mathbb E_{\beta,L,N} e^{Y_p/8})^J
+ \le \mathbb E_{\beta,L,N}\exp\!\left(\tfrac18\sum_{\rm copies}Y_{p'}\right)
+ \le \frac{\mathcal Z_{\beta/2,L,N}}{\mathcal Z_{\beta,L,N}} .
+$$
+In the last bound every positive action in the original Wilson integral can be softened by at most one half. This argument applies to single cells on non-dyadic boxes without changing their boundary conditions.
+
+At fixed $\beta,L$ take $N\to\infty$ along even periods. With $P=3L^3$, the logarithm of the partition ratio divided by $NP$ tends to
+$$
+ \log \frac{z(\beta/2)}{z(\beta)}
+       +P^{-1}\log\frac{\|T_{\beta/2,\beta/2}\|}{\|T_{\beta,\beta}\|}.
+$$
+The numerator norm is at most one. The denominator has $-P^{-1}\log\|T_{\beta,\beta}\|\le C_0$ by the original-link product-bump lower bound. The one-link normalization ratio is bounded by the radial cap estimates. Since $NP/J<768$ and the partition ratio is at least one, this proves the uniform exponential moment. At fixed regulator the exponential of the face action is a bounded cylinder function, so its expectation passes to the vacuum in this order. [Transfer pressure and local conventions](wilson-law.md) · [Product-bump estimate](../electric-disorder/wilson-readings.md)
+
+## Limiting moments and a one-face spectral measure
+
+We have $|F_p^\beta|^2\le2Y_p$. The exponential bound and Hölder's inequality give uniform integrability of every fixed joint polynomial in finitely many $F_p^\beta,Y_p$, including absolute moments. The identity $2Y_p=|F_p^\beta|^2+Y_p^2/\beta$ identifies the joint limit. Each $Y_p$ converges to $\chi^2_3/4$, with moments
+$$
+ \lim_{\beta,L\to\infty}\mathbb E Y_p^k
+   =2^{-k}\frac{\Gamma(k+3/2)}{\Gamma(3/2)}\qquad(k\ge0).
+$$
+In particular the mean tends to $3/4$, the second moment to $15/16$ and the variance to $3/8$. These are the values for normalized fundamental trace and the specified Wilson coupling, in both spatial and temporal orientations.
+
+For a spatial $12$ face, the *unbounded in the limit* action $Y_p$ itself is a finite-regulator multiplication observable. With the notation $C_1(n),\mu_1$ of the [single-face calculation](reflection.md), Wick's formula gives
+$$
+ \lim_{\beta,L\to\infty}\operatorname{Cov}(Y_p(0),Y_p(n))
+     =\tfrac32 C_1(n)^2,\qquad \rho_Y=\tfrac32\,\mu_1*\mu_1 .
+$$
+Each of the three colors contributes $2C_1(n)^2/4$. Its finite-cutoff connected spectral measures converge weakly after mapping lattice energy $E$ to $\exp(-E)$, including their total masses by the second-moment bound. In the limiting measure $\rho_Y([0,\epsilon])\sim 3\epsilon^8/(2\pi^4\,8!)$ and its large-step correlation is asymptotic to $3/(2\pi^4 n^8)$. At any fixed positive physical time with $b\downarrow0$, both the variance-normalized and the mean-normalized connected action correlations vanish by the monotonicity argument. The rate at a growing separation is undetermined. The action probe has a nonzero limiting mean; the positive-time conclusion is about its connected part.

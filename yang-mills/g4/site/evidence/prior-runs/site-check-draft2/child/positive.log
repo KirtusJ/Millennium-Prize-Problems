@@ -1,0 +1,92 @@
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\site\SharedBoundaryPositivity.lean:33:0: warning: automatically included section variable(s) unused in theorem 'Millennium.G4.SiteRP.fiberPartition_pos':
+  [CompactSpace Y]
+  [SecondCountableTopology Y]
+  [MeasurableSpace Y]
+  [BorelSpace Y]
+  [SecondCountableTopology Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CompactSpace
+  Y] [SecondCountableTopology Y] [MeasurableSpace Y] [BorelSpace Y] [SecondCountableTopology Q] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\site\SharedBoundaryPositivity.lean:37:0: warning: automatically included section variable(s) unused in theorem 'Millennium.G4.SiteRP.totalPartition_pos':
+  [SecondCountableTopology Y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [SecondCountableTopology Y] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\site\SharedBoundaryPositivity.lean:47:0: warning: automatically included section variable(s) unused in theorem 'Millennium.G4.SiteRP.boundaryDensity_integrable':
+  [SecondCountableTopology Y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [SecondCountableTopology Y] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\site\SharedBoundaryPositivity.lean:60:58: error: unsolved goals
+Y : Type u_1
+Q : Type u_2
+inst✝¹¹ : TopologicalSpace Y
+inst✝¹⁰ : CompactSpace Y
+inst✝⁹ : SecondCountableTopology Y
+inst✝⁸ : MeasurableSpace Y
+inst✝⁷ : BorelSpace Y
+inst✝⁶ : TopologicalSpace Q
+inst✝⁵ : CompactSpace Q
+inst✝⁴ : SecondCountableTopology Q
+inst✝³ : MeasurableSpace Q
+inst✝² : BorelSpace Q
+η : Measure Y
+μ : Measure Q
+inst✝¹ : IsProbabilityMeasure η
+inst✝ : IsProbabilityMeasure μ
+S : Y × Q → ℝ
+hS : Continuous S
+P : Y × Q → ℂ
+y : Y
+hz : ↑(fiberPartition μ S y) ≠ 0
+ht : ↑(totalPartition η μ S) ≠ 0
+⊢ (↑(fiberPartition μ S y) * ∫ (x : Q), Complex.exp ↑(S (y, x)) * P (y, x) ∂μ) * ↑(totalPartition η μ S) =
+    (∫ (x : Q), Complex.exp ↑(S (y, x)) * P (y, x) ∂μ) * (↑(totalPartition η μ S) * ↑(fiberPartition μ S y))
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\site\SharedBoundaryPositivity.lean:90:6: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  ∫ (z : Y × Q), (Complex.ofReal ∘ Real.exp ∘ S) z * P z ∂η.prod μ
+Y : Type u_1
+Q : Type u_2
+inst✝¹¹ : TopologicalSpace Y
+inst✝¹⁰ : CompactSpace Y
+inst✝⁹ : SecondCountableTopology Y
+inst✝⁸ : MeasurableSpace Y
+inst✝⁷ : BorelSpace Y
+inst✝⁶ : TopologicalSpace Q
+inst✝⁵ : CompactSpace Q
+inst✝⁴ : SecondCountableTopology Q
+inst✝³ : MeasurableSpace Q
+inst✝² : BorelSpace Q
+η : Measure Y
+μ : Measure Q
+inst✝¹ : IsProbabilityMeasure η
+inst✝ : IsProbabilityMeasure μ
+S : Y × Q → ℝ
+hS : Continuous S
+P : Y × Q → ℂ
+hP : Continuous P
+⊢ ↑(∫ (x : Y × Q), Real.exp (S x) ∂η.prod μ)⁻¹ * ∫ (x : Y × Q), ↑(Real.exp (S x)) * P x ∂η.prod μ =
+    ∫ (y : Y), ↑(boundaryDensity η μ S y) * fiberExpectation μ S P y ∂η
+'Millennium.G4.SiteRP.fiberPartition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.totalPartition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.boundaryDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.fiberExpectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.fiberPartition_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.totalPartition_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.boundaryDensity_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.integral_fiberPartition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.boundaryDensity_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.integral_boundaryDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.weighted_fiberExpectation' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.weighted_fiberExpectation_integrable' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.SiteRP.normalized_boundary_mixture' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.nonnegativeComplex_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.shared_boundary_nonnegative' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.sharedReflection' does not depend on any axioms
+'Millennium.G4.SiteRP.shared_boundary_reflection_positive' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

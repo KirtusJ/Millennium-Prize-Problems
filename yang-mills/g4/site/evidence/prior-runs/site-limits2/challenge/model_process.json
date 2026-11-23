@@ -1,0 +1,13 @@
+{
+  "pid": 7724,
+  "start_ns": 1795423099784188800,
+  "exit_observed_ns": 1795423340182558000,
+  "returncode": 1,
+  "prompt_sha256": "19eaabf06410e217456c09f95c37e106c5df5c8c0975216b16790aa7c0354563",
+  "unexpected_item_types": [],
+  "event_types": [
+    "thread.started",
+    "turn.started"
+  ],
+  "error_events": []
+}

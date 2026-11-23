@@ -1,0 +1,28 @@
+{
+  "geometry": {
+    "cases": 1548,
+    "max_overlap": 4,
+    "bound_three_rejected_by": {
+      "lengths": [
+        5,
+        7,
+        11,
+        12
+      ],
+      "orientation": [
+        0,
+        1
+      ]
+    }
+  },
+  "odd_seam": {
+    "odd_form": "5429315911/819200",
+    "gram_form": "5429315911/819200",
+    "projector_omission_changes_kernel": true,
+    "arithmetic": "exact rational"
+  },
+  "boundary": {
+    "correct_expectation": "3/4",
+    "unweighted_expectation": "1/2"
+  }
+}

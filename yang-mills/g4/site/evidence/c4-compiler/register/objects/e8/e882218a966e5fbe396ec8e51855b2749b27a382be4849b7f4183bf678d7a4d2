@@ -1,0 +1,40 @@
+{
+  "source_sha256": "95ee640c0e5dc33d0f51b945e4c3007830a63db106359c3ddd3ba6bfc9e58474",
+  "source": "C:\\Users\\donke\\OneDrive\\Documents\\ChatGPT\\From Prephysical Hypotheses to Physical_Models\\Session\\G4_runtime\\site-c4-source\\TangentCurvature.lean",
+  "records": [
+    {
+      "label": "positive",
+      "pid": 9784,
+      "command": [
+        "C:\\Users\\donke\\AppData\\Local\\PCP-Toolchains\\lean-4.19.0\\lean-4.19.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "C:\\Users\\donke\\OneDrive\\Documents\\ChatGPT\\From Prephysical Hypotheses to Physical_Models\\Session\\G4_runtime\\site-c4-source\\TangentCurvature.lean"
+      ],
+      "exit_code": 0,
+      "start_ns": 1795423171582456900,
+      "exit_observed_ns": 1795423215144543600,
+      "post_exit_readback_ns": 1795423215160343700,
+      "output_sha256": "c42ff481701519a5d8046f5d8fc455f84c2b5ea174eeb372aa5122ce20b0482f",
+      "expected_success": true,
+      "control_passed": true
+    }
+  ],
+  "passed": true,
+  "verification": {
+    "events": 8,
+    "head": "b39ef9f74355266f8ad64330c3c1e8e14dd4e2b6a0729e0fb1e20a5f40545f9c",
+    "guard_problems": [],
+    "altered_objects": [],
+    "objects_by_reference_only": 0,
+    "anchor": null,
+    "ok": true
+  },
+  "native_execution": false,
+  "worker_kind": "PROGRAM",
+  "depth": 3,
+  "namespace": "YangMills.TangentCurvature",
+  "checker_sha256": "a0cdcf8ec6843b36a1efd62c5d6e736ba115cf7d29d504515b8a5ad9945190ff",
+  "mutations_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "dependency_olean_sha256": {}
+}

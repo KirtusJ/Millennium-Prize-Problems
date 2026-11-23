@@ -1,0 +1,57 @@
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\site-check-final\child\negative_negative_density.lean:33:0: warning: automatically included section variable(s) unused in theorem 'Millennium.G4.SiteRP.fiberPartition_pos':
+  [CompactSpace Y]
+  [SecondCountableTopology Y]
+  [MeasurableSpace Y]
+  [BorelSpace Y]
+  [SecondCountableTopology Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CompactSpace
+  Y] [SecondCountableTopology Y] [MeasurableSpace Y] [BorelSpace Y] [SecondCountableTopology Q] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\site-check-final\child\negative_negative_density.lean:37:0: warning: automatically included section variable(s) unused in theorem 'Millennium.G4.SiteRP.totalPartition_pos':
+  [SecondCountableTopology Y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [SecondCountableTopology Y] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\site-check-final\child\negative_negative_density.lean:41:2: error: type mismatch
+  div_pos (fiberPartition_pos μ S hS y) (totalPartition_pos η μ S hS)
+has type
+  0 < fiberPartition μ S y / totalPartition η μ S : Prop
+but is expected to have type
+  boundaryDensity η μ S y < 0 : Prop
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\site-check-final\child\negative_negative_density.lean:47:0: warning: automatically included section variable(s) unused in theorem 'Millennium.G4.SiteRP.boundaryDensity_integrable':
+  [SecondCountableTopology Y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [SecondCountableTopology Y] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\site-check-final\child\negative_negative_density.lean:71:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\site-check-final\child\negative_negative_density.lean:126:17: error: application type mismatch
+  mul_nonneg (LT.lt.le (boundaryDensity_pos η μ S hS y))
+argument
+  LT.lt.le (boundaryDensity_pos η μ S hS y)
+has type
+  boundaryDensity η μ S y ≤ 0 : Prop
+but is expected to have type
+  0 ≤ boundaryDensity η μ S y : Prop
+'Millennium.G4.SiteRP.fiberPartition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.totalPartition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.boundaryDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.fiberExpectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.fiberPartition_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.totalPartition_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.boundaryDensity_pos' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.integral_fiberPartition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.boundaryDensity_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.integral_boundaryDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.weighted_fiberExpectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.weighted_fiberExpectation_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.normalized_boundary_mixture' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.nonnegativeComplex_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.shared_boundary_nonnegative' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Millennium.G4.SiteRP.sharedReflection' does not depend on any axioms
+'Millennium.G4.SiteRP.shared_boundary_reflection_positive' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.SiteRP.rooted_reversal' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,110 @@
+Director G4 commission under standing autonomous PCP research. You are a bounded text-only PCP worker; no tool or external access. Independently challenge the supplied source, do not invent execution. Return a concise mathematical audit with exact scope, supported statements, defects, and remaining assumptions.
+Audit ONLY the four-copy reflected-block bound and pressure/moment limit order. Check every dimension, face overlap, odd spatial extents and smallest length 3. Independently derive a finite geometric enumeration using cube vertices and face vertices; propose an adverse case rejecting a false overlap bound 3. Give concrete defects if any, not vague warnings.
+
+SOURCE moments.md
+# Uniform exponential tails and the original plaquette action
+
+Let $Y_p=\beta(1-x_p)$ in the isotropic $SU(2)$ Wilson law. In the infinite-time vacuum there exist $\beta_0,C<\infty$, independent of the spatial side $L\ge3$, such that
+$$
+                  \mathbb E e^{Y_p/8}\le C\qquad(\beta\ge\beta_0)
+$$
+for every orientation. This estimate upgrades the rooted Gaussian limit to convergence of all joint polynomial moments of finitely many scaled curvatures and scaled plaquette actions.
+
+## A local reflection bound at arbitrary side length
+
+Begin at finite even time extent $N\ge4$. Assign the initial face to one nominal unit four-cube containing it. Let $f=\exp(Y_p/8)$. Whenever a function $g$ is a nonnegative product of the copied factors supported on a rectangular block, reflect that block in one endpoint site plane perpendicular to an axis. As long as the block fits into its half lattice, [site reflection positivity](reflection.md) and Cauchy–Schwarz against $1$ give
+$$
+                  (\mathbb E g)^2\le \mathbb E[g\,\theta g].
+$$
+Indeed the bilinear form $(A,B)\mapsto\mathbb E[A\,\theta B]$ on real half-functions is symmetric, positive and has $(1,1)=1$. The reflected copy of the plaquette factor is exactly the factor for the reflected face since scalar trace is invariant under inversion and cyclic base changes.
+
+Starting at width one, double successively along each of the four axes up to the largest power of two **at most half** of the corresponding extent. At every step the old block lies on one side of the chosen site plane, away from the far seam, including for odd spatial sides. The new block occupies consecutive cells. If the final widths are $k_i$, then $k_i>\mathrm{extent}_i/4$ and $J=\prod_i k_i>L^3N/256$. The final block contains $J$ distinct nominal unit four-cubes with one assigned face per cube. A fixed plaquette belongs to at most four such four-cubes, since its two transverse coordinates each have two choices of side. Repetition of a face at a shared boundary is thus accounted for. Iterating the inequality gives
+$$
+ (\mathbb E_{\beta,L,N} e^{Y_p/8})^J
+ \le \mathbb E_{\beta,L,N}\exp\!\left(\tfrac18\sum_{\rm copies}Y_{p'}\right)
+ \le \frac{\mathcal Z_{\beta/2,L,N}}{\mathcal Z_{\beta,L,N}} .
+$$
+In the last bound every positive action in the original Wilson integral can be softened by at most one half. This argument applies to single cells on non-dyadic boxes without changing their boundary conditions.
+
+At fixed $\beta,L$ take $N\to\infty$ along even periods. With $P=3L^3$, the logarithm of the partition ratio divided by $NP$ tends to
+$$
+ \log \frac{z(\beta/2)}{z(\beta)}
+       +P^{-1}\log\frac{\|T_{\beta/2,\beta/2}\|}{\|T_{\beta,\beta}\|}.
+$$
+The numerator norm is at most one. The denominator has $-P^{-1}\log\|T_{\beta,\beta}\|\le C_0$ by the original-link product-bump lower bound. The one-link normalization ratio is bounded by the radial cap estimates. Since $NP/J<768$ and the partition ratio is at least one, this proves the uniform exponential moment. At fixed regulator the exponential of the face action is a bounded cylinder function, so its expectation passes to the vacuum in this order. [Transfer pressure and local conventions](wilson-law.md) · [Product-bump estimate](../electric-disorder/wilson-readings.md)
+
+## Limiting moments and a one-face spectral measure
+
+We have $|F_p^\beta|^2\le2Y_p$. The exponential bound and Hölder's inequality give uniform integrability of every fixed joint polynomial in finitely many $F_p^\beta,Y_p$, including absolute moments. The identity $2Y_p=|F_p^\beta|^2+Y_p^2/\beta$ identifies the joint limit. Each $Y_p$ converges to $\chi^2_3/4$, with moments
+$$
+ \lim_{\beta,L\to\infty}\mathbb E Y_p^k
+   =2^{-k}\frac{\Gamma(k+3/2)}{\Gamma(3/2)}\qquad(k\ge0).
+$$
+In particular the mean tends to $3/4$, the second moment to $15/16$ and the variance to $3/8$. These are the values for normalized fundamental trace and the specified Wilson coupling, in both spatial and temporal orientations.
+
+For a spatial $12$ face, the *unbounded in the limit* action $Y_p$ itself is a finite-regulator multiplication observable. With the notation $C_1(n),\mu_1$ of the [single-face calculation](reflection.md), Wick's formula gives
+$$
+ \lim_{\beta,L\to\infty}\operatorname{Cov}(Y_p(0),Y_p(n))
+     =\tfrac32 C_1(n)^2,\qquad \rho_Y=\tfrac32\,\mu_1*\mu_1 .
+$$
+Each of the three colors contributes $2C_1(n)^2/4$. Its finite-cutoff connected spectral measures converge weakly after mapping lattice energy $E$ to $\exp(-E)$, including their total masses by the second-moment bound. In the limiting measure $\rho_Y([0,\epsilon])\sim 3\epsilon^8/(2\pi^4\,8!)$ and its large-step correlation is asymptotic to $3/(2\pi^4 n^8)$. At any fixed positive physical time with $b\downarrow0$, both the variance-normalized and the mean-normalized connected action correlations vanish by the monotonicity argument. The rate at a growing separation is undetermined. The action probe has a nonzero limiting mean; the positive-time conclusion is about its connected part.
+
+SOURCE reflection.md
+# Site reflection fixes the constant curvature
+
+The loop equations and closedness determine a candidate field $F=G+H$, where $G$ is centered Gaussian curvature and $H$ is an independent random constant two-form. In the original Wilson vacuum, reflection positivity forces $H=0$ for all six orientations and all three colors. The position of the color root and the reflected orientation are essential here. [Decomposition](gaussian.md)
+
+## Reflection at a layer of lattice sites
+
+Begin with a finite periodic lattice. Reflect an axis $i$ through its layer of sites $x_i=0$. Reflection maps an oriented link to the geometrically reflected link, taking its inverse when necessary. For every real bounded function $f$ of links on the positive side (it may use links tangent to layer zero), supported short of the opposite seam,
+$$
+                 \mathbb E[f\,\theta f]\ \ge\ 0.
+$$
+The function need not be gauge invariant. To prove this, treat $i$ as the transfer direction and call the variables on its transverse slices $U$. All measures on the original links are product Haar before weighting. For even extent $2m$, fix the tangential links at slices $0,m$ and give each half one half of the tangential action on those two slices. The remaining integrals then factor into identical real quantities by reflection, and their product is a square. This argument allows unequal extents in all the other directions.
+
+For odd extent $2m+1$, keep slice zero fixed and cut between slices $m$ and $-m$. Integrating the positive half up to $m$ with $f$ gives a real function of the last slice. Its reflected half gives the same function on $-m$. Conditional on slice zero the remaining quadratic form uses the kernel of the one step crossing the far cut, including its group integrations. More explicitly the endpoint tangential actions can be shared as positive multipliers $M$ and the middle operator, up to a positive constant, is $M K\Pi M$. Here $K$ is the product of identical one-link convolutions and $\Pi$ averages the site-gauge action on the transverse slice. This identity follows by integrating each normal link on that cut as the gauge variable at its transverse vertex. The one-link kernel is proportional to $\exp(\beta\,q\cdot q')$ on $S^3$; its power series has positive coefficients multiplying dot-product tensor powers. It defines a positive operator on the full link space. The tensor product commutes with $\Pi$ by invariance under simultaneous endpoint rotations, so $K\Pi=\Pi K\Pi$ is positive even on gauge-dependent endpoint functions. The two $M$ factors preserve positivity. The fixed slice-zero factors left outside the form are positive. This proves the inequality also for odd spatial sides. In the time direction one can always take even periods before the vacuum limit. The compact-link cylinder limit preserves the inequality. [Periodic transfer and gauge projection](../../transfer-operator/periodic-time/) · [Wilson reflection analysis](../../g4/wilson/)
+
+## The odd test
+
+Fix an orientation $ij$ and color $c$. Place the root at zero on the reflecting plane perpendicular to axis $i$. For $n\ge1$ take the positively oriented $ij$ plaquette based at $n e_i$, transported to the root by the straight positive half-axis path. Use
+$$
+ f=\sin\bigl(t [\sqrt\beta\,\operatorname{Im} U_p^{\rm rooted}]_c\bigr).
+$$
+For each fixed $n$ and real $t$, this is a bounded positive-half test at all sufficiently large extents. It transforms under a change of color frame at the root; the reflection inequality above applies to it before quotienting by gauge. Its reflected plaquette has the opposite orientation at the reflected square. Cyclically moving to the positively oriented base conjugates by a single edge. In the common rooted gauge the effect of this extra conjugation on scaled curvature vanishes in probability. The choice of the reflected root paths also has vanishing effect for fixed $n$. Inverting a unit quaternion negates its imaginary part exactly. Consequently, writing $p_n$ and $p_{-n-1}$ for the two positively oriented squares, the limiting inequality is
+$$
+ 0\ge \mathbb E[\sin(tF_{p_n,c})\sin(tF_{p_{-n-1},c})].
+$$
+Both factors are bounded, so weak convergence suffices. Now send $n\to\infty$ **in the already identified tangent law**. The Fourier multiplier of $G$ is bounded on the Brillouin torus. Its Fourier coefficients at this growing separation tend to zero by the Riemann–Lebesgue lemma. The two Gaussian components converge jointly to independent $N(0,1/2)$ variables and remain independent of $H$. Conditionally on $H$, the limiting mean of each sine is $e^{-t^2/4}\sin(tH_{ij,c})$. Hence
+$$
+           0\ge e^{-t^2/2}\mathbb E[\sin^2(tH_{ij,c})].
+$$
+Taking the countably many $t=1/m$, $m\ge1$, proves $H_{ij,c}=0$ almost surely: for any nonzero finite value, sufficiently large $m$ gives a nonzero sine. The finite set of components can be treated simultaneously. This proves the whole-sequence Gaussian law for every finite set of rooted faces.
+
+## Single-plaquette Wilson action
+
+The exact quaternion identity
+$$
+ 2\beta(1-x_p)=|F_p^\beta|^2+\beta(1-x_p)^2
+$$
+and tightness of $\beta(1-x_p)$ imply that the last term tends to zero in probability. Thus $\beta(1-x_p)$ converges in distribution to $\chi_3^2/4$ at any fixed face. Bounded functions of this local action have convergent expectations. The separate [uniform exponential moment bound](moments.md) proves convergence of its unbounded mean to $3/4$ and of all higher moments.
+
+For the bounded one-slice observable $O_s^\beta=\exp[-2s\beta(1-x_{12})]$, the same determinant and convolution formulas as for the [two-plaquette difference](dipole.md) apply with the factor $\widehat k_3^2$ **removed** from the spatial integral. Denote the resulting positive measure by $\mu_1$, its Laplace transform by $C_1(n)$, and put $D_1=1+2s C_1(0)=1+s$. The two-slice Gaussian limit now concerns the curvature of the single spatial face. Its centered correlation is
+$$
+ B_{s,1}(n)=[(1+s)^2-4s^2 C_1(n)^2]^{-3/2}-(1+s)^{-3}.
+$$
+The angular integral of $\theta_1^2+\theta_2^2$ is $8\pi/3$, giving $\mu_1(dE)=[E^3/(6\pi^2)+O(E^5)]dE$ at zero and $C_1(n)\sim1/(\pi^2 n^4)$. The positive convolution series with $\mu_1,D_1$ has no atoms. Its first term yields
+$$
+ B_{s,1}(n)\sim\frac{6s^2}{(1+s)^5\pi^4}n^{-8},\qquad
+ \rho_{s,1}([0,\epsilon])\sim\frac{6s^2}{(1+s)^5\pi^4\,8!}\epsilon^8.
+$$
+The weak convergence and successive limits have the same meaning as for the dipole. In particular, the gauge-invariant vacuum sector sampled by this *single* bounded Wilson action has spectral weight approaching arbitrarily small positive energies measured in lattice steps. A gap lower bound in physical units is still a separate question.
+
+## Fixed positive physical time and normalization
+
+There is also a conclusion at physical separations, without a rate. For either bounded observable let $B_\beta(n)$ denote its actual connected transfer correlation on the chosen finite box. Positivity of the normalized transfer gives $0\le B_\beta(n')\le B_\beta(n)$ for $n'\ge n$. On **every** admissible joint sequence and for **any** integers $n_\beta\to\infty$ this gives
+$$
+ 0\le \limsup B_\beta(n_\beta)\le B_s(N)\quad\text{for every fixed }N .
+$$
+The appropriate single-face or dipole limiting correlation tends to zero with $N$. Thus the connected correlation tends to zero whenever $n_\beta$ diverges, including $n_\beta=\lfloor t/b\rfloor$ for fixed physical $t>0$ and $b\downarrow0$. The mean tends to $D^{-3/2}>0$ and the variance tends to $B_s(0)>0$, with $D$ for the chosen probe. Hence both the variance-normalized correlation and $\langle O_s^\beta(0)O_s^\beta(n_\beta)\rangle/\langle O_s^\beta\rangle^2-1$ tend to zero. Equivalently, the raw connected spectral weight below any fixed physical energy tends to zero, by weak convergence and the absence of an atom at zero lattice energy. These statements concern these two specific local probes.
+
+If one normalizes by the connected reading at the positive time itself, its magnitude has just been shown to vanish. A fixed number of *additional lattice steps* has a well-defined ratio nevertheless. For any $\delta>0$ sufficiently small, the weight in $(\delta/4,\delta/2)$ tends to a positive number. After tilting the spectral measure by $\exp(-n_\beta E)$ and dividing by its mass, the fraction at $E\ge\delta$ is therefore at most $C_\delta e^{-n_\beta\delta/2}$ for sufficiently large regulators along the sequence. The tilted probability concentrates at zero in lattice units. For fixed $k\ge0$ this proves $B_\beta(n_\beta+k)/B_\beta(n_\beta)\to1$. A second separation differing by a fixed **physical** time corresponds to $k$ growing with the cutoff and is outside this ratio estimate.

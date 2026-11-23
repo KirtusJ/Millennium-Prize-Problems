@@ -1,0 +1,20 @@
+{
+  "source_sha256": "e029dbaa9ad0ac1807c39bec504990413037e19e34d731a18c9f0350abe9bad6",
+  "exit_code": 0,
+  "pid": 16504,
+  "start_ns": 1795423038334753600,
+  "exit_observed_ns": 1795423043593975400,
+  "readback_ns": 1795423043606543000,
+  "output_sha256": "25eb4b1dcbdc527986ad14a5b4008e48d0169b7ae12716f415e85bfdf197f341",
+  "verification": {
+    "events": 8,
+    "head": "93fb39e6836836b952debbda42437fcc65ad01936ec016e80f338d1ec0fa3130",
+    "guard_problems": [],
+    "altered_objects": [],
+    "objects_by_reference_only": 0,
+    "anchor": null,
+    "ok": true
+  },
+  "passed": true,
+  "scope": "Exact finite cube, rational Z2 kernel and normalized-mixture controls; not a continuum theorem."
+}

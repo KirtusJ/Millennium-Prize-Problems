@@ -1,0 +1,24 @@
+**Scoped disposition.** `SUPPORTED_IN_SCOPE` for the four-copy geometric bound and the finite-control code’s geometry, checked by hand. `CONDITIONAL` for the exponential-tail and polynomial-moment conclusions. Their limit order is valid given the stated transfer-pressure formula, uniform pressure bounds, local vacuum convergence, and rooted Gaussian limit. The supplied excerpts cite dependencies for those inputs. No code or Lean was run, and no external sources or additional ACR clauses were inspected.
+
+### Four-copy geometry
+
+A unit four-cube has \(2^4=16\) vertices. An assigned plaquette has \(2^2=4\) vertices, with two varying coordinates and two fixed transverse coordinates. Reflecting a block of width \(w\) about \(x_i=w\) sends the old cell indices \(0,\ldots,w-1\) to \(w,\ldots,2w-1\). The cubes remain distinct even when their reflected faces share vertices or coincide. The code doubles only when \(4w\le \ell_i\), so the **old** block lies short of the opposite seam. This holds for odd \(\ell_i=2m+1\) as well as even extents. At \(\ell_i=3\) there is no doubling and the final width is one. The final widths satisfy \(\ell_i/4<k_i\le\ell_i/2\). All vertices lie in \(\prod_i[0,k_i]\), where reduction modulo the extents is injective.
+
+Given the four vertices of a plaquette, each varying coordinate determines one unit interval. Each fixed coordinate \(t\) allows at most two incident intervals, \([t-1,t]\) and \([t,t+1]\). Thus at most \(1^2 2^2=4\) distinct cubes can carry the same face. Iterated reflection Cauchy–Schwarz raises the original expectation to the power \(J=\prod_i k_i\). A face of multiplicity \(m_p\) leaves action coefficient \(1-m_p/8\ge1/2\), so nonnegativity of the Wilson action gives the partition-ratio bound. In four dimensions \(J>L^3N/256\), hence \(NP/J<768\) for \(P=3L^3\).
+
+**Independent finite enumeration.** Along a transverse axis the fixed face coordinates, in increasing cell-index order, begin as \((0)\), then \((0,2)\), then \((0,2,2,4)\). Each doubling appends the reversed list reflected about the old endpoint. Consequently, at any dyadic width \(k\ge2\), the two endpoints occur once and every interior even coordinate occurs twice. Along either varying axis the face interval uniquely determines the cell index. Taking the product of these one-axis counts determines the maximum in each of the code’s \((4^4+2)\binom42=1548\) cases. The maximum is four exactly when both transverse widths are at least four. The first such case in the code’s order is \((5,7,11,12)\), orientation \((0,1)\). The face with vertex set \(\{0,1\}^2\times\{2\}^2\) is assigned to all four cubes with transverse lower coordinates in \(\{1,2\}^2\). This rejects a cap of three and uses an even time extent.
+
+There is no geometric defect in the finite control. Its assertion checks the global maximum over the suite. The odd-time entries are legitimate geometry cases. The separate rational seam model illustrates a projected positive kernel. The all-size \(SU(2)\) argument uses the supplied reflection proof, in which the odd-cut operator is \(M K\Pi M\) and \(K\Pi=\Pi K\Pi\) is positive.
+
+### Pressure and moment limits
+
+At fixed \(\beta,L\), the finite-period inequality gives
+\[
+0\le \log\mathbb E_{\beta,L,N}e^{Y_p/8}
+\le 768\,\frac{\log\mathcal Z_{\beta/2,L,N}-\log\mathcal Z_{\beta,L,N}}{NP}.
+\]
+Here \(0\le Y_p\le2\beta\), so the left-hand observable is bounded at the fixed regulator. Taking even \(N\to\infty\) first is valid under local vacuum convergence. The stated pressure limit then gives a uniform bound provided the one-link normalization ratio and \(-P^{-1}\log\|T_{\beta,\beta}\|\) have the stated uniform bounds. This step requires no uniform rate in \(N\).
+
+In the vacuum, on any joint regulator sequence admitting the stated Gaussian limit, the exponential estimate gives uniform bounds on all powers of each \(Y_p\). The inequality \(|F_p^\beta|^2\le2Y_p\) and Hölder then bound every fixed joint polynomial in \(L^{1+\delta}\) for some \(\delta>0\). Also \(Y_p^2/\beta\to0\) in \(L^1\), so the exact identity identifies the joint action limit as \(|F_p|^2/2\). Weak convergence and uniform integrability give the claimed polynomial moments, including the one-face mean \(3/4\), second moment \(15/16\), and variance \(3/8\).
+
+One statement in `reflection.md` needs tightening. The inference that “bounded functions” of the local action have convergent expectations is too broad for the weak convergence cited there. That step gives convergence for bounded continuous functions and, more generally, bounded functions whose discontinuity sets have zero limiting probability. The polynomial-moment argument uses the exponential estimate and is unaffected.

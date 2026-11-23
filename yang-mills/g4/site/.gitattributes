@@ -1,0 +1,6 @@
+*.lean -text whitespace=cr-at-eol
+*.py -text whitespace=cr-at-eol
+*.json -text whitespace=cr-at-eol
+*/formalizer_task.txt -text whitespace=cr-at-eol
+*/reviewer_task.txt -text whitespace=cr-at-eol
+evidence/** -text -whitespace

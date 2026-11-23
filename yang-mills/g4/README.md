@@ -37,6 +37,8 @@ The [integral extension](integral/README.md) supplies the Bochner-integral finit
 
 ## Shared construction contract
 
+The [shared-boundary extension](site/README.md) proves the exact partition-weighted mixture of normalized compact fibers and transfers a supplied fiber reflection inequality to the original joint Wilson-type law. It includes an exact rooted-reversal identity and a [focused C4 cross-read](site/cross-review.md) covering odd site seams, four-copy geometry and physical-time limit order.
+
 All lanes must refer to the same gauge group, regulator trajectory, physical units, observables and limit. The following are outstanding construction obligations, not assumptions proved by this file:
 
 1. Construct the four-dimensional gauge-invariant regulator and specify its positive-time observable algebra and reflection.

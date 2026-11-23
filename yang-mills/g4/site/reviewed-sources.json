@@ -1,0 +1,62 @@
+{
+  "commit": "32e17b1836c139abf81c6d4cbce54e199185331c",
+  "newline_note": "Review packets normalize CRLF to LF; Git snapshots are exact LF bytes.",
+  "files": {
+    "README.md": {
+      "sha256": "8f7ab5cc6fa9b8abac832d2f21bf7bbd19352e9f725b96adc1d8a424d7ad7f3b",
+      "bytes": 3511,
+      "git_blob": "a3aceaeb004597538d7a71f7513245c2abc30076",
+      "working_copy_sha256": "10f79f9738cf26407427486b51d2155fbcbd9980b0b14816a2fb7f7971d4c3ac",
+      "working_copy_bytes": 3531
+    },
+    "reflection.md": {
+      "sha256": "0a84ec5735333e34315c364d6a15d954ec7df0dad1baf347a58bedc15f5bc593",
+      "bytes": 8738,
+      "git_blob": "2a1601da7c3f0ce50cd26d837a50ccecb4cba4cc",
+      "working_copy_sha256": "e335f520ae0372c39255dd168b1c8751d479d40fd1fbb613cca7e1543fad3586",
+      "working_copy_bytes": 8796
+    },
+    "moments.md": {
+      "sha256": "31e7277ae50f882fbcf950b517ecb434c1db863983dcc262ec66240a2541096b",
+      "bytes": 5047,
+      "git_blob": "3cdb265534e882d39969603e967defd355d533c6",
+      "working_copy_sha256": "1d9a5f197f06f59f6bf6edc8edab59aea1f51e9933d8750b87fb477adbd3a1ea",
+      "working_copy_bytes": 5093
+    },
+    "gaussian.md": {
+      "sha256": "aabcec852f08422b74d39a7e4a6f3f7b11e7a3c3b0530aa02b2dceb9e7ccf14f",
+      "bytes": 5279,
+      "git_blob": "80a62021c7d14f80fd60e10fca18b285d4d3b668",
+      "working_copy_sha256": "5c677bb0a993b6773d759d3e23728527066d4310a557d1217270bbb69431265b",
+      "working_copy_bytes": 5312
+    },
+    "wilson-law.md": {
+      "sha256": "a9808f77495048f3a0c6e20a2d710026d7118167bb00de34f01be9b7c0e4846e",
+      "bytes": 8048,
+      "git_blob": "1caab89f91a3b6642a3e2c4206a98bc92bdb525a",
+      "working_copy_sha256": "fb30c026e27a620f8a3aad889ea5265c1ca0de21b4f43f3e0b4739daaeb18354",
+      "working_copy_bytes": 8097
+    },
+    "dipole.md": {
+      "sha256": "f022c98111a75c542ccc7bebdc92aa47edc90ef50e3bfa41904e45f2f3244655",
+      "bytes": 5285,
+      "git_blob": "dfd6a347a4a1e3bc7419decd3f7468af5bf57842",
+      "working_copy_sha256": "ad81a26b7d3afe9500b1baff9645d42f3baf042749f25a7d3d4cfea3f23e829c",
+      "working_copy_bytes": 5331
+    },
+    "TangentCurvature.lean": {
+      "sha256": "95ee640c0e5dc33d0f51b945e4c3007830a63db106359c3ddd3ba6bfc9e58474",
+      "bytes": 6901,
+      "git_blob": "b8071b31fb1f8b184015ab2b97b72f01dca64c14",
+      "working_copy_sha256": "4ddbf1d039561aba2b6eca33265ec86c5bba352d0ee564c1471a81ac3f4430a9",
+      "working_copy_bytes": 7084
+    },
+    "check_reflection.py": {
+      "sha256": "6449827e2a5ab8b2bdd71d154f07ac2e6fc053e8139ced240e2d4b78a4ee8b47",
+      "bytes": 4366,
+      "git_blob": "6e7f8d1af57ebfb689ab94bc22cb7b3fa39426e5",
+      "working_copy_sha256": "249c33e660a2c2567eab89f855253a686ee6f03b6d8046c7ed00a331c4aeb312",
+      "working_copy_bytes": 4470
+    }
+  }
+}
