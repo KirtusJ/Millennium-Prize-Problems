@@ -1,0 +1,7 @@
+P1 beta 1 eig [-0.99999967 -0.99999967 -0.99999967  1.          1.          1.          1.          1.          1.          1.          1.          1.        ] max|eig-claim| 3.3323144066343957e-07 PASS
+P2 beta 3 eig [-4.999999 -4.999999 -4.999999  1.        1.        1.        1.        1.        1.        1.        1.        1.      ] max|eig-claim| 9.99250233668647e-07 PASS
+P3 random plaquette: max|H(h)-H(2h)|/3 = 2.439148420278296e-07 max|H(h)-HR|= 2.4391484210184444e-07 max|H(h)-Hgrad(h)|= 1.1102230246251565e-13 PASS
+  min eig B (random plaq, beta=3) H1/HR: -2.969386342536866 -2.969387004113588
+P4 lattice U=1 beta=1 HessV eigs [-0.         -0.         -0.         -0.         -0.         -0.         -0.         -0.         -0.          0.          0.          0.          0.          0.          0.          1.99999967
+  1.99999967  1.99999967  1.99999967  1.99999967  1.99999967  3.99999933  3.99999933  3.99999933] min -1.1102306321548104e-10 zeros(|e|<1e-5): 15 PASS
+P5 lattice random: sym err of gradient-differenced Hessian 0.0 ; max|Hsym-Hn| 0.0 ; sym err of 4-point scheme 0.0 min eig B: -1.3078934151668542 (from Hn sym part: -1.3078934151668542 ) PASS

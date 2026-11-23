@@ -1,0 +1,2 @@
+check K38: exit 0 (expected 0) in 519663 ms | output 100f567d8c73 | event 40 head f683feccc023
+  /home/user/z4-workers/a3-C/report.md — not a proof of (C): 12 steps (PROVED 8, CITED 1, CLAIMED 1, MISSING 1, NOT CHECKED 1; weakest link step 6, the one-step inequality (C′) for the flowed SU(2) density); predicates met 10, failed 5, measured only 2.

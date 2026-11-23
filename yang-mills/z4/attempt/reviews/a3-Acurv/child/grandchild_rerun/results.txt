@@ -1,0 +1,12 @@
+control FD: [(0.01, np.float64(-0.9999958333395398)), (0.001, np.float64(-0.9999999583953922)), (0.0001, np.float64(-0.999999993922529))]
+analytic -1.000000 ; agree(1e-5)=True
+
+h=0.01  asym=0.00e+00
+smallest eig(I+H)=-0.99997292
+distinct (tol 1e-5): [(np.float64(-0.999973), 3), (np.float64(0.999994), 9)]
+
+h=0.001  asym=0.00e+00
+smallest eig(I+H)=-0.99999973
+distinct (tol 1e-5): [(np.float64(-1.0), 3), (np.float64(1.0), 9)]
+
+max |eig diff| between h: 2.681e-05

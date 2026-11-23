@@ -1,0 +1,2 @@
+check K6: exit 0 (expected 0) in 167307 ms | output 7a1374b783a7 | event 7 head 3688000a0b60
+check K7: exit 0 (expected 0) in 101600 ms | output e6e733a1b57e | event 8 head 9d593dde2546

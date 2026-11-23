@@ -1,0 +1,8 @@
+L=3 bc=p nE=324 nS=81 nP=486 NTH=300 NSEP=40
+beta=0.5 s=0 plaq=0.13869 kH=-0.8190 kH(gauge-fixed)=1.0000 kfull=-0.862 rankG=243 nneg=99 IPR*nE=17.96 zeroMomW=0.012 maxdev=1.9934 meandev=0.8613 w_on_top1%links=0.214 (frac links 0.059) landauReTr/2=0.0000 low5=[-0.819, -0.76, -0.746, -0.73, -0.707]
+beta=0.5 s=1 plaq=0.14722 kH=-0.7440 kH(gauge-fixed)=1.0000 kfull=-0.777 rankG=243 nneg=100 IPR*nE=5.52 zeroMomW=0.012 maxdev=1.9927 meandev=0.8528 w_on_top1%links=0.130 (frac links 0.062) landauReTr/2=0.0000 low5=[-0.744, -0.737, -0.726, -0.718, -0.708]
+beta=0.5 s=2 plaq=0.08630 kH=-0.8502 kH(gauge-fixed)=1.0000 kfull=-0.887 rankG=243 nneg=123 IPR*nE=6.25 zeroMomW=0.012 maxdev=1.9946 meandev=0.9137 w_on_top1%links=0.158 (frac links 0.062) landauReTr/2=0.0000 low5=[-0.85, -0.836, -0.813, -0.808, -0.788]
+beta=0.5 s=3 plaq=0.13337 kH=-0.7890 kH(gauge-fixed)=1.0000 kfull=-0.835 rankG=243 nneg=103 IPR*nE=18.96 zeroMomW=0.012 maxdev=1.9135 meandev=0.8666 w_on_top1%links=0.070 (frac links 0.062) landauReTr/2=0.0000 low5=[-0.789, -0.77, -0.749, -0.744, -0.717]
+C1 beta=0.5 <plaq>=0.12303 +- 0.00563 ref=0.12402 PASS time=8s
+beta=4.0 s=0 plaq=0.81528 kH=-1.6402 kH(gauge-fixed)=1.0000 kfull=-3.866 rankG=243 nneg=8 IPR*nE=1.92 zeroMomW=0.012 maxdev=0.8326 meandev=0.1847 w_on_top1%links=0.115 (frac links 0.062) landauReTr/2=0.0000 low5=[-1.64, -1.379, -0.906, -0.852, -0.818]
+beta=4.0 s=1 plaq=0.78775 kH=-1.7919 kH(gauge-fixed)=1.0000 kfull=-4.562 rankG=243 nneg=4 IPR*nE=1.58 zeroMomW=0.012 maxdev=0.8942 meandev=0.2123 w_on_top1%links=0.101 (frac links 0.059) landauReTr/2=0.0000 low5=[-1.792, -1.567, -1.302, -1.111, 0.076]

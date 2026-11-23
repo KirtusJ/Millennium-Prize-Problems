@@ -1,0 +1,2 @@
+check K2: exit 0 (expected 0) in 128001 ms | output e3b0c44298fc | event 3 head 1772f80d93ed
+exit=0

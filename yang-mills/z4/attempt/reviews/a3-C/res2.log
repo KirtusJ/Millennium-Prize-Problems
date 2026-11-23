@@ -1,0 +1,1 @@
+check K6: exit 1 (expected 1) in 59581 ms | output e037e9fe431d | event 7 head b0e3d8b750fb

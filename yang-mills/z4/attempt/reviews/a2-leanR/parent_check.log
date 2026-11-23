@@ -1,0 +1,2 @@
+check K31: exit 0 (expected 0) in 354300 ms | output 72551ac02186 | event 33 head 9840499d6f9f
+  /home/user/z4-workers/a2-leanR/report.md — verdicts: 9 STANDS, 1 DEFECT ("D ≥ 1" holds only when E ≥ 0, so not for every sign of E), 1 NOT CHECKED (L8, measure version); the mutated L1 is shown false in Lean, as intended; predicates: 10 met, 1 failed, 3 measured only.

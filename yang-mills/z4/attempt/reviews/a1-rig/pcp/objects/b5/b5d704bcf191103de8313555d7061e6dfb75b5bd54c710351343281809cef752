@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/a1-rig/child/tools/check_table.py", line 14, in <module>
+    out = open(sys.argv[1], "x"); fails = 0
+FileExistsError: [Errno 17] File exists: 'results2.json'

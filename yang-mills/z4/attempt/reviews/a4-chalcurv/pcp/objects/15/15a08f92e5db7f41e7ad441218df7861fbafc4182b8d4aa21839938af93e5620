@@ -1,0 +1,27 @@
+The finite-difference Hessians match the claimed eigenvalues. I fixed the predicates in each script before running it. `report.md` has the full numbers, and `control.txt` holds -5 (1 - 2·3).
+
+**(a) Single plaquette with Q = -1.** I used central differences with h = 1e-3. The eigenvalues of B came out as:
+
+| beta | three eigenvalues | nine eigenvalues | worst deviation from claim |
+|---|---|---|---|
+| 1 | -0.99999967 | 1 | 3.3e-7 |
+| 3 | -4.999999 | 1 | 1.0e-6 |
+
+At a random configuration (seed 12345, beta = 3), comparing h with 2h gives a Richardson error estimate of 2.4e-7. The smallest eigenvalue of B there is -2.969386. I did not derive an analytic Hessian, so the h versus 2h comparison is the only error estimate.
+
+**(b) 2x2 periodic lattice.**
+- **At U = identity, beta = 1:** the Hessian of V has eigenvalues 0 (15 times), 2 (6 times) and 4 (3 times). The smallest is -1.1e-10, so all are ≥ 0 within noise, and there are 15 zero eigenvalues.
+- **At a random configuration (seed 777):** the smallest eigenvalue of B is -1.3078934.
+- **Plaquette reading:** I read the prompt's "x+1, x+2" as x+e1 and x+e2.
+
+**Failed test.** My first symmetry check was vacuous. The "gradient-differenced" Hessian reused the same function evaluations as the 4-point scheme, so its symmetry error was exactly 0. That was a flaw in my test design, not in the target. I replaced it with a nested scheme using steps 1e-3 and 3e-3, which gives a symmetry error of 6.5e-11. Its smallest eigenvalue of B is -1.30789188, which differs from the first value by 1.5e-6.
+
+**Sub-agent.** It wrote 8 to `grandchild/control.txt` first, which is correct. It then recomputed the Q = -1, beta = 3 plaquette and got -4.99999919 (three times) and 0.99999981 (nine times). I reread its results and reran its script in `rerun_gc/`, and the numbers were identical. It used the same h and stencil as mine, so it is only a weakly independent check. Its own symmetry check was vacuous in the same way.
+
+**PCP verify.** The register has three checks, K1 and K2 for my programs and K3 for the sub-agent rerun, each exiting 0 as expected. The last lines of the two verify commands:
+- **Python:** `result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)`
+- **Rust:** `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.`
+
+To rerun, from `/home/user/z4-workers/a4-chalcurv/child`: `python3 hess.py results.txt` and `python3 hess2.py`. Result files open with mode "x", so delete the existing `results.txt` and `results2.txt` first. `report.md` lists all the commands.
+
+Everything is in `/home/user/z4-workers/a4-chalcurv/child`; the main files are `report.md` and `notes.md`.

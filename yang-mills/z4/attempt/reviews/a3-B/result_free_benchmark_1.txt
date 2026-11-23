@@ -1,0 +1,32 @@
+n  G_K96  G_K128  c(n)=(G/G0)^2  b(n)=log(c(n)/c(n+1))  n*b(n)
+0 5.000000e-01 5.000000e-01 1.000000e+00 3.96464 0.0000
+1 6.887475e-02 6.887475e-02 1.897492e-02 3.64121 3.6412
+2 1.115272e-02 1.115272e-02 4.975325e-04 3.19066 6.3813
+3 2.262239e-03 2.262238e-03 2.047089e-05 2.63645 7.9094
+4 6.053978e-04 6.053967e-04 1.466021e-06 2.08795 8.3518
+5 2.131328e-04 2.131318e-04 1.817006e-07 1.65124 8.2562
+6 9.334483e-05 9.334381e-05 3.485227e-08 1.34487 8.0692
+7 4.764964e-05 4.764863e-05 9.081569e-09 1.13428 7.9400
+8 2.702467e-05 2.702368e-05 2.921117e-09 0.98385 7.8708
+9 1.652459e-05 1.652362e-05 1.092120e-09 0.87084 7.8376
+10 1.069162e-05 1.069066e-05 4.571611e-10 nan nan
+P4 ratio 10^4G(10)/(6^4G(6)) = 0.8837
+measured: 4D chessboard bound log P(1-cos a_p > delta) <= L(beta,delta)
+beta=8 delta=0.1 logBound=36.238
+beta=8 delta=0.5 logBound=33.038
+beta=8 delta=1.0 logBound=29.038
+beta=32 delta=0.1 logBound=42.243
+beta=32 delta=0.5 logBound=29.443
+beta=32 delta=1.0 logBound=13.443
+beta=128 delta=0.1 logBound=40.983
+beta=128 delta=0.5 logBound=-10.217
+beta=128 delta=1.0 logBound=-74.217
+beta=512 delta=0.1 logBound=10.906
+beta=512 delta=0.5 logBound=-193.894
+beta=512 delta=1.0 logBound=-449.894
+P1: MET
+P1b: MET
+P2: MET
+P3: MET
+P4: MET
+counts: met 5, failed 0, measured only 3

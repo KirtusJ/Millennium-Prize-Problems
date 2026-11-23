@@ -1,0 +1,13 @@
+Q1	0711.4930.txt	P1_found=True	P2_sentences=1<=2:True
+Q2	0711.4930.txt	P1_found=True	P2_sentences=1<=2:True
+Q3	0711.4930.txt	P1_found=True	P2_sentences=1<=2:True
+Q4	0712.2620.txt	P1_found=True	P2_sentences=1<=2:True
+Q5	0707.2179.txt	P1_found=True	P2_sentences=2<=2:True
+Q6	0707.2179.txt	P1_found=True	P2_sentences=1<=2:True
+Q7	1803.01950.txt	P1_found=True	P2_sentences=1<=2:True
+Q8	1803.01950.txt	P1_found=True	P2_sentences=1<=2:True
+Q9	jw.txt	P1_found=True	P2_sentences=2<=2:True
+Q10	a2611.11534.abs.html	P1_found=True	P2_sentences=1<=2:True
+Q11	a2503.15539.html	P1_found=True	P2_sentences=1<=2:True
+Q12	kt.abs.html	P1_found=True	P2_sentences=1<=2:True
+SUMMARY cases=12 P1_met=12 P2_met=12 ALL=PASS

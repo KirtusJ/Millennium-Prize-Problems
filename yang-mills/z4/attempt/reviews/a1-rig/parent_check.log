@@ -1,0 +1,2 @@
+check K30: exit 0 (expected 0) in 388721 ms | output 2c284a37f6ec | event 32 head 2d9db7b97b4b
+  /home/user/z4-workers/a1-rig/report.md: verdicts STANDS 16, DEFECT 2, NOT CHECKED 4; predicates met 6, failed 0, measured only 2.

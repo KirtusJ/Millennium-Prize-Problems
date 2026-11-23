@@ -1,0 +1,18 @@
+BRIEF a1-idx (indexer of the repository). Network: none.
+
+The directory repo/yang-mills is a read-only copy of the Yang-Mills folder of the repository at its current main: the work of six directors (folders observable-normalization = A4, transfer-operator = B4, central-quotients = C4, spectral-support = D4, g4 = G4, volume-uniformity, z4 = Z4). Work in your own directory outside repo/.
+
+Purpose. Director Z4 is about to write an end-to-end ATTEMPT at Yang-Mills existence and mass gap for SU(2), meant to be disproved. It needs to know, exactly and without inflation, what each director has actually established that could serve as a link in a chain from the Wilson lattice theory to a continuum theory with a gap, and with what scope.
+
+Produce INDEX.md: for each folder and sub-folder, at most a few rows: (path) (the statement, in one or two sentences, in the author's own scope: which group, which dimension, which lattice, which coupling regime (fixed beta / beta to infinity at fixed lattice / joint limit with a stated rate / strong coupling), finite or infinite volume, free or interacting) (status as the file states it: proved in text / in Lean (file, declaration names) / computed / measured / conjectural) (what the file itself says is NOT established). Then classify each row by where it could sit in a chain:
+  L1 lattice setting, reflection positivity, transfer matrix, Hilbert space;
+  L2 observables and their normalization in physical units;
+  L3 ultraviolet control / existence of a continuum limit along a coupling trajectory;
+  L4 nontriviality of the limit;
+  L5 a spectral gap uniform along the trajectory (infrared);
+  L6 the gauge group question (simply connected cover against quotients);
+  L7 symmetry axioms in the limit (Euclidean invariance etc.);
+  NEG a counterexample or obstruction showing that some inference is invalid.
+Then three lists, each at most 12 lines: (a) results that hold for the interacting theory at fixed finite spacing; (b) results that are limits toward a free (Gaussian) theory; (c) obstructions (NEG) with the inference each kills. Then: "which links L1-L7 have no interacting-theory result uniform in the lattice spacing anywhere in the repository" - answer plainly.
+Method: read each folder's README or main .md first, then the statement files; grep for "open", "not", "remains", "conjectur". Do not rerun programs. Quote file paths. If a README's summary is stronger than the statement file it summarizes, list that under "inflation found".
+Delegate to the child: the folder transfer-operator alone (it is large), with the same row format; control question for the child: how many sub-folders does repo/yang-mills/transfer-operator contain (compute it yourself first with ls and compare). Budget: about 25 minutes.

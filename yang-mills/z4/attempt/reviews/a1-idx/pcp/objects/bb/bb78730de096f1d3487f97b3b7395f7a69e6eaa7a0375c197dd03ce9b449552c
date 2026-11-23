@@ -1,0 +1,26 @@
+{
+ "P1": {
+  "value": 13,
+  "met": true
+ },
+ "P2": {
+  "child": "13",
+  "met": true
+ },
+ "P3": {
+  "missing": [],
+  "met": true
+ },
+ "P4": {
+  "sorry_files": [],
+  "met": true
+ },
+ "P5": {
+  "files_without_print_axioms": [
+   "central-quotients/Model.lean",
+   "z4/lean/Z4YM.lean"
+  ],
+  "met": false
+ }
+}
+H: 7 of 7

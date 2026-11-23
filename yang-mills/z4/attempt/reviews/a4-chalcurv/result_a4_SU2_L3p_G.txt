@@ -1,0 +1,35 @@
+SU(2) L=3 bc=p ens=G nE=324 Ric=1.0
+curl form on horizontal: dim 732, zero modes 12, min nonzero 1.5000
+seed=0 c=0.25 beta=16.0 kH=0.3436 (kH-Ric)/Ric=-0.6564 beta*dev=0.2041 zeroMomW=0.989 nneg=0 low4=[0.344, 0.368, 0.412, 0.449]
+seed=0 c=0.25 beta=64.0 kH=0.3452 (kH-Ric)/Ric=-0.6548 beta*dev=0.2049 zeroMomW=0.997 nneg=0 low4=[0.345, 0.368, 0.412, 0.448]
+seed=0 c=0.25 beta=256.0 kH=0.3460 (kH-Ric)/Ric=-0.6540 beta*dev=0.2051 zeroMomW=0.999 nneg=0 low4=[0.346, 0.369, 0.413, 0.448]
+seed=0 c=0.25 beta=1024.0 kH=0.3464 (kH-Ric)/Ric=-0.6536 beta*dev=0.2051 zeroMomW=1.000 nneg=0 low4=[0.346, 0.369, 0.413, 0.448]
+  M1 seed=0 c=0.25: kH 0.3460 -> 0.3464 PASS | k=2.6145 c0=Ric/k=0.382
+seed=0 c=0.5 beta=16.0 kH=-0.3154 (kH-Ric)/Ric=-1.3154 beta*dev=0.4061 zeroMomW=0.978 nneg=6 low4=[-0.315, -0.263, -0.176, -0.102]
+seed=0 c=0.5 beta=64.0 kH=-0.3109 (kH-Ric)/Ric=-1.3109 beta*dev=0.4093 zeroMomW=0.995 nneg=6 low4=[-0.311, -0.264, -0.176, -0.103]
+seed=0 c=0.5 beta=256.0 kH=-0.3087 (kH-Ric)/Ric=-1.3087 beta*dev=0.4101 zeroMomW=0.999 nneg=6 low4=[-0.309, -0.263, -0.175, -0.103]
+seed=0 c=0.5 beta=1024.0 kH=-0.3076 (kH-Ric)/Ric=-1.3076 beta*dev=0.4102 zeroMomW=1.000 nneg=6 low4=[-0.308, -0.262, -0.175, -0.103]
+  M1 seed=0 c=0.5: kH -0.3087 -> -0.3076 PASS | k=2.6151 c0=Ric/k=0.382
+seed=0 c=1.0 beta=16.0 kH=-1.6374 (kH-Ric)/Ric=-2.6374 beta*dev=0.8035 zeroMomW=0.953 nneg=12 low4=[-1.637, -1.515, -1.351, -1.2]
+seed=0 c=1.0 beta=64.0 kH=-1.6256 (kH-Ric)/Ric=-2.6256 beta*dev=0.8165 zeroMomW=0.989 nneg=12 low4=[-1.626, -1.528, -1.352, -1.205]
+seed=0 c=1.0 beta=256.0 kH=-1.6192 (kH-Ric)/Ric=-2.6192 beta*dev=0.8197 zeroMomW=0.997 nneg=12 low4=[-1.619, -1.527, -1.351, -1.206]
+seed=0 c=1.0 beta=1024.0 kH=-1.6161 (kH-Ric)/Ric=-2.6161 beta*dev=0.8203 zeroMomW=0.999 nneg=12 low4=[-1.616, -1.525, -1.35, -1.207]
+  M1 seed=0 c=1.0: kH -1.6192 -> -1.6161 PASS | k=2.6161 c0=Ric/k=0.382
+  M2 seed=0: limit kH(c=1)=-1.6161 <0 PASS
+seed=1 c=0.25 beta=16.0 kH=0.3745 (kH-Ric)/Ric=-0.6255 beta*dev=0.1905 zeroMomW=0.990 nneg=0 low4=[0.374, 0.396, 0.427, 0.464]
+seed=1 c=0.25 beta=64.0 kH=0.3729 (kH-Ric)/Ric=-0.6271 beta*dev=0.1916 zeroMomW=0.997 nneg=0 low4=[0.373, 0.394, 0.426, 0.462]
+seed=1 c=0.25 beta=256.0 kH=0.3724 (kH-Ric)/Ric=-0.6276 beta*dev=0.1920 zeroMomW=0.999 nneg=0 low4=[0.372, 0.393, 0.426, 0.462]
+seed=1 c=0.25 beta=1024.0 kH=0.3722 (kH-Ric)/Ric=-0.6278 beta*dev=0.1921 zeroMomW=1.000 nneg=0 low4=[0.372, 0.393, 0.425, 0.461]
+  M1 seed=1 c=0.25: kH 0.3724 -> 0.3722 PASS | k=2.5113 c0=Ric/k=0.398
+seed=1 c=0.5 beta=16.0 kH=-0.2474 (kH-Ric)/Ric=-1.2474 beta*dev=0.3784 zeroMomW=0.979 nneg=4 low4=[-0.247, -0.203, -0.144, -0.069]
+seed=1 c=0.5 beta=64.0 kH=-0.2530 (kH-Ric)/Ric=-1.2530 beta*dev=0.3823 zeroMomW=0.995 nneg=4 low4=[-0.253, -0.21, -0.147, -0.074]
+seed=1 c=0.5 beta=256.0 kH=-0.2548 (kH-Ric)/Ric=-1.2548 beta*dev=0.3836 zeroMomW=0.999 nneg=4 low4=[-0.255, -0.213, -0.148, -0.076]
+seed=1 c=0.5 beta=1024.0 kH=-0.2555 (kH-Ric)/Ric=-1.2555 beta*dev=0.3841 zeroMomW=1.000 nneg=4 low4=[-0.255, -0.214, -0.149, -0.077]
+  M1 seed=1 c=0.5: kH -0.2548 -> -0.2555 PASS | k=2.5110 c0=Ric/k=0.398
+seed=1 c=1.0 beta=16.0 kH=-1.4814 (kH-Ric)/Ric=-2.4814 beta*dev=0.7473 zeroMomW=0.958 nneg=12 low4=[-1.481, -1.39, -1.281, -1.127]
+seed=1 c=1.0 beta=64.0 kH=-1.5020 (kH-Ric)/Ric=-2.5020 beta*dev=0.7618 zeroMomW=0.990 nneg=12 low4=[-1.502, -1.415, -1.292, -1.144]
+seed=1 c=1.0 beta=256.0 kH=-1.5083 (kH-Ric)/Ric=-2.5083 beta*dev=0.7663 zeroMomW=0.997 nneg=12 low4=[-1.508, -1.424, -1.296, -1.151]
+seed=1 c=1.0 beta=1024.0 kH=-1.5104 (kH-Ric)/Ric=-2.5104 beta*dev=0.7678 zeroMomW=0.999 nneg=12 low4=[-1.51, -1.428, -1.297, -1.153]
+  M1 seed=1 c=1.0: kH -1.5083 -> -1.5104 PASS | k=2.5104 c0=Ric/k=0.398
+  M2 seed=1: limit kH(c=1)=-1.5104 <0 PASS
+FAILED predicates: []

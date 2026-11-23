@@ -1,0 +1,13 @@
+lattice L=3 4D periodic: nE 324 nS 81 nP 486 batches 11
+P1 SU2 FD maxerr 2.733315140890369e-08 |H|2 12.519854261959221 PASS
+one-plaquette box: nE 4 nP 1
+P2 beta=1.0 eig B [-1. -1. -1.  1.  1.  1.  1.  1.  1.  1.  1.  1.] PASS
+P4 beta=1.0 kappa_H -1.0000000000000016 rankG 9 dimH 3 PASS
+P2 beta=3.0 eig B [-5. -5. -5.  1.  1.  1.  1.  1.  1.  1.  1.  1.] PASS
+P4 beta=3.0 kappa_H -5.000000000000008 rankG 9 dimH 3 PASS
+P3 U=1 L=3 beta=3: rankG 240 kH 0.9999999999999911 kfull 0.9999999999999428 PASS
+   number of horizontal eigenvalues equal to Ric=1 at U=1 (zero modes of curl form, horizontal): 12
+P3 random config: rankG 243 PASS
+P5 SU3 FD maxerr 1.4111874516165024e-08 |H|2 7.098945579239831 PASS
+   SU3 U=1: kH 1.4999999999999898 (Ric=1.5) rankG 640 (expect 8*81-8=640)
+FAILED: []

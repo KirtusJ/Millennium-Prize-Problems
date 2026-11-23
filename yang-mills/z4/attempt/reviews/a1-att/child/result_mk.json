@@ -1,0 +1,203 @@
+{
+ "rows": [
+  {
+   "grp": "U1",
+   "order": "A",
+   "beta0": 0.5,
+   "strong": true,
+   "n": 6,
+   "c_last": 4.433593492492899e-11
+  },
+  {
+   "grp": "U1",
+   "order": "A",
+   "beta0": 1,
+   "strong": false,
+   "n": 400,
+   "c_last": 0.5591328002626774
+  },
+  {
+   "grp": "U1",
+   "order": "A",
+   "beta0": 2,
+   "strong": false,
+   "n": 400,
+   "c_last": 0.7679953488454114
+  },
+  {
+   "grp": "U1",
+   "order": "A",
+   "beta0": 4,
+   "strong": false,
+   "n": 400,
+   "c_last": 0.8795946445386207
+  },
+  {
+   "grp": "U1",
+   "order": "A",
+   "beta0": 8,
+   "strong": false,
+   "n": 400,
+   "c_last": 0.9386603334943502
+  },
+  {
+   "grp": "U1",
+   "order": "B",
+   "beta0": 0.5,
+   "strong": true,
+   "n": 3,
+   "c_last": 0.0
+  },
+  {
+   "grp": "U1",
+   "order": "B",
+   "beta0": 1,
+   "strong": true,
+   "n": 3,
+   "c_last": 1.3494044754312602e-10
+  },
+  {
+   "grp": "U1",
+   "order": "B",
+   "beta0": 2,
+   "strong": true,
+   "n": 6,
+   "c_last": 1.7734373969971596e-10
+  },
+  {
+   "grp": "U1",
+   "order": "B",
+   "beta0": 4,
+   "strong": false,
+   "n": 400,
+   "c_last": 0.8647154846961597
+  },
+  {
+   "grp": "U1",
+   "order": "B",
+   "beta0": 8,
+   "strong": false,
+   "n": 400,
+   "c_last": 0.9361375103651157
+  },
+  {
+   "grp": "SU2",
+   "order": "A",
+   "beta0": 0.5,
+   "strong": true,
+   "n": 3,
+   "c_last": 4.663713859542895e-12
+  },
+  {
+   "grp": "SU2",
+   "order": "A",
+   "beta0": 1,
+   "strong": true,
+   "n": 5,
+   "c_last": -2.7755575615628914e-17
+  },
+  {
+   "grp": "SU2",
+   "order": "A",
+   "beta0": 2,
+   "strong": true,
+   "n": 9,
+   "c_last": -2.7755575615628914e-17
+  },
+  {
+   "grp": "SU2",
+   "order": "A",
+   "beta0": 4,
+   "strong": true,
+   "n": 16,
+   "c_last": 8.135425111355232e-10
+  },
+  {
+   "grp": "SU2",
+   "order": "A",
+   "beta0": 8,
+   "strong": true,
+   "n": 32,
+   "c_last": 2.4988899838263023e-12
+  },
+  {
+   "grp": "SU2",
+   "order": "B",
+   "beta0": 0.5,
+   "strong": true,
+   "n": 2,
+   "c_last": 3.0848101850722287e-12
+  },
+  {
+   "grp": "SU2",
+   "order": "B",
+   "beta0": 1,
+   "strong": true,
+   "n": 3,
+   "c_last": -2.7755575615628914e-17
+  },
+  {
+   "grp": "SU2",
+   "order": "B",
+   "beta0": 2,
+   "strong": true,
+   "n": 3,
+   "c_last": 1.8655216260654583e-11
+  },
+  {
+   "grp": "SU2",
+   "order": "B",
+   "beta0": 4,
+   "strong": true,
+   "n": 5,
+   "c_last": -2.7755575615628914e-17
+  },
+  {
+   "grp": "SU2",
+   "order": "B",
+   "beta0": 8,
+   "strong": true,
+   "n": 9,
+   "c_last": -2.7755575615628914e-17
+  }
+ ],
+ "log": [
+  "P0 c1 grid 0.24249961258080197 Bessel 0.24249961258080185 diff 1.1102230246251565e-16",
+  "P0 c1 grid 0.6977746579640081 Bessel 0.6977746579640081 diff 0.0",
+  "P0 c1 grid 0.948599825954846 Bessel 0.9485998259548459 diff 1.1102230246251565e-16",
+  "P0 d=2 control diff 2.7755575615628914e-17",
+  "P0 PASS",
+  "P1 beta 2.0 [np.float64(0.767984215672277), np.float64(0.7679842156722766)] rel 5.782530432104215e-16",
+  "P1 beta 10.0 [np.float64(0.950743618235748), np.float64(0.950743618235748)] rel 0.0",
+  "P1 PASS",
+  "P2 U1 A beta0 0.5 flows_strong True n 6 c1[0,1,5,20,n] [0.2425, 0.2371, 0.0006451, 4.434e-11, 4.434e-11]",
+  "P2 U1 A beta0 1 flows_strong False n 400 c1[0,1,5,20,n] [0.4464, 0.556, 0.5683, 0.5681, 0.5591]",
+  "P2 U1 A beta0 2 flows_strong False n 400 c1[0,1,5,20,n] [0.6978, 0.765, 0.768, 0.768, 0.768]",
+  "P2 U1 A beta0 4 flows_strong False n 400 c1[0,1,5,20,n] [0.8635, 0.8788, 0.8796, 0.8796, 0.8796]",
+  "P2 U1 A beta0 8 flows_strong False n 400 c1[0,1,5,20,n] [0.9352, 0.9385, 0.9387, 0.9387, 0.9387]",
+  "P2 U1 B beta0 0.5 flows_strong True n 3 c1[0,1,5,20,n] [0.2425, 0.01383, 0.0, 0.0, 0.0]",
+  "P2 U1 B beta0 1 flows_strong True n 3 c1[0,1,5,20,n] [0.4464, 0.1567, 1.349e-10, 1.349e-10, 1.349e-10]",
+  "P2 U1 B beta0 2 flows_strong True n 6 c1[0,1,5,20,n] [0.6978, 0.6649, 0.00258, 1.773e-10, 1.773e-10]",
+  "P2 U1 B beta0 4 flows_strong False n 400 c1[0,1,5,20,n] [0.8635, 0.868, 0.8683, 0.8681, 0.8647]",
+  "P2 U1 B beta0 8 flows_strong False n 400 c1[0,1,5,20,n] [0.9352, 0.9361, 0.9361, 0.9361, 0.9361]",
+  "P2 SU2 A beta0 0.5 flows_strong True n 3 c1[0,1,5,20,n] [0.1237, 0.03519, 4.664e-12, 4.664e-12, 4.664e-12]",
+  "P2 SU2 A beta0 1 flows_strong True n 5 c1[0,1,5,20,n] [0.2402, 0.1875, -2.776e-17, -2.776e-17, -2.776e-17]",
+  "P2 SU2 A beta0 2 flows_strong True n 9 c1[0,1,5,20,n] [0.4331, 0.4505, 0.1688, -2.776e-17, -2.776e-17]",
+  "P2 SU2 A beta0 4 flows_strong True n 16 c1[0,1,5,20,n] [0.658, 0.6792, 0.5953, 8.135e-10, 8.135e-10]",
+  "P2 SU2 A beta0 8 flows_strong True n 32 c1[0,1,5,20,n] [0.8192, 0.8266, 0.8048, 0.6163, 2.499e-12]",
+  "P2 SU2 B beta0 0.5 flows_strong True n 2 c1[0,1,5,20,n] [0.1237, 0.0009371, 3.085e-12, 3.085e-12, 3.085e-12]",
+  "P2 SU2 B beta0 1 flows_strong True n 3 c1[0,1,5,20,n] [0.2402, 0.01331, -2.776e-17, -2.776e-17, -2.776e-17]",
+  "P2 SU2 B beta0 2 flows_strong True n 3 c1[0,1,5,20,n] [0.4331, 0.1384, 1.866e-11, 1.866e-11, 1.866e-11]",
+  "P2 SU2 B beta0 4 flows_strong True n 5 c1[0,1,5,20,n] [0.658, 0.5472, -2.776e-17, -2.776e-17, -2.776e-17]",
+  "P2 SU2 B beta0 8 flows_strong True n 9 c1[0,1,5,20,n] [0.8192, 0.7963, 0.5099, -2.776e-17, -2.776e-17]",
+  "P2 qualifying cases 14 of 20 -> FAIL (see per-case)",
+  "P3 d=3 beta0 0.5 strong True n 3",
+  "P3 d=3 beta0 1 strong True n 4",
+  "P3 d=3 beta0 2 strong True n 5",
+  "P3 d=3 beta0 4 strong True n 6",
+  "P3 d=3 beta0 8 strong True n 7",
+  "P3 d=5 beta0=8 strong False c1_last 1.0 weak-phase True",
+  "P3 PASS",
+  "P4 U1 d=4 A beta0=8: first n with c1<0.01 = None ; c1 at n=0,10,20,40,80: [0.9352, 0.9387, 0.9387, 0.9387, 0.9387]"
+ ]
+}

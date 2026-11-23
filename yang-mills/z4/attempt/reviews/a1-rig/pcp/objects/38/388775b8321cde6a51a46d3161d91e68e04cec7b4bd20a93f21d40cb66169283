@@ -1,0 +1,28 @@
+Three more fetches are still running: the Adhikari–Cao abstract reread, the INSPIRE records for the three older papers, and the 2D Yang–Mills and SU(2) search. `control.txt` already says "three", but that is from memory and not yet checked against a source. The sub-agent's report says "2022" for the arXiv id question, which is correct. I'm waiting on the fetches before writing the tables.
+
+The 2D and SU(2) fetch agent got only one abstract, Chatterjee's arXiv:2006.16229. I'm still waiting on the Adhikari–Cao reread and the INSPIRE records. For 2D Yang–Mills and SU(2), most rows will be marked FROM MEMORY.
+
+`report.md` is written, but the literature part is thin. I read no full text myself. All web reads went through fetch sub-agents, since I had no direct fetch tool.
+
+**Control.** `control.txt` says "three", from memory. The INSPIRE title of the Göpfert–Mack paper says "Three-Dimensional", which is consistent.
+
+**What came back by item:**
+- **(a)** Both abstracts were relayed. Guth gives "a rigorous lower bound … for the Wilson loop expectation value". Fröhlich–Spencer gives "a deconfining transition to a massless (QED) phase". The exact perimeter-law, massless-photon and power-law-decay statements are not confirmed and are marked FROM MEMORY.
+- **(b)** Göpfert–Mack: "string tension α is nonzero for all values of the coupling constant g²". The size of the tension or gap as a function of beta was not retrieved. INSPIRE lists the paper as 1981.
+- **(c)** Adhikari–Cao (SUMMARY ONLY): Theorem 1.1 needs β ≥ (1/Δ_G)(114 + 4 log|G|), for a finite, possibly non-abelian group on boxes in Z⁴. The covariance of conjugacy-invariant functions of holonomies decays like e^(−(β/2)Δ_G(L−1)).
+- **(d)** Only Chatterjee's confinement paper (arXiv:2006.16229, abstract only) was read. The Lévy, Driver and Sengupta rows are FROM MEMORY.
+- **(e)** Nothing was read. From memory, no rigorous SU(2) phase-transition result is known in 4D; 5D is unknown to me.
+
+**Delegation and a conflict.** The grandchild's control ("2022") was correct. Its abstract-only read found no numeric beta range. A second agent that read the arXiv HTML version found the explicit threshold above. The report states this conflict and uses the later reading, with SUMMARY ONLY status.
+
+**Program.** `tools/check_table.py` checks that every row has an address, locator and how-read. It passed 7/7 with 0 failed predicates, and only 4 of the 7 rows have any source read. I edited the script in place between the two runs, so run 1 can't be reproduced byte-for-byte with the final script.
+
+**PCP verify, last lines:**
+- `pcp_os verify`: "result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)"
+- `pcpos verify`: "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+
+Files are in `/home/user/z4-workers/a1-rig/child/`:
+- `report.md`
+- `control.txt`
+- `notes.md`
+- `results2.json`

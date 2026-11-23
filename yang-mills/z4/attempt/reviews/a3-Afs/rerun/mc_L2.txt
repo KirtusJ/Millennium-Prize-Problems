@@ -1,0 +1,13 @@
+L=2 T=16 beta=2.3 R=1000 NS=2500 NT=300 a=0.74137542 m_formula=0.598496
+C(0)=0.500144 +- 0.000096  exact=0.500000  pull=+1.50  ok
+C(1)=0.274896 +- 0.000173  exact=0.274852  pull=+0.26  ok
+C(2)=0.150957 +- 0.000256  exact=0.151146  pull=-0.74  ok
+C(3)=0.082871 +- 0.000275  exact=0.083221  pull=-1.27  ok
+C(4)=0.045609 +- 0.000271  exact=0.046006  pull=-1.46  ok
+m_eff(1)=0.59812 +- 0.00039  formula=0.59850 pull=-0.97 ok  exact-T m_eff=0.59855  sigma<0.25m:True
+m_eff(2)=0.59926 +- 0.00108  formula=0.59850 pull=+0.71 ok  exact-T m_eff=0.59852  sigma<0.25m:True
+m_eff(3)=0.60081 +- 0.00168  formula=0.59850 pull=+1.38 ok  exact-T m_eff=0.59851  sigma<0.25m:True
+<cos p>=0.741253 +- 0.000072 ref=0.741375 pull=-1.69 ok
+<cc'>_time=0.549440 +- 0.000106 ref=0.549638 pull=-1.86 ok
+<cc'>_space=0.549440 +- 0.000113 ref=0.549638 pull=-1.74 ok
+P1 3/3  P2 5/5  P3 3/3  P4 3/3  runtime 66s

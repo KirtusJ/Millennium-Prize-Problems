@@ -1,0 +1,4 @@
+check K37: exit 0 (expected 0) in 907339 ms | output 9052d180d1cf | event 39 head 29b3ab63e351
+  The rerun of the child's program is still going; I'll finish report.md once it reports.
+  
+  /home/user/z4-workers/a3-B/report.md — not a proof: 3 steps PROVED (S1, S2, free target), 1 CITED (S0), 3 CLAIMED (S3a, S3b, S3c), 0 MISSING; 1 DEFECT in the target (A1's 2D row); predicates met 8, failed 2, measured only 5.

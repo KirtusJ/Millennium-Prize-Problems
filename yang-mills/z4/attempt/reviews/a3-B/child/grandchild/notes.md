@@ -1,0 +1,5 @@
+# notes
+step1: wrote mc.py with predicates in docstring; running (control then main)
+step2: ran 'python3 mc.py result.txt' (cwd grandchild); output:
+CONTROL N=20000000 est=1.590466 SE=0.000420 diff=-0.000171 PASS=True
+MAIN seed=12345 N=40000000 P=8.936222e-02 SE(delta)=9.379e-05 SE(batch means of ratio, 40 batches)=9.121e-05 ESS=1360293

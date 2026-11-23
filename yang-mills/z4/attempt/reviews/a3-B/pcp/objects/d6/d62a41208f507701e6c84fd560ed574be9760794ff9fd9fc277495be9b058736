@@ -1,0 +1,2 @@
+/home/user/z4-workers/a3-B/sharp_chess2d.py:46: RuntimeWarning: divide by zero encountered in log
+  la = np.log(np.abs(a))

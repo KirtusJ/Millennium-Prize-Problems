@@ -1,0 +1,14 @@
+MK in d=4 gives confinement for SU(2) in every case I ran. For U(1) the full-character recursion stalls at weak coupling, so I could not show it reaches strong coupling there. The U(1) conclusion rests on Ito and Seiler's text. I did not compute it, and I did not read Guth or Fröhlich–Spencer; Ito–Seiler only cite them.
+
+- **Control:** `control.txt` says `4`, written from memory first. Ito–Seiler (arXiv:0803.3019, read in full text) agree: for the standard MK formula, d=4 is the critical dimension.
+- **SU(2):** all 10 cases flow to strong coupling within 32 steps. These cover starting couplings 0.5 to 8 and two orderings of the bond-moving and convolution steps. I could not tell which ordering is the authentic MK, since I did not read Migdal or Kadanoff.
+- **U(1):**
+  - The "for all" predicate failed: 14 of 20 cases qualify, and all 6 failures are U(1).
+  - A longer probe showed the starting-coupling-1 case does collapse to strong coupling between 400 and 1600 steps.
+  - Starting couplings 4 and 8 are constant to double precision out to 6400 steps. Any flow there is nonperturbatively slow.
+  - There is no logarithmic running at the steps I checked.
+- **Why the U(1) prediction is wrong:** Ito–Seiler say MK flows to strong coupling for abelian and non-abelian groups alike, which "cannot possibly be correct" because a deconfining transition exists in 4D abelian theories. Their Theorem 2.2(2) gives deconfinement at weak coupling as a variation of Fröhlich–Spencer (CMP 83, 1982) and Guth (PRD 21, 1980). Any argument for confinement that uses only MK bounds therefore cannot work as stated.
+- **Sub-agent:** its control passed, and my rerun reproduced its output byte-for-byte. It used a truncated recursion that refits only the first coefficient each step. That drifts toward weak coupling, which disagrees with my full-character run. It flagged this itself as a truncation artefact, so I do not count it as an MK prediction.
+- **PCP OS:** both `verify` calls passed. One check (`probe_u1_tail`) pipes the program through `tail`, so its exit code is masked and it does not certify that the probe ran; this is disclosed in the report.
+
+Everything is in `/home/user/z4-workers/a1-att/child/`. `report.md` has the verdict table, sources with how each was read, failed predicates, what I did not check, the sub-agent outcome and the rerun commands. The other files are `control.txt`, `notes.md`, `mk_recursion.py`, `probe_u1_tail.py` and the result JSONs.

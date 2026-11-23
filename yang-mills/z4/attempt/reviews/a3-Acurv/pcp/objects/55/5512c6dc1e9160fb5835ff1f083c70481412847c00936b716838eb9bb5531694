@@ -1,0 +1,38 @@
+Q1–Q3 are done: lam at the Q = −1 configuration is 1 − 2b, and the search found nothing lower. The full write-up is in `report.md`, with a running log in `notes.md`.
+
+**Control:** `control.txt` holds −1.000000. The trace is 2cos(t/√2), and finite differences agree.
+
+**Q1:** lam equals 1 − 2b to 1e-14.
+
+| b | lam |
+|---|---|
+| 0.5 | 0 (1.5e-16) |
+| 1 | −1 |
+| 2 | −3 |
+| 4 | −7 |
+
+The Hessian of V there is −(b/2)|s1+s2−s3−s4|² per colour, so I + Hess V has eigenvalue 1 − 2b (×3) and 1 (×9). My analytic Hessian matches finite differences to 1.7e-7 (tolerance 1e-5, set by the h=1e-3 truncation error).
+
+**Q2:** measured only, not proved. I ran 5000 Haar-random configurations per b, then 13 hill-climb starts per b. The minimum found is 0, −1, −3, −7, equal to the Q1 values to 1e-14 and never below them. Random sampling alone stopped 0.002–0.02 short of the Q1 value; only local optimisation reached it. This is an upper bound on the true minimum.
+
+**Q3:** the gauge directions have rank 9 (singular values 2 ×3, √2 ×6, 0 ×3), so the horizontal space has dimension 3. Its eigenvalues of I + Hess V are 1 − 2b (×3), the same as Q1. The gauge block has minimum 1.0 for every b. The soft modes are all horizontal.
+
+**Failed runs:** the first run of `hess.py` exited 1 because scipy isn't installed. That is an environment problem, not a predicate failure. I replaced scipy with my own SU(2) exponential and hill-climb, and the second run passed. No numerical predicate failed.
+
+**Delegated check:** the sub-agent recomputed lam at Q = −1, b = 1 by finite differences only. It gave −0.99999973 and eigenvalues −1 (×3) and +1 (×9). I read its code and reran it in clean copies. The output was byte-identical, and it agrees with my −1 within 2.7e-7.
+
+**PCP OS:**
+- `pcp_os.py verify`, last line: `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.` Its result line was `PASS`.
+- `pcpos verify pcp/register.jsonl`, last line: `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.`
+
+**Not checked:** an analytic proof of the global minimum, other b values, other plaquette orientation conventions, and seeds beyond 12345 and 777+10b.
+
+Files are in `/home/user/z4-workers/a3-Acurv/child`:
+- `report.md`
+- `notes.md`
+- `control.txt`
+- `hess.py`
+- `results_hess.json`
+- `grandchild/`
+- `grandchild_rerun/`
+- `grandchild_rerun2/`

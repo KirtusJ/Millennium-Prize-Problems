@@ -1,0 +1,14 @@
+RESULT D=3 L=2 beta=0.3 n=8 F=0.031985 err=0.001749 agree=8/8
+RESULT D=4 L=2 beta=0.3 n=8 F=0.077438 err=0.002362 agree=8/8
+RESULT D=4 L=2 beta=0.3 n=5 F=0.077555 err=0.003017 agree=5/5
+RESULT D=4 L=3 beta=0.3 n=8 F=0.004138 err=0.003802 agree=8/8
+RESULT D=4 L=3 beta=0.3 n=5 F=-0.000949 err=0.004410 agree=5/5
+RESULT D=4 L=4 beta=0.3 n=8 F=0.006062 err=0.005072 agree=8/8
+RESULT D=4 L=4 beta=0.3 n=5 F=-0.007358 err=0.006292 agree=5/5
+RESULT D=3 L=2 beta=0.6 n=8 F=0.686241 err=0.005371 agree=8/8
+RESULT D=4 L=2 beta=0.6 n=8 F=3.205181 err=0.024974 agree=8/8
+RESULT D=4 L=2 beta=0.6 n=5 F=3.214201 err=0.026497 agree=5/5
+RESULT D=4 L=3 beta=0.6 n=8 F=8.244437 err=0.126832 agree=8/8
+RESULT D=4 L=3 beta=0.6 n=5 F=8.097566 err=0.179217 agree=5/5
+RESULT D=4 L=4 beta=0.6 n=8 F=15.841856 err=0.249064 agree=8/8
+RESULT D=4 L=4 beta=0.6 n=5 F=15.672055 err=0.283044 agree=5/5

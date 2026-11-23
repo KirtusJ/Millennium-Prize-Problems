@@ -1,0 +1,2 @@
+check K35: exit 0 (expected 0) in 478215 ms | output 43dd50a538a9 | event 37 head b9afefd5aa66
+  /home/user/z4-workers/a3-Afs/report.md — not a proof; steps PROVED 3, CITED 1, CLAIMED 2, MISSING 2 (missing: z unbounded in L at every β, and the bridge from large z to the criterion); predicates met 6, failed 1, measured only 6.

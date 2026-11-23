@@ -1,0 +1,14 @@
+# notes a3-Avort
+- 11:4x control.txt = 0.272341 (-ln tanh 1). Lean READY exists.
+- Read A1_REDUCTION, LIT_* (facts 9,10; holes 1-12), INDEX_EXTRACT.
+- Route committed: (a) vortex free energy F(L,beta) on L^4 torus -> Tomboulis-Yaffe/Borgs-Seiler inequality -> area law -> [MISSING] gap. CLAIMED step: F(L,beta) non-increasing in L and ->0 for SU(2) at every beta.
+- Child control: Z2 2D torus N=4 plaquettes beta=0.5, F=-ln((1-t^N)/(1+t^N)) = 0.091272 (my value, python).
+- Fetched arXiv:0707.2179v1 (pdftotext, scratchpad). §6.1 eq (6.1) exp(-F)=Z^-/Z; (6.2) confining F ~ L exp(-sigma |A|), A=L1L2; (6.3) exp(-F^el)=(1/2)(1 - Z^-/Z) [note: 1/2 factor as printed]; (6.4) <W[C]>_Lambda <= [exp(-F^el)]^{S/A}, C rectangle in [12]-plane, ref [15]. Child started 11:5x.
+- vortex_su2.py written (predicates Q0,Q1,Q2 in docstring). Pre-run sanity (not a result): 4^4 beta=2.4 plaquette ~0.62 after 300+ sweeps cold start (lit. ~0.63); so ntherm=200. Launch run1: ntherm 200 nmeas 400 betas 1.8,2.4.
+- Child control.txt = 0.091272 = my value -> child control CORRECT (graded before reading its output).
+- su2 run1 partial: Q0 MET (0.09856+-0.0007 vs 0.0995). F(2,1.8)=0.69+-0.24, F(3,1.8)=-0.26+-0.28: errors large -> Q1 at 3 sigma is a weak test (note in report).
+- Sources read: KT hep-lat/0108017 eqs (2)-(11) (SU(2), Wilson, periodic; (11) <W[C]> <= 2 exp(-Fel)^{|A_C|/|A_12|}, exp(-Fel)=<(1/2)(1-O[V])>); Tomboulis 0707.2179 §6.1 (6.1)-(6.4), II.1.
+- PROOF.md drafted (S0..S6; S5a CLAIMED, S5b,S6 MISSING).
+- su2 run1 done exit 0: Q0 MET; Q1 4/4 MET; Q2 6/6 MET. F(2,3,4)@1.8 = .69+-.24, -.26+-.28, .49+-.40; @2.4 = 3.06+-.42, 1.55+-.45, 2.81+-.95. Weak: errors ~ size of differences.
+- child rerun K3 exit 0: all 6 d4 n8 RESULT lines and the 3D checks identical to child's (bitwise). Child control correct. Grandchild: 2^24 exact 3D L=2 F(0.3)=0.0325243, F(0.6)=0.6912790; child MC 0.03199+-.00175, 0.68624+-.00537 consistent.
+- exact3d.py K4: independent 2^24 enumeration reproduces grandchild F(0.3), F(0.6) to 1e-10. MET 2/2.

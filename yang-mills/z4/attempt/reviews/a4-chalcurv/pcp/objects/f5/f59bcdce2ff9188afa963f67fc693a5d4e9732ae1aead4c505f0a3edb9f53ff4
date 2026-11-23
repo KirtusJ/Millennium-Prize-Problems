@@ -1,0 +1,10 @@
+SU(3) L=3 bc=p ens=G nE=324 Ric=1.5
+curl form on horizontal: dim 1952, zero modes 32, min nonzero 1.0000
+seed=0 c=0.5 beta=256.0 kH=-0.2079 (kH-Ric)/Ric=-1.1386 beta*dev=0.9454 zeroMomW=0.998 nneg=7 low4=[-0.208, -0.159, -0.126, -0.084]
+seed=0 c=0.5 beta=1024.0 kH=-0.2084 (kH-Ric)/Ric=-1.1389 beta*dev=0.9467 zeroMomW=0.999 nneg=6 low4=[-0.208, -0.16, -0.128, -0.088]
+  M1 seed=0 c=0.5: kH -0.2079 -> -0.2084 PASS | k=3.4167 c0=Ric/k=0.439
+seed=0 c=1.0 beta=256.0 kH=-1.9141 (kH-Ric)/Ric=-2.2761 beta*dev=1.8875 zeroMomW=0.995 nneg=32 low4=[-1.914, -1.815, -1.749, -1.663]
+seed=0 c=1.0 beta=1024.0 kH=-1.9165 (kH-Ric)/Ric=-2.2777 beta*dev=1.8924 zeroMomW=0.999 nneg=32 low4=[-1.917, -1.819, -1.754, -1.673]
+  M1 seed=0 c=1.0: kH -1.9141 -> -1.9165 PASS | k=3.4165 c0=Ric/k=0.439
+  M2 seed=0: limit kH(c=1)=-1.9165 <0 PASS
+FAILED predicates: []

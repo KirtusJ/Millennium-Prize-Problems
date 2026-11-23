@@ -1,0 +1,17 @@
+curv_test L=3 d=4 nsamp=4 betas=[12.0, 24.0, 48.0]
+C0: MET identity config bW=3: lam_full=1.000000000000 lam_hor=1.000000000000
+C1: MET max|H_analytic - H_FD| = 1.68e-08
+  staple check: ReTr(U A) = 0.714629107736 direct = 0.714629107736
+  T1 case bW=12.0: lam_full=-50.764204 lam_hor=-50.764204 (1-bW=-11.000, 1-2bW=-23.000)
+  T1 case bW=24.0: lam_full=-102.528407 lam_hor=-102.528407 (1-bW=-23.000, 1-2bW=-47.000)
+  T1 case bW=48.0: lam_full=-206.056815 lam_hor=-206.056815 (1-bW=-47.000, 1-2bW=-95.000)
+T1: MET 3/3 cases qualify
+bW=12.0: plaq=0.9379 fneg=0.0000 lam_full mean=-6.4151 min=-6.7382 lam_hor mean=-1.6111 min=-1.7036 max=-1.4344 ||H||max=78.586 (12bW=144.00) [4.4s]
+   lam_hor per sample: -1.675 -1.434 -1.632 -1.704
+bW=24.0: plaq=0.9683 fneg=0.0000 lam_full mean=-9.0383 min=-10.0772 lam_hor mean=-1.9522 min=-2.3016 max=-1.7393 ||H||max=155.215 (12bW=288.00) [5.0s]
+   lam_hor per sample: -1.960 -1.739 -1.808 -2.302
+bW=48.0: plaq=0.9849 fneg=0.0000 lam_full mean=-12.2162 min=-12.5590 lam_hor mean=-1.4917 min=-2.1955 max=-1.1738 ||H||max=313.825 (12bW=576.00) [5.3s]
+   lam_hor per sample: -1.174 -1.290 -1.307 -2.196
+C3: MET 12/12 samples qualify
+staple consistency: ok
+COUNTS met=4 failed=0

@@ -1,0 +1,15 @@
+Q1	0711.4930.txt	This cannot be correct, however, since there exists a deconfining Kosterlitz-Thouless (KT) type transition in 4D lattice gauge theory based on abelian gauge groups.
+Q2	0711.4930.txt	Namely equation (3.2) is reduced to inequality (3.5) which is, as far as we can see, not proven
+Q3	0711.4930.txt	Though the Migdal-Kadanoff RG recursion formulas cannot distinguish non-abelian groups from abelian ones, the velocities of the convergences of {cj (n)}∞j=1/2 to 0 as n → ∞ are very different.
+Q4	0712.2620.txt	In other words, by construction, inequality (5.15) does not come up at weak coupling (large β).
+Q5	0707.2179.txt	For Abelian systems, comparison inequalities of the type (5.15) either follow from Griffith’s inequalities, or can be approached by the same methods. All such known methods fail in the non-Abelian case.
+Q6	0707.2179.txt	Assume that there is an n0 such that the upper bound coefficients cU j (n) become sufficiently small for n ≥ n0 .
+Q7	1803.01950.txt	However, this also implied that the area law at small β cannot be evidence for quark confinement, because there are certain Yang–Mills theories that should not be confining quarks.
+Q8	1803.01950.txt	The solution of Problem 4.1 for four- dimensional non-Abelian lattice gauge theories at large β remains elusive.
+Q9	jw.txt	Yet, even if this were accomplished, no present ideas point the direction to establish the existence of a mass gap that is uniform in the volume. Nor do present methods suggest how to obtain the existence of the infinite volume limit T4 → R4 .
+Q10	a2611.11534.abs.html	A nontrivial four-dimensional spatial-cutoff construction and a positive spectral bound along it are not established; no exact continuum mass is asserted.
+Q11	a2503.15539.html	The interacting four-dimensional construction, nontrivial renormalized local fields and a uniform physical mass gap remain unproved.
+Q12	kt.abs.html	This is rigorously known to provide a necessary and sufficient condition for maintaining confinement at weak coupling in SU(N) gauge theories.
+Q13	0803.3019.txt	But the price to pay for this is that cj (n) may not converge to 0 (the strong coupling fixed point) as n → ∞ !
+Q14	0803.3019.txt	(This is so even though the MK recursion formulas fail to describe the deconfining transition of the U(1) model even for α = r = 1.)
+Q15	0803.3019.txt	These subtle points are not addressed in [1].

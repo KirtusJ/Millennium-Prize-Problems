@@ -1,0 +1,2 @@
+check K33: exit 0 (expected 0) in 489573 ms | output 6f2d5441cc37 | event 35 head 797ba4fd449d
+  /home/user/z4-workers/a3-Avort/report.md — steps: PROVED 2, CITED 3, CLAIMED 1 (S5a), MISSING 2 (S5b, S6); not a proof; predicates mine 13 met / 0 failed / 6 measured only, child 23 met / 2 failed (S5a false for Z₂ at β = 0.6, as the discriminator requires) / 6 measured only.

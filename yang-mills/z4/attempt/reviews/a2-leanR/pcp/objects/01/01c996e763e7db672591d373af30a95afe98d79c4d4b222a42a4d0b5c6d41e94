@@ -1,0 +1,21 @@
+L1–L7 all held on the 10^4 random sets per statement, and the mutated L1 (`exp(-K)` in place of `exp(-K/2)`) fails. `report.md` has the full verdict table.
+
+The control `2*log(exp(1))` came out as 2.0, written to `control.txt`. Seed was 12345 and tolerance was 1e-12 relative, about four orders above double-precision rounding error for these sums. Every premise was met in all 10000 sets of each statement, so none were discarded.
+
+- **L1–L5:** 0 violations each. L4 also holds for t in [-1, 1), not just t ≥ 1.
+- **L6:** the maximum observed C(1/2)/C(1) was 2.71738. That is just under e = 2.71828 and well above exp(1/2) = 1.6487, so exp(1/2) is not the bound.
+- **L7:** the largest ratio (C(c)/C(1))/f(D,c) was 0.99996, so it stays below 1 but is nearly tight.
+- **Mutation:** a single atom (w=1, E=2) is a counterexample. At K=1.25, T = 0.13534 against a right side of 0.10540. At K=1.5 the right side is 0.08208, so the inequality fails by a factor of e^0.5. All 10000 random sets also violated it. One atom is the minimum possible.
+- **Sub-agent:** its control gave 3.0. For w=1, E=2 it found C(1/2)/C(1) = 2.718281828459045 and the same K=1.5 numbers as above. I reread its `results.md` and recomputed exp(-2) and exp(-2.5) myself, and they match.
+- **PCP OS:** the init reported the method as not found, as expected. `check` exited 0 as expected. The last line of each verify:
+  - Python: `result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)`
+  - Rust: `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.`
+
+No predicate failed unexpectedly. I did not check n > 8, other energy distributions apart from U[1,2] for L6, or any proofs. The results file opens with mode "x", so a rerun needs a new filename; the rerun commands are in `report.md`.
+
+Files are in `/home/user/z4-workers/a2-leanR/child`:
+- `report.md`
+- `notes.md`
+- `pcp_check.py`
+- `results_main.json`
+- `grandchild/`

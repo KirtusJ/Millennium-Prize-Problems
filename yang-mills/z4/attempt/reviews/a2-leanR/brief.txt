@@ -1,0 +1,15 @@
+BRIEF a2-leanR (formalizer). Network: none. Lean 4.19.0 with Mathlib as in rule 6.
+
+Target: the elementary inequalities of Theorem R in A1_REDUCTION.md (this directory), for FINITE positive sums of atoms (weights w_i >= 0, energies E_i >= 1 in units of the gap, i in a Finset), and, if the budget allows, for a finite measure on the reals. State each in general form first and let Lean find the proof; report the exact statements proved and every hypothesis you could drop or had to add. One file A1R.lean, namespace A1R, no sorry, standard axioms only.
+ Notation: C(t) = sum_i w_i exp(-t E_i) (t real), "physical time" t, normalization at t = 1.
+ L1 (R2, tightness). If C(1/2) <= D * C(1) then for every K: sum over {i : E_i > K} of w_i exp(-E_i) <= D * exp(-K/2) * C(1).
+ L2 (iterated). If C(c) <= D * C(1) for some 0 < c < 1 then the tail above K is at most D * exp(-(1-c) K) * C(1).
+ L3 (R4 upper). If all E_i >= 1 and t >= 1 then C(t) <= exp(-(t-1)) * C(1).
+ L4 (R4 lower, Jensen). If C(1) > 0 and t >= 1 then C(t) >= C(1) * exp(-(t-1) * Ebar), Ebar = (sum_i w_i E_i exp(-E_i)) / C(1).
+ L5 (mean energy). If C(1) > 0 and C(1/2) <= D * C(1) then Ebar <= 2 * log D. (Jensen for exp, or the inequality x <= 2 (exp(x/2) - 1)... choose what closes; note D >= 1 follows.)
+ L6 (the spectral-subspace remark). If all E_i are in [1, 2] then C(1/2) <= exp(1) * C(1).   Also decide and prove the sharp constant: is it exp(1) or exp(1/2)? (E in [1,2]: exp(-E/2) <= exp(E/2) * exp(-E) and E/2 <= 1.)
+ L7 (converse direction of (C)). If the tail bound of L1 holds for all K with constant D, what bound on C(c)/C(1) for c in (1/2, 1) follows? Prove one explicit bound of the form C(c) <= f(D, c) * C(1) for finite sums (layer-cake over the atoms), or report why not.
+ L8 (measure version, optional). L1 and L3 for a finite Borel measure nu on the reals supported in [1, infinity), with C(t) = integral of exp(-t E) d nu.
+Mutation control: in a copy, replace exp(-K/2) in L1 by exp(-K) and show the statement becomes false (a two-atom counterexample proved in Lean if feasible, else numerically in Python and say so).
+Delegate to the child: a Python check of L1-L7 on 10^4 random atom sets each (hypothesis per case first), control question for the child: 2*log(exp(1)) = 2.
+Budget: about 20 minutes.

@@ -1,0 +1,24 @@
+The formula holds for 2D U(1) at β = 2.3 for L = 2 and L = 3, and none of my pre-set predicates failed. SU(2) was only tabulated, not simulated.
+
+- **Control:** I_2(2)/I_1(2) = 0.433127. It's in `control.txt`, and the sub-agent's power series gives 0.43312743.
+- **Claimed z(L), L = 1..8:** a = I_1/I_0 = 0.7413754 for U(1) and a = I_2/I_1 = 0.4792791 for SU(2). z rises from 0.299 to 19.152 for U(1) and from 0.735 to 47.070 for SU(2). It is strictly increasing, and z/L² is constant.
+  - Eight points can't show "unbounded". That follows from the closed form with a < 1, not from the check.
+- **Monte Carlo** (Metropolis, 1000 independent replicas, 2500 measured sweeps, T = 16, jackknife over 20 blocks of replicas):
+
+| L | m_eff(1) | m_eff(2) | m_eff(3) | formula | pulls (σ) |
+|---|---|---|---|---|---|
+| 2 | 0.59812(39) | 0.59926(108) | 0.60081(168) | 0.59850 | -0.97, +0.71, +1.38 |
+| 3 | 0.89724(49) | 0.89466(114) | 0.89629(315) | 0.89774 | -1.04, -2.71, -0.46 |
+
+- **Plaquette independence hint:** it holds. The mean plaquette and the nearest-neighbour correlations (time and space) match a and a² within 3σ in all 6 cases.
+- **Exact finite-T C(t):** I derived this from the character expansion and it matches the MC for C(0..4) at both L (10/10). The finite-T correction to m_eff is below 1e-4.
+- **Predicates:** all met, with a tolerance of 3 jackknife σ. P1 passed 6/6 cases, P2 10/10, P3 6/6, and the power check (σ < 0.25 m) 6/6.
+  - Two pulls reach 2.62 and 2.71 (C(2) and m_eff(2) at L = 3). They pass, but I ran no second seed, so I can't say whether they are noise.
+- **Sub-agent:** it passed its control (I_0(0) = 1), then computed the ratios by power series. All values agree with my quadrature to 8 decimals. I reread its script and results and reran a copy, and the output matched.
+- **PCP OS:** I ran the control, table, and both MC runs through `check`.
+  - `verify --ws pcp`: "result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)"
+  - `pcpos verify pcp/register.jsonl`: "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+
+**Not checked:** SU(2) by simulation, other β or T, L > 3 by MC, and other seeds. Thermalisation (300 sweeps from a hot start) and the cosh fit were not tested separately. The result files use mode 'x', so rerun in a clean directory; the commands are in `report.md`.
+
+Everything is in `/home/user/z4-workers/a3-Afs/child/`; start with `report.md`.

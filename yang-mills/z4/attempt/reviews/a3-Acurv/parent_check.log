@@ -1,0 +1,2 @@
+check K32: exit 0 (expected 0) in 598866 ms | output 768bcc5f0bef | event 34 head 2253eb528437
+  /home/user/z4-workers/a3-Acurv/report.md — not a proof of (A): steps PROVED 6, CITED 1, CLAIMED 3 (S6 refuted by my own test), MISSING 1 (S7); predicates met 14, failed 4, measured only 3.

@@ -1,0 +1,17 @@
+SU(2) L=3 bc=o ens=W nE=216 Ric=1.0
+seed=0 c=0.25 beta=16.0 kH=12.2261 (kH-Ric)/Ric=11.2261 beta*dev=0.8435 zeroMomW=0.004 nneg=0 low4=[12.226, 12.623, 13.045, 13.286]
+seed=0 c=0.25 beta=64.0 kH=58.1408 (kH-Ric)/Ric=57.1408 beta*dev=0.8634 zeroMomW=0.001 nneg=0 low4=[58.141, 59.435, 60.328, 60.601]
+seed=0 c=0.25 beta=256.0 kH=245.8578 (kH-Ric)/Ric=244.8578 beta*dev=0.8695 zeroMomW=0.000 nneg=0 low4=[245.858, 249.321, 250.794, 251.149]
+seed=0 c=0.25 beta=1024.0 kH=1005.2591 (kH-Ric)/Ric=1004.2591 beta*dev=0.8716 zeroMomW=0.000 nneg=0 low4=[1005.259, 1013.406, 1015.681, 1016.316]
+  M1 seed=0 c=0.25: kH 245.8578 -> 1005.2591 FAIL | k=-4017.0364 c0=Ric/k=-0.000
+seed=0 c=0.5 beta=16.0 kH=8.4839 (kH-Ric)/Ric=7.4839 beta*dev=1.6397 zeroMomW=0.008 nneg=0 low4=[8.484, 8.883, 9.488, 9.752]
+seed=0 c=0.5 beta=64.0 kH=53.7581 (kH-Ric)/Ric=52.7581 beta*dev=1.7128 zeroMomW=0.002 nneg=0 low4=[53.758, 55.249, 56.513, 57.03]
+seed=0 c=0.5 beta=256.0 kH=239.7419 (kH-Ric)/Ric=238.7419 beta*dev=1.7346 zeroMomW=0.000 nneg=0 low4=[239.742, 244.05, 246.398, 247.0]
+seed=0 c=0.5 beta=1024.0 kH=995.5952 (kH-Ric)/Ric=994.5952 beta*dev=1.7416 zeroMomW=0.000 nneg=0 low4=[995.595, 1006.371, 1010.014, 1010.924]
+  M1 seed=0 c=0.5: kH 239.7419 -> 995.5952 FAIL | k=-1989.1904 c0=Ric/k=-0.001
+seed=0 c=1.0 beta=16.0 kH=0.5228 (kH-Ric)/Ric=-0.4772 beta*dev=3.1062 zeroMomW=0.013 nneg=0 low4=[0.523, 1.052, 1.584, 2.213]
+seed=0 c=1.0 beta=64.0 kH=45.9044 (kH-Ric)/Ric=44.9044 beta*dev=3.3741 zeroMomW=0.004 nneg=0 low4=[45.904, 47.493, 49.18, 50.142]
+seed=0 c=1.0 beta=256.0 kH=229.5631 (kH-Ric)/Ric=228.5631 beta*dev=3.4536 zeroMomW=0.001 nneg=0 low4=[229.563, 234.742, 238.312, 239.405]
+seed=0 c=1.0 beta=1024.0 kH=980.4312 (kH-Ric)/Ric=979.4312 beta*dev=3.4780 zeroMomW=0.000 nneg=0 low4=[980.431, 994.282, 1000.177, 1001.595]
+  M1 seed=0 c=1.0: kH 229.5631 -> 980.4312 FAIL | k=-979.4312 c0=Ric/k=-0.001
+FAILED predicates: ['M1 s0 c0.25', 'M1 s0 c0.5', 'M1 s0 c1.0']

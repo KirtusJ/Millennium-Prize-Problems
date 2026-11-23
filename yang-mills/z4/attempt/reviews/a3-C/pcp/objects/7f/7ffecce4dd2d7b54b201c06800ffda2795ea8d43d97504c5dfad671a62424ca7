@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/a3-C/test_c2.py", line 52, in <module>
+    R = C(2.5 * xi) / C(3 * xi); q += R >= math.exp(xi / 2) / 3
+        ~~~~~~~~~~~~^~~~~~~~~~~
+ZeroDivisionError: float division by zero

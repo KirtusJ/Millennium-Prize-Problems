@@ -1,0 +1,2 @@
+'A3C.step_chain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A3C.weight_implies_C' depends on axioms: [propext, Classical.choice, Quot.sound]

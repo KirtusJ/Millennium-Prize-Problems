@@ -1,0 +1,2 @@
+check K39: exit 0 (expected 0) in 818593 ms | output 5e45809fdc7a | event 41 head 7f54d94637d2
+  /home/user/z4-workers/a4-chalcurv/report.md — verdicts: 6 STANDS (including the reproduced refutation of S6), 1 DEFECT, 1 NOT CHECKED, 2 measured only; predicates 71 met, 53 failed, 5 measured only.

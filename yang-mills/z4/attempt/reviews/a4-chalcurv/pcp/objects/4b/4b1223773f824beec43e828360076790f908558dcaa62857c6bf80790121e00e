@@ -1,0 +1,19 @@
+/usr/local/lib/python3.13/site-packages/numpy/linalg/_linalg.py:2406: RuntimeWarning: overflow encountered in det
+  r = _umath_linalg.det(a, signature=signature)
+/home/user/z4-workers/a4-chalcurv/lat.py:125: RuntimeWarning: invalid value encountered in multiply
+  X = [s[k] * np.einsum('nij,ajk,nlk->nail', W[k], E, W[k].conj()) for k in range(4)]
+Traceback (most recent call last):
+  File "/home/user/z4-workers/a4-chalcurv/run_a2.py", line 60, in <module>
+    rg = kappa_H(lat, Ug, beta, 2, want_vec=True)
+  File "/home/user/z4-workers/a4-chalcurv/lat.py", line 166, in kappa_H
+    Nh, r, s = horizontal_basis(G)
+               ~~~~~~~~~~~~~~~~^^^
+  File "/home/user/z4-workers/a4-chalcurv/lat.py", line 158, in horizontal_basis
+    Uu, s, Vt = np.linalg.svd(G, full_matrices=True)
+                ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/numpy/linalg/_linalg.py", line 1840, in svd
+    u, s, vh = gufunc(a, signature=signature)
+               ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/numpy/linalg/_linalg.py", line 153, in _raise_linalgerror_svd_nonconvergence
+    raise LinAlgError("SVD did not converge")
+numpy.linalg.LinAlgError: SVD did not converge

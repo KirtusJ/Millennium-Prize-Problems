@@ -1,0 +1,2 @@
+check K29: exit 0 (expected 0) in 312339 ms | output c721c73df78b | event 31 head fdddfe8ce41c
+  /home/user/z4-workers/a1-idx/report.md — verdicts: 6 STANDS, 4 DEFECT, 2 NOT CHECKED (predicates: 4 met, 1 failed, file counts measured only)

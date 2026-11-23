@@ -1,0 +1,2 @@
+P6 sym err 6.476e-11 PASS
+P7 min eig B -1.30789188 diff vs -1.30789342 = 1.54e-06 PASS

@@ -1,0 +1,92 @@
+{
+ "L1": {
+  "qualifying": 10000,
+  "violations": 0,
+  "extreme": null,
+  "first_violating_set": null
+ },
+ "L2": {
+  "qualifying": 10000,
+  "violations": 0,
+  "extreme": null,
+  "first_violating_set": null
+ },
+ "L3": {
+  "qualifying": 10000,
+  "violations": 0,
+  "extreme": null,
+  "first_violating_set": null
+ },
+ "L4a_t>=1": {
+  "qualifying": 10000,
+  "violations": 0,
+  "extreme": null,
+  "first_violating_set": null
+ },
+ "L4b_t in[-1,1)": {
+  "qualifying": 10000,
+  "violations": 0,
+  "extreme": null,
+  "first_violating_set": null
+ },
+ "L5": {
+  "qualifying": 10000,
+  "violations": 0,
+  "extreme": null,
+  "first_violating_set": null
+ },
+ "L6": {
+  "qualifying": 10000,
+  "violations": 0,
+  "extreme": 2.717382981988521,
+  "first_violating_set": null
+ },
+ "L7": {
+  "qualifying": 10000,
+  "violations": 0,
+  "extreme": 0.9999598076973447,
+  "first_violating_set": null
+ },
+ "MUT_L1_exp(-K)": {
+  "qualifying": 10000,
+  "violations": 10000,
+  "extreme": null,
+  "first_violating_set": [
+   [
+    0.7856492565012594,
+    10.011891413939349
+   ],
+   [
+    0.564216507083785,
+    1.4255844237193294
+   ],
+   [
+    0.2374991892889775,
+    9.244082810087136
+   ],
+   [
+    0.35063778951074454,
+    1.2697503561279766
+   ],
+   [
+    0.5727879291334649,
+    1.2156214300814687
+   ],
+   [
+    0.9819948397828799,
+    3.4727243731851867
+   ]
+  ]
+ },
+ "MUT_n1_counterexample": {
+  "atoms": [
+   [
+    1.0,
+    2.0
+   ]
+  ],
+  "K": 1.25,
+  "T": 0.1353352832366127,
+  "rhs": 0.10539922456186433
+ }
+}

@@ -1,0 +1,10 @@
+L1 {'qualifying': 10000, 'violations': 0, 'extreme': None}
+L2 {'qualifying': 10000, 'violations': 0, 'extreme': None}
+L3 {'qualifying': 10000, 'violations': 0, 'extreme': None}
+L4a_t>=1 {'qualifying': 10000, 'violations': 0, 'extreme': None}
+L4b_t in[-1,1) {'qualifying': 10000, 'violations': 0, 'extreme': None}
+L5 {'qualifying': 10000, 'violations': 0, 'extreme': None}
+L6 {'qualifying': 10000, 'violations': 0, 'extreme': 2.717382981988521}
+L7 {'qualifying': 10000, 'violations': 0, 'extreme': 0.9999598076973447}
+MUT_L1_exp(-K) {'qualifying': 10000, 'violations': 10000, 'extreme': None}
+MUT_n1_counterexample {'atoms': [(1.0, 2.0)], 'K': 1.25, 'T': 0.1353352832366127, 'rhs': 0.10539922456186433}

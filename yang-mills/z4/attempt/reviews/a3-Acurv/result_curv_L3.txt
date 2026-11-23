@@ -1,0 +1,34 @@
+curv_test L=3 d=4 nsamp=8 betas=[0.05, 0.5, 1.0, 2.0, 2.5, 3.0, 4.0, 6.0]
+C0: MET identity config bW=3: lam_full=1.000000000000 lam_hor=1.000000000000
+C1: MET max|H_analytic - H_FD| = 1.68e-08
+  staple check: ReTr(U A) = 0.714629107736 direct = 0.714629107736
+  T1 case bW=1.0: lam_full=-3.313684 lam_hor=-3.313684 (1-bW=0.000, 1-2bW=-1.000)
+  T1 case bW=2.0: lam_full=-7.627367 lam_hor=-7.627367 (1-bW=-1.000, 1-2bW=-3.000)
+  T1 case bW=2.5: lam_full=-9.784209 lam_hor=-9.784209 (1-bW=-1.500, 1-2bW=-4.000)
+  T1 case bW=3.0: lam_full=-11.941051 lam_hor=-11.941051 (1-bW=-2.000, 1-2bW=-5.000)
+  T1 case bW=4.0: lam_full=-16.254735 lam_hor=-16.254735 (1-bW=-3.000, 1-2bW=-7.000)
+  T1 case bW=6.0: lam_full=-24.882102 lam_hor=-24.882102 (1-bW=-5.000, 1-2bW=-11.000)
+T1: MET 6/6 cases qualify
+bW=0.05: plaq=0.0130 fneg=0.4879 lam_full mean=0.7961 min=0.7866 lam_hor mean=0.7997 min=0.7896 max=0.8097 ||H||max=0.216 (12bW=0.60) [7.0s]
+   lam_hor per sample: 0.805 0.799 0.800 0.803 0.810 0.790 0.798 0.792
+bW=0.5: plaq=0.1270 fneg=0.3907 lam_full mean=-0.8699 min=-0.9629 lam_hor mean=-0.8354 min=-0.9323 max=-0.7221 ||H||max=2.284 (12bW=6.00) [6.5s]
+   lam_hor per sample: -0.830 -0.932 -0.722 -0.907 -0.791 -0.810 -0.812 -0.879
+bW=1.0: plaq=0.2389 fneg=0.3040 lam_full mean=-2.4194 min=-2.6450 lam_hor mean=-2.3347 min=-2.6048 max=-2.1918 ||H||max=4.862 (12bW=12.00) [6.6s]
+   lam_hor per sample: -2.381 -2.305 -2.355 -2.193 -2.605 -2.323 -2.192 -2.322
+bW=2.0: plaq=0.4956 fneg=0.1075 lam_full mean=-4.3177 min=-4.7175 lam_hor mean=-3.9642 min=-4.4904 max=-3.4389 ||H||max=11.118 (12bW=24.00) [6.8s]
+   lam_hor per sample: -3.563 -3.439 -4.490 -4.307 -4.074 -4.042 -3.888 -3.911
+bW=2.5: plaq=0.6597 fneg=0.0278 lam_full mean=-4.0795 min=-4.8944 lam_hor mean=-2.5204 min=-3.4948 max=-1.7761 ||H||max=15.033 (12bW=30.00) [6.7s]
+   lam_hor per sample: -2.441 -3.495 -2.221 -2.834 -2.282 -2.859 -1.776 -2.256
+bW=3.0: plaq=0.7413 fneg=0.0059 lam_full mean=-3.8348 min=-4.2924 lam_hor mean=-1.7839 min=-2.0922 max=-1.5651 ||H||max=18.850 (12bW=36.00) [7.0s]
+   lam_hor per sample: -1.590 -1.790 -1.948 -1.636 -2.092 -1.565 -1.946 -1.705
+bW=4.0: plaq=0.8016 fneg=0.0021 lam_full mean=-4.6535 min=-5.5606 lam_hor mean=-1.8331 min=-2.1425 max=-1.6304 ||H||max=25.730 (12bW=48.00) [7.1s]
+   lam_hor per sample: -1.901 -1.711 -1.947 -1.630 -1.920 -1.708 -2.142 -1.705
+bW=6.0: plaq=0.8675 fneg=0.0000 lam_full mean=-5.1507 min=-5.2679 lam_hor mean=-1.7655 min=-2.1530 max=-1.5064 ||H||max=39.858 (12bW=72.00) [7.8s]
+   lam_hor per sample: -2.153 -1.631 -1.506 -1.754 -1.977 -1.870 -1.695 -1.537
+C2: MET plaq(0.5)=0.1270 vs I2/I1=0.1237
+C3: MET 64/64 samples qualify
+T2[bW=4.0]: FAILED 0/8 samples with lam_hor>=0.5
+T2[bW=6.0]: FAILED 0/8 samples with lam_hor>=0.5
+T3: MET -1.7655 vs -2.5204
+staple consistency: ok
+COUNTS met=6 failed=2

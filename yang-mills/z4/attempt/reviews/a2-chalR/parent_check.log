@@ -1,0 +1,2 @@
+check K36: exit 0 (expected 0) in 1355142 ms | output 1e04f34c12b5 | event 38 head 49b65b729f46
+  /home/user/z4-workers/a2-chalR/report.md: STANDS 16 / DEFECT 8 / NOT CHECKED 1. The proof of Theorem R survives line by line; the defects are in the remarks on (C), the D_j constant, section 4 and the table, and the child run timed out at 900 s.

@@ -1,0 +1,23 @@
+The claim stands: R1(ξ) stays bounded and tends to the continuum value 2K₁(1/2)/K₁(1) = 5.503975. The deviation shrinks as ξ grows, roughly like 1/ξ². The control K₁(1) = 0.601907 is in `control.txt`, and `report.md` has the full write-up.
+
+| ξ | R1 | R2 | rel. deviation |
+|---|---|---|---|
+| 4 | 6.58355 | 43.3431 | +1.96e-1 |
+| 8 | 5.92129 | 35.0617 | +7.58e-2 |
+| 16 | 5.57963 | 31.1323 | +1.37e-2 |
+| 32 | 5.52157 | 30.4878 | +3.20e-3 |
+| 64 | 5.50831 | 30.3415 | +7.87e-4 |
+| 128 | 5.50505 | 30.3056 | +1.96e-4 |
+
+- **Tolerance:** the two grid resolutions (N=80 and N=120) agree to 1.8e-14 relative or better. I used that difference as the stated tolerance.
+- **Trend:** the deviation fell at all 5 consecutive steps, and the last ratios approach 4. R2 is R1², so it adds no independent check.
+- **Sub-agent check at ξ=16:** it computed R1 by the Schwinger representation and got 5.5796296, against my 5.5796295 (2.4e-8 apart). Its own control, I₀(1) = 1.266066, matched. I reread its code and reran it under `pcp check`, and the numbers reproduced exactly.
+- **Failed predicates:** one. The sub-agent's own two-resolution test (1e-6) failed at 1.05e-6, and G(8) was the quantity that moved. That is a defect in its quadrature, not in the target.
+- **Counts:** 11 predicates met, 1 failed, and the table and trend are measured only.
+- **PCP verification:** both verifications pass.
+  - Python `verify` ends "result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)".
+  - Rust `verify` ends "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+  - The expected method-not-found message appeared at `init`.
+- **Not checked:** other ratios of n to ξ, other observables, and the continuum formula itself.
+
+Everything is in `/home/user/z4-workers/a3-C/child/`; the main program is `r1.py`, and the sub-agent's work is in `grandchild/`.

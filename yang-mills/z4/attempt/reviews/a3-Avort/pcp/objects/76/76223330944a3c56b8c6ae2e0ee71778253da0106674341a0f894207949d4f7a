@@ -1,0 +1,50 @@
+F is not non-increasing in L for both couplings. It rises sharply with L at β = 0.60, and at β = 0.30 it is consistent with non-increasing. The report is in `report.md`.
+
+**Control:** F = 0.091272 for the 2D N=4 torus at β = 0.5, written to `control.txt` first. Brute force over all 2^8 configurations matches the analytic −ln[(c⁴−s⁴)/(c⁴+s⁴)].
+
+**F(L,β) from heat-bath Monte Carlo** (8-node Gauss-Legendre in s, hot and cold chains, 20-bin errors):
+
+| β | L | F | error |
+|---|---|---|---|
+| 0.30 | 2 | 0.0774 | 0.0024 |
+| 0.30 | 3 | 0.0041 | 0.0038 |
+| 0.30 | 4 | 0.0061 | 0.0051 |
+| 0.60 | 2 | 3.205 | 0.025 |
+| 0.60 | 3 | 8.24 | 0.13 |
+| 0.60 | 4 | 15.8 | 0.25 |
+
+- **β = 0.60:** F rises strongly, by 5.04±0.13 from L=2 to 3 and 7.60±0.28 from L=3 to 4. This holds even if the quoted errors are too small.
+- **β = 0.30:** F drops by 0.073±0.005 from L=2 to 3. From L=3 to 4 it changes by +0.002±0.006, so it is flat and consistent with zero. I cannot tell "decreasing" from "zero" there.
+
+**Predicates:**
+- **Met:**
+  - The control agrees with the analytic value.
+  - The Monte Carlo reproduces the 2D control (0.25 sigma).
+  - It matches the exact 3D L=2 enumeration (within 1 sigma at both β).
+  - Hot and cold chains agree in all 6 cases.
+  - The 5-node and 8-node integrals agree in all 6 cases.
+  - F ≥ 0 within 3 sigma in all 6 cases.
+- **Failed:** non-increasing in L fails at β = 0.60. That is physics, not a code defect.
+- **Weak:** the hot/cold agreement test is weak for β = 0.60 at L=4 for s ≥ 0.76. The chains there have errors of 1–2 and appear to tunnel between states, so those bin errors are unreliable.
+
+**Not checked:** autocorrelation times, repeats with other seeds, a Metropolis cross-check, β near 0.44, and L > 4. `report.md` lists these.
+
+**Delegated check:** the sub-agent enumerated the 3D L=2 torus exactly (2^24 configurations) and returned F = 0.0325243 at β = 0.3 and 0.691279 at β = 0.6. Its quadrature identity holds to 1.4e-15 and −1.9e-9. I reread `grandchild/results.md` but did not rerun its code. I used its numbers to check my own Monte Carlo. Its programs were not run through `check`.
+
+**PCP records:** `control.py` and `run_all.sh` went through `check` (exit 0 both times). The last lines of the two verifies:
+- Python verify: "result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)"
+- Rust verify: "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+
+**Rerun:** move `out/` and `control.txt` aside first, since result files are opened in mode "x". Then:
+```
+cd /home/user/z4-workers/a3-Avort/child
+gcc -O2 -o vortex vortex.c -lm
+python3 control.py write
+./run_all.sh
+```
+`run_all.sh` takes about 53 s. `out/test_trash.dat` is an early smoke test, not a result.
+
+Everything is in `/home/user/z4-workers/a3-Avort/child`:
+- `report.md`
+- `control.txt`
+- `notes.md`

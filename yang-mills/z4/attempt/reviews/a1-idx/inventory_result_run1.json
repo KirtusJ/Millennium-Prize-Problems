@@ -1,0 +1,58 @@
+{
+ "predicates": {
+  "P1": {
+   "value": 13,
+   "met": true
+  },
+  "P2": {
+   "child": "13",
+   "met": true
+  },
+  "P3": {
+   "missing": [],
+   "met": true
+  },
+  "P4": {
+   "sorry_files": [],
+   "met": true
+  },
+  "P5": {
+   "files_without_print_axioms": [
+    "central-quotients/Model.lean",
+    "z4/lean/Z4YM.lean"
+   ],
+   "met": false
+  }
+ },
+ "measured": {
+  "observable-normalization": {
+   "lean_files_excl_evidence": 30,
+   "md_files": 82
+  },
+  "transfer-operator": {
+   "lean_files_excl_evidence": 13,
+   "md_files": 63
+  },
+  "central-quotients": {
+   "lean_files_excl_evidence": 16,
+   "md_files": 89
+  },
+  "spectral-support": {
+   "lean_files_excl_evidence": 15,
+   "md_files": 64
+  },
+  "g4": {
+   "lean_files_excl_evidence": 11,
+   "md_files": 39
+  },
+  "volume-uniformity": {
+   "lean_files_excl_evidence": 1,
+   "md_files": 1
+  },
+  "z4": {
+   "lean_files_excl_evidence": 16,
+   "md_files": 10
+  }
+ },
+ "H_cases_qualifying": "7 of 7"
+}

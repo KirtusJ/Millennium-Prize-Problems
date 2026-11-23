@@ -1,0 +1,13 @@
+rows qualifying for for-all predicates: 25
+P1: MET bad rows []
+P2: MET bad rows []
+P3: MET bad rows []
+P4: MET missing []
+P5: MET no full text for []
+P6: MET Ric=1 threshold=1/48 K_S(1/96)=1/2
+measured: beta_W threshold (SU(2),d=4) = N^2*thr = 1/12
+measured P7: ABSTRACT ONLY: 15
+measured P7: FROM MEMORY: 2
+measured P7: FULL TEXT: 7
+measured P7: SUMMARY ONLY: 1
+SUMMARY met=6 failed=0 measured_only=2
