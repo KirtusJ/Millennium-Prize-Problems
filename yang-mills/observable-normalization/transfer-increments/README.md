@@ -41,3 +41,5 @@ This example sets the spatial plaquette interaction to zero. Matching its scalin
 [Weight near the gap at one correlation length](gap-weight/) gives the sharp bound on the two-time ratio from raw low-energy weight, a necessary and sufficient test on the half-time law, and the optimal positive temporal smearing over a bounded slab.
 
 [A growing spatial Wilson packet](spatial-packet/) gives a uniform $O(\beta^{-1/8})$ upper bound on the lattice gap in even-periodic limit states and positive spectral weight at energies of that order.
+
+[Distinguishing two electric lags](electric-lag/) gives the optimal asymptotic test based on plaquette traces and the relative entropy against independent slices.
