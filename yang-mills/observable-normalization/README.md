@@ -42,3 +42,5 @@ For a candidate transfer Hamiltonian and centered vector, the two inputs are the
 [Boundary weight above the bulk static spectrum](boundary-weight/) bounds the fraction carried by a fixed open-cube boundary layer.
 
 [Periodic thermal transition frequencies](thermal-transitions/) tests the number of nonzero energy differences visible in the matched slice-flow measurements.
+
+[Minimal two-charge winding supports](winding-count/) counts bends and gives the leading fixed-box Bernoulli witness probability.
