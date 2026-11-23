@@ -1,0 +1,5 @@
+[
+  {"label":"negative_filter","find":"1/4 ≤ hi := by","replace":"1/2 ≤ hi := by","diagnostic":"error:"},
+  {"label":"negative_radius","find":"ksq ≤ (err + width) / stiffness := by","replace":"ksq ≤ (err - width) / stiffness := by","diagnostic":"error:"},
+  {"label":"negative_mass","find":"1 / 8 ≤ top := by","replace":"1 / 4 ≤ top := by","diagnostic":"error:"}
+]
