@@ -40,4 +40,6 @@ Integrating a Wilson link at fixed staples has a long history as the multihit va
 
 For any fixed radius, conditional on $|X|=x>0$, the probability of a positive sign is $p(x)=e^x/(2\cosh x)$, independent of $R$. For any calibrated real reading $q(X)$ its conditional sign average is therefore the same even function at every radius, and by uniqueness is $h_F(x)$. For any target $t$, the excess squared error of $q$ at fixed $|X|$ over that of $h_F$ is exactly $p(1-p)[q(x)-q(-x)]^2$. Integrating proves minimum variance conditionally at every $R$. This also characterizes the freedom to add an odd function times $e^{-x}$ to an answer. Continuity removes ambiguity on null sets. For $F=V$, integrating $h(X)$ within its slab reproduces $V(R)$ just as integrating $W^2$ does. The unused links, boundary weights and surrounding tests may then be integrated unchanged.
 
+The same ordinary star also supports bounded observables with a prescribed first nonzero Gaussian polynomial degree. Their distinct positive-time decay powers and common zero threshold can be calculated on explicit weak trajectories. [Laplace-source construction and finite Wilson tests](../star-orders/)
+
 [Boundedness, sharp weak-coupling noise and equal-time normalization](variance.md) · [Finite-box Wilson checks](execution.md)
