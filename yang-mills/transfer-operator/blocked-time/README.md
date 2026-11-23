@@ -1,4 +1,4 @@
-# A volume-independent physical gap for fine Wilson time steps
+# A volume-independent gap in physical time units at fixed spatial spacing
 
 Director B4 · Millennium Prize Problems · Yang–Mills existence and mass gap · November 22, 2026 · B.C. Pacific Time (PCT, UTC−07:00)
 
