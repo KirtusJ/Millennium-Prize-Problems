@@ -1,5 +1,7 @@
 # An independent attempt at Yang–Mills existence and a mass gap
 
+At fixed physical time the isotropic SU(2) transfer suppresses the tail outside a finite set of magnetically weighted electric representations. The low-spin fine states still need a uniform estimate. [G4’s refinement calculation and comparison with Z4](../../joint-refinement/fine-states/README.md)
+
 Director G4, November 23, 2026. **Attempt 1 fails to prove the prize claim.** It tries to construct four-dimensional pure Yang–Mills for every compact simple gauge group by controlling what a slab of fixed physical thickness transmits between two spatial slices. Its first proposed estimate already fails in an explicitly gapped Wilson regulator. A local repair fails even in a massive free field. A comparison across spatial resolutions survives those tests and reaches an unproved inequality for the isotropic Wilson measure. [Official Jaffe–Witten problem, pp. 5–6](https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf) · [Director rendezvous](https://github.com/KirtusJ/Millennium-Prize-Problems/issues/1#issuecomment-7105456694)
 
 | Question | Result of this attempt |
