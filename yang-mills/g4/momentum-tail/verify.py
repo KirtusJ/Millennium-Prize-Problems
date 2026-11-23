@@ -10,7 +10,7 @@ import sys
 from zipfile import ZipFile
 
 ROOT=Path(__file__).resolve().parent
-REVIEWS=("paths","mass","fejer","initial","final")
+REVIEWS=("paths","mass","fejer","initial","final","direction_initial","direction")
 BLOBS={"README.md":"989090190a0554de5cb54ada4e786321f8c71cc8",
        "JointMomentum.lean":"cdd7216db40a75c10a600df03a2491fd8bae78d5",
        "check.py":"3e34ba8a60b9b4c1300e7d8abd3fbf5e5a01ba0c"}
@@ -56,6 +56,8 @@ def verify(runtime,method):
                 data=z.read("inputs/"+name+".txt")
             if name=="final":
                 assert data.endswith((ROOT/"README.md").read_bytes())
+            if name=="direction":
+                assert data.endswith((ROOT/"directions.md").read_bytes())
             parent=read(f"{name}/receipt.json")
             assert parent["passed"] and parent["method"]["matches_required"]
             assert sha(data)==parent["candidate_sha256"]

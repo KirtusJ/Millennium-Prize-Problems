@@ -68,16 +68,22 @@ def check_fourier():
         poly={0:Q(1)}
         for _ in range(4):
             poly=convolution(poly,d)
+        normal=convolution(poly,d)
         assert max(map(abs,poly),default=0)<=4*(M-1)
         assert sum(map(abs,poly.values()))<=16 and sum(poly.values())==0
+        assert max(map(abs,normal),default=0)<=5*(M-1)
+        assert sum(map(abs,normal.values()))<=32 and sum(normal.values())==0
         for x in (Q(-1),Q(-3,5),Q(-1,3),Q(0),Q(3,5),Q(99,101),Q(1)):
-            c=cosines(x,4*M)
+            c=cosines(x,5*M)
             F=sum(v*c[abs(j)] for j,v in f.items())
             K=sum(v*c[abs(j)] for j,v in poly.items())
             assert 0<=F<=1 and K==(1-F)**4
+            K5=sum(v*c[abs(j)] for j,v in normal.items())
+            assert K5==(1-F)**5
             assert 1-F<=Q(M*M-1,6)*(1-x)
             if M*M*(1-x)>=8:
                 assert K>=Q(3,4)**4
+                assert K5>=Q(3,4)**5
                 separated+=1
             cases+=1
     # R=4, P=0 versus P=2π (within the representative cube). The corresponding
@@ -87,7 +93,8 @@ def check_fourier():
     def f4(c):
         return sum(Q(4-abs(j),16)*c[abs(j)] for j in range(-3,4))
     assert f4(c0)==1 and f4(c1)==0
-    return {"exact_fourier_tests":cases,"far_angle_floor_tests":separated,"stride_alias_separated":True}
+    return {"exact_fourier_tests_per_degree":cases,"far_angle_floors_per_degree":separated,
+            "cutoff_degrees":[4,5],"stride_alias_separated":True}
 
 
 def check_pareto_and_wrapping():
@@ -95,6 +102,8 @@ def check_pareto_and_wrapping():
         # For the law P(U>t)=min(1,t^-6), split the layer-cake integral at t=1.
         layer=8/A**8*(Q(1,8)+(A*A-1)/2)
         assert layer==4/A**6-3/A**8 and 1/A**6<=layer<=4/A**6
+        normal=10/A**10*(Q(1,10)+(A*A-1)/2)
+        assert normal==5/A**8-4/A**10 and 1/A**8<=normal<=5/A**8
     def center(x,R):
         # Momentum in units of π, representative [-R,R).
         return (x+R)%(2*R)-R
@@ -106,7 +115,8 @@ def check_pareto_and_wrapping():
             # For every positive threshold a large representative forces a large leg.
             h=abs(center(sum(legs),R))
             assert h<=3*max(map(abs,legs))
-    return {"pareto_eighth_moment_cases":6,"wrapped_three_leg_cases":wrapped}
+    return {"pareto_moment_orders":[8,10],"pareto_cases_per_order":6,
+            "wrapped_three_leg_cases":wrapped}
 
 if __name__=="__main__":
     print(json.dumps({"paths":check_paths(),"fejer":check_fourier(),
