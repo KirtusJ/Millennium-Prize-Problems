@@ -35,3 +35,5 @@ Let the step be $a$, the spatial mesh $h$, $ka\to t>0$, and $Lh\to\ell>0$ as $a,
 This example sets the spatial plaquette interaction to zero. Matching its scaling by tuning $\gamma$ supplies no scale-setting theorem for four-dimensional Yang–Mills. The outstanding estimate is on the interacting two-slice Wilson law, with the same spatial smearing, renormalization, time step, gauge group and infinite-volume trajectory as the other lanes. A usable transfer comparison must control the variance and increment after inserting the spatial action and vacuum weights, uniformly in volume and cutoff.
 
 [Weight near the gap at one correlation length](gap-weight/) gives the sharp bound on the two-time ratio from raw low-energy weight, a necessary and sufficient test on the half-time law, and the optimal positive temporal smearing over a bounded slab.
+
+[A growing spatial Wilson packet](spatial-packet/) gives a uniform $O(\beta^{-1/8})$ upper bound on the lattice gap in even-periodic limit states and positive spectral weight at energies of that order.
