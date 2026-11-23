@@ -1,0 +1,2 @@
+check K25: exit 0 (expected 0) in 299463 ms | output 0b7f3565b16e | event 27 head 89fe7a6d1a73
+  /home/user/z4-workers/r14-micro/report.md — 22 findings: 5 WRONG, 8 OVERSTATED, 9 OMITTED (summary arithmetic stands except one range); arith.py 24 met, 5 failed (4 my own rounding, 1 a summary defect), 3 measured only; child control correct (3.25), child and grandchild reruns identical.

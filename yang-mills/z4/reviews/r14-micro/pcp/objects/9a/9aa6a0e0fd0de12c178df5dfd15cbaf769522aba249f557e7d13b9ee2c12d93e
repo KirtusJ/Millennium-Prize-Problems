@@ -1,0 +1,35 @@
+I recomputed every item and wrote the table to `report.md`. Eight rounded claims came out MISMATCH (A5, A6 and A8), and each is a defect in the claimed number itself, not in my setup. The remaining claims MATCH, and the control (`control.txt`) is 3.25.
+
+Before running I fixed the predicates in `recompute.py`'s docstring: tolerance is half a unit of the last quoted digit, and an A6 claim must match under both formulas. Tolerances come from your task statement.
+
+**MISMATCH (claimed vs computed):**
+- **A5 R(0):** value 0.913 vs 0.9118, error 0.033 vs 0.0336. The values are off by rounding.
+- **A5 Q0:** value 0.956 vs 0.9566 (error 0.012 matches).
+- **A6 Q0:** 4.4 % vs 4.34 %. The 3.6 standard errors match under both formulas (3.59 and 3.58).
+- **A6 R(0):** 2.7 vs 2.63 (ratio formula) and 2.60 (direct difference). The 9 % matches (8.8 %).
+- **A6 R(l/6):** 7.6 vs 7.54 (ratio formula) and 6.98 (direct difference). The factor of two matches (2.02).
+- **A8:** 88 vs 89.31, and 31 vs 31.63. The third value, 11 vs 10.74, matches.
+
+**MATCH:** A1, A2 (3.2520 %, error 0.9448 %), A3, A4, A5 R(l/6), A7 (0.9085), A9 (2.0/1.1 = 1.82, inside 2), A10 (0.87628207, series, no scipy), A12 (0.00028060488), A13 (m = 1.1110, m/0.3690 = 3.011), A14 (1001 points, and 931 from 3.50 to 50 by exact integer arithmetic) and A15 (20 per block).
+
+**Numbers with no claim to judge:** A10 gives −1.05 standard errors. A11 gives 0.12 and 0.35 standard errors.
+
+**"For all" groups, cases that match:**
+
+| Group | Matching |
+|---|---|
+| A3 | 4/4 |
+| A4 | 3/3 |
+| A5 | 3/6 |
+| A6 | 4/9 |
+| A8 | 1/3 |
+
+So no blanket "all match" statement holds for A5, A6 or A8.
+
+**Sub-agent (A13):** it solved the equation by bisection and by closed form (x = (r+√(r²+8))/4, m = acosh x) after a known-answer control (m = acosh((1+√3)/2), agreement 1e-16). Both gave m = 1.1110143957 and m/0.3690 = 3.0109. I reran its `solve.py` in a scratch copy and got identical output. That rerun is also recorded in the register, as check K3.
+
+**PCP OS:** I created the register (method not found, as expected) and ran three checks, all exit 0 as expected.
+- `verify --ws pcp`, last line: "result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)"
+- Rust `pcpos verify pcp/register.jsonl`, last line: "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+
+Everything is in `/home/user/z4-workers/r14-micro/child`: `report.md`, `notes.md`, `control.txt`, `results.json`, `recompute.py`, `control.py`, and `grandchild/`.

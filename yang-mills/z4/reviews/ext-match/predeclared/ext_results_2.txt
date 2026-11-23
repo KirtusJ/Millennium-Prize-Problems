@@ -1,0 +1,39 @@
+== meas_L6_b2.3_s623.txt: L=6 beta=2.3 s=0.5 ncfg used=2990 tau_int=1.08 block=11 blocks=271
+   plaq=0.602953  Ebar=9.334673e-02+-2.6e-04  Q0=9.33467e-02+-2.6e-04
+   R(tau): 0:3.751e-02+-4.2e-04; 1:1.012e-02+-3.2e-04; 2:3.652e-03+-3.4e-04; 3:2.125e-03+-4.0e-04
+== meas_L8_b2.4_s824.txt: L=8 beta=2.4 s=0.888889 ncfg used=1490 tau_int=1.63 block=17 blocks=87
+   plaq=0.630335  Ebar=2.716249e-02+-1.2e-04  Q0=8.58469e-02+-3.7e-04
+   R(tau): 0:3.615e-02+-6.0e-04; 1:1.166e-02+-5.1e-04; 2:5.168e-03+-4.3e-04; 3:2.758e-03+-4.7e-04; 4:2.064e-03+-5.2e-04
+== meas_L12_b2.5_s1205.txt: L=12 beta=2.5 s=2.0 ncfg used=260 tau_int=2.40 block=25 blocks=10
+   plaq=0.651949  Ebar=5.669595e-03+-6.2e-05  Q0=9.07135e-02+-9.9e-04
+   R(tau): 0:3.302e-02+-8.7e-04; 1:1.309e-02+-5.7e-04; 2:5.042e-03+-5.2e-04; 3:2.839e-03+-5.4e-04; 4:9.545e-04+-5.8e-04; 5:-4.203e-04+-6.5e-04; 6:-1.334e-03+-9.3e-04
+== meas_L12_b2.5_s1206.txt: L=12 beta=2.5 s=2.0 ncfg used=290 tau_int=1.63 block=17 blocks=17
+   plaq=0.651944  Ebar=5.712492e-03+-5.3e-05  Q0=9.13999e-02+-8.5e-04
+   R(tau): 0:3.232e-02+-1.4e-03; 1:1.246e-02+-1.2e-03; 2:6.819e-03+-1.0e-03; 3:4.025e-03+-1.1e-03; 4:2.202e-03+-1.2e-03; 5:1.467e-03+-1.4e-03; 6:1.434e-03+-1.5e-03
+== meas_L12_b2.5_s1207.txt: L=12 beta=2.5 s=2.0 ncfg used=290 tau_int=1.02 block=11 blocks=26
+   plaq=0.652028  Ebar=5.746264e-03+-3.6e-05  Q0=9.19402e-02+-5.8e-04
+   R(tau): 0:3.149e-02+-1.3e-03; 1:1.179e-02+-9.7e-04; 2:5.576e-03+-7.2e-04; 3:2.688e-03+-5.7e-04; 4:1.002e-03+-8.0e-04; 5:-9.209e-04+-9.1e-04; 6:-1.043e-03+-1.0e-03
+E5 Ebar meas_L12_b2.5_s1205.txt vs meas_L12_b2.5_s1206.txt: 0.53 sigma -> agree
+E5 Ebar meas_L12_b2.5_s1205.txt vs meas_L12_b2.5_s1207.txt: 1.07 sigma -> agree
+E5 Ebar meas_L12_b2.5_s1206.txt vs meas_L12_b2.5_s1207.txt: 0.53 sigma -> agree
+== fine combined: ncfg=840 tau_int=1.67 block=17 blocks=49
+   R(tau): 0:3.233e-02+-6.1e-04; 1:1.245e-02+-5.1e-04; 2:5.898e-03+-4.7e-04; 3:3.180e-03+-4.5e-04; 4:1.369e-03+-5.0e-04; 5:8.700e-05+-5.9e-04; 6:-2.269e-04+-6.9e-04
+E1 positivity within 2 sigma: 16 of 16 -> MET
+Q0: N=6 x=0.2500: 9.33467e-02+-2.6e-04; N=8 x=0.1406: 8.58469e-02+-3.7e-04; N=12 x=0.0625: 9.13796e-02+-4.6e-04
+   line through outer two predicts N=8: 9.21992e-02+-2.9e-04; measured minus predicted = -13.58 sigma -> NOT a line in x (measured only); two-point intercept at x=0: 9.07239e-02
+R(0): N=6 x=0.2500: 3.75141e-02+-4.2e-04; N=8 x=0.1406: 3.61496e-02+-6.0e-04; N=12 x=0.0625: 3.23259e-02+-6.1e-04
+   line through outer two predicts N=8: 3.44877e-02+-4.0e-04; measured minus predicted = +2.30 sigma -> NOT a line in x (measured only); two-point intercept at x=0: 3.05965e-02
+R against tau/l (measured only):
+   tau/l=0.0833: N=12 (1 steps): 1.245e-02+-5.1e-04
+   tau/l=0.1250: N=8 (1 steps): 1.166e-02+-5.1e-04
+   tau/l=0.1667: N=6 (1 steps): 1.012e-02+-3.2e-04; N=12 (2 steps): 5.898e-03+-4.7e-04
+   tau/l=0.2500: N=8 (2 steps): 5.168e-03+-4.3e-04; N=12 (3 steps): 3.180e-03+-4.5e-04
+   tau/l=0.3333: N=6 (2 steps): 3.652e-03+-3.4e-04; N=12 (4 steps): 1.369e-03+-5.0e-04
+   tau/l=0.3750: N=8 (3 steps): 2.758e-03+-4.7e-04
+   tau/l=0.4167: N=12 (5 steps): 8.700e-05+-5.9e-04
+   tau/l=0.5000: N=6 (3 steps): 2.125e-03+-4.0e-04; N=8 (4 steps): 2.064e-03+-5.2e-04; N=12 (6 steps): -2.269e-04+-6.9e-04
+   E4 R(l/4) N=12/N=8: 0.615+-0.101  (3.8 sigma from 1)
+   E4 R(l/2) N=8/N=6: 0.971+-0.305  (0.1 sigma from 1)
+   E4 R(l/2) N=12/N=8: -0.110+-0.337  (3.3 sigma from 1)
+   R(l/6) N=12/N=6: 0.583+-0.050  (8.4 sigma from 1)
+   R(l/3) N=12/N=6: 0.375+-0.142  (4.4 sigma from 1)

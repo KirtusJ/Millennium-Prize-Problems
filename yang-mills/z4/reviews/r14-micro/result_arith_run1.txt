@@ -1,0 +1,33 @@
+Q1a MET 2.214000
+Q1b MET 2.286000
+Q2a MET 3.2520%
+Q2b MET 0.9448%
+Q3 MET 0.25 0.0625 2 4
+Q4a MET 0.28868
+Q4b MET 0.5 2.0
+Q5_R0 FAILED 0.9128(0.0336); (1-q)/e=2.60; diff/sig=2.57
+Q6_R0 FAILED 8.72% 2.60sig
+Q5_Rl6 MET 0.4943(0.0671); (1-q)/e=7.54; diff/sig=6.98
+Q6_Rl6 FAILED 0.494 7.54sig
+Q5_Q0 MET 0.9564(0.0121); (1-q)/e=3.62; diff/sig=3.61
+Q6_Q0 MET 4.36% 3.62sig
+Q7 MET 0.9085
+Q8 FAILED 89.31 31.62 10.74
+Q9 MET 1.818
+Q10 MET 0.8762821
+Q11 MET 0.0002806049
+Q12 MET m a=1.11054, m/sqrt(sigma)=3.0096, m l=6.6632; log form 2.7622
+Q13 MET 1001
+Q14 MET 8*19=152
+Q15 MET 4.67
+Q16 MET ok
+Q17 MET 1.75378e-04
+Q18 MET 2.666667 1.333333; 1/(48pi^2)=0.0021108580
+Q19 MET tau=8 -0.246%
+Q19_all MEASURED tau=1:+4.08% tau=4:+0.15% tau=8:-0.25% tau=16:-1.32%
+Q20 FAILED summary upper end 1e-3 < report max 2e-2
+Q21 MET 34, 23
+Q22 MET -1.047
+Q23 MEASURED 0.12 0.35
+X_ext_R0 MEASURED results_2 R(0) ratio 0.8802(252), 4.8 sigma (not quoted in summary)
+COUNTS met 24 failed 5 measured 3
