@@ -1,0 +1,86 @@
+D4 electric scale and mesh time · November 23, 2026
+
+244 task admissions and matching releases across 502 cumulative events. The prior register is an identical prefix.
+
+chain intact: 502 events, head 4c42cb9c1baae1db15af2f05b2e5d7bb02c46e90e627ac97bb53d7e597de4e30
+guards replayed: 0 problem(s)
+The guards are those of pcpos 1.0.22. A register is read under the rules of the program that reads it: an event an earlier build accepted may be reported here, and its bytes are unchanged.
+register file SHA-256: 8ac0c6f1f599be90cbb99a17b443b5d886ee942ec0938ea18c07458aacb9e32b
+A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.
+
+Hashes of serial receipts from the producing run:
+16fcbbf433e8b5dbd1587602a4b742ad0172cd863c37578750a60590baa275f7  assemble.serial.txt
+10e933bbf06c5bd8cb8e9440ecd18ba5f8d1f4734b6c72fe8fb14cde8779c294  factor.serial.txt
+82fe35de71619581f4d83d24c097b8c5615c48d51fc70a9b4b7659cd5e23a1da  flux.serial.txt
+lean3
+'Millennium.YangMills.D4.ElectricScale.edgeTransform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricScale.chainForm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricScale.interiorRow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricScale.collectRows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricScale.prefixBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricScale.freeEnd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricScale.shellVariation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricScale.scaledEnergy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricScale.centerDisk' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricScale.centerError' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricScale.wrongEndpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricScale.lowTwistMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricScale.twistLeakage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricScale.starSpectrum' depends on axioms: [propext]
+'Millennium.YangMills.D4.ElectricScale.meshTangent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricScale.meshSurvival' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricScale.starCalculation' depends on axioms: [propext]
+
+controls3
+class probes: min Gram=9.13581e-05  min mesh-time Gram=4.11127e-05  fixed-angle var/h^2=0.17773
+g=    16  median(n)/g^0.25=0.5000  r90/g^0.75=1.2500  S-0.75log(g)=0.04267  twist residual=0.670035  microscopic C(1)=0.249949
+class probes: min Gram=9.48049e-05  min mesh-time Gram=3.60284e-05  fixed-angle var/h^2=2.21645
+g=   256  median(n)/g^0.25=0.7500  r90/g^0.75=1.1250  S-0.75log(g)=0.13788  twist residual=0.170224  microscopic C(1)=0.155407
+class probes: min Gram=9.48354e-05  min mesh-time Gram=3.41957e-05  fixed-angle var/h^2=3.42538
+g=  4096  median(n)/g^0.25=0.7500  r90/g^0.75=1.0996  S-0.75log(g)=0.15926  twist residual=0.042732  microscopic C(1)=0.139947
+class probes: min Gram=9.48298e-05  min mesh-time Gram=3.37326e-05  fixed-angle var/h^2=3.41233
+g= 65536  median(n)/g^0.25=0.8750  r90/g^0.75=1.0957  S-0.75log(g)=0.16448  twist residual=0.010694  microscopic C(1)=0.136465
+Seven angular sectors, five endpoint sizes and four rotor couplings passed.
+L=3,4,7 incidence identical; 32 even sectors; rates 0:1, 8:6, 12:16, 16:9.
+SU(2), SU(3) and SU(4) Wilson-action residual inequality checked.
+
+mutations3
+free endpoint: rejected at freeEnd
+smaller ultraviolet leakage: rejected at twistLeakage
+missing star face: rejected at starSpectrum
+wrong spectral multiplicity: rejected at starSpectrum
+
+replay-electric-scale
+guest ELF 9a0c055625830f7377cbd54bbc3e4e2fa0e86d23df35bb5a471160673c69381c
+Lean source d8b44086b7234ac94b9d4acb4d71c868b8a888ddb3645d4ac0e3962295bcd792 (9001 bytes)
+factor d0594044c38932153487ea82f96b21284aa19fb6f68bfe8255de0a4d6ce22827
+flux 25d70c0f8202ca306270e71338ad7f758f9b4fb378a511017efbff1b26b5306a
+assemble d51fb2ba4eb31c1f33383934b4ec00d0b745c63a1c14cd17a5e4117dfb3d6c7f
+
+replay-finite-readings
+guest ELF 974b4663a8f26a4b11868e967c4e0a3bda96b766e9b9d1a022113a180b71450d
+Lean source 029ce009e020212b7f7dbd45bcb574b80a7e831c2de8bf137eda55c9857aee68 (19442 bytes)
+factor 4c18cabaa514ec08b14680acffdebdf6f684856778bade91bf2d2a1b2fdc8970
+moments 90dc491051bb848644bb88f474638bb4c78fb7d1120f345ec04a41b0e8e2aaa4
+assemble a9cb951c91c6674879b18d92d420258ac010444aa391b36cdb2e80aa560d2776
+
+replay-adjoint
+guest ELF 215b28f7d03d4f722a75bc86123ecdb6966b1d9f9a49865ad1ff6b1e13d32128
+Lean source e03ee1d3bef8f6fca3b41b74e08c2f70bdbc524a63161a68633c0bdd1ecef508 (9637 bytes)
+factor 2930b80cb16dd473970d1faef2112f2317edb973a69352f2e67d1b7bfe94b8fc
+divergence 5f2558e51bbb94216defbe11ce5414c615ccba04a96d8d729ae5457ea5cdc9b9
+assemble 3535936b437d774d2b5aa5f9d10c54878bc3535f05ccf493ef730c84f35dfeb8
+
+replay-difference
+guest ELF 81ee0657560726917fcae43810d3faac7e2827c2a3250bcff4a481369552d198
+Lean source 2002c660d00ff94e5714aa7e3f3c69fa8946181174dc518fbee21e13845ad6d8 (5873 bytes)
+factor 39941016b548e6458b86e6f43aadd1c4f8cb3403f5160620f88b8a8a764199dc
+square 16202e28dd748ff285698af603d903ff33dca79c901db999cf25fff8a6158391
+assemble ae37c5bf46836fd8d3675fc3e53b51e81788568b991b9d515b6ca8b2421e1004
+
+replay-basic
+guest ELF aeb03ab77f4f9ca4ba7d877d55e55d76f1e02243b742acd9a552791dc29850b6
+Lean source 1fd54f3cb4f7bf54bfcdfbae55fd03c66e2cfe9f3f7282c9680087d9b605e391 (12919 bytes)
+factor ab17ed429626916b9c82973db4f106e9d82934732d7b3274b67b4acf842ed8eb
+square dbb1d454322d8b22ecf9ef1ba608ca43db14248d6684383f66813786dae04036
+assemble c0834a3a0a6ad76c236bb939df0a195c5ec4ea98750a98259f78fc393e419170

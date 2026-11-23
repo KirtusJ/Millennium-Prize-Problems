@@ -18,6 +18,9 @@ ADJOINT_MARKER = b"-- BEGIN PCP OS generated spherical divergence\n"
 
 
 def result_spec(mode):
+    if mode == "scale":
+        return (HERE.parent / "electric-scale/ElectricScale.lean",
+                b"-- BEGIN PCP OS generated star flux\n", "flux")
     if mode == "finite":
         return (HERE.parent / "finite-readings/FiniteReadings.lean",
                 b"-- BEGIN PCP OS generated electric readings\n", "moments")
@@ -32,7 +35,7 @@ def launch(stage, folder, config):
     command = [sys.executable, "-I", __file__, "--worker", stage, str(folder)]
     if config["dispatcher"]:
         register = config["register"] if stage == "factor" else "-"
-        prefix = {"adjoint": "adjoint-", "finite": "readings-"}.get(config["mode"], "positive-")
+        prefix = {"adjoint": "adjoint-", "finite": "readings-", "scale": "electric-"}.get(config["mode"], "positive-")
         command = [config["dispatcher"], "--register", register, config["actor"],
                    prefix + stage, "--", *command]
     subprocess.run(command, check=True)
@@ -42,7 +45,7 @@ def worker(stage, folder):
     config = json.loads((folder / "config.json").read_text())
     mode = config["mode"]
     filename, marker, intermediate = result_spec(mode)
-    coefficient = {"positive": 2, "difference": 1, "adjoint": 3, "finite": 4}[mode]
+    coefficient = {"positive": 2, "difference": 1, "adjoint": 3, "finite": 4, "scale": 6}[mode]
     if stage == "factor":
         request = b"F" + bytes([coefficient])
     elif stage == intermediate:
@@ -58,6 +61,9 @@ def worker(stage, folder):
     if stage == "factor":
         expected_factor = {"adjoint": bytes([3, 3, 4]), "finite": bytes([3, 8])}.get(
             mode, bytes([1, coefficient]))
+        if mode == "scale":
+            expected_factor = bytes((1 << i) | (1 << j) for i in range(6)
+                                    for j in range(i + 1, 6) if i // 2 != j // 2)
         if output != expected_factor:
             raise ValueError("unexpected guest coefficient vector")
         (folder / "factor.out").write_bytes(output)
@@ -78,7 +84,9 @@ def generate(folder, kernel, pcp_source, qemu, firmware, template, dispatcher=No
     filename, _, _ = result_spec(mode)
     package = kernel_package(kernel, pcp_source)
     flags = ["-DD4_POSITIVE_TIME"]
-    if mode == "finite":
+    if mode == "scale":
+        flags.append("-DD4_ELECTRIC_SCALE")
+    elif mode == "finite":
         flags.append("-DD4_FINITE_READINGS")
     elif mode == "adjoint":
         flags.append("-DD4_ADJOINT_BAND")
@@ -95,7 +103,7 @@ def generate(folder, kernel, pcp_source, qemu, firmware, template, dispatcher=No
 
 
 def main():
-    if len(sys.argv) == 4 and sys.argv[1] == "--worker" and sys.argv[2] in (*STAGES, "divergence", "moments"):
+    if len(sys.argv) == 4 and sys.argv[1] == "--worker" and sys.argv[2] in (*STAGES, "divergence", "moments", "flux"):
         worker(sys.argv[2], Path(sys.argv[3]))
         return
     p = argparse.ArgumentParser(description=__doc__)
@@ -107,6 +115,8 @@ def main():
     p.add_argument("--register", type=Path)
     p.add_argument("--actor", default="Director-D4")
     modes = p.add_mutually_exclusive_group()
+    modes.add_argument("--electric-scale", dest="mode", action="store_const", const="scale",
+                       help="replay the electric flux and shell module")
     modes.add_argument("--finite-readings", dest="mode", action="store_const", const="finite",
                        help="replay the finite correlation-matrix module")
     modes.add_argument("--adjoint", dest="mode", action="store_const", const="adjoint", help="replay the adjoint plaquette module")

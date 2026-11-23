@@ -58,3 +58,7 @@ For several zero-energy states, the transfer projection above acts on the orthog
 The directly measured $SU(2)$ adjoint plaquette retains a positive-energy component at all finite couplings, uniformly in box size at fixed spatial mesh. Its lower window endpoint is at least $\kappa/576$. A selected simultaneous Wilson-time and spatial-volume limit inherits the witness. [Adjoint spectral band and scope](adjoint-band/)
 
 At weak magnetic coupling, three physical-time plaquette readings exclude a proposed gap of $4\kappa$, uniformly in box size. At all fixed couplings, local spin tails give a two-sided finite-dimensional approximation to the finite-volume gap. [Measured gap test, exact completion and spin cutoff](finite-readings/)
+
+## Electric representations at weak bare coupling
+
+Along spatial refinement the actual vacuum occupies a growing range of electric representations. For compact connected simple groups the minimum local dimension capturing fixed vacuum weight is of order $g_G^{\dim G/4}$. For $SU(2)$ the six-link center flux has a uniform even-parity law and explicit magnetic-scale dynamics. The full bounded local center-flux algebra loses connected weight at fixed positive physical times. Class-averaged probes at angles of order $g^{-1/4}$ retain a nonzero correlation matrix at times proportional to the spatial mesh. [Proofs, Lean module and checks](electric-scale/)
