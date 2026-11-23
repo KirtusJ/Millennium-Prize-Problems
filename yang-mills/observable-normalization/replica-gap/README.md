@@ -32,3 +32,5 @@ For $V$ independent two-level systems with dimensionless gap $m$ and $x=e^{-Nm}$
 Della Morte and Giusti used symmetry-resolved partition functions to compute the mass and multiplicity of a scalar glueball in finite-spacing $SU(3)$. The two-copy bound here requires no choice of symmetry sector. It does require enough temporal resolution to distinguish the two deficits. [Della Morte and Giusti, JHEP 05 (2011) 056](https://doi.org/10.1007/JHEP05%282011%29056)
 
 The [ordinary total plaquette](spectral-weight/) measures the first scalar state with an explicit quadratic loss of overlap. The same three intermediate energies determine its finite-lag effective-mass bias and give an independent continuous-time check.
+
+On an [open Wilson cube](thermal-count/) three trace periods distinguish a cluster of six states from its single lowest state, with certified bounds including all spins.
