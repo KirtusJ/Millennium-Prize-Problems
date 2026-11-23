@@ -1,0 +1,3 @@
+rooted four-face edge identifications on the cover and two tori
+cube cumulant and disconnected repeated-face control
+vacuum subtraction retains the exact exponential in a biased chain

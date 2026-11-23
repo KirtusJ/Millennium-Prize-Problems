@@ -37,3 +37,9 @@ $$B_h(S)=e^{hS}/\mathbb E_Q e^{hS}$$
 satisfies $\|D-B_h(S)\|_2\to0$. To see this, both $Z$ and $B_h$ equal $e^{hS-h^2/2+o_Q(1)}$. Their difference tends to zero in probability, since $S$ is tight. The deterministic bound on $\log Z-hS$ and the exponential moment bound give uniformly bounded fourth moments of both. Their difference therefore converges in $L^2$. Apply the projection estimate above. In particular the conditional expectation $\mathbb E_Q[D\mid S]$, the optimal $L^2$ approximation using only this statistic, has vanishing residual.
 
 On the common reference space, replace the two likelihoods in their TV integral by $B_{h^{(1)}}$ and $B_{h^{(2)}}$. The Gaussian limit and the exponential moment bound justify passing the absolute difference to the limit. The result is half the $L^1$ distance of the two normal densities with means $h_1,h_2$ and unit variance. They cross at the midpoint, giving the stated formula. Applying the same tilt to bounded tests proves the asserted distributions of $S$ and hence the attainment by the single threshold. For $P_n$ against $Q$, $D\log D$ is uniformly integrable by the bounded second moments; its negative part is bounded on $[0,1]$. Its expectation tends to $h_i^2/2$ by the normal tilt. This forward relative entropy is proved only in the finite-profile window. [Lean and finite checks](checks.md)
+
+[Magnetic response of a coarse square](bends/) computes the optimal first derivative over all fine readings at the electric point, including spin-one and corner terms.
+
+[The whole straight coarse space](all-coarse/) gives a volume-independent first-derivative bound with matching mesh decay at positive electric time and an exact sign symmetry for even-mesh histories.
+
+[Three coarse time slices](coarse-memory/) gives the leading failure of Markov composition and the strictly positive fourth-order conditional mutual information at fixed volume.

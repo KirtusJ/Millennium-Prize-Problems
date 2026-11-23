@@ -1,0 +1,38 @@
+[
+  {
+    "label": "negative_mass",
+    "find": "r i ≤ q i) :",
+    "replace": "q i ≤ r i) :",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_energy",
+    "find": "-Real.log q / s ≤ E",
+    "replace": "E ≤ -Real.log q / s",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_leakage",
+    "find": "w i j * (z i * z j) ≤ η * ∑",
+    "replace": "w i j * (z i * z j) ≥ η * ∑",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_remote",
+    "find": "response r 1 + response r (r^2) = 0",
+    "replace": "response r 1 - response r (r^2) = 0",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_resolvent",
+    "find": "= r/2 * response r x",
+    "replace": "= r/3 * response r x",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_alias",
+    "find": "= 2*m/(w+m)",
+    "replace": "= m/(w+m)",
+    "diagnostic": "error:"
+  }
+]

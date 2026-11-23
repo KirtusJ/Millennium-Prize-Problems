@@ -1,0 +1,3 @@
+momentum matrices in eight Brillouin-zone corners
+isotropic scalar and tensor splittings at orders four and six
+Hamiltonian normalization for the quadratic and cube-only terms

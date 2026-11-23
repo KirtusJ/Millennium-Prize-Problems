@@ -1,0 +1,40 @@
+# Independent checks of the coarse-to-fine derivative
+
+G4’s first PCP builder obtained the reducing electric subspaces. Its displayed first derivative interchanged the coarse and bent-loop eigenvalues. The challenger caught the interchange. Differentiating the normalized vacuum transfer fixes the numerator to $u-q^4r$, with $r$ the coarse eigenvalue and $u$ the bent-loop eigenvalue. The written proof, a fresh reader of that proof and the finite-group transfer below agree on the sign and on the factor $1/4$ for the Wilson convention $A=\tfrac12\sum_p\mathrm{Tr}U_p$. [Derivation](README.md)
+
+In the numerical control two loops of lengths eight and four share one link. The group is the 24-element binary tetrahedral subgroup of $SU(2)$. The transfer matrix is assembled on all 576 ordered holonomy pairs, using one shared central increment and independent seven- and three-link arms. The magnetic insertion is on the short face. Haar center signs eliminate every other face from the first derivative in the full lattice proof. At each sign of the perturbation the program recomputes the vacuum, verifies its full eigenvector equation, and takes the conditional expectation given the coarse holonomy. It checks that this conditional expectation is constant on each coarse conjugacy class. Distinct geometric inputs for the two slots are the coarse trace and the trace around the ten-link detour. Using the subgroup changes the numerical one-link multiplier $q$, which is computed from its own Wilson weight.
+
+| Temporal coupling | One-step derivative | Three-step derivative |
+| --- | ---: | ---: |
+| 2.2 | 0.000104491298 | 0.000000000714 |
+| 4 | 0.004253408735 | 0.000020061038 |
+| 6 | 0.027844102473 | 0.004415790738 |
+
+The recorded numbers are centered differences with step halving. They check the moving-vacuum bilinear form, including the subtraction of the coarse conditional mean. The full continuous $SU(2)$ answer on a cubic torus is given by the Haar and transfer calculation in the proof. [Matrix program](check.py)
+
+A PCP coordinator commissioned a builder and challenger for the mathematics, a separate builder and challenger for the scalar vacuum identity, a reader of the complete mathematical argument, and a further reader of the physical-time comparison. These are separate same-provider model invocations through the hosted PCP hierarchy. The Lean file checks the scalar Doob normalization, the finite-lag recurrence, the one-step cancellation, and strict positivity. G4 split one tactic sequence in the formalizer’s output to clear a linter warning. An initial compile needed an explicit real-number import. A final clean run checked four declarations with three negative controls. The nine native cases cover the method acceptance and rejection tests and the three-part source emission. The twelve hosted registers, including the compiler pair, replay against the same packet as the [parent attempt](../execution.md). [Lean](Blocking.lean) · [Mutations](mutations.json) · [Evidence](evidence.zip)
+
+Run `python -B verify.py` here with NumPy installed. To replay the full registers use `python -B verify.py --runtime /path/to/PCP_OS_Python --method /path/to/PCP/Method`. To recompile directly use `lake env lean /absolute/path/to/Blocking.lean` in the parent attempt’s pinned Mathlib checkout. [Verifier](verify.py)
+
+The Hamiltonian challenger proposed dropping vacuum conjugation as a normalization control. The direct integral then gives 0.0116291989, twice the normalized result 0.0058145994 to rounding. The code checks the factor using unrounded values.
+
+On periodic sides 8, 12 and 16, the graph control builds every elementary face and every outward detour of the selected blocked square. It checks each detour is a single loop, has an omitted horizontal edge, has a distinct set of center parities, and differs from the original loop by exactly one magnetic face. This tests the geometrical selection rule behind the coherent sum. [Graph and matrix checks](check.py)
+
+### Physical time at fixed spatial spacing
+
+Put $g=\kappa/a_t$, $b=a_t j$, with $\kappa,s>0$, and take $n a_t\to s$ at fixed spatial graph. Differentiate with respect to the Hamiltonian magnetic coupling $j$ at zero **before** removing the time step. Since $q=1-3a_t/(2\kappa)+O(a_t^2)$, equation (1) gives
+$$
+ \lim_{a_t\downarrow0} a_t B_n'(0)=\frac{\kappa}{24}
+       e^{-3ks/(2\kappa)}(1-e^{-3s/\kappa}).
+$$
+There is a separate continuous-time calculation. In these units the pure electric Hamiltonian $H_0$ assigns energies $E_f=3k/(2\kappa)$ and $E_h=3(k+2)/(2\kappa)$ to the two loops. The square insertion $A1$ has energy $E_p=6/\kappa$. At fixed finite spatial volume the magnetic perturbation is the bounded multiplication operator $-jA$. Differentiating the semigroup at $j=0$ gives its Duhamel integral. Between the detour and square its value is $\tfrac14(e^{-sE_f}-e^{-sE_h})/(E_h-E_f)$. The vacuum derivative is $A/E_p$ as a function acting on the constant vacuum. Conjugation to the Markov semigroup contributes $-\tfrac14(e^{-sE_f}-e^{-sE_h})/E_p$ and the top-energy derivative is zero. The same moving-projection subtraction as in the discrete proof applies. Since $1/(E_h-E_f)-1/E_p=\kappa/6$, the two calculations agree. The $k$-detour sum multiplies the response by $\sqrt{k}$.
+
+For $\kappa=2$, $s=1/4$, and $k=8$, class-angle quadrature at $g=16,64,256,1024$ gives slopes $0.0054802589$, $0.0057365583$, $0.0057954477$, and $0.0058098340$. Direct integration of the time-ordered Hamiltonian matrix element, including the vacuum term, gives $0.0058145994$. [Class-angle and Duhamel quadratures](check.py)
+
+The divergent bare-$b$ slope in the paper and this finite physical-time slope use different perturbation parameters. Both leave the problem of uniform control through *spatial* refinement open. [Kogut and Susskind’s Hamiltonian formulation](https://doi.org/10.1103/PhysRevD.11.395) · [B4’s temporal scaling convention](../../../transfer-operator/blocked-time/magnetic-curvature/README.md) · [Ashtekar and Lewandowski on refinement of gauge orbits](https://arxiv.org/abs/hep-th/9412073)
+
+### Director results on the parent attempt
+
+A4 checked the signed deletion expansion and obtained a two-lag comparison. C4 independently recovered the one-lag profile using moments of a single plaquette score under both laws. B4 used sign symmetry and branch simplicity to improve the fixed-box magnetic remainder to fourth order and derived the quadratic momentum splitting. These results apply at the couplings specified in each calculation. Z4’s revised continuum theorem and G4’s independently calibrated Wilson construction retain their open hypotheses. [A4’s two-lag result](../../../observable-normalization/transfer-increments/electric-lag/README.md) · [C4’s single-score proof](../../../central-quotients/tangent-curvature/periodic-limit/electric-score/README.md) · [B4’s magnetic branch](../../../transfer-operator/blocked-time/magnetic-curvature/spatial-momentum.md) · [Z4’s third revision](https://github.com/KirtusJ/Millennium-Prize-Problems/blob/eafb765/yang-mills/z4/attempt/paper/main.pdf)
+
+C4 also recovered the blocked kernel, the exact norm and the one-bend derivative. At fixed positive electric time $-n\log q\to\tau$, C4’s normalized bare-coupling slope diverges as $(1-q)^{-1}$ with an explicit coefficient. The Hamiltonian calculation above uses the **rescaled** magnetic coupling and $\tau=3s/(2\kappa)$, reconciling the two limits. C4 further quantified the signal lost upon seeing only one coarse orbit pair at the fine cutoff. B4 separately proved stabilization of each fixed Taylor coefficient of the log gap on sufficiently large even tori. Uniform control of all orders remains open. [C4’s review](https://github.com/KirtusJ/Millennium-Prize-Problems/pull/15#issuecomment-7106683964) · [C4 on information lost under blocking](https://github.com/KirtusJ/Millennium-Prize-Problems/blob/f235fbe/yang-mills/central-quotients/tangent-curvature/periodic-limit/electric-mesh/README.md) · [B4’s coefficient result](https://github.com/KirtusJ/Millennium-Prize-Problems/issues/1#issuecomment-7106605864)
