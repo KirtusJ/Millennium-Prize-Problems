@@ -251,3 +251,40 @@ Gathered on 23 November 2026 at the principal's request: [`OVERALL_DISPOSITION.m
 ## Fourth round: an observable of fixed physical size
 
 Direction chosen by the principal after the overall disposition. Statements, benchmark, Lean file and review record: [`fixed-size/STATEMENT.md`](fixed-size/STATEMENT.md). In short: on the free lattice Maxwell benchmark the sharp-time smeared action density has variance growing like b^-5 and no limit as a vector, while its time-regularized version converges with energy moments bounded in physical units, and shows no gap; `lean/Z4YM/HeatRegularized.lean` proves that for such vectors norm, moments and a bounded energy window follow from two values of the positive-time correlator. Six defects of the draft were found by the workers and are corrected there with the draft kept. Register checks K21 to K25; the register holds 32 events. No estimate for the interacting theory.
+
+
+## Fifth round: loop normalization on the benchmark; challenges of B4's heat trace and D4's electric scale
+
+23 November 2026. Three workers (register checks K26, K27, K28), each with a sub-agent and its own register; all six replay. The loop benchmark and its review record are in [`fixed-size/WILSON_LOOP.md`](fixed-size/WILSON_LOOP.md). Reports: [`reviews/r6-loop/`](reviews/r6-loop/), [`reviews/r6-heat/`](reviews/r6-heat/), [`reviews/r6-elec/`](reviews/r6-elec/). The director reread the three reports and reran the loop program (K29, bytes identical). The two challenges below read the other directors' notes only; their Lean files and programs were not replayed.
+
+### B4's charged spatial heat trace (`transfer-operator/spatial-heat-trace`)
+
+This is the first result in the repository stated on the weak-bare-coupling trajectory. Nine items stand; no mathematical defect was found in the SU(2) proofs read.
+
+- The theorem, restated: fixed physical Dirichlet region and diffusion time s, x = s/b² → ∞, couplings with 1 + β_s + β_t = x^{o(1)}; then −log E F_s = x^{3/5 + o(1)}. One limit, b → 0 along a coupling trajectory, with bounds uniform in the enclosing volume. It is a statement about a lattice expectation; no continuum object appears.
+- The upper bound, its constants and the choice m = 2⌈x^{1/5}⌉ were rederived by hand and by program (constant c = 1/132000; 3000 of 3000 random SU(2) cubes within the stated floor). The lower bound by a nearly flat cube was rederived for SU(2).
+- β = c·log(1/b) satisfies the hypothesis. The convergence is slow: on β = log(1/b) the explicit upper bound says nothing for b ≥ 10⁻³, and at b = 10⁻⁵⁰ it confines the exponent only to [0.549, 0.619]. If B grows like x^γ the bounds give only a window [min(3/5, 1 − γ), (3 + 2γ)/5].
+- Units: E F_s vanishes faster than any power of b. The spectral statement puts the probe's normalized weight above x^η/a for every η < 3/5, that is above s^η·b^(−(1+2η)) in physical units on the isotropic trajectory: beyond the cutoff scale by the factor x^η. It concerns this one vector sequence under every deterministic affine renormalization; it says nothing about field-dependent subtractions or other observables, and B4 says so.
+- The decorrelation bound is uniform in every lattice separation, so it does cover fixed physical time; it is a bound on the correlation coefficient. See `fixed-size/WILSON_LOOP.md` for why that leaves the mean-normalized covariance undecided.
+- The Hamiltonian first-moment bound is on the unnormalized weight and nothing bounds the norm of the vector from below, so it does not control a normalized fraction.
+- Minor defects for B4: the summary says "compact connected simple" where the proof file uses "compact connected" and never uses simplicity; several symbols carry two meanings (F_t and F_s, U, V, κ_B and B).
+- Not checked: the general-group exponent (a sketch resting on a Łojasiewicz-type argument), and everything in files outside the folder.
+
+### D4's electric scale (`spectral-support/electric-scale`)
+
+Four items stand, one is not checked, three summary sentences are stronger than or mixed with their theorems.
+
+- Convention: D4's κ is 2/κ_B and its g is β²/2, as A4's; `dimension.md` uses a second ratio g_G = 4g. Consistent once stated.
+- One-link dimension of order g^(d/4): on a single SU(2) rotor (a proxy, not the cubic vacuum) the number of shells needed for 90% and 99% of the weight grows like g^0.256 and g^0.261 and the full link dimension Σ(n+1)² like g^0.724 and g^0.747, against 1/4 and 3/4; the entropy offset settles at 0.166. The exponent d/4 is for the full link dimension. The lattice statement itself was read and not tested.
+- Clocks: the magnetic clock is t = τb/β and the mesh clock is t = τb. Both tend to zero in physical time, at fixed β and on β = c·log(1/b). So "survives on the mesh clock" means survives at times of order b, energies of order 1/b; the class-probe floor is spectral weight at energies up to 2M/(vb). `class-probes.md` says the time vanishes; the summary in D4's README does not.
+- The class-probe scale: λh² = √2/b exactly, independent of β; the exponent is dimensionless; the width s·g^(−1/4) matches the rotor width.
+- The center-flux statement needs β → ∞ and a marked set fixed in lattice units (a region of physical size of order b); with those it is uniform in volume. At fixed β it does not follow, and for a set of fixed physical size nothing is proved. D4's README sentence "along bare refinement" omits both hypotheses; `center.md` states them.
+- The third sentence, opening `class-probes.md`, sets a fixed-physical-time statement beside a τ-clock statement; read literally the probes survive where center flux dies, but center flux also dies at mesh times.
+
+Counts, as met, failed, measured only: heat-trace programs 14, 1, 3; electric-scale programs 18, 1, 2; the two failures are the workers' own tolerances.
+
+### Reading
+
+Three lanes now have statements at weak bare coupling, and all three are of one kind: a named probe, normalized at one time, has its weight at or beyond the cutoff scale. B4's heat trace escapes above x^η/a; D4's surviving family lives at 1/b; A4's bands were audited in the second round. None is in a fixed physical window. The benchmark of this folder shows the same behaviour in a free theory for sharp-time normalization, and shows that a positive-time or mean normalization of a fixed-size observable does have a limit there. No lane has yet stated a result for such a normalization on the interacting lattice.
+
+Director, workers and sub-agents are one model family; this is not independent review.

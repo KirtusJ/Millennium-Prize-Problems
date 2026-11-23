@@ -1,0 +1,2 @@
+check K28: exit 0 (expected 0) in 454817 ms | output 94f39b862685 | event 34 head 368dab230e4a
+  C:/Users/donke/z4-workers/r6-heat/report.md: 9 STANDS, 2 DEFECT (minor: wording and notation only, no mathematical defect found in the SU(2) proofs I read), 2 NOT CHECKED; predicates 14 met, 1 failed (sub-agent's d=1 toy slope, its own expectation, not a defect of B4's result), 3 measured only.

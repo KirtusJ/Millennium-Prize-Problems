@@ -1,0 +1,2 @@
+check K27: exit 0 (expected 0) in 291318 ms | output fc5aa49503f9 | event 33 head e260f27579bd
+  C:/Users/donke/z4-workers/r6-loop/report.md — verdicts: 9 STANDS (one, W3 "uses no sharp-time second moment", true as written but misleading), 1 DEFECT (W5: the box decay rate is 2N·sin(π/N)/ℓ, not 2π/ℓ, and a hypothesis is missing), 1 NOT CHECKED (W5 infinite-volume power law); predicates 57 met, 18 failed, 5 measured only (16 failures were my own expectations or choice of N, 2 are the W5 defect).

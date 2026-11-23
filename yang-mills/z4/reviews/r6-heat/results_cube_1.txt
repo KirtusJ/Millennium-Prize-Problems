@@ -1,0 +1,6 @@
+met:
+Q1 (3000 cases qualify)
+Q2 (600 cases qualify) m=3: max lam/bound=0.2524; m=4: max lam/bound=0.2900; m=5: max lam/bound=0.3174
+failed:
+
+measured: min lam/r_p^2 over Q1 = 0.04135 (stated floor 1/256=0.00391)

@@ -1,0 +1,2 @@
+check K26: exit 0 (expected 0) in 242739 ms | output 502363ac119a | event 32 head 27d4a36d018c
+  C:/Users/donke/z4-workers/r6-elec/report.md: STANDS 4, DEFECT 1 (summary wording on clocks and limits), NOT CHECKED 1; predicates met 18, failed 1 (my own tolerance, not D4's), measured only 2.

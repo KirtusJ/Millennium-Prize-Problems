@@ -1,0 +1,202 @@
+TOY MODEL results (toy.py)
+K = (5/2)(2/3)^(3/5) = (3/2)^(2/5)+(2/3)^(3/5) = 1.9601317042077892876
+
+== A1 (L=1) ==
+  k=  2 ratio=1.06225476192
+  k=  3 ratio=1.02283427392
+  k=  4 ratio=1.00287380471
+  k=  5 ratio=1.00175304395
+  k=  6 ratio=1.00205289062
+  k=  7 ratio=1.0001479991
+  k= 10 ratio=1.00001570096
+  k= 20 ratio=1.00000000022
+  k= 50 ratio=1.0
+  k=100 ratio=1.0
+  k=300 ratio=1.0
+  max excess over k>=6: 0.00205289 at k=6 ; tol=0.01 -> A1 FAILED
+
+== A2 / A3 (trajectory s=1, c=1, L = B + log(2+x)) ==
+     k            L     logcost/logx      |r-3/5|                U      |U-3/5|
+     3    28.633019     0.8934645583     0.293465     -1.152499683       1.7525
+     6    56.262044      0.766476104     0.166476    -0.2534289885     0.853429
+    12    111.52408     0.6926033797    0.0926034     0.1732855057     0.426714
+    50    461.51702     0.6271592068    0.0271592     0.4975885214     0.102411
+   100    922.03404     0.6147818403    0.0147818     0.5487942607    0.0512057
+   300    2764.1021      0.605563023   0.00556302     0.5829314202    0.0170686
+  A2: decreasing=True, gap(300)=0.00556302 < 0.05 -> A2 MET
+  A3 (measured only): first k in list with U>=0: 12 ; first integer k: 9 ; |U-3/5| at k=300 = 0.01706858
+
+== Part B (d=1 trapping toy, p=0.5) ==
+  B0: max rel err DP vs brute force (t=1..14) = 0.000e+00 -> B0 MET
+  S(10) = 8.282661e-02   -log S = 2.491006
+  S(100) = 4.700348e-04   -log S = 7.662704
+  S(500) = 2.540560e-07   -log S = 15.185711
+  S(1000) = 1.970015e-09   -log S = 20.045225
+  S(2000) = 3.960235e-12   -log S = 26.254718
+  local slopes d log(-log S)/d log t (central, t/1.25..1.25t), measured only:
+    t=   40  slope=0.47674
+    t=  100  slope=0.44600
+    t=  200  slope=0.42707
+    t=  400  slope=0.41138
+    t=  800  slope=0.39834
+    t= 1200  slope=0.39175
+    t= 1600  slope=0.38748
+  B1: LSQ slope over t in [500,2000] = 0.39376 ; |slope-1/3| = 0.06043 ; tol 0.06 -> B1 FAILED
+
+FAILURES:
+  A1: k=145 ratio=1.0
+  A1: k=148 ratio=1.0
+  A1: k=149 ratio=1.0
+  A1: k=150 ratio=1.0
+  A1: k=151 ratio=1.0
+  A1: k=152 ratio=1.0
+  A1: k=153 ratio=1.0
+  A1: k=154 ratio=1.0
+  A1: k=155 ratio=1.0
+  A1: k=156 ratio=1.0
+  A1: k=157 ratio=1.0
+  A1: k=158 ratio=1.0
+  A1: k=159 ratio=1.0
+  A1: k=160 ratio=1.0
+  A1: k=161 ratio=1.0
+  A1: k=162 ratio=1.0
+  A1: k=163 ratio=1.0
+  A1: k=164 ratio=1.0
+  A1: k=165 ratio=1.0
+  A1: k=166 ratio=1.0
+  A1: k=167 ratio=1.0
+  A1: k=168 ratio=1.0
+  A1: k=169 ratio=1.0
+  A1: k=170 ratio=1.0
+  A1: k=171 ratio=1.0
+  A1: k=172 ratio=1.0
+  A1: k=173 ratio=1.0
+  A1: k=174 ratio=1.0
+  A1: k=175 ratio=1.0
+  A1: k=176 ratio=1.0
+  A1: k=177 ratio=1.0
+  A1: k=178 ratio=1.0
+  A1: k=179 ratio=1.0
+  A1: k=180 ratio=1.0
+  A1: k=181 ratio=1.0
+  A1: k=182 ratio=1.0
+  A1: k=183 ratio=1.0
+  A1: k=184 ratio=1.0
+  A1: k=185 ratio=1.0
+  A1: k=186 ratio=1.0
+  A1: k=187 ratio=1.0
+  A1: k=188 ratio=1.0
+  A1: k=189 ratio=1.0
+  A1: k=190 ratio=1.0
+  A1: k=191 ratio=1.0
+  A1: k=192 ratio=1.0
+  A1: k=193 ratio=1.0
+  A1: k=194 ratio=1.0
+  A1: k=195 ratio=1.0
+  A1: k=196 ratio=1.0
+  A1: k=197 ratio=1.0
+  A1: k=198 ratio=1.0
+  A1: k=199 ratio=1.0
+  A1: k=200 ratio=1.0
+  A1: k=201 ratio=1.0
+  A1: k=202 ratio=1.0
+  A1: k=203 ratio=1.0
+  A1: k=204 ratio=1.0
+  A1: k=205 ratio=1.0
+  A1: k=206 ratio=1.0
+  A1: k=207 ratio=1.0
+  A1: k=208 ratio=1.0
+  A1: k=209 ratio=1.0
+  A1: k=210 ratio=1.0
+  A1: k=211 ratio=1.0
+  A1: k=212 ratio=1.0
+  A1: k=213 ratio=1.0
+  A1: k=214 ratio=1.0
+  A1: k=215 ratio=1.0
+  A1: k=216 ratio=1.0
+  A1: k=217 ratio=1.0
+  A1: k=218 ratio=1.0
+  A1: k=219 ratio=1.0
+  A1: k=220 ratio=1.0
+  A1: k=221 ratio=1.0
+  A1: k=222 ratio=1.0
+  A1: k=223 ratio=1.0
+  A1: k=224 ratio=1.0
+  A1: k=225 ratio=1.0
+  A1: k=226 ratio=1.0
+  A1: k=227 ratio=1.0
+  A1: k=228 ratio=1.0
+  A1: k=229 ratio=1.0
+  A1: k=230 ratio=1.0
+  A1: k=231 ratio=1.0
+  A1: k=232 ratio=1.0
+  A1: k=233 ratio=1.0
+  A1: k=234 ratio=1.0
+  A1: k=235 ratio=1.0
+  A1: k=236 ratio=1.0
+  A1: k=237 ratio=1.0
+  A1: k=238 ratio=1.0
+  A1: k=239 ratio=1.0
+  A1: k=240 ratio=1.0
+  A1: k=241 ratio=1.0
+  A1: k=242 ratio=1.0
+  A1: k=243 ratio=1.0
+  A1: k=244 ratio=1.0
+  A1: k=245 ratio=1.0
+  A1: k=246 ratio=1.0
+  A1: k=247 ratio=1.0
+  A1: k=248 ratio=1.0
+  A1: k=249 ratio=1.0
+  A1: k=250 ratio=1.0
+  A1: k=251 ratio=1.0
+  A1: k=252 ratio=1.0
+  A1: k=253 ratio=1.0
+  A1: k=254 ratio=1.0
+  A1: k=255 ratio=1.0
+  A1: k=256 ratio=1.0
+  A1: k=257 ratio=1.0
+  A1: k=258 ratio=1.0
+  A1: k=259 ratio=1.0
+  A1: k=260 ratio=1.0
+  A1: k=261 ratio=1.0
+  A1: k=262 ratio=1.0
+  A1: k=263 ratio=1.0
+  A1: k=264 ratio=1.0
+  A1: k=265 ratio=1.0
+  A1: k=266 ratio=1.0
+  A1: k=267 ratio=1.0
+  A1: k=268 ratio=1.0
+  A1: k=269 ratio=1.0
+  A1: k=270 ratio=1.0
+  A1: k=271 ratio=1.0
+  A1: k=272 ratio=1.0
+  A1: k=273 ratio=1.0
+  A1: k=274 ratio=1.0
+  A1: k=275 ratio=1.0
+  A1: k=276 ratio=1.0
+  A1: k=277 ratio=1.0
+  A1: k=278 ratio=1.0
+  A1: k=279 ratio=1.0
+  A1: k=280 ratio=1.0
+  A1: k=281 ratio=1.0
+  A1: k=282 ratio=1.0
+  A1: k=283 ratio=1.0
+  A1: k=284 ratio=1.0
+  A1: k=285 ratio=1.0
+  A1: k=286 ratio=1.0
+  A1: k=287 ratio=1.0
+  A1: k=288 ratio=1.0
+  A1: k=289 ratio=1.0
+  A1: k=290 ratio=1.0
+  A1: k=291 ratio=1.0
+  A1: k=292 ratio=1.0
+  A1: k=293 ratio=1.0
+  A1: k=294 ratio=1.0
+  A1: k=295 ratio=1.0
+  A1: k=296 ratio=1.0
+  A1: k=297 ratio=1.0
+  A1: k=298 ratio=1.0
+  A1: k=299 ratio=1.0
+  A1: k=300 ratio=1.0
+  B1: fitted slope 0.39376, |slope-1/3|=0.06043 > 0.06
+wrote results_1.txt

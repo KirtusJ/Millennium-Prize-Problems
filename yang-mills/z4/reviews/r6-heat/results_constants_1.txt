@@ -1,0 +1,33 @@
+met:
+P1
+P2: max(log lhs - log rhs)=-2.877e-01
+P3a: 19.1703
+P3b
+P3c
+P4
+P5
+P6: max ratio integral/bound=0.7432
+P7
+P8
+P9: 24.972
+failed:
+
+measured:
+M1 window for log(-log EF)/log x on beta=log(1/b), s=V=1, isotropic (lower end from upper bound on EF)
+ b        x          lowerEnd   upperEnd(C=1)
+ 1e-1    e^     4.6        nan     1.2102
+ 1e-2    e^     9.2        nan     0.9333
+ 1e-3    e^    13.8        nan     0.8335
+ 1e-6    e^    27.6     0.1725     0.7266
+ 1e-10   e^    46.1     0.3440     0.6803
+ 1e-20   e^    92.1     0.4720     0.6432
+ 1e-50   e^   230.3     0.5488     0.6188
+ 1e-100  e^   460.5     0.5744     0.6100
+ 1e-150  e^   690.8     0.5829     0.6069
+M2 spectral threshold R=x^eta/a, a=b, s=1
+ eta=0.3 b=1e-2: R=1.585e+03 (phys units 1/length), R*a=1.585e+01
+ eta=0.3 b=1e-4: R=2.512e+06 (phys units 1/length), R*a=2.512e+02
+ eta=0.3 b=1e-8: R=6.310e+12 (phys units 1/length), R*a=6.310e+04
+ eta=0.59 b=1e-2: R=2.291e+04 (phys units 1/length), R*a=2.291e+02
+ eta=0.59 b=1e-4: R=5.248e+08 (phys units 1/length), R*a=5.248e+04
+ eta=0.59 b=1e-8: R=2.754e+17 (phys units 1/length), R*a=2.754e+09
