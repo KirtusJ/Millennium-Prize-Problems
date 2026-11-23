@@ -1,0 +1,15 @@
+P1 <B3^2>_3Dflow = 2.110857992549e-03 exact 2.110857992549e-03 rel -2.11e-15 True
+P2 <F12^2>_4Dflow = 7.915717472058e-04 Luscher(2.28) 7.915717472058e-04 rel -2.11e-15 True
+   ratio 3D-spatial-flow/4D-flow <B^2> = 2.666667 (= 128/48 = 2.666667)
+P5 2*int D^2 d^3r = 2.806046399799e-04 closed form 2.806048783206e-04 rel -8.49e-07 True
+   s/sqrt(t)=  0.5: t*Var = 2.2347007531e-05  grid-change 1.6e-11  Var/(int f^2 c_flow t^-5/2) = 0.114417
+   s/sqrt(t)=    1: t*Var = 6.1106697739e-04  grid-change 2.1e-11  Var/(int f^2 c_flow t^-5/2) = 0.391083
+   s/sqrt(t)=    2: t*Var = 8.9142176634e-03  grid-change 2.3e-11  Var/(int f^2 c_flow t^-5/2) = 0.713137
+   s/sqrt(t)=    4: t*Var = 9.0205848788e-02  grid-change 1.6e-11  Var/(int f^2 c_flow t^-5/2) = 0.902058
+   s/sqrt(t)=    8: t*Var = 7.7809371287e-01  grid-change 8.8e-12  Var/(int f^2 c_flow t^-5/2) = 0.972617
+   s/sqrt(t)=   16: t*Var = 6.3547157775e+00  grid-change 4.5e-12  Var/(int f^2 c_flow t^-5/2) = 0.992924
+P3 finite, positive, converged: True
+P6 approach to asymptotic law, deviations ['0.8856', '0.6089', '0.2869', '0.0979', '0.0274', '0.0071']: True
+P4 Var(1/4,1)/(4 Var(1,2)) - 1 = 0.00e+00 True
+measured: c_flow = sqrt(pi)/(640 pi^2) = 2.806049e-04: Var -> c_flow * int f^2 * t^(-5/2) as t->0 at fixed f
+COUNTS met 6, failed 0, measured only 3

@@ -427,3 +427,31 @@ Defect of the director's brief, found by the measurement: the strong-coupling ch
 Counts, as met, failed, measured only: proof programs 63, 0, 31 and sub-agent 18, 0, 0; simulation controls and comparisons, the worker's five long runs stopped early for time and recorded as failed checks, blocks kept; magnetic 11, 1, 2 (one failure the worker's own expectation of a rate).
 
 Director, workers and sub-agents are one model family; this is not independent review.
+
+
+## Ninth round: primary sources read; the proof attacked
+
+23 November 2026. Three workers (register checks K42, K43, K44), each with a sub-agent and its own register; all six replay. Reports: [`reviews/r10-chal/`](reviews/r10-chal/), [`reviews/r10-lit1/`](reviews/r10-lit1/), [`reviews/r10-lit2/`](reviews/r10-lit2/). Two workers were allowed to fetch eleven named papers and nothing else; the papers are not copied here.
+
+### Literature, second pass
+
+[`LITERATURE.md`](LITERATURE.md) is rewritten from the sources. In brief:
+
+- The official problem text requires more than the six items of `OVERALL_DISPOSITION.md`: local operators for the gauge-invariant polynomials in the curvature, short-distance agreement with asymptotic freedom including a stress tensor and operator product expansion, a finite mass, a unique vacuum, and it excludes existence by compactness alone. The table in that file is extended. The short-distance requirement rules out every free-field limit in this repository as the theory itself.
+- Four rows of the first pass were wrong, all from trusting search summaries: the Faria da Veiga–O'Carroll bounds concern a field that vanishes for SU(2) and are not comparable with C4's, A4's or this folder's statements; the continuum limit of flowed observables is perturbative, not established; two attributions (Makeenko, Dimock) were not in the sources; Driver's theorem is a different limit from the benchmark's.
+- A 414-page preprint of 8 November 2026 (arXiv:2611.11534) has the same leading entropy and electric-cutoff laws as D4's `electric-scale`, as lower bounds. Nothing read in it contradicts the repository, and it claims no continuum construction.
+- On the free benchmark the flowed action density behaves as the literature says: the equal-time variance of its smeared square is finite at every positive flow time and scales like t^(−5/2), so flow time replaces the b² of the sharp-time divergence. `fixed-size/STATEMENT.md` has an addendum restating S6′ with it.
+
+### The proof of the free bounds, attacked
+
+Seventeen items stand, one defect of wording, two not checked; no wrong constant ([report](reviews/r10-chal/report.md)). Every constant in [`fixed-size/PROOF_FREE_BOUNDS.md`](fixed-size/PROOF_FREE_BOUNDS.md) was rederived, with a non-symmetric f, odd and even N, and box sides 0.5, 0.7, 1 and 2 (the proof's own numerics were at side 1 and N = 8 with a symmetric f).
+
+- Defect: "representatives with |k_i b| ≤ π" counts the edge mode twice for even N if read literally; doing so changes C_b by +170% at N = 6. It should read −π < k_i b ≤ π. No bound is affected.
+- Unstated hypothesis: the vacuum energy is subtracted, so that HΩ = 0. The Hamiltonian as written in `STATEMENT.md` has a positive zero-point energy; the two-point function there already assumes the subtraction.
+- The upper bound is very loose for large τ/ℓ (the lattice-sum lemma exceeds the sum by up to 6·10⁵).
+
+Both points are added to the proof file as a review note; the proof text is unchanged.
+
+Counts, as met, failed, measured only: challenger 13, 0, 1 and its sub-agent 3, 0, 0; readers' extraction checks 18, 0, 0; flowed benchmark 6, 0, 0.
+
+Director, workers and sub-agents are one model family; this is not independent review, and a located statement is not a refereed reading.

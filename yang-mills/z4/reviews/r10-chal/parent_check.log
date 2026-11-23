@@ -1,0 +1,2 @@
+check K43: exit 0 (expected 0) in 420051 ms | output 5fb2521ba236 | event 49 head d718155a2345
+  C:/Users/donke/z4-workers/r10-chal/report.md — verdicts: 17 STANDS, 1 DEFECT (the Brillouin-zone wording would count the even-N boundary mode twice, which changes C_b by +95 to +170 %; no constant is affected), 2 NOT CHECKED; checks met/failed/measured-only: mine 13/0/1, Lean 1/0/0, sub-agent 3/0/0; PCP verify: PASS.

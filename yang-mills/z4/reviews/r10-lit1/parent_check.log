@@ -1,0 +1,2 @@
+check K42: exit 0 (expected 0) in 254357 ms | output 7e12fc9a97ed | event 48 head 19dd3d805d3a
+  C:\Users\donke\z4-workers\r10-lit1\report.md: 13 rows STANDS or confirmed (some only in part), 2 DEFECT (Z4's requirement list misses several items the Clay problem text requires; Dimock III is cited for 4D Yang–Mills but covers only φ⁴ in 3D), 0 NOT CHECKED; script predicates 18 met, 0 failed; sub-agent claims 3 checked against the pages, 3 confirmed; register verify: PASS.

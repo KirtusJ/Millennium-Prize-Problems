@@ -98,3 +98,19 @@ It is not progress on the estimate itself. The two-sided bound on C_b at weak co
 Counts, as met, failed, measured only. Benchmark programs 56, 4, 17 (two failures are the worker's own range of N at t = 0.05; two are defect 1 above, predicted in its docstring before the run). Challenger 9, 2, 2 (both failures its own expectations: a nonlocal Λ⁴ term with a sharp cutoff; an arithmetic slip in a constant). Formalizer: 13 declarations, one failed intermediate compile; its numerics 4, 0, 0 on 2000 atom sets. The challenger's sub-agent left one program unfinished at the budget; its fits are not used.
 
 Director, workers and sub-agents are one model family; this is not independent review. No literature was consulted for the renormalization statements in defect 4.
+
+---
+
+# Addendum, 23 November 2026: S6′ with the gradient-flowed action density
+
+After the literature was read (`../LITERATURE.md`; Lüscher, arXiv:1006.4518; Lüscher and Weisz, arXiv:1101.0963). Conjectural reading, not a result.
+
+**S6″.** Lattice SU(N), spacing b, coupling trajectory β(b), Wilson flow to a fixed physical flow time t. E_b(t, x) a lattice discretization of the flowed ¼G·G. O_{b,t}(f) = b³Σ_x f(bx)(E_b(t, x) − ⟨E_b(t)⟩) on one time slice; C_{b,t}(τ) its connected Euclidean-time correlator.
+
+- Existence and nontriviality for this observable: 0 < c ≤ t²⟨E_b(t)⟩ ≤ C, and v ≤ C_{b,t}(2τ), C_{b,t}(τ) ≤ V, uniformly as b → 0 along the trajectory. By S5 (e) (`MeasureHeat.M3`) a fixed weight then lies in a fixed physical window.
+- A gap in the sector it generates: C_{b,t}(τ) ≤ K·e^(−mτ) for τ ≥ τ₀ with m > 0 uniform in b and in the volume (`MeasureHeat.M4_gap`, `M5_no_bound`).
+- Caveats: a four-dimensional flow reaches links at all times, so exact reflection positivity on a slice needs the spatial flow or control of the heat-kernel tails; the mass gap needs every gauge-invariant local field, not one.
+- Known: finiteness of all such correlators at positive flow time, order by order in perturbation theory in dimensional regularization, with no renormalization beyond the coupling; t²⟨E⟩ = 3(N²−1)g²/(128π²) at leading order; numerical scaling on the lattice. Not known: any of the bounds above nonperturbatively. Perturbation theory gives power-law decay.
+- Free benchmark (worker's program, `../reviews/r10-lit2/`): ⟨B₃²⟩ = 1/(48π²t²) under the spatial flow; the equal-time variance of the smeared flowed B₃² is finite for every t > 0 and tends to (√π/(640π²))·∫f²·t^(−5/2) for smearing width much larger than √t. The sharp-time b⁻⁵ of S1′ becomes (√t)⁻⁵.
+
+S6′ above used the time-evolved plaquette density, which mixes magnetic and electric parts; S6″ replaces it.

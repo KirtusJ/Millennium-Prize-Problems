@@ -1,0 +1,3 @@
+Q1 max|ImTr U| SU(2) = 0.00e+00 True
+Q2 SU(3) ImTr/eps^3, (1-ReTr/3)/eps^2: {0.01: (np.float64(16.352104436016116), np.float64(7.136142585908445)), 0.001: (np.float64(16.35499334053103), np.float64(7.137403312373891))} True
+COUNTS met 2, failed 0, measured only 0

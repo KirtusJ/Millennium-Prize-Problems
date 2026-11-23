@@ -1,0 +1,1400 @@
+
+=== PAGE 1 ===
+arXiv:0810.2183v2  [hep-th]  3 Nov 2008
+Topics in Cusped/Lightcone Wilson Loops
+Yuri Makeenko∗
+Institute of Theoretical and Experimental Physics
+117218 Moscow, Russia
+makeenko@itep.ru
+Abstract
+I review several old/new approaches to the string/gauge correspondence for the
+cusped/lightcone Wilson loops. The main attention is payed to SYM perturbation
+theory calculations at two loops and beyond and to the cusped loop equation.
+These three introductory lectures were given at the 48 Cracow School of Theo-
+retical Physics: “Aspects of Duality”, June 13-22, 2008, Zakopane, Poland.
+Contents
+• Lecture 1. Pedagogical Introduction
+Wilson loops with cusps, their renormalization, relation to twist-two operators, the role
+in string/gauge correspondence, minimal surface in AdS5 ⊗ S5 for cusped loops;
+• Lecture 2. Perturbation Theory: two loops and beyond
+exact sum of ladders, explicit two loops and the anomaly terms, results in the double
+logarithmic approximation, problems with planar QFT;
+• Lecture 3. Cusped Loop Equation
+modern formulation of the loop equation, SUSY extension, UV regularization, speciﬁcs
+of cusped loops, cusp anomalous dimension from the loop equation.
+For completeness of these lecture notes I added three appendices with some detail not
+given in the lectures but which might be useful for the reader.
+∗Also at the Institute for Advanced Cycling, Blegdamsvej 19, 2100 Copenhagen Ø, Denmark
+1
+=== PAGE 2 ===
+Lecture 1. Pedagogical Introduction
+I review in this lecture Wilson loops with cusps, their renormalization and the relation
+to twist-two operators. Then I discuss the role played by the cusped Wilson loops in
+the string/gauge correspondence and describe a proper minimal surface in AdS5 ⊗ S5
+associated with cusped loops.
+1.1 Wilson loops
+Wilson loops play a crucial role in modern formulations of gauge theories since the work
+by Wilson (1975).
+The construction is based on a non-Abelian phase factor
+U (C) = P eig R CAµ(x)dxµ def = ∏
+x∈C
+(1 + igAµ(x)dxµ) (1.1)
+which is nothing but a parallel transporter in an external non-Abelian Yang–Mills ﬁeld
+Aµ(x). The trace over matrix indices tr U (C) is gauge-invariant for closed C.
+The Wilson loop vacuum expectation value (or the average in Euclidean formulation)
+is deﬁned by
+W (C) = Z−1
+∫
+DAµ D ¯ψDψ · · · eiS 1 N tr U (C) , (1.2)
+where the path integration goes over Yang-Mills and quark ﬁelds.
+The importance of the Wilson loops in QCD is because
+• observables are expressed via sum-over-path of W (C),
+• dynamics is entirely reformulated via W (C).
+These statements hold strictly speaking only at large N , while at ﬁnite N correlators
+of several Wilson loops appear which factorize in the large-N limit. Wilson loops W (C)
+obey the loop equation which is a closed equation on loop space at largeN (see the book
+by Y. M. (2002) for more detail on these issues).
+It is important that typical loops which are essential in the sum-over-path are cusped.
+The properties of the Wilson loops of this kind diﬀer from those for smooth loops, e.g. a
+circular loop.
+1.2 Renormalization of smooth Wilson loops
+Renormalization properties of smooth Wilson loops are studied by Gervais, Neveu (1980),
+Polyakov (1980), Vergeles, Dotsenko (1980). They become ﬁnite after the charge renor-
+malization:
+W (g;C) = e−const.L(C)/a WR(gR;C) , (1.3)
+where WR is ﬁnite after the charge renormalization g =⇒ gR and a is a certain (gauge-
+invariant) UV cutoﬀ.
+2
+=== PAGE 3 ===
+The exponential perimeter factor in Eq. (1.3) is associated with the renormalization
+of the mass of a heavy test particle propagating along the loop. It does not emerge in
+dimensional regularization.
+1.3 Renormalization of cusped Wilson loops
+An additional logarithmic divergence appears for cusped loops as was ﬁrst discovered by
+Polyakov (1980). A cusped Wilson loop is depicted in Fig. 1.
+vu
+θ
+Figure 1: Segment of a closed loop near the cusp. The cusp angle θ is formed by the
+vectors u and v: coshθ = u·v√ u2 √ v2 .
+The cusped Wilson loops are multiplicatively renormalizable as was shown by Brandt,
+Neri, Sato (1981):
+W (g; Γ) = Z(g, ;θ)WR(gR; Γ) , (1.4)
+where (the divergent factor of) Z(g;θ) depends on the cusp angle θ.
+Equation (1.4) is true only when the contour Γ has no light-cone segments. The
+peculiarities of the renormalization of light-cone Wilson loops are described below.
+1.4 Cusp anomalous dimension
+The cusp anomalous dimension is deﬁned by the formula
+γcusp (g;θ) = −a d da ln Z(g;θ) , (1.5)
+where Z is the renormalizing factor in Eq. (1.4).
+The cusp anomalous dimension depends in general both on the coupling constant g
+and on the cusp angle θ. A very important observation by Korchemsky, Radyushkin
+(1987) is that in the limit of large θ it is linear in θ:
+γcusp (g;θ)
+θ→∞
+→ θ 2 f (g) . (1.6)
+The same function f (g) appears in the anomalous dimensions of twist-two conformal
+operators with large spin.
+3
+=== PAGE 4 ===
+1.5 Conformal operators of twist two
+Anomalous dimensions of twist-two operators of the type
+O(F ) J = 1 N tr Fµ· (∇·)J−2 Fµ· (1.7)
+O(Ψ) J = ¯Ψγ· (∇·)J−1 Ψ (1.8)
+with Lorentz spinJ are measurable in deep inelastic scattering. The operators in Eq. (1.7)
+are constructed from gauge ﬁeld and those in Eq. (1.8) are constructed from quarks.
+In N = 4 supersymmetric Yang–Mills (SYM) there are also analogous operators
+O(Φ) J = 1 N tr Φ (∇·)J Φ (1.9)
+constructed from scalars.
+The following notation is used in Eqs. (1.7), (1.8) and (1.9):
+∇· ≡ ∇µξµ ξ2 = 0 . (1.10)
+This multiplication by a light-like vector ξ provides symmetrization and subtraction of
+traces, as is needed for a representation of the Lorentz group.
+What is depicted in Eqs. (1.7), (1.8) and (1.9) by (∇·)J is in fact a polynomial in ← ∇·
+and
+→
+∇·, the covariant derivatives acting on the left and on the right. At the one-loop level
+it is a Gegenbauer polynomial dictated by conformal invariance as was shown by Brodsky,
+Frishman, Lepage, Sachrajda (1980), Y. M. (1981), Ohrndorf (1982). These conformal
+operators are multiplicatively renormalizable at one loop and form a convenient basis for
+two-loop computations.
+1.6 Relation between the anomalous dimensions
+The relation between twist-two operators and cusped Wilson loops can be understood by
+considering an open Wilson loop with matter ﬁelds attached at the ends:
+O(Cy0) = ¯ψ(y)P eig R y 0 dξµ Aµ ψ(0) . (1.11)
+The case when this open loop is a straight line from 0 to y is depicted in Fig. 2.
+x=0y
+Cx0
+Figure 2: Straight Wilson loop from 0 to y.
+The standard triangular diagrams, which give the anomalous dimension like in Gross,
+Wilczek (1973), come from the formula
+⟨
+ψ(∞,⃗y)O(Cy0) ¯ψ(∞,⃗0)
+⟩
+∝ W (Π) (1.12)
+4
+=== PAGE 5 ===
+as mass of matter ﬁelds → ∞. The Wilson loop which emerges on the right-hand side is
+Π-shaped as is depicted in Fig. 3. The vertical lines represent propagation (in time) of
+y
+u
+−u
+v
+0
+Figure 3: Π-shaped Wilson loop.
+static quarks, sitting at ⃗0 and ⃗y, which are connected by the straight line associated with
+the open Wilson loop.
+To derive Eq. (1.12), remember that the propagator in an external ﬁeld Aµ is
+⟨
+ψi(x) ¯ψj(y) ⟩ ψ large N = ∑
+C yx
+[
+e
+ig R Cyx dξµAµ ]
+ij
+mass→∞
+∝
+[
+e
+ig R
+C(min) yx dξµAµ ]
+ij
+(1.13)
+and thus the straight vertical lines appear in Π.
+The central segment of Π is near the light-cone to suppress the contribution from
+operators of twists higher than two. Π has two cusps with θ → ∞.
+This is how the light-cone Wilson loop is related to the conformal operators of twist
+two.
+1.7 Light-cone Wilson loops
+For the Π-shaped loop with 1 light-cone segment as in Fig. 3, we have
+W (Π) = e− 1 2 f (λ) ln2 T a +const.(λ) ln T a +ﬁnite(λ) (1.14)
+with the same f (λ) as before, as was shown by Korchemsky, Marchesini (1993). Here vµ
+is along the light cone (v2 = 0) and yµ = vµT .
+A very closely related (and more simple!) object, proposed by Alday, Maldacena
+(2007), is a Γ-shaped loop which is formed by 2 light-cone segments:
+W (Γ) = e− 1 2 f (λ) ln T a ln S a +g(λ)(ln T a +ln S a )+ﬁnite1(λ) . (1.15)
+Now both vµ and uµ are along the light cones (v2 = 0, u2 = 0) and yµ = vµT , xµ = uµS.
+Most probably it gives the same f (λ) but this is not yet rigorously proved.
+5
+=== PAGE 6 ===
+1.8 SYM Wilson loops
+An extension of Wilson loops to N = 4 supersymmetric Yang–Mills (SYM) was given by
+Maldacena (1998):
+WSYM(C) =
+⟨ 1
+N tr P eig
+H
+C dσ( ˙ξµAµ +| ˙ξ|niΦi) ⟩ (1.16)
+with unit vector ni ∈ S5 (n2 = 1) and 6 scalars Φi (i = 1, · · · , 6). In Minkowski space
+there is no relative i between the two terms in the exponent in Eq. (1.16), which is present
+in Euclidean space.
+Under a supersymmetry transformation
+δAµ = ¯ΨΓµζ, δΦi = ¯ΨΓiζ, (1.17)
+where an inﬁnitesimal parameter ζ is a 10d Majorana–Weyl spinor and (Γµ, Γi) are 10d
+gamma matrices, the SYM Wilson loop (1.16) remains unchanged if
+(
+Γµ ˙ξµ + Γi| ˙ξ|ni
+)
+ζ = 0 . (1.18)
+Noting that the combination of gamma matrices in the brackets is nilpotent for timelike
+˙ξ, Eq. (1.18) is satisﬁed when a half components of ζ vanish. An example of such a BPS
+state possessing a half of supersymmetries is the SYM Wilson loop for a straight line
+inside the light-cone, for which we have
+WSYM(|) = 1 . (1.19)
+An adjoint Wilson loop is related to the fundamental-representation one by the formula
+trAU = | tr U |2 − 1 . (1.20)
+Due to factorization at large N we have
+⟨ 1
+N 2 trAU (C)
+⟩
+=
+⟨ 1
+N tr U (C)
+⟩2
+, (1.21)
+where the adjoint Wilson loop is on the left-hand side and the (square of the) fundamental
+one is on the right-hand side.
+The same results as mentioned above for QCD hold for SYM Wilson loops and there
+are some more. In particular, the perimeter factor in Eq. (1.3) is missing for SYM Wilson
+loops owing to the cancellation between gauge ﬁelds and scalars.
+1.9 Motivation (since 2002)
+A remarkable prediction for the anomalous dimension of twist-two operators with large
+(Lorentz) spin J, based on the AdS/CFT correspondence, was made by Gubser, Klebanov,
+Polyakov (2002). It states that
+∆ −J − 2 = f (λ) lnJ large J (1.22)
+6
+=== PAGE 7 ===
+with
+f (λ) =
+√
+λ
+π large λ =g2 YMN. (1.23)
+It stems from the spectrum of closed folded string which is rotating in AdS5.
+The same result holds for the cusp anomalous dimension at largeθ in the supergravity
+approximation to the AdS/CFT correspondence as is demonstrated by Kruczenski (2002),
+Y. M. (2003) and reviewed in the lectures by L. Alday at this School. For completeness
+of these lectures I describe the proper minimal surface in AdS5 ⊗ S5 in Appendix A.
+Equations (1.22), (1.23) have been remarkable reproduced recently from the spin chain
+S-matrix by Staudacher (2005), Eden, Staudacher (2006), Beisert, Eden, Staudacher
+(2007). Many more results are obtained along this line as is reviewed in the lectures
+by M. Staudacher at this School.
+Remarkably, the same function f (λ) appears in MHV gluon amplitudes for SYM as
+conjectured by Bern, Dixon, Smirnov (2005) on the basis of a few lower orders of SYM
+perturbation theory and further elaborated by Bern, Czakon, Dixon, Kosower, Smirnov
+(2007). This subject is reviewed in the lectures by R. Roiban at this School. The BDS am-
+plitude is reproduced for large λ from the AdS/CFT correspondence by Alday, Maldacena
+(2007) and is reviewed in the lectures by L. Alday at this School.
+It is a challenging problem to obtain
+√
+λ for the cusp anomalous dimension at large λ
+in SYM perturbation theory. I shall describe some steps along this line in my second and
+third lectures.
+1.10 AdS/CFT for Wilson loops
+The formulation of the AdS/CFT correspondence between Wilson loops and open IIB
+strings in the AdS5 ⊗ S5 background was given by Maldacena (1998), Rey, Yee (1998).
+The statement is that the SYM Wilson loop equals the sum over open surfaces bounded
+by the contour C:
+WSYM(C) =
+∑
+S:∂S=C
+eiAIIB on AdS5⊗S5 . (1.24)
+Here
+C =
+(
+xµ(σ),
+∫ σ
+dσ | ˙x(σ)|ni(σ)
+)
+(1.25)
+is a (9-dimensional loop) in the boundary of AdS5 ⊗ S5, e.g. for ni = (1, 0, 0, 0, 0, 0) only
+a 4d contour xµ(σ) remains. Equation (1.24) is graphically represented in Fig. 4.
+)(
+S
+W =  Σ
+Figure 4: Open-string/Wilson-loop correspondence.
+7
+=== PAGE 8 ===
+For a circular loop there is a remarkable perfect agreement between the AdS super-
+gravity calculation by Berenstein, Corrado, Fischler, Maldacena (1998), Drukker, Gross,
+Ooguri (1999) and the CFT SYM calculation by Erickson, Semenoﬀ, Zarembo (2000),
+Drukker, Gross (2001).
+However, the situation is not as good for a rectangular loop (or antiparallel lines),
+when the minimal surface in AdS5 ⊗ S5 was found by Maldacena (1998), Rey, Yee (1998),
+and the summation of ladder diagrams of the type depicted in Fig. 5 was performed by
+Erickson, Semenoﬀ, Szabo, Zarembo (1999), Erickson, Semenoﬀ, Zarembo (2000).
+Figure 5: Ladder diagrams for a rectangular Wilson loop.
+The results are:
+AdS:
+V (R) = − 4π2√ 2λ Γ4(1/4)R SYM: V (R) = − √ λ πR. (1.26)
+The coeﬃcients in these two results obviously do not agree. The discrepancy is cus-
+tomly attributed to interaction diagrams... But a remark is that the SYM coeﬃcient is
+what is needed for the cusp anomalous dimension at large λ.
+2 Perturbation Theory: two loops and beyond
+I describe in this lecture how to sum up ladder diagrams of perturbation theory and
+explicitly consider the two-loop order where a cancellation of interaction diagrams is not
+complete resulting in an anomaly term. I analyze light-cone Wilson loops in the double
+logarithmic approximation which gives a hint on higher-order anomaly terms and reveals
+problems with planar QFT in describing the results.
+2.1 One-loop perturbation theory
+Diagrams of perturbation theory for SYM Wilson loops can be constructed by expanding
+Eq. (1.16) in the coupling constant λ.
+To the order λ (one-loop order) we have explicitly
+W (Γ) = 1 − λ 2
++∞∫
+−∞
+dσ1
++∞∫
+−∞
+dσ2
+[
+˙xµ(σ1) ˙xµ(σ2) − | ˙x(σ1)|| ˙x(σ2)| ] D (x(σ1) − x(σ2)) , (2.1)
+8
+=== PAGE 9 ===
+where
+D(x) = − Γ (d/2 − 1) 4πd/2 [−x2]1−d/2 (2.2)
+is the (scalar) propagator in d-dimensions.
+The double integral on the right-hand side of Eq. (2.1) can be represented as the
+sum of three diagrams in Fig. 6, where dashed lines correspond to either gluon or scalar
+propagators. Actually, the diagrams (a) and (c) vanish because gluons are cancelled by
+♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣
+♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣
+♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣ ♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣ ♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣ ♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣ ♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣ ♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣ ♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣ ♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣ ♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣ ♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣ .......... .......... .................................................. .................................................. .......... .......... .......... .......... .......... .......... .......... .......... .......... ..........
+(b) (c)(a)
+Figure 6: Diagrams of perturbation theory to order λ. Diagrams (a) and (c) vanish
+(gluons are cancelled by scalars).
+scalars (like in Eq. (1.19)).
+For the only nonvanishing diagram in Fig. 6(b), we have
+W (Γ) = 1 − λ 4π2 (coshθ − 1) ∫ ds ∫ dt 1 s2 + 2st coshθ + t2
+= 1 − λ 4π2 coshθ − 1 sinhθ θ ln L a
+large θ
+→ 1 − λ 4π2θ ln L a (2.3)
+which yields =⇒ f (λ) = λ 2π2 . (2.4)
+Notice that, in contrast to QCD, in SYM there is no mass-renormalization term
+−λ/4πa.
+An exact formula for the order λ result is
+W (S,T ; a,b) = 1 − λ 4π2 (coshθ − 1) ∫ S a ds ∫ T b dt 1 s2 + 2st coshθ + t2
+= 1 − λ 8π2 coshθ − 1 sinhθ ( Li2(− T S eθ) − Li2(− T S e−θ) − Li2(− T aeθ)
++Li2(− T ae−θ) − Li2(− b S eθ) + Li2(− b S e−θ) + Li2(− b a eθ) − Li2(− b a e−θ) ) (2.5)
+where we cut the integrals by S,T from above and by a,b from below.
+9
+=== PAGE 10 ===
+In Eq. (2.5) Li2 is Euler’s dilogarithm
+Li2(z) =
+∞∑
+n=1
+zn
+n2 = −
+∫ z
+0
+dx
+x ln (1 − x) (2.6)
+which obeys the relation
+Li2
+(
+−eΩ) + Li2 ( −e−Ω) = − 1 2 ln2 Ω − π2 6 . (2.7)
+It is used to extract the double logarithms.
+2.2 Double-logarithmic approximation
+The ﬁnal result for large θ in Eq. (2.3) can be extracted without an exact computation
+using a double logarithmic approximation (DLA) quite similar to the one for Sudakov’s
+form-factor.
+The one-loop integral
+W (S,T ; a,b) = 1 − 2β(coshθ − 1)
+∫ S
+a
+ds
+∫ T
+b
+dt 1 s2 + 2st coshθ + t2 , (2.8)
+where we have introduced
+β = λ 8π2 , (2.9)
+has a double-logarithmic region of integration:
+t e−θ <∼ s<∼ t eθ or s e−θ <∼ t<∼ s eθ. (2.10)
+As a consequence of this fact, we write Eq. (2.8) for θ ≫ 1 in DLA as
+W (S,T ; a,b)
+DLA
+= 1 −β
+T∫
+b
+dt
+t
+min{S,t eθ}∫
+max{a,t e−θ}
+ds
+s . (2.11)
+Several limits are now possible. Let
+1 ≪θ<∼ ln T b ≪ ln S a . (2.12)
+Then
+W (S,T ; a,b) =⇒ 1 − 2βθ ln T b (2.13)
+reproducing the above result (2.3).
+Alternatively, if
+θ ≫ ln T b, ln S a , (2.14)
+we obtain
+W (S,T ; a,b) =⇒ 1 −β ln T b ln S a very large θ (2.15)
+reproducing the result for 2 light-cone segments.
+Some more results on the double logarithms are described in Appendix B.
+10
+=== PAGE 11 ===
+2.3 Sum of ladder diagrams
+As was explained in the ﬁrst lecture, we are motivated to consider ladder diagrams of the
+type depicted in Fig. 7, which is a simplest class of diagrams of planar QFT.
+S T
+s t
+Figure 7: Typical ladder diagram for a cusped Wilson loop.
+The ladder diagrams can be summed using a Bethe–Salpeter equation
+G(S,T ) = 1 − λ(coshθ − 1) 4π2
+∫ S
+a
+ds
+∫ T
+b
+dt G(s,t) s2 + 2st coshθ + t2 . (2.16)
+Several light-cone limits are again possible:
+1 light-cone limit: θ → ∞ with ﬁxed Tl.c. = 2T eθ resulting in
+G (S,T ; a,b) = 1 −β
+∫ S
+a
+ds
+∫ T
+b
+dt G (s,t; a,b) αs2 + st , (2.17)
+where
+α = u2
+2u · v (2.18)
+and β is given by Eq. (2.9) (remember that v2 = 0 for the light-cone direction).
+2 light-cone limit: forα = 0 when additionally u2 = 0, the cusped loop has 2 light-cone
+segments.
+2.4 The ladder equation
+Diﬀerentiating Eq. (2.17) we obtain
+S ∂ ∂S T ∂ ∂T G (S,T ; a,b) = − β 1 +αS/T G (S,T ; a,b) (2.19)
+and analogously
+a ∂ ∂ab∂ ∂b G (S,T ; a,b) = − β 1 +αa/b G (S,T ; a,b) (2.20)
+11
+=== PAGE 12 ===
+with the boundary conditions
+G(a,T ; a,b) = G(S,b; a,b) = 1 . (2.21)
+To separate variables, it is convenient to introduce the new variables
+X = ln S a − ln T b , Y = ln S a + ln T b . (2.22)
+Then Eqs. (2.19) and (2.20) can be rewritten as
+( ∂2
+∂X 2 − ∂2 ∂Y 2 ) G = β 1 +αa b eX G αS≪T = β G . (2.23)
+It is similar to the equation by Erickson, Semenoﬀ, Szabo, Zarembo (1999) but with
+diﬀerent boundary conditions.
+2.5 Exact solution for ladders (α = 0)
+A solution to Eq. (2.23) for α = 0 is the Bessel function
+Gα=0 (S,T ; a,b) = J0
+(
+2
+√
+β ln S a ln T b
+)
+(2.24)
+which obviously obeys the boundary condition (2.21).
+This can be easily shown by an iterative solution of
+Gα=0 (S,T ; a,b) = 1 −β
+∫ S
+a
+ds
+s
+∫ T
+b
+dt
+t Gα=0 (s,t; a,b) , (2.25)
+where the integrals over s and t decouple and both are logarithmic:
+Gα=0 (S,T ; a,b) =
+∞∑
+n=0
+(−β)n
+(
+ln S a )n
+n!
+(
+ln T b )n
+n! = J0
+(
+2
+√
+β ln S a ln T b
+)
+. (2.26)
+Asymptotically we have
+Jk(z) ∼ cos z large z (2.27)
+which is not of the type expected in Eq. (1.14) from renormalization.
+2.6 Exact solution for ladders (α ⁄= 0)
+An exact solution to Eq. (2.23) for α ⁄= 0 is found by Y. M., Olesen, Semenoﬀ (2006).
+Let us consider the ansatz
+G (S,T ; a,b) =
+∮
+C
+dω
+2πiω
+(S
+a
+)√βω(T
+b
+)−√βω−1
+F
+(
+−ω,αa b ) F ( ω,αS T ) , (2.28)
+12
+=== PAGE 13 ===
+where C is a contour in the complex ω-plane. This ansatz is motivated by the integral
+representation of the Bessel function J0 at α = 0 (=⇒F = 1).
+The substitution into Eq. (2.19) reduces it to the hypergeometric equation (ξ =αS/T )
+ξ(1 + ξ)F′′ ξξ + [1 + √ β(ω + ω−1)](1 + ξ)F′ ξ +βF = 0 (2.29)
+whose solution is given by hypergeometric functions. How to draw the contour C to
+satisfy the boundary conditions (2.21) is described in Appendix C.
+A great simpliﬁcation of the solution (2.28) occurs at S = T , a = b and α = −1:
+Gα=−1(T,T ; a,a) = 1√ βτ (τ − 2πi) J1 ( 2 √ βτ (τ − 2πi) ) (2.30)
+with
+ln T a = τ, ln ( − T a ) = τ − iπ (2.31)
+and β given by Eq. (2.9).
+In Appendix B this Bessel function is reproduced in the double-logarithmic approxi-
+mation. It is similar to that obtained by Erickson, Semenoﬀ, Zarembo (2000) for a circular
+Wilson loop. It is J1 rather than I1 because of Minkowski space.
+Nothing good happens with the contribution of ladders to the cusp anomalous dimen-
+sion. It is not of the form prescribed by the renormalizability (cf. Eq. (1.14)):
+W (Γl.c.) ∝ e− 1 4 f (β) ln2 T a . (2.32)
+A miniconclusion of this fact is that diagrams with interaction have to contribute.
+2.7 Two-loop ladder diagram
+The contribution to the cusp anomalous dimension of the ladder diagram with two rungs
+depicted in Fig. 8 was calculated by Korchemsky, Radyushkin (1987).
+S T
+Figure 8: Ladder diagram with two rungs.
+13
+=== PAGE 14 ===
+The result is
+γ(lad) cusp = λ2 128π4 (coshθ − 1)2 sinh2θ ∫ ∞ 0 dσ σ ln ( 1 + σ eθ 1 + σ e−θ ) ln ( σ + eθ σ + e−θ )
+→ λ2
+96π4
+(
+θ3 + π2
+2 θ + O(1)
+)
+. (2.33)
+The θ3 -term should be cancelled by interaction! Therefore, not only ladder diagrams
+are essential to order λ2.
+Similar results hold for the light-cone Wilson loop, when
+Gladd. l.c. = 1 − β 2 ln2 T ε + β2 12 ln4 T ε − β2π2 12 ln2 T ε . (2.34)
+The term ln4 T ε is again to be cancelled by diagrams with interaction.
+2.8 Anomaly surface term
+As was shown by Y. M., Olesen, Semenoﬀ (2006), the cancellation between the diagrams
+with the three-gluon vertex and the corrections to propagators (both are of the order λ2)
+is not complete. These diagrams are depicted in Fig. 9.
+(c)
++ +
+(b) (d)
+=
+(a)
+Figure 9: Interaction diagrams of the order λ2. The sum of the diagrams (b), (c) and (d)
+on the right-hand side is equal to the anomalous term represented by the diagram (a) on
+the left-hand side.
+The cancellation of the diagrams (b), (c) and (d) on the right-hand side is not complete
+as it is for a straight line or a circular loop. A nonvanishing surface term comes from
+integration by parts. It is represented by the diagram (a) on the left-hand side. It gives
+the following contribution to the cusp anomalous dimension
+γanom cusp = − λ2 16π4 coshθ − 1 coshθ (∫ θ 0 + ∫ π/2 0 ) dψψ 1 − cosh2 ψ/ cosh2θ ln cosh2θ cosh2 ψ
+→ − λ2
+96π4
+(
+θ3 + π2θ + O(1) ) . (2.35)
+Theθ3 -terms are mutually cancelled in the sum of the contributions of the ladder dia-
+gram (2.33) and the anomaly diagram (2.35). The remaining linear-in-θ term reproduces
+the known results
+γcusp = θ 2 ( λ 2π2 − λ2 96π2 ) + O(θ0) (2.36)
+14
+=== PAGE 15 ===
+for the two-loop cusp anomalous dimension.
+Both the ladder contribution (2.33) and the anomaly contribution (2.35) simplify at
+the light cone. To demonstrate the exponentiation to the order λ2, it is convenient to
+apply the so-called “non-Abelian exponentiation theorem” which states that
+ln W = G(1) + A(2) − G(2) crossed + O(λ3) , (2.37)
+where G(2) crossed denotes the ladder diagram with two crossed rungs, which is nonplanar and
+have to be added (and correspondingly subtracted) for the exponentiation of the diagram
+in Fig. 6(b) of the order λ.
+We calculate the diﬀerence of the anomaly and crossed ladder diagram using the
+regularization via dimensional reduction to d = 4 − ǫ:
+A(2) − G(2) crossed = 2β2
+∫ S
+a
+ds
+s1−ǫ
+∫ T
+b
+dt
+t1−ǫ
+[π2
+6 − Li2
+( αs
+αs + t
+)]
+. (2.38)
+The integral in Eq. (2.38) is fast convergent when s → ∞ or t → 0 because Li2(1) =
+π2/6. Alternatively, the second term (dilogarithm) can be omitted with the double-
+logarithmic accuracy for αs ≪ t. This justiﬁes the exponentiation to the order λ2 and
+reproduces the two-loop anomalous dimension because only the domain αs<∼ t is essential
+both for αS ≪ T and αS ≫ T .
+2.9 Higher-order anomaly terms
+A question arises as to whether the anomaly surface term of orderβ2 is the only one (like
+an anomaly in QFT) or next order anomaly terms also appear. This question can be
+answered in the double logarithmic approximation.
+Let us consider the sum of the ladder diagram with three rungs and the anomaly
+diagram of the order λ2 dressed by a ladder as is depicted in Fig. 10. It is easy to see that
+S T
+Figure 10: Dressing of the anomaly diagram of the order λ2 by a ladder.
+this sum does not provide the coeﬃcient required for the exponentiation to the order λ3,
+like in
+Wl.c. (Γ) = e− β 2 T 2 , αS >∼ T, (2.39)
+15
+=== PAGE 16 ===
+which itself is a consequence of a dual conformal symmetry by Drummond, Korchemsky,
+Sokatchev (2008), Drummond, Henn, Korchemsky, Sokatchev (2008) and reviewed in the
+lectures by G. Korchemsky at this School.
+However, to guarantee the exponentiation in the double logarithmic approximation to
+the order λ3, it is enough to add a new anomaly diagram depicted in Fig. 11. It appears
+from a particular class of interaction diagrams of the order λ3 after two integrations by
+parts.
+S T
+Figure 11: New anomaly diagram of the order λ3 which provides the exponentiation in
+the double logarithmic approximation.
+2.10 Higher-order anomaly terms (continued)
+The exponentiation to the order λ3, described in the previous Section, prompts to analyze
+anomaly diagrams of the type depicted in Fig. 12, i.e. of the type of a sliced pie.
+. . .
+Figure 12: Particular class of anomaly diagrams.
+This class of diagrams can be exactly calculated recursively. Let us denote x = −us
+and y = vt with y2 = 0 and x2 ⁄= 0 to proceed recursively. We ﬁnd for the n-loop (n-slice)
+16
+=== PAGE 17 ===
+diagram
+P (n)(x,y) = 2n−1(−1)n βn
+4(n − 1)!
+( 4
+ǫ
+)n−1 Γ(1 − nǫ 2 )
+Γn(1 − ǫ 2 )
+× u · v
+∫ S
+0
+ds
+∫ T
+0
+dt
+∫ 1
+0
+dτ1 · · · dτn−1
+∏n−1
+k=1 τ−kǫ/2 k (1 − τk)−ǫ/2
+(
+x2 − 2 ∏n−1 k=1 τkx · y )1−nǫ/2 .
+(2.40)
+We have inserted a combinatorial factor of 2n−1 because the n − 1 lines, that are trapped
+by the cusp, may come from both sides.
+Equation (2.40) is the exact result for the loop with 1 light-cone segment.
+For the loop with 2 light-cone segments, we put x2 = 0 after which the integral is
+expressed via Γ-functions:
+P (n) = (−1)n βn
+16(n!)2
+( 4
+ǫ
+)2n Γ(1 − nǫ 2 )Γ(1 + (n−1)ǫ 2 )
+Γ(1 − ǫ 2 ) (2u · vST )nǫ/2 . (2.41)
+It gives again the Bessel function J0 in the double logarithmic approximation rather than
+the exponential (2.39).
+In fact this illustrates why it is very diﬃcult to obtain the exponential (2.39) in the
+framework of planar QFT, where the appearance of Bessel functions is instead quite
+natural and understandable from the relationship between connected planar and all planar
+diagrams. The exponential (2.39) is rather quite natural for Abelian theories when planar
+and nonplanar diagrams are both essential. Actually the role of the anomaly terms is
+simply to complete the Bessel function to an exponential.
+A question immediately arises as to what is the equation which sums planar dia-
+grams: ladders and anomalous to provide the exponentiation in the double logarithmic
+approximation? For this purpose we shall consider in the next lecture the cusped loop
+equation.
+Lecture 3. Cusped Loop Equation
+In this lecture I consider the loop equation for cusped Wilson loops. I begin with a review
+of the modern formulation of the loop equation, describe its supersymmetric extension
+and a UV regularization. Then I concentrate on speciﬁc features of the loop equation
+for cusped loops and show how to extract the cusp anomalous dimension from the loop
+equation.
+3.1 Loop equation in QCD
+The Schwinger–Dyson equation of Yang–Mills theory
+∇ab µ Fb µν(x) w.s. = ℏ δ δAa ν(x) , (3.1)
+17
+=== PAGE 18 ===
+when applied for Wilson loops, was translated by Y. M., Migdal (1979) to the loop equation
+which is a closed equation as N → ∞:
+∂x µ δ δσµν(x) W (C) = λ ∮
+C
+dyν δ(d)(x − y) W (Cyx) W (Cxy) . (3.2)
+This original loop equation includes the operators of path and area derivatives, which are
+deﬁned for functionals of Stokes type obeying the zig-zag symmetry. The product of two
+W ’s on the right-hand side is due to the large-N factorization.
+The following vocabulary for translation from the ordinary space to loop space is in
+order.
+Ordinary space Loop space
+Φ[A] Phase factor Φ(C) Loop functional
+Fµν(x) Field strength δ δσµν(x) Area derivative
+∇x µ Covariant derivative ∂x µ Path derivative
+∇ ∧ F = 0 Bianchi identity Stokes functionals
+−∇µFµν Schwinger–Dyson Loop
+= δ/δAν equation equation
+3.2 Loop-space Laplace equation
+A very nice (and equivalent!) form of the loop equation can be obtained by one more
+contour integration over x:
+∆W (C) =λ
+∮
+C
+dxµ
+∮
+C
+dyµδ(d)(x − y) W (Cyx) W (Cxy) . (3.3)
+The operator ∆ on the left-hand side of Eq. (3.3) is nothing but the loop-space Lapla-
+cian
+∆ ≡
+∮
+C
+dxν ∂x µ δ δσµν(x) =
+σf∫
+σi
+dσ
+σ+0∫
+σ−0
+dσ′ δ δxµ(σ′) δ δxµ(σ) (3.4)
+which is a proper functional extension of a ﬁnite-dimensional Laplacian that respects
+continuity of the loop. As is seen from the right-hand side of Eq. (3.4), the loop-space
+Laplacian is deﬁned for a much wider class of functionals than Stokes functionals. This
+will be important for a supersymmetric extension of the loop equation.
+18
+=== PAGE 19 ===
+The loop-space Laplace equation (3.3) is associated with the second-order Schwinger–
+Dyson equation
+∫
+ddx ∇µFa µν (x) δ δAa ν(x) w.s. = ℏ ∫ ddx ddyδ(d)(x − y) δ δAa ν(y) δ δAa ν(x) (3.5)
+in the same sense as the original loop equation (3.2) is associated with Eq. (3.1). This fact
+was utilized by Halpern, Y. M. (1989) to construct a non-perturbative gauge-invariant
+regularization of Eq. (3.4) by substituting
+δbcδ(d)(x − y) reg. =⇒
+⟨
+y
+⏐⏐⏐⏐ ( ea2∇2 /2 )bc ⏐⏐⏐⏐x ⟩ , (3.6)
+where a is a UV cutoﬀ.
+3.3 Smearing of loop-space Laplacian
+A smearing of the loop-space Laplacian is needed to invert it, i.e. to produce a Green
+function.
+The proper smearing procedure (which makes a second-order operator from the ﬁrst
+order loop-space Laplacian) reads as
+∆(G) =
+1∫
+0
+dσ
+1∫
+0
+dσ′G(σ,σ′) δ δxµ(σ′) δ δxµ(σ)
+=
+1∫
+0
+dσ
+1∫
+0
+⁄ dσ′G(σ,σ′) δ δxµ(σ′) δ δxµ(σ) + ∆ (3.7)
+with the parametric-invariant smearing function
+G(σ1,σ2) = e−|
+R σ2
+σ1 dσ
+√
+˙x2(σ)|/ε (ε ≪ L = length) . (3.8)
+Here ε has the meaning of a stiﬀness of the loop.
+3.4 Green function of functional Laplacian
+Loop-space Laplacian was inverted by Y. M. (1988) to produce a Green function which
+is useful for an iterative solution.
+The functional Laplace equation
+∆(G)W [x] = J[x] (3.9)
+with the proper choice of boundary conditions can be solved for a given J[x] to give
+W [x] = 1 − 1 2 ∫ ∞ 0 dA {⟨ J[x + √ Aξ] ⟩(G) ξ − ⟨ J[ √ Aξ] ⟩(G) ξ } . (3.10)
+19
+=== PAGE 20 ===
+The average over the loops ξ(σ) in Eq. (3.10) is given by the path integral
+⟨F [ξ]⟩(G) ξ =
+∫
+ξ(0)=ξ(1) Dξ e−SF [ξ]∫
+ξ(0)=ξ(1) Dξ e−S (3.11)
+over closed trajectories with the local action
+S = 1 4 ∫ 1 0 dσ { ε√ ˙x2(σ) ˙ξ 2 (σ) + √ ˙x2(σ) ε ξ2(σ) } . (3.12)
+This extends the results of the French mathematician R. Gˆateaux (early 1900’s) for the
+functional Laplacian (obtained for the case of L2 space of functions with an integrable
+square) to the case of loop space when loops are always continuous functions. It is
+immediately seen from the action (3.12) that the presence of the stiﬀness ε is crucial to
+have a Wiener-type measure in the path integral (3.11) and correspondingly continuous
+trajectories.
+3.5 Iterative solution
+In large-N Yang–Mills theory the regularized J[x] is as above bilinear in W :
+J (G)[x] = λ
+∫ 1
+0
+∫ 1
+0
+dσ1dσ2 (1 − G(σ1 − σ2)) ˙xµ(σ1) ˙xµ(σ2)
+×
+∫ r(a2 )=x(σ2 )
+r(0)=x(σ1 )
+Dr e− 1 2 R a2 0 dτ ˙r2(τ )
+× W (Cx(σ1 )x(σ2 )rx(σ2 )x(σ1 )) W (Cx(σ2 )x(σ1 )rx(σ1 )x(σ2 )) . (3.13)
+It can been shown that an iterative solution in λ starting from W0(C) = 1 recovers
+Yang–Mills perturbation theory. All that can be deduced from the general formula
+⟨
+ei
+√
+A
+R
+dσ ˙p(σ)ξ(σ)
+⟩(G)
+ξ
+= e−A
+R
+dσ
+R
+dσ′ ˙p(σ)G(σ−σ′ ) ˙p(σ′ )/2 , (3.14)
+where pµ(σ) (pµ(0) = pµ(1)) represents a momentum-space loop. In particular, the triple
+gluon vertex remarkably appears from doing an uncertainty ε × 1/ε.
+3.6 SYM loop equation
+An extension of the loop equation (3.3) to N = 4 SYM was proposed by Drukker, Gross,
+Ooguri (1999). An equivalent equation was derived earlier by Fukuma, Kawai, Kitazawa,
+Tsuchiya (1998) in connection with the IIB matrix model.
+The equation closes for general supersymmetric loops
+C = {xµ(σ),Yi(σ); ζ(σ)} µ = 1,..., 4, i = 1,..., 6 , (3.15)
+20
+=== PAGE 21 ===
+where ζ(σ) denotes the Grassmann odd component. An N = 4 supersymmetric extension
+of the loop-space Laplacian (3.4) is
+∆ = lim
+η→0
+∫
+ds
+∫ s+η
+s−η
+ds′
+( δ2
+δxµ(s′)δxµ(s) + δ2 δYi(s′)δYi(s) + δ2 δζ(s′)δ ¯ζ(s) ) . (3.16)
+To return to the SYM Wilson loops (1.16), we have to put ˙Y 2 = ˙x2, ζ = 0 after acting
+by ∆. We use the bold C for general loops (3.15) and normal C for SYM loops (1.25).
+The resulting N = 4 SYM loop equation then reads
+∆ ln W (C)
+⏐⏐⏐
+C=C
+= λ
+∫
+dσ1
+∫
+dσ2 ( ˙xµ(σ1) ˙xµ(σ2) − | ˙xµ(σ1)|| ˙xµ(σ2)|)
+× δ(4)(x1 − x2) W (Cx1x2 )W (Cx2x1 ) W (C) . (3.17)
+For latter convenience we have applied ∆ to ln W (C) and used the fact that ∆ is a ﬁrst-
+order operator (obeys the Leibnitz rule). The right-hand side is correspondingly divided
+by W (C).
+Probably a simpler version of N = 4 SYM loop equation exists which is written
+directly for SYM loops W (C) along the line of the derivation of the loop equation for an
+Abelian scalar loop by Y. M. (1988). It is crucial for this approach that the loop-space
+Laplacian is well-deﬁned for the functionals of the type (1.16) which do not obey the
+zig-zag symmetry because of the presence of
+√
+˙x2. But Eq. (3.17) will be enough for the
+purposes below.
+3.7 Cusped loop equation
+The loop equation for cusped Wilson loops, which we denote by Γ, can be obtained by
+substituting C = Γ in Eq. (3.17). We then obtain the following cusped loop equation
+∆ ln W (C)
+⏐⏐⏐
+C=Γ
+= λ
+∫
+dσ1
+∫
+dσ2 ( ˙xµ(σ1) ˙xµ(σ2) − | ˙xµ(σ1)|| ˙xµ(σ2)|)
+× δ(4)(x1 − x2) W (Γx1 x2 )W (Γx2x1 ) W (Γ) . (3.18)
+The cusped loop equation (3.18) has several remarkable properties. One of them is
+the following. The right-hand side of the usual Yang–Mills loop equation (3.3) is of the
+order L/a3, where a is a UV cutoﬀ. For the N = 4 SYM loop equation (3.17) this term
+is cancelled by scalars so the right-hand side of Eq. (3.17) is ∼ (La)−1 for smooth loops.
+But it is easy to estimate that it is ∼ a−2 for cusped loops which is larger. Therefore,
+some interesting information about cusped Wilson loop can be extracted from the loop
+equation at the order ∼a−2. As we shall now see, this is the cusp anomalous dimensions.
+A crucial observation is the following relation that holds for cusped Wilson loops:
+∆ ln W (C)
+⏐⏐⏐
+C=Γ
+= − d da2 ln W (Γ) + O(a−1) . (3.19)
+21
+=== PAGE 22 ===
+Here the diﬀerential operator on the right-hand side which is, in general, regularization-
+dependent is written for the Schwinger proper time regularization, like in Eq. (3.13).
+The relation (3.19) can be veriﬁed in perturbation theory for usual Yang–Mills and most
+probably extends to the SYM case.
+Noting that the term of the order a−2 on the right-hand side of Eq. (3.19) gives
+the cusped anomalous dimension owing to Eq. (1.5), we ﬁnd that the cusp anomalous
+dimension equals to the term of the order a−2 on the right-hand side of the (regularized)
+loop equation:
+2
+a2 γcusp (θ,λ) + O
+(
+a−1) = λ ∫ dσ1 ∫ dσ2 ( ˙xµ(σ1) ˙xµ(σ2) − | ˙xµ(σ1)|| ˙xµ(σ2)|)
+× δ(4) a (x1 − x2) W (Γx1x2 )W (Γx2 x1 ) W (Γ) . (3.20)
+Here the right-hand side is to be regularized according to Eq. (3.13).
+This very interesting fact was ﬁrst observed to the order λ of perturbation theory by
+Drukker, Gross, Ooguri (1999) and veriﬁed to order λ2 for arbitrary θ by Y. M., Olesen,
+Semenoﬀ (2006). The nontrivial function ofθ thus reproduced to the order λ2 is the sum
+of the contribution of the ladder diagram (2.33) and the anomaly diagram (2.35).
+The contribution of the ladder diagram of order λ2 straightforwardly comes iteratively
+by substituting the ladder diagram of order λ into the right-hand side of Eq. (3.20). A
+planar part is cancelled between the numerator and the denominator on the right-hand
+side of Eq. (3.20) so what is left is analogous to the diagram with two crossed ladders (with
+the minus sign) as in Eq. (2.33). This is a well-know implementation of the “non-Abelian
+exponentiation theorem” in the loop equation.
+Alternatively, the contribution of the anomaly diagram is reproduced in a very non-
+trivial way, when a gluon is attached to the regularizing path rx1x2 . While the length of
+this path is ∼ a, i.e. very small, this smallness is compensated by a very large factor.
+The calculation is performed using an important formula of the loop dynamics derived by
+Y. M., Migdal (1981):
+∫
+z(0)=x
+z(τ )=y
+Dz(t) e− R τ 0 dt ˙z2(t)/2 ∫ y
+x
+dzµδ(d)(z − u) =
+∫ ∞
+0
+dτ1
+∫ ∞
+0
+dτ2 δ (τ − τ1 − τ2)
+× 1 (2πτ1)d/2 e−(x−u)2 /2τ1
+↔
+∂
+∂uµ
+1
+(2πτ2)d/2 e−(y−u)2 /2τ2 . (3.21)
+This formula in the usual Yang–Mills theory was used to reproduce the three gluon vertex.
+Now in N = 4 SYM it reproduces directly the anomaly diagram, rather than individual
+interaction diagrams.
+An expectation is that the loop equation may be useful for analyzing next orders in λ
+and, in particular, to verify the exponentiated solution (2.39) in the double logarithmic
+approximation.
+22
+=== PAGE 23 ===
+3.8 Some comments about large-N QCD
+Some of the results described above for cusped Wilson loops in N = 4 SYM are applicable
+also to large-N QCD. Actually, nobody considered before speciﬁc features of the loop
+equation for cusped loops.
+A ﬁrst immediate consequence of the cusped loop equations is that | ˙x| on the right-
+hand side (which comes from scalars) can be neglected near the light-cone, reproducing
+the same cusped loop equation as in QCD.
+This may indicate that γcusp coincide in both cases while the diﬀerence is absorbed by
+the charge renormalization which is present in QCD and missing in N = 4 SYM. This
+may be understood because supersymmetry is broken by construction in the presence of
+a cusp and the larger the cusp the larger is the breaking. However, this assertion is in
+fact rather vague because the cusp anomalous dimension is regularization-dependent. But
+this indeed works to the order λ2, if the regularization in both cases is via dimensional
+reduction. A comparison of recent explicit calculations of the anomalous dimensions of
+twist-two operators to the order λ3 in QCD by Moch, Vermaseren, Vogt (2004) with
+those in SYM by Kotikov, Lipatov, Onishchenko, Velizhanin (2004) may be useful for this
+purpose.
+Conclusions
+I list below a (quite incomplete) set of conclusions from these lectures:
+• Cusped Wilson loops are convenient for studies of the anomalous dimensions;
+• The minimal surface of an open string in AdS5 ⊗ S5 determines the cusp anomalous
+dimension at large λ via the AdS/CFT correspondence;
+• Ladder diagrams themselves do not give a reasonable result for the cusp anomalous
+dimension, so that diagrams with interaction are essential;
+• A cancellation of interaction diagram to the order λ2 is not complete for N = 4
+SYM cusped Wilson loops and an anomaly surface term remains;
+• Results in the double logarithmic approximation indicate that higher-order interac-
+tion diagrams are also essential for the exponentiation;
+• The loop equation has speciﬁc features for cusped loops when its right-hand side
+reproduces the cusp anomalous dimension;
+• There are indications that some of the results about the cusp anomalous dimension
+in N = 4 SYM could persist for QCD;
+• A challenging problem is to obtain
+√
+λ for large λ in perturbation theory.
+23
+=== PAGE 24 ===
+Appendix A Minimal surface in AdS5 ⊗ S5
+I brieﬂy review in this Appendix the calculation of the cusp anomalous dimension at large
+λ which is based on the open-string/Wilson-loop correspondence described in Sect. 1.10.
+Only the leading order calculation by Kruczenski (2002), Y. M. (2003) in the supergravity
+approximation is considered.
+A.1 Near cusp ansatz
+We describe the AdS5 space by the Poincar´e coordinates
+x0 = t, x1 = x, x2 = x3 = 0, z (A.1)
+choosing the Π-shaped loop to be located in the 0, 1-plane. The associated AdS3 metric
+is
+ds2 =R2 dt2 − dx2 − dz2
+z2 . (A.2)
+We parametrize the string worldsheet by the coordinates τ = t, σ = x so the open-
+string action reads as
+A = − R2
+2πα′
+y∫
+0
+dx
+∞∫
+x
+dt 1 z2
+√
+1 +
+(∂z
+∂x
+)2
+−
+(∂z
+∂t
+)2
+. (A.3)
+It is to be minimized for the function z(t,x).
+Using scale and Lorentz invariance (at the worldsheet) the following ansatz was pro-
+posed by Drukker, Gross, Ooguri (1999) near the cusp to simplify the problem of mini-
+mizing the action (A.3):
+z(t,x) =
+√
+t2 − x2 1 f (θ) , θ = arctanh x t . (A.4)
+It works for the domain near the cusp depicted in Fig. 13. As we shall see shortly it is the
+domain which contributes to the cusp anomalous dimension at large θ and at the light
+cone.
+The original two-dimensional variational problem is thus reduced to a one-dimensional
+Euler–Lagrange one.
+A.2 Euler–Lagrange problem
+We are led to minimize the one-dimensional action
+A = −2 R2
+2πα′
+∫ dx
+x
+∫
+dθ
+√
+f 4 − f 2 + f′ 2 , (A.5)
+where the factor of 2 is because the Π-shaped Wilson loop in Fig. 13(a) has two cusps.
+24
+=== PAGE 25 ===
+x
+t
+(a)
+y
+θ=
+θθ=0
+(b)
+oo
+Figure 13: Near cusp domains of the minimal surface which determines the cusp anoma-
+lous dimension. In Fig. (b) one of the two domains is magniﬁed.
+The standard condition thatz = 0 in the boundary is transformed into the boundary
+condition for f (θ): f (0) = ∞ and an arbitrary value of f (∞) because
+√
+t2 − x2 → 0 as
+θ → ∞. Also, f = 0 is the horizon and f = 1 is the AdS light cone given by z2 = t2 − x2.
+To minimize the action (A.5), we solve the following Euler–Lagrange equation
+f′′V = f′2V′ + 1 2V′V , V = f 4 − f 2 (A.6)
+with the described boundary conditions.
+A.3 Solution for f (θ)
+The equation (A.6) can be easily integrated utilizing the conserved “energy”
+E = V√
+f′2 + V =⇒ f′ = −
+√
+V 2
+E2 − V . (A.7)
+It is seen from these formulas thatθmax is ﬁnite unless E2 = −1/4 < 0 (an instanton-like
+solution).
+An exact analytic solution to Eq. (A.7) is
+θ =
+√
+2 arctanh
+√
+2(1 − f 2) − arctanh √ 1 − f 2 − iπ 2 (√ 2 − 1 ) . (A.8)
+It obeys the boundary condition θ = 0 at f = ∞ and θ → ∞ approaching the light cone
+as f → fmin = 1/
+√
+2.
+Only a part of the surface near the light cone described by the equation
+z =
+√
+t2 − x2
+fmin
+=
+√
+2(t2 − x2) (A.9)
+25
+=== PAGE 26 ===
+will be essential for the cusp anomalous dimension. It is the same (space-like) minimal
+surface as found by Kruczenski (2002) for space-like Wilson loops, when it was always
+real.
+A.4 Cusp anomalous dimension
+Substituting the solution (A.8) into the action (A.5), we ﬁnd that the essential domain
+of integration is when
+f → fmin = 1√ 2 + √ 2 e− √ 2θmax , θmax = ln 2 √ 2x a (A.10)
+and θ → θmax. We get for the divergent part of the minimal area
+Amin = R2
+πα′
+∫ y
+a
+dx
+x
+∫ θmax
+0
+dθ
+√
+f 4 min − f 2 min
+= iR2
+πα′
+∫ y
+a
+dx
+x
+θmax
+2 = i R2 4πα′ ln2 y a. (A.11)
+From the open-string/Wilson-loop correspondence, described in Sect. 1.10, we obtain
+WSYM(Π) = e2iAmin with √ λ = R2 α′. (A.12)
+Comparing with Eq. (1.14) we ﬁnd
+f (λ) =
+√
+λ
+π large λ (A.13)
+which reproduces the result by Gubser, Klebanov, Polyakov (2002) quoted in Sect. 1.9. It
+is obtained for open string in the supergravity approximation while the original calculation
+dealt with closed string in the plane wave limit.
+The asymptotic behavior (A.13) of the cusp anomalous dimension at large λ has
+been remarkably reproduced from the spin-chain equation of Beisert, Eden, Staudacher
+(2007) ﬁrst numerically by Benna, Benvenuti, Klebanov, Scardicchio (2007) and then
+analytically by Kotikov, Lipatov (2007), Basso, Korchemsky, Kotanski (2008). The latter
+authors constructed a systematic expansion of the cusp anomalous dimension in 1/
+√
+λ,
+reproducing also the O(1) correction by Frolov, Tseytlin (2002) obtained from closed
+stings. The next order in 1/
+√
+λ also agrees with the recent superstring calculations by
+Roiban and Tseytlin (2007), (2008).
+26
+=== PAGE 27 ===
+Appendix B Double-Logarithmic Accuracy
+I describe in this appendix how the double logarithmic accuracy works for lightcone Wilson
+loops to the leading order, conﬁrming in particular previously obtained results.
+B.1 Double logarithms at the light cone
+Let us consider the 1 light-cone limit with β ≪ 1 while
+T = ln T αa, Σ = ln S a (B.1)
+are both large for the double Logs to be of order 1. We assumeα> 0 (forα< 0 it should
+be substituted by |α|).
+The double Logs appear in the ladder equation (2.17) from the domain of integration
+t ≫αs, so we rewrite it with DLA as
+G (S,T ; a,b ≤αa) = 1 −β
+∫ min{S,T/α}
+a
+ds
+s
+∫ T
+max{αs,b}
+dt
+t G (s,t; a,b ≤αa) . (B.2)
+We solve it ﬁrst for G (S,T ≥αS; a,b), which then determines G (S,T ≤αS; a,b) in DLA.
+B.2 Leading-order solution
+An exact solution to Eq. (B.2) for b ≤αa is given by the sum of two Bessel functions
+G (S,T ≥αS; a,b ≤αa) = J0
+(
+2
+√
+βΣT
+)
++ Σ T J2 ( 2 √ βΣT ) . (B.3)
+The ﬁrst term on the RHS of Eq. (B.3) is familiar from the α = 0 solution. But now the
+solution is for any α with DLA.
+The solution (B.3) obeys the boundary condition G(a,T ; a,b) = 1. The second one,
+G(S,b; a,b) = 1, cannot be veriﬁed because T ≥αS. Instead (B.3) obeys
+∂
+∂S G(S,T ≥αS; a,b)
+⏐⏐⏐
+S=T/α
+= 0 (B.4)
+at the boundary S = T/α, which can be deduced from Eq. (B.2).
+Substituting S = T/α we have from Eq. (B.3)
+G (T,T ; a,b ≤αa) = J1
+(
+2√βT ) √βT (B.5)
+which is the same Bessel function as in Y. M., Olesen, Semenoﬀ (2006).
+Finally, substituting Eq. (B.3) into Eq. (B.2), we get
+G (S ≥ T/α,T ; a,b ≤αa) = J1
+(
+2√βT ) √βT (B.6)
+which does not depend on Σ with DLA. We can set S = ∞ in Eq. (B.6).
+27
+=== PAGE 28 ===
+Appendix C Exact Sum of Lightcone Ladders
+I describe in this appendix now to draw the contour in the complex ω-plane for the
+solution (2.28) with F obeying Eq. (2.29) to satisfy the boundary condition (2.21) and
+correspondingly to be a solution for the sum of the lightcone ladder diagrams.
+C.1 The exact solution
+The ansatz (2.28) with F obeying Eq. (2.29) will satisfy the boundary condition (2.21) if
+the integrand has no poles in the complex ω-plane. Then the contour of the integration
+over ω can be arbitrarily deformed.
+The following linear combination of solutions of the hypergeometric equation (2.29)
+solves the problem as was shown by Y. M., Olesen, Semenoﬀ (2006):
+G(S,T ; a,b) =
+∮
+C r
+dω
+2πiω
+2F1
+(
+−
+√
+βω, −
+√
+βω−1; 1 − √ β(ω + ω−1); −αa b )
+×
+(S
+a
+)√βω(T
+b
+)−√βω−1
+2F1
+(√
+βω,
+√
+βω−1; 1 + √ β(ω + ω−1); −αS T )
++
+∫
+|nmin−0
+ds
+2πi
+Γ(−s)
+Γ(s)
+1√β(ωR + − ωR −) Γ(√βωR +)Γ(1 + √βωR +) Γ(√βωL +)Γ(1 + √βωL +)
+×
+[(αS
+b
+)√βωR + ( T
+αa
+)−√βωR −
++
+(αS
+b
+)√βωR − (T
+αa
+)−√βωR + ]
+×2F1
+(√
+βωR +, √ βωR −; s + 1; −αa b ) 2F1 (√ βωR +, √ βωR −; s + 1; −αS T )
+(C.1)
+with
+ωR ± = s 2√β ±
+√
+s2
+4β − 1 ωL ± = −ωR ∓ = − s 2√β ±
+√
+s2
+4β − 1 . (C.2)
+The contour Cr in the ﬁrst term runs over a circle of arbitrary radius r (|ω| = r). The
+second contour integral runs parallel to imaginary axis along
+s = nmin − 0 + ip (−∞ <p< +∞) , (C.3)
+where
+nmin =
+[√
+β(r + 1/r)
+]
++ 1 (C.4)
+and [· · ·] denotes the integer part.
+C.2 Cancellation of poles
+The integrand in the ﬁrst term on the right-hand side of Eq. (C.1) has poles at
+ω = ωR ±(n) = n 2√β ±
+√
+n2
+4β − 1 , ω = ωL ±(n) = − n 2√β ±
+√
+n2
+4β − 1 (C.5)
+28
+=== PAGE 29 ===
+as the hypergeometric functions have. These poles are depicted in Fig. 14.
+ω
+123123 3 1 2 321
+ω
+123123 3 1 2 321
+Figure 14: Location of poles of the integrand in the ﬁrst term in Eq. (C.1) for β < 1 4 ,
+r = 1 (above) and β < 1 4 , r< 1 (below). The circle represents the contour of integration
+Cr.
+The poles of the integrand in the ﬁrst term are cancelled by the poles at s = n of the
+integrand in the second term, so the contour of integration can be arbitrarily deformed.
+This is guaranteed by the value of nmin, given by Eq. (C.4), which changes accordingly
+with r to provide the cancellation of the poles of the ﬁrst term, that are located inside
+Cr, by those of the second term, that are located to the right on nmin.
+The boundary conditions (2.21) are satisﬁed by the solution (C.1): we choose the
+integration contour in the ﬁrst term to be a circle of the radius which is either small for
+T = b or large for S = a. Then the residue at the pole at ω = 0 or ω = ∞ equals 1 which
+proves that the boundary conditions is satisﬁed.
+For S = T , a = b andα = −1 the solution (C.1) simpliﬁes to the Bessel function (2.30).
+References
+[1] L. F. Alday and J. Maldacena, Gluon scattering amplitudes at strong coupling, JHEP
+0706 (2007) 064 [arXiv:0705.0303 [hep-th]].
+29
+=== PAGE 30 ===
+[2] L. F. Alday and J. Maldacena, Comments on operators with large spin, JHEP 0711
+(2007) 019. [arXiv:0708.0672 [hep-th]].
+[3] L. F. Alday and J. Maldacena, Comments on gluon scattering amplitudes via
+AdS/CFT, JHEP 0711 (2007) 068 [arXiv:0710.1060 [hep-th]].
+[4] B. Basso, G. P. Korchemsky and J. Kotanski, Cusp anomalous dimension in max-
+imally supersymmetric Yang-Mills theory at strong coupling, Phys. Rev. Lett. 100
+(2008) 091601 [arXiv:0708.3933 [hep-th]].
+[5] N. Beisert, B. Eden and M. Staudacher, Transcendentality and crossing, J. Stat.
+Mech. 0701 (2007) P021 [arXiv:hep-th/0610251].
+[6] M. K. Benna, S. Benvenuti, I. R. Klebanov and A. Scardicchio, A test of the
+AdS/CFT correspondence using high-spin operators, Phys. Rev. Lett. 98, 131603
+(2007) [arXiv:hep-th/0611135].
+[7] D. Berenstein, R. Corrado, W. Fischler and J. Maldacena, The operator product
+expansion for Wilson loops and surfaces in the large N limit, Phys. Rev. D 59 (1999)
+105023 [arXiv:hep-th/9809188].
+[8] Z. Bern, L. J. Dixon and V. A. Smirnov, Iteration of planar amplitudes in maximally
+supersymmetric Yang-Mills theory at three loops and beyond, Phys. Rev. D 72 (2005)
+085001 [arXiv:hep-th/0505205].
+[9] Z. Bern, M. Czakon, L. J. Dixon, D. A. Kosower and V. A. Smirnov, The four-
+loop planar amplitude and cusp anomalous dimension in maximally supersymmetric
+Yang-Mills theory, Phys. Rev. D 75 (2007) 085010 [arXiv:hep-th/0610248].
+[10] R. A. Brandt, F. Neri and M. Sato, Renormalization of loop functions for all loops,
+Phys. Rev. D 24 (1981) 879.
+[11] S. J. Brodsky, Y. Frishman, G. P. Lepage, and C. T. Sachrajda, Hadronic wave
+functions at short distances and the operator product expansion, Phys. Lett. B 91
+(1980) 239.
+[12] V. S. Dotsenko and S. N. Vergeles, Renormalizability of phase factors in non-Abelian
+gauge theory, Nucl. Phys. B 169 (1980) 527.
+[13] N. Drukker and D. J. Gross, An exact prediction of N = 4 SUSYM theory for string
+theory, J. Math. Phys. 42 (2001) 2896 [arXiv:hep-th/0010274].
+[14] N. Drukker, D. J. Gross and H. Ooguri, Wilson loops and minimal surfaces, Phys.
+Rev. D 60 (1999) 125006 [arXiv:hep-th/9904191].
+[15] J. M. Drummond, J. Henn, G. P. Korchemsky and E. Sokatchev, On planar gluon
+amplitudes/Wilson loops duality, Nucl. Phys. B 795 (2008) 52 [arXiv:0709.2368 [hep-
+th]].
+30
+=== PAGE 31 ===
+[16] J. M. Drummond, J. Henn, G. P. Korchemsky and E. Sokatchev, Dual superconformal
+symmetry of scattering amplitudes in N=4 super-Yang-Mills theory, arXiv:0807.1095
+[hep-th].
+[17] J. M. Drummond, G. P. Korchemsky and E. Sokatchev, Conformal properties of
+four-gluon planar amplitudes and Wilson loops, Nucl. Phys. B 795 (2008) 385
+[arXiv:0707.0243 [hep-th]].
+[18] B. Eden and M. Staudacher, Integrability and transcendentality, J. Stat. Mech. 0611
+(2006) P014 [arXiv:hep-th/0603157].
+[19] J. K. Erickson, G. W. Semenoﬀ, R. J. Szabo, and K. Zarembo, Static potential in
+N = 4 supersymmetric Yang-Mills theory, Phys. Rev. D 61 (2000) 105006 [arXiv:hep-
+th/9911088].
+[20] J. K. Erickson, G. W. Semenoﬀ and K. Zarembo, Wilson loops in N = 4 supersym-
+metric Yang-Mills theory, Nucl. Phys. B 582 (2000) 155 [arXiv:hep-th/0003055].
+[21] M. Fukuma, H. Kawai, Y. Kitazawa and A. Tsuchiya, String ﬁeld theory from IIB
+matrix model, Nucl. Phys. B 510 (1998) 158 [arXiv:hep-th/9705128].
+[22] S. Frolov and A. A. Tseytlin Semiclassical quantization of rotating superstring in
+AdS5 × S5, JHEP 0206 (2002) 007 [arXiv:hep-th/0204226].
+[23] M. B. Halpern and Y. M. Makeenko, Continuum-regularized loop-space equation,
+Phys. Lett. B 218 (1989) 230.
+[24] J. L. Gervais and A. Neveu, The slope of the leading Regge trajectory in quantum
+chromodynamics, Nucl. Phys. B 163 (1980) 189.
+[25] D. J. Gross and F. Wilczek, Asymptotically free gauge theories, Phys. Rev. D 8 (1973)
+3633.
+[26] S. S. Gubser, I. R. Klebanov and A. M. Polyakov, A semi-classical limit of the
+gauge/string correspondence, Nucl. Phys. B 636 (2002) 99 [arXiv:hep-th/020405].
+[27] G. P. Korchemsky and G. Marchesini, Partonic distributions for large x and renor-
+malization of Wilson loop, Nucl. Phys. B 406 (1993) 225.
+[28] G. P. Korchemsky and A. V. Radyushkin, Renormalization of the Wilson loops beyond
+the leading order, Nucl. Phys. B 283 (1987) 342.
+[29] A. V. Kotikov and L. N. Lipatov, On the highest transcendentality in N = 4 SUSY,
+Nucl. Phys. B 769 (2007) 217 [arXiv:hep-th/0611204].
+[30] A. V. Kotikov, L. N. Lipatov, A. I. Onishchenko, and V. N. Velizhanin, Three-loop
+universal anomalous dimension of the Wilson operators in N = 4 SUSY Yang-Mills
+model, Phys. Lett. B 595 (2004) 521 [arXiv:hep-th/0404092].
+31
+=== PAGE 32 ===
+[31] M. Kruczenski, A note on twist two operators in N = 4 SYM and Wilson loops in
+Minkowski signature, JHEP 0212 (2002) 024 [arXiv:hep-th/0210115].
+[32] J. Maldacena, Wilson loops in large N ﬁeld theories, Phys. Rev. Lett. 80 (1998) 4859
+[arXiv:hep-th/9803002].
+[33] Y. M. Makeenko, On conformal operators in quantum chromodynamics, Sov. J. Nucl.
+Phys. 33 (1981) 440.
+[34] Y. M. Makeenko, Polygon discretization of the loop space equation, Phys. Lett. B
+212 (1988) 221.
+[35] Y. Makeenko, Methods of contemporary gauge theory, Cambridge Univ. Press (2002).
+[36] Y. Makeenko, Light-cone Wilson loops and the string/gauge correspondence, JHEP
+0301 (2003) 007 [arXiv:hep-th/0210256].
+[37] Y. M. Makeenko and A. A. Migdal, Exact equation for the loop average in multicolor
+QCD, Phys. Lett. B 88 (1979) 135.
+[38] Y. M. Makeenko and A. A. Migdal, Quantum chromodynamics as dynamics of loops,
+Nucl. Phys. B 188 (1981) 269.
+[39] Y. Makeenko, P. Olesen and G. W. Semenoﬀ, Cusped SYM Wilson loop at two loops
+and beyond, Nucl. Phys. B 748 (2006) 170 [arXiv:hep-th/0602100].
+[40] S. Moch, J. A. M. Vermaseren and A. Vogt, The three-loop splitting functions in
+QCD: The non-singlet case, Nucl. Phys. B 688 (2004) 101 [arXiv:hep-ph/0403192].
+[41] T. Ohrndorf, Constraints from conformal covariance on the mixing of operators of
+lowest twist, Nucl. Phys. B 198 (1982) 26.
+[42] A. M. Polyakov, Gauge ﬁelds as rings of glue, Nucl. Phys. B 164 (1980) 171.
+[43] S.-J. Rey and J. Yee, Macroscopic strings as heavy quarks in large N gauge theory and
+anti-de Sitter supergravity, Eur. Phys. J. C 22 (2001) 379 [arXiv:hep-th/9803001].
+[44] R. Roiban and A. A. Tseytlin, Strong-coupling expansion of cusp anomaly from quan-
+tum superstring, JHEP 0711 (2007) 016 [arXiv:0709.0681 [hep-th]].
+[45] R. Roiban and A. A. Tseytlin, Spinning superstrings at two loops: strong-coupling
+corrections to dimensions of large-twist SYM operators, Phys. Rev. D 77 (2008)
+066006 [arXiv:0712.2479 [hep-th]].
+[46] G. W. Semenoﬀ and K. Zarembo, Wilson loops in SYM theory: from weak to strong
+coupling, Nucl. Phys. Proc. Suppl. 108 (2002) 106 [arXiv:hep-th/0202156].
+[47] M. Staudacher, The factorized S-matrix of CFT/AdS, JHEP 0505 (2005) 054
+[arXiv:hep-th/0412188].
+[48] K. G. Wilson, Conﬁnement of quarks, Phys. Rev. D 10 (1974) 2445.
+32

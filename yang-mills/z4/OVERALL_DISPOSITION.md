@@ -92,3 +92,19 @@ Not a plan adopted by anyone; the choices this gathering leaves.
 3. The conventions list above can be closed by the directors in one pass.
 
 Director, workers and sub-agents are one model family. This gathering reduces the chance of a misread row; it is not independent review of any lane.
+
+---
+
+## Addendum, 23 November 2026: the requirements, from the official text
+
+The table "Against the requirements of the problem" above omits items that the official problem description makes (Jaffe and Witten, read by a worker; pages in `reviews/r10-lit1/report.md`). Added rows, with the combined state of the repository at this date:
+
+| Requirement | Combined state |
+|---|---|
+| (g) Local field operators corresponding to the gauge-invariant local polynomials in the curvature and its covariant derivatives | Not addressed. The observables studied are plaquettes, loops and their smearings at fixed regulator. |
+| (h) Short-distance agreement with asymptotic freedom and perturbative renormalization, with a stress tensor and an operator product expansion | Not addressed. Every limit obtained here is a free (Gaussian) field on a trajectory where the coupling vanishes faster than any logarithm; such a limit cannot satisfy this item. |
+| (i) The mass m = sup Δ finite | Not addressed. |
+| (j) Vacuum unique up to phase | At fixed regulator and finite volume only (B4, C4 by positivity arguments). |
+| (k) Existence by compactness alone does not count | Bears on every "subsequential limit" statement in the lanes: such a limit is not existence unless the axioms and the gap are shown for it. |
+
+The text cites both the Wightman and the Osterwalder–Schrader axioms; a Euclidean construction is acceptable. A gap uniform in finite volume is called a possible route there, not a requirement. Also scoped: the sentence in section 5 that "the literature has none in four dimensions"; see `LITERATURE.md`.

@@ -1,0 +1,3537 @@
+
+=== PAGE 1 ===
+arXiv:2205.07376v2  [math-ph]  26 Aug 2024
+On Yang-Mills Stability Bounds and Plaquette Field Generating Function
+Paulo A. Faria da Veiga∗ and Michael O’Carroll†
+Departamento de Matem´atica Aplicada e Estat´ıstica - ICMC, USP-S˜ao Carlos,
+C.P. 668, 13560-970 S˜ao Carlos SP, Brazil
+(Dated: August 26, 2024.)
+We consider the gauge-invariant Yang-Mills quantum ﬁeld theory in the imaginary-time functional
+integral Wilson formulation on the ﬁnite hypercubic lattice Λ ⊂ aZd ⊂ Rd, d = 2, 3, 4, a ∈ (0, 1],
+with L (even) sites on a side and with the gauge Lie groups G = U(N ), SU(N ). The lattice provides
+an UV regularization of the continuum spacetime and Osterwalder-Seiler positivity is veriﬁed. To
+each Λ bond b there is assigned a unitary matrix gauge variable Ub from an irrep of G. The vector
+gauge potentials (gluons) are parameters in the Lie algebra of G. The Wilson ﬁnite lattice partition
+function ZΛ (a) is used with an action AΛ(a) which is a sum of gauge-invariant plaquette (set of
+four bonds forming a minimal square) actions times [ad−4 /g2], g2 ∈ (0, g2 0 ], 0 < g2 0 < ∞. Each
+plaquette action has the product of four gauge variables; the partition function is the integral over
+the Boltzmann factor with a product over bonds of G Haar measures. Formally, in the UV limit
+a ց 0, the action gives the YM classical continuum action. For free and periodic b.c., and using
+scaled ﬁelds, deﬁned with an a-dependent noncanonical scaling, we show thermodynamic and UV
+stable (TUV) stability bounds for a scaled partition function, with bound constants independent of
+L, a and g. Passing to scaled ﬁelds does not alter the model energy-momentum spectrum, hence
+its particle contents, and can be interpreted as an a priori ﬁeld strength renormalization, making
+the action more regular. With scaled ﬁelds, we can isolate the UV singularity of the ﬁnite lattice
+physical, unscaled free energy fΛ(a) = [ln ZΛ ]/Λs , where Λs = Ld is the total number of lattice
+sites. This allows us to show the existence of, at least, the subsequential thermodynamic (L ր ∞)
+and UV (a ց 0) limits of the scaled free energy. To obtain the TUV bounds, the Weyl integration
+formula is used in the gauge integral and the random matrix probability distributions of the CUE
+and GUE appear naturally. The lower bound on ZΛ (a) results from a global, new upper bound on
+AΛ(a), quadratic in the gluon ﬁelds. This is in contrast to what happens in the classical continuum
+action which has a quartic growth. We also deﬁne gauge-invariant physical and scaled plaquette
+ﬁelds. Using periodic b.c. and the multireﬂection method, the generating function of r scaled
+plaquette correlations is bounded uniformly in L, a and g. The bound is also independent of the
+location/orientation of the r plaquette ﬁelds. Consequently, r-scaled plaquette ﬁeld correlations are
+also bounded. Combining this result with the scaling relation shows that the physical two-plaquette
+correlation at coincident points has an a−d singular behavior, which is the same as that of correlation
+of the derivative of free scalar unscaled ﬁelds at coincident points. Unlike other approaches, working
+with the Wilson model, there is no need to introduce any additional infrared regulator in the action
+for free and periodic boundary conditions. Using the free scalar ﬁeld as a reference, we have a
+characterization of UV asymptotic freedom. Here and in other papers, various Bose/Fermi models
+were treated with scaled ﬁelds. This method can be coupled with other methods to analyze the
+existence and properties of QFT models.
+PACS numbers: 11.15.Ha, 02.30.Tb, 11.10.St, 24.85.+p
+Keywords: Nonabelian and Abelian Gauge Models; Lattice Gauge Models; Stability Bounds; Generating
+Function; Thermodynamic Limit; Continuum Limit
+This article is dedicated to the memory of our friend Krzysztof Gawedzki who
+made important contributions to mathematics and mathematical physics.
+I. INTRODUCTION AND DESCRIPTION OF RESULTS
+To show the existence and properties of an interacting relativistic quantum ﬁeld theory (QFT) in spacetime di-
+mension d = 4 is a fundamental problem in physics [1–5]. Many partial results have been obtained [4, 6–8]. The
+quantum chromodynamics model (QCD) of interacting (anti)quarks and gauge, gluon ﬁelds is considered to be the
+∗Electronic address: veiga@icmc.usp.br. Orcid Registration Number: 0000-0003-0739-069X.
+†Electronic address: michaelocarroll@gmail.com
+=== PAGE 2 ===
+2
+best candidate for a four dimensional QFT model which rigorously exists. The so called Gap Problem of the Clay
+Foundation is related to the proof of two important features of QCD: ﬁrst, one shall ensure the existence of the
+ultraviolet limit of QCD and, second, when considering the underlying physical quantum mechanical Hilbert space,
+we must prove the so called gap problem, showing that the are no corresponding vectors for free quarks, antiquarks
+and gluons. The only physically admitted states are bound states of these fundamental particles of the model. This is
+the conﬁnement property! The fact that the ﬁrst vector state in the gluonic energy-momentum (E-M) sector spectrum
+has a mass ensures a ﬁnite range for the strong interactions, according to the Paley-Wiener theorem [9].
+Unfortunately, up to now, we are not able to give a complete answer to these problems. This paper considers the UV
+limit of the pure Yang-Mills (YM) model which corresponds to discard the matter particles (quarks and antiquarks)
+from QCD and take only gluons and their nonlinear interaction into account.
+We work on a spacetime lattice and use a special class of scaled ﬁelds, with a noncanonical scaling which preserves
+the decay of correlations (and then the E-M spectrum), we concentrate on obtaining ﬁniteness properties for the
+model free energy, the generating functions of certain gauge invariant plaquette ﬁeld correlations for any value of the
+parameters. Of course, this ﬁniteness properties do not lead directly to the construction of the UV limit but their
+proofs give some progress in this direction and we hope our methods can be coupled to more traditional methods
+in constructive quantum ﬁeld theory to produce other results. We also discuss how to characterize UV asymptotic
+freedom on the lattice. Finally, we emphasize that our methods work also for models with Fermi (Grassmann) ﬁelds.
+The action of QCD is a sum of an interacting Fermi-gauge ﬁeld part and a pure-gauge, self-interacting YM ﬁeld
+part. The imaginary-time d-dimensional continuum spacetime classical smooth ﬁeld Lagrangian or action of the local
+gauge-invariant YM model is given by [1, 4, 5]
+Aclassical =
+∑
+{µ<ν}
+∫
+Rd
+Tr[Fµν (x)]2 ddx = ∑
+{µ<ν}
+∫
+Rd
+Tr {∂µAν (x) − ∂νAµ(x) + ig[Aµ(x),Aν (x)]}2 ddx, (1)
+where µ,ν = 0, 1,..., (d − 1) (the label 0 denotes the time direction!), Aµ are the gauge ﬁelds or vector poten-
+tials, commonly called gluons, which are matrices in the Lie algebra of the gauge group G, Fµν is the second order
+antisymmetric ﬁeld strength tensor, g> 0 is the gauge ﬁeld coupling and [ · , · ] denotes the Lie algebra commutator.
+Here, we will work in an Euclidean imaginary-time formulation of QFT. In this formulation, the model is deﬁned
+by a partition function with a Boltzmann factor given by the exponential of minus the action and integration over all
+conﬁgurations of the ﬁelds is carried out.
+One approximation is to work with a discretization of the Euclidean spacetime, replace the continuum ﬁelds by
+ﬁelds on a ﬁnite lattice Λ ⊂ Rd and make Riemann sum approximation to the integral in the classical action of Eq.
+(1). Carrying this out, inﬁnities emerge due to the unbounded gauge (gluon) ﬁeld integration and also the excess of
+gauge bond variables due to local gauge invariance.
+Instead of this approach, Wilson (see e.g. Refs. [10, 11]) proposed a ﬁnite valued ﬁnite lattice partition function.
+We can take e.g. the lattice Λ to be the ﬁnite hypercubic lattice with spacing a, L ∈ N (L even) sites on a side and
+a total number of sites Λs = Ld. With this, we have Λ ⊂ aZd ⊂ Rd and we take a ∈ (0, 1]. The lattice volume
+|Λ| ≡ Λs is taken to be the total number of sites Ld, instead of the volume (aL)d in Rd, as it is usual in statistical
+mechanical lattice models [4, 12–14].
+In the Wilson ﬁnite lattice partition function, the gluon ﬁelds are parameters in the Lie algebra associated with the
+Lie gauge group G. We choose G to be compact, e.g. we can take the groups of unitary matrices G = U(N ), SU(N ),
+N ∈ N.
+Let bµ(x) = [x,x+ µ ] denote a positively directed lattice bond, connecting the site x to its neighboring lattice site
+x+ µ = x + aeµ, where eµ, µ = 0, 1,..., (d − 1), is the unitary vector of the µth spacetime direction.
+To each positively oriented bond (or, simply, bond), we assign a unitary matrix from an irreducible representation
+of the gauge group G. These are our bond variables. The physical gluon ﬁelds are parameters in the Lie algebra of
+G. The integration over the ﬁeld conﬁgurations becomes a product of Haar integrals over the whole set of variables
+in gauge group G. In this way, our gauge model is a random matrix model.
+With the ﬁnite lattice Wilson partition function (see Eq. (6) below and Section II), we get a regularization for
+the YM model and there are no more inﬁnities. Besides, local gauge invariance is preserved and the property of
+Osterwalder-Seiler (OS) positivity, which allows the construction of an underlying quantum mechanical Hilbert space
+and then to prove the existence of a lattice QFT [8], is veriﬁed.
+Moreover, it is expected that the control of the thermodynamic limit Λ ր aZd and also the continuum limit a ց 0
+of gauge ﬁeld correlations lead to a continuum spacetime Euclidean QFT. Then, if the remaining OS axioms are
+veriﬁed, by the OS reconstruction theorem, we obtain a physically acceptable relativistic QFT in Minkowski space
+[4, 5].
+In this paper, we will concentrate on the pure-gauge, YM model. In an imaginary-time functional integral for-
+mulation, we adopt the above deﬁned hypercubic lattice ultraviolet (UV) regularization Λ ⊂ aZd ⊂ Rd, d = 2, 3, 4,
+a ∈ (0, 1].
+=== PAGE 3 ===
+3
+The starting point is the Wilson plaquette action partition function given below in Eq. (6). For small gauge coupling
+0 < g ≪ 1, stability bounds (see Ref. [15]) for the corresponding model partition function have been proved in the
+seminal work of Balaban (see [16, 17] and Refs. therein), using renormalization group (RG) methods and the heavy
+machinery of multiscale analysis. Applying RG methods in the continuum spacetime and using momentum slices, the
+UV limit of the YM model, in d = 4 and with an additional infrared cutoﬀ, was treated in Ref. [18]. Using softer
+methods, in Ref. [19], the d = 2 YM model was solved exactly. It is expected that partition function stability bounds
+of Refs. [16, 17] lead to bounds on YM gauge ﬁeld correlations.
+Recently, the scaling limit of the YM-Higgs model was analyzed in [20] for the gauge group SU (2). More recently
+(see e.g. Ref. [21]), a completely diﬀerent approach considers the construction of Euclidean QFT using stochastic
+quantization and SPDE/acute.ts1s (Stochastic Diﬀerential Equations). For the scalar φ4 3 model in R3, some of the important
+OS axioms were shown and it is to be stressed that one of the virtues of this method is that the results are valid
+for any value of the couplings. Using this approach, the YM model with a general compact Lie gauge group in three
+dimensions was considered in Ref. [22].
+Indeed, in the context of the RG, considering models which are small perturbations of the free ﬁeld, the generating
+function of gauge ﬁeld correlations and then correlations can be obtained through a formula which involves the
+eﬀective actions generated by applying the RG transformations to the partition function (see e.g. [23]). However,
+unfortunately, in the case of gauge ﬁelds, this question, as well as the incorporation of fermionic quark/antiquark ﬁelds
+and the veriﬁcation of the whole set of Osterwalder-Schrader-Seiler (OSS) axioms [4, 5], have never been completely
+analyzed up to now. This includes the physically interesting d = 4 case. In d = 4, after showing the mathematical
+existence of QCD, and checking the Osterwalder-Schrader-Seiler (OSS) axioms hold, an analysis of the low-lying E-M
+spectrum is expected to lead to the conﬁnement of quarks/antiquarks and to the solution of the YM gap problem.
+Recently, in the related Refs. [24–26], we introduced an a priori QFT renormalization procedure on the lattice,
+with lattice spacing a ∈ (0, 1]. This alternative procedure is based on a scaling of the physical (original) ﬁelds, like a
+wavefunction renormalization. The a-dependent scaling is noncanonical. Besides, it preserves OSS positivity and the
+particle spectrum since it does not alter the decay rates of correlations. The new ﬁelds are called scaled ﬁelds. In the
+scaled ﬁelds, the original, physical action is more regular. The scaling is a smoothing process and may render some
+models ﬁnite and other are smoothed by it and present less or milder singularities. Our scaling transformation can
+then be viewed as a partial renormalization.
+For the free ﬁeld, the scaling removes the inﬁnities from the free energy and correlations. Correlations are ﬁnite
+even at coincident points. No smearing with test functions is needed. Moreover, for the scaled ﬁeld partition function
+and correlations, series expansions in the scaled coupling parameter converge absolutely, up to and including the
+critical value. The coeﬃcients of these series are given explicitly. The random walk expansion associated with scaled
+ﬁeld correlations also converge in this region [27]. These free ﬁeld results are detailed in Appendix A.
+In the unpublished papers [28, 29], using scaled gauge ﬁelds, a simple proof of TUV stability bounds is given by a
+direct analysis of the ﬁnite lattice physical Wilson partition function Z(Λ,a), with free boundary conditions (b.c.) in
+conﬁguration space, starting with the model in the ﬁnite hypercubic lattice Λ ⊂ aZd. The gauge group is taken to be
+G = U(N ), SU(N ), with respective dimensions
+δN = N 2 ; δN = N 2 − 1 , (2)
+but our methods extend to any other compact Lie group. Recall eµ, µ = 0, 1,..., (d − 1), is the lattice unit vector
+in the spacetime direction µ. For each lattice oriented bond b ≡ [x,x+ µ ≡ x + aeµ], there is a bond variable, i.e. a
+unitary matrix of the gauge group, Ub ∈ G. There are a total of Λb = dLd−1(L − 1) bonds in the lattice Λ.
+By the exponential map, the gauge ﬁelds Ab are elements of the Lie algebra of G, and we write
+Ub = exp(igaAb) . (3)
+With this convenient parametrization, the gauge ﬁelds are the usual physical gauge potentials. The N × N gluon ﬁeld
+matrix Ab, in a suitable basis, is given by
+Ab =
+δN∑
+c=1
+Ac bθc,
+and has components which are the ordinary gluon ﬁelds. Here, for α = 1, 2,...,δN , we take the self-adjoint θα to form
+a basis for the self-adjoint matrices of G = U(N ), SU(N ). They are the Lie algebra generators and are normalized
+accordingly to the trace condition Trθαθβ = δαβ, with a Kronecker delta. With all this, if bµ(x) = [x,x+ µ ≡ x + aeµ],
+then Ab is the usual gauge ﬁeld Aµ(x).
+A lattice plaquette p is a set of four bonds forming a minimal lattice square. The bonds connect four neighbor
+lattice sites. If p ≡ pµν (x) is a plaquette in the µ<ν coordinate plane (µ,ν = 0, 1,..., (d − 1)), and if x denotes the
+=== PAGE 4 ===
+4
+lower left corner of the plaquette, then the sites of Λ taking part in p are
+vertices of p = pµν(x) : x, x+ µ , x+ µ + aeν , x+ ν . (4)
+Each plaquette p ∈ Λ is associated with a positive Wilson action Ap involving the trace of Up, which is given by the
+ordered product of the four bond variables comprising the four consecutive sides of the plaquette. For the plaquette
+p = pµν (x), and using the physical parametrization of Eq. (3), we have
+Up(x) = exp [iagAµ(x)] exp
+[
+iagAν(x+ µ ) ] {exp [iagAν(x)] exp [iagAµ(x+ ν )]}†
+= exp [iagAµ(x)] exp
+[
+iagAν(x+ µ ) ] exp [−iagAµ(x+ ν )] exp [−iagAν(x)] . (5)
+Remark 1 We warn the reader that, as usual, we use the same notation g both for a gauge group element, g ∈ G,
+and the gauge coupling parameter g> 0, which usually appears as g2. There should be no confusion! Also, as the case
+of the unitary gauge group G = U(N ) is a little simpler than G = SU (N ), in the text below, we will concentrate on
+U(N ). The analysis for G = SU(N ) can be recovered from G = U(N ) with some minor modiﬁcations [31].
+Now, taking G = U(N ), we give a schematic description of the model partition function and the stability bounds.
+Precise deﬁnitions are given in sections below. Mainly, we refer the reader to Section II where most of the needed
+deﬁnitions can be found.
+The original, physical model partition function Z(Λ,a) ≡ ZΛ(a) is an integral over the Boltzmann factor (expo-
+nential of minus the action), with a product measure of U(N ) (SU(N )) Haar measures [30–32]
+dµ(U ) =
+∏
+b∈Λ
+dµ(Ub) ,
+one normalized measure for each bond. It reads
+ZΛ(a) =
+∫
+exp
+
+− ad−4
+g2
+∑
+p∈Λ
+Ap(Up)
+
+ dµ(U ) ≡
+∫
+exp
+
+− ad−4
+g2
+∑
+p∈Λ
+2 Re Tr (1 − Up)
+
+ dµ(U ) . (6)
+The Wilson plaquette action Ap ≥ 0 is given by
+Ap(Up) = 2 Re Tr (1 − Up) = ‖Up − 1‖2 H−S, (7)
+and each plaquette action has a prefactor [ad−4/g2], where we take the squared gauge coupling parameter g2 ∈ (0,g2 0 ],
+0 <g0 < ∞. Here, ‖ M ‖H−S ≡ [Tr M ∗M ]1/2 denotes the Hilbert-Schmidt norm (see Section II for the last equality).
+Remark 2 Although we have the physical parametrization of the gauge group bond variable Ub in Eq. (5), the value
+of the partition function representation of Eq. (6) is independent of the parametrization. Sometimes, we denote this
+Wilson partition function as Zw Λ (a).
+Remark 3 As we see below, the apparent singularity at g = 0, due to the prefactor (1/g2) in Eq. (6), is removed by
+adopting the physical parametrization Ub = exp[igaAb].
+All our results hold for all g2 in the range g2 ∈ (0,g2 0 ]. Therefore, contrary to what happens in other works (see,
+e.g., [16, 17]), our statements are not restricted to small enough g2.
+Remark 4 The adjoint of the positive oriented bond variable of Eq. (5) can be interpreted as associated with the
+negatively oriented bond. For the above plaquette p = pµν(x), the plaquette action Ap can be interpreted as an ordered
+product of group variables going around the perimeter of the plaquette in a counterclockwise fashion, with a bond
+variable for a positively oriented traverse and its adjoint for a negatively oriented traverse.
+Formally, in Ref. [3], using the Baker-Campbell-Hausdorﬀ formula [see Ref. [32] and Eq. (43) below], it is shown
+that, for small lattice spacing a, the Wilson plaquette action
+{(
+ad−4/g2)∑ p∈Λ Ap(Up) } , as explained in Eq. (1) is
+the Riemann sum approximation to the usual classical smooth ﬁeld continuum YM action
+A =
+∑
+{µ<ν}
+∫
+[−La,La]d
+Tr[Fµν (x)]2 ddx ≃ ∑
+{µ<ν}
+∑
+x∈Λ
+ad Tr { Fa µν ≡ ∂a µAν (x) − ∂a νAµ(x) + ig[Aµ(x),Aν (x)] }2 . (8)
+=== PAGE 5 ===
+5
+Here, we have the ﬁnite diﬀerence derivatives ∂a µAν(x) = a−1 [Aν (x + aeµ) − Aν (x)] and used the notation {µ <
+ν} ≡ {µ,ν = 0,..., (d − 1) /µ<ν}.
+Associated with the classical statistical mechanical model partition function ZΛ(a) of Eq. (6), there is a lattice
+QFT. The Osterwalder-Seiler construction provides, via a Feynman-Kac formula, a quantum mechanical Hilbert space,
+self-adjoint mutually commuting spatial momentum operators and a positive energy operator. A key property in the
+construction is Osterwalder-Seiler reﬂection positivity, which is ensured here by choosing L ∈ N to be even! (see e.g.
+Ref. [8]).
+In principle, considering this lattice QFT and neglecting all the possible internal degrees of freedom in a more
+general case (spin, isospin, etc), there are Λs sites in the lattice Λ, and our system has ΛbδN degrees of freedom,
+where we recall δN is the gauge group dimension [see Eq. (2)]. However, as we explain more precisely below, there is
+a copy of the gauge group G attached to each spacetime ﬁnite lattice site x ∈ Λ, and due to local gauge invariance of
+the plaquette actions Ap in Eq. (6), when considering the total number Λb of bonds and then the whole set of gauge
+variables in the lattice Λ, there is an excess of variables.
+By a gauge ﬁxing procedure, the extraneous gauge variables can be eliminated. Here, we sometimes ﬁx what we
+call the enhanced temporal gauge. In this gauge, the temporal bond variables in Λ are set to the identity (leading to
+a trivial gauge group integration), as well as certain speciﬁed bond variables on the boundary ∂Λ of Λ. The gauged
+away bond variables involve bonds which do not form a lattice loop. This guarantees that the value of partition
+function is unchanged [4]. Also, the maximal number of relevant variables is given by
+Λr ≈ (d − 1)Ld−1 = [(d − 1)Λs/L] , (9)
+which is roughly the number of non-temporal (spatial) bonds. These are the retained bond variables or simply, retained
+bonds. The eﬀective number of degrees of freedom in our model is then [δN Λr].
+Remark 5 We warn the reader that we use abusively the name volume for the quantity Λr. Below, we talk about the
+volumetric free energy using Λr instead of the lattice volume Λs = Ld. We are not using the physical volume (aL)d in
+Rd. By doing so, as there is a ﬁnite proportionality between them, we will be neglecting a ﬁnite additive (d-dependent)
+constant value of the free energy.
+In the context of a generic lattice model with partition function ZΛ, when Λf degrees of freedom are present, a
+stability bound is a lower/upper bound on ZΛ of the form
+ecℓΛf ≤ ZΛ ≤ ecuΛf , (10)
+for some ﬁnite real ‘constants’ cℓ and cu.
+Usually, in statistical mechanical models, to control the thermodynamic limit of the free energy, the only requirement
+is that cℓ and cu are uniform in the ‘volume’ Λf . Here, in our lattice YM model, besides this condition, since we are
+also interested in taking the UV (continuum) limit a ց 0 afterwards, we do require that cℓ and cu are also uniform
+in the lattice spacing a. This is why we call our stability bound a thermodynamic and UV stable stability bound, or
+simply TUV bound, for short.
+In addition to the physical, unscaled gluon ﬁelds which, in order to improve clarity, we sometimes denote by Au b , with
+a superscript u, we will also be using local, scaled gluon ﬁelds Aµ(x) (without any superscript, or with a superscript
+s) which are related to Au µ(x) by the a-dependent scaling transformation
+Aµ(x) = a(d−2)/2 Au µ(x) . (11)
+This a priori scaling corresponds to a partial renormalization and can interpreted as a ﬁeld strength renormalization.
+Associated with the scaled ﬁelds are the scaled free energy, scaled generating functionals and scaled correlations.
+As it will be made clear below, the scaled ﬁeld quantities have good UV regularity properties in the lattice spacing a
+and the gauge coupling g. For instance, the scaled free energy and correlations are bounded uniformly in a ∈ (0, 1]
+for any ﬁnite gauge coupling g2.
+Before embarking on the scaling transformations and speciﬁc results for the YM model free energy and correlations,
+we give a general picture of the use of our scaled ﬁelds and its consequences. For simplicity, we consider the free
+lattice scalar ﬁeld. This case is analyzed in more detail in Appendix A. It is important to stress that the scaling used
+in the analysis of the free scalar ﬁeld case is also employed for each color component Ac µ(x) ∈ R, x ∈ Λ ⊂ aZd, of our
+gauge ﬁelds in our YM model.
+Considering the same hypercubic lattice deﬁned before, we denote the Λ lattice physical (or unscaled) scalar ﬁeld
+at a lattice site x ∈ Λ by φu(x). Up to boundary conditions, the physical, free unscaled lattice scalar model action is
+given by
+Au Λ(φu) = 1 2 κ2 uad−2 ∑ x,µ [ φu(x+ µ ) − φu(x) ]2 + 1 2 m2 uad ∑ x [φu(x)]2 . (12)
+=== PAGE 6 ===
+6
+Here, κ2 u, mu > 0 and ∑ x,µ sums over the ﬁnite lattice sites x ∈ Λ ⊂ aZd and µ = 0, 1,..., (d − 1).
+As usual, the ﬁnite lattice unscaled partition function is
+Zu Λ(a) =
+∫
+e−Au Λ(φu) Dφu, (13)
+where Dφu is the Λ product of single site Lebesgue measures dφu(x)/ √ 2π. Recalling that lattice Λ has L ∈ N, L
+even, sites on a side, and its volume is Λs = Ld, we can take the thermodynamic limit of the physical, unscaled free
+energy as
+fu(a) = lim
+Lր∞
+1
+Ld ln Zu Λ(a) .
+The scalar model correlations at coincident points are singular in the continuum limit a ց 0.
+We now introduce a-dependent scaled scalar ﬁelds by making the change of variables
+φ(x) = s(a) φu(x) ; s(a) = a(d−2)/2 t , t = ( 2dκ2 u + m2 ua2)1/2 . (14)
+The scaled scalar ﬁeld action is
+AΛ(φ) = Au Λ(φu = [s(a)]−1 φ) = − κ2 ∑
+x,µ
+φ(x)φ(x+ µ ) + 1 2 ∑ x φ2(x) ,
+where κ2 is the scaled hopping parameter κ2 = ( 2d + m2 ua2/κ2 u )−1 .
+The ﬁnite lattice scaled free ﬁeld partition function is
+ZΛ(a) =
+∫
+e−AΛ(φ) Dφ = sΛs Zu Λ(a) , (15)
+where we recall that Λs = Ld is the number of sites in Λ and the scaled measure Dφ is deﬁned a product measure,
+similarly to the unscaled measure Dφu in Eq. (13).
+The scaled scalar model partition function ZΛ(a) obeys the TUV stability bound
+ecℓΛs ≤ ZΛ(a) ≤ ecuΛs ,
+with real ﬁnite constants cℓ and cu independent of Λs and the lattice spacing a.
+The important point is that, in terms of scaled ﬁelds, all singularities disappear, and the scaled free energy is ﬁnite,
+for d = 3, 4, and is given by
+f (a) = lim
+Lր∞
+1
+Ld ln ZΛ(a) .
+We observe that scaled ﬁeld correlations, to be deﬁned below, also remain ﬁnite as a ց 0, even at coincident points,
+for d = 3, 4.
+Furthermore, in the thermodynamic limit L ր ∞, the unscaled free energy is related to the scaled one by
+f (a) = ln s(a) + fu(a) , (16)
+meaning that we have isolated completely the a ց 0 singularity of fu(a).
+Regarding correlations, the physical, unscaled two-point correlation
+⟨φu(x) φu(y)⟩u ≡ 1 Zu Λ
+∫
+φu(x) φu(y) e−Au Λ(φu) Dφu,
+using the change of variables of Eq. (14), is related to the corresponding scaled two-point correlation (similarly deﬁned
+without the u superscripts) by
+⟨φu(x) φu(y)⟩u = 1 s2(a) ⟨φ(x) φ(y)⟩ .
+Both correlations have the same asymptotic decay rate at large distances. More generally, the scaling transformation
+does not aﬀect the Osterwalder-Schrader positivity property [4, 5] nor does it alter the decay rates of correlations.
+Thus, the E-M spectrum is unchanged.
+=== PAGE 7 ===
+7
+As is known, the unscaled correlations are singular in the continuum limit a ց 0. However, the scaled free scalar
+model correlations remain ﬁnite as a ց 0, even at coincident points, for d = 3, 4. For example, for the unscaled
+two-point correlation at coincident points we have the following singular behavior
+⟨[φu(x)]2⟩ ≃ 1 s2(a) ≃ a2−d.
+This behavior can be taken as a characterization of UV asymptotic freedom on the lattice.
+In the YM case, we consider only gauge-invariant correlations which behave as derivative ﬁelds (think of the
+electromagnetic ﬁeld for the abelian gauge group U(1)). For scalar free ﬁelds the unscaled ﬁnite lattice derivative ﬁeld
+correlation is
+⟨
+∂a µφu(x) ∂a µφu(y) ⟩u ≡ ⟨ 1 a [ φu(x+ µ ) − φu(x) ] 1 a [ φu(y+ µ ) − φu(y) ]⟩u ,
+with derivatives replaced by ﬁnite diﬀerences. This correlation behaves as s−2(a) a−2 ≃ a−d, for coincident points.
+This behavior can also be taken as a characterization of UV asymptotic freedom on the lattice for derivative ﬁeld
+correlations.
+We remind the reader that, even for a ﬁnite lattice with spacing a ∈ (0, 1], the partition function may not exist due
+to zero modes in the action. This is e.g. the case for periodic b.c. where the action has a zero mode for mu = 0. This
+problem is usually eliminated by adding to the action a small mass term (an infrared regulator). Then the partition
+function exists and obeys TUV stability bounds. Then, the regulator may be removed after taking the thermodynamic
+limit. Alternatively, for example, if free b.c. is used, there is no zero mode, the ﬁnite lattice partition function exists
+and agrees with that in the infrared regulator procedure. In this paper, we deal with the Wilson YM model and no
+infrared regulator is needed for free and periodic b.c..
+We now return to the YM model and describe how we apply the scaling transformation. For the abelian U(1) case
+we can deﬁne the scaling transformation by a similar change of variables of Eq. (11), namely
+Aµ(x) = a(d−2)/2 Au µ(x) .
+In terms of the gauge ﬁelds Aµ(x), the action becomes regular both in g and a ∈ (0, 1], and the U(1) Haar measure
+is proportional to the Lebesgue measure.
+In the nonabelian case, the implementation and the eﬀect of the scaling is more complicated than the scalar free
+ﬁeld case. The scaling is performed in each color component Au,c µ of the physical or unscaled gluon ﬁeld Au µ by deﬁning
+Ac µ(x) = a(d−2)/2 Au,c µ (x) , (17)
+so that the bond variable Ub is parametrized as Ub = exp[iga−(d−4)/2 Ab]. In doing this, the action of each plaquette
+Boltzmann factor becomes also regular. However, the Haar measure is not proportional to the Lebesgue and does not
+transform simply by a multiplicative factor. This complexity does not lead to a multiplicative scaling for the partition
+function and correlations. Below, we show how we deal with this problem. The Haar measure for unitary groups is
+obtained in Refs. [33–36].
+Before we get to this point, in order to be able to compare our method with the renormalization method developed
+in Ref. [21], we illustrate how our scaling leads to the absence of singularities in the scalar φ4 3 model. From Refs.
+[21, 22, 37], the unscaled action is the free action Au Λ(φu) of Eq. (12) plus a local quartic potential. Namely, for
+spacetime dimension d = 3, we have (for λ > 0)
+Au 4,Λ(φu) = 1 2 κ2 ua ∑ x,µ [ φu(x+ µ ) − φu(x) ]2 + 1 2 ( m2 u − cλ a ) a3 ∑ x [φu(x)]2 + λa3 ∑ x [φu(x)]4
+≡ Au Λ(φu) + Au I,Λ(φu) .
+(18)
+In d = 3, the sums are over x ∈ Λ ⊂ aZ3 and µ = 0, 1, 2. Also, we have c ≡ c(a,λ) = c1(a) + c2(a) λ, where
+c1(a) = O(1) and c2(a) = O(| ln a|). The form of [λc(a,λ)/a] is a renormalization which removes the UV divergences
+and keeps the physical mass ﬁnite in the continuum limit a ց 0. In λ perturbation, we take care of the O(λ) tadpole
+contribution and the so called ‘rising sun’ O(λ2) contribution. For simplicity, we suppress the a, λ dependence of
+c(a,λ) and put c ≡ c(a,λ).
+As before, in terms of scaled ﬁelds,
+φ(x) = sφu(x) , s = a(d−2)/2 t ; t = [2dκ2 u + (mua)2]1/2 ,
+=== PAGE 8 ===
+8
+the scaled φ4 3 action is
+A4,Λ(φu) = − κ2 ∑ x,µ φ(x) φ(x+ µ ) + 1 2 ∑ x [φ(x)]2 − cλa2 s2 ∑ x [φ(x)]2 + λa3 s4 ∑ x [φ(x)]4
+≡ AΛ(φ) + AI,Λ(φ) ,
+(19)
+where AΛ(φ) is the scaled free action. The key fact is that AI (φ) has a minimum at φ2(x) = c/2, where it assumes
+the value (− λac2 Λs/4).
+We let Z fr Λ denote also the scaled free scalar ﬁeld partition function of Eq. (15). Then, Z fr Λ satisﬁes the TUV
+stability bound (recalling Λs = Ld, d = 3)
+ecfr ℓ Λs ≤ Z fr Λ ≤ ecfr u Λs ,
+where cfr u = [(1 − L−1) ln √ 2] (see Appendix C) and cfr ℓ = 0 (by Jensen’s inequality).
+Now, we let Z4,Λ denote the partition function for the φ4 3 model. We have
+Z4,Λ =
+∫
+e−A4,Λ(φ) dφ ≡ Z fr Λ
+∫
+e−AI,Λ(φ) dµfr(φ) ,
+with, using Eq. (19), dµfr(φ) = ∫ e−AΛ(φ) dφ/Z fr Λ is a probability measure.
+For the upper bound, reinstating the λ, a dependence in c, taking the minimum value of AI,Λ(φ) given above, we
+have
+Z4,Λ ≤ exp
+[
+aλc2(λ,a) Λs ] exp [ cfr u Λs ] ≡ ecu Λs .
+Now, by Jensen’s inequality and using the lower bound Z fr Λ ≥ 1, we have the lower bound
+Z4,Λ ≥ e−
+∫
+AI,Λ(φ) dµfr (φ) ≡ ecℓ Λs ,
+with, here, cℓ =
+[
+(cλa/t2) C0 − (3λa/t4) C 2 0 ] and C0 is the coincident point two-point correlation for the free scaled
+ﬁeld given in Eq. (A17) and bounded in Eq. (A23).
+Writing the upper and lower bound together, we have the TUV stability bound
+ecℓ Λs ≤ Z4,Λ ≤ ecu Λs . (20)
+From the values of cℓ, cu and c given above and using, for C0 Remark A3 below, we see that the constants in Eq.
+(20) are uniform in a ∈ (0, 1] so that the bound in Eq. (20) is a TUV stability bound.
+Let us now come back to the gauge ﬁeld case. We consider the abelian case of the gauge group U(1) case in
+more detail. For the special case of U(1), both the pure-gauge action and the coupling with Bose and Fermi ﬁelds
+were treated in Refs. [38–41]. The starting point for all these papers is a quadratic action for the electromagnetic
+potentials. In these papers, in order to remove the null space of the quadratic form and deﬁne the model partition
+function, a gauge ﬁxing is required at the onset. This is not what we do here. Instead, we make a rigorous connection
+between the Wilson partition function and the Wilson plaquette action which is not quadratic in the ﬁelds.
+To see the eﬀect of the scaling transformation on the U(1) Haar measure, we parametrize the bond variable Ub with
+the physical potential as Ub = exp(iagAu b ). The measure is ∏
+b
+(ag
+2πdAu b
+)
+. In terms of scaled ﬁelds Ab, the measure
+is
+∏
+b
+[( g2
+ad−4
+)1/2
+dAb/(2π)
+]
+. Hence, for G = U(1), the unscaled and scaled gauge ﬁnite lattice partition functions
+are related by
+Zu Λ(a) ≡ Zw Λ (a) =
+( g2
+ad−4
+)Λr /2
+Zs Λ(a) ,
+where we recall that Λr is the number of retained gauge variables after the enhanced temporal gauge is ﬁxed (see Eq.
+(9)).
+Here, Zs Λ(a) is the scaled partition function, expressed with an action written in terms of scaled ﬁelds and with the
+measure
+∏
+b
+dAb/(2π), |Ab| < π.
+=== PAGE 9 ===
+9
+Also, Zs Λ(a) obeys TUV stability bounds (δN = 1 is the U(1) group dimension)
+ecℓδN Λr ≤ Zs Λ(a) ≤ ecuδN Λr . (21)
+Motivated by the scaling relation above, for the abelian case, in the nonabelian YM case of the gauge groups
+G = U(N ), SU(N ), by deﬁning a scaled ﬁeld partition function by
+Zs Λ(a) =
+(ad−4
+g2
+)δN Λr /2
+Zu Λ(a) , (22)
+with one factor of
+(ad−4
+g2
+)1/2
+for each of the δN Λr eﬀective degrees of freedom, Zs Λ(a) obeys TUV stability bounds.
+Here, we consider two types of boundary conditions (b.c.) on the lattice Λ. Namely, our TUV bounds on the scaled
+partition function Zs,B Λ ≡ Zs,B(Λ,a) hold for both free and periodic b.c. The index B is left blank, for free b.c., and
+B = P , for periodic b.c. The adoption of periodic b.c extends the TUV bound result of Refs. [28] and is convenient for
+us to use the multiple reﬂection method [4] to analyze a generating function and correlations. The partition function
+Zs,B Λ is related to Zu Λ(a) as in Eq. (22) obeys the the same TUV stability bound of Eq. (21) with a corrected value
+of δN = N 2, (N 2 − 1). Namely, we have
+ecℓδN Λr ≤ Zs,B Λ ≤ ecuδN Λr , (23)
+where we recall that the ﬁnite constants cℓ and cu are both uniform in Λr and a ∈ (0, 1].
+Using Eq. (22), the proof of the bound of Eq. (23) is one of our main results and is stated in Theorem 1.
+The TUV stability bound on the scaled partition function [see Eq. (23)] arises from an interesting factorization
+structure of the bounds for Zu,B Λ and hence Zs,B Λ . For Zu,B Λ , the upper and lower bounds factorize as
+zΛr ℓ ≤ Zu,B Λ ≤ zΛr u
+where each factor is a single plaquette partition function of one bond variable. Expressions for the ‘constants’ zℓ and
+zu involve probability distributions of the circular unitary random matrix and the Gaussian unitary ensembles, CUE
+[42, 43], and are analyzed in Theorem 2. This analysis leads to the TUV stability bound of Eq. (23).
+Remark 6 A key point in our method, as it can be checked in the expressions and bounds on zℓ and zu given below, is
+that our lower and upper bounds on the unscaled partition functions do exhibit the same multiplicative singular factor.
+This is what allows us to deﬁne a scaled partition function by extracting the singular factor multiplicatively.
+The random matrix ensemble CUE arises naturally in the above context. To go further, and extract the singular
+behavior of zℓ and zu, the Gaussian unitary random matrix ensemble GUE [42, 43] also shows up. We notice that
+both zℓ and zu are given by integrals with class function integrands. We emphasize that this property was not
+present for the integrand of the unscaled partition function Zu Λ but does hold for the bounds and we recall that a
+class function f (U ) on the gauge group G is constant over each group conjugacy class, i.e. f (U ) satisﬁes the property
+f (U ) = f (VUV −1), for all V ∈ G.
+We now explain how these random matrix ensembles appear in our bounds.
+Our upper and lower stability bounds have an interesting factorization structure. In continuum scalar ﬁeld models
+such a factorization is achieved by imposing Dirichlet decoupling on the covariance of the free ﬁeld Gaussian measure
+(see Chap. 9 of [4] and [44–46]). In the continuum, in the exponents of the stability bounds, we typically have the
+volume in Rd. We show in Appendix C, how this factorization is accomplished in lattice scalar ﬁeld models where
+each factor is a partition function of single bond ‘transfer matrix’. Here, the exponent in the TUV stability bound is
+the number Λb = d(L − 1)Ld−1 of lattice bonds in Λ.
+In the YM model, the factorization involves products of single-plaquette, single-bond variable partition functions.
+A new, global quadratic upper bound in the gluon ﬁelds, for the positive Wilson plaquette action, is proved in Lemma
+2. This upper bound gives a lower bound on the partition function. This bound gives rise to the factorized lower
+bound on the partition function. For the upper bound, since each plaquette action is positive (it is a Hilbert-Schmidt
+norm!), we simply set some plaquettes actions to zero. We denote by zu (zℓ) the single-bond Haar integral partition
+functions describing the single-plaquette partition function for the upper (lower) stability bound on the partition
+function with periodic b.c.
+By the spectral theorem, as U is unitary, there exists a unitary V which diagonalizes Ub, i.e. V −1UbV =
+diag(eiλ1 ,...,eiλN ), λj ∈ (−π,π]. The λj are called the angular eigenvalues of U . Recalling Eq. (11), the fun-
+damental relation between scaled gluon ﬁelds and the angular eigenvalues is given by the equality (see Lemma 1)
+N∑
+j=1
+λ2 j = a2g2
+δN∑
+c=1
+|Au,c b |2 = g2 ad−4 δN∑ c=1 |Ac b|2 , (24)
+=== PAGE 10 ===
+10
+which is used to deal with the above quadratic bound on the Wilson action. It is immediate for G = U(1).
+With this, for λ = (λ1,...,λN ) and dλ = dλ1 ...dλN , by the Weyl integration formula [30–32, 47]
+∫
+U(N )
+f (U ) dσ(U ) = 1 N ! ∫ (−π,π]N f (diag(λ1,λ2,...,λN )) ∏ k,j=1,...,N ;k<j |eiλj − eiλk |2 dλ (2π)N , (25)
+the N 2-dimensional Haar integration over the N × N matrix unitary gauge group G is reduced to an N -dimensional
+integration over the angular eigenvalues of U . In Eq. (25), the measure corresponds to the probability density of the
+circular unitary ensemble (CUE) and in the bounds on zu and zℓ the probability density for the Gaussian unitary
+ensemble (GUE). Random matrix theory appears in a natural way in our context (see Refs. [42, 43]).
+From the Weyl formula of Eq. (25), we see that, even in the case of class functions, the measure
+∏
+k,j=1,...,N ; k<j
+|eiλj − eiλk |2 dλ
+does not obey a multiplicative scaling relation under a change of variables transformation. However, for small enough
+λk, scaling λk by (sλk), this measure scales with a factor sδN .
+Going further, the importance of the TUV bound of Eq. (23), for the scaled partition function Zs Λ(a) ≡ Zs(Λ,a),
+is that it ensures us that the ﬁnite lattice scaled YM free energy
+fs Λ(a) ≡ fs(Λ,a) = 1 Λ ln Zs Λ(a) (26)
+satisﬁes the bound
+cℓ ≤ fs Λ(a) ≤ cu. (27)
+However, recalling that the ﬁnite constants cℓ and cu are both uniform in Λr and a, by the Bolzano-Weierstrass
+theorem [48], this shows that the thermodynamic limit
+fs(a) = lim
+ΛրaZd
+fs(Λ,a)
+exists at least in the subsequential sense. Subsequently, by the same reason, the continuum limit exists, at least in
+the subsequential sense, and deﬁnes the bounded function
+fs = lim
+aց0
+fs(a) ,
+of the model parameters.
+From the above discussion, we see that our scaling transformation, used to deﬁne the scaled gluon ﬁelds, allowed
+us to subtract the exact singularity of the physical or unscaled free energy
+fu Λ (a) ≡ fu(Λ,a) = (ln Zu Λ(a))/Λr.
+In fact, we see that the scaled and unscaled free energy are related by
+fs Λ(a) = fu Λ (a) + δN ln a(d−4)/2 g , (28)
+which is analogous to Eq. (16) for the scaled scalar free ﬁeld model.
+It is to be remarked that, as a ﬁrst step towards showing the existence (the continuum and thermodynamic limits)
+of the YM models and QCD, here and in Ref. [28], we only concentrated on the ﬁniteness of the scaled free energy per
+degree of freedom. Next, in Ref. [29], the ﬁniteness analysis was extended to the generating function of gauge-invariant
+plaquette ﬁelds and their correlations. There, we did not invest in analyzing the properties these quantities satisfy
+and if there is possibly more than the physical models of interest. It is also worth noticing that the techniques and
+methods used in Ref. [28], combined with the results of Refs. [24–26] were used to prove the existence of a scaled free
+energy for a bosonic lattice QCD model, with the (anti)quark ﬁelds replaced with spin zero, multicomponent complex
+or real scalar ﬁelds. This is the content of Ref. [49]. With these results in mind, we mention that our methods and
+techniques can eventually be coupled with new and more traditional methods, such as explicit renormalization and
+multiscale analysis, to make progress towards the complete construction of QFT models, e.g. to show the existence
+=== PAGE 11 ===
+11
+of the continuum and the thermodynamic limits of correlations for the SU(3) YM model and QCD, and also other
+interesting models which are still not fully understood.
+We now turn to generating functions and correlations. The folklore tells us that the TUV bound of Eq. (23) is
+enough to bound the generating function and correlations. For the case of the scaled free ﬁeld (see Appendix A), the
+generating function for powers of the ﬁeld at a single point x is
+⟨eJφ(x)⟩ = exp 1 2 [ J 2 ⟨[φ(x)]2 ⟩ ] ,
+where J is a constant source strength, and the expectations ⟨[φ(x)]r⟩, r = 1, 2,... are Gaussians and are also bounded.
+So as not to think that these boundedness properties only hold for the scaled scalar free ﬁeld, in Appendix B, we
+prove that they also hold for another scaled ﬁeld model, which we call truncated model and which is a good candidate
+for a continuum QFT model that exists and in perturbation theory it is nontrivial (non-Gaussian) in d = 4. This is
+important because of the recent triviality results for φ4 4 by Aizenman and Dumenil-Copin [50].
+The model partition function, denoted here by Zt Λ, is obtained from the scaled free ﬁeld partition function (see
+Eqs. (A4) and (A6) of Appendix A) by replacing the bond factor exp[κ2 φ(x)φ(x+ µ )], where κ2 > 0 is the (squared)
+hopping parameter and x+ µ = x + aeµ, by the truncation [ 1 + αφ(x)φ(x+ µ ) ] . We call this model the truncated model.
+The partition function Zt Λ obeys the TUV stability bound, recalling that Λs = Ld,
+ecℓΛs ≤ Zt Λ ≤ ecuΛs , (29)
+with ﬁnite constants cℓ and cu independent of Λs and a ∈ (0, 1]. The bounds depend on Λs in the exponent and not
+the physical volume (aL)d in Rd.
+We also prove that the generating function ⟨eJφ(x)⟩ obeys the bound
+⟨eJφ(x)⟩ ≤ ecu−cℓ eJ 2 ,
+with the same constants cℓ and cu of Eq. (29). Applying Cauchy estimates, this bound leads to the bound on the
+coincident point correlation with r = 1, 2,... ﬁelds φ
+⟨φr(x)⟩ ≤ eecu−cℓ r! .
+The point is that the TUV stability bound using the lattice number of sites Λs = Ld is enough to bound the generating
+function and correlations.
+Concerning the YM model, inspired by Ref. [51], we deﬁne a gauge-invariant physical, unscaled plaquette ﬁeld
+as follows. Consider the plaquette p = pµν(x), µ < ν, in the µν coordinate plane. The unscaled plaquette ﬁeld
+associated with p is given by, recalling that Up = exp{iXp},
+Tr Fu p (x) = 1 a2g Im Tr (Up − 1) = i 2a2g Tr [U † p − Up] = 1 a2g Tr (sin Xp) . (30)
+The reason for the above [1/(a2g)] multiplicative factor in Eq. (30) is that, if one uses the physical parametrization
+for Ub = exp(igaAb), then we obtain, for 0 <a ≪ 1, that Tr Fu p ≃ Tr Fa µν , where
+Fa µν = ∂a µAν (x) − ∂a νAµ(x) + ig[Aµ(x),Aν (x)] , (31)
+with a commutator in the Lie algebra of G = U(N ), SU(N ).
+Similarly to what we did for the gauge ﬁelds and Wilson action, we deﬁne the scaled plaquette ﬁeld Fs p (x) by
+Tr Fs p (x) = ad/2 Tr Fu p (x) = a(d−4)/2 g Im Tr (Up − 1) . (32)
+As before, we emphasize that, in the above equations, g = 0 is only an apparent singularity follows from Lemma 2
+(see below).
+To analyze the plaquette ﬁeld generating functions, we use this scaled plaquette ﬁeld. The scaled ﬁeld plaquette
+correlations are proved to be bounded, uniformly in a ∈ (0, 1]. These bounds imply bounds on the singular behavior,
+when a ց 0, of the physical, unscaled plaquette correlations. For example, the bound implies that the physical,
+unscaled plaquette-plaquette correlation has a singularity of at most a−d, when a ց 0.
+=== PAGE 12 ===
+12
+Remark 7 It is important to remark that the exponential decay of physical, unscaled plaquette ﬁeld correlations is
+the same as that of scaled plaquette ﬁeld correlations. Hence, the associated E-M spectrum is also the same. Also, in
+the abelian case, it is known that local polynomials in the plaquette ﬁelds form a dense set in the subspace of gauge-
+invariant vectors in the associated model quantum mechanical Hilbert space H. Whether or not these local ﬁelds form
+a dense set in the nonabelian case requires further investigation. We know it generates the low-lying E-M massive
+glueball spectrum. Possibly, more general loop variables are needed to go up in the spectrum [8].
+Rather than bounding the scaled plaquette ﬁeld correlations directly, we bound the generating function of r−scaled
+(r ∈ N) plaquette ﬁeld correlations. To do this, we use periodic b.c. and the multireﬂection method (see Ref. [4]).
+Based on the work of Ref. [51], we deﬁne a scaled generating function for the correlation of r ∈ N gauge-invariant
+scaled plaquette ﬁelds as
+⟨
+exp
+{∑r
+j=1 Jj Tr Fs pj (xj ) }⟩ = 1 ZP Λ ∫ exp    r∑ j=1 Jj Tr Fs pj (xj ) − ad−4 g2 ∑ p∈Λ Ap(Up)   dµ(U )
+≡ Gr,Λ(J (r),x) ≡ Gr(Λ,a,J (r),x) ,
+(33)
+where J (r) denotes the whole set of r source strengths {J1,...,Jr} and x the set of r external points {x1,...,xr}. We
+note that the denominator is the J (r) = 0 value of the numerator integral, with periodic b.c., which is the periodic
+b.c. partition function ZP Λ . Also, here pj is a short notation for pµj νj (xj ).
+Of course, the scaled plaquette ﬁelds correlation are given by the source derivatives (∂/∂Jj) at J (r) = 0, i.e. setting
+all the sources to zero. Namely, for yE = {y1,...,yr}, we have
+Cr,Λ(yE) ≡ Cr(Λ,a,yE) = ∂r ∂J1(y1) ...∂Jr(yr) Gr,Λ,a(J (r)) ⏐⏐⏐⏐ J (r) =0 . (34)
+In Theorem 4 below, we prove that the scaled generating function Gr,Λ(J (r),x) is absolutely bounded, with a bound
+that is independent of L, a, g, and the location and orientation of the r external plaquette ﬁelds. This bound leads
+to the existence of a sequential or subsequential thermodynamic limit Gr,a(J (r)) and then to a continuum a ց 0 (at
+least subsequential) limit Gr(J (r)).
+The generating function bound also has an interesting structure. The bound has only a product of single-plaquette,
+single bond-variable partition function zu(J) with a source strength ﬁeld J in the numerator; in the denominator only
+a product of zℓ (the same as in the preceding case!) occurs. In the bound for zu(J) the probability density for the
+Gaussian symplectic ensemble (GSE) appears (see [43]). The generating function is jointly analytic, entire function
+in the source strengths J1, ..., Jr of the r plaquette ﬁelds. The r-plaquette ﬁeld correlations admit a Cauchy integral
+representation and are bounded by Cauchy bounds. In particular, the coincident point plaquette-plaquette physical
+ﬁeld correlation is bounded by const a−d. The a−d factor at small a behavior is the same as that of the physical
+or unscaled real derivative scalar free ﬁeld two-point correlation (the physical free ﬁeld correlation has a singular
+behavior a−(d−2)). For the free ﬁeld, these singular behaviors are a measure of ultraviolet asymptotic freedom, in the
+context of the lattice approximation to a continuum QFT.
+In this way, we conclude that the singular behavior of the plaquette correlations is bounded by the singular behavior
+of the free derivative scalar ﬁeld correlations in d = 2, 3, 4. For the physically relevant d = 4 case, we can say more. The
+behavior of the coincident plaquette, physical plaquette-plaquette correlation is exactly a−dh(g), for some function
+h(g) which is bounded.
+For the free physical scalar ﬁeld, locally scaled ﬁeld correlations are bounded uniformly in a ∈ (0, 1], such as no
+smearing of the ﬁelds is needed to achieve boundedness. The two-point correlation of physical ﬁelds for coincident
+points has an a2−d singular behavior, for d = 3, 4. If we consider correlations of physical derivative scalar ﬁelds, then
+the singular behavior is diﬀerent. The two-point correlation of physical derivative scalar ﬁelds, at coincident points,
+has an a−d, a ց 0 singularity, for d = 2, 3, 4; for the massless case the exact value is a−d/d.
+For the free ﬁeld, the relation between the correlations of physical ﬁelds or physical derivative ﬁelds and their scaled
+counterparts is developed Appendix A.
+In this paper, ﬁrst, we give detailed and much simpliﬁed proofs of the Theorems of the unpublished Refs. [28, 29],
+using free boundary conditions. Moreover, we are able to incorporate the case of periodic boundary conditions in the
+present analysis. Similar ﬁniteness results are shown to hold for the generating function of gauge-invariant plaquette
+ﬁelds [51] and their correlations. For doing this, we adopt periodic b.c. and apply the multireﬂection method.
+Besides, in order the allow the reader see how our methods work in a simpler case, we discuss the special case of
+the abelian gauge group U(1). For this group, the Haar measure is much simpler as compared with U(N > 1) [33–36]
+and computations can be carried out more explicitly and transparently, and we emphasize that the independence of
+our bounds on a ∈ (0, 1] is already manifest in this case and the reader can better appreciate why this holds true.
+=== PAGE 13 ===
+13
+For both, free and periodic b.c., our TUV stability bounds on the scaled partition functions (deﬁned by extracting
+the a ց 0 singularity) lead to at least the existence of the subsequential thermodynamic and ultraviolet limits of the
+corresponding scaled free energies per eﬀective degree of freedom. The existence of these subsequential continuum
+limits apply to any gauge model with the same Wilson action and free/periodic b.c.
+We now emphasize that our method does not intend to be a substitute to other powerful methods such as the RG
+multiscale formalism. However, it corresponds to a simple way to obtain TUV and generating function bounds, as
+well as it allows to a simple characterization of UV asymptotic freedom in the context of a lattice ﬁeld theory. Our
+results hold for the whole one-parameter family of models depending on the gauge coupling g, such that g2 ∈ (0,g2 0 ],
+0 <g2 0 < ∞. As pointed out before, the type of singularity we met for the plaquette-plaquette correlation is typical of
+UV asymptotic models, as it is expected on physical grounds. Concerning the mass, whether or not our YM models
+have a mass is not known for now. However, we can think that applying our methods with the ones developed in
+Ref. [51] can be used to attack this question. Recall that in [51], a gauge-invariant glueball state was shown to be
+present in the E-M spectrum, with mass gap of −8 ln β (0 < β = 1/g2 ≪ 1). This state is isolated from above and
+below (going down to the vacuum state!) in the spectrum and shows it determines a mass gap. The needed spectral
+methods, based on the analysis of correlations and the Bethe-Salpeter operator kernel, are the same developed by
+Ref. [52] and employed e.g. in Refs. [53, 54] and in many other cases of strongly coupled lattice QCD. We still have
+a long way to go to get more substantial progress regarding YM and QCD models.
+We give a brief overview of our main results. In Lemma 2, we give a representation for the Wilson plaquette action
+and for plaquette ﬁelds. This representation is used to prove an upper bound on the action which is quadratic in the
+gluon ﬁelds. In turn, this bound is used to obtain a lower bound on the Wilson partition function in Theorem 1.
+In Theorem 1, we obtain a factorized stability bound on the Wilson partition function. The positivity of each
+plaquette action in the Wilson action plays a role in the proof of the upper stability bound and its factorization. Each
+factor is a partition function of a single plaquette action with only a single bond variable. The stability bound is
+good enough for the existence of the thermodynamic limit of the free energy. However, the bound is not uniform in
+the lattice spacing a ∈ (0, 1]. So, it is not enough to show, subsequently, the existence of the continuum a ց 0 limit.
+Upper and lower bounds on the single plaquette partition function are obtained in Theorem 2.
+We deﬁne a scaled partition function and, using the results of Theorems 1 and 2, in Theorem 3, we prove that
+it satisﬁes upper and lower stability bound, which are uniform in a ∈ (0, 1] and leads to a scaled free energy which
+does have a subsequential continuum limit, at least. To obtain TUV stability bound, it is crucial to scale the
+physical gluon ﬁeld Au b , as it appears in the physical parametrization Ub = exp[igaAu b ] and use the scaled gluon ﬁeld
+Ab = a(d−2)/2 Au b
+Also, we consider the generating function for correlations of r = 0, 1, 2,..., plaquette ﬁelds deﬁned in Eqs. (30)
+and (32. In Theorem 4, we prove that this generating function is bounded uniformly in the number of lattice sites,
+a ∈ (0, 1] and g2 ∈ (0,g2 0 < ∞]. The exponent of the exponential bound is the sum of the square of the r source
+strengths. The bound is also independent of the location and orientation of the r plaquette ﬁelds. Using analyticity
+in the sources and Cauchy bounds these results imply that the r-plaquette correlations are also bounded uniformly
+in a ∈ (0, 1] and g2 ∈ (0,g2 0 < ∞]. In particular, the bound is UV regular, meaning the bound holds if some of the
+positions of the plaquette ﬁelds coincide.
+The paper is organized as follows. In Section II, we deﬁne the model with the Wilson action for periodic and free
+b.c. In Section III, we deﬁne and treat an approximate model. In the approximate model, we set to zero, in the
+Wilson action, plaquette actions corresponding to interior horizontal plaquettes (i.e. plaquettes orthogonal to the
+time direction), plus some speciﬁed plaquettes on the boundary ∂Λ of Λ. Next, by a judicious integration procedure,
+we carry out all the remaining gauge bond variable integrations. In each integration, a factor is extracted which is a
+plaquette partition function depending only on a single bond variable. In this way, we obtain explicit and exact results
+for the approximate model partition function, free energy and plaquette correlations, as well as their continuum limits,
+in subsections III 1, III 2 and III 3. For the complete model, TUV stability bounds and bounds for the generating
+functions for the gauge-invariant plaquette correlations are given in sections IV and V, as our four main theorems.
+These theorems are proved in section VI. Section VII is devoted to some concluding remarks. We provide three
+appendices aiming at giving the reader the opportunity to understand essential steps in our proofs for the YM model
+in a context of simpler model cases. In Appendix A, we develop the relation between original physical, unscaled
+quantities and their scaled counterparts for the free ﬁeld. The use of scaled ﬁelds removes the UV divergences of the
+free energy and correlations, even at coincident points. Comparing the a ց 0 behavior of the free scalar case with
+the physical ﬁeld coincident-point plaquette-plaquette correlation gives us a characterization of ultraviolet asymptotic
+freedom.
+As a bonus, the scaled ﬁeld free energy and correlations admit absolutely convergent power series in the scaled
+coupling (hopping) parameter up to and including the critical point. The same holds for the random walk expansion
+associated with the scaled ﬁeld free energy and scaled ﬁeld correlations.
+In contrast with the scalar model analyzed in Ref. [50], in Appendix B, we treat a lattice scalar ﬁeld model,
+=== PAGE 14 ===
+14
+which is non-Gaussian in perturbation theory in d = 3, 4. We prove that it obeys TUV stability bounds with the
+exponent of the exponential proportional to the number of lattice sites Λs = Ld (not the volume (aL)d in Rd). The
+proportionality constants are uniform in L ∈ N (even) and a ∈ (0, 1]. This bound is suﬃcient to bound the scaled
+ﬁeld free energy and correlations, even at coincident points, uniformly in a ∈ (0, 1].
+Finally, we note that we have obtained local factorized bounds of the YM partition function in the text. In Appendix
+C, we show how local factorized bounds are obtained in the case of Bose ﬁelds.
+II. THE WILSON YM MODEL
+This section is devoted to the deﬁnition of our lattice YM model.
+Remark 8 We warn the reader that all deﬁnitions given above (lattice, sites, plaquettes, partition function,...) are
+assumed to hold here and below in our text. In order to simplify the notation, sometimes, we will drop the u and
+s superscripts to diﬀer the same quantity in its unscaled and scaled versions, respectively. Instead, we will assign
+two diﬀerent letters for them, making clear in the text which is which. Also, our notation will avoid to write the
+a-dependence explicitly. Finally, as it was observed above, we concentrate on the case of the gauge group G = U(N ).
+The case of the gauge group G = SU(N ) is obtained from this one with minor adaptations.
+We describe the partition function of the free and periodic b.c. scaled YM models and their gauge invariance
+properties. The superscript P will denote periodic b.c. quantities.
+Free b.c. Bonds: Recalling that a lattice site is x = (x0,x1,...,xd−1), where 0 labels the time direction, eµ,
+µ = 0, 1,..., (d − 1) is the unit vector of the µ-th direction and bµ(x) is the lattice bond with initial point x and
+terminal point xµ + ≡ x + aeµ ∈ Λ, the number of free b.c. bonds in Λ is Λb = d(L − 1)Ld−1. Sometimes, we refer to
+the bonds in the time direction x0 as vertical bonds. The other (spatial) bonds are called horizontal.
+Periodic b.c. Bonds: In addition to free b.c. bonds, we have additional or extra bonds in our periodic lattice. An
+extra bond has initial point at the extreme right lattice site and terminal point at the extreme left lattice site, in each
+coordinate direction. If Λe denotes the number of extra bonds, we have Λe = dLd−1. The total number bonds in Λ
+with periodic b.c. (henceforth called periodic bonds) is ΛP b = Λb + Λe.
+Free b.c. Plaquettes : The free b.c. plaquettes are the plaquettes pµν(x), in the µν-plane, with µ<ν. Its vertices are
+the lattice sites x, xµ + ≡ x + aeµ, xµ + + aeν, xν + ≡ x + aeν of Λ.
+Periodic b.c. Plaquettes: In addition to the free b.c. lattice plaquettes, there are also extra plaquettes formed with
+at least with one periodic b.c. bond. The periodic b.c. plaquettes are comprised of all plaquettes that can be formed
+from the totality of periodic b.c. bonds. We denote the total number of free (periodic) plaquettes by Λp (ΛP p ). We
+have, Λp = Λr, for d = 2; Λp ≃ 3L3, 6L4, respectively, for d = 3, 4. ΛP p is given by Λp plus the number of boundary
+plaquettes.
+Recalling that a ∈ (0, 1] and g2 ∈ (0,g2 0 ), 0 <g2 0 < ∞, and letting B = blank or P , to denote the free and periodic
+b.c., respectively, we represent the model partition function, with B-type b.c., by Eq. (6). Namely, we have
+ZB Λ (a) =
+∫
+exp
+
+− ad−4
+g2
+∑
+p∈Λ
+Ap(Up)
+
+ dµ(U ) ≡
+∫
+exp
+
+− ad−4
+g2
+∑
+p∈Λ
+2 Re Tr (1 − Up)
+
+ dµ(U ) , (35)
+with dµ(U ) = ∏ b∈Λ dµ(Ub). The Wilson plaquette action Ap(Up) is deﬁned according Eq. (7) and is given by
+Ap(Up) = 2 Re Tr (1 − Up) = ‖Up − 1‖2 H−S = Tr ( 2 − Up − U † p ) = 2Tr (1– cos Xp) . (36)
+Here, ‖ · ‖H−S means the Hilbert-Schmidt norm and the dagger sign denotes the adjoint. The last equality is proved
+below, before Lemma 1. For p = pµν(x), the plaquette with vertices as in Eq. (4), and bonds b1 = [x, xµ +],
+b2 = [xµ + , xµ + + aeν], b3 = [xν + , xν + + aeµ] and b4 = [x,xν +], we have
+Up = Ub1 Ub2 U † b3 U † b4 = Ub1 Ub2 [Ub4 Ub3 ]† = eiXp . (37)
+The last equality for Ap(Up) above uses the fact Up is a unitary variable, as given in Eq. (37). All the above deﬁnitions
+are independent of the gauge variable parametrization.
+=== PAGE 15 ===
+15
+If we adopt the physical parametrization of Eq. (7), i.e. Ub = exp[igaAb], with Ap → Au p , denoting the unscaled
+Wilson action, we obtain
+Zu,B Λ,a =
+∫
+exp
+[
+− ad−4
+g2 Au,B
+]
+dgB. (38)
+Here, we assigned a gauge bond variable for each bond b which is a unitary matrix U ∈ G = U(N ). The measure
+dgB is the product over bonds b of the single-bond G Haar measures dσ(U ). dgB is expressed in terms of the physical,
+unscaled gauge potentials Au b , according to Eq. (3). For p denoting any ﬁxed plaquette, the model unscaled action is
+Au,B = ∑
+p
+Au p , (39)
+where the sum ∑ p is over plaquettes in the lattice Λ with the b.c. of type B. Obviously, the plaquette actions Au p ,
+and then the total action Au,B, are pointwise positive. This is an important property which we will use when deriving
+our bounds below.
+To deﬁne Au p , we ﬁrst recall some important facts about unitary matrices and their representation in terms of
+elements of the Lie algebra of self-adjoint matrices associated with the gauge group G.
+For an N × N matrix M , recall the Hilbert-Schmidt norm is ‖M ‖H−S = [Tr(M †M )]1/2. Let M1 and M2 be N × N
+matrices. Then (M1,M2) ≡ Tr(M † 1 M2) is a sesquilinear inner product. We also have the following properties, which
+are summarized in the next lemma.
+Lemma 1 1. Let X be a self-adjoint matrix. Deﬁne exp(iX) by the Taylor series expansion of the exponential.
+Then exp(iX) is unitary.
+2. Given a unitary N × N matrix U , by the spectral theorem, there exists a unitary V such that V −1UV =
+diag(eiλ1 ,...,eiλN ), λj ∈ (−π,π]. The λj are the angular eigenvalues of U . Deﬁne X = V −1diag(λ1,...,λN )V .
+Then, X is self-adjoint, U = exp(iX), and the exponential map is onto (see [30]).
+3. For α = 1, 2,...,N , let the self-adjoint θα form a basis for the self-adjoint matrices (the U(N ) Lie algebra
+generators), with the normalization condition Trθαθβ = δαβ, with a Kronecker delta. Then, with X being an
+N × N self-adjoint matrix, X has the representation X = ∑ 1≤α≤N 2 xαθα, with xα = Tr Xθα, for xα real.
+4. For U and X related as in item 2, we have the important equalities:
+‖X‖2 H−S = Tr ( X †X ) = ∑
+1≤α≤N 2
+|xα|2 = |x|2 = ∑
+1≤j≤N
+λ2 j ≤ Nπ2 , λj ∈ (−π,π] .
+Thus, the exponential map is onto, for |x| ≤ N 1/2π.
+5. In particular, if Xb = agAu b , the equality of the last item takes the form
+‖X‖2 H−S = Tr ( X †X ) = ∑
+1≤α≤N 2
+|xα|2 =
+N∑
+j=1
+λ2 j = a2g2
+δN∑
+c=1
+|Au,c b |2 = g2 ad−4 δN∑ c=1 |Ac b|2 . (40)
+where we used the scaling relation given in Eq. (11), namely,
+Ab = a(d−2)/2 Au b . (41)
+Eq. (40) uses the content of Eq. (24).
+The unscaled gauge ﬁeld Au b has the representation Au b = ∑ 1≤α≤δN Au,α b θα, and we refer to Au,α b as the physical,
+unscaled color or gauge components of Au b . For p = pµν(x), the plaquette variable Up, is given by Eq. (5), with
+Aµ(x) → Au µ(x). Likewise, adopting the physical parametrization for the Ub in Up and with Up = eiXp , the positive
+unscaled plaquette action Au p for the plaquette p is deﬁned as in below Eq. (6), by
+Au p = ‖Up − 1‖2 H−S = 2 Re Tr (1 − Up) = 2Tr (1– cos Xp) = Tr ( 2 − Up − U † p ) . (42)
+For concreteness, we give the case of the gauge group G = U(2), as an example. Here, X = ∑ α=1,...,4 xαθα, with
+Tr θαθβ = δαβ (with a Kronecker delta), and, for σj, for j = 1, 2, 3, 4 being the three 2 × 2 traceless and hermitian
+Pauli spin matrices σ1, σ2, σ3, and σ4 = I is the 2 × 2 identity. For U(2), we can take θj = σj/
+√
+2.
+=== PAGE 16 ===
+16
+This completes the description of the model.
+Using the Baker-Campbell-Hausdorﬀ formula [32] for non-commuting operators X and Y ,
+eX eY = eZ ; Z = X + Y + 1 2 [X,Y ] + 1 12 [X, [X,Y ]] − 1 12 [Y, [X,Y ]] + · · · , (43)
+formally, it is shown in Ref. [3], for small lattice spacing a> 0, that
+Up = exp
+[
+ia2gFa µν (x) + R ] , R = O(a3) ,
+where Fa µν (x) is the ﬁnite lattice unscaled nonabelian strength ﬁeld tensor given in Eq. (31). Namely, we have
+Fa µν (x) = ∂a µAu ν (x) – ∂a νAu µ(x) + ig[Au µ(x),Au ν (x)] ,
+with ﬁnite diﬀerence derivatives
+∂a µAu ν (x) = a−1 [Au ν (x + aeµ) – Au ν (x)] , (44)
+Also, it is shown that the unscaled plaquette action satisﬁes, for small a, Au p ≃ a4g2 Tr [ Fa µν (x) ]2 . Each term
+in
+[
+Fa µν (x) ] is self-adjoint. Hence, the square is a self-adjoint and positive matrix, and its trace is positive. The
+quantity { [ad−4/g2] ∑ p Ap } is the Riemann sum approximation to the classical smooth ﬁeld continuum YM action
+{
+∫
+Tr (Fa µν )2(x) ddx }. When Λ ր aZd and after a ց 0, formally, and the ﬁnite diﬀerence derivatives become
+ordinary partial derivatives.
+We now discuss gauge invariance and gauge ﬁxing in detail. We take the global gauge group Gglobal as the product
+of a G = U(N ), SU(N ) group at each lattice site. Namely,
+Gglobal =
+∏
+x∈Λ
+Gx,
+where an element of Gx is an element of G. It transforms the bond variables Ub ≡ Ux,x+ µ and its adjoint U † b to
+Ux,x+ µ → UxUx,x+ µ U † x+ µ ; U † x,x+ µ → Ux+ µ U † x,x+ µ U † x, (45)
+respectively. It is easy to see that Tr Up is invariant under these transformation. From this, it follows that the
+plaquette action Ap(Up) and the total action ∑ p Ap(Up) are also invariant under this local gauge transformation.
+Due to the local gauge invariance of the action Au p , and so also Au,B = ∑ p Au p , there is an excess of gauge
+variables in the deﬁnition of the partition function given of Eq. (38). By a gauge ﬁxing procedure [4], we eliminate
+gauge variables by setting them, in the action, equal to the identity and performing the trivial gauge bond variable
+integration. In this process of gauging away some of the gauge group bond variables, the value of the partition function
+is unchanged, as long as the gauged away bonds do not form a closed loop in Λ (see [4]).
+We work with the enhanced temporal gauge. This gauge will be ﬁxed to prove some of our main results.
+In the enhanced temporal gauge, the temporal bond variables in Λ are set to the identity, as well as certain
+speciﬁed bond variables on the boundary ∂Λ of Λ. The number Λr of retained bonds (see Eq. (9)) is, for free b.c.,
+Λr = [(L − 1)2], [(2L + 1)(L − 1)2], [(3L3 − L2 − L − 1)(L − 1)], respectively, for d = 2, 3, 4. Clearly, Λr ≃ (d − 1)Ld,
+for suﬃciently large L, and Λr ր ∞ as Λ ր aZd. For periodic b.c., the same bond variables are gauged away; the
+number of non-gauged away bond variables is then (Λr + Λe), where we recall that Λe is the number of extra bonds
+to implement periodic b.c.
+The precise deﬁnition of gauged away bonds, for free b.c., is as follows (see page 4 of [49] for more details). We
+label the sites of the µ-th lattice coordinate by 1, 2,...,L. The enhanced temporal gauge is deﬁned by setting in Λ
+the following bond variables to 1. First, for any d = 2, 3, 4, we gauge away all temporal bond variables in Λ by setting
+gb0(x) = 1. For d = 2, take also gb1(x0=1,x1) = 1. For d = 3, set also gb1(x0=1,x1,x2) = 1 and gb2(x0=1,x1=1,x2) = 1.
+Similarly, for d = 4, set also to 1 all gb1 (x0=1,x1,x2,x3), gb2(x0=1,x1=1,x2,x3) and gb3 (x0=1,x1=1,x2=1,x3). For d = 2 the
+gauged away bond variables form a comb with the teeth along the temporal direction, and the open end at the
+maximum value of x0. For d = 3, the gauged away bonds can be visualized as forming a scrub brush with bristles
+along the x0 direction and the grip forming a comb. For any d, all gauged away bond variables are associated with
+bonds in the hypercubic lattice Λ which form a maximal tree. Hence, by adding any other bond to this set, we form
+a closed loop.
+In the next section, we consider the case of an approximate model and obtain TUV stability bounds. This analysis
+is intend to allow the reader to get an overall view on how the TUV bounds hold, showing a factorization structure.
+=== PAGE 17 ===
+17
+III. TUV STABILITY AND PLAQUETTE FIELD CORRELATIONS FOR AN APPROXIMATE MODEL
+With the deﬁnitions given in section II for our YM model in mind, in this section, we restrict our attention to a
+simpliﬁed lattice YM model. Of particular interest are the contents of the basic Eqs. (35), (36), (37), (38), (39) and
+(42), which will be used repeatedly here, as well as in the next sections.
+Before attacking the complete nonabelian mode, in order to allow the reader to understand better the main points
+of our proofs, we consider a simpliﬁed YM model, with free b.c. In the Wilson action, we set to zero the actions
+corresponding to internal horizontal plaquettes (i.e., those plaquettes which are orthogonal to the time direction), plus
+certain speciﬁed plaquettes on the boundary ∂Λ of the lattice Λ. We refer to this model as the approximate model.
+For the approximate model, the free energy, plaquette ﬁeld [check Eq. (30)] correlations and their thermodynamic
+limits, as well as their continuum limits, are obtained explicitly and exactly. The bounds obeyed in the approximate
+model are a good guide for the model without approximation.
+In subsection III 1, we deﬁne the approximate model and treat stability. In subsection III 2, we obtain plaquette
+ﬁeld correlations considering the gauge group U(1). The plaquette ﬁeld correlation results are extended to U(N ≥ 2)
+in subsection III 3.
+The complete, non-approximate model is treated in the ensuing sections. For d = 2, the results obtained for the
+complete model and the approximate model coincide.
+The physical gauge-invariant plaquette ﬁeld plaquette-plaquette correlation is most singular for coincident points.
+The ultraviolet limit a ց 0 singular behavior is (const/ad). The same behavior occurs for the coincident-point
+derivative ﬁeld correlations in the case of the real, massless scalar free ﬁeld, as shown in Appendix A.
+Of course, the abelian G = U(1) case and, for the model without approximation, the formal g ց 0 limit gives us
+the lattice free electromagnetic ﬁeld with a quadratic action. (See Remark 10 in subsection III 1). The plaquette-
+plaquette ﬁeld correlations can be obtained exactly in a momentum space representation and the coincident point
+plaquette-plaquette ﬁeld correlation is equal to {4/[d(d − 1)ad]}.
+Using our scaled ﬁeld method, we obtain TUV stability bounds and bounds on the scaled free energy and also the
+boundedness of two-point plaquette scaled ﬁeld correlation. For the abelian gauge group G = U(1), the Haar measure
+is simpler, formulas are more familiar and the analysis becomes more transparent.
+For d = 2, the results for the two-point plaquette ﬁeld correlation are exact. For d = 3, 4, the results are also exact
+for the approximate model. This seemingly gross approximation gives the correct picture for bounds for the complete
+YM model with the nonabelian gauge group G = U(N > 1).
+1. Approximate Model: TUV Stability
+Using the physical parametrization and starting from the free b.c. partition function of Eq. (38), we set
+Ub = eiθb = eiagAu b ,
+where we recall Au b is the physical, unscaled gauge potential. For the plaquette p = pµν(x), set
+θµν (x) = θµ(x) + θν(x+ µ ) − θν(x) − θµ(x+ ν ) ,
+where θµ(x) ≡ θb=bµ (x).
+Then, the ﬁnite lattice free b.c. unscaled partition function reads
+Zu Λ(a) =
+∫
+|θb|≤π
+exp
+[
+− ad−4
+g2
+∑
+x,µ<ν
+2 [1 − cos (θµν (x))]
+] ∏
+b∈Λ
+dθb
+2π .
+In terms of the ﬁelds Au b , setting Aµν (x) ≡ aFa µν(x), where Fa µν (x), given in Eq. (31), is the usual ﬁeld strength
+antisymmetric second order tensor, deﬁned with ﬁnite diﬀerence derivatives. We have
+Zu Λ(a) = (ag 2π )Λr ∫ |Ab|≤π/(ag) exp { − ad−4 g2 ∑ x,µ<ν 2 [ 1 − cos ( a2gFa µν (x) )] } ∏ b dAb,
+Now, we transform to the locally scaled ﬁelds χb deﬁned by
+χb = a(d−2)/2 Au b . (46)
+=== PAGE 18 ===
+18
+In terms of these ﬁelds, the free b.c. unscaled partition function is
+Zu Λ(a) = ( g 2πa(4−d)/2 )Λr ∫ |χb|≤(π/g) a(d−4)/2 exp { − ad−4 g2 ∑ x,µ<ν 2 [ 1 − cos ( ga(4−d)/2χµν(x) )]} ∏ b dχb,
+Remark 9 We note that, instead of the above simple expression, in the nonabelian case U(N > 1), the Haar measure
+presents also a weight function factor besides the product of Lebesgue measures [33–36].
+Remark 10 In the Ab variables, the Boltzmann factor, for a ց 0, is approximately
+exp
+{
+− ad ∑
+x,µ<ν
+[
+Fa µν (x) ]2
+}
+,
+for d = 2, 3, and for d = 4 and g ց 0. In both cases, the action approximates the continuum model action.
+In the χb variables, the Boltzmann factor, for a ց 0, is approximately
+exp
+{
+−
+∑
+x,µ<ν
+[χµν (x)]2
+}
+,
+for d = 2, 3 and the same holds for d = 4 and g ց 0. Here, in both cases, the action is independent of the lattice
+spacing a. In the above quadratic approximation of the action, the model can be solved explicitly by diagonalizing the
+corresponding quadratic form.
+We now deﬁne more precisely and analyze our approximate model. We also outline the bond gauge integration
+procedure. This is done for each value of the spacetime dimension d = 2, 3, 4. For simplicity, we identify coordinates
+of a lattice site in each lattice direction, µ = 0, 1, 2,..., (d − 1), with the labels 1, 2,...,L. We have:
+• d = 4: For x0 = L,L − 1,..., 2, set the plaquette actions to zero in the planes parallel to the µν = 12, 13, 23
+coordinate planes. For x0 = 1, x3 = L,..., 2, set the plaquette actions to zero in the coordinate planes parallel
+to the 12-plane;
+• d = 3: For x0 = L,L − 1,..., 2, set to zero the plaquette actions in the planes parallel to the 12-plane;
+• d = 2: maintain all the plaquette actions.
+Remark 11 We remark that a simpler approximate model can be deﬁned by setting to zero all horizontal plaquette
+actions. Such a model can also be solved exactly and the same results given here, for our approximate model, also
+hold. Boundary eﬀects disappear in the thermodynamic limit. In our approximate model, fewer plaquette actions are
+discarded.
+Simpliﬁed, Approximate Model for the Abelian Gauge Group G = U(1):
+With these deﬁnitions, we now perform the bond integration. For ease of visualization, we carry it out explicitly
+for d = 3.
+For d = 3, integrate over successive planes of horizontal bonds starting at the coordinate x0 = L and ending
+at x0 = 2. For the x0 = 1 horizontal plane, integrate over successive lines of horizontal bonds in the coordinate
+direction two, starting at x1 = L and ending at x1 = 2. For each horizontal bond variable integration, the bond
+variable appears in only one plaquette.
+The simpliﬁcation that occurs in our original model is that, in the approximate model, we can carry out all bond
+integrations. Besides, for each integration, we can extract a single plaquette partition function of a single bond
+variable.
+We emphasize that, for d = 2, the model was solved without any approximation in Ref. [19].
+After integration, each integral depends, in principle, on the other bond variables of the plaquette which are present
+in the plaquette variable Up [see Eq. (5)]. However, as in Ref. [19], for d = 2, by a change of variables, the integral is
+independent of the other variables and their integrals are trivially done. Here, we are using the simplest case of the
+left and right invariance of the gauge group Haar measure (see e.g Refs. [30–32] and Eq. (54) below). In this way, a
+factor is extracted from the partition function which corresponds to the scaled partition function of a single plaquette
+of a single bond variable.
+=== PAGE 19 ===
+19
+After the bond integration procedure is completed, we obtain
+Zu Λ(a) = [ g 2πa(d−4)/2 ]Λr zΛr , (47)
+where z is the scaled single bond partition function. Namely, we have
+z =
+∫
+|X|≤(π/g) a(d−4)/2
+exp
+{
+− ad−4
+g2
+∑
+x,µ<ν
+2
+[
+1 − cos
+(
+ga(4−d)/2 X )]} dX.
+Using the following elementary trigonometric inequalities in the above integrand (see e.g. Ref. [13] for a proof of
+the second one)
+1 − cos u ≤ u2/2 , u ∈ R
+1 − cos u ≥ 2u2
+π2 , u ∈ (−π,π] ,
+(48)
+we obtain the upper and lower bounds
+z ≤
+∫
+|X|≤(π/g) a(d−4)/2
+exp
+[
+− 4 π2 X 2
+]
+dX ≡ zu, (49)
+and
+z ≥
+∫
+|X|≤(π/g) a(d−4)/2
+e−X 2 dX ≥ ∫
+|X|≤(π/g0)
+e−X 2 dX ≡ ˜zℓ > 0 , (50)
+for all a ∈ (0, 1] and 0 < g2 ≤ g2 0 < ∞.
+We now deﬁne the scaled free b.c. partition function Zs Λ(a), by extracting the a ց 0 singularity in Eq. (47). It
+reads
+Zs Λ(a) = [ g 2πa(d−4)/2 ]−Λr Zu Λ(a) = zΛr . (51)
+In this way, in terms of Zs Λ(a), we obtain the TUV stability bound
+0 < ˜zΛr ℓ ≤ Zs Λ(a) ≤ zΛr u ,
+so that, deﬁning the scaled free energy per eﬀective degree of freedom in the ﬁnite d-dimensional hypercubic lattice
+Λ by
+fs Λ(a) ≡ 1 Λr ln Zs Λ(a) = ln z, (52)
+the TUV bounds ensure, the thermodynamic limit Λ ր aZd and the continuum limit a ց 0 exist (here, not only the
+subsequential limits as below!) and we obtain
+fs ≡ limaց0 limΛրaZd fs Λ(a)
+= limaց0 ln z
+=
+
+
+
+∫
+R
+e−X 2 dX = √ π/2 , d = 2, 3,
+∫
+|X|≤π/g
+e−2g−2[1−cos(gX)] dX, d = 4 .
+Besides, for d = 4, we have limgց0 fn = √ π/2.
+Simpliﬁed Approximate Model with Gauge Group G = U(N ):
+=== PAGE 20 ===
+20
+Still considering the approximate model, here we extend our TUV bounds to the more general nonabelian G = U(N )
+case. Using the same bond integration procedure as in the above U(1) case, the simpliﬁed model, free b.c. unscaled
+partition function with the gauge group U(N ) also factorizes as
+Zu Λ,a = zΛr ,
+where
+z =
+∫
+U(N )
+exp
+[
+− ad−4
+g2 Tr
+(
+2 − U − U †)] dσ(U ) . (53)
+Here, z is the partition function of a single plaquette with the single bond variable U .
+We explain how the factorization occurs, and we use the left and right invariance of the single bond Haar measure
+dσ(U ). We recall the invariance property (see e.g. [30–32]): let f (U ) be a function of the bond variable U ∈ U(N )
+and let W ∈ U(N ). Then,
+∫
+U(N )
+f (U ) dσ(U ) =
+∫
+U(N )
+f (WU ) dσ(U ) =
+∫
+U(N )
+f (UW ) dσ(U ) . (54)
+Returning to the bond integration procedure, let U1,U2,U3,U4 be the plaquette p bond variables and Up =
+U1U2U3U4, as in Eq. (5). Consider the integration over U1, where, in the partition function Zu Λ(a), U1 only appears
+in the plaquette p. The integral over the bond variable U1 is
+∫
+U(N )
+exp
+{
+− a(d−4)
+g2 Tr
+(
+2 − Up − U † p )} dσ(U1) .
+By the Haar measure left and right invariance (take W = U2U3U4 and U = U1 above!), the integral is just the single
+bond partition function z, and is independent of the other bond variables. In this way, we extract the factors z from
+the partition function Zu Λ(a).
+To continue our analysis, we note that the above integrand is a class function on G. For the U(N ) group integral of
+a class function, the N 2 dimensional integral over the n × n matrix group reduces to an N dimensional integral over
+the angular eigenvalues of U , according to the Weyl integration formula [30–32, 47].
+The angular eigenvalues are deﬁned as follows. If the eigenvalues of the unitary matrix U are denoted by
+{eiλ1 ,...,eiλN }, with λj ∈ (−π,π], j = 1,...,N , then λ ≡ (λ1,...,λN ) are called the angular eigenvalues of
+U . The Weyl integration formula reads
+∫
+U(N )
+f (U ) dσ(U ) = 1 N ! ∫ (−π,π]N f (λ) ρ(λ) dλ (2π)N , (55)
+where dλ = dλ1 ...dλN is a product measure of Lebesgue measures, and the weight function or density ρ(λ) arises
+from a squared Vandermonde determinant. It is given by
+ρ(λ) =
+∏
+1≤j<k≤N
+⏐⏐eiλj − eiλk ⏐⏐2 = ∏
+1≤j<k≤N
+{2 [1 − cos (λj − λk)]} . (56)
+In this way, applying the Weyl integration formula to z of Eq. (53), we obtain
+z = 1 N !(2π)N
+∫
+(−π,π]N
+exp
+
+− 2ad−4
+g2
+∑
+j=1,...,N
+(1 − cos λj)
+
+ ρ(λ) dλ.
+Next, we use Eq. (48) to give bounds on (1 − cos u) and the density bound
+( 4
+π2
+)N (N −1)/2
+ˆρ(λ) ≤ ρ(λ) ≤ ˆρ(λ) ,
+where ˆρ(λ) = ∏ 1≤j<k≤N |λj − λk|2. The lower bound holds for all |λj | ≤ π/2 and there is no restriction for the
+upper bound. Besides, we make use of the changes of variables, with y = (y1,...,yN ),
+y =
+(ad−4
+g2
+)1/2
+λ ; y =
+(ad−4
+g2
+)1/2
+2
+πλ,
+=== PAGE 21 ===
+21
+respectively, in the lower and upper bounds. Doing this, we obtain the following bound on z
+( 2
+π
+)N (N −1) 1
+N !(2π)N
+( g2
+ad−4
+)N 2/2 ∫
+L
+exp
+
+− ∑
+1≤j≤N
+y2 j
+
+ ˆρ(y)dy
+≤ z ≤
+(π
+2
+)N 2 1
+N !(2π)N
+( g2
+ad−4
+)N 2 /2 ∫
+U
+exp
+
+− ∑
+1≤j≤N
+y2 j
+
+ ˆρ(y)dy.
+where we have the integration domains L = {y : |yk| ≤ (π/2) (ad−4/g2)1/2} and U = {y : |yk| ≤ 2 (ad−4/g2)1/2}.
+We easily recognize the above integrands as being proportional to the well known (see e.g. Refs. [42, 43]) Gaussian
+Unitary Ensemble (GUE) probability density in RN of random matrix theory.
+Extracting the a ց 0 singularity and deﬁning the normalized U(N ) approximate model ﬁnite lattice scaled partition
+with free b.c. by
+Zs Λ(a) =
+(ad−4
+g2
+)N 2Λr /2
+Zu Λ,a, (57)
+then Zs Λ,a obeys the TUV bound
+zΛr ℓ ≤ Zs Λ(a) = zΛr s ≤ zΛr u , (58)
+with
+zs = 1 N !(2π)N
+(ad−4
+g2
+)N 2/2 ∫
+(−π,π]N
+exp
+
+− 2ad−4
+g2
+∑
+j=1,...,N
+(1 − cos λj)
+
+ ρ(λ) dλ. (59)
+In Eq. (58), we have
+zℓ = ( 2 π )N (N −1) G ( (ad−4/g2)1/2 π/2 )
+zu = ( π 2 )N 2 G ( (ad−4/g2)1/2 2 ) ,
+where, up to a normalization (see [42, 49]), G is the probability in the GUE given by
+G(u) = 1 N ! (2π)N
+∫
+|yk |<u
+exp
+
+− ∑
+1≤j≤N
+y2 j
+
+ ˆρ(λ)dλ ≤ G(∞) .
+We now deﬁne a scaled ﬁnite lattice free energy by
+fs Λ(a) = 1 Λr ln Zs Λ(a) .
+Hence, the above TUV bounds ensure the existence of the thermodynamic and continuum limits of the scaled free
+energy given by, with G(∞) ≡ limuր∞ G(u),
+fs = lim
+aց0
+lim
+ΛրaZd
+fs Λ(a) =
+
+
+
+ln G(∞) , d = 2, 3
+ln
+
+
+
+1
+N !(2π)N
+∫
+|yk |≤π/g
+exp
+
+− 2g−2 ∑
+1≤j≤N
+(1 − cos(gyj))
+
+ ˆρ(y) dy
+
+
+, d = 4 ,
+at least in the subsequential sense. Furthermore, for d = 4, we get limgց0 fs = ln G(∞).
+2. Approximate Model: Plaquette Field Correlations for U(1)
+Here, ﬁrst we take the gauge group to be G = U(1). As shown below, in this simple abelian group case, we are able to
+compute the plaquette-plaquette correlation exactly for the approximate model and for vertical plaquettes (plaquettes
+=== PAGE 22 ===
+22
+with two vertical bonds). This computation allows us to show the boundedness of the scaled ﬁeld plaquette-plaquette
+correlation. In the next subsection, we consider the nonabelian gauge groups U(N ≥ 2).
+For the plaquette p = pµν(x), we deﬁne the physical unscaled gauge-invariant plaquette ﬁeld as in Eq. (30), using
+the unscaled ﬁelds Au b . In the abelian case, with the physical parametrization Ub = eiagAu b , it reduces to
+Fu p (Up) = 1 a2g sin [ a2gFa µν (x) ] (60)
+where Au p = aFa µν, for the abelian version of the ﬁeld tensor Fa µν given in Eq. (31), i.e. without the commutator
+term.
+Next, considering a suﬃciently small lattice spacing a, we show this plaquette ﬁeld leads to the expected physical
+correlation, i.e.
+Fu p (Up) ≃ Fa µν = ∂a µAu ν − ∂a νAu µ , 0 < a ≪ 1 .
+Then, the gauge-invariant unscaled plaquette-plaquette correlation is deﬁned by
+⟨Fu µν(x)Fu ρσ(y)⟩ = 1 N ∫ |Au b |<π/(ag) {[ 1 a2g sin ( a2 gFa µν (x) )][ 1 a2g sin ( a2gFa ρσ(y) )]}
+× exp
+{
+− ad−4
+g2
+∑
+z,µ<ν 2
+[
+1 − cos
+(
+a2 gFa µν (z) )]} ∏ bdAu b . (61)
+As seen above, we emphasize that in the abelian case we can deal easily with the G Haar measure and express it in
+terms of the unscaled ﬁelds Au b .
+For small a, the right-hand-side of Eq. (61) becomes
+1
+N
+∫
+|Au b | ≤ (π/ag)
+Fa µν (x) Fa ρσ(y) exp
+{
+− ad ∑
+z,µ<ν
+[
+Fa µν (z) ]2
+} ∏
+b
+dAu b .
+Note that the above action is the Riemann sum approximation to the smooth ﬁeld classical continuum action∑
+µ<ν
+∫
+[−La,La]d ddx [ Fa µν (x)) ]2 , where the ﬁeld strength antisymmetric tensor in the abelian case is Fa µν (x) =
+∂µAu ν (x) − ∂νAu µ(x). Hence, we obtain the lattice approximation to the unscaled plaquette-plaquette correlation.
+Now, for a ∈ (0, 1], we deﬁne a U(1) gauge-invariant scaled plaquette-plaquette correlation by
+⟨Fs µν (x) Fs ρσ(y)⟩ = 1 N ∫ |Au b |<π/(ag) [(ad−4 g2 )1/2 sin[a2gFa µν (x)] ] [(ad−4 g2 )1/2 sin[a2gFa ρσ(y)] ]
+× exp
+{
+− ad−4
+g2
+∑
+z,µ<ν 2
+(
+1 − cos(a2gFa µν(z)) )} ∏ bdAu b
+= ad ⟨Fu µν(x)Fu ρσ(y)⟩ ,
+(62)
+where we observe the change of coeﬃcients on the sine terms, as compared with Eq. (61), and where N is the
+normalization constant
+N ≡
+∫
+|Au b |<π/(ag)
+exp
+{
+− ad−4
+g2
+∑
+x,µ<ν
+2
+(
+1 − cos(a2gFa µν (x)) )
+} ∏
+b
+dAu b .
+Using the scaled gauge ﬁeld χb = a(d−2)/2 Au b (see Eq. (46)), we can rewrite the plaquette-plaquette correlation as
+⟨Fs µν (x)Fs ρσ(y)⟩ = 1 N ′
+∫
+|χb |<π(ad−4/g2 )1/2
+ad−4
+g2 sin
+[(ad−4
+g2
+)−1/2
+χµν (x)]
+]
+sin
+[(ad−4
+g2
+)−1/2
+χρσ(y)
+]
+× exp
+{
+− ad−4
+g2
+∑
+z,µ<ν 2
+(
+1 − cos
+(ad−4
+g2
+)−1/2
+χµν(z)
+)}
+∏
+bdχb,
+where N ′ is the measure normalization.
+=== PAGE 23 ===
+23
+Now, for the approximate model, we compute the plaquette-plaquette correlation exactly. We also show that its
+thermodynamic limit exists and that the correlation of Eq. (62) is bounded uniformly in a ∈ (0, 1]. The continuum
+limit of ⟨Fs µν(x)Fs ρσ(y)⟩ also exists! [In the next subsection, we extend these results to the case of the nonabelian
+gauge group U(N ), N ≥ 2.]
+More precisely, for the approximate model, we will show that ⟨Fs µν (x)Fs ρσ(x)⟩ is bounded uniformly in a ∈ (0, 1]
+and 0 < g2 ≤ g2 0 < ∞. The importance of this result is that it shows us that the coincident point (x = y) physical
+plaquette-plaquette correlation behaves as const/ad.
+The a−d behavior is analogous to what occurs if we transform the physical massless scalar ﬁeld φu(x), by a local
+scaling factor, to a scaled ﬁeld φ(x) = a(d−2)/2 (2d)1/2 φu(x). The scaled ﬁeld action is independent of the lattice
+spacing a (see Ref. [24] and Appendix A for more details.) Moreover, the scaled ﬁeld correlations are bounded at
+coincident points, uniformly in a ∈ (0, 1], for d = 3, 4, and the unscaled derivative ﬁeld two-point correlation has the
+exact value 2/(dad), for dimensions d = 2, 3, 4.
+In order to simplify the notation, like in Eq. (62), below N will mean the average of the constant which is identically
+1, with the relevant measure appearing in the corresponding average integral, including the exponential density factor.
+For the complete model with gauge group G = U(N ), the integrals do not factorize, but for the approximate
+model they do factorize, which makes much easier the analysis of the plaquette-plaquette correlation. For this reason,
+from now on this subsection, we deal with only the approximate model. Note that we also take the two plaquettes,
+containing the external points, to be vertical (i.e. with at least one bond in the time direction).
+To analyze the plaquette-plaquette correlation for the approximate model, we follow the same integration procedure
+employed before in our treatment of the partition function (see subsection III 1). The result is that all gauge integrals
+with densities given by the exponential of the actions factorize, provided they do not contain the external points
+x and y. As before, the factorized terms correspond to single plaquette partition functions depending only on a
+single bond variable. They are present both in the numerator and the normalization integrals in the denominator in
+⟨Fs µν (x)Fs ρσ(y)⟩. Thus, they do cancel out.
+After this partial cancellation, we are left in the numerator with integrals whose coordinate supports contain the
+x and y external points. However, since the single plaquette ﬁeld correlation is zero by the A → −A symmetry, the
+only nonzero contribution occurs when the points x and y coincide.
+For coincident points x = y, the contributions depend on a single bond variable χb(x). Taking into account the
+partial cancellation between the numerator and denominator of the normalized plaquette-plaquette correlation, the
+inﬁnite volume limit can then be taken. By translation invariance, the remaining integral does not depend on the
+lattice site point x = y we ﬁxed. Thus, we can suppress x and the bond lower index b in χb(x) and simply write χ.
+Doing this, we obtain
+⟨ [Fs µν (x)]2 ⟩ = 1 N ∫ |χ|<(π/g)a(d−4)/2 {(ad−4 g2 ) sin2 [(ad−4 g2 )−1/2 χ ]}
+× exp
+{
+− ad−4
+g2 2
+[
+1 − cos
+[(ad−4
+g2
+)−1/2
+χ
+]]}
+dχ,
+(63)
+where N denotes here the normalization with the integral over a single variable χ, which is
+N =
+∫
+|χ|<(π/g)a(d−4)/2
+exp
+{
+− ad−4
+g2 2
+[
+1 − cos
+[(ad−4
+g2
+)−1/2
+χ
+]]}
+dχ.
+Using the trigonometric inequalities of Eq. (48), for a ∈ (0, 1] and 0 <g2 ≤ g2 0 < ∞, we have the bound
+⟨ [Fs µν (x)]2 ⟩ ≤ 1 N1,0
+∫
+|χ|<πa(d−4)/2 /g
+χ2 exp
+[
+− 4 π2 χ2
+]
+dχ,
+where, for N1 =
+∫
+|χ|<πa(d−4)/2 /g
+exp
+(
+−χ2) dχ, and the constant N1,0 is deﬁned as N1 but with g replaced by g0 in
+the integral domain.
+Similarly, we obtain the lower bound
+⟨
+[
+Fs µν(0) ]2 ⟩ ≥
+4
+π2
+∫
+|χ|<(π/2g)a(d−4)/2
+χ2 e−χ2 dχ
+∫
+R
+e−(4/π2)χ2 dχ ,
+=== PAGE 24 ===
+24
+where the numerator is bounded below taking the integration domain to be |χ| ≤ [(πa(d−4)/2)/(2g0)]. Thus, we
+see that the scaled plaquette-plaquette correlation at coincident points is uniformly bounded for a ∈ (0, 1] and
+0 < g2 ≤ g2 0 . Using these bounds and the relation given in Eq. (62), we see that the scaled plaquette-plaquette
+correlation at coincident points has the exact singular behavior a−d (rather than just an upper bound for the singular
+behavior!)
+From these bounds, the continuum limit
+F 2(x) ≡ lim
+aց0
+⟨ [Fs µν(x)]2 ⟩ ,
+exists and is given by
+F 2(x) =
+
+
+
+∫
+R
+χ2 e−χ2 dχ
+∫
+R
+e−χ2 dχ = 1 2 , d = 2, 3 ;
+∫
+|χ|≤π/g
+[ sin(gχ)
+g
+]2
+e−2[1−cos(gχ)]/g2 dχ
+∫
+|χ|≤π/g
+e−2[1−cos(gχ)]/g2 dχ , d = 4 .
+(64)
+Furthermore, from Eq. (64), for d = 4, the g ց 0 limit also exists and is 1/2.
+In the next subsection, considering the approximate model, we extend these exact and explicit results to scaled
+correlations with the nonabelian gauge group U(N ), N ≥ 2. In the following sections, we obtain boundedness
+results for the YM model without approximation. The nonabelian case N ≥ 2 is more diﬃcult than the abelian
+N = 1 case. One of the diﬃculties is that the gauge group Haar measure is much more complicated than the product
+Lebesgue measure of the abelian model [33–36]. In our extension to the nonabelian case, rather than treat directly the
+correlations, we bound the two-point plaquette ﬁeld scaled normalized generating function (with the scaled partition
+function in the denominator). Bounds on correlations follow from this, using analyticity and Cauchy bounds for the
+source derivatives of the generating function at zero source ﬁeld strengths.
+To obtain bounds on the scaled generating function which are independent of the number of lattice sites, we use
+the well known multiple reﬂection method (see Ref. [4]). This method makes multiple use of the Cauchy-Schwarz
+inequality in the quantum mechanical physical Hilbert space of the associated quantum ﬁeld theory.
+3. Approximate Model: Plaquette Field Correlations for U(N ≥ 2)
+In this subsection, we analyze the plaquette ﬁeld correlations for the nonabelian case of the gauge group G = U(N ).
+The physical unscaled gauge-invariant plaquette ﬁeld Tr Fu µν for the plaquette p = pµν (x) is deﬁned in Eq. (30).
+Taking the physical parametrization, Ub = exp{iagAu b }, for small lattice spacing a, we have that Tr Fu µν(x) ≃
+Tr Fa µν (x), where Fa µν is given by Eq. (31).
+With Up = exp(iXp), we also deﬁne the gauge-invariant scaled plaquette ﬁeld by
+Tr Fs µν (x) = ad/2 Tr Fu µν =
+(ad−4
+g2
+)1/2
+Im Tr (Up − 1) =
+(ad−4
+g2
+)1/2
+Tr (sin Xp) .
+For small a, we have
+Tr Fs µν (x) ≃ ad/2 Tr Fa µν (x) .
+As explained in the previous subsection, when analyzing the plaquette-plaquette correlation in the G = U(1),
+with external points x and y, for the approximate model,whenever the external points x and y are not endpoints
+of the bonds, we have a factorization and cancellation of the single plaquette, single bond partition functions in
+the numerator and denominator of the scaled plaquette-plaquette correlations. By the left-right invariance of the
+Haar measure, the integrals associated with these factors are again over a single bond Haar measure and, by gauge
+integration properties, the only nonzero contributions are those with coincident points x = y. This property allows
+us to take the inﬁnite volume limit Λ ր aZd.
+=== PAGE 25 ===
+25
+With this argument, we have that the usual truncated [4] plaquette-plaquette correlation is then equal to the
+non-truncated one. The integrands are class functions, and we can apply the Weyl integration formula (see Refs.
+[30–32, 47]) to pass from integrals over N 2, N × N matrix elements, to integrals over N angular eigenvalues. Doing
+this [compare with Eq. (63)], the coincident point scaled plaquette-plaquette correlation becomes, with U being the
+single plaquette gauge variable,
+⟨(Tr Fs µν )2⟩ = 1 N2
+∫
+U(N )
+[(ad−4
+g2
+)1/2
+Im Tr (U − 1)
+]2
+exp
+{
+− 2
+(ad−4
+g2
+)
+Tr (1 − U − U †)
+}
+dσ(U )
+= 1 N2
+∫
+(−π,π]N
+
+
+(ad−4
+g2
+)1/2 ∑
+j=1,...,N
+sin λj
+
+
+2
+exp
+
+
+− 2
+(ad−4
+g2
+) ∑
+j=1,...,N
+(1 − cos λj )
+
+
+ρ(λ) dλ.
+Note that the single plaquette correlation is obtained by replacing the squared bracket factor by the single bracket
+(power one!) in the above integrand. By the transformation of variables λj → (−λj ), the single plaquette correlation
+⟨Tr Fu µν⟩ = 0, as asserted above.
+In view of the recent result of Ref. [50], on the triviality of the continuum limit of the φ4 4 model, we investigate
+whether or not the continuum limit of the approximate model is Gaussian. For this, we also want to consider the
+scaled four-plaquette correlation and, more generally, the r-th power of the scaled plaquette ﬁeld at coincident points.
+Following the same gauge integration procedure as before, and after using the Weyl integration formula to pass to
+angular eigenvalues, the thermodynamic limit of the r-th power of the plaquette ﬁeld at coincident points reduces to
+⟨(Tr Fs µν)r⟩ = 1 Nr
+∫
+(−π,π]N
+
+
+(ad−4
+g2
+)1/2 ∑
+j=1,...,N
+sin λj
+
+
+r
+exp
+
+
+− 2 ad−4 g2 ∑ j=1,...,N (1 − cos λj)
+
+
+ ρ(λ) dλ, (65)
+where the ratio is taken over single plaquette single variable bond variable integrals. Here, Nr is a corresponding
+normalization constant and ρ(λ) is given in Eq. (56). It is worth noticing that, for the abelian gauge group U(1), we
+have ρ(λ) = 1.
+From Eq. (65), we easily see the the r-correlation is zero if r is odd. For even r, making a change of variables, using
+elementary inequalities and the well-known Lebesgue integral convergence theorems, we obtain that the continuum
+limit of the above coincident point truncated correlations exists. With
+ˆρ(λ) =
+∏
+1≤j<k≤N
+|λj − λk|2
+and Tr(g) ≡ limaց0 ⟨[Tr Fs µν]r⟩, for d = 2, 3, we obtain, letting λ = ( 2ad−4/g2)−1/2 y,
+Tα(g) = 2 N2
+∫
+RN
+
+ ∑
+j=1,...,N
+yj
+
+
+r
+ˆρ(y) exp
+
+− ∑
+j=1...,N
+y2 j
+
+ dNy,
+with an associated measure normalization N2. For d = 4, letting λ = gy, we obtain
+Tr(g) = 1 N4 gN (N −1)
+∫
+(−π/g,π/g]N
+
+
+
+ ∑
+j=1,...,N
+sin(gyj)
+g
+
+
+r
+ ρ(gy) exp
+
+− ∑
+j=1...,N
+2[1 − cos(gyj)]
+g2
+
+ dNy.
+For d = 4, the g ց 0 limit Tr, of Tr(g), is
+Tr = 1 N4
+∫
+RN
+
+ ∑
+j=1,...,N
+yj
+
+
+r
+ˆρ(y) exp
+
+− ∑
+j=1...,N
+y2 j
+
+ dNy, (66)
+with a normalization N4.
+Note that, for r = 2, 4, the right-hand-side of Eq. (66) is, respectively, ∑ i,j,k,ℓ=1,...,N ⟨yiyj⟩G and∑
+i,j,k,ℓ=1,...,N ⟨yiyj,yk,yℓ⟩G, where ⟨ · ⟩G is the expectation in the GUE (Gaussian Unitary Ensemble) (see e.g. Refs.
+[30, 42, 43]).
+=== PAGE 26 ===
+26
+Finally, for the case of an abelian gauge group U(1), we then see that the continuum limit is Gaussian for d = 2, 3.
+For d = 4 the continuum limit followed by the g ց 0 limit is also Gaussian.
+From Eq. (66), for d = 4 and taking the gauge group G = U(2), we have
+Tr = 1 N4
+∫
+R2
+(y1 + y2)r (y1 − y2)2 e−(y2 1 +y2 2 ) dy1 dy2
+= 1 ξ ∫ R2 (√ 2η )r (√ 2ǫ )2 e−(η2+ǫ2) dηdǫ,
+with ξ =
+∫
+R2 e−(η2+ǫ2) dηdǫ, where we made the (π/4) rotation change of variables √ 2ǫ = (y1 − y2) and √ 2η = (y1 + y2). By performing the integrals in the denominator and the ǫ integral in the numerator, we obtain
+Tr = 2r/2 √π ∫ R ηαe−η2 dη,
+which shows a Gaussian, non-interacting behavior. Whether or not this is the behavior we have for any gauge group
+U(N > 2) is still to be analyzed.
+IV. THERMODYNAMIC AND ULTRAVIOLET STABILITY BOUNDS: THE GENERAL G = U(N ≥ 1)
+CASE
+We now obtain factorized stability bounds for the unscaled partition function Zu,B Λ (a) of the complete model deﬁned
+in Eq. (38) with boundary condition B. In doing this, we are improving the proofs of Refs. [28, 49] and are extending
+the results to the periodic b.c. case. The bounds are factorized as a product. In the product, each factor is a single
+bond variable, single plaquette partition function. First, we give Lemma 2 which yields an exact representation for
+the Wilson plaquette action and is used to prove that the plaquette action upper bound is quadratic in each gluon
+ﬁeld. This growth is in contrast to the classical Lagrangian action which has a quartic growth in the ﬁelds and which
+is used in Refs. [18, 22]. The upper quadratic bound on Ap is used to obtain the factorized lower bound on Zu,B Λ (a).
+Again, as an example, it is worth recalling that, for the abelian gauge group U(1), the bound is obtained by
+elementary inequalities. Indeed, writing the unscaled plaquette gauge variable Uu p = exp {i(θ1 + θ2 − θ3 − θ4)},
+|θj| <π, j = 1, 2, 3, 4, and using the ﬁrst of Eq. (48)], we obtain
+Ap = 2[1 − cos(θ1 + θ2 − θ3 − θ4)] ≤ (θ1 + θ2 − θ3 − θ4)2 ≤ 4(θ2 1 + θ2 2 + θ2 3 + θ2 4 ) ,
+where, we have expanded the square in the ﬁrst inequality and used the bound 2uv ≤ u2 + v2, u,v ∈ R, to obtain
+the second inequality.
+The following Lemma is a much improved version of Lemma 2 of Ref. [49].
+Lemma 2 Let Uj = eLj , where Lj = i∑N 2 α=1 xj αθα, so that |Lj| ≤ ‖Lj‖H−S = |xj|. Here, xj α is real and
+xj α = −i Tr θαLj. Let also
+Up(δ) = U1(δ) U2(δ) U † 3 (δ) U † 4 (δ) ,
+=== PAGE 27 ===
+27
+with Uj(δ) = eδLj , for δ ∈ [0, 1]. Then, by the Fundamental Theorem of Calculus, we have the representation
+Up − 1 =
+∫ 1
+0
+dδ
+[
+L1U1(δ)U2(δ)U † 3 (δ)U † 4 (δ) + U1(δ)L2U2(δ)U † 3 (δ)U † 4 (δ)
+− U1(δ)U2(δ)L3U † 3 (δ)U † 4 (δ) − U1(δ)U2(δ)U † 3 (δ)L4U † 4 (δ) ]
+=
+∫ 1
+0
+{
+L1 +
+∫ δ
+0
+dˆδ
+[
+L1L1U1(ˆδ)U2(ˆδ)U † 3 (ˆδ)U † 4 (ˆδ) + ... ]}
++
+∫ 1
+0
+{
+L2 +
+∫ δ
+0
+dˆδ
+[
+L1U1(ˆδ)L2U2(ˆδ)U † 3 (ˆδ)U † 4 (ˆδ) + ... ]}
+−
+∫ 1
+0
+{
+L3 +
+∫ δ
+0
+dˆδ
+[
+L1U1(ˆδ)U2(ˆδ)L3U † 3 (ˆδ)U † 4 (ˆδ) + ... ]}
+−
+∫ 1
+0
+{
+L4 +
+∫ δ
+0
+dˆδ
+[
+L1U1(ˆδ)U2(ˆδ)U † 3 (ˆδ)L4U † 4 (ˆδ) + ... ]}
+(67)
+For a single retained unscaled plaquette action Ap(Up) = 2Re Tr (1 − Up), using the representation of Eq. (67), the
+second equality holds without the isolated Lj terms, which give an imaginary trace, and we have the global quadratic
+upper bound
+Au p = ‖Uu p − 1‖2 H−S ≡ |2Re Tr (Uu p − 1)| ≤ C 2 ∑
+1≤j≤4
+|xj|2 , C = 2 √ N, (68)
+where C 2 = 4N . In particular, for the physical parametrization Ub = exp[igaAu b ] and the scaled ﬁeld parametrization
+Ub = exp[iga(4−d)/2Ab], we have, respectively,
+ad−4
+g2 Ap ≤ C 2 ad−2 ∑ b |Au b |2 and C 2 ∑ b |Ab|2 , (69)
+where ∑ b runs over the bonds of the plaquettes and C 2 = 4N . Hence, the plaquette energy ad−4 g2 Ap is regular in g2,
+for all g2 ≥ 0, and has the quadratic growth bound in the ﬁelds.
+When there are only one, two or three retained bond variables in a plaquette, in the ﬁrst equality, the sum over j has,
+respectively, only one, two and three terms and the numerical factor 4 in C 2N is replaced by 1, 2 and 3, respectively.
+For the total unscaled action Au,B = ∑ p Au p , we have the global quadratic upper bound
+Au,B ≤ 2(d − 1) C 2 ∑
+b
+|xb|2 = 2(d − 1) C 2 ∑
+b
+|λb|2 , (70)
+where, whenever gauge ﬁxing is applied, the sum runs over all Λr lattice bonds.
+Concerning the unscaled and scaled plaquette ﬁelds
+Tr Fu p = 1 a2g Im Tr (Up − 1) ,
+and
+Tr Fp = ad/2 Tr Fu p ,
+we also have the representation of Eq. (67), and the Lj terms are, respectively
+Tr Fu p = a−d/2 Tr (Au 1 + Au 2 − Au 3 − Au 4 ) , Lj termsonly
+= a−d/2 Tr ( ∂µAu ν − ∂νAu µ ) , Lj termsonly,
+and
+Tr Fp = Tr (∂µAν − ∂νAµ) , Lj termsonly,
+The coeﬃcients in the integral terms are proportional to g, so that the plaquette ﬁelds are also regular in g, for g2 ≥ 0.
+=== PAGE 28 ===
+28
+Remark 12 From the second equality in Eq. (67), and taking the real part of the trace, only the double integrals
+contribute. From this representation, the bound given in Lemma 2 is obtained by inspection. We give a proof for the
+bound using only the ﬁrst line. The iteration of the Fundamental Theorem of Calculus in Eq. (67) produces the diverse
+terms in the Baker-Campbell-Haussdorﬀ formula [32]. Here, instead, there is no question of convergence involved.
+Remark 13 The apparent singularity at g = 0, due to the action prefactor (1/g2) [see Eq. (6)], which persists in
+the corresponding scaled expression, is removed and the ’action’ Ap/g2 is regular at g = 0, if we use the physical ﬁeld
+parametrization Ub = exp[igaAu b ], for the unscaled bond variable Ub, or the scaled bond ﬁeld Ub = exp[iga(4−d)/2Ab].
+In both cases, the action is bounded by a quadratic growth. This is in contrast to the classical Lagrangian, where cubic
+and quartic interactions are present, and the growth is quartic. This growth behavior is also present in the analysis of
+the existence of YM models in Refs. [18, 22]. Besides, in these references, an explicit infrared regulator is introduced
+contrary to the Wilson YM case where an infrared cutoﬀ is not needed for periodic and free b.c.
+For completeness of the present paper, we give the proof of Lemma 2 in section VI. A preliminary version of the
+stability bounds was given in Ref. [49]. The following four theorems are also proved in section VI. Our results on
+stability and boundedness of the generating function and correlations are for the Wilson YM model. We sometimes
+use gauge ﬁxing but there are no additional infrared regulator terms added to the action like in Refs. [18, 22].
+Our stability bounds on the unscaled partition function Zu,B Λ (a), leading to TUV stability bounds for the scaled
+partition function Zs,B Λ (a) are given by
+Theorem 1 The unscaled partition function Zu,B Λ (a) veriﬁes the following stability bounds:
+Free b.c.: For B= blank, we have
+zΛr ℓ ≤ Zu Λ(a) ≤ zΛr u , (71)
+Periodic b.c.: For B = P , we obtain
+zΛr +Λe ℓ ≤ Zu,P Λ ≤ Zu Λ(a) ≤ zΛr u , (72)
+where
+zu =
+∫
+exp
+[
+−2(ad−4/g2) Re Tr (1 − U )] ] dσ(U ) . (73)
+Also, we have U = eiX , C 2 = 4N , X = ∑ α=1,...,N 2 xαθα and then
+Tr X 2 = ∑
+α=1,...,N 2
+x2 α = ∑
+k=1,...,N
+λ2 k,
+where λ1,...,λN are the angular eigenvalues of U . Finally,
+zℓ =
+∫
+exp
+[
+−2C 2(ad−4/g2) (d − 1) Tr X 2] dσ(U ) . (74)
+Remark 14 Using Jensen’s inequality, we obtain the factorized lower bound Zu Λ(a) ≥ ξΛp , where
+ξ = exp
+{
+− ad−4
+g2
+∫
+‖U − 1‖2 H−Sdσ(U )
+}
+≥ exp
+[
+−2N ad−4
+g2
+]
+,
+where we recall Λp is the number of plaquettes in Λ. We have Λp = Λr, for d = 2; Λp ≃ 3L3, 6L4, respectively, for
+d = 3, 4. In Theorem 2 below, we obtain factorized lower and upper bounds with Λr = (d − 1)Ld factors. In both the
+upper and lower bound a factor of [(ad−4/g2)−N 2/2] is extracted. This factor dominates the a, g2 dependence.
+We continue by giving more detailed bounds for zu and zℓ. In these bounds, we extract a factor of [(ad−4/g2)−N 2 /2]
+from both zu and zℓ. Note that the integrands of both zu and zℓ only depend on the angular eigenvalues of the
+gauge variable U ; they are class functions on G. The N 2-dimensional integration over the group can be reduced to an
+N -dimensional integration over the angular eigenvalues of U by the Weyl integration formula of Eq. (55) (see Refs.
+[30–32, 47]). For the group U(N ), we explicitly have
+∫
+U(N )
+f (U ) dσ(U ) = 1 NC(N ) ∫ (−π,π]N f (λ) ρ(λ) dNλ, (75)
+=== PAGE 29 ===
+29
+where NC(N ) = [(2π)N N !], λ = (λ1,...,λN ), dNλ = dλ1 ...dλN and ρ(λ) = ∏ 1≤j<k≤N |eiλj − eiλk |2.
+In our stability and generating function bounds in the G = U(N ) case, the following integrals of the Gaussian
+unitary ensemble (GUE) and Gaussian symplectic ensemble (GSE) probability distributions (see [42, 43]), of random
+matrix theory, arise naturally. Let, for β = 2, 4 and u> 0,
+Iβ(u) =
+∫
+(−u,u)N
+exp
+
+−(1/2) β ∑
+1≤j≤N
+y2 j
+
+ ˆρβ/2(y) dNy, (76)
+where ˆρ(y) = ∏ 1≤j<k≤N (yj − yk)2, Iβ(u) < Iβ(∞) = Nβ, is the normalization constant for the GUE and the
+GSE probability distributions for β = 2, 4, respectively. Explicitly, we have NG = [(2π)N/2 2−N 2/2 ∏ 1≤j≤N j! ] and
+NS = [(2π)N/2 4−N 2 ∏ 1≤j≤N (2j)! ].
+For the upper bound on zu and lower bound on zℓ, we have the following result.
+Theorem 2 For C 2 = 4N , we have the bounds on zu and zℓ appearing in Theorem 1
+zu = N −1 C ∫ (−π,π]N exp[−2(ad−4/g2) ∑ 1≤j≤N (1 − cos λj)] ρ(λ) dNλ
+≤ (ad−4/g2)−N 2/2 (π/2)N 2 NG(N )N −1 C (N )
+≡ (ad−4/g2)−N 2/2 ecu ,
+(77)
+and
+zℓ = N −1 C ∫ (−π,π]N exp[−2C 2(d − 1)(ad−4/g2) ∑ 1≤j≤N λ2 j ] ρ(λ) dNλ
+≥ (ad−4/g2)−N 2/2 N −1 C (N ) (4/π2)N (N −1)/2 [2(d − 1)C 2]−N 2/2 Iℓ,
+≡ (ad−4/g2)−N 2/2 ecℓ ,
+(78)
+where, recalling Eq. (76), Iℓ ≡ I2(π[2(d−1)C 2]1/2/(2g0)). The constants cu and cℓ are real and ﬁnite, and independent
+of a, a ∈ (0, 1] and g2 ∈ (0,g2 0 ], 0 <g0 < ∞.
+Concerning the existence of the thermodynamic and continuum limits of the scaled free energy we deﬁne the scaled
+partition function by
+Zs,B Λ (a) = (ad−4/g2)(N 2 /2)Λr Zu,B Λ (a) , (79)
+and a ﬁnite lattice scaled free energy by
+fs,B Λ (a) = 1 Λr ln Zs,B Λ (a) . (80)
+Using Theorems 1 and 2, together with the Bolzano-Weierstrass theorem [48], we prove the following Theorem.
+Theorem 3 The scaled free energy fs,B Λ (a) converges subsequentially, at least, to a thermodynamic limit
+fs,B(a) = lim
+ΛրaZd
+fs,B Λ (a) ,
+and, subsequently, again, at least subsequentially, to a continuum limit
+fs,B = lim
+aց0
+fs,B(a) .
+Besides, fs,B(a) satisﬁes the bounds
+−∞ < cℓ ≤ fs,B(a) ≤ cu < ∞ . (81)
+and so does its subsequential continuum limit fs,B. The constants cℓ and cu are ﬁnite real constants independent of
+a ∈ (0, 1] and g2 ∈ (0,g2 0 ], 0 <g0 < ∞.
+Remark 15 For the case of the free scaled scalar ﬁeld, the TUV stability bound follows by bounding spectral repre-
+sentations [check Eq. (A17)] and their ﬁnite lattice counterparts. For the case of bond independent couplings, the
+TUV stability bound is proven in Appendix C. The proof uses a multiple reﬂection bound in addition to the H¨older
+inequality to decouple the d coordinate directions. In this way, the proof of TUV is reduced to a TUV bound for the
+partition function Zc of a one-dimensional chain. In turn, this bound is obtained by bounding a single bond ‘transfer
+matrix/acute.ts1. The bound can also be obtained by successive integration for free boundary conditions. The free boundary
+conditions serve as an infrared regulator, i.e. no mass term is needed in the action to exclude the zero mode.
+=== PAGE 30 ===
+30
+V. GENERATING FUNCTION FOR PLAQUETTE FIELD CORRELATIONS
+Here, we obtain bounds for the generating function of gauge-invariant plaquette ﬁeld correlations. Bounds for
+the ﬁeld correlations follow from analyticity in the source ﬁeld strengths, using Cauchy estimates on the generating
+function. The same hypercubic lattice Λ is maintained, with periodic b.c., and we use the multiple reﬂection method
+[4]. Our choice of correlations is guided by the E-M spectral results for lattice YM with strong gauge coupling g2 ≫ 1
+(see Ref. [51]). We ﬁx the lattice spacing a = 1 and denote the plaquette coupling constant by γ = ad−4/g2. For
+0 <γ ≪ 1, a lattice quantum ﬁeld theory is constructed via a Feynman-Kac formula. By polymer expansion methods,
+inﬁnite lattice correlations exist and are analytic in γ ∈ C, |γ| ≪ 1 (see Ref. [8]). In Ref. [51], for 0 < γ ≪ 1, it is
+shown that, associated with the truncated plaquette-plaquette correlation, there is an isolated particle (glueball) state
+in the low-lying E-M spectrum, with mass of order (–8 ln γ). Furthermore, it is proved that the low-lying spectrum
+is generated by limits of local polynomials in the plaquette ﬁeld. No more general loop variables are needed. The
+isolated dispersion curve of the glueball is the only low-lying spectrum that is present.
+Returning to our model, we consider the generating function for the correlation of r ∈ N gauge-invariant real
+plaquette ﬁelds. For p = pµν(x), as deﬁned in Eq. (30), with Up = eiXp ∈ U(N ), the physical, unscaled plaquette
+ﬁeld is given by
+Tr Fu µν(x) = 1 a2g Im Tr (Up − 1) = − i 2a2g Tr (Up − (Up)†) = 1 a2g Tr sin Xp.
+Recalling Eq. (32), parametrizing Up by the physical, unscaled gauge ﬁeld Ub = exp{iagAu b }, we have
+Tr Fu µν (x) ≃ Tr Fa µν (x) = Tr [ ∂a µAu ν (x) − ∂a νAu µ(x) ] ,
+where Fa µν (x) = ∂a µAu ν (x) − ∂a νAu µ(x) + ig [ Au µ(x),Au ν (x) ] , with a commutator in the Lie algebra of U(N ).
+Next, deﬁne the gauge-invariant scaled plaquette ﬁeld by
+Tr Fs µν(x) = ad/2 Tr Fu µν =
+(ad−4
+g2
+)1/2
+Im Tr (Up − 1) . (82)
+Using once more the physical, unscaled ﬁeld parametrization, we have that
+Tr Fs µν(x) ≃ ad/2 Tr [ ∂a µAu ν (x) − ∂a νAu µ(x) ] .
+With our choice of the scaling factor [(ad−4/g2)1/2], the generating function for scaled plaquette ﬁeld correlations is
+ﬁnite, uniformly in a ∈ (0, 1]. It may seem surprising that the generating function is pointwise bounded. However, it
+is known that a similar phenomenon occurs in the case of a free massless or massive scalar ﬁeld in d = 3, 4. Namely,
+as analyzed in Ref. [26], if instead of the given physical ﬁeld φu(x), we use a locally scaled ﬁeld φ(x) ≃ a(d−2)/2φu(x),
+then the r–point correlation for the scaled φ ﬁelds is bounded pointwise, uniformly in a ∈ (0, 1]. No smearing by a
+smooth test function is needed to achieve boundedness! We give more details regarding the properties of scalar ﬁelds
+in Appendix A.
+Remark 16 We can also deﬁne other plaquette ﬁelds and their associated scaled ﬁelds. For instance, we can also
+work with the ﬁeld
+Tr Hµν(x) = 1 a4gAp ≃ Tr [ Fa µν (x) ]2 ,
+and the associated scaled ﬁelds given by Tr Sµν(x) ≡ ad Tr Hµν (x). The results and proofs obtained below for the
+generating function of correlations of the scaled ﬁeld Tr Mµν(x) carry over to Tr Sµν(x).
+The r-plaquette scaled ﬁeld generating function, associated with the ﬁeld of Eq. (82), is deﬁned by
+Gr,Λ,a(J (r)) = 1 Zs,P Λ (a) Zs,P r,Λ (a,J (r)) ,
+where, for the source strengths Jj, j = 1,...,r, we have J (r) = (J1,...,Jr) and Zs,P r,Λ (a,J (r)) is deﬁned similarly to
+Zs,P Λ (a) (see Eq. 38), but with the inclusion of r local source factors in the integrand given by
+exp
+
+∑
+x∈Λ
+∑
+1≤j≤r
+Jj(xj ) Tr Fs pj (Upj )
+
+ ,
+=== PAGE 31 ===
+31
+Here, we adopt the convention that the plaquette pj originates at the lattice point xj and pj is a shorthand for
+pj = pµj ,νj (xj ). The r-plaquette correlation, with a set yE = (y1,...,yr) of r lattice external points in Λ is given by
+∂r
+∂J1(y1) ...∂Jr(yr) Gr,Λ,a(J (r))
+⏐⏐⏐⏐
+Jj =0
+.
+Our factorized bound is given in the next Theorem. For simplicity of notation, from now on, we set Ji ≡ Ji(yi).
+Theorem 4 Considering the model with periodic b.c., we have:
+1. The r−plaquette scaled ﬁeld generating function is bounded by
+|Gr,Λ,a(J (r))| ≤ ∏
+1≤j≤r
+|zu(rJj )|2dΛr /(rΛs)
+z2d(Λr +Λe )/(rΛs) ℓ . (83)
+2. From this, if Gr,a(J (r)) denotes a sequential or subsequential thermodynamic limit Λ ր aZd, then
+⏐⏐⏐Gr,a(J (r)) ⏐⏐⏐ ≤ ∏
+1≤j≤r
+|zu(rJj )/zℓ|2d(d−1)/r ,
+with
+|zu(J)| =
+∫
+exp
+[
+|J| (ad−4/g2)1/2 |Im Tr(U − 1)| − (ad−4/g2) Au p (U ) ] dσ(U )
+= (Nc)−1
+∫
+exp
+
+|J| (ad−4/g2)1/2 ∑
+1≤j≤N
+| sin λj| − 2ad−4/g2 ∑
+1≤j≤N
+(1– cos λj)
+
+ ρ(λ) dNλ
+≤ (ad−4/g2)−N 2/2 πN 2 +N/4 N 1/2 S
+NC
+exp[(π2/8)N |J|2]
+≡ (ad−4/g2)−N 2/2 exp(c′ u + π2/8N |J|2) .
+, (84)
+where exp c′ u = πN 2 +N/4 + √Ns NC . Recalling C 2 = 4N and using Eq. (78) of Theorem 2, we obtain
+zℓ = N −1 C
+∫
+(−π,π]N
+exp
+
+
+−
+[
+2C 2(d − 1)ad−4/g2] ∑
+j=1,...,N
+λ2 j
+
+
+ ρ(λ) dNλ
+≥ N −1 C
+( 2(d − 1)C 2ad−4
+g2
+)−N 2/2 ( 4
+π2
+)N (N −1)/2
+Iℓ
+≡
+(
+ad−4/g2)−N 2/2 ecℓ ,
+where cℓ is deﬁned in Theorem 2 and Iℓ ≡ I2(πC
+√
+2(d − 1)/(2g0)) and I2 is the function deﬁned in Eq. (76).
+Hence, from the bounds of Eqs.(83) and (84), it follows that Gr,Λ,a(J (r)) is a jointly analytic, entire complex
+function of the source ﬁeld strengths Jj ∈ C.
+3. Letting Gr(J (r)) denote a sequential or subsequential continuum limit a ց 0 of Gr,a(J (r)), then
+⏐⏐⏐Gr(J (r)) ⏐⏐⏐ ≤ exp
+
+ 2d
+r (d − 1) (c′ u − cℓ) + (π2/8) Nr ∑ 1≤j≤r |Jj|2
+
+ .
+This bound is independent of the location and orientation of the r plaquettes, and independent of the value of a ∈ (0, 1]
+and g2.
+=== PAGE 32 ===
+32
+Remark 17 Our method to prove the generating function bound uses multiple reﬂection bounds [4]. Remember the
+bound has to be uniform in the volume Λs (number of lattice sites) and in the lattice spacing a ∈ (0, 1]. For the case of
+the free scaled scalar ﬁeld, the multiple reﬂection method does not work, as we now explain. Using multiple reﬂection
+with a uniform source ﬁeld, we have to bound ⟨exp[J∑ xφ(x)]⟩. The bound should be in the form exp[u(J) Λs], where
+cu(J) is bounded uniformly in Λs, a ∈ (0, 1] and,for ﬁnite J or, at least, for small |J|. However, as the free ﬁeld is
+Gaussian,
+⟨ exp
+[
+J
+∑
+x
+φ(x)
+]
+⟩ = exp
+[
+1
+2 J 2 ∑ x,y C(x,y) ] ,
+where C(x,y) is the 2-point correlation for the scaled scalar ﬁeld and is given in Eq. (A17), in the thermodynamic
+limit. Using translation invariance, ∑ x,y C(x,y) = Λs ∑ x C(x, 0). The sum ∑ x C(x, 0) gives the zero momentum
+value of the Fourier transform. This quantity in not bounded uniformly in a ∈ (0, 1], and blows up as 1/a2 as seen
+from Eq. (A17). Of course, ⟨ exp [Jφ(x)] ⟩ = exp
+[ 1
+2 J 2 C(x,x) ] and C(x,x) are bounded uniformly in a ∈ (0, 1]
+which can again be seen using Eq. (A17).
+Remark 18 For comparison, the r−point correlation for the free scaled scalar ﬁeld, in the thermodynamic limit, is
+given by
+⟨
+exp
+[∑r
+j=1 Jj φ(xj )
+]⟩
+= exp
+[ 1
+2
+∑r
+j,k=1 Jj C(xj,xk) Jk
+]
+≤ exp
+{ 2d + (mu/κu)2
+4d ∆−1 1 (0, 0) ∑r j,k=1 |Jj| |Jk| }
+≤ exp
+[
+r 2d + (mu/κu)2
+4d ∆−1 1 (0, 0) ∑r j=1 J 2 j
+]
+,
+where ∆−1 1 (0, 0) is given in Eq. (A24) and is ﬁnite for d ≥ 3. By Griﬀths I [4], this bound extends to complex J.
+Remark 19 The generating function extends to an entire jointly analytic function of the source strengths Ji, i =
+1,...,r. By Cauchy estimates, it can be used to bound the r-plaquette scaled ﬁeld correlations. We use the Cr version
+of the Cauchy bounds. Recall that, for C, if f (z) is analytic in the disk |z| < R, R > 0, then |(dnf/dzn)(z =
+0)| ≤ n! [supz; |z|=R0 |f (z)| ]/Rn 0 , for any 0 < R0 < R (see e.g. Ref. [55]). In particular, the coincident point
+plaquette-plaquette physical ﬁeld correlation is bounded by const a−d. The a−d factor is the same small a behavior
+of the coincident point, two-point correlation of the derivative of the real scalar physical free ﬁeld (see Appendix A).
+Using the free scalar ﬁeld as a reference, this singular behavior is a measure of the ultraviolet asymptotic freedom.
+Remark 20 In obtaining the bounds on the scaled plaquette ﬁeld generating function and correlations, we have used
+the group bond variable parametrization Ub = exp
+{
+iga−(d−4)/2 χb } . In the physically relevant d = 4 case, Ub = eigχb
+and ⟨[Tr Fs]r⟩Λ,a,g is independent of the lattice spacing a, so that
+⟨[Tr Fs]r⟩Λ,g ≡ ⟨[Tr Fs]r⟩Λ,a,g = adr/2 ⟨[Tr Fu]r⟩Λ,a,g.
+For the thermodynamic limit or subsequential limit, we drop the subscript Λ, so that we have
+⟨[Tr Fs]r⟩g = adr/2 ⟨[Tr Fu]r⟩a,g.
+Of course, the continuum limit of the left-hand-side is ⟨[Tr Fs]r⟩g and
+⟨[Tr Fu]r⟩g = a−dr/2 ⟨[Tr Fs]r⟩g,
+which displays the exact dependence on the lattice spacing a as a multiplicative factor.
+Lemma 2 and Theorems 1 − 4 are proved in the next section.
+VI. PROOFS OF THE LEMMA AND THEOREMS
+Here, following Ref. [49], we give a proof of Lemma 2. We also prove Theorems 1 − 4. The enhanced temporal
+gauge is sometimes used for proving these theorems. The proof of the upper stability bound on the partition function
+actually does not depend on this choice.
+=== PAGE 33 ===
+33
+1. Proof of Lemma 2
+For simplicity, we consider the case where we have four bonds in a plaquette. The other cases, when only one, two, or
+three bonds are retained, are similar. Recalling that, if A and B are self-adjoint, then Tr (AB) = Tr (BA) = Tr (AB)†
+is real, we deﬁne, for 1 ≤ j ≤ 4, Lj = i∑ 1≤α≤N 2 xj αθα, so that Uj = eLj and Up = U1U2U † 3 U † 4 .
+Since ‖Lj‖ ≤ ‖Lj‖H−S = |xj | and letting Up(δ) = U1(δ)U2(δ)U † 3 (δ)U † 4 (δ), Uj(δ) = eδLj , for δ ∈ [0, 1], by the
+fundamental theorem of calculus, suppressing δ,
+Up − 1 =
+∫ 1
+0
+dδ
+[
+L1U1U2U † 3 U † 4 + U1L2U2U † 3 U † 4 − U1U2L3U † 3 U † 4 − U1U2U † 3 L4U † 4
+]
+.
+Using the triangle and Cauchy-Schwarz inequalities, we obtain
+‖Up − 1‖ ≤
+4∑
+j=1
+‖Lj‖ ≤
+4∑
+j=1
+‖Lj‖H−S =
+4∑
+j=1
+|xj | ≤ 2
+
+
+4∑
+j=1
+|xj |2
+
+
+1/2
+.
+But, ‖Up − 1‖ ≥ N −1/2 ‖Up − 1‖H−S. Hence,
+Ap = ‖Up − 1‖2 H−S ≤ 4N
+4∑
+j=1
+|xj|2 .
+By considering the number of terms in the sum over j, the factor 4 in C 2 is replaced by 1, 2 and 3, respectively, when
+only one, two or three retained bond variables appear in a retained plaquette.
+Alternatively, we can bound the terms of the second equality of Eq. (67), for (Up − 1) directly.
+Using this upper bound on the single plaquette action, we sum over the plaquettes. Noting that, ﬁxing a given
+lattice bond, there are at most [2(d − 1)] plaquettes that have this bound in common, the result for the total action
+follows.
+2. Proof of Theorem 1
+The Case of Free b.c.:
+Upper Bound: For ease of visualization we carry it out explicitly for d = 3. An upper bound is obtained by discarding
+all horizontal plaquettes from the action, except those with temporal coordinates x0 = 1. We now perform the
+horizontal bond integration. Integrate over successive planes of horizontal bonds starting at x0 = L and ending at
+x0 = 2. For the x0 = 1 horizontal plane, integrate over successive lines in the µ = 2 direction, starting at x1 = L and
+ending at x1 = 2. For each horizontal bond variable, the bond variable appears in only one plaquette in the action.
+After the integration, in principle, the integral still depends on the other bond variables of the plaquette. However,
+using the left or right invariance of the Haar measure, the integral is independent of the other variables. In this way,
+we extract a factor zu. In the total procedure, we integrate over the Λr horizontal bonds (see Eq. (9)), so that we
+extract a factor zΛr u .
+Lower Bound: Using Lemma 1 gives the factorization and zℓ.
+The Case of Periodic b.c.:
+Upper Bound: Considering the positivity of each term in the model action of Eq. (39), since AP ≥ A, we have
+ZP Λ,a ≤
+∫
+e−AdgB =
+∫
+e−Adg = ZΛ,a ≤ zΛr u .
+Lower Bound: Use the global quadratic upper bound of Lemma 2 on all Λr ∪ Λe bond variables. Thus, we have
+ZP Λ,a ≥ zΛr +Λe ℓ ,
+where U = exp(iX), X = ∑ αxαθα.
+=== PAGE 34 ===
+34
+3. Proof of Theorem 2
+In Theorem 2, the ﬁrst line for zu [see Eq. (77)] is the application of the Weyl integration formula of Eq. (75) (see
+Refs. [30–32, 47]). Use the inequality (see [13]) (1 − cos x) ≥ 2x2/π2, x ∈ [−π,π], in the action, and the inequality
+(1 − cos x) ≤ x2/2 in each factor of ρ(λ). After making the change of variables y = 2[a(d−4)/2/(πg)] λ and using the
+monotonicity of the integral, the result follows.
+To obtain Eq. (78) for zℓ, apply the Weyl integration formula and use the inequality 2[1 − cos(λj − λk)] ≥
+(4/π2) (λj − λk)2, |λℓ| <π/2 in each factor of the density ρ(λ). Then, use the positivity of the integrand and restrict
+the domain of integration to (−π/2,π/2]N. In making the change of variables y = [a(d−4)/2/g] C √ 2(d − 1) λ, the
+integral I2([a(d−4)/2/g] C √ 2(d − 1))π/2) appears (see Eq. (76)). Since I2(u) is monotone increasing, the integral
+assumes its smallest value for a = 1 and g2 = g2 0 .
+4. Proof of Theorem 3
+For periodic b.c. and the lower bound, using Theorem 1, we have the ﬁnite volume lattice normalized free energy
+fP,n Λ,a = 1 Λr ln ZP,n Λ,a = 1 Λr ln [ad−4 g2 ]N 2Λr /2 + 1 Λr ln ZP Λ,a
+≥ 1 Λr ln [ad−4 g2 ]N 2Λr /2 + 1 Λr ln zΛr +Λℓ ℓ .
+Continuing the inequality and using Theorem 2, we have
+fP,n Λ,a ≥ 1 Λr ln [ad−4 g2 ]N 2 Λr /2 + Λe + Λr Λr ln [(ad−4 g2 )−N 2/2 ecℓ ]
+≥ ln
+[ad−4
+g2
+]N 2 /2
++ Λe + Λr
+Λr
+[
+ln
+(ad−4
+g2
+)−N 2/2
++ cℓ
+]
+which gives, when Λ → aZd,
+fP,n a ≥ cℓ.
+A similar calculation for the upper bound, setting to zero the number of extra bonds in the lattice with periodic
+b.c., Λe = 0, proves the theorem for the upper bound. Of course, for free b.c., set Λe = 0 in the above calculations.
+5. Proof of Theorem 4
+To prove Theorem 4, ﬁrst use the generalized H¨older’s inequality to bound Gr,Λ,a(J (r)) by a product of single
+plaquette generating functions, i.e.
+|Gr,Λ,a(J (r))| ≤ ∏
+1≤j≤r
+|G1,Λ,a(rJj )|1/r.
+Now, since we are adopting periodic b.c., we can apply the multireﬂection method (see [4]) to bound each factor in
+the product. To this end, we make a shift in the lattice by (1/2a) in each coordinate direction. Also, we use the
+π/2 lattice rotational symmetry and translational symmetry to put the single plaquette in the µν = 01 coordinate
+plane in the ﬁrst quadrant, with lower left vertex at (a/2,a/2,...,a/2). Then, we apply the multireﬂection method
+to obtain the bound
+|G1,Λ,a(rJj )| ≤ |GΛ,a(rJj )|2d/Λs ,
+where GΛ,a(J) =
+[
+ZP Λ,a ]−1 ZP Λ,a(J), with ZP Λ,a(J) denoting ZP Λ,a with a source of uniform source strength J. The
+source factor is given by exp[J∑′ p Tr Fp(Up)], where the sum is over an array of plaquettes. The array consists of
+=== PAGE 35 ===
+35
+planes of plaquettes that are parallel to the 01 coordinate plane. In each plane, they are only alternating, i.e. like
+considering only squares of a same color on a chessboard. We obtain a greater upper bound by noting that
+|J Tr Fp(Up)| ≤ |J| [a(d−4)/2/g] |Im Tr (Up − 1)|
+≤ |J| [a(d−4)/2/g] |Tr (Up − 1)|
+≤ |J| [a(d−4)/2/g] N 1/2 ‖Up − 1‖H−S,
+where we have used the Cauchy-Schwarz inequality in the Hilbert-Schmidt inner product.
+We also increase the bound by summing over all plaquettes in the lattice Λ that are parallel to the 01 coordinate
+plane. We denote this sum by ∑′′ p. In this way, we obtain the upper bound
+⏐⏐ZP Λ,a(J) ⏐⏐ ≤ ∫ exp [ |J|a(d−4)/2g−1N 1/2 ′′∑
+p
+‖Up − 1‖H−S − ad−4AP/g2
+]
+dgP .
+As in the proof of the upper stability bound, for the periodic model, given above, we discard plaquette actions in
+AP , for plaquettes that are not in Λ so that
+⏐⏐ZP Λ,a(J) ⏐⏐ ≤ ∫ exp [ |J|a(d−4)/2g−1N 1/2 ′′∑
+p
+‖Up − 1‖H−S − ad−4A/g2
+]
+dg.
+We bound the integral as we did for the upper stability bound for the free b.c. case. In this manner, we obtain the
+factorized bound
+⏐⏐ZP Λ,a(J) ⏐⏐ ≤ [zu(J)]Λr ,
+and the factorized bound of Theorem 4for GrΛa(J (r)) is proved. Here, we have used the factorized lower bound of
+Theorems 1 and 2 for ZP Λ,a.
+Now, recalling that Λs = Ld, Λr ≃ (d–1)Ld and Λe = dLd−1, the factorized bound for Gra(J (r)) follows.
+Application of the Weyl integration formula of Eq. (75) [30–32, 47] gives the λ integral for zu(J). Using the bounds
+| sin λj| ≤ |λj|, for all j, and | exp(iλj) − exp(iλk)|2 = 2[1– cos(λj − λk)] ≤ (λj − λk)2, for each factor of ρ(λ) gives the
+inequality
+zu(J) ≤ (1/Nc)
+∫
+(−π,π]N )
+exp
+
+|J|(a(d−4)/2/g) ∑
+1≤j≤N
+|λj | − 4ad−4/(g2π2) ∑
+1≤j≤N
+λ2 j
+
+ ˆρ(λ) dNλ.
+Making the change of variables yk = [2a(d−4)/2/(gπ)] λk, a factor of [a(d−4)/2/g]−N 2 is extracted and the remaining
+integral is bounded by, with y2 = ∑ j y2 j ,
+∫
+RN
+exp
+
+π|J| ∑
+1≤j≤N
+|yj|/2 −
+∑
+1≤j≤N
+y2 j
+
+ ˆρ(y) dNy.
+Writing exp(−y2) = exp(−y2/2) exp(−y2/2) and using the Cauchy-Schwarz inequality, the integral is bounded by
+
+
+∫
+RN
+exp
+
+π |J| ∑
+1≤j≤N
+|yj| −
+∑
+1≤j≤N
+y2 j
+
+dNy
+
+
+1/2 
+
+∫
+RN
+exp
+
+− ∑
+1≤j≤N
+y2 j
+
+ ˆρ2(y) dNy
+
+
+1/2
+.
+Using the inequality es|yk | ≤ esyk + e−syk , s> 0, the Gaussian integral of the bound of the integral of the ﬁrst factor
+is carried out explicitly. For the integral of the second factor, after making the change of variables wk = (yk/
+√
+2) and,
+up to a numerical factor, the resulting integral is the normalization constant NS for the GSE ensemble (see [42, 43]).
+Keeping track of the numerical factors gives the ﬁnal inequality for zu(J) and the proof of Theorem 4 is complete.
+=== PAGE 36 ===
+36
+VII. CONCLUDING REMARKS
+We consider the Yang-Mills quantum ﬁeld theory in an imaginary-time functional integral formulation and on an
+hypercubic lattice Λ ⊂ aZd, d = 2, 3, 4, a ∈ (0, 1], with the Wilson partition function deﬁned with gauge coupling
+0 < g2 < g2 0 , for g0 positive and ﬁnite. This means our results are not restricted to small couplings g0. The lattice
+Λ has L (even) sites on a side, Λs = Ld sites, and we use both free and periodic boundary conditions. Letting 0 label
+the temporal direction, x = (x0,...,xd−1) denotes a lattice site and eµ, µ = 0,..., (d − 1) is a unit vector in the
+positive µ direction. We are concerned with ﬁniteness properties of physically relevant quantities and our main goal
+is to derive stability bounds to control the thermodynamic limit (Λ ր aZd) and the continuum limit (a ց 0) of the
+free energy and correlations.
+In the Wilson formulation, there is a matrix, gauge variable Ub for each positively oriented lattice bond b. A
+positively oriented bond bµ(x) is a segment [x,x+ µ ≡ x + aeµ] connecting the Λ site x to x+ µ in the µth positive axis
+direction, and we take Ub to be an element of the compact Lie gauge groups G = U(N ), SU(N ). With this, we write
+the unitary gauge variable Ub =,eiXb , with a self-adjoint element Xb of the G Lie algebra. We also use what we call
+the physical parametrization Ub = eiagAb , and if b = bµ(x) = [x,x+ µ ≡ x + aeµ], we set Ab = Aµ(x). The physical
+gauge potentials (gluon ﬁelds) Aµ(x) then lie in the Lie algebra of G.
+The partition function for type B (free = no superscript or periodic = P ) b.c. is given by
+ZB Λ,a =
+∫
+exp[(−ad−4/g2) AB] d˜gB.
+A lattice plaquette (minimal square) p = pµν (x), with positively oriented bonds b1 = [x, xµ +], b2 = [xµ + , xµ + + aeν],
+b3 = [xν + , xν + + aeµ] and b4 = [x,xν +], in the µν coordinate plane (µ<ν), is associated with the plaquette variable
+Up = Ub1 Ub2 U † b3 U † b4 = eiXp , since Ub is unitary. The total Wilson action AB is a sum over all distinct lattice Λ single plaquette actions Ap given by
+Ap = ‖Up − 1‖2 H−S = 2 Re Tr (1 − Up) = 2Tr (1– cos Xp) .
+Here, ‖ · ‖H−S is the Hilbert-Schmidt norm. Note that Ap is pointwise nonnegative and so is AB = ∑ p Ap. Last, a
+copy of the gauge group, denoted by Gx is attached to each lattice point x ∈ Λ and the gauge group measure d˜gB is
+a product measure over bonds of a gauge group G Haar measure. Whenever periodic b.c. is employed, as usual, we
+add extra bonds to Λ connecting the Λ endpoints of the boundary ∂Λ of Λ to the initial points of the boundary ∂Λ in
+each spacetime direction µ = 0, 1,..., (d − 1). The periodic plaquettes are those that can be formed from the totality
+of periodic bonds.
+Formally, for small a ∈ (0, 1], Ap ≃ a4g2 Tr [Fa µν (x)]2, where, with ﬁnite diﬀerence derivatives given in Eq. (44),
+we have Fa µν (x) = ∂a µAν (x) – ∂a νAµ(x) + ig [Aµ(x),Aν (x)], and the commutator is taken over the Lie algebra of
+G = U(N ). Thus, for µ < ν, (ad−4/g2) ∑ pAp ≃ ∑ x∈Λ ad ∑d−1 µ,ν=0 Tr [Fa µ,ν(x)]2 is the Riemann sum approximation
+to the smooth ﬁeld continuum Yang-Mills action ∑ µ<ν ∫ [−La,La]d Tr [Fµν (x)]2 ddx, where Fµν (x) is deﬁned as above,
+but with usual partial derivatives.
+The Wilson action is invariant under local gauge transformations from the group ∏ x∈Λ Gx [see Eq. (45)]. By
+this invariance, initially, there is an excess of degrees of freedom. Then, by a gauge ﬁxing procedure, certain gauge
+variables are gauged away, i.e. they are ﬁxed to the identity matrix, and have trivial gauge integration. In this
+procedure, there are only Λr retained bond variables and the value of the partition function is not changed if the
+gauged away bonds do not form a loop on Λ [4]. We sometimes adopt the enhanced temporal gauge, in which case
+all temporal bonds in Λ are gauged away (i.e. set to the identity with a trivial corresponding gauge Haar integral) as
+well as some speciﬁed spatial bonds on the boundary of Λ. Here, Λr is approximately the number of non temporal
+(or spatial) bonds, namely, Λr ≃ (d − 1)Ld.
+Since there are δN (the group Lie algebra dimension) components of the gauge potential, the Λ lattice total
+number of degrees of freedom in the Yang-Mills model is δN Λr. Instead of working with the unscaled, physical ﬁelds
+Aµ(x) ≡ Au µ(x), if we work with scaled ﬁelds As µ(x) = a(d−2)/2 Au(x), we ﬁnd that the Wilson action becomes more
+regular in a ∈ (0, 1] and 0 < g2 < g2 0 < ∞. If we deﬁne a scaled ﬁeld partition function Zs Λ(a) by
+Zs Λ(a) = ( a(d−4)/2/g )δN Λr Zu Λ(a) ,
+then we ﬁnd that Zs Λ(a) obeys the thermodynamic and ultraviolet stability bounds (TUV)
+ecℓΛr ≤ Zs Λ(a) ≤ ecuΛr ,
+=== PAGE 37 ===
+37
+with ﬁnite constants cℓ and cu, independent of a and g2. By the Bolzano-Weierstrass theorem, this bound leads to
+the existence of the thermodynamic followed by the continuum limit of the scaled free energy fs Λ(a), at least in the
+subsequential sense. Note that the scaling we use is non-canonical and that it does not aﬀect the underlying quantum
+mechanical energy-momentum spectrum and particle content of the model, since it does not alter the decay rate of
+correlations.
+What about correlations? For the plaquette p = pµν, as given above, we deﬁne a gauge-invariant unscaled plaquette
+ﬁeld, with Up = eiXp ,
+Tr Fu µν (x) = 1 a2g Im Tr (Up − 1) = − i 2a2g Tr ( Up − U † p ) = 1 a2g Tr sin Xp.
+The gauge invariance of the plaquette ﬁeld results from Eq. (45) and, more directly, from the gauge invariance of
+Tr Up.
+With the physical parametrization Ub = eigaAb , for small a, we have Tr Fu µν(x) ≃ Tr Fa µν (x). We also deﬁne a
+scaled plaquette ﬁeld
+Tr Fs µν(x) = ad Tr Fu µν(x) = a(d−4)/2 g Im Tr (Up − 1) .
+Our results on stability bounds on the partition function and boundedness of the generating function and correlations
+are for the Wilson Yang-Mills model with a priori scaled ﬁelds. Sometimes we apply gauge ﬁxing, imposing what we
+call the enhanced temporal gauge, but there are no additional infrared regulator terms added to the action like in
+Refs. [18, 22]. An infrared cutoﬀ is not needed in the Wilson model with free and periodic b.c..
+We have applied our scaled ﬁeld method to many Bose and Fermi models. Scaling improves regularity of the
+physical action. The corresponding partition function and model correlations are bounded. Correlations are bounded
+even at coincident points. In models which are perturbations of the free ﬁeld, the usual subtraction terms have ﬁnite
+coeﬃcients.
+In particular, for the real scalar ﬁeld, these properties are proved in Appendix A, for the free ﬁeld, and in Appendix B,
+for a perturbatively non-Gaussian scalar ﬁeld model. Denote by φu(x) and φs(x) the unscaled, physical and the scaled
+scalar ﬁeld. They satisfy the relation φs(x) = s(a) φu(x), where s(a) = a(d−2)/2 ( 2dκ2 u + m2 ua2)1/2 is a noncanonical
+x-independent scaling factor. With this, the scaled and unscaled partition functions verify Zs Λ(a) = [s(a)]Λs Zu Λ(a).
+The scaled partition function Zs Λ(a) obeys TUV stability bounds with the exponent Λs (number of sites) and not the
+Rd volume (La)d. The scaled free energy fs Λ(a) = [ln Zs Λ(a)]/Λs is bounded uniformly in L and a ∈ (0, 1]. fs Λ(a) then
+converges to a thermodynamic limit fs(a) and then to a continuum limit fs, for dimensions d = 3, 4.
+Moreover, the unscaled, physical two-point normalized correlation is related to the scaled one by ⟨φs(x) φs(y)⟩s =
+s2(a) ⟨φu(x) φu(y)⟩u and the scaled correlation is bounded uniformly in Λ and a, even at coincident points. This
+property leads to the existence of its thermodynamic and, subsequently, continuum limits. The unscaled, physical
+two-point correlation at coincident points presents the singular behavior a(d−2)/2, which can be taken as a lattice
+characterization of UV asymptotic freedom. The singular behavior of derivative ﬁelds is diﬀerent and we have, with
+ﬁnite diﬀerence derivatives and ⟨∂a ρφu(x) ∂a σφu(y)⟩u = ≃ [1/(s2(a) a2)]. For x = y, we obtain the behavior a−d,
+d = 1, 2, 3, 4. Again, this behavior can be taken as a characterization of UV asymptotic freedom. The same type of
+analysis can be used to treat the complete φ4 3-model and we also notice that singularities present in the construction
+of φ4 3 in Ref. [37], and the stochastic PDE construction of Ref. [21] are greatly reduced using our scaled ﬁeld method.
+The scaled ﬁeld method also applies to treat interacting Fermi ﬁelds, and may be a useful tool to extend our results
+for Yang-Mills models to QCD. For fermionic models TUV bounds, etc, also hold for scaled free ﬁeld fermionic models
+[25, 26]. The key fact is that the fermionic Gaussian integral, written here symbolically as ( ˜ψ meaning a ψ or a ¯ψ
+ﬁeld, where we are suppressing lattice and internal indices (such as spin, ﬂavor/isospin, ...)
+∫
+M ( ˜ψ) e ¯ψψd ¯ψdψ = −1, 0, 1 ,
+where M ( ˜ψ) is a coeﬃcient one monomial in the Fermi (Grassmann) ﬁelds ¯ψ and ψ. The integrand and the measures
+factorizes over lattice sites and internal indices. Thus, for example, considering a model with partition function
+ZΛ =
+∫
+eh( ˜ψ) eV ( ˜ψ) e− ¯ψψd ¯ψdψ
+=
+∫ 
+∏
+b∈Λ
+
+1 + ∑
+n(b)
+cb n(b) Mn(b)( ˜ψb)
+
+
+
+
+
+∏
+s∈Λ
+
+1 + ∑
+m(s)
+cs m(s) Mm(s)( ˜ψs)
+
+
+
+ e− ¯ψψd ¯ψdψ, (85)
+=== PAGE 38 ===
+38
+where b denotes a lattice bond and s a lattice site. To arrive at the last equality, we expand each free ﬁeld nearest
+neighbor hopping factor eh( ˜ψ) and each factor in eV ( ˜ψ), of the local interacting potential V ( ˜ψ). Due to Pauli repulsion,
+the expansions are ﬁnite, in the ﬁnite lattice. For the terms in the bond b expansion, we make a correspondence with
+the integers n(b) = 1 , 2 ,... For the terms in the site s expansion, a correspondence with the integers m(s) = 1 , 2 ,...
+is also made. The scaled ﬁeld Fermi bond coupling is (see Ref. [56])
+κ = 1 1 + (mua/κu) . (86)
+and each cn(b) has at least one factor of κ.
+In the two above square brackets, the c’s are coeﬃcients (with a possible dependence on a, κ) and the M ’s are
+coeﬃcient one monomials in the Fermi ﬁelds. Expand the products and use the basic fact to perform the fermionic
+integrals. In this way, we obtain a numerical partition function. Bounding each of the c’ s by its absolute value, we
+obtain the upper stability bound on the fermionic ZΛ
+|ZΛ| ≤
+[∏
+b∈Λ
+(
+1 + ∑ n(b) |cb n(b)| )] [∏ s∈Λ ( 1 + ∑ m(s) |cs m(s)| )]
+≤ exp [Λb ln (1 + Cb)] exp [Λs ln (1 + Cs)] ,
+(87)
+with Cb ≡ maxb∈Λ
+∑
+n(b) |cb n(b)| and Cs ≡ maxs∈Λ ∑ m(s) |cs (s)|.
+For the bound to be independent of the lattice spacing a ∈ (0, 1], renormalization of the coeﬃcients may be required.
+For large enough (mua/κu) (hence, a small scaled hopping parameter κ, as in Eq. (86), after dividing by the integral
+of eV ( ˜ψ), which factorizes over sites, the free energy and correlations admit convergent polymer expansion and the
+thermodynamic limit.
+Returning to the Yang-Mills model, we take periodic conditions and apply the multireﬂection method. We analyzed
+the generating function of r ∈ N of the above scaled plaquette ﬁeld correlations. It is given by (here, ZP Λ denotes the
+measure normalization and the J’ s are source strengths)
+⟨
+exp
+{∑r
+j=1 Jj Tr Fs pj (xj ) }⟩ = 1 ZP Λ ∫ exp    r∑ j=1 Jj Tr Fs pj (xj ) − ad−4 g2 ∑ p∈Λ Ap(Up)   dµ(U )
+≡ Gr,Λ(J (r),x) ≡ Gr(Λ,a,J (r),x) .
+Here, pj is a shorthand for pµj νj (xj). We proved that Gr,Λ(J (r),x) is uniformly bounded in the x’s and J’s and possess
+a ﬁnite thermodynamic and continuum limits, at least in the subsequential sense. Moreover, the generating function
+extends to an entire function of the J’s and Cauchy bounds are applied to derive bounds on r ∈ N scaled plaquette
+ﬁeld correlations. In particular, our analysis shows that the two unscaled plaquette ﬁeld correlation presents a singular
+behavior which is bounded by a−d, which is less than or equal to the singular behavior of the UV asymptotic freedom
+behavior. In particular, in d = 4, the unscaled coincident point two-plaquette correlation is equal to a−dM (g), with
+M (g) uniformly bounded for g2 ∈ (0, g2 0 < ∞].
+In deriving the above results, we have obtained a new global upper bound on the Wilson plaquette action, which
+is quadratic in the gluon ﬁelds. This is not what happens in the classical Lagrangian version of the model, which
+was used in the analysis of Yang-Mills models in Refs. [18, 22], and is also a surprise here, since the small a naive
+approximation has positive quartic terms. This quadratic bound on the Wilson plaquette action is used to obtain a
+lower bound on the partition function.
+Furthermore, the bound on the partition function factorizes and each factor is the partition function of a single
+plaquette action with a single bond partition function. The factorization occurs by setting to zero the actions of
+the spatial plaquettes. Such a local factorization does not occur in typical bosonic and fermionic models. The
+factorization suggests an avenue for a cluster or polymer expansion. In this case, the unperturbed partition function
+has only temporal plaquettes (plaquettes with at least one bond in the temporal direction) and the perturbation only
+has spatial plaquettes.
+Concerning the integral over the gauge group Haar measure of the single bond partition function, the integrand is a
+class function. In this case, with the help of the Weyl’ s integration formula, the N 2 dimensional group integral can be
+reduced to an N -dimensional integral over the angular eigenvalues.During this process, the random matrix probability
+distributions of the the circular unitary ensemble (CUE) and the Gaussian unitary ensemble (GUE) appear.
+An open and important question is whether or not the class of Yang-Mills models we analyzed here has a mass gap
+in the spectrum.
+=== PAGE 39 ===
+39
+Lastly, we hope that our methods and techniques, combined with other methods, will be useful to accomplish a
+complete construction of the d = 4 Yang-Mills and QCD models, including the veriﬁcation of the Osterwalder-Schrader
+axioms.
+APPENDIX A: Unscaled (Physical) and Scaled Real Scalar Free Field Model
+Here, we consider the case of an one-component (N = 1) real free scalar ﬁeld and obtain the relation between the
+physical, unscaled partition function and the scaled partition function. Correlations are also analyzed. Considering the
+scaled partition function and correlations, the thermodynamic and continuum limits are obtained. These quantities
+also admit a convergent expansion in the scaled hopping parameter κ2. The convergence is absolute, up to and
+including the critical point κ2 = κ2 c = (1/2d). The use of scaled ﬁelds removes the UV divergences from the
+scaled free energy and correlations, even at coincident points. The use of free b.c. is proved to provide infrared (IR)
+regularization and no global local mass term is needed. The relation between the original physical, unscaled ﬁelds
+and scaled ﬁeld correlations at coincident points provides a characterization of UV asymptotic freedom.
+Our analysis here is given in more detail in Appendix A of Ref. [49], where we considered N component ﬁelds and
+to which we refer the reader. Concerning the lattice Λ, we use the same as in the text and recall that Λs = Ld, L
+even, is the total number of sites.
+1. Partition Function:
+We consider the hypercubic lattice Λ ⊂ aZd ⊂ Rd, a ∈ (0, 1], with L ∈ N, L even sites on a side and periodic
+boundary conditions. The total number of sites in Λ is denoted by Λs = Ld. For the real scalar ﬁeld model, the
+physical or unnormalized ﬁnite lattice partition function is (the lowercase/uppercase index u denotes unscaled)
+Zu Λ =
+∫
+e−Au(φu) Dφu, (A1)
+where Dφu = ∏ x∈Λ dφu(x)/ √ 2π, with a Lebesgue measure dφu(x) for the unscaled ﬁeld at each lattice site. Also,
+up to boundary terms, for µ = 0,..., (d − 1) denoting a lattice spacetime direction and for any site x ∈ Λ, the model
+action is given by (as before x+ µ = x + aeµ, eµ being the unit vector of the µ spacetime direction)
+Au(φu) = 1 2 κ2 uad−2 ∑ x,µ ( φu(x+ µ ) − φu(x) )2 + 1 2 m2 uad ∑ x [φu(x)]2
+= −κ2 uad−2 ∑ x,µ ( φu(x)φu(x+ µ ) ) + 1 2 ( m2 uad + 2dκ2 uad−2)∑ x [φu(x)]2 , (A2)
+where κu, mu > 0. The mass associated with this action and corresponding to the partition function is deﬁned as
+the inﬁnite time limit of the exponential decay rate of the two-point correlation. Equivalently, it is the ﬁrst isolated
+point in the E-M spectrum of the associated lattice QFT, lying above the vacuum and at zero spatial momentum.
+We determine this mass in subsection 2 of this appendix.
+The scaled ﬁelds φ(x) are related to the unscaled ﬁelds φu(x) by an a-dependent noncanonical scaling transformation
+which corresponds to an a priori renormalization procedure. It reads (in [49], a similar equation has a misprint in the
+exponent of a!)
+φ(x) = s(a) φu(x) ; s(a) = ( 2dκ2 uad−2 + m2 uad)1/2 ≥ ( 2dκ2 u )1/2 a(d−2)/2 , (A3)
+which leads to the scaled ﬁeld partition function
+ZΛ =
+∫
+e−A(φ) Dφ ; A(φ) = Au(φu = s−1φ) , (A4)
+where Dφ is deﬁned similarly to Dφu.
+For
+κ2 = (2d + r)−1 , r = m2 ua2/κ2 u, (A5)
+=== PAGE 40 ===
+40
+the scaled ﬁeld action of Eq. (A4) is given by
+A(φ) = −κ2 ∑ x,µ φ(x) φ(x+ µ ) + 1 2 ∑ x [φ(x)]2
+= κ2
+2
+∑
+x,µ
+(
+φ(x+ µ ) − φ(x) )2 + κ2r 2 ∑ x [φ(x)]2 . (A6)
+Thus, by a change of variables, the unscaled and scaled ﬁnite lattice partition functions are related by
+ZΛ = sΛs Zu Λ , (A7)
+and the corresponding ﬁnite lattice free energies satisfy
+fΛ(a) = ln s + fu Λ (a) , (A8)
+where, as made precise above and omitting the a-dependence, fΛ = 1 Λs ln ZΛ and fu Λ = 1 Ns ln Zu. Eq. (A8) above,
+tells us that the singularities of fu Λ (a), when Λ ր aZd and, subsequently, in the a ց limit are killed by the ln s term.
+Thus, we have isolated the divergences of fu Λ (a).
+Indeed, as it is proved in Ref. [49], we have the stability bounds for the scaled partition function of Eq. (A7)
+ecℓΛs ≤ ZΛ,a ≤ ecuΛs , (A9)
+so as, by the Bolzano-Weierstrass theorem [48], the scaled free energy fΛ(a), in the thermodynamic limit Λ ր aZd
+followed by the continuum continuum limit a ց 0 is bounded. Letting f denote the result of these two limits, with
+these considerations, we have
+cℓ ≤ f ≤ cu. (A10)
+We now derive and sum a power series representation, in the scaled hopping parameter κ2, for the free energy. The
+series is proved to converge absolutely up to and including the critical value κ2 = κ2 c = (1/2d).
+From Appendix A of Ref. [49], for d = 1, 2, 3, 4, we have the momentum representation
+f (a) = − 1 2(2π)d
+∫
+(−π,π]d
+ln
+[
+1 − 2κ2 ∑
+µ
+cos qµ
+]
+ddq. (A11)
+Recalling that the scaled hopping parameter κ2 depends on a [see Eq. (A6)], the integral in Eq. (A11) is proved to
+be uniformly bounded for a ∈ (0, 1] and also, by the Lebesgue dominated convergence theorem, that the limit a ց 0
+exists and is equal to the a = 0 value of the r.h.s. of Eq. (A11).
+Remark A1 For d = 1, the integral in Eq. (A11) gives the closed form expression
+f (a) = − 1 2 ln
+[
+1 +
+√
+1 − 4 κ4
+2
+]
+.
+At the critical point, κ2 = (1/2), f (a) remains bounded and takes the value ln √ 2.
+Expanding the logarithm in the integrand of Eq. (A11), and using the multinomial theorem, we obtain
+f (a) = 1 2 ∑ r≥1 (2κ2)r r ∑ r1,...,rd| ∑ j rj =r r! r1! ...rd! ∏ j=1,...,d
+[
+1
+2π
+∫
+(−π,π]
+cosrj qdq
+]
+. (A12)
+We claim that the series is absolutely convergent, for κ2 < κ2 c = (1/2d). To see this, bound the integral factors
+inside the product by one and then sum over the rj to get dr. Next, summing over r gives [ (−1/2) ln(1 − 2κ2d) ].
+This is bounded for κ2 < (1/2d) which proves our claim.
+Using Ref. [57], Chap. 3, for the trigonometric integrals gives, for 0 ≤ rj ≤ r, j = 1,...,d,
+f (a) = 1 2 ∑ r≥2, even (2κ2)r r ∑ r1,...,rd, even| ∑ j rj =r r! r1! ...rd! ∏ j=1,...,d (rj − 1)!! rj !! , (A13)
+=== PAGE 41 ===
+41
+with the convention 0!! ≡ 1 and (−1)!! ≡ 1.
+Note that all the coeﬃcients of the above series are positive. As κ2 is a monotone increasing function of a mono-
+tonically decreasing a, by the monotone convergence in the space ℓ1 of the counting measure, and by the Lebesgue
+dominated convergence theorem, the series in Eq. (A13) converges absolutely for all 0 ≤ κ2 ≤ κ2 c = (1/2d).
+Denoting by f the a ց 0 limit of f (a), we have the exact result
+f = 1 2 ∑ r≥2,even 1 rdr ∑ r1 ,...,rd, even| ∑ j rj =r r! r1! ...rd! ∏ j=1,...,d (rj − 1)!! rj !! . (A14)
+2. Correlations:
+We now consider correlations of the real free ﬁeld scalar case. We obtain the relation between unscaled and scaled
+correlations and prove their thermodynamic and continuum limits exist. We also analyze derivative ﬁeld correlations.
+Explicit momentum space representations are also derived. The previous treatment of the partition function is widely
+used here.
+First, we obtain the relation between the physical, unscaled two-point correlation and its scaled counterpart.
+Recalling Eqs. (A1) and (A7), we have, with s ≡ s(a),
+⟨φu(x)φu(y)⟩u ≡ 1 Zu
+∫
+φu(x) φu(y) exp {−Au(φu)} dφu
+= 1 s2 Zu
+∫
+sφu(x) sφu(y) exp {−Au(φu)} dφu
+= 1 s2Z ∫ φ(x)φ(y) exp {−A(φ)} dφ
+= 1 s2 ⟨φ(x)φ(y)⟩ ,
+(A15)
+where we changed from φu(x) to φ(x) = sφu(x) and also set, following Eqs. (A2) and (A6),
+A(φ) = Au(φu = s−1φ) .
+Similarly, recalling that x+ µ = x + aeµ and with δµ(x) = φ(x+ µ ) − φ(x), we have,
+⟨∂a ρφu(x)∂a νφu(y)⟩u = 1 (as)2 ⟨δρφ(x)δνφ(y)⟩ . (A16)
+As proved in Ref. [49], the scaled two-point correlation ⟨φ(x)φ(y)⟩ at the thermodynamic limit admits the momen-
+tum space representation given by
+⟨φ(x)φ(y)⟩ = 1 (2π)d
+∫
+(−π,π]d
+eiq(x−y)/a
+(
+1 − 2κ2 ∑ µ cos qµ )ddq
+= 1 2(2π)dκ2
+∫
+(−π,π]d
+eiq(x−y)/a
+∑
+µ (1 − cos qµ) + r/2 ddq.
+(A17)
+Remark A2 For d = 1, the above integral gives the closed form expression
+⟨φ2(x)⟩ = ( 1 − 4κ4)−1/2 = 1 + ∑
+r≥2, even
+(r − 1)!!
+r!!
+(
+2κ2)r , κ2 < 1/2 ,
+which is inﬁnite at the critical point κ2 = 1/2.
+Remark A3 From Eq. (A17), for d = 3, 4, we that for x = y, the two-point function is bounded from above and
+below, uniformly in a ∈ (0, 1]. Indeed, a lower bound is obtained by replacing κ2 by its maximum value (1/2d) and
+putting r = m2 u/κ2 u (the maximum of r) in the denominator of the integrand, resulting in a ﬁnite integral. For an
+upper bound, we set r = 0 in the integrand and take a = 1 in κ−2 [see Eq. (A5)].
+=== PAGE 42 ===
+42
+From Eq. (A17), expanding the denominator of the ﬁrst equality and using the multinomial expansion on each
+term, for coincident points x = y, we obtain, with 0 ≤ rj ≤ r, j = 1,...,d,
+⟨[φ(x)]2 ⟩ = 1 + ∑
+r≥1
+(2κ2)r ∑
+rj , even| ∑d j=1 rj =r
+r!
+r1! ...rd!
+d∏
+j=1
+[ 1
+2π
+∫ π
+−π
+cosrj q dq
+]
+. (A18)
+At this stage, we see that all coeﬃcients of powers of κ2 are positive. The series is bounded for 0 < κ2 < (1/2d) as
+the integrals are bounded by (2π). Using these bounds and resumming, we get
+⟨[φ(x)]2 ⟩ ≤
+∞∑
+r=0
+(2κ2d)r = 1 1 − 2κ2d.
+Now, from (see e.g Ref. [57], Chap. 3),
+∫ π
+−π
+cos2mxdx = 4
+∫ π/2
+0
+cos2mxdx = 2π (2m − 1)!! (2m)!! ,
+so that letting 2m = rj, and recalling the convention 0!! ≡ 0 and (−1)!! ≡ 1, we have
+⟨[φ(x)]2 ⟩ = 1 + ∑
+r≥2, even
+(2κ2)r ∑
+rj , even| ∑d j=1 rj =r
+r!
+r1! ...rd!
+d∏
+j=1
+(rj − 1)!!
+rj!! . (A19)
+The series is monotone increasing in κ2. In Eq. (A19), if we bound the product by one, we see that the series
+converges absolutely for all 0 ≤ κ2 < κ2 c ≡ (1/2d). By the upper bound given below, for d> 2, we can extend the
+κ2 convergence domain up to and including κ2 c.
+Remark A4 By the upper bound below, the convergence of the series in Eq. (A19) is uniform in the lattice spacing
+a ∈ (0, 1]. The continuum limit exists, up to and including κ2 c, for ⟨[φ(x)]2 ⟩ setting 2κ2 = 1/d in Eq. (A19) and
+considering d> 2. Also, the zero mass limit and the continuum limit are interchangeable. Recalling Eq. (A3) and the
+scaled/unscaled relation ⟨[φu(x)]2⟩u = s−2 ⟨[φ(x)]2 ⟩, and taking m2 u = 0 in s ≡ s(a), we have the zero mass limit of
+⟨[φ(x)]2 ⟩.
+Remark A5 Comparing Eq. (A19) with Eq. (A13), for the thermodynamic limit of free energy, we have that
+κ2 df dκ2 = [⟨φ2(x)⟩ − 1]/2 . (A20)
+Hence it is enough to determine only one expansion, for f or for ⟨φ2(x)⟩. We remark that this equation gives
+a relation between the derivative of a global quantity in terms of a local average. This is a more general result.
+Consider a ﬁnite lattice Λ model partition function deﬁned with a quadratic form ZΛ =
+∫
+exp{− 1 2 (φ,Aφ)} Dφ, with a symmetric matrix A > 0, (φ,Aφ) = ∑ x,y∈Λ φ(x)Axyφ(y) and a product Lebesgue measure Dφ, such that we have
+ZΛ = exp{− 1 2 Tr ln A}. Hence, the associated ﬁnite free energy is
+fΛ = ln ZΛ Λs = − 1 2Λs Tr ln A.
+On the other hand, for A = 1 − λM and assuming translation invariance, even at ﬁnite volume, expanding the log
+for small enough |λ|,
+fΛ = 1 2 ∑ n≥1 1 n (λM )n 00 , (A21)
+and
+⟨φ2(x)⟩Λ = [1 − λM ]−1 xx = ∑
+n≥0
+(λM )n 00 . (A22)
+From the last two equations, we obtain
+λdfΛ
+dλ = 1 2 [ ⟨φ2(x)⟩ − 1 ] .
+This is an equality of the same type as in Eq. (A20). Likely, this result can be extended to the case when translation
+invariance is present only in the thermodynamic limit of a lattice model.
+=== PAGE 43 ===
+43
+We now prove existence of ⟨[φ(x)]2 ⟩ at κ2 = κ2 c = (2d)−1. From the second equality in Eq. (A17), using the basic
+lower bound (1 − cos u) ≥ 2u2/π2, u ∈ (−π,π], the upper bound κ−2 ≤ 2d + (mu/κu)2 and spherical coordinates,
+we get, for d> 2,
+⟨φ(x)φ(y)⟩ ≤ π2Ωd
+4(2π)d
+[
+2d + (mu/κu)2] ( √ dπ)d−2 d − 2 , (A23)
+where Ωd is the d-dimensional solid angle and [ρ(q)]2 = ∑ µ (qµ)2. The last numerical factor arises from the radial
+integral by expanding the integration domain to 0 ≤ ρ ≤
+√
+dπ. Notice that the bound of Eq. (A23) holds for all
+a ∈ (0, 1] and 0, ≤ κ2 ≤ κ2 c.
+Coming back to the spectral representation of Eq. (A17), the integrand is dominated, for a ∈ (0, 1] and d = 3, 4,
+by the integrable function {1/[∑ µ=0,1,...,(d−1) (1 − cos qµ)]}. Recalling that κ−2 = [2d + (mua/κu)2], we have
+lim
+aց0
+⟨ φ(x) φ(y) ⟩ =
+{ ⟨φ2(0)⟩0 , x = y;
+0 , x ⁄= y. ,
+by the dominated convergence theorem, for x = y, and the Riemann-Lebesgue lemma for x ⁄= y. Here,
+⟨φ2(0)⟩0 (a) = d (2π)d
+∫
+(−π,π]d
+1∑
+µ=0,1,...,(d−1) (1 − cos qµ) ddq = 2d ∆−1 1 (0, 0) ,
+denote the zero mass (r = 0) coincident point value of ⟨ φ(y)⟩0, in the thermodynamic limit, and ∆−1 1 (x,y) is the
+kernel of the inverse of minus the unit lattice Laplacian operator, and ∆1 acts on f ∈ ℓ2(Zd) by
+[∆1f ](x) = 2df (x) −
+∑
+µ
+[f (xµ+ = x + eµ) + f (xµ− = x − eµ)] , (A24)
+where, here, the lattice site x ∈ Zd. The integrand is integrable. Thus,
+⟨ φ(x) φ(y)⟩ ≤ 2d + (mua/κu)2
+2d ⟨ φ2(0) ⟩0 ≤ 2d + (mu/κu)2 2d ∆−1(0, 0) , (A25)
+and is bounded uniformly for a ∈ (0, 1].
+We now obtain a series expansion for scaled scalar ﬁeld lattice two-point correlation ⟨φ(0)φ(x)⟩Λ , in the thermo-
+dynamic limit. Expanding Eq. (A17) as before, we obtain, writing x = nxa. nx = (nx,1,...,nx,d) ∈ Zd and with a
+Kronecker delta,
+⟨φ(0)φ(x)⟩ = δ(x) +
+∑
+r≥1
+(2κ2)r ∑
+r1,...,rd| ∑ j rj =r
+r!
+r1! ...rd!
+∏
+j=1,...,d
+[ 1
+2π
+∫ π
+−π
+cos(njqj) cosrj qj dqj
+]
+. (A26)
+Here, the jth integral with nj = m, rj = s, is
+1
+2π
+∫ π
+−π
+cos(mq) cossq dq = 1 2s+1π ∫ π −π
+
+
+
+[eimq + e−imq
+2
+] ∑
+k=0,...,s
+[ s!
+k!(s − k)! eiq(2k−s)
+] 
+ dq.
+Substituting this result in Eq. (A26) gives
+⟨φ(0)φ(x)⟩ = δ(x) + ∑ r≥1 (2κ2)r ∑ r1,...,rd| ∑ j rj =r r! r1! ...rd! ∏ j=1,...,d
+{ 1
+2rj +1
+∑
+kj =0,...,rj
+× rj! kj!(rj − kj )! [δ(2kj − rj + nj) + δ(2kj − rj − nj)] }
+= δ(x) + ∑ r≥1 κ2r ∑ r1,...,rd | ∑ rj =r
+(
+r
+r1 r2 ... rd
+)
+× ∏ j=1,...,d
+{∑
+kj =0,...,rj Nrj ,kj
+1
+2 [δ(2kj − rj + nj) + δ(2kj − rj − nj)]
+}
+.
+(A27)
+=== PAGE 44 ===
+44
+The second equality above is obtained as follows. In d = 1, the number of paths of length n that start at the origin
+and end at the site k is
+Nn,k ≡
+(n
+k
+)
+= n! k! (n − k)! .
+For nj = 0, for any j = 1, ..., d, such as the path terminates at the origin, rj = 2kj is even and
+Nrj ,kj = Nrj ,rj /2 = rj ! [(rj/2)!]2 = Nr.
+The series in Eq. (A27) converges absolutely for 0 ≤ κ2 ≤ κ2 c = (1/2d). For the point x = n1a, n1 ⁄= 0, the smallest
+exponent of r is |n1|; for the point x = (n1a, 0,..., 0), n1 = 1, the leading contribution is of order κ2.
+For the derivative ﬁeld correlation ⟨δµφ(x)δνφ(y)⟩ a spectral representation can be obtained from ⟨φ(x)φ(y)⟩ by
+including an additional factor [(eiqµ − 1) (e−iqν − 1)] in the integrand, and we show that, with no sum on ρ,
+⟨δρφ(0) δρφ(0)⟩0 =
+( 1
+κ2d
+)
+(r = 0) = 2 ,
+We have an exact value of the coincident point derivative physical ﬁeld correlation
+⟨∂a ρφu(0)∂a ρφu(0)⟩u 0 = 2 a2 s2(mµ = 0) = 2 ad (2dκ2u)d−2 .
+and the physical derivative ﬁeld correlation veriﬁes the bound
+|⟨∂a ρφu(0)∂a ρφu(0)⟩u 0 | ≤ 1 (as)2 ⟨δρφ(0) δσφ(0)⟩0 ≤ 2(as)−2 ≤ 2 ad (2dκ2u)d−2 .
+which shows that the singular behavior is a−d.
+With similar arguments for the unscaled two-point correlation, we have the thermodynamic limit
+⟨φu(x)φu(y)⟩u a = 1 2(2π)d
+∫
+(−π/a,π/a]d
+eip(x−y)
+κ2 u
+a2
+∑
+µ (1 − cos apµ) + m2u/2
+ddp.
+Thus, from Eq. (A17), even at coincident points, and for d = 3, 4, the scaled two-point correlation is bounded
+uniformly in a ∈ (0, 1]). Using the scaling relation between the unscaled, physical ﬁeld and the scaled ﬁeld correlations,
+the physical two-point correlation behaves as a2−d at coincident points and the derivative ﬁeld two-point correlation
+singular behavior is a−d. As mentioned above, these behaviors characterize the free ﬁeld and can be taken as a
+measure of UV asymptotic freedom on the lattice.
+The mass m associated with the aZd lattice QFT is given by the zero of the Fourier transform of the convolution in-
+verse of the two-point correlation ⟨φu(x)φu(y)⟩u a at zero spatial momentum, namely ˜Γ(p0 = im,⃗p = 0). It corresponds
+to the solution of the equation
+2 κ2 u
+a2 [1 − cosh(ma)] + m2 u = 0 ,
+or, using the equality (cosh u − 1) = 2 sinh2(u/2), u ∈ R,
+sinh2 ma 2 = m2 ua2 4κ2u .
+With this, we see the solution is, with r = (mua/κu)2,
+m = 2 a sinh−1
+(mua
+2κu
+)
+= 2 a ln [ √r 2 + √4 + r 2 ]
+= mu
+κu
++ O
+(
+a2
+(mu
+κu
+)3)
+.
+The mass m is real analytic in a, mu and κu ⁄= 0.
+=== PAGE 45 ===
+45
+3. Scaled Two-Point Correlation: Random Walk Expansions, Number of Paths and Spectral
+Representations:
+We would be remiss if we did not establish the connection with random walk expansions for the scaled two-point
+correlation ⟨φ(x) φ(y)⟩. We give a description of some of our ﬁndings. For a simple random walk in dimension one, it
+is well-known that the number of paths starting and ending at the origin, and of length n, even, is [60]
+Ξn = n! [(n/2)!]2 . (A28)
+As shown below in Eq. (A34), in dimension d> 1, the number of paths is given by,
+Nr =
+∑
+r1 ,...,rd | ∑ ri=r, | r even
+( r
+r1 r2 ... rd
+) ∏
+j=1,...,d
+Ξrj . (A29)
+Furthermore, in the thermodynamic limit, the free energy
+f = 1 2 ∑ r≥2 , even Nr κ2r r ; κ2 ≤ (1/2d), d = 1, 2,..., (A30)
+and the local correlation
+⟨φ2(x)⟩ = 1 + ∑
+r≥2, even
+Nrκ2r ; κ2 ≤ (1/2d), d = 3, 4,... (A31)
+Furthermore,
+κ2 df dκ2 = 1 2 [ ⟨φ2(x)⟩ − 1 ] . (A32)
+Thus, it turns out that the only input needed for these numerical formulas is the d = 1 combinatorial factor Ξn.
+Whether or not this property is a consequence of a more fundamental behavior is to be investigated.
+The number [Nr/(2d)r] ≡ pr is the fraction of the total number of paths of length r, with initial and endpoint at
+the origin. Denoting by ⟨φ2(x)⟩c the value of ⟨φ2(x)⟩ at the critical point κ2 = κ2 c = (1/2d), we have
+⟨φ2(x)⟩c = 1 + ∑
+r even≥2
+pr.
+For simplicity of notation, we do drop the s (scaled) upper indices in this section. We write the free b.c. scaled
+ﬁeld action of Eq. (A6) as, with inner product in ℓ2(aZd),
+1
+2
+(
+φ, [1 − κ2S] φ ) ,
+with
+⟨φ(x) φ(y)⟩ =
+(
+1 − κ2S )−1 xy = δxy + ∞∑
+r=1
+κ2r
+
+ ∑
+x1,x2,...,xr−1
+Sx,x1 Sx1,x2 ... Sxr−1y
+
+ .
+Here, the elements of the symmetric matrix S are given by
+Syj ,yk =
+{ 1 , |yj − yk| = 1,
+0 , otherwise .
+. (A33)
+The above Neumann series converges absolutely for |κ2| < (1/2d), as |S| = 2d.
+=== PAGE 46 ===
+46
+Comparing this series with the series obtained from spectral representation, we can equate the κ2r coeﬃcients. For
+example, for coincident points x = y, and for r and rj (j = 1,...,d) being even integers, we have
+∑
+x1,x2,...,xr−1 Sx,x1 Sx1,x2 ... Sxr−1 x = 2r ∑ r1 ,...,rd∈{0,1,...,r} r! r1! r2! ...rd! ∏d j=1 (rj − 1)!! rj!!
+= ∑ r1,...,rd∈{0,1,...,r}
+(
+r
+r1 r2 ... rd
+)
+∏d
+j=1 Ξrj ; ∑d j=1 rj = r,
+(A34)
+where we have used the multinomial coeﬃcient and used the number of paths starting and ending at zero, according
+to Eq. (A28).
+Remark A6 The second equality above follows on writing r = ∑ j=1,...,d rj in the exponent of 2r, and using double
+factorial identities, namely, for even n,
+2n(n − 1)!!
+n!! = 2(n − 1)! (n/2 − 1)! (n/2)! = n! [(n/2)!]2 .
+In Ref. [60], the number Ξn is deduced by a combinatorial argument. The same result is obtained here by an analytic
+argument in Remark A2 .
+Remark A7 Since, using Eq. (A33), the product in the left-hand-side of Eq. (A34) is 0 or 1, the right-hand-side of
+this equation is the counting of paths of length r (even) that start and end at site x = 0.
+Remark A8 From Eq. (A21), we see that the free energy satisﬁes Eq. (A30), for d = 1, 2, 3, 4 and κ2 < (1/2d).
+Likewise, Eq. (A22) tell us that ⟨φ2(x)⟩ obeys Eq. (A31). Hence, we have the relation of Eq. (A32). Note the only
+input for all this results is the combinatorial factor Ξn, for d = 1.
+On the other hand, for d = 1, we also have
+f = − 1 2 ln 1 +
+√
+1 − 4κ4
+2 ,
+κ2 ≤ 1 2 , so that 0 ≤ f ≤ ln √ 2. In Appendix C, we show the inequality f ≤ ln √ 2, holds for any dimension d, provided
+that κ2 ≤ (1/2d). We also have the correlation inequality
+⟨φ2(x)⟩ = 1√ 1 − 4κ4 ≥ 1 ; d = 1 , κ2 < 1/2 .
+Whether or not there is a deeper reason for this bound to be true needs further investigation.
+Eq. (A34) is an explicit formula for the number of paths of length r that begin at x and terminate at the same
+point x. Note that if there are no restrictions on endpoints of the paths, then the r.h.s. is [(2d)r] upon replacing the
+j product by 1, and removing the rj even restriction, as it should be.
+Next, we consider free b.c. and follow closely the treatment given in Ref. [49], for periodic b.c. We derive the
+spectral representation for the partition function and free energy. Similar considerations apply for the two-point
+correlation. For the free b.c. action, we write
+A =
+∑
+x,y∈Λ
+φ(x)M (x,y)φ(y) ,
+where M (x,y) = 1 2 δxy − κ2 2 ∑ µ Hµ(x,y) , and where Hµ(x,y) is associated with a L × L tridiagonal symmetric matrix with unit elements on the nearest neighbor of the diagonal, and zero otherwise. M is diagonalized by a product
+over µ of eigenvectors of Hµ. The orthogonal eigenvectors are sin pµxµ with xµ = a, 2a,...La (recall we chose the
+number L of sites on the hypercubic lattice side to be L even). The orthogonal eigenvectors of H are
+∏
+µ
+sin πpµxµ
+L + 1 .
+=== PAGE 47 ===
+47
+Here, we identify the L points along a line in the µ = 0, 1,..., (d − 1) coordinate direction with a, 2a,...,La. The
+momenta pµ lie in the set
+P =
+{
+p = (p0,...,pd−1) ; pµ = πrµ
+a(L + 1) , µ = 0, 1,..., (d − 1)
+}
+,
+with rµ = −L, −L + 2,..., −2, 1, 3,..., (L − 1). There are Ld elements in the set P. We have chosen the p’s so that
+P lies in (−π/a,π/a]d. The pµ spacing is {2π/[a(L + 1)]}, for rµ positive and rµ negative.
+The eigenvalues of M are
+λ(p) = 1 2
+[
+1 − 2κ2 ∑
+µ
+cos(pµa)
+]
+,
+and the spectral representation for the free b.c. partition function, in terms of the spectral parameter q = pa, q ∈ aP,
+now follows as in Ref. [49] for the periodic b.c. case. Namely,
+ZΛ = exp
+{
+− 1 2 ∑ q ln (2λ(p = q/a)) } .
+Here, the qµ spacing is [2π/(L + 1)] and |qµ| < π.
+From this spectral representation and bounds on the Riemann sum approximation, the thermodynamic limit of the
+ﬁnite lattice free energy
+fΛ = 1 Ld ln ZΛ = − (L + 1)d 2(2π)dLd ∑ q ( 2π L + 1 )d ln ( 1 − 2κ2 ∑ µ cos qµ ) ,
+is the same as the thermodynamic limit of the periodic b.c. free energy given in Eq. (A11).
+We now show the relation between ⟨φ(x)φ(y)⟩, the scaled free ﬁeld two-point correlation and the much analyzed
+resolvent of minus the unit lattice Laplacian ∆1 (see e.g. [58–62] and references therein).
+Letting x ≡ nxa, y ≡ nya and nx − ny ≡ n, we have
+⟨φ(nxa)φ(nya)⟩ = 1 (2π)d
+∫
+(−π,π]d
+einq
+1 − 2κ2 ∑ µ cos qµ ddq.
+On the other hand, noting that we have, in Fourier space, the unit lattice Laplacian ˜∆1(q) = ∑ µ 2 (1 − cos qµ),
+we have the resolvent
+(∆1 − z)−1 = 1 (2π)d
+∫
+(−π,π]d
+einq
+∑
+µ 2 (1 − cos qµ) − z ddq,
+for z /∈ [0, 4d]. Thus, we have the desired relation
+⟨φ(nxa)φ(nya)⟩ = 1 κ2 (∆1 − z)−1 (nx,ny) ,
+where
+z = −
+( 1
+κ2 − 2d
+)
+= − m2 ua2
+κ2u .
+APPENDIX B: Truncated Model of Real Scalar Fields
+In this Appendix, we analyze the scalar scaled ﬁeld truncated model. The ingredients for proving the results in this
+Appendix are the same used in the text or involve well known results, and will only be indicated. This lattice model,
+non-Gaussian in perturbation theory, illustrates that a TUV stability bound where the exponent is proportional to
+the number of lattice sites Λs = Ld and not the volume (aL)d in Rd, with a constant of proportionality which is
+independent of L ∈ N (even) and a ∈ (0, 1] is suﬃcient to bound correlations uniformly in a ∈ (0, 1].
+=== PAGE 48 ===
+48
+Starting from the scalar scaled ﬁeld model of Appendix A, recalling that κ2 > 0 is the (squared) hopping parameter
+and x+ µ = x + aeµ, the truncated model is obtained by replacing the bond factor exp[κ2 φ(x)φ(x+ µ )],by the truncation[
+1 + αφ(x)φ(x+ µ ) ] . Its ﬁnite lattice Λ ⊂ aZd, a ∈ (0, 1], partition function reads
+Zt Λ =
+∫ ∏
+x,µ
+[
+1 + αφ(x)φ(x+ µ ) ] dµI (φ) , (B1)
+where the measure is a product of normalized Gaussian measures, with identity covariances dµI (φ) =∏
+x
+[
+exp
+(
+− φ2(x)/2 ) dφ(x)/ √ 2π ] and the parameter α veriﬁes the condition α> 0.
+We notice that the model satisﬁes Osterwalder-Schrader positivity and Griﬃths I inequality (see e.g. Ref. [4, 63]).
+Concerning the truncated model, our ﬁrst result is a stability bound.
+Proposition 1 Letting Λs = Ld denote the number of sites in Λ, we have the stability bound
+ecℓ Λs = 1 ≤ Zt Λ ≤
+∫ ∏
+x,µ
+[
+1 + √α |φ(x)| ][ 1 + √α |φ(x+ µ )| ] dµI (φ)
+≤
+∫ ∏
+x
+[
+1 + √α |φ(x)| ]2d dµI (φ) ≤ ecuΛs
+, (B2)
+where cℓ = 0 by Griﬃths I inequality and cu = ln
+[∫ (
+1 + √α|φ| )2d e−φ2/2 dφ/ √ 2π ] .
+Proof: For the upper bound, use |1 + αφ(x)φ(x+ µ )| ≤ 1 + α|φ(x)| |φ(x+ µ )| ≤ [1 + √α |φ(x)| ] [ 1 + √α |φ(x+ µ )| ] . For
+the lower bound, use Griﬃths I inequality [4, 63].
+Consider the ﬁnite lattice generating function with a single point source
+⟨eJφ(y)⟩Λ = Zt Λ(J) Zt Λ , (B3)
+where Zt Λ(J) =
+∫
+exp[Jφ(y)]
+∏
+x,µ
+[
+1 + αφ(x)φ(x+ µ ) ] dµI (φ), verifying Zt Λ(J = 0) = Zt Λ. Concerning this quantity,
+we have the following upper bound.
+Proposition 2 The generating function ⟨eJφ(y)⟩Λ satisﬁes the bound
+⟨eJφ(y)⟩Λ ≤ e−cℓ+J 2+cu,2 (B4)
+where cu,2 = ln
+[∫ (
+1 + √α|φ| )4d e−φ2/2 dφ/ √ 2π ] , with a single point normalized Gaussian measure with unit
+covariance (see Eq. (B1)).
+Proof: The proof uses the multireﬂection bound [4, 49] and Cauchy-Schwarz inequality multiple times in the un-
+derlying quantum Hilbert space. Finally, the Cauchy-Schwarz inequality is used to factorize the J dependence. An
+analogous proof for the YM model is given in the text. With these methods, we obtain
+⟨eJφ(y)⟩Λ ≤
+[
+1
+Zt Λ
+∫
+exp
+{
+J
+∑
+x
+φ(x)
+} ∏
+x,µ
+[
+1 + αφ(x)φ(x+ µ ) ] dµI (φ)
+]1/Λs
+≤ e−cℓ
+{∫
+exp
+[
+2J
+∑
+x
+φ(x)
+]
+dµI (φ)
+}1/2Λs {∫ ∏
+x,µ
+[
+1 + √α |φ(x)| ]2 [ 1 + √α |φ(x+ µ )| ]2 dµI (φ)
+}1/2Λs
+≤ e−cℓ eJ 2 ecu,2 .
+Above, in passing from the ﬁrst to the second equality, we have written e−φ2/2 = e−φ2/4 e−φ2/4 and considered each
+of the exponential terms in the r.h.s. in each factor of dµI (φ).
+As usual [see Eq. (34)], correlations are deﬁned by the zero source value of the source derivatives of the generating
+function ⟨eJφ(y)⟩Λ. For the truncated model, we have the coincident point correlation bound
+=== PAGE 49 ===
+49
+Proposition 3 We have the bound
+|⟨φr(y)⟩Λ| ≤ cr ≡ e−cℓ+cu,2+1 r! (B5)
+Proof: The coeﬃcients of the Taylor series of ZΛ(J) in J are all positive by Griﬃths I inequality [4, 63]. The bound
+extends to complex source J and ⟨eJφ(y)⟩Λ is an entire function of J. The upper bound results from using Cauchy
+estimates on the source derivatives,namely,
+|⟨φr(y)⟩Λ| =
+⏐⏐⏐⏐ [ dr dJr ⟨exp[Jφ(y)]⟩Λ ] J=0 ⏐⏐⏐⏐ ≤ r! max|J|=1 [ ecℓ e|J|2 ecu,2 ] ≡ cr. (B6)
+For d = 1, we can obtain exact explicit results for the above correlations. They emerge, by inspection, just by
+expanding the product of bond factors and controlling the terms individually. In doing so, we note that if a lattice
+site is intersected by only one bond, then the integral for that site vanishes.
+d = 1 and free b.c.:
+We have Zt Λ = 1. We also have TUV stability for all α> 0 and we have cℓ = cu = 0. Also, we have
+⟨φ(x)φ(y)⟩ = α|x−y|/a = exp{(|x − y|/a) ln α} .
+This behavior gives a decay for 0 <α< 1 and a blowup for α> 1. The α = 1 value is the critical point. We perform
+a ﬁnite renormalization for a ∈ (0, 1] setting α = e−ma, for the mass m> 0. Thus,
+⟨φ(x)φ(y)⟩ = e−m|x−y| .
+For a power of the ﬁeld, at a single point, we obtain a Gaussian behavior, namely (recalling we are dealing with a
+unit covariance),
+⟨φr(y)⟩ = (r − 1)!! .
+However, if x ⁄= y, we have
+⟨φ2(x)φ2(y)⟩ = 1 , x ⁄= y
+so that the truncated four-point correlation satisﬁes
+⟨φ2(x)φ2 (y)⟩tr = ⟨φ2(x)φ2 (y)⟩ − ⟨φ2(x)⟩ ⟨φ2(y)⟩ − 2 ⟨φ(x)φ(y)⟩2
+= − 2 ⟨φ(x)φ(y)⟩2
+= −2 e−2m|x−y| , x ⁄= y,
+(B7)
+which implies that our truncated scalar ﬁeld model is non-Gaussian and triviality does not hold. This is in contrast
+with the recent result of Ref. [50] for the complete scalar ﬁeld model with a quartic interaction, in d = 4.
+Scaling Limit (denoted by scl)
+The scaling limit is obtained by ﬁxing the mass as ms > 0 taking a ց 0, nx, ny ր ∞, where x = nxa and y = nya
+so that x, y → xs, ys ∈ R. Thus,
+scl⟨φ(x) φ(y)⟩ = e−ms|xs−ys| ,
+scl⟨φ2(x) φ2 (y)⟩tr = −2 e−2ms|xs−ys| .
+We now consider periodic b.c.
+d = 1 and periodic b.c:
+Using periodic b.c., with similar methods, the following list results is derived for d = 1.
+Partition Function: Zt Λ = 1 + αL.
+Free Energy: fΛ = 1 L ln(1 + αL) Lր∞ −→
+{ 0 ; α ≤ 1
+ln α ; α> 1 .
+=== PAGE 50 ===
+50
+In the thermodynamic limit, the two-point correlation presents a discontinuous α derivative at α = 1. Indeed, we
+have
+⟨φ(x)φ(y)⟩ =
+{
+α|x−y|/a ; α ≤ 1
+α−|x−y|/a ; α> 1 .
+α = αc = 1 is a critical point.
+We can perform a ﬁnite renormalization setting α = e−ma, for m> 0 and α< 1, and α = ema, for α> 1, and m
+is the scalar ﬁeld mass. Thus,
+⟨φ(x)φ(y)⟩ = e−m|x−y| .
+Also, we can take the scaling limit scl and obtain non-triviality of the model like in the d = 1 free b.c. case.
+Finally, for the free or periodic b.c., we can obtain the critical exponents and, also, we can take the limit ms → 0.
+Now, taking d = 3, 4, we carry out perturbation theory to order α2 and obtain
+αc = 1 2 [ 1 − √ 1 − 2/d ] = 1 2d + 1 4d2 + ... ,
+which is to be compared with the free scaled ﬁeld value αc = 1/(2d). Here, αc is small but not very small (not
+αc ≪ 1).
+For the conﬁguration x1 = x2 = 0 and x3 = x4 = aeµ, the truncated four-point correlation ⟨φ(x1 )φ(x2)φ(x3 )φ(x4 )⟩tr
+veriﬁes the non-Gaussian (nontrivial) behavior
+⟨φ(x1)φ(x2 )φ(x3 )φ(x4)⟩tr = −2 α2 ⁄= 0
+With the negative sign and considering the ladder, leading order approximation in a lattice Bethe-Salpeter equation
+(see Refs. [52–54], the negative sign of the above truncated four-point correlation implies that potential between the
+interacting particles is repulsive and does not favor the formation of bound states.
+APPENDIX C: Factorized Bounds for Bose Field Model Partition Functions
+In the text, bounds are obtained on the YM partition function which admit a factorization into local quantities,
+i.e. single plaquette partition functions of a single bond variable. This factorization seems to be peculiar to local
+gauge-invariant YM models.
+In this Appendix, we show how to obtain factorized local bounds for Bose ﬁeld models. Each factor involves only
+the ‘transfer matrix/acute.ts1 of a single bond. For the continuum limit a ց 0, it is important that the constants appearing
+in the bounds are uniform in the lattice spacing a ∈ (0, 1], and include the critical values of the model parameters. In
+particular, for the free ﬁeld free energy, the bounds on the partition function allow us to show, in dimension d, that
+f (a) ≤ ln
+√
+2, in the thermodynamic limit, as long as κ2 ≤ (1/2d). Our bounds also allow the bond factor coupling
+parameters to be space dependent where, as other bounds (e.g. those using the momentum representation) require
+the couplings to be space independent.
+Variants of the method apply to numerous Bosonic models, as for λφ4 3 with small λ > 0, the truncated model of
+Appendix B, etc. For simplicity, we treat the free scalar scaled ﬁeld model partition function with free b.c. and the
+local bond factors given by
+Fx,µ = eκ2 φ(x)φ(x+ µ ) .
+For this model with free b.c., we have the ﬁnite lattice partition function, given in terms of the bond factors, which
+reads
+ZΛ =
+∫ ∏
+µ,x
+Fx,µdµI (φ) , (C1)
+where dµI (φ) is a product measure of normalized Gaussian measures with unit covariance.
+=== PAGE 51 ===
+51
+By the generalized H¨older inequality, we have
+ZΛ ≤ ∏ µ
+∫ [∏
+x
+Fd x,µdµI (φ)
+]1/d
+,
+≤ ∏ µ [∏ c Zµ Λ,c ]1/d ,
+where Zµ Λ,c is the partition function of a one-dimensional chain which we shall now deﬁne.
+For a ﬁxed spacetime direction µ = 0, 1,..., (d − 1), we index each sequence of Ld−1 points (lattice sites) in the
+xµ = 1 hyperplane by c. Zµ Λ,c of a chain with L sites parallel to the µ direction, starting at xµ = 1 denotes the
+partition function and ending at xµ = L. The couplings in the chain c are denoted by κ2 cj . For the generic chain c,
+we denote the L sites by 1, 2,...,L and the L − 1 bound coupling parameters by κ2 1µ, κ2µ2, ...,κ2 (L−1)µ, suppressing
+the c dependence. The ﬁeld variables are denoted by φ1, φ2, ..., φL. Having done this, we now write
+Zµ c =
+
+f, ∏
+j=1,...,(L−1)
+T (κ2 cj ,µ) f
+
+
+L2(R)
+.
+The product is the composition of integral operators T (κ2 cj ,µ) with the operator kernel K(φ,φ′,κ2 cj ) given by
+K(φ,φ′,β) = 1√ 2π exp ( − 1 4 φ2 ) exp (dβφφ′ ) exp ( − 1 4 (φ′)2 ) ,
+and f (φ) = (2π)−1/4 e−φ2/4. Thus,
+Zµ c ≤ ‖f ‖2 ∏
+j=1,...,(L−1)
+‖T (κ2 cj ,µ)‖ ,
+and
+ZΛ ≤ ∏ µ {∏ c [ ‖f ‖2 ∏ j=1,...,(L−1) ‖T (κ2 cj ,µ)‖ ]}1/d
+= ‖f ‖2Ld−1 ∏ b ‖T (κ2 cj ,µ)‖1/d,
+where we have indexed the d(L − 1)Ld−1 bonds of the lattice Λ by b.
+This is our factorized bound! If all the couplings are equal, say κ2 b = κ2 for any bond b, the product over the bonds
+is ‖T (κ2)‖(L−1)Ld−1 and
+ZΛ ≤ e2Ld−1 ln ‖f ‖ exp [ Ld−1(L − 1) ln ‖T (κ2)‖ ] ≡ ecu Ld .
+Of course, here,
+cu = 2 L ln ‖f ‖ + (1 − L−1) ln ‖T (κ2)‖ ,
+which is our upper stability bound.
+We obtain a convenient bound for ‖T (κ2)‖ using a Holmgren bound ‖T (κ2)‖H for the norm (see e.g. Ref. [13] and
+Chap. 4 of Ref. [64]). We have
+‖T (κ2)‖ ≤ ‖K‖H = supφ
+[∫
+R
+K(φ,φ′,κ2) dφ′
+]
+= supφ
+[√
+2 exp
+( 1
+4 (1 − 4d2κ4) φ2
+)]
+=
+√
+2 ; κ2 ≤ (1/2d) .
+=== PAGE 52 ===
+52
+Since ‖f ‖ = 1, the thermodynamic limit f (a) of the ﬁnite lattice model free energy f (Λ,a) satisﬁes
+f (a) = lim
+Ldր∞
+ln ZΛ
+Ld ≤ 1 2 ln 2 ; κ2 ≤ (1/2d) .
+The bound is independent of the coupling parameters.
+Alternatively, for an upper bound on Zc, we set the maximum κ condition, dκ2 = 1/2, in Zc. For free b.c., we
+evaluate Zc by successive integration. The result is expressed in the following Lemma. We have,
+Lemma C1 We have
+Zc =
+L−1∏
+j=1
+1√
+1 − bj
+, (C2)
+where bj satisfy the recursion relation
+bj+1 = 1 4(1 − bj) , b1 = 1 4 .
+The solution to this recursion is
+bj = j 2(j + 1) ,
+so that we have
+Zc =
+L−1∏
+j=1
+√
+2(j + 1)
+j + 2 = 2(L−1)/2 √ L + 1 . (C3)
+Proof: By induction, we obtain the bj recursion. To solve the recursion, we note that b∗ = 1/2 is a ﬁxed point and
+pass to the variable cj where bj = b∗ + cj. The recursion for cn is
+cn+1 = cn 1 − 2cn , c1 = − 1 4 ,
+or
+1
+cn+1
+= 1 cn − 2 .
+Telescoping (1/cn+1) gives
+1
+cn
+= 1 c1 +
+n−1∑
+k=1
+[ 1
+ck+1
+− 1 ck
+]
+= 1 c1 +
+n−1∑
+k=1
+(−2) = 1 c1 − 2(n − 1) .
+or
+cn = − 1 2(n + 1) .
+so that bn = n 2(n + 1) , and 1 − bn = n + 2 2(n + 1) .
+Acknowledgments
+We would like to thank the anonymous referees for suggestions. We also acknowledge the partial support of FAPESP
+and the Conselho Nacional de Desenvolvimento Cient´ıﬁco e Tecnol´ogico (CNPq) during the early stage of this work.
+[1] Weinberg, S.: The Quantum Theory of Fields, 3 vols., Cambridge University Press, Cambridge UK, 2005.
+=== PAGE 53 ===
+53
+[2] Banks, T.: Modern Quantum Field Theory, Cambridge University Press, Cambridge UK, 2008.
+[3] Gattringer, C., Lang, C.B.: Quantum Chromodynamics on the Lattice, An Introductory Presentation, Lecture Notes in
+Physics 788, Springer, New York, 2010.
+[4] Glimm, J., Jaﬀe, A.: Quantum Physics: A Functional Integral Point of View, Springer Verlag, NY, 1986.
+[5] J. Dimock, Quantum Mechanics and Quantum Field Theory, A Mathematical Primer, Cambridge University Press, Cam-
+bridge, 2011.
+[6] Rivasseau, V.: From Perturbative to Constructive Renormalization, Princeton University Press, Princeton, 1991.
+[7] Summers, S.J.: A Perspective on Constructive Quantum Field Theory, arXiv:1203.3991v2 (2016).
+[8] Seiler, E.: Lecture Notes in Physics 159, Gauge Theories as a Problem of Constructive Quantum Field Theory and Statistical
+Mechanics, Springer, New York, 1982.
+[9] Stein, E.M.: Harmonic Analysis, Princeton University Press, Princeton, New Jersey (1993).
+[10] Wilson, K.: in New Phenomena in Subnuclear Physics, Part A, edited by A. Zichichi, Plenum Press, New York, 1977.
+[11] Montvay, I., M¨unster, G.: Quantum Fields on a Lattice, Cambridge University Press, Cambridge UK, 1997.
+[12] Huang, K.: Statistical Mechanics, 2nd Ed., Wiley, NY, 1987.
+[13] Simon, B.: Statistical Mechanics of Lattice Models, Princeton University Press, Princeton, 1994.
+[14] Gallavotti, G.: Statistical Mechanics: A Short Treatise, Springer-Verlag, Berlin, 1999.
+[15] Ruelle, D.: Statistical Mechanics: Rigorous Results, World Scientiﬁc Publishing Co., Singapore, 1999.
+[16] Balaban, T.: Ultraviolet Stability of Three-Dimensional Lattice Pure Gauge Field Theories, Commun. Math. Phys. 102,
+255-275 (1985).
+[17] Balaban, T.: Large Field Renormalization II. Localization, Exponentiation, and Bounds for the R Operation, Commun.
+Math. Phys. 122, 355-392 (1989).
+[18] Magnen, J., Rivasseau, V., S´en´eor, R.: Construction of YM4 with an Infrared Cutoﬀ, Commun. Math. Phys. 155, 325–383
+(1993).
+[19] Ashtekar, A., Lewandowski, J., Marolf, D., Mour˜ao, J., Thiemann, T.: SU(N ) Quantum Yang–Mills Theory in Two
+Dimensions: A Complete Solution, J. Math. Phys. 38, 5453-5482 (1997).
+[20] Chaterjee, S.: A scaling limit of SU(2) lattice Yang-Mills-Higgs theory, arXiv:2401.10507.
+[21] Gubbinelli, M., Hofmanov´a, M.: A PDE Construction of the Euclidean φ4 3 Quantum Field Theory, Commun. Math. Phys.
+384, 1–75 (2021).
+[22] Chandra, A., Chevyrev, I., Hairer, M., Shen, H.: Stochastic Quantisation of Yang-Mills-Higgs in 3D, Invent. Math. (2024).
+https://doi.org/10.1007/s00222-024-01264-2.
+[23] Balaban, T., O’Carroll, M.: A Simple Method for Correlation Functions via the Eﬀective Actions in the Renormalization
+Group Framework, Ann. Phys. (NY) 260, 1-8 (1997).
+[24] O’Carroll, M.: Lattice Scaled Bose Fields and Gauge Interacting Models: Stability and Regularity, 2018, unpublished.
+[25] O’Carroll, M., Faria da Veiga, P.A.: Scaled Lattice Fermion Fields, Stability Bounds and Regularity, J. Math. Phys. 59,
+022301 (2018).
+[26] Faria da Veiga, P.A., O’Carroll, M.: Generating Functions for Lattice Gauge Models With Scaled Fermions and Bosons,
+Ann. Henri Poincar´e 20, 2323-2352 (2019).
+[27] Fern´andez, R., Fr¨ohlich, J., Sokal, A.: Random Walks, Critical Phenomena, and Triviality in Quantum Filed Theory
+(Theoretical and Mathematical Physics), 1st ed. reprinted, Springer, New York, 2012.
+[28] Faria da Veiga, P.A., O’Carroll, M.: On Thermodynamic and Ultraviolet Stability of Yang-Mills, arXiv:1903.09829v2
+[math-ph], 2019.
+[29] O’Carroll, M., Faria da Veiga, P.A.: On Yang-Mills Stability and Plaquette Field Generating Function, arXiv:2005.00899
+[math-ph], 2020.
+[30] Bump, D.: Lie Groups, GTM225 Series, Springer, New York, 2000.
+[31] Simon, B.: Representations of Finite and Compact Groups, American Mathematical Society, Providence, 1996.
+[32] Faraut, J.: Analysis on Lie Groups: An Introduction, Cambridge University Press, Cambridge UK, 2008.
+[33] Nelson, T.J.: A Set of Harmonic Functions for the Group SU (3) as Specialized Matrix Elements of a General Finite
+Transformation, J. Math. Phys. 8, 857 (1967).
+[34] Holland, D.F.: Finite Transformations of SU (3), J. Math. Phys. 10, 531 (1969); and Finite Transformations and Basis
+States of SU (N ), J. Math. Phys. 10, 1903 (1969).
+[35] Marinov, M.S.: Invariant Volumes of Compact Groups, J. Phys. A: Math. Gen. 13, 3357 (1980); and Correction to:
+Invariant Volumes of Compact Groups, J. Phys. A: Math. Gen. 14, 543 (1981).
+[36] Byrd, M.: The Geometry of SU (3), LANL ePrint physics-9708015, (1997). Byrd, M., Sudarshan, E.C.G.: SU (N ) Revisited,
+J. Phys. A: Math. Gen. 31, 9255 (1998). Tilma, T., Sudarshan, E.C.G.: Generalized Euler Angle Parametrization for
+SU (N ), Journal of Physics A: Mathematical and General 35, 10467 (2002).
+[37] Brydges, D., Fr¨ohlich, J., Sokal, A.: A New Proof of the Existence and Nontriviality of the Continuum ϕ4 2 and ϕ4 3 Quantum
+Field Theories, Commun. Math. Phys. 91, 141–186, (1983).
+[38] Driver, B.K.: Convergence of the U(1)4 Lattice Gauge Theory to its Continuum Limit, Commun. Math. Phys. 110, 479-501
+(1987).
+[39] Balaban, T.: (Higgs)2 , 3 in a Finite Volume, Commun. Math. Phys. 85, 603-636 (1982).
+[40] Dimock, J.: Nonperturbative Renormalization of Scalar Quantum Electrodynamics in d = 3, J. Math. Phys. 56, 102304
+(2015); Ultraviolet Regularity of QED in d = 3, J. Math. Phys. 59, 012301 (2018); Ultraviolet Stability for QED in d = 3,
+Ann. Henri Poincar´e 23, 2113–2205 (2022); Stability for QED in d = 3: An Overview, J. Math. Phys. 63, 042305 (2022).
+[41] King, C.: The U(1) Higgs Model. I. The Continuum Limit. II. The Inﬁnite Volume Limit, Commun. Math. Phys. 102,
+=== PAGE 54 ===
+54
+649-677 (1986); 103, 323-349 (1986).
+[42] Mehta, M.L.: Random Matrices, 3rd ed., Elsevier, San Diego, 2004.
+[43] Deift, P.: Orthogonal Polynomials and Random Matrices: A Riemann-Hilbert Approach, AMS, Providence, 2000.
+[44] Guerra, F., Rosen, L., Simon, B.: The P (φ)2 Euclidean Quantum Field Theory as Classical Statistical Mechanics, Ann.
+Math. 101, 111-259 (1975).
+[45] Guerra, F., Rosen, L., Simon, B.: Boundary Conditions in the P (φ)2 Euclidean Field Theory, Ann. Inst. H. Poincar´e,
+231-334 (1976).
+[46] Simon, B.: The P (φ)2 Euclidean (Quantum) Field Theory, Princeton University Press, Princeton, 1974.
+[47] Weyl, H.: Classical Groups: Their Invariants and Representations, Princeton University Press, Princeton NJ, 1997.
+[48] Rudin, W.: Principles of Mathematical Analysis, 3rd ed., MacGraw-Hill, New York, 1976.
+[49] Faria da Veiga, P.A., O’Carroll, M.: On Thermodynamic and Ultraviolet Stability of Bosonic Lattice QCD Models in
+Euclidean Spacetime Dimensions d = 2, 3, 4, Rev. Math. Phys. 33 (2023) 2350004.
+[50] Aizenman, M., Duminil-Copin, H.: Marginal Triviality of the Scaling Limits of Critical 4D Ising and φ4 4M odels, Ann.
+Math. 194, 163-235 (2021).
+[51] Schor, R.S.: Existence of Glueballs in Strongly Coupled Lattice Gauge Theories, Nucl. Phys. B222, 71 (1983); The Energy-
+Momentum Spectrum of Strongly Coupled Lattice Gauge Theories, Nucl. Phys. B231, 321 (1984).
+[52] Spencer, T.: The Decay of the Bethe-Salpeter Kernel in P (ϕ)2 Quantum Field Models, Commun. Math. Phys. 44, 143-164
+(1975).
+[53] Faria da Veiga, P.A., O’Carroll, M.: Baryon-Baryon Bound States from First Principles in 3 + 1 Lattice QCD with Two
+Flavors and Strong Coupling, Phys. Lett. B643, 109-114 (2007).
+[54] Faria da Veiga, P.A., O’Carroll, M.: Baryon-Baryon Bound States in Strongly Coupled Lattice QCD, Phys. Rev. D75,
+074503 (2007).
+[55] Hille, E.: Analytic Function Theory, vol. 1, Blaisdell, New York, 1959.
+[56] Faria da Veiga, P.A., O’ Carroll, M.: Scaled Lattice Fermion Fields, Stability Bounds, and Regularity, J. Math. Phys. 59,
+022301 (2018).
+[57] Gradshteyn, I.S., Rizhik, I.M.: Table of Integrals, Series, and Products, 7th Ed., Academic Press, London, 2007.
+[58] Delves, R.T., Joyce, G.S.: On the Green Function for the Anisotropic Simple Cubic Lattice, Ann. Phys. (NY) 291, 71-133
+(2001).
+[59] Faria da Veiga, P.A., Ioriatti, L., O’Carroll, M.: Energy-Momentum Spectrum of Some Two-Particle Lattice Schr¨odinger
+Hamiltonians, Phys. Rev. E 66, 016130 (2002).
+[60] Lawler, G.F., Limic, V.: Random Walks: A Modern Introduction, Cambridge University Press, Cambridge UK, 2010.
+[61] Zucker, I.S.: 70+ Years of the Watson Integrals, J. Stat. Phys. 145, 591–612 (2011).
+[62] Michtz, E., Slade, G.: Asymptotic Behaviour of the Lattice Green Function, ALEA, Lat. Am. J. Probab. Math. Stat. 19,
+957–981 (2022).
+[63] Ginibre, J.: General Formulation of Griﬃths’ Inequalities, Commun. Math. Phys. 16, 310-328 (1970).
+[64] Kato, T.: Perturbation Theory of Linear Operators Springer, New York, 1966.

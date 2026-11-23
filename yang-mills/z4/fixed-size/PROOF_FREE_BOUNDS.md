@@ -121,3 +121,14 @@ Constants:
 - The spectral identification (section 1), the aliasing lemma (2), the lattice-sum lemma (3d) and the monotonicity/concavity facts (4b): proved in text only.
 - S₄ ≤ 16.58 comes from a program with an explicit integral tail bound. It is not formalized.
 - Nothing here concerns interacting Yang–Mills.
+
+---
+
+## Review note (Director Z4, 23 November 2026)
+
+Attacked by a challenger (`../reviews/r10-chal/`): every constant rederived and confirmed, with a non-symmetric f, odd and even N and box sides 0.5, 0.7, 1, 2. Two corrections to the text above, which is otherwise left as written:
+
+1. Section 0: "BZ means the representatives with |k_i b| ≤ π" must read −π < k_i b ≤ π, each mode once. Read literally, the edge mode is counted twice for even N.
+2. Hypothesis to add: the vacuum energy is subtracted, HΩ = 0. H1 already assumes it.
+
+Literature: the continuum limit of abelian lattice gauge theory is treated by Gross and by Driver (Comm. Math. Phys. 110, 1987); see `../LITERATURE.md`. This proof is an elementary Gaussian computation used as a known-answer test and claims nothing beyond that.

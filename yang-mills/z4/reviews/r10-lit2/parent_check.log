@@ -1,0 +1,2 @@
+check K44: exit 0 (expected 0) in 664011 ms | output 367770de9c6c | event 50 head d8c35403becb
+  C:\Users\donke\z4-workers\r10-lit2\report.md: 8 stand, 3 defects (all in input/LITERATURE.md, none in the lanes: Faria da Veiga–O'Carroll's field is Im Tr, identically zero for SU(2); flowed-density continuum limit overstated; "self-intersecting loops" not in Makeenko), 1 D4 overlap with Mihajlovic to cite, 3 comparisons without contradiction; flowed benchmark 6 met, 0 failed, 3 measured only (trial run failed 2 on my own factor-2 slip, fixed); PCP verify PASS.

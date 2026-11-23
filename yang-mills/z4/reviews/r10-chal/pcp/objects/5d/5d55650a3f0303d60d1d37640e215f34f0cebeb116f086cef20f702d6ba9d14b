@@ -1,0 +1,32 @@
+wrote results_run1.json
+P1 {'pass_': True, 'failures': 0, 'max_rel': 0.0}
+P2 {'pass_': True, 'failures': 0, 'max_rel': 0.0}
+P3 {'qualifying': 27, 'failures': 0, 'pass_': True, 'nonqualifying': 0}
+unit integrals M64/96/128: (np.float64(1.406728540904221), np.float64(1.406728540904221), np.float64(28398.60087968054)) (np.float64(1.406728540904221), np.float64(1.406728540904221), np.float64(28399.373784826705)) (np.float64(1.406728540904221), np.float64(1.406728540904221), np.float64(28399.702962986048))
+ell=0.5  N=6   tau=0.025 b=0.0833 b0=0.1098 C(tau)=3.514589e+04 V=4.4461e+13 C(2tau)=8.467732e+03 v=3.7799e+01 q=True lo=True up=True
+ell=0.5  N=6   tau=0.050 b=0.0833 b0=0.1098 C(tau)=8.467732e+03 V=2.7311e+11 C(2tau)=6.478878e+02 v=1.2656e+01 q=True lo=True up=True
+ell=0.5  N=6   tau=0.150 b=0.0833 b0=0.1098 C(tau)=7.409803e+01 V=2.4243e+08 C(2tau)=6.288867e-01 v=8.3044e-02 q=True lo=True up=True
+ell=0.5  N=9   tau=0.025 b=0.0556 b0=0.1098 C(tau)=1.299760e+05 V=4.4461e+13 C(2tau)=1.704986e+04 v=3.7799e+01 q=True lo=True up=True
+ell=0.5  N=9   tau=0.050 b=0.0556 b0=0.1098 C(tau)=1.704986e+04 V=2.7311e+11 C(2tau)=6.099025e+02 v=1.2656e+01 q=True lo=True up=True
+ell=0.5  N=9   tau=0.150 b=0.0556 b0=0.1098 C(tau)=5.710383e+01 V=2.4243e+08 C(2tau)=5.178276e-01 v=8.3044e-02 q=True lo=True up=True
+ell=0.5  N=12  tau=0.025 b=0.0417 b0=0.1098 C(tau)=2.726788e+05 V=4.4461e+13 C(2tau)=2.127976e+04 v=3.7799e+01 q=True lo=True up=True
+ell=0.5  N=12  tau=0.050 b=0.0417 b0=0.1098 C(tau)=2.127976e+04 V=2.7311e+11 C(2tau)=5.192635e+02 v=1.2656e+01 q=True lo=True up=True
+ell=0.5  N=12  tau=0.150 b=0.0417 b0=0.1098 C(tau)=5.102083e+01 V=2.4243e+08 C(2tau)=4.868464e-01 v=8.3044e-02 q=True lo=True up=True
+ell=1.0  N=6   tau=0.050 b=0.1667 b0=0.2197 C(tau)=8.786473e+03 V=1.1115e+13 C(2tau)=2.116933e+03 v=9.4498e+00 q=True lo=True up=True
+ell=1.0  N=6   tau=0.100 b=0.1667 b0=0.2197 C(tau)=2.116933e+03 V=6.8278e+10 C(2tau)=1.619720e+02 v=3.1641e+00 q=True lo=True up=True
+ell=1.0  N=6   tau=0.300 b=0.1667 b0=0.2197 C(tau)=1.852451e+01 V=6.0608e+07 C(2tau)=1.572217e-01 v=2.0761e-02 q=True lo=True up=True
+ell=1.0  N=9   tau=0.050 b=0.1111 b0=0.2197 C(tau)=3.249401e+04 V=1.1115e+13 C(2tau)=4.262464e+03 v=9.4498e+00 q=True lo=True up=True
+ell=1.0  N=9   tau=0.100 b=0.1111 b0=0.2197 C(tau)=4.262464e+03 V=6.8278e+10 C(2tau)=1.524756e+02 v=3.1641e+00 q=True lo=True up=True
+ell=1.0  N=9   tau=0.300 b=0.1111 b0=0.2197 C(tau)=1.427596e+01 V=6.0608e+07 C(2tau)=1.294569e-01 v=2.0761e-02 q=True lo=True up=True
+ell=1.0  N=12  tau=0.050 b=0.0833 b0=0.2197 C(tau)=6.816971e+04 V=1.1115e+13 C(2tau)=5.319940e+03 v=9.4498e+00 q=True lo=True up=True
+ell=1.0  N=12  tau=0.100 b=0.0833 b0=0.2197 C(tau)=5.319940e+03 V=6.8278e+10 C(2tau)=1.298159e+02 v=3.1641e+00 q=True lo=True up=True
+ell=1.0  N=12  tau=0.300 b=0.0833 b0=0.2197 C(tau)=1.275521e+01 V=6.0608e+07 C(2tau)=1.217116e-01 v=2.0761e-02 q=True lo=True up=True
+ell=2.0  N=6   tau=0.100 b=0.3333 b0=0.4393 C(tau)=2.196618e+03 V=2.7788e+12 C(2tau)=5.292333e+02 v=2.3624e+00 q=True lo=True up=True
+ell=2.0  N=6   tau=0.200 b=0.3333 b0=0.4393 C(tau)=5.292333e+02 V=1.7070e+10 C(2tau)=4.049299e+01 v=7.9102e-01 q=True lo=True up=True
+ell=2.0  N=6   tau=0.600 b=0.3333 b0=0.4393 C(tau)=4.631127e+00 V=1.5152e+07 C(2tau)=3.930542e-02 v=5.1902e-03 q=True lo=True up=True
+ell=2.0  N=9   tau=0.100 b=0.2222 b0=0.4393 C(tau)=8.123502e+03 V=2.7788e+12 C(2tau)=1.065616e+03 v=2.3624e+00 q=True lo=True up=True
+ell=2.0  N=9   tau=0.200 b=0.2222 b0=0.4393 C(tau)=1.065616e+03 V=1.7070e+10 C(2tau)=3.811891e+01 v=7.9102e-01 q=True lo=True up=True
+ell=2.0  N=9   tau=0.600 b=0.2222 b0=0.4393 C(tau)=3.568990e+00 V=1.5152e+07 C(2tau)=3.236423e-02 v=5.1902e-03 q=True lo=True up=True
+ell=2.0  N=12  tau=0.100 b=0.1667 b0=0.4393 C(tau)=1.704243e+04 V=2.7788e+12 C(2tau)=1.329985e+03 v=2.3624e+00 q=True lo=True up=True
+ell=2.0  N=12  tau=0.200 b=0.1667 b0=0.4393 C(tau)=1.329985e+03 V=1.7070e+10 C(2tau)=3.245397e+01 v=7.9102e-01 q=True lo=True up=True
+ell=2.0  N=12  tau=0.600 b=0.1667 b0=0.4393 C(tau)=3.188802e+00 V=1.5152e+07 C(2tau)=3.042790e-02 v=5.1902e-03 q=True lo=True up=True
