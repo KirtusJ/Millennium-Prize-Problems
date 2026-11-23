@@ -1,0 +1,2 @@
+check K90: exit 0 (expected 0) in 428983 ms | output 63b1c8f096aa | event 92 head 7df1bde91d26
+  /home/user/z4-workers/j1-chal67/report.md: 22 STANDS, 2 DEFECT (both minor and repairable), 4 NOT CHECKED.

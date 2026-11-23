@@ -1,0 +1,19 @@
+mode=box shape=(2, 2, 2) T=64 beta=256.0 sweeps=100 therm=300 seed=1 eps=0.09 acc=0.055 time=13.2s
+tau_int(O_a slice sum)=7.80 sweeps, Nmeas=100, Nmeas/tau=12.8
+prediction=0.23722
+t=0 m_eff=0.62164 +- 0.04602   m*beta^(1/3)=3.9471
+t=1 m_eff=0.42797 +- 0.08364   m*beta^(1/3)=2.7174
+t=2 m_eff=0.78270 +- 0.19662   m*beta^(1/3)=4.9698
+t=3 m_eff=0.78821 +- 0.26968   m*beta^(1/3)=5.0048
+t=4 m_eff=0.44651 +- 0.66721   m*beta^(1/3)=2.8351
+t=5 m_eff=-1.22230 +- 0.54694   m*beta^(1/3)=-7.7611
+t=6 m_eff=0.11840 +- 0.19338   m*beta^(1/3)=0.7518
+t=7 m_eff=0.19338 +- 0.22352   m*beta^(1/3)=1.2279
+t=8 m_eff=0.35864 +- 0.20417   m*beta^(1/3)=2.2772
+t=9 m_eff=0.88122 +- 0.86338   m*beta^(1/3)=5.5954
+t=10 m_eff=nan +- nan   m*beta^(1/3)=nan
+t=11 m_eff=0.33863 +- 0.34911   m*beta^(1/3)=2.1502
+t=12 m_eff=-0.63818 +- 0.28433   m*beta^(1/3)=-4.0522
+t=13 m_eff=-0.09043 +- 0.26480   m*beta^(1/3)=-0.5742
+t=14 m_eff=0.44000 +- 0.28370   m*beta^(1/3)=2.7938
+BOX measured only

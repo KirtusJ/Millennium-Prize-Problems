@@ -1,0 +1,57 @@
+met {'Q0': 17, 'Q1': 3695, 'Q2': 3695, 'Q3': 81090, 'Q4': 706608, 'Q5': 6}
+failed {'Q0': 1, 'Q1': 0, 'Q2': 0, 'Q3': 0, 'Q4': 0, 'Q5': 0}
+within {'Q0': 0, 'Q1': 0, 'Q2': 0, 'Q3': 0, 'Q4': 0, 'Q5': 0}
+b=    10.0 m=0.05 M=  0 th=0.9071 minratioL=nan at None slackL=None nL=1 nH=120 slackH=1.924e-01
+b=    10.0 m=0.10 M=  0 th=0.8620 minratioL=nan at None slackL=None nL=1 nH=120 slackH=1.924e-01
+b=    10.0 m=0.20 M=  0 th=0.7745 minratioL=nan at None slackL=None nL=1 nH=120 slackH=1.924e-01
+b=    10.0 m=0.30 M=  0 th=0.6928 minratioL=nan at None slackL=None nL=1 nH=120 slackH=1.924e-01
+b=    10.0 m=0.40 M=  1 th=0.5648 minratioL=0.9012 at (1, 1) slackL=0.5955233767369956 nL=4 nH=192 slackH=2.477e-01
+b=    10.0 m=0.50 M=  1 th=0.5043 minratioL=0.9012 at (1, 1) slackL=0.787122502320862 nL=4 nH=192 slackH=2.477e-01
+b=    30.0 m=0.05 M=  0 th=0.9551 minratioL=nan at None slackL=None nL=1 nH=120 slackH=6.593e-02
+b=    30.0 m=0.10 M=  0 th=0.9238 minratioL=nan at None slackL=None nL=1 nH=120 slackH=6.593e-02
+b=    30.0 m=0.20 M=  1 th=0.8285 minratioL=0.9668 at (1, 1) slackL=0.16695504516007018 nL=4 nH=192 slackH=9.430e-02
+b=    30.0 m=0.30 M=  1 th=0.7593 minratioL=0.9668 at (1, 1) slackL=0.27331413888600026 nL=4 nH=192 slackH=9.430e-02
+b=    30.0 m=0.40 M=  2 th=0.6693 minratioL=0.8902 at (2, 2) slackL=0.32998526402977035 nL=9 nH=280 slackH=1.178e-01
+b=    30.0 m=0.50 M=  2 th=0.6057 minratioL=0.8902 at (2, 2) slackL=0.4696027677420359 nL=9 nH=280 slackH=1.178e-01
+b=   100.0 m=0.05 M=  0 th=0.9779 minratioL=nan at None slackL=None nL=1 nH=120 slackH=1.994e-02
+b=   100.0 m=0.10 M=  1 th=0.9473 minratioL=0.9900 at (1, 1) slackL=0.04505719320673143 nL=4 nH=192 slackH=2.949e-02
+b=   100.0 m=0.20 M=  2 th=0.8869 minratioL=0.9656 at (2, 2) slackL=0.08874995316429482 nL=9 nH=280 slackH=3.859e-02
+b=   100.0 m=0.30 M=  3 th=0.8188 minratioL=0.9328 at (3, 3) slackL=0.1392741076423147 nL=16 nH=384 slackH=4.710e-02
+b=   100.0 m=0.40 M=  4 th=0.7476 minratioL=0.8928 at (4, 4) slackL=0.19427517480682172 nL=25 nH=504 slackH=5.489e-02
+b=   100.0 m=0.50 M=  5 th=0.6770 minratioL=0.8471 at (5, 5) slackL=0.25114314196919546 nL=36 nH=640 slackH=6.185e-02
+b=   300.0 m=0.05 M=  0 th=0.9873 minratioL=nan at None slackL=None nL=1 nH=120 slackH=6.660e-03
+b=   300.0 m=0.10 M=  1 th=0.9686 minratioL=0.9967 at (1, 1) slackL=0.029017020861012766 nL=4 nH=192 slackH=9.944e-03
+b=   300.0 m=0.20 M=  3 th=0.9198 minratioL=0.9770 at (3, 3) slackL=0.062159755755612014 nL=16 nH=384 slackH=1.634e-02
+b=   300.0 m=0.30 M=  5 th=0.8599 minratioL=0.9453 at (5, 5) slackL=0.09931970004386549 nL=36 nH=640 slackH=2.241e-02
+b=   300.0 m=0.40 M=  6 th=0.7962 minratioL=0.9255 at (6, 6) slackL=0.16233398512474714 nL=49 nH=792 slackH=2.528e-02
+b=   300.0 m=0.50 M=  8 th=0.7276 minratioL=0.8790 at (8, 8) slackL=0.20814925013881538 nL=81 nH=1144 slackH=3.062e-02
+b=  1000.0 m=0.05 M=  1 th=0.9913 minratioL=0.9990 at (1, 1) slackL=0.0077456534276864174 nL=4 nH=192 slackH=2.995e-03
+b=  1000.0 m=0.10 M=  3 th=0.9775 minratioL=0.9930 at (3, 3) slackL=0.015923369978644825 nL=16 nH=384 slackH=4.971e-03
+b=  1000.0 m=0.20 M=  6 th=0.9382 minratioL=0.9769 at (6, 6) slackL=0.041185103022069416 nL=49 nH=792 slackH=7.873e-03
+b=  1000.0 m=0.30 M=  9 th=0.8857 minratioL=0.9525 at (9, 9) slackL=0.0754989660718011 nL=100 nH=1344 slackH=1.067e-02
+b=  1000.0 m=0.40 M= 12 th=0.8245 minratioL=0.9209 at (12, 12) slackL=0.11700867479923845 nL=169 nH=2040 slackH=1.332e-02
+b=  1000.0 m=0.50 M= 15 th=0.7590 minratioL=0.8831 at (15, 15) slackL=0.16345970058597684 nL=256 nH=2880 slackH=1.579e-02
+b=  3000.0 m=0.05 M=  2 th=0.9940 minratioL=0.9988 at (2, 2) slackL=0.00490326836243999 nL=9 nH=280 slackH=1.332e-03
+b=  3000.0 m=0.10 M=  5 th=0.9830 minratioL=0.9944 at (5, 5) slackL=0.011594773453054203 nL=36 nH=640 slackH=2.324e-03
+b=  3000.0 m=0.20 M= 10 th=0.9482 minratioL=0.9804 at (10, 10) slackL=0.03398637599864337 nL=121 nH=1560 slackH=3.952e-03
+b=  3000.0 m=0.30 M= 16 th=0.8989 minratioL=0.9536 at (16, 16) slackL=0.06095061181132437 nL=289 nH=3192 slackH=5.838e-03
+b=  3000.0 m=0.40 M= 21 th=0.8401 minratioL=0.9238 at (21, 21) slackL=0.09966025283551126 nL=484 nH=4992 slackH=7.331e-03
+b=  3000.0 m=0.50 M= 27 th=0.7757 minratioL=0.8803 at (27, 27) slackL=0.1347553874730631 nL=784 nH=7680 slackH=9.000e-03
+b= 10000.0 m=0.05 M=  5 th=0.9955 minratioL=0.9983 at (5, 5) slackL=0.002846309482427815 nL=36 nH=640 slackH=6.992e-04
+b= 10000.0 m=0.10 M= 10 th=0.9861 minratioL=0.9941 at (10, 10) slackL=0.008053534686273987 nL=121 nH=1560 slackH=1.196e-03
+b= 10000.0 m=0.20 M= 20 th=0.9541 minratioL=0.9784 at (20, 20) slackL=0.025469426026411467 nL=441 nH=4600 slackH=2.173e-03
+b= 10000.0 m=0.30 M= 30 th=0.9072 minratioL=0.9535 at (30, 30) slackL=0.05114167440838718 nL=961 nH=9240 slackH=3.118e-03
+b= 10000.0 m=0.40 M= 40 th=0.8498 minratioL=0.9206 at (40, 40) slackL=0.08325876094101764 nL=1681 nH=15480 slackH=4.016e-03
+b= 10000.0 m=0.50 M= 50 th=0.7865 minratioL=0.8806 at (50, 50) slackL=0.11959429277763713 nL=2601 nH=23320 slackH=4.855e-03
+b= 30000.0 m=0.05 M=  8 th=0.9964 minratioL=0.9987 at (8, 8) slackL=0.002329976706003229 nL=81 nH=1144 slackH=3.331e-04
+b= 30000.0 m=0.10 M= 17 th=0.9878 minratioL=0.9947 at (17, 17) slackL=0.006908727382757398 nL=324 nH=3520 slackH=6.314e-04
+b= 30000.0 m=0.20 M= 34 th=0.9572 minratioL=0.9799 at (34, 34) slackL=0.02365643900490587 nL=1225 nH=11544 slackH=1.187e-03
+b= 30000.0 m=0.30 M= 51 th=0.9115 minratioL=0.9563 at (51, 51) slackL=0.04912091789157611 nL=2704 nH=24192 slackH=1.725e-03
+b= 30000.0 m=0.40 M= 69 th=0.8550 minratioL=0.9226 at (69, 69) slackL=0.0791402025472781 nL=4900 nH=42624 slackH=2.268e-03
+b= 30000.0 m=0.50 M= 86 th=0.7922 minratioL=0.8838 at (86, 86) slackL=0.11567315703430843 nL=7569 nH=64792 slackH=2.748e-03
+b=100000.0 m=0.05 M= 15 th=0.9969 minratioL=0.9987 at (15, 15) slackL=0.0018568994091272284 nL=256 nH=2880 slackH=1.699e-04
+b=100000.0 m=0.10 M= 31 th=0.9889 minratioL=0.9949 at (31, 31) slackL=0.006117090783467121 nL=1024 nH=9792 slackH=3.291e-04
+b=100000.0 m=0.20 M= 63 th=0.9592 minratioL=0.9798 at (63, 63) slackL=0.021505965583194182 nL=4096 nH=35904 slackH=6.431e-04
+b=100000.0 m=0.30 M= 94 th=0.9142 minratioL=0.9562 at (94, 94) slackL=0.04597962596747329 nL=9025 nH=76824 slackH=9.380e-04
+b=100000.0 m=0.40 M=126 th=0.8582 minratioL=0.9235 at (126, 126) slackL=0.07615901990547601 nL=16129 nH=135192 slackH=1.228e-03
+b=100000.0 m=0.50 M=158 th=0.7957 minratioL=0.8836 at (158, 158) slackL=0.11046679983515016 nL=25281 nH=209944 slackH=1.500e-03

@@ -144,3 +144,16 @@ The pre-registered checks were met: within 8 per cent at β = 4096 in all three 
 
 
 Sections 7 to 10 were swept against the worker records by a micro-review ([`reviews/j1-micro/report.md`](reviews/j1-micro/report.md)): 5 statements of mine wrong and 12 overstated out of 82; all 17 corrected in place above and in the paper section.
+
+## 11. Two more reviews: the end of the second proof, and the fixed-box claim
+
+**The concluding steps of the second proof** ([`reviews/j1-chal67/report.md`](reviews/j1-chal67/report.md)). L6 and L7 of the lower half, and the restated inputs, challenged: 24 items; 21 stand, 2 minor defects, 1 not checked (the Bessel source, no network). The defects: a justification that names one of two needed hypotheses (1 − K₁⊗K₂ ≥ (1 − K₁)⊗1 needs K₁ ≥ 0 as well as K₂ ≤ 1; both hold); the corollary's condition list omits compactness of the resolvent. One exponent is overestimated (16R² where 8R² suffices). Kinetic comparison on 81,090 and 706,608 grid pairs, no failure; the localisation identity for the non-local kernel exact to 3·10⁻¹⁶ on a discretised example. Same model family throughout.
+
+**A4's fixed-box statement** (`d0a7ccb`; [`reviews/j1-box/report.md`](reviews/j1-box/report.md)). On each fixed box of n sites, a central-patch expansion E_j = E_* + h·n^(−1/3)·e_j + o(h). The read-back: 20 items; 16 stand, none false, 3 not checked, 1 conditional.
+- What is two-sided: the expansion for the compressed patch operator. For the full center-neutral transfer the first file gives only an upper bound and spectral inclusion, and says so. The second file's two-sided claim rests on an exterior estimate in a file that was not among those read: not checked.
+- The factor n in the constant-mode mass: confirmed by an exact Gaussian computation (Schur complement over all non-constant modes) on 2³, 3×2×2, 3³, to 2·10⁻¹⁶.
+- Two gaps of exposition: a global Lipschitz bound for the cutoffs is asserted, not proved; "sum norms" for the rectangle is ambiguous, and with the ℓ¹ reading the inclusion fails for n = 8 unless a radius is shrunk by a constant.
+- A remark for the author: the hard-mode zero-point curvature along commuting backgrounds, with the constant mode excluded, is positive on 2³ (0.02015) but negative and of order one when a side is 3 or more (−2.581 on 3×2×2 in the long direction, −3.276 on 4³). It enters only at order h², so the box argument is unaffected, but the two-site statement "positive to quadratic order" does not carry over.
+- The Monte Carlo on 2³ failed its autocorrelation rule (τ = 240 sweeps); no number.
+
+So the heuristic scaling of section 8 now has a written derivation at each fixed box by another lineage, with one unchecked dependency. It remains non-uniform in the box, by its author's own statement.

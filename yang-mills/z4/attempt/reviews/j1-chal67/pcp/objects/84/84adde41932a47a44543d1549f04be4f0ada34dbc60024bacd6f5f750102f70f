@@ -1,0 +1,32 @@
+All three claims hold on the grid (LOW, HIGH and K1), with no failures. The report is `report.md` in the child directory. The grid is finite, so this is measured, not proved.
+
+Control: 1+2+…+100 = 5050, written to `control.txt`.
+
+**Verdicts** (met / failed / trivial):
+
+| Claim | Verdict | Met | Failed | Tightest margin |
+|---|---|---|---|---|
+| LOW | STANDS | 5337 | 0 (24 trivial n=0 pairs) | smallest ratio/theta is 1.0028 (β=10000, m=0.05) |
+| HIGH | STANDS | 47154 | 0 | smallest L/c is 1.0007 (β=10000, m=0.05) |
+| K1 | STANDS | 18006 (n = 0…3000, 6 values of β) | 0 | relative slack 2e-4 (lower bound), 1.7e-3 (upper bound), both at β=10000 |
+
+- **LOW cells:** LOW is non-trivial only when M ≥ 1. That holds in 21 of the 24 (β, m) cells; the other 3 have only the n=0 pair.
+- **Smallest ratio on the LOW set:** it always occurs at n1=n2=M and is at least θ in every cell. It falls below 1/(1+m²) in two cells: β=100, m=0.1 (0.990012 against 0.990099) and β=400, m=0.05 (0.997501 against 0.997506).
+- **Tolerance:** every inequality uses a relative 1e-9. Double rounding in 1−κκ is about 1e-13 at worst, so this is loose, and every margin above is larger than that.
+- **Cross-check:** the trapezoid quadrature of the integral agrees with the backward-recurrence κ values to 1.2e-15 over 36 cases. κ₁(100) = 0.9850378800081571.
+- **My own mistakes:**
+  - I first ran `check.py` outside `pcp check`. That run is kept as `results_prelim_outside_pcp.txt` (0 failures). I then reran it under `pcp check` as `results_run1.txt` and changed only the output filename.
+  - An earlier draft of the report had the 1/(1+m²) comparison wrong. I corrected it after tabulating every cell.
+- **Grandchild T115:**
+  - Its control was 42.
+  - It computed κ₁(100) = 0.985037880008157 by both methods.
+  - At β=10000, m=0.5, n1=n2=M=50 it found LHS 0.22896 against RHS 0.20450, ratio 1.1196, PASS.
+  - I reread `gc.py` and reran it in `rerun_gc/`; the output is byte-identical to `grandchild/gc_result.txt`.
+  - T115 is released (event 230).
+- **PCP OS:** `init` reported the method as not found, as expected. Both checks exited 0 as expected (`check_run1` and `grandchild_rerun`). Last line of `pcp_os.py verify --ws pcp`: "result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)". Last line of `pcpos verify pcp/register.jsonl`: "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+
+Rerun commands, from the child directory (the results files are write-once, so use a new filename):
+```
+python3 -I check.py results_rerun.txt
+mkdir -p rr && cd rr && python3 -I ../grandchild/gc.py
+```
