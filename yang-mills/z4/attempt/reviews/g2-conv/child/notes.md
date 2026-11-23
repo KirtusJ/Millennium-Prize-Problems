@@ -1,0 +1,5 @@
+- control: 0.257416
+- control written first (series sum, pure python)
+- wrote lam.py (preds in docstring)
+- grandchild T85: N=12 full space 0.811274 (GL quadrature), matches mine 0.811274 (lam.py check); rerun by me OK; released T85
+- report.md written

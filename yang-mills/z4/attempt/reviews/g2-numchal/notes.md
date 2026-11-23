@@ -1,0 +1,21 @@
+# g2-numchal notes (task T78)
+Step 0: control.txt = 0.272341 (-ln tanh 1). Register pcp initialised. Lean READY exists (not used).
+Step 1: child admitted as T80 (parent T78); child/PROMPT.txt written (A3: continuum E0,E1, symmetry class; control = HO ground state 0.5). Child run started in background, recorded as child-run1.
+Environment: numpy 2.5.3 only; no scipy, no mpmath -> all special functions written by me.
+Step 2 (A1/A4 derivation, on paper): see report. Key facts:
+ - Wilson action on 1x1xZ: per site one (12)-plaquette U1U2U1^-1U2^-1, and one (0i) plaquette per spatial link per step. V = beta(1 - 1/2 Tr C). K per link = exp(beta(1/2 Re Tr(U W^-1) -1)). Temporal link = gauge projection (redundant on invariant f).
+ - Center element z_i: U_i -> -U_i means (a_i, n_i) -> (pi - a_i, -n_i), so t = n1.n2 -> -t. Note the sign flip of t!
+ - kappa: metric on SU(2) with U=exp(i Y.sigma): ds^2 = da^2 + sin^2 a dOmega^2 = unit S^3 in Y; -ln(I_{n+1}/I_1) ~ n(n+2)/(2beta) = (1/2beta)(-Lap_{unit S3}). Commutator angle ~ 2|Y1xY2| so V ~ 2 beta |Y1xY2|^2. Y = beta^{-1/3} Z -> beta^{-1/3}[-1/2 Lap + 2|Z1xZ2|^2]. kappa=2. Radius-2 S^3 convention would give kinetic 1/4 relative -> gap factor (1/4)^{2/3}=0.397 (or 4^{2/3}=2.52 the other way).
+Step 3: controls1 FAILED (exit 1): own defect, numpy bool not JSON-serialisable (partial results/controls1.json kept). Fixed serialiser -> controls2.
+Step 4: controls2: C3 (V formula vs matrices, 4.4e-16) met; C4 (center symmetry commutes, 7e-16) met; C1 recurrence (5.7e-12 vs 1e-13) FAILED own expectation (amplification (2l+1)/z ~ 800 of 1e-14 abs error); C2 FAILED own test design (Lanczos found only 3 distinct values, degenerate copies). controls_b: C2b met (V=0 Nystrom = products of per-link class eigenvalues, rel 5e-13); C1b FAILED again by factor 1.8 (own expectation: abs error of the quadrature values ~1e-14 not 1e-15); closed forms i_0,i_1 agree to 8.8e-15 -> kernel accurate to ~1e-14 absolute.
+Step 5: sweep1 (exit 0, all Lanczos residuals < 1.5e-15 lam0). m_e (refined grid) vs target:
+ b=2 1.637619955 (T 1.63761996); 4 0.763198846 (0.76319885); 8 0.515585193 (0.51558519); 16 0.541420134 (0.54142013; base grid differs 1.2e-6 -> nt-limited); 32 0.515164176 (0.51516418); 64 0.439942329 (0.43994233).
+ second ee level and m_eo also agree with target table to all printed digits (m_eo 64: 8.9923e-11).
+Step 6: child control graded BEFORE reading other output: 0.499997 vs exact 0.5 -> correct to 5 digits, NOT to the 6 decimals requested (FD error 3e-6). Partial pass. sweep2 (beta 128, 256) started.
+Step 7: fits1 (exit 0): F1 E+c b^-2/3 on b=128..1024 -> E=1.97275, LS se 5e-4, LOO spread 1.4e-3 -> sigma 1.4e-3; E1-E = 2.2e-3 = 1.5 sigma: met. F2 free exponent p=0.637 (E=1.9761): met. F3 b^-1/3 model rms 10.6x worse (E=2.045): met.
+ measured: E+c b^-2/3+d b^-1 on 128..1024 -> E=1.97496+-0.00003, rms 4.6e-6 (best 3-param model; equals E1 to 1e-6!). b^-2/3+b^-4/3 -> 1.97447. b^-1/3+b^-2/3 from 32 -> 1.97615 (target's 1.9762 reproduced). log models: E+c/ln b rms 3.3e-3 (excluded), +c2/ln^2 rms 1.3e-4 (30x worse than best; E=1.946).
+ increments ratios 0.621,0.643,0.644,0.642 (2^-2/3=0.630). Distances 1/3-p_loc = 0.062,0.038,0.024,0.015 reproduced.
+A6 (measured): my m_eo: -ln m_eo = 4.215 (b=8), 8.044, 14.078, 23.132 (b=64). Local exponent of -ln m_eo in beta: 0.93, 0.81, 0.72 -- still above 1/2 at b=64. -ln m_eo/sqrt(b)=1.49,2.01,2.49,2.89 still rising. Heuristic WKB along the commuting valley (transverse zero-point energy 2 sin a, mass beta) gives S = 2 sqrt(beta) int_0^pi sqrt(sin a) da = 4.79 sqrt(beta): consistent with exp(-c sqrt beta), c->~4.8, but NOT demonstrated by data.
+Step 8: b=128: m_e 0.364500792 (na140,nt32) vs 0.364500793 (na100,nt24); target 0.36450079. 2nd ee 0.372150075 (target 0.37215008). m_eo below double precision (1e-16), as target states.
+Step 9: b=256: m_e 0.297123300 both grids (na128/nt24, na176/nt32), 2nd 0.300885; target 0.29712330/0.30088500. sweep3 (512,1024) started.
+Step 10: b=512,1024 reproduced; compare1 met 26 failed 0; child released T80; child-run1 record missing (background wrapper killed at 600s, my defect); child rerun K7 identical; N=64 1+ 5.324760 -> dr^3 extrap 5.32550 = 0- 5.325497. report.md written. Verdict STANDS 11, DEFECT 3, NOT CHECKED 1.

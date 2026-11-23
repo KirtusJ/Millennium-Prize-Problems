@@ -1,0 +1,37 @@
+I'm waiting on the remaining convergence runs and the sub-agent. I have no final numbers yet.
+
+So far, the control gives 0.499997 and the HO self-test error scales as dr², as expected. The coarse run puts E_0 near 3.34. The first excited state is not settled: 5.28 in the (L odd/even, exchange) = (0, −) sector and 5.31 in (1, +) are close, and neither is converged in dr or R. I'll write report.md once the runs finish.
+
+I computed E_0 = 3.350533 and E_1 = 5.32475, so the gap is 1.97422. The control gave 0.499997. The full write-up is in `report.md` in my working directory.
+
+| Quantity | Value | Basis |
+|---|---|---|
+| E_0 | 3.350533 (±2e-6) | Stable across box sizes R=6, 8, 10, radial grids N=24–48 and Legendre cutoffs of 6, 8 and 12 functions. |
+| E_1 | 5.32475 (±3e-5) | Radial grid N=48 gave 5.32477 and N=64 gave 5.32476. A larger Legendre cutoff shifts it by about 4e-6. |
+| Gap | 1.97422 (±3e-5) | E_1 − E_0 |
+
+- **Q2 symmetry:** The E_1 state is symmetric under Y_1 ↔ Y_2 and odd under Y_2 → −Y_2, so (−1)^L = −1 and its lowest L is 1.
+- **Degeneracy:** E_1 is not exactly degenerate in my numerics, but it is nearly so. The state that is antisymmetric under exchange and even under inversion sits at 5.325497, 7.4e-4 above it, about 25 times my error estimate. I did not prove the continuum limit has no exact degeneracy.
+- **Sector degeneracy:** I only computed the two lowest eigenvalues in each of the four symmetry sectors. A degeneracy inside one sector would not show up.
+- **Method:** The final numbers come from a second solver (`solve2.py`) that uses a sine basis for the radial functions. It reproduces the 6-D harmonic oscillator values 3 and 5 to about 1e-14.
+
+**Failed predicates, all my own expectations:**
+- **Finite-difference self-test:** The 6-D harmonic oscillator gave 2.99695, an error of 3.05e-3 against my 2e-3 tolerance. The error scales as dr², so the finite-difference code is correct.
+- **Grid size for E_1:** E_1 at N=32 read 5.3196, which was off by 5e-3. The odd-L sector needs a finer radial grid than the even-L sector.
+- **Finite-difference runs:** The finite-difference code never converged and I killed its last runs. Its numbers are only a consistency check.
+
+**Sub-agent:** It recomputed E_0 alone with a different discretization (sine basis plus Legendre) and its own Lanczos. Its control, the 3-D oscillator, gave 1.5000000000000158, and it found E_0 = 3.35053. My rerun of its code gives 3.35053307. It was admitted as task T81 and released afterwards (event 167).
+
+**PCP verify, last line of each:**
+- Python: `result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)`
+- Rust: `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.`
+
+Not checked: the second level in the odd-L, exchange-antisymmetric sector, which is not converged in N. I also tested the box size for the E_1 state only at R=6 versus R=8. `report.md` has the full not-checked list and the exact rerun commands.
+
+That notification is only a monitor timing out. It was watching for the last finite-difference run, which I killed on purpose, so nothing is pending and nothing changes.
+
+The results stand as reported: E_0 = 3.350533, E_1 = 5.32475, gap 1.97422. `report.md` has the full write-up.
+
+Another monitor timeout. It was also waiting on the finite-difference run I killed, so there's nothing to act on.
+
+The results are unchanged: E_0 = 3.350533, E_1 = 5.32475, gap 1.97422. `report.md` has the details.

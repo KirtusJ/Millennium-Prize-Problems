@@ -1,0 +1,2 @@
+check K80: exit 0 (expected 0) in 955147 ms | output adf6417db356 | event 82 head b7ef7d0432e9
+  /home/user/z4-workers/g2-three/report.md — verdicts: STANDS 7, DEFECT 0, NOT CHECKED 4 (predicates: met 40, failed 3, measured only 9).

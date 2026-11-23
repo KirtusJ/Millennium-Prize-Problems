@@ -1,0 +1,5 @@
+dim 231
+all 0.811274
+Leven 0.811274
+Lodd 1.047695
+max|even-odd coupling| 4.74e-17

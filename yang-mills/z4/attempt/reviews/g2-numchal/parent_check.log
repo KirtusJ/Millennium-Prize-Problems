@@ -1,0 +1,2 @@
+check K81: exit 0 (expected 0) in 990053 ms | output 5053fe1caacf | event 83 head 7db10ebd7a8e
+  /home/user/z4-workers/g2-numchal/report.md: STANDS 11, DEFECT 3 (one is the child's own error, two are minor overstatements in the target), NOT CHECKED 1. Predicates: met 52, failed 4, measured only 32.

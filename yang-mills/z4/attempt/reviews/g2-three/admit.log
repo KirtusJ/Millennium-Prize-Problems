@@ -1,0 +1,8 @@
+ADMITTED T79
+WRITTEN as event 158: TASK_ADMITTED by principal (DECLARED)
+head f1a3f9eef8517256d9121bb98d8ef9eab76ceb173b0c07743c9441fac4e13a2d
+previous head af41473e5c09c4c186f5cc5bfdecd48acaabc2994d3c09354999d517c043319a
+RELEASED T79
+WRITTEN as event 172: TASK_RELEASED by principal (DECLARED)
+head d2d6afa99afa918d1602838402ffe4ae65047d30bb30ef8c08a149c764f4e1c8
+previous head 2f17f1e1ed2ec5c0ff4baddda01cd03bfd913e905e1dda0ad8390cb357e00b8c

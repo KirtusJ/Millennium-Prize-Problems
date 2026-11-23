@@ -1,0 +1,13 @@
+/home/user/z4-workers/g2-conv/scalar.lean:6:34: warning: unused variable `ha0`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/user/z4-workers/g2-conv/scalar.lean:6:62: warning: unused variable `hb0`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/user/z4-workers/g2-conv/scalar.lean:28:27: warning: unused variable `h0`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+'one_sub_mul_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ratio_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ratio_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'fibre_min' depends on axioms: [propext, Classical.choice, Quot.sound]
+'neglog_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'le_neglog' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit 0

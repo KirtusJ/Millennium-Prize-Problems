@@ -1,0 +1,1 @@
+E0=np.float64(1.5000000000000158) err=1.577e-14 tol=1e-8 pass=True
