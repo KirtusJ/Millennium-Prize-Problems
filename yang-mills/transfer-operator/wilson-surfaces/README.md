@@ -42,7 +42,7 @@ $$
 $$
 Indeed the two lower bounds furnish the two competitors, and the upper bound charges their minimum. The $k\log4$ penalty is $o(L_b/b^2)$. A square of physical side $X$ has crossover $T=X/2$ on this logarithmic scale. Below it the tube outweighs the disconnected contribution. Above it the leading area exponent of $J_k$ agrees with that of $w^2$. Its subleading behavior depends on information beyond this bound.
 
-When $|\log\beta|\gg b^{-2}\log(1/b)$, the first nonzero Haar coefficients also control the **full four-dimensional** answer. With $z=\beta/4$, the ratio is asymptotic to $z^{Pk-2A}/4$ below the integer area crossover; it tends to $5/4$ at exact equality and to $1$ above. Thus at exact equality the mean-normalized connected reading tends to $1/4$. At fixed small coupling the long-separation relative limit remains open here. [Four-dimensional prefactor proof](prefactors.md) · [Controls and formal coverage](execution.md)
+When $|\log\beta|\gg b^{-2}\log(1/b)$, the first nonzero Haar coefficients also control the **full four-dimensional** answer. With $z=\beta/4$, the ratio is asymptotic to $z^{Pk-2A}/4$ below the integer area crossover; it tends to $5/4$ at exact equality and to $1$ above. Thus at exact equality the mean-normalized connected reading tends to $1/4$. For $|\log\beta|b^2\to\infty$, subtracting the vacuum identifies a narrower tube with $A$ possible locations and fixes the relative connected asymptotic. The fixed-coupling long-separation relative limit remains open here. [Connected rectangles](../connected-rectangles/) [Four-dimensional prefactor proof](prefactors.md) · [Controls and formal coverage](execution.md)
 
 ## Which energies contribute after propagation?
 
