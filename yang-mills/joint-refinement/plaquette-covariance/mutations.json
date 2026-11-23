@@ -1,0 +1,14 @@
+[
+  {
+    "label": "negative_half_row_sum",
+    "find": "≤ 2 * (b * ∑ i, x i ^ 2) := by",
+    "replace": "≤ b * ∑ i, x i ^ 2 := by",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_eighth_ceiling",
+    "find": "4*z ≤ 1 := by",
+    "replace": "8*z ≤ 1 := by",
+    "diagnostic": "error:"
+  }
+]
