@@ -1,0 +1,195 @@
+Audit the finite-word expansion, empty word and factorial weights, true finite-integral positivity, continuity-based integrability, passing to the actual exponential integral, and normalization. Check conjugation and do not permit assumptions equivalent to the requested conclusion. A sibling really proves convergence separately; identify the precise interface. No Lean execution or independent-party claim. G4 is a director name.
+
+
+SOURCE TO AUDIT:
+The code below gives the finite-word expansion, nonnegativity of each degree integral, and nonnegativity of the full exponential numerator by the supplied convergence theorem. The last theorem gives the normalization bridge. The local Lean sources were inaccessible in this session, so the bridge takes the tilted-integral identity and integrability as explicit hypotheses. The concrete `split_wilson_reflection_positive` theorem still needs those two hypotheses wired to the source lemmas. I did not run Lean.
+
+Place this after the sibling declarations, with `IntegralReflectionPositivity` imported.
+
+```lean
+namespace Millennium.G4.WilsonRP
+
+noncomputable section
+
+open MeasureTheory Filter
+open scoped BigOperators Topology ComplexConjugate
+
+variable {X D : Type*} [Fintype D]
+
+def wordMode (s : X → ℝ) (v : D → X → ℝ) (F : X → ℂ)
+    (k : ℕ) (w : Fin k → D) (x : X) : ℂ :=
+  (Real.exp (s x) : ℂ) * F x * ∏ i, (v (w i) x : ℂ)
+
+def wordGramDegree (s : X → ℝ) (v : D → X → ℝ) (F : X → ℂ)
+    (k : ℕ) (p : X × X) : ℂ :=
+  ∑ w : Fin k → D,
+    ((1 / (k.factorial : ℝ) : ℝ) : ℂ) *
+      conj (wordMode s v F k w p.1) * wordMode s v F k w p.2
+
+theorem testedTaylor_degree_eq_wordGramDegree
+    (s : X → ℝ) (v : D → X → ℝ) (F : X → ℂ)
+    (k : ℕ) (p : X × X) :
+    (Real.exp (s p.1 + s p.2) : ℂ) *
+        ((dotKernel v p.1 p.2 : ℂ) ^ k / (k.factorial : ℂ)) *
+        (conj (F p.1) * F p.2) =
+      wordGramDegree s v F k p := by
+  classical
+  have hdot :
+      (dotKernel v p.1 p.2 : ℂ) =
+        ∑ r : D, (v r p.1 : ℂ) * (v r p.2 : ℂ) := by
+    unfold dotKernel
+    push_cast
+  rw [hdot, Fintype.sum_pow]
+  simp only [div_eq_mul_inv, Finset.sum_mul, Finset.mul_sum, wordGramDegree]
+  apply Finset.sum_congr rfl
+  intro w _
+  rw [Real.exp_add, Finset.prod_mul_distrib]
+  simp only [wordMode, map_mul, map_prod, Complex.conj_ofReal]
+  push_cast <;> ring
+
+theorem testedTaylor_eq_sum_wordGramDegree
+    (s : X → ℝ) (v : D → X → ℝ) (F : X → ℂ)
+    (N : ℕ) (p : X × X) :
+    testedTaylor s v F N p =
+      ∑ k ∈ Finset.range N, wordGramDegree s v F k p := by
+  unfold testedTaylor taylorWeight partialExp
+  push_cast
+  simp only [Finset.mul_sum, Finset.sum_mul]
+  exact Finset.sum_congr rfl (fun k _ =>
+    testedTaylor_degree_eq_wordGramDegree s v F k p)
+
+variable [TopologicalSpace X]
+
+theorem continuous_wordMode
+    (s : X → ℝ) (v : D → X → ℝ) (F : X → ℂ)
+    (hs : Continuous s) (hv : ∀ r, Continuous (v r))
+    (hF : Continuous F) (k : ℕ) (w : Fin k → D) :
+    Continuous (wordMode s v F k w) := by
+  have hprod : Continuous (fun x : X => ∏ i, (v (w i) x : ℂ)) :=
+    continuous_finset_prod _ (fun i _ =>
+      Complex.continuous_ofReal.comp (hv (w i)))
+  exact ((Complex.continuous_ofReal.comp (Real.continuous_exp.comp hs)).mul
+    hF).mul hprod
+
+theorem continuous_wordGramDegree
+    (s : X → ℝ) (v : D → X → ℝ) (F : X → ℂ)
+    (hs : Continuous s) (hv : ∀ r, Continuous (v r))
+    (hF : Continuous F) (k : ℕ) :
+    Continuous (wordGramDegree s v F k) := by
+  unfold wordGramDegree
+  apply continuous_finset_sum
+  intro w _
+  have hw := continuous_wordMode s v F hs hv hF k w
+  have hc : Continuous (fun z : ℂ => conj z) := continuous_star
+  exact (continuous_const.mul (hc.comp (hw.comp continuous_fst))).mul
+    (hw.comp continuous_snd)
+
+open Millennium.G4.ComplexRP (NonnegativeComplex)
+open Millennium.G4.IntegralRP
+  (integrable_continuous_compact integral_prod_gram_nonnegative)
+
+variable [CompactSpace X] [SecondCountableTopology X]
+  [MeasurableSpace X] [BorelSpace X]
+
+theorem nonnegative_wordGramDegree_integral
+    (μ : Measure X) [IsProbabilityMeasure μ]
+    (s : X → ℝ) (v : D → X → ℝ) (F : X → ℂ)
+    (hs : Continuous s) (hv : ∀ r, Continuous (v r))
+    (hF : Continuous F) (k : ℕ) :
+    NonnegativeComplex
+      (∫ p : X × X, wordGramDegree s v F k p ∂(μ.prod μ)) := by
+  exact integral_prod_gram_nonnegative μ
+    (fun _ : Fin k → D => (1 / (k.factorial : ℝ)))
+    (wordMode s v F k)
+    (fun _ => div_nonneg zero_le_one (Nat.cast_nonneg _))
+    (fun w => integrable_continuous_compact μ _
+      (continuous_wordMode s v F hs hv hF k w))
+    (integrable_continuous_compact (μ.prod μ) _
+      (continuous_wordGramDegree s v F hs hv hF k))
+
+theorem nonnegativeComplex_finset_sum
+    {ι : Type*} (t : Finset ι) (f : ι → ℂ)
+    (hf : ∀ i ∈ t, NonnegativeComplex (f i)) :
+    NonnegativeComplex (∑ i ∈ t, f i) := by
+  classical
+  induction t using Finset.induction_on with
+  | empty =>
+      simp [NonnegativeComplex]
+  | @insert i t hi ih =>
+      have hhead := hf i (Finset.mem_insert_self i t)
+      have htail := ih (fun j hj => hf j (Finset.mem_insert_of_mem hj))
+      rw [Finset.sum_insert hi]
+      exact ⟨by rw [Complex.add_im, hhead.1, htail.1, add_zero],
+        by rw [Complex.add_re]; exact add_nonneg hhead.2 htail.2⟩
+
+theorem nonnegative_testedTaylor_integral
+    (μ : Measure X) [IsProbabilityMeasure μ]
+    (s : X → ℝ) (v : D → X → ℝ) (F : X → ℂ)
+    (hs : Continuous s) (hv : ∀ r, Continuous (v r))
+    (hF : Continuous F) (N : ℕ) :
+    NonnegativeComplex
+      (∫ p : X × X, testedTaylor s v F N p ∂(μ.prod μ)) := by
+  have heq : testedTaylor s v F N =
+      (fun p => ∑ k ∈ Finset.range N, wordGramDegree s v F k p) :=
+    funext (testedTaylor_eq_sum_wordGramDegree s v F N)
+  rw [heq, integral_finset_sum]
+  · exact nonnegativeComplex_finset_sum _ _ (fun k _ =>
+      nonnegative_wordGramDegree_integral μ s v F hs hv hF k)
+  · intro k _
+    exact integrable_continuous_compact (μ.prod μ) _
+      (continuous_wordGramDegree s v F hs hv hF k)
+
+theorem nonnegative_testedWilson_integral
+    (μ : Measure X) [IsProbabilityMeasure μ]
+    (s : X → ℝ) (v : D → X → ℝ) (F : X → ℂ)
+    (hs : Continuous s) (hv : ∀ r, Continuous (v r))
+    (hF : Continuous F) :
+    NonnegativeComplex
+      (∫ p : X × X, testedWilson s v F p ∂(μ.prod μ)) := by
+  exact Millennium.G4.ComplexRP.nonnegativeComplex_of_tendsto
+    (tendsto_testedTaylor_integral (μ.prod μ) s v F hs hv hF)
+    (Filter.Eventually.of_forall
+      (fun N => nonnegative_testedTaylor_integral μ s v F hs hv hF N))
+
+theorem normalized_testedWilson_of_integral_eq
+    (μ : Measure X) [IsProbabilityMeasure μ]
+    (s : X → ℝ) (v : D → X → ℝ) (F : X → ℂ)
+    (hs : Continuous s) (hv : ∀ r, Continuous (v r))
+    (hF : Continuous F)
+    (ν : Measure (X × X)) (Z : ℝ) (hZ : 0 < Z)
+    (hidentity :
+      (∫ p : X × X, conj (F (Prod.swap p).2) * F p.2 ∂ν) =
+        (↑(Z⁻¹) : ℂ) *
+          (∫ p : X × X, testedWilson s v F p ∂(μ.prod μ)))
+    (hintegrable :
+      Integrable (fun p : X × X => conj (F (Prod.swap p).2) * F p.2) ν) :
+    NonnegativeComplex
+        (∫ p : X × X, conj (F (Prod.swap p).2) * F p.2 ∂ν) ∧
+      Integrable (fun p : X × X => conj (F (Prod.swap p).2) * F p.2) ν := by
+  refine ⟨?_, hintegrable⟩
+  rw [hidentity]
+  obtain ⟨him, hre⟩ := nonnegative_testedWilson_integral μ s v F hs hv hF
+  constructor
+  · simp [Complex.mul_im, him]
+  · simpa [Complex.mul_re] using mul_nonneg (inv_nonneg.mpr hZ.le) hre
+
+#print axioms wordMode
+#print axioms wordGramDegree
+#print axioms testedTaylor_degree_eq_wordGramDegree
+#print axioms testedTaylor_eq_sum_wordGramDegree
+#print axioms continuous_wordMode
+#print axioms continuous_wordGramDegree
+#print axioms nonnegative_wordGramDegree_integral
+#print axioms nonnegativeComplex_finset_sum
+#print axioms nonnegative_testedTaylor_integral
+#print axioms nonnegative_testedWilson_integral
+#print axioms normalized_testedWilson_of_integral_eq
+
+end
+
+end Millennium.G4.WilsonRP
+```
+
+For the concrete wrapper, instantiate `ν` with `(μ.prod μ).tilted (splitExponent s v)` and `Z` with the corresponding Wilson partition. Use `wilson_partition_pos` for `hZ` and `integrable_reflectedProduct_wilson_tilt` for `hintegrable`. Unfold `reflectedIntegral` at the wrapper goal. For `hidentity`, specialize `integral_tilted` to the reflected product, expand `(Prod.swap p).2` to `p.1`, and pull the constant complex scalar `↑(Z⁻¹)` outside the integral. The remaining integrand is `testedWilson s v F` after multiplication is put in the displayed order. If `integral_tilted` takes the tilted probability instance, use `wilson_tilt_probability` to supply it.
+
+The unverified Mathlib API points are the names and binder order of `continuous_finset_prod`, `continuous_finset_sum`, and `integral_finset_sum`, the use of `continuous_star` for complex conjugation, and the `push_cast` simplification for the finite sums and factorial casts. The project-specific Gram and convergence calls use the signatures supplied in the commission.

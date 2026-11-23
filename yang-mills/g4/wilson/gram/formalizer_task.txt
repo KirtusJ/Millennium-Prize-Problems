@@ -1,0 +1,24 @@
+Director G4 PCP Lean commission. Return Lean4.19 / Mathlib c44e0c8e code for the finite-word Gram expansion and positive normalized exponential kernel. G4 is a name, not an ACR clause. No axioms/sorry/native_decide, no claimed compiler execution. Work in namespace Millennium.G4.WilsonRP, noncomputable section, open MeasureTheory Filter, scoped BigOperators Topology ComplexConjugate.
+
+Sibling worker supplies these exact definitions and convergence theorem; use them without redeclaring:
+partialExp N z = ∑k∈Finset.range N, z^k/(k.factorial:ℝ)
+dotKernel v x y = ∑r, v r x*v r y (v:D→X→ℝ, Fintype D)
+splitExponent s v p = s p.1+s p.2+dotKernel v p.1 p.2
+taylorWeight s v N p = Real.exp(s p.1+s p.2)*partialExp N(dotKernel v p.1 p.2)
+testedTaylor s v F N p = (taylorWeight s v N p:ℂ)*(conj(F p.1)*F p.2)
+testedWilson s v F p = (Real.exp(splitExponent s v p):ℂ)*(conj(F p.1)*F p.2)
+tendsto_testedTaylor_integral (μ:Measure(X×X)) [IsFiniteMeasure μ] (s:X→ℝ)(v:D→X→ℝ)(F:X→ℂ) (hs:Continuous s)(hv:∀r,Continuous(v r))(hF:Continuous F): Tendsto (fun N=>∫p,testedTaylor s v F N p ∂μ) atTop (nhds(∫p,testedWilson s v F p ∂μ)), with X compact second-countable Borel, Fintype D.
+continuous_splitExponent s v hs hv and continuous_testedTaylor s v F N hs hv hF supplied.
+
+Define wordMode (s v F)(k:ℕ)(w:Fin k→D)(x:X):ℂ := (Real.exp(s x):ℂ)*F x*∏i,(v(w i)x:ℂ).
+Prove pointwise testedTaylor expansion into degree k, finite words and (1/k!)*conj(wordMode w x)*wordMode w y. Fintype.sum_pow (f:ι→α)(n:ℕ): (∑a,f a)^n=∑p:Fin n→ι,∏i,f(p i), and Finset.prod_mul_distrib are available. exp(sx+sy)=exp(sx)*exp(sy), real modes have no conjugation change. Prefer separate degree identity before finite N sum.
+
+Use actual existing theorem from imported IntegralReflectionPositivity:
+Millennium.G4.IntegralRP.integral_prod_gram_nonnegative (μ:Measure X)[SFinite μ](a:R→ℝ)(u:R→X→ℂ)(ha:∀r,0≤a r)(hu:∀r,Integrable(u r)μ)(hjoint:Integrable(fun p:X×X=>∑r,(a r:ℂ)*conj(u r p.1)*u r p.2)(μ.prod μ)):
+Millennium.G4.ComplexRP.NonnegativeComplex (∫p:X×X,∑r,(a r:ℂ)*conj(u r p.1)*u r p.2 ∂μ.prod μ).
+NonnegativeComplex z := z.im=0 ∧ 0≤z.re.
+integrable_continuous_compact μ g hg from IntegralRP supplies integrability for continuous functions on compact Borel spaces with finite μ.
+
+Prove each degree integral positive, then finite sum positivity and nonnegative_testedTaylor_integral for μ probability on compact second-countable Borel X. Derive nonnegative_testedWilson_integral using actual sibling convergence and ComplexRP.nonnegativeComplex_of_tendsto (hlim)(eventual positivity).
+Finally prove split_wilson_reflection_positive: actual reflectedIntegral under (μ.prodμ).tilted(splitExponent s v) with Prod.swap and test fun p=>F p.2 has NonnegativeComplex and is integrable. Source integral_tilted density identity, wilson_partition_pos, wilson_tilt_probability and integrable_reflectedProduct_wilson_tilt are available from IntegralRP. Do not assume the finite-Gram factorization for the FULL exponential, do not normalize Gram truncations as probability densities. If normalization proof unwieldy provide exact numerator nonnegativity and clear bridge code.
+Include #print axioms all new named definitions/theorems. State any unverified API guesses.

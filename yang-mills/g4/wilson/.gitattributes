@@ -1,0 +1,7 @@
+WilsonReflectionPositivity.lean -text whitespace=cr-at-eol
+check_wilson.py -text whitespace=cr-at-eol
+build_dependency.py -text whitespace=cr-at-eol
+commission.py -text whitespace=cr-at-eol
+run_worker.py -text whitespace=cr-at-eol
+mutations.json -text whitespace=cr-at-eol
+evidence/** -text -whitespace

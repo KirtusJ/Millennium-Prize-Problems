@@ -1,0 +1,27 @@
+{
+  "method": {
+    "release_fingerprint": "7ff72eed9162e2c11fc62f6681c4afbc29524bfa96b87d45a455423d027d4707",
+    "core_descriptor_sha256": "9f5998dd75e921afe490687783787847916428f7ee7bcea410a88dad04646fb0",
+    "files": 58,
+    "matches_required": true
+  },
+  "runtime": "C:\\Users\\donke\\pcp-os\\PCP_OS_Python",
+  "native_execution": false,
+  "host_pid": 13568,
+  "start_ns": 1795417453879308400,
+  "exit_observed_ns": 1795417536539631500,
+  "exit_code": 0,
+  "readback_sha256": "815c45342ad2f64a86bd9fa1b484e5aa1fa592b8d83720a0c01cba52e85f6f62",
+  "verification": {
+    "events": 11,
+    "head": "4ab42d0f2b211236276b5b7434b6ce137e8bd28c0f749921a00a0b1e3da3e637",
+    "guard_problems": [],
+    "altered_objects": [],
+    "objects_by_reference_only": 0,
+    "anchor": null,
+    "ok": true
+  },
+  "hierarchy": "Director G4 -> PCP Python supervisor -> PCP hosted Codex model",
+  "auth": "DECLARED; principal instruction relayed",
+  "proof_compilation": "NOT YET PERFORMED"
+}

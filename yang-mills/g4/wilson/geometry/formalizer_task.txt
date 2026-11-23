@@ -1,0 +1,18 @@
+PCP concrete finite open-slab algebra commission, Director G4. Lean4.19 Mathlib c44e0c8e, namespace Millennium.G4.WilsonRP, no sorry/axioms/native_decide; uncompiled output acknowledged. Parent has compiler and separate convergence/measure-preservation proofs. Avoid replacing actual slab action identity by an assumption of that identity.
+
+Use a finite half-graph with vertices V [DecidableEq V], links E [Fintype E], endpoints src dst:E→V; boundary vertices B:Finset V (type ↥B), crossing spatial edges C [Fintype C], edge:C→E and bsrc bdst:C→↥B with hsrc:∀c,src(edge c)=(bsrc c).val and hdst analog. Group G. Define:
+vertexGauge src dst g U e = g(src e)*U e*(g(dst e))⁻¹.
+boundaryGauge B (h:↥B→G) (v:V) = if hv:v∈B then h ⟨v,hv⟩ else 1.
+GaugeInvariant src dst (f:(E→G)→K) := ∀g U, f(vertexGauge src dst g U)=f U (generic output K).
+crossingWord edge bsrc bdst (U0 U1:E→G)(h:↥B→G)(c:C)=U0(edge c)*h(bdst c)*(U1(edge c))⁻¹*(h(bsrc c))⁻¹.
+slabExponent χ β s ((U0,U1),h) = s U0+s U1+∑c,β c*χ(crossingWord ... U0 U1 h c).
+reducedSlabExponent χ β s (U0,U1)=s U0+s U1+∑c,β c*χ((U0(edge c))⁻¹*U1(edge c)).
+
+Prove boundaryGauge_at, crossingWord_eq_gauged U0 U1 h c = U0(edge c)*(vertexGauge ... (boundaryGauge B h) U1 (edge c))⁻¹, using hsrc/hdst, actual group identities. Then slabExponent_gauge identity to reducedSlabExponent at (U0, vertexGauge g_h U1), assuming GaugeInvariant s and only χrelative : ∀a b,χ(a*b⁻¹)=χ(a⁻¹*b). This χrelative is proved by the parent's unitary matrix trace argument; it is not reflection positivity. Likewise define positiveHalfTest F (((U0,U1),h))=F U1 and slabReflection ((U0,U1),h)=((U1,U0),fun b=>(h b)⁻¹); prove involution and reflectedProduct = conj(F U0)*F U1, and its equality to the product after gauging the positive half given GaugeInvariant F.
+
+Prove action continuity when G is a topological group and χ,s continuous, with the product topologies, finite E and B; prove test continuity. Use continuous_finset_sum and continuous_pi_apply/projections, or fun_prop with explicit imports. Keep definitions and binder order clean. Parent already has measurePreserving_gaugeMap for arbitrary coordinate left/right translations on normalized bi-invariant Haar. Your vertexGauge is that gaugeMap with l(e)=g(src e),r(e)=g(dst e)⁻¹; do not assume preservation anew.
+
+Finally show GaugeInvariant for any finite sum of gauge-invariant half terms and for Wilson plaquette terms if feasible. Parent supplies plaquette_covariance and unitary trace conjugation invariance, so state/use a generic class function χ with χ(g*x*g⁻¹)=χ x for one closed four-edge cycle with matching endpoints. Specify all incidence hypotheses. This makes half Wilson action invariance derived from local closed loops, while optional end actions and arbitrary test functions may naturally assume GaugeInvariant.
+
+This double-half graph is a finite bond-reflected open slab: internal spatial/time links live in E, crossing temporal links are h on B, and only the stated faces cross the plane. It excludes the second periodic-time seam. A gauge change only on the positive half fixes h without globally fixing its internal temporal links. This is equivalent for RP and works for arbitrarily large half-graphs; do not restrict to two temporal slices.
+Include #print axioms for every named declaration.

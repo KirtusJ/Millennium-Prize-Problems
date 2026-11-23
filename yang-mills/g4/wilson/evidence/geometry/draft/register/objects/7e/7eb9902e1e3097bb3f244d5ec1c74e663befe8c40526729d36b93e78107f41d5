@@ -1,0 +1,216 @@
+Below is a standalone Lean draft for the finite open slab. The slab identity follows from the crossing-word identity, gauge invariance of the half action, and `χrelative`. The plaquette proof uses the orientation \(e_1e_2e_3^{-1}e_4^{-1}\), with all four incidence conditions explicit.
+
+This session exposed neither a compiler nor a workspace reader. The draft is uncompiled, and I could not inspect the parent declarations or retrieve the remaining ACR clauses. The `#print axioms` commands are included for the parent run. The measure-preserving step uses the parent theorem with the explicit coordinate translations below. Its invocation is left to the parent file because its signature and import path were unavailable.
+
+```lean
+import Mathlib
+
+namespace Millennium.G4.WilsonRP
+
+variable {V E C G K : Type*} [DecidableEq V] [Group G]
+
+def vertexGauge (src dst : E → V) (g : V → G) (U : E → G) : E → G :=
+  fun e => g (src e) * U e * (g (dst e))⁻¹
+
+def boundaryGauge (B : Finset V) (h : ↥B → G) (v : V) : G :=
+  if hv : v ∈ B then h ⟨v, hv⟩ else 1
+
+theorem boundaryGauge_at (B : Finset V) (h : ↥B → G) (b : ↥B) :
+    boundaryGauge B h b.val = h b := by
+  rcases b with ⟨v, hv⟩
+  simp [boundaryGauge, hv]
+
+def GaugeInvariant (src dst : E → V) (f : (E → G) → K) : Prop :=
+  ∀ (g : V → G) (U : E → G), f (vertexGauge src dst g U) = f U
+
+/-- The coordinate left and right translations used by the parent Haar theorem. -/
+theorem vertexGauge_eq_coordinateTranslations
+    (src dst : E → V) (g : V → G) :
+    vertexGauge src dst g =
+      (fun (U : E → G) e => g (src e) * U e * (g (dst e))⁻¹) :=
+  rfl
+
+def crossingWord (edge : C → E) {B : Finset V} (bsrc bdst : C → ↥B)
+    (U0 U1 : E → G) (h : ↥B → G) (c : C) : G :=
+  U0 (edge c) * h (bdst c) * (U1 (edge c))⁻¹ * (h (bsrc c))⁻¹
+
+theorem crossingWord_eq_gauged
+    (src dst : E → V) (edge : C → E) {B : Finset V}
+    (bsrc bdst : C → ↥B)
+    (hsrc : ∀ c, src (edge c) = (bsrc c).val)
+    (hdst : ∀ c, dst (edge c) = (bdst c).val)
+    (U0 U1 : E → G) (h : ↥B → G) (c : C) :
+    crossingWord edge bsrc bdst U0 U1 h c =
+      U0 (edge c) * (vertexGauge src dst (boundaryGauge B h) U1 (edge c))⁻¹ := by
+  unfold crossingWord vertexGauge
+  rw [hsrc c, hdst c, boundaryGauge_at, boundaryGauge_at]
+  simp [mul_inv_rev, mul_assoc]
+
+def slabExponent [Fintype C]
+    (edge : C → E) {B : Finset V} (bsrc bdst : C → ↥B)
+    (χ : G → ℝ) (β : C → ℝ) (s : (E → G) → ℝ)
+    (x : ((E → G) × (E → G)) × (↥B → G)) : ℝ :=
+  s x.1.1 + s x.1.2 +
+    ∑ c, β c * χ (crossingWord edge bsrc bdst x.1.1 x.1.2 x.2 c)
+
+def reducedSlabExponent [Fintype C]
+    (edge : C → E) (χ : G → ℝ) (β : C → ℝ) (s : (E → G) → ℝ)
+    (x : (E → G) × (E → G)) : ℝ :=
+  s x.1 + s x.2 + ∑ c, β c * χ ((x.1 (edge c))⁻¹ * x.2 (edge c))
+
+theorem slabExponent_gauge [Fintype C]
+    (src dst : E → V) (edge : C → E) {B : Finset V}
+    (bsrc bdst : C → ↥B)
+    (hsrc : ∀ c, src (edge c) = (bsrc c).val)
+    (hdst : ∀ c, dst (edge c) = (bdst c).val)
+    (χ : G → ℝ) (β : C → ℝ) (s : (E → G) → ℝ)
+    (hs : GaugeInvariant src dst s)
+    (χrelative : ∀ a b : G, χ (a * b⁻¹) = χ (a⁻¹ * b))
+    (U0 U1 : E → G) (h : ↥B → G) :
+    slabExponent edge bsrc bdst χ β s ((U0, U1), h) =
+      reducedSlabExponent edge χ β s
+        (U0, vertexGauge src dst (boundaryGauge B h) U1) := by
+  simp only [slabExponent, reducedSlabExponent, hs (boundaryGauge B h) U1]
+  congr 1
+  apply Finset.sum_congr rfl
+  intro c _
+  rw [crossingWord_eq_gauged src dst edge bsrc bdst hsrc hdst, χrelative]
+
+def positiveHalfTest {B : Finset V} (F : (E → G) → K)
+    (x : ((E → G) × (E → G)) × (↥B → G)) : K :=
+  F x.1.2
+
+def slabReflection (B : Finset V)
+    (x : ((E → G) × (E → G)) × (↥B → G)) :
+    ((E → G) × (E → G)) × (↥B → G) :=
+  ((x.1.2, x.1.1), fun b => (x.2 b)⁻¹)
+
+theorem slabReflection_involutive (B : Finset V) :
+    Function.Involutive (slabReflection (E := E) (G := G) B) := by
+  rintro ⟨⟨U0, U1⟩, h⟩
+  simp [slabReflection]
+
+/-- On complex scalars, `star` is complex conjugation. -/
+def reflectedProduct {B : Finset V} (F : (E → G) → ℂ)
+    (x : ((E → G) × (E → G)) × (↥B → G)) : ℂ :=
+  star (positiveHalfTest F (slabReflection B x)) * positiveHalfTest F x
+
+theorem reflectedProduct_eq {B : Finset V} (F : (E → G) → ℂ)
+    (U0 U1 : E → G) (h : ↥B → G) :
+    reflectedProduct F ((U0, U1), h) = star (F U0) * F U1 :=
+  rfl
+
+theorem reflectedProduct_gauge
+    (src dst : E → V) {B : Finset V} (F : (E → G) → ℂ)
+    (hF : GaugeInvariant src dst F)
+    (U0 U1 : E → G) (h : ↥B → G) :
+    reflectedProduct F ((U0, U1), h) =
+      star (F U0) * F (vertexGauge src dst (boundaryGauge B h) U1) := by
+  rw [reflectedProduct_eq, hF (boundaryGauge B h) U1]
+
+section Topology
+
+variable [TopologicalSpace G] [IsTopologicalGroup G]
+
+theorem continuous_slabExponent [Fintype C]
+    (edge : C → E) {B : Finset V} (bsrc bdst : C → ↥B)
+    (χ : G → ℝ) (β : C → ℝ) (s : (E → G) → ℝ)
+    (hχ : Continuous χ) (hs : Continuous s) :
+    Continuous (slabExponent edge bsrc bdst χ β s) := by
+  let X := ((E → G) × (E → G)) × (↥B → G)
+  have h0 : Continuous (fun x : X => x.1.1) :=
+    continuous_fst.comp continuous_fst
+  have h1 : Continuous (fun x : X => x.1.2) :=
+    continuous_snd.comp continuous_fst
+  have hb : Continuous (fun x : X => x.2) := continuous_snd
+  unfold slabExponent
+  apply ((hs.comp h0).add (hs.comp h1)).add
+  apply continuous_finset_sum
+  intro c _
+  have hu0 := (continuous_pi_apply (edge c)).comp h0
+  have hu1 := (continuous_pi_apply (edge c)).comp h1
+  have hdst := (continuous_pi_apply (bdst c)).comp hb
+  have hsrc := (continuous_pi_apply (bsrc c)).comp hb
+  have hw : Continuous (fun x : X =>
+      crossingWord edge bsrc bdst x.1.1 x.1.2 x.2 c) := by
+    unfold crossingWord
+    exact ((hu0.mul hdst).mul hu1.inv).mul hsrc.inv
+  exact continuous_const.mul (hχ.comp hw)
+
+theorem continuous_reducedSlabExponent [Fintype C]
+    (edge : C → E) (χ : G → ℝ) (β : C → ℝ) (s : (E → G) → ℝ)
+    (hχ : Continuous χ) (hs : Continuous s) :
+    Continuous (reducedSlabExponent edge χ β s) := by
+  let X := (E → G) × (E → G)
+  have h0 : Continuous (fun x : X => x.1) := continuous_fst
+  have h1 : Continuous (fun x : X => x.2) := continuous_snd
+  unfold reducedSlabExponent
+  apply ((hs.comp h0).add (hs.comp h1)).add
+  apply continuous_finset_sum
+  intro c _
+  have hu0 := (continuous_pi_apply (edge c)).comp h0
+  have hu1 := (continuous_pi_apply (edge c)).comp h1
+  exact continuous_const.mul (hχ.comp (hu0.inv.mul hu1))
+
+end Topology
+
+theorem continuous_positiveHalfTest [TopologicalSpace G] [TopologicalSpace K]
+    {B : Finset V} (F : (E → G) → K) (hF : Continuous F) :
+    Continuous (positiveHalfTest (B := B) F) :=
+  hF.comp (continuous_snd.comp continuous_fst)
+
+theorem gaugeInvariant_finset_sum {I : Type*} [AddCommMonoid K]
+    (src dst : E → V) (S : Finset I) (f : I → (E → G) → K)
+    (hf : ∀ i ∈ S, GaugeInvariant src dst (f i)) :
+    GaugeInvariant src dst (fun U => ∑ i ∈ S, f i U) := by
+  intro g U
+  exact Finset.sum_congr rfl (fun i hi => hf i hi g U)
+
+def plaquetteWord (e1 e2 e3 e4 : E) (U : E → G) : G :=
+  U e1 * U e2 * (U e3)⁻¹ * (U e4)⁻¹
+
+theorem gaugeInvariant_plaquette
+    (src dst : E → V) (e1 e2 e3 e4 : E)
+    (h12 : dst e1 = src e2)
+    (h23 : dst e2 = dst e3)
+    (h34 : src e3 = dst e4)
+    (h41 : src e4 = src e1)
+    (χ : G → K) (hχ : ∀ a x : G, χ (a * x * a⁻¹) = χ x) :
+    GaugeInvariant src dst (fun U => χ (plaquetteWord e1 e2 e3 e4 U)) := by
+  intro g U
+  change χ (plaquetteWord e1 e2 e3 e4 (vertexGauge src dst g U)) =
+    χ (plaquetteWord e1 e2 e3 e4 U)
+  have hcov :
+      plaquetteWord e1 e2 e3 e4 (vertexGauge src dst g U) =
+        g (src e1) * plaquetteWord e1 e2 e3 e4 U * (g (src e1))⁻¹ := by
+    simp only [plaquetteWord, vertexGauge, h12, h23, h34, h41]
+    group
+  rw [hcov, hχ]
+
+#print axioms vertexGauge
+#print axioms boundaryGauge
+#print axioms boundaryGauge_at
+#print axioms GaugeInvariant
+#print axioms vertexGauge_eq_coordinateTranslations
+#print axioms crossingWord
+#print axioms crossingWord_eq_gauged
+#print axioms slabExponent
+#print axioms reducedSlabExponent
+#print axioms slabExponent_gauge
+#print axioms positiveHalfTest
+#print axioms slabReflection
+#print axioms slabReflection_involutive
+#print axioms reflectedProduct
+#print axioms reflectedProduct_eq
+#print axioms reflectedProduct_gauge
+#print axioms continuous_slabExponent
+#print axioms continuous_reducedSlabExponent
+#print axioms continuous_positiveHalfTest
+#print axioms gaugeInvariant_finset_sum
+#print axioms plaquetteWord
+#print axioms gaugeInvariant_plaquette
+
+end Millennium.G4.WilsonRP
+```
+
+For each fixed \(h\), instantiate the parent `measurePreserving_gaugeMap` with `l e = boundaryGauge B h (src e)` and `r e = (boundaryGauge B h (dst e))⁻¹`. Its coordinate map is definitionally `vertexGauge src dst (boundaryGauge B h)` for the parenthesization above. In the slab change of variables the full map is `((U0, U1), h) ↦ ((U0, vertexGauge src dst (boundaryGauge B h) U1), h)`. The crossing field \(h\) stays fixed as a parameter of this change, and every internal positive-half link transforms by its endpoints. The identities apply to arbitrary finite half-graphs, with crossings indexed by `C` at the single open-slab reflection plane.

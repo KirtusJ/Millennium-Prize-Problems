@@ -1,0 +1,16 @@
+The exponential-series and dominated-convergence arguments are mathematically sound under the stated hypotheses. The candidate derives both limits from library theorems. I found no concrete mathematical defect. Compatibility with Mathlib `c44e0c8e` and the local `IntegralReflectionPositivity` import remains unverified.
+
+| Check | Finding |
+|---|---|
+| Exponential series | `hasSum_real_exp_terms` applies a library series theorem to the actual terms \(z^k/k!\). Then `HasSum.tendsto_sum_nat` gives convergence of the sums over `Finset.range N`. Neither the pointwise theorem nor the integral theorem takes convergence as a hypothesis. The split exponent matches the limit after `Real.exp_add`. |
+| Complex conjugation | Both tested functions use \(\overline{F(p.1)}F(p.2)\). The norm calculation uses conjugation invariance, and the pointwise limit multiplies by the same fixed complex factor. This requires neither a real-valued test function nor a symmetric measure. |
+| Absolute partial-sum bound | The triangle inequality and positivity of the factorial denominators give \(\lvert S_N(z)\rvert\le S_N(\lvert z\rvert)\). The latter is bounded by the full sum because every term is nonnegative. That full sum is \(e^{\lvert z\rvert}\). The argument covers negative \(z\) and \(N=0\). |
+| Compactness and finite measure | Compactness of \(X\) gives compactness of \(X\times X\). The continuous real bound is bounded there, so it is integrable for the supplied finite measure \(\mu\). The proof works for an arbitrary finite measure on the product, with no product-measure or symmetry hypothesis. |
+| Continuity and domination | The dot kernel is a finite sum of continuous products. The Taylor weights, test factor and dominating function are continuous. With the stated second-countability and Borel assumptions supporting the product instances, continuity gives the a.e. strong measurability required for the Taylor integrands. The norm bound holds at every point for every \(N\), and the pointwise limit holds everywhere. These are the required inputs for dominated convergence. |
+
+The two most consequential API dependencies are concrete:
+
+- The initial `have h := NormedSpace.expSeries_div_hasSum_exp ℝ z` is outside the `first` block. The alternatives only address conversion of its conclusion to `Real.exp`. If the declaration is unavailable through the imports, has a different argument order, or yields a different term form requiring additional rewrites, those alternatives do not establish the series lemma.
+- `Millennium.G4.IntegralRP.integrable_continuous_compact μ bound hbound_continuous` is the sole justification of integrability of the bound. The local declaration must accept those arguments and its typeclass requirements must be met by the stated hypotheses. The final call also depends on the pinned DCT theorem using the supplied argument order and a.e. hypotheses. `Filter.Eventually.of_forall` is mathematically appropriate for supplying those hypotheses.
+
+This was a source-only review. I could inspect the pasted candidate, but could not retrieve the remaining ACR clauses, the pinned declarations, or the local helper. The `#print axioms` commands are present in the source, with no output supplied to audit.

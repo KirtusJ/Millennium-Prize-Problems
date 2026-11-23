@@ -1,0 +1,220 @@
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:32:4: warning: 'simpa only [NormedSpace.exp_eq_real] using h' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:33:4: warning: 'simpa using h' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:32:4: warning: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:33:4: warning: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:60:6: warning: 'exact hsum.summable.sum_le_tsum (Finset.range N) (fun k _ => hnonneg k)' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:60:6: warning: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:89:6: warning: 'exact continuous_star' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:89:6: warning: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:137:6: warning: 'exact norm_star _' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:138:6: warning: 'simp' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:137:6: warning: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:138:6: warning: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+'Millennium.G4.WilsonRP.partialExp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.WilsonRP.dotKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.WilsonRP.splitExponent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.WilsonRP.taylorWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.WilsonRP.testedTaylor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.WilsonRP.testedWilson' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.WilsonRP.hasSum_real_exp_terms' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.WilsonRP.tendsto_partialExp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.WilsonRP.abs_partialExp_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.WilsonRP.continuous_dotKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.WilsonRP.continuous_splitExponent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.WilsonRP.continuous_partialExp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.WilsonRP.continuous_testFactor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.WilsonRP.continuous_testedTaylor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.WilsonRP.continuous_testedWilson' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.WilsonRP.tendsto_testedTaylor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.WilsonRP.norm_testedTaylor_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.WilsonRP.tendsto_testedTaylor_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:231:50: error: unsolved goals
+X : Type u_1
+D : Type u_2
+inst✝ : Fintype D
+s : X → ℝ
+v : D → X → ℝ
+F : X → ℂ
+k : ℕ
+p : X × X
+⊢ ∑ x, ↑(v x p.1) * ↑(v x p.2) = ∑ x, ↑(v x p.1) * ↑(v x p.2)
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:251:4: error: type mismatch
+  testedTaylor_degree_eq_wordGramDegree s v F k p
+has type
+  ↑(Real.exp (s p.1 + s p.2)) * (↑(dotKernel v p.1 p.2) ^ k / ↑k.factorial) * ((starRingEnd ℂ) (F p.1) * F p.2) =
+    wordGramDegree s v F k p : Prop
+but is expected to have type
+  Complex.exp (↑(s p.1) + ↑(s p.2)) * (↑(dotKernel v p.1 p.2) ^ k / ↑k.factorial) * ((starRingEnd ℂ) (F p.1) * F p.2) =
+    wordGramDegree s v F k p : Prop
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:255:0: warning: automatically included section variable(s) unused in theorem 'Millennium.G4.WilsonRP.continuous_wordMode':
+  [Fintype D]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype D] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'Millennium.G4.WilsonRP.wordMode' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.WilsonRP.wordGramDegree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.WilsonRP.testedTaylor_degree_eq_wordGramDegree' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.WilsonRP.testedTaylor_eq_sum_wordGramDegree' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.WilsonRP.continuous_wordMode' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.WilsonRP.continuous_wordGramDegree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.WilsonRP.nonnegative_wordGramDegree_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.WilsonRP.nonnegativeComplex_finset_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.WilsonRP.nonnegative_testedTaylor_integral' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.WilsonRP.nonnegative_testedWilson_integral' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.WilsonRP.normalized_testedWilson_of_integral_eq' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:442:10: error: failed to synthesize
+  MeasurableMul₂ G
+
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:442:11: error: failed to synthesize
+  MeasurableMul₂ G
+
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:446:10: error: failed to synthesize
+  MeasurableMul₂ G
+
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:446:11: error: failed to synthesize
+  MeasurableMul₂ G
+
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:452:0: warning: automatically included section variable(s) unused in theorem 'Millennium.G4.WilsonRP.measurePreserving_gaugeMap':
+  [MeasurableInv G]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableInv G] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:482:24: error: unknown identifier '«μ».prod'
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:484:16: error: unknown identifier '«μ».prod'
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:493:16: error: unknown identifier '«μ».prod'
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:494:33: error: unknown identifier 'η'
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:496:32: error: unknown identifier 'η'
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:498:23: error: unsolved goals
+E : Type u_1
+G : Type u_2
+inst✝¹⁰ : Group G
+inst✝⁹ : MeasurableSpace G
+inst✝⁸ : MeasurableMul G
+inst✝⁷ : MeasurableInv G
+inst✝⁶ : Fintype E
+m : Measure G
+inst✝⁵ : IsProbabilityMeasure m
+inst✝⁴ : m.IsMulLeftInvariant
+inst✝³ : m.IsMulRightInvariant
+B : Type u_3
+inst✝² : NormedAddCommGroup B
+inst✝¹ : NormedSpace ℝ B
+H : Type u_4
+inst✝ : MeasurableSpace H
+l r : H → E → G
+Φ : (E → G) × H → B
+φ : (E → G) → B
+hΦ : Integrable Φ sorry
+hpoint : ∀ (U : E → G) (h : H), Φ (U, h) = φ (gaugeMap (l h) (r h) U)
+hfiber : ∀ (h : H), (∫ (U : E → G), Φ (U, h) ∂Measure.pi fun x => m) = ∫ (U : E → G), φ U ∂Measure.pi fun x => m
+⊢ ∫ (x : H), ∫ (U : E → G), φ U ∂Measure.pi fun x => m ∂sorry () = ∫ (U : E → G), φ U ∂Measure.pi fun x => m
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:484:44: error: unsolved goals
+E : Type u_1
+G : Type u_2
+inst✝¹⁰ : Group G
+inst✝⁹ : MeasurableSpace G
+inst✝⁸ : MeasurableMul G
+inst✝⁷ : MeasurableInv G
+inst✝⁶ : Fintype E
+m : Measure G
+inst✝⁵ : IsProbabilityMeasure m
+inst✝⁴ : m.IsMulLeftInvariant
+inst✝³ : m.IsMulRightInvariant
+B : Type u_3
+inst✝² : NormedAddCommGroup B
+inst✝¹ : NormedSpace ℝ B
+H : Type u_4
+inst✝ : MeasurableSpace H
+l r : H → E → G
+Φ : (E → G) × H → B
+φ : (E → G) → B
+hΦ : Integrable Φ sorry
+hpoint : ∀ (U : E → G) (h : H), Φ (U, h) = φ (gaugeMap (l h) (r h) U)
+hfiber : ∀ (h : H), (∫ (U : E → G), Φ (U, h) ∂Measure.pi fun x => m) = ∫ (U : E → G), φ U ∂Measure.pi fun x => m
+⊢ ∫ (z : (E → G) × H), Φ z ∂sorry = ∫ (U : E → G), φ U ∂Measure.pi fun x => m
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:507:54: error: unknown identifier '«μ».prod'
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:508:61: error: unknown identifier '«μ».prod'
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:512:27: error: unknown identifier '«μ».prod'
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:514:31: error: unknown identifier '«μ».prod'
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:515:33: error: unknown identifier '«μ».prod'
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:517:27: error: unknown identifier '«μ».prod'
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:518:37: error: unknown identifier '«μ».prod'
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:522:29: error: unknown identifier '«μ».prod'
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:524:4: error: unknown identifier 'integral_temporalGauge'
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:520:44: error: unsolved goals
+E : Type u_1
+G : Type u_2
+inst✝¹⁰ : Group G
+inst✝⁹ : MeasurableSpace G
+inst✝⁸ : MeasurableMul G
+inst✝⁷ : MeasurableInv G
+inst✝⁶ : Fintype E
+m : Measure G
+inst✝⁵ : IsProbabilityMeasure m
+inst✝⁴ : m.IsMulLeftInvariant
+inst✝³ : m.IsMulRightInvariant
+B : Type u_3
+inst✝² : NormedAddCommGroup B
+inst✝¹ : NormedSpace ℝ B
+H : Type u_4
+inst✝ : MeasurableSpace H
+l r : H → E → G
+S : (E → G) × H → ℝ
+S₀ : (E → G) → ℝ
+P : (E → G) × H → B
+P₀ : (E → G) → B
+hS : ∀ (U : E → G) (h : H), S (U, h) = S₀ (gaugeMap (l h) (r h) U)
+hP : ∀ (U : E → G) (h : H), P (U, h) = P₀ (gaugeMap (l h) (r h) U)
+hDensity : Integrable (fun z => Real.exp (S z)) sorry
+hWeighted : Integrable (fun z => Real.exp (S z) • P z) sorry
+hDensity₀ : Integrable (fun U => Real.exp (S₀ U)) (Measure.pi fun x => m)
+hWeighted₀ : Integrable (fun U => Real.exp (S₀ U) • P₀ U) (Measure.pi fun x => m)
+hPositive₀ : 0 < ∫ (U : E → G), Real.exp (S₀ U) ∂Measure.pi fun x => m
+⊢ (∫ (z : (E → G) × H), Real.exp (S z) ∂sorry = ∫ (U : E → G), Real.exp (S₀ U) ∂Measure.pi fun x => m) ∧
+    0 < ∫ (z : (E → G) × H), Real.exp (S z) ∂sorry ∧
+      (∫ (z : (E → G) × H), Real.exp (S z) • P z ∂sorry =
+          ∫ (U : E → G), Real.exp (S₀ U) • P₀ U ∂Measure.pi fun x => m) ∧
+        (∫ (z : (E → G) × H), Real.exp (S z) ∂sorry)⁻¹ • ∫ (z : (E → G) × H), Real.exp (S z) • P z ∂sorry =
+          (∫ (U : E → G), Real.exp (S₀ U) ∂Measure.pi fun x => m)⁻¹ •
+            ∫ (U : E → G), Real.exp (S₀ U) • P₀ U ∂Measure.pi fun x => m
+'Millennium.G4.WilsonRP.temporalGauge' depends on axioms: [propext]
+'Millennium.G4.WilsonRP.temporalGauge_cancel' depends on axioms: [propext]
+'Millennium.G4.WilsonRP.spatialGauge_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.WilsonRP.plaquette_covariance' depends on axioms: [propext]
+'Millennium.G4.WilsonRP.gaugeMap' does not depend on any axioms
+'Millennium.G4.WilsonRP.gaugeEquiv' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Millennium.G4.WilsonRP.measurePreserving_gaugeMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.WilsonRP.integral_gaugeMap' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:550:14: error: unknown constant 'integral_temporalGauge'
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\wilson\WilsonReflectionPositivity.lean:551:14: error: unknown constant 'normalized_weighted_temporalGauge'

@@ -1,0 +1,24 @@
+The finite-word argument is mathematically sound at the stated interface. The normalized bridge is conditional on the tilted-integral identity and integrability, and the source leaves the concrete `split_wilson_reflection_positive` theorem unfinished. This is a static audit of the supplied text. I did not run Lean, inspect the imported declarations, or independently verify the sibling proof. I treat G4 as the director name.
+
+| Check | Finding |
+|---|---|
+| Finite-word expansion | The \(k\)-th power of the dot kernel expands over all ordered words `Fin k → D`. Each word contributes the product of its \(k\) coordinate factors. Summing degrees over `Finset.range N` matches the truncation if `partialExp N` uses that range and the displayed factorial coefficients. |
+| Empty word and factorial | At \(k=0\) there is exactly one function `Fin 0 → D`, even if `D` is empty. Its product is \(1\), and \(1/0!=1\). Thus the degree-zero term retains the full factor \(e^{s(x)+s(y)}\overline{F(x)}F(y)\). Ordered words already account for multiplicity, so each word in degree \(k\) gets exactly one weight \(1/k!\). At `N = 0` the Taylor sum itself is empty. |
+| Conjugation | `conj (wordMode … x)` conjugates \(F(x)\). It fixes the real exponential and real coordinate factors after casting to \(\mathbb C\). The right mode contains \(F(y)\), and `(Prod.swap p).2 = p.1` gives the same orientation in the reflected product. |
+| Integrability and finite-degree positivity | Each mode is continuous, and each degree kernel is a finite sum of continuous products involving the two projections and conjugation. Compactness and finiteness of the measures give integrability in the stated Borel setting. The Gram calculation uses the product measure to turn each word’s integral into \((1/k!)\lvert\int \mathrm{wordMode}\,d\mu\rvert^2\). This gives zero imaginary part and nonnegative real part for the **integral**. The supplied code delegates that calculation to `integral_prod_gram_nonnegative` and supplies both mode and degree-kernel integrability. |
+| Finite Taylor integrals | The pointwise expansion and integrability of every degree justify moving the finite degree sum outside the integral. The resulting finite sum preserves both parts of `NonnegativeComplex`. |
+
+The precise interface to the separate convergence proof is `tendsto_testedTaylor_integral (μ.prod μ) s v F hs hv hF`. At this call site it must provide the following convergence, with the actual `testedWilson` integral as its target.
+
+```lean
+Tendsto
+  (fun N : ℕ => ∫ p : X × X, testedTaylor s v F N p ∂(μ.prod μ))
+  atTop
+  (𝓝 (∫ p : X × X, testedWilson s v F p ∂(μ.prod μ)))
+```
+
+`nonnegativeComplex_of_tendsto` then takes that convergence and eventual `NonnegativeComplex` of the approximating integrals. The latter comes from the finite-degree proof for every `N`. The convergence interface must reach the integral whose integrand is the exact exponential weight times \(\overline{F(x)}F(y)\). Pointwise Taylor convergence alone would leave the limit exchange open. A Bochner integral term by itself also does not establish integrability, so the sibling’s separate proof or an explicit continuity argument should establish integrability of `testedWilson`.
+
+For normalization, the bridge has the right algebra. Multiplication by the positive real scalar \(Z^{-1}\), cast to \(\mathbb C\), preserves zero imaginary part and nonnegative real part. Its `hidentity` is a measure-change identity and `hintegrable` is a finiteness obligation. Neither assumes the desired sign. The concrete wrapper still has to establish that `Z` is the partition used by the exact tilt in `integral_tilted`, discharge that lemma’s actual premises, and identify its weighted integrand with `testedWilson`. The proposed calls to `wilson_partition_pos`, `integrable_reflectedProduct_wilson_tilt`, and, if required, `wilson_tilt_probability` are the intended connections. Their signatures and the exponent identity are unverified from the supplied text.
+
+Lean elaboration remains open, particularly the use of `Fintype.sum_pow` with the word index, cast and factorial normalization, the finite-sum and finite-product APIs, and the imported Gram, convergence, and tilt signatures. The missing concrete wrapper is a separate gap visible directly in the submission.
