@@ -57,3 +57,5 @@ For $E<L$ the constant suffices. For $E>U$ the quadratic term suffices. Integrat
 Two controls illustrate the need for moment information. The laws $(1-1/n)\delta_0+n^{-1}\delta_n$ have unit mass and unit first moment but place vanishing weight in every fixed strictly positive finite band. Their second moments diverge. The laws $\delta_{1/n}$ have bounded second moments but all their support tends to zero. In the physical free-plaquette control the law is exactly $\delta_{3\kappa}$ with unit mass.
 
 For a spatial continuum trajectory, the thresholds and the weight must be followed in the same physical units. For large $g$ these particular choices have $L$ of order $\kappa/\sqrt g$, $U$ of order $\kappa g$ and $w$ of order $g^{-3/2}$. A fixed-cutoff positive-energy window leaves the continuum Yang–Mills existence and mass-gap problem open. [Guest replay, Lean coverage and numerical control](execution.md)
+
+The [third-moment sum rule](third-moment/) bounds the plaquette’s second moment uniformly in the magnetic coupling. It improves the large-coupling upper endpoint to order $\kappa\sqrt g$ and the guaranteed weight to order $1/g$.
