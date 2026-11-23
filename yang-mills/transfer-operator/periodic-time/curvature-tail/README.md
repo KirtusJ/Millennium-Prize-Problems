@@ -15,3 +15,5 @@ The total variation conclusion extends to all links in any fixed central block, 
 For an explicit shell tree, full rooted plaquette matrices recover every shell link by ordered square operations. The maximum class-angle amplification is of order the square of the side length. [Construction, upper bound and matching Cartan example](shell-frame/README.md)
 
 For Z4's six specified connectors, the first rescaled additive Bianchi defect has an explicit, non-Gaussian one-colour law in the tangent limit. [Cube calculation and checks](bianchi/README.md)
+
+On a periodic four-cube, the based-loop fillings for G4’s weak-coupling analysis give a global two-sided action comparison. Explicit backgrounds show how the constants grow with the side length. [Review of PR #13](periodic-fillings/README.md)
