@@ -1,0 +1,3 @@
+- control.txt = 0.272341. PCP register created (method not pinned, expected).
+- Run 1 zn.py (dps 320): P3 FAILED at N=16, n=3,4 (precision floor, M/A-1 < 1e-320 resolution). Kept (result.txt, event K1).
+- Run 2 zn2.py (dps 900), same predicates, all PASS (result2.txt, K2).

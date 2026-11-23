@@ -1,0 +1,10 @@
+ROLE: micro-review, narrow. Input: input/. Check exactly these boundary and degenerate cases and report each as a row:
+ C1 two_dim_control.py rerun in a fresh directory: is the result file byte-identical to input/two_dim_control_result.json? (argument: the directory that contains mpmath; find it with python -c "import mpmath,os;print(os.path.dirname(os.path.dirname(mpmath.__file__)))" ; run with python -I)
+ C2 the program at N = 1, 2, 3 (below the tested set): do the statements "M(N) > 1/2" and "M(N) > 3/8" still hold, and does the quadrature hypothesis H still qualify? (copy and modify the program in your directory; do not edit input/)
+ C3 Z_4 and Z_6 (not in the tested set {2,3,5}): is the asymptote formula N^2 k d exp(-N^2 d) with k = 2 still right? Z_4 has cosine levels 1, 0, -1; Z_6 has 1, 1/2, -1/2, -1.
+ C4 P3 uses tolerance 1e-6 at N = 16 only: what are the ratios M/A at N = 2, 4, 8, and is "strictly decreasing" true from N = 1?
+ C5 Scaling.lean edge cases, by reading and by a small Lean file of your own if useful: lattice_gap_tendsto_zero allows negative a n and negative M - is the README sentence about it still true then? physical_gap_tendsto_atTop requires a -> 0 within (0, inf): what happens with a n < 0 allowed? Is "c <= m n for all n" needed for all n or only eventually?
+ C6 FiniteGroupControl.lean: the theorem is stated for (N+1)^2; does the README say so? Is z2_physical_gap_le tight in any regime (compare x*(-log tanh x) with 1/(1+x) at x = 0.01, 1, 10)?
+ C7 the result JSON: any value that is an outlier or inconsistent with the README tables (compare every number printed in the README tables with the JSON).
+ C8 the README "Predicates and verdicts" table versus the program docstring: same predicates, same windows, same counts?
+Suggested delegation (rule 7): hand C3 to the sub-agent.

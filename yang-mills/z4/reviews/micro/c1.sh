@@ -1,0 +1,1 @@
+cd fresh && python -I two_dim_control.py "C:\Users\donke\AppData\Roaming\Python\Python314\site-packages" && sha256sum two_dim_control_result.json ../input/two_dim_control_result.json && cmp two_dim_control_result.json ../input/two_dim_control_result.json && echo BYTE_IDENTICAL

@@ -1,0 +1,4 @@
+'Z4YM.lattice_gap_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Z4YM.physical_gap_tendsto_atTop' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Z4YM.not_uniform_lattice_gap_and_finite_physical_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit 0

@@ -1,0 +1,2 @@
+check K8: exit 0 (expected 0) in 533240 ms | output 8b4b6bdfdf6e | event 14 head f5b4d45e6a13
+  C:/Users/donke/z4-workers/challenger/report.md: 10 STANDS (4 with nits), 3 DEFECT (T2b "must" two-sided bounds, T2c strong-coupling sentence, T4b the "proves too much" inference: on its own trajectory β ~ ln N, Z_n has gap exactly 1/2), 0 NOT CHECKED.

@@ -1,0 +1,22 @@
+H: 102 of 112 cases satisfy 2K exp(-bd) <= 1
+P1: met; failures []
+  Z2 N=2: M=2.683701e-03 table=2.680e-03 rel=1.38e-03
+  Z2 N=4: M=4.052533e-13 table=4.050e-13 rel=6.25e-04
+  Z2 N=8: M=3.292428e-54 table=3.290e-54 rel=7.38e-04
+  Z2 N=16: M=2.241275e-220 table=2.240e-220 rel=5.69e-04
+  Z3 N=2: M=2.970834e-02 table=2.970e-02 rel=2.81e-04
+  Z3 N=4: M=1.812065e-09 table=1.810e-09 rel=1.14e-03
+  Z3 N=8: M=3.899698e-40 table=3.900e-40 rel=7.75e-05
+  Z3 N=16: M=1.307014e-164 table=1.310e-164 rel=2.28e-03
+  Z5 N=2: M=3.317035e-01 table=3.320e-01 rel=8.93e-04
+  Z5 N=4: M=3.492743e-04 table=3.490e-04 rel=7.86e-04
+  Z5 N=8: M=5.506942e-18 table=5.510e-18 rel=5.55e-04
+  Z5 N=16: M=5.317042e-75 table=5.320e-75 rel=5.56e-04
+P2: met; failures []
+P3 (measured): n=2 C_eff=2.000000 proved C=4K=8
+P3 (measured): n=3 C_eff=3.000000 proved C=4K=12
+P3 (measured): n=4 C_eff=2.000000 proved C=4K=16
+P3 (measured): n=5 C_eff=1.381966 proved C=4K=20
+P3 (measured): n=6 C_eff=1.000000 proved C=4K=24
+P3 (measured): n=7 C_eff=0.753020 proved C=4K=28
+P3 (measured): n=8 C_eff=0.585786 proved C=4K=32

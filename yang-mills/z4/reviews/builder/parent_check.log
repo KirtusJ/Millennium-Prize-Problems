@@ -1,0 +1,2 @@
+check K7: exit 0 (expected 0) in 468849 ms | output 9921ce27fc21 | event 13 head 9716bd21d4e3
+  C:/Users/donke/z4-workers/builder/report.md: B1 proved in Lean with constant C = 4K (I picked it over B2 because it contains Z_3) and B3 recompiled; met 4, failed 0, measured only 2; one wording DEFECT in README §1 (the two-sided bounds hold only eventually and give no limit); verify PASS.

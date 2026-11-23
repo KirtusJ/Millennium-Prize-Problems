@@ -1,0 +1,2 @@
+check K6: exit 0 (expected 0) in 268864 ms | output 46cf5af1f808 | event 12 head d1147c6b666a
+  C:\Users\donke\z4-workers\micro\report.md — 8 of 8 items STANDS (met 8, failed 0, measured only 0). No defects found, but there are two wording gaps (C5, C8).

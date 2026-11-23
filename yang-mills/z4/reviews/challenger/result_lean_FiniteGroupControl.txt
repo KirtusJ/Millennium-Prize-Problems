@@ -1,0 +1,4 @@
+'Z4YM.z2_gap_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Z4YM.z2_physical_gap_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Z4YM.z2_physical_gap_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit 0
