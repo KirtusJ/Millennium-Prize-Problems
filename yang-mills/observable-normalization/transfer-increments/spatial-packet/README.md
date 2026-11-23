@@ -10,6 +10,8 @@ This uses C4's [periodic-state first moment](../../../central-quotients/tangent-
 
 The same packet carries a uniform positive amount of spectral weight at strictly positive lattice energies comparable to $\beta^{-1/8}$, including in a state with multiple fixed vectors. The result permits zero gap at fixed coupling and arbitrarily faster closure in lattice units. The physical scale, positivity at fixed coupling, and a four-dimensional interacting continuum theory with a positive mass gap remain open. [Clay formulation](https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf)
 
+A [reflected-strip estimate](strip/README.md) improves the exponent from $1/8$ to $1/7$ for these periodic states and extends the improvement to finite families of magnetic packets.
+
 ## The observable
 
 Fix integer $R\ge2$. At time $t$ take positively oriented $12$-faces at spatial sites $x\in\mathbb Z^3$, transport each holonomy to $(t,0)$ along the ordered spatial coordinate path, and denote its scaled imaginary quaternion by $F(t,x)=\sqrt\beta\,\operatorname{Im}U^{\rm transported}_{12}(t,x)$. Put

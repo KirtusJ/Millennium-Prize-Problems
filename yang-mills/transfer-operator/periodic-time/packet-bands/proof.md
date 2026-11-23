@@ -10,7 +10,7 @@ $$
  X_{i,R}(t)=\sum_{\mathbf z} f_{i,R}(\mathbf z)F_{12}(t,\mathbf z),\qquad
  O_{i,R}(t)=e^{-s|X_{i,R}(t)|^2}.
 $$
-Here $\tau_u f(x)=f(x-u)$. The time trunk acts on the entire sum at a given time by one conjugation, so $O_{i,R}$ uses only links in that spatial slice. All spatial paths in that slice begin at its origin. In the interacting state one need not identify these different probes with exact translates of a single probe. They are exact translates in the reference Gaussian cochain pairing. Set $\psi_{i,R}=(O_{i,R}-\mu O_{i,R})\Omega$. The transfer matrix moments of this family are its connected correlation matrices, including the ordinary covariance at lag zero.
+Here $\tau_u f(x)=f(x-u)$. The time trunk acts on the entire sum at a given time by one conjugation, so $O_{i,R}$ uses only links in that spatial slice. All spatial paths in that slice begin at its origin. For the offsets $iR e_1$ used here these observables are exact spatial translates already in the Wilson state. Prepend to every translated packet path the straight segment from the slice origin to $iR e_1$. This conjugates all its faces by the same group element and preserves the norm. The next segment is again along axis 1, so the two segments reduce, including backtracking, to the single first leg of the common-root path. The other two legs coincide face by face. [C4's independent review](https://github.com/KirtusJ/Millennium-Prize-Problems/issues/1#issuecomment-7102590992) Set $\psi_{i,R}=(O_{i,R}-\mu O_{i,R})\Omega$. The transfer matrix moments of this family are its connected correlation matrices, including the ordinary covariance at lag zero.
 
 ## A uniform estimate for a pair of probes
 
