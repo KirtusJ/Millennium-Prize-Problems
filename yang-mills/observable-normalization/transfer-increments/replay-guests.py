@@ -20,7 +20,7 @@ def run_worker(args, directory, role, request):
     elf = directory / name
     subprocess.run(["gcc", "-Os", "-ffreestanding", "-mcmodel=large", "-fno-pie",
                     "-nostdlib", "-static", f"-Wl,--build-id=none,-T,{HERE.parent / 'link.ld'}",
-                    f"-DROLE={role}", str(HERE / "worker.c"), "-o", str(elf)], check=True)
+                    f"-DROLE={role}", str(args.proof.parent / "worker.c"), "-o", str(elf)], check=True)
     serial = directory / f"{role}.serial"
     command = [args.qemu]
     if args.firmware:
@@ -61,6 +61,8 @@ def run_worker(args, directory, role, request):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("kernel", type=Path)
+    parser.add_argument("--proof", type=Path, default=HERE / "TransferIncrement.lean",
+                        help="Expected Lean file; its sibling worker.c generates it")
     parser.add_argument("--qemu", default="qemu-system-x86_64")
     parser.add_argument("--firmware", type=Path)
     parser.add_argument("--timeout", type=float, default=120)
@@ -72,7 +74,7 @@ def main():
         for role, request in enumerate(["spectrum", "limit", None]):
             generated.extend(run_worker(args, Path(temp), role, request))
     source = ("\n".join(generated) + "\n").encode()
-    if source != (HERE / "TransferIncrement.lean").read_bytes():
+    if source != args.proof.read_bytes():
         raise ValueError("guest output differs from committed Lean bytes")
     print("generated source SHA-256", hashlib.sha256(source).hexdigest())
 
