@@ -27,7 +27,9 @@ static void copy_source(const char *name) {
     }
     if (os(3, fd, 0, 0)) finish(2);
 }
-#ifdef D4_ADJOINT_BAND
+#if defined(D4_FINITE_READINGS)
+#include "../finite-readings/guest.h"
+#elif defined(D4_ADJOINT_BAND)
 #include "../adjoint-band/guest.h"
 #else
 __attribute__((used,noreturn)) static void run(void) {
