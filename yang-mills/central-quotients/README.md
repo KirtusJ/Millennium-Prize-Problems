@@ -86,3 +86,7 @@ On the cubic $SU(2)$ Hamiltonian the vacuum shifted by a central link sign conce
 ## Microscopic curvature on the original isotropic Wilson law
 
 In the $SU(2)$ vacuum, rooted plaquettes scaled by $\sqrt\beta$ have a joint Gaussian curvature limit on fixed lattice cells. The scaled Wilson action has limiting mean $3/4$ and variance $3/8$. Its low-energy spectral weight is of order $\epsilon^8$ in lattice units, and its mean-normalized connected correlation vanishes at fixed positive physical time. [Local Wilson curvature and spectral measure](tangent-curvature/)
+
+## Positive physical-time weight in coherently smeared magnetic curvature
+
+On explicit rapidly weakening pure $SU(2)$ Wilson trajectories, a fixed physical spatial smearing of parallel-transported curvature gives positive mean-normalized and variance-normalized connected readings. The full rooted spacetime field has a free Maxwell curvature limit under the stated joint bounds. The coherent magnetic energy has connected physical spectral mass proportional to $\epsilon^8$ near zero. [Trajectories, original-law argument and spectral measures](magnetic-smearing/)
