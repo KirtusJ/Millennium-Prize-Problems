@@ -132,3 +132,5 @@ Attacked by a challenger (`../reviews/r10-chal/`): every constant rederived and 
 2. Hypothesis to add: the vacuum energy is subtracted, HΩ = 0. H1 already assumes it.
 
 Literature: the continuum limit of abelian lattice gauge theory is treated by Gross and by Driver (Comm. Math. Phys. 110, 1987); see `../LITERATURE.md`. This proof is an elementary Gaussian computation used as a known-answer test and claims nothing beyond that.
+
+Note, 23 November 2026 (second session): for the slice-flowed observable the route of steps 3b to 3d (the supremum of the sampled Fourier coefficient) gives s⁻⁴ where the truth is s^(−5/2); it is replaced there by a Schur and Parseval step, and "convergence with a rate" is proved for s > 0. See [`SPATIAL_FLOW.md`](SPATIAL_FLOW.md), section 3.

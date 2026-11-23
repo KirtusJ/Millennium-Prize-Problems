@@ -1,0 +1,25 @@
+At N=16 and N=32 (l=1, s=0.005), C(0) and M1/M0 are:
+
+| N | C(0) | M1/M0 |
+|---|---|---|
+| 16 | 574.67958 | 21.956692 |
+| 32 | 542.73368 | 21.711833 |
+
+- **Control:** the lowest nonzero khat at N=16 is 6.2429 (32 sin(π/16)).
+- **Cross-check:** the position-space and momentum-space forms agree to roundoff, and a brute-force double sum over k,k' at N=16 agrees with the momentum form (relative difference below 1e-10). All five predicates I fixed before the first run were met, none failed, and the one number measured rather than predicted was the sub-agent's finite-difference result below.
+- **Sub-agent:** it wrote the right control, then recomputed M1/M0 at N=16 by finite differences of C(t). Its one-sided estimate with t ≥ 0 gave 21.9566922, matching my analytic 21.9566923. I reran its program and got identical numbers.
+- **Sub-agent slip:** its "richardson" rows use the wrong combination, so ignore them. It also wrote results.txt with `tee`, not mode "x", so my rerun overwrote that file with identical content.
+- **Verify, last lines:** `pcp_os.py verify --ws pcp` ended with "result: PASS (a local fact about these files…)". `pcpos verify pcp/register.jsonl` ended with "A pass is a fact about these bytes…". Both of my `check` runs exited 0.
+
+The report also has the exact rerun commands. Everything is in `/home/user/z4-workers/r11-flowbounds/child`:
+- control.txt
+- results_child_run1.json
+- report.md
+- notes.md
+- compute.py
+- grandchild/
+- pcp/
+
+That notification is just my earlier wait-loop timing out; the sub-agent had already finished and I'd already used its output. Nothing further to act on.
+
+The work is complete: results are in `results_child_run1.json` and `report.md` in `/home/user/z4-workers/r11-flowbounds/child`. The headline numbers are C(0) = 574.67958 and M1/M0 = 21.956692 at N=16, and C(0) = 542.73368 and M1/M0 = 21.711833 at N=32.

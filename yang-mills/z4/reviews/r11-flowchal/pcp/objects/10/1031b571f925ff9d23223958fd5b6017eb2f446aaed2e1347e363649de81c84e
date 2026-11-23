@@ -1,0 +1,34 @@
+K(0..4) at tau = 6 came out of the Green-function formula with all three predicates passing. The sub-agent's check of G at one mass also passed, and both PCP verifications report PASS.
+
+Control: sum cos²(2πl/16) = 8.0, written to `control.txt`.
+
+Closed form for the periodic 16-chain: G(n; m²) = cosh(w(8−|n|)) / (2 sinh w · sinh 8w), with cosh w = 1 + m²/2. It matches the direct 16-term sum for 640 cases, which is every distinct nonzero spatial m² (128 of them) at n = 0..4, with max difference 9e-49 in 50-digit Decimal. mpmath isn't installed, so I used Decimal. The spatial zero mode is omitted, since q₁² + q₂² = 0 there.
+
+| n | K(n) |
+|---|---|
+| 0 | 4.59711720810075987680612797526e-5 |
+| 1 | 2.95053418892087773534077950338e-5 |
+| 2 | 1.91229675153985667565436979283e-5 |
+| 3 | 1.25407275612970961687866633600e-5 |
+| 4 | 8.36761198729685332197301080076e-6 |
+
+R = [K(2)² − 2K(3)² + K(4)²] / K(0)² = 0.0573332378047662315959012113343
+
+- **Independent check:** a plain-float direct 4-fold sum over all 65535 nonzero momenta agrees with these K values to 1.6e-14 relative, against a tolerance of 1e-11.
+- **Failed predicates:** none. My first-run output was piped through `tail` inside the PCP check and lost, so I reran the script in a scratch copy to read the predicate lines. The numbers were identical.
+- **Sub-agent** (`grandchild/`): its control sum of cos(2πl/16) was −9e-16, effectively zero. At m² = 2 − 2cos(π/8) the closed form matched the direct sum for n = 0..4 with max difference 6.66e-16 against a 1e-13 tolerance. I reran its script in a scratch copy and got the same 6.66e-16. Its own `result.md` can't be regenerated in place, because the write-once rule blocks a rerun there.
+- **Not checked:** there is no direct 4-fold sum beyond float precision, and no scan over tau.
+
+**PCP verification, last line of each:**
+- Python: `result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)`
+- Rust: `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.`
+
+Files are in /home/user/z4-workers/r11-flowchal/child:
+- control.txt
+- notes.md
+- k_green.py
+- K_result.json
+- report.md
+- grandchild/
+
+`report.md` has the verdict table and exact rerun commands.

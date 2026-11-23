@@ -1,0 +1,13 @@
+BRIEF r12-lean (formalizer). Network: none. Lean 4.19.0 with Mathlib as in rule 6. State each lemma in general form first and let Lean find the proof; report the exact statement proved and any hypothesis you had to add or could drop.
+
+Prove in one file R12Analytic.lean (namespace R12), no sorry, standard axioms only:
+ F1. For all real y >= 0: y - y^3/6 <= Real.sin y. (Mathlib has it on a bounded interval only; prove for all y >= 0, e.g. by monotonicity of y -> sin y - y + y^3/6 using cos y >= 1 - y^2/2.)
+ F2. For all real y: |Real.sin y - y| <= |y|^3/6.
+ F3. Lattice momentum error: for b > 0 and real k: | (2/b) * Real.sin(k*b/2) - k | <= b^2 * |k|^3 / 24.
+ F4. Jordan, two-sided: for |y| <= pi/2: (2/pi)*|y| <= |Real.sin y| <= |y|; hence for b > 0, |k b| <= pi: (2/pi)|k| <= |(2/b) sin(k b/2)| <= |k|.
+ F5. Gaussian sum against integral, finite form: for c > 0 and every natural M: sum_{m=1}^{M} exp(-c m^2) <= sqrt(pi/c)/2. (Use an antitone sum-integral comparison and the Gaussian integral over [0, infinity), integral_gaussian_Ioi or similar in Mathlib.) If this takes more than a third of your budget, prove instead the weaker closed form sum_{m=1}^{M} exp(-c m^2) <= 1/(exp(c) - 1)  (from m^2 >= m and a geometric sum) and say so.
+ F6. For x >= 0 and j a natural number >= 1, c > 0: x^(2j) * exp(-c x^2) <= (j/(e c))^j. (The maximum used in the theta-function bounds.)
+ F7. If p, q are real with p^2 + q^2 > 0 (think p = sqrt(p1^2+p2^2), q = p3) then (p^2/(p^2+q^2)) is in [0,1] (the projector P33), and for a, a' in [0, A], |a^2 - a'^2| <= 2 A |a - a'|.
+Mutation control: after F3 compiles, change 24 to 25 in a COPY of the statement and confirm that your proof no longer closes it or (better) exhibit in Lean a counterexample direction: show that the constant 24 cannot be replaced by 25 for all k, b (e.g. via the limit; a numeric witness with interval bounds is enough: find k, b with |khat - k| > b^2 |k|^3/25, proved by norm_num-style bounds if feasible; otherwise give the witness numerically in Python and say it is numeric).
+Delegate to the child: a Python check of F1-F6 on 10^5 random points each (hypothesis per case first), control question for the child: sin(1) - 1 + 1/6 to 6 decimals (answer 0.008138).
+Budget: about 20 minutes. Report compile exit code, the #print axioms output for every theorem, and any lemma not proved.

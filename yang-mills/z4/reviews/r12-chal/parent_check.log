@@ -1,0 +1,2 @@
+check K9: exit 0 (expected 0) in 457895 ms | output e9b3e5c3c1f1 | event 11 head da4831c3adf3
+  /home/user/z4-workers/r12-chal/report.md — 23 items: 21 STANDS, 1 DEFECT (B3 text says s^−4; the correct exponent is s^−7/2), 1 measured only, 0 NOT CHECKED.

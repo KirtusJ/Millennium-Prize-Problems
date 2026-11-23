@@ -1,0 +1,22 @@
+All six statements held on 10^5 random points each, with no failures within tolerance. `control.txt` reads 0.008138.
+
+| Item | Verdict | Qualifying cases | Min relative slack |
+|---|---|---|---|
+| F1 | STANDS | 50,188 (y ≥ 0) | 0 (equality at y ≈ 0) |
+| F2 | STANDS | 100,000 | −6e-4, rounding noise at tiny y |
+| F3 | STANDS | 90,038 (b > 0) | negative only where the right side is rounding noise |
+| F4a | STANDS | 76,329 | 2.9e-5 (lower), 1.7e-13 (upper) |
+| F4b | STANDS | 89,604 | 1.7e-4 (lower), −2.2e-16 (upper, one-ulp noise) |
+| F5 | STANDS | 98,020 (M ≥ 1) | 5.6e-2 |
+| F6 | STANDS | 98,080 | −5.7e-14 at the 1,000 exact-equality points |
+
+- **Tolerance:** 8 × eps (2^-52) times the operand magnitudes, including the cancelled term for F1–F3. F6 is compared in the log domain to avoid overflow. F5 sums with `math.fsum` and truncates where the terms underflow.
+- **Failed predicates:** none, from my expectations or from the target. The negative minimum slacks are rounding noise inside tolerance.
+- **Not checked:** values outside the sampled ranges (|y| > 30, |k| > 50, M above about 3,000, j > 60), anything in extended precision except the F6 boundary, and F4 outside its hypothesis region. Random sampling is not a proof.
+- **Delegated check:** the sub-agent recomputed F6 at 50 digits (`decimal`) for 21 (j, c) pairs. It got a relative difference of at most 9.35e-48 at x² = j/c, and lhs < rhs in all 42 cases at x² = (j/c)(1 ± 1e-3). I reread its `results.txt` and reran its script in a scratch copy; the output was identical.
+- **PCP verify, last line of each:**
+  - Python: "result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)"
+  - Rust: "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+- **Rust verify detail:** its output continues past the line quoted above only with the register SHA-256, `b615a366…e9cb`.
+
+Everything is in `/home/user/z4-workers/r12-lean/child`: `control.txt`, `check.py` (predicates and tolerances in the docstring), `results1.txt`, `notes.md`, `report.md` and `grandchild/`. `report.md` has the rerun commands.

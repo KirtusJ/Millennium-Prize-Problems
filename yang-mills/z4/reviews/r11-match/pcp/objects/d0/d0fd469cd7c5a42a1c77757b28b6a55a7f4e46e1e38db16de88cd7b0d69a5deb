@@ -1,0 +1,39 @@
+I found the string tension at β = 2.3, 2.4 and 2.5, and plaquette values only at nearby couplings. I also found continuum and scale-matched scalar glueball values, but not at fixed β. Web search was refused, so I used only arXiv PDFs.
+
+**Control:** I₂(1)/I₁(1) = 0.240194, written to `control.txt`.
+
+| quantity | verdict | value (source) |
+|---|---|---|
+| a√σ at β = 2.3 / 2.4 / 2.5 | FOUND | 0.3690(30) / 0.2660(20) / 0.1905(8) (Fingberg–Heller–Karsch hep-lat/9208012, Table 3) |
+| a√σ at β = 2.2, 2.6, 2.7 | FOUND | 0.4690(100), 0.1360(40), 0.1015(10) (same table) |
+| a√σ at β = 2.2986, 2.3726, 2.4265, 2.5115 | FOUND | 0.3667(18), 0.2879(10), 0.2388(9), 0.17680(76) (Lucini–Teper–Wenger hep-lat/0307017, Table 1) |
+| plaquette at β = 2.3, 2.4, 2.5 exactly | NOT FOUND | none of the sources tabulates these |
+| 1 − ⟨U_p⟩ at β = 2.2986, 2.3726, 2.4265, 2.5115 | FOUND | 0.39746(1), 0.37661(2), 0.36352(1), 0.34564(1) (Fingberg–Heller–Karsch, Table 8) |
+| m₀₊₊/√σ, continuum | FOUND | 3.74(12) (Teper hep-th/9812187, Table 1) |
+| m₀₊₊/√σ at fixed a√σ | FOUND, but not at fixed β | 3.67(10), 3.62(7), 3.49(3) at a√σ = 0.197, 0.228, 0.296 (Teper, Table 8) |
+
+The Fingberg–Heller–Karsch plaquette operator is (1/N)Tr U_p, which is (1/2)Tr U_p for SU(2). Their Table 3 is a compilation from earlier work, so I did not trace the underlying primary papers.
+
+**Size matching** (`match.py`, output in `match_out.txt`): l√σ = N·a√σ, using the Fingberg–Heller–Karsch values for β = 2.2 to 2.7. Four pairs with N_f = 2N_c agree within 5%, out of 72 candidate pairs:
+- (2.3, 6)–(2.5, 12): +3.25%
+- (2.3, 8)–(2.5, 16): +3.25%
+- (2.4, 6)–(2.6, 12): +2.26%
+- (2.4, 8)–(2.6, 16): +2.26%
+
+Only 2 of the 6 coarse cases (β_c = 2.3, 2.4, 2.5 with N_c = 6, 8) have any partner within 5% among β = 2.3 to 2.5. That failed my "every case has a partner" hypothesis, which was my own expectation, not a defect of the data. I had predicted the 2.3→2.5 match but not the 2.4→2.6 one. N_c = 12 has no partner because N_f = 24 was not requested.
+
+**Sub-agent:** I asked it to re-locate a√σ at β = 2.5. Its control, 1 − I₂(0.5)/I₁(0.5) = 0.876282, matched, and I reread its `control.txt`. It found 0.1905(8) in Fingberg–Heller–Karsch Table 3, the same as mine. It did not identify which primary paper that table entry comes from.
+
+**PCP OS:** `init` reported the method as not found, as expected. The `match` program was run through `check` with exit 0. The last lines of the two verifies:
+- Python verify: `result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)`
+- Rust verify: `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.`
+
+**Not checked:** other plaquette sources at exact β, Bloch et al., and Lucini–Teper–Wenger hep-lat/0404008. The literature lookups themselves were done by hand with curl and pdftotext, so only `match` is in the register.
+
+Files are in `/home/user/z4-workers/r11-match/child`:
+- `control.txt`
+- `results.md`
+- `report.md`
+- `notes.md`
+- `match.py`
+- `match_out.txt`

@@ -1,0 +1,31 @@
+I found no defect in T1, T2 or T3 over the requested ranges, and the constant "2" in T2 is needed in general. The control sum is 1.086435, in `control.txt`.
+
+| Item | Verdict | Evidence |
+|---|---|---|
+| T1 (j=0) | STANDS | Holds at 241/241 grid points. |
+| T2 (j=1..4) | STANDS | Holds in 964/964 cases. |
+| T2 constant | 2 needed in general | Constant 1 holds for j≤4, but fails for j=8, 12, 20 and 30. Constant 2 holds there. |
+| "Integral + max" justification | STANDS | For a unimodal integrand the one-sided sum is at most integral + max, so the two-sided sum is at most integral over R + 2·max. That is where the 2 comes from. |
+| T3, q=2 | STANDS | It is an equality. The brute-force 3-D sum matches at 13/13 points. |
+| T3, q=4 identity | STANDS | The identity matches the brute-force sum at 13/13 points. Substituting the bounds for each theta gives an upper bound at all 241 points. |
+
+Constant 1 and T3 notes:
+- **Constant 1:** at j=8, 12, 20 and 30 the sum exceeds integral + max by 1.12, 1.28, 1.44 and 1.54 times the max. My expectation that constant 1 would hold was wrong; it is not a defect in T2, which claims constant 2. j≥8 was outside the requested range.
+- **T3 brute force:** the 3-D brute-force comparison was run only at 13 values of c≥0.05.
+
+**Not checked:** I used float64 only, with no interval arithmetic, because neither mpmath nor numpy is installed. A finite grid does not prove "for all c" by itself. Details are in `report.md`.
+
+**Delegated check:** the sub-agent recomputed θ₂(0.01), θ₁(0.3) and θ₀(0.01) by direct summation and by Poisson summation, and its own control gave 1.086435. The two methods agree to about 1e-15. I re-summed directly and got the same values.
+
+**PCP OS:** `$P verify --ws pcp` ends with `result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)`. The Rust `pcpos verify pcp/register.jsonl` ends with `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.`
+
+Counts: 0 predicates failed in the requested ranges.
+
+Everything is in `/home/user/z4-workers/r12-chal/child`:
+- `report.md`
+- `notes.md`
+- `control.txt`
+- `main_test.py`
+- `const1_probe.py`
+- `const1_largej.py`
+- `grandchild/`

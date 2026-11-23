@@ -114,3 +114,9 @@ After the literature was read (`../LITERATURE.md`; Lüscher, arXiv:1006.4518; L�
 - Free benchmark (worker's program, `../reviews/r10-lit2/`): ⟨B₃²⟩ = 1/(48π²t²) under the spatial flow; the equal-time variance of the smeared flowed B₃² is finite for every t > 0 and tends to (√π/(640π²))·∫f²·t^(−5/2) for smearing width much larger than √t. The sharp-time b⁻⁵ of S1′ becomes (√t)⁻⁵.
 
 S6′ above used the time-evolved plaquette density, which mixes magnetic and electric parts; S6″ replaces it.
+
+---
+
+# Note, 23 November 2026 (second session): S6″ is superseded
+
+S6″ and its caveat cannot both hold: under a flow of the spatial links alone the electric half of ¼G·G is not regularized (wildcard worker, `../reviews/r12-wild/`), and under the four-dimensional flow the flowed algebra is not reflection positive (C4; reproduced in `../reviews/r11-flowchal/`). The text above is kept as written. The statement as it now stands is S6‴ in [`SPATIAL_FLOW.md`](SPATIAL_FLOW.md).

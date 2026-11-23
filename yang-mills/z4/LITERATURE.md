@@ -67,3 +67,21 @@ Mihajlovic, "SU(2) Yang-Mills: Spectral Bounds, Vacuum Concentration, and Criter
 - It said Driver's theorem made the benchmark's convergence "not new". The two statements are different limits; the benchmark is elementary, and that is all.
 
 All four came from relying on search summaries. The rule adopted: a row enters this file as established only when the statement has been located in the source.
+
+## 7. Third pass, 23 November 2026: the flow inside one time slice
+
+Read by a worker and its child from the arXiv full texts, with locators; not reread by the director ([`reviews/r11-lit/report.md`](reviews/r11-lit/report.md)). The fetched papers and extracted text are not kept here.
+
+| Statement | Source and locator | How read |
+|---|---|---|
+| A "spatial gradient flow" of the spatial links under the spatial Wilson action is used for glueball spectroscopy, because the four-dimensional flow distorts the correlator at separations below the smearing radius. Positivity is not mentioned. | Sakai and Sasaki, Phys. Rev. D 107, 034510, arXiv:2211.15176, Sec. II.B eqs. (3)–(4); Sec. V eq. (13), Figs. 4–5 | full text |
+| The heat flow of a three-dimensional connection as a gauge-invariant regularization of observables: proposed; state space of distributional gauge orbits on the three-torus; smoothened observables for the three-dimensional stochastic Yang–Mills–Higgs dynamics. All on three-dimensional space or space-time, none on a slice of a four-dimensional measure. | Charalambous and Gross, arXiv:1004.1639, Sec. 1; Cao and Chatterjee, arXiv:2111.12813, Thm 1.6, 1.16, and arXiv:2111.10652, Thm 1.19, Cor. 1.22; Chandra, Chevyrev, Hairer and Shen, arXiv:2201.03487, Thm 1.2, Remark 1.3 | full text, theorem statements |
+| t²⟨E⟩ = 3(N²−1)g²/(128π²) at leading order | Lüscher, arXiv:1006.4518, eq. (2.32) | full text |
+| Finiteness of flowed fields to all orders of perturbation theory is proved for the four-dimensional flow, in dimensional regularization, through a local theory in 4+1 dimensions. Nothing is said about a flow in three directions, or about reflection positivity. | Lüscher and Weisz, arXiv:1101.0963, Sec. 7, 8.2 | full text; word search for positivity: none |
+| a√σ = 0.3690(30), 0.2660(20), 0.1905(8) at β = 2.3, 2.4, 2.5 for SU(2), Wilson action (a compilation). The average plaquette is tabulated at 2.2986, 2.4265, 2.5115, not at these couplings. | Fingberg, Heller and Karsch, arXiv:hep-lat/9208012, Table 3, Table 8 | full text |
+| Continuum m(0⁺⁺)/√σ = 3.78(7) for SU(2) | Lucini, Teper and Wenger, arXiv:hep-lat/0404008, Table 14 | full text |
+| "the interacting fields cannot in general be restricted to sharp times, as is known from model studies" | Jäkel and Wreszinski, arXiv:2002.09312 | abstract only |
+
+Not found, after search: any statement, rigorous or numerical, that a density flowed in the spatial directions alone has a continuum limit, or a finite correlator at zero time separation, in an interacting theory; any published statement that the four-dimensional flow breaks reflection positivity for the flowed algebra (C4's and G4's result of today is not contradicted and not anticipated by what was read). Glimm and Jaffe's book could not be reached; the standard statement on time-zero Wick powers is not cited here.
+
+What it changes: the slice flow is not new and is cited; its positivity is the ordinary transfer-matrix statement for a function of one slice; its continuum finiteness in the interacting theory is an open hypothesis of this folder (H-fin in `fixed-size/SPATIAL_FLOW.md`) and must not be imported from Lüscher and Weisz. A correction to section 4 of this file: the plaquette values quoted there from memory are now replaced, for the two couplings used, by interpolation in the published table.

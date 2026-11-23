@@ -1,0 +1,7 @@
+P1 pairs qualifying 6/6 -> PASS
+P2 (1-<Up> decreasing) pairs qualifying 6/6 -> PASS
+P3 a(2.3)/a(2.4) measured 1.387 2-loop 1.286 dev 7.9% -> PASS
+P3 a(2.4)/a(2.5) measured 1.396 2-loop 1.287 dev 8.5% -> PASS
+P6 plaquette at exactly beta=2.3 in Table 8: NO (not tabulated)
+P6 plaquette at exactly beta=2.4 in Table 8: NO (not tabulated)
+P6 plaquette at exactly beta=2.5 in Table 8: NO (not tabulated)

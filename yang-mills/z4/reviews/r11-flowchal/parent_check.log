@@ -1,0 +1,2 @@
+check K3: exit 0 (expected 0) in 289662 ms | output 232018cb0a6c | event 5 head 5d55c19a7c6e
+  /home/user/z4-workers/r11-flowchal/report.md: 9 STANDS, 0 DEFECT, 0 NOT CHECKED, plus 1 value measured only (the full-flow form turns negative at tau = 3.5).

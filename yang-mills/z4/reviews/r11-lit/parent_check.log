@@ -1,0 +1,2 @@
+check K8: exit 0 (expected 0) in 276411 ms | output 2c96462923dc | event 10 head d413724fda09
+  /home/user/z4-workers/r11-lit/report.md — STANDS 6, DEFECT 0, NOT CHECKED 5

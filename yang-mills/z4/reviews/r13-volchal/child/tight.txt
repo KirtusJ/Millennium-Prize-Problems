@@ -1,0 +1,1 @@
+p3=0,q!=0: min slack=4.441e-15, min slack/|q|^2=0.4584, max viol count=0

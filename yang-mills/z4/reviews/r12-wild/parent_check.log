@@ -1,0 +1,2 @@
+check K15: exit 0 (expected 0) in 308720 ms | output a1c225d7446a | event 17 head 6ccf8b27886e
+  /home/user/z4-workers/r12-wild/report.md: 2 STANDS, 2 DEFECT, 1 NOT CHECKED. Main finding: the spatial flow leaves ⟨electric density⟩ at 1/b⁴, so S6″'s bound on t²⟨E_b(t)⟩ fails.

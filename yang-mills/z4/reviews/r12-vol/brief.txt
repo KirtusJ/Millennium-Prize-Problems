@@ -1,0 +1,16 @@
+BRIEF r12-vol (builder, positive arc). Network: none.
+
+Paper text in this directory: SETTING.md (free lattice Maxwell benchmark), THEOREMS_B.md (Theorems B1-B3 for the SPATIALLY FLOWED observable: each transverse mode multiplied by exp(-s khat^2); D_{t,s}(x) = l^-3 sum_{k != 0} e^{i k.x} P33 (khat/2) e^{-t khat} e^{-2 s khat^2}; C_{b,s}(t) = 2 b^6 sum_{x,y} f(bx) f(by) D_{t,s}(x-y)^2 = (2/l^6) sum_{k,k' != 0} |fhat_b(k+k')|^2 a(k) a(k')), PROOF_FREE_BOUNDS.md (older lemmas cited). A challenger has upheld B1-B3 as stated.
+
+The weakness to remove. In B1 the lower bounds v1, v2 are proportional to (int f)^2 / l^6: they keep only pairs with k + k' = 0 and so vanish as the box side l -> infinity, and they need int f != 0. The true equal-time value is C_s(0) ~ (sqrt(pi)/(640 pi^2)) * int f^2 * s^(-5/2) for smearing width >> sqrt(s), which does not depend on l and does not need int f != 0. The upper bound V already has the right form (const * Phi * s^(-5/2), Phi ~ int f^2).
+
+Make stronger, in order:
+ V1. Prove a lower bound of the same form as the truth: for t >= 0, s > 0,
+       C_{b,s}(t) >= c(t/sqrt(s)) * s^(-5/2) * [ int f^2 - (error controlled by sqrt(s) * ||grad f||_2 or similar) ]
+     with c explicit, valid uniformly in b <= b1(s, f) and in l >= l1(s). Suggested route (yours to change): write C = (2/l^6) sum_q |fhat_b(q)|^2 G(q), G(q) = sum_k a(k) a(q-k) >= 0; show G(q) >= (1/2) G-type lower bound for |q| <= q0 ~ 1/sqrt(s) by restricting k to a region where a(q-k) >= (1/2) a(k) or by a direct estimate; bound the weight of f at |q| > q0 by ||grad f||_2^2/q0^2 (Parseval), with the sampled fhat_b handled by the aliasing lemma or by working with b^3 sum f^2 directly; lower-bound the remaining lattice sum over k by an integral (state the Riemann-sum comparison lemma you use, with its hypothesis, e.g. monotonicity in each |k_i| or a Lipschitz bound).
+ V2. Hence remove the hypothesis int f != 0 from B1 (replace by f not identically zero and s small against the scale of f), and state the l -> infinity limit: bounds uniform in the volume.
+ V3. The same for B3: M1/M0 <= const/sqrt(s), M2/M0 <= const/s PROVED (the earlier proof had these only as measured, because v2 ~ s^(-5/2) was not proved).
+ V4. Numerics with your own program, predicates fixed first: l in {1, 2, 4}, s in {0.001, 0.002, 0.005} (so l/sqrt(s) from 14 to 126), N up to what fits in 5 minutes and memory (use FFT: D^2 in position space), f of fixed physical shape (a non-symmetric bump of width about 0.15, periodized), and one f with int f = 0 (e.g. the x1-derivative of the bump). For each case: hypothesis first (b <= b1, l >= l1), then new lower bound <= C <= V. Report the ratio C * s^(5/2) / int f^2 against sqrt(pi)/(640 pi^2) = 2.806e-4.
+ V5. Lean for pure-algebra steps.
+Delegate to the child: an independent FFT evaluation of C_{b,s}(0) for one case you specify completely (give f in closed form), control question for the child: sqrt(pi)/(640 pi^2) = 2.806e-4 (answer 0.00028061 to 8 decimals).
+A partial proof with the missing step named is a good outcome; a claimed proof with a gap is not. Budget: about 20 minutes.

@@ -1,0 +1,2 @@
+/home/user/z4-workers/r12-chal/chal.py:264: RuntimeWarning: invalid value encountered in scalar divide
+  mx = max(mx, np.linalg.norm(g)/bd); mxg = max(mxg, np.linalg.norm(gg))

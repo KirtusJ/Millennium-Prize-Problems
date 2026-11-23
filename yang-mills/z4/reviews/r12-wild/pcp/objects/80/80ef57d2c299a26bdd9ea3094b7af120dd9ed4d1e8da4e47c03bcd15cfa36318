@@ -1,0 +1,19 @@
+The claim holds: the longitudinal part is exactly 1 for every k with p ≠ 0, at every tau I tried. The control came out at 2.000000.
+
+| tau | e(tau) | m(tau) | tau²·m |
+|---|---|---|---|
+| 1 | 1.0111277555 | 6.5664481334e-03 | 6.5664481334e-03 |
+| 4 | 1.0016304900 | 3.6234145385e-04 | 5.7974632616e-03 |
+| 16 | 1.0004608860 | 4.4066867511e-06 | 1.1281118083e-03 |
+
+- **Single mode:** for n = (3,5,1,7) at L=16 the longitudinal sum is 1.000000000000000 at tau = 1, 4 and 16. The deviation is 2.2e-16, against a tolerance of 1e-12 set by float64 rounding.
+- **All momenta:** all 65520 modes with p ≠ 0 qualify at each tau, with a maximum deviation of 8.9e-16.
+- **Why it is exactly 1:** a_4 is independent of a_i and P_L a has norm² 1/A, so the sum is (p² + q4²)/A = 1.
+- **Why e(tau) exceeds 1:** the transverse part also contributes to e(tau). The claim concerns only the longitudinal piece.
+- **p = 0 modes:** each of the 15 modes with p = 0 and k ≠ 0 contributes 3 to e.
+- **My P5 failure:** my first closed form for m(tau) was off by a factor of 2, because there are two transverse polarizations. That was my own expectation error, not a defect in the target. With the factor 2 the closed form matches the matrix result to within 2.5e-14.
+- **A slip of mine:** check K2 exited 2 because `m_check.py` had not been written yet (an earlier command was aborted before the file was created). K4 is the rerun. Both are kept in the register.
+- **Sub-agent:** I asked it for a Monte Carlo of e(tau=4) at L=8, built directly from Gaussian samples with a fixed seed, after its own control. It returned 1.00326752 ± 0.00035587 against an exact 1.00331441, which is −0.13 sigma, so the 4-sigma predicate passed. I reran a copy of its code and got identical output (K3). I checked its output, not its source line by line.
+- **Register:** `pcp` verifies. Last line: "result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)". The method was reported not found at init, as expected.
+
+Everything is in `/home/user/z4-workers/r12-wild/child/`; start with `report.md`, which has the verdict table and rerun commands. Result files open with mode "x", so delete them before rerunning.

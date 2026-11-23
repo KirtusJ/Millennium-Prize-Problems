@@ -1,0 +1,14 @@
+/home/user/z4-workers/r12-vol/lean/R12Vol.lean:4:29: warning: unused variable `hx`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/user/z4-workers/r12-vol/lean/R12Vol.lean:4:42: warning: unused variable `hy`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/user/z4-workers/r12-vol/lean/R12Vol.lean:13:29: warning: unused variable `hX`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/user/z4-workers/r12-vol/lean/R12Vol.lean:13:42: warning: unused variable `ha`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+'sq_div_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'perp_prod' depends on axioms: [propext, Classical.choice, Quot.sound]
+'sq_sub_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'pair_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+'gauss_lin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'jensen_exp' depends on axioms: [propext, Classical.choice, Quot.sound]

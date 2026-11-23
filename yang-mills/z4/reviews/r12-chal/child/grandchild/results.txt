@@ -1,0 +1,3 @@
+theta_2(0.01): direct=1.329340388179e+05 poisson=1.329340388179e+05 reldiff=4.379e-16
+theta_1(0.3): direct=5.393405312651e+00 poisson=5.393405312651e+00 reldiff=1.647e-16
+theta_0(0.01): direct=1.772453850906e+01 poisson=1.772453850906e+01 reldiff=8.018e-16

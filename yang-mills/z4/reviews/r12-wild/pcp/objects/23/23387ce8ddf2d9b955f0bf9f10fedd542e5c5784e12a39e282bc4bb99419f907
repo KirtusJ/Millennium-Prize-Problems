@@ -1,0 +1,13 @@
+P1 control 2.0 MET
+P2 tau=1 single-mode long. = 1.000000000000000 dev=2.23e-16 MET
+P2 tau=4 single-mode long. = 1.000000000000000 dev=2.23e-16 MET
+P2 tau=16 single-mode long. = 1.000000000000000 dev=2.23e-16 MET
+tau=1: e=1.0111277555 m=6.5664481334e-03 tau^2*m=6.5664481334e-03
+  P3 modes with p!=0: 65520, qualifying(|dev|<1e-12): 65520, max dev 8.88e-16 MET
+  P4 closed e=1.0111277555 diff=0.0e+00 MET; P5 closed m=3.2832240667e-03 diff=3.3e-03 FAIL
+tau=4: e=1.0016304900 m=3.6234145385e-04 tau^2*m=5.7974632616e-03
+  P3 modes with p!=0: 65520, qualifying(|dev|<1e-12): 65520, max dev 8.88e-16 MET
+  P4 closed e=1.0016304900 diff=0.0e+00 MET; P5 closed m=1.8117072692e-04 diff=1.8e-04 FAIL
+tau=16: e=1.0004608860 m=4.4066867511e-06 tau^2*m=1.1281118083e-03
+  P3 modes with p!=0: 65520, qualifying(|dev|<1e-12): 65520, max dev 8.88e-16 MET
+  P4 closed e=1.0004608860 diff=0.0e+00 MET; P5 closed m=2.2033433755e-06 diff=2.2e-06 FAIL

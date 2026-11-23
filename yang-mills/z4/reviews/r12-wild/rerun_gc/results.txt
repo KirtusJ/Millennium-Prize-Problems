@@ -1,0 +1,6 @@
+V=4095 N=2000 tau=4 seed=12345
+MC=1.00326752
+SE=0.00035587
+exact=1.00331441
+z=-0.132 sigmas
+predicate |MC-exact|<4SE: True

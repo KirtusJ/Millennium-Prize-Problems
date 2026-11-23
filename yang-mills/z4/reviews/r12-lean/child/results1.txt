@@ -1,0 +1,9 @@
+F1: sampled=100000 qualifying=50188 fails=0 min_rel_slack=0.000e+00 min_slack_in_tol_units=0 (min rel slack among rhs>1e-8*extra: 0.000e+00)
+F2: sampled=100000 qualifying=100000 fails=0 min_rel_slack=-5.963e-04 min_slack_in_tol_units=-0.0619 (min rel slack among rhs>1e-8*extra: -7.817e-09)
+F3: sampled=100000 qualifying=90038 fails=0 min_rel_slack=-9.997e-01 min_slack_in_tol_units=-0.199 (min rel slack among rhs>1e-8*extra: -2.876e-08)
+F4a-lower: sampled=100000 qualifying=76329 fails=0 min_rel_slack=2.857e-05 min_slack_in_tol_units=4.5e+09 (min rel slack among rhs>1e-8*extra: 2.857e-05)
+F4a-upper: sampled=100000 qualifying=76329 fails=0 min_rel_slack=1.668e-13 min_slack_in_tol_units=31.3 (min rel slack among rhs>1e-8*extra: 1.668e-13)
+F4b-lower: sampled=100000 qualifying=89604 fails=0 min_rel_slack=1.714e-04 min_slack_in_tol_units=2.7e+10 (min rel slack among rhs>1e-8*extra: 1.714e-04)
+F4b-upper: sampled=100000 qualifying=89604 fails=0 min_rel_slack=-2.198e-16 min_slack_in_tol_units=-0.0412 (min rel slack among rhs>1e-8*extra: -2.198e-16)
+F5: sampled=100000 qualifying=98020 fails=0 min_rel_slack=5.642e-02 min_slack_in_tol_units=1.63e+13 (min rel slack among rhs>1e-8*extra: 5.642e-02)
+F6: sampled=100000 qualifying=98080 fails=0 min_rel_slack=-5.684e-14 min_slack_in_tol_units=-0.171 ; equality pts (t=1) max|d|=5.684e-14

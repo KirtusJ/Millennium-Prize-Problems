@@ -455,3 +455,21 @@ Both points are added to the proof file as a review note; the proof text is unch
 Counts, as met, failed, measured only: challenger 13, 0, 1 and its sub-agent 3, 0, 0; readers' extraction checks 18, 0, 0; flowed benchmark 6, 0, 0.
 
 Director, workers and sub-agents are one model family; this is not independent review, and a located statement is not a refereed reading.
+
+## Tenth round: the flow inside one time slice; the session restarted on Linux
+
+23 November 2026, second session (the Z4 session was restarted by the principal and now runs in a Linux container). Nine workers (register checks K3, K5, K8, K9, K11, K13, K15, K17, K18 of [`pcp/linux-23nov/register.jsonl`](pcp/linux-23nov/register.jsonl); the director's reruns and Lean compiles are the checks between and after them, to K23), each with a child started as its own headless session and a grandchild below it; eighteen registers, all verified in the Rust and Python hosts. Statement, theorems and record: [`fixed-size/SPATIAL_FLOW.md`](fixed-size/SPATIAL_FLOW.md). Measurement: [`fixed-size/MATCHED_MEASUREMENT.md`](fixed-size/MATCHED_MEASUREMENT.md). Literature: section 7 of [`LITERATURE.md`](LITERATURE.md).
+
+In brief:
+
+- **C4's reflection-positivity test stands** on an independent reproduction to all printed digits; the fully flowed form turns negative at lattice flow time 3.50 on 16⁴, the slice-flowed form is positive for every flow time.
+- **S6″ is withdrawn in favour of S6‴**: the observable is the magnetic density flowed inside one time slice. Its correlator is a positive Laplace transform at every separation including zero, at every lattice spacing. The wildcard found what this costs: the slice flow does not regularize the electric half of ¼G·G (a contact term of weight exactly 1 per mode), so the observable is the magnetic density alone and not a Lorentz scalar; S6″ and its own caveat could not both hold.
+- **Free benchmark, proved and challenged**: two-sided bounds uniform in the lattice spacing for all t ≥ 0 including t = 0 (B1); convergence with rate b² (B2, constant useless); bounded energy moments at t = 0 (B3); a lower bound uniform in the volume and without ∫f ≠ 0, non-vacuous when the smearing is wide against √s and ℓ/√s ≳ 9. One defect of text in B3, three of scope and presentation in the volume bound, no wrong constant or inequality. Twenty-four new Lean declarations.
+- **Literature**: the slice flow is established lattice practice (Sakai and Sasaki); the three-dimensional heat flow as a regularizer is the Charalambous–Gross programme. No source establishes continuum finiteness of a slice-flowed density in an interacting theory; Lüscher and Weisz's proof does not transfer. This is recorded as the open hypothesis H-fin.
+- **First matched pair in SU(2)** (measured only): positivity seen; Q0 and R(0) agree between spacings to 4 and 9 per cent; R at separation ℓ/6 differs by a factor of two, with the coarse separation equal to one step in time. Not evidence for or against a limit.
+- **Defect of this folder**: the Lean library as a whole did not build (a name clash between two files that each compiled alone). Repaired; it now builds.
+- `OVERALL_DISPOSITION.md`, section 4: a dated qualification of "Neither has been done", at A4's request.
+
+Counts, as met, failed, measured only: flow challenger 9, 3, 1 (the three failures its own projector code, fixed); flow builder 306, 0, 4; bounds challenger 21 items standing, 1 defect, 1 measured only; formalizer 10 of 10 lemmas; volume builder 59, 6, 4 (the six are the bound being vacuous at larger s); volume challenger 41, 0, 9; measurement 25, 1, 8; literature 6 standing, 5 not found or not checked.
+
+Director, workers, children and grandchildren are one model family; this is not independent review, and the literature locators were not reread by the director.

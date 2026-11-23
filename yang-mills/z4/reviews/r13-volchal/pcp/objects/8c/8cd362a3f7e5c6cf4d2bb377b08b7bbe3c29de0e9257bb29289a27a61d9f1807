@@ -1,0 +1,19 @@
+eps=0.06510 (1-eps)^4=0.76393 K=2.5 Q=1.25 K'=1.875
+cases with H_tail: 13 of 13 r-values (x20 shifts)
+r=   5 Htail=True d0=4.231e-01 d1=9.353e-01 bracket/c1c0^2=-4.076113 A*s^2.5*(2/l^3)=-5.4610e-04 B'/(A s)=nan Q^2>=A/B':True
+r=   6 Htail=True d0=2.110e-01 d1=7.420e-01 bracket/c1c0^2=-2.414678 A*s^2.5*(2/l^3)=-3.2351e-04 B'/(A s)=nan Q^2>=A/B':True
+r=   7 Htail=True d0=9.355e-02 d1=4.796e-01 bracket/c1c0^2=-1.012639 A*s^2.5*(2/l^3)=-1.3567e-04 B'/(A s)=nan Q^2>=A/B':True
+r=   8 Htail=True d0=3.663e-02 d1=2.564e-01 bracket/c1c0^2=-0.019023 A*s^2.5*(2/l^3)=-2.5486e-06 B'/(A s)=nan Q^2>=A/B':True
+r=   9 Htail=True d0=1.266e-02 d1=1.155e-01 bracket/c1c0^2=+0.555481 A*s^2.5*(2/l^3)=+7.4421e-05 B'/(A s)=12.2169 Q^2>=A/B':True
+r=  10 Htail=True d0=3.861e-03 d1=4.440e-02 bracket/c1c0^2=+0.830415 A*s^2.5*(2/l^3)=+1.1126e-04 B'/(A s)=8.3093 Q^2>=A/B':True
+r=  12 Htail=True d0=2.468e-04 d1=4.196e-03 bracket/c1c0^2=+0.981047 A*s^2.5*(2/l^3)=+1.3144e-04 B'/(A s)=7.1204 Q^2>=A/B':True
+r=  15 Htail=True d0=1.562e-06 d1=4.238e-05 bracket/c1c0^2=+0.998272 A*s^2.5*(2/l^3)=+1.3374e-04 B'/(A s)=7.0104 Q^2>=A/B':True
+r=  20 Htail=True d0=2.778e-11 d1=1.361e-09 bracket/c1c0^2=+0.999527 A*s^2.5*(2/l^3)=+1.3391e-04 B'/(A s)=7.0028 Q^2>=A/B':True
+r=  30 Htail=True d0=7.447e-25 d1=8.303e-23 bracket/c1c0^2=+0.999871 A*s^2.5*(2/l^3)=+1.3396e-04 B'/(A s)=7.0008 Q^2>=A/B':True
+r=  50 Htail=True d0=2.770e-68 d1=8.629e-66 bracket/c1c0^2=+0.999957 A*s^2.5*(2/l^3)=+1.3397e-04 B'/(A s)=7.0003 Q^2>=A/B':True
+r=  80 Htail=True d0=3.830e-174 d1=3.060e-171 bracket/c1c0^2=+0.999978 A*s^2.5*(2/l^3)=+1.3397e-04 B'/(A s)=7.0001 Q^2>=A/B':True
+r= 130 Htail=True d0=0.000e+00 d1=0.000e+00 bracket/c1c0^2=+0.999985 A*s^2.5*(2/l^3)=+1.3397e-04 B'/(A s)=7.0001 Q^2>=A/B':True
+true const sqrt(pi)/(640 pi^2) = 2.8060e-04; 5/8*(1-eps)^4*true = 1.3398e-04
+FAILS (0):
+
+

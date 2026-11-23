@@ -1,0 +1,12 @@
+Report: `/home/user/z4-workers/r11-lit/child/report.md`
+
+- **Control:** six Millennium Prize Problems are unsolved and the Poincaré conjecture is the solved one. This is in `control.txt`.
+- **(a) a√σ:** I read these in Fingberg–Heller–Karsch (hep-lat/9208012, 1992), Table 3, which compiles other groups' data. The values are 0.3690(30) at β=2.3, 0.2660(20) at β=2.4 and 0.1905(8) at β=2.5.
+- **(b) Plaquette:** I did not find a source with values at exactly β=2.3, 2.4 or 2.5. The nearest are in the same paper's Table 8, at β=2.2986, 2.4265 and 2.5115. I derived ⟨U_p⟩ from the tabulated 1−⟨U_p⟩: 0.60254, 0.63648 and 0.65436.
+- **(c) m(0++)/√σ:** the continuum value is 3.78(7), from Lucini–Teper–Wenger (hep-lat/0404008, 2004), Table 14. Their Table 15 gives 3.493(56), but that is at fixed lattice spacing, not the continuum limit.
+- **Sub-agent:** it passed its control (7×8 = 56) and returned the same 3.78(7) and Table 14. I re-read the paper myself and confirmed it, but it is the same paper, so this is only an independent locating of the value.
+- **Not checked:** I did not open Athenodorou–Teper 2021, Bloch et al., or the original papers behind FHK's Table 3. Plaquette values at exactly β=2.3, 2.4 and 2.5 still need another source.
+- **Consistency check:** a√σ decreases and the plaquette increases with β in all 6 of 6 adjacent pairs. The ratios of a between adjacent β are within about 8% of the 2-loop expectation; I chose the 20% tolerance myself, with no source behind it. The plaquette at the exact β values was not tabulated in 0 of 3 cases, which is a property of the source's β grid, not a defect in my code.
+- **PCP verify:** both passed.
+  - Python: `result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)`
+  - Rust: `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.`

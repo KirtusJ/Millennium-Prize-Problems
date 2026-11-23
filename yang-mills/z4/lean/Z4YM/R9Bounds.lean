@@ -11,6 +11,10 @@ import Mathlib
 
 open Real Finset
 
+-- 23 November 2026: the whole file is placed in namespace R9, because its verbatim copy of
+-- section S5 clashed with Z4YM.HeatRegularized when both were imported by the root file.
+namespace R9
+
 namespace S5
 
 /-- x e^{-x} ≤ e^{-1} for ALL real x. -/
@@ -262,3 +266,5 @@ end R9
 #print axioms R9.keep_terms_card
 #print axioms R9.factor_upper
 #print axioms R9.window_from_two_sided
+
+end R9

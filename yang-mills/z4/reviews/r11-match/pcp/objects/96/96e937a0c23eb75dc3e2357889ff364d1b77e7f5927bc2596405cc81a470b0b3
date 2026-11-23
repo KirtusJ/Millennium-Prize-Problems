@@ -1,0 +1,39 @@
+== coarse: meas_L6_b2.3_s623.txt  L=6 beta=2.3 s=0.5  ncfg used=2990 (skip 10)  sec/cfg=0.24
+   tau_int [Ebar, O(0), O(1), O(2)] = 1.08, 1.05, 1.06, 1.05  block=11 cfgs  independent blocks=271
+   C2 plaquette 0.602953+-0.000159 vs FHK-interp 0.602934+-0.000037: diff +0.000019 tol(3 sigma comb) 0.000489 -> MET
+   Ebar         = 9.334673e-02 +- 2.55e-04
+   Q0           = 9.334673e-02 +- 2.55e-04
+   Q0beta       = 5.367437e-02 +- 1.47e-04
+   meff_l       = 6.115761e+00 +- 4.80e-01
+   meff_l_cosh  = 6.663513e+00 +- 4.17e-01
+   R0-R1        = 2.739334e-02 +- 3.24e-04
+   R1-R2        = 6.468700e-03 +- 3.21e-04
+   R0R2-R1^2    = 3.457443e-05 +- 1.06e-05
+   R(tau) all tau: 0:3.751e-02+-4.2e-04; 1:1.012e-02+-3.2e-04; 2:3.652e-03+-3.4e-04; 3:2.125e-03+-4.0e-04; 4:3.652e-03+-3.4e-04; 5:1.012e-02+-3.2e-04
+   d ln(s^2 Ebar)/d ln s between s/2 and s: +0.567
+   P1 R(0)=3.751e-02+-4.2e-04 (88.3 sig); R(1)=1.012e-02+-3.2e-04 (31.2 sig); R(2)=3.652e-03+-3.4e-04 (10.9 sig) -> MET
+   P2 (R0-R1)/sig=84.4 (R1-R2)/sig=20.2 (R0R2-R1^2)/sig=3.3 -> MET
+   P4 m_eff/sqrt(sigma) = 2.762+-0.217 (log form), cosh form 3.010+-0.189; l*sqrt(sigma)=2.214; published 3.74(12)
+== fine: meas_L12_b2.5_s1205_first170.txt  L=12 beta=2.5 s=2.0  ncfg used=160 (skip 10)  sec/cfg=6.18
+   tau_int [Ebar, O(0), O(2), O(4)] = 1.76, 1.72, 1.80, 1.81  block=19 cfgs  independent blocks=8
+   C2 plaquette 0.652029+-0.000160 vs FHK-interp 0.651941+-0.000198: diff +0.000088 tol(3 sigma comb) 0.000764 -> MET
+   Ebar         = 5.579520e-03 +- 6.88e-05
+   Q0           = 8.927232e-02 +- 1.10e-03
+   Q0beta       = 5.579520e-02 +- 6.88e-04
+   meff_l       = 1.404602e+01 +- nan
+   meff_l_cosh  = 1.409985e+01 +- nan
+   R0-R1        = 2.923922e-02 +- 1.44e-03
+   R1-R2        = 4.520608e-03 +- 1.42e-03
+   R0R2-R1^2    = -8.537757e-06 +- 4.26e-05
+   R(tau) all tau: 0:3.424e-02+-1.2e-03; 1:1.327e-02+-5.7e-04; 2:5.002e-03+-6.6e-04; 3:2.164e-03+-9.2e-04; 4:4.813e-04+-1.2e-03; 5:-5.360e-04+-1.0e-03; 6:-2.030e-03+-1.1e-03; 7:-5.360e-04+-1.0e-03; 8:4.813e-04+-1.2e-03; 9:2.164e-03+-9.2e-04; 10:5.002e-03+-6.6e-04; 11:1.327e-02+-5.7e-04
+   d ln(s^2 Ebar)/d ln s between s/2 and s: +0.418
+   P1 R(0)=3.424e-02+-1.2e-03 (29.4 sig); R(2)=5.002e-03+-6.6e-04 (7.6 sig); R(4)=4.813e-04+-1.2e-03 (0.4 sig) -> MET
+   P2 (R0-R1)/sig=20.3 (R1-R2)/sig=3.2 (R0R2-R1^2)/sig=-0.2 -> MET
+   P4 m_eff/sqrt(sigma) = 6.144+-nan (log form), cosh form 6.168+-nan; l*sqrt(sigma)=2.286; published 3.74(12)
+== P3 ratios fine/coarse (independent ensembles, errors in quadrature of relative errors)
+   R(0)     ratio = 0.9128 +- 0.0328  |r-1|/sig = 2.7  consistent with 1 (2 sig): no
+   R(l/6)   ratio = 0.4942 +- 0.0668  |r-1|/sig = 7.6  consistent with 1 (2 sig): no
+   R(l/3)   ratio = 0.1318 +- 0.3348  |r-1|/sig = 2.6  consistent with 1 (2 sig): no
+   Q0       ratio = 0.9564 +- 0.0121  |r-1|/sig = 3.6  consistent with 1 (2 sig): no
+   Q0beta   ratio = 1.0395 +- 0.0131  |r-1|/sig = 3.0  consistent with 1 (2 sig): no
+   m_eff l  ratio = 2.2967 +- nan  |r-1|/sig = nan  consistent with 1 (2 sig): no

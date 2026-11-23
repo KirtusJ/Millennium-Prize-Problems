@@ -1,0 +1,2 @@
+A: min(L-RHS)=0.000000e+00 at p=[0.0, 0.0, 0.0] q=[0.0, 0.0, 0.0] L=0.000000e+00 RHS=-0.000000e+00; violations=0; tight(<1e-9)=62438 samples; max|L-analytic|/(1+L)=4.29e-16
+B: min(L-RHS)=0.000000e+00 at p=[0.0, 0.0, 0.0] q=[0.0, 0.0, 0.0] L=0.000000e+00 RHS=0.000000e+00; violations=0; tight(<1e-9)=10416 samples; max|L-analytic|/(1+L)=1.02e-12

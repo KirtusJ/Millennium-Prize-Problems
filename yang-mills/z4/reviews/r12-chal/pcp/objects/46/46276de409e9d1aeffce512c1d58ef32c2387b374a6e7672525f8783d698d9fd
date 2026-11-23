@@ -1,0 +1,12 @@
+/home/user/z4-workers/r12-chal/chal.py:264: RuntimeWarning: invalid value encountered in scalar divide
+  mx = max(mx, np.linalg.norm(g)/bd); mxg = max(mxg, np.linalg.norm(gg))
+Traceback (most recent call last):
+  File "/home/user/z4-workers/r12-chal/chal.py", line 337, in <module>
+    main()
+    ~~~~^^
+  File "/home/user/z4-workers/r12-chal/chal.py", line 276, in main
+    Cs = C_cont(fd, l, s, t)
+  File "/home/user/z4-workers/r12-chal/chal.py", line 145, in C_cont
+    G[np.ix_(tgt, tgt, tgt)] = np.abs(ft[np.ix_(idx, idx, idx)])**2
+    ~^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: index 24 is out of bounds for axis 0 with size 24

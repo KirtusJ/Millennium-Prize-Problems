@@ -1,0 +1,6 @@
+- control.txt: I2(1)/I1(1)=0.240194 (first attempt used scipy: absent, file left empty, rewritten by series).
+- pcp init done (method not found, as expected).
+- Web search tool refused (permission); used arxiv PDFs via curl only (kept in src/, untrusted, read only with pdftotext).
+- FHK Table 3, 8; LTW Table 1; T98 Table 1, 8 read. Plaquette at exactly 2.3/2.4/2.5 not tabulated in these sources.
+- match.py: predicates fixed in docstring; P2 expectation (2.3->2.5 matches, adjacent betas do not) confirmed; 2.4->2.6 also matched, which I did not predict (my expectation incomplete, not a target defect). Hypothesis 'every coarse case has partner' failed: 2 of 6 qualify.
+- Sub-agent: control 0.876282 ok; found FHK Table 3 beta=2.5 -> 0.1905(8), agrees with mine. Reread its control.txt myself.

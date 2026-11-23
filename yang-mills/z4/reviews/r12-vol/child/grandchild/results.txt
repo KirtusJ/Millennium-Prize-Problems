@@ -1,0 +1,6 @@
+C_mom=3.44162704613096926e+00
+C_pos=3.44162704613179837e+00
+rel_diff=2.409e-13
+max|Im D|=1.421e-14
+agree_1e-10=True
+distinct q=3375

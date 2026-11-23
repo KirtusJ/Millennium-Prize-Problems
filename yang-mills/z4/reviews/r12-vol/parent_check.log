@@ -1,0 +1,2 @@
+check K13: exit 0 (expected 0) in 557469 ms | output a6ec4a511963 | event 15 head 88b90b14cbe9
+  /home/user/z4-workers/r12-vol/report.md — verdicts: 7 STANDS, 1 DEFECT (my lower bound is positive only at s = 0.001, below zero at s = 0.002 and 0.005), 1 PARTIAL (the ∫f² and ‖∇f‖₂ form of V1 is not proved), t > 0 numerics NOT CHECKED; predicates 59 met, 6 failed, 4 measured only.

@@ -1,0 +1,2 @@
+check K18: exit 0 (expected 0) in 377713 ms | output c5914b67ce28 | event 20 head dbfa8e946eeb
+  /home/user/z4-workers/r13-volchal/report.md — STANDS 9, DEFECT 3, NOT CHECKED 1 (predicates met 41, failed 0, measured only 9)

@@ -1,0 +1,26 @@
+T1 K_full(0..4) tau=6: ['1.5786677314281319172391462e-5', '1.5604934042501556938181425e-5', '1.5088117176611977993913632e-5', '1.4316703434951500590351063e-5', '1.3409928331259878999702472e-5']
+T1 R_full = -0.009864957816795690839466881673
+[PASS] P1: diff=-8.395e-19
+T2 K_spat(0..4) tau=6: ['4.5971172081007598768061280e-5', '2.9505341889208777353407795e-5', '1.9122967515398566756543698e-5', '1.2540727561297096168786663e-5', '8.3676119872968533219730108e-6']
+T2 R_spat = 0.057333237804766231595901211334
+[PASS] P2: diff=3.160e-17
+[FAIL] P3a: max|P_num - (q1^2+q2^2)/A kernel| = 1.89e-01; rank d = 765
+[FAIL] P3b: full flow tau=0.7 max diff = 1.72e-03
+  sensitivity: with exp(-tau A) instead of exp(-2tau A): diff = 9.15e-03
+[FAIL] P3c: spatial flow tau=0.7 max diff = 1.46e-03
+  temporal links untouched by spatial flow: max|flows-1| on temporal block = 0.00e+00
+T4 sign factor 2cos3w(cos w-1) = -5.826008e-02
+  tau=20: N/leading = 1.006543341257
+  tau=30: N/leading = 1.000311691954
+  tau=50: N/leading = 1.000000706387
+[PASS] P4a: ratio at 50 = 1.0000007064
+  float64 check at tau=6: full -9.864957816795208e-03, spat 5.733323780476657e-02
+  full form at tau=0: 4.576504e-04; first grid tau with form<0: 3.5; negative for all later grid points: True
+P4b MEASURED: smallest tau with full form < 0 = 3.496769 (to 2 digits 3.5)
+[PASS] P4c: spatial form > 0 in 1001/1001 grid cases; min = 4.5765e-04 at tau=0.0
+T5 k4-integral at p=1: 0.49992042 vs 1/2 (tail 1/(pi*4000)=7.96e-05)
+[PASS] P5: (a) 2.374715241617e-03 vs 3/(128pi^2)=2.374715241617e-03; (b) 2.110857992549e-03 vs 1/(48pi^2)=2.110857992549e-03
+T5c (units 1/(pi^2 t^2)): spatial mag 1/32, full mag 3/256, full total 3/128; ratios 8/3, 4/3
+   decimals: spat mag 0.0031662870, full mag 0.0011873576, full tot 0.0023747152
+[PASS] P6: slopes point 7.99996, zero-momentum 4.99997
+FAILED predicates: ['P3a', 'P3b', 'P3c']

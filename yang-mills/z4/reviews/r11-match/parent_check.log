@@ -1,0 +1,2 @@
+check K17: exit 0 (expected 0) in 2162480 ms | output d49fbe33c79d | event 19 head 9f9262adc635
+  /home/user/z4-workers/r11-match/report.md — 25 met, 1 failed, 8 measured only. At matched physical size the correlator is not the same at the two spacings: at τ=l/6 the fine/coarse ratio is 0.49(7), and at τ=l/3 the fine-lattice signal is not resolved (0.4σ).

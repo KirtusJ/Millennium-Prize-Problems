@@ -1,0 +1,10 @@
+C1 strong coupling beta=0.5 4^4: <1-P>=0.875486+-0.000760 expected 0.876282 diff=-7.96e-04 tol=3.28e-03 -> MET
+C6 free field beta=40 6^4 s=0.5: s^2<Ebar>=2.7569e-04+-3.5e-06 free=2.6043e-04 rel=+0.059 -> MET
+C6 free field beta=40 6^4 s=1.0: s^2<Ebar>=2.0770e-04+-4.3e-06 free=1.8156e-04 rel=+0.144 -> MET
+C6 aux: unflowed free mode sum (s=0) 5.62066e-02 vs 9/(4beta) 5.62500e-02 (finite-volume)
+C4 L=6 beta=2.3: spatial action 7.3033 -> 0.5562, max step change -4.728e-02 -> MET
+C5 L=6 step eps=0.025 vs 0.0125: rel diff of slice-mean Ebar at s=0.5: 1.12e-05; max per slice 1.46e-05 -> MET
+C3 L=6 gauge invariance: |dplaq|=0.00e+00 |dEbar unflowed|=4.44e-16 |dEbar flowed| max=4.44e-16 -> MET
+C4 L=12 beta=2.5: spatial action 12.5808 -> 0.0706, max step change -2.716e-03 -> MET
+C5 L=12 step eps=0.05 vs 0.025: rel diff of slice-mean Ebar at s=2.0: 5.87e-07; max per slice 7.33e-06 -> MET
+C3 L=12 gauge invariance: |dplaq|=0.00e+00 |dEbar unflowed|=2.22e-16 |dEbar flowed| max=2.09e-16 -> MET

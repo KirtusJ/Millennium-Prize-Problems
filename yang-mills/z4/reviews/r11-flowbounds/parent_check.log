@@ -1,0 +1,2 @@
+check K5: exit 0 (expected 0) in 636475 ms | output 47b8a634c0b9 | event 7 head e43d01016386
+  /home/user/z4-workers/r11-flowbounds/report.md: B1, B2, B3, B4 and B5 STAND (B2's constant is proved but 10⁷ to 10⁹ too loose to use; in B3 the 1/√s and 1/s scaling rests on a lower bound that is measured, not proved); 1 DEFECT (the sup|f̂| upper-bound route gives s⁻⁴, not s^(−5/2)); NOT CHECKED: H1 normalization (taken from the brief, not rederived); predicates met 306, failed 0, measured only 4.

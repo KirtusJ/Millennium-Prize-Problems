@@ -9,3 +9,6 @@ import Z4YM.HeatRegularized
 import Z4YM.MeasureHeat
 import Z4YM.KBound
 import Z4YM.R9Bounds
+import Z4YM.R11Flow
+import Z4YM.R12Analytic
+import Z4YM.R12Vol

@@ -1,0 +1,4 @@
+  File "/home/user/z4-workers/r13-volchal/child/check.py", line 46
+    tight_rel_lt_1e-6=int((d/sc<1e-6).sum()),tight_exact_le_tol=int((np.abs(d)<=tol).sum()))
+    ^^^^^^^^^^^^^^^^^^
+SyntaxError: expression cannot contain assignment, perhaps you meant "=="?

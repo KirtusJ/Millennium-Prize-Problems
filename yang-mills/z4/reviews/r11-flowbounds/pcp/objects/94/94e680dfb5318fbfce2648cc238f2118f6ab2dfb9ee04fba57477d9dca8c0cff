@@ -1,0 +1,8 @@
+/home/user/z4-workers/r11-flowbounds/R11Flow.lean:81:90: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'R11Flow.flow_decreases' depends on axioms: [propext, Classical.choice, Quot.sound]
+'R11Flow.C_antitone' depends on axioms: [propext, Classical.choice, Quot.sound]
+'R11Flow.weighted_amgm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'R11Flow.schur' depends on axioms: [propext, Classical.choice, Quot.sound]
+'R11Flow.ratio_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'R11Flow.exp_neg_le_inv' depends on axioms: [propext, Classical.choice, Quot.sound]

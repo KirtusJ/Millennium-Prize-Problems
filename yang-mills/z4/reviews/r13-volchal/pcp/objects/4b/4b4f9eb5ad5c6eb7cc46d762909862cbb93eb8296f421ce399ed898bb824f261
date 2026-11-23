@@ -1,0 +1,13 @@
+I found no violations of the pair bound or of (i)–(iv) on 10^6 random (p, q) pairs. The control value is 2.777778, written to `control.txt` before anything else.
+
+- **Pair bound:** the smallest LHS − RHS is −5.6e-17. That is rounding error, and it sits at q = 0 with p3 ≈ 1e-6.
+- **Tightness:** the bound is tight at q = 0 with p3 = 0, where LHS = RHS = p1² + p2² exactly. For q ≠ 0 with p3 = 0, the slack is at least 0.458|q|² on 10^5 samples.
+- **(i), (ii), (iii):** these hold. (i) follows exactly from |u|² + |w|² = 2|p|² + |q|²/2. (ii) is AM-GM. (iii) is Cauchy–Schwarz on the perpendicular parts.
+- **(iv):** it holds, with a worst case of −5.6e-16 relative, which is also rounding.
+- **Cases covered:** the sample included 50,260 with u = 0, 50,193 with w = 0, 119,583 with p_perp = 0 and 50,078 with q = 0. About 900k were non-degenerate.
+- **Failed predicate:** my first run (`main`) exited 1 with a SyntaxError from invalid keyword names such as `tight_rel_lt_1e-6`. That was my own coding mistake, not a defect of the target. I renamed the keys, left the predicates unchanged, and the rerun passed.
+- **Sub-agent:** it checked p along the 3-axis with small q, and q parallel to p, at 200,000 samples each, after its own control. It found 0 violations. I reread its findings and reran its script, and the results file came out identical. Its analytic bound for q parallel to p is checked numerically only.
+- **Not covered:** this is random sampling, not a proof and not an adversarial search.
+- **PCP OS:** the Python `verify` last line is "result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)". The Rust `verify` last line is "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+
+Everything is in `/home/user/z4-workers/r13-volchal/child/`; the report with the verdict table and rerun commands is `report.md`.
