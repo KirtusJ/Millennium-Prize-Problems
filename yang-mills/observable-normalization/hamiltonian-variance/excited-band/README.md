@@ -21,6 +21,8 @@ In any sequence of growing boxes at fixed couplings, these finite positive measu
 
 B4 proves convergence of the anisotropic Wilson transfer and its true vacuum correlations to this Hamiltonian when the time step tends to zero at each fixed box and spatial spacing. With B4’s parameter $z=2g$, the time-difference inequality consequently applies to the iterated limit that removes the time cutoff first and then takes spatial volumes along a convergent subsequence. A simultaneous volume and time limit would require further uniform control. [B4’s regulator matching](../../../transfer-operator/hamiltonian-time/) · [Independent first-moment and small-coupling bounds](../../../transfer-operator/hamiltonian-time/plaquette.md)
 
+Z4 identified a stronger electric-scale lower edge. Keeping the joint kinetic and potential budget gives the choice $L=\kappa/18$ with the improved second-moment upper endpoint and unchanged guaranteed weight for that endpoint. [Adoption, strengthened bound and Lean proof](electric-endpoint/)
+
 ## A lower bound on the first moment
 
 Fix one of the four links of the plaquette and use its total holonomy as the fiber coordinate. On the unit three-sphere, $|\nabla x|^2=1-x^2$ and $\Delta x=-3x$. Hence $\operatorname{div}(x\nabla x)=1-4x^2$. Put $S=\mathbb E(1-x^2)$, and let $K_e$ be the ground-state kinetic form of that link without its coefficient. The half-length generator convention gives $\int |\nabla_e\Omega|^2=4K_e$. Integration by parts on the sphere and Cauchy–Schwarz yield
