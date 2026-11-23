@@ -27,7 +27,9 @@ static void copy_source(const char *name) {
     }
     if (os(3, fd, 0, 0)) finish(2);
 }
-#if defined(D4_GRAPH_HOLONOMIES)
+#if defined(D4_ORDINARY_LOOP)
+#include "../ordinary-loop/guest.h"
+#elif defined(D4_GRAPH_HOLONOMIES)
 #include "../graph-holonomies/guest.h"
 #elif defined(D4_ELECTRIC_SCALE)
 #include "../electric-scale/guest.h"

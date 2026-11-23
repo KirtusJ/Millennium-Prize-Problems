@@ -183,8 +183,10 @@ void run(double beta, int blocks) {
         throw std::runtime_error("Haar control failed");
 }
 
+#ifndef WILSON_CONTACT_LIBRARY
 int main() {
     std::cout<<std::setprecision(8);
     run(0.,12);
     run(2.2,45);
 }
+#endif

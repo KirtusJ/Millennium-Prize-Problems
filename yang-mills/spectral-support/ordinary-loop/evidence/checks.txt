@@ -1,0 +1,159 @@
+Director D4 · ordinary signed Wilson loops · 23 November 2026
+
+720 cumulative register events, 352 admissions, all matched by releases. Previous 599 events identical.
+
+chain intact: 720 events, head 4393f5c3433425f503d057fc3e4cea421526fa4efc1550d9c0156ac5985f656d
+guards replayed: 0 problem(s)
+The guards are those of pcpos 1.0.22. A register is read under the rules of the program that reads it: an event an earlier build accepted may be reported here, and its bytes are unchanged.
+register file SHA-256: e9330b2d01ff4b218abcdca1a6086630f57c3993fc84ee85428827c8a7f1cfdf
+A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.
+
+
+SHA-256 of original producing serial transcripts
+09b56ba68292d2370a5ec3f1dad0b5a411736b24733abc309f259c01dded9463  assemble.serial.txt
+5598dd821a60aa73b6faeb61370b9f75f91d0aa3c4c98156355cee46fb4de553  factor.serial.txt
+6d96a7b90216fc88fe7728dc323d4ca4a4b1a2d353f7fd51eef1d6dd1cdbae15  wick.serial.txt
+
+lean-final
+'Millennium.YangMills.D4.OrdinaryLoop.dotWord' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.OrdinaryLoop.orientedWord' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.OrdinaryLoop.ordinaryProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.OrdinaryLoop.scalarDefect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.OrdinaryLoop.productRemainder' depends on axioms: [propext]
+'Millennium.YangMills.D4.OrdinaryLoop.normalizedReading' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.OrdinaryLoop.integrableLater' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.OrdinaryLoop.tiltedTail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.OrdinaryLoop.determinantWick' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.OrdinaryLoop.radialCounts' does not depend on any axioms
+'Millennium.YangMills.D4.OrdinaryLoop.twiceWound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.OrdinaryLoop.windingGram' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.OrdinaryLoop.windingCalibration' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.OrdinaryLoop.squareDilation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.OrdinaryLoop.degreeBudget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.OrdinaryLoop.triangleRatio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.OrdinaryLoop.orientedRatio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.OrdinaryLoop.squarePairings' depends on axioms: [propext]
+'Millennium.YangMills.D4.OrdinaryLoop.colorWeights' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+
+controls
+256 signed quaternion words; largest order difference / 2 = 0.868815; adjacent-face and vertex-gauge controls passed
+square pair 1.5, signed triangle -12, nonsymmetric cubic -48
+Z4 comparison, 1 by 1 lattice square at lags 1..4: [0.06887475, 0.01115272, 0.00226224, 0.0006054]
+Z4 comparison, 2 by 2 lattice square at lags 1..4: [0.26406902, 0.06144611, 0.01764375, 0.00622435]
+t=0.5 exact=0.2129332669 N=8,16,32,64 relative errors=[0.05252387364130828, 0.010854293068326415, 0.002608665419483236, 0.0006464609843470637]; quadrature refinement 6.21e-09
+t=1 exact=0.0418146955242 N=8,16,32,64 relative errors=[0.025196548698853016, 0.006075643401113107, 0.0015069011563071388, 0.00037599534469379137]; quadrature refinement 1.98e-09
+t=2 exact=0.0047305108043 N=8,16,32,64 relative errors=[0.014487811543031581, 0.003575197160042176, 0.0008909461396293672, 0.00022255844009611003]; quadrature refinement 1.1e-09
+closed contour integral, time doubling, infrared angular density, endpoint asymptotics and both band coefficients passed
+
+
+blocks
+32 exact line-antiderivative reconstructions; disjoint block squared-norm ratios 1/M
+explicit box, Ward, block, centered-moment and Wick power budgets passed for even degrees 2 through 24
+
+
+windings
+v=5, K=1/3: exact centered winding determinants through rank 4, 40/3 and 5/3 passed
+v=91, K=-2: exact centered winding determinants through rank 4, 40/3 and 5/3 passed
+v=3/2, K=5/4: exact centered winding determinants through rank 4, 40/3 and 5/3 passed
+
+
+mutations-final
+reverse cubic orientation: rejected at orientedWord
+double determinant coefficient: rejected at determinantWick
+remove triangle pairing: rejected at squarePairings
+overstate tail suppression: rejected at tiltedTail
+erase winding rank: rejected at windingGram
+wrong radial Wick count: rejected at radialCounts
+double dimensionless weight: rejected at orientedRatio
+
+
+replay-ordinary-loop
+guest ELF 31ef074312c1e517cefab984318c0128e50242a89118fda5a0eb8963d68ec87b
+Lean source 886c0b6b0453e135ad1cd4df6ddb359af6f7a9b8f764001fc10f8eb4260fbdd1 (7272 bytes)
+factor d29329af023e0b43fc088957546e7fefb31d4079dcb3fcda8c5ed65141e93675
+wick 992733c107403c6bf9539c80836a41e3466c5369ce9adb3daccae84fc3f16469
+assemble 8e08ec4fc239fd6135b8fbb3bc159c436dcc2f2fac45fb8ed30d0f709194abdf
+
+
+replay-graph-holonomies
+guest ELF d6dc835b7ff0acf67d21882bf6106964d120861a9ea3f821c0e396496169efdc
+Lean source 988a04e72b0d28189958b60f586600607a6fca58e528b525f8e9e1a7772dd580 (9242 bytes)
+factor 40673e4001b8d82c10daba1ec2f6a11d7e384786583478419cd406833e742bf9
+words 4bd815c9fc331117500e9925906cdde82bfaf92c912d662526e3421a0a211dd1
+assemble a4c24f08c8a216dcfddf2b39806b1f5415606d80f039ba3d8e86b4c910656a44
+
+
+replay-electric-scale
+guest ELF 9a0c055625830f7377cbd54bbc3e4e2fa0e86d23df35bb5a471160673c69381c
+Lean source d8b44086b7234ac94b9d4acb4d71c868b8a888ddb3645d4ac0e3962295bcd792 (9001 bytes)
+factor ada400c583ca2e76b712c15f94328a7e458bd7fc04f31cb4e1702ae3d4740319
+flux 756b6bb70baddbd7c3c110f35facb4c07b746ca86ac96346683779c2ed545988
+assemble e2652ba1b639c739d14d2c87ddae9496350cdd3cb20c36f0aa6f10fa2461a2e4
+
+
+replay-finite-readings
+guest ELF 974b4663a8f26a4b11868e967c4e0a3bda96b766e9b9d1a022113a180b71450d
+Lean source 029ce009e020212b7f7dbd45bcb574b80a7e831c2de8bf137eda55c9857aee68 (19442 bytes)
+factor 42b5ea77c68491f90ad5b7090b8b518aef452fede347370b83151ad1d67e2bcb
+moments 8e5006cfbf3955a0ad59999fe8e809f9badffd844ef3af1c44dc218903f6f8cb
+assemble 961e65bfb84b70a031563a53a01319da20e33b05e63c0651f7e05e3523a634dc
+
+
+replay-adjoint
+guest ELF 215b28f7d03d4f722a75bc86123ecdb6966b1d9f9a49865ad1ff6b1e13d32128
+Lean source e03ee1d3bef8f6fca3b41b74e08c2f70bdbc524a63161a68633c0bdd1ecef508 (9637 bytes)
+factor 2f1c0663c37859923faf93af5f1b295ac5057d6eb73cec9c64b8b611aebac8e4
+divergence 4d246da17338668e0c40c30a88fc39036d4c13b1581182aabecb0c0e499cc4a2
+assemble 77305b4ea8a4232d75d6e917a85db4d90bc595a58f2f6ea6168023a50c26a71a
+
+
+replay-difference
+guest ELF 81ee0657560726917fcae43810d3faac7e2827c2a3250bcff4a481369552d198
+Lean source 2002c660d00ff94e5714aa7e3f3c69fa8946181174dc518fbee21e13845ad6d8 (5873 bytes)
+factor 6a31cd58039469dfc4a2e0374ec0b256f3cafd51c10da76e6abbadba21afff8e
+square 19bc564829ac173f32d907160e2ae76b1edf72ff7117ee2d2fdd7d5d53d9dd7e
+assemble 86921fc78c837c5e27bd1edbff40c55d9d28d02b8ffb0cb72967d8dbcd661195
+
+
+replay-basic
+guest ELF aeb03ab77f4f9ca4ba7d877d55e55d76f1e02243b742acd9a552791dc29850b6
+Lean source 1fd54f3cb4f7bf54bfcdfbae55fd03c66e2cfe9f3f7282c9680087d9b605e391 (12919 bytes)
+factor 626cf3d87dbac226dc23fdaf679ef979ec3b0874016bb2afb47407561e86bb35
+square 0328a08c3d5c9ceeb6d33664c20c1f420d7bcca7f6c14df06f3151b96320c3b2
+assemble 11341cfe2e194bc86372f23c6b52740bb7248dd76c4b4377962e5f2570dea31a
+
+
+peer
+'YangMills.MagneticSmearing.moveWeights' does not depend on any axioms
+'YangMills.MagneticSmearing.stoppedMass' does not depend on any axioms
+'YangMills.MagneticSmearing.stoppedTotal' does not depend on any axioms
+'YangMills.MagneticSmearing.stoppedTelescopes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.MagneticSmearing.frameCommutator' depends on axioms: [propext]
+'YangMills.MagneticSmearing.hodgeRemainder' depends on axioms: [propext]
+'YangMills.MagneticSmearing.killedStep' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.MagneticSmearing.transportedSign' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.MagneticSmearing.wardBudget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.MagneticSmearing.projectionTail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.MagneticSmearing.smoothingPowers' does not depend on any axioms
+'YangMills.MagneticSmearing.spectralPowers' does not depend on any axioms
+'YangMills.MagneticSmearing.integratingFactorRatio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.MagneticSmearing.radialMoment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.MagneticSmearing.determinantBigger' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.MagneticSmearing.energyReadback' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.MagneticSmearing.duhamelBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.MagneticSmearing.reflectedSquare' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.MagneticSmearing.signedBlockMoments' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.MagneticSmearing.reflectedFirstMoment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.MagneticSmearing.absorbMoment' depends on axioms: [propext, Classical.choice, Quot.sound]
+orientation, full derivative, Wilson score, frozen frame 1 -0.1960184342569474 -0.19601843425694734 -0.0705327745489824
+orientation, full derivative, Wilson score, frozen frame -1 -0.3029215641914693 -0.3029215641914694 -0.47081617473877047
+stopped mass 1.0 discarded exit error 0.04653337597846985 Hodge error 1.9131948672901813e-14
+two compact second primitives; wrong base leaves first moment -438
+four-dimensional curvature multiplier: maximal projection errors [np.float64(0.22273086900081354), np.float64(0.11208300446069965), np.float64(0.05613141177458966), np.float64(0.028076951249077223)]
+order 0 continuum C(0,1,2) [0.01972957 0.00455193 0.0013694 ] relative errors [np.float64(0.09072287225686237), np.float64(0.026139378466405683), np.float64(0.006813508596742124), np.float64(0.0017221612090202454)]
+bounded mean-normalized t=1,2 [0.02029847 0.0018093 ] positive-time ratio 0.08913480286389021
+order 1 continuum C(0,1,2) [0.01186471 0.00185254 0.00038296] relative errors [np.float64(0.15059226469537268), np.float64(0.044624954266379135), np.float64(0.011743156214313988), np.float64(0.002975929373590147)]
+bounded mean-normalized t=1,2 [0.00921237 0.00039081] positive-time ratio 0.042422124186798735
+order 2 continuum C(0,1,2) [0.0221967  0.00253362 0.00038373] relative errors [np.float64(0.23895003800443315), np.float64(0.07308578707074465), np.float64(0.019432424749486366), np.float64(0.004938458598073847)]
+bounded mean-normalized t=1,2 [0.0049058  0.00011209] positive-time ratio 0.022847646318834094

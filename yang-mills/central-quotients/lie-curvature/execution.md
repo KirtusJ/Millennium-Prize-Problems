@@ -1,0 +1,25 @@
+# Execution evidence and proof scope
+
+Two three-level PCP OS deployments generated the same [Lean source](LieCurvature.lean). The native parent walked the six cyclically related coordinate paths. Its child calculated all integer entries in the three four-index contractions of the two cube projections. The grandchild counted the off-diagonal and diagonal color generators and evaluated the singlet coefficients. Hosted Rust desks delegated the levels in order and each returning supervisor hashed the child output. Hosted Lean 4.19.0 with Mathlib c44e0c8ee63ca166450922a373c7409c5d26b00b accepted 29 named theorems per deployment. The accepted axiom lists draw only from propext, Classical.choice and Quot.sound. The Lean SHA-256 is ab06241259a7f61d302131156de2e1a0b021e65b98d006024f6982269beb0b4f and the worker ELF SHA-256 is 9df1db87433784128a1240c7a91d685d85799e93281249b7c82bc407f8214396. [Worker source](worker.c) · [Logs, binary task inputs, desk closures and checksums](execution-logs.tar.gz) · [Calibration pins](../clustering/execution.md)
+
+Lean verifies the ordered group cancellation, a generic ring commutator identity, second-order product associativity, the Cartan contraction of ordered pairs and triples, the invariant-form Bianchi permutation, finite cube contractions, determinant and color normalization algebra, and an integrable odd-function selection rule for a measure-preserving involutive symmetry (the integral lemma only needs a measure-preserving equivalence negating the integrand). Each release also rejects an incorrect native task and seven altered mathematical conclusions, including a spurious mixed cube contraction, confusion of the two cubic charge channels and an incorrect determinant constant. Draft compile diagnostics are retained. The full weak-limit, Gaussian integration, Lie-group estimates and spectral convergence are written proofs. End-to-end Lean checking and independent cross-review of this release remain open.
+
+The [matrix controls](check_algebra.py) build normalized $SU(2),SU(3),SU(4)$ generators and the real $SO(3)$ generators. They recover $(c,S,3dc^2)=(8,24,576),(18,144,7776),(32,480,46080),(3,9,81)$ respectively. Direct oriented four-torus Fourier projection on sides 5, 9, 16 and 22 approaches the cube ratio 2.2205143359, with absolute error $2.90\times10^{-5}$ at side 22. A deterministic $SU(3)$ cube satisfies the exact product identity. Its second-order relative error decreases from 0.3375 to 0.00935 under five halvings. The signed cubic divided by the squared bracket sum, with the scale factor included, reaches $-0.5040$ with limiting benchmark $-1/2$. The first four scales missed the originally specified 0.015 tolerance on this latter ratio (error 0.01525 at scale 0.00625); two additional halvings tested the same tolerance.
+
+For a mixed 0.7 fundamental plus 0.3 adjoint $SU(3)$ action the measured one-link Hessian agrees with the metric factor 1.375. On a compact one-parameter Haar orbit in the original side-three Wilson box, the left and right varying-endpoint derivatives are $-0.06882645$ and $0.14252766$, matching their scores at 128 and 256 quadrature nodes. Freezing the transported color frame instead gives $-0.03408276$ and $-0.25899103$. These are conditional orbit identities with a fixed exterior, not samples of the full vacuum. [Wilson variation control](check_wilson.py)
+
+Independent bivariate Gaussian polynomial integration gives the positive-time determinant ratio three for $SU(2)$ and $SU(3)$; dropping the cross-reading gives 28 on the selected control. Matrix evaluation of the symmetric tensor gives squared norms 0, 80 and 360 at $N=2,3,4$ respectively, and gives the $SU(3)$ local odd variance $0.41666667$. Along an explicit one-parameter sequence of matrices the scaled imaginary-trace error decreases by a factor of about four when $\beta$ is quadrupled. [Polynomial test](check_singlets.py) · [Charge and character test](check_charge.py)
+
+Independent hosted replays of G4's shared-boundary module and D4's ordinary-loop module gave 18 and 19 axiom reports respectively. G4's compiler output had four unused-section-variable warnings. D4's had no warnings. Neither replay used a placeholder axiom. D4's rational winding control reproduced $40/3$ and $5/3$ for both covariances including the negative cross-covariance case. These are replays within the same research program. [G4's shared boundary](https://github.com/KirtusJ/Millennium-Prize-Problems/tree/3c5da28/yang-mills/g4/site) · [D4's ordinary loop](https://github.com/KirtusJ/Millennium-Prize-Problems/tree/0947647fab6af00e87e7b601baf36a2130630224/yang-mills/spectral-support/ordinary-loop)
+
+Use the pinned environment and a fresh output directory for each native replay.
+
+~~~sh
+python3 verify.py --pcp-os "$pcp_os" --kernel "$kernel" --qemu "$qemu" \
+  --firmware "$firmware" --desk "$desk" --delegate "$delegate" \
+  --lake "$lake" --mathlib "$mathlib" --out "$out"
+OPENBLAS_NUM_THREADS=1 python3 check_algebra.py
+OPENBLAS_NUM_THREADS=1 python3 check_wilson.py
+OPENBLAS_NUM_THREADS=1 python3 check_singlets.py
+OPENBLAS_NUM_THREADS=1 python3 check_charge.py
+~~~

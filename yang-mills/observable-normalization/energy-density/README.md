@@ -12,6 +12,8 @@ For a covariant candidate containing both conserved energy and a scalar, positiv
 
 On the original four-dimensional SU(2) Wilson measure, conditional link integration removes at least order $b^{-5}$ of smooth magnetic-energy variance while preserving separated-time readings. A two-link identity detects contact variance in all six spacetime plaquette orientations. [Interacting Wilson contact bound](wilson-contact/)
 
+On the same Wilson histories the conditional prediction error of the six-component action approaches a [Gaussian white noise](contact-law/). Squaring the centered action around a single temporal link yields a [positive separated correlation through the surrounding staples](staple-response/). Its leading coefficient at fixed temporal separation is identified in the weak-coupling vacuum.
+
 ## Observable and finite-volume identity
 
 Take the periodic cubic SU(2) Hamiltonian of side at least three. In unit-round convention write
