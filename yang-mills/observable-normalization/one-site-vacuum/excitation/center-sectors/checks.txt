@@ -1,0 +1,3 @@
+Weighted ground-state identity for signed and positive trial factors
+Short jumps that change a center sign meet the exterior band
+Two-site-per-axis curl spectrum has 42 transverse color modes
