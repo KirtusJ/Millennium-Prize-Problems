@@ -292,3 +292,9 @@
 {"actor":"principal","auth":"DECLARED","body":{"id":"T141"},"kind":"TASK_RELEASED","prev":"6f8ae6e19c52253d7c8b593729210ed0f6a39df88db3f1d4a085a515532fe288","seq":291,"ts":"2026-11-23T20:52:35Z"}
 {"actor":"principal","auth":"DECLARED","body":{"id":"T142"},"kind":"TASK_RELEASED","prev":"044d51bf4d420050a1f5509af7bb9bd95efda84b245e418b112793483a61d298","seq":292,"ts":"2026-11-23T20:55:51Z"}
 {"actor":"principal","auth":"DECLARED","body":{"id":"T140"},"kind":"TASK_RELEASED","prev":"2b7452e39c946b39d940f8746c795ae496596bad706cf774f1b0fcf5fd6679dd","seq":293,"ts":"2026-11-23T20:57:24Z"}
+{"actor":"principal","auth":"DECLARED","body":{"depth":1,"id":"T146","label":"p1-lower2","parent":"T1"},"kind":"TASK_ADMITTED","prev":"94cd5f0abc6fd48f0a040086718ebcc5c5b5508b9fe56b284c297cb2b0373cec","seq":294,"ts":"2026-11-23T20:59:04Z"}
+{"actor":"principal","auth":"DECLARED","body":{"depth":2,"id":"T147","label":"p1-lower2-child","parent":"T146"},"kind":"TASK_ADMITTED","prev":"2faf0f7b7e808b0222a30416d09b33089813cab506786deec28b658d9785d3fe","seq":295,"ts":"2026-11-23T21:04:20Z"}
+{"actor":"principal","auth":"DECLARED","body":{"depth":3,"id":"T148","label":"p1-lower2-grandchild","parent":"T147"},"kind":"TASK_ADMITTED","prev":"b6c5a2beb3b91d1d13dc0c3bb6b0d526a458d4fdfab043c3006c88e92681b8d6","seq":296,"ts":"2026-11-23T21:05:03Z"}
+{"actor":"principal","auth":"DECLARED","body":{"id":"T148"},"kind":"TASK_RELEASED","prev":"1f82ab78fa284f86e08b0b5f06f3c186b15856a1de517e3da130de1d6512a740","seq":297,"ts":"2026-11-23T21:05:34Z"}
+{"actor":"principal","auth":"DECLARED","body":{"id":"T147"},"kind":"TASK_RELEASED","prev":"a4e528f9fd0662ad8a02f5ab1ff52770b2f5ea7fe7d3f37028c09d468b72e2ac","seq":298,"ts":"2026-11-23T21:09:30Z"}
+{"actor":"principal","auth":"DECLARED","body":{"id":"T146"},"kind":"TASK_RELEASED","prev":"879daed6637e8a0dcbb13273118ddeb1a52b55c06db3e57b5684ad94af111968","seq":299,"ts":"2026-11-23T21:10:29Z"}

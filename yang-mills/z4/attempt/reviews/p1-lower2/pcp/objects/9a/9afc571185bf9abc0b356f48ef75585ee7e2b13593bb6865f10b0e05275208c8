@@ -1,0 +1,1 @@
+/home/user/z4-workers/p1-lower2/child/report.md — met 76, failed 0, measured only 36; worst |diff| 0.129, 0.072 and 0.041 at β = 256, 1024 and 4096, with √β·|diff| at most about 2.1, 2.3 and 2.6, so it looks bounded.

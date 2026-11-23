@@ -1,0 +1,2 @@
+check K102: exit 0 (expected 0) in 684292 ms | output fdb01820f591 | event 104 head 645d20e373aa
+  /home/user/z4-workers/p1-lower2/report.md — 12 items: 7 STANDS, 1 DEFECT, 4 NOT CHECKED. The target limsup ≤ c* is not proved. It still needs (E1), (E3), the Harnack chain H4 and a continuum form of Lemma P'. Predicates: 92 met, 1 failed, 19 measured only.

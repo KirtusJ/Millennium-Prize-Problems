@@ -1,0 +1,5 @@
+/home/user/z4-workers/p1-lower2/CutoffAlgebra.lean:22:47: warning: unused variable `hS`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+'cutoff_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'cutoff_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'sqrt_increment' depends on axioms: [propext, Classical.choice, Quot.sound]

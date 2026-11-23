@@ -1,0 +1,126 @@
+# tube_ratio.py tag=main n=400000 seed=20261123
+Q1 beta=256 mean_cos=0.99413788 exact=0.99414637 SE=5.36e-06 MET
+Q2 beta=256 a1=0.5000 c=0.0 y=0.0 -logR=0.12703 pred=0.00000 diff=+0.12703 sqrtb*diff=+2.033 SE=2.6e-03 MET
+Q2 beta=256 a1=0.5000 c=0.0 y=1.0 -logR=0.08881 pred=0.00730 diff=+0.08151 sqrtb*diff=+1.304 SE=3.0e-03 MET
+Q2 beta=256 a1=0.5000 c=0.1 y=0.0 -logR=0.14579 pred=0.01851 diff=+0.12728 sqrtb*diff=+2.036 SE=2.6e-03 MET
+Q2 beta=256 a1=0.5000 c=0.1 y=1.0 -logR=0.10839 pred=0.02558 diff=+0.08281 sqrtb*diff=+1.325 SE=3.0e-03 MET
+Q2 beta=256 a1=1.5708 c=0.0 y=0.0 -logR=-0.01366 pred=0.00000 diff=-0.01366 sqrtb*diff=-0.218 SE=1.1e-02 MET
+Q2 beta=256 a1=1.5708 c=0.0 y=1.0 -logR=-0.02610 pred=0.00275 diff=-0.02885 sqrtb*diff=-0.462 SE=1.4e-02 MET
+Q2 beta=256 a1=1.5708 c=0.1 y=0.0 -logR=-0.00967 pred=0.00702 diff=-0.01669 sqrtb*diff=-0.267 SE=1.1e-02 MET
+Q2 beta=256 a1=1.5708 c=0.1 y=1.0 -logR=-0.02026 pred=0.00974 diff=-0.02999 sqrtb*diff=-0.480 SE=1.5e-02 MET
+Q2 beta=256 a1=2.5000 c=0.0 y=0.0 -logR=-0.09406 pred=0.00000 diff=-0.09406 sqrtb*diff=-1.505 SE=5.4e-03 MET
+Q2 beta=256 a1=2.5000 c=0.0 y=1.0 -logR=-0.08073 pred=0.00557 diff=-0.08630 sqrtb*diff=-1.381 SE=6.3e-03 MET
+Q2 beta=256 a1=2.5000 c=0.1 y=0.0 -logR=-0.08105 pred=0.01417 diff=-0.09521 sqrtb*diff=-1.523 SE=5.4e-03 MET
+Q2 beta=256 a1=2.5000 c=0.1 y=1.0 -logR=-0.06459 pred=0.01961 diff=-0.08420 sqrtb*diff=-1.347 SE=6.5e-03 MET
+Q4 beta=256 a1=0.5000 c=0.0 y=0.000 R1=0.61028 log R1=-0.49383 SE=4.1e-03 measured-only
+Q4 beta=256 a1=0.5000 c=0.0 y=1.000 R1=0.86724 log R1=-0.14244 SE=5.0e-03 measured-only
+Q4 beta=256 a1=0.5000 c=0.0 y=2.606 phi1=0 (outside support) skipped
+Q4 beta=256 a1=0.5000 c=0.07 y=0.000 R1=0.71385 log R1=-0.33708 SE=4.5e-03 measured-only
+Q4 beta=256 a1=0.5000 c=0.07 y=1.000 R1=1.02251 log R1=+0.02226 SE=5.4e-03 measured-only
+Q4 beta=256 a1=0.5000 c=0.07 y=2.617 phi1=0 (outside support) skipped
+Q4 beta=256 a1=0.5000 c=0.14 y=0.000 R1=2.48488 log R1=+0.91023 SE=6.9e-03 measured-only
+Q4 beta=256 a1=0.5000 c=0.14 y=1.000 phi1=0 (outside support) skipped
+Q4 beta=256 a1=0.5000 c=0.14 y=2.649 phi1=0 (outside support) skipped
+Q4 beta=256 a1=1.2000 c=0.0 y=0.000 R1=0.81267 log R1=-0.20743 SE=1.2e-02 measured-only
+Q4 beta=256 a1=1.2000 c=0.0 y=1.000 R1=1.24542 log R1=+0.21947 SE=1.8e-02 measured-only
+Q4 beta=256 a1=1.2000 c=0.0 y=1.683 R1=6.69595 log R1=+1.90150 SE=1.8e-02 measured-only
+Q4 beta=256 a1=1.2000 c=0.07 y=0.000 R1=0.95914 log R1=-0.04172 SE=1.3e-02 measured-only
+Q4 beta=256 a1=1.2000 c=0.07 y=1.000 R1=1.48556 log R1=+0.39579 SE=1.7e-02 measured-only
+Q4 beta=256 a1=1.2000 c=0.07 y=1.685 R1=9.79093 log R1=+2.28146 SE=1.9e-02 measured-only
+Q4 beta=256 a1=1.2000 c=0.14 y=0.000 R1=3.43992 log R1=+1.23545 SE=1.9e-02 measured-only
+Q4 beta=256 a1=1.2000 c=0.14 y=1.000 phi1=0 (outside support) skipped
+Q4 beta=256 a1=1.2000 c=0.14 y=1.688 phi1=0 (outside support) skipped
+Q4 beta=256 a1=1.5708 c=0.0 y=0.000 R1=0.85064 log R1=-0.16177 SE=1.4e-02 measured-only
+Q4 beta=256 a1=1.5708 c=0.0 y=1.000 R1=1.32102 log R1=+0.27841 SE=2.3e-02 measured-only
+Q4 beta=256 a1=1.5708 c=0.0 y=1.598 R1=6.20759 log R1=+1.82577 SE=2.0e-02 measured-only
+Q4 beta=256 a1=1.5708 c=0.07 y=0.000 R1=1.00438 log R1=+0.00437 SE=1.5e-02 measured-only
+Q4 beta=256 a1=1.5708 c=0.07 y=1.000 R1=1.57789 log R1=+0.45609 SE=2.1e-02 measured-only
+Q4 beta=256 a1=1.5708 c=0.07 y=1.599 R1=8.56176 log R1=+2.14731 SE=2.1e-02 measured-only
+Q4 beta=256 a1=1.5708 c=0.14 y=0.000 R1=3.62362 log R1=+1.28747 SE=2.2e-02 measured-only
+Q4 beta=256 a1=1.5708 c=0.14 y=1.000 phi1=0 (outside support) skipped
+Q4 beta=256 a1=1.5708 c=0.14 y=1.602 phi1=0 (outside support) skipped
+Q1 beta=1024 mean_cos=0.99853655 exact=0.99853551 SE=1.33e-06 MET
+Q2 beta=1024 a1=0.5000 c=0.0 y=0.0 -logR=0.05893 pred=0.00000 diff=+0.05893 sqrtb*diff=+1.886 SE=2.9e-03 MET
+Q2 beta=1024 a1=0.5000 c=0.0 y=1.0 -logR=0.04370 pred=0.00183 diff=+0.04186 sqrtb*diff=+1.340 SE=3.3e-03 MET
+Q2 beta=1024 a1=0.5000 c=0.1 y=0.0 -logR=0.07795 pred=0.01851 diff=+0.05944 sqrtb*diff=+1.902 SE=2.9e-03 MET
+Q2 beta=1024 a1=0.5000 c=0.1 y=1.0 -logR=0.06329 pred=0.02029 diff=+0.04300 sqrtb*diff=+1.376 SE=3.3e-03 MET
+Q2 beta=1024 a1=1.5708 c=0.0 y=0.0 -logR=-0.00991 pred=0.00000 diff=-0.00991 sqrtb*diff=-0.317 SE=9.8e-03 MET
+Q2 beta=1024 a1=1.5708 c=0.0 y=1.0 -logR=-0.01246 pred=0.00069 diff=-0.01315 sqrtb*diff=-0.421 SE=1.2e-02 MET
+Q2 beta=1024 a1=1.5708 c=0.1 y=0.0 -logR=-0.00574 pred=0.00702 diff=-0.01276 sqrtb*diff=-0.408 SE=1.0e-02 MET
+Q2 beta=1024 a1=1.5708 c=0.1 y=1.0 -logR=-0.00482 pred=0.00770 diff=-0.01252 sqrtb*diff=-0.401 SE=1.2e-02 MET
+Q2 beta=1024 a1=2.5000 c=0.0 y=0.0 -logR=-0.04965 pred=0.00000 diff=-0.04965 sqrtb*diff=-1.589 SE=4.7e-03 MET
+Q2 beta=1024 a1=2.5000 c=0.0 y=1.0 -logR=-0.04217 pred=0.00140 diff=-0.04357 sqrtb*diff=-1.394 SE=5.6e-03 MET
+Q2 beta=1024 a1=2.5000 c=0.1 y=0.0 -logR=-0.03907 pred=0.01417 diff=-0.05323 sqrtb*diff=-1.703 SE=4.8e-03 MET
+Q2 beta=1024 a1=2.5000 c=0.1 y=1.0 -logR=-0.03036 pred=0.01553 diff=-0.04590 sqrtb*diff=-1.469 SE=5.7e-03 MET
+Q4 beta=1024 a1=0.5000 c=0.0 y=0.000 R1=0.96731 log R1=-0.03324 SE=4.0e-03 FAILED
+Q4 beta=1024 a1=0.5000 c=0.0 y=1.000 R1=1.10361 log R1=+0.09859 SE=4.6e-03 MET
+Q4 beta=1024 a1=0.5000 c=0.0 y=2.606 R1=5.42401 log R1=+1.69084 SE=1.0e-02 MET
+Q4 beta=1024 a1=0.5000 c=0.07 y=0.000 R1=1.07812 log R1=+0.07522 SE=4.4e-03 MET
+Q4 beta=1024 a1=0.5000 c=0.07 y=1.000 R1=1.21038 log R1=+0.19094 SE=5.0e-03 MET
+Q4 beta=1024 a1=0.5000 c=0.07 y=2.617 R1=6.00455 log R1=+1.79252 SE=1.2e-02 MET
+Q4 beta=1024 a1=0.5000 c=0.14 y=0.000 R1=2.27222 log R1=+0.82076 SE=7.2e-03 MET
+Q4 beta=1024 a1=0.5000 c=0.14 y=1.000 R1=3.46669 log R1=+1.24320 SE=7.7e-03 MET
+Q4 beta=1024 a1=0.5000 c=0.14 y=2.649 phi1=0 (outside support) skipped
+Q4 beta=1024 a1=1.2000 c=0.0 y=0.000 R1=1.07627 log R1=+0.07350 SE=1.1e-02 MET
+Q4 beta=1024 a1=1.2000 c=0.0 y=1.000 R1=1.28227 log R1=+0.24863 SE=1.4e-02 MET
+Q4 beta=1024 a1=1.2000 c=0.0 y=1.683 R1=4.57349 log R1=+1.52028 SE=2.3e-02 MET
+Q4 beta=1024 a1=1.2000 c=0.07 y=0.000 R1=1.21710 log R1=+0.19647 SE=1.2e-02 MET
+Q4 beta=1024 a1=1.2000 c=0.07 y=1.000 R1=1.41178 log R1=+0.34485 SE=1.4e-02 MET
+Q4 beta=1024 a1=1.2000 c=0.07 y=1.685 R1=4.91244 log R1=+1.59177 SE=2.5e-02 MET
+Q4 beta=1024 a1=1.2000 c=0.14 y=0.000 R1=2.68175 log R1=+0.98647 SE=1.9e-02 MET
+Q4 beta=1024 a1=1.2000 c=0.14 y=1.000 R1=4.17585 log R1=+1.42932 SE=1.9e-02 MET
+Q4 beta=1024 a1=1.2000 c=0.14 y=1.688 R1=190.73402 log R1=+5.25088 SE=2.7e-02 MET
+Q4 beta=1024 a1=1.5708 c=0.0 y=0.000 R1=1.09526 log R1=+0.09099 SE=1.2e-02 MET
+Q4 beta=1024 a1=1.5708 c=0.0 y=1.000 R1=1.31612 log R1=+0.27469 SE=1.6e-02 MET
+Q4 beta=1024 a1=1.5708 c=0.0 y=1.598 R1=4.52198 log R1=+1.50895 SE=2.6e-02 MET
+Q4 beta=1024 a1=1.5708 c=0.07 y=0.000 R1=1.24360 log R1=+0.21801 SE=1.4e-02 MET
+Q4 beta=1024 a1=1.5708 c=0.07 y=1.000 R1=1.45104 log R1=+0.37228 SE=1.7e-02 MET
+Q4 beta=1024 a1=1.5708 c=0.07 y=1.599 R1=4.85082 log R1=+1.57915 SE=2.8e-02 MET
+Q4 beta=1024 a1=1.5708 c=0.14 y=0.000 R1=2.76052 log R1=+1.01542 SE=2.2e-02 MET
+Q4 beta=1024 a1=1.5708 c=0.14 y=1.000 R1=4.29041 log R1=+1.45638 SE=2.2e-02 MET
+Q4 beta=1024 a1=1.5708 c=0.14 y=1.602 R1=56.71738 log R1=+4.03808 SE=2.8e-02 MET
+Q1 beta=4096 mean_cos=0.99963433 exact=0.99963381 SE=3.34e-07 MET
+Q2 beta=4096 a1=0.5000 c=0.0 y=0.0 -logR=0.03218 pred=0.00000 diff=+0.03218 sqrtb*diff=+2.059 SE=3.0e-03 MET
+Q2 beta=4096 a1=0.5000 c=0.0 y=1.0 -logR=0.02589 pred=0.00046 diff=+0.02543 sqrtb*diff=+1.627 SE=3.4e-03 MET
+Q2 beta=4096 a1=0.5000 c=0.1 y=0.0 -logR=0.05021 pred=0.01851 diff=+0.03170 sqrtb*diff=+2.029 SE=3.0e-03 MET
+Q2 beta=4096 a1=0.5000 c=0.1 y=1.0 -logR=0.04363 pred=0.01895 diff=+0.02467 sqrtb*diff=+1.579 SE=3.4e-03 MET
+Q2 beta=4096 a1=1.5708 c=0.0 y=0.0 -logR=0.01205 pred=0.00000 diff=+0.01205 sqrtb*diff=+0.771 SE=9.8e-03 MET
+Q2 beta=4096 a1=1.5708 c=0.0 y=1.0 -logR=0.00299 pred=0.00017 diff=+0.00282 sqrtb*diff=+0.180 SE=1.4e-02 MET
+Q2 beta=4096 a1=1.5708 c=0.1 y=0.0 -logR=0.02086 pred=0.00702 diff=+0.01384 sqrtb*diff=+0.886 SE=9.9e-03 MET
+Q2 beta=4096 a1=1.5708 c=0.1 y=1.0 -logR=0.01004 pred=0.00719 diff=+0.00285 sqrtb*diff=+0.183 SE=1.4e-02 MET
+Q2 beta=4096 a1=2.5000 c=0.0 y=0.0 -logR=-0.01862 pred=0.00000 diff=-0.01862 sqrtb*diff=-1.192 SE=4.4e-03 MET
+Q2 beta=4096 a1=2.5000 c=0.0 y=1.0 -logR=-0.01454 pred=0.00035 diff=-0.01489 sqrtb*diff=-0.953 SE=5.3e-03 MET
+Q2 beta=4096 a1=2.5000 c=0.1 y=0.0 -logR=-0.00356 pred=0.01417 diff=-0.01773 sqrtb*diff=-1.135 SE=4.4e-03 MET
+Q2 beta=4096 a1=2.5000 c=0.1 y=1.0 -logR=0.00008 pred=0.01451 diff=-0.01443 sqrtb*diff=-0.923 SE=5.4e-03 MET
+Q4 beta=4096 a1=0.5000 c=0.0 y=0.000 R1=1.11959 log R1=+0.11297 SE=4.0e-03 MET
+Q4 beta=4096 a1=0.5000 c=0.0 y=1.000 R1=1.18832 log R1=+0.17254 SE=4.6e-03 MET
+Q4 beta=4096 a1=0.5000 c=0.0 y=2.606 R1=4.38172 log R1=+1.47744 SE=9.3e-03 MET
+Q4 beta=4096 a1=0.5000 c=0.07 y=0.000 R1=1.21348 log R1=+0.19349 SE=4.2e-03 MET
+Q4 beta=4096 a1=0.5000 c=0.07 y=1.000 R1=1.27463 log R1=+0.24265 SE=4.9e-03 MET
+Q4 beta=4096 a1=0.5000 c=0.07 y=2.617 R1=4.44564 log R1=+1.49192 SE=9.5e-03 MET
+Q4 beta=4096 a1=0.5000 c=0.14 y=0.000 R1=1.74959 log R1=+0.55938 SE=6.4e-03 MET
+Q4 beta=4096 a1=0.5000 c=0.14 y=1.000 R1=1.92633 log R1=+0.65562 SE=7.0e-03 MET
+Q4 beta=4096 a1=0.5000 c=0.14 y=2.649 R1=11.67985 log R1=+2.45786 SE=1.3e-02 MET
+Q4 beta=4096 a1=1.2000 c=0.0 y=0.000 R1=1.15668 log R1=+0.14556 SE=1.1e-02 MET
+Q4 beta=4096 a1=1.2000 c=0.0 y=1.000 R1=1.28915 log R1=+0.25399 SE=1.6e-02 MET
+Q4 beta=4096 a1=1.2000 c=0.0 y=1.683 R1=4.10514 log R1=+1.41224 SE=2.0e-02 MET
+Q4 beta=4096 a1=1.2000 c=0.07 y=0.000 R1=1.25065 log R1=+0.22367 SE=1.1e-02 MET
+Q4 beta=4096 a1=1.2000 c=0.07 y=1.000 R1=1.38006 log R1=+0.32213 SE=1.6e-02 MET
+Q4 beta=4096 a1=1.2000 c=0.07 y=1.685 R1=4.22516 log R1=+1.44106 SE=1.9e-02 MET
+Q4 beta=4096 a1=1.2000 c=0.14 y=0.000 R1=1.83235 log R1=+0.60560 SE=1.6e-02 MET
+Q4 beta=4096 a1=1.2000 c=0.14 y=1.000 R1=2.12005 log R1=+0.75144 SE=2.0e-02 MET
+Q4 beta=4096 a1=1.2000 c=0.14 y=1.688 R1=6.96615 log R1=+1.94106 SE=2.3e-02 MET
+Q4 beta=4096 a1=1.5708 c=0.0 y=0.000 R1=1.16308 log R1=+0.15107 SE=1.2e-02 MET
+Q4 beta=4096 a1=1.5708 c=0.0 y=1.000 R1=1.31297 log R1=+0.27229 SE=1.9e-02 MET
+Q4 beta=4096 a1=1.5708 c=0.0 y=1.598 R1=4.09346 log R1=+1.40939 SE=2.2e-02 MET
+Q4 beta=4096 a1=1.5708 c=0.07 y=0.000 R1=1.25489 log R1=+0.22705 SE=1.2e-02 MET
+Q4 beta=4096 a1=1.5708 c=0.07 y=1.000 R1=1.40517 log R1=+0.34016 SE=1.9e-02 MET
+Q4 beta=4096 a1=1.5708 c=0.07 y=1.599 R1=4.20837 log R1=+1.43708 SE=2.1e-02 MET
+Q4 beta=4096 a1=1.5708 c=0.14 y=0.000 R1=1.83332 log R1=+0.60613 SE=1.7e-02 MET
+Q4 beta=4096 a1=1.5708 c=0.14 y=1.000 R1=2.16224 log R1=+0.77114 SE=2.3e-02 MET
+Q4 beta=4096 a1=1.5708 c=0.14 y=1.602 R1=6.77542 log R1=+1.91330 SE=2.4e-02 MET
+Q3 worst|diff|: beta=256: 0.12728, beta=1024: 0.05944, beta=4096: 0.03218 MET
+SUMMARY Q1: met 3, failed 0 of 3
+SUMMARY Q2: met 36, failed 0 of 36
+SUMMARY Q3: met 1, failed 0 of 1
+SUMMARY Q4: met 52, failed 1 of 53

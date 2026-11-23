@@ -1,0 +1,11 @@
+# notes.md — worker p1-lower2 (T146)
+- step 0: control.txt = 0.272341 (-ln tanh 1). Lean READY exists.
+- step 1: read TUNNEL_LOWER.md, TUNNEL_THEOREM.md, LEMMA_F.md. Register pcp initialised.
+- step 2: child admitted T147; child/PROMPT.txt written (task: MC of (T phi)/phi at 12 points, 3 betas; control c*).
+- step 3: tube_ratio.py written; first check K1 (smoke) FAILED exit 1: scipy missing (own defect); replaced ive by trapezoid quadrature (no other change).
+- step 4: smoke run v1 (n=2e4): Q1 3/0, Q2 36/0 (but SE 2-9%), Q3 0/1 (noise), Q4 36 met/15 failed at a2~0: own parameter defect (Hessian of Theta, l=0.02). v2: antithetic, th0=0.5,l=0.08,r0=0.15. v1 kept as tube_ratio_v1.py/results_smoke.txt.
+- step 5: child control 4.60541 graded CORRECT (c*=4.6054132). Lean CutoffAlgebra.lean: check K4 exit 0.
+- step 6: TUNNEL_LOWER2.md draft written (target NOT proved; conditional on E1,E3,H4,continuum P').
+- step 7: main run K5: Q1 3/0, Q2 36/0, Q3 1/0, Q4 52/1 (fail: beta=1024 a1=0.5 c=0 y=0 R1=0.967; own expectation, finite-beta Hessian cost). Child K3 exit 0.
+- step 8: child mc.py rerun in child_rerun/ (K6): bit-identical. Cross-check child vs mine on 36 core points: see report.
+- step 9: report.md written; T147 released; verify PASS both.

@@ -1,0 +1,6 @@
+P5 ESS>=1000: met 36/36 (min ESS 1890)
+P3 |diff|<=5SE+2/sqrt(b): met 36/36 failed 0
+beta=256: worst|diff|=0.12913  max sqrt(b)|diff|=2.066  max SE=0.0229
+beta=1024: worst|diff|=0.07237  max sqrt(b)|diff|=2.316  max SE=0.0181
+beta=4096: worst|diff|=0.04072  max sqrt(b)|diff|=2.606  max SE=0.0189
+P4 bounded: 2.606 <= 1.5*2.066+slack -> met=True

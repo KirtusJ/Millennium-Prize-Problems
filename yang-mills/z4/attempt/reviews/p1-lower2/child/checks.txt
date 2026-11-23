@@ -1,0 +1,2 @@
+P1 control recomputed 4.60541319 file 4.60541 met=True
+P2 mean=0.994129 exact=0.994146 SE=1.07e-05 z=-1.61 met=True
