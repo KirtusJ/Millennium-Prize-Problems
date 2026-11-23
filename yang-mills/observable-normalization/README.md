@@ -36,3 +36,5 @@ For a candidate transfer Hamiltonian and centered vector, the two inputs are the
 [Spatial smearing of the conserved Hamiltonian energy](energy-density/) gives an exact first moment in terms of local weight differences and a cutoff-uniform compactness test for a time-differenced energy density.
 
 [Three periodic Wilson partition functions](replica-gap/) bound the full finite-box transfer gap. At the SU(2) electric endpoint the first multiplet gives an explicit magnetic susceptibility, dispersion, and two-copy measurement variance.
+
+[Uniform isolation of the first Wilson transfer band](uniform-band/) gives the volume-independent spectral estimate and its strong-coupling mass expansion.
