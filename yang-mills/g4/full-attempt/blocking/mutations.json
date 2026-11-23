@@ -1,0 +1,20 @@
+[
+  {
+    "label": "negative_reverse_vacuum",
+    "find": "(u - s * r) / (1 - s) := by",
+    "replace": "(r - s * u) / (1 - s) := by",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_drop_lag",
+    "find": "= r^n-u^n := by",
+    "replace": "= r^n+u^n := by",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_double_face",
+    "find": "= r*q^2/(4*(1+q^2)) := by",
+    "replace": "= r*q^2/(2*(1+q^2)) := by",
+    "diagnostic": "error:"
+  }
+]

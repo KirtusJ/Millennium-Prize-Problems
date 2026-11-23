@@ -75,6 +75,8 @@ For fixed periodic $SU(2)$ Wilson boxes, the [compact zero-mode calculation](per
 
 G4’s [independent full-proof attempt](full-attempt/README.md) fixes the physical length before estimating the gap. The electric Wilson transfer and a massive Gaussian field disprove two proposed uniform estimates. A multiscale replacement remains open for the isotropic theory.
 
+The [blocked Wilson transfer](full-attempt/blocking/README.md) preserves each straight-link spatial resolution in the electric model. Its first magnetic derivative couples a coarse square to fine bent loops and rules out a coupling-uniform linear estimate for this interaction.
+
 ## Reproduction
 
 Use Lean `4.19.0` and Mathlib commit `c44e0c8ee63ca166450922a373c7409c5d26b00b`. From that Mathlib checkout:
