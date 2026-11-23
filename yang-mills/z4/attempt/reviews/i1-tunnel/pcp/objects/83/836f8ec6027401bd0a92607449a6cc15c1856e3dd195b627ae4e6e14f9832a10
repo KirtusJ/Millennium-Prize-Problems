@@ -1,0 +1,29 @@
+(i) holds exactly: Λ(a) = 1/(sin a + √(1+sin²a)), so ε_total(a) = 2 arcsinh(sin a) = arccosh(1 + 2 sin²a). (ii) gives S′²/2 = ε(a) − E at leading order, but the control integral is not c. The correct c is 4.605413. Every predicate passed, so there are no failed predicates.
+
+**Control.** `control.txt` holds 4.792561. It is the integral of 2√(sin a), which equals 2√π Γ(3/4)/Γ(5/4).
+
+**(i) Frozen U1.**
+- **Eigenvalue:** with w = β sin²a, the Gaussian ansatz gives the fixed point c = 2√(w(w+β)). The largest eigenvalue is Λ = √β/(√w + √(w+β)) = 1/(s + √(1+s²)), with s = sin a.
+- **ε:** ε per transverse dimension is arcsinh(sin a). It does not depend on β and is exact for this Gaussian operator.
+- **Identity:** two transverse dimensions give 2 arcsinh(sin a), which equals arccosh(1 + 2 sin²a) exactly, since cosh 2u = 1 + 2 sinh²u. The longitudinal direction contributes eigenvalue 1.
+- **Grid check:** on a grid, β=50 at a=π/2 gives 0.4142135623731, and β=50 at a=0.3 gives 0.7472320134491. Relative error against the formula is about 4e-15 in both cases. β=200 at a=π/2 gives the same eigenvalue as β=50.
+- **Neglected:** SU(2) curvature, the compact-group kernel normalisation, and non-adiabatic coupling to the U1 motion. These are all O(1/β) or smaller.
+
+**(ii) Slow motion along the valley.**
+- **Eikonal:** a Gaussian step of variance 1/β acting on exp(−√β S) gives exactly exp(S′²/2). There is no sinh/cosh lattice correction. The Haar factor sin²a only adds an O(1/√β) term, so it changes the prefactor and not the eikonal.
+- **E:** the eigenvalue is e^(−E/√β) → 1, so E drops out of the leading exponent. It would enter as √(2(ε − E)) only if the lowest eigenvalue were an O(1) distance from 1.
+- **Exactness check:** for constant ε, exp(−k a) with k = √(2βε) is an exact eigenfunction with eigenvalue 1, to 4e-16.
+- **Splitting exponent:** −log(splitting) ≈ c√β with c = ∫₀^π √(2 ε_total) da = 2∫₀^π √(arcsinh(sin a)) da = **4.605413**.
+- **Why the control is not c:** the control integrand corresponds to ε = 2 sin a, which is only the small-sin a limit. Using the exact ε changes c by a factor of 0.961.
+
+**Failed predicates:** none.
+
+**Not checked:** full two-link SU(2) numerics, a numerical double-well splitting, a numerical test of the Haar-factor effect (analytic only), non-adiabatic and Berry corrections, and the finite-β compact-group kernel. I also took as given that the splitting exponent is the full action from a = 0 to π, and did not verify it.
+
+**Grandchild.** I admitted it as T104 and released it after it returned. It passed its own control, then computed the largest eigenvalue independently at β=50 for a=π/2 and a=0.3, and at β=200 for a=π/2. It got 0.4142135624, 0.7472320134 and 0.4142135624. These match the formula to 3.6e-14, and halving the grid changed them by at most 4e-16. I reread its `eig.py` and reran it as check K2. The output was identical to its `result.txt`.
+
+**PCP records:** `pcp_os.py verify` ended with "result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)". `pcpos verify` ended with "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+
+**Rerun:** delete `check_result.txt`, then run `python3 -I check.py` in `child/`. For the grandchild, run `python3 -I eig.py` in `child/rerun/`.
+
+Everything is in `/home/user/z4-workers/i1-tunnel/child`; start with `report.md`. The other files are `control.txt`, `notes.md`, `check.py`, `check_result.txt`, `grandchild/` and `rerun/`.

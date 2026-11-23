@@ -118,3 +118,26 @@ What was done here:
 **Grounding of the ceiling** (same record). The conversion to the lattice box was rederived: constant modes on L³ give (βL³)^(−1/3)·h₃ exactly at leading order, so m = e·β^(−1/3)/L, Lüscher's g^(2/3)/L with identical coefficients (bare coupling; the literature uses the renormalised g(L), equal at leading order). The literature puts the end of the regime at z = mL of order one: boundary effects of the fundamental domain from z > 0.9 and a crossover near z ≈ 2 (van Baal pp. 11–15; Lüscher–Münster abstract). No theorem giving a lower bound on the finite-torus gap at weak coupling, uniform in anything, was found; no proof of the discrete-time one-site limit was found; no published spectrum of the two-direction operator was found. The searches were limited (the arXiv and INSPIRE phrase queries returned nothing even where they should have), so "not found" is weak.
 
 A caution for readers of the review cited: it calls 4.1167 the lowest-order "mass of the scalar glueball"; in its own eq. (12) and in our computation it is the ground energy, not a gap.
+
+## 9. The tunnelling exponent of the two-direction model: a heuristic value, and a measurement beyond double precision
+
+A4's two-sided bound e^(−C√β) ≤ m_χ ≤ e^(−c√β) leaves the coefficient open. A heuristic gives one. With one link at class angle a on the valley, the two transverse directions of the other link are a discrete-time oscillator with exact ground energy ε(a) = arccosh(1 + 2 sin²a) = 2 asinh(sin a), of order one in lattice units (so the continuous-time value 2 sin a is wrong away from the centers). The slow link walks with Gaussian steps of variance 1/β; for ψ = exp(−√β S(a)) the step integral is exact and gives S′²/2 = ε − E. Hence
+
+ −log m_eo = c√β − E₀·d·β^(1/6) + O(log β),  c = ∫₀^π √(2ε(a)) da = 4.6054132,  d = ∫₀^π da/√(2ε(a)) = 2.6828,  E₀·d = 8.99.
+
+Not proved: the WKB step; that the optimal path keeps the other link at a center.
+
+Measured ([`reviews/i1-tunnel/report.md`](reviews/i1-tunnel/report.md); double-double arithmetic, the four double-precision values reproduced first): m_eo = 6.8644·10⁻¹⁴, 1.4597·10⁻¹⁶, 4.1266·10⁻²¹, 5.4032·10⁻²⁵ at β = 96, 128, 192, 256 (the last digit at 256 not guaranteed by the worker's own error bound); m_oo/m_eo = 2.00000. Local slopes d(−log m)/d√β: 3.99, 4.06, 4.12, 4.17, rising. A free fit c√β + qβ^(1/6) + k over β ≥ 96 gives c = 4.599, q = −7.8; with c = 4.6054 fixed, q = −8.1 (predicted −8.99, about 12 per cent off, with four points and a log term unresolved). With the continuous-time c = 4.7926 forced the residual is five to six times larger and the other parameters drift. So the data favour 4.6054 over 4.7926; they do not establish it. The worker and its child derived ε and the WKB relation separately and agree; they share my model family. My brief's remark that the E-correction diverges at the ends was wrong (the integral converges), and my size estimates for the splittings were too small by up to five orders.
+
+## 10. The three-direction limit, measured
+
+A Monte Carlo measurement of the one-site three-direction model ([`reviews/i1-mc3/report.md`](reviews/i1-mc3/report.md); 32 independent chains per β, variational analysis of four center-even operators per channel, plateau rule fixed before the runs). Controls: the exact gap at β = 2 (1.6291 ± 0.0132 against 1.621505; the child's separate code 1.620 ± 0.013) and at β = 4 (0.96904 ± 0.00380 against 0.96893, with a differenced correlator adopted after the raw one showed a constant floor: a defect of the first method, kept); the two-direction pipeline at β = 256 (1.9019 ± 0.0084 against 1.887, 1.8 σ high). The control at β = 1 failed its plateau rule.
+
+m·β^(1/3), channels E, T₂, A₁ (predictions 3.0125, 3.0125, 3.6028):
+- β = 64: 2.747(10), 2.813(13), 3.225(36)
+- β = 256: 2.901(11), 2.938(7), 3.453(16)
+- β = 1024: 2.955(9), 2.973(8), 3.524(17)
+- β = 4096: 2.992(13), 2.989(13), 3.544(27)
+- β = 16384: 2.988(23), 2.984(23), 3.568(48)
+
+The pre-registered checks were met: within 8 per cent at β = 4096 in all three channels (−0.7, −0.8, −1.6 per cent), and the deviation shrinking from β = 64. The E–T₂ splitting falls from 0.28(4) at β = 16 to zero within errors from β = 1024. The approach is from below, as in two directions. This supports the three-direction case of A4's limit and the continuum numbers of section 7; it is a measurement at 1 to 2 per cent, not a proof.

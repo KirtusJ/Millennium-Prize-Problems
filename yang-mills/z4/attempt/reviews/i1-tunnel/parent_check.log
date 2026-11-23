@@ -1,0 +1,2 @@
+check K86: exit 0 (expected 0) in 975501 ms | output a6809c70f531 | event 88 head eefd6528f3c8
+  /home/user/z4-workers/i1-tunnel/report.md — STANDS 8, DEFECT 2, NOT CHECKED 2, measured only 1 (β=256: 5.4032e-25, third digit not guaranteed); predicates met 144, failed 7, measured only 34; data favour c≈4.60 (supports 4.6054, not 4.7926).

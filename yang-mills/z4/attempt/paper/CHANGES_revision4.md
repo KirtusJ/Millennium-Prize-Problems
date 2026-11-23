@@ -6,4 +6,4 @@ One section added; no theorem of the paper changed.
 - `main.tex`: one row in the status table; one item in "What is not claimed"; one sentence in the Disclosure. The abstract is unchanged, by decision: the result is another contributor's, at fixed volume, in one sector.
 - `refs_add.tex`: van Baal 2000 (read in full); Lüscher 1983 and Lüscher–Münster 1984 (abstracts only), so marked in the text.
 - Section drafted by a worker and checked for fidelity by its child (record: `../reviews/i1-sec/`); the false-start paragraph rewritten by the director to state the inequality that failed (coefficient one on the weight), since the form recorded in the notes was true as written.
-- Not done in this revision: no outside-lineage reading of the new section; the three-direction limit has no numerical check yet.
+- Not done in this revision: no outside-lineage reading of the new section; the three-direction limit is checked by Monte Carlo only (added to the section the same day; record `../reviews/i1-mc3/`).

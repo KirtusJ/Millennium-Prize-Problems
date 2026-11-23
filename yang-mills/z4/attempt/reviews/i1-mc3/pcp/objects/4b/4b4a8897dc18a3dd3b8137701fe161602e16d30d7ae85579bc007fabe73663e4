@@ -1,0 +1,20 @@
+At β=2 I get m_e = 1.620 ± 0.013 (statistical, jackknife over 128 chains). The effective mass in the Q₁+Q₂+Q₃ channel is 1.897 ± 0.023 at τ=1.
+
+- **Method:** Metropolis Monte Carlo with quaternion SU(2). It uses 128 independent chains, T=16, W=1 gauge with W(T−1) dynamic, 300 thermalisation sweeps and 9000 measurement sweeps.
+- **m_e value:** it is the log-ratio effective mass of the two-fold operators (Q₁−Q₂, Q₁+Q₂−2Q₃) at τ=1. The τ=2 value is 1.63 ± 0.06, consistent with it. Beyond τ=2 the correlators drop into the noise, so excited-state contamination at τ=1 is not excluded; a conservative quote is 1.62 ± 0.02.
+- **Degeneracy and channel check:** the two operators have the same mass within errors: the difference is −0.005 ± 0.022 at τ=1. At τ=1 the two-fold level lies below the Q₁+Q₂+Q₃ level (1.62 vs 1.90). My predeclared τ=2 test of that ordering failed on statistics (difference 0.28 ± 0.17, against a 2σ bar).
+- **Control:** control.txt holds 1.266066.
+- **Known-answer check:** at β=0 the code gives ⟨Q⟩ = 0.24968 ± 0.00020 against the exact 1/4.
+- **Grandchild (T103):** on 20000 random SU(2) samples the commutator identity holds to 1.2e-15, and Q and P_ij are center-even (deviations 0 and 1.7e-15). All 4 predicates were met. I reread check.py and reran it with identical output, then released T103.
+- **Predicate counts:** 11 met, 2 failed, plus the measured-only values.
+  - The β=0 acceptance predicate failed because acceptance is 1.0 by construction at β=0. That was my own misapplied expectation; at β=2 acceptance is 0.46 and the predicate is met.
+  - The other failure is the τ=2 ordering test above.
+- **Not checked:** only T=16, one β and one seed, so systematics are untested. I did not run an independent method such as transfer-matrix diagonalisation.
+- **Verify:** the Python verify ends `result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)`. The Rust verify ends `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.`
+
+The report has the verdict table first, then the predicate counts, the grandchild's question and the exact rerun commands. Everything is in `/home/user/z4-workers/i1-mc3/child/`:
+- report.md
+- mc3.py
+- analyze.py
+- control.txt
+- notes.md

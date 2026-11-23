@@ -1,0 +1,2 @@
+/home/user/z4-workers/i1-mc3/child/analyze.py:20: RuntimeWarning: invalid value encountered in log
+  mm=lambda c,t:np.log(c[t]/c[t+1])

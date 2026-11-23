@@ -1,0 +1,5 @@
+P1 commutator formula: maxdev=1.221e-15 met
+P2 Ui->-Ui: maxdev=0.000e+00 met
+P3 Uj->-Uj: maxdev=0.000e+00 met
+P4 conjugation: maxdev=1.665e-15 met
+met 4/4

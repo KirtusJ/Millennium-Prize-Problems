@@ -1,0 +1,3 @@
+- control.txt = 1.266066 (I0(1), periodic trapezoid, 4096 pts).
+- check.py: seed 12345, N=20000; predicates declared in docstring before first run. 4/4 met: P1 1.2e-15, P2 0, P3 0, P4 1.7e-15. No failures, so no expectation-vs-target-defect question arises.
+- Rerun: rm results.txt; OMP_NUM_THREADS=1 python3 check.py (results.txt opened mode "x").
