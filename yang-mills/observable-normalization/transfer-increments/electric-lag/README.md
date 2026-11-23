@@ -43,3 +43,5 @@ On the common reference space, replace the two likelihoods in their TV integral 
 [The whole straight coarse space](all-coarse/) gives a volume-independent first-derivative bound with matching mesh decay at positive electric time and an exact sign symmetry for even-mesh histories.
 
 [Three coarse time slices](coarse-memory/) gives the leading failure of Markov composition and the strictly positive fourth-order conditional mutual information at fixed volume.
+
+[Energy slopes seen by a large square](corner-spectrum/) identifies the resonant corner moves and the limiting Gaussian distribution of first-order energy shifts in the square’s excited perimeter cluster.
