@@ -48,3 +48,5 @@ For a candidate transfer Hamiltonian and centered vector, the two inputs are the
 [Directional winding-energy bounds](winding-rate/) applies displacement-weighted walks to the charged Wilson sectors.
 
 [Unit-coupling plaquette spectral window](plaquette-window/) bounds both lattice-energy endpoints using two exterior slices and the fundamental-link tensor rule.
+
+[A finite difference of cube-centered plaquettes](filtered-contrast/) isolates the quartic overlap and its eleventh-power spectral weight.
