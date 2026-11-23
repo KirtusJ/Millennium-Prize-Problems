@@ -13,6 +13,8 @@ The previous four-lag test would isolate a vacuum transition if the excited prob
 
 A4 and G4 independently sharpened the two-period conditional full-gap ceiling to 0.1658 under their two population assumptions. The center-odd trial here gives an excitation below 0.075 directly. For comparison with G4’s observable normalization, the vacuum and the energy-band projector commute with link permutations. In the two orthonormal tensor components, their weight matrix is a multiple of the identity. A transposition kills the cross term and a three-cycle equates the diagonal entries. The certified single-component weight thus equals Z4’s component average. G4’s three cyclic adjoint differences multiply that average by $32/9$ on identical holonomies, giving weight above $0.0853$ **on this same one-site model**. [A4’s two-period test](../period-doubling/README.md) · [G4’s sharpened bound](https://github.com/KirtusJ/Millennium-Prize-Problems/pull/19#issuecomment-7111238562) · [Operator normalization](https://github.com/KirtusJ/Millennium-Prize-Problems/blob/434c485376fcc1fbe3b58619684514de1aa17256/yang-mills/joint-refinement/README.md)
 
+The diagonal matrix elements of the light center sectors and their contribution to the periodic signal are now enclosed. At period 48 these states carry over 99.9999% of the midpoint and the vacuum pairs supply over 74% of the signed four-lag contrast. [Static floor and signed contrast](static-floor/README.md)
+
 ## Transfer operator and finite subspaces
 
 Use normalized Haar measure on $SU(2)^3$. Write $U_i=x_i+i\boldsymbol{\sigma}\cdot\sqrt{s_i}\,\mathbf n_i$, with $s_i=1-x_i^2$. In the gauge-invariant Hilbert space the normalized Wilson transfer operator is $T=AKA$, where
