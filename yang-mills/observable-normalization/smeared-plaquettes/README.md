@@ -47,3 +47,5 @@ Haar symmetry gives $\mathbb E_0 X_iX_j=\delta_{ij}/4$. With the new weight, $\m
 The formulas specify which equal-time quantities to bound on an interacting physical trajectory. For a prescribed family $c$, determine $A,J_x,J_y$ and $V(c)$ with the same coupling, boundary conditions, spatial resolution, volume and smearing. The unresolved step is a joint analytic estimate on these quantities as the regulator is removed. Neither the two-plaquette example nor the conditional Rayleigh bound proves continuum existence or a mass gap.
 
 [All spatial smearings and the energy-weighted spectral law](moment-bounds/) gives a uniform lower bound on the first moment even for signed coefficients, derives an equal-time covariance floor, and tests how spatial support must grow to retain energy-weighted spectral mass on refinement.
+
+[The energy scale of the homogeneous action](action-curvature/) uses the curvature of the ground energy to control the raw spectral law at zero momentum when the magnetic coupling is averaged over a dyadic window.
