@@ -1,0 +1,14 @@
+[
+  {
+    "label": "negative_probability_factor",
+    "find": "2*(if u < |a-z| then (1 : ℝ) else 0) + signedCut",
+    "replace": "1*(if u < |a-z| then (1 : ℝ) else 0) + signedCut",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_reflection_sign",
+    "find": "|Y w + Y (θ w)|} := by\n  apply reflected_tail",
+    "replace": "|Y w - Y (θ w)|} := by\n  apply reflected_tail",
+    "diagnostic": "error:"
+  }
+]

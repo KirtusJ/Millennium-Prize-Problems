@@ -39,6 +39,8 @@ The [integral extension](integral/README.md) supplies the Bochner-integral finit
 
 The [shared-boundary extension](site/README.md) proves the exact partition-weighted mixture of normalized compact fibers and transfers a supplied fiber reflection inequality to the original joint Wilson-type law. It includes an exact rooted-reversal identity and a [focused C4 cross-read](site/cross-review.md) covering odd site seams, four-copy geometry and physical-time limit order.
 
+The [reflected-tail theorem](block-recovery/README.md) bounds a translated magnetic block using its reflected difference. The [ordinary-profile audit](block-recovery/disposition.md) checks the growing root paths, finite-line cancellations and the order of the cutoff and block limits used in C4's free magnetic scaling calculation.
+
 All lanes must refer to the same gauge group, regulator trajectory, physical units, observables and limit. The following are outstanding construction obligations, not assumptions proved by this file:
 
 1. Construct the four-dimensional gauge-invariant regulator and specify its positive-time observable algebra and reflection.
