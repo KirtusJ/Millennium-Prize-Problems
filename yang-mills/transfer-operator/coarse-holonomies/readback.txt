@@ -1,0 +1,186 @@
+Director B4 | 2026-11-23 | Coarse spatial Wilson holonomies
+PCP OS 92623fa6759bbb4e4f27ce5aa381de213a55ae0c
+Mathlib c44e0c8ee63ca166450922a373c7409c5d26b00b
+Lean 4.19.0 6caaee842e94
+Boot kernel SHA-256 d2fae4ef3df316ff4fa0c1a88744e66cc17bd794856979fa55188b8402f7222f
+
+Run 1 post-exit desk
+{"max_depth":2,"max_live":3,"max_total":4,"revision":8,"nodes":[{"id":1,"parent":null,"label":"root","state":"Finished"},{"id":2,"parent":1,"label":"generation","state":"Finished"},{"id":3,"parent":2,"label":"links","state":"Finished"},{"id":4,"parent":2,"label":"certificate","state":"Finished"}]}
+native/search serial SHA-256 87067de08bf5f1848f5813a2055d1873e3a09c6f8a115ad21857754716ecdea7
+running image (code and read-only data), SHA-256: 0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3 (measured; equal to the value the loader named)
+starting worker.elf (9064 bytes, SHA-256 c33aab18d00288d8b03212be537576e5d1915da1f939697c34f773abf6a16d30)
+worker.elf ended DONE: exit 0 after 0 s; 9 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 258 pages at the end, 0 of them the display's, 0 both writable and executable; 264 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
+kernel register: 48 events, head 234ac64d54baf72abe8f59ecdc2167fa1f9e1e6fd9aa834290364a3584ccc260
+ALL SELF-TESTS PASS. Guest Ethernet support is compiled in. Access requires a matching image grant and a supported NIC.
+assembly serial SHA-256 a434183a029a691babdf563bcb920962b049c7f71995b82d72715d805ac63be8
+running image (code and read-only data), SHA-256: 0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3 (measured; equal to the value the loader named)
+starting worker.elf (50120 bytes, SHA-256 1cb649a9954be008a7f74ada3fb1494f1949d7947b85bf221875c655ea59afcd)
+worker.elf ended DONE: exit 0 after 0 s; 243 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 268 pages at the end, 0 of them the display's, 0 both writable and executable; 274 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
+kernel register: 51 events, head 327193fe35aa9f28c26f1dd6ebe991b02f0ec5ed17ca2e7f4d5c0ff2347e28a1
+ALL SELF-TESTS PASS. Guest Ethernet support is compiled in. Access requires a matching image grant and a supported NIC.
+
+Run 2 post-exit desk
+{"max_depth":2,"max_live":3,"max_total":4,"revision":8,"nodes":[{"id":1,"parent":null,"label":"root","state":"Finished"},{"id":2,"parent":1,"label":"generation","state":"Finished"},{"id":3,"parent":2,"label":"links","state":"Finished"},{"id":4,"parent":2,"label":"certificate","state":"Finished"}]}
+native/search serial SHA-256 b668ebc85a6f64261cc8fa6e9e15e0fde5a05876925dfc7f6b43c0a3f4158f7b
+running image (code and read-only data), SHA-256: 0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3 (measured; equal to the value the loader named)
+starting worker.elf (9064 bytes, SHA-256 c33aab18d00288d8b03212be537576e5d1915da1f939697c34f773abf6a16d30)
+worker.elf ended DONE: exit 0 after 0 s; 9 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 258 pages at the end, 0 of them the display's, 0 both writable and executable; 264 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
+kernel register: 48 events, head 81e5447fadc06b6e63c0667441df7106142ccffc71d9d513f970fb06f2452fc9
+ALL SELF-TESTS PASS. Guest Ethernet support is compiled in. Access requires a matching image grant and a supported NIC.
+assembly serial SHA-256 67e64ea6dfa8c32bf2a369120c60433a6b1a2d6444c0b1b488013e74019a8d27
+running image (code and read-only data), SHA-256: 0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3 (measured; equal to the value the loader named)
+starting worker.elf (50120 bytes, SHA-256 1cb649a9954be008a7f74ada3fb1494f1949d7947b85bf221875c655ea59afcd)
+worker.elf ended DONE: exit 0 after 0 s; 243 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 268 pages at the end, 0 of them the display's, 0 both writable and executable; 274 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
+kernel register: 51 events, head 70c416ee16e8650ad7679cbe2cadc6c6b1805edb6114b56e715d385718dd4338
+ALL SELF-TESTS PASS. Guest Ethernet support is compiled in. Access requires a matching image grant and a supported NIC.
+
+geometry | identical in both runs | SHA-256 c8d6a80ca1ec3d3f0825abc29bcff98594d3aeb0a754c914ea7dee1dae2a8f26
+counts.bin | identical in both runs | SHA-256 970bec7483984728e413a0ff65986310f4bbe8fff5f02c58e6064856262d8476
+certificate | identical in both runs | SHA-256 f94c9acbbad57c6358eb94ee4099dc8b3b1768244692e61dab264547bff4f0c5
+assembly/basis | identical in both runs | SHA-256 90dbc67ff4ba7990b9a009398613b36b800f42a62181037fb6964eca4ab9d63c
+assembly.out | identical in both runs | SHA-256 75748f36eb258b61e5117d613e244602bde003a38b5675c5b9b34af51c3519ff
+CoarseHolonomies.lean | identical in both runs | SHA-256 75748f36eb258b61e5117d613e244602bde003a38b5675c5b9b34af51c3519ff
+checks.json | identical in both runs | SHA-256 c8647ef410093c73ffaf66b0f6f47196d2df6334164bc169e2682e0152ded724
+CoarseHolonomies.log | identical in both runs | SHA-256 89aab65f93f45eac23b7718de07f455409da877e3eeadd3ebff5c1dcd84c8b45
+certificate.c | SHA-256 8aa4957f071e7e68bab8bc89d9f3c288e102b646e4daf4d8094a51dfc4f76acc
+controls.py | SHA-256 b67cd90ef6586e51fd01ca5ee6447e5b2e4a5f130797fffd128d9f9bad553350
+replay.py | SHA-256 9ca98456c7639f41a45c0fc13da0c0e68aef44676acd08e0e8451e185b2ef583
+
+Lean axiom read-back
+'Millennium.YangMills.CoarseHolonomies.positiveInsertion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.CoarseHolonomies.reverseBias' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.CoarseHolonomies.scoreMoments' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.CoarseHolonomies.centerParity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.CoarseHolonomies.faceFactorization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.CoarseHolonomies.inverseDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.CoarseHolonomies.powerDisplacement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.CoarseHolonomies.overlapVariance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.CoarseHolonomies.shiftScore' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.CoarseHolonomies.displacementFloor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.CoarseHolonomies.heatSteps' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.CoarseHolonomies.iterateBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.CoarseHolonomies.productDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.CoarseHolonomies.productSecondMoment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.CoarseHolonomies.exteriorBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.CoarseHolonomies.spectralWindow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.CoarseHolonomies.interiorLinks' depends on axioms: [propext, Quot.sound]
+
+Both runs rejected these variants
+ReverseBias.lean:175:2: error: linarith failed to find a contradiction
+OverlapFloor.lean:82:2: error: linarith failed to find a contradiction
+HeatSteps.lean:87:2: error: linarith failed to find a contradiction
+EvenDifference.lean:217:43: error: unsolved goals
+EndpointCount.lean:220:62: error: omega could not prove the goal:
+
+Numerical controls (both runs)
+{
+  "graphs": [
+    {
+      "pitch": 3,
+      "coarse_edges": 24,
+      "marks": 24,
+      "max_per_face": 1
+    },
+    {
+      "pitch": 4,
+      "coarse_edges": 24,
+      "marks": 48,
+      "max_per_face": 1
+    },
+    {
+      "pitch": 6,
+      "coarse_edges": 24,
+      "marks": 96,
+      "max_per_face": 1
+    }
+  ],
+  "rectangles": {
+    "four_dimensional_faces": 2520,
+    "active_links": 8,
+    "max_action_residual": 3.055333763768431e-13,
+    "trace_pair": [
+      [
+        -1.5266078693156238,
+        0.10919874898866846
+      ],
+      [
+        1.5266078693156238,
+        -0.10919874898866846
+      ]
+    ],
+    "shared_face_mixed_change": 4.0
+  },
+  "binary_channel": [
+    {
+      "m": 6,
+      "M": 6,
+      "s": 0.19688451705766075,
+      "M_s_squared": 0.23258107834216984,
+      "KL_over_s_squared": 8.571540483393962,
+      "variance_over_s_squared": 16.32780246047408,
+      "equal_prior_error": 0.15606750983116363,
+      "normal_limit_at_Ms2": 0.1673893333169098,
+      "inversion_change": 3.5083047578154947e-14,
+      "cap_log_ratio_over_s": 3.5247808093478348,
+      "rare_M": 5,
+      "all_positive_ratio": 32.13268822986513
+    },
+    {
+      "m": 10,
+      "M": 56,
+      "s": 0.06663247440478084,
+      "M_s_squared": 0.24863365213701139,
+      "KL_over_s_squared": 8.07659028971773,
+      "variance_over_s_squared": 16.058968215834085,
+      "equal_prior_error": 0.15781211649749066,
+      "normal_limit_at_Ms2": 0.1593182981966555,
+      "inversion_change": 4.440892098500626e-16,
+      "cap_log_ratio_over_s": 3.4098107126321437,
+      "rare_M": 15,
+      "all_positive_ratio": 30.206643254945888
+    },
+    {
+      "m": 14,
+      "M": 492,
+      "s": 0.0225507150671654,
+      "M_s_squared": 0.25019909701991644,
+      "KL_over_s_squared": 8.009722499771929,
+      "variance_over_s_squared": 16.00860645902301,
+      "equal_prior_error": 0.15837109062897559,
+      "normal_limit_at_Ms2": 0.15855894098238277,
+      "inversion_change": 5.218048215738236e-15,
+      "cap_log_ratio_over_s": 3.396964238545597,
+      "rare_M": 44,
+      "all_positive_ratio": 29.09524608393869
+    },
+    {
+      "m": 18,
+      "M": 4292,
+      "s": 0.007631935547691346,
+      "M_s_squared": 0.2499937213560607,
+      "KL_over_s_squared": 8.001175698937756,
+      "variance_over_s_squared": 16.001108969127774,
+      "equal_prior_error": 0.1586358168597618,
+      "normal_limit_at_Ms2": 0.15865829246565877,
+      "inversion_change": 2.0261570199409107e-14,
+      "cap_log_ratio_over_s": 3.3954954366849406,
+      "rare_M": 131,
+      "all_positive_ratio": 29.8075138578334
+    }
+  ],
+  "dressing": {
+    "edges": 10,
+    "reverse_chi_squared": 0.0752059957138072,
+    "conditional_squared_bias_over_energy": [
+      0.045689401624441905,
+      0.02844958264465828
+    ]
+  },
+  "circle_translation": {
+    "fisher": 14.461046765515974,
+    "hessian_cap": 32.05,
+    "small_shift_overlap": 0.7282273915395521,
+    "tested_modes": 256,
+    "max_displacement_ratio": 0.7282166816562283
+  }
+}
