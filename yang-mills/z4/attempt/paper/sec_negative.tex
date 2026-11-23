@@ -17,7 +17,10 @@ level only. Numerical evidence is never proof. Where the sources do not give see
 
 Two discriminators are used throughout. Compact $\U(1)$ in four dimensions has no gap at weak
 coupling \cite{Guth80,FS82} (both as stated in their abstracts). Finite gauge groups in four
-dimensions have exponential decay of correlations at weak coupling \cite{AC22}. A route to (A)
+dimensions have exponential decay of correlations at weak coupling, on boxes with free edges and for
+functions invariant under separate conjugation of each loop holonomy \cite[Theorem~1.1]{AC22}; for the
+periodic-limit states of this paper a session of a second model lineage reports a gap that grows at least
+as $\beta$ for finite abelian groups (Section~\ref{gen:sec}). A route to (A)
 that applies verbatim to $\U(1)$ proves something false. A route that cannot reach the finite
 groups is incomplete, not wrong.
 
@@ -115,7 +118,7 @@ program~2).
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.92\textwidth]{figures/curvature.pdf}
-\caption{Smallest horizontal curvature of equilibrium configurations, from the second of the two programs (ranges over its samples). Upper panel: periodic $3^4$ lattice. Lower panel: open $4^4$ box; at $\beta=4$ and $6$ a range, at $\beta=12,24,48$ the rounded values reported. Both panels share axes. Measured on small lattices; not used in any proof. Rendered from exact rational input by the plot instrument of the PCP~OS Rust host (branch \repo{director-g/science-math-svg}, commit \repo{e8d62e4b}); the digest of the input is printed on the figure and the input is \repo{figures/curvature.json}.}
+\caption{Smallest horizontal curvature of equilibrium configurations, from the second of the two programs (ranges over its samples). Upper panel: periodic $3^4$ lattice. Lower panel: open $4^4$ box; at $\beta=4$ and $6$ a range, at $\beta=12,24,48$ the rounded values reported. Both panels share axes. Measured on small lattices; not used in any proof. Rendered from exact rational input by the plot instrument of the PCP~OS Rust host (commit \repo{e8d62e4b}); the digest of the input is printed on the figure and the input is \repo{figures/curvature.json}.}
 \label{neg:fig-curv}
 \end{figure}
 
@@ -287,16 +290,17 @@ in the periodic box, is claimed to grow with $L$ for $\SU(2)$. If $z$ became lar
 and large $z$ implied $K$, the gap would follow.
 
 \begin{lemma}\label{neg:lem-decaygap}
-Let $T=e^{-H}$ be the transfer matrix of a reflection-positive state, $0\le T\le1$. Suppose
+Let $T$ be the transfer matrix of a reflection-positive state, $0\le T\le1$. Suppose
 that for a set of local observables $F$ whose vectors $\psi_F=(F-\langle F\rangle)\Omega$ are
 dense in $\Omega^\perp$, $0\le\langle\psi_F,T^n\psi_F\rangle\le K_Fe^{-mn}$ for all $n\ge0$, with
-$m$ independent of $F$. Then $\operatorname{spec}(H|_{\Omega^\perp})\subset[m,\infty)$.
+$m$ independent of $F$. Then $\|T|_{\Omega^\perp}\|\le e^{-m}$.
 \end{lemma}
 
 \begin{proof}
-Let $\nu_F$ be the spectral measure of $\psi_F$. For $m'<m$,
-$e^{-nm'}\nu_F([0,m'))\le K_Fe^{-mn}$, so $\nu_F([0,m'))=0$. The spectral projection of
-$[0,m')$ is bounded and vanishes on a dense set, hence on $\Omega^\perp$.
+Let $\sigma_F$ be the spectral measure of $\psi_F$ for $T$, on $[0,1]$. For $m'<m$,
+$e^{-nm'}\sigma_F((e^{-m'},1])\le K_Fe^{-mn}$ for all $n$, so $\sigma_F((e^{-m'},1])=0$. The spectral
+projection of $(e^{-m'},1]$ is bounded and vanishes on a dense subset of $\Omega^\perp$, hence on
+$\Omega^\perp$. So $\|T|_{\Omega^\perp}\|\le e^{-m'}$ for every $m'<m$.
 \end{proof}
 
 The criterion itself (decay from $K$) is claimed: the Dobrushin--Shlosman paper was not read,
@@ -548,9 +552,14 @@ coupling.
 
 \subsection{Hypothesis (C)}
 
-Let $T=e^{-H}$ be the transfer matrix at $\beta$, $\psi\perp\Omega$ the vector of a local
-observable, $\nu$ its spectral measure, $C(n)=\langle\psi,T^n\psi\rangle=\int e^{-n\varepsilon}\,d\nu(\varepsilon)$
-for real $n\ge0$, $m=m(\beta)$ and $\xi=1/m$. We write (C) in the form
+Let $T$ be the transfer matrix at $\beta$. It is not injective on the site-reflection space
+(Section~\ref{pf:sec-transfer}), so we do not write $T=e^{-H}$ there; as in
+Section~\ref{red:R}, put $H:=-\frac12\log T^2$ on the closure of the range of $T$. Let $\psi\perp\Omega$ be
+the component in that closure of the vector of a local observable, $\nu$ its spectral measure for $H$, and
+$C(n)=\langle\psi,e^{-nH}\psi\rangle=\int e^{-n\varepsilon}\,d\nu(\varepsilon)$
+for real $n\ge0$; at even $n\ge2$, $C(n)=\langle\psi,T^n\psi\rangle$ is the lattice correlation, and at odd $n$ it is when
+$T\ge0$ (for the Wilson action the theorem of \cite{Lu77}, recalled, not read). The measurements of
+Observation~\ref{neg:obs-matched} use the lattice correlations at $n=0$ and $n=1$ in place of $C(0)$ and $C(1)$. Put $m=m(\beta)$ and $\xi=1/m$. We write (C) in the form
 $C(\xi/2)\le K_C\,C(\xi)$ with $K_C$ independent of $\beta\ge\beta_1$. The effective mass
 $u(n)=-\frac{d}{dn}\log C(n)$ is the mean energy of $e^{-nH/2}\psi$; (C) is equivalent, up to
 constants and a change of time from $\xi/2$ to $\xi$, to $u(\xi/2)\le K\,m$.
@@ -625,7 +634,7 @@ repeats removed the estimates move within their errors); the boxes are matched i
 $N^4$ & $\beta$ & $s/a^2$ & configs & $a\sqrt\sigma$ & $R(0)\cdot10^2$ & $R(1)\cdot10^2$ & $\xi$ & $\xi(1-q)$ \\
 \midrule
 $6^4$ & $2.3$ & $0.5$ & $2990$ & $0.3690(30)$ & $3.751(42)$ & $1.012(32)$ & $0.72$ & $0.53$ \\
-$8^4$ & $2.4$ & $0.889$ & $1500$ & $0.2660(20)$ & $3.615(60)$ & $1.166(51)$ & $1.01$ & $0.68$ \\
+$8^4$ & $2.4$ & $0.889$ & $1490$ & $0.2660(20)$ & $3.615(60)$ & $1.166(51)$ & $1.01$ & $0.68$ \\
 $12^4$ & $2.5$ & $2.0$ & $840$ ($834$) & $0.1905(8)$ & $3.233(61)$ & $1.245(51)$ & $1.40$ & $0.86$ \\
 \bottomrule
 \end{tabular}
@@ -676,11 +685,17 @@ declare the free Maxwell limit interacting. A second mass, or any mass ratio, do
 distinguish either: a GFF with measure $\delta_{m_1^2}+\delta_{m_2^2}$ has any ratio.
 
 A formulation that does exclude every free algebra is the two-particle energy shift. Assume
-that the lightest mass $m$ is an isolated eigenvalue of the mass operator. Let $E_2(L)$ be the
-lowest two-particle energy at zero total momentum in a periodic box of side $L=z/m$, and
-$\delta(z)=\lim_{\beta\to\infty}(E_2(L)-2m)/m$. Then (E$^*$): $\delta(z)\ne0$ for some $z$ in some
-symmetry channel. In the Fock space of a free algebra the Hamiltonian is a sum of one-particle
-Hamiltonians, so $E_2(L)=2m$ exactly; hence (E$^*$) excludes every free algebra. It needs the
+that the lightest mass $m$ is an isolated eigenvalue of the mass operator. Fix a symmetry channel. Let $E_2(L)$ be the
+lowest two-particle energy at zero total momentum in that channel in a periodic box of side $L=z/m$, and
+$E_2^{\rm free}(L)$ the lowest energy of two non-interacting particles of mass $m$ in the same box,
+at zero total momentum and in the same symmetry channel as $E_2(L)$. Put
+$\delta(z)=\lim_{\beta\to\infty}(E_2(L)-E_2^{\rm free}(L))/m$. Then (E$^*$): $\delta(z)\ne0$ for some $z$,
+with $E_2$ and $E_2^{\rm free}$ taken in the same symmetry channel. Any two-particle interaction test must
+compare with the free level in the same channel; a comparison with $2m$ in an arbitrary channel fails
+already for a free pair, as a session of a second model lineage showed~\cite[comments 7104999220,
+7105100783, 7103655841]{RepoThread}. In the Fock space of a free algebra the Hamiltonian is a sum of
+one-particle Hamiltonians, so $E_2(L)=E_2^{\rm free}(L)$ in every channel; hence (E$^*$) excludes every
+free algebra. It needs the
 isolated one-particle shell, which a gap does not give. Its relation to the scattering length
 through \cite{LW86} is claimed from memory; the source was not read.
 

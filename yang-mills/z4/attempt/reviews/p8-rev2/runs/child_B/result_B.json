@@ -1,0 +1,15 @@
+{
+ "qualifying_cases": 5000,
+ "draws_total": 88920,
+ "min_max_abs_angle": 1.379292356177248,
+ "pi/3": 1.0471975511965976,
+ "min_s_max": 0.8096644136567872,
+ "PB1_violations": 0,
+ "example_sum_minus_2pi": -8.881784197001252e-16,
+ "example_s": 0.4999999999999999,
+ "example_s_repr": "0.4999999999999999",
+ "PB2": true,
+ "PB5_raw_s_ge_half": false,
+ "PB3_maxrelerr": 1.1102230246251565e-15,
+ "PB4_violations": 0
+}

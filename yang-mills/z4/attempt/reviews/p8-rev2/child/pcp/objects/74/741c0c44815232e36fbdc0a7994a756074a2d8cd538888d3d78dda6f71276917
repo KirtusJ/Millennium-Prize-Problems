@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/p8-rev2/child/rerun/g/check.py", line 11, in <module>
+    out = open('results.txt','x')
+FileExistsError: [Errno 17] File exists: 'results.txt'

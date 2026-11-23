@@ -1,0 +1,33 @@
+% general.tex -- extension of Section~\ref{sec:proof} to general compact gauge groups. Labels prefix gen:.
+\subsection{Extension to compact Lie groups}\label{gen:sec}
+
+This subsection was written after the rest of Section~\ref{sec:proof} and has a weaker standing: one session wrote it and one attacked it (Section~\ref{sec:provenance}); it was not part of the text read by the referee session. It states the changes to the preceding proof and proves only those.
+
+
+Let $G$ be a compact Lie group (not necessarily connected) with $d:=\dim G\ge1$, and let $\rho:G\to\U(N_\rho)$ be a faithful continuous unitary representation. (If $\rho$ is not faithful the lattice theory depends on $\rho(G)$ only, and the statement applies to the group $\rho(G)$ with its inclusion, provided $\dim\rho(G)\ge1$; then $d$ means $\dim\rho(G)$. For trivial $\rho$ the statement is false.) Put $s(U):=1-\frac1{N_\rho}\operatorname{Re}\Tr\rho(U)$, $S:=\sum_ps(U_p)$, $O_p:=\beta s(U_p)$, and $\langle X,Y\rangle_\rho:=-\frac1{N_\rho}\Tr(d\rho X\,d\rho Y)$ on $\mathfrak g$, which is positive definite and $\mathrm{Ad}(G)$-invariant.
+
+\begin{theorem}\label{gen:thm}
+Under these hypotheses the conclusion \eqref{pf:eq-main} holds verbatim, with the same $G(n)$ and the same constant $c(n)=(G(n)/G(0))^2$. The limit field has $d$ independent colours in a $\langle\cdot,\cdot\rangle_\rho$-orthonormal basis, and $\Cov(X_0,X_n)=\frac d2G(n)^2+G(n)\E|f|^2+\frac14\Var|f|^2$, $\Var X_0\ge d/8$.
+\end{theorem}
+
+No group-dependent factor appears because the Gaussian weight and the observable use the same form: the Hessian of $s$ at $1$ is $\frac12|X|_\rho^2$. Neither simplicity, nor proportionality to the Killing form, nor transitivity of $\mathrm{Ad}$, nor connectedness is used. The hypothesis $d\ge1$ is used, and it is needed: for finite $G$ the limit field vanishes, $\Var X_0\to0$, and for finite groups in four dimensions at weak coupling connected correlations decay at a rate that grows with $\beta$~\cite[Theorem~1.1]{AC22}, so the conclusion cannot hold there.
+
+\emph{Replacements.} Let $a(U)$ be the distance from $1$ for the bi-invariant metric $\langle\cdot,\cdot\rangle_\rho$ ($a=\infty$ off the identity component $G_0$), and let $\chi(U):=\|\rho(U)-1\|_{HS}/\sqrt{2N_\rho}$, so that $s=\chi^2$. Both $a$ and $\chi$ satisfy the four relations \eqref{pf:eq-alpha}, and $|s(AVB)-s(AB)|\le2\sqrt2\,\chi(V)$. The map $\exp$ is injective with invertible differential on $\{\|d\rho X\|_{op}<\pi\}$ (uniqueness of the principal matrix logarithm). Hence it maps $\{|X|_\rho<r\}$ diffeomorphically onto $\{a<r\}$ for $r<\pi/\sqrt{N_\rho}$, and $\log$ is defined there. If $i\theta_j$ are the eigenvalues of $d\rho X$, then $|X|_\rho^2=\frac1{N_\rho}\sum\theta_j^2$ and $s(e^X)=\frac1{N_\rho}\sum(1-\cos\theta_j)$. Therefore $s(e^X)\le\frac12|X|_\rho^2$ for all $X$; $s(e^X)\ge\frac2{\pi^2}|X|_\rho^2$ if $\|d\rho X\|_{op}\le\pi$; and $0\le\frac12|X|^2_\rho-s(e^X)\le\frac{N_\rho}{24}|X|_\rho^4$. Let $\eta_*:=\inf\{s(U):a(U)\ge\pi/\sqrt{N_\rho}\}>0$ (compactness, faithfulness). With $\log:=0$ off $\{a<\pi/\sqrt{N_\rho}\}$, the lasso field satisfies $|F^\beta_p|^2\le\frac{\pi^2}2O_p$ everywhere. Also $\|\mathrm{Ad}(V)-I\|\le2\sqrt{2N_\rho}\,\chi(V)$.
+
+\emph{Ball volume.} Let $V(t):=\mathrm{Haar}\{s\le t\}$ and let $\omega_d$ be the volume of the unit ball. The Haar density in the exponential chart is $\prod(\frac{\sin(l/2)}{l/2})^2/\mathrm{Vol}_\rho(G)$, the product over the eigenvalue pairs $\pm il$ of $\mathrm{ad}X$. Since $\|\mathrm{ad}X\|\le2\sqrt{N_\rho}|X|_\rho$, Jordan's inequality gives
+\[
+\omega_d\min\big(\tfrac2\pi,N_\rho^{-1/2}\big)^d\,t^{d/2}\le \mathrm{Vol}_\rho(G)\,V(t)\ \ (0<t\le1),\qquad V(t)\le\max\Big(\frac{\omega_d(\pi^2/2)^{d/2}}{\mathrm{Vol}_\rho(G)},\eta_*^{-d/2}\Big)t^{d/2},
+\]
+and $V(t)\sim\omega_d2^{d/2}t^{d/2}/\mathrm{Vol}_\rho(G)$ as $t\to0$ (for $\SU(3)$: $9\sqrt3/(8\pi)$).
+
+\emph{Changes, by statement.}
+\begin{itemize}
+\item[(i)] Lemmas~\ref{pf:lem-rp}, \ref{pf:lem-limit}, \ref{pf:lem-transfer}, \ref{pf:lem-chess}, \ref{pf:lem-forest}, \ref{pf:lem-flat} and~\ref{pf:lem-G} carry over verbatim, and Corollary~\ref{pf:cor-zero} carries over with faithfulness of $\rho$. They use only $s(U^{-1})=s(U)$, unimodularity and group-theoretic facts.
+\item[(ii)] Proposition~\ref{pf:prop-spectral}: on $G_0V^{-1}$ the function $U\mapsto s(UV)$ is real-analytic and nonconstant, so $\Var O_{p_0}>0$. On other components $s$ may be constant (reflections in $\mathrm O(2)$).
+\item[(iii)] Lemma~\ref{pf:lem-free}: $\hat z(b)\le C_V\Gamma(\frac d2+1)b^{-d/2}$. For the lower bound, restrict the free links to $\{a\le\beta^{-1/2}\}$; then $\beta S\le48|\Lambda_L|$ as before. The tail of Corollary~\ref{pf:cor-tail} holds with $D^*_G=48+3\log(C_V\Gamma(\frac d2+1)2^{d/2})-3\log c_V$. This constant cannot be bounded in terms of $(d,N_\rho)$ alone: for $\U(1)$ with $\rho=e^{it}\oplus e^{ikt}$, $C_V/c_V\gtrsim k$. It does not enter $c(n)$.
+\item[(iv)] Lemma~\ref{pf:lem-E}: (E1) becomes $s=\chi^2$; (E2) holds verbatim; in (E3), $|y_p-dx_p|_\rho\le N_\rho s_p^2e^{\sqrt{N_\rho}s_p}$. Lemma~\ref{pf:lem-shell} holds with $\chi$ in place of $\alpha$.
+\item[(v)] Theorem~\ref{pf:thm-L3}: choose $\delta\le\pi/(2\sqrt{N_\rho})$ with $48N_\rho^2\delta^2e^{8\sqrt{N_\rho}\delta}\le\min(\lambda_N/16,1)$. On the near region $\beta S_R\ge\frac{\lambda_N}{16}|\varphi|^2-7|\psi|^2$. The chart need not cover $G$: the closed set $\{\max_la(U_l)\ge\delta\}$ has $S_R\ge\eta(\delta)/2$, so its conditional mass relative to the chart normalisation is at most $(\mathrm{Vol}_\rho\beta^{d/2})^{\nu_R}e^{-\beta\eta/2}/z_M\to0$. The total-variation limit follows.
+\item[(vi)] Proposition~\ref{pf:prop-L4}, Lemmas~\ref{pf:lem-D}, \ref{pf:lem-R}, \ref{pf:lem-wick}: replace $\R^3$ by $(\mathfrak g,\langle\cdot,\cdot\rangle_\rho)\cong\R^d$ and the colour group $\SU(2)$ by $\mathrm{Ad}(G)$. In (d), $|O_p-\frac12|F^\beta_p|^2|\le N_\rho|F^\beta_p|^4/(24\beta)$ off an event of probability $\le e^{D^*_G-\beta\eta_*/8}$. For $\U(1)$ the errors in (E3) and in (b) vanish identically.
+\end{itemize}
+
+\emph{Check.} On $R_1$ with the shell fixed to $1$, the theorem predicts $\E O_p\to\frac d2C^{R_1}_{p_0p_0}=\frac{7d}{48}$ for every faithful $\rho$. Monte Carlo at $\beta=300$ by the program of the session that wrote this subsection gives $1.1680(11)$ for $\SU(3)$ (prediction $7/6$), $0.4369(4)$ for $\SU(2)$, and $0.1459(2)$ for $\U(1)$ with $\rho=e^{it}$ and with $\rho=e^{it}\oplus e^{2it}$; a separate program of the session that attacked it gives $1.1650(20)$ for $\SU(3)$ and $0.1462(3)$ for $\U(1)$. These are measurements on the smallest box with trivial boundary data.

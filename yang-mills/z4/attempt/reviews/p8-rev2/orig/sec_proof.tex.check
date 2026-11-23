@@ -1,0 +1,554 @@
+% sec_proof.tex -- Section: proof of Theorem 1.1 (Theorem B').
+% To be \input into a document using preamble.tex. All labels carry the prefix pf:.
+\section{Proof of Theorem~\ref{thm:main}}\label{sec:proof}
+
+We prove Theorem~\ref{thm:main} with three restrictions, which are part of its statement.
+The periodic boxes have side $L=2^k$.
+The states are weak limit points of periodic finite-volume states, not arbitrary Gibbs states.
+The conclusion ``$m_\mu(\beta)\to0$'' includes the case $m_\mu(\beta)=0$.
+We recall the statement:
+\begin{equation}\label{pf:eq-main}
+\begin{gathered}
+\liminf_{\beta\to\infty}\ \inf_{\mu\in\cL_\beta}\ \frac{\Cov_\mu(O_{p_0},O_{p_n})}{\Var_\mu(O_{p_0})}\ \ge\ \Big(\frac{G(n)}{G(0)}\Big)^2\quad\text{for every } n\ge1,\\
+\text{and consequently }\ \sup_{\mu\in\cL_\beta}m_\mu(\beta)\to0\ \text{ as }\beta\to\infty,
+\end{gathered}
+\end{equation}
+where $G$ is the free lattice Maxwell field-strength correlation of Definition~\ref{pf:def-G}, $G(0)=\tfrac12$, $G(n)>0$, and $G(n)=1/(\pi^2n^4)+O(n^{-6})$.
+The order of limits is: the box first, then the coupling, then the separation.
+
+\subsection{Setting and notation}\label{pf:sec-setting}
+
+\emph{Lattice.} Directions are $0,1,2,3$; direction $0$ is time. $e_\mu$ is the unit vector. $\Lambda_L=(\Z/L\Z)^4$ with $L=2^k$, $|\Lambda_L|=L^4$. A link is an ordered pair $(x,x+e_\mu)$; we write $U_{x,\mu}\in\SU(2)$ for its variable and $U_{x+e_\mu,x}:=U_{x,\mu}^{-1}$ for the reversed link. A plaquette is $p=(x;\mu,\nu)$ with $\mu<\nu$; its corner is $x_p:=x$, and its holonomy, based at $x_p$, is
+\[
+U_p:=U_{x,\mu}\,U_{x+e_\mu,\nu}\,U_{x+e_\nu,\mu}^{-1}\,U_{x,\nu}^{-1}.
+\]
+For a path $\gamma=(y_0,\dots,y_m)$ of nearest neighbours, $U_\gamma:=U_{y_0y_1}\cdots U_{y_{m-1}y_m}$.
+A gauge transformation $g=(g_x)$ acts by $(U^g)_{x,\mu}=g_xU_{x,\mu}g_{x+e_\mu}^{-1}$; then $U_\gamma\mapsto g_{y_0}U_\gamma g_{y_m}^{-1}$ and $U_p\mapsto g_{x_p}U_pg_{x_p}^{-1}$.
+Each link of $\Z^4$ lies in exactly $6$ plaquettes: for each of the three other directions, one on each side.
+
+\emph{Class angle.} For $U\in\SU(2)$, $\alpha(U)\in[0,\pi]$ is defined by $\tfrac12\Tr U=\cos\alpha(U)$.
+Identify $\SU(2)$ with the unit quaternions, that is, with the unit sphere $S^3\subset\R^4$, so that $\tfrac12\Tr U$ is the Euclidean inner product of $U$ with $1$. Then $\alpha(U)$ is the geodesic distance from $U$ to $1$ on $S^3$, and left and right multiplications are isometries. Hence $(U,V)\mapsto\alpha(UV^{-1})$ is a bi-invariant metric, and
+\begin{equation}\label{pf:eq-alpha}
+\begin{gathered}
+\alpha(U^{-1})=\alpha(U),\qquad \alpha(VUV^{-1})=\alpha(U),\\
+\alpha(UV)\le\alpha(U)+\alpha(V),\qquad |\alpha(AVB)-\alpha(AB)|\le\alpha(AVA^{-1})=\alpha(V),
+\end{gathered}
+\end{equation}
+the last by the triangle inequality for the metric.
+We write $\alpha_p:=\alpha(U_p)$; it does not depend on the base point or orientation of the loop.
+
+\emph{Action and states.} $S:=\sum_p(1-\cos\alpha_p)$ and
+\[
+\mu_{\beta,L}(dU):=Z_L(\beta)^{-1}e^{-\beta S(U)}\prod_{\text{links}}dU_{x,\mu},\qquad Z_L(b):=\int e^{-bS}\,dU,
+\]
+with normalised Haar measure $dU$. By Weyl's formula, the law of $\alpha(U)$ under Haar measure has density $\tfrac2\pi\sin^2\alpha$ on $[0,\pi]$.
+We embed $\Lambda_L$ in $\Z^4$ around the origin and regard $\mu_{\beta,L}$ as a measure on $\SU(2)^{E(\Z^4)}$ for local questions.
+$\cL_\beta$ is the set of weak limit points of $(\mu_{\beta,2^k})_{k\ge2}$; boxes of side $2$ are excluded, which changes no limit point. It is nonempty because $\SU(2)^{E(\Z^4)}$ is compact.
+$O_p:=\beta(1-\cos\alpha_p)\in[0,2\beta]$. $p_0:=(0;1,2)$ and $p_n:=p_0+ne_0$.
+
+\emph{Lie algebra.} We identify $\R^3$ with $\mathfrak{su}(2)$ through $x\mapsto\sigma\cdot x$ (Pauli matrices). For $|x|\le\pi$, $U=e^{i\sigma\cdot x}=\cos|x|+i\sin|x|\,\hat x\cdot\sigma$ and $\alpha(U)=|x|$. For $\alpha(U)<\pi$ we write $\log U$ for the unique $x$ with $|x|<\pi$ and $U=e^{i\sigma\cdot x}$; for $\alpha(U)=\pi$ we set $\log U:=(\pi,0,0)$. In all cases $|\log U|=\alpha(U)$. $\mathrm{Ad}(U)\in\mathrm{SO}(3)$ is defined by $\sigma\cdot(\mathrm{Ad}(U)x)=U(\sigma\cdot x)U^{-1}$; it is the rotation by the angle $2\alpha(U)$, so $\|\mathrm{Ad}(U)-I\|\le2|\sin\alpha(U)|\le2\alpha(U)$.
+Norms of vectors in $(\R^3)^E$ are Euclidean over all links and colours.
+
+\emph{Forms.} Real $r$-forms on $\Z^4$ are functions on oriented $r$-cells. For a $1$-form $A$, $(dA)_{(x;\mu,\nu)}=A_{x+e_\mu,\nu}-A_{x,\nu}-A_{x+e_\nu,\mu}+A_{x,\mu}$, and $d^*$ is the $\ell^2$-adjoint of $d$. On a $3$-cube $c=(x;\lambda,\mu,\nu)$, $\lambda<\mu<\nu$,
+$(d\omega)_c=\omega_{\mu\nu}(x+e_\lambda)-\omega_{\mu\nu}(x)-\omega_{\lambda\nu}(x+e_\mu)+\omega_{\lambda\nu}(x)+\omega_{\lambda\mu}(x+e_\nu)-\omega_{\lambda\mu}(x)$.
+For $\R^3$-valued forms, $d$ acts on each colour.
+
+\emph{Boxes.} $R=z+[-N,N]^4$ with $N\ge1$. The shell $\partial R$ is the set of sites with $|x-z|_\infty=N$; the other sites of $R$ are interior. $\Lambda'_R$ is the set of links with at least one interior endpoint. $P_R$ is the set of plaquettes containing a link of $\Lambda'_R$. Shell links and shell plaquettes are those with all sites in $\partial R$. $T_{\rm int}$ is the set of links $(x,x+e_0)$ with $x$ interior. $T_s$ is a spanning tree of the shell graph, rooted at a shell site $b$. $\Lambda''_R:=\Lambda'_R\setminus T_{\rm int}$, $\nu_R:=|\Lambda''_R|$, and $\nu_s$ is the number of shell links not in $T_s$. We write $R_N:=[-N,N]^4$.
+
+\subsection{Outline}\label{pf:sec-outline}
+
+The proof has four parts.
+
+\emph{Part I: reduction to one correlation} (\S\ref{pf:sec-rp}--\S\ref{pf:sec-transfer}). Reflection positivity in site planes holds on every periodic box of even side and passes to every $\mu\in\cL_\beta$. It gives a Hilbert space and a self-adjoint contraction $T_\mu$, the transfer matrix, with $m_\mu=-\log\|T_\mu|_{\Omega^\perp}\|$. For the vector $v$ of $O_{p_0}-\mu(O_{p_0})$ we have $\Cov_\mu(O_{p_0},O_{p_n})=\langle v,T_\mu^nv\rangle\le e^{-nm_\mu}\Var_\mu(O_{p_0})$ for every $n\ge1$. So a lower bound $c(n)$ on the ratio in \eqref{pf:eq-main}, with $-\log c(n)/n\to0$, forces $\sup_\mu m_\mu\to0$.
+
+\emph{Part II: uniform tails} (\S\ref{pf:sec-chess}--\S\ref{pf:sec-free}). A chessboard estimate, which we prove for sides $2^k$ by repeated reflection, bounds $\mu_{\beta,L}(O_p>t)$ by $\exp(f_L(\beta/2)-f_L(\beta)-t/8)$ with $f_L$ the free energy per site. Elementary upper and lower bounds on $f_L$ give $\mu(O_p>t)\le e^{60.2-t/8}$ for all $\mu\in\cL_\beta$, $\beta\ge1$, $t\ge0$. So the rescaled curvature $\sqrt\beta\,\alpha_p$ is tight uniformly in $\beta$ and $\mu$, with all moments bounded.
+
+\emph{Part III: the Gaussian limit} (\S\ref{pf:sec-box}--\S\ref{pf:sec-L4}). We condition on the links outside a box $R$ and fix the gauge by a tree in the shell and a forest of interior time links; this gauge uses no interior information, so the conditioning is not circular. The shell of a $4$-box is simply connected, so bounded shell curvatures give bounded shell data. The only zero of the action with trivial shell data is the trivial configuration, and the Dirichlet Maxwell form is nondegenerate. A Laplace argument (Theorem~\ref{pf:thm-L3}) shows that the rescaled conditional law converges, uniformly over bounded shell data, to the Gaussian with the Dirichlet Maxwell form. A lasso field $F^\beta_p=\sqrt\beta\,\mathrm{Ad}(U_{\gamma_p})\log U_p$, defined without a gauge tree, then has subsequential limits along every sequence $\mu_k\in\cL_{\beta_k}$, $\beta_k\to\infty$ (Proposition~\ref{pf:prop-L4}). Every such limit $F$ is closed, colour and translation invariant, has all moments, is the limit of the observables $O_p$ in law and in moments, and satisfies the Gaussian DLR equations of the free Maxwell field in every box.
+
+\emph{Part IV: the free comparison} (\S\ref{pf:sec-D}--\S\ref{pf:sec-assembly}). The Dirichlet covariances increase to the projection $P$ onto exact $2$-forms. By the downward martingale theorem every limit field is $F=\xi+f$, with $\xi$ the free field of covariance $P$ in three independent colours and $f$ an independent background. The background is closed, co-closed and second-order stationary; a two-line computation in $L^2$ shows that it is a random constant. Wick's theorem then gives
+$\Cov(X_0,X_n)=\tfrac32G(n)^2+G(n)\E|f|^2+\tfrac14\Var|f|^2$ with $X_m=\tfrac12|F_{p_m}|^2$, and each term has ratio at least $(G(n)/G(0))^2$ to its counterpart at $n=0$. Finally $G(n)>0$ and $G(n)=1/(\pi^2n^4)+O(n^{-6})$, so $c(n)=4G(n)^2=4/(\pi^4n^8)\,(1+O(n^{-2}))$ and $-\log c(n)/n\to0$.
+
+Two constants are obtained by compactness and are not explicit: $\eta(\delta)$ in Theorem~\ref{pf:thm-L3} (hence the constant $c$ there) and the combinatorial constant $K_N$ of Lemma~\ref{pf:lem-shell}. Neither enters the final bound. The measure-theoretic facts used without proof are listed in \S\ref{pf:sec-standard}.
+
+\subsection{Reflection positivity and limit states}\label{pf:sec-rp}
+
+Reflection positivity of the Wilson action is due to Osterwalder and Seiler~\cite{OS78}, and the transfer matrix of lattice gauge theory to L\"uscher~\cite{Lu77}; we re-prove the case we use. Fix $j\in\{0,1,2,3\}$ and even $L\ge4$. Let $\vartheta$ be the reflection $x_j\mapsto-x_j$ of $\Lambda_L$. It fixes the two site planes $\pi=\{x_j=0\}\cup\{x_j=L/2\}$. On configurations it acts by $(\vartheta U)_{b}=U_{\vartheta b}$, where a link in direction $j$ is mapped to a reversed link, whose variable is the inverse. For a function $F$ put $\theta F:=\overline{F\circ\vartheta}$.
+Let $E_0$ be the set of links in $\pi$; $E_+$ (resp. $E_-$) the set of links not in $E_0$ with both endpoints in $\{0\le x_j\le L/2\}$ (resp. $\{L/2\le x_j\le L\}$). These three sets partition the links, and $\vartheta$ fixes $E_0$ pointwise and exchanges $E_+$ and $E_-$. Let $\cH_+$ be the bounded measurable functions of the links in $E_0\cup E_+$.
+
+\begin{lemma}[site-plane reflection positivity]\label{pf:lem-rp}
+For even $L\ge4$, every $j$ and all $F,F'\in\cH_+$: $\mu_{\beta,L}(\theta F\cdot F)\ge0$, $\mu_{\beta,L}(\theta F\cdot F')=\overline{\mu_{\beta,L}(\theta F'\cdot F)}$, and $|\mu_{\beta,L}(\theta F\cdot F')|^2\le\mu_{\beta,L}(\theta F\cdot F)\,\mu_{\beta,L}(\theta F'\cdot F')$. The same holds for the reflection $x_j\mapsto2r-x_j$ for every $r\in\Z/L\Z$, with the corresponding half-spaces.
+\end{lemma}
+
+\begin{proof}
+A plaquette has extent at most one in direction $j$, so all its sites lie in $\{0\le x_j\le L/2\}$ or all in $\{L/2\le x_j\le L\}$. Let $W_+$ be the sum of $\cos\alpha_p$ over plaquettes with all sites in the first set, with weight $\tfrac12$ for plaquettes contained in $\pi$. Since $\vartheta$ maps $U_p$ to a conjugate of $U_{\vartheta p}^{\pm1}$ and $\tfrac12\Tr U^{-1}=\tfrac12\Tr U$ on $\SU(2)$, we get $\sum_p\cos\alpha_p=W_++W_+\circ\vartheta$. Haar measure is invariant under $U\mapsto U^{-1}$, so $\vartheta$ maps $\prod_{E_-}dU$ to $\prod_{E_+}dU$. For $F\in\cH_+$, with $I(U_{E_0}):=\int F e^{\beta W_+}\prod_{E_+}dU$,
+\[
+Z_L(\beta)\,\mu_{\beta,L}(\theta F\cdot F)=e^{-6\beta|\Lambda_L|}\int\prod_{E_0}dU\ \overline{I(U_{E_0})}\,I(U_{E_0})\ \ge0 .
+\]
+So $(F,F')\mapsto\mu_{\beta,L}(\theta F\cdot F')$ is a positive semidefinite Hermitian form on $\cH_+$, which gives the other two claims. Translation invariance of $\mu_{\beta,L}$ gives the version at $r$.
+\end{proof}
+
+\begin{lemma}[limit states]\label{pf:lem-limit}
+Let $\beta>0$ and $\mu\in\cL_\beta$. Then:
+\begin{enumerate}
+\item $\mu$ is invariant under the translations, rotations and reflections of $\Z^4$, and under every gauge transformation $g$ (each local function depends on finitely many $g_x$).
+\item For every coordinate direction $j\in\{0,1,2,3\}$, every $c\in\Z$, the reflection $\vartheta$ in the site plane $\{x_j=c\}$ and every bounded continuous $F$ depending on finitely many links in $\{x_j\ge c\}$: $\mu(\theta F\cdot F)\ge0$.
+\item (DLR) For every finite set $\Lambda$ of links and every bounded measurable $g$, $\mu(g)=\mu(\gamma_\Lambda g)$, where $\gamma_\Lambda g$ integrates $U_\Lambda$ against $Z^{-1}\exp(-\beta\sum_{p\cap\Lambda\ne\emptyset}(1-\cos\alpha_p))\prod_\Lambda dU$, the other links fixed.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Let $\mu=\lim_i\mu_{\beta,L_i}$ weakly. Each $\mu_{\beta,L}$ has the symmetries in (1) for the torus, and for a local continuous function only finitely many of them matter once $L$ is large; weak limits preserve the identities $\mu_L(h\circ s)=\mu_L(h)$ for continuous local $h$. For (2), once $L_i$ is large, $F\in\cH_+$ on the torus for the reflection $x_j\mapsto2c-x_j$ of Lemma~\ref{pf:lem-rp}, and $\nu\mapsto\nu(\theta F\cdot F)$ is weakly continuous, since $\theta F\cdot F$ is bounded, continuous and local. For (3), let first $g$ be continuous and local. Then $\gamma_\Lambda g$ is continuous and local, and $\mu_{L_i}(\gamma_\Lambda g)=\mu_{L_i}(g)$ for large $L_i$; pass to the limit. The two finite measures $\mu$ and $\mu\gamma_\Lambda$ agree on continuous local functions, hence they are equal, which is the claim for bounded measurable $g$.
+\end{proof}
+
+\subsection{The transfer matrix and the spectral bound}\label{pf:sec-transfer}
+
+Fix $\mu\in\cL_\beta$. Let $\mathcal A_+$ be the bounded continuous functions of finitely many links in $\{x_0\ge0\}$, $\langle F,F'\rangle:=\mu(\theta F\cdot F')$, $\cH$ the completion of $\mathcal A_+$ modulo null vectors, $[F]$ the class of $F$, and $\Omega:=[1]$. Let $\tau$ be the unit time translation, $(\tau F)(U)=F(U_{\cdot-e_0})$, so that $\tau\mathcal A_+\subset\mathcal A_+$ and $\theta\tau=\tau^{-1}\theta$.
+
+\begin{lemma}[transfer matrix]\label{pf:lem-transfer}
+$T[F]:=[\tau F]$ defines a self-adjoint contraction $T=T_\mu$ on $\cH$ with $T\Omega=\Omega$ and $T\Omega^\perp\subset\Omega^\perp$.
+\end{lemma}
+
+\begin{proof}
+By translation invariance, $\langle F',\tau F\rangle=\mu(\theta F'\cdot\tau F)=\mu(\tau^{-1}\theta F'\cdot F)=\mu(\theta(\tau F')\cdot F)=\langle\tau F',F\rangle$; likewise $\langle\tau^aF,\tau^bF\rangle=\langle F,\tau^{a+b}F\rangle$. Put $a_m:=\|\tau^mF\|$. Cauchy--Schwarz gives $a_{2^i}^2=\langle F,\tau^{2^{i+1}}F\rangle\le a_0a_{2^{i+1}}$, hence $a_1\le a_0^{1-2^{-j}}a_{2^j}^{2^{-j}}$ for every $j$. Since $a_m\le\|F\|_\infty$, letting $j\to\infty$ gives $a_1\le a_0$ (if $a_0=0$ then $a_1=0$). So $\tau$ maps null vectors to null vectors and defines a symmetric contraction on a dense subspace, which extends to a self-adjoint contraction. $T\Omega=\Omega$ is clear, and $\langle\Omega,TF\rangle=\mu(\tau F)=\mu(F)=\langle\Omega,F\rangle$ gives invariance of $\Omega^\perp$.
+\end{proof}
+
+We define $m_\mu(\beta):=-\log\|T_\mu|_{\Omega^\perp}\|\in[0,\infty]$.
+
+\begin{proposition}[spectral bound and reduction]\label{pf:prop-spectral}
+Let $\mu\in\cL_\beta$. Then $\Var_\mu(O_{p_0})>0$, and for every $n\ge1$
+\begin{equation}\label{pf:eq-S1}
+\Cov_\mu(O_{p_0},O_{p_n})\le e^{-n\,m_\mu(\beta)}\Var_\mu(O_{p_0}).
+\end{equation}
+Consequently, if for every $n\ge1$ there are $c(n)>0$ with
+\[\liminf_{\beta\to\infty}\inf_{\mu\in\cL_\beta}\Cov_\mu(O_{p_0},O_{p_n})/\Var_\mu(O_{p_0})\ge c(n)\]
+and $\inf_n(-\log c(n))/n\le0$, then $\sup_{\mu\in\cL_\beta}m_\mu(\beta)\to0$ as $\beta\to\infty$.
+\end{proposition}
+
+\begin{proof}
+$O_{p_0}$ is real, bounded, continuous and depends on links in $\{x_0=0\}$, which $\vartheta$ fixes; so $\theta O_{p_0}=O_{p_0}$. Let $v:=[O_{p_0}-\mu(O_{p_0})]\in\Omega^\perp$. Then $\|v\|^2=\Var_\mu(O_{p_0})$ and $\langle v,T^nv\rangle=\mu\big((O_{p_0}-\mu O_{p_0})(O_{p_n}-\mu O_{p_0})\big)=\Cov_\mu(O_{p_0},O_{p_n})$, using $\mu(O_{p_n})=\mu(O_{p_0})$. Since $\Omega^\perp$ is invariant, $|\langle v,T^nv\rangle|\le\|T|_{\Omega^\perp}\|^n\|v\|^2$, which is \eqref{pf:eq-S1} for every $n\ge1$, odd or even.
+By Lemma~\ref{pf:lem-limit}(3) with $\Lambda=\{(0,e_1)\}$, given the other links the law of $U:=U_{0,1}$ has a positive density with respect to Haar measure, and $O_{p_0}=\beta(1-\tfrac12\Tr(UV))$ with $V$ fixed by the other links. Each level set $\{\tfrac12\Tr(UV)=s\}$ is a translate of a conjugacy class and has Haar measure zero. So the conditional law of $O_{p_0}$ has no atoms, and $\Var_\mu(O_{p_0})>0$.
+For the reduction, fix $n$ and $\varepsilon\in(0,c(n))$. For $\beta$ large and every $\mu\in\cL_\beta$ the ratio is $\ge c(n)-\varepsilon>0$, so \eqref{pf:eq-S1} gives $m_\mu(\beta)\le-\log(c(n)-\varepsilon)/n$. Hence $\limsup_\beta\sup_\mu m_\mu\le-\log c(n)/n$ for every $n$, and the infimum over $n$ is $\le0$. Since $m_\mu\ge0$, the claim follows.
+\end{proof}
+
+\subsection{The chessboard estimate for dyadic sides}\label{pf:sec-chess}
+
+The chessboard estimate is due to Fr\"oh\-lich, Israel, Lieb and Simon~\cite{FILS78}; we re-prove the case we use. Let $L=2^k$. A block is a closed unit cube $[t,t+1]$, $t\in\Lambda_L$, with all its links and faces. For $t\in\Lambda_L$ let $\vartheta_t$ be the lattice map that is, in each direction $j$, the translation $x_j\mapsto x_j+t_j$ if $t_j$ is even and the reflection $x_j\mapsto t_j+1-x_j$ if $t_j$ is odd. It maps block $0$ onto block $t$. For a function $f$ of the links of block $0$ put $(f\circ\vartheta_t)(U):=f(\vartheta_t^*U)$, $(\vartheta_t^*U)_b:=U_{\vartheta_tb}$. Let $\theta_r$ denote the reflection $x_j\mapsto2r-x_j$ in one direction $j$.
+
+\begin{lemma}[chessboard estimate]\label{pf:lem-chess}
+Let $L=2^k$, $k\ge2$, and let $f\ge0$ be a bounded measurable function of the links of block $0$. Then
+\[
+\mu_{\beta,L}(f)\le\mu_{\beta,L}\Big(\prod_{t\in\Lambda_L}f\circ\vartheta_t\Big)^{1/|\Lambda_L|}.
+\]
+\end{lemma}
+
+\begin{proof}
+For a set $S$ of blocks put $Z(S):=\mu_{\beta,L}(\prod_{t\in S}f\circ\vartheta_t)$, so $Z(\emptyset)=1$.
+In direction $j$, $\theta_r\circ\vartheta_t=\vartheta_{t'}$ with $t'_j=2r-1-t_j$ and $t'_i=t_i$ for $i\ne j$. Indeed, if $t_j$ is even, $x\mapsto2r-x-t_j$ is the reflection $x\mapsto t'_j+1-x$ with $t'_j$ odd; if $t_j$ is odd, $x\mapsto2r-(t_j+1-x)$ is the translation by the even number $t'_j$. Hence $(f\circ\vartheta_t)\circ\theta_r=f\circ\vartheta_{t'}$, and $\theta(f\circ\vartheta_t)=f\circ\vartheta_{t'}$ since $f$ is real.
+
+\emph{Doubling step.} Let $S\subset H_+:=\{t:r\le t_j\le r+L/2-1\}$. Blocks in $H_+$ have all their sites in $\{r\le x_j\le r+L/2\}$, so $F:=\prod_{t\in S}f\circ\vartheta_t$ lies in $\cH_+$ for the reflection $\theta_r$. The set $\theta_aS$ lies in $\{r-L/2\le t_j\le r-1\}$ and is disjoint from $S$. Lemma~\ref{pf:lem-rp} with $F'=1$ gives
+\[
+Z(S)^2=|\mu(\theta1\cdot F)|^2\le\mu(\theta F\cdot F)\,\mu(1)=Z(S\cup\theta_aS).
+\]
+
+\emph{Iteration.} In direction $1$ take $r=-2^i+1$ for $i=0,\dots,k-1$, starting from $S=\{0\}$. If $S=\{t:t_1\in[-2^i+1,0],\,t_2=t_3=t_0=0\}$, then $S\subset H_+$ because $0\le r+L/2-1$ is $2^i\le L/2$, and $\theta_aS$ has $t_1\in[-2^{i+1}+1,-2^i]$. So $S\cup\theta_aS$ has $t_1\in[-2^{i+1}+1,0]$. After $k$ steps $t_1$ runs over $\Z/L\Z$. Repeat in directions $2,3,0$ with slabs. After $4k$ doublings, $Z(\{0\})^{2^{4k}}\le Z(\Lambda_L)$, and $2^{4k}=|\Lambda_L|$.
+\end{proof}
+
+\subsection{Free-energy bounds and the uniform tail}\label{pf:sec-free}
+
+Let $f_L(b):=|\Lambda_L|^{-1}\log Z_L(b)$ and $\hat z(b):=\int e^{-b(1-\cos\alpha(U))}dU$.
+
+\begin{lemma}[forest gauge]\label{pf:lem-forest}
+Let $\mathcal T$ be a forest of links of a finite graph, $B$ a set of sites containing exactly one site of each tree of $\mathcal T$, and $F$ an integrable function of the links that is invariant under gauge transformations equal to $1$ on $B$. Then $\int F\,dU=\int F|_{U_{\mathcal T}=1}\,dU_{\mathcal T^c}$.
+\end{lemma}
+
+\begin{proof}
+Define $g$ by $g=1$ on $B$ and, along each tree from its site in $B$, $g_y:=g_xU_{xy}$ when $(x,y)$ is a tree link with $x$ already treated; then $(U^g)_{xy}=g_xU_{xy}g_y^{-1}=1$ on $\mathcal T$ (a session of a second model lineage corrected the order of the two factors~\cite[comments 7105447358, 7105348719, 7105100783]{RepoThread}), and $g$ depends only on $U_{\mathcal T}$. Thus $F(U)=F(U^g)$. At fixed $U_{\mathcal T}$, the map $U_{\mathcal T^c}\mapsto(U^g)_{\mathcal T^c}$ is a product of left and right multiplications, which preserve Haar measure. Integrate $U_{\mathcal T^c}$ first, then $U_{\mathcal T}$.
+\end{proof}
+
+\begin{lemma}[free-energy bounds]\label{pf:lem-free}
+For every $b>0$ and every $\beta\ge1$,
+\begin{align*}
+f_L(b)&\le3(1-1/L)\log\hat z(b),\qquad \hat z(b)\le(\pi/2)^{5/2}b^{-3/2},\\
+f_L(\beta)&\ge-48+(3+1/L)\log\big(c_H\beta^{-3/2}\big),\qquad c_H:=2\sin^21/(3\pi).
+\end{align*}
+Consequently $\limsup_{L=2^k\to\infty}\big(f_L(\beta/2)-f_L(\beta)\big)\le D^*:=48+3\log\big((\pi/2)^{5/2}2^{3/2}\big)-3\log c_H=60.1922\ldots$ for every $\beta\ge1$.
+\end{lemma}
+
+\begin{proof}
+Let $\mathcal T$ be the set of time links $(x,x+e_0)$ with $x_0\in\{0,\dots,L-2\}$; it is a forest of $L^3$ paths, each containing $L$ sites. Apply Lemma~\ref{pf:lem-forest} to $e^{-bS}$ with $B=\{x_0=0\}$.
+
+\emph{Upper bound.} Drop every plaquette factor except those of the $(0,i)$ plaquettes with $x_0\le L-2$; each dropped factor is $\le1$. With $U_{\mathcal T}=1$ such a plaquette has holonomy $V_{x_0}V_{x_0+1}^{-1}$, up to conjugation and inversion, where $V_s$ is the variable of the spatial link $\ell$ at time $s$. So for each of the $3L^3$ spatial links $\ell$ we integrate $\prod_{s=0}^{L-2}w(V_sV_{s+1}^{-1})$ with $w(U)=e^{-b(1-\cos\alpha(U))}$. Integrating $V_{L-1},V_{L-2},\dots,V_1$ in turn gives $\hat z(b)^{L-1}$ by Haar invariance; the remaining variables integrate to $1$. Hence $Z_L(b)\le\hat z(b)^{3L^3(L-1)}$. Next, $\sin\alpha\le\alpha$ and $1-\cos\alpha\ge2\alpha^2/\pi^2$ on $[0,\pi]$ give
+$\hat z(b)\le\frac2\pi\int_0^\infty\alpha^2e^{-2b\alpha^2/\pi^2}d\alpha=(\pi/2)^{5/2}b^{-3/2}$.
+
+\emph{Lower bound.} After gauge fixing there are $4L^4-L^3(L-1)=3L^4+L^3$ free links. Restrict each to $B_s:=\{\alpha(U)\le s\}$, $s:=\beta^{-1/2}\le1$. By \eqref{pf:eq-alpha}, $\alpha_p\le4s$ and $1-\cos\alpha_p\le\alpha_p^2/2\le8s^2$, so $\beta S\le6|\Lambda_L|\cdot8=48|\Lambda_L|$ there. Also $\mathrm{Haar}(B_s)=\frac2\pi\int_0^s\sin^2\alpha\,d\alpha\ge\frac2\pi\sin^21\int_0^s\alpha^2d\alpha=c_Hs^3$, since $\sin\alpha\ge\alpha\sin1$ on $[0,1]$. Hence $Z_L(\beta)\ge e^{-48|\Lambda_L|}(c_H\beta^{-3/2})^{3L^4+L^3}$.
+
+\emph{Combination.} Inserting $b=\beta/2$,
+\[
+f_L(\beta/2)-f_L(\beta)\le48+3(1-\tfrac1L)\log\big((\pi/2)^{5/2}2^{3/2}\big)-(3+\tfrac1L)\log c_H+\tfrac6L\log\beta .
+\]
+The terms $\tfrac92\log\beta$ cancel and the remaining $\beta$-dependence is $\tfrac6L\log\beta$, which vanishes as $L\to\infty$ at fixed $\beta$. The numerical value of $D^*$ is a direct evaluation ($c_H=0.150258\ldots$).
+\end{proof}
+
+\begin{corollary}[uniform tail]\label{pf:cor-tail}
+For every $\beta\ge1$, every $\mu\in\cL_\beta$, every plaquette $p$ and every $t\ge0$,
+\[
+\mu(O_p>t)\le e^{60.2-t/8}.
+\]
+Consequently $\sqrt\beta\,\alpha_p\le(\pi/\sqrt2)\sqrt{O_p}$ has Gaussian tails uniformly in $\beta\ge1$ and $\mu\in\cL_\beta$, and $\sup_{\beta\ge1}\sup_{\mu\in\cL_\beta}\mu(O_p^m)\le\int_0^\infty mt^{m-1}\min(1,e^{60.2-t/8})\,dt<\infty$ for every $m\ge1$.
+\end{corollary}
+
+\begin{proof}
+By the lattice symmetries of $\mu_{\beta,L}$ it suffices to take $p=p_0$, which is a face of block $0$. Apply Lemma~\ref{pf:lem-chess} with $f=\mathbf 1\{O_{p_0}>t\}$. The image $\vartheta_tp_0$ is the $(1,2)$ plaquette spanning $[t_1,t_1+1]\times[t_2,t_2+1]$ at $x_3=t_3$ or $t_3+1$ and $x_0=t_0$ or $t_0+1$, whichever is even. So the images are the $|\Lambda_L|/4$ distinct $(1,2)$ plaquettes with $x_3,x_0$ even, each hit $4$ times, and since indicators are idempotent the product is the indicator that all these plaquettes have $O_p>t$. On that event $\beta S\ge t|\Lambda_L|/4$, so $e^{-\beta S}\le e^{-\beta S/2}e^{-t|\Lambda_L|/8}$ and
+\[
+\mu_{\beta,L}(O_{p_0}>t)\le\Big(e^{-t|\Lambda_L|/8}\,Z_L(\beta/2)/Z_L(\beta)\Big)^{1/|\Lambda_L|}=\exp\big(f_L(\beta/2)-f_L(\beta)-t/8\big).
+\]
+The event $\{O_p>t\}$ is open, so for $\mu=\lim\mu_{\beta,L_i}$ we get $\mu(O_p>t)\le\liminf_i\mu_{\beta,L_i}(O_p>t)\le e^{D^*-t/8}$ by Lemma~\ref{pf:lem-free}, and $D^*<60.2$. The inequality $\sqrt\beta\alpha_p\le(\pi/\sqrt2)\sqrt{O_p}$ is $1-\cos\alpha\ge2\alpha^2/\pi^2$. The moment bound is $\mu(O^m)=\int_0^\infty mt^{m-1}\mu(O>t)dt$.
+\end{proof}
+
+\subsection{Algebraic tools and the geometry of a box}\label{pf:sec-box}
+
+\begin{lemma}[three estimates]\label{pf:lem-E}
+\leavevmode
+\begin{enumerate}
+\item[(E1)] For $U\in\SU(2)$, $\|U-1\|_{HS}^2=4(1-\cos\alpha(U))$.
+\item[(E2)] For Hermitian $2\times2$ matrices $A_1,\dots,A_k$, signs $\varepsilon_i=\pm1$ and $s:=\sum_i\|A_i\|_{op}$,
+\[\big\|e^{i\varepsilon_1A_1}\cdots e^{i\varepsilon_kA_k}-1-i\textstyle\sum_i\varepsilon_iA_i\big\|_{op}\le e^s-1-s\le\tfrac{s^2}2e^s.\]
+\item[(E3)] Let $x_1,\dots,x_4\in\R^3$, $U_p=e^{i\sigma\cdot x_1}e^{i\sigma\cdot x_2}e^{-i\sigma\cdot x_3}e^{-i\sigma\cdot x_4}$, $dx_p:=x_1+x_2-x_3-x_4$, $s_p:=\sum_i|x_i|<\pi$. Then $\alpha(U_p)\le s_p$ and $y_p:=\log U_p$ satisfies $|y_p-dx_p|\le s_p^2e^{s_p}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(E1): $U-1=(\cos\alpha-1)+i\sin\alpha\,\hat n\cdot\sigma$, and the cross term is traceless, so $\|U-1\|_{HS}^2=2(1-\cos\alpha)^2+2\sin^2\alpha=4(1-\cos\alpha)$.
+(E2): expand each exponential. The terms of total degree $0$ and $1$ are $1$ and $i\sum\varepsilon_iA_i$; the terms of degree $\ge2$ are bounded in norm, term by term, by the corresponding terms of $\prod_ie^{\|A_i\|}=e^s$. Finally $e^s-1-s=\sum_{m\ge2}s^m/m!\le\frac{s^2}2\sum_{m\ge2}s^{m-2}/(m-2)!$ because $m!\ge2(m-2)!$.
+(E3): $\alpha(e^{\pm i\sigma\cdot x_i})=|x_i|$ and \eqref{pf:eq-alpha} give $|y_p|=\alpha(U_p)\le s_p<\pi$, so $U_p=e^{i\sigma\cdot y_p}$. Apply (E2) to the product and to $e^{i\sigma\cdot y_p}$, use $\|\sigma\cdot v\|_{op}=|v|$, and subtract: $|y_p-dx_p|\le\frac{s_p^2}2e^{s_p}+\frac{|y_p|^2}2e^{|y_p|}\le s_p^2e^{s_p}$.
+\end{proof}
+
+We also use three elementary inequalities: $1-\cos x\ge2x^2/\pi^2$ on $[-\pi,\pi]$; $\tfrac12(a-b)_+^2\ge a^2/4-b^2/2$ for $a,b\ge0$ (if $a\ge b$ the difference is $(a/2-b)^2$; otherwise the right side is negative); and $\|u+v\|^2\ge\tfrac12\|u\|^2-\|v\|^2$.
+
+A $\mathbb G$-connection on a $2$-complex $X$ of the lattice is an assignment of $U_{xy}\in\mathbb G$ to its links with $U_{yx}=U_{xy}^{-1}$; it is \emph{flat} if $U_p=1$ for every plaquette of $X$, and \emph{pure gauge} if $U_{xy}=g_xg_y^{-1}$ for some $g$. The $2$-complex of a box $R$ consists of all links and plaquettes with all sites in $R$; the shell $2$-complex of all links and plaquettes with all sites in $\partial R$.
+
+\begin{lemma}[flat connections on a box]\label{pf:lem-flat}
+Let $\mathbb G$ be any group, $d'\ge1$, and $R'$ a box in $\Z^{d'}$. Every flat $\mathbb G$-connection on the $2$-complex of $R'$ is pure gauge. If $d'=4$, $R'=R$, and moreover $U=1$ on the shell links and on $T_{\rm int}$, then $U\equiv1$.
+\end{lemma}
+
+\begin{proof}
+Order the directions as $1,\dots,d'$ and write $R'=\prod_i[a_i,b_i]$ with $a_i<b_i$. Let $T_{\rm ax}$ consist of the $e_i$-links $(x,x+e_i)$ with $x_l=a_l$ for all $l>i$; it is a spanning tree. Let $g_x$ be the holonomy along $T_{\rm ax}$ from the corner $(a_1,\dots,a_{d'})$ to $x$; then $U^g=1$ on $T_{\rm ax}$, and we show $U^g\equiv1$. Let $(x,x+e_j)$ be a link not in $T_{\rm ax}$, and let $k>j$ be the largest index with $x_k>a_k$. The links $(x-e_k,x)$ and $(x-e_k+e_j,x+e_j)$ are $e_k$-links whose coordinates $x_l$, $l>k$, equal $a_l$, so they lie in $T_{\rm ax}$. Flatness of the $(j,k)$ plaquette at $x-e_k$ gives $U^g_{x,j}=U^g_{x-e_k,j}$. Induct on $x_k$ down to $a_k$, then on the next largest index; the induction ends at a link of $T_{\rm ax}$. So $U^g\equiv1$, that is, $U_{xy}=g_x^{-1}g_y$, which is pure gauge with the gauge function $g^{-1}$.
+
+For the second claim, write $U_{xy}=g_xg_y^{-1}$. $U=1$ on shell links makes $g$ constant on each connected component of the shell graph. The shell graph is connected: each face $F_{i,\pm}:=\partial R\cap\{x_i-z_i=\pm N\}$ is a connected $3$-box, every shell site lies in a face, and $F_{i,s}\cap F_{j,s'}\ne\emptyset$ for $i\ne j$, while $F_{i,+}$ and $F_{i,-}$ both meet $F_{j,+}$. So $g\equiv g_b$ on $\partial R$. Each tree of $T_{\rm int}$ is the time path from an interior site up to the unique shell site above it, and $U=1$ on it makes $g$ constant along it. Hence $g\equiv g_b$ and $U\equiv1$.
+\end{proof}
+
+\begin{lemma}[the shell is simply connected]\label{pf:lem-shell}
+Let $\mathbb G$ be any group. Every flat $\mathbb G$-connection on the shell $2$-complex of $R$ is pure gauge. Consequently there is a finite integer $K_N$ such that, for every $\SU(2)$-connection on the shell and every shell link $l\notin T_s$, the variable of $l$ in the $T_s$-gauge (the gauge with $g_b=1$ and $U=1$ on $T_s$) is a product of at most $K_N$ conjugates of shell plaquette holonomies and their inverses; in particular its class angle is at most $K_N\max_q\alpha_q$, the maximum over shell plaquettes.
+\end{lemma}
+
+\begin{proof}
+Every shell link and every shell plaquette lies in a face $F_{i,\pm}$. Take a plaquette in directions $(j,k)$ and suppose that no other coordinate satisfies $|x_i-z_i|=N$. The coordinate $x_j-z_j$ takes two consecutive values in $[-N,N]$, and one of them, $s$, has $|s|<N$. The two sites with $x_j-z_j=s$ then need $|x_k-z_k|=N$, but $x_k$ takes two consecutive values on them; this is impossible. The argument for links is the same.
+
+\emph{Gluing.} Let $X=Y\cup Z$ be subcomplexes such that flat connections on $Y$ and on $Z$ are pure gauge and the $1$-skeleton of $Y\cap Z$ is connected. If $U$ is flat on $X$, write $U=g\cdot g^{-1}$ on $Y$ and $U=h\cdot h^{-1}$ on $Z$. On each link $xy$ of $Y\cap Z$, $h_x^{-1}g_x=h_y^{-1}g_y$, so $h^{-1}g\equiv c$ on $Y\cap Z$. Then $k:=g$ on $Y$ and $k:=hc$ on $Z$ agree on $Y\cap Z$ and give $U=k\cdot k^{-1}$ on $X$.
+
+Each face is the $2$-complex of a $3$-box, so Lemma~\ref{pf:lem-flat} applies to it. Add the faces in the order $F_{1,-},F_{2,-},F_{3,-},F_{0,-},F_{1,+},F_{2,+},F_{3,+},F_{0,+}$. The intersection of a new face $F_{i,s}$ with the union of the earlier ones is the union of the $2$-boxes $F_{i,s}\cap F_{j,s'}$ over the earlier faces. For $s=-$ these $2$-boxes pairwise intersect. For $s=+$ they include $F_{i,+}\cap F_{j,-}$ for all $j\ne i$, which pairwise intersect, and each $F_{i,+}\cap F_{j,+}$ meets $F_{i,+}\cap F_{m,-}$ for $m\notin\{i,j\}$. So each intersection is connected, and gluing gives the first claim.
+
+For the second claim, let $\Pi$ be the group with one generator for each oriented shell link, the relations $l^{-1}=$ reversed link, $l=1$ for $l\in T_s$, and $\partial q=1$ for every shell plaquette $q$. The tautological $\Pi$-connection is flat, hence pure gauge, $l=g_xg_y^{-1}$; since $g$ is constant along the spanning tree $T_s$, every generator is trivial in $\Pi$. So in the free group on the links not in $T_s$, each such link is a finite product of conjugates of the plaquette words $\partial q^{\pm1}$ (with tree links deleted). Let $K_N$ be the largest, over the finitely many links, of the least number of factors. Evaluating the identity on an $\SU(2)$-connection in $T_s$-gauge, the plaquette words evaluate to the plaquette holonomies in that gauge, which are conjugate to the gauge-invariant ones; \eqref{pf:eq-alpha} gives the bound.
+\end{proof}
+
+$K_N$ is finite by this argument; we do not compute it.
+
+\begin{corollary}[zero set and nondegeneracy]\label{pf:cor-zero}
+\leavevmode
+\begin{enumerate}
+\item Let $S_R(U):=\sum_{p\in P_R}(1-\cos\alpha_p)$. If $U=1$ on the shell links and on $T_{\rm int}$, then $S_R(U)=0$ only for $U\equiv1$ on $\Lambda'_R$.
+\item \emph{(Dirichlet Maxwell form.)} For a real $1$-form $\varphi$ on $\Lambda''_R$, extended by $0$ to $T_{\rm int}$ and to the shell links, $Q(\varphi):=\sum_{p\in P_R}|(d\varphi)_p|^2$ is positive definite. Its smallest eigenvalue $\lambda_N$ is positive.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+A plaquette containing a link with an interior endpoint has all its sites in $R$, and every plaquette of $R$ is either in $P_R$ or a shell plaquette. (1) $S_R=0$ makes every $p\in P_R$ flat, and the shell plaquettes are flat because the shell links are $1$. Apply Lemma~\ref{pf:lem-flat}. (2) $Q(\varphi)=0$ means that $\varphi$ is a flat connection with group $(\R,+)$ on the $2$-complex of $R$, equal to $0$ on the shell links and on $T_{\rm int}$. Lemma~\ref{pf:lem-flat} gives $\varphi=0$.
+\end{proof}
+
+For orientation only: the computed values are $\lambda_1=0.837722$ and $\lambda_2=0.147122$; the proof uses $\lambda_N>0$ only.
+
+\subsection{The conditional law in a box and the uniform Laplace limit}\label{pf:sec-L3}
+
+Fix $R=z+[-N,N]^4$. Under $\mu\in\cL_\beta$, Lemma~\ref{pf:lem-limit}(3) with $\Lambda=\Lambda'_R$ shows that the conditional law of $U_{\Lambda'_R}$ given the links outside $\Lambda'_R$ is $\propto e^{-\beta S_R}\,dU_{\Lambda'_R}$. Every $p\in P_R$ has its links in $\Lambda'_R$ or among the shell links, so this law depends only on the shell links.
+
+\emph{The gauge.} We fix the gauge in two steps that use no interior information. Let $g^s$ be the gauge transformation on shell sites with $g^s_b=1$ and $U^{g^s}=1$ on $T_s$; it is a function of the shell links only. Let $V:=U^{g^s}$ on the shell links, and let $\psi_l:=\sqrt\beta\log V_l$ for the shell links $l\notin T_s$ (and $\psi_l:=0$ on $T_s$). So $\psi$ is a function of the shell links only. Inside the conditional integral we apply Lemma~\ref{pf:lem-forest} with the forest $T_{\rm int}$ and $B=\partial R$: each tree of $T_{\rm int}$ meets $\partial R$ in exactly one site, and the gauge is $1$ there, so the shell links are unchanged.
+
+Let $w$ be a bounded measurable function of the links of $R$ that is invariant under gauge transformations $g$ on $R$ with $g_b=1$, and let $\Psi_w$ be its conditional expectation. A gauge transformation at interior sites is absorbed by Haar invariance of $dU_{\Lambda'_R}$; at shell sites it acts on the argument of $\Psi_w$. Hence $\Psi_w(\text{shell})=\Psi_w(V)$, a function of $\psi$. With the exponential chart $U_l=e^{i\sigma\cdot\varphi_l/\sqrt\beta}$ on $\Lambda''_R$, and $J(x):=(\sin|x|/|x|)^2/(2\pi^2)$ the Haar density in that chart (normalised: $\int_{|x|<\pi}J=\frac{4\pi}{2\pi^2}\cdot\frac\pi2=1$), we obtain $\Psi_w=K_\beta w$ with
+\begin{equation}\label{pf:eq-Kbeta}
+K_\beta(d\varphi\,|\,\psi)=Z_\beta(\psi)^{-1}\exp\big(-\beta S_R(\varphi/\sqrt\beta;\psi/\sqrt\beta)\big)\prod_{l\in\Lambda''_R}J(\varphi_l/\sqrt\beta)\,\mathbf 1\{|\varphi_l|<\pi\sqrt\beta\}\,d\varphi,
+\end{equation}
+where $S_R(x;y)$ is $S_R$ with interior variables $e^{i\sigma\cdot x}$ on $\Lambda''_R$, $1$ on $T_{\rm int}$, and shell variables $e^{i\sigma\cdot y}$ off $T_s$, $1$ on $T_s$. The factors $\beta^{-3\nu_R/2}$ cancel, and $\{|x_l|=\pi\}$ is Haar-null.
+
+\emph{Shell data from shell curvatures.} By Lemma~\ref{pf:lem-shell}, $|\psi_l|=\sqrt\beta\alpha(V_l)\le K_N\max_q\sqrt\beta\alpha_q\le K_N(\pi/\sqrt2)\max_q\sqrt{O_q}$, the maximum over the shell plaquettes $q$. With Corollary~\ref{pf:cor-tail} and a union bound, for every $M$,
+\begin{equation}\label{pf:eq-epsM}
+\mu(|\psi|>M)\le\varepsilon_R(M)\quad\text{for all }\beta\ge1,\ \mu\in\cL_\beta,\qquad\varepsilon_R(M)\xrightarrow[M\to\infty]{}0.
+\end{equation}
+Bounded shell data are thus implied by bounded gauge-invariant shell energies. No holonomy variables arise.
+
+Write $Q(\varphi;\psi):=\sum_{p\in P_R}|(d\varphi+d\psi)_p|^2$ (colours summed), where $\varphi$ and $\psi$ are extended by $0$. Then $\tfrac12Q(\varphi;\psi)=\tfrac12\langle\varphi,Q\varphi\rangle+\langle\varphi,B\psi\rangle+\tfrac12\langle\psi,C\psi\rangle$ for fixed matrices $B,C$, and $Q$ acts on each colour as the form of Corollary~\ref{pf:cor-zero}(2). Let $K_\infty(\cdot|\psi)$ be the Gaussian measure $\propto e^{-\frac12Q(\varphi;\psi)}d\varphi$: three independent colours, each $N(-Q^{-1}B\psi,\,Q^{-1})$.
+
+\begin{theorem}[uniform Laplace limit; L3]\label{pf:thm-L3}
+Fix a box $R$ and $M<\infty$. There are $c>0$ and $\beta_0(M)<\infty$ such that, for all $\beta\ge\beta_0(M)$, all $|\psi|\le M$ and all $\varphi$ in the chart,
+\begin{equation}\label{pf:eq-lower}
+\beta S_R(\varphi/\sqrt\beta;\psi/\sqrt\beta)\ge c|\varphi|^2-7M^2 .
+\end{equation}
+Moreover
+\[
+\lim_{\beta\to\infty}\ \sup_{|\psi|\le M}\ \big\|K_\beta(\cdot|\psi)-K_\infty(\cdot|\psi)\big\|_{TV}=0,
+\]
+so $\sup_{|\psi|\le M}|K_\beta W(\psi)-K_\infty W(\psi)|\to0$ for every bounded measurable $W$, also when $W$ depends on $\psi$ or on further parameters with $\|W\|_\infty$ uniformly bounded. Finally, uniformly in $|\psi|\le M$ and $\beta\ge\beta_0(M)$, $K_\beta(|\varphi|>r\,|\,\psi)\le z_M^{-1}e^{7M^2}\int_{|\varphi|>r}e^{-c|\varphi|^2}d\varphi+o(1)$ as $\beta\to\infty$, with $z_M>0$.
+The constant $c=\min(\lambda_N/16,\eta(\delta)/(2\nu_R\pi^2))$ contains $\eta(\delta)>0$, which is obtained by compactness and is not explicit.
+\end{theorem}
+
+\begin{proof}
+\emph{Choice of $\delta$.} Fix $\delta\in(0,1]$ with $48\delta^2e^{8\delta}\le\min(\lambda_N/16,1)$. Write $x=\varphi/\sqrt\beta$ on the interior and $x=\psi/\sqrt\beta$ on the shell, $\tilde\varphi$ for $\varphi$ on the interior and $\psi$ on the shell, $s_p:=\sum_{i\in p}|x_i|$ and $\tilde s_p:=\sqrt\beta s_p$.
+
+\emph{Near region} $\mathcal N:=\{|x_l|\le\delta\ \forall l\in\Lambda''_R\}$, with $\beta\ge M^2/\delta^2$ so that also every shell $|x_l|\le\delta$. For $p\in P_R$, $s_p\le4\delta$. By (E1), (E2), $\|\sigma\cdot v\|_{HS}=\sqrt2|v|$ and $\|A\|_{HS}\le\sqrt2\|A\|_{op}$,
+$\|U_p-1\|_{HS}\ge\sqrt2\big(|dx_p|-\tfrac12s_p^2e^{s_p}\big)$. With $\beta(1-\cos\alpha_p)=\frac\beta4\|U_p-1\|^2_{HS}$ this gives $\beta(1-\cos\alpha_p)\ge\tfrac12(a_p-b_p)_+^2$ with $a_p:=|(d\tilde\varphi)_p|$ and $b_p:=\tfrac12\sqrt\beta s_p^2e^{s_p}\le2\delta e^{4\delta}\tilde s_p$. The second elementary inequality and $\tilde s_p^2\le4\sum_{i\in p}|\tilde\varphi_i|^2$ give
+$\beta(1-\cos\alpha_p)\ge\tfrac14a_p^2-8\delta^2e^{8\delta}\sum_{i\in p}|\tilde\varphi_i|^2$. Each link lies in at most $6$ plaquettes, so
+$\beta S_R\ge\tfrac14Q(\varphi;\psi)-48\delta^2e^{8\delta}(|\varphi|^2+|\psi|^2)$. The third elementary inequality, Corollary~\ref{pf:cor-zero}(2) and $|(d\psi)_p|^2\le4\sum_{i\in p}|\psi_i|^2$ give $Q(\varphi;\psi)\ge\tfrac12\lambda_N|\varphi|^2-24|\psi|^2$. Hence on $\mathcal N$
+\[
+\beta S_R\ge(\lambda_N/8-48\delta^2e^{8\delta})|\varphi|^2-(6+48\delta^2e^{8\delta})|\psi|^2\ge(\lambda_N/16)|\varphi|^2-7|\psi|^2 .
+\]
+
+\emph{Far region.} The set $\mathcal K_\delta:=\{U_{\Lambda''_R}:\max_l\alpha(U_l)\ge\delta\}$ is compact, and $S_R(\cdot\,;\text{shell}=1)$ is continuous and, by Corollary~\ref{pf:cor-zero}(1), positive on it. Let $\eta(\delta)>0$ be its minimum. By the last relation in \eqref{pf:eq-alpha}, $1-\cos$ being $1$-Lipschitz, and each shell link lying in at most $6$ plaquettes,
+$|S_R(U;\psi/\sqrt\beta)-S_R(U;0)|\le6\sum_l|\psi_l|/\sqrt\beta\le6\sqrt{\nu_s}M/\sqrt\beta$. For $\beta\ge(12\sqrt{\nu_s}M/\eta)^2$ this is $\le\eta/2$, so $S_R\ge\eta/2$ on $\mathcal N^c$. Since $|\varphi|^2<\nu_R\pi^2\beta$ on the chart, $\beta S_R\ge(\eta/(2\nu_R\pi^2))|\varphi|^2$ there. With $\beta_0(M):=\max(M^2/\delta^2,144\nu_sM^2/\eta^2)$ this proves \eqref{pf:eq-lower}.
+
+\emph{Pointwise limit.} Fix $r$ and let $|\varphi|\le r$, $|\psi|\le M$, $\beta$ large. By (E3), $|\sqrt\beta\alpha_p-|(d\tilde\varphi)_p||\le\sqrt\beta|y_p-dx_p|\le\tilde s_p^2e^{\tilde s_p/\sqrt\beta}/\sqrt\beta$, and $\sqrt\beta\alpha_p,|(d\tilde\varphi)_p|\le\tilde s_p\le4(r+M)$. Also $0\le\beta(\alpha^2/2-(1-\cos\alpha))\le\beta\alpha^4/24$. Hence
+\[
+\big|\beta S_R-\tfrac12Q(\varphi;\psi)\big|\le C_N(r+M)^3e^{4(r+M)/\sqrt\beta}/\sqrt\beta+C_N(r+M)^4/\beta,
+\]
+with $C_N$ depending on $N$ only. Moreover $(2\pi^2)^{\nu_R}\prod_lJ(\varphi_l/\sqrt\beta)\to1$ uniformly on $|\varphi|\le r$, and the indicator equals $1$ once $\beta>r^2/\pi^2$.
+
+\emph{Convergence.} Let $f_\beta$ be the unnormalised density in \eqref{pf:eq-Kbeta} times $(2\pi^2)^{\nu_R}$, and $f_\infty:=e^{-\frac12Q(\varphi;\psi)}$. By the pointwise limit, $f_\beta\to f_\infty$ uniformly on $\{|\varphi|\le r,|\psi|\le M\}$. By \eqref{pf:eq-lower} and $J\le1/(2\pi^2)$, $f_\beta\le e^{7M^2}e^{-c|\varphi|^2}$; and $f_\infty\le e^{12M^2}e^{-\lambda_N|\varphi|^2/4}$. Splitting $\int=\int_{|\varphi|\le r}+\int_{|\varphi|>r}$ gives $\sup_{|\psi|\le M}\int|f_\beta-f_\infty|\,d\varphi\to0$. $Z_\infty(\psi):=\int f_\infty$ is continuous and positive, so $z_M:=\min_{|\psi|\le M}Z_\infty>0$. For $|W|\le1$, $|\int Wf_\beta/\int f_\beta-\int Wf_\infty/\int f_\infty|\le2\int|f_\beta-f_\infty|/\int f_\infty$, which gives the total-variation statement. The tail statement follows from the bound on $f_\beta$ and $\int f_\beta\ge z_M-o(1)$.
+\end{proof}
+
+\subsection{The limit curvature field}\label{pf:sec-L4}
+
+Fix a base site $o$ and, for every plaquette $p$, a lattice path $\gamma_p$ from $o$ to $x_p$. Define the \emph{lasso field}
+\[
+F^\beta_p:=\sqrt\beta\,\mathrm{Ad}(U_{\gamma_p})\log U_p\in\R^3 .
+\]
+Then $|F^\beta_p|=\sqrt\beta\alpha_p$ exactly, and $O_p=\phi_\beta(|F^\beta_p|)$ with $\phi_\beta(t):=\beta(1-\cos(t/\sqrt\beta))$, $|\phi_\beta(t)-t^2/2|\le t^4/(24\beta)$. Under a gauge transformation, $F^\beta\mapsto\mathrm{Ad}(g_o)F^\beta$. No gauge tree is used to define $F^\beta$. We write $F^{\beta,(o)}$ when the base point matters, and $\mathcal P$ for the set of plaquettes of $\Z^4$.
+
+\begin{proposition}[L4]\label{pf:prop-L4}
+Let $\beta_k\ge1$, $\beta_k\to\infty$, and let $\mu_k\in\cL_{\beta_k}$ be arbitrary. Then there is a subsequence along which the finite-dimensional laws of $F^{\beta_k}$ under $\mu_k$ converge to the finite-dimensional laws of a probability measure $\mu_\infty$ on $(\R^3)^{\mathcal P}$. Every $\mu_\infty$ obtained in this way, along any subsequence, has the following properties; $F$ denotes the coordinate field.
+\begin{enumerate}
+\item[(a)] $\mu_\infty$ does not depend on the choice of $o$ and of the paths $\gamma_p$, in the sense that the same subsequence gives the same limit for every other choice.
+\item[(b)] \emph{(Bianchi.)} $(dF)_c=0$ for every $3$-cube $c$, $\mu_\infty$-almost surely.
+\item[(c)] \emph{(Invariances.)} $\mu_\infty$ is invariant under $F\mapsto\mathrm{Ad}(\mathcal R)F$ for each $\mathcal R\in\SU(2)$, and under lattice translations.
+\item[(d)] \emph{(Moments.)} $\mu_\infty(\tfrac12|F_p|^2>t)\le e^{60.2-t/8}$ for all $p,t$, so $F$ has moments of all orders. Along the subsequence, $(O_p)_{p\in\mathcal P}$ under $\mu_k$ converges in finite-dimensional laws to $(\tfrac12|F_p|^2)_{p\in\mathcal P}$, and $\mu_k(O_p)\to\E_\infty\tfrac12|F_p|^2$ and $\mu_k(O_pO_q)\to\E_\infty\tfrac14|F_p|^2|F_q|^2$ for all $p,q$.
+\item[(e)] \emph{(Gaussian DLR.)} For every box $R$, let $\cG_R:=\sigma(F_q:q\notin P_R)$, the $\sigma$-field of the limit curvatures outside the box only (no link variables enter), $F_{\rm in}:=(F_p)_{p\in P_R}$ and $F_{\rm sh}:=(F_q)_{q\text{ shell plaquette}}$, which is $\cG_R$-measurable. Let $\mathsf L$ be a fixed linear left inverse of $d$ on the shell $1$-forms vanishing on $T_s$. Then a regular conditional law of $F_{\rm in}$ given $\cG_R$ is the law of $d(A+\Psi)|_{P_R}$, where the shell potential $\Psi:=\mathsf LF_{\rm sh}$ is this fixed linear image of the shell curvature and $A\sim K_\infty(\cdot|\Psi)$.
+\end{enumerate}
+\end{proposition}
+
+The map $d$ is injective on shell $1$-forms vanishing on $T_s$: a form in the kernel is a flat $(\R,+)$-connection on the shell, hence $d\lambda$ by Lemma~\ref{pf:lem-shell}, and $\lambda$ is constant along the spanning tree $T_s$, so the form is $0$. Hence $\mathsf L$ exists.
+
+\begin{proof}[Proof of existence and of (a)]
+By Corollary~\ref{pf:cor-tail}, $|F^\beta_p|=\sqrt\beta\alpha_p\le(\pi/\sqrt2)\sqrt{O_p}$ is tight uniformly in $\beta\ge1$ and $\mu\in\cL_\beta$. So every finite family $(F^{\beta_k}_p)_{p\in\mathcal F}$ is tight. Prokhorov's theorem and diagonal extraction over the countably many finite families give a subsequence along which all finite-dimensional laws converge; they are consistent, and Kolmogorov's extension theorem gives $\mu_\infty$.
+
+\emph{Paths.} Let $\gamma'_p$ be another path from $o$ to $x_p$ and $F'$ the corresponding field. Then $F'_p=\mathrm{Ad}(V)F_p$, where $V=U_{\gamma'_p}U_{\gamma_p}^{-1}$ is the holonomy of a closed path in a box. By Lemma~\ref{pf:lem-flat} applied to the tautological connection of the box (as in the proof of Lemma~\ref{pf:lem-shell}), the loop word is a product of a fixed number $m$ of conjugates of plaquette words $q_1,\dots,q_m$, so $\alpha(V)\le\sum_i\alpha_{q_i}\le(\pi/\sqrt2)\sum_i\sqrt{O_{q_i}/\beta}$. Corollary~\ref{pf:cor-tail} makes this $O_P(\beta^{-1/2})$ uniformly in $\mu\in\cL_\beta$, and $|F'_p-F_p|\le2\alpha(V)|F_p|\to0$ in probability. By Slutsky's lemma the limits coincide.
+
+\emph{Base point.} Let $b\ne o$, let $W$ be the holonomy of a fixed path from $o$ to $b$, and let $H:=F^{(b)}$ (paths from $b$) on a finite family. Then $F^{(o)}$ with paths through $b$ equals $\mathrm{Ad}(W)H$. Let $g$ be independent Haar variables at the finitely many sites involved (and $g=1$ elsewhere), independent of $U$, and $\tilde U:=U^g$. By Lemma~\ref{pf:lem-limit}(1), $\tilde U\sim\mu$. Now $W(\tilde U)=g_oWg_b^{-1}$ and $H(\tilde U)=\mathrm{Ad}(g_b)H(U)$. Given $(U,g_b)$, $g_oWg_b^{-1}$ is Haar distributed, so $W(\tilde U)$ is Haar and independent of $H(\tilde U)$, whose law is that of $H$. Hence $\mathrm{law}(\mathrm{Ad}(W)H)=\mathrm{law}(\mathrm{Ad}(\mathcal H)H)$ with $\mathcal H$ Haar and independent of $H$. Since $\mathrm{law}(H)$ is invariant under each fixed $\mathrm{Ad}(\mathcal R)$ (constant gauge transformations, Lemma~\ref{pf:lem-limit}(1)), this is $\mathrm{law}(H)$. So at every $\beta$ the field based at $o$ (paths through $b$) and the field based at $b$ have the same law. With the path statement, the limit does not depend on the base point.
+\end{proof}
+
+\begin{proof}[Proof of (c)]
+Colour invariance holds at every $\beta$ by gauge invariance under constant $g\equiv\mathcal R$. For translations, translation invariance of $\mu_k$ maps the field based at $o$ with paths $\gamma_p$ to the field based at $o+a$ with paths $\gamma_p+a$ on the plaquettes $p+a$. By (a), changing the base point back to $o$ and the paths to $\gamma_{p+a}$ does not change the limit. So $(F_{p+a})_p$ and $(F_p)_p$ have the same limit law.
+\end{proof}
+
+\begin{proof}[Proof of (b)]
+\emph{The cube word identity.} Let $c=(x;\lambda,\mu,\nu)$ with $\lambda<\mu<\nu$; write $1,2,3$ for $\lambda,\mu,\nu$, $U_{ab}(y)$ for the holonomy of the $(a,b)$ plaquette with corner $y$ (as in \S\ref{pf:sec-setting}), and $u_a:=U_{x,a}$. Then, for every $\SU(2)$-connection on the twelve edges of $c$,
+\begin{equation}\label{pf:eq-cube}
+U_{23}(x)^{-1}\cdot u_2U_{13}(x+e_2)^{-1}u_2^{-1}\cdot U_{12}(x)^{-1}\cdot u_1U_{23}(x+e_1)u_1^{-1}\cdot U_{13}(x)\cdot u_3U_{12}(x+e_3)u_3^{-1}=1 .
+\end{equation}
+This is an identity in the free group on the twelve edges: writing each factor as a word in the edges, the product reduces to the empty word. To check it, label the edge from $x+\epsilon$ in direction $a$ by $a_\epsilon$, $\epsilon\in\{0,1\}^3$. The six words are
+\begin{align*}
+U_{23}(x)^{-1}&=3_{000}2_{001}3_{010}^{-1}2_{000}^{-1}, &
+u_2U_{13}(x+e_2)^{-1}u_2^{-1}&=2_{000}3_{010}1_{011}3_{110}^{-1}1_{010}^{-1}2_{000}^{-1},\\
+U_{12}(x)^{-1}&=2_{000}1_{010}2_{100}^{-1}1_{000}^{-1}, &
+u_1U_{23}(x+e_1)u_1^{-1}&=1_{000}2_{100}3_{110}2_{101}^{-1}3_{100}^{-1}1_{000}^{-1},\\
+U_{13}(x)&=1_{000}3_{100}1_{001}^{-1}3_{000}^{-1}, &
+u_3U_{12}(x+e_3)u_3^{-1}&=3_{000}1_{001}2_{101}1_{011}^{-1}2_{001}^{-1}3_{000}^{-1}.
+\end{align*}
+Concatenating and cancelling adjacent inverse pairs from left to right removes all letters. The abelianised identity, with signs $-,-,-,+,+,+$ on $U_{23}(x),U_{13}(x+e_2),U_{12}(x),U_{23}(x+e_1),U_{13}(x),U_{12}(x+e_3)$, is the boundary of $c$ with the incidence numbers of $d$ in \S\ref{pf:sec-setting}.
+
+\emph{The estimate.} Write $y_f:=\log U_f$ for the six faces $f$ (based at their corners), $\varepsilon_f$ for the sign of $f$ in \eqref{pf:eq-cube}, and $W_f\in\{1,u_1,u_2,u_3\}$ for its transport. Each factor of \eqref{pf:eq-cube} is $e^{i\varepsilon_f\sigma\cdot\mathrm{Ad}(W_f)y_f}$ whenever $\alpha_f<\pi$. Since the product is $1$, (E2) gives $|\sum_f\varepsilon_f\mathrm{Ad}(W_f)y_f|\le\frac{s^2}2e^s$ with $s=\sum_f\alpha_f$. Multiply by $\sqrt\beta$ and apply the isometry $\mathrm{Ad}(U_{\gamma_x})$, $\gamma_x$ a fixed path from $o$ to $x$. Then $\mathrm{Ad}(U_{\gamma_x}W_f)\sqrt\beta y_f$ is the lasso field of $f$ with the path $\gamma_x$ followed by the edge of $W_f$; by the path estimate in the proof of (a) it differs from $F^\beta_f$ by at most $2\alpha(V_f)|F^\beta_f|=O_P(\beta^{-1/2})$. Hence, with $S_c:=\sum_f|F^\beta_f|$,
+\[
+|(dF^\beta)_c|\le\frac{S_c^2}{2\sqrt\beta}e^{S_c/\sqrt\beta}+O_P(\beta^{-1/2}),
+\]
+on the event $\max_f\alpha_f<\pi$, whose probability tends to $1$ by Corollary~\ref{pf:cor-tail}. $S_c$ is tight, so $(dF^{\beta_k})_c\to0$ in probability. The set $\{|(dF)_c|>\epsilon\}$ is open, so $\mu_\infty(|(dF)_c|>\epsilon)\le\liminf_k\mu_k(|(dF^{\beta_k})_c|>\epsilon)=0$ for every $\epsilon>0$. There are countably many cubes.
+\end{proof}
+
+\begin{proof}[Proof of (d)]
+$O_p=\phi_{\beta}(|F^\beta_p|)$. For a bounded Lipschitz $h$ of finitely many coordinates $p\in\mathcal F$,
+\[
+\big|\E_kh(\phi_{\beta_k}(|F^{\beta_k}|))-\E_kh(\tfrac12|F^{\beta_k}|^2)\big|\le\mathrm{Lip}(h)\,|\mathcal F|\sup_{t\le r}\frac{t^4}{24\beta_k}+2\|h\|_\infty\,\mu_k\big(\max_{\mathcal F}|F^{\beta_k}_p|>r\big),
+\]
+which tends to $0$ as $k\to\infty$ and then $r\to\infty$. Since $F\mapsto h(\tfrac12|F|^2)$ is bounded and continuous, $\E_kh(\tfrac12|F^{\beta_k}|^2)\to\E_\infty h(\tfrac12|F|^2)$; bounded Lipschitz functions determine convergence in law. For the tail bound: the law of $\tfrac12|F_p|^2$ under $\mu_\infty$ is the limit in law of the law of $O_p$ under $\mu_k$, just shown; the set $\{y>t\}$ is open, so $\mu_\infty(\tfrac12|F_p|^2>t)\le\liminf_k\mu_k(O_p>t)\le e^{60.2-t/8}$ by Corollary~\ref{pf:cor-tail}. By Corollary~\ref{pf:cor-tail}, $\sup_k\mu_k(O_p^4)<\infty$, so $O_p$, $O_pO_q$ (with $\mu_k(O_p^2O_q^2)\le\mu_k(O_p^4)^{1/2}\mu_k(O_q^4)^{1/2}$) are uniformly integrable, and their expectations converge.
+\end{proof}
+
+\begin{proof}[Proof of (e)]
+Fix $R$ and $b\in\partial R$, the root of $T_s$. Let $T:=T_s\cup T_{\rm int}$.
+
+\emph{Step 1: adapted paths.} By (a) we may compute with the base point $b$ and with any paths. For $p\in P_R$ choose $\gamma_p$ inside $T$: along $T_s$ to a shell site, then down the tree of $T_{\rm int}$. For $q\notin P_R$ choose $\gamma_q$ through links not in $\Lambda'_R$: a plaquette $q\notin P_R$ has no interior site, and the graph of non-interior sites with the links not in $\Lambda'_R$ is connected. For a shell plaquette choose $\gamma_q$ inside $T_s$. Then $F^\beta_{\rm out}:=(F^\beta_q)_{q\notin P_R}$ is a function of the links outside $\Lambda'_R$. In the box gauge ($g^s$ on the shell, then the $T_{\rm int}$ gauge, both with $g_b=1$), $F^{\beta,(b)}$ is unchanged and $U_{\gamma_p}=1$ for $p\in P_R$; so $F^\beta_{\rm in}=F_{\rm in}(\varphi,\psi):=(\sqrt\beta\log U_p)_{p\in P_R}$, and by (E3)
+\begin{equation}\label{pf:eq-Fin}
+|F_{\rm in}(\varphi,\psi)-(d\varphi+d\psi)|_{P_R}|\le C_R(|\varphi|+|\psi|)^2e^{4(|\varphi|+|\psi|)/\sqrt\beta}/\sqrt\beta
+\end{equation}
+when $4(|\varphi|+|\psi|)<\pi\sqrt\beta$. Likewise $F^\beta_{\rm sh}=(\sqrt\beta\log V_q)_q$, so $|F^\beta_{\rm sh}-d\psi|\le C_R|\psi|^2e^{4|\psi|/\sqrt\beta}/\sqrt\beta$.
+
+\emph{Step 2: finite-$\beta$ DLR.} Let $w_{\rm in}$ be bounded Lipschitz on $(\R^3)^{P_R}$ and $w_{\rm out}$ bounded Lipschitz in finitely many $F_q$, $q\notin P_R$. The function $w_{\rm in}(F^{\beta,(b)}_{\rm in})$ is invariant under gauge transformations with $g_b=1$. By \S\ref{pf:sec-L3} and Lemma~\ref{pf:lem-limit}(3),
+$\E_k[w_{\rm in}(F^\beta_{\rm in})w_{\rm out}]=\E_k[(K_\beta W_\beta)(\psi)\,w_{\rm out}]$ with $W_\beta(\varphi,\psi):=w_{\rm in}(F_{\rm in}(\varphi,\psi))$.
+
+\emph{Step 3: Laplace limit.} Let $\Phi(\psi):=K_\infty[w_{\rm in}(d\varphi+d\psi)](\psi)$. For $|\psi|\le M$,
+$|K_\beta W_\beta-\Phi|\le|K_\beta W_\beta-K_\beta W_\infty|+|K_\beta W_\infty-K_\infty W_\infty|$ with $W_\infty(\varphi,\psi):=w_{\rm in}(d\varphi+d\psi)$. The second term tends to $0$ uniformly by Theorem~\ref{pf:thm-L3}. The first is at most $\mathrm{Lip}(w_{\rm in})\sup_{|\varphi|\le r}(\text{right side of }\eqref{pf:eq-Fin})+2\|w_{\rm in}\|_\infty K_\beta(|\varphi|>r|\psi)$, which is small uniformly by the tightness statement of Theorem~\ref{pf:thm-L3}. Under $K_\infty(\cdot|\psi)$, $d\varphi+d\psi=D\zeta+E\psi$ with $\zeta\sim N(0,Q^{-1})$ per colour and fixed linear maps $D,E$; so $\Phi$ is bounded and Lipschitz.
+
+\emph{Step 4: tail.} Off $\{|\psi|\le M\}$ the difference is at most $2\|w_{\rm in}\|_\infty\|w_{\rm out}\|_\infty\varepsilon_R(M)$ by \eqref{pf:eq-epsM}, uniformly in $k$.
+
+\emph{Step 5: shell data from curvatures.} $\psi=\mathsf Ld\psi$ exactly. So on $\{|\psi|\le M\}$,
+\[|\psi-\mathsf LF^{\beta}_{\rm sh}|\le\|\mathsf L\|\,C_RM^2e^{4M/\sqrt\beta}/\sqrt\beta .\] Since $\Phi$ is Lipschitz, $|\E_k[\Phi(\psi)w_{\rm out}]-\E_k[\Phi(\mathsf LF^\beta_{\rm sh})w_{\rm out}]|\le o(1)+2\|\Phi\|_\infty\|w_{\rm out}\|_\infty\varepsilon_R(M)$.
+
+\emph{Step 6: limit.} The laws of the adapted field under $\mu_k$ converge to $\mu_\infty$ along the subsequence: at each $k$ the law of the field based at $b$ equals that of the field based at $o$ with paths through $b$, which differs from $F^{\beta_k}$ by $o_P(1)$ (proof of (a)); apply Slutsky's lemma. The functions $w_{\rm in}(F_{\rm in})w_{\rm out}$ and $\Phi(\mathsf LF_{\rm sh})w_{\rm out}$ are bounded and continuous in finitely many coordinates. Hence
+$|\E_\infty[w_{\rm in}(F_{\rm in})w_{\rm out}]-\E_\infty[\Phi(\mathsf LF_{\rm sh})w_{\rm out}]|\le C\varepsilon_R(M)$ for every $M$, and so equality holds.
+
+\emph{Step 7: conditional law.} The functions $w_{\rm out}$ generate $\cG_R$ and form a class closed under products, so by the monotone class theorem $\E_\infty[w_{\rm in}(F_{\rm in})|\cG_R]=\Phi_{w_{\rm in}}(\mathsf LF_{\rm sh})$ a.s. A regular conditional law of $F_{\rm in}$ given $\cG_R$ exists because $(\R^3)^{P_R}$ is Polish. A countable family of bounded Lipschitz $w_{\rm in}$ determines probability measures on $(\R^3)^{P_R}$, so this regular conditional law equals the law of $d(A+\Psi)|_{P_R}$, $A\sim K_\infty(\cdot|\Psi)$, $\Psi=\mathsf LF_{\rm sh}$, almost surely.
+\end{proof}
+
+At finite $\beta$ the conditioning is on links modulo gauge; in the limit, as (e) states, it is on curvatures only. Lemma~\ref{pf:lem-shell} and the injectivity of $d$ on $T_s$-gauge shell forms show that nothing is lost: shell curvatures determine shell links modulo gauge, exactly for the group and linearly in the limit.
+
+\subsection{The increasing Dirichlet covariances}\label{pf:sec-D}
+
+In this subsection and the next, $\mu_\infty$ is a limit as in Proposition~\ref{pf:prop-L4}, $\E$ is its expectation, and $F$ is its field. For a box $R$ let $h^R_p:=\E[F_p|\cG_R]$; so $h^R_q=F_q$ for $q\notin P_R$.
+Let $P$ be the orthogonal projection in $\ell^2(\mathcal P)$ (one colour) onto the closure of $\{dA:A\text{ a finitely supported real }1\text{-form}\}$.
+
+\begin{definition}\label{pf:def-G}
+$G(n):=\langle\delta_{p_0},P\delta_{p_n}\rangle$ for $n\in\Z$, and $c(n):=(G(n)/G(0))^2$.
+\end{definition}
+
+\begin{lemma}[Dirichlet covariances; Lemma D]\label{pf:lem-D}
+Let $R$ be a box. Given $\cG_R$, the field $\xi^R:=F-h^R$ is centred Gaussian, with three independent colours, each with the deterministic covariance $C^R$ given by
+\begin{equation}\label{pf:eq-CR}
+\langle f,C^Rf\rangle=\sup\Big\{\frac{\langle f,dA\rangle^2}{|dA|^2}:A\text{ a real }1\text{-form supported on }\Lambda'_R,\ dA\ne0\Big\}
+\end{equation}
+for finitely supported $f\in\ell^2(\mathcal P)$. Moreover $(d^*h^R)_l=0$ for every $l\in\Lambda'_R$. For $R_N=[-N,N]^4$, $\langle f,C^{R_N}f\rangle$ is nondecreasing in $N$ and converges to $|Pf|^2$.
+\end{lemma}
+
+\begin{proof}
+By Proposition~\ref{pf:prop-L4}(e), given $\cG_R$, $F_{\rm in}=d(A+\Psi)|_{P_R}$ with $A\sim K_\infty(\cdot|\Psi)$: per colour $A=a(\Psi)+\zeta$ with $a(\Psi)=-Q^{-1}B\Psi$ and $\zeta\sim N(0,Q^{-1})$ independent of $\cG_R$. So $h^R|_{P_R}=d(a(\Psi)+\Psi)$, and $\xi^R=D\zeta$ with $D$ the restriction of $d$ to $1$-forms on $\Lambda''_R$. Its covariance per colour is $C^R=DQ^{-1}D^{\mathsf T}$, where $Q=D^{\mathsf T}D$. For $f$ supported on $P_R$, Cauchy--Schwarz in the inner product $\langle\cdot,Q\cdot\rangle$ gives
+$\langle f,DQ^{-1}D^{\mathsf T}f\rangle=\sup_{\varphi\ne0}\langle f,D\varphi\rangle^2/\langle\varphi,Q\varphi\rangle$. A $1$-form $A$ on $\Lambda'_R$ can be changed to vanish on $T_{\rm int}$ by adding $d\lambda$ with $\lambda$ supported on interior sites (solve along each tree of $T_{\rm int}$ from its shell site); this does not change $dA$. So the supremum over $\varphi$ on $\Lambda''_R$ equals the supremum in \eqref{pf:eq-CR}. Since $dA$ is supported on $P_R$, \eqref{pf:eq-CR} holds for all finitely supported $f$ (and $\xi^R_q=0$ for $q\notin P_R$).
+
+The mean $a(\Psi)+\Psi$ minimises $\varphi\mapsto\sum_{p\in P_R}|(d(\varphi+\Psi))_p|^2$ over $\varphi$ on $\Lambda''_R$. By the same gauge remark it also minimises over $\varphi$ on all of $\Lambda'_R$. Every plaquette containing $l\in\Lambda'_R$ lies in $P_R$, so the stationarity condition in the variable $\varphi_l$ is $(d^*h^R)_l=0$.
+
+$R_N\subset R_{N+1}$ gives $\Lambda'_{R_N}\subset\Lambda'_{R_{N+1}}$, so \eqref{pf:eq-CR} is nondecreasing. The union of the $\Lambda'_{R_N}$ is all links, and the supremum of $\langle f,v\rangle^2/|v|^2$ over a dense subset of a closed subspace is $|Pf|^2$.
+\end{proof}
+
+For orientation only: $C^{R_N}_{p_0p_0}=7/24=0.29167$, $0.49267$, $0.49916$ for $N=1,2,3$, where $R_N=[-N,N]^4$ has side $2N$; the limit is $G(0)=\tfrac12$.
+
+\subsection{Decomposition of a limit point}\label{pf:sec-R}
+
+\begin{lemma}[free field plus constant background; Lemma R]\label{pf:lem-R}
+Under $\mu_\infty$, $F=\xi+f$, where:
+$\xi$ is centred Gaussian with three independent colours, each with covariance $P$;
+$f$ is a random constant, that is, $f_p=f_{\mu\nu}\in\R^3$ for every plaquette $p$ of type $(\mu,\nu)$;
+$\xi$ and $f$ are independent; and $\E|f_{\mu\nu}|^4<\infty$.
+The colours of $f$ may be correlated.
+\end{lemma}
+
+\begin{proof}
+\emph{Martingale limit.} For $N'\ge N$, $P_{R_N}\subset P_{R_{N'}}$, so $\cG_{R_{N'}}\subset\cG_{R_N}$. Let $\cG_\infty:=\bigcap_N\cG_{R_N}$ and $h^N:=h^{R_N}$. Since $\E|F_p|^2<\infty$ (Proposition~\ref{pf:prop-L4}(d)), L\'evy's downward theorem gives $h^N_p\to h_p:=\E[F_p|\cG_\infty]$ almost surely and in $L^2$. By conditional Jensen, $\E|h_p|^4\le\E|F_p|^4<\infty$.
+
+\emph{Gaussian part.} Let $\xi:=F-h$. For finitely supported $f'$ (all colours) and bounded $\cG_\infty$-measurable $Y$, Lemma~\ref{pf:lem-D} gives $\E[e^{i\langle f',\xi^{R_N}\rangle}Y]=e^{-\frac12\sum_a\langle f'^a,C^{R_N}f'^a\rangle}\E Y$. Let $N\to\infty$: $\xi^{R_N}\to\xi$ in $L^2$ and $\langle f'^a,C^{R_N}f'^a\rangle\to|Pf'^a|^2$. So $\E[e^{i\langle f',\xi\rangle}Y]=e^{-\frac12\sum_a|Pf'^a|^2}\E Y$. Hence $\xi$ is centred Gaussian with independent colours of covariance $P$, and independent of $\cG_\infty$, hence of $h$.
+
+\emph{Closed and co-closed.} $(dh)_c=\E[(dF)_c|\cG_\infty]=0$ by Proposition~\ref{pf:prop-L4}(b). For a link $l$, $(d^*h^{N})_l=0$ once $l\in\Lambda'_{R_N}$ (Lemma~\ref{pf:lem-D}); the $L^2$ limit gives $(d^*h)_l=0$.
+
+\emph{Stationarity.} Since $\xi$ is centred and independent of $h$, $\E[h^a_ph^a_q]=\E[F^a_pF^a_q]-P_{pq}$. Both terms are invariant under lattice translations (Proposition~\ref{pf:prop-L4}(c), and $P$ commutes with translations). So $h$ is second-order stationary.
+
+\emph{Constancy.} The following argument for constancy was supplied by an independent check of this lemma by a session of a second model lineage \cite[comment 7102490558]{RepoThread}. On $\Z^4$ the Hodge Laplacian $dd^*+d^*d$ on $2$-forms acts on each component $\omega_{\mu\nu}$ as the scalar operator $8-\sum_{e}\mathsf S_e$, the sum over the eight unit vectors $e=\pm e_\lambda$ and $\mathsf S_e\omega(x)=\omega(x+e)$. (Both sides are finite-range, translation-invariant operators; on finitely supported forms their Fourier symbols agree, because $\hat d=\sum_\lambda\hat e_\lambda\,e^\lambda\wedge$ and $\hat d^*=\sum_\lambda\overline{\hat e_\lambda}\,\iota_\lambda$ with $\hat e_\lambda=e^{ik_\lambda}-1$, and $e^\lambda\wedge\iota_\kappa+\iota_\kappa e^\lambda\wedge=\delta_{\lambda\kappa}$, so the symbol is $\sum_\lambda|\hat e_\lambda|^2=\sum_\lambda(2-2\cos k_\lambda)$.) Since $dh=0$ and $d^*h=0$ almost surely, every component is harmonic: $\sum_eh(x+e)=8h(x)$ for each fixed type $(\mu,\nu)$ and colour, writing $h(x)$ for that component at the plaquette with corner $x$. Fix $x$ and put $u:=h(x)$, $v_e:=h(x+e)$ in real $L^2(\mu_\infty)$. By stationarity, $\|v_e\|=\|u\|$ for all $e$. Hence
+\[
+\sum_e\|v_e-u\|^2=\sum_e\|v_e\|^2-2\Big\langle\sum_ev_e,u\Big\rangle+8\|u\|^2=16\|u\|^2-16\|u\|^2=0 .
+\]
+So $h(x+e)=h(x)$ almost surely for every $x$ and $e$. There are countably many pairs, so almost surely $h$ is constant in $x$ for each type and colour. Put $f:=h$.
+\end{proof}
+
+A constant background matters: for a background with $f_{p_n}=-f_{p_0}$ the covariance ratio can be negative.
+
+\subsection{The free correlation}\label{pf:sec-G}
+
+Write $\hat k_\lambda^2:=4\sin^2(k_\lambda/2)$ and $\hat k^2:=\sum_{\lambda=0}^3\hat k_\lambda^2$, and for $\vec k=(k_1,k_2,k_3)\in[-\pi,\pi]^3$ let $\varsigma (\vec k):=\sum_{i=1}^3\hat k_i^2$ and $m(\vec k)>0$ with $\cosh m=1+\varsigma /2$.
+
+\begin{lemma}[the free correlation; Lemma G]\label{pf:lem-G}
+\leavevmode
+\begin{enumerate}
+\item $G(n)=\displaystyle\int_{[-\pi,\pi]^4}\frac{\hat k_1^2+\hat k_2^2}{\hat k^2}\,e^{ik_0n}\,\frac{dk}{(2\pi)^4}=\int_{[-\pi,\pi]^3}\frac{\hat k_1^2+\hat k_2^2}{2\sinh m}\,e^{-m|n|}\,\frac{d\vec k}{(2\pi)^3}$.
+\item $G(0)=\tfrac12$, and $0<G(n+1)<G(n)\le\tfrac12$ for $n\ge0$.
+\item $G(n)\ge\frac4{\pi^2}\cdot\frac{16r^5}3\cdot\frac{e^{-1}}{2\sinh1}\cdot\frac1{(2\pi)^3}$ with $r=1/(\sqrt3n)$, for $n\ge1$.
+\item For all $n\ge1$, with $m_1:=\mathrm{arccosh}(1+2/\pi^2)$,
+\[\Big|G(n)-\frac1{\pi^2n^4}\Big|\le\frac{14400}{\pi^2n^6}+\frac12e^{-m_1n}+\frac1{6\pi^2}\int_1^\infty r^3e^{-nr}\,dr ;\]
+in particular $G(n)=1/(\pi^2n^4)+O(n^{-6})$. We do not convert the two exponentially small terms into a numerical multiple of $n^{-6}$.
+\end{enumerate}
+Consequently $c(n)=4G(n)^2=\frac4{\pi^4n^8}\big(1+O(n^{-2})\big)$, and $-\log c(n)/n\to0$.
+\end{lemma}
+
+\begin{proof}
+(1) In Fourier, with $\hat d$ as above, $\hat d\hat d^*+\hat d^*\hat d=\hat k^2$ on forms of every degree. For $k\ne0$, the range of $\hat d$ on $2$-forms equals the kernel of $\hat d$, and $\hat d\hat d^*/\hat k^2$ is the identity on it and vanishes on the range of $\hat d^*$; so $\hat P(k)=\hat d\hat d^*/\hat k^2$. The closure of the range of $d$ is the set of $\omega\in\ell^2$ with $\hat\omega(k)\in\mathrm{ran}\,\hat d(k)$ for almost every $k$: this set is closed and contains the range; conversely, for such $\omega$ and $\varepsilon>0$, $\mathbf 1\{|k|>\varepsilon\}\hat\omega=\hat d\hat A_\varepsilon$ with $\hat A_\varepsilon:=\mathbf 1\{|k|>\varepsilon\}\hat d^*\hat\omega/\hat k^2\in L^2$, and $A_\varepsilon$ is an $\ell^2$-limit of finitely supported forms, on which $d$ is bounded. So $P$ is multiplication by $\hat P(k)$. Its diagonal entry at the type $(1,2)$ is $|\hat e_1|^2+|\hat e_2|^2=\hat k_1^2+\hat k_2^2$. Since $p_n=p_0+ne_0$, Plancherel gives the first formula. For $\varsigma >0$, $\int_{-\pi}^\pi e^{ik_0n}/(2+\varsigma -2\cos k_0)\,dk_0/(2\pi)=e^{-m|n|}/(2\sinh m)$ (residues), which gives the second; the integrand is integrable because $\hat k_1^2+\hat k_2^2\le \varsigma $ and $\sinh m\ge m\ge c\sqrt \varsigma $ near $0$.
+
+(2) By the symmetry $k_1\leftrightarrow k_3$ and so on, $\int(\hat k_1^2+\hat k_2^2)/\hat k^2=2\cdot\frac14$. The integrand of the second formula is positive almost everywhere and strictly decreasing in $|n|$.
+
+(3) On the cube $|k_i|\le r$ we have $\varsigma \le|\vec k|^2\le1/n^2$. Since $\varsigma =4\sinh^2(m/2)\ge m^2$, $m\le1/n$, so $e^{-mn}\ge e^{-1}$ and $\sinh m\le\sinh1$. Also $\hat k_i^2\ge4k_i^2/\pi^2$, and $\int_{\text{cube}}(k_1^2+k_2^2)\,d\vec k=16r^5/3$. Drop the rest of the (positive) integrand.
+
+(4) Let $g:=(\hat k_1^2+\hat k_2^2)/(2\sinh m)$ and $g_0:=(k_1^2+k_2^2)/(2|\vec k|)\le|\vec k|/2$. A direct computation in polar coordinates gives $\int_{\R^3}g_0e^{-n|\vec k|}d\vec k/(2\pi)^3=\frac{8\pi/3}{2(2\pi)^3}\int_0^\infty r^3e^{-nr}dr=\frac1{\pi^2n^4}$. For $|\vec k|\le1$ we use: $0\le x^2-\hat x^2\le x^4/12$; $|\vec k|-|\vec k|^3/8\le m\le|\vec k|$ (from $m=2\,\mathrm{arcsinh}(\sqrt \varsigma /2)$, $y-y^3/6\le\mathrm{arcsinh}\,y\le y$, and $|\vec k|^2-|\vec k|^4/12\le \varsigma \le|\vec k|^2$); $m\le\sinh m\le m+m^3$. These give $|g-g_0|\le3|\vec k|^3$ and $|e^{-nm}-e^{-n|\vec k|}|\le\frac n8|\vec k|^3e^{-n|\vec k|/2}$, so
+\[
+\int_{|\vec k|\le1}|ge^{-nm}-g_0e^{-n|\vec k|}|\,\frac{d\vec k}{(2\pi)^3}\le\frac1{(2\pi)^3}\int_{\R^3}\Big(3|\vec k|^3+\frac n{16}|\vec k|^4\Big)e^{-n|\vec k|/2}d\vec k=\frac{14400}{\pi^2n^6}.
+\]
+For $|\vec k|>1$ in the cube, $\varsigma \ge4|\vec k|^2/\pi^2>4/\pi^2$, so $m\ge m_1>0$ and that part of $G(n)$ is at most $\tfrac12e^{-nm_1}$; the part of the $g_0$-integral over $|\vec k|>1$ is at most $\frac1{6\pi^2}\int_1^\infty r^3e^{-nr}dr$. This gives the bound in (4). Finally $c(n)=(G(n)/G(0))^2=4G(n)^2$, and (4) gives the asymptotics; (3) or (4) gives $-\log c(n)/n\to0$.
+\end{proof}
+
+For orientation only: $G(1)=0.0688747$, and $\pi^2n^4G(n)=1.092$ at $n=8$.
+
+\subsection{The Wick inequality}\label{pf:sec-wick}
+
+\begin{lemma}[Wick inequality]\label{pf:lem-wick}
+Let $F=\xi+f$ be as in Lemma~\ref{pf:lem-R}, $n\ge1$, and $X_m:=\tfrac12|F_{p_m}|^2$. Then
+\begin{align*}
+\Cov(X_0,X_n)&=\tfrac32G(n)^2+G(n)\,\E|f_{12}|^2+\tfrac14\Var|f_{12}|^2,\\
+\Var X_0&=\tfrac32G(0)^2+G(0)\,\E|f_{12}|^2+\tfrac14\Var|f_{12}|^2,
+\end{align*}
+so $\Var X_0\ge\tfrac38$ and $\Cov(X_0,X_n)\ge c(n)\Var X_0$.
+\end{lemma}
+
+\begin{proof}
+$p_0$ and $p_n$ have the same type, so $F_{p_m}=\xi_{p_m}+f_{12}$ with the same $f_{12}$. Condition on $f_{12}$, which is independent of $\xi$. Then $\E[X_m|f_{12}]=\tfrac32G(0)+\tfrac12|f_{12}|^2$, whose covariance at $m=0,n$ is $\tfrac14\Var|f_{12}|^2$. Given $f_{12}$, the conditional covariance of $\tfrac12|\xi_{p_0}|^2+\langle\xi_{p_0},f_{12}\rangle$ and $\tfrac12|\xi_{p_n}|^2+\langle\xi_{p_n},f_{12}\rangle$ has three parts: odd Gaussian moments vanish; $\Cov(\tfrac12|\xi_{p_0}|^2,\tfrac12|\xi_{p_n}|^2)=\tfrac14\cdot3\cdot2G(n)^2$ by Isserlis' theorem and independence of colours; and $\Cov(\langle\xi_{p_0},f_{12}\rangle,\langle\xi_{p_n},f_{12}\rangle\,|\,f_{12})=G(n)|f_{12}|^2$. Taking expectations gives the formula; $n=0$ gives the variance. All moments are finite by Lemma~\ref{pf:lem-R}. By Lemma~\ref{pf:lem-G}(2), $0<G(n)/G(0)\le1$, so each of the three terms of the covariance is at least $c(n)=(G(n)/G(0))^2$ times the corresponding term of the variance; the terms are nonnegative, and summing gives the inequality. $\Var X_0\ge\frac32\cdot\frac14$.
+\end{proof}
+
+Constancy of the background is used here: $p_0$ and $p_n$ see the same $f_{12}$.
+
+\subsection{Assembly}\label{pf:sec-assembly}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Fix $n\ge1$. Suppose that the first claim in \eqref{pf:eq-main} fails at $n$. Then there are $\epsilon>0$, $\beta_k\to\infty$ with $\beta_k\ge1$, and $\mu_k\in\cL_{\beta_k}$ with
+$\Cov_{\mu_k}(O_{p_0},O_{p_n})\le(c(n)-\epsilon)\Var_{\mu_k}(O_{p_0})$, where $\Var_{\mu_k}(O_{p_0})>0$ by Proposition~\ref{pf:prop-spectral}. By Proposition~\ref{pf:prop-L4}, along a subsequence the laws converge to some $\mu_\infty$, and by part (d), with $X_m=\tfrac12|F_{p_m}|^2$,
+\[
+\Cov_{\mu_k}(O_{p_0},O_{p_n})\to\Cov_{\mu_\infty}(X_0,X_n),\qquad\Var_{\mu_k}(O_{p_0})\to\Var_{\mu_\infty}(X_0)\ge\tfrac38 .
+\]
+Lemmas~\ref{pf:lem-R} and~\ref{pf:lem-wick} apply to $\mu_\infty$ and give $\Cov_{\mu_\infty}(X_0,X_n)\ge c(n)\Var_{\mu_\infty}(X_0)$. The limit of the assumed inequality gives $\Cov_{\mu_\infty}(X_0,X_n)\le(c(n)-\epsilon)\Var_{\mu_\infty}(X_0)$, a contradiction since $\Var_{\mu_\infty}(X_0)>0$. This proves the first claim for every $n\ge1$.
+
+By Lemma~\ref{pf:lem-G}, $G(0)=\tfrac12$, $G(n)>0$, $G(n)=1/(\pi^2n^4)+O(n^{-6})$, and $c(n)>0$ with $-\log c(n)/n\to0$. Proposition~\ref{pf:prop-spectral} gives $\sup_{\mu\in\cL_\beta}m_\mu(\beta)\to0$.
+\end{proof}
+
+The bound is through the single vector $v$ of Proposition~\ref{pf:prop-spectral}; this suffices for an upper bound on $m_\mu$. The lower bound $c(n)$ on the ratio decays like $4/(\pi^4n^8)$, and no rate in $\beta$ is obtained.
+
+\subsection{Standard facts used}\label{pf:sec-standard}
+
+The proof uses the following textbook facts without proof.
+\begin{enumerate}
+\item \emph{Prokhorov's theorem} (tight families in $\R^m$ are relatively compact): existence in Proposition~\ref{pf:prop-L4}.
+\item \emph{Diagonal extraction}: existence in Proposition~\ref{pf:prop-L4}, over the countably many finite families of plaquettes.
+\item \emph{Portmanteau theorem}, including that bounded Lipschitz functions determine convergence in law, and the continuous-mapping theorem: Corollary~\ref{pf:cor-tail} (open sets); Proposition~\ref{pf:prop-L4}(b), (d), (e).
+\item \emph{Uniform integrability and convergence of moments}: Proposition~\ref{pf:prop-L4}(d).
+\item \emph{Monotone class ($\pi$--$\lambda$) theorem}: Lemma~\ref{pf:lem-limit}(3) (from continuous local to bounded measurable functions); Proposition~\ref{pf:prop-L4}(e), Step~7.
+\item \emph{Slutsky's lemma}: Proposition~\ref{pf:prop-L4}(a) (paths and base points) and (e), Step~6.
+\item \emph{Regular conditional distributions} on Polish spaces: Proposition~\ref{pf:prop-L4}(e), Step~7, and Lemma~\ref{pf:lem-D}.
+\item \emph{Kolmogorov's extension theorem}: existence of $\mu_\infty$ in Proposition~\ref{pf:prop-L4}.
+\item \emph{Scheff\'e's lemma}: the total-variation convergence in Theorem~\ref{pf:thm-L3} is of this type; the proof there bounds the $L^1$ distance of the densities directly.
+\item \emph{L\'evy's downward martingale theorem} (a.s.\ and $L^2$): Lemma~\ref{pf:lem-R}.
+\end{enumerate}
+We also use, without proof or citation, Weyl's integration formula for $\SU(2)$ (\S\ref{pf:sec-setting}), Plancherel's theorem on $\Z^4$ and a residue computation (Lemma~\ref{pf:lem-G}), and Isserlis' theorem for Gaussian moments (Lemma~\ref{pf:lem-wick}).

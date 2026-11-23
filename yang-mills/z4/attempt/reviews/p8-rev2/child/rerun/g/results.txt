@@ -1,0 +1,8 @@
+pi(70d)= 3.141592653589793238462643383279502884197169399375105820974944592307812
+(1) 6*(pi/3)-2pi = 0E-69  within 1e-45: True
+(2) 1-cos(pi/3)-0.5 = -1.2E-69  within 1e-45: True
+sympy not installed; exactness rests on tolerance + known identity cos(pi/3)=1/2
+(3) double 1-cos(pi/3)= 0.4999999999999999  >=0.5: False  math.pi/3= 1.0471975511965976  cos= 0.5000000000000001
+(4) bisection theta= 1.0471975511965979  prev double 1.0471975511965976  f(hi) True  f(lo) False
+    hi.hex= 0x1.0c152382d7366p+0  ulps above math.pi/3: 1  diff 2.220446049250313e-16
+    50 doubles below hi all False: True

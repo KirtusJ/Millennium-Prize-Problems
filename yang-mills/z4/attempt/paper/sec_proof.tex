@@ -112,7 +112,7 @@ $T[F]:=[\tau F]$ defines a self-adjoint contraction $T=T_\mu$ on $\cH$ with $T\O
 By translation invariance, $\langle F',\tau F\rangle=\mu(\theta F'\cdot\tau F)=\mu(\tau^{-1}\theta F'\cdot F)=\mu(\theta(\tau F')\cdot F)=\langle\tau F',F\rangle$; likewise $\langle\tau^aF,\tau^bF\rangle=\langle F,\tau^{a+b}F\rangle$. Put $a_m:=\|\tau^mF\|$. Cauchy--Schwarz gives $a_{2^i}^2=\langle F,\tau^{2^{i+1}}F\rangle\le a_0a_{2^{i+1}}$, hence $a_1\le a_0^{1-2^{-j}}a_{2^j}^{2^{-j}}$ for every $j$. Since $a_m\le\|F\|_\infty$, letting $j\to\infty$ gives $a_1\le a_0$ (if $a_0=0$ then $a_1=0$). So $\tau$ maps null vectors to null vectors and defines a symmetric contraction on a dense subspace, which extends to a self-adjoint contraction. $T\Omega=\Omega$ is clear, and $\langle\Omega,TF\rangle=\mu(\tau F)=\mu(F)=\langle\Omega,F\rangle$ gives invariance of $\Omega^\perp$.
 \end{proof}
 
-We define $m_\mu(\beta):=-\log\|T_\mu|_{\Omega^\perp}\|\in[0,\infty]$.
+We define $m_\mu(\beta):=-\log\|T_\mu|_{\Omega^\perp}\|\in[0,\infty]$. We do not write $T_\mu=e^{-H}$ on $\cH$: $T_\mu$ is not injective there. A session of a second model lineage exhibited a nonzero open-link vector of squared norm $\tfrac14$ with $T_\mu v=0$, and showed that averaging over boundary gauge transformations gives an orthogonal projection $P$ with $PT_\mu=T_\mu=T_\mu P$, under which $\|T_\mu|_{\Omega^\perp}\|$ is unchanged~\cite[comments 7105447358, 7104999220]{RepoThread}. Only the norm enters below.
 
 \begin{proposition}[spectral bound and reduction]\label{pf:prop-spectral}
 Let $\mu\in\cL_\beta$. Then $\Var_\mu(O_{p_0})>0$, and for every $n\ge1$
@@ -162,7 +162,7 @@ Let $\mathcal T$ be a forest of links of a finite graph, $B$ a set of sites cont
 \end{lemma}
 
 \begin{proof}
-Define $g$ by $g=1$ on $B$ and, along each tree from its site in $B$, $g_y:=U_{yx}^{-1}g_x$ when $(x,y)$ is a tree link with $x$ already treated; then $U^g=1$ on $\mathcal T$, and $g$ depends only on $U_{\mathcal T}$. Thus $F(U)=F(U^g)$. At fixed $U_{\mathcal T}$, the map $U_{\mathcal T^c}\mapsto(U^g)_{\mathcal T^c}$ is a product of left and right multiplications, which preserve Haar measure. Integrate $U_{\mathcal T^c}$ first, then $U_{\mathcal T}$.
+Define $g$ by $g=1$ on $B$ and, along each tree from its site in $B$, $g_y:=g_xU_{xy}$ when $(x,y)$ is a tree link with $x$ already treated; then $(U^g)_{xy}=g_xU_{xy}g_y^{-1}=1$ on $\mathcal T$ (a session of a second model lineage corrected the order of the two factors~\cite[comments 7105447358, 7105348719, 7105100783]{RepoThread}), and $g$ depends only on $U_{\mathcal T}$. Thus $F(U)=F(U^g)$. At fixed $U_{\mathcal T}$, the map $U_{\mathcal T^c}\mapsto(U^g)_{\mathcal T^c}$ is a product of left and right multiplications, which preserve Haar measure. Integrate $U_{\mathcal T^c}$ first, then $U_{\mathcal T}$.
 \end{proof}
 
 \begin{lemma}[free-energy bounds]\label{pf:lem-free}
@@ -186,7 +186,7 @@ $\hat z(b)\le\frac2\pi\int_0^\infty\alpha^2e^{-2b\alpha^2/\pi^2}d\alpha=(\pi/2)^
 \[
 f_L(\beta/2)-f_L(\beta)\le48+3(1-\tfrac1L)\log\big((\pi/2)^{5/2}2^{3/2}\big)-(3+\tfrac1L)\log c_H+\tfrac6L\log\beta .
 \]
-The terms $\tfrac92\log\beta$ cancel and the remaining $\beta$-dependence is $\tfrac6L\log\beta$, which vanishes as $L\to\infty$ at fixed $\beta$. The numerical value of $D^*$ is a direct evaluation ($c_H=0.150258\ldots$).
+The terms $\tfrac92\log\beta$ cancel and the remaining $\beta$-dependence is $\tfrac6L\log\beta$, which vanishes as $L\to\infty$ at fixed $\beta$. The numerical value of $D^*$ is a direct evaluation ($c_H=0.150258\ldots$); a session of a second model lineage recomputed it as $60.19224006$~\cite[comment 7102590992]{RepoThread}.
 \end{proof}
 
 \begin{corollary}[uniform tail]\label{pf:cor-tail}
@@ -370,7 +370,7 @@ u_1U_{23}(x+e_1)u_1^{-1}&=1_{000}2_{100}3_{110}2_{101}^{-1}3_{100}^{-1}1_{000}^{
 U_{13}(x)&=1_{000}3_{100}1_{001}^{-1}3_{000}^{-1}, &
 u_3U_{12}(x+e_3)u_3^{-1}&=3_{000}1_{001}2_{101}1_{011}^{-1}2_{001}^{-1}3_{000}^{-1}.
 \end{align*}
-Concatenating and cancelling adjacent inverse pairs from left to right removes all letters. The abelianised identity, with signs $-,-,-,+,+,+$ on $U_{23}(x),U_{13}(x+e_2),U_{12}(x),U_{23}(x+e_1),U_{13}(x),U_{12}(x+e_3)$, is the boundary of $c$ with the incidence numbers of $d$ in \S\ref{pf:sec-setting}.
+Concatenating and cancelling adjacent inverse pairs from left to right removes all letters. The abelianised identity, with signs $-,-,-,+,+,+$ on $U_{23}(x),U_{13}(x+e_2),U_{12}(x),U_{23}(x+e_1),U_{13}(x),U_{12}(x+e_3)$, is the boundary of $c$ with the incidence numbers of $d$ in \S\ref{pf:sec-setting}. A session of a second model lineage verified the identity for this fixed cube: the six connected factors cancel as an exact word in the twelve edge generators. It also found that the additive Bianchi defect of these six paths has root-mean-square size asymptotic to a strictly positive constant times $\beta^{-1/2}$, so the order $\beta^{-1/2}$ below is sharp, and that changing individual face paths can affect this order~\cite[comment 7104976877]{RepoThread}.
 
 \emph{The estimate.} Write $y_f:=\log U_f$ for the six faces $f$ (based at their corners), $\varepsilon_f$ for the sign of $f$ in \eqref{pf:eq-cube}, and $W_f\in\{1,u_1,u_2,u_3\}$ for its transport. Each factor of \eqref{pf:eq-cube} is $e^{i\varepsilon_f\sigma\cdot\mathrm{Ad}(W_f)y_f}$ whenever $\alpha_f<\pi$. Since the product is $1$, (E2) gives $|\sum_f\varepsilon_f\mathrm{Ad}(W_f)y_f|\le\frac{s^2}2e^s$ with $s=\sum_f\alpha_f$. Multiply by $\sqrt\beta$ and apply the isometry $\mathrm{Ad}(U_{\gamma_x})$, $\gamma_x$ a fixed path from $o$ to $x$. Then $\mathrm{Ad}(U_{\gamma_x}W_f)\sqrt\beta y_f$ is the lasso field of $f$ with the path $\gamma_x$ followed by the edge of $W_f$; by the path estimate in the proof of (a) it differs from $F^\beta_f$ by at most $2\alpha(V_f)|F^\beta_f|=O_P(\beta^{-1/2})$. Hence, with $S_c:=\sum_f|F^\beta_f|$,
 \[
@@ -413,7 +413,7 @@ $|\E_\infty[w_{\rm in}(F_{\rm in})w_{\rm out}]-\E_\infty[\Phi(\mathsf LF_{\rm sh
 \emph{Step 7: conditional law.} The functions $w_{\rm out}$ generate $\cG_R$ and form a class closed under products, so by the monotone class theorem $\E_\infty[w_{\rm in}(F_{\rm in})|\cG_R]=\Phi_{w_{\rm in}}(\mathsf LF_{\rm sh})$ a.s. A regular conditional law of $F_{\rm in}$ given $\cG_R$ exists because $(\R^3)^{P_R}$ is Polish. A countable family of bounded Lipschitz $w_{\rm in}$ determines probability measures on $(\R^3)^{P_R}$, so this regular conditional law equals the law of $d(A+\Psi)|_{P_R}$, $A\sim K_\infty(\cdot|\Psi)$, $\Psi=\mathsf LF_{\rm sh}$, almost surely.
 \end{proof}
 
-At finite $\beta$ the conditioning is on links modulo gauge; in the limit, as (e) states, it is on curvatures only. Lemma~\ref{pf:lem-shell} and the injectivity of $d$ on $T_s$-gauge shell forms show that nothing is lost: shell curvatures determine shell links modulo gauge, exactly for the group and linearly in the limit.
+At finite $\beta$ the conditioning is on links modulo gauge; in the limit, as (e) states, it is on curvatures only. Lemma~\ref{pf:lem-shell} and the injectivity of $d$ on $T_s$-gauge shell forms show that nothing is lost: shell curvatures determine shell links modulo gauge, exactly for the group and linearly in the limit. A session of a second model lineage verified this shell reconstruction~\cite[comment 7104825691]{RepoThread}: Step~5 uses a valid linear left inverse at fixed volume; for the statement for the group, an explicit shell tree with its connectors gives a constructive proof, in which the full plaquette matrices in one root frame recover every shell link at any coupling, each link from at most $16(L+1)^2$ signed face factors for side $L=2N$. It did not check the interior estimate of Theorem~\ref{pf:thm-L3}.
 
 \subsection{The increasing Dirichlet covariances}\label{pf:sec-D}
 
@@ -483,7 +483,7 @@ Write $\hat k_\lambda^2:=4\sin^2(k_\lambda/2)$ and $\hat k^2:=\sum_{\lambda=0}^3
 \item $G(n)\ge\frac4{\pi^2}\cdot\frac{16r^5}3\cdot\frac{e^{-1}}{2\sinh1}\cdot\frac1{(2\pi)^3}$ with $r=1/(\sqrt3n)$, for $n\ge1$.
 \item For all $n\ge1$, with $m_1:=\mathrm{arccosh}(1+2/\pi^2)$,
 \[\Big|G(n)-\frac1{\pi^2n^4}\Big|\le\frac{14400}{\pi^2n^6}+\frac12e^{-m_1n}+\frac1{6\pi^2}\int_1^\infty r^3e^{-nr}\,dr ;\]
-in particular $G(n)=1/(\pi^2n^4)+O(n^{-6})$. We do not convert the two exponentially small terms into a numerical multiple of $n^{-6}$.
+in particular $G(n)=1/(\pi^2n^4)+O(n^{-6})$. We do not convert the two exponentially small terms into a numerical multiple of $n^{-6}$. A session of a second model lineage checked the asymptotics~\cite[comment 7102490558]{RepoThread}.
 \end{enumerate}
 Consequently $c(n)=4G(n)^2=\frac4{\pi^4n^8}\big(1+O(n^{-2})\big)$, and $-\log c(n)/n\to0$.
 \end{lemma}
