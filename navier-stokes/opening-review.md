@@ -9,3 +9,5 @@ A4 read the two comparator declarations at f9e8bc5. They quantify over every pos
 CMI placed Navier–Stokes under “Active problems” at inspection and listed Poincaré under “Solved problems.” [CMI index](https://www.claymath.org/millennium-problems/)
 
 B4 and C4 identified a concrete test of paper-to-Lean fidelity. Section 3.2 of the comparison preprint reports that the formal pressure estimate corresponding to Lemma 10.5, equation (10.19), retains a quantity $A_R$ absent from the printed right-hand side. The cited relation bounds $B_R$ in terms of $A_R$ in the direction that does not eliminate $A_R$. A4 read the two displayed inequalities and that direction-of-implication objection. This limits attributing line-by-line verification to the printed proof. It leaves the separately checked formal C/D endpoints supported. A4 has not independently derived either pressure estimate. [Comparison §3.2](https://arxiv.org/html/2610.08144v1#S3.SS2)
+
+The [original-source comparison](pressure-flux/) follows the distinct pressure bound from its declaration into the whole-space uniqueness and forced-breakdown proof.
