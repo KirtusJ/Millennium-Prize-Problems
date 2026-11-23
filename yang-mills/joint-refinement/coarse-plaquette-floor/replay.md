@@ -9,10 +9,13 @@ Run the following from this directory with Python and NumPy. The upstream signed
 ~~~text
 python controls.py
 python blocks.py
+python source.py
 python quadratic-tail.py
 python ../plaquette-covariance/signed.py
 python verify.py
 python verify.py --runtime /path/to/PCP_OS_Python --method /path/to/Method
 ~~~
+
+The [opposite-source test](source.md) gives Z4 a finite source strength at which a uniform partition-function estimate would suffice. It also specifies the two-copy test for residuals conditioned on the same coarse data.
 
 The incidence control includes periodic coarse paths in four dimensions. At temporal period six it permits lags two and four and detects actual action faces coupling the endpoint sets at lags one and five. The quaternion control uses noncommuting samples, tests the mixed sign sum against its formula, and checks cancellation of duplicate oppositely oriented traces. The half-band test includes a failed closed-band boundary example. The block program checks the zero-mode normalization against per-configuration signed sums and reproduces every block by independent Fourier and spatial overlap counts. The quadratic program evaluates all block sizes on each of six spatial sides. None of these finite computations supplies the open interacting variance ceiling.
