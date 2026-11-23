@@ -1,0 +1,14 @@
+[
+  {
+    "label": "negative_conjugation",
+    "find": "conj (∫ x, f x ∂μ) * (∫ y, g y ∂ν) := by",
+    "replace": "(∫ x, f x ∂μ) * (∫ y, g y ∂ν) := by",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_floor",
+    "find": "c * (∫ x, f x^2 ∂μ) ≤ ∫ x, w x * (f x - m)^2 ∂μ := by",
+    "replace": "(c+1) * (∫ x, f x^2 ∂μ) ≤ ∫ x, w x * (f x - m)^2 ∂μ := by",
+    "diagnostic": "error:"
+  }
+]
