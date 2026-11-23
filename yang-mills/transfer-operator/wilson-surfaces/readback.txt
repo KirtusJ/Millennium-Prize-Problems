@@ -1,0 +1,242 @@
+Director B4 | 2026-11-23 | Strong-coupling Wilson rectangles at positive time
+PCP OS 92623fa6759bbb4e4f27ce5aa381de213a55ae0c
+Mathlib c44e0c8ee63ca166450922a373c7409c5d26b00b
+Lean 4.19.0 6caaee842e94
+Boot kernel SHA-256 d2fae4ef3df316ff4fa0c1a88744e66cc17bd794856979fa55188b8402f7222f
+
+Run 1 post-exit desk
+{"max_depth":2,"max_live":3,"max_total":4,"revision":8,"nodes":[{"id":1,"parent":null,"label":"root","state":"Finished"},{"id":2,"parent":1,"label":"generation","state":"Finished"},{"id":3,"parent":2,"label":"links","state":"Finished"},{"id":4,"parent":2,"label":"certificate","state":"Finished"}]}
+native/search serial SHA-256 f01cdc28638960b2b7c938267505adcc190d96dd0e64b80cc9ffe953bfefb37c
+running image (code and read-only data), SHA-256: 0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3 (measured; equal to the value the loader named)
+starting worker.elf (9104 bytes, SHA-256 a7bfa381b7c9abd221e1d1abe92447f9dd45abe31124a533c0c1a2f53c6cff5e)
+worker.elf ended DONE: exit 0 after 0 s; 10 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 258 pages at the end, 0 of them the display's, 0 both writable and executable; 264 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
+kernel register: 48 events, head 7e5a1b9694f5510e5ab08296656f66dea9dddb226426fd03e22b3c0d1f7c751f
+ALL SELF-TESTS PASS. Guest Ethernet support is compiled in. Access requires a matching image grant and a supported NIC.
+assembly serial SHA-256 b0b3bd0e639ec6a849604f368d803d45fe98ae78f21ba3f8babd231325af23c5
+running image (code and read-only data), SHA-256: 0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3 (measured; equal to the value the loader named)
+starting worker.elf (50120 bytes, SHA-256 1cb649a9954be008a7f74ada3fb1494f1949d7947b85bf221875c655ea59afcd)
+worker.elf ended DONE: exit 0 after 0 s; 212 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 268 pages at the end, 0 of them the display's, 0 both writable and executable; 274 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
+kernel register: 51 events, head 6d2920f77a08d790e27ecbcb3e5156c0d0dee26fff06ba4e6f5b8844fb96b238
+ALL SELF-TESTS PASS. Guest Ethernet support is compiled in. Access requires a matching image grant and a supported NIC.
+
+Run 2 post-exit desk
+{"max_depth":2,"max_live":3,"max_total":4,"revision":8,"nodes":[{"id":1,"parent":null,"label":"root","state":"Finished"},{"id":2,"parent":1,"label":"generation","state":"Finished"},{"id":3,"parent":2,"label":"links","state":"Finished"},{"id":4,"parent":2,"label":"certificate","state":"Finished"}]}
+native/search serial SHA-256 8c0ec78470845681cd8ed84cbb1623c8b925f240e600850a6977e5a8c7839454
+running image (code and read-only data), SHA-256: 0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3 (measured; equal to the value the loader named)
+starting worker.elf (9104 bytes, SHA-256 a7bfa381b7c9abd221e1d1abe92447f9dd45abe31124a533c0c1a2f53c6cff5e)
+worker.elf ended DONE: exit 0 after 0 s; 10 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 258 pages at the end, 0 of them the display's, 0 both writable and executable; 264 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
+kernel register: 48 events, head 78cde032237bedd1dc0ae76f9232cc526302fa7f410a3daf38a7836ec08f9659
+ALL SELF-TESTS PASS. Guest Ethernet support is compiled in. Access requires a matching image grant and a supported NIC.
+assembly serial SHA-256 8d6948368561aef956aff30cb60be92163cf469ab62812f8fdef9b8822a68ccc
+running image (code and read-only data), SHA-256: 0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3 (measured; equal to the value the loader named)
+starting worker.elf (50120 bytes, SHA-256 1cb649a9954be008a7f74ada3fb1494f1949d7947b85bf221875c655ea59afcd)
+worker.elf ended DONE: exit 0 after 0 s; 212 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 268 pages at the end, 0 of them the display's, 0 both writable and executable; 274 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
+kernel register: 51 events, head 12989a748e4ad16b8bea4ea7bae47544f5e7757a6f0700829f794ebb1ba6052f
+ALL SELF-TESTS PASS. Guest Ethernet support is compiled in. Access requires a matching image grant and a supported NIC.
+
+geometry | identical in both runs | SHA-256 36e48a1443a729a6a4a1e0730b5ca04f1edcaab678cd9ed9d6dc4b32c3f09709
+counts.bin | identical in both runs | SHA-256 2db610e90d11013bcdfdc0fa1ecb9cc0a2ecd2e0be469ecbcf1b2d97c9bec6ed
+certificate | identical in both runs | SHA-256 8b3384fc9624e9ce4181f19f986aea9edde28e9e7016e7356ad3665cce115c8f
+assembly/basis | identical in both runs | SHA-256 54caa62421b49c441022ec83872c8cdc6daa6287aaf8b471728d68ba929ac089
+assembly.out | identical in both runs | SHA-256 9fe75e8419b865424331c2ac36f99fca1619cb218e6f21005e10fa59bebcab70
+WilsonSurfaces.lean | identical in both runs | SHA-256 9fe75e8419b865424331c2ac36f99fca1619cb218e6f21005e10fa59bebcab70
+checks.json | identical in both runs | SHA-256 861ef2380e714ec372b49520bb6cbb1cd433201818de23d407e04f0e0ec91342
+WilsonSurfaces.log | identical in both runs | SHA-256 eef7752a9a777d157779df9958f006dfa577227882e90af464919cacc47b13ae
+certificate.c | SHA-256 93cc5d58a95d526fa1225df8f76deb123dbcdafb6dc7f47a1ec38f5c172e8e9e
+controls.py | SHA-256 53b1034dfeb679526b0fab9dc628f49ee7c7e791d68f353946f3652a9bb1e3b8
+bulk_control.py | SHA-256 cbec0f985a6057cced33dfa924cbe60064d5ee474158e7cf39901f8736b3b476
+replay.py | SHA-256 f6d692a50047ba4864eb7106d7051b627df1b27b570c1268ed3a57691113bd4b
+
+Lean axiom read-back
+'Millennium.YangMills.WilsonSurfaces.fullRectangle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.WilsonSurfaces.relativeRemainder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.WilsonSurfaces.threeSquare' depends on axioms: [propext, Quot.sound]
+'Millennium.YangMills.WilsonSurfaces.lowBand' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.WilsonSurfaces.highBand' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.WilsonSurfaces.densityBias' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.WilsonSurfaces.centerCancellation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.WilsonSurfaces.activeOdds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.WilsonSurfaces.sliceWalk' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.WilsonSurfaces.flatCompetitor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.WilsonSurfaces.rectangleRatio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.WilsonSurfaces.surfaceMinimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.WilsonSurfaces.eigenlineFloor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.WilsonSurfaces.spectralMoment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.WilsonSurfaces.positiveSandwich' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.WilsonSurfaces.surfaceCount' depends on axioms: [propext, Quot.sound]
+'Millennium.YangMills.WilsonSurfaces.animalRate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.WilsonSurfaces.normalizedRate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.WilsonSurfaces.positiveRatio' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+Both runs rejected these variants
+Eigenline.lean:104:2: error: linarith failed to find a contradiction
+RowColumn.lean:45:2: error: linarith failed to find a contradiction
+AnimalRate.lean:131:50: error: linarith failed to find a contradiction
+ThinTube.lean:133:61: error: omega could not prove the goal:
+InconsistentCaps.lean:144:20: error: linarith failed to find a contradiction
+InconsistentCaps.lean:144:20: error: linarith failed to find a contradiction
+InconsistentCaps.lean:147:20: error: linarith failed to find a contradiction
+InconsistentCaps.lean:147:20: error: linarith failed to find a contradiction
+
+Numerical controls (both runs)
+{
+  "surface": {
+    "variable_slice_minima": 84,
+    "spur_caps_and_walls": [
+      58,
+      56
+    ],
+    "spur_body_route": 48
+  },
+  "bulk": [
+    {
+      "haar_coefficients_in_units_of_4_to_minus_area": [
+        4
+      ],
+      "rectangle": [
+        2,
+        1
+      ],
+      "steps": 1,
+      "four_dimensional_faces": 42,
+      "minimum": 4,
+      "geometric_minimizers": 1,
+      "next_cost_after_exclusion": 6
+    },
+    {
+      "haar_coefficients_in_units_of_4_to_minus_area": [
+        4,
+        1
+      ],
+      "rectangle": [
+        2,
+        2
+      ],
+      "steps": 1,
+      "four_dimensional_faces": 73,
+      "minimum": 8,
+      "geometric_minimizers": 2,
+      "next_cost_after_exclusion": 10
+    },
+    {
+      "haar_coefficients_in_units_of_4_to_minus_area": [
+        1
+      ],
+      "rectangle": [
+        3,
+        3
+      ],
+      "steps": 1,
+      "four_dimensional_faces": 148,
+      "minimum": 12,
+      "geometric_minimizers": 1,
+      "next_cost_after_exclusion": 14
+    },
+    {
+      "haar_coefficients_in_units_of_4_to_minus_area": [
+        4
+      ],
+      "rectangle": [
+        2,
+        2
+      ],
+      "steps": 2,
+      "four_dimensional_faces": 126,
+      "minimum": 8,
+      "geometric_minimizers": 1,
+      "next_cost_after_exclusion": 12
+    }
+  ],
+  "center": {
+    "original_edges": 32,
+    "plaquettes": 24,
+    "independent_center_assignments": 131072,
+    "negative_conditional_couplings": 16,
+    "max_character_residual": 2.7755575615628914e-17,
+    "partition_residual": 4.440892098500626e-16,
+    "active_identity_residual": 2.220446049250313e-16
+  },
+  "shell": [
+    {
+      "width": 3,
+      "separation": 1,
+      "minimal_area": 12,
+      "data": [
+        {
+          "beta": 0.12,
+          "mean": 3.91541232899044e-14,
+          "two_loop": 5.276306459573766e-19,
+          "mean_normalized": 344171579.0515174,
+          "ratio_to_leading_joint": 1.0
+        },
+        {
+          "beta": 0.04,
+          "mean": 1.9988004398734862e-18,
+          "two_loop": 9.992003732050045e-25,
+          "mean_normalized": 250100013334.87872,
+          "ratio_to_leading_joint": 1.0
+        }
+      ]
+    },
+    {
+      "width": 4,
+      "separation": 2,
+      "minimal_area": 32,
+      "data": [
+        {
+          "beta": 0.12,
+          "mean": 8.527139027664428e-25,
+          "two_loop": 9.089012499639732e-49,
+          "mean_normalized": 1.25,
+          "ratio_to_leading_joint": 1.0
+        },
+        {
+          "beta": 0.04,
+          "mean": 1.9978679460989908e-32,
+          "two_loop": 4.98934541256225e-64,
+          "mean_normalized": 1.25,
+          "ratio_to_leading_joint": 0.9999999999999999
+        }
+      ]
+    },
+    {
+      "width": 3,
+      "separation": 2,
+      "minimal_area": 18,
+      "data": [
+        {
+          "beta": 0.12,
+          "mean": 3.91541232899044e-14,
+          "two_loop": 1.5330453708794283e-27,
+          "mean_normalized": 1.0000000001815954,
+          "ratio_to_leading_joint": 1.0
+        },
+        {
+          "beta": 0.04,
+          "mean": 1.9988004398734862e-18,
+          "two_loop": 3.9952031984394404e-36,
+          "mean_normalized": 1.0000000000002498,
+          "ratio_to_leading_joint": 1.0000000000000002
+        }
+      ]
+    }
+  ],
+  "vacuum": {
+    "beta_space": 0.38,
+    "beta_time": 1.7,
+    "mean": 0.19689100527302153,
+    "moments": [
+      1.0194335724454806,
+      0.05915830949843056,
+      0.039190113300438804,
+      0.038774885745372786
+    ],
+    "one_step_floor": 3.908653801133211e-27
+  },
+  "incidence": {
+    "per_link": 6,
+    "per_vertex": 24,
+    "corners": 4,
+    "touching": 72
+  }
+}
