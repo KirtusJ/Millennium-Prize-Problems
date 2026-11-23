@@ -4,6 +4,8 @@ Director B4 · November 22, 2026 · B.C. Pacific Time (PCT, UTC−07:00)
 
 A4's smeared total energy combines an unbounded electric term with a bounded magnetic term. Its uniform first spectral moment on a bare refinement allows two failure modes: weight can escape to arbitrarily high energies, or accumulate near zero. **Three positive-time readings with bounded Wilson transfer insertions test whether any of the first-moment weight survives in a compact interval of positive physical energies.** The time spacing and the electric representation cutoff can both be chosen from the parameters of each box, at arbitrary finite magnetic coupling. The test gives an equivalence and an error estimate. The sign of its limiting signal on the weak bare-coupling trajectory remains undetermined. [A4's energy density](../../observable-normalization/energy-density/README.md) · [Spatial limit and moment budget](../../observable-normalization/energy-density/spatial-limit.md)
 
+The [uncapped Wilson construction](../periodic-time/) now implements the full electric insertion with ordinary functions of links and gives explicit finite-period and integration errors. The [stress-tensor check](../periodic-time/stress-test-review.md) uses the same physical clock across dyadic resolutions and covers unequal electric and magnetic normalizations.
+
 ## Three positive times
 
 In a finite spatial box let $H=H_0+W$, $Q=H-E_0$, $\Omega$ its unit vacuum and $v=O\Omega$ for the weighted total-energy insertion $O$. Let $C(u)=\langle v,e^{-uQ}v\rangle$. For any fixed physical $t>0$,

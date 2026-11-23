@@ -1,0 +1,149 @@
+PCP OS periodic Wilson test, Director B4, November 22, 2026 session
+PCP OS source 92623fa6759bbb4e4f27ce5aa381de213a55ae0c
+Mathlib c44e0c8ee63ca166450922a373c7409c5d26b00b
+Lean 4.19.0 commit 6caaee842e94
+kernel.elf32 SHA-256 d2fae4ef3df316ff4fa0c1a88744e66cc17bd794856979fa55188b8402f7222f
+
+Post-exit desk status
+{"max_depth":2,"max_live":3,"max_total":4,"revision":8,"nodes":[{"id":1,"parent":null,"label":"root","state":"Finished"},{"id":2,"parent":1,"label":"generation","state":"Finished"},{"id":3,"parent":2,"label":"histories","state":"Finished"},{"id":4,"parent":2,"label":"certificate","state":"Finished"}]}
+
+certificate.c SHA-256 8823cee7d8793c8a49ef47132dce5f523c552bb7eb35b0c62fdc6767a7907eb4
+history_checks.py SHA-256 1ac29f1c7ff520b4af3d901ae370cfa4ec6bd6fb5aba0099c6e65803101fb6e7
+replay.py SHA-256 fa5f4c836ac76c1ba7f9d68faf51dbfac728610bb984dcb76c78d6e46114f615
+counts.bin 3 bytes SHA-256 4912326e465b6efb1d5b1b276e321709d99a506e230a31f3c158c976d4a8a4e8
+geometry 287 bytes SHA-256 980fff273c9d7af4ea500d29477d5eb7832623feb595781308477a72cfa10089
+certificate 251 bytes SHA-256 21714b309e434316326d1bdbbea68d28cf0bc6ffd2c4a86867542cb302b09ffe
+assembly/basis 5718 bytes SHA-256 8b1aa15d0286434eca2d165b0337858202d652057c3f412701ca6377e6d8287b
+assembly.out 6254 bytes SHA-256 2fa37dec6eec2ef1172480b84cfa6253267b28dd3119cea6aefc92e65e38dc91
+PeriodicTime.lean 6254 bytes SHA-256 2fa37dec6eec2ef1172480b84cfa6253267b28dd3119cea6aefc92e65e38dc91
+
+native/search serial SHA-256 a030b2a752af9d3e827fd9dcae1ff6a4ea4bca5ef8204d6cf7ec63e7fe4e1206
+running image (code and read-only data), SHA-256: 0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3 (measured; equal to the value the loader named)
+starting worker.elf (9064 bytes, SHA-256 dd585ef9cd1c83542a5b4fe0e513c3e50eeeccacea1b1a06ae8aa19b0e94c20f)
+worker.elf ended DONE: exit 0 after 0 s; 10 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 258 pages at the end, 0 of them the display's, 0 both writable and executable; 264 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
+kernel register: 48 events, head ecccbd827d95f9704ce45e211a1d7e7c66f16f265abd9b19394c0d557f9a11fc
+ALL SELF-TESTS PASS. Guest Ethernet support is compiled in. Access requires a matching image grant and a supported NIC.
+
+assembly serial SHA-256 a69f9a2eb14d964b3e214baf9290fb9b7aaa8d60d3ca483043a1527cdcb559d1
+running image (code and read-only data), SHA-256: 0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3 (measured; equal to the value the loader named)
+starting worker.elf (50120 bytes, SHA-256 1cb649a9954be008a7f74ada3fb1494f1949d7947b85bf221875c655ea59afcd)
+worker.elf ended DONE: exit 0 after 0 s; 148 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 268 pages at the end, 0 of them the display's, 0 both writable and executable; 274 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
+kernel register: 51 events, head 78970c32dc09635c30117f2cbca8b25592661d487418e492b009f46b7f8e2870
+ALL SELF-TESTS PASS. Guest Ethernet support is compiled in. Access requires a matching image grant and a supported NIC.
+
+Hosted Lean from the assembled source
+'Millennium.YangMills.PeriodicTime.kineticMultiplier' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.PeriodicTime.graphError' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.PeriodicTime.gaugeAverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.PeriodicTime.traceTail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.PeriodicTime.thermalBias' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.PeriodicTime.positiveTimeSmoothing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.PeriodicTime.scoreVariation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.PeriodicTime.mixedDilation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.PeriodicTime.sphericalScore' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.PeriodicTime.threeThermalErrors' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+Adverse checks in the modified declarations
+ReverseDefect.lean:20:4: error: linarith failed to find a contradiction (1 diagnostic(s))
+NoThermalError.lean:72:2: error: linarith failed to find a contradiction (1 diagnostic(s))
+MissingReading.lean:133:18: error: linarith failed to find a contradiction (2 diagnostic(s))
+BadScore.lean:123:18: error: linarith failed to find a contradiction (2 diagnostic(s))
+
+Controls
+{
+  "periodic_boundary": {
+    "period_two_partition": 1.0378039368225003,
+    "unprojected_partition": 4.311113087711962,
+    "polyakov_expectation": 0.0,
+    "min_two_seam_gram_eigenvalue": -5.686779186169954e-15,
+    "open_nongauge_end_partition": 1.879534488882944,
+    "open_temporal_links_set_to_one": 2.239508518300183
+  },
+  "full_SU2_scores": {
+    "link_tests": 96,
+    "max_gauge_change": 3.9968028886505635e-15,
+    "max_casimir_difference": 6.263263108152728e-08
+  },
+  "character_rotor": {
+    "thermal_readings": [
+      0.07256562719005377,
+      0.05913943420977115,
+      0.057184610765987104
+    ],
+    "thermal_signal": 0.011471369536498577,
+    "max_basis_score_error": 1.1102230246251565e-16,
+    "vacuum_target": 0.011474978915346375,
+    "time_graph_signal_errors": [
+      [
+        0.03125,
+        0.003637575961793137,
+        1.856175087153536e-05
+      ],
+      [
+        0.0078125,
+        0.0009996185359753991,
+        6.057395778934216e-06
+      ],
+      [
+        0.001953125,
+        0.00025553947495209577,
+        1.6021408332130005e-06
+      ],
+      [
+        0.00048828125,
+        6.423689926704835e-05,
+        4.0601011527113817e-07
+      ]
+    ]
+  },
+  "haar_midpoint": [
+    [
+      8,
+      0.0007600168931886087,
+      0.015077233982595998
+    ],
+    [
+      16,
+      0.000166479511217843,
+      0.0031035056062498987
+    ],
+    [
+      32,
+      4.1617297632634553e-05,
+      0.000775842170696644
+    ],
+    [
+      64,
+      1.0404163181543247e-05,
+      0.0001939584043543579
+    ]
+  ],
+  "unequal_weights": [
+    [
+      16,
+      0.15164756774902344,
+      38.82177734375
+    ],
+    [
+      32,
+      0.14901790022850037,
+      152.59432983398438
+    ],
+    [
+      64,
+      0.14836526801809669,
+      607.704137802124
+    ]
+  ]
+}
+
+Separate source and replay checks
+ComplexReflectionPositivity.lean SHA-256 47c67d26f29d0f47eade1e9505b78b33112f8ef896957a2cc952ce5bef0f5cc6, 33 declarations, 0 warning(s)
+IntegralReflectionPositivity.lean SHA-256 6c035f89d1f29c8f1e0b712dad6b8982a7d30bcccda7a557b8403df3853b9f0f, 31 declarations, 2 warning(s)
+LorentzTest.lean SHA-256 c4e20c959c4fc209778dce497862de616a49cad65d162809b086520975f3bff6, 14 declarations, 0 warning(s)
+A4 shell-control output
+maximum matrix residual 6e-15
+1 0.7958578261 1.095531582 0.3001220987
+4 1.072672258 1.095531582 0.02552215645
+16 1.094083639 1.095531582 0.001628050898
+64 1.09544101 1.095531582 0.0001018836476
