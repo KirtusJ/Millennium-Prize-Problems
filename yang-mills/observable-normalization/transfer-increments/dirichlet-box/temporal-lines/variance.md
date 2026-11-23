@@ -1,0 +1,16 @@
+# Conditional variance of a single temporal Wilson line
+
+Let $G_s=(A^{-1})_{ss}$ for the spatial Dirichlet Laplacian. For every interior site one has $1/6\le G_s\le6$, uniformly in the box. The upper bound is proved in the [kernel comparison](comparison.md). The lower bound follows by testing the inverse variational formula with the vertex delta, whose squared gradient norm is six. Let $m_s(\psi)=\mathbb E_K[W_s\mid\psi]$ be the quaternion mean of the straight temporal transporter in the common shell frame. Its norm is independent of endpoint gauge choices. Write
+
+$$V_s(\psi)=\frac{\beta}{L}\big(1-|m_s(\psi)|^2\big).$$
+
+There are two levels of control, both uniform in the site and the chosen dyadic periodic-limit state.
+
+* When $L=o(\beta^{1/16})$, $\mathbb E_\mu[(3G_s-V_s(\psi))_+]\to0$. In particular the unscaled mean conditional variance is at least $(1/2-o(1))L/\beta$.
+* When $L=O(\beta^\eta)$ for a fixed $0\le\eta<1/22$, one has $\mathbb E_\mu |V_s(\psi)-3G_s|\to0$. Both statements include fixed $L$.
+
+For two independent samples given the shell, put $U=W_s^{(1)}(W_s^{(2)})^{-1}$ and $B=\sqrt{\beta/(2L)}(U-1)\in\mathbb H$. Then $|B|^2=(\beta/L)(1-\operatorname{Re}U)$, and conditional independence gives $\mathbb E[|B|^2\mid\psi]=V_s(\psi)$ exactly. Regard the logarithm difference $Z_s$ as a pure imaginary quaternion. The unitary Taylor bound of the [temporal-line proof](README.md) also bounds the full quaternion error, giving $\|B-Z_s\|_{L^2}\le C L^{7/2}/\sqrt\beta$ per site. The unweighted rooted-link moments give $\|Z_s\|_{L^{2p}}\le C_p L^{3/2}$ for every fixed $p\ge1$. Also $\|B\|_{L^2}\le C L^{3/2}$, from $|U-1|\le(|b_s^{(1)}|+|b_s^{(2)}|)/\sqrt\beta$. Cauchy–Schwarz bounds $\mathbb E\big||B|^2-|Z_s|^2\big|$ by $C L^5/\sqrt\beta$.
+
+Choose $M>0$ and test with $\min(|Z_s|^2,M)$. For the reference vector $Y_s\sim\mathcal N(0,G_s I_3)$ its mean-square is $3G_s$, and the error from clipping is uniformly small as $M\to\infty$ because $G_s\le6$. The corresponding conditional means of the clipped test differ in mean absolute value by at most $2MC L^8/\sqrt\beta$ using the product-TV bound before averaging over the shell. Since $|Z_s|^2$ dominates its clipped value and the chord error tends to zero, take the coupling limit first and then $M\to\infty$. This proves the one-sided assertion.
+
+For two-sided convergence, maximally couple the conditional log-difference vector and its Gaussian reference. The unconditional failure probability is at most $C d$, where $d=L^8/\sqrt\beta$. On a failure, Hölder bounds the expected sum of the two squared norms restricted to that event by $C_p L^3 d^{1-1/p}$, for $p>1$. On success the squared norms coincide. This bounds the mean absolute conditional expectation discrepancy by the same error, in addition to the chord error $C L^5/\sqrt\beta$. For each fixed $\eta<1/22$, choose a finite $p$ large enough that $3\eta+(8\eta-1/2)(1-1/p)<0$. Both errors then vanish. This line variance measures disorder across two conditional interiors. It supplies no lower bound on the infinite-volume one-copy transfer gap.
