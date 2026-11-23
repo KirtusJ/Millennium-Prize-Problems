@@ -1,0 +1,8 @@
+# A single transverse polarization attains both Gaussian rates
+
+The recursive Gaussian challenger suggested testing the axial momentum $p=(2\pi/N,0,0)$ with polarization along direction two. For $N>4$ this lies in the principal zone. The coarse direction-two row receives exactly four aliases, those with $s_2=0$. Each has fine momentum component $q_2=0$, so this polarization is transverse and the direction-two straight-link filter equals 2. The other four have zero direction-two filter. The direction-three coarse row is orthogonal to all four contributing polarizations. Thus the following scalar row calculation is an invariant part of the full first-chaos problem. [All-mode upper bounds and definitions](gaussian.md)
+
+The squared entries of the normalized coarse vector $w$ are proportional to $c(q_s)$. The principal variance grows linearly in $N$, and the three nonprincipal variances tend to positive constants. Consequently $d=1-|w_0|^2=\Theta(1/N)$. At time $\ell$, let $\sigma_s=e^{-N\omega(q_s)}$. The principal value tends to $e^{-2\pi}$ and all three others decay exponentially. Feeding the principal vector to the half-time transfer gives $b\ge\sigma_0 d$. For the cross block, the squared norm on the coarse vector is
+$$\|q_c S w\|^2=\sum_{i<j}|w_i|^2|w_j|^2(\sigma_i-\sigma_j)^2
+\ \ge (1-d)d\min_{j\ne0}(\sigma_0-\sigma_j)^2.$$
+Combining these lower bounds with the all-chaos upper bounds yields $b=\Theta(N^{-1})$ and $\eta=\Theta(N^{-1/2})$ on the unrestricted centered transverse Gaussian space. Each lower bound uses the first chaos. The color-singlet sector inherits the upper bounds. This distinction matters before comparing this calculation to a gauge-invariant Wilson spectrum.
