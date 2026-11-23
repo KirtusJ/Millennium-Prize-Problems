@@ -1,0 +1,5 @@
+I found no published spectrum for this operator, so the verdict on Q3 is **NOT FOUND**. That covers the limited search I ran only; it doesn't show that no such value exists. The report is at `/home/user/z4-workers/h2-ground/child/report.md`.
+
+- **Search:** 8 INSPIRE title queries plus some ad hoc ones. The arXiv API queries returned nothing, and I did not work out why. The only related hits were the Koller–van Baal papers (1986–88), which cover 3+1 dimensions, a different operator. I saw their titles only, not the full text.
+- **Independent check on e_0:** The grandchild (T97) got e_0 ≈ 3.35053305 from a Rayleigh-Ritz calculation. That differs from the claimed 3.3505330 by 5.5e-8, and I reran it with the same output. e_1 was not checked.
+- **PCP verify:** Both verifications passed.

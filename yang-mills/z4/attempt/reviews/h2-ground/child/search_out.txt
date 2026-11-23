@@ -1,0 +1,40 @@
+Q t "Yang-Mills" and t torus -> total 29
+  2D Discrete Yang–Mills Equations on the Torus
+  Large N duality of Yang-Mills theory on a torus
+  New vacua for Yang-Mills theory on a three torus
+  Comments on supersymmetric Yang-Mills theory on a noncommutative torus
+  Volume independence for Yang–Mills fields on the twisted torus
+  Resurgent structure of 2d Yang-Mills theory on a torus
+  Flat connections for Yang-Mills theories on the 3 torus
+  Yang Mills theories on the two and four-dimensional torus
+  Equivalence of two approaches to Yang–Mills on noncommutative torus
+  Yang-Mills fields on the four-dimensional torus. Part 1.: Classical theory
+Q t "SU(2)" and t "finite volume" -> total 5
+  Finite Volume Effects in SU(2) Lattice Gauge Theories
+  Finite volume effects in SU(2) with two adjoint fermions
+  Monopoles at finite volume and temperature in SU(2) lattice gauge theory
+  Unified approach to the SU(2) Principal Chiral Field model at Finite Volume
+  SU(2) lattice gluon propagator: Continuum limit, finite-volume effects and infrared mass scale m(IR)
+Q t "gauge theory" and t "2+1" and t volume -> total 1
+  Finite-volume step scaling at fixed truncation in (2+1)D Hamiltonian $\textrm{U}(1)$ lattice gauge t
+Q t "Yang-Mills" and t "quantum mechanics" -> total 67
+  Supersymmetric Yang-Mills quantum mechanics
+  YANG-MILLS QUANTUM MECHANICS
+  Vacua of supersymmetric Yang-Mills quantum mechanics
+  Spectra of supersymmetric Yang-Mills quantum mechanics
+  Supersymmetric Yang-Mills quantum mechanics in various dimensions
+  Hamiltonian study of supersymmetric Yang-Mills quantum mechanics
+  Gauge-gravity duality -- Super Yang Mills Quantum Mechanics
+  Supersymmetric Yang-Mills quantum mechanics in various dimensions
+  On the ground state of Yang-Mills quantum mechanics
+  The study of SU(3) super Yang-Mills quantum mechanics
+Q t "Yang-Mills" and t "three dimensions" and t volume -> total 0
+Q t "gauge" and t "small torus" -> total 0
+Q a van baal and t torus -> total 5
+  Nahm dualities on the torus: A Synthesis
+  Nahm gauge fields for the torus
+  Recent results on selfdual configurations on the torus
+  Chromomagnetic Energy of SU(2) Gauge Fields on a Torus
+  {QCD} on a Torus and Electric Flux Energies From Tunneling
+Q a luscher and t "small volume" -> total 0
+answered=8 candidates=0 []

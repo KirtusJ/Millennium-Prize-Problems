@@ -51,3 +51,9 @@ No rigorous result was found on SU(2) in five dimensions, or on the presence or 
 The indexer's plain answer, which the director adopts as the starting state of the attempt: **no folder contains an interacting-theory result uniform in the lattice spacing for the existence of a limit, for its nontriviality, for a gap, for the group question, or for the symmetry axioms.** Every gap bound is at strong coupling or at a fixed spatial mesh and is proportional to 1/b in physical units; every limit taken is toward a free theory or to zero. What the folders do supply to a chain: reflection positivity at each cutoff in Lean (G4); strong-coupling and fixed-mesh gaps uniform in volume (B4, A4); free-field limits along fast trajectories (C4, D4, A4); and a dozen obstructions, each killing one tempting inference (listed in the index, section (c)). The attempt uses the obstructions as tests.
 
 The indexer also found three places where a summary reads stronger or weaker than its statement file; one is in this folder's own `OVERALL_DISPOSITION.md` (its classification of results omits the positive free-limit results along refinement; its conclusion stands). They are passed to the directors concerned on the thread.
+
+## Small-volume expansion (added 23 November, for the one-site rung)
+
+- P. van Baal, "QCD in a finite volume", arXiv:hep-ph/0008206 (2000). Read in full by a worker. Eq. (9): leading effective Hamiltonian; after eq. (12): ε₁ = 4.116719735; pp. 11–15: range of validity in z = mL. Used for: the normalisation and the ground energy of the three-direction operator; the ceiling of the route.
+- M. Lüscher, Nucl. Phys. B219 (1983) 233; M. Lüscher and G. Münster, Nucl. Phys. B232 (1984) 445. Abstracts only. Not used for any number.
+- J. Wosiek, arXiv:hep-th/0203116, eq. (38): same normalisation of the potential. Ambroziński, arXiv:1408.2655, App. B: no J = 1 bosonic SU(2) level.

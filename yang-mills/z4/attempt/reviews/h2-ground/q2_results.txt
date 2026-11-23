@@ -1,0 +1,14 @@
+P1 eps=0.1: worst |r|=1.665e-03 bound=1.0e-01 MET
+P1 eps=0.01: worst |r|=2.649e-05 bound=1.0e-03 MET
+P2 eps=0.1: worst |r|=5.745e-01 bound=1.0e-01 FAILED
+   note: nonabelian A (|A|~1) -> geodesic distance between U(a+d),U(a) is not |d|; see report
+P2 eps=0.01: worst |r|=4.411e-01 bound=1.0e-03 FAILED
+   note: nonabelian A (|A|~1) -> geodesic distance between U(a+d),U(a) is not |d|; see report
+P3 kinetic coef = {'2': Fraction(-1, 1), 'beta': Fraction(-1, 3), 'L': Fraction(-1, 1)} vs kappa/2 = {'beta': Fraction(-1, 3), 'L': Fraction(-1, 1), '2': Fraction(-1, 1)}; potential coef = {'2': Fraction(1, 1), 'beta': Fraction(-1, 3), 'L': Fraction(-1, 1)} vs 2 kappa = {'beta': Fraction(-1, 3), 'L': Fraction(-1, 1), '2': Fraction(1, 1)}: MET
+P4 beta^(-1/3)/L at beta=4/g^2 = {'2': Fraction(-2, 3), 'g': Fraction(2, 3), 'L': Fraction(-1, 1)} vs 4^(-1/3) g^(2/3)/L = {'2': Fraction(-2, 3), 'g': Fraction(2, 3), 'L': Fraction(-1, 1)}: MET
+P5 4^(-1/3)*6.534885 = 4.11671959 vs 4.1167196: diff -1.49e-08 MET
+P5 4^(-1/3)*3.012539 = 1.89778065 vs 1.8977806: diff +4.99e-08 MET
+P5 4^(-1/3)*3.602838 = 2.26964572 vs 2.2696457: diff +1.78e-08 MET
+P6 ours 4.1167196 vs vanBaal 4.116719735: diff -1.35e-07 FAILED
+ratios (measured only): E-gap/e0 = 0.46099, scalar gap / J=2 gap = 1.19595
+SOME FAILED

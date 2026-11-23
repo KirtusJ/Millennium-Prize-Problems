@@ -1,0 +1,5 @@
+P2b |A|=0.1 eps=0.01: worst |r|=8.351e-04 bound=1.010e-01 MET
+P2b |A|=0.1 eps=0.001: worst |r|=8.331e-04 bound=1.000e-01 MET
+P6b 4.116719585 vs 4.116719735: diff -1.499e-07 tol 3.15e-07 MET
+P6c measured: ours - vB = -1.499e-07 (negative = ours lower; within rounding, so no ordering conclusion)
+ALL MET

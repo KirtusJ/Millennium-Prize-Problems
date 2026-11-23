@@ -1,0 +1,2 @@
+check K85: exit 0 (expected 0) in 512467 ms | output 96b165f8aa6f | event 87 head 6ec9f0ad3d2b
+  /home/user/z4-workers/h2-ground/report.md — items: 6 STANDS, 1 DEFECT (van Baal's review wording; our numbers unaffected), 2 NOT CHECKED (the two Lüscher–Münster gap coefficients), 3 NOT FOUND (Q3 published k = 2 spectrum, Q4 uniform gap theorem, Q5 one-site limit proof); predicates: 11 met, 3 failed (2 of them my own expectation, 1 a missing sympy), 2 measured only.
