@@ -34,3 +34,5 @@ $$
           \frac{m^2}{\sigma_Q}=16|\log\beta|+O(1).
 $$
 Indeed, with $L_0=|\log\beta|$, write $m=4L_0+e$ and $\sigma_Q=L_0+d$ with uniformly bounded $d,e$. Subtracting $16L_0$ leaves $[(8e-16d)L_0+e^2]/(L_0+d)$, which stays bounded. Restoring one common isotropic spacing gives $(m/b)^2/(\sigma_Q/b^2)=m^2/\sigma_Q$. No common choice of physical units can give both a finite nonzero mass and a finite nonzero tension along $\beta\downarrow0$. This obstacle applies at the strong end. The usual asymptotically free continuum trajectory approaches the opposite end of the bare coupling.
+
+At fixed spatial coupling the leading eigenvalues and multiplicities of the entire first cluster can now be computed from the single-slice covariance of the shortest Wilson loops. In particular on a fixed isotropic torus the additive error after $g\log(4/\beta)$ tends to zero. [Finite-box transfer reduction](../girth-shell/transfer.md)

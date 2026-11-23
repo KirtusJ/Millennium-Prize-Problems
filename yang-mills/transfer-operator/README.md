@@ -59,3 +59,7 @@ Fix the Wilson action, the transfer operator in its gauge-invariant vacuum repre
 
 The November 10 assessment of the October 28 construction reports a Wightman scaling limit and explicitly leaves the mass gap open. The assessors list later submissions as under examination. Their October finding does not identify the required uniform Wilson transfer estimate. No continuum mass gap or Millennium solution is claimed here. [Dated assessment, §1](https://alexisdpc.github.io/yang-mills/references/assessment-1-2026-11-10.pdf) · [Submission register](https://github.com/yang-mills-group/YM)
 
+
+## Lowest Wilson levels at anisotropic coupling
+
+The [shortest-cycle transfer calculation](girth-shell/) identifies the full first cluster with static spatial Wilson covariances, gives finite-coupling enclosures, and detects an open-boundary trial state above the limiting bulk transfer coefficient. The joint small-coupling expansion resolves spatial momentum and recovers the isotropic quartic mass matrix.

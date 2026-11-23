@@ -1,0 +1,249 @@
+Director B4 | 2026-11-23 | Wilson girth shell, joint mobility, boundary/bulk splitting and spectral enclosures
+PCP OS 92623fa6759bbb4e4f27ce5aa381de213a55ae0c
+Mathlib c44e0c8ee63ca166450922a373c7409c5d26b00b
+Lean 4.19.0 6caaee842e94
+Boot kernel SHA-256 d2fae4ef3df316ff4fa0c1a88744e66cc17bd794856979fa55188b8402f7222f
+
+Run 1 post-exit desk
+{"max_depth":2,"max_live":3,"max_total":4,"revision":8,"nodes":[{"id":1,"parent":null,"label":"root","state":"Finished"},{"id":2,"parent":1,"label":"generation","state":"Finished"},{"id":3,"parent":2,"label":"links","state":"Finished"},{"id":4,"parent":2,"label":"certificate","state":"Finished"}]}
+native/search serial SHA-256 67fdfda37f8e9fb2a51d27e25a014a01eaa2381c3b0052a376aa032a5ffe9601
+running image (code and read-only data), SHA-256: 0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3 (measured; equal to the value the loader named)
+starting worker.elf (9232 bytes, SHA-256 b4340ab7e290a064e17e3ff8f209bd32a56f4ebd211b4c078db73a3030587456)
+worker.elf ended DONE: exit 0 after 0 s; 6 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 258 pages at the end, 0 of them the display's, 0 both writable and executable; 264 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
+kernel register: 48 events, head c4e71e983633eee651ec91807c16dd13e08c996d5b1d64fc416010467f17b270
+ALL SELF-TESTS PASS. Guest Ethernet support is compiled in. Access requires a matching image grant and a supported NIC.
+assembly serial SHA-256 933333d393a889d965c8116135f918307ed2c90507586fa7c6e51299c15981d2
+running image (code and read-only data), SHA-256: 0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3 (measured; equal to the value the loader named)
+starting worker.elf (50120 bytes, SHA-256 1cb649a9954be008a7f74ada3fb1494f1949d7947b85bf221875c655ea59afcd)
+worker.elf ended DONE: exit 0 after 0 s; 169 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 268 pages at the end, 0 of them the display's, 0 both writable and executable; 274 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
+kernel register: 51 events, head c685f47276d48b596961a0d8f59808470aa97ecc656fdc5edf068356a79e4140
+ALL SELF-TESTS PASS. Guest Ethernet support is compiled in. Access requires a matching image grant and a supported NIC.
+
+Run 2 post-exit desk
+{"max_depth":2,"max_live":3,"max_total":4,"revision":8,"nodes":[{"id":1,"parent":null,"label":"root","state":"Finished"},{"id":2,"parent":1,"label":"generation","state":"Finished"},{"id":3,"parent":2,"label":"links","state":"Finished"},{"id":4,"parent":2,"label":"certificate","state":"Finished"}]}
+native/search serial SHA-256 bd5ff5959709cbcc694a8a8b941c7280b48e6f75496d74089cf19960d1ec6c2e
+running image (code and read-only data), SHA-256: 0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3 (measured; equal to the value the loader named)
+starting worker.elf (9232 bytes, SHA-256 b4340ab7e290a064e17e3ff8f209bd32a56f4ebd211b4c078db73a3030587456)
+worker.elf ended DONE: exit 0 after 0 s; 6 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 258 pages at the end, 0 of them the display's, 0 both writable and executable; 264 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
+kernel register: 48 events, head 2e65581cd8882707c66fcf6e98c647b1d476be6ab9c6be775c121bd831dbc7ba
+ALL SELF-TESTS PASS. Guest Ethernet support is compiled in. Access requires a matching image grant and a supported NIC.
+assembly serial SHA-256 af72d381bde1608d2b66570bca9e7b6533367d66c23f4b0abdc7bf78cbeb69db
+running image (code and read-only data), SHA-256: 0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3 (measured; equal to the value the loader named)
+starting worker.elf (50120 bytes, SHA-256 1cb649a9954be008a7f74ada3fb1494f1949d7947b85bf221875c655ea59afcd)
+worker.elf ended DONE: exit 0 after 0 s; 169 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 268 pages at the end, 0 of them the display's, 0 both writable and executable; 274 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
+kernel register: 51 events, head e4b5e4907890b3accbadc90603d26436d2fcdbf415577746e31e648201f844d3
+ALL SELF-TESTS PASS. Guest Ethernet support is compiled in. Access requires a matching image grant and a supported NIC.
+
+geometry | identical in both runs | SHA-256 92376496be047e240627024b34d81ca63c85213599cd96d8c388417f724a85f4
+counts.bin | identical in both runs | SHA-256 fbedec9c8d3f4221a12bb52dba143bf84ea72cd4f6829b7bdddae38975798912
+certificate | identical in both runs | SHA-256 d4c64d9ca36090a5cb5961e81e5542787657577d9ef2e5cc331ff15e5588e2f7
+assembly/basis | identical in both runs | SHA-256 3ab5274b4834b1686c827e54b2547cafa44d7532944fb4573f96f2f1596e3a6a
+assembly.out | identical in both runs | SHA-256 f46e604fffb09b306fdd449344736a1c0709801be227090b7bf0ede51d9176aa
+GirthShell.lean | identical in both runs | SHA-256 f46e604fffb09b306fdd449344736a1c0709801be227090b7bf0ede51d9176aa
+checks.json | identical in both runs | SHA-256 b1a1ef9a89f7cb00e35ecc03cb87275e056a1a241517fa51452fd194fb167b2d
+GirthShell.log | identical in both runs | SHA-256 ec939038abc00808d6b845ef24a7f36fad086c9b89c01809b00c69e6a8f73f2c
+Rectangles.log | identical in both runs | SHA-256 bb5a8f56141d7cdc6ca8276def179664aa32fb288baf482bfbe793cd7c9acc04
+ReplicaGap.log | identical in both runs | SHA-256 06be5c647095203608a0c6a70806ee7cb88ddbe08c752a7099dd8efd512af05e
+A4-band.log | identical in both runs | SHA-256 deb731fa19ceffe4eab9837fe05d698e2611d36db3c28eb9554ffeed1a5e9313
+certificate.c | SHA-256 a183047d36328a59896faf487b524bd55435bab940831c31cabbd9a0cf257e4b
+controls.py | SHA-256 f0dc23bf1f04a45f1820018969144cb62c6003ab790a2e2192e68f04c32f4fcf
+cube_bounds.py | SHA-256 158da9831024825653ff102786a7b319634eea9c8dd82bd30ff003c92a5f19f2
+replay.py | SHA-256 14801a3e344166447c39e570ac44ddfa04c9eb3f8527d365fbd6ae4455cb03bc
+
+Lean axiom read-back
+'Millennium.YangMills.GirthShell.centeredInner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.vacuumLeak' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.gramPowers' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.longitudinal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.transverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.incidenceSymbol' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.bandEdges' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.coreCompletion' depends on axioms: [propext]
+'Millennium.YangMills.GirthShell.corner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.intertwinePowers' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.stepError' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.schurRows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.cornerEnergy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.cornerTrial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.cubeLimits' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.jointSymbol' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.cubeHessian' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+Both runs rejected these variants
+WrongCenter.lean:17:31: error: unsolved goals
+WrongCover.lean:60:64: error: tactic 'decide' proved that the proposition
+WrongBand.lean:70:18: error: linarith failed to find a contradiction
+WrongCube.lean:154:54: error: unsolved goals
+WrongCorner.lean:133:2: error: linarith failed to find a contradiction
+WrongBoundary.lean:128:2: error: linarith failed to find a contradiction
+WrongMix.lean:148:35: error: unsolved goals
+
+Rectangles.log
+'Millennium.YangMills.ConnectedRectangles.leaf' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.ConnectedRectangles.productCut' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.ConnectedRectangles.affineFloor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.ConnectedRectangles.rectangleFloor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.ConnectedRectangles.nonemptySection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.ConnectedRectangles.emptySection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.ConnectedRectangles.socketMultiplicity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.ConnectedRectangles.crossoverShift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.ConnectedRectangles.polymerBudget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.ConnectedRectangles.pinnedBudget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.ConnectedRectangles.centeredMoment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.ConnectedRectangles.concentrationBudget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Millennium.YangMills.ConnectedRectangles.vacuumTie' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.ConnectedRectangles.returnCost' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.ConnectedRectangles.slicedFloor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.ConnectedRectangles.deletionRatio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.ConnectedRectangles.branchOdds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.ConnectedRectangles.mixedPathFloor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.ConnectedRectangles.collectiveOverlap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.ConnectedRectangles.perimeterResidual' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.ConnectedRectangles.commonSpacing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.ConnectedRectangles.scaleError' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.ConnectedRectangles.exposedLines' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.ConnectedRectangles.projectedPerimeter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.ConnectedRectangles.projectedArea' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.ConnectedRectangles.planarSection' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+ReplicaGap.log
+'YangMills.ReplicaGap.exteriorTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ReplicaGap.momentUpper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ReplicaGap.momentLower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ReplicaGap.thermalBracket' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ReplicaGap.swapBounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ReplicaGap.swapIdentity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ReplicaGap.swapExpectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ReplicaGap.purityMagneticError' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ReplicaGap.vacuumCurvature' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ReplicaGap.electricRelativeVariance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ReplicaGap.regularGraphTop' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ReplicaGap.resolventTangent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ReplicaGap.bandCurvature' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+A4-band.log
+two adjacent squares, gamma=0.6, predicted 0.245082736, cutoffs 3,5 0.245082736 0.245082737
+two adjacent squares, gamma=2, predicted 0.241334847, cutoffs 3,5 0.241334847 0.241334847
+two adjacent squares, gamma=6, predicted 0.520872564, cutoffs 3,5 0.520872566 0.520872566
+cubic lattice gamma=0.1, gap curvature 0.248128081, dispersion coefficient 0.000052008
+cubic lattice gamma=1, gap curvature 0.088969721, dispersion coefficient 0.004555945
+cubic lattice gamma=2, gap curvature -0.204768347, dispersion coefficient 0.013518279
+cubic lattice gamma=8, gap curvature -1.307988376, dispersion coefficient 0.060919157
+cubic lattice gamma=100, gap curvature -16.823078780, dispersion coefficient 0.789779459
+spatial symbol, step 0.02, quadratic slope 1.333222227
+spatial symbol, step 0.01, quadratic slope 1.333305556
+
+Numerical controls (both runs)
+{
+  "mobility_prediction_and_n40_error": {
+    "0.0": [
+      1.0,
+      4.1611432254340386e-05
+    ],
+    "0.5": [
+      1.3333333333333333,
+      4.7531294229186116e-05
+    ],
+    "1.0": [
+      2.333333333333333,
+      7.262973599964084e-05
+    ],
+    "3.0": [
+      13.0,
+      0.0004088437786311516
+    ]
+  },
+  "certified_cube_transfer": {
+    "beta_s": "1",
+    "beta_t": "1/100",
+    "unit": "(I2/I1)^4",
+    "first": [
+      "0.8993",
+      "0.9040"
+    ],
+    "second_through_sixth": [
+      "0.8836",
+      "0.8883"
+    ],
+    "later_upper": "0.00456",
+    "dimension_cut": 7,
+    "power_index_cut": 8
+  },
+  "corner_masks": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    8,
+    12,
+    16,
+    32,
+    48
+  ],
+  "open_G_trial_top": {
+    "1": [
+      0.16666666666666666,
+      4.5,
+      5.000000000000002
+    ],
+    "2": [
+      0.18412698412698417,
+      4.400725623582766,
+      4.733926753896097
+    ],
+    "3": [
+      0.18539915966386558,
+      4.393921355306829,
+      4.633057998222176
+    ],
+    "4": [
+      0.1855434657172146,
+      4.393153209459818,
+      4.590867057576587
+    ]
+  },
+  "girth_counts_L2_to_L6": [
+    12,
+    27,
+    240,
+    375,
+    648
+  ],
+  "flat_multiplicity_L4_L5": [
+    129,
+    250
+  ],
+  "one_square": {
+    "variance": 0.8208292243263641,
+    "absolute_errors": [
+      5.2472215336885064e-05,
+      3.349321359813473e-06,
+      2.1044576081763466e-07
+    ]
+  },
+  "cube_off_over_z4": [
+    0.9359132200218485,
+    0.9834986108311784,
+    0.9958437281603585
+  ],
+  "cube_scaled_off_transverse_scalar": {
+    "20": [
+      0.17177736597043164,
+      3.9755094569850296,
+      5.00617365280762
+    ],
+    "100": [
+      0.1676485089920444,
+      3.9954723960125116,
+      5.001363449964778
+    ],
+    "500": [
+      0.16686149300879113,
+      3.9991078386069994,
+      5.000276796659746
+    ]
+  }
+}
