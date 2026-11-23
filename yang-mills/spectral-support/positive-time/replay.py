@@ -18,6 +18,9 @@ ADJOINT_MARKER = b"-- BEGIN PCP OS generated spherical divergence\n"
 
 
 def result_spec(mode):
+    if mode == "boundary":
+        return (HERE.parent / "boundary-spectrum/BoundarySpectrum.lean",
+                b"-- BEGIN PCP OS generated surface patch readings\n", "patch")
     if mode == "dual":
         return (HERE.parent / "dual-scalar/DualScalar.lean",
                 b"-- BEGIN PCP OS generated dual response checks\n", "fourier")
@@ -50,7 +53,7 @@ def launch(stage, folder, config):
     command = [sys.executable, "-I", __file__, "--worker", stage, str(folder)]
     if config["dispatcher"]:
         register = config["register"] if stage == "factor" else "-"
-        prefix = {"adjoint": "adjoint-", "finite": "readings-", "scale": "electric-", "graph": "graph-", "loop": "loop-", "slab": "slab-", "response": "response-", "dual": "dual-"}.get(config["mode"], "positive-")
+        prefix = {"adjoint": "adjoint-", "finite": "readings-", "scale": "electric-", "graph": "graph-", "loop": "loop-", "slab": "slab-", "response": "response-", "dual": "dual-", "boundary": "boundary-"}.get(config["mode"], "positive-")
         command = [config["dispatcher"], "--register", register, config["actor"],
                    prefix + stage, "--", *command]
     subprocess.run(command, check=True)
@@ -60,7 +63,7 @@ def worker(stage, folder):
     config = json.loads((folder / "config.json").read_text())
     mode = config["mode"]
     filename, marker, intermediate = result_spec(mode)
-    coefficient = {"positive": 2, "difference": 1, "adjoint": 3, "finite": 4, "scale": 6, "graph": 7, "loop": 8, "slab": 9, "response": 10, "dual": 11}[mode]
+    coefficient = {"positive": 2, "difference": 1, "adjoint": 3, "finite": 4, "scale": 6, "graph": 7, "loop": 8, "slab": 9, "response": 10, "dual": 11, "boundary": 12}[mode]
     if stage == "factor":
         request = b"F" + bytes([coefficient])
     elif stage == intermediate:
@@ -114,6 +117,11 @@ def worker(stage, folder):
             values += [case[m][key + "_T1"] for m in ("wilson", "matched") for key in ("cube", "star")]
             expected_factor = bytes(v.numerator * pow(v.denominator, -1, 101) % 101
                                     for v in map(Fraction, values))
+        if mode == "boundary":
+            from fractions import Fraction
+            data = json.loads((HERE.parent / "boundary-spectrum/evidence/patch.json").read_text())
+            values = [Fraction(data["ground_entry"]), Fraction(data["norm"]), Fraction(data["energy"])]
+            expected_factor = bytes(v.numerator * pow(v.denominator, -1, 101) % 101 for v in values)
         if output != expected_factor:
             raise ValueError("unexpected guest coefficient vector")
         (folder / "factor.out").write_bytes(output)
@@ -134,7 +142,9 @@ def generate(folder, kernel, pcp_source, qemu, firmware, template, dispatcher=No
     filename, _, _ = result_spec(mode)
     package = kernel_package(kernel, pcp_source)
     flags = ["-DD4_POSITIVE_TIME"]
-    if mode == "dual":
+    if mode == "boundary":
+        flags.append("-DD4_BOUNDARY_SPECTRUM")
+    elif mode == "dual":
         flags.append("-DD4_DUAL_SCALAR")
     elif mode == "response":
         flags.append("-DD4_SCALAR_RESPONSE")
@@ -163,7 +173,7 @@ def generate(folder, kernel, pcp_source, qemu, firmware, template, dispatcher=No
 
 
 def main():
-    if len(sys.argv) == 4 and sys.argv[1] == "--worker" and sys.argv[2] in (*STAGES, "divergence", "moments", "flux", "words", "wick", "faces", "residues", "fourier"):
+    if len(sys.argv) == 4 and sys.argv[1] == "--worker" and sys.argv[2] in (*STAGES, "divergence", "moments", "flux", "words", "wick", "faces", "residues", "fourier", "patch"):
         worker(sys.argv[2], Path(sys.argv[3]))
         return
     p = argparse.ArgumentParser(description=__doc__)
@@ -175,6 +185,8 @@ def main():
     p.add_argument("--register", type=Path)
     p.add_argument("--actor", default="Director-D4")
     modes = p.add_mutually_exclusive_group()
+    modes.add_argument("--boundary-spectrum", dest="mode", action="store_const", const="boundary",
+                       help="replay the two finite-field boundary spectra and Lean certificate")
     modes.add_argument("--dual-scalar", dest="mode", action="store_const", const="dual",
                        help="replay the complementary boundary and twisted Fourier checks")
     modes.add_argument("--scalar-response", dest="mode", action="store_const", const="response",

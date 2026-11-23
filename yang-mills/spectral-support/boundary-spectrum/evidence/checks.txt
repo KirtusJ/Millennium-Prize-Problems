@@ -1,0 +1,182 @@
+Director D4 · boundary spectrum · November 23, 2026
+1442 cumulative events, 711 admissions, all released. Previous 1249 events identical.
+
+chain intact: 1442 events, head 4ebbd7dfc8ddc969de17d0a258674717c9a5d1d3668b11ffad4e1d59a4347c19
+guards replayed: 0 problem(s)
+The guards are those of pcpos 1.0.22. A register is read under the rules of the program that reads it: an event an earlier build accepted may be reported here, and its bytes are unchanged.
+register file SHA-256: 94a9a73334a37bd4f9cf0a4fbf52cf46c22723df3a2fa519c61d5fba46c6316e
+A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.
+
+
+Exact source and guest SHA-256
+be88aae89e54834a2ee55eae79b0f40374ffdc9996f5c868f17aa1c8a9f99236  BoundarySpectrum.lean
+3097647229dc3002598bb36b4949c4285de9b314a905421196778de59fb42150  d4.elf
+
+Producing serial SHA-256
+c03db9bc63edcd422a00ce97afb7d14e0d49f884c71c242ff2c20c9241d1c361  assemble.serial.txt
+aa5b1266599c9f02ebbefbeca247298a73649504814faa70f2c25f745535f1e9  factor.serial.txt
+d269c4a41a6fed148c03c094aca76d03b732230b97ab46598fa9c827bce07425  patch.serial.txt
+
+checked
+'Millennium.YangMills.D4.BoundarySpectrum.gramProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.BoundarySpectrum.squaredIncrement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.BoundarySpectrum.rowEnergy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.BoundarySpectrum.boundaryTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.BoundarySpectrum.countExcess' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.BoundarySpectrum.inverseEquations' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.BoundarySpectrum.patchLayout' does not depend on any axioms
+'Millennium.YangMills.D4.BoundarySpectrum.patchSizes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.BoundarySpectrum.patchNumerator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.BoundarySpectrum.surfaceBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.BoundarySpectrum.edgeBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.BoundarySpectrum.cornerBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.BoundarySpectrum.modularPatch' depends on axioms: [propext]
+'Millennium.YangMills.D4.BoundarySpectrum.centralChoose' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.BoundarySpectrum.walkSums' depends on axioms: [propext]
+'Millennium.YangMills.D4.BoundarySpectrum.returnWalkBounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.BoundarySpectrum.largeSurface' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+
+host-release
+surface: 64 cells, 176 faces; exact quotient 6456368251844829167498758441475410194379/1609291694989263481105223354563409299875 4.011931629267436
+edge grounded Green entry 981403623/4993731821 quotient 102371583838220719998/24937357500067976041 4.105149626937885
+corner grounded Green entry 6682304780825183191939141957321/36006679442822741156466775925235 quotient 632816895789921727380390061534059554835990633023689406635003652/144053440499799309503772892792989277211399945189744332256645025 4.392931495383502
+
+
+cycles
+112 independent cycles, exact normalized quotient 6456368251844829167498758441475410194379/1609291694989263481105223354563409299875
+ground Green entry, norm, energy match the direct divergence calculation
+
+
+series
+closed-walk bounds: mean Green < 266467799156134434400381/1047737896442413330078125 second moment > 2101225532429572271797/23283064365386962890625
+limiting surface quotient > 4.084807300264839 2048-square quotient > 4.081689913119537
+
+
+final-counts
+side 2 three threshold counts [8, 8, 7] largest 4.733926753896096
+side 3 three threshold counts [20, 20, 8] largest 4.633057998222179
+side 5 three threshold counts [50, 48, 8] largest 4.573438788787214
+side 8 three threshold counts [122, 98, 20] largest 4.562798943168745
+side 10 three threshold counts [182, 140, 20] largest 4.562250838833239
+periodic Maxwell box 3 exact norm 4(1-1/V) 3.851851851851852
+periodic Maxwell box 4 exact norm 4(1-1/V) 3.9375
+
+
+final-mutations
+quadratic energy factor rejected at rowEnergy
+surface area budget rejected at boundaryTrace
+potential row diagonal rejected at checkedRow00
+central bond orbit rejected at patchLayout
+flat patch lower bound rejected at surfaceBound
+corner covariance sign rejected at cornerBound
+large flat patch bound rejected at largeSurface
+measured modular energy rejected at modularPatch
+
+
+peer
+'Millennium.YangMills.GirthShell.centeredInner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.vacuumLeak' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.gramPowers' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.longitudinal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.transverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.incidenceSymbol' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.bandEdges' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.coreCompletion' depends on axioms: [propext]
+'Millennium.YangMills.GirthShell.corner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.intertwinePowers' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.stepError' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.schurRows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.cornerEnergy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.cornerTrial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.cubeLimits' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.jointSymbol' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.GirthShell.cubeHessian' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+
+replay-boundary-spectrum
+guest ELF 3097647229dc3002598bb36b4949c4285de9b314a905421196778de59fb42150
+Lean source be88aae89e54834a2ee55eae79b0f40374ffdc9996f5c868f17aa1c8a9f99236 (45505 bytes)
+factor a061ea7c956b4591fa494651d547a324c5d00679943a61e73c3c1acba14c4960
+patch d9b947d6f8582ab9f06d9d41f680dcff98621047f98da4ff411c21e71b1875fe
+assemble f5a2bb98ba92fa01b5a2d1d1b4af094b7ab25448a362f6bae7c70f0764fd602a
+
+
+replay-dual-scalar
+guest ELF e21e0b5837c5dcdd5a108e1ed2bd1cd89c0447db31c2b5374f61ee3b682fe06d
+Lean source 0565c917e76598e286c07daa80b4652eafcf8e442d273e0cc4068828e56a79a2 (8956 bytes)
+factor 98e2403450a4883ab6bf71da43f96be3303b44a617542fec65149cec86ee1dc8
+fourier 28c235f5272e1468bd91e44cb39d4c5f215729a2cea199c4498d3c693a35ca15
+assemble 21f782b75a42bd676cd4d0a16d6b60117d3b8a46b0383aec69717c483dd528b4
+
+
+replay-scalar-response
+guest ELF fbef68827e33f0d6d7b988f427d998e79264b207f71103721cba20c416cad8d0
+Lean source e00513d0e0693aa0b7c6c745bcd56e96d8173377e0487e5f9818f68e6cb68e68 (13211 bytes)
+factor 07939bddfc25387d3dfafbe277795fa72a1da19d1013320d5853e774a2366c3b
+residues 502cfff4c52d33f2959d8c0c92cad9d9fd3612c6a3f919ae25b6774fa87c427e
+assemble db7cfd6d1703f6ad1f60ba69258dc6bcf09a2069490cdf809c38550d4bcf49bf
+
+
+replay-electric-slab
+guest ELF 5421565fe5e86cf5ee2929f527756c23ca55ce67165795af956b19afa251f5cf
+Lean source 459f0bcfdd4488208748fdbbd9bc087f18ce2e5778a4c86c3aa22dff8416f22e (6375 bytes)
+factor 408dfcca8329203f24590a513d50e86e973ae042d329f50e61846a335d0be522
+faces 9a35cf2653859c1bab077133781c2aa3e66f54e2a1c81c3cfef87eeb3462027d
+assemble 008832fc9ecb30389b94f1880078cd803bc5f1bc89cb3cffb1959c120a127d0b
+
+
+replay-ordinary-loop
+guest ELF 31ef074312c1e517cefab984318c0128e50242a89118fda5a0eb8963d68ec87b
+Lean source 886c0b6b0453e135ad1cd4df6ddb359af6f7a9b8f764001fc10f8eb4260fbdd1 (7272 bytes)
+factor 70f01bd482e6eb609056eb7d185804f8f74acea5f3c89621299f3fc0c8327db9
+wick 08bb2f924e16d0bfd364a21c5675a4898d621b4473507077826a04d3de889442
+assemble b5d6d0adbc37b04211a412e0fba1d51c3d0d91d24490cc0399afeaa986eddd97
+
+
+replay-graph-holonomies
+guest ELF d6dc835b7ff0acf67d21882bf6106964d120861a9ea3f821c0e396496169efdc
+Lean source 988a04e72b0d28189958b60f586600607a6fca58e528b525f8e9e1a7772dd580 (9242 bytes)
+factor f9f43db9d480541e32cd07569fd025627a084dce9f02ee43ee1c0bfe4184fc42
+words 8a6784bdc53906cf4d10ad4800abc820837c215ac1927e57defab0b8576f2c27
+assemble 778b6ecafd6683dfd5f4669f531c8797ca6be1056e47ac29ca0f4c2737e40758
+
+
+replay-electric-scale
+guest ELF 9a0c055625830f7377cbd54bbc3e4e2fa0e86d23df35bb5a471160673c69381c
+Lean source d8b44086b7234ac94b9d4acb4d71c868b8a888ddb3645d4ac0e3962295bcd792 (9001 bytes)
+factor 1bec20c873a9a545e11e5e443978e8aadca14137c79ab633ff12486c1a395bdd
+flux b328dc2d871a23e590755399c47917230c33cd42d6804d1bbba78effcb2b601b
+assemble e9f30f75725a091dcb475b4056d87200adf2778eba3dd2831ab29e1802eb9482
+
+
+replay-finite-readings
+guest ELF 974b4663a8f26a4b11868e967c4e0a3bda96b766e9b9d1a022113a180b71450d
+Lean source 029ce009e020212b7f7dbd45bcb574b80a7e831c2de8bf137eda55c9857aee68 (19442 bytes)
+factor 6d50b506a6b47a1eaa2c0e4ff40304ef4ac11d1298d6991da73d0f3df199e007
+moments 329084da0f98629c4799288ccd793a33e83bef95bd567da2fa4b8cef817cb1d5
+assemble 4d56b43460eed3f18c74fa5f0492b2338cb542fe77c49d74925515b72a70943d
+
+
+replay-adjoint
+guest ELF 215b28f7d03d4f722a75bc86123ecdb6966b1d9f9a49865ad1ff6b1e13d32128
+Lean source e03ee1d3bef8f6fca3b41b74e08c2f70bdbc524a63161a68633c0bdd1ecef508 (9637 bytes)
+factor 6cc7496b005dd7718a1d43a922fae478fab82c555f8105f01045ef3296f68c46
+divergence ee8759451d5f1a132c8603564dc42aff0bd4c80f0c40a5316ace5c72da8a4fc5
+assemble 94cf811f16efe9a1e12b40297073eb81a2b15e47f2fa9c94555c7998851d7022
+
+
+replay-difference
+guest ELF 81ee0657560726917fcae43810d3faac7e2827c2a3250bcff4a481369552d198
+Lean source 2002c660d00ff94e5714aa7e3f3c69fa8946181174dc518fbee21e13845ad6d8 (5873 bytes)
+factor 08df60ff3eb39fc8c614f17b41d85451b17a56d157ffb2c6662cd2d961f4eabf
+square 86f91b3ca1688868514fdb84cbe27c6f13b92743ec9117d4ef1d7c01ae6f9982
+assemble ec33e515d2e0ce06b8c0aad37af0c3bee865d19fd3ac4d8412b4244b4c22cbf2
+
+
+replay-basic
+guest ELF aeb03ab77f4f9ca4ba7d877d55e55d76f1e02243b742acd9a552791dc29850b6
+Lean source 1fd54f3cb4f7bf54bfcdfbae55fd03c66e2cfe9f3f7282c9680087d9b605e391 (12919 bytes)
+factor be42d70668eb88f5857f2ef0a9f3dd540931cfb9acd0e00eb0b8c3791484272e
+square 99a9b86f1d394c3db24a54cda4e67b73893ebc15a39789c5c49c12b32dededeb
+assemble 84116bd870e489ac9b2d553ff953f366cd62e0b4e5f48e48f478d6a9091f7030

@@ -27,7 +27,9 @@ static void copy_source(const char *name) {
     }
     if (os(3, fd, 0, 0)) finish(2);
 }
-#if defined(D4_DUAL_SCALAR)
+#if defined(D4_BOUNDARY_SPECTRUM)
+#include "../boundary-spectrum/guest.h"
+#elif defined(D4_DUAL_SCALAR)
 #include "../dual-scalar/guest.h"
 #elif defined(D4_SCALAR_RESPONSE)
 #include "../scalar-response/guest.h"

@@ -20,3 +20,5 @@ For open boxes at large spatial coupling the temporal shell distinguishes bounda
 At finite temporal coupling an electric-degree truncation gives certified two-sided enclosures for the full transfer. On one original SU(2) cube at $\beta_s=1$, $\beta_t=0.01$, the first ratio divided by $u_t^4$ lies in $(0.8993,0.9040)$, the next five lie in $(0.8836,0.8883)$, and every subsequent ratio is below $0.00456$ in the same units. [Proof and rational certificate](enclosures.md)
 
 Combining A4's fixed-temporal calculation with the spatial covariance determines the full joint quartic matrix on even tori. Its isotropic specialization recovers Münster's momentum-dependent Eq. (28). On an explicit isotropic family, a Fourier cube-sum reading with the measured rest decay removed tends to $e^{-(7/3)t|q|^2}$. [Joint expansion, error and long-wavelength limit](joint.md)
+
+The [weak-coupling cavity limit](../weak-cavity/) takes the temporal and spatial Wilson couplings large together, at fixed anisotropy. In that regime tree-link kinetic noise persists and the first physical levels are two transverse quanta combined to a color singlet.
