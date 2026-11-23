@@ -6,6 +6,8 @@ The [local plaquette study](local-scalar-edge/README.md) applies the positive tr
 
 The [opposite-slice spectrum estimate](paired-slice-spectrum/README.md) bounds finite-volume excitation energies and thermal occupation from a histogram of two complete spatial slices.
 
+The [growing spatial block](spatial-block-criticality/README.md) gives a uniform comparison with the free magnetic profile and an upper bound on the weak-coupling SU(2) gap in lattice units.
+
 ## Exact question and result
 
 Let `I` be a common set of test labels. For a finite type `J`, a map `i : J → I`, real coefficients `c`, and a real kernel `K`, define
