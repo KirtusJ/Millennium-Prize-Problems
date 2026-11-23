@@ -1,4 +1,4 @@
-"""Verify the common winding operators and read back the two Z4 control trajectories."""
+"""Verify the common winding operators and replay three one-site control runs."""
 import argparse
 import hashlib
 import importlib.util
