@@ -1,0 +1,17 @@
+'Millennium.YangMills.D4.nullTailOfWeakLimit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.diagonalSpectralExclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.boundedWindow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.disappearingWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.arbitraryArrayControl' depends on axioms: [propext, Classical.choice, Quot.sound]
+closed-tail :67:26: error: Application type mismatch: The argument
+reversed-array :97:2: error: unsolved goals
+window-cost :77:4: error: Type mismatch
+guest ELF 2f920f7d9dd19e99b2807e614b4565dbefb3a74096786857ad490179288359bd
+Lean source bc65f44f95de9855558b34c2a523a0768df41139a7297e887cfddecba52e3cb4 (6518 bytes)
+guest ELF 9cfb0ab9a111f2d2795415a30d1ba8d0ae8ec2b51738df4497eba1f4f839fb4d
+Lean source 02ebd938be4c8b41b3837c5f2dba783c214d54761c5e49ba5a1ccaf4d2a73435 (6157 bytes)
+chain intact: 110 events, head d4a28d078afebde839c5cb7d1ba0cb3b6c731b7c9cc48ba9d16a170e72023a0f
+guards replayed: 0 problem(s)
+The guards are those of pcpos 1.0.22. A register is read under the rules of the program that reads it: an event an earlier build accepted may be reported here, and its bytes are unchanged.
+register file SHA-256: 37e32bdb636684126b1a810465f725e4ca864557fca8c7fef4fcfc261be94a46
+A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.
