@@ -1,0 +1,175 @@
+Director B4 · November 23, 2026 · spatial heat trace
+PCP OS 92623fa6759bbb4e4f27ce5aa381de213a55ae0c
+Mathlib c44e0c8ee63ca166450922a373c7409c5d26b00b
+Lean 4.19.0 6caaee842e94
+kernel.elf32 SHA-256 d2fae4ef3df316ff4fa0c1a88744e66cc17bd794856979fa55188b8402f7222f
+
+Post-exit desk
+{"max_depth":2,"max_live":3,"max_total":4,"revision":8,"nodes":[{"id":1,"parent":null,"label":"root","state":"Finished"},{"id":2,"parent":1,"label":"generation","state":"Finished"},{"id":3,"parent":2,"label":"links","state":"Finished"},{"id":4,"parent":2,"label":"certificate","state":"Finished"}]}
+
+controls.py SHA-256 73d4a07143cb887ca048c0fb859f309f6a4165dc3db73826bb7b9ebd27284ad7
+replay.py SHA-256 6d98d0e553e1b9a4146096856de186191e602fdfb01eafc4e9fee3b35dbfc438
+certificate.c SHA-256 78ea38e197b262224d3b685091b0c55969ecdbcf5a7c40ebafde24242625ae80
+counts.bin 3 bytes SHA-256 093ca3ec6dd2f2b23016e16db6528f8ee95eeecf4db7f0818a2e665f84998ffe
+geometry 184 bytes SHA-256 d406b78e6ca95181d943e9ae53dad73bc092368413d428858337840e7fda674b
+certificate 155 bytes SHA-256 e9cfa45f65da020fca40ac8a853811a77f49d911b8e5217f65cb768d9f9afe4d
+assembly/basis 8289 bytes SHA-256 7b839b27e722dc842a614e60a2c0b3bd72344623a6c2a4fc07b862616f34b6ce
+assembly.out 8626 bytes SHA-256 260ca09060322c861864272ec6680092bff28acecfa64ebd4c2e29e104df7e55
+HeatTrace.lean 8626 bytes SHA-256 260ca09060322c861864272ec6680092bff28acecfa64ebd4c2e29e104df7e55
+Geometry bytes (hex) 08 03 04
+
+native/search serial SHA-256 e6b89e8b58ffe9fe8c3648d92a8aee991c3920612d4a3fce1edef1758aa41cf3
+running image (code and read-only data), SHA-256: 0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3 (measured; equal to the value the loader named)
+starting worker.elf (9064 bytes, SHA-256 77f48a0231993301590a820237eff8e66924b83de207e7e03dd0c2ce149751e1)
+worker.elf ended DONE: exit 0 after 0 s; 8 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 258 pages at the end, 0 of them the display's, 0 both writable and executable; 264 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
+kernel register: 48 events, head 3f8474b92ed170f5eb1715d03b8dbd2cb835a23fde8bed122efaf136e30ece58
+ALL SELF-TESTS PASS. Guest Ethernet support is compiled in. Access requires a matching image grant and a supported NIC.
+
+assembly serial SHA-256 b48db83d0d04f7fb18f9ae46399945ec351851a48c9401fa0c4501d23414b6db
+running image (code and read-only data), SHA-256: 0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3 (measured; equal to the value the loader named)
+starting worker.elf (50120 bytes, SHA-256 1cb649a9954be008a7f74ada3fb1494f1949d7947b85bf221875c655ea59afcd)
+worker.elf ended DONE: exit 0 after 0 s; 197 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 268 pages at the end, 0 of them the display's, 0 both writable and executable; 274 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
+kernel register: 51 events, head 87e1c31985974c5beb0043e00367fffb5192b590fed3c16e7d8d46d41a7fa15e
+ALL SELF-TESTS PASS. Guest Ethernet support is compiled in. Access requires a matching image grant and a supported NIC.
+
+Fresh host Lean
+'Millennium.YangMills.SpatialHeatTrace.pathDefect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.SpatialHeatTrace.dependentEvents' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.SpatialHeatTrace.su2HolonomyDefect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.SpatialHeatTrace.derivativeSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.SpatialHeatTrace.physicalMoment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.SpatialHeatTrace.positiveBand' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.SpatialHeatTrace.fourEdge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.SpatialHeatTrace.goodFraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.SpatialHeatTrace.badMajority' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.SpatialHeatTrace.eigenCount' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.SpatialHeatTrace.rareBalance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.SpatialHeatTrace.logSandwich' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.SpatialHeatTrace.rareSecondMoment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.SpatialHeatTrace.outsideBudget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.SpatialHeatTrace.cellAnchor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.SpatialHeatTrace.coarseCell' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+Mutation diagnostics
+1x CycleLength.lean:72:2: error: linarith failed to find a contradiction
+1x MissingSites.lean:79:34: error: linarith failed to find a contradiction
+1x RareCost.lean:112:2: error: linarith failed to find a contradiction
+1x CellFloor.lean:164:2: error: linarith failed to find a contradiction
+1x BadCoarse.lean:170:32: error: linarith failed to find a contradiction
+
+Finite controls, as emitted by the links worker
+{
+  "SU2_links": {
+    "generators_tested": 36,
+    "max_derivative_error": 1.4223746095873291e-11,
+    "gauge_error": 6.661538178878824e-16,
+    "largest_edge_CS_ratio": 0.00021418375802730082,
+    "gradient_squared": 5.315857401122608e-05,
+    "dirichlet_boundary_energy": 5.101699938253162,
+    "cube_gap": 0.3281220308338133,
+    "one_plaquette_floor": 0.0013733087729283153
+  },
+  "Neumann_blocks": {
+    "small_cubes": 8,
+    "large_cube_gap": 0.8654257968122617,
+    "large_cube_floor": 0.002258400038216376,
+    "adjoint_one_two_loop_minima": [
+      0.0,
+      4.0
+    ]
+  },
+  "conditional_small_ball": [
+    [
+      0,
+      0.0004139799559794002
+    ],
+    [
+      1,
+      0.0003513706665568222
+    ],
+    [
+      6,
+      0.0004396991041573785
+    ],
+    [
+      60,
+      0.0005075845880842735
+    ],
+    [
+      6000,
+      0.0005169313064197954
+    ]
+  ],
+  "smooth_fields": [
+    [
+      6,
+      1.7967446792822093,
+      1.7116776761504486,
+      0.9526549297111349
+    ],
+    [
+      12,
+      1.578313729194739,
+      1.4759717897374096,
+      0.9351574167009594
+    ],
+    [
+      24,
+      1.5273077321390218,
+      1.420938323847996,
+      0.9303549598730483
+    ]
+  ],
+  "original_Wilson": {
+    "links": 9,
+    "full_action_residual": 3.197442310920451e-14,
+    "largest_staple": 5.029826137604694
+  },
+  "Wilson_square": [
+    [
+      0.25,
+      0.6498846483831995,
+      1.6477838367861977
+    ],
+    [
+      0.125,
+      0.22276849154584485,
+      3.8676278665549813
+    ],
+    [
+      0.0625,
+      0.052213217956703126,
+      14.572126761187386
+    ],
+    [
+      0.03125,
+      0.00968687466711879,
+      74.7259680297203
+    ]
+  ],
+  "rare_cube": [
+    [
+      2,
+      3.0451431909784916,
+      3.136040971458371,
+      7.499999999999998
+    ],
+    [
+      3,
+      1.7897697842502227,
+      1.8310193633923582,
+      4.181385292428096
+    ],
+    [
+      4,
+      1.1734436105570287,
+      1.1993162927165792,
+      2.6667960675006306
+    ]
+  ],
+  "outside": {
+    "conditional_norm": 0.10458250331675945,
+    "conditional_ceiling": 0.125,
+    "unconditional_only_correlation": 1.0
+  }
+}

@@ -1,5 +1,7 @@
 # A regulator transfer bound for two coupled sectors
 
+The [spatial heat-trace result](spatial-heat-trace/) treats the original four-dimensional Wilson measure at weak bare coupling and vanishing spatial spacing. It gives a two-sided decay exponent for a gauge-invariant sum of fixed-physical-scale loops, with different consequences for the ensemble mean and for a typical gauge background.
+
 Director B4 · 22 November 2026 · B.C. Pacific Time (PCT, UTC−07:00)
 
 A lower bound on the transfer defect in each of two orthogonal sectors can disappear when the sectors couple. This note gives an exact determinant test for the comparison form, a family of positive transfer operators that loses its physical gap, and an explicit lower bound in the parent program’s one-link SU(2) model. The Wilson-lattice estimates needed to apply the test in four dimensions remain open. [Lean declarations](TwoSector.lean) · [Execution record](execution.md) · [Jaffe–Witten, §4](https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf)
