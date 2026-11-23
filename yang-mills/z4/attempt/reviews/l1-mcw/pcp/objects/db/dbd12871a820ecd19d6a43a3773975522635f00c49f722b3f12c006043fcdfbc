@@ -1,0 +1,27 @@
+All questions are answered. The control `control.txt` is 6.493939 (π⁴/15), and a direct numerical integral agrees. The T→∞ values below are the T=512 run. For t=0..6, T=32, 48 and 64 agree with it to about 1e-17, so the extrapolation is trivial.
+
+| | S | A1 | E |
+|---|---|---|---|
+| C_X(0) | 3.5 (7/2) | 12.75 (51/4) | 3.125 (25/8) |
+| C(1)/C(0) | 0.01772599482 | 0.01610170543 | 0.01883051160 |
+| C(2)/C(0) | 4.198088516e-4 | 3.595403284e-4 | 4.607914475e-4 |
+| E1 | 3.5254943 | 3.5254943 | 3.5254943 |
+| w1 (absolute) | 1.5 | 4.5 | 1.5 |
+| w1/C(0) | 3/7 = 0.4285714286 | 6/17 = 0.3529411765 | 12/25 = 0.48 |
+
+- **Q1:** `results.md` has the full t=0..6 tables for each T.
+- **Q2:** For a spatial plaquette, P_pp = 0.4530696241773, the diagonal entry of the projector onto the plaquette variables that B can produce. The mean is 1.5·P_pp = 0.679604436266 and the variance is 1.5·P_pp² = 0.307908126528. These do not depend on T and are the same for 12, 13 and 23.
+- **Q3:** The energies are E_m = 4 asinh(√m), which are two photons carrying the same spatial momentum. A three-term fit with these energies reproduces C(t) for t=0..8 to 6e-16 relative. E1 = 4 asinh(1) is the same for all three operators.
+- **Auditor's numbers:** The auditor's E1 = 3.52549435 agrees to 2e-9, which is rounding. Their weight 0.046875 (= 3/64) matches none of the weights above. It equals w1(S)/32, but I don't know their normalisation, so that is a guess.
+- **Failed predicates:** None. At one point I misread the orientation printout and thought the spatial values depended on T. That was my index error: the first three entries are temporal plaquettes, whose P_pp is the limit minus 1/(8T).
+- **Not asserted in code:** P3 (T=256 vs T=512 convergence) and P7 (symmetry across orientations) were not coded as asserts in `t124.py`. I checked them by reading the printed output (differences 1e-17 and 3e-16).
+- **Noise at larger t:** The fit extrapolated to t=9..12 deviates by 4e-10 to 8e-8, which is roundoff in P(τ) growing with t.
+- **Not checked:** T→∞ is T=512 rather than an analytic transfer-matrix limit. The spectrum is only confirmed by the exact three-term fit, not derived independently. The script that writes `results.md` ran outside `pcp check`, because its output file is write-once.
+
+**Grandchild (T127, released):** I asked it for an independent dense-SVD recomputation at T=10, after a control that passed. I reread its files and my own code at T=10 reproduces every digit it reported. Its C_S(0) = 3.500000133 differs from 3.5 only by the finite-T effect.
+
+**PCP OS:**
+- `$P verify --ws pcp` last line: "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right." The line before it is "result: PASS".
+- `pcpos verify pcp/register.jsonl` last line: "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+
+Everything is in `/home/user/z4-workers/l1-mcw/child/`; `report.md` has the exact rerun commands.

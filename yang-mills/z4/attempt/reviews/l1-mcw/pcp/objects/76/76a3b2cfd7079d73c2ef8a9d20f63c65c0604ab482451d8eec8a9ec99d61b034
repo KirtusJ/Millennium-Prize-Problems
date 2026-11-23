@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/l1-mcw/gauss.py", line 98, in <module>
+    main()
+    ~~~~^^
+  File "/home/user/z4-workers/l1-mcw/gauss.py", line 89, in main
+    r['PS_weight_est'] = [float(CS[t] * math.exp(E1 * t) / CS[0]) for t in range(1, 7)]
+                                ~~^^^
+IndexError: index 5 is out of bounds for axis 0 with size 5

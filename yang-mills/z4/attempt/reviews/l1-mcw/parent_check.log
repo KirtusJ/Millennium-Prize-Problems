@@ -1,0 +1,2 @@
+check K95: exit 0 (expected 0) in 2040903 ms | output e02fe3265b0a | event 97 head 91189566048a
+  /home/user/z4-workers/l1-mcw/report.md: STANDS 7, DEFECT 4, NOT CHECKED 2 (12 rows; row (iii) holds in all channels at t=1 but fails for PS at t=2, so it is counted under both; predicates met 107, failed 12, plus measured-only results).

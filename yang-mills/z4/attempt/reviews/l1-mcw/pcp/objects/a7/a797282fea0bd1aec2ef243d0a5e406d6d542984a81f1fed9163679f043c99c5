@@ -1,0 +1,56 @@
+
+## results/b64: beta=64.0 T=56 NCH=16 NMEAS=1500 COLL=0 pre_ok=True TAU=True THERM=True tau={'sum_q': 2.3521423416655494, 'E1': 2.910872758303679, 'T2_12': 3.445698884168936, 'plaq': 0.6019095423620948} (Gaussian ref T=32)
+P1 c1: <P>=0.98833011(0.00000136) r=0.995831(0.000116) (1-r)V=1.87 -> met
+single spatial plaquette: mean 0.69319(0.00012) vs Gauss 0.67960; var 0.31950(0.00015) vs Gauss 0.30791 (rel +0.0377); P6(3%+3s) FAILED (measured only at this beta)
+winding E: m=0.37076(0.00387) m b^1/3=1.4830(0.0155) PLAT=True ta=2 TLEN=True
+winding A1: m=0.44059(0.00615) m b^1/3=1.7624(0.0246) PLAT=True ta=2 TLEN=True
+| op | C(0) | Gauss C(0) | R(0) | R(1) | R(2) | R(3) | R(4) | R(5) | R(6) | meff01 | meff12 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| PS | 3.5018(0.0033) | 3.5000 | 1.000e+00(0.0e+00) | 2.019e-02(7.8e-04) | 1.571e-03(4.9e-04) | -6.072e-05(5.3e-04) | 6.166e-04(6.9e-04) | 4.282e-04(2.2e-04) | -2.159e-04(5.3e-04) | 3.9027(0.0385) [G 4.0327] | 2.553(0.297) [G 3.7430] |
+  P2 PS t=1: MC 2.0188e-02(7.8e-04) G 1.7726e-02 dev +3.17 sigma -> met (measured only)
+  P2 PS t=2: MC 1.5710e-03(4.9e-04) G 4.1981e-04 dev +2.33 sigma -> met (measured only)
+  P3 PS meff01 3.9027(0.0385) vs G 4.0327 -> met (measured only)
+  P4 PS soft fit (m=0.4406 from A1 run, t=4..11): A=3.338e-03(1.5e-03) RESOLVED; A b^1/3=1.335e-02 A b^2/3=5.341e-02 A b=2.137e-01
+  P4 PS soft fit (m=0.4504 from A1 pred, t=4..11): A=3.511e-03(1.6e-03) RESOLVED; A b^1/3=1.404e-02 A b^2/3=5.617e-02 A b=2.247e-01
+  P4 PS soft fit (m=0.3708 from E run, t=4..13): A=2.398e-03(1.1e-03) RESOLVED; A b^1/3=9.594e-03 A b^2/3=3.837e-02 A b=1.535e-01
+  P4 PS soft fit (m=0.3766 from E pred, t=4..12): A=2.408e-03(1.1e-03) RESOLVED; A b^1/3=9.630e-03 A b^2/3=3.852e-02 A b=1.541e-01
+| PA | 12.8487(0.0200) | 12.7500 | 1.000e+00(0.0e+00) | 1.970e-02(1.1e-03) | 9.741e-04(7.9e-04) | 2.447e-04(9.9e-04) | 4.427e-04(1.1e-03) | -1.097e-03(9.7e-04) | -4.136e-04(8.6e-04) | 3.9269(0.0535) [G 4.1288] | 3.007(0.805) [G 3.8019] |
+  P2 PA t=1: MC 1.9704e-02(1.1e-03) G 1.6102e-02 dev +3.43 sigma -> FAILED (measured only)
+  P2 PA t=2: MC 9.7414e-04(7.9e-04) G 3.5954e-04 dev +0.78 sigma -> met (measured only)
+  P3 PA meff01 3.9269(0.0535) vs G 4.1288 -> met (measured only)
+  P4 PA soft fit (m=0.4406 from A1 run, t=4..11): A=7.021e-04(3.9e-03) not resolved; 2-sigma bound |A|<8.51e-03; A b^1/3=2.808e-03 A b^2/3=1.123e-02 A b=4.493e-02
+  P4 PA soft fit (m=0.4504 from A1 pred, t=4..11): A=6.779e-04(4.1e-03) not resolved; 2-sigma bound |A|<8.83e-03; A b^1/3=2.712e-03 A b^2/3=1.085e-02 A b=4.338e-02
+| PE | 3.1113(0.0025) | 3.1250 | 1.000e+00(0.0e+00) | 2.052e-02(7.4e-04) | 1.982e-03(5.6e-04) | -2.709e-04(6.1e-04) | 7.363e-04(7.5e-04) | 1.478e-03(5.6e-04) | -7.992e-05(7.5e-04) | 3.8863(0.0362) [G 3.9723] | 2.337(0.283) [G 3.7103] |
+  P2 PE t=1: MC 2.0521e-02(7.4e-04) G 1.8831e-02 dev +2.28 sigma -> met (measured only)
+  P2 PE t=2: MC 1.9817e-03(5.6e-04) G 4.6079e-04 dev +2.72 sigma -> met (measured only)
+  P3 PE meff01 3.8863(0.0362) vs G 3.9723 -> met (measured only)
+  P4 PE soft fit (m=0.3708 from E run, t=4..13): A=4.279e-03(2.3e-03) not resolved; 2-sigma bound |A|<8.93e-03; A b^1/3=1.712e-02 A b^2/3=6.847e-02 A b=2.739e-01
+  P4 PE soft fit (m=0.3766 from E pred, t=4..12): A=4.334e-03(2.4e-03) not resolved; 2-sigma bound |A|<9.14e-03; A b^1/3=1.734e-02 A b^2/3=6.934e-02 A b=2.774e-01
+
+## results/b256: beta=256.0 T=88 NCH=16 NMEAS=1100 COLL=0 pre_ok=True TAU=True THERM=True tau={'sum_q': 9.388002327400145, 'E1': 6.797920928091894, 'T2_12': 8.890978566337967, 'plaq': 0.613811605599764} (Gaussian ref T=32)
+P1 c1: <P>=0.99708181(0.00000053) r=0.996074(0.000181) (1-r)V=2.76 -> met
+single spatial plaquette: mean 0.68735(0.00016) vs Gauss 0.67960; var 0.31462(0.00018) vs Gauss 0.30791 (rel +0.0218); P6(3%+3s) met (measured only at this beta)
+winding E: m=0.23750(0.00389) m b^1/3=1.5080(0.0247) PLAT=True ta=2 TLEN=True
+winding A1: m=0.28307(0.00776) m b^1/3=1.7974(0.0493) PLAT=True ta=2 TLEN=True
+| op | C(0) | Gauss C(0) | R(0) | R(1) | R(2) | R(3) | R(4) | R(5) | R(6) | meff01 | meff12 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| PS | 3.4974(0.0031) | 3.5000 | 1.000e+00(0.0e+00) | 1.868e-02(5.2e-04) | 7.138e-04(4.7e-04) | -1.099e-04(4.4e-04) | 4.162e-05(3.8e-04) | 7.435e-05(5.0e-04) | -1.990e-04(4.2e-04) | 3.9801(0.0281) [G 4.0327] | 3.265(0.654) [G 3.7430] |
+  P2 PS t=1: MC 1.8683e-02(5.2e-04) G 1.7726e-02 dev +1.83 sigma -> met (measured only)
+  P2 PS t=2: MC 7.1381e-04(4.7e-04) G 4.1981e-04 dev +0.63 sigma -> met (measured only)
+  P3 PS meff01 3.9801(0.0281) vs G 4.0327 -> met (measured only)
+  P4 PS soft fit (m=0.2831 from A1 run, t=4..15): A=1.980e-04(9.0e-04) not resolved; 2-sigma bound |A|<1.99e-03; A b^1/3=1.257e-03 A b^2/3=7.984e-03 A b=5.070e-02
+  P4 PS soft fit (m=0.2837 from A1 pred, t=4..15): A=1.989e-04(9.0e-04) not resolved; 2-sigma bound |A|<2.00e-03; A b^1/3=1.263e-03 A b^2/3=8.018e-03 A b=5.091e-02
+  P4 PS soft fit (m=0.2375 from E run, t=4..17): A=1.715e-04(6.8e-04) not resolved; 2-sigma bound |A|<1.53e-03; A b^1/3=1.089e-03 A b^2/3=6.914e-03 A b=4.390e-02
+  P4 PS soft fit (m=0.2372 from E pred, t=4..17): A=1.712e-04(6.8e-04) not resolved; 2-sigma bound |A|<1.53e-03; A b^1/3=1.087e-03 A b^2/3=6.902e-03 A b=4.383e-02
+| PA | 12.7876(0.0167) | 12.7500 | 1.000e+00(0.0e+00) | 1.638e-02(7.0e-04) | -5.799e-04(7.9e-04) | -1.340e-04(6.4e-04) | 4.317e-05(8.4e-04) | 2.804e-04(9.2e-04) | -9.061e-04(8.0e-04) | 4.1118(0.0427) [G 4.1288] | 3.341(1.776) [G 3.8019] |
+  P2 PA t=1: MC 1.6378e-02(7.0e-04) G 1.6102e-02 dev +0.40 sigma -> met (measured only)
+  P2 PA t=2: MC -5.7992e-04(7.9e-04) G 3.5954e-04 dev -1.18 sigma -> met (measured only)
+  P3 PA meff01 4.1118(0.0427) vs G 4.1288 -> met (measured only)
+  P4 PA soft fit (m=0.2831 from A1 run, t=4..15): A=1.596e-03(1.4e-03) not resolved; 2-sigma bound |A|<4.41e-03; A b^1/3=1.013e-02 A b^2/3=6.435e-02 A b=4.086e-01
+  P4 PA soft fit (m=0.2837 from A1 pred, t=4..15): A=1.598e-03(1.4e-03) not resolved; 2-sigma bound |A|<4.42e-03; A b^1/3=1.015e-02 A b^2/3=6.444e-02 A b=4.091e-01
+| PE | 3.1148(0.0033) | 3.1250 | 1.000e+00(0.0e+00) | 2.026e-02(5.9e-04) | 1.599e-03(4.8e-04) | -9.338e-05(7.0e-04) | 4.056e-05(4.7e-04) | -6.663e-05(6.8e-04) | 2.849e-04(5.9e-04) | 3.8991(0.0293) [G 3.9723] | 2.539(0.286) [G 3.7103] |
+  P2 PE t=1: MC 2.0261e-02(5.9e-04) G 1.8831e-02 dev +2.41 sigma -> met (measured only)
+  P2 PE t=2: MC 1.5990e-03(4.8e-04) G 4.6079e-04 dev +2.36 sigma -> met (measured only)
+  P3 PE meff01 3.8991(0.0293) vs G 3.9723 -> met (measured only)
+  P4 PE soft fit (m=0.2375 from E run, t=4..17): A=1.856e-04(9.6e-04) not resolved; 2-sigma bound |A|<2.10e-03; A b^1/3=1.178e-03 A b^2/3=7.482e-03 A b=4.751e-02
+  P4 PE soft fit (m=0.2372 from E pred, t=4..17): A=1.848e-04(9.5e-04) not resolved; 2-sigma bound |A|<2.09e-03; A b^1/3=1.174e-03 A b^2/3=7.452e-03 A b=4.731e-02
