@@ -13,7 +13,8 @@ from zipfile import ZipFile
 ROOT = Path(__file__).resolve().parent
 G4 = ROOT.parents[1]
 SOURCES = ("README.md", "checks.md", "Blocking.lean", "mutations.json", "check.py", "verify.py", "../transfer_check.py")
-ROLES = {"blocking": ("draft", "challenge"), "formalizer": ("draft", "challenge"), "paper": ("challenge",)}
+ROLES = {"blocking": ("draft", "challenge"), "formalizer": ("draft", "challenge"), "paper": ("challenge",),
+         "hamiltonian": ("challenge",)}
 
 
 def sha(data):
@@ -51,6 +52,12 @@ def verify(runtime, method):
             assert sha(candidate) == parent["candidate_sha256"] and raw_review.endswith(b"SOURCE TO AUDIT:\n"+candidate)
             if name == "paper":
                 assert lf(req).endswith(b"\n\nREADME.md\n\n"+lf((ROOT/"README.md").read_bytes()))
+            if name == "hamiltonian":
+                heading = b"### Physical time at fixed spatial spacing\n"
+                page = lf((ROOT/"checks.md").read_bytes()).split(heading,1)[1].split(b"### Director results",1)[0]
+                paper = lf((ROOT/"README.md").read_bytes())
+                source_packet = b"\n\n".join((b"README.md", paper, b"checks.md, physical-time section", heading+page))
+                assert lf(req).split(b"\n\n",1)[1] == source_packet
             if name == "formalizer":
                 assert lf(candidate).replace(b"field_simp [h] <;> ring", b"field_simp [h]\n  ring") in lf(source)
             folders.append(name)
@@ -85,7 +92,12 @@ def verify(runtime, method):
         assert native["kernel_sha256"] == base["KERNEL"]
         assert all(x["start_ns"] <= x["exit_observed_ns"] <= x["readback_ns"] for x in native["observations"])
         computed = json.loads(subprocess.check_output([sys.executable,"-B",ROOT/"check.py"]))
-        for row, saved in zip(computed,read("matrix.json"),strict=True):
+        recorded = read("matrix.json")
+        for x,y in zip(computed["physical_time"]["electric_slopes"],recorded["physical_time"]["electric_slopes"],strict=True):
+            assert isclose(x,y,rel_tol=0,abs_tol=1e-10)
+        for key in ("hamiltonian_slope", "slope_without_vacuum_term"):
+            assert isclose(computed["physical_time"][key],recorded["physical_time"][key],rel_tol=0,abs_tol=1e-10)
+        for row, saved in zip(computed["pairings"],recorded["pairings"],strict=True):
             assert all(row[k] == saved[k] for k in ("g","states","length"))
             assert isclose(row["link_ratio"],saved["link_ratio"],abs_tol=1e-10)
             for p,s in zip(row["pairings"],saved["pairings"],strict=True):
@@ -95,7 +107,8 @@ def verify(runtime, method):
             exterior["deep_replay"](archive,folders,runtime,method)
     return {"declarations":count, "rejected":len(rejected), "native_cases":len(native["observations"]),
             "registers":len(folders), "deep_replayed":len(folders) if runtime else 0,
-            "magnetic_pairings":sum(len(row["pairings"]) for row in computed), "source_sha256":sha(source)}
+            "magnetic_pairings":sum(len(row["pairings"]) for row in computed["pairings"]),
+            "physical_time_slope":computed["physical_time"]["hamiltonian_slope"], "source_sha256":sha(source)}
 
 
 if __name__ == "__main__":
