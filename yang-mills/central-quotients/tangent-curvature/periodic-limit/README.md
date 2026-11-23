@@ -23,6 +23,8 @@ For large scaled momenta in the untilted packet, the in-plane tail falls with th
 
 A four-dimensional nearest-neighbor Gaussian control separates three requirements for a fixed local reading: a bounded midpoint ratio, control at every fixed dyadic clock, and a uniform polynomial short-distance bound. The latter can fail for a bounded hypercubic site scalar even when all fixed dyadic ratios stay finite. [Light-mode overlap and Theorem S](local-overlap/README.md)
 
+Free-field controls for the interaction hypothesis exhibit a nonzero raw two-particle shift in a cubic symmetry channel and calculate the full Wick-square susceptibility ratio under two length normalizations. [Interaction criteria and matching](interaction-controls/README.md)
+
 ## Verification
 
 Two three-generation PCP OS deployments returned identical Lean source. The parent counted live links and temporal faces, the child counted distinct reflected faces and their multiplicities, and the grandchild computed a geometric crossing and emitted the general spectral implication. Hosted Lean 4.19.0 verified ten supporting declarations. In particular, fixed-lag convergence of moment arrays with the stated exponential lower bounds forces the contraction norms to tend to one. Each run rejected an invalid guest request and four changed mathematical statements. The identification of the Wilson field, reflection estimates and application of the transfer construction remain analytic proofs. [Lean source](PeriodicCriticality.lean) · [Guest source](worker.c) · [Receipts](receipts.zip)
