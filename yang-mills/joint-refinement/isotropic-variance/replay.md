@@ -1,5 +1,7 @@
 # Evidence and reproduction
 
+The [full covariance correction](contact.md) identifies the distant conditional-mean correlations with the previously measured raw tail, site by site. Its Gaussian test checks the entire momentum spectrum on four sizes.
+
 The native PCP OS guests emitted the prepared Lean source in three sections. The hosted compiler checked the six declarations under Lean 4.19 and mathlib, including the signed normalization and scalar bounds. Reversing the tensor sign and lowering the shell coefficient from 18 to 17 both fail. An earlier compile lacking the real-number import failed and is recorded in the evidence. The gauge measure, conditional integration, spatial transfer and limiting arguments are manuscript proofs. The recursive PCP builders and challengers ran through a supervisor and child processes using the calibrated Enterprise method. The register and source verifier checks their recorded inputs and post-exit read-backs. These are model-assisted reviews from the same provider. [Compiler source](Isotropic.lean) · [Worker and compiler records](evidence.zip) · [Replay verifier](verify.py)
 
 Two preliminary worker suggestions failed their stated scope. A bound labeled $O(N^3\log\beta)$ in the pressure draft had an extra factor $\beta$ in its derivation. The prior single-site moment already gives $KN^3$ by Cauchy–Schwarz. A cosine-field example for a four-dimensional spacetime sum did not give divergence on a three-dimensional time slice. The sine-field control checks the required slice explicitly. A separate challenge noted that dyadic block control need not cover other sizes through a central momentum estimate alone. The axial proof counts all sites for each even side. Neither the strong-coupling theorem nor the finite weak-coupling measurements give a uniform upper bound on the matched trajectory. Sources for external comparisons include the published Wilson one-link integration and Gibbs covariance method, the primary lattice calibrations and the Yang–Mills group's posted assessment. A separate systematic correction or retraction search was not performed.
@@ -9,6 +11,7 @@ Run from this folder with Python and NumPy. The signed operator comparison also 
 ~~~text
 python controls.py
 python quadratic.py
+python contact.py
 python axes.py
 python stars.py
 python stars.py --extent 10
