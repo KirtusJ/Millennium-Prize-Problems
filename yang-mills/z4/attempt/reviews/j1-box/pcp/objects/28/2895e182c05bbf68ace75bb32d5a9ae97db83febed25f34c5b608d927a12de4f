@@ -1,0 +1,8 @@
+'YangMills.PeriodicSpectrum.meanVariance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.PeriodicSpectrum.volumeDilation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.PeriodicSpectrum.blockCost' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.PeriodicSpectrum.colorAverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.PeriodicSpectrum.corrector' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.PeriodicSpectrum.pairedSlope' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.PeriodicSpectrum.windingDeficit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.PeriodicSpectrum.shellAbsorption' depends on axioms: [propext, Classical.choice, Quot.sound]

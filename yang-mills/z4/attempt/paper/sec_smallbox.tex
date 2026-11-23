@@ -83,7 +83,8 @@ capped valley arms in place of the walk estimate), was written by sessions of th
 Its upper half and its lemmas up to tightness were challenged once by a session of the same lineage
 ($11$ of $12$ items stood; one sign defect, the bound used survives). The concluding steps of the lower half,
 written in full by another session of that lineage, which also rederived one constant and replaced one
-partition of unity, have not been challenged. It has not been read by a person, and it is not reproduced here.
+partition of unity, were challenged once in the same way ($22$ of $24$ items stood, one not checked; two
+incomplete justifications and one overestimated exponent, none affecting the conclusion). It has not been read by a person, and it is not reproduced here.
 
 \begin{remark}[All center sectors]\label{sb:rem-center}
 With all $2^k$ center characters restored to the gauge-invariant space, the same author reports that for
@@ -167,8 +168,16 @@ With $\beta=4/g^2$ this is $mL=e'g^{2/3}$, $e'=4^{-1/3}e$: the $g^{2/3}/L$ form 
 expansion of L\"uscher~\cite{Lu83}, with the leading-order effective Hamiltonian of~\cite[eq.~(9)]{vB00}
 (the agreement of coefficients was checked against~\cite{vB00}, not against~\cite{Lu83}); the bare coupling $g$ here agrees with the
 renormalised $g(L)$ of the literature at leading order only. The derivation neglects the non-constant
-modes and assumes the replacement of $T$ by $e^{-H}$ on the box, which is the box analogue of the reported
-statement and is not proved for $L>1$.
+modes and assumes the replacement of $T$ by $e^{-H}$ on the box, the box analogue of the reported
+statement. For each fixed box the same author has since written a derivation of this scaling, with
+coefficient $(e_1-e_0)/L$ on a cube of side $L$ and constants not uniform in $L$ (repository folder
+\url{yang-mills/observable-normalization/periodic-box-spectrum/}, commit \repo{d0a7ccb}). A session of the
+first lineage read it and found no false line; it found the two-sided statement for the full spectrum
+conditional on an exterior estimate it could not check, and two gaps of exposition. An exact Gaussian
+computation on boxes $2^3$, $3\times2\times2$ and $3^3$ confirmed the factor $L^3$ in the mass of the constant
+mode. A Monte Carlo test on $2^3$ did not meet its own autocorrelation rule and gives no number. We do not
+rely on that derivation: the conclusion of this subsection needs only that the predicted gap vanishes as
+$L\to\infty$.
 The literature on this expansion places the end of its regime at $z=mL$ of order one: effects of the
 boundary of the fundamental domain from $z>0.9$ \cite[pp.~11--12]{vB00}, and a crossover near $z\approx2$
 (\cite{LM84}, abstract). The route therefore gives no lower bound uniform in the volume, and no lower bound

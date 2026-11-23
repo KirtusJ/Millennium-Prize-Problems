@@ -1,0 +1,1 @@
+Backward recurrence started at N=2000 (x=100) / 30000 (x=1e4) with r_N=0. Quadrature: trapezoid, 2e6 nodes, scaled integrand (spectrally accurate for periodic-even integrand). kappa_n=I_{n+1}/I_1 as product of r_1..r_n. Tolerance 1e-12 relative on (b), fixed pre-run. See gc_result.txt.

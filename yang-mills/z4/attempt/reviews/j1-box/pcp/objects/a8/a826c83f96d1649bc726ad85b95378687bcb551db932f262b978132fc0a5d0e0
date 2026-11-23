@@ -1,0 +1,2 @@
+/home/user/z4-workers/j1-box/mc_box.py:116: RuntimeWarning: Mean of empty slice
+  err = np.sqrt((nb - 1) * np.nanmean((jk - jk.mean(0)) ** 2, axis=0))

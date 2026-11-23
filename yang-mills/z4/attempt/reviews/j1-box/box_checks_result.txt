@@ -1,0 +1,38 @@
+MET    P2 slice dim (2, 2, 2) | dim=17 expect 17
+MET    P1 constant-mode coefficient (2, 2, 2) s=0.3 | kappa/n=1.000000000000, rel.err=0.00e+00
+MET    P1 constant-mode coefficient (2, 2, 2) s=0.1 | kappa/n=1.000000000000, rel.err=0.00e+00
+MET    P2 hard spectrum (2, 2, 2) | n_eig=14 expect 14 maxdev=8.881784197001252e-15
+MET    P3 E_*N (2, 2, 2) | E*=44.3983569740 eig=44.3983569740 gap d/g=1-exp(-1.762747)
+MET    P3 E_* 2^3 two-site formula | 44.3983569740
+MET    P2 slice dim (3, 2, 2) | dim=25 expect 25
+MET    P1 constant-mode coefficient (3, 2, 2) s=0.3 | kappa/n=1.000000000000, rel.err=2.13e-16
+MET    P1 constant-mode coefficient (3, 2, 2) s=0.1 | kappa/n=1.000000000000, rel.err=1.20e-35
+MET    P2 hard spectrum (3, 2, 2) | n_eig=22 expect 22 maxdev=7.105427357601002e-15
+MET    P3 E_*N (3, 2, 2) | E*=68.4241728362 eig=68.4241728362 gap d/g=1-exp(-1.566799)
+MET    P2 slice dim (3, 3, 3) | dim=55 expect 55
+MET    P1 constant-mode coefficient (3, 3, 3) s=0.3 | kappa/n=1.000000000000, rel.err=2.41e-34
+MET    P1 constant-mode coefficient (3, 3, 3) s=0.1 | kappa/n=1.000000000000, rel.err=2.51e-35
+MET    P2 hard spectrum (3, 3, 3) | n_eig=52 expect 52 maxdev=9.769962616701378e-15
+MET    P3 E_*N (3, 3, 3) | E*=159.8347551755 eig=159.8347551755 gap d/g=1-exp(-1.566799)
+MET    P4 strict winding (2, 2, 2) | 200/200 qualify (non-central, strict); min diff=2.973e-01
+MET    P4 central equality (2, 2, 2) | 8 grid twists, max|diff|=1.8e-15
+MET    P4 strict winding (3, 2, 2) | 200/200 qualify (non-central, strict); min diff=4.642e-01
+MET    P4 central equality (3, 2, 2) | 12 grid twists, max|diff|=3.6e-15
+MET    P4 strict winding (4, 3, 2) | 200/200 qualify (non-central, strict); min diff=2.479e-01
+MET    P4 central equality (4, 3, 2) | 24 grid twists, max|diff|=2.1e-14
+MET    P4 strict winding (5, 3, 3) | 200/200 qualify (non-central, strict); min diff=1.607e-01
+MET    P4 central equality (5, 3, 3) | 45 grid twists, max|diff|=9.9e-14
+MET    P5 oscillator m=0.01 | top=0.9512491645 pred=0.9512492197
+MET    P5 oscillator m=0.1 | top=0.8543089536 pred=0.8543089536
+MET    P5 oscillator m=1.0 | top=0.6180339887 pred=0.6180339887
+MET    P6 hard zero-point (3, 2, 2) dir | dE/dr=7.1e-11 ratio=4.00016 kappa_dir=-0.945373
+MET    P6 hard zero-point (3, 2, 2) dir | dE/dr=0.0e+00 ratio=4.00034 kappa_dir=-0.296629
+MET    P6 hard zero-point (3, 2, 2) dir | dE/dr=0.0e+00 ratio=3.99710 kappa_dir=1.098466
+MET    P6 hard zero-point (3, 2, 2) dir | dE/dr=0.0e+00 ratio=3.99764 kappa_dir=0.299162
+MET    P6 hard zero-point (3, 2, 2) dir | dE/dr=0.0e+00 ratio=3.99571 kappa_dir=0.288875
+MET    P6 hard zero-point (3, 3, 3) dir | dE/dr=0.0e+00 ratio=4.00084 kappa_dir=-1.455126
+MET    P6 hard zero-point (3, 3, 3) dir | dE/dr=-1.4e-10 ratio=4.00113 kappa_dir=-1.455162
+MET    P6 hard zero-point (3, 3, 3) dir | dE/dr=0.0e+00 ratio=4.00044 kappa_dir=-1.455078
+MET    P6 hard zero-point (3, 3, 3) dir | dE/dr=0.0e+00 ratio=4.00011 kappa_dir=-1.455038
+MET    P6 hard zero-point (3, 3, 3) dir | dE/dr=0.0e+00 ratio=4.00057 kappa_dir=-1.455094
+SUMMARY met=37 failed=0
