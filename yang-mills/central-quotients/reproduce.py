@@ -53,11 +53,11 @@ def guest(out, config, task, label, expected_exit):
     return serial
 
 
-def work(out, task):
+def work(out, task, tasks=TASKS, entry=__file__):
     config = json.loads((out / "run.json").read_text())
     depth = task[0]
-    stage = out / TASKS[depth]
-    serial = guest(out, config, task, TASKS[depth], 0)
+    stage = out / tasks[depth]
+    serial = guest(out, config, task, tasks[depth], 0)
     fragments = re.findall(r"^LEAN-BEGIN\n(.*?)^LEAN-END$", serial, re.S | re.M)
     requests = re.findall(r"^NEXT (\d+) (\d+) (\d+)$", serial, re.M)
     if len(fragments) != 1 or len(requests) != int(depth < 2):
@@ -69,9 +69,9 @@ def work(out, task):
             raise ValueError(f"invalid child request {requests[0]}")
         if depth and tuple(task[1:]) != successor[1:]:
             raise ValueError("witness changed in transit")
-        checked([config["delegate"], "-", TASKS[depth+1], TASKS[depth+1], "--",
-                 sys.executable, __file__, "worker", str(out), *map(str, successor)])
-        child = out / TASKS[depth+1]
+        checked([config["delegate"], "-", tasks[depth+1], tasks[depth+1], "--",
+                 sys.executable, entry, "worker", str(out), *map(str, successor)])
+        child = out / tasks[depth+1]
         suffix = (child / "subtree.lean").read_bytes()
         if digest(suffix) != (child / "subtree.sha256").read_text().strip():
             raise ValueError("child result digest mismatch on post-exit read-back")

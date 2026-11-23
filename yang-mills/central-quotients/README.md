@@ -60,3 +60,7 @@ The parent program already distinguished local from global holonomy in its $\mat
 ## Formal coverage
 
 The Lean definitions use integer Hamilton multiplication, explicit signed lifts, and a cube with twelve edges. Nine generated theorems check the finite identities. The classification of Klein-four tuples, the commuting-lift criterion, the four-cycle Pfaffian, and the cube counts are kernel-checked. For the cube, 32 even face-sign patterns each have 128 edge assignments. The direct integer sum of 64 times the Boltzmann weight over 4096 edge assignments is 1,046,656. Dividing by $64\cdot4096$ gives $8177/2048$. The covering-group interpretation, Haar pushforward and general surface expansion have the mathematical arguments above. The Lean file does not formalize measure theory or quantum-field reconstruction. [Definitions](Model.lean) · [Generated proofs](CentralQuotient.lean) · [Execution and replay](execution.md)
+
+## Local response and observable histories
+
+The open cube strip has an exact binary sign chain and a sharp conditional decay rate at every finite coupling. In a continuous-time single-plaquette model the complete history of center-even observations detects the entire interacting class-function sector. Its first spectral weight can nevertheless vanish with the coupling. [Strip theorem](local-response/) · [Transfer test](local-response/transfer.md) · [Observable sector and its gap](local-response/rotor.md)
