@@ -1,0 +1,54 @@
+E1[1]: MET tun_upper.tex occurrences=1 expected=1 (upper #1 (nit: name Jentzsch's theorem))
+E1[2]: MET tun_upper.tex occurrences=1 expected=1 (upper #4 DEFECT (status paragraph); brief (i))
+E1[3]: MET tun_upper.tex occurrences=1 expected=1 (upper #5 / #23 (numbers of the thresholds item; tau, delta stated); brief (i))
+E1[4]: MET tun_upper.tex occurrences=1 expected=1 (brief (i) (Lean covers scalar lemmas only; Lean files not part of the note))
+E1[5]: MET tun_upper.tex occurrences=1 expected=1 (upper #11 DEFECT (Remark tu:U-R-rem: restrict to beta>=256))
+E1[6]: MET tun_upper.tex occurrences=1 expected=1 (upper #20 (nit: H-tilde_delta(0) undefined))
+E1[7]: MET tun_upper.tex occurrences=1 expected=1 (upper #23 DEFECT (Remark tu:U-F-num: state tau, delta; correct two numbers))
+E1[8]: MET tun_upper.tex occurrences=1 expected=1 (upper #23 (provenance of the corrected numbers))
+E1[9]: MET tun_upper.tex occurrences=1 expected=1 (upper #27 (nit: tu:U-weight(1) at a=pi/2))
+E1[10]: MET tun_upper.tex occurrences=1 expected=1 (upper #34 (nit: name tu:U-schur and tu:U-A in Remark tu:U-uses))
+E1[11]: MET tun_lower.tex occurrences=11 expected=11 (lower notation nit (epsilon(sin a) -> epsilon(a), 11 occurrences))
+E1[12]: MET tun_lower.tex occurrences=1 expected=1 (lower #10 (nit: q at S=0))
+E1[13]: MET tun_lower.tex occurrences=1 expected=1 (lower #8 GAP (tu:L-M4: phi_min(eta)>0); brief (iii))
+E1[14]: MET tun_lower.tex occurrences=1 expected=1 (lower notation nit (Delta S^2 is a definition))
+E1[15]: MET tun_lower.tex occurrences=1 expected=1 (brief (i) (E13 status line reconciled with the gap bounds now on the page))
+E1[16]: MET tun_lower.tex occurrences=1 expected=1 (lower notation nit (a_1 = e^{-3eta/4} renamed bar a in S4 Step 4))
+E1[17]: MET tun_lower.tex occurrences=1 expected=1 (lower notation nit (a_1 renamed bar a, cont.))
+E1[18]: MET tun_lower.tex occurrences=1 expected=1 (lower #25 (mu is defined, not fixed, in Section 8.1))
+E1[19]: MET tun_lower.tex occurrences=1 expected=1 (lower #25 DEFECT (8.1: M fixed as a function of eta); brief (iv))
+E1[20]: MET tun_lower.tex occurrences=1 expected=1 (lower #25 DEFECT, #15 nit (8.1: delta, tau, (W1)/(W3), chi, Theta-tilde, C; mu moved out); brief (iv))
+E1[21]: MET tun_lower.tex occurrences=1 expected=1 (lower #25 DEFECT (8.1: every beta_0 a function of eta alone, checked threshold by threshold); brief (iv))
+E1[22]: MET tun_lower.tex occurrences=1 expected=1 (lower notation nit (set S renamed mathcal S in Section 8))
+E1[23]: MET tun_lower.tex occurrences=1 expected=1 (lower notation nit (set S renamed, cont.))
+E1[24]: MET tun_lower.tex occurrences=1 expected=1 (lower #26 nit (8.2: chains padded to a common n))
+E1[25]: MET tun_lower.tex occurrences=1 expected=1 (lower #26 nit (mu' defined))
+E1[26]: MET tun_lower.tex occurrences=1 expected=1 (lower notation nit (set S renamed, cont.))
+E1[27]: MET tun_lower.tex occurrences=1 expected=1 (lower notation nit (set S renamed, cont.))
+E1[28]: MET tun_lower.tex occurrences=1 expected=1 (lower notation nit (set S renamed, cont.))
+E1[29]: MET tun_lower.tex occurrences=1 expected=1 (brief (i) + upper #4 (status line of tu:L-main reconciled))
+E2: MET no epsilon(sin ...) left in tun_lower.tex
+E3: MET main.tex
+E3: MET preamble.tex
+C1: MET eta=0.4
+C2: MET eta=0.4 |Simpson-Theta|=0.00e+00
+C3: MET eta=0.4 phi_min~4.4765e-03 (attained at a=0.4233)
+M1: measured only eta=0.4 H<= 10.3763
+C1: MET eta=0.2
+C2: MET eta=0.2 |Simpson-Theta|=0.00e+00
+C3: MET eta=0.2 phi_min~1.4132e-03 (attained at a=0.2027)
+M1: measured only eta=0.2 H<= 12.3411
+C1: MET eta=0.1
+C2: MET eta=0.1 |Simpson-Theta|=0.00e+00
+C3: MET eta=0.1 phi_min~4.8668e-04 (attained at a=0.1003)
+M1: measured only eta=0.1 H<= 15.1197
+C1: MET eta=0.05
+C2: MET eta=0.05 |Simpson-Theta|=7.77e-16
+C3: MET eta=0.05 phi_min~1.7094e-04 (attained at a=0.0500)
+M1: measured only eta=0.05 H<= 25.0292
+C1: MET eta=0.01
+C2: MET eta=0.01 |Simpson-Theta|=1.10e-13
+C3: MET eta=0.01 phi_min~1.5346e-05 (attained at a=0.0100)
+M1: measured only eta=0.01 H<= 125.1742
+C4: MET 2asinh(cos(1/4)) - 0.4 = 1.3184
+RESULT: ALL MET

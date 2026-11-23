@@ -1,0 +1,2 @@
+check K115: exit 0 (expected 0) in 522805 ms | output cb397918cc11 | event 117 head d44f76038087
+  /home/user/z4-workers/w1-fin/report.md: 16 STANDS, 0 DEFECT, 1 NOT CHECKED (the corrected numbers come from the referee and I did not recompute them); 29 changes, all logged in CHANGES.md, and the note compiles to 32 pages with 0 undefined references.

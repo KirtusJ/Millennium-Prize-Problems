@@ -1,0 +1,52 @@
+lines orig=1069 patched=1096
+unmerged hunks (plain opcodes): 27
+merged hunks (gap<=3): 18
+proof blocks (patched): [(30, 46), (60, 65), (77, 84), (100, 111), (132, 141), (193, 219), (252, 259), (282, 290), (332, 348), (403, 420), (447, 474), (516, 544), (570, 578), (595, 616), (638, 652), (686, 745), (783, 792), (803, 810), (830, 840), (854, 860), (883, 888), (902, 907), (922, 930), (1018, 1045), (1065, 1078), (1092, 1094)]
+notes: []
+--- UNMERGED
+1	insert	orig none(after 173)	patched 174-174	inside_proof=no
+2	replace	orig 226-227	patched 227-228	inside_proof=no
+3	replace	orig 230-230	patched 231-231	inside_proof=no
+4	replace	orig 234-235	patched 235-241	inside_proof=no
+5	replace	orig 249-250	patched 255-256	inside_proof=yes
+6	replace	orig 308-308	patched 314-314	inside_proof=no
+7	replace	orig 437-437	patched 443-443	inside_proof=no
+8	replace	orig 613-613	patched 619-620	inside_proof=no
+9	replace	orig 702-703	patched 709-710	inside_proof=yes
+10	replace	orig 718-718	patched 725-725	inside_proof=yes
+11	replace	orig 720-720	patched 727-727	inside_proof=yes
+12	replace	orig 722-722	patched 729-729	inside_proof=yes
+13	replace	orig 724-724	patched 731-731	inside_proof=yes
+14	replace	orig 934-934	patched 941-941	inside_proof=no
+15	replace	orig 940-940	patched 947-947	inside_proof=no
+16	replace	orig 942-942	patched 949-958	inside_proof=no
+17	insert	orig none(after 943)	patched 960-961	inside_proof=no
+18	insert	orig none(after 948)	patched 967-972	inside_proof=no
+19	replace	orig 960-961	patched 984-985	inside_proof=no
+20	replace	orig 966-966	patched 990-990	inside_proof=no
+21	replace	orig 976-976	patched 1000-1001	inside_proof=no
+22	replace	orig 987-987	patched 1012-1012	inside_proof=no
+23	replace	orig 1032-1032	patched 1057-1057	inside_proof=no
+24	replace	orig 1041-1042	patched 1066-1067	inside_proof=yes
+25	replace	orig 1044-1044	patched 1069-1069	inside_proof=yes
+26	replace	orig 1047-1047	patched 1072-1072	inside_proof=yes
+27	replace	orig 1055-1058	patched 1080-1085	inside_proof=no
+--- MERGED
+1	insert	orig none(after 173)	patched 174-174	inside_proof=no
+2	merged	orig 226-235	patched 227-241	inside_proof=no
+3	replace	orig 249-250	patched 255-256	inside_proof=yes
+4	replace	orig 308-308	patched 314-314	inside_proof=no
+5	replace	orig 437-437	patched 443-443	inside_proof=no
+6	replace	orig 613-613	patched 619-620	inside_proof=no
+7	replace	orig 702-703	patched 709-710	inside_proof=yes
+8	merged	orig 718-724	patched 725-731	inside_proof=yes
+9	replace	orig 934-934	patched 941-941	inside_proof=no
+10	merged	orig 940-943	patched 947-961	inside_proof=no
+11	insert	orig none(after 948)	patched 967-972	inside_proof=no
+12	replace	orig 960-961	patched 984-985	inside_proof=no
+13	replace	orig 966-966	patched 990-990	inside_proof=no
+14	replace	orig 976-976	patched 1000-1001	inside_proof=no
+15	replace	orig 987-987	patched 1012-1012	inside_proof=no
+16	replace	orig 1032-1032	patched 1057-1057	inside_proof=no
+17	merged	orig 1041-1047	patched 1066-1072	inside_proof=yes
+18	replace	orig 1055-1058	patched 1080-1085	inside_proof=no

@@ -1,0 +1,23 @@
+All 22 repair items from the two referee reports have a matching change in the diff, and none is missing. The one thing to look at is a change in `tun_upper.tex` that neither report asks for: one hunk rewords the Lean-status paragraph (patched `tun_upper.tex` 113–115). It narrows a claim and is harmless.
+
+- **Q1:** every DEFECT, the GAP, the nits and the corrected numbers are covered. The status paragraph repair (item U#4) takes the "remove the qualifier" option. Its pointer holds: `L-taylor` and `L-gauss` both sit in Section `tu:L-sec-sub`.
+- **Q2:** the diff has 9 hunks in `tun_upper.tex` and 18 in `tun_lower.tex`. Every hunk traces to a repair item except that Lean wording hunk.
+- **Q3:** `main.tex` and `preamble.tex` are identical.
+- **Q4:** no hunk changes a proof step beyond its repair. Five hunks lie inside proof blocks (one in the upper file, four in the lower file). Each is a rename or a short closing remark.
+
+One predicate failed. My expectation that no hunk lies inside a proof block was wrong. That was my own guess, not a defect of the target.
+
+The grandchild (T187) ran the independent recount of `tun_lower.tex`. It agreed with my merged hunk count of 18 and with the set of lower hunks that lie inside proofs. It also passed its control (3025). I reran its script and got identical output. T187 is released. My control is 2870.
+
+Both register verifies pass:
+- **Python:** `result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)`
+- **Rust:** `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.`
+
+`result.md` has the full tables, predicates and rerun commands.
+
+Files are in /home/user/z4-workers/w1-fin/child:
+- result.md
+- hunks_out.txt
+- hunks.py
+- control.txt
+- notes.md

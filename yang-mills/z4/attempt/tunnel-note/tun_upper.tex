@@ -35,8 +35,9 @@ $\langle hUh^{-1},hU'h^{-1}\rangle=\langle U,U'\rangle$, and $V$ is invariant un
 gauge transformations, $T$ commutes with $\sigma_1$, $\sigma_2$ and with gauge transformations.
 
 Since the kernel of $T$ is continuous and strictly positive on the compact space $X$, $T$ is compact
-(Hilbert--Schmidt), its largest eigenvalue $\lambda:=\|T\|$ is simple, and its eigenvector can be chosen
-strictly positive. We call it $g$, with $\|g\|=1$. Because the eigenvalue is simple and $T$ commutes with
+(Hilbert--Schmidt), and by Jentzsch's theorem (the Perron--Frobenius theorem for integral operators with
+a strictly positive continuous kernel) its largest eigenvalue $\lambda:=\|T\|$ is simple, and its eigenvector
+can be chosen strictly positive. We call it $g$, with $\|g\|=1$. Because the eigenvalue is simple and $T$ commutes with
 the flips and gauge transformations, $g$ is invariant under them; in particular $g$ lies in the sector
 even under $\sigma_1$ and $\sigma_2$, and $\lambda=\lambda_{ee}$, the top eigenvalue of $T$ on the
 gauge-invariant functions even under both flips.
@@ -81,16 +82,24 @@ $\beta\to\infty$. The lower bound on $\lambda_{ee}$ and $\lambda_{eo}$ is all th
 
 \subsection{What is and is not claimed}\label{tu:U-sec-status}
 \begin{enumerate}
-\item \emph{Status.} Theorem~\ref{tu:U-thm} is proved in writing in this note. The proofs were written
-by sessions of one model family (Claude, Anthropic), working as a director and workers, and were
-attacked by other sessions of the same family. Agreement among them is not independent review. The
+\item \emph{Status.} Both halves of Theorem~\ref{tu:U-thm} are written out in this note:
+$\liminf\ge c^*$ in Sections~\ref{tu:U-sec-kernel}--\ref{tu:U-sec-agmon} (Theorem~\ref{tu:U-main}) and
+$\limsup\le c^*$ in Sections~\ref{tu:L-sec-exact}--\ref{tu:L-sec-assembly} (Theorem~\ref{tu:L-main}). After the
+patches no step of the second half is conditional on anything that is not on the page: it uses the results of
+the first half, proved in Sections~\ref{tu:U-sec-kernel}--\ref{tu:U-sec-agmon}, and the gap bounds of
+Lemma~\ref{tu:L-gauss} and the $\Delta h$ bound of Lemma~\ref{tu:L-taylor}, on which an earlier status line made
+Theorem~\ref{tu:L-main} conditional and which are now derived in Section~\ref{tu:L-sec-sub}. This is all that is
+established: a complete written proof that has been checked only by its authors' model family. All of it was
+written, patched and refereed by sessions of one model family (Claude, Anthropic), working as director,
+workers, challengers and referees, and by no one else. Agreement among them is not independent review. The
 note has not been read by a session of another model lineage or by a person.
 \item \emph{No rate.} The theorem is a limit statement. No rate of convergence is proved.
 \item \emph{Thresholds.} The thresholds in $\beta$ beyond which the estimates of this note are
 effective are explicit in principle and useless in practice. For example the explicit form of
 Lemma~\ref{tu:U-F} (Theorem~\ref{tu:U-F-master}) gives a deficit below $0.2$ uniformly in
-$\sin a\in[0.1,1]$ only for $\beta$ of order $10^{13}$ to $10^{14}$; at $\beta\le4096$ its deficit is $8.6$
-to $14$ nats. Other steps (in the second half) become effective only for $\beta$ of order $10^{8}$ or
+$\sin a\in[0.1,1]$ only from $\beta\approx2.0\cdot10^{13}$ on (with $\tau=\delta=\beta^{-1/3}$;
+Remark~\ref{tu:U-F-num}); for $100\le\beta\le4096$ its deficit is $7.3$ to $14.2$ nats. All explicit
+thresholds of this note are far beyond any $\beta$ at which $T$ can be computed. Other steps (in the second half) become effective only for $\beta$ of order $10^{8}$ or
 beyond, and the explicit lower bound on $\lambda_{ee}$ in Lemma~\ref{tu:L-L4} is still about $0.75$ at
 $\beta=10^{16}$. These numbers are measurements of the explicit bounds, not of the operator.
 \item \emph{Numerics.} Measured splittings of $T$ up to $\beta=256$ (double and double-double
@@ -101,8 +110,9 @@ $0.15\%$. A fit at finite $\beta$ does not establish the limit and is not used i
 $|t|\le\delta\le1$, the identities $\alpha/2-S^2=c/A$ and $\log A=2\operatorname{asinh}S$ of
 Lemma~\ref{tu:U-fixed}, the inequality of Lemma~\ref{tu:U-amgm} and the duality bound of
 Lemma~\ref{tu:U-outer} (not its Taylor step) were checked in Lean 4 with Mathlib by the authors of the
-working files. Nothing else in this note is formalised. These Lean files were not compiled in the
-preparation of this text.
+working files. Lean covers these scalar lemmas only; the remarks ``Lean-checked'' elsewhere in this note
+also refer to scalar steps in the working files. Nothing else in this note is formalised. The Lean files are
+not part of this note and were not compiled in the preparation of this text.
 \end{enumerate}
 
 \section{The kernel, coordinates, exponential moments, and the fibre reduction}\label{tu:U-sec-kernel}
@@ -324,7 +334,8 @@ note; it serves only to compute $\varepsilon_{\mathrm{eff}}$ numerically. The to
 spread along the circle of (3) and Gaussian across it; it is not concentrated at two points.
 \emph{Measured} (working file TUNNEL\_THEOREM \S1(iii), not recomputed here):
 $\varepsilon_{\mathrm{eff}}(a)-\varepsilon(a)=-c(a)/\beta$ with $c(a)=0.98,0.95,0.86,0.76,0.68,0.65$ at
-$a=0.05,0.1,0.3,0.6,1.0,\pi/2$, the same at $\beta=64,256,1024$ to within $2\%$. A challenger
+$a=0.05,0.1,0.3,0.6,1.0,\pi/2$, the same at $\beta=256,1024$ to within $2\%$ (not at $\beta=64$: a referee
+recomputation gives $c=1.04$ and $0.98$ at $a=0.05$ and $0.1$ there). A challenger
 reproduced $\beta(\varepsilon_{\mathrm{eff}}-\varepsilon)\in[-1.14,-0.65]$ over $24$ cases with an independent
 Nystr\"om discretisation.
 \end{remark}
@@ -407,7 +418,9 @@ For $0<\delta\le1$ and $z>0$,
 e^{-z}I_0(z)\le\tilde H_\delta(z):=\min(1,H_\delta(z)),\qquad
 H_\delta(z)=\bigl[2\pi z(1-5\delta^2/48)\bigr]^{-1/2}+e^{-z(1-\cos\delta)},
 \]
-and $\tilde H_\delta$ is nonincreasing in $z$.
+and $\tilde H_\delta$ is nonincreasing in $z$. (We put $\tilde H_\delta(0):=1$; the bound and the monotonicity
+then hold for $z\ge0$, since $e^{-0}I_0(0)=1$. The value at $0$ occurs in Theorem~\ref{tu:U-F-master} only
+on the null set $r'=1$.)
 \end{lemma}
 
 \begin{proof}
@@ -545,13 +558,17 @@ $\varepsilon_{\mathrm{eff}}(a)\ge\varepsilon(a)-\eta$.
 \end{proof}
 
 \begin{remark}[Size of $\beta_0$; measured]\label{tu:U-F-num}
-$\beta_0(\eta)$ is explicit but large. For $\eta=0.2$ (so $s_0=0.1$) the deficit $\log\max(M_{\rm in},AM_{\rm out})$, maximised
-over $s\in[0.1,1]$ on a grid, first falls below $0.2$ at $\beta\approx2.2\cdot10^{13}$ (worst $s=0.1$); at $s=0.1$,
-$\beta=10^{12}$ it is $24.9$; at $s=1$, $\beta=10^{11}$ it is $5\cdot10^{-4}$. At $\beta\le4096$ the deficit is $8.6$ to $14$ nats.
+$\beta_0(\eta)$ is explicit but large. For $\eta=0.2$ (so $s_0=0.1$) and $\tau=\delta=\beta^{-1/3}$ (as in
+Corollary~\ref{tu:U-F-cor}(b)), the deficit $\log\max(M_{\rm in},AM_{\rm out})$, maximised
+over $s\in[0.1,1]$ on a grid, first falls below $0.2$ at $\beta\approx2.03\cdot10^{13}$ (worst $s=0.1$); at $s=0.1$,
+$\beta=10^{12}$ it is $24.9$; at $s=1$, $\beta=10^{11}$ it is $5\cdot10^{-4}$. For $100\le\beta\le4096$ the deficit is $7.33$ to
+$14.23$ nats (for $\beta\le125$ the hypothesis $\tau<1/5$ fails, so there this is only a value of the formula). (Corrected
+by a referee recomputation; the working file had $2.2\cdot10^{13}$ and $8.6$ to $14$.)
 The loss is in the outer region ($I_0\le e^z$ and the area-times-supremum bound), not in the choice of test
 function: the Barta ratio of $\psi$ computed by quadrature satisfies $-\log\sup B-\varepsilon=-O(1/\beta)$ (between
 $-4.1\cdot10^{-4}$ and $-2\cdot10^{-4}$ at $\beta=4096$ for $s\ge0.1$). These are measurements by the author and a challenger
-of the working file, not recomputed here. A rate $\varepsilon_{\mathrm{eff}}\ge2\operatorname{asinh}s-3(648\log\beta/\beta)^{1/4}$
+of the working file, recomputed only by a referee of the same model family (who reproduced them with the corrections
+above). A rate $\varepsilon_{\mathrm{eff}}\ge2\operatorname{asinh}s-3(648\log\beta/\beta)^{1/4}$
 is claimed in the working file with a sketch only; it is not proved and not used.
 \end{remark}
 
@@ -671,6 +688,8 @@ c^*-\pi\sqrt{6\eta}\le c^\rho_\eta\le c^*_\eta:=\int_0^\pi\sqrt{2(\varepsilon-\e
 $I\cap[\pi/2,\pi]$ by symmetry). The window $(\frac\pi2-\frac\tau2,\frac\pi2+\frac\tau2)$ does not meet $I$: there
 $\varepsilon\ge2\operatorname{asinh}(\cos\frac12)>1.3>\eta$. Hence $\Phi=0$ on the open set $I$, so $\Phi'=0$ there. Outside $I$,
 $\Phi'^2/2\le(1-\delta)^2f'^2/2\le(1-\delta)^2\rho_\eta(\varepsilon)\le(1-\delta)^2(\varepsilon-\eta)$, using (W3) and (W1).
+At $a=\pi/2$, where $f'$ is not defined, the bound follows by continuity of $\tilde f'$ (for the $\tilde f$ of
+Lemma~\ref{tu:U-W13}, $\tilde f'(\pi/2)=0$).
 $|\Phi'|\le L$ since $\varepsilon\le\varepsilon(\pi/2)$.
 
 (2) Near $a=0$ and $a=\pi$, $\Phi$ vanishes, so $\Phi\circ a$ vanishes near $U=\pm1$. On $\{0<a<\pi\}$, $a$ is the
@@ -863,7 +882,8 @@ Letting $\delta,\tau,\eta\to0$ gives the claim.
 \begin{remark}[What the proof uses]\label{tu:U-uses}
 Theorem~\ref{tu:U-main} uses: Lemma~\ref{tu:U-kernel}; Lemma~\ref{tu:U-K} (with its radial form);
 Lemma~\ref{tu:U-R}(1),(2); Lemma~\ref{tu:U-F}; the weight of \S\ref{tu:U-sec-weight}, whose ingredients (W1) and (W3) are
-constructed in Lemma~\ref{tu:U-W13}; Proposition~\ref{tu:U-B}(1) for $u=g$; Lemma~\ref{tu:U-flux}; and the lower
+constructed in Lemma~\ref{tu:U-W13}; Proposition~\ref{tu:U-B}(1) for $u=g$, and through it
+Lemmas~\ref{tu:U-schur} and~\ref{tu:U-A}; Lemma~\ref{tu:U-flux}; and the lower
 bounds $\lambda_{ee},\lambda_{eo}\ge e^{-\eta/4}$ from Lemma~\ref{tu:L-L4} of the second half. The order of limits is:
 $\eta,\delta,\tau$ and the weight fixed, then $\beta\to\infty$, then $\delta,\tau,\eta\to0$. The harmonic picture of the
 two-dimensional valley (the minimising tunnelling path runs along $\sin a_2=0$) explains why a weight in the slow

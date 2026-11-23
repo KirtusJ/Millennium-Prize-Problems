@@ -1,0 +1,210 @@
+main.tex: IDENTICAL (P met)
+preamble.tex: IDENTICAL (P met)
+tun_upper.tex: DIFFERS, 10 opcodes, 18 proof blocks
+tun_upper.tex: 9 hunks (merged if gap<=3 lines)
+--- tun_upper.tex H1: orig 38-39 -> patched 38-40; overlaps proof block []
+  - (Hilbert--Schmidt), its largest eigenvalue $\lambda:=\|T\|$ is simple, and its eigenvector can be chosen
+  - strictly positive. We call it $g$, with $\|g\|=1$. Because the eigenvalue is simple and $T$ commutes with
+  + (Hilbert--Schmidt), and by Jentzsch's theorem (the Perron--Frobenius theorem for integral operators with
+  + a strictly positive continuous kernel) its largest eigenvalue $\lambda:=\|T\|$ is simple, and its eigenvector
+  + can be chosen strictly positive. We call it $g$, with $\|g\|=1$. Because the eigenvalue is simple and $T$ commutes with
+--- tun_upper.tex H2: orig 84-86 -> patched 85-94; overlaps proof block []
+  - \item \emph{Status.} Theorem~\ref{tu:U-thm} is proved in writing in this note. The proofs were written
+  - by sessions of one model family (Claude, Anthropic), working as a director and workers, and were
+  - attacked by other sessions of the same family. Agreement among them is not independent review. The
+  + \item \emph{Status.} Both halves of Theorem~\ref{tu:U-thm} are written out in this note:
+  + $\liminf\ge c^*$ in Sections~\ref{tu:U-sec-kernel}--\ref{tu:U-sec-agmon} (Theorem~\ref{tu:U-main}) and
+  + $\limsup\le c^*$ in Sections~\ref{tu:L-sec-exact}--\ref{tu:L-sec-assembly} (Theorem~\ref{tu:L-main}). After the
+  + patches no step of the second half is conditional on anything that is not on the page: it uses the results of
+  + the first half, proved in Sections~\ref{tu:U-sec-kernel}--\ref{tu:U-sec-agmon}, and the gap bounds of
+  + Lemma~\ref{tu:L-gauss} and the $\Delta h$ bound of Lemma~\ref{tu:L-taylor}, on which an earlier status line made
+  + Theorem~\ref{tu:L-main} conditional and which are now derived in Section~\ref{tu:L-sec-sub}. This is all that is
+  + established: a complete written proof that has been checked only by its authors' model family. All of it was
+  + written, patched and refereed by sessions of one model family (Claude, Anthropic), working as director,
+  + workers, challengers and referees, and by no one else. Agreement among them is not independent review. The
+--- tun_upper.tex H3: orig 92-93 -> patched 100-102; overlaps proof block []
+  - $\sin a\in[0.1,1]$ only for $\beta$ of order $10^{13}$ to $10^{14}$; at $\beta\le4096$ its deficit is $8.6$
+  - to $14$ nats. Other steps (in the second half) become effective only for $\beta$ of order $10^{8}$ or
+  + $\sin a\in[0.1,1]$ only from $\beta\approx2.0\cdot10^{13}$ on (with $\tau=\delta=\beta^{-1/3}$;
+  + Remark~\ref{tu:U-F-num}); for $100\le\beta\le4096$ its deficit is $7.3$ to $14.2$ nats. All explicit
+  + thresholds of this note are far beyond any $\beta$ at which $T$ can be computed. Other steps (in the second half) become effective only for $\beta$ of order $10^{8}$ or
+--- tun_upper.tex H4: orig 104-105 -> patched 113-115; overlaps proof block []
+  - working files. Nothing else in this note is formalised. These Lean files were not compiled in the
+  - preparation of this text.
+  + working files. Lean covers these scalar lemmas only; the remarks ``Lean-checked'' elsewhere in this note
+  + also refer to scalar steps in the working files. Nothing else in this note is formalised. The Lean files are
+  + not part of this note and were not compiled in the preparation of this text.
+--- tun_upper.tex H5: orig 327-327 -> patched 337-338; overlaps proof block []
+  - $a=0.05,0.1,0.3,0.6,1.0,\pi/2$, the same at $\beta=64,256,1024$ to within $2\%$. A challenger
+  + $a=0.05,0.1,0.3,0.6,1.0,\pi/2$, the same at $\beta=256,1024$ to within $2\%$ (not at $\beta=64$: a referee
+  + recomputation gives $c=1.04$ and $0.98$ at $a=0.05$ and $0.1$ there). A challenger
+--- tun_upper.tex H6: orig 410-410 -> patched 421-423; overlaps proof block []
+  - and $\tilde H_\delta$ is nonincreasing in $z$.
+  + and $\tilde H_\delta$ is nonincreasing in $z$. (We put $\tilde H_\delta(0):=1$; the bound and the monotonicity
+  + then hold for $z\ge0$, since $e^{-0}I_0(0)=1$. The value at $0$ occurs in Theorem~\ref{tu:U-F-master} only
+  + on the null set $r'=1$.)
+--- tun_upper.tex H7: orig 548-554 -> patched 561-571; overlaps proof block []
+  - $\beta_0(\eta)$ is explicit but large. For $\eta=0.2$ (so $s_0=0.1$) the deficit $\log\max(M_{\rm in},AM_{\rm out})$, maximised
+  - over $s\in[0.1,1]$ on a grid, first falls below $0.2$ at $\beta\approx2.2\cdot10^{13}$ (worst $s=0.1$); at $s=0.1$,
+  - $\beta=10^{12}$ it is $24.9$; at $s=1$, $\beta=10^{11}$ it is $5\cdot10^{-4}$. At $\beta\le4096$ the deficit is $8.6$ to $14$ nats.
+  - The loss is in the outer region ($I_0\le e^z$ and the area-times-supremum bound), not in the choice of test
+  - function: the Barta ratio of $\psi$ computed by quadrature satisfies $-\log\sup B-\varepsilon=-O(1/\beta)$ (between
+  - $-4.1\cdot10^{-4}$ and $-2\cdot10^{-4}$ at $\beta=4096$ for $s\ge0.1$). These are measurements by the author and a challenger
+  - of the working file, not recomputed here. A rate $\varepsilon_{\mathrm{eff}}\ge2\operatorname{asinh}s-3(648\log\beta/\beta)^{1/4}$
+  + $\beta_0(\eta)$ is explicit but large. For $\eta=0.2$ (so $s_0=0.1$) and $\tau=\delta=\beta^{-1/3}$ (as in
+  + Corollary~\ref{tu:U-F-cor}(b)), the deficit $\log\max(M_{\rm in},AM_{\rm out})$, maximised
+  + over $s\in[0.1,1]$ on a grid, first falls below $0.2$ at $\beta\approx2.03\cdot10^{13}$ (worst $s=0.1$); at $s=0.1$,
+  + $\beta=10^{12}$ it is $24.9$; at $s=1$, $\beta=10^{11}$ it is $5\cdot10^{-4}$. For $100\le\beta\le4096$ the deficit is $7.33$ to
+  + $14.23$ nats (for $\beta\le125$ the hypothesis $\tau<1/5$ fails, so there this is only a value of the formula). (Corrected
+  + by a referee recomputation; the working file had $2.2\cdot10^{13}$ and $8.6$ to $14$.)
+  + The loss is in the outer region ($I_0\le e^z$ and the area-times-supremum bound), not in the choice of test
+  + function: the Barta ratio of $\psi$ computed by quadrature satisfies $-\log\sup B-\varepsilon=-O(1/\beta)$ (between
+  + $-4.1\cdot10^{-4}$ and $-2\cdot10^{-4}$ at $\beta=4096$ for $s\ge0.1$). These are measurements by the author and a challenger
+  + of the working file, recomputed only by a referee of the same model family (who reproduced them with the corrections
+  + above). A rate $\varepsilon_{\mathrm{eff}}\ge2\operatorname{asinh}s-3(648\log\beta/\beta)^{1/4}$
+--- tun_upper.tex H8: orig 674-673 -> patched 691-692; overlaps proof block [(686, 712)]
+  + At $a=\pi/2$, where $f'$ is not defined, the bound follows by continuity of $\tilde f'$ (for the $\tilde f$ of
+  + Lemma~\ref{tu:U-W13}, $\tilde f'(\pi/2)=0$).
+--- tun_upper.tex H9: orig 866-866 -> patched 885-886; overlaps proof block []
+  - constructed in Lemma~\ref{tu:U-W13}; Proposition~\ref{tu:U-B}(1) for $u=g$; Lemma~\ref{tu:U-flux}; and the lower
+  + constructed in Lemma~\ref{tu:U-W13}; Proposition~\ref{tu:U-B}(1) for $u=g$, and through it
+  + Lemmas~\ref{tu:U-schur} and~\ref{tu:U-A}; Lemma~\ref{tu:U-flux}; and the lower
+tun_lower.tex: DIFFERS, 27 opcodes, 26 proof blocks
+tun_lower.tex: 18 hunks (merged if gap<=3 lines)
+--- tun_lower.tex H1: orig 174-173 -> patched 174-174; overlaps proof block []
+  + (At $S=0$ we put $q:=0$; there $w=0$ and $V=0$.)
+--- tun_lower.tex H2: orig 226-235 -> patched 227-241; overlaps proof block []
+  - Fix $\eta\in(0,0.4]$ and put $a_-:=\arcsin(\sinh\eta)$, so that $\varepsilon(\sin a_-)=2\eta$, and
+  - $C_\eta:=\{\varepsilon(\sin a_1)<2\eta,\ \varepsilon(\sin a_2)<2\eta\}$. This is the union of the four
+  - corners $\{a_i<a_-\text{ or }a_i>\pi-a_-,\ i=1,2\}$. The weighted bound (B) of
+  - Proposition~\ref{tu:U-B} is used in the following form: there are a function $\Phi$ of the class angle,
+  - vanishing on $\{\varepsilon(\sin a)<\eta\}$, with $\phi_{\min}(\eta):=\inf_{\varepsilon(\sin a)\ge2\eta}\Phi(a)>0$,
+  - and a constant $C(\eta)$, such that for $\beta\ge\beta_0(\eta)$ and every eigenfunction $u$ of $T$
+  - with $\|u\|=1$ and eigenvalue $\mu\ge e^{-\eta/4}$, $\|e^{\sqrt\beta\Phi(a_1)}u\|^2\le C(\eta)$. Since
+  - $K_1$ and $K_2$ commute, $T=B'^*K_2B'$ with $B'=K_1^{1/2}e^{-V/2}$ as well, and the same proof gives
+  - $\|e^{\sqrt\beta\Phi(a_2)}u\|^2\le C(\eta)$. The proof of (B) uses no positivity of $u$, so it applies to
+  - $u=f$.
+  + Fix $\eta\in(0,0.4]$ and put $a_-:=\arcsin(\sinh\eta)$, so that $\varepsilon(a_-)=2\eta$, and
+  + $C_\eta:=\{\varepsilon(a_1)<2\eta,\ \varepsilon(a_2)<2\eta\}$. This is the union of the four
+  + corners $\{a_i<a_-\text{ or }a_i>\pi-a_-,\ i=1,2\}$. The weighted bound (B) of
+  + Proposition~\ref{tu:U-B} is used in the following form: there are a function $\Phi$ of the class angle,
+  + vanishing on $\{\varepsilon(a)<\eta\}$, with $\phi_{\min}(\eta):=\inf_{\varepsilon(a)\ge2\eta}\Phi(a)>0$,
+  + and a constant $C(\eta)$, such that for $\beta\ge\beta_0(\eta)$ and every eigenfunction $u$ of $T$
+  + with $\|u\|=1$ and eigenvalue $\mu\ge e^{-\eta/4}$, $\|e^{\sqrt\beta\Phi(a_1)}u\|^2\le C(\eta)$. Since
+  + $K_1$ and $K_2$ commute, $T=B'^*K_2B'$ with $B'=K_1^{1/2}e^{-V/2}$ as well, and the same proof gives
+  + $\|e^{\sqrt\beta\Phi(a_2)}u\|^2\le C(\eta)$ (this is Proposition~\ref{tu:U-B}(2)). The proof of (B) uses no positivity of $u$, so it applies to
+  + $u=f$. That $\phi_{\min}(\eta)>0$ is not stated in Lemma~\ref{tu:U-weight}; it follows from the construction of
+  + Lemma~\ref{tu:U-W13}: $\Phi=(1-\delta)\tilde f$ with $\tilde f'=p\chi$ on $[0,\pi/2]$, where $p>0$ wherever
+  + $\varepsilon>\frac32\eta$ (there $\psi>0$) and $\chi>0$ on $[0,\pi/2)$. Since $\varepsilon$ is increasing on $[0,\pi/2]$, every
+  + $a\le\pi/2$ with $\varepsilon(a)\ge2\eta$ has $\varepsilon>\frac32\eta$ on an interval $(a',a)$ with $a'<a$, so $\tilde f(a)>0$; by symmetry
+  + $\tilde f>0$ on the compact set $\{\varepsilon\ge2\eta\}$, which is nonempty ($2\eta\le0.8<\varepsilon(\pi/2)$), and the continuous
+  + $\Phi$ attains a positive minimum there.
+--- tun_lower.tex H3: orig 249-250 -> patched 255-256; overlaps proof block [(252, 259)]
+  - $C_\eta$ is $\bigcup_i\{\varepsilon(\sin a_i)\ge2\eta\}$, and
+  - $\int_{\varepsilon(\sin a_i)\ge2\eta}u^2\le e^{-2\sqrt\beta\phi_{\min}}\|e^{\sqrt\beta\Phi(a_i)}u\|^2\le C(\eta)e^{-2\sqrt\beta\phi_{\min}}$.
+  + $C_\eta$ is $\bigcup_i\{\varepsilon(a_i)\ge2\eta\}$, and
+  + $\int_{\varepsilon(a_i)\ge2\eta}u^2\le e^{-2\sqrt\beta\phi_{\min}}\|e^{\sqrt\beta\Phi(a_i)}u\|^2\le C(\eta)e^{-2\sqrt\beta\phi_{\min}}$.
+--- tun_lower.tex H4: orig 308-308 -> patched 314-314; overlaps proof block []
+  - $\varphi=\max(\varphi_L,\varphi_R)$, with $\mu>0$ fixed in Section~\ref{tu:L-sec-assembly};
+  + $\varphi=\max(\varphi_L,\varphi_R)$, with $\mu>0$ defined in Section~\ref{tu:L-sec-assembly} (it depends on $\beta$);
+--- tun_lower.tex H5: orig 437-437 -> patched 443-443; overlaps proof block []
+  - $\Delta S^2\le2\sum_i(\sin a_i\,r_b+r_b^2)$, and $\Delta h\le\Delta S^2/(2\sigma_-^2\sqrt{1+1/\sigma_-})$ with
+  + $\Delta S^2:=2\sum_i(\sin a_i\,r_b+r_b^2)$, and $\Delta h\le\Delta S^2/(2\sigma_-^2\sqrt{1+1/\sigma_-})$ with
+--- tun_lower.tex H6: orig 613-613 -> patched 619-620; overlaps proof block []
+  - stand except the gap bounds, not checked); numerically the explicit bound is not small at simulable $\beta$
+  + stand except the gap bounds, which that challenger did not check; they are now derived on the page in
+  + Lemma~\ref{tu:L-gauss}, and a referee of the same model family rederived them); numerically the explicit bound is not small at simulable $\beta$
+--- tun_lower.tex H7: orig 702-703 -> patched 709-710; overlaps proof block [(686, 745)]
+  - (a) On $[a_-,\pi/2]$, $\chi=1$, so $\Psi'^2/2=\varepsilon(\sin a_1)+\eta$ and $\log A_1^\circ=\eta-D+t$ with
+  - $D:=e(S)-\varepsilon(\sin a_1)$. Since $\operatorname{asinh}$ is $1$-Lipschitz, $S\ge\sin a_1$ and
+  + (a) On $[a_-,\pi/2]$, $\chi=1$, so $\Psi'^2/2=\varepsilon(a_1)+\eta$ and $\log A_1^\circ=\eta-D+t$ with
+  + $D:=e(S)-\varepsilon(a_1)$. Since $\operatorname{asinh}$ is $1$-Lipschitz, $S\ge\sin a_1$ and
+--- tun_lower.tex H8: orig 718-724 -> patched 725-731; overlaps proof block [(686, 745)]
+  - $u=a_1x_c$, $a_1:=e^{-3\eta/4}$, $v=(Pa_1^{-\gamma})^{k}$ (note $1/(1-\gamma)=k$),
+  - \[
+  - Px_c^\gamma\le\gamma a_1x_c+\tfrac1kP^ka_1^{1-k}\le a_1x_c+R,\qquad R:=\tfrac1k\,e^{ke(S)-M^2+(k-1)3\eta/4}.
+  - \]
+  - By (d), $\log R\le2\sqrt{2+r_0^2}+\tfrac34\eta\coth\eta-\log k-M^2\le\log m_0$ under (M$_A$) (using $k>1$). Hence, with $a\le a_1$,
+  - \[
+  - a(1-x_c)+Px_c^\gamma\le a_1(1-x_c)+a_1x_c+R\le1-2m_0+m_0=1-m_0 .
+  + $u=\bar ax_c$, $\bar a:=e^{-3\eta/4}$, $v=(P\bar a^{-\gamma})^{k}$ (note $1/(1-\gamma)=k$),
+  + \[
+  + Px_c^\gamma\le\gamma\bar ax_c+\tfrac1kP^k\bar a^{1-k}\le\bar ax_c+R,\qquad R:=\tfrac1k\,e^{ke(S)-M^2+(k-1)3\eta/4}.
+  + \]
+  + By (d), $\log R\le2\sqrt{2+r_0^2}+\tfrac34\eta\coth\eta-\log k-M^2\le\log m_0$ under (M$_A$) (using $k>1$). Hence, with $a\le\bar a$,
+  + \[
+  + a(1-x_c)+Px_c^\gamma\le\bar a(1-x_c)+\bar ax_c+R\le1-2m_0+m_0=1-m_0 .
+--- tun_lower.tex H9: orig 934-934 -> patched 941-941; overlaps proof block []
+  - \item $a_-=\arcsin(\sinh\eta)$, so $\varepsilon(\sin a_-)=2\eta$ and $a_-\le\pi/4$;
+  + \item $a_-=\arcsin(\sinh\eta)$, so $\varepsilon(a_-)=2\eta$ and $a_-\le\pi/4$;
+--- tun_lower.tex H10: orig 940-943 -> patched 947-961; overlaps proof block []
+  - \item $M=M(\eta)$ with $M^2\ge M_A^2(\eta)$ (condition (M$_A$) of Lemma~\ref{tu:L-S4}; the earlier choice $c_1=e^{-M^2}\le G_{\min}(e^{\eta/2}-1)e^{-C}/4$ implies it) and $M^2\ge1.5\rho_B^2+\log2$ (Lemma~\ref{tu:L-balls}; implied by (M$_A$));
+  - \item $\eta'=a_-$ (change C1);
+  - \item $\mu:=\exp\big(-35(a_-+r_0)\sqrt\beta-R_\beta\big)$ (Corollary~\ref{tu:L-H4cor}).
+  - \end{itemize}
+  + \item $M=M(\eta)$ with $M^2:=M_A^2(\eta)$, so $M^2\ge M_A^2(\eta)$ (condition (M$_A$) of Lemma~\ref{tu:L-S4}; the earlier choice $c_1=e^{-M^2}\le G_{\min}(e^{\eta/2}-1)e^{-C}/4$ implies it) and $M^2\ge1.5\rho_B^2+\log2$ (Lemma~\ref{tu:L-balls}; implied by (M$_A$));
+  + \item $\eta'=a_-$ (change C1);
+  + \item the weight of Proposition~\ref{tu:U-B}: $\delta=\tau=\frac12$ in (W3), (W4) (these are the parameters of
+  + \S\ref{tu:U-sec-weight}, not the $\delta=\tau=\beta^{-1/3}$ of Corollary~\ref{tu:U-F-cor}(b)), and $\rho_\eta$, $\tilde f$ the explicit
+  + functions of Lemma~\ref{tu:U-W13} with this $\tau$, so $\Phi=\frac12\tilde f$; Proposition~\ref{tu:U-B} applies since
+  + $\eta\le0.4\le\frac12$ and $\delta,\tau\in(0,1)$;
+  + \item with the fixed $C^\infty$ step $s_\infty(t)=e^{-1/t}/(e^{-1/t}+e^{-1/(1-t)})$ on $(0,1)$, $s_\infty=0$ for $t\le0$,
+  + $s_\infty=1$ for $t\ge1$:
+  + $\chi(a):=s_\infty\big(\frac{a-a_-/2}{a_-/2}\big)\,s_\infty\big(\frac{\pi-a_-/4-a}{a_-/4}\big)$ and
+  + $\tilde\Theta(a):=\int_0^a\frac{\theta_0b}{\sqrt{b^2+\ell^2}}\,s_\infty\big(\frac{3\pi/4-b}{\pi/4}\big)\,db$; they have the properties
+  + required in Section~\ref{tu:L-ansatz} ($\tilde\Theta=\Theta$ on $[0,\pi/2]$, $\tilde\Theta'=0$ on $[3\pi/4,\pi]$);
+  + \item $C=1$ in $L=\sqrt{C\log\beta}$ of Proposition~\ref{tu:L-E13} (any fixed $C>0$ would do).
+  + \end{itemize}
+  + The amplitude $\mu:=\exp\big(-35(a_-+r_0)\sqrt\beta-R_\beta\big)$ (Corollary~\ref{tu:L-H4cor}) is not among the fixed parameters:
+  + it depends on $\beta$ (through $\sqrt\beta$ and $R_\beta$). No threshold below depends on it.
+--- tun_lower.tex H11: orig 949-948 -> patched 967-972; overlaps proof block []
+  + With the choices above every one of these thresholds is a function of $\eta$ alone: the constants of
+  + Proposition~\ref{tu:L-E13} and $m(\eta)$ depend on $\eta',r_0,\ell,\theta_0,M,C$ and on $H_\Psi,\Lambda,\tilde\Theta$, which are now
+  + fixed functions of $\eta$; the conditions of Lemma~\ref{tu:L-balls} on $\rho_B,r_0,\ell,\theta_0$; the threshold of
+  + Lemma~\ref{tu:L-L4} on $\eta$; that of Lemma~\ref{tu:U-F} on $\eta/2$; $\beta_1(\eta,\delta,\tau)$ of (B) on $\eta$, $\delta=\tau=\frac12$ and
+  + the explicit choices of Lemma~\ref{tu:U-W13} (through $\beta_0(\eta/4)$ of Lemma~\ref{tu:U-F} and $\omega(\beta)$, which depends on $H$);
+  + and $m_B\ge\frac18$, $\int f^2\ge\frac12$ on $C(\eta)$, $\phi_{\min}(\eta)$ and $\varkappa=1$.
+--- tun_lower.tex H12: orig 960-961 -> patched 984-985; overlaps proof block []
+  - $\int_Sf^2\ge\frac12$ and $m_B\ge\frac18$, where $S:=C_\eta\cap\{V\le1\}$.
+  - \item Corollary~\ref{tu:L-H4cor} gives $g\ge\mu$ on $D_M\cup\sigma_1D_M\supset R_{\rm well}$ and on $S$.
+  + $\int_{\mathcal S}f^2\ge\frac12$ and $m_B\ge\frac18$, where $\mathcal S:=C_\eta\cap\{V\le1\}$ (a set; not the radius $S$).
+  + \item Corollary~\ref{tu:L-H4cor} gives $g\ge\mu$ on $D_M\cup\sigma_1D_M\supset R_{\rm well}$ and on $\mathcal S$.
+--- tun_lower.tex H13: orig 966-966 -> patched 990-990; overlaps proof block []
+  - $S$ is $\sigma_1$-invariant, since $\varepsilon(\sin a_1)$ and $V$ are. Corollary~\ref{tu:L-B} needs, for each $x\in S$, centres
+  + $\mathcal S$ is $\sigma_1$-invariant, since $\varepsilon(a_1)$ and $V$ are. Corollary~\ref{tu:L-B} needs, for each $x\in\mathcal S$, centres
+--- tun_lower.tex H14: orig 976-976 -> patched 1000-1001; overlaps proof block []
+  - The number of steps is $n\le(\pi+2a_-)\sqrt\beta/d+O(\beta^{1/4})=O(\sqrt\beta)$. The centres depend measurably on $x$, since the
+  + The number of steps is $n\le(\pi+2a_-)\sqrt\beta/d+O(\beta^{1/4})=O(\sqrt\beta)$. Lemma~\ref{tu:L-Pc} needs one $n$ for all
+  + $x\in\mathcal S$; the chains are padded with zero steps to this common bound, as in Lemma~\ref{tu:L-geom}. The centres depend measurably on $x$, since the
+--- tun_lower.tex H15: orig 987-987 -> patched 1012-1012; overlaps proof block []
+  - -\log\mu'\le35a_-\sqrt\beta+R'_\beta,
+  + \mu':=e^{-35a_-\sqrt\beta-R'_\beta},
+--- tun_lower.tex H16: orig 1032-1032 -> patched 1057-1057; overlaps proof block []
+  - \emph{Other inputs.} $\sup g\le k_{\sup}^2/\lambda=O(\beta^3)$ by (sup); $v\asymp\beta^{-3}$; $n=O(\sqrt\beta)$; $|S|\le1$.
+  + \emph{Other inputs.} $\sup g\le k_{\sup}^2/\lambda=O(\beta^3)$ by (sup); $v\asymp\beta^{-3}$; $n=O(\sqrt\beta)$; $|\mathcal S|\le1$.
+--- tun_lower.tex H17: orig 1041-1047 -> patched 1066-1072; overlaps proof block [(1065, 1078)]
+  - Fix $\eta$ and the parameters above, and let $\beta\ge\beta_0(\eta)$. Corollary~\ref{tu:L-B} with $\sigma=\sigma_1$, the set $S$,
+  - $r_\beta=\rho_B/\sqrt\beta$, and Lemma~\ref{tu:L-balls} (with $g\ge\mu$ on $S$ for the end points) give
+  - \[
+  - -\log\Delta\le2\sup_{\rm balls\cup S}(-\log g)+O(\log\beta)-\log\Big(2\int_Sf^2\Big)
+  - \le\sqrt\beta\,2\Psi(\pi/2)+70(a_-+r_0)\sqrt\beta+O(\beta^{1/4})+O(\log\beta),
+  - \]
+  - using $\int_Sf^2\ge\frac12$ and $-\log\mu\le35(a_-+r_0)\sqrt\beta+R_\beta$. By Lemma~\ref{tu:L-ansatz-props}(v),
+  + Fix $\eta$ and the parameters above, and let $\beta\ge\beta_0(\eta)$. Corollary~\ref{tu:L-B} with $\sigma=\sigma_1$, the set $\mathcal S$,
+  + $r_\beta=\rho_B/\sqrt\beta$, and Lemma~\ref{tu:L-balls} (with $g\ge\mu$ on $\mathcal S$ for the end points) give
+  + \[
+  + -\log\Delta\le2\sup_{\rm balls\cup\mathcal S}(-\log g)+O(\log\beta)-\log\Big(2\int_{\mathcal S}f^2\Big)
+  + \le\sqrt\beta\,2\Psi(\pi/2)+70(a_-+r_0)\sqrt\beta+O(\beta^{1/4})+O(\log\beta),
+  + \]
+  + using $\int_{\mathcal S}f^2\ge\frac12$ and $-\log\mu\le35(a_-+r_0)\sqrt\beta+R_\beta$. By Lemma~\ref{tu:L-ansatz-props}(v),
+--- tun_lower.tex H18: orig 1055-1058 -> patched 1080-1085; overlaps proof block []
+  - \noindent\emph{Status.} Proved in writing, conditional on the results of the first half (Lemmas~\ref{tu:U-kernel},
+  - \ref{tu:U-K}, \ref{tu:U-R}, \ref{tu:U-F}, Proposition~\ref{tu:U-B}), on the gap bounds of Lemma~\ref{tu:L-gauss} and the $\Delta h$
+  - bound of Lemma~\ref{tu:L-taylor} as stated. (The absorption step in Lemma~\ref{tu:L-S4} is now quantified.) Not independently
+  - reviewed: the working files and the assembly were written by sessions of the same model family. The constant $70(a_-+r_0)$ is far
+  + \noindent\emph{Status.} Proved in writing. It uses the results of the first half (Lemmas~\ref{tu:U-kernel},
+  + \ref{tu:U-K}, \ref{tu:U-R}, \ref{tu:U-F}, Proposition~\ref{tu:U-B}), proved in Sections~\ref{tu:U-sec-kernel}--\ref{tu:U-sec-agmon}, and the gap bounds of
+  + Lemma~\ref{tu:L-gauss} and the $\Delta h$ bound of Lemma~\ref{tu:L-taylor}, which are derived in Section~\ref{tu:L-sec-sub}. (An earlier
+  + version of this line said ``conditional on'' these; they are now on the page. The absorption step in Lemma~\ref{tu:L-S4} is now
+  + quantified.) Not independently reviewed: the working files, the assembly, the patches and the referee reports were written by
+  + sessions of the same model family (Claude, Anthropic). The constant $70(a_-+r_0)$ is far

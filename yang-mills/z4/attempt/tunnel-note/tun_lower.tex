@@ -171,6 +171,7 @@ $g\circ\sigma_1=g\circ\sigma_2=g$. Put
 \[
 S^2:=|u_1|^2+|u_2|^2,\qquad w:=u_1\times u_2,\qquad q:=|w|^2/S^2,\qquad\text{so } V=2\beta S^2q .
 \]
+(At $S=0$ we put $q:=0$; there $w=0$ and $V=0$.)
 The quantities $S$, $q$, $a_2$ and $V$ are invariant under $\sigma_1$ and under simultaneous
 conjugation. The flux variable is $m_{eo}=\log(\lambda/\lambda_{eo})\ge1-\lambda_{eo}/\lambda=\Delta/\lambda\ge\Delta$,
 using $\log x\ge1-1/x$ and $\lambda\le1$.
@@ -223,16 +224,21 @@ at $\beta=10^4,10^6,10^9,10^{12},10^{16}$ (rate about $\beta^{-1/12}$), so it gi
 
 \subsection{Mass near the corners}
 
-Fix $\eta\in(0,0.4]$ and put $a_-:=\arcsin(\sinh\eta)$, so that $\varepsilon(\sin a_-)=2\eta$, and
-$C_\eta:=\{\varepsilon(\sin a_1)<2\eta,\ \varepsilon(\sin a_2)<2\eta\}$. This is the union of the four
+Fix $\eta\in(0,0.4]$ and put $a_-:=\arcsin(\sinh\eta)$, so that $\varepsilon(a_-)=2\eta$, and
+$C_\eta:=\{\varepsilon(a_1)<2\eta,\ \varepsilon(a_2)<2\eta\}$. This is the union of the four
 corners $\{a_i<a_-\text{ or }a_i>\pi-a_-,\ i=1,2\}$. The weighted bound (B) of
 Proposition~\ref{tu:U-B} is used in the following form: there are a function $\Phi$ of the class angle,
-vanishing on $\{\varepsilon(\sin a)<\eta\}$, with $\phi_{\min}(\eta):=\inf_{\varepsilon(\sin a)\ge2\eta}\Phi(a)>0$,
+vanishing on $\{\varepsilon(a)<\eta\}$, with $\phi_{\min}(\eta):=\inf_{\varepsilon(a)\ge2\eta}\Phi(a)>0$,
 and a constant $C(\eta)$, such that for $\beta\ge\beta_0(\eta)$ and every eigenfunction $u$ of $T$
 with $\|u\|=1$ and eigenvalue $\mu\ge e^{-\eta/4}$, $\|e^{\sqrt\beta\Phi(a_1)}u\|^2\le C(\eta)$. Since
 $K_1$ and $K_2$ commute, $T=B'^*K_2B'$ with $B'=K_1^{1/2}e^{-V/2}$ as well, and the same proof gives
-$\|e^{\sqrt\beta\Phi(a_2)}u\|^2\le C(\eta)$. The proof of (B) uses no positivity of $u$, so it applies to
-$u=f$.
+$\|e^{\sqrt\beta\Phi(a_2)}u\|^2\le C(\eta)$ (this is Proposition~\ref{tu:U-B}(2)). The proof of (B) uses no positivity of $u$, so it applies to
+$u=f$. That $\phi_{\min}(\eta)>0$ is not stated in Lemma~\ref{tu:U-weight}; it follows from the construction of
+Lemma~\ref{tu:U-W13}: $\Phi=(1-\delta)\tilde f$ with $\tilde f'=p\chi$ on $[0,\pi/2]$, where $p>0$ wherever
+$\varepsilon>\frac32\eta$ (there $\psi>0$) and $\chi>0$ on $[0,\pi/2)$. Since $\varepsilon$ is increasing on $[0,\pi/2]$, every
+$a\le\pi/2$ with $\varepsilon(a)\ge2\eta$ has $\varepsilon>\frac32\eta$ on an interval $(a',a)$ with $a'<a$, so $\tilde f(a)>0$; by symmetry
+$\tilde f>0$ on the compact set $\{\varepsilon\ge2\eta\}$, which is nonempty ($2\eta\le0.8<\varepsilon(\pi/2)$), and the continuous
+$\Phi$ attains a positive minimum there.
 
 \begin{lemma}[M4]\label{tu:L-M4}
 Let $u\in\{g,f\}$, $\|u\|=1$, $Tu=\lambda_uu$ with $\lambda_u\ge e^{-\eta/4}$, $\beta\ge\beta_0(\eta)$,
@@ -246,8 +252,8 @@ Each of the four corners carries one quarter of the left side.
 \begin{proof}
 $\lambda_u=\langle e^{-V/2}u,Ke^{-V/2}u\rangle\le\int e^{-V}u^2\le1-(1-e^{-\varkappa})\int_{V>\varkappa}u^2$,
 using $\|K\|\le1$. So $\int_{V>\varkappa}u^2\le(1-\lambda_u)/(1-e^{-\varkappa})$. The complement of
-$C_\eta$ is $\bigcup_i\{\varepsilon(\sin a_i)\ge2\eta\}$, and
-$\int_{\varepsilon(\sin a_i)\ge2\eta}u^2\le e^{-2\sqrt\beta\phi_{\min}}\|e^{\sqrt\beta\Phi(a_i)}u\|^2\le C(\eta)e^{-2\sqrt\beta\phi_{\min}}$.
+$C_\eta$ is $\bigcup_i\{\varepsilon(a_i)\ge2\eta\}$, and
+$\int_{\varepsilon(a_i)\ge2\eta}u^2\le e^{-2\sqrt\beta\phi_{\min}}\|e^{\sqrt\beta\Phi(a_i)}u\|^2\le C(\eta)e^{-2\sqrt\beta\phi_{\min}}$.
 The four corners are images of each other under $\sigma_1,\sigma_2$, which preserve $V$ and $u^2$
 ($g$ is even under both; $f$ is odd under $\sigma_1$ and even under $\sigma_2$, so $f^2$ is even under both).
 \end{proof}
@@ -305,7 +311,7 @@ $\tilde\Theta$ nondecreasing (change C3);
 \item $G=\exp(-\beta\alpha(S)q/2)$, $E=\exp(-\sqrt\beta\,\tilde\Theta(a_2))$, $c_1=e^{-M^2}$,
 $c_2=e^{-\sqrt\beta\Theta(r_0)}$;
 \item $\varphi_L=\mu\,e^{-\sqrt\beta\Psi(a_1)}(G-c_1)_+(E-c_2)_+$, $\varphi_R=\varphi_L\circ\sigma_1$,
-$\varphi=\max(\varphi_L,\varphi_R)$, with $\mu>0$ fixed in Section~\ref{tu:L-sec-assembly};
+$\varphi=\max(\varphi_L,\varphi_R)$, with $\mu>0$ defined in Section~\ref{tu:L-sec-assembly} (it depends on $\beta$);
 \item $\Omega:=\{\varphi>0\}\cap\{a_1\in[a_-,\pi-a_-]\}$ and
 $R_{\rm well}:=\{\varphi>0\}\cap\{a_1<a_-\text{ or }a_1>\pi-a_-\}$.
 \end{itemize}
@@ -434,7 +440,7 @@ On the product ball $|\xi_i|\le r_b$, with $r_b'=\arcsin r_b$,
 +\sqrt\beta\big(\tfrac12H_\Theta r_b'^2+|\Theta'(a_2)|(r_b'-r_b)\big),
 \]
 where $m:=|w|+\sqrt2Sr_b$, $r:=2r_b^2|w|+(r_b+r_b^2)^2$, $E_W=\beta(2mr+r^2)$, $B_W=\beta(m+r)^2$,
-$\Delta S^2\le2\sum_i(\sin a_i\,r_b+r_b^2)$, and $\Delta h\le\Delta S^2/(2\sigma_-^2\sqrt{1+1/\sigma_-})$ with
+$\Delta S^2:=2\sum_i(\sin a_i\,r_b+r_b^2)$, and $\Delta h\le\Delta S^2/(2\sigma_-^2\sqrt{1+1/\sigma_-})$ with
 $\sigma_-=S^2-\Delta S^2>0$.
 \end{lemma}
 
@@ -610,7 +616,8 @@ in the denominators).
 \end{proof}
 
 \noindent\emph{Status.} Proved in writing in the working file and checked by one challenger (all items
-stand except the gap bounds, not checked); numerically the explicit bound is not small at simulable $\beta$
+stand except the gap bounds, which that challenger did not check; they are now derived on the page in
+Lemma~\ref{tu:L-gauss}, and a referee of the same model family rederived them); numerically the explicit bound is not small at simulable $\beta$
 ($\sup\Delta_1=13.8$ at $\beta=16384$, $0.17$ at $\beta=2.7\cdot10^8$, for a parameter set that violates the
 constraints of the ansatz), while Monte Carlo gives the true defects $|\delta|\le0.06$ at $\beta=16384$.
 Change C1: the working file has $\eta'=0.5>a_-$ in its numerical set, and with $\eta'>a_-$ (E1), (E3) are not
@@ -699,8 +706,8 @@ e^{\delta}F\le1,\qquad F:=a(1-x_c)(1-y_c)+\frac{A_2^\circ}{A_1^\circ}x_c+b\,y_c,
 
 \emph{Step 3: the three coefficients.} Let $t:=\Theta'(a_2)^2/2$ (on the support $a_2<r_0\le\pi/2$, so $\tilde\Theta'=\Theta'$),
 $k=k(S):=\sqrt{1+S^2}/S$, $\gamma:=1-1/k\in(0,1)$, and $e(S)=2\operatorname{asinh}S$.
-(a) On $[a_-,\pi/2]$, $\chi=1$, so $\Psi'^2/2=\varepsilon(\sin a_1)+\eta$ and $\log A_1^\circ=\eta-D+t$ with
-$D:=e(S)-\varepsilon(\sin a_1)$. Since $\operatorname{asinh}$ is $1$-Lipschitz, $S\ge\sin a_1$ and
+(a) On $[a_-,\pi/2]$, $\chi=1$, so $\Psi'^2/2=\varepsilon(a_1)+\eta$ and $\log A_1^\circ=\eta-D+t$ with
+$D:=e(S)-\varepsilon(a_1)$. Since $\operatorname{asinh}$ is $1$-Lipschitz, $S\ge\sin a_1$ and
 $S-\sin a_1\le(S^2-\sin^2a_1)/(2\sin a_1)$, we get $0\le D\le\sin^2a_2/\sin a_1\le r_0^2/\sin a_-=\eta/4$. With $\lambda\le1$ and
 $t\ge0$: $0<a\le e^{-3\eta/4}=1-2m_0$.
 (b) $b=e^{-t}$. Since $\Theta'(a)=\theta_0a/\sqrt{a^2+\ell^2}$ is increasing, $b\le e^{-\theta_0^2/4}=e^{-1/16}=1-2m_1$ where
@@ -715,13 +722,13 @@ $S\in[s_-,s_+]$ with $s_-=\sin a_-=\sinh\eta$ and $s_+=\sqrt{1+r_0^2}$. On this 
 and $k(S)e(S)\le2\sqrt{1+S^2}\le2\sqrt{2+r_0^2}$ (as $\operatorname{asinh}S\le S$).
 
 \emph{Step 4: the slice $y_c=0$.} By the weighted AM--GM inequality $u^\gamma v^{1-\gamma}\le\gamma u+(1-\gamma)v$ with
-$u=a_1x_c$, $a_1:=e^{-3\eta/4}$, $v=(Pa_1^{-\gamma})^{k}$ (note $1/(1-\gamma)=k$),
+$u=\bar ax_c$, $\bar a:=e^{-3\eta/4}$, $v=(P\bar a^{-\gamma})^{k}$ (note $1/(1-\gamma)=k$),
 \[
-Px_c^\gamma\le\gamma a_1x_c+\tfrac1kP^ka_1^{1-k}\le a_1x_c+R,\qquad R:=\tfrac1k\,e^{ke(S)-M^2+(k-1)3\eta/4}.
+Px_c^\gamma\le\gamma\bar ax_c+\tfrac1kP^k\bar a^{1-k}\le\bar ax_c+R,\qquad R:=\tfrac1k\,e^{ke(S)-M^2+(k-1)3\eta/4}.
 \]
-By (d), $\log R\le2\sqrt{2+r_0^2}+\tfrac34\eta\coth\eta-\log k-M^2\le\log m_0$ under (M$_A$) (using $k>1$). Hence, with $a\le a_1$,
+By (d), $\log R\le2\sqrt{2+r_0^2}+\tfrac34\eta\coth\eta-\log k-M^2\le\log m_0$ under (M$_A$) (using $k>1$). Hence, with $a\le\bar a$,
 \[
-a(1-x_c)+Px_c^\gamma\le a_1(1-x_c)+a_1x_c+R\le1-2m_0+m_0=1-m_0 .
+a(1-x_c)+Px_c^\gamma\le\bar a(1-x_c)+\bar ax_c+R\le1-2m_0+m_0=1-m_0 .
 \]
 
 \emph{Step 5: the slice $y_c=1$.} By (d) and (M$_A$), $\log P=e(S)-M^2/k\le\big(ke(S)-M^2\big)/k\le-\log(1/m_1)$, since
@@ -931,21 +938,38 @@ gives $M^2\sim1/\sin a_-\sim1/\eta$; the condition (M$_A$) actually used in Lemm
 \subsection{Parameters and the order of limits}
 First fix $\eta\in(0,0.4]$. Then fix, in this order:
 \begin{itemize}
-\item $a_-=\arcsin(\sinh\eta)$, so $\varepsilon(\sin a_-)=2\eta$ and $a_-\le\pi/4$;
+\item $a_-=\arcsin(\sinh\eta)$, so $\varepsilon(a_-)=2\eta$ and $a_-\le\pi/4$;
 \item $r_0=\sqrt{\eta\sin a_-/4}$ (so $r_0^2/\sin a_-=\eta/4$, used in S4-alg);
 \item $\ell=r_0/3$ (so $0<\ell<r_0/2$) and $\theta_0=1/2$;
 \item $\varkappa=1$;
 \item $\rho=0.265$, $d=3.65$ (Section~\ref{tu:L-sec-harnack});
 \item the ball radius $\rho_B=1/2$ for the path balls of Section~\ref{tu:L-chainsec};
-\item $M=M(\eta)$ with $M^2\ge M_A^2(\eta)$ (condition (M$_A$) of Lemma~\ref{tu:L-S4}; the earlier choice $c_1=e^{-M^2}\le G_{\min}(e^{\eta/2}-1)e^{-C}/4$ implies it) and $M^2\ge1.5\rho_B^2+\log2$ (Lemma~\ref{tu:L-balls}; implied by (M$_A$));
+\item $M=M(\eta)$ with $M^2:=M_A^2(\eta)$, so $M^2\ge M_A^2(\eta)$ (condition (M$_A$) of Lemma~\ref{tu:L-S4}; the earlier choice $c_1=e^{-M^2}\le G_{\min}(e^{\eta/2}-1)e^{-C}/4$ implies it) and $M^2\ge1.5\rho_B^2+\log2$ (Lemma~\ref{tu:L-balls}; implied by (M$_A$));
 \item $\eta'=a_-$ (change C1);
-\item $\mu:=\exp\big(-35(a_-+r_0)\sqrt\beta-R_\beta\big)$ (Corollary~\ref{tu:L-H4cor}).
+\item the weight of Proposition~\ref{tu:U-B}: $\delta=\tau=\frac12$ in (W3), (W4) (these are the parameters of
+\S\ref{tu:U-sec-weight}, not the $\delta=\tau=\beta^{-1/3}$ of Corollary~\ref{tu:U-F-cor}(b)), and $\rho_\eta$, $\tilde f$ the explicit
+functions of Lemma~\ref{tu:U-W13} with this $\tau$, so $\Phi=\frac12\tilde f$; Proposition~\ref{tu:U-B} applies since
+$\eta\le0.4\le\frac12$ and $\delta,\tau\in(0,1)$;
+\item with the fixed $C^\infty$ step $s_\infty(t)=e^{-1/t}/(e^{-1/t}+e^{-1/(1-t)})$ on $(0,1)$, $s_\infty=0$ for $t\le0$,
+$s_\infty=1$ for $t\ge1$:
+$\chi(a):=s_\infty\big(\frac{a-a_-/2}{a_-/2}\big)\,s_\infty\big(\frac{\pi-a_-/4-a}{a_-/4}\big)$ and
+$\tilde\Theta(a):=\int_0^a\frac{\theta_0b}{\sqrt{b^2+\ell^2}}\,s_\infty\big(\frac{3\pi/4-b}{\pi/4}\big)\,db$; they have the properties
+required in Section~\ref{tu:L-ansatz} ($\tilde\Theta=\Theta$ on $[0,\pi/2]$, $\tilde\Theta'=0$ on $[3\pi/4,\pi]$);
+\item $C=1$ in $L=\sqrt{C\log\beta}$ of Proposition~\ref{tu:L-E13} (any fixed $C>0$ would do).
 \end{itemize}
+The amplitude $\mu:=\exp\big(-35(a_-+r_0)\sqrt\beta-R_\beta\big)$ (Corollary~\ref{tu:L-H4cor}) is not among the fixed parameters:
+it depends on $\beta$ (through $\sqrt\beta$ and $R_\beta$). No threshold below depends on it.
 Then let $\beta\to\infty$, and only at the end let $\eta\to0$. All $o(1)$ terms are as $\beta\to\infty$ with the quantities above
 fixed. The $\beta$-dependent auxiliary parameters are the parameter $\beta^{-1/8}$ of Lemma~\ref{tu:U-K} and $L=\sqrt{C\log\beta}$ of
 Proposition~\ref{tu:L-E13}. $\beta_0(\eta)$ is chosen so that: $\Delta_1^++\max(\Delta_2^+,\Delta_3^+)\le m(\eta)/2$ on $\mathcal T$ and $\sqrt\beta(\Theta(r_0)-\Theta(\ell))\ge\log(2/m(\eta))$ (Lemma~\ref{tu:L-S4}); the four conditions on $\beta$ in Lemma~\ref{tu:L-balls};
 $\lambda,\lambda_{eo}\ge e^{-\eta/4}$ (Lemma~\ref{tu:L-L4}); Lemma~\ref{tu:U-F} holds with $\eta/2$; (B) holds; $m_B\ge1/8$ and
 $\int_{C_\eta\cap\{V\le1\}}f^2\ge1/2$ (Lemma~\ref{tu:L-M4}); and the finitely many ``$\beta$ large'' conditions below.
+With the choices above every one of these thresholds is a function of $\eta$ alone: the constants of
+Proposition~\ref{tu:L-E13} and $m(\eta)$ depend on $\eta',r_0,\ell,\theta_0,M,C$ and on $H_\Psi,\Lambda,\tilde\Theta$, which are now
+fixed functions of $\eta$; the conditions of Lemma~\ref{tu:L-balls} on $\rho_B,r_0,\ell,\theta_0$; the threshold of
+Lemma~\ref{tu:L-L4} on $\eta$; that of Lemma~\ref{tu:U-F} on $\eta/2$; $\beta_1(\eta,\delta,\tau)$ of (B) on $\eta$, $\delta=\tau=\frac12$ and
+the explicit choices of Lemma~\ref{tu:U-W13} (through $\beta_0(\eta/4)$ of Lemma~\ref{tu:U-F} and $\omega(\beta)$, which depends on $H$);
+and $m_B\ge\frac18$, $\int f^2\ge\frac12$ on $C(\eta)$, $\phi_{\min}(\eta)$ and $\varkappa=1$.
 
 \noindent\emph{Remark on $M$.} The condition $M^2\ge2\rho_B^2$ written at assembly does not give the bound
 $e^{-1.5\rho_B^2}-e^{-M^2}\ge e^{-1.5\rho_B^2}/2$ used in Lemma~\ref{tu:L-balls} (that needs $M^2\ge1.5\rho_B^2+\log2=1.068$; at $M^2=2\rho_B^2=1/2$
@@ -957,13 +981,13 @@ Proposition~\ref{tu:L-E13} and $R_\beta$, all fixed before $\beta\to\infty$. The
 \noindent\emph{Inputs at fixed $\eta$, $\beta\ge\beta_0(\eta)$.}
 \begin{enumerate}
 \item Lemma~\ref{tu:L-L4} gives $\lambda,\lambda_{eo}\ge e^{-\eta/4}$; (B) (Proposition~\ref{tu:U-B}) and Lemma~\ref{tu:L-M4} give
-$\int_Sf^2\ge\frac12$ and $m_B\ge\frac18$, where $S:=C_\eta\cap\{V\le1\}$.
-\item Corollary~\ref{tu:L-H4cor} gives $g\ge\mu$ on $D_M\cup\sigma_1D_M\supset R_{\rm well}$ and on $S$.
+$\int_{\mathcal S}f^2\ge\frac12$ and $m_B\ge\frac18$, where $\mathcal S:=C_\eta\cap\{V\le1\}$ (a set; not the radius $S$).
+\item Corollary~\ref{tu:L-H4cor} gives $g\ge\mu$ on $D_M\cup\sigma_1D_M\supset R_{\rm well}$ and on $\mathcal S$.
 \item Proposition~\ref{tu:L-sub} gives $g\ge\varphi$ on $X$.
 \end{enumerate}
 
 \subsection{The chain from $x$ to $\sigma_1x$}\label{tu:L-chainsec}
-$S$ is $\sigma_1$-invariant, since $\varepsilon(\sin a_1)$ and $V$ are. Corollary~\ref{tu:L-B} needs, for each $x\in S$, centres
+$\mathcal S$ is $\sigma_1$-invariant, since $\varepsilon(a_1)$ and $V$ are. Corollary~\ref{tu:L-B} needs, for each $x\in\mathcal S$, centres
 $c_1(x),\dots,c_{n-1}(x)$ with consecutive distance $\le d/\sqrt\beta$ in each link, and lower bounds on $g$ and on $T$ on the
 balls $B(c_k,\rho_B/\sqrt\beta)$. For $x$ in the corner $(0,0)$ (the others follow by $\sigma_1,\sigma_2$, using $g\circ\sigma_2=g$):
 \begin{enumerate}
@@ -973,7 +997,8 @@ $a=a_1(x)<a_-$. Phase 0 has $O(\beta^{1/4})$ steps with $V$ nonincreasing from $
 class angle runs $a\to0\to\pi-a$; $V\equiv0$; length $\pi$, so $\le\pi\sqrt\beta/d+1$ steps.
 \item $\sigma_1$ applied to the reverse of step 1, from $(-U_1^0,1)$ to $\sigma_1x$.
 \end{enumerate}
-The number of steps is $n\le(\pi+2a_-)\sqrt\beta/d+O(\beta^{1/4})=O(\sqrt\beta)$. The centres depend measurably on $x$, since the
+The number of steps is $n\le(\pi+2a_-)\sqrt\beta/d+O(\beta^{1/4})=O(\sqrt\beta)$. Lemma~\ref{tu:L-Pc} needs one $n$ for all
+$x\in\mathcal S$; the chains are padded with zero steps to this common bound, as in Lemma~\ref{tu:L-geom}. The centres depend measurably on $x$, since the
 phase-0 rotation is an explicit function of $(U_1,U_2)$.
 
 \begin{lemma}\label{tu:L-balls}
@@ -984,7 +1009,7 @@ Let $M'':=1+2\rho_B+\rho_B^2$ $(=2.25)$ and assume, besides $\beta\ge\beta_0$,
 and $M^2\ge1.5\rho_B^2+\log2$ (implied by (M$_A$)). Then for every point $z$ of every ball $B(c_k(x),\rho_B/\sqrt\beta)$ of the chain,
 \[
 g(z)\ge\min\big(\mu',\ \tfrac\mu4e^{-1.5\rho_B^2}e^{-\sqrt\beta\Psi(\pi/2)}\big),\qquad
--\log\mu'\le35a_-\sqrt\beta+R'_\beta,
+\mu':=e^{-35a_-\sqrt\beta-R'_\beta},
 \]
 $R'_\beta:=(n_0''+4)c_{\rm ch}(K_{M''})+M''^2+\tfrac12+\log\frac{k_{\sup}^2}{\lambda k_{\min}^2m_B}$, $n_0''=\lceil(\pi/2)\sqrt{M''}\beta^{1/4}/d\rceil$,
 so $R'_\beta=O(\beta^{1/4})$.
@@ -1029,7 +1054,7 @@ $35a_-$ instead of $35(a_-+r_0)$; the weaker form $35(a_-+r_0)$ used in Theorem~
 
 \noindent\emph{$T_{\min}$.} For consecutive ball points the link distance is $\le(d+2\rho_B)/\sqrt\beta$ and $V\le V_{\max}$ (bounded,
 by (infl)), so (k$_{\min}$) gives $T\ge e^{-V_{\max}}(\sqrt{2/\pi}\beta^{3/2}e^{-(d+2\rho_B)^2/2})^2$, polynomial in $\beta$.
-\emph{Other inputs.} $\sup g\le k_{\sup}^2/\lambda=O(\beta^3)$ by (sup); $v\asymp\beta^{-3}$; $n=O(\sqrt\beta)$; $|S|\le1$.
+\emph{Other inputs.} $\sup g\le k_{\sup}^2/\lambda=O(\beta^3)$ by (sup); $v\asymp\beta^{-3}$; $n=O(\sqrt\beta)$; $|\mathcal S|\le1$.
 
 \subsection{The upper bound and the limit}
 
@@ -1038,13 +1063,13 @@ $\limsup_{\beta\to\infty}(-\log m_{eo})/\sqrt\beta\le c^*$.
 \end{theorem}
 
 \begin{proof}
-Fix $\eta$ and the parameters above, and let $\beta\ge\beta_0(\eta)$. Corollary~\ref{tu:L-B} with $\sigma=\sigma_1$, the set $S$,
-$r_\beta=\rho_B/\sqrt\beta$, and Lemma~\ref{tu:L-balls} (with $g\ge\mu$ on $S$ for the end points) give
+Fix $\eta$ and the parameters above, and let $\beta\ge\beta_0(\eta)$. Corollary~\ref{tu:L-B} with $\sigma=\sigma_1$, the set $\mathcal S$,
+$r_\beta=\rho_B/\sqrt\beta$, and Lemma~\ref{tu:L-balls} (with $g\ge\mu$ on $\mathcal S$ for the end points) give
 \[
--\log\Delta\le2\sup_{\rm balls\cup S}(-\log g)+O(\log\beta)-\log\Big(2\int_Sf^2\Big)
+-\log\Delta\le2\sup_{\rm balls\cup\mathcal S}(-\log g)+O(\log\beta)-\log\Big(2\int_{\mathcal S}f^2\Big)
 \le\sqrt\beta\,2\Psi(\pi/2)+70(a_-+r_0)\sqrt\beta+O(\beta^{1/4})+O(\log\beta),
 \]
-using $\int_Sf^2\ge\frac12$ and $-\log\mu\le35(a_-+r_0)\sqrt\beta+R_\beta$. By Lemma~\ref{tu:L-ansatz-props}(v),
+using $\int_{\mathcal S}f^2\ge\frac12$ and $-\log\mu\le35(a_-+r_0)\sqrt\beta+R_\beta$. By Lemma~\ref{tu:L-ansatz-props}(v),
 $2\Psi(\pi/2)\le c^*+\pi\sqrt{2\eta}$. Since $m_{eo}\ge\Delta$,
 \[
 \limsup_{\beta\to\infty}\frac{-\log m_{eo}}{\sqrt\beta}\le c^*+\pi\sqrt{2\eta}+70(a_-+r_0)
@@ -1052,10 +1077,12 @@ $2\Psi(\pi/2)\le c^*+\pi\sqrt{2\eta}$. Since $m_{eo}\ge\Delta$,
 for every $\eta\in(0,0.4]$. As $\eta\to0$, $a_-\to0$ and $r_0\to0$.
 \end{proof}
 
-\noindent\emph{Status.} Proved in writing, conditional on the results of the first half (Lemmas~\ref{tu:U-kernel},
-\ref{tu:U-K}, \ref{tu:U-R}, \ref{tu:U-F}, Proposition~\ref{tu:U-B}), on the gap bounds of Lemma~\ref{tu:L-gauss} and the $\Delta h$
-bound of Lemma~\ref{tu:L-taylor} as stated. (The absorption step in Lemma~\ref{tu:L-S4} is now quantified.) Not independently
-reviewed: the working files and the assembly were written by sessions of the same model family. The constant $70(a_-+r_0)$ is far
+\noindent\emph{Status.} Proved in writing. It uses the results of the first half (Lemmas~\ref{tu:U-kernel},
+\ref{tu:U-K}, \ref{tu:U-R}, \ref{tu:U-F}, Proposition~\ref{tu:U-B}), proved in Sections~\ref{tu:U-sec-kernel}--\ref{tu:U-sec-agmon}, and the gap bounds of
+Lemma~\ref{tu:L-gauss} and the $\Delta h$ bound of Lemma~\ref{tu:L-taylor}, which are derived in Section~\ref{tu:L-sec-sub}. (An earlier
+version of this line said ``conditional on'' these; they are now on the page. The absorption step in Lemma~\ref{tu:L-S4} is now
+quantified.) Not independently reviewed: the working files, the assembly, the patches and the referee reports were written by
+sessions of the same model family (Claude, Anthropic). The constant $70(a_-+r_0)$ is far
 from sharp, but it vanishes as $\eta\to0$, which is all that is used.
 
 \begin{corollary}\label{tu:L-limit}
