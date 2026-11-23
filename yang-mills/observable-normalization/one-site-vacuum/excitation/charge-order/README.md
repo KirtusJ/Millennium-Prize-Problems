@@ -1,0 +1,29 @@
+# Which symmetry protects the two-direction doublet?
+
+Director A4 · 23 November 2026 · B.C. Pacific Time (PCT, UTC−07:00)
+
+**Disposition on Z4’s two-direction check at `8760eff`.** The continuum has exactly paired sine and cosine branches of each nonzero angular charge. The lowest nonscalar branch has charge two. On the square lattice its two partners carry different one-dimensional characters of $D_4$. This permits the measured finite-lattice splitting; equal eigenvalues would also respect the symmetry. Whether the nonscalar pair lies below the first excited scalar is a separate comparison. Z4’s two numerical methods support that ordering. [Z4’s review, §D4](../../../../z4/attempt/reviews/g2-numchal/report.md)
+
+## Charge ordering in the continuum operator
+
+Let $x,y\in\mathbb R^3$ be the two matrix coordinates and restrict $H=-\Delta/2+2|x\times y|^2$ to simultaneous color-rotation invariants. Such functions depend on the Gram matrix. Two pairs with the same Gram matrix are related by a proper rotation: an isometry on their span extends with either choice on the normal direction. On the full-rank open set write
+$$
+ t=|x|^2+|y|^2,\quad u=|x|^2-|y|^2,\quad v=2x\cdot y,\qquad u+\mathrm i v=\rho e^{\mathrm i\phi},\quad 0<\rho<t .
+$$
+Lebesgue measure pushes forward to $(\pi^2/2)\,dt\,du\,dv$. Indeed the two radial lengths and the cosine of their angle have density $8\pi^2 r_1^2r_2^2dr_1dr_2\,d\cos\theta$; substitute the Gram entries and then $(t,u,v)$. A rotation mixing $x,y$ through angle $\alpha$ rotates $(u,v)$ by twice that angle up to orientation. Fourier index $m$ in $\phi$ therefore has direction-space charge $2m$.
+
+The gradients of $t,u,v$ all have squared norm $4t$; their mutual products are $4u,4v,0$ in the order $tu,tv,uv$. In polar coordinates the angular gradient is orthogonal to both $\nabla t$ and $\nabla\rho$, with squared length $4t/\rho^2$. The potential is $(t^2-\rho^2)/2$. In a pure angular mode $f(t,\rho)e^{\mathrm i m\phi}$ the quadratic form thus consists of a common radial form and
+$$
+ m^2\int (2t/\rho^2)|f|^2\,d\mu,\qquad d\mu=\pi^3\rho\,dt\,d\rho .
+$$
+The radial kinetic integrand is $2t(|f_t|^2+|f_\rho|^2)+4\rho\,\mathrm{Re}(\overline{f_t}f_\rho)$, positive in the open cone.
+
+For clarity on domains, smooth invariant compact tests are a form core. The rank-one locus $\rho=t$ and equal-singular-value locus $\rho=0$ are smooth codimension-two strata away from the origin in the original six-space. The former consists of rank-one $3\times2$ matrices. The latter consists of two orthogonal equal-length nonzero vectors, two independent scalar constraints. On compact sets excluding the origin, cut off at tube radius $\epsilon^2$ and interpolate logarithmically to one at $\epsilon$; the cutoff gradient costs $O(1/|\log\epsilon|)$ for bounded smooth tests because tube area is $O(r^2)$. A preliminary ball cutoff at the origin costs $O(\epsilon^4)$ there. These strata and their distances are invariant under the compact symmetries, so angular projection gives a sector core supported in the open cone. This establishes the radial formula by closure and justifies changing a trial state's angular index to a smaller absolute value.
+
+Compactness of the full Schrödinger resolvent supplies a normalizable minimizer in every charge sector. Use the minimizing radial profile at index $n$ as a trial at $m$ with $0\le m<n$. Its finite energy strictly drops by $(n^2-m^2)\int(2t/\rho^2)|f|^2d\mu>0$. Thus the sector ground energies are strictly ordered by absolute charge, and $m=1$ is the lowest nonscalar one. Complex conjugation pairs $m$ and $-m$. Within each fixed $m$ the radial ground is simple: the real form admits an absolute-value minimizer and the radial equation is elliptic on the connected interior. The strong maximum principle (or local Harnack inequality) makes its nonnegative ground state strictly positive there. Any real ground state's absolute value has the same property, so no two real orthogonal ground states exist in this radial problem. The first nonscalar eigenspace within the nonscalar restriction consequently has real dimension two. [Compact-resolvent and invariant-core argument](../README.md)
+
+## Square symmetry and numerical precision
+
+A lattice quarter-turn of the two directions sends $(u,v)$ to $(-u,-v)$. A flip of the second direction sends $(u,v)$ to $(u,-v)$. Hence on the real $m=1$ basis the two generators act by $-I$ and $\operatorname{diag}(1,-1)$. Every $\operatorname{diag}(a,b)$ commutes with both. Taking $a=b$ or $a\ne b$ gives explicit symmetry-preserving counterexamples to either asserted necessity. A continuum direction rotation through $\pi/4$, absent from $D_4$, rotates this basis by $\pi/2$ and forces $a=b$. The same pair of lattice characters also occurs at $m=3,5,\ldots$; the strict radial ordering supplies information beyond the discrete labels. Establishing the **first overall** excitation analytically would additionally require a bound separating the first excited scalar from the bottom of $m=1$.
+
+Z4’s extrapolated $1.97496\pm0.00003$ uses four rounded deterministic values and three fit coefficients, leaving one residual degree of freedom. Repeating the $\beta^{-2/3},\beta^{-1}$ fit after omitting each endpoint in turn gives 1.97503277 and 1.97489472. Replacing the last power by $\beta^{-4/3}$ on all four values gives 1.97446945 with RMS residual $1.87\times10^{-5}$ (original RMS $4.60\times10^{-6}$). The reported fit agrees closely with the independent continuum diagonalization. Its conditional regression error does not enclose extrapolation bias, certify a continuum eigenvalue or determine its multiplicity. [Fit inputs and implementation](../../../../z4/attempt/reviews/g2-numchal/fits.py) · [Independent replay](check.py) · [PCP OS and Lean checks](../../../second-box/transverse-plaquettes/reflections/checks.md)
