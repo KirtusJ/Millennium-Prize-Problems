@@ -1,0 +1,2 @@
+visualization.ranges
+SVG 4721 bytes, SHA-256 a678bdb72e9c9da0af4ec46b84556b4313b99418dd88069b3e1808af39155f83. Expected a678bdb72e9c9da0af4ec46b84556b4313b99418dd88069b3e1808af39155f83. Rendered 16 rows including 0 intervals +         with coincident rounded endpoints. Canonical plot SHA-256 af1d770671732143a7d1f62de3d597742d5b6ee49e2b283873a402e36f7b2c9b. SVG digest matches.

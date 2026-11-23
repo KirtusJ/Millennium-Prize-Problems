@@ -1,0 +1,52 @@
+# The first sheet seen by a coarse vacuum Wilson loop
+
+Fix the even periodic spatial box and the anisotropic $SU(2)$ Wilson transfer of the [all-reading calculation](README.md). Use the normalized fundamental loop $W_R=\tfrac12\mathrm{Tr}(U_{\partial R})$ in a planar square $R$ of $\ell\times\ell$ fine faces, $m=\ell^2$, measured at time zero. The temporal coupling $g>0$ is arbitrary and fixed; $q=I_2(g)/I_1(g)$. The magnetic weight per spatial face is $\exp(b\,\mathrm{Tr}(U_p)/2)$. The coefficient below resums **all electric time separations** allowed at the first nonzero magnetic order. Wilson’s surface expansion supplies the strong-coupling context. [Wilson, *Confinement of quarks*](https://doi.org/10.1103/PhysRevD.10.2445)
+
+### Least area under spatial refinement
+
+For any mod-two coarse edge cycle $\gamma$ on an aligned periodic cube, let $a(\gamma)$ be the minimum number of spatial faces filling it, or infinity for a nonboundary. Straight subdivision $\iota_\ell$ satisfies
+$$
+ a(\iota_\ell\gamma)=\ell^2 a(\gamma).
+$$
+For each offset $v\in\{0,\ldots,\ell-1\}^3$, snap the fine coordinate $x_i$ to $\lfloor(x_i+v_i)/\ell\rfloor$ modulo the coarse period. This gives a cubical chain map over $\mathbb F_2$. An edge either collapses or maps to a coarse edge. A face collapses if either of its directions collapses, in which case surviving opposite sides cancel. Otherwise it maps to the coarse face bounded by its image edges. On every subdivided coarse edge the map traverses the original edge exactly once, including across a seam. Any fine filling therefore projects to a coarse filling for every offset. In a fixed pair of face directions exactly one offset in each direction survives, with $\ell$ choices in the third coordinate. Before any cancellations, a fine sheet of size $F$ contributes $\ell F$ faces in total to the $\ell^3$ projections. This gives $\ell^3 a(\gamma)\le\ell F$. Subdividing a minimal coarse filling attains the reverse bound. The chain maps also detect the unfillable case. Every fine cycle supported entirely on the retained skeleton consists of whole coarse segments, by the boundary condition at each interior segment vertex.
+
+The first-order orthogonality used for the transfer norm has a concrete failure at the next order for $\ell=2$. Use opposite pairs of tiles, numbered $1,2$ and $3,4$, partitioning one coarse square. Let $C=2W_R$ and let $D$ be an unnormalized fundamental loop on a disjoint remote coarse square, centered and of Haar norm one. Take coarse inputs $D$ and $DC$ and form the two outputs $A_1A_2D$, $A_3A_4DC$ with $A_i=\mathrm{Tr}(U_i)/2$. Both have a nonempty parity outside the coarse skeleton and hence have zero coarse expectation. Their Haar inner product is **$1/128$**. Integration over the disk interior gives $2^{1-4}C$ from the product of its four unnormalized traces. The boundary trace has norm one, as does the independent remote loop. The four factors of $1/2$ give the stated value. This falsifies a termwise quadratic extension of the orthogonal-output argument. Interference, normalization and moving-projection terms in a full second derivative still require calculation. [Independent contraction](checks.md)
+
+### The first nonzero Taylor coefficient
+
+With exterior height fixed at zero, write
+$$
+ E_R(t)=\sum_{p\sim p'\text{ in }R}|t_p-t_{p'}|
+             +\sum_{e\in\partial R}|t_{p(e)}|,
+ \qquad Z_R(q)=\sum_{t:R\to\mathbb Z} q^{E_R(t)} .
+$$
+Neighbor pairs are unordered and $p(e)$ is the unique tile at the perimeter edge $e$. Then at fixed $L,\ell,g$ with $L/\ell\ge4$,
+$$
+ \pi_b W_R = (b/4)^m Z_R(q)+O_{L,\ell,g}(|b|^{m+2}). \tag{1}
+$$
+In particular the leading power is exactly the least area. $Z_R$ has the unrestricted, zero-boundary solid-on-solid energy on the two-dimensional tile set with inverse temperature $-\log q$. Here it is a coefficient in a gauge-theory observable. [Solid-on-solid Hamiltonian and boundary convention](https://arxiv.org/pdf/2301.09197#page=1)
+
+1. **Time window.** Evaluate the stationary vacuum by inserting $W_R$ between two transfers of length $H$ with constant external vectors. At $b=0$ the physical matrix element agrees with the product of independent stationary single-link Haar chains. Convolution by a central one-link kernel commutes with gauge projection. All insertions and endpoints are gauge invariant, so intervening projections can be dropped. The magnetic multipliers occur once at each interior time and with half weight at each endpoint. Center-flipping a link at **every** time leaves the electric chain law invariant. Thus nonzero Taylor terms have spatial insertion boundaries equal modulo two to the measured perimeter. The area identity excludes every order below $m$.
+2. **Which faces.** At order $m$ there must be exactly $m$ distinct spatial faces of odd multiplicity. Project the three-torus onto the loop’s coordinate two-torus. A projected mod-two filling there is $R$ or its complement, because any closed two-chain is either empty or the entire two-torus. The complement has size $L^2-m>m$. Equality leaves one horizontal face above every tile of $R$ and no other faces. Two neighboring tiles must occur at the same spatial height for their shared edge to cancel. Matching the boundary fixes that height to the original plane. Thus the spatial sheet is unique. Temporal insertion times on its tiles are free. Distinct tiles give $m!$ permutations canceling the Taylor factorial, including when times coincide.
+3. **Link integrals.** Each sheet edge contributes two fundamental matrix factors. The electric transition carries each fundamental matrix coefficient for $d$ time steps with multiplier $q^d$. Conditional expectation on the earlier time consequently gives $q^d$ times the same two-factor Haar contraction for that edge, with the Hermitian-dual orientation on one factor. A boundary edge is paired with the measured loop at time zero. Their product is $q^{E_R(t)}$. For the remaining static contraction, a rectangular disk can be peeled a tile at a time while keeping a disk. Given the outer boundary holonomy $U$, the product of the unnormalized tile traces has conditional integral $2^{1-m}\mathrm{Tr}(U)$. One way to see this is to fix a spanning tree of disk links. The remaining $m$ gauge-fixed links can be replaced, by successive left or right Haar translations, with $m$ independent Haar plaquette holonomies based at a common root. Their ordered product is the outer holonomy up to conjugation. The convolution identity $\chi*\chi=\chi/2$ gives the factor $2^{1-m}$. Integrating against the outer character, whose squared norm is one, and restoring all $m+1$ trace normalizations yields $4^{-m}$.
+4. **Infinite time and the next power.** A dual spanning tree on the tiles plus one exterior root bounds $Z_R(q)\le[(1+q)/(1-q)]^m$ by summing independent integer increments along that tree. Hence finite time sums with the half endpoint weights converge to $Z_R(q)$. At fixed volume the simple isolated vacuum of the compact electric transfer persists analytically on a small complex disk. On a smaller disk its Riesz projection has nonzero constant-endpoint overlap and the rest of the transfer powers are exponentially smaller, uniformly on the disk. The ratios of the two finite-window matrix elements therefore converge locally uniformly to the analytic continuation of the real vacuum expectation. Cauchy’s formula permits coefficient extraction. Finally the periodic central links $z_i(x)=(-I)^{\sum_{j<i}x_j}$ multiply each elementary spatial loop by $-1$ and the perimeter by $(-1)^m$. They conjugate the two transfers at $b$ and $-b$, giving parity $(-1)^m$ for the expectation. This removes order $m+1$. [Single-link and transfer normalization](../magnetic.md)
+
+A one-tile check gives $Z_\square=(1+q^4)/(1-q^4)$, reproducing the vacuum derivative $(1+q^4)/(4(1-q^4))$. Sending $q$ to zero in (1) gives the coefficient $4^{-m}$ at independent times.
+
+### Computing the coefficient and its physical-time scaling
+
+Let $P(S)$ be the number of boundary edges of a subset $S$ of tiles, including boundaries of holes. Define $F(\varnothing)=1$ and, for $S\ne\varnothing$,
+$$
+ F(S)=\frac{q^{P(S)}}{1-q^{P(S)}}\sum_{T\subsetneq S}F(T).
+$$
+$F$ enumerates nonnegative heights with positive support exactly $S$. Removing their first level contributes $P(S)$ and leaves support $T\subseteq S$; moving the $T=S$ term to the left gives the recurrence. Positive and negative integer heights add their variations even on an edge joining opposite signs. Therefore $Z_R(q)=\sum_{S\cap T=\varnothing}F(S)F(T)$ with both subsets of $R$.
+
+Set $g=\kappa/a_t$, $b=a_t j$ at fixed spatial lattice and fixed $R$. For the **coefficient of $j^m$**, first extracted at zero coupling and then taken to continuous time, (1) gives
+$$
+ \lim_{a_t\downarrow0}(a_t/4)^m Z_R(q)
+  =(\kappa/6)^m\sum_{S\subseteq R}H(S)H(R\setminus S),\quad
+ H(\varnothing)=1,\qquad H(S)=\frac{\sum_{p\in S}H(S\setminus\{p\})}{P(S)} .
+$$
+Indeed $q=1-3a_t/(2\kappa)+O(a_t^2)$ and the recurrence gives $(1-q)^{|S|}F(S)\to H(S)$ by induction. Only complementary supports survive in the top power. The time-continuous Hamiltonian interpretation sums ordered electric propagations between tile insertions and the observation at time zero. Each boundary link of the current tile subset costs $3/(2\kappa)$ in electric energy. [Modified Bessel expansion](https://dlmf.nist.gov/10.40) · [Kogut and Susskind](https://doi.org/10.1103/PhysRevD.11.395)
+
+For the sequence of *leading coefficients* on squares, the per-tile limit of $\log Z_R(q)$ exists at each fixed $0<q<1$. Joining adjacent rectangles decreases their combined boundary energy because $|a-b|\le|a|+|b|$. Tile a large square by fixed smaller squares, fixing the leftover heights to zero. The resulting lower bound on the limiting inferior is the log partition sum per tile of any smaller square; the spanning-tree estimate bounds the supremum above. Restricting the heights to one checkerboard color also gives a lower bound. Thus the limit lies between $\tfrac12\log[(1+q^4)/(1-q^4)]$ and $\log[(1+q)/(1-q)]$. This calculation controls a sequence of coefficients at orders increasing with area. Equation (1) has a box- and loop-dependent remainder. A finite-coupling area law, the continuum field construction and a positive continuum mass gap remain open on this route. [Clay problem statement](https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf)
