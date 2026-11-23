@@ -1,0 +1,14 @@
+The report is at `/home/user/z4-workers/b1-style/child/report.md`.
+
+- **Control:** four alternatives, (A) to (D).
+- **(a) FOUND:** arXiv:2610.08144 exists. It is "Navier-Stokes lost in translation: Why Lean verification of AI autoformalisation does not guarantee correct natural language proofs", by Bastounis, Circelli and Hansen, submitted 6 Oct 2026.
+- **(b) FOUND, but the premise is only partly right:** §3.2 does describe a paper-versus-Lean discrepancy, but it concerns estimate (10.19), not the one the claim implies. The printed (8.19) versus Lean discrepancy is in §3.1, Example 3.1.
+- **(c) FOUND:**
+  - In §3.2 (Example 3.3), the printed estimate is (10.19), compared with the Lean declaration `exists_uniform_actual_pressure_flux_bound` (`NavierStokes/R3/PressureFlux.lean`, line 576).
+  - In §3.1, the printed estimate is (8.19) (m+4 derivatives), compared with `norm_derivativeWord_inverse_le` (m+5 derivatives).
+- **(d) FOUND, secondary sources only:** TechCrunch on 8 Oct 2026 and aiweekly.co both report the same paper. I found no independent criticism of the presentation beyond that preprint. I only skimmed the other search hits (YourStory, Scientific American, NYU Shanghai, John D. Cook).
+- **Failed predicate:** my first check failed on the title match because the PDF running head is uppercase; that was my own expectation, not a defect in the paper. I kept the failed run and fixed it in `check2.py`, where all six predicates pass.
+- **Grandchild:** task T4 was admitted and released. It passed its control (arXiv:1706.03762 returned "Attention Is All You Need") and independently found the same title and authors. I reran its script and got the same result.
+- **Verify last lines:** the Python verify ended `result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)`. The Rust verify ended `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.`
+
+The rerun commands are in `report.md`.

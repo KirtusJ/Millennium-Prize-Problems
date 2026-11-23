@@ -1,0 +1,2 @@
+check K53: exit 0 (expected 0) in 509554 ms | output d39dd59b8af3 | event 55 head a97fc044724d
+  /home/user/z4-workers/c1-excl/report.md — verdicts: 2 stand, 5 defect, 2 not checked; program predicates: 8 met, 0 failed, 3 measured only.

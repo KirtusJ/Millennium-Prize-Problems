@@ -1,0 +1,34 @@
+The 5D SU(2) runs show a clear cold/hot hysteresis gap at beta = 1.6. It is weak and marginal at 1.7, and absent at 1.3, 1.5, 1.9 and 2.2. These are short runs: 200 sweeps of checkerboard Metropolis, one seed per start. They show the gap but don't locate or characterise the transition.
+
+**Control:** the expectation of (1/2)Tr U at beta = 1 is I2(1)/I1(1) = **0.240194**. It is in `control.txt`, and a series and a numerical integral agree. My first `control.py` run crashed because this numpy has no `np.trapz`. That was a defect in my code, and I fixed it and reran.
+
+P is the mean of the last 100 sweeps; the error comes from 10 blocks and ignores autocorrelation.
+
+| beta | P_cold | P_hot | gap |
+|---|---|---|---|
+| 1.3 | 0.3200 ± 0.0006 | 0.3211 ± 0.0005 | 0.0011 |
+| 1.5 | 0.3779 ± 0.0008 | 0.3793 ± 0.0012 | 0.0014 |
+| 1.6 | 0.5057 ± 0.0026 | 0.4154 ± 0.0010 | **0.090** |
+| 1.7 | 0.5648 ± 0.0014 | 0.5469 ± 0.0067 | 0.018 |
+| 1.9 | 0.6295 ± 0.0010 | 0.6302 ± 0.0007 | 0.0007 |
+| 2.2 | 0.6925 ± 0.0007 | 0.6926 ± 0.0005 | 0.00006 |
+
+- **At 1.6** the gap is about 30 sigma. The cold run is still drifting (last sweep 0.479 against a mean of 0.506), so that branch is not stable either.
+- **At 1.7** the gap is 2.6 sigma. The hot run is still drifting upward (last sweep 0.5645), so this one may close with more sweeps.
+- **Predicates:** all four predicates were fixed in the program's docstring before the first run, and all four were met. Their tolerances (0.02, 0.03, 5 sigma) are my own guesses, not derived. P1 was tested per case and all 12 runs qualify. P3 was met through 1.6 only, because the 1.7 gap (0.018) is below the 0.03 threshold. The P values themselves, the 1.7 behaviour and the drifts were measured only.
+- **Sweep count:** I cut the sweeps from 400 to 200 before the first run to stay under 3 minutes (0.058 s per sweep).
+
+**Grandchild (task T13):** I asked it for an independent program giving P at beta = 0.4 on a 4^5 lattice, compared with the strong-coupling value I2/I1, with its own control first.
+- **Result:** it got P = 0.099383 ± 0.000587 against 0.099340, a difference of 0.07 sigma, with its control also 0.240194.
+- **Predicates:** its three predicates passed on its second run. Its first run failed (P = 0.0007) because it updated a whole direction at once, which is its own bug. It fixed this with a checkerboard update and kept the failed record.
+- **Rerun:** I reread its files and reran its program with a new tag, and got identical numbers. I did not otherwise check its sampler.
+- **Tolerance:** its tolerance for higher-order corrections is a guess, so the agreement does not test those corrections.
+- **Task:** T13 is released.
+
+**PCP OS:**
+- **Python verify:** the last line is "result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)".
+- **Rust verify:** the last line is "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right." The register SHA-256 is 725402cc…3288f.
+
+The exact rerun commands are in `report.md`. Delete `results.json` before rerunning `su2_5d.py`, since result files are opened with mode "x".
+
+Everything is in `/home/user/z4-workers/c1-excl/child`; start with `report.md`.

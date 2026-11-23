@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/c1-excl/usc_test.py", line 86, in <module>
+    Zgrid = [b for b in grid if m_formula(b) <= math.log(1.05)]
+                                ~~~~~~~~~^^^
+  File "/home/user/z4-workers/c1-excl/usc_test.py", line 85, in m_formula
+    return min(-math.log(moments(beta, 2 * k) / moments(beta, 0)) / (2 * k) for k in (1, 10, 100, K))
+  File "/home/user/z4-workers/c1-excl/usc_test.py", line 85, in <genexpr>
+    return min(-math.log(moments(beta, 2 * k) / moments(beta, 0)) / (2 * k) for k in (1, 10, 100, K))
+                ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: math domain error

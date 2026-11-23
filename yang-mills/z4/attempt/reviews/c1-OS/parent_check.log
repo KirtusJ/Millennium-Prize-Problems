@@ -1,0 +1,2 @@
+check K54: exit 0 (expected 0) in 638715 ms | output f09518c43716 | event 56 head e3b6cac586e2
+  /home/user/z4-workers/c1-OS/report.md: 6 stand, 2 defects (the brief's (E1) form passes the free field's :φ²:; I first used the bare mass where the exact gap 2 asinh(m/2) belongs, now fixed), 2 not checked; programs 32 met, 4 failed (all my own), 0 measured only; SU(2) has 2 of 5 hypotheses proved (H0 lattice axioms, H2 = (B)); the OS reconstruction was read only via Kravchuk–Qiao–Rychkov since Project Euclid blocked the papers.

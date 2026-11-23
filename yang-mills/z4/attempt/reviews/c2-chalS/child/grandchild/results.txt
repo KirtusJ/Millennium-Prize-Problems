@@ -1,0 +1,3 @@
+A rank=6 met
+B size=384 met
+C size>20000: reached 20165 met

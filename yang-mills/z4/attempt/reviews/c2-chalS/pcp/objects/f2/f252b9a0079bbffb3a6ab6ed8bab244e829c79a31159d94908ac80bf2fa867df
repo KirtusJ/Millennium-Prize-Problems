@@ -1,0 +1,22 @@
+**Verdict: G = O(4), YES.**
+
+- **Why:** the powers of R are dense in the (1,2)-plane SO(2) by Kronecker, since theta/pi is irrational. Conjugating by the permutation matrices in W4 gives all six coordinate-plane SO(2)'s. Their Lie algebra elements E_ij − E_ji span a space of rank 6, which is all of so(4) (dimension 6). SO(4) is connected, so G contains it. W4 also contains a determinant −1 element, so G is all of O(4).
+- **Predicates:** all met. The control (dim SO(4) = 6) is in `control.txt`.
+- **Numerical check:** the five Haar-random SO(4) samples (seed 20260101) were approximated with powers R^n, n ≤ 10^5. The Frobenius errors were 7.3e-5, 2.5e-4, 6.1e-5, 6.0e-5 and 7.8e-5, against a tolerance of 1e-3.
+- **Random word:** the length-200 word (seed 7) has orthogonality error 0.0, but it probably contains no R, since R is 1 of 385 letters. A second word (seed 8, 108 R's) has error 5.4e-15.
+- **Failed run:** the first `check.py` run exited 1 because of my own bug (a numpy bool that JSON can't write). Its partial `check_result.json` is kept, and the good run wrote `check_result2.json`.
+- **Grandchild (T16, now released):** the rank-of-identity control gave 3. The six E_ij − E_ji have rank 6. For theta = π/2 the generated group has 384 elements, equal to W4. For theta = 1 rad the group closure grew to 20165 elements before the 20000 cap, which is consistent with an infinite group but isn't a proof. I reread the code and reran it in a fresh directory, and the results were identical. My first rerun attempt used a stale directory and was discarded.
+- **Verify, last lines:**
+  - `pcp_os.py verify`: `result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)`
+  - `pcpos verify`: `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.`
+
+To rerun, delete the existing result files first, since they open in mode "x". Run `python3 check.py` in this directory, then `python3 control.py && python3 tasks.py` in `grandchild/`. The exact commands are also in `report.md`.
+
+Files are in `/home/user/z4-workers/c2-chalS/child`:
+- `report.md`
+- `notes.md`
+- `control.txt`
+- `check.py`
+- `check_result.json`
+- `check_result2.json`
+- `grandchild/`

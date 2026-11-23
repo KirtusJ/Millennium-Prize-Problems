@@ -1,0 +1,2 @@
+check K55: exit 0 (expected 0) in 567396 ms | output 8fb4389fbbf2 | event 57 head f4096b01710d
+  /home/user/z4-workers/c2-chalS/report.md: 12 STANDS, 3 DEFECT, 2 NOT CHECKED. Theorem S holds as stated, but proof step 8 needs a positive transfer matrix, which hypothesis H0 does not give; it is fixed by using |F(s)| ≤ e^{−s}F(0) instead or by adding link-plane reflection positivity.

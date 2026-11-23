@@ -1,0 +1,15 @@
+# notes.md — worker c1-E (task T6), brief c1-E
+- 13:2x step 0: control.txt = 0.272341 (-ln tanh 1, python math). Register pcp initialised.
+- step 1: child admitted as T8 (parent T6), child/PROMPT.txt written (2D Ising Binder calibration, control K_c=0.440687).
+- step 2: wrote ising_wolff.c (predicates in header), compiled; pilot K-scan in pilot/ (not recorded as predicate run, only to place the K grid).
+- step 3: predicates P2a' (xi/L=0.5) and P2c added after pilot, before recorded runs; P2a kept. run_4d.sh launched via register (name mc-4d).
+- step 4: free_field.py run (register name free-field), result in results/free_L8_m0.25.txt
+- step 5: child returned (exit 0, 129 s). Child control.txt graded first (expected 0.440687).
+- step 6: child control 0.440687 CORRECT. Child report: U4(2D,Kc) 0.6172(L4, exact match), 0.6132, 0.6115, 0.6107, 0.6109 (L=8..64); grandchild T9 exact 4x4 enum. Child reported running mknod on /dev/null (out of its directory) - recorded as rule breach by child.
+- step 7: DEFECT OF MY OWN PROGRAM found by cross-check vs child: v1 measured after a sweep ended by 'flipped>=V' - a stopping time depending on cluster sizes; v1 2D L=16 gives <M^2>/V=150.6 vs its own mean cluster 139.6 (Wolff identity requires equality), U4 0.6286 vs child 0.6115. v1 4D runs killed, moved with v1 source to results_v1_biased/. Fixing: fixed number of clusters per sweep set after thermalisation.
+- step 8: v2 2D: U4(16)=0.6111(5), U4(32)=0.6098(7), P0 identity ok; agrees with child. Launched run_4d_v2.sh (register mc-4d-v2), trimmed grid, nmeas 15000.
+- step 9: T8 released.
+- step 10: interim v2 4D: xi/L in 0.30-0.42 at the planned K; xi/L=0.5 not bracketed (grid placed from biased v1 pilot) -> P2a' will fail as NOT MEASURABLE (own error). Post-hoc measured-only comparison at xi/L=0.33 planned, labelled as such.
+- step 11: HYPOTHESIS_E.md written.
+- step 12: analysis_v2: P2a MET (gR 67(9), 46(8), 32(7) at xi/L=0.25, L=6,8,12); P2b FAILED (32/6.9=4.6 sigma); P2a', P2c FAILED (xi/L=0.5 not bracketed). Post-hoc at xi/L~0.33 (measured only): gR 36(2) L6, ~29 L8, 22(2) L12, 20(3) L16.
+- step 13: report.md written; registers verified PASS (python, rust); T8 released.

@@ -1,0 +1,9 @@
+TypeError: only 0-dimensional arrays can be converted to Python scalars
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user/z4-workers/c2-chalS/t_pos.py", line 35, in <module>
+    M[i, j] = 0.5 * cond(b[0], b[1]) * cond(b[1], b[2]) * cond(a[0], a[1]) * cond(a[1], a[2])
+    ~^^^^^^
+ValueError: setting an array element with a sequence.

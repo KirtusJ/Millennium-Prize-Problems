@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/c1-excl/usc_test.py", line 55, in <module>
+    e = abs(gk(atoms, 200) - (-math.log(xmax)))
+            ~~^^^^^^^^^^^^
+  File "/home/user/z4-workers/c1-excl/usc_test.py", line 38, in gk
+    return -math.log(a / a0) / (2 * k)
+            ~~~~~~~~^^^^^^^^
+ValueError: math domain error

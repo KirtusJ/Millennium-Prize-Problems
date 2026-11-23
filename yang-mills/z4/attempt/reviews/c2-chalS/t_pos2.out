@@ -1,0 +1,15 @@
+eigenvalues 2.255252 -1.042191; m = 0.771937
+T1 min eigenvalue of site-RP matrix: -1.092e-17
+T2 t=1: F(t)=-0.462117 F(t+1)=+0.213552 e^-m F(t)=-0.213552 holds=False
+T2 t=2: F(t)=+0.213552 F(t+1)=-0.098686 e^-m F(t)=+0.098686 holds=True
+T2 t=3: F(t)=-0.098686 F(t+1)=+0.045605 e^-m F(t)=-0.045605 holds=False
+T2 t=4: F(t)=+0.045605 F(t+1)=-0.021075 e^-m F(t)=+0.021075 holds=True
+T2 t=5: F(t)=-0.021075 F(t+1)=+0.009739 e^-m F(t)=-0.009739 holds=False
+T2 t=6: F(t)=+0.009739 F(t+1)=-0.004501 e^-m F(t)=+0.004501 holds=True
+T3 per t: [np.True_, np.True_, np.True_, np.True_, np.True_, np.True_, np.True_, np.True_, np.True_, np.True_, np.True_]
+T4 <s0 s1> = -0.462117
+T2 cases holding: 3 of 6
+PREDICATE T1: MET
+PREDICATE T2: FAILED
+PREDICATE T3: MET
+PREDICATE T4: MET

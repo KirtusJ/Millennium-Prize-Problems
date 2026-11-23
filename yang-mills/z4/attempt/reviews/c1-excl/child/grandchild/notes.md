@@ -1,0 +1,3 @@
+- wrote su2_plaq.py with predicates P1-P3 (stated in docstring before running)
+- run1 FAILED P3: P=0.00066 vs 0.0993. Cause: bug, simultaneous update of all mu-links but plaquette contains two mu-links (x and x+nu); need checkerboard. result_run1.txt kept as failed record. Fix + rerun as run2 (predicates unchanged).
+- run2 (checkerboard): P=0.099383(587) vs 0.099340; P1,P2,P3 pass. control.txt=0.240194

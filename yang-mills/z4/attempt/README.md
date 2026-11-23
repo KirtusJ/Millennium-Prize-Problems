@@ -12,6 +12,10 @@ Rules of the folder: one numbered chain; every link marked proved here, taken fr
 | [`A1_REDUCTION.md`](A1_REDUCTION.md) | Attempt 1, part I: scale by the gap. Theorem R′ and its three hypotheses (A), (B), (C); the challenge and the corrected statement |
 | [`A1_LEDGER.md`](A1_LEDGER.md) | Attempt 1: where the chain stands and where it is broken |
 | [`THEOREM_B.md`](THEOREM_B.md) | The one link that held: statement, proof by file, challenges, limits |
+| [`A2_LEDGER.md`](A2_LEDGER.md) | Attempt 2: the whole chain as one conditional theorem (five lattice hypotheses, two proved); what "interacting" has to mean; why exclusion fails |
+| [`paper/`](paper/) | A paper reporting the attempt, in preparation |
 | [`reviews/`](reviews/) | Every worker's brief, chain, programs, result files and register |
 
 State on 23 November 2026: attempt 1 is broken at (A) on all four routes tried (curvature, center vortices, a finite-size criterion, positivity of the dual); (C) is reduced to one inequality that is missing and that the folder's measurement leans against; (B), that the gap closes at weak coupling, held: written out in full and challenged three times within one model family with no failing line found ([`THEOREM_B.md`](THEOREM_B.md)); it is the easy direction, holds for U(1) too, and is not independently reviewed; (D) to (G) are not attempted. A negative result is recorded: six properties shared by SU(2), U(1) and Z₂ in four dimensions cannot prove a gap, because U(1) has them all and no gap.
+
+Later on 23 November 2026: attempt 2 takes the gap at every coupling as a hypothesis and writes the rest as a conditional theorem to the Osterwalder–Schrader axioms. For SU(2), of its five lattice hypotheses two are proved, and they are the two that hold for U(1) as well.

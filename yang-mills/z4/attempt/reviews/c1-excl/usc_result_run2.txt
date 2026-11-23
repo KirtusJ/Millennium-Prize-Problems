@@ -1,0 +1,7 @@
+P1/P2 cases qualifying: 1989 of 2000
+P1 monotone: failed 0 of 1989; max increase g_(k+1)-g_k = 8.882e-16  -> MET
+P2 limit: failed 0 of 1989; max error/bound = 0.498  -> MET
+P3 continuity n=0: max neighbour jump 1.000e-03 <= 2.0e-03: True
+P3 continuity n=2: max neighbour jump 5.833e-04 <= 2.0e-03: True
+P3 continuity n=10: max neighbour jump 1.817e-04 <= 2.0e-03: True
+P3 continuity n=50: max neighbour jump 3.922e-05 <= 2.0e-03: True

@@ -1,0 +1,51 @@
+pages=166
+abstract words=31 sentences=1
+title='FINITE TIME BLOWUP FOR NAVIER–STOKES'
+Lean in body: 0; Millennium in body: 1
+  section '1. Introduction' starts p1, span 2 pp
+  section '2. Physical description of the blowup' starts p3, span 3 pp
+  section '3. Proof outline' starts p6, span 18 pp
+  section '4. Constructing the leading order flow' starts p24, span 21 pp
+  section '5. Correcting the base flow to every order' starts p45, span 17 pp
+  section '6. Auxiliary torus and separation of oscillatory supports' starts p62, span 11 pp
+  section '7. Oscillatory realization and correction of the residual stress' starts p73, span 15 pp
+  section '8. Compactly supported mean corrections' starts p88, span 12 pp
+  section '9. Residual improvement and the local field' starts p100, span 16 pp
+  section '10. Compact forcing and whole-space breakdown' starts p116, span 10 pp
+  section 'Appendix A. Matching radial moments and constructing the heat exterior' starts p126, span 18 pp
+  section 'Appendix B. Analytic profiles near the axis and their continuation' starts p144, span 13 pp
+  section 'Appendix C. Realizing the admissible stress cone' starts p157, span 8 pp
+  section 'References' starts p165, span 2 pp
+P8 per-case: 14 of 14 sections qualify
+numbered references=22 (max label 22)
+measured: 'Theorem N.' headers=8 distinct=5
+measured: 'Proposition N.' headers=39 distinct=30
+measured: 'Lemma N.' headers=65 distinct=44
+measured: 'Corollary N.' headers=6 distinct=6
+measured: 'Remark N.' headers=1 distinct=1
+measured: 'Definition N.' headers=5 distinct=3
+measured: 'Figure N.' headers=6 distinct=6
+measured: 'Table N.' headers=0 distinct=0
+measured: 'we expect' count=0
+measured: 'we believe' count=0
+measured: 'we conjecture' count=0
+measured: 'it seems' count=0
+measured: 'perhaps' count=0
+measured: 'might' count=0
+measured: 'may ' count=74
+measured: 'remarkabl' count=0
+measured: 'breakthrough' count=0
+measured: 'first ' count=129
+measured: 'novel' count=0
+measured: 'Consequently' count=26
+measured: 'establish' count=22
+P1: MET
+P2: MET
+P3: MET
+P4: MET
+P5: FAILED
+P6: FAILED
+P7: MET
+P8: MET
+P9: MET
+SUMMARY met=7 failed=2

@@ -1,0 +1,2 @@
+check K52: exit 0 (expected 0) in 535697 ms | output 95c1b7c5cdb0 | event 54 head 9b2df631eca3
+  /home/user/z4-workers/c1-E/report.md — STANDS 9, DEFECT 5, NOT CHECKED 3; predicates: 7 met, 3 failed, 2 measured only.

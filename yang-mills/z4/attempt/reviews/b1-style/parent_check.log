@@ -1,0 +1,2 @@
+check K51: exit 0 (expected 0) in 258213 ms | output 621ea56c99ee | event 53 head efc75fddfc98
+  /home/user/z4-workers/b1-style/report.md — STANDS 10, DEFECT 2, NOT CHECKED 3.
