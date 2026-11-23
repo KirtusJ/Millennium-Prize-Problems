@@ -1,0 +1,3 @@
+dyadic slab doubling and two copies per transverse even site
+both spatial cube shells cover each unused face in the slice twice
+plaquette product-mean inequality and residual seam exponent

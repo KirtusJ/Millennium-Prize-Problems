@@ -48,3 +48,5 @@ For the parity-odd Wilson clover, a sine-weighted sum of side-two cells improves
 For a fixed finite abelian gauge group the free-box correlation bound carries to dyadic periodic limits and the full site-reflection transfer norm. A 64-element nonabelian group illustrates a separate observable-class issue. [Finite-group source audit](finite-groups/README.md)
 
 At the actual gap clock, temporal two-point Lipschitz control fixes a rate for negative transfer weight. An index-five sublattice gives exact rotation comparisons for H4. [Current H0–H4 cross-check](clock-rotation/README.md)
+
+The dyadic reflection argument and a product-measure lower bound give an explicit exponential moment for the Wilson action of a single face. [Chessboard audit and stronger tail](plaquette-tail/README.md)
