@@ -1,0 +1,12 @@
+(2, 2, 2) one-color variance 0.45306962 pair threshold 3.52549435
+(3, 3, 3) one-color variance 0.49085147 pair threshold 3.13359847
+(3, 2, 5) one-color variance 0.46651745 pair threshold 3.13359847
+(4, 3, 2) one-color variance 0.51230398 pair threshold 2.63391579
+h=0.04 plaquette, winding, sheet errors [0.0206037 0.0055612 0.0136529]
+h=0.01 plaquette, winding, sheet errors [0.0090959 0.002227  0.0065734]
+h=0.0025 plaquette, winding, sheet errors [0.0042445 0.000971  0.0031944]
+h=0.000625 plaquette, winding, sheet errors [0.002046  0.0004496 0.0015705]
+8 N*threshold 11.9651104 N^8*mass 196.2079963
+32 N*threshold 12.526191 N^8*mass 233.8636621
+128 N*threshold 12.5638481 N^8*mass 236.6804005
+512 N*threshold 12.5662129 N^8*mass 236.8586154

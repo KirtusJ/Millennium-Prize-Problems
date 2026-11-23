@@ -1,0 +1,2 @@
+check K94: exit 0 (expected 0) in 430009 ms | output e295ef79d147 | event 96 head 24abc993d60b
+  /home/user/z4-workers/l1-obs/report.md: Part A has 10 STANDS, 3 DEFECT (shipped check.py missing a dependency, a winding-control mismatch in checks.md, a typo) and 1 NOT CHECKED; Part B confirms all 5 quoted numbers; my predicates came out 23 met, 2 failed, 2 measured only.

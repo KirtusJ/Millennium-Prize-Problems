@@ -1,0 +1,5 @@
+h=0.1: Y=1.5055346495e-01 ref=1.5148000000e-01 rel=-6.1166e-03  cross-term scale h^0.5=3.162e-01
+h=0.01: Y=1.5147070948e-02 ref=1.5148000000e-02 rel=-6.1332e-05  cross-term scale h^0.5=1.000e-01
+h=0.001: Y=1.5147990709e-03 ref=1.5148000000e-03 rel=-6.1333e-07  cross-term scale h^0.5=3.162e-02
+P9b: MET error ratios 99.73 100.00
+COUNTS met=1 failed=0 measured=1

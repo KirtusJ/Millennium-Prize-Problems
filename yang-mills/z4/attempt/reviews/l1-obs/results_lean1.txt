@@ -1,0 +1,7 @@
+'YangMills.ObservableWeights.curlLongitudinal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ObservableWeights.wickColor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ObservableWeights.pairAtom' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ObservableWeights.thresholdCoefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ObservableWeights.variancePositive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ObservableWeights.massFromMoment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ObservableWeights.survivingWeight' depends on axioms: [propext, Classical.choice, Quot.sound]

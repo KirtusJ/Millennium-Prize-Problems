@@ -1,0 +1,39 @@
+hypothesis per case: boxes tested 3 (+ (4,3,2) measured); all have N>=2 in every direction
+(2, 2, 2) E1=3.5254943481 weight=0.0468750000 var=0.4530696242 closed=3.5254943481 min w all=1.762747 min active w=1.762747 zero modes=10 k(0)Fourier=0.4530696242
+P1(2, 2, 2): MET diff=-1.33e-15
+P2(2, 2, 2): MET diff=-1.92e-09
+P3(2, 2, 2): MET diff=6.25e-17
+P4(2, 2, 2): MET diff=4.18e-09
+(3, 3, 3) E1=3.1335984739 weight=0.0141093474 var=0.4908514669 closed=3.1335984739 min w all=1.566799 min active w=1.566799 zero modes=29 k(0)Fourier=0.4908514669
+P1(3, 3, 3): MET diff=-1.33e-15
+P2(3, 3, 3): MET diff=3.94e-09
+P3(3, 3, 3): MET diff=-2.56e-09
+P4(3, 3, 3): MET diff=-3.09e-09
+(3, 2, 5) E1=3.1335984739 weight=0.0028571429 var=0.4665174534 closed=3.1335984739 min w all=1.116645 min active w=1.566799 zero modes=32 k(0)Fourier=0.4665174534
+P1(3, 2, 5): MET diff=-8.88e-16
+P2(3, 2, 5): MET diff=3.94e-09
+P3(3, 2, 5): MET diff=2.86e-09
+P4(3, 2, 5): MET diff=3.35e-09
+(4, 3, 2) E1=2.6339157938 weight=0.0034722222 var=0.5123039753 closed=2.6339157938 min w all=1.316958 min active w=1.316958 zero modes=26 k(0)Fourier=0.5123039753
+P1(4, 3, 2): MET diff=-8.88e-16
+P5[t=0]: MET direct=0.453069624177 fourier=0.453069624177
+P6[t=0]: MET MC=0.307034+-0.001193 3k^2/2=0.307908 3k^2=0.615816 doubled within 5se: False
+   C_Y limit t=0: 0.3079081265
+P5[t=1]: MET direct=0.056132297590 fourier=0.056132297590
+P6[t=1]: MET MC=0.004970+-0.000496 3k^2/2=0.004726 3k^2=0.009453 doubled within 5se: False
+   C_Y limit t=1: 0.0047262522
+P5[t=2]: MET direct=0.007658950332 fourier=0.007658950332
+P6[t=2]: MET MC=-0.000831+-0.000485 3k^2/2=0.000088 3k^2=0.000176 doubled within 5se: True
+   C_Y limit t=2: 0.0000879893
+P7[N=4]: MET matrix E=2.633915793850 mass=1.953125e-03; closed E=2.633915793850 mass=1.953125e-03
+P7[N=8]: MET matrix E=1.495638803178 mass=1.169491e-05; closed E=1.495638803178 mass=1.169491e-05
+N=4: N*E=10.5356631754 (4pi=12.5663706144, diff -2.0307e+00); N^8 mu=128.00000000 (24pi^2=236.87050563, diff -1.0887e+02)
+N=8: N*E=11.9651104254 (4pi=12.5663706144, diff -6.0126e-01); N^8 mu=196.20799626 (24pi^2=236.87050563, diff -4.0663e+01)
+N=16: N*E=12.4079051975 (4pi=12.5663706144, diff -1.5847e-01); N^8 mu=225.26831153 (24pi^2=236.87050563, diff -1.1602e+01)
+N=32: N*E=12.5261910211 (4pi=12.5663706144, diff -4.0180e-02); N^8 mu=233.86366206 (24pi^2=236.87050563, diff -3.0068e+00)
+P8: MET ratio dE(16)/dE(32)=3.9439, dmu ratio=3.8586; ratios(8/16)=3.7943,3.5047
+h=0.1: beta(1-ReP)=1.505535e-01 2h|X1xX2|^2=1.514800e-01 ratio-1=-6.117e-03
+h=0.01: beta(1-ReP)=1.514707e-02 2h|X1xX2|^2=1.514800e-02 ratio-1=-6.133e-05
+h=0.001: beta(1-ReP)=1.514566e-03 2h|X1xX2|^2=1.514800e-03 ratio-1=-1.543e-04
+P9: FAILED error ratios 99.73 0.40 (10 => O(h), 100 => O(h^2))
+COUNTS met=22 failed=1 measured=0

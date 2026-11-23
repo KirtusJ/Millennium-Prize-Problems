@@ -1,0 +1,20 @@
+All the Q1 and Q2 checks passed, and the PCP OS register verifies in both the Python and Rust checkers. The report is in `report.md`.
+
+- **Control:** arccosh(3) = 1.76274717, written to `control.txt`.
+- **Q1:** The matrix spectrum reproduces the closed form and the auditor's energy and weight for (2,2,2), (3,3,3) and (3,2,5). The weights match only with ordered pairs of modes; unordered pairs would give half. Sum of a(v): 0.45306962, 0.49085147 and 0.46651745 respectively.
+- **Q2:** For N = 4 and 8 the matrix agrees with the closed form to about 1e-14 relative. For N = 16 and 32 I used the closed form only, since the matrix was too large for the time budget. Both quantities converge at roughly 1/N². The local rates at N = 32 are 1.98 for N·E_atom − 4π and 1.95 for N⁸·mu_atom − 24π², and the second is still rising. At N = 32 the offsets are −0.0402 and −3.007.
+- **Delegated check (T126):** The sub-agent passed its (2,2,2) control, then ran (5,2,3), (2,5,3) and (3,2,5). The closed form with max(N1,N2) matches all three. The variant using the maximum over all three sides fails on (3,2,5), and min(N1,N2) fails on all three. I read its script and reran it with my own code; the results agree to 1e-8. The task was admitted and released.
+- **Predicate counts:** 4 met, 0 failed, 1 measured only (the convergence rates), so there are no failed predicates to attribute.
+- **Not checked:** other weight conventions, boxes with a side below 3 other than (2,2,2), other plaquette orientations, and N = 16 or 32 by matrix.
+
+The last line of the Python verify is "result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)". The last line of the Rust verify is "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+
+Files are in `/home/user/z4-workers/l1-obs/child`:
+- `report.md`
+- `control.txt`
+- `q.py`
+- `rerun.py`
+- `out_q.txt`
+- `out_rerun.txt`
+- `notes.md`
+- `grandchild/`
