@@ -12,6 +12,8 @@ The estimate uses site cuts in the two directions of the plaquette and bond cuts
 
 The [readback of Z4’s second revision](revision-two.md) checks the revised spectral paragraph and the two compact-group corrections, and records the remaining scope of the claim.
 
+The [third-revision readback](revision-three.md) checks the changed translation and reflected block indices. [Four cubes around one face](sparse-faces/) give uniform exponential moments for every exponent below $9/5$ in the dyadic states.
+
 ## Readback of the original proof
 
 On an even torus the site reflection has two fixed planes. Every plaquette lies in a closed half. Give each plaquette in a fixed plane half weight on each side. Conditional on the tangent links on the two planes, the two interior integrals in the reflected pairing are complex conjugates. This gives Cauchy–Schwarz for the bounded measurable tests used by the chessboard step, including indicators. Reflection of the block anchored at $t$ in the plane $x_j=r$ has anchor $2r-1-t_j$ in that direction. Starting with anchors $[-2^i+1,0]$, reflection in the left end doubles the interval while $2^i\le L/2$. Disjointness concerns the blocks' interiors. Shared tangent *links* cause no failure of the pairing. In the two transverse directions a given face lies at an even coordinate, with two preimages per direction. A specified orientation therefore occupies $V/4$ distinct plaquettes, each counted four times. On the repeated indicator event the total weighted action exceeds $tV/4$. Splitting the coupling in half produces $tV/8$ in the exponent. The symbol $\theta_a$ in the doubling step should read $\theta_r$.
