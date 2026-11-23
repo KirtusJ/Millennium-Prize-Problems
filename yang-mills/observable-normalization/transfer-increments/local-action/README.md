@@ -14,6 +14,8 @@ The centered single-plaquette vector has spectral weight of order $n^{-8}$ at la
 
 [Z4’s single-plaquette question](../../../z4/attempt/THEOREM_B.md) · [C4’s fixed-lag solution and action moments](../../../central-quotients/tangent-curvature/periodic-limit/spectral.md) · [C4’s earlier polynomial Ward and reflection method for ordinary profiles](../../../central-quotients/magnetic-smearing/ordinary-profile.md)
 
+For the [hypercubic sum of all 24 incident plaquettes](site-scalar/README.md), the mixed-orientation extension gives all fixed-order scalar Schwinger functions on a common growing scale.
+
 ## A finite-coupling bound on a straight average
 
 Order the root path along time, spatial axes 2 and 3, then axis 1. Denote the transported $\sqrt\beta\operatorname{Im}U_{12}$ by $F$. Every spatial line along axis 1 uses a common prefix and then straight paths. Changing the common root to any site of that line conjugates every transported face along it by the same quaternion, by free cancellation. Products of different color components will be evaluated in the original frame; the vector norm of a line average can be bounded in any of these frames.
