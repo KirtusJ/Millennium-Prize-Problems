@@ -1,0 +1,7 @@
+IntegralReflectionPositivity.lean -text
+check_integral.py -text
+mutations.json -text
+wilson-kernel.md -text
+open-slab.md -text
+# Preserve exact captured bytes, including native CRLF and provider whitespace.
+evidence/** -text -whitespace

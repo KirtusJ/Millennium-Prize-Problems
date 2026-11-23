@@ -1,0 +1,127 @@
+{
+  "source_sha256": "6c035f89d1f29c8f1e0b712dad6b8982a7d30bcccda7a557b8403df3853b9f0f",
+  "source": "C:\\Users\\donke\\OneDrive\\Documents\\ChatGPT\\From Prephysical Hypotheses to Physical_Models\\Session\\Millennium_G4\\yang-mills\\g4\\integral\\IntegralReflectionPositivity.lean",
+  "records": [
+    {
+      "label": "positive",
+      "pid": 668,
+      "command": [
+        "C:\\Users\\donke\\AppData\\Local\\PCP-Toolchains\\lean-4.19.0\\lean-4.19.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "C:\\Users\\donke\\OneDrive\\Documents\\ChatGPT\\From Prephysical Hypotheses to Physical_Models\\Session\\Millennium_G4\\yang-mills\\g4\\integral\\IntegralReflectionPositivity.lean"
+      ],
+      "exit_code": 0,
+      "start_ns": 1795416207104477700,
+      "exit_observed_ns": 1795416245487677100,
+      "post_exit_readback_ns": 1795416245500749100,
+      "output_sha256": "63e807f040211184d3ba10c5ddefb4431062d6a7048c14e3c9095a8b13fe72da",
+      "expected_success": true,
+      "control_passed": true
+    },
+    {
+      "label": "negative_missing_conjugation",
+      "pid": 21020,
+      "command": [
+        "C:\\Users\\donke\\AppData\\Local\\PCP-Toolchains\\lean-4.19.0\\lean-4.19.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "C:\\Users\\donke\\OneDrive\\Documents\\ChatGPT\\From Prephysical Hypotheses to Physical_Models\\Session\\G4_runtime\\integral-check11\\child\\negative_missing_conjugation.lean"
+      ],
+      "exit_code": 1,
+      "start_ns": 1795416245551930100,
+      "exit_observed_ns": 1795416284117114800,
+      "post_exit_readback_ns": 1795416284130127500,
+      "output_sha256": "bdb4bcd0d774ec4718843f0873af94ab9cc75f4cd737eb8febd505733cae9dcd",
+      "expected_success": false,
+      "control_passed": true
+    },
+    {
+      "label": "negative_unit_normalization",
+      "pid": 10212,
+      "command": [
+        "C:\\Users\\donke\\AppData\\Local\\PCP-Toolchains\\lean-4.19.0\\lean-4.19.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "C:\\Users\\donke\\OneDrive\\Documents\\ChatGPT\\From Prephysical Hypotheses to Physical_Models\\Session\\G4_runtime\\integral-check11\\child\\negative_unit_normalization.lean"
+      ],
+      "exit_code": 1,
+      "start_ns": 1795416284177873800,
+      "exit_observed_ns": 1795416323435773900,
+      "post_exit_readback_ns": 1795416323448704200,
+      "output_sha256": "af16a8912e105b139ca6c7b45ca7151b6ddee3f8465e9359ba7589284342a111",
+      "expected_success": false,
+      "control_passed": true
+    },
+    {
+      "label": "negative_missing_partition",
+      "pid": 18400,
+      "command": [
+        "C:\\Users\\donke\\AppData\\Local\\PCP-Toolchains\\lean-4.19.0\\lean-4.19.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "C:\\Users\\donke\\OneDrive\\Documents\\ChatGPT\\From Prephysical Hypotheses to Physical_Models\\Session\\G4_runtime\\integral-check11\\child\\negative_missing_partition.lean"
+      ],
+      "exit_code": 1,
+      "start_ns": 1795416323499188900,
+      "exit_observed_ns": 1795416364220864500,
+      "post_exit_readback_ns": 1795416364237346800,
+      "output_sha256": "d64017cc6c733507872a7d5968661c835446cff919a746f4cbede48fb1c8b078",
+      "expected_success": false,
+      "control_passed": true
+    },
+    {
+      "label": "negative_gram_weights",
+      "pid": 12984,
+      "command": [
+        "C:\\Users\\donke\\AppData\\Local\\PCP-Toolchains\\lean-4.19.0\\lean-4.19.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "C:\\Users\\donke\\OneDrive\\Documents\\ChatGPT\\From Prephysical Hypotheses to Physical_Models\\Session\\G4_runtime\\integral-check11\\child\\negative_gram_weights.lean"
+      ],
+      "exit_code": 1,
+      "start_ns": 1795416364292996100,
+      "exit_observed_ns": 1795416404478097700,
+      "post_exit_readback_ns": 1795416404491397700,
+      "output_sha256": "054fced4793d9b440d92ab84d3e582d1943168102f11a64a5ef88dfcffa1b7fb",
+      "expected_success": false,
+      "control_passed": true
+    },
+    {
+      "label": "negative_nonintegrable_tilt",
+      "pid": 13480,
+      "command": [
+        "C:\\Users\\donke\\AppData\\Local\\PCP-Toolchains\\lean-4.19.0\\lean-4.19.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "C:\\Users\\donke\\OneDrive\\Documents\\ChatGPT\\From Prephysical Hypotheses to Physical_Models\\Session\\G4_runtime\\integral-check11\\child\\negative_nonintegrable_tilt.lean"
+      ],
+      "exit_code": 1,
+      "start_ns": 1795416404547571500,
+      "exit_observed_ns": 1795416445575194300,
+      "post_exit_readback_ns": 1795416445590135600,
+      "output_sha256": "77f59c8d6dad30dd8281c66784e71666046928303c63809542f125b822f13ee1",
+      "expected_success": false,
+      "control_passed": true
+    }
+  ],
+  "passed": true,
+  "verification": {
+    "events": 23,
+    "head": "801a03f705db2dc9452f3e64f2e8e6eea5558e6ec0c1f4bc2b62bfb32b6d1756",
+    "guard_problems": [],
+    "altered_objects": [],
+    "objects_by_reference_only": 0,
+    "anchor": null,
+    "ok": true
+  },
+  "native_execution": false,
+  "worker_kind": "PROGRAM",
+  "depth": 3,
+  "namespace": "Millennium.G4.IntegralRP",
+  "checker_sha256": "f2ce2703f880fb276eac84ef1563bfde3373a87e2c19ad0a802a603b34bd1b1a",
+  "mutations_sha256": "f34f31f175af1096fc99a9c368faabb776617ea703649e7a8935deb9b3a318fb",
+  "dependency_olean_sha256": {
+    "ComplexReflectionPositivity.olean": "e813aff6c86181bf9493cf9ce3264df5827e1c0c0ecbd845a6a0d2a3ef52e74a"
+  }
+}

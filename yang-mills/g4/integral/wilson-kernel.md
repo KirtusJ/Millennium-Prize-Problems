@@ -1,0 +1,68 @@
+# Wilson holonomy kernels: a direct integral positivity proof
+
+This is an analytic application of the finite Gram and closed-ray interfaces, not an additional Lean-checked theorem. It avoids an infinite irreducible-character decomposition. The cross-plane geometry required below is an explicit hypothesis.
+
+## Statement
+
+Let X be a compact Hausdorff space, μ a nonzero finite positive Borel measure, s:X→ℝ continuous, and P finite. For each p choose a continuous map A_p:X→U(d_p), a coupling β_p≥0 and a positive trace normalization c_p>0. Set
+
+\[
+H(x,y)=\sum_{p\in P}\beta_pc_p\operatorname{Re}\operatorname{Tr}(A_p(x)^*A_p(y)),\qquad
+W(x,y)=\exp(s(x)+s(y)+H(x,y)).
+\]
+
+With θ(x,y)=(y,x), let ν be W(μ⊗μ)/Z, where Z=∫W d(μ⊗μ). Then Z is finite and strictly positive, ν is a probability measure, and every continuous complex F:X→ℂ satisfies
+
+\[
+\int\overline{F(x)}F(y)\,d\nu(x,y)\in[0,\infty)\subset\mathbb C.
+\]
+
+For a compact second-countable group G, take X=G^E for a finite half-link set E, μ the product normalized Haar measure, and A_p the unitary representation of a continuous oriented half-holonomy. The displayed split form is sufficient for RP of the resulting Wilson measure. Necessity is not asserted, and an arbitrary boundary identification need not have that form.
+
+## Proof, including convergence
+
+The identity
+
+\[
+\operatorname{Re}\operatorname{Tr}(A^*B)=
+\sum_{i,j}(\operatorname{Re}A_{ij}\operatorname{Re}B_{ij}
++\operatorname{Im}A_{ij}\operatorname{Im}B_{ij})
+\]
+
+writes H(x,y)=Σ_{r∈D} v_r(x)v_r(y) with a finite real feature set D. The features are the real and imaginary matrix entries multiplied by √(β_pc_p). They are continuous and bounded. Unitarity supplies the usual Wilson interpretation and the bound |H|≤M:=Σ_p β_pc_pd_p; bounded continuous matrix maps would also suffice.
+
+For a word w=(r₁,…,r_k)∈D^k define ψ_w(x)=e^{s(x)}∏_j v_{r_j}(x); for the empty word ψ_∅=e^s. The truncation
+
+\[
+W_N(x,y)=e^{s(x)+s(y)}\sum_{k=0}^{N}\frac{H(x,y)^k}{k!}
+=\sum_{k=0}^{N}\frac1{k!}\sum_{w\in D^k}\overline{\psi_w(x)}\psi_w(y)
+\]
+
+is a finite Gram kernel, since ψ_w is real. Integrability of all its tested terms follows from compact continuity and finiteness of μ. Finite linearity and Fubini give
+
+Here product measurability follows directly from measurable coordinate factors, finite sums and products, and composition with the exponential. No equality of the product Borel σ-algebra and the Borel σ-algebra of X×X is needed at this compact Hausdorff generality. Each tested rank-one summand is absolutely integrable, with absolute integral (∫|Fψ_w|dμ)².
+
+\[
+I_N(F)=\int\overline{F(x)}F(y)W_N(x,y)\,d\mu(x)d\mu(y)
+=\sum_{k=0}^{N}\frac1{k!}\sum_{w\in D^k}
+\left|\int F\psi_w\,d\mu\right|^2\ge0.
+\]
+
+The finite kernels W_N need not be pointwise nonnegative. No measure with density W_N is introduced.
+
+Write m=μ(X), B=‖F‖∞ and s_max=max s. The exponential series converges absolutely and uniformly on [−M,M], and
+
+\[
+|I_N(F)-I(F)|\le m^2B^2e^{2s_{\max}}
+\sum_{k>N}\frac{M^k}{k!}\longrightarrow0.
+\]
+
+Thus I(F) is real and nonnegative by closedness of that ray in ℂ. Finally W is continuous and strictly positive on compact X×X. Its minimum is positive, so 0<Z<∞ because m>0. Dividing I(F) by Z preserves reality and nonnegativity. This also proves integrability of the actual tested expectation, independently of any totalized-integral convention. No exchange with an uncontrolled infinite series was used.
+
+## Boundary variables and genuine lattice geometry
+
+The same argument works conditionally on a shared boundary variable z when the base law is η(dz)μ_z(dx)μ_z(dy), reflection fixes z and swaps the halves, and the action has s_z(x)+s_z(y)+Σβ_pc_p ReTr(A_{p,z}(x)^*A_{p,z}(y)). Require the fiberwise hypotheses almost everywhere, measurable conditional integrals, absolute integrability of the full tested density, and separately 0<Z_full=∫Z(z)dη(z)<∞, where Z(z)=∫W_z d(μ_z⊗μ_z). The conditional unnormalized expectation I(z) is nonnegative almost everywhere, so ∫I(z)dη(z)/Z_full is nonnegative. If each fiber is normalized first, its boundary mixing law must be Z(z)η(dz)/Z_full; retaining η generally changes the joint law. On a finite compact product with continuous data and fixed nonzero finite base measures the required uniform bounds hold. More general disintegrations require their own proof.
+
+To apply this to a specified Wilson lattice, exhibit its actual reflection, half-links, treatment of reflection-plane links, shared boundary variables, reflected plaquette orientation, and Haar-preserving coordinate/gauge changes. In particular prove that the actual cross-plane action is the stated ReTr(A*B) sum, with nonnegative coefficients. A gauge fixing that changes the measure, an unaccounted boundary identification, or fresh quotient averaging cannot be inserted into this argument. This geometry identification and the full OS reconstruction are still separate obligations.
+
+For the simplest explicit compact-group example, X=G and A=ρ for a continuous finite-dimensional unitary representation. The weight exp(β ReTr(ρ(x)^*ρ(y))) divided by its partition Z is an actual normalized Wilson holonomy kernel against h⊗h, and the proof above establishes its reflected integral inequality for all continuous complex tests. For G=U(1) and ρ(u)=u, Haar invariance gives Z=∫exp(β Re t)dh(t). A finite family on shared half-links is obtained by pulling factors back along their half-holonomy maps and multiplying them on the common configuration space; independent tensor products cover disjoint coordinates. Continuous same-half actions are absorbed into s. This is a finite-regulator result and supplies neither spatial continuum convergence nor a spectral gap.

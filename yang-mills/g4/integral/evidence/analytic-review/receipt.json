@@ -1,0 +1,34 @@
+{
+  "method": {
+    "release_fingerprint": "7ff72eed9162e2c11fc62f6681c4afbc29524bfa96b87d45a455423d027d4707",
+    "core_descriptor_sha256": "9f5998dd75e921afe490687783787847916428f7ee7bcea410a88dad04646fb0",
+    "files": 58,
+    "matches_required": true
+  },
+  "hierarchy": "Director -> PCP program coordinator -> PCP child supervisor -> PCP model",
+  "records": [
+    {
+      "label": "challenge",
+      "pid": 2768,
+      "exit_code": 0,
+      "start_ns": 1795415430292319200,
+      "exit_observed_ns": 1795415468278973700,
+      "readback_ns": 1795415468332346900,
+      "receipt_sha256": "0f04305161fb58d8f14fc19a1cc02ddbe44fa99f1f2dd0c78fb47a3d5f15504f",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "verification": {
+    "events": 8,
+    "head": "c987757c799aca4da97809c7c5eb50369923aba1c691303c88060996276ea96c",
+    "guard_problems": [],
+    "altered_objects": [],
+    "objects_by_reference_only": 0,
+    "anchor": null,
+    "ok": true
+  },
+  "native_execution": false,
+  "independent_party_review": false,
+  "candidate_sha256": "c57f42682ea5a7141ff22b328baa87316ff44b99c30cc6d95d0327ad02200fe3"
+}

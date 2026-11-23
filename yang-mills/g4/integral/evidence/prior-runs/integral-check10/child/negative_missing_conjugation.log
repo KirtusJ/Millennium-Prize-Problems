@@ -1,0 +1,111 @@
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\integral-check10\child\negative_missing_conjugation.lean:84:39: error: unsolved goals
+X : Type u_1
+A : Type u_3
+ι : Type u_4
+inst✝¹ : MeasurableSpace X
+inst✝ : Fintype ι
+μ : Measure X
+theta : X → X
+f : A → X → ℂ
+idx : ι → A
+c d : ι → ℂ
+hpair : ∀ (i j : ι), Integrable (fun x => (starRingEnd ℂ) (f (idx i) (theta x)) * f (idx j) x) μ
+g : ι → ι → X → ℂ := fun i j x => (starRingEnd ℂ) (c i) * d j * ((starRingEnd ℂ) (f (idx i) (theta x)) * f (idx j) x)
+hg : ∀ (i j : ι), Integrable (g i j) μ
+hrow : ∀ (i : ι), Integrable (fun x => ∑ j, g i j x) μ
+⊢ ∫ (x : X), finiteTest f idx c (theta x) * finiteTest f idx d x ∂μ =
+    ∫ (x : X),
+      ∑ x_1, ∑ x_2, (starRingEnd ℂ) (c x_1) * d x_2 * ((starRingEnd ℂ) (f (idx x_1) (theta x)) * f (idx x_2) x) ∂μ
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\integral-check10\child\negative_missing_conjugation.lean:98:6: error: type mismatch
+  integral_const_mul ?m.12548 ?m.12549
+has type
+  ∫ (a : ?m.12543), ?m.12548 * ?m.12549 a ∂?m.12545 = ?m.12548 * ∫ (a : ?m.12543), ?m.12549 a ∂?m.12545 : Prop
+but is expected to have type
+  ∫ (x : X), g i j x ∂μ = (starRingEnd ℂ) (c i) * d j * integralKernel μ theta f (idx i) (idx j) : Prop
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\integral-check10\child\negative_missing_conjugation.lean:130:2: error: type mismatch, term
+  integral_map (Measurable.aemeasurable hq) hprod
+after simplification has type
+  ∫ (y : Y), (starRingEnd ℂ) (F (thetaY y)) * G y ∂Measure.map q μ =
+    ∫ (x : X), (starRingEnd ℂ) (F (thetaY (q x))) * G (q x) ∂μ : Prop
+but is expected to have type
+  ∫ (x : Y), F (thetaY x) * G x ∂Measure.map q μ = ∫ (x : X), F (thetaY (q x)) * G (q x) ∂μ : Prop
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\integral-check10\child\negative_missing_conjugation.lean:213:17: warning: unused variable `hS`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\integral-check10\child\negative_missing_conjugation.lean:227:8: error: typeclass instance problem is stuck, it is often due to metavariables
+  NormedSpace ℝ ?m.13861
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\integral-check10\child\negative_missing_conjugation.lean:273:55: error: unsolved goals
+X : Type u_1
+inst✝⁵ : TopologicalSpace X
+inst✝⁴ : CompactSpace X
+inst✝³ : MeasurableSpace X
+inst✝² : BorelSpace X
+μ : Measure X
+inst✝¹ : IsFiniteMeasure μ
+inst✝ : NeZero μ
+S : X → ℝ
+hS : Continuous S
+theta : X → X
+this : IsProbabilityMeasure (μ.tilted S) := wilson_tilt_probability μ S hS
+hI : (starRingEnd ℂ) Complex.I * Complex.I = 1
+⊢ -1 = 1
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\integral-check10\child\negative_missing_conjugation.lean:290:41: warning: unused variable `hu`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+'Millennium.G4.IntegralRP.integral_gram_rank_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.normalized_integral_gram_nonnegative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.IntegralRP.reflectedIntegral_wilson_of_gram' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.IntegralRP.integral_regulator_limit' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.integral_gram_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.integral_gram_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.integral_prod_gram_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.reflectedIntegral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.integralKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.finiteTest' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.finiteTest_reflected_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.integrable_finiteTest_reflected_product' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.IntegralRP.reflectedIntegral_finiteTest' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.IntegralRP.reflectedIntegral_map' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.integrable_reflectedProduct_map_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.IntegralRP.reflectedIntegral_map_nonnegative' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.IntegralRP.integrable_continuous_compact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.integrable_reflectedProduct_continuous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.IntegralRP.reflectedIntegral_finiteTest_continuous' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.IntegralRP.integrable_wilson_exp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.wilson_partition_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.wilson_tilt_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.integrable_reflectedProduct_wilson_tilt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.IntegralRP.reflectedIntegral_tilted_density' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.IntegralRP.reflectedIntegral_wilson_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.wilson_action_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.wilson_link_tilt_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.tilted_vacuity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.reflectedIntegral_tilted_vacuity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.reflectedIntegral_wilson_const_I' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.IntegralRP.wilson_const_I_without_conjugation' depends on axioms: [propext, Classical.choice, Quot.sound]

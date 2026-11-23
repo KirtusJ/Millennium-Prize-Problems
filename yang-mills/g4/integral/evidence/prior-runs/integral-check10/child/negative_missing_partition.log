@@ -1,0 +1,61 @@
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\integral-check10\child\negative_missing_partition.lean:213:17: warning: unused variable `hS`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\integral-check10\child\negative_missing_partition.lean:227:8: error: typeclass instance problem is stuck, it is often due to metavariables
+  NormedSpace ℝ ?m.13900
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\integral-check10\child\negative_missing_partition.lean:290:41: warning: unused variable `hu`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+'Millennium.G4.IntegralRP.integral_gram_rank_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\integral-check10\child\negative_missing_partition.lean:408:4: error: 'change' tactic failed, pattern
+  ↑(Real.exp (S p) / ∫ (y : X × X), Real.exp (S y) ∂μ.prod μ) * ((starRingEnd ℂ) (F p.1) * F p.2) =
+    ↑(∫ (p : X × X), Real.exp (S p) ∂μ.prod μ)⁻¹ * ∑ r, ↑(a r) * (starRingEnd ℂ) (u r p.1) * u r p.2
+is not definitionally equal to target
+  (fun a => Real.exp (S a) • ((starRingEnd ℂ) (F a.swap.2) * F a.2)) p =
+    (fun a_1 => ↑(∫ (p : X × X), Real.exp (S p) ∂μ.prod μ)⁻¹ * ∑ r, ↑(a r) * (starRingEnd ℂ) (u r a_1.1) * u r a_1.2) p
+'Millennium.G4.IntegralRP.normalized_integral_gram_nonnegative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.IntegralRP.reflectedIntegral_wilson_of_gram' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.IntegralRP.integral_regulator_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.integral_gram_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.integral_gram_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.integral_prod_gram_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.reflectedIntegral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.integralKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.finiteTest' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.finiteTest_reflected_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.integrable_finiteTest_reflected_product' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.IntegralRP.reflectedIntegral_finiteTest' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.reflectedIntegral_map' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.integrable_reflectedProduct_map_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.IntegralRP.reflectedIntegral_map_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.integrable_continuous_compact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.integrable_reflectedProduct_continuous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.IntegralRP.reflectedIntegral_finiteTest_continuous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.IntegralRP.integrable_wilson_exp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.wilson_partition_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.wilson_tilt_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.integrable_reflectedProduct_wilson_tilt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.IntegralRP.reflectedIntegral_tilted_density' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Millennium.G4.IntegralRP.reflectedIntegral_wilson_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.wilson_action_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.wilson_link_tilt_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.tilted_vacuity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.reflectedIntegral_tilted_vacuity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.reflectedIntegral_wilson_const_I' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.IntegralRP.wilson_const_I_without_conjugation' depends on axioms: [propext, Classical.choice, Quot.sound]

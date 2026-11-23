@@ -1,0 +1,14 @@
+G4 is the director's moniker, not a governing-clause name. This is a bounded PCP mathematical commission; no independent-party method certification is requested. Return a Lean 4.19.0 / Mathlib c44e0c8e proof block (plus required imports) for a genuine integral sum-of-squares sufficient condition for reflection positivity. You cannot execute tools; mark APIs uncertain, never claim compilation. No hidden reasoning transcript, sorry, axioms, admit, unsafe, native_decide.
+
+Use namespace Millennium.G4.IntegralRP, noncomputable section. Existing imported module ComplexReflectionPositivity supplies Millennium.G4.ComplexRP.NonnegativeComplex(z):=z.im=0 AND 0<=z.re. The parent integral source already supplies integrable_continuous_compact (μ:Measure X) [Finite μ] (g:X->V) (hg:Continuous g) : Integrable g μ for compact Borel X, and reflectedIntegral μ theta F G := integral conj(F(theta x))*G(x).
+
+Target: finite positive-rank Gram kernels integrated on TWO independent halves, not the false implication 'positive density -> RP'. For a finite index R, real a_r>=0, and complex u_r:X->C each Integrable under a finite measure μ, prove
+integral x, integral y, sum_r (a_r:C)*conj(u_r(x))*u_r(y) dμ(y)dμ(x)
+ = sum_r (a_r * Complex.normSq(integral u_r dμ):R):C,
+and hence NonnegativeComplex of that iterated integral. Make integral linearity obligations explicit. You can separate rank-one identity and finite weighted sum. Finite sum rearrangement and integral_const_mul / integral_mul_const are available. Mathlib.MeasureTheory.Integral.Bochner.ContinuousLinearMap has integral_conj (no integrability hypothesis needed for that scalar isometry identity), integral_re and integral_im (require Integrable). Complex.normSq_eq_conj_mul_self and normSq_nonneg can prove reality and nonnegativity.
+
+If feasible prove the product-measure version using Fubini with EXPLICIT Integrable(fun xy => sum_r (...) (xy.1)(xy.2)) (μ.prod μ). Do not assume Fubini automatically. Compact continuous u_r discharge both single and joint integrability, which may be a separate corollary. Identify how u_r=phi_r*F gives the reflected test for theta(x,y)=(y,x), Fplus(x,y)=F(y), when the actual density is the Gram kernel. Normalization requires Z>0 separately.
+
+Important: finite-rank Gram approximants can be negative POINTWISE even though every quadratic test is nonnegative. Do not silently treat them as probability densities. For the infinite Wilson character expansion, the parent will require convergence of the tested integrals to the actual positive Wilson density; no infinite-sum interchange is established merely by this finite theorem. A compact continuous matrix coefficient expansion for beta>=0 is a separate analytic application.
+
+Prefer a short compilable block with four or fewer key results; use exact explicit integral identities rather than broad automation. Print axioms for each new definition/theorem. List scope and unresolved API details separately.

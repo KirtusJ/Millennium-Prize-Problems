@@ -33,6 +33,8 @@ Full Osterwalder–Schrader reflection positivity is a complex sesquilinear cond
 
 The [cross-lane review](cross-lane-review.md) checks C4's finite quotient calculation independently and states the exact pushforward identity needed to transport reflection positivity. It also records the scope of G4's source review of D4's spectral criterion.
 
+The [integral extension](integral/README.md) supplies the Bochner-integral finite-test expansion and exact measurable pushforward, compact continuous Wilson normalization, and a conditional finite-Gram reflection-positivity criterion. Its [analytic Wilson-kernel application](integral/wilson-kernel.md) proves positivity for an explicitly split compact-group holonomy action using matrix features and uniform exponential convergence. Lattice reflection-plane geometry and the continuum construction remain separate obligations.
+
 ## Shared construction contract
 
 All lanes must refer to the same gauge group, regulator trajectory, physical units, observables and limit. The following are outstanding construction obligations, not assumptions proved by this file:

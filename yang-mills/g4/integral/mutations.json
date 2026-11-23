@@ -1,0 +1,32 @@
+[
+  {
+    "label": "negative_missing_conjugation",
+    "find": "∫ x, (starRingEnd ℂ) (F (theta x)) * G x ∂μ",
+    "replace": "∫ x, F (theta x) * G x ∂μ",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_unit_normalization",
+    "find": "reflectedIntegral (μ.tilted S) theta (fun _ => 1) (fun _ => 1) = 1 := by",
+    "replace": "reflectedIntegral (μ.tilted S) theta (fun _ => 1) (fun _ => 1) = 0 := by",
+    "diagnostic": "unsolved goals"
+  },
+  {
+    "label": "negative_missing_partition",
+    "find": "∫ x, (Real.exp (S x) / (∫ y, Real.exp (S y) ∂μ)) •",
+    "replace": "∫ x, Real.exp (S x) •",
+    "diagnostic": "is not definitionally equal to target"
+  },
+  {
+    "label": "negative_gram_weights",
+    "find": "theorem integral_gram_nonnegative\n    (μ : Measure X) (a : R → ℝ) (u : R → X → ℂ)\n    (ha : ∀ r, 0 ≤ a r)",
+    "replace": "theorem integral_gram_nonnegative\n    (μ : Measure X) (a : R → ℝ) (u : R → X → ℂ)\n    (ha : ∀ r, a r ≤ 0)",
+    "diagnostic": "type mismatch"
+  },
+  {
+    "label": "negative_nonintegrable_tilt",
+    "find": "μ.tilted S = 0 :=\n  tilted_of_not_integrable h",
+    "replace": "μ.tilted S = μ :=\n  tilted_of_not_integrable h",
+    "diagnostic": "type mismatch"
+  }
+]

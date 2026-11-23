@@ -1,0 +1,1 @@
+{"exit_code": 0, "readback_sha256": "e0932ced58186bfb76a68bbf84b971a427f880478267ee4955e406fae2955ade", "verification": {"events": 11, "head": "75fea5092c706ad46bbb6466061f0ab65c57c86baec1220eb4f5aec8f2c20ce7", "guard_problems": [], "altered_objects": [], "objects_by_reference_only": 0, "anchor": null, "ok": true}}

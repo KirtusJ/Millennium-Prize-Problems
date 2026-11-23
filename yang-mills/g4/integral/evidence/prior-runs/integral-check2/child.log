@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\integral\check_integral.py", line 38, in <module>
+    ops, _ = Ops.init(a.out/'register', label='G4-compiler-child' if a.child else 'G4-check-supervisor',
+             ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        principal='Kirtus', principal_name='Kirtus Justus', method_path=str(a.method), require_method=True)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\donke\pcp-os\PCP_OS_Python\pcpos\ops.py", line 75, in init
+    ops.method_pin(method_path)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\donke\pcp-os\PCP_OS_Python\pcpos\ops.py", line 90, in method_pin
+    m = self.method(explicit)
+  File "C:\Users\donke\pcp-os\PCP_OS_Python\pcpos\ops.py", line 87, in method
+    return method_mod.open_method(self.ws.root, explicit)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\donke\pcp-os\PCP_OS_Python\pcpos\method.py", line 184, in open_method
+    raise PcposError(ENVIRONMENT, "the ACR Implementation packet was not found",
+                     "place %s or the folder %s beside the PCP OS packet, or pass --method <path>, or set PCPOS_METHOD" % (req["archive"], req["folder"]))
+pcpos.base.PcposError: the ACR Implementation packet was not found

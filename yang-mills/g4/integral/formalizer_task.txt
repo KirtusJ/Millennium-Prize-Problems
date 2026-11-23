@@ -1,0 +1,32 @@
+Director G4 commission: produce the Bochner-INTEGRAL reflection-positivity extension for finite compact-group Wilson lattices. Return a complete Lean 4.19.0 source and a short scope statement; no hidden reasoning transcript. You cannot run tools. Do not claim execution. Target Mathlib c44e0c8ee63ca166450922a373c7409c5d26b00b; use no sorry/admit/axiom/unsafe/native_decide.
+
+Use namespace Millennium.G4.IntegralRP, noncomputable section, open Filter MeasureTheory, open scoped BigOperators Topology. Import ComplexReflectionPositivity (the existing verified G4 module; parent supplies its olean). Its namespace Millennium.G4.ComplexRP supplies:
+NonnegativeComplex(z:C):= z.im=0 AND 0<=z.re;
+pairing K idx c d := sum_i sum_j conj(c_i)*d_j*K(idx_i,idx_j);
+Q K idx c := pairing K idx c c;
+Q_nonnegative_of_entrywise_tendsto: entrywise Tendsto K_n -> L and eventual NonnegativeComplex(Q K_n idx c) imply NonnegativeComplex(Q L idx c), for arbitrary nontrivial filter;
+all_finite_tests_nonnegative_of_entrywise_tendsto: sequence form with separate eventual cutoff for each finite complex test.
+Do not copy these definitions under an unrelated positivity notion.
+
+Define reflectedIntegral μ theta F G := integral x, conj(F(theta x))*G(x) dμ and integralKernel μ theta f a b using this pairing. For arbitrary measurable configuration spaces, prove:
+1. Finite complex test expansion into pairing (integralKernel ...) with EXPLICIT Integrable(fun x => conj(f_i(theta x))*f_j(x)) μ for every selected pair. Derive integrability of the expanded combination as well. Use only finite sums; do not exchange infinite sums/limits with integrals.
+2. Exact measurable pushforward: reflectedIntegral (Measure.map q μ) thetaY F G = reflectedIntegral μ thetaX (F o q) (G o q), assuming measurable q, q(thetaX x)=thetaY(q x), and integrability or AEStronglyMeasurable of the reflected product downstairs for the exact pushed measure. Include the integrability transport if feasible. A nonnegative pulled-back test then gives a nonnegative quotient test. No independent quotient density or Markov dynamics is identified.
+3. For compact topological X, its Borel measurable space, finite μ, continuous theta,F,G, prove reflected-product integrability. Supply the finite expansion as a compact continuous corollary.
+4. Use Mathlib's Measure.tilted μ S as normalized Wilson density exp(S)/Z. On compact X with continuous real S and nonzero finite μ, prove exp(S) integrable, partition Z>0, and IsProbabilityMeasure(μ.tilted S). Prove continuous reflected products integrable under this probability measure, state its normalized density identity, and check reflectedIntegral for both constant tests 1 equals 1. The Wilson finite action S=sum_p beta_p*phi_p is continuous when all real plaquette observables phi_p are continuous; beta>=0 is a reflection-positivity condition, not needed for this normalization theorem.
+5. If feasible specialize the probability theorem to finite link configurations E -> G and Measure.pi(fun _:E => haar), with a compact, second-countable Borel group G and an input normalized Haar probability. Be honest about whether Haar invariance is used or merely supplied; normalization needs only probability.
+6. Adverse/vacuity control: without exp-integrability the tilted measure is 0, so every reflected integral vanishes. It is not a normalized Wilson model. A constant-I diagonal test under the valid probability tilt should give +1, distinguishing the missing-conjugation variant.
+
+ACTUAL PINNED APIs inspected by G4:
+MeasureTheory.integral_finset_sum (s:Finset i) (hf:forall i in s, Integrable (f i) μ): integral(sum i in s,f i x)=sum i in s,integral(f i).
+MeasureTheory.integrable_finset_sum has the same finset/hypothesis convention.
+integral_const_mul (r:C) (f:X->C): integral(r*f)=r*integral f (no integrability side premise needed for this scalar identity).
+Integrable.const_mul is available.
+integral_map (hq:AEMeasurable q μ) (hg:AEStronglyMeasurable g (Measure.map q μ)): integral g d(map q μ)=integral(g o q)dμ.
+ContinuousOn.integrableOn_compact' (hK:IsCompact K) (hKmeas:MeasurableSet K) (hf:ContinuousOn f K), with OpensMeasurableSpace and IsFiniteMeasureOnCompacts μ. Taking K=univ discharges compact continuous integrability. Alternative Continuous.integrable_of_hasCompactSupport hf (isClosed_tsupport f).isCompact.
+integral_exp_pos [NeZero μ] (hf:Integrable(fun x=>Real.exp(S x)) μ): 0<integral exp(S)dμ.
+isProbabilityMeasure_tilted [NeZero μ] hf: IsProbabilityMeasure(μ.tilted S).
+integral_tilted S g: integral g d(μ.tilted S) = integral (fun x => (exp(S x)/integral exp(S)dμ) • g x) dμ, using REAL scalar action on complex g.
+tilted_of_not_integrable hf: μ.tilted S = 0.
+Required imports likely Mathlib.MeasureTheory.Integral.Bochner.Basic, Mathlib.MeasureTheory.Function.LocallyIntegrable, Mathlib.MeasureTheory.Measure.Tilted, Mathlib.MeasureTheory.Constructions.Pi.
+
+Include '-- NATIVE CHILD 1' and '-- NATIVE CHILD 2' between complete declarations, and #print axioms for every new named definition/theorem. Keep input integrability explicit to avoid Lean's totalized integral silently giving zero. Do not claim compactness or positive density alone establishes reflection positivity, Haar invariance, Wilson cross-plane factorization, continuum reconstruction, Hamiltonian identification, or mass gap.

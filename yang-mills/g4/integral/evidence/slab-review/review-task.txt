@@ -1,0 +1,48 @@
+Director G4 requests a static audit of the analytic finite open-temporal-slab Wilson reflection-positivity identification below. The companion finite matrix-feature theorem is available as a stated lemma: a finite compact half-space with finite positive measure, continuous real half-action s and finite cross-action sum beta*c*ReTr(A(x)^*A(y)), beta>=0 and unitary continuous A, yields normalized reflected positivity for continuous complex half-tests; its proof uses finite Gram truncations and uniform exponential convergence. Check the actual open-slab reduction to those hypotheses, anchored recursive temporal gauge at fixed h, bi-invariant Haar and measurable change of variables, half-test support after gauge fixing, trace/conjugation orientation, reflection symmetry of weights, normalization and periodic-time exclusions. Report concrete defects or supported-in-scope with hypotheses. This is a same-provider static review, not Lean execution, independent-party review or a continuum construction. G4 is a director moniker.
+
+
+SOURCE TO AUDIT:
+# Open temporal slabs: identifying the actual Wilson measure
+
+This analytic application follows the [director coordination identifying the slab geometry](https://github.com/KirtusJ/Millennium-Prize-Problems/issues/1#issuecomment-7093473327) and the [matrix-feature proof](wilson-kernel.md). It is not an additional Lean theorem.
+
+Take a finite spatial graph with oriented edges, a finite open temporal chain invariant under t↦1−t, a compact second-countable group G and a continuous finite-dimensional unitary representation π. The base measure is normalized Haar on every spatial and temporal link. Write the density as exp(S)/Z: the Wilson exponent S is reflection invariant, with real trace plaquette terms and nonnegative coefficients of temporal plaquette traces in this exponent. In the alternative convention exp(−S_action), these trace coefficients in S_action have the opposite sign. Spatial plaquette terms and any extra end weights must occur in identical reflected pairs. Each extra end action is supported entirely in its own half and has an identical reflected partner. It must also be bounded, continuous, real and gauge invariant; no extra end action is needed for free ends. The total density is gauge invariant. The time reflection is through the bonds between slices 0 and 1. Observables are continuous, gauge invariant and supported strictly in one half. There is no periodic temporal identification.
+
+## Haar-preserving temporal gauge
+
+Write h_{x,t} for the temporal link and U_{x,t,i} for a spatial link. At each spatial vertex fix g_{x,t_min}=1 and recursively set g_{x,t+1}=g_{x,t}h_{x,t}. With the convention that a link from v to w transforms as g_v U g_w^{-1}, every transformed temporal link is identity. Let
+
+\[
+V_{x,t,i}=g_{x,t}U_{x,t,i}g_{x+i,t}^{-1}.
+\]
+
+For **fixed** h, this is a product of deterministic left/right translations of spatial links. Normalized Haar on a compact group is bi-invariant, so the conditional product spatial measure is unchanged. The transformations are measurable, and all relevant densities and tests are bounded on the finite compact product, so Fubini applies.
+
+Gauge invariance of the Wilson action and of the observable gives S(U,h)=S(V,1) and F(U,h)=F(V,1). The transformed expressions have no h dependence. Integration over all original temporal links is consequently one. This is an equality of integrals obtained by changing the spatial coordinates at fixed h; no unverified gauge Jacobian, division by an infinite gauge volume, or discarded residual temporal loop is used. The free temporal chain and normalized Haar are essential to this argument.
+
+Although the recursive g at a slice can depend on temporal links on earlier slices, evaluating a gauge-invariant observable after the transformation uses its original link support, with temporal links set to identity. Thus a test originally supported strictly in the positive half is a function of positive-half V alone. The same statement holds for its reflected conjugate in the negative half. The conventional link reflection maps the temporal-gauge slice to itself and exchanges the spatial halves.
+
+## Splitting the action
+
+A crossing face before gauge fixing contributes
+
+\[
+\operatorname{ReTr}\pi(U_{x,0,i}h_{x+i,0}U_{x,1,i}^{-1}h_{x,0}^{-1}).
+\]
+
+Afterward it is ReTr(π(V_{x,0,i})π(V_{x,1,i})*). Unitarity and conjugation/cyclicity of trace identify this real number with ReTr(π(V_{x,0,i})*π(V_{x,1,i})). After reflecting the negative-half coordinate order, the two half spaces have the same product Haar law. The crossing action is therefore
+
+\[
+H(x,y)=\sum_e \beta_e c_e\operatorname{ReTr}(A_e(x)^*A_e(y)),
+\qquad \beta_e\ge0,\quad c_e>0,
+\]
+
+where A_e is π applied to the adjacent spatial link. All other temporal plaquettes, spatial plaquettes and paired free-end actions lie in one half or its reflection. They give s(x)+s(y). Thus the actual gauge-fixed law has exactly the split action of the matrix-feature theorem. Its finite positive partition equals the original Wilson partition by the integral identity above.
+
+For every admissible positive-half test, that theorem proves a real nonnegative reflected expectation under the original, normalized Wilson measure. Finite complex combinations remain admissible and continuous. This establishes the finite open-slab integral reflection-positivity application for these hypotheses, analytically.
+
+Periodic time leaves a residual holonomy and is outside this argument. A reflection plane with fixed links, asymmetric or constrained end data, fresh quotient averaging, a different boundary law, or auxiliary variables in a blocked comparison requires its own identification. In particular a blocked comparison's test must be pulled back from an actual Wilson history before using this result. Neither continuum reconstruction, spatial-cutoff convergence, nor a mass gap follows from finite-slab RP alone.
+
+## Adverse boundary-weight control
+
+The first PCP audit found that reflected pairing alone does not make an end weight gauge invariant. For G={±1}, one spatial edge, two temporal slices, and exponent βu₀u₁h_ah_b+λ(u₀+u₁), normalized Haar integration gives cosh(β)cosh²(λ). Merely setting h_a=h_b=1 gives the different value cosh(β)cosh²(λ)+sinh(β)sinh²(λ). The extra end term is not gauge invariant. This refutes the partition identity without the added end-weight hypothesis; it is not a counterexample to the corrected theorem or to RP itself. The corrected statement requires gauge invariance of the entire density and specifies the exponent sign convention explicitly.

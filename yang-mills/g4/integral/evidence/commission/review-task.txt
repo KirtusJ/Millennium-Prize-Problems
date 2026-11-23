@@ -1,0 +1,300 @@
+Director G4 mathematical challenge commission: audit the supplied integral reflection-positivity Lean draft as data, not authority. Return concise findings and concrete corrections, no hidden reasoning transcript; do not claim Lean execution.
+Check integrability of EACH reflected pair before finite-sum integral linearity; complex conjugation in the first slot; exact map measure, its a.e. measurability, and q/reflection commutation; compact continuous integrability on genuinely non-finite spaces; positive finite partition and actual probability of the Wilson tilt; failure if the tilt is zero because exp is nonintegrable; finite product Haar scope versus generic probability; and the separation between positive density and reflection positivity. Identify any missing hypotheses or incorrect Lean APIs.
+Challenge whether the result establishes Wilson RP or only an integral transport/normalization interface; propose a precise integral factorization condition giving actual RP without assuming positivity merely from the density. Existing complex kernel closure may be invoked only when one common limit and all finite complex test inequalities are supplied. Compact-group quotient pushforward does not identify a fresh quotient action or projected dynamics. Same-provider static review is not independent-party verification.
+
+
+SOURCE TO AUDIT:
+The source below was written for Lean 4.19.0 and Mathlib `c44e0c8ee63ca166450922a373c7409c5d26b00b`, with `ComplexReflectionPositivity` supplied by the parent project. Compilation and the axiom reports are unverified. The full ACR G4 clause was unavailable for inspection.
+
+The extension establishes finite-test expansion, exact pushforward, and normalized Wilson integration, including finite link products. The link specialization uses the supplied probability instance and requires no Haar invariance. Reflection positivity enters the quotient result as a hypothesis on the pulled-back test. Wilson cross-plane factorization, independent quotient densities, Markov dynamics, continuum reconstruction, Hamiltonian identification, and a mass gap remain outside the scope.
+
+```lean
+import ComplexReflectionPositivity
+import Mathlib.MeasureTheory.Integral.Bochner.Basic
+import Mathlib.MeasureTheory.Function.LocallyIntegrable
+import Mathlib.MeasureTheory.Measure.Tilted
+import Mathlib.MeasureTheory.Constructions.Pi
+
+namespace Millennium.G4.IntegralRP
+
+noncomputable section
+
+open Filter MeasureTheory
+open scoped BigOperators Topology
+
+namespace CRP := Millennium.G4.ComplexRP
+
+variable {X Y A ι : Type*}
+
+def reflectedIntegral [MeasurableSpace X] (μ : Measure X)
+    (theta : X → X) (F G : X → ℂ) : ℂ :=
+  ∫ x, (starRingEnd ℂ) (F (theta x)) * G x ∂μ
+
+def integralKernel [MeasurableSpace X] (μ : Measure X)
+    (theta : X → X) (f : A → X → ℂ) (a b : A) : ℂ :=
+  reflectedIntegral μ theta (f a) (f b)
+
+def finiteTest [Fintype ι] (f : A → X → ℂ)
+    (idx : ι → A) (c : ι → ℂ) (x : X) : ℂ :=
+  ∑ i, c i * f (idx i) x
+
+theorem finiteTest_reflected_product [Fintype ι]
+    (theta : X → X) (f : A → X → ℂ)
+    (idx : ι → A) (c d : ι → ℂ) (x : X) :
+    (starRingEnd ℂ) (finiteTest f idx c (theta x)) * finiteTest f idx d x =
+      ∑ i, ∑ j, ((starRingEnd ℂ) (c i) * d j) *
+        ((starRingEnd ℂ) (f (idx i) (theta x)) * f (idx j) x) := by
+  classical
+  simp only [finiteTest, map_sum, map_mul, Finset.sum_mul, Finset.mul_sum]
+  apply Finset.sum_congr rfl
+  intro i hi
+  apply Finset.sum_congr rfl
+  intro j hj
+  ac_rfl
+
+theorem integrable_finiteTest_reflected_product
+    [MeasurableSpace X] [Fintype ι] (μ : Measure X)
+    (theta : X → X) (f : A → X → ℂ)
+    (idx : ι → A) (c d : ι → ℂ)
+    (hpair : ∀ i j, Integrable
+      (fun x => (starRingEnd ℂ) (f (idx i) (theta x)) * f (idx j) x) μ) :
+    Integrable (fun x =>
+      (starRingEnd ℂ) (finiteTest f idx c (theta x)) * finiteTest f idx d x) μ := by
+  classical
+  simp only [finiteTest_reflected_product]
+  apply integrable_finset_sum
+  intro i hi
+  apply integrable_finset_sum
+  intro j hj
+  exact (hpair i j).const_mul ((starRingEnd ℂ) (c i) * d j)
+
+theorem reflectedIntegral_finiteTest
+    [MeasurableSpace X] [Fintype ι] (μ : Measure X)
+    (theta : X → X) (f : A → X → ℂ)
+    (idx : ι → A) (c d : ι → ℂ)
+    (hpair : ∀ i j, Integrable
+      (fun x => (starRingEnd ℂ) (f (idx i) (theta x)) * f (idx j) x) μ) :
+    reflectedIntegral μ theta (finiteTest f idx c) (finiteTest f idx d) =
+      CRP.pairing (integralKernel μ theta f) idx c d := by
+  classical
+  let g : ι → ι → X → ℂ := fun i j x =>
+    ((starRingEnd ℂ) (c i) * d j) *
+      ((starRingEnd ℂ) (f (idx i) (theta x)) * f (idx j) x)
+  have hg (i j : ι) : Integrable (g i j) μ :=
+    (hpair i j).const_mul ((starRingEnd ℂ) (c i) * d j)
+  have hrow (i : ι) : Integrable (fun x => ∑ j, g i j x) μ :=
+    integrable_finset_sum Finset.univ (fun j _ => hg i j)
+  calc
+    reflectedIntegral μ theta (finiteTest f idx c) (finiteTest f idx d) =
+        ∫ x, (∑ i, ∑ j, g i j x) ∂μ := by
+          simp only [reflectedIntegral, finiteTest_reflected_product, g]
+    _ = ∑ i, ∫ x, (∑ j, g i j x) ∂μ :=
+      integral_finset_sum Finset.univ (fun i _ => hrow i)
+    _ = ∑ i, ∑ j, ∫ x, g i j x ∂μ := by
+      apply Finset.sum_congr rfl
+      intro i hi
+      exact integral_finset_sum Finset.univ (fun j _ => hg i j)
+    _ = CRP.pairing (integralKernel μ theta f) idx c d := by
+      unfold CRP.pairing
+      apply Finset.sum_congr rfl
+      intro i hi
+      apply Finset.sum_congr rfl
+      intro j hj
+      exact integral_const_mul _ _
+
+-- NATIVE CHILD 1
+
+theorem reflectedIntegral_map [MeasurableSpace X] [MeasurableSpace Y]
+    (μ : Measure X) (q : X → Y) (thetaX : X → X) (thetaY : Y → Y)
+    (F G : Y → ℂ) (hq : Measurable q)
+    (hcomm : ∀ x, q (thetaX x) = thetaY (q x))
+    (hprod : AEStronglyMeasurable
+      (fun y => (starRingEnd ℂ) (F (thetaY y)) * G y) (Measure.map q μ)) :
+    reflectedIntegral (Measure.map q μ) thetaY F G =
+      reflectedIntegral μ thetaX (F ∘ q) (G ∘ q) := by
+  simpa only [reflectedIntegral, Function.comp_apply, hcomm] using
+    (integral_map hq.aemeasurable hprod)
+
+theorem integrable_reflectedProduct_map_iff
+    [MeasurableSpace X] [MeasurableSpace Y]
+    (μ : Measure X) (q : X → Y) (thetaX : X → X) (thetaY : Y → Y)
+    (F G : Y → ℂ) (hq : Measurable q)
+    (hcomm : ∀ x, q (thetaX x) = thetaY (q x))
+    (hprod : AEStronglyMeasurable
+      (fun y => (starRingEnd ℂ) (F (thetaY y)) * G y) (Measure.map q μ)) :
+    Integrable (fun y => (starRingEnd ℂ) (F (thetaY y)) * G y)
+        (Measure.map q μ) ↔
+      Integrable (fun x => (starRingEnd ℂ) (F (q (thetaX x))) * G (q x)) μ := by
+  simpa only [Function.comp_apply, hcomm] using
+    (integrable_map_measure hprod hq.aemeasurable)
+
+theorem reflectedIntegral_map_nonnegative
+    [MeasurableSpace X] [MeasurableSpace Y]
+    (μ : Measure X) (q : X → Y) (thetaX : X → X) (thetaY : Y → Y)
+    (F : Y → ℂ) (hq : Measurable q)
+    (hcomm : ∀ x, q (thetaX x) = thetaY (q x))
+    (hprod : Integrable
+      (fun y => (starRingEnd ℂ) (F (thetaY y)) * F y) (Measure.map q μ))
+    (hpull : CRP.NonnegativeComplex
+      (reflectedIntegral μ thetaX (F ∘ q) (F ∘ q))) :
+    CRP.NonnegativeComplex (reflectedIntegral (Measure.map q μ) thetaY F F) := by
+  rw [reflectedIntegral_map μ q thetaX thetaY F F hq hcomm
+    hprod.aestronglyMeasurable]
+  exact hpull
+
+theorem integrable_continuous_compact
+    {V : Type*} [NormedAddCommGroup V]
+    [TopologicalSpace X] [CompactSpace X] [MeasurableSpace X] [BorelSpace X]
+    (μ : Measure X) [IsFiniteMeasure μ] (g : X → V) (hg : Continuous g) :
+    Integrable g μ := by
+  have h : IntegrableOn g (Set.univ : Set X) μ :=
+    hg.continuousOn.integrableOn_compact' isCompact_univ MeasurableSet.univ
+  simpa only [IntegrableOn, Measure.restrict_univ] using h
+
+theorem integrable_reflectedProduct_continuous
+    [TopologicalSpace X] [CompactSpace X] [MeasurableSpace X] [BorelSpace X]
+    (μ : Measure X) [IsFiniteMeasure μ] (theta : X → X) (F G : X → ℂ)
+    (htheta : Continuous theta) (hF : Continuous F) (hG : Continuous G) :
+    Integrable (fun x => (starRingEnd ℂ) (F (theta x)) * G x) μ :=
+  integrable_continuous_compact μ _
+    ((Complex.continuous_conj.comp (hF.comp htheta)).mul hG)
+
+theorem reflectedIntegral_finiteTest_continuous
+    [TopologicalSpace X] [CompactSpace X] [MeasurableSpace X] [BorelSpace X]
+    [Fintype ι] (μ : Measure X) [IsFiniteMeasure μ]
+    (theta : X → X) (f : A → X → ℂ) (idx : ι → A) (c d : ι → ℂ)
+    (htheta : Continuous theta) (hf : ∀ i, Continuous (f (idx i))) :
+    reflectedIntegral μ theta (finiteTest f idx c) (finiteTest f idx d) =
+      CRP.pairing (integralKernel μ theta f) idx c d :=
+  reflectedIntegral_finiteTest μ theta f idx c d (fun i j =>
+    integrable_reflectedProduct_continuous μ theta (f (idx i)) (f (idx j))
+      htheta (hf i) (hf j))
+
+-- NATIVE CHILD 2
+
+theorem integrable_wilson_exp
+    [TopologicalSpace X] [CompactSpace X] [MeasurableSpace X] [BorelSpace X]
+    (μ : Measure X) [IsFiniteMeasure μ] (S : X → ℝ) (hS : Continuous S) :
+    Integrable (fun x => Real.exp (S x)) μ :=
+  integrable_continuous_compact μ _ (Real.continuous_exp.comp hS)
+
+theorem wilson_partition_pos
+    [TopologicalSpace X] [CompactSpace X] [MeasurableSpace X] [BorelSpace X]
+    (μ : Measure X) [IsFiniteMeasure μ] [NeZero μ]
+    (S : X → ℝ) (hS : Continuous S) :
+    0 < ∫ x, Real.exp (S x) ∂μ :=
+  integral_exp_pos (integrable_wilson_exp μ S hS)
+
+theorem wilson_tilt_probability
+    [TopologicalSpace X] [CompactSpace X] [MeasurableSpace X] [BorelSpace X]
+    (μ : Measure X) [IsFiniteMeasure μ] [NeZero μ]
+    (S : X → ℝ) (hS : Continuous S) :
+    IsProbabilityMeasure (μ.tilted S) :=
+  isProbabilityMeasure_tilted (integrable_wilson_exp μ S hS)
+
+theorem integrable_reflectedProduct_wilson_tilt
+    [TopologicalSpace X] [CompactSpace X] [MeasurableSpace X] [BorelSpace X]
+    (μ : Measure X) [IsFiniteMeasure μ] [NeZero μ]
+    (S : X → ℝ) (hS : Continuous S)
+    (theta : X → X) (F G : X → ℂ)
+    (htheta : Continuous theta) (hF : Continuous F) (hG : Continuous G) :
+    Integrable (fun x => (starRingEnd ℂ) (F (theta x)) * G x) (μ.tilted S) := by
+  letI : IsProbabilityMeasure (μ.tilted S) := wilson_tilt_probability μ S hS
+  exact integrable_reflectedProduct_continuous (μ.tilted S) theta F G htheta hF hG
+
+theorem reflectedIntegral_tilted_density
+    [MeasurableSpace X] (μ : Measure X)
+    (S : X → ℝ) (theta : X → X) (F G : X → ℂ) :
+    reflectedIntegral (μ.tilted S) theta F G =
+      ∫ x, (Real.exp (S x) / (∫ y, Real.exp (S y) ∂μ)) •
+        ((starRingEnd ℂ) (F (theta x)) * G x) ∂μ := by
+  unfold reflectedIntegral
+  exact integral_tilted S _
+
+theorem reflectedIntegral_wilson_one
+    [TopologicalSpace X] [CompactSpace X] [MeasurableSpace X] [BorelSpace X]
+    (μ : Measure X) [IsFiniteMeasure μ] [NeZero μ]
+    (S : X → ℝ) (hS : Continuous S) (theta : X → X) :
+    reflectedIntegral (μ.tilted S) theta (fun _ => 1) (fun _ => 1) = 1 := by
+  letI : IsProbabilityMeasure (μ.tilted S) := wilson_tilt_probability μ S hS
+  simp [reflectedIntegral, integral_const]
+
+theorem wilson_action_continuous
+    {P : Type*} [TopologicalSpace X] (plaquettes : Finset P)
+    (β : P → ℝ) (φ : P → X → ℝ)
+    (hφ : ∀ p ∈ plaquettes, Continuous (φ p)) :
+    Continuous (fun x => ∑ p ∈ plaquettes, β p * φ p x) := by
+  exact continuous_finset_sum _ (fun p hp => continuous_const.mul (hφ p hp))
+
+theorem wilson_link_tilt_probability
+    {E G : Type*} [Fintype E] [TopologicalSpace G] [CompactSpace G]
+    [SecondCountableTopology G] [MeasurableSpace G] [BorelSpace G]
+    (haar : Measure G) [IsProbabilityMeasure haar]
+    (S : (E → G) → ℝ) (hS : Continuous S) :
+    IsProbabilityMeasure ((Measure.pi (fun _ : E => haar)).tilted S) := by
+  classical
+  letI : IsProbabilityMeasure (Measure.pi (fun _ : E => haar)) := inferInstance
+  exact wilson_tilt_probability (Measure.pi (fun _ : E => haar)) S hS
+
+theorem tilted_vacuity
+    [MeasurableSpace X] (μ : Measure X) (S : X → ℝ)
+    (h : ¬ Integrable (fun x => Real.exp (S x)) μ) :
+    μ.tilted S = 0 :=
+  tilted_of_not_integrable h
+
+theorem reflectedIntegral_tilted_vacuity
+    [MeasurableSpace X] (μ : Measure X) (S : X → ℝ)
+    (theta : X → X) (F G : X → ℂ)
+    (h : ¬ Integrable (fun x => Real.exp (S x)) μ) :
+    reflectedIntegral (μ.tilted S) theta F G = 0 := by
+  rw [tilted_vacuity μ S h]
+  simp [reflectedIntegral]
+
+theorem reflectedIntegral_wilson_const_I
+    [TopologicalSpace X] [CompactSpace X] [MeasurableSpace X] [BorelSpace X]
+    (μ : Measure X) [IsFiniteMeasure μ] [NeZero μ]
+    (S : X → ℝ) (hS : Continuous S) (theta : X → X) :
+    reflectedIntegral (μ.tilted S) theta
+      (fun _ => Complex.I) (fun _ => Complex.I) = 1 := by
+  letI : IsProbabilityMeasure (μ.tilted S) := wilson_tilt_probability μ S hS
+  have hI : (starRingEnd ℂ) Complex.I * Complex.I = (1 : ℂ) := by
+    apply Complex.ext <;> simp [Complex.mul_re, Complex.mul_im]
+  simp [reflectedIntegral, hI, integral_const]
+
+theorem wilson_const_I_without_conjugation
+    [TopologicalSpace X] [CompactSpace X] [MeasurableSpace X] [BorelSpace X]
+    (μ : Measure X) [IsFiniteMeasure μ] [NeZero μ]
+    (S : X → ℝ) (hS : Continuous S) :
+    (∫ _ : X, Complex.I * Complex.I ∂(μ.tilted S)) = (-1 : ℂ) := by
+  letI : IsProbabilityMeasure (μ.tilted S) := wilson_tilt_probability μ S hS
+  simp [Complex.I_mul_I, integral_const]
+
+#print axioms reflectedIntegral
+#print axioms integralKernel
+#print axioms finiteTest
+#print axioms finiteTest_reflected_product
+#print axioms integrable_finiteTest_reflected_product
+#print axioms reflectedIntegral_finiteTest
+#print axioms reflectedIntegral_map
+#print axioms integrable_reflectedProduct_map_iff
+#print axioms reflectedIntegral_map_nonnegative
+#print axioms integrable_continuous_compact
+#print axioms integrable_reflectedProduct_continuous
+#print axioms reflectedIntegral_finiteTest_continuous
+#print axioms integrable_wilson_exp
+#print axioms wilson_partition_pos
+#print axioms wilson_tilt_probability
+#print axioms integrable_reflectedProduct_wilson_tilt
+#print axioms reflectedIntegral_tilted_density
+#print axioms reflectedIntegral_wilson_one
+#print axioms wilson_action_continuous
+#print axioms wilson_link_tilt_probability
+#print axioms tilted_vacuity
+#print axioms reflectedIntegral_tilted_vacuity
+#print axioms reflectedIntegral_wilson_const_I
+#print axioms wilson_const_I_without_conjugation
+
+end
+
+end Millennium.G4.IntegralRP
+```

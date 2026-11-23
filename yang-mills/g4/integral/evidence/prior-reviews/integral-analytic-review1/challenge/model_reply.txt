@@ -1,0 +1,30 @@
+**SUPPORTED_IN_SCOPE for the finite-kernel inequality.** The shared-boundary extension needs an explicit finite, strictly positive full partition. The compact-group example needs to distinguish the Boltzmann weight from the normalized density, and the lattice statement should describe a sufficient split-form hypothesis without implying necessity.
+
+### Finite-kernel proof
+
+- **Real features and coupling signs.** Expanding \(\operatorname{Tr}(A^*B)=\sum_{i,j}\overline{A_{ij}}B_{ij}\) gives the displayed real-entry and imaginary-entry identity. Scaling both copies of each feature by \(\sqrt{\beta_pc_p}\) gives the required coefficient, including zero couplings. The features are finite in number, continuous, and bounded. Since \(A_p(x)^*A_p(y)\) is unitary, its trace has modulus at most \(d_p\), giving the stated \(M\). Bounded continuous matrix maps also work with a bound from their Frobenius norms.
+- **Words, conjugation, and Fubini.** Expanding \(H^k\) over ordered words accounts for multiplicities, and the empty word gives the constant term of the exponential after factoring out \(e^{s(x)+s(y)}\). For \(g_w=F\psi_w\), the tested summand is \(\overline{g_w(x)}g_w(y)\). Each \(g_w\) is bounded and measurable, and the absolute integral of that summand is \((\int |g_w|\,d\mu)^2<\infty\). Fubini therefore gives \(|\int g_w\,d\mu|^2\) for complex \(F\). All sums at this step are finite. A truncation can be negative pointwise, as \(1+H\) is wherever \(H<-1\).
+- **Product measurability.** For arbitrary compact Hausdorff \(X\), continuity on \(X\times X\) alone does not justify measurability for \(\mathcal B(X)\otimes\mathcal B(X)\). Here each coordinate factor is measurable, and finite sums, products, and composition with the exponential give product measurability of \(H\), \(W_N\), \(W\), and the tested integrands. This supplies the missing justification for using the product measure and Fubini at the stated generality.
+- **Remainder and normalization.** The exponential tail is bounded uniformly by \(\sum_{k>N}M^k/k!\). Multiplying by \(e^{2s_{\max}}\|F\|_\infty^2\mu(X)^2\) gives the displayed error bound, which tends to zero. Closedness of the nonnegative real ray in \(\mathbb C\) gives \(I(F)\ge 0\). Compactness and strict positivity give \(0<\min W\le\max W<\infty\), so \(0<Z<\infty\). Thus \(W/Z\) defines a probability density and the actual tested integrand is absolutely integrable.
+
+### Shared boundary
+
+Let \(Z(z)=\int W_z\,d(\mu_z\otimes\mu_z)\) and let \(I(z)\) be the corresponding unnormalized tested integral. Require the fiberwise proof’s hypotheses almost everywhere, measurable fiber integrals, absolute integrability of the full tested density, and
+\[
+0<Z_{\mathrm{full}}=\int Z(z)\,\eta(dz)<\infty.
+\]
+Absolute integrability for a particular test alone does not imply the partition condition, as the zero test illustrates. If the assumption covers all tests including \(F=1\), it already supplies finiteness.
+
+The globally normalized expectation is \(\int I(z)\,\eta(dz)/Z_{\mathrm{full}}\), which is nonnegative. Equivalently, one may normalize each nonzero fiber by \(Z(z)\) and average it under the boundary law \(Z(z)\eta(dz)/Z_{\mathrm{full}}\). Keeping the original probability boundary law \(\eta\) after pointwise normalization generally gives a different joint law. For compact products with jointly continuous data and fixed finite base measures, uniform bounds supply the relevant integrability.
+
+### Compact-group example and lattice scope
+
+A genuine one-kernel example is \(G=U(1)\), \(X=G\), \(s=0\), and the one-dimensional representation \(\rho(u)=u\). With normalized Haar measure \(h\) and \(\beta\ge0\), the weight is \(e^{\beta\operatorname{Re}(\bar u v)}\). Its partition is
+\[
+Z=\int_{U(1)}e^{\beta\operatorname{Re}t}\,dh(t),
+\]
+by Haar invariance, and the probability density against \(h\otimes h\) is \(e^{\beta\operatorname{Re}(\bar u v)}/Z\). The same construction works with \(\rho(x)^*\rho(y)=\rho(x^{-1}y)\) for the stated continuous unitary representations. A finite family with shared half-links is obtained by pulling the factors back along their half-holonomy maps and multiplying them on the common configuration space. Independent tensor products cover the disjoint-coordinate case.
+
+For a specified Wilson lattice, the application still requires checking the actual reflection, half-link coordinates, reflection-plane links and shared variables, plaquette orientations, and preservation of the base measure under any coordinate or gauge changes used. The displayed split form with nonnegative coefficients is sufficient for the reflected inequality. Necessity is unestablished, so replace “precisely” with a direct statement of sufficiency. OS reconstruction, spatial continuum convergence, and a spectral gap remain separate.
+
+This was a static audit of the supplied text. The matrix-feature and exponential convergence proof remains unformalized. No Lean execution or independent-party validation was performed. The ACR clauses beyond the supplied extracts were unavailable and were not inspected.

@@ -1,0 +1,15 @@
+**SUPPORTED_IN_SCOPE** for the stated mathematical implications under a static audit of the supplied source. I found no mathematically incorrect theorem statement in that scope. Lean elaboration and the imported declaration signatures remain unchecked.
+
+- The finite-test expansion has the correct coefficient \(\overline{c_i}d_j\). Pairwise integrability justifies both finite sum interchanges. The regulator theorem uses the same `Type vtest` quantifier in its hypothesis and conclusion. Each fixed finite test gets its own eventual positivity bound, which suffices with entrywise convergence even as the configuration spaces and measures vary.
+- Exact reflection intertwining gives the pullback identity under the stated measurability hypotheses. The separate integrability equivalence and the integrability premise of the positivity transfer control vacuous zeros from totalization. Compact continuity and finite measure give integrability of the reflected products and the exponential weight. The nonzero base measure gives a finite, strictly positive partition, so the tilt is a probability measure.
+- The finite Gram calculation gives a sum of \(a_r|\int u_r\,d\mu|^2\). The product version uses joint integrability for Fubini. In `reflectedIntegral_wilson_of_gram`, compact continuity proves actual tilted integrability of the reflected test product. The exact tested factorization and positive normalization then give zero imaginary part and nonnegative real part. The zero-tilt lemma exposes the vacuity when the exponential is nonintegrable. The constant \(1\) and \(i\) controls check normalization and the sign from conjugation, respectively.
+
+**UNRESOLVED** for actual compact-group Wilson reflection positivity. The candidate leaves these application obligations open:
+
+1. Instantiate the link base law with normalized Haar measure and verify the required compactness, second-countability, Borel, and probability hypotheses.
+2. Prove continuity of the concrete reflection and plaquette holonomies using group multiplication and inversion, and of the plaquette weights used in the action.
+3. Establish the cross-plane factorization for the chosen reflection and allowed test algebra. Account for crossing plaquettes and fixed or shared boundary variables, justifying any conditioning or boundary integration used to obtain a product Gram representation.
+4. Prove the appropriate infinite character expansion with the coefficient signs and representation identities required for positive Gram approximants.
+5. Justify convergence of the **tested integrals** to the full Wilson value, for example by \(L^1\) convergence of the tested densities. If the approximants are separately normalized, also prove convergence of their partitions to the positive Wilson partition.
+
+A positive density supplies normalization. A finite Gram truncation supplies positivity for that truncation. The full Wilson law requires the factorization and convergence arguments above.

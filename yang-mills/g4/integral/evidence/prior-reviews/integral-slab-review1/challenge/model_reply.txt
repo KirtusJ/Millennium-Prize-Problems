@@ -1,0 +1,18 @@
+**UNRESOLVED as written. SUPPORTED_IN_SCOPE for the formulation with gauge-invariant end weights and nonnegative crossing coefficients in the exponent.**
+
+The stated end-weight condition is insufficient. Identical reflected pairing and bounded continuous real end actions give reflection symmetry and boundedness, but they do not give the gauge invariance needed for \(S(U,h)=S(V,1)\). That identity requires gauge invariance of the **total density**, including any end factors. Omitting the end factors or requiring each end action to be gauge invariant supplies the missing hypothesis.
+
+The defect can change the partition function. Take \(G=\{\pm1\}\) in its one-dimensional representation, one spatial edge, and two time slices. Write \(u_0,u_1\) for the spatial signs and \(h_a,h_b\) for the temporal signs at the endpoints. Use the reflection-invariant exponent
+\[
+\beta u_0u_1h_ah_b+\lambda(u_0+u_1),\qquad \beta,\lambda>0.
+\]
+The original normalized Haar integral is \(\cosh\beta\,\cosh^2\lambda\), since averaging the temporal signs gives \(\cosh\beta\). Substituting identity temporal links into the same exponent gives \(\cosh\beta\,\cosh^2\lambda+\sinh\beta\,\sinh^2\lambda\). This refutes the asserted partition equality under the end-weight conditions alone. It does not refute reflected positivity for that example.
+
+With gauge-invariant end weights, the reduction checks out:
+
+- **Temporal gauge and Haar.** The anchored recursion gives \(g_{x,t}h_{x,t}g_{x,t+1}^{-1}=1\) on every temporal edge. At fixed \(h\), the spatial map is a continuous bijection with inverse \(U_{vw}=g_v^{-1}V_{vw}g_w\), and bi-invariance preserves each Haar factor. The recursion and coordinate maps are continuous on the finite products. Boundedness and finiteness justify Fubini. After applying gauge invariance to the density and tests, normalized temporal Haar integrates the constant \(1\).
+- **Test support and reflection.** Gauge invariance applies to the positive-half test and its reflected conjugate because link reflection transports vertex gauge transformations. On the temporal-gauge slice, evaluation replaces each temporal link in the original support by identity. The resulting test is continuous and depends only on positive-half spatial coordinates. Reflection preserves that slice, so the reflected factor is the complex conjugate of the same half-test in the reflected negative-half coordinates.
+- **Crossing term and weights.** For \(P=\pi(V_0)\) and \(Q=\pi(V_1)\), \(\operatorname{Tr}(PQ^*)=\overline{\operatorname{Tr}(P^*Q)}\) by adjunction and cyclicity. The real parts agree. Reflection identifies the half-space Haar laws and pairs the interior and end terms into \(s(x)+s(y)\). The matrix-feature lemma needs the density convention explicitly: the coefficient of each crossing real trace in the **exponent** must be nonnegative. With density \(e^{-S}\), the corresponding coefficient in \(S\) has the opposite sign.
+- **Normalization and scope.** With these hypotheses, the exponent is bounded and real on a compact finite product, so \(0<Z<\infty\). The fixed-\(h\) identity applies to both the partition function and the reflected numerator, and the supplied lemma gives real nonnegative expectation under the original normalized measure. A periodic temporal chain adds a closure condition to the recursion. All temporal links can be set to identity only when the ordered temporal holonomy is identity at every vertex, so the periodic law requires a separate identification.
+
+This was a same-provider static audit of the supplied source using the matrix-feature theorem as a stated lemma. It establishes the corrected finite-slab reduction, with no Lean execution, independent-party review, or continuum claim.
