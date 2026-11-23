@@ -1,0 +1,10 @@
+name = "z4ym"
+defaultTargets = ["Z4YM"]
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.19.0"
+
+[[lean_lib]]
+name = "Z4YM"
