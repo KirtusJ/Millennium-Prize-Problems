@@ -1,0 +1,6 @@
+/home/user/z4-workers/k1-mc8/child/report.md — no valid mass: the plateau rule failed, so there is no m, error or m·β^(1/3).
+
+- **Control:** ∫x^x dx on [0,1] = 0.783431.
+- **Autocorrelation:** tau_int is about 135 sweeps, so 3000 sweeps per chain is only about 21 tau (the rule needed 50).
+- **Plateau:** m_eff rises smoothly with t and never flattens, and D(t) turns negative from t=9.
+- **Grandchild:** T119 passed and is released. It checked a heat-bath sampler, not the Metropolis code that produced the numbers.

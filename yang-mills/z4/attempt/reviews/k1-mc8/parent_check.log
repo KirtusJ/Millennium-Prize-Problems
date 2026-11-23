@@ -1,0 +1,2 @@
+check K93: exit 0 (expected 0) in 2073361 ms | output 45d5b2bc9694 | event 95 head 352509765749
+  /home/user/z4-workers/k1-mc8/report.md — STANDS 8, DEFECT 1, NOT CHECKED 6: E and T2 agree with 1.5063 at β=256 and 1024, A1 is not resolved, and no β=4096 run.

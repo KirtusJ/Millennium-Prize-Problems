@@ -1,0 +1,7 @@
+eps=0.04 acc=0.618 <s>=0.43440 time/600sw=12.5s
+eps=0.06 acc=0.473 <s>=0.41948 time/600sw=12.0s
+eps=0.08 acc=0.365 <s>=0.39596 time/600sw=11.5s
+eps=0.11 acc=0.243 <s>=0.39180 time/600sw=11.9s
+eps=0.15 acc=0.146 <s>=0.39379 time/600sw=12.0s
+eps=0.2 acc=0.085 <s>=0.38554 time/600sw=11.7s
+CHOSEN eps=0.06

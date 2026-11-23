@@ -1,0 +1,11 @@
+# SU(2) heat-bath check, k=3.0, n=400000, seed=12345
+- sample mean a0 = 0.56863222
+- standard error = 0.00052385
+- I2/I1 (Simpson Bessel integrals) = 0.567923649307
+- direct quadrature ratio (Gauss-Chebyshev II) = 0.567923649307
+- z = (mean - quad)/SE = 1.353
+- |quad1-quad2| = 1.11e-16
+- predicate 4 SE: PASS
+- predicate quadratures agree 1e-8: PASS
+- OVERALL: PASS
+

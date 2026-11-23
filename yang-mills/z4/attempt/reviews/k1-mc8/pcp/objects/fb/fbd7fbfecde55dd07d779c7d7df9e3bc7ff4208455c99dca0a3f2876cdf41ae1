@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/k1-mc8/analyse.py", line 149, in <module>
+    main()
+    ~~~~^^
+  File "/home/user/z4-workers/k1-mc8/analyse.py", line 120, in main
+    d = np.load(pre + '.npz'); js = json.load(open(pre + '.json'))
+  File "/usr/local/lib/python3.13/site-packages/numpy/lib/_npyio_impl.py", line 463, in load
+    raise EOFError("No data left in file")
+EOFError: No data left in file

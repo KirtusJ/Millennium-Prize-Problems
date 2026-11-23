@@ -1,0 +1,1 @@
+check K6: exit 0 (expected 0) in 285671 ms | output 0f8badfa65c8 | event 7 head b9e108de9bf2
