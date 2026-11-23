@@ -1,0 +1,11 @@
+T2 | +1.26 +- 1.05 | a3-Avort.PROOF.md | ABSENT
+P4 presence: 115/116 tokens present (all 116 tested; no sampling)
+DERIVED T1 16+12+4: OK
+DERIVED T1 20+4: OK
+DERIVED T2 F4-F3: OK
+DERIVED T3 11.7: OK
+DERIVED T3 1/(2beta): OK
+DERIVED T6 q: OK
+DERIVED T6 xi: OK
+DERIVED T6 xi(1-q): OK
+DERIVED T6 exponent 0.740: OK

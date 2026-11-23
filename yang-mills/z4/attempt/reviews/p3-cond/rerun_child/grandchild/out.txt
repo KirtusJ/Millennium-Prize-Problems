@@ -1,0 +1,4 @@
+G1 best n=9752 phi_n=0.496403257282 min_dist=3.597e-03 fro=5.087e-03 fro_tol=1.414e-03 fro_exact_tol=1.414e-03
+G1 FAILED (min<1e-3)
+G2 group size=384 rotation_0.5_in_group=False
+G2 MET (size==384)

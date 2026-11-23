@@ -1,0 +1,34 @@
+OS73 {'P1': False, 'P2': False} 
+OS75 {'P1': False, 'P2': False} 
+KQR21 {'P1': True, 'P3': True, 'P4': False} 
+OS78 {'P1': False, 'P2': False} 
+Lu77 {'P1': True, 'P2': True, 'P3': True} 
+FILS78 {'P1': True, 'P2': True, 'P3': False} 
+SZZ23 {'P1': True, 'P3': True, 'P4': True} 
+Guth80 {'P1': False, 'P2': True, 'P3': False} 
+FS82 {'P1': True, 'P2': True, 'P3': True} 
+GM82 {'P1': True, 'P2': False, 'P3': False} 
+AC22 {'P1': True, 'P3': False, 'P4': True} 
+Ch21 {'P1': True, 'P3': True, 'P4': True} 
+Ch18 {'P1': True, 'P4': True} 
+To07 {'P1': True, 'P4': True} 
+IS07 {'P1': True, 'P4': True} 
+IS08 {'P1': True, 'P4': True} 
+KT02 {'P1': True, 'P2': True, 'P3': True, 'P4': True} 
+TY85 {'P1': True, 'P2': True, 'P3': True} 
+BS83 {'P1': True, 'P2': True, 'P3': False} 
+ADC21 {'P1': True, 'P2': True, 'P3': True, 'P4': True} 
+Sin81 {'P1': True, 'P2': True, 'P3': False} 
+CCK07 {'P1': True, 'P3': False, 'P4': True} 
+Cr79 {'P1': True, 'P2': True, 'P3': True} 
+FiveD11 {'P1': True, 'P3': True, 'P4': True} 
+LW86 {'P1': True, 'P2': True, 'P3': False} 
+FHK93 {'P1': True, 'P2': True, 'P3': True, 'P4': True} 
+Te98 {'P1': True, 'P4': True} 
+LTW04 {'P1': True, 'P3': False, 'P4': True} 
+BCH26 {'P1': True, 'P4': True} 
+SS23 {'P1': True, 'P2': True, 'P3': True, 'P4': True} 
+GJ {'P1': True} 
+GJ {} <HTTPError 429: 'Too Many Requests'>
+LL10 {} <HTTPError 429: 'Too Many Requests'>
+FAILED: ['OS73:P1', 'OS73:P2', 'OS75:P1', 'OS75:P2', 'KQR21:P4', 'OS78:P1', 'OS78:P2', 'FILS78:P3', 'Guth80:P1', 'Guth80:P3', 'GM82:P2', 'GM82:P3', 'AC22:P3', 'BS83:P3', 'Sin81:P3', 'CCK07:P3', 'LW86:P3', 'LTW04:P3']

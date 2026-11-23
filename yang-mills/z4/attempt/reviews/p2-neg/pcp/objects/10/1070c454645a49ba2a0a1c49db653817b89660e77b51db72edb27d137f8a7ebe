@@ -1,0 +1,25 @@
+Every number in TABLES.md is present in the file it names, and the derived arithmetic is right. I found no absent, differing or misattributed number. The full report with the row-by-row table is in `report.md`.
+
+- **Control:** `control.txt` holds `1`. The Ricci constant of SU(2) in the −Tr(XY) normalization is 1 (N/2), as stated in `a3-Acurv.PROOF.md`.
+- **Presence check:** `check_tables.py` tested 116 tokens and 115 were present. The one miss was my own wrong expectation: "+1.26 ± 1.05" is in `a3-Avort.report.md`, not in the PROOF file I first searched. Some tokens are short (for example "2.2" or "1500"), so I also read ranges and lists by hand.
+- **Derived values:**
+  - Tolerance is rounding to the printed digits.
+  - T1's counts and the union of ranges, T2's F(4) − F(3) = 1.26 ± 1.05, T3's ratio 11.7 and all nine T6 values (q, ξ, ξ(1−q)) are correct.
+  - The growth exponent in T6 comes out at 0.740 against "about 0.75".
+
+**Discrepancies and soft spots:**
+1. **T7 labels:** `c1-E.report.md` gives four values ("36±2, ≈29, 22±2, 20±3") for "L = 6, 8, 12". The writer added "L = 16" to make the labels fit. That label is not in the source.
+2. **T8 bound:** "below 0.002" is looser than the source's "below 0.0015".
+3. **Two N = 12 values:** `MATCHED_MEASUREMENT.md` gives R(0) as 3.42(12)e−2 in its first table and 3.233(61)e−2 in the extension table, and similarly for Q0. T6 correctly uses the extension values.
+4. **Rounding of the κ_H range:** the sources round the same data differently (−1.1 or −1.17 or −1.2 at one end, −2.0 or −2.04 at the other). TABLES.md's range is consistent with the detailed tables.
+5. **Ambiguous "0/8":** `a3-Acurv.PROOF.md` reads as 8 samples in total, but its report shows 8 per β. The writer's "8 each" is correct.
+
+**Grandchild:** task T20, admitted and released. Its control (1.0695) was correct and all nine T6 derived values matched the writer's. I reran its script and the output was identical. It used the same inputs I did, so it is not independent of my reading.
+
+**Verify, last lines:**
+- Python: `result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)`
+- Rust: `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.`
+
+The rerun commands are in `report.md`.
+
+Everything is in `/home/user/z4-workers/p2-neg/child`: `report.md`, `control.txt`, `notes.md`, `check_tables.py`, `results_check_tables.txt`, `grandchild/`, `rerun_gc/`.

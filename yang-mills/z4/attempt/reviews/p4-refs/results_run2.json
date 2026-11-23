@@ -1,0 +1,1653 @@
+{
+ "results": {
+  "JW": {
+   "inspire_url": "https://inspirehep.net/api/literature?q=t+%22Quantum+Yang-Mills+theory%22+and+a+Jaffe+and+a+Witten&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Cimprints%2Cisbns&size=5",
+   "inspire": [
+    {
+     "authors": [
+      {
+       "full_name": "Jaffe, Arthur M."
+      },
+      {
+       "full_name": "Witten, Edward"
+      }
+     ],
+     "control_number": 540132,
+     "titles": [
+      {
+       "title": "Quantum Yang-Mills theory"
+      }
+     ]
+    }
+   ],
+   "pred": {
+    "Q1": true
+   },
+   "crossref": []
+  },
+  "OS73": {
+   "inspire_url": "https://inspirehep.net/api/literature?q=a+Osterwalder+and+a+Schrader+and+j+Commun.Math.Phys.%2C31&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Cimprints%2Cisbns&size=5",
+   "inspire": [
+    {
+     "publication_info": [
+      {
+       "journal_volume": "31",
+       "page_end": "112",
+       "year": 1973,
+       "journal_record": {
+        "$ref": "https://inspirehep.net/api/journals/1214791"
+       },
+       "page_start": "83",
+       "journal_title": "Commun.Math.Phys."
+      }
+     ],
+     "authors": [
+      {
+       "full_name": "Osterwalder, Konrad"
+      },
+      {
+       "full_name": "Schrader, Robert"
+      }
+     ],
+     "control_number": 81180,
+     "dois": [
+      {
+       "value": "10.1007/BF01645738"
+      }
+     ],
+     "titles": [
+      {
+       "title": "AXIOMS FOR EUCLIDEAN GREEN'S FUNCTIONS"
+      }
+     ]
+    }
+   ],
+   "pred": {
+    "Q1": true,
+    "Q2": true
+   },
+   "crossref": [
+    {
+     "url": "https://api.crossref.org/works/10.1007/BF01645738",
+     "rec": {
+      "title": [
+       "Axioms for Euclidean Green's functions"
+      ],
+      "container-title": [
+       "Communications in Mathematical Physics"
+      ],
+      "volume": "31",
+      "issue": "2",
+      "page": "83-112",
+      "article-number": null,
+      "issued": {
+       "date-parts": [
+        [
+         1973,
+         6
+        ]
+       ]
+      },
+      "published-print": {
+       "date-parts": [
+        [
+         1973,
+         6
+        ]
+       ]
+      },
+      "DOI": "10.1007/bf01645738",
+      "publisher": "Springer Science and Business Media LLC",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "Konrad",
+        "Osterwalder"
+       ],
+       [
+        "Robert",
+        "Schrader"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "OS75": {
+   "inspire_url": "https://inspirehep.net/api/literature?q=a+Osterwalder+and+a+Schrader+and+j+Commun.Math.Phys.%2C42&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Cimprints%2Cisbns&size=5",
+   "inspire": [
+    {
+     "publication_info": [
+      {
+       "journal_volume": "42",
+       "artid": "281",
+       "year": 1975,
+       "journal_record": {
+        "$ref": "https://inspirehep.net/api/journals/1214791"
+       },
+       "page_start": "281",
+       "journal_title": "Commun.Math.Phys."
+      },
+      {
+       "pubinfo_freetext": "Commun.Math.Phys.42 (1975) 281-305 and Preprint - OSTERWALDER K (REC.DEC 74) 53p"
+      }
+     ],
+     "authors": [
+      {
+       "full_name": "Osterwalder, Konrad"
+      },
+      {
+       "full_name": "Schrader, Robert"
+      }
+     ],
+     "control_number": 1627,
+     "dois": [
+      {
+       "value": "10.1007/BF01608978"
+      }
+     ],
+     "titles": [
+      {
+       "title": "Axioms for Euclidean Green's Functions. 2."
+      }
+     ]
+    }
+   ],
+   "pred": {
+    "Q1": true,
+    "Q2": false
+   },
+   "crossref": [
+    {
+     "url": "https://api.crossref.org/works/10.1007/BF01608978",
+     "rec": {
+      "title": [
+       "Axioms for Euclidean Green's functions II"
+      ],
+      "container-title": [
+       "Communications in Mathematical Physics"
+      ],
+      "volume": "42",
+      "issue": "3",
+      "page": "281-305",
+      "article-number": null,
+      "issued": {
+       "date-parts": [
+        [
+         1975,
+         10
+        ]
+       ]
+      },
+      "published-print": {
+       "date-parts": [
+        [
+         1975,
+         10
+        ]
+       ]
+      },
+      "DOI": "10.1007/bf01608978",
+      "publisher": "Springer Science and Business Media LLC",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "Konrad",
+        "Osterwalder"
+       ],
+       [
+        "Robert",
+        "Schrader"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "OS78": {
+   "inspire_url": "https://inspirehep.net/api/literature?q=a+Osterwalder+and+a+Seiler+and+j+Annals+Phys.%2C110&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Cimprints%2Cisbns&size=5",
+   "inspire": [
+    {
+     "authors": [
+      {
+       "full_name": "Osterwalder, K."
+      },
+      {
+       "full_name": "Seiler, E."
+      }
+     ],
+     "publication_info": [
+      {
+       "journal_volume": "110",
+       "artid": "440",
+       "year": 1978,
+       "journal_record": {
+        "$ref": "https://inspirehep.net/api/journals/1214855"
+       },
+       "page_start": "440",
+       "journal_title": "Annals Phys."
+      },
+      {
+       "pubinfo_freetext": "Salerno Soliton Wkshp.1977:0201"
+      }
+     ],
+     "control_number": 120117,
+     "dois": [
+      {
+       "value": "10.1016/0003-4916(78)90039-8"
+      }
+     ],
+     "titles": [
+      {
+       "title": "Gauge Field Theories on the Lattice"
+      }
+     ]
+    }
+   ],
+   "pred": {
+    "Q1": true,
+    "Q2": false
+   },
+   "crossref": [
+    {
+     "url": "https://api.crossref.org/works/10.1016/0003-4916%2878%2990039-8",
+     "rec": {
+      "title": [
+       "Gauge field theories on a lattice"
+      ],
+      "container-title": [
+       "Annals of Physics"
+      ],
+      "volume": "110",
+      "issue": "2",
+      "page": "440-471",
+      "article-number": null,
+      "issued": {
+       "date-parts": [
+        [
+         1978,
+         2
+        ]
+       ]
+      },
+      "published-print": {
+       "date-parts": [
+        [
+         1978,
+         2
+        ]
+       ]
+      },
+      "DOI": "10.1016/0003-4916(78)90039-8",
+      "publisher": "Elsevier BV",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "K",
+        "Osterwalder"
+       ],
+       [
+        "E",
+        "Seiler"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "Guth80": {
+   "inspire_url": "https://inspirehep.net/api/literature?q=a+Guth+and+t+nonconfining&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Cimprints%2Cisbns&size=5",
+   "inspire": [
+    {
+     "authors": [
+      {
+       "full_name": "Guth, Alan H."
+      }
+     ],
+     "publication_info": [
+      {
+       "journal_volume": "21",
+       "artid": "2291",
+       "year": 1980,
+       "page_start": "2291",
+       "journal_title": "Phys.Rev.D"
+      }
+     ],
+     "control_number": 144419,
+     "dois": [
+      {
+       "value": "10.1103/PhysRevD.21.2291"
+      }
+     ],
+     "titles": [
+      {
+       "title": "Existence Proof of a Nonconfining Phase in Four-Dimensional U(1) Lattice Gauge Theory"
+      }
+     ]
+    }
+   ],
+   "pred": {
+    "Q1": true,
+    "Q2": true
+   },
+   "crossref": [
+    {
+     "url": "https://api.crossref.org/works/10.1103/PhysRevD.21.2291",
+     "rec": {
+      "title": [
+       "Existence proof of a nonconfining phase in four-dimensional U(1) lattice gauge theory"
+      ],
+      "container-title": [
+       "Physical Review D"
+      ],
+      "volume": "21",
+      "issue": "8",
+      "page": "2291-2307",
+      "article-number": null,
+      "issued": {
+       "date-parts": [
+        [
+         1980,
+         4,
+         15
+        ]
+       ]
+      },
+      "published-print": null,
+      "DOI": "10.1103/physrevd.21.2291",
+      "publisher": "American Physical Society (APS)",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "Alan H.",
+        "Guth"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "AC22": {
+   "crossref": [
+    {
+     "url": "https://api.crossref.org/works/10.1214/24-AOP1702",
+     "rec": {
+      "title": [
+       "Correlation decay for finite lattice gauge theories at weak coupling"
+      ],
+      "container-title": [
+       "The Annals of Probability"
+      ],
+      "volume": "53",
+      "issue": "1",
+      "page": "140-174",
+      "article-number": null,
+      "issued": {
+       "date-parts": [
+        [
+         2025,
+         1,
+         1
+        ]
+       ]
+      },
+      "published-print": {
+       "date-parts": [
+        [
+         2025,
+         1,
+         1
+        ]
+       ]
+      },
+      "DOI": "10.1214/24-aop1702",
+      "publisher": "Institute of Mathematical Statistics",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "Arka",
+        "Adhikari"
+       ],
+       [
+        "Sky",
+        "Cao"
+       ]
+      ]
+     }
+    }
+   ],
+   "pred": {
+    "Q2": true
+   }
+  },
+  "BS83": {
+   "crossref": [
+    {
+     "url": "https://api.crossref.org/works/10.1007/BF01208780",
+     "rec": {
+      "title": [
+       "Lattice Yang-Mills theory at nonzero temperature and the confinement problem"
+      ],
+      "container-title": [
+       "Communications in Mathematical Physics"
+      ],
+      "volume": "91",
+      "issue": "3",
+      "page": "329-380",
+      "article-number": null,
+      "issued": {
+       "date-parts": [
+        [
+         1983,
+         9
+        ]
+       ]
+      },
+      "published-print": {
+       "date-parts": [
+        [
+         1983,
+         9
+        ]
+       ]
+      },
+      "DOI": "10.1007/bf01208780",
+      "publisher": "Springer Science and Business Media LLC",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "Christian",
+        "Borgs"
+       ],
+       [
+        "Erhard",
+        "Seiler"
+       ]
+      ]
+     }
+    }
+   ],
+   "pred": {
+    "Q2": true
+   }
+  },
+  "GJ_book": {
+   "url": "https://api.crossref.org/works?query.bibliographic=Glimm+Jaffe+Quantum+Physics+A+Functional+Integral+Point+of+View&rows=6",
+   "items": [
+    {
+     "title": [
+      "<i>Quantum Physics: A Functional Integral Point of View</i>"
+     ],
+     "container-title": [
+      "Physics Today"
+     ],
+     "DOI": "10.1063/1.2914804",
+     "type": "journal-article",
+     "publisher": "AIP Publishing",
+     "issued": {
+      "date-parts": [
+       [
+        1982,
+        10,
+        1
+       ]
+      ]
+     },
+     "ISBN": null,
+     "edition-number": null,
+     "page": "82-83",
+     "volume": "35",
+     "author": [
+      [
+       "J.",
+       "Gllmm"
+      ],
+      [
+       "A.",
+       "Jaffe"
+      ],
+      [
+       "Frank",
+       "Wilczek"
+      ]
+     ],
+     "editor": []
+    },
+    {
+     "title": [
+      "The Φ4 Critical Point"
+     ],
+     "container-title": [
+      "Quantum Physics"
+     ],
+     "DOI": "10.1007/978-1-4684-0121-9_17",
+     "type": "book-chapter",
+     "publisher": "Springer US",
+     "issued": {
+      "date-parts": [
+       [
+        1981
+       ]
+      ]
+     },
+     "ISBN": [
+      "9780387905624",
+      "9781468401219"
+     ],
+     "edition-number": null,
+     "page": "304-320",
+     "volume": null,
+     "author": [
+      [
+       "James",
+       "Glimm"
+      ],
+      [
+       "Arthur",
+       "Jaffe"
+      ]
+     ],
+     "editor": []
+    },
+    {
+     "title": [
+      "The φ4 Critical Point"
+     ],
+     "container-title": [
+      "Quantum Physics"
+     ],
+     "DOI": "10.1007/978-1-4612-4728-9_17",
+     "type": "book-chapter",
+     "publisher": "Springer New York",
+     "issued": {
+      "date-parts": [
+       [
+        1987
+       ]
+      ]
+     },
+     "ISBN": [
+      "9780387964775",
+      "9781461247289"
+     ],
+     "edition-number": null,
+     "page": "339-355",
+     "volume": null,
+     "author": [
+      [
+       "James",
+       "Glimm"
+      ],
+      [
+       "Arthur",
+       "Jaffe"
+      ]
+     ],
+     "editor": []
+    },
+    {
+     "title": [
+      "Functional Integral Methods in Quantum Field Theory"
+     ],
+     "container-title": [
+      "New Developments in Quantum Field Theory and Statistical Mechanics Cargèse 1976"
+     ],
+     "DOI": "10.1007/978-1-4615-8918-1_2",
+     "type": "book-chapter",
+     "publisher": "Springer US",
+     "issued": {
+      "date-parts": [
+       [
+        1977
+       ]
+      ]
+     },
+     "ISBN": [
+      "9781461589204",
+      "9781461589181"
+     ],
+     "edition-number": null,
+     "page": "35-66",
+     "volume": null,
+     "author": [
+      [
+       "James",
+       "Glimm"
+      ],
+      [
+       "Arthur",
+       "Jaffe"
+      ]
+     ],
+     "editor": []
+    },
+    {
+     "title": [
+      "Quantum Physics"
+     ],
+     "container-title": null,
+     "DOI": "10.1007/978-1-4612-4728-9",
+     "type": "book",
+     "publisher": "Springer New York",
+     "issued": {
+      "date-parts": [
+       [
+        1987
+       ]
+      ]
+     },
+     "ISBN": [
+      "9780387964775",
+      "9781461247289"
+     ],
+     "edition-number": null,
+     "page": null,
+     "volume": null,
+     "author": [
+      [
+       "James",
+       "Glimm"
+      ],
+      [
+       "Arthur",
+       "Jaffe"
+      ]
+     ],
+     "editor": []
+    },
+    {
+     "title": [
+      "Quantum Physics"
+     ],
+     "container-title": null,
+     "DOI": "10.1007/978-1-4684-0121-9",
+     "type": "book",
+     "publisher": "Springer US",
+     "issued": {
+      "date-parts": [
+       [
+        1981
+       ]
+      ]
+     },
+     "ISBN": [
+      "9780387905624",
+      "9781468401219"
+     ],
+     "edition-number": null,
+     "page": null,
+     "volume": null,
+     "author": [
+      [
+       "James",
+       "Glimm"
+      ],
+      [
+       "Arthur",
+       "Jaffe"
+      ]
+     ],
+     "editor": []
+    }
+   ],
+   "pred": {
+    "Q3": true
+   }
+  },
+  "LL10_book": {
+   "url": "https://api.crossref.org/works?query.bibliographic=Lawler+Limic+Random+Walk+A+Modern+Introduction&rows=6",
+   "items": [
+    {
+     "title": [
+      "Random Walk: A Modern Introduction"
+     ],
+     "container-title": null,
+     "DOI": "10.1017/cbo9780511750854",
+     "type": "monograph",
+     "publisher": "Cambridge University Press",
+     "issued": {
+      "date-parts": [
+       [
+        2010,
+        6,
+        24
+       ]
+      ]
+     },
+     "ISBN": [
+      "9780521519182",
+      "9780511750854"
+     ],
+     "edition-number": "1",
+     "page": null,
+     "volume": null,
+     "author": [
+      [
+       "Gregory F.",
+       "Lawler"
+      ],
+      [
+       "Vlada",
+       "Limic"
+      ]
+     ],
+     "editor": []
+    },
+    {
+     "title": [
+      "Loop-erased random walk"
+     ],
+     "container-title": [
+      "Random Walk: A Modern Introduction"
+     ],
+     "DOI": "10.1017/cbo9780511750854.012",
+     "type": "book-chapter",
+     "publisher": "Cambridge University Press",
+     "issued": {
+      "date-parts": [
+       [
+        2010,
+        6,
+        24
+       ]
+      ]
+     },
+     "ISBN": [
+      "9780521519182",
+      "9780511750854"
+     ],
+     "edition-number": "1",
+     "page": "307-325",
+     "volume": null,
+     "author": [],
+     "editor": []
+    },
+    {
+     "title": [
+      "Additional topics on simple random walk"
+     ],
+     "container-title": [
+      "Random Walk: A Modern Introduction"
+     ],
+     "DOI": "10.1017/cbo9780511750854.009",
+     "type": "book-chapter",
+     "publisher": "Cambridge University Press",
+     "issued": {
+      "date-parts": [
+       [
+        2010,
+        6,
+        24
+       ]
+      ]
+     },
+     "ISBN": [
+      "9780521519182",
+      "9780511750854"
+     ],
+     "edition-number": "1",
+     "page": "225-246",
+     "volume": null,
+     "author": [],
+     "editor": []
+    },
+    {
+     "title": [
+      "Introduction"
+     ],
+     "container-title": [
+      "Random Walk: A Modern Introduction"
+     ],
+     "DOI": "10.1017/cbo9780511750854.002",
+     "type": "book-chapter",
+     "publisher": "Cambridge University Press",
+     "issued": {
+      "date-parts": [
+       [
+        2010,
+        6,
+        24
+       ]
+      ]
+     },
+     "ISBN": [
+      "9780521519182",
+      "9780511750854"
+     ],
+     "edition-number": "1",
+     "page": "1-20",
+     "volume": null,
+     "author": [],
+     "editor": []
+    },
+    {
+     "title": [
+      "Appendix"
+     ],
+     "container-title": [
+      "Random Walk: A Modern Introduction"
+     ],
+     "DOI": "10.1017/cbo9780511750854.013",
+     "type": "other",
+     "publisher": "Cambridge University Press",
+     "issued": {
+      "date-parts": [
+       [
+        2010,
+        6,
+        24
+       ]
+      ]
+     },
+     "ISBN": [
+      "9780521519182",
+      "9780511750854"
+     ],
+     "edition-number": "1",
+     "page": "326-359",
+     "volume": null,
+     "author": [],
+     "editor": []
+    },
+    {
+     "title": [
+      "Preface"
+     ],
+     "container-title": [
+      "Random Walk: A Modern Introduction"
+     ],
+     "DOI": "10.1017/cbo9780511750854.001",
+     "type": "book-chapter",
+     "publisher": "Cambridge University Press",
+     "issued": {
+      "date-parts": [
+       [
+        2010,
+        6,
+        24
+       ]
+      ]
+     },
+     "ISBN": [
+      "9780521519182",
+      "9780511750854"
+     ],
+     "edition-number": "1",
+     "page": "ix-xii",
+     "volume": null,
+     "author": [],
+     "editor": []
+    }
+   ],
+   "pred": {
+    "Q3": true
+   }
+  },
+  "JW_book": {
+   "url": "https://api.crossref.org/works?query.bibliographic=Jaffe+Witten+Quantum+Yang-Mills+theory+Millennium+Prize+Problems&rows=6",
+   "items": [
+    {
+     "title": [
+      "HOW TO EXPLICITLY INTRODUCE THE JAFFE-WITTEN MASS GAP INTO THE QUANTUM YANG-MILLS THEORY"
+     ],
+     "container-title": [
+      "Non-Perturbative QCD"
+     ],
+     "DOI": "10.1142/9789812778352_0040",
+     "type": "proceedings-article",
+     "publisher": "WORLD SCIENTIFIC",
+     "issued": {
+      "date-parts": [
+       [
+        2002,
+        4
+       ]
+      ]
+     },
+     "ISBN": null,
+     "edition-number": null,
+     "page": "297-302",
+     "volume": null,
+     "author": [
+      [
+       "V.",
+       "GOGOHIA"
+      ]
+     ],
+     "editor": []
+    },
+    {
+     "title": [
+      "YANGIAN SYMMETRY IN D=4 SUPERCONFORMAL YANG-MILLS THEORY"
+     ],
+     "container-title": [
+      "Quantum Theory and Symmetries"
+     ],
+     "DOI": "10.1142/9789812702340_0036",
+     "type": "proceedings-article",
+     "publisher": "WORLD SCIENTIFIC",
+     "issued": {
+      "date-parts": [
+       [
+        2004,
+        10
+       ]
+      ]
+     },
+     "ISBN": null,
+     "edition-number": null,
+     "page": "300-315",
+     "volume": null,
+     "author": [
+      [
+       "LOUISE",
+       "DOLAN"
+      ],
+      [
+       "CHIARA R.",
+       "NAPPI"
+      ],
+      [
+       "EDWARD",
+       "WITTEN"
+      ]
+     ],
+     "editor": []
+    },
+    {
+     "title": [
+      "The Seiberg-Witten Solution of N = 2 SUSY Yang-Mills Theory"
+     ],
+     "container-title": [
+      "Mathematical Physics Studies",
+      "Topological Quantum Field Theory and Four Manifolds"
+     ],
+     "DOI": "10.1007/1-4020-3177-7_7",
+     "type": "book-chapter",
+     "publisher": "Springer Netherlands",
+     "issued": {
+      "date-parts": [
+       [
+        null
+       ]
+      ]
+     },
+     "ISBN": [
+      "9781402030581"
+     ],
+     "edition-number": null,
+     "page": "110-132",
+     "volume": null,
+     "author": [],
+     "editor": []
+    },
+    {
+     "title": [
+      "Millennium Prize: the Yang-Mills Existence and Mass Gap problem"
+     ],
+     "container-title": null,
+     "DOI": "10.64628/aa.yfv6adaq9",
+     "type": "posted-content",
+     "publisher": "The Conversation Media Group Ltd",
+     "issued": {
+      "date-parts": [
+       [
+        2011,
+        12,
+        8
+       ]
+      ]
+     },
+     "ISBN": null,
+     "edition-number": null,
+     "page": null,
+     "volume": null,
+     "author": [
+      [
+       "Michael",
+       "Murray"
+      ],
+      [
+       "Alan",
+       "Carey"
+      ],
+      [
+       "Peter",
+       "Bouwknegt"
+      ]
+     ],
+     "editor": [
+      [
+       "Paul",
+       "Dalgarno"
+      ]
+     ]
+    },
+    {
+     "title": [
+      "Mass in Quantum Yang-Mills Theory (Comment on a Clay Millennium Problem)"
+     ],
+     "container-title": [
+      "Mathematical Physics Studies",
+      "Perspectives in Analysis"
+     ],
+     "DOI": "10.1007/3-540-30434-7_6",
+     "type": "book-chapter",
+     "publisher": "Springer-Verlag",
+     "issued": {
+      "date-parts": [
+       [
+        null
+       ]
+      ]
+     },
+     "ISBN": [
+      "3540304320"
+     ],
+     "edition-number": null,
+     "page": "63-72",
+     "volume": null,
+     "author": [
+      [
+       "L. D.",
+       "Faddeev"
+      ]
+     ],
+     "editor": []
+    },
+    {
+     "title": [
+      "SUSY Yang-Mills theories"
+     ],
+     "container-title": [
+      "Seiberg-Witten Theory and Integrable Systems"
+     ],
+     "DOI": "10.1142/9789812815873_0002",
+     "type": "book-chapter",
+     "publisher": "WORLD SCIENTIFIC",
+     "issued": {
+      "date-parts": [
+       [
+        1999,
+        3
+       ]
+      ]
+     },
+     "ISBN": [
+      "9789810236366",
+      "9789812815873"
+     ],
+     "edition-number": null,
+     "page": "9-25",
+     "volume": null,
+     "author": [],
+     "editor": []
+    }
+   ],
+   "pred": {
+    "Q3": false
+   }
+  },
+  "GM82_page": {
+   "url": "https://link.springer.com/article/10.1007/BF01961240",
+   "meta": [
+    [
+     "dc.title",
+     "Proof of confinement of static quarks in 3-dimensionalU(1) lattice gauge theory for all values of the coupling constant"
+    ],
+    [
+     "dc.source",
+     "Communications in Mathematical Physics 1982 82:4"
+    ],
+    [
+     "dc.format",
+     "text/html"
+    ],
+    [
+     "dc.publisher",
+     "Springer"
+    ],
+    [
+     "dc.type",
+     "OriginalPaper"
+    ],
+    [
+     "dc.language",
+     "En"
+    ],
+    [
+     "dc.copyright",
+     "1982 Springer-Verlag"
+    ],
+    [
+     "dc.rights",
+     "1982 Springer-Verlag"
+    ],
+    [
+     "dc.description",
+     "We study the 3-dimensional pureU(1) lattice gauge theory with Villain action which is related to the 3-dimensional ℤ-ferromagnet by an exact duality transformation (and also to a Coulomb system). We show that its string tension α is nonzero for all values of the coupling constantg 2, and obeys a bound α≧const·m Dβ−1 for smallag 2, with β=4π2/g 2 and $$m_D^2 = (2{\\beta \\mathord{\\left/ {\\vphantom {\\beta a}} \\right. \\kern-\\nulldelimiterspace} a}^3 )e^{ - \\beta \\upsilon _{Cb} {{(0)} \\mathord{\\left/ {\\vphantom {{(0)} 2}} \\right. \\kern-\\nulldelimiterspace} 2}} (a = lattice spacing)$$ . A continuum limita→0,m D fixed, exists and represents a scalar free field theory of massm D. The string tension αm −2 in physical units tends to ∞ in this limit. Characteristic differences in the behaviour of the model for large and small coupling constantag 2 are found. Renormalization group aspects are discussed."
+    ],
+    [
+     "citation_pdf_url",
+     "https://link.springer.com/content/pdf/10.1007/BF01961240.pdf"
+    ],
+    [
+     "citation_fulltext_html_url",
+     "https://link.springer.com/article/10.1007/BF01961240"
+    ],
+    [
+     "citation_journal_title",
+     "Communications in Mathematical Physics"
+    ],
+    [
+     "citation_journal_abbrev",
+     "Commun.Math. Phys."
+    ],
+    [
+     "citation_publisher",
+     "Springer-Verlag"
+    ],
+    [
+     "citation_issn",
+     "1432-0916"
+    ],
+    [
+     "citation_title",
+     "Proof of confinement of static quarks in 3-dimensionalU(1) lattice gauge theory for all values of the coupling constant"
+    ],
+    [
+     "citation_volume",
+     "82"
+    ],
+    [
+     "citation_issue",
+     "4"
+    ],
+    [
+     "citation_publication_date",
+     "1982/01"
+    ],
+    [
+     "citation_firstpage",
+     "545"
+    ],
+    [
+     "citation_lastpage",
+     "606"
+    ],
+    [
+     "citation_article_type",
+     "Article"
+    ],
+    [
+     "citation_language",
+     "en"
+    ],
+    [
+     "dc.identifier",
+     "doi:10.1007/BF01961240"
+    ],
+    [
+     "citation_doi",
+     "10.1007/BF01961240"
+    ],
+    [
+     "citation_springer_api_url",
+     "http://api.springer.com/xmldata/jats?q=doi:10.1007/BF01961240&api_key="
+    ],
+    [
+     "dc.creator",
+     "Göpfert, Markus"
+    ],
+    [
+     "dc.creator",
+     "Mack, Gerhard"
+    ],
+    [
+     "dc.subject",
+     "Theoretical, Mathematical and Computational Physics"
+    ],
+    [
+     "dc.subject",
+     "Mathematical Physics"
+    ],
+    [
+     "dc.subject",
+     "Quantum Physics"
+    ],
+    [
+     "dc.subject",
+     "Complex Systems"
+    ],
+    [
+     "dc.subject",
+     "Classical and Quantum Gravitation, Relativity Theory"
+    ],
+    [
+     "citation_author",
+     "Göpfert, Markus"
+    ],
+    [
+     "citation_author_institution",
+     "II. Institut für Theoretische Physik der Universität Hamburg, Hamburg 50, Federal Republic of Germany"
+    ],
+    [
+     "citation_author",
+     "Mack, Gerhard"
+    ],
+    [
+     "citation_author_institution",
+     "II. Institut für Theoretische Physik der Universität Hamburg, Hamburg 50, Federal Republic of Germany"
+    ],
+    [
+     "citation_cover_date",
+     "1982/01/01"
+    ]
+   ],
+   "html_title": "Proof of confinement of static quarks in 3-dimensionalU(1) lattice gauge theory for all values of the coupling constant | Communications in Mathematical Physics | Springer Nature Link",
+   "pred": {
+    "Q4": true
+   }
+  },
+  "LW86_page": {
+   "url": "https://link.springer.com/article/10.1007/BF01211097",
+   "meta": [
+    [
+     "dc.title",
+     "Volume dependence of the energy spectrum in massive quantum field theories"
+    ],
+    [
+     "dc.source",
+     "Communications in Mathematical Physics 1986 105:2"
+    ],
+    [
+     "dc.format",
+     "text/html"
+    ],
+    [
+     "dc.publisher",
+     "Springer"
+    ],
+    [
+     "dc.type",
+     "OriginalPaper"
+    ],
+    [
+     "dc.language",
+     "En"
+    ],
+    [
+     "dc.copyright",
+     "1986 Springer-Verlag"
+    ],
+    [
+     "dc.rights",
+     "1986 Springer-Verlag"
+    ],
+    [
+     "dc.description",
+     "The low-lying energy values associated to energy eigenstates describing two stable particles enclosed in a (space-like) box of sizeL are shown to be expandable in an asymptotic power series of 1/L. The coefficients in these expansions are related to the appropriate elastic scattering amplitude in a simple and apparently universal manner. At low energies, the scattering amplitude can thus be determined, if an accurate calculation of two-particle energy values is possible (by numerical simulation, for example)."
+    ],
+    [
+     "citation_pdf_url",
+     "https://link.springer.com/content/pdf/10.1007/BF01211097.pdf"
+    ],
+    [
+     "citation_fulltext_html_url",
+     "https://link.springer.com/article/10.1007/BF01211097"
+    ],
+    [
+     "citation_journal_title",
+     "Communications in Mathematical Physics"
+    ],
+    [
+     "citation_journal_abbrev",
+     "Commun.Math. Phys."
+    ],
+    [
+     "citation_publisher",
+     "Springer-Verlag"
+    ],
+    [
+     "citation_issn",
+     "1432-0916"
+    ],
+    [
+     "citation_title",
+     "Volume dependence of the energy spectrum in massive quantum field theories"
+    ],
+    [
+     "citation_volume",
+     "105"
+    ],
+    [
+     "citation_issue",
+     "2"
+    ],
+    [
+     "citation_publication_date",
+     "1986/06"
+    ],
+    [
+     "citation_firstpage",
+     "153"
+    ],
+    [
+     "citation_lastpage",
+     "188"
+    ],
+    [
+     "citation_article_type",
+     "Article"
+    ],
+    [
+     "citation_language",
+     "en"
+    ],
+    [
+     "dc.identifier",
+     "doi:10.1007/BF01211097"
+    ],
+    [
+     "citation_doi",
+     "10.1007/BF01211097"
+    ],
+    [
+     "citation_springer_api_url",
+     "http://api.springer.com/xmldata/jats?q=doi:10.1007/BF01211097&api_key="
+    ],
+    [
+     "dc.creator",
+     "Lüscher, M."
+    ],
+    [
+     "dc.subject",
+     "Theoretical, Mathematical and Computational Physics"
+    ],
+    [
+     "dc.subject",
+     "Mathematical Physics"
+    ],
+    [
+     "dc.subject",
+     "Quantum Physics"
+    ],
+    [
+     "dc.subject",
+     "Complex Systems"
+    ],
+    [
+     "dc.subject",
+     "Classical and Quantum Gravitation, Relativity Theory"
+    ],
+    [
+     "citation_author",
+     "Lüscher, M."
+    ],
+    [
+     "citation_author_institution",
+     "Theory Division, Deutsches Elektronen-Synchrotron DESY, Hamburg 52, Federal Republic of Germany"
+    ],
+    [
+     "citation_cover_date",
+     "1986/06/01"
+    ]
+   ],
+   "html_title": "Volume dependence of the energy spectrum in massive quantum field theories | Communications in Mathematical Physics | Springer Nature Link",
+   "pred": {
+    "Q4": true
+   }
+  },
+  "OS73_page": {
+   "url": "https://link.springer.com/article/10.1007/BF01645738",
+   "meta": [
+    [
+     "dc.title",
+     "Axioms for Euclidean Green's functions"
+    ],
+    [
+     "dc.source",
+     "Communications in Mathematical Physics 1973 31:2"
+    ],
+    [
+     "dc.format",
+     "text/html"
+    ],
+    [
+     "dc.publisher",
+     "Springer"
+    ],
+    [
+     "dc.type",
+     "OriginalPaper"
+    ],
+    [
+     "dc.language",
+     "En"
+    ],
+    [
+     "dc.copyright",
+     "1973 Springer-Verlag"
+    ],
+    [
+     "dc.rights",
+     "1973 Springer-Verlag"
+    ],
+    [
+     "dc.description",
+     "We establish necessary and sufficient conditions for Euclidean Green's functions to define a unique Wightman field theory."
+    ],
+    [
+     "citation_pdf_url",
+     "https://link.springer.com/content/pdf/10.1007/BF01645738.pdf"
+    ],
+    [
+     "citation_fulltext_html_url",
+     "https://link.springer.com/article/10.1007/BF01645738"
+    ],
+    [
+     "citation_journal_title",
+     "Communications in Mathematical Physics"
+    ],
+    [
+     "citation_journal_abbrev",
+     "Commun.Math. Phys."
+    ],
+    [
+     "citation_publisher",
+     "Springer-Verlag"
+    ],
+    [
+     "citation_issn",
+     "1432-0916"
+    ],
+    [
+     "citation_title",
+     "Axioms for Euclidean Green's functions"
+    ],
+    [
+     "citation_volume",
+     "31"
+    ],
+    [
+     "citation_issue",
+     "2"
+    ],
+    [
+     "citation_publication_date",
+     "1973/06"
+    ],
+    [
+     "citation_firstpage",
+     "83"
+    ],
+    [
+     "citation_lastpage",
+     "112"
+    ],
+    [
+     "citation_article_type",
+     "Article"
+    ],
+    [
+     "citation_language",
+     "en"
+    ],
+    [
+     "dc.identifier",
+     "doi:10.1007/BF01645738"
+    ],
+    [
+     "citation_doi",
+     "10.1007/BF01645738"
+    ],
+    [
+     "citation_springer_api_url",
+     "http://api.springer.com/xmldata/jats?q=doi:10.1007/BF01645738&api_key="
+    ],
+    [
+     "dc.creator",
+     "Osterwalder, Konrad"
+    ],
+    [
+     "dc.creator",
+     "Schrader, Robert"
+    ],
+    [
+     "dc.subject",
+     "Theoretical, Mathematical and Computational Physics"
+    ],
+    [
+     "dc.subject",
+     "Mathematical Physics"
+    ],
+    [
+     "dc.subject",
+     "Quantum Physics"
+    ],
+    [
+     "dc.subject",
+     "Complex Systems"
+    ],
+    [
+     "dc.subject",
+     "Classical and Quantum Gravitation, Relativity Theory"
+    ],
+    [
+     "citation_author",
+     "Osterwalder, Konrad"
+    ],
+    [
+     "citation_author_institution",
+     "Lyman Laboratory of Physics, Harvard University, Cambridge, USA"
+    ],
+    [
+     "citation_author",
+     "Schrader, Robert"
+    ],
+    [
+     "citation_author_institution",
+     "Lyman Laboratory of Physics, Harvard University, Cambridge, USA"
+    ],
+    [
+     "citation_cover_date",
+     "1973/06/01"
+    ]
+   ],
+   "html_title": "Axioms for Euclidean Green's functions | Communications in Mathematical Physics | Springer Nature Link",
+   "pred": {
+    "Q4": true
+   }
+  },
+  "ADC21_page": {
+   "url": "https://annals.math.princeton.edu/2021/194-1/p03",
+   "meta": [
+    [
+     "citation_journal_title",
+     "Annals of Mathematics"
+    ],
+    [
+     "citation_journal_abbrev",
+     "Ann. Math."
+    ],
+    [
+     "citation_publisher",
+     "Princeton University and the Institute for Advanced Study"
+    ],
+    [
+     "citation_author",
+     "Michael Aizenman"
+    ],
+    [
+     "citation_author_institution",
+     "Departments of Physics and Mathematics, Princeton University, Princeton, NJ 08544"
+    ],
+    [
+     "citation_author",
+     "Hugo Duminil-Copin"
+    ],
+    [
+     "citation_author_institution",
+     "Institut des Hautes Études Scientifiques (IHÉS), 91440 Bures-sur-Yvette, France and Université de Genève, 1211 Genève, Switzerland"
+    ],
+    [
+     "citation_title",
+     "Marginal triviality of the scaling limits of critical 4D Ising and $\\phi _4^4$ models"
+    ],
+    [
+     "citation_publication_date",
+     "2021"
+    ],
+    [
+     "citation_volume",
+     "194"
+    ],
+    [
+     "citation_issue",
+     "1"
+    ],
+    [
+     "citation_firstpage",
+     "163"
+    ],
+    [
+     "citation_lastpage",
+     "235"
+    ],
+    [
+     "citation_doi",
+     "https://doi.org/10.4007/annals.2021.194.1.3"
+    ],
+    [
+     "citation_issn",
+     "0003-486X"
+    ],
+    [
+     "citation_keywords",
+     "Critical behavior; Ising model; field theory; marginal dimension; scaling limits"
+    ]
+   ],
+   "html_title": "Marginal triviality of the scaling limits of critical 4D Ising and $\\phi _4^4$ models | Annals of Mathematics",
+   "pred": {
+    "Q4": true
+   }
+  }
+ },
+ "failed_predicates": [
+  "OS75:Q2",
+  "OS78:Q2",
+  "JW_book:Q3"
+ ]
+}

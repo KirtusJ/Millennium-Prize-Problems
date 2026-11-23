@@ -1,0 +1,65 @@
+\input{preamble}
+\title[An upper bound on the lattice mass gap at weak coupling]{An upper bound on the lattice mass gap\\ at weak coupling}
+\author{Kirtus Justus}
+\address{Theoretical Physicist, Port Coquitlam, British Columbia, Canada}
+\date{23 November 2026. Working draft; not reviewed by a mathematician. See Section~\ref{sec:provenance}.}
+\begin{document}
+\begin{abstract}
+For $\SU(2)$ lattice gauge theory in four dimensions with the Wilson action, we prove that the mass gap of the transfer matrix, in lattice units, tends to zero or is zero as the coupling tends to its weak limit, for every infinite-volume limit of periodic states along boxes of side $2^k$. This is an upper bound and does not address whether the gap is positive. We also record a conditional reduction of the continuum problem to five lattice hypotheses, of which two are proved, and five attempted routes to the principal one, each of which fails.
+\end{abstract}
+\maketitle
+\tableofcontents
+
+\section{Introduction}\label{sec:intro}
+
+Lattice gauge theory with the Wilson action is reflection positive and has a self-adjoint transfer matrix at every coupling~\cite{OS78,Lu77}. At strong coupling the transfer matrix has a gap above the vacuum, for every compact gauge group~\cite{OS78}. A continuum limit requires the opposite at weak coupling: the gap, measured in lattice units, must close. We prove that it does.
+
+Let $\beta>0$. On the periodic box $\Lambda_L=(\Z/L\Z)^4$ let $\mu_{\beta,L}$ be the probability measure on $\SU(2)$-valued link variables with density proportional to $\exp\bigl(-\beta\sum_p(1-\cos\alpha_p)\bigr)$ with respect to Haar measure, where the sum runs over plaquettes and $\tfrac12\Tr U_p=\cos\alpha_p$, $\alpha_p\in[0,\pi]$. Let $\cL_\beta$ be the set of weak limit points of $\mu_{\beta,2^k}$ as $k\to\infty$. Each $\mu\in\cL_\beta$ is translation invariant and reflection positive, and has a self-adjoint transfer matrix $T_\mu$ with $\|T_\mu\|\le 1$ and invariant vector $\Omega$ (Section~\ref{sec:proof}). Put $m_\mu(\beta)=-\log\|T_\mu|_{\Omega^\perp}\|\in[0,\infty]$.
+
+\begin{theorem}\label{thm:main}
+Let $O_p=\beta(1-\cos\alpha_p)$, let $p_0$ be a plaquette in a spatial coordinate plane at time $0$ and $p_n$ its translate by $n$ lattice steps in time. For every $n\ge 1$,
+\[
+\liminf_{\beta\to\infty}\ \inf_{\mu\in\cL_\beta}\ \frac{\Cov_\mu(O_{p_0},O_{p_n})}{\Var_\mu(O_{p_0})}\ \ge\ \Bigl(\frac{G(n)}{G(0)}\Bigr)^{2},
+\]
+where $G(n)$ is the correlation of one field-strength component of the free lattice Maxwell field in four dimensions at time separation $n$; $G(0)=\tfrac12$, $G(n)>0$, and $G(n)=\pi^{-2}n^{-4}+O(n^{-6})$.
+\end{theorem}
+
+Consequently $\sup_{\mu\in\cL_\beta}m_\mu(\beta)\to 0$ as $\beta\to\infty$.
+
+The limits are taken in this order: the box, then the coupling, then the separation. The statement allows $m_\mu(\beta)=0$.
+
+\subsection*{Relation to the mass gap problem}
+The problem posed by Jaffe and Witten~\cite{JW} asks, for every compact simple gauge group, for a quantum Yang--Mills theory on $\R^4$ satisfying axioms at least as strong as those of Osterwalder and Schrader, with a mass gap $\Delta>0$: no spectrum of the Hamiltonian in $(0,\Delta)$. Theorem~\ref{thm:main} is not that statement and is not a step of a proof of it. It bounds a lattice gap from above. It holds, with the same proof, for the gauge group $\U(1)$, whose four-dimensional lattice theory has a massless phase at weak coupling~\cite{Guth80,FS82}. What the mass gap problem needs on the lattice is the opposite inequality at every coupling, Hypothesis~\ref{hyp:A} below, and this paper does not prove it.
+
+\subsection*{What else is in the paper}
+The work reported here began as an attempt at the whole problem, written with the expectation that it would fail, in order to record where it fails. It fails at Hypothesis~\ref{hyp:A}. Section~\ref{sec:reduction} states a conditional reduction: five hypotheses on the lattice theories imply limit Schwinger functions that satisfy the Osterwalder--Schrader axioms with a gap. Two of the five are proved for $\SU(2)$: the lattice axioms, and the closing of the gap, which is Theorem~\ref{thm:main}. Both hold for $\U(1)$ as well. Section~\ref{sec:proof} proves Theorem~\ref{thm:main}. Section~\ref{sec:routes} records five routes to Hypothesis~\ref{hyp:A} and the step at which each fails. Section~\ref{sec:shared} lists six properties, each proved or cited, that $\SU(2)$, $\U(1)$ and $\Z_2$ lattice gauge theories share in four dimensions; since $\U(1)$ has no gap at weak coupling, no argument using only these properties can prove Hypothesis~\ref{hyp:A}. Section~\ref{sec:CE} discusses two further hypotheses. Section~\ref{sec:notclaimed} lists what is not claimed. Section~\ref{sec:provenance} states how the paper was produced and checked.
+
+\subsection*{A stronger result by a different method}
+During the preparation of this paper, three other working groups of the same research program, using a different method (a Ward identity obtained by varying Haar measure along rooted paths, with heat-kernel estimates), obtained the bound $m_\mu(\beta)\le C\beta^{-1/8}$ for even-periodic limit states, and families of linearly independent gauge-invariant vectors at energies of order $\beta^{-1/8}$~\cite{RepoC4,RepoB4}. Those results imply the last sentence of Theorem~\ref{thm:main} with a rate. This paper does not use them, and its author has not read their proofs. One of those groups also reports that the random constant background of Lemma~\ref{pf:lem-R} vanishes, which turns the inequality of Theorem~\ref{thm:main} into an equality~\cite{RepoThread}; that is not proved here.
+
+\subsection*{Disclosure}
+Every statement and proof in this paper was written by sessions of one artificial-intelligence model family (Claude, Anthropic), working as a director with subordinate workers, at the direction of the author, who is accountable for the paper. Each proof was then attacked by other sessions of the same family. Agreement among them is not independent review. Lemma~\ref{pf:lem-R} and the asymptotics of $G$ were checked, at the scope stated in Section~\ref{sec:provenance}, by sessions of a second model lineage (OpenAI Codex). No mathematician has read the paper. It should be read as a claim awaiting review.
+
+\section{What is not claimed}\label{sec:notclaimed}
+
+\begin{enumerate}
+\item No statement is made about the existence of a mass gap, on the lattice or in the continuum. Hypothesis~\ref{hyp:A} is open.
+\item No continuum theory is constructed. Theorem~\ref{thm:conditional} is conditional on hypotheses that contain the whole difficulty.
+\item Theorem~\ref{thm:main} is restricted to limits of periodic states along boxes of side $2^k$. Other boundary conditions, other sequences of boxes and other Gibbs states are not covered.
+\item Theorem~\ref{thm:main} gives no rate.
+\item The proof of Theorem~\ref{thm:main} uses ten standard facts of measure theory without proof or citation. They are listed in Section~\ref{pf:sec-standard}.
+\item Nothing is proved about gauge groups other than $\SU(2)$. The proof of Theorem~\ref{thm:main} uses the group only through error terms of order $\beta^{-1/2}$, and we expect it to extend; we have not written the extension.
+\item The numerical statements of Sections~\ref{sec:routes}--\ref{sec:CE} are measurements on small lattices. None is used in a proof.
+\item The observations of Sections~\ref{sec:routes} and~\ref{sec:shared} say that particular arguments fail. They do not say that Hypothesis~\ref{hyp:A} is false, or that no argument of a similar kind can succeed.
+\item The paper has not been independently reviewed (Section~\ref{sec:provenance}).
+\end{enumerate}
+
+\input{sec_reduction}
+\input{sec_proof}
+\input{sec_negative}
+\input{sec_provenance}
+
+\begin{thebibliography}{99}
+\input{refs}
+\end{thebibliography}
+\end{document}

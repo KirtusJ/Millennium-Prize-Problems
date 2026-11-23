@@ -1,0 +1,43 @@
+BRIEF p4-refs (bibliographer). Network: inspirehep.net (API), arxiv.org, doi.org, crossref (api.crossref.org), zbmath.org, journal landing pages, web search. Keep fetched material outside this directory; copy no paper text.
+
+Produce refs.tex: the \bibitem entries (AMS style: authors, title in italics, journal volume (year), pages, DOI or arXiv number) for a paper's bibliography, one entry per key below, in alphabetical order of key. EVERY bibliographic field must come from a record you fetched in this run (INSPIRE, Crossref, arXiv, zbMATH or the publisher's page), not from memory: for each entry record in report.md the address of the record and the fields taken from it. If a field cannot be confirmed, leave it out of the entry and say so in the report; an incomplete entry is acceptable, a wrong one is not. The LIT_*.md files in this directory are literature notes from earlier workers of the same program; they tell you what each key refers to and give arXiv numbers for many.
+Keys and what they denote:
+ JW: Jaffe and Witten, "Quantum Yang-Mills theory", the official problem description of the Clay Mathematics Institute (cite the URL https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf and the access date 23 November 2026).
+ OS73, OS75: Osterwalder and Schrader, "Axioms for Euclidean Green's functions" I (CMP 31, 1973) and II (CMP 42, 1975).
+ KQR21: Kravchuk, Qiao, Rychkov, "Distributions in CFT II. Minkowski space", arXiv:2104.02090.
+ OS78: Osterwalder and Seiler, "Gauge field theories on a lattice", Ann. Physics 110 (1978).
+ Lu77: Luscher, "Construction of a selfadjoint, strictly positive transfer matrix for Euclidean lattice gauge theories", CMP 54 (1977).
+ GJ: Glimm and Jaffe, "Quantum Physics: A Functional Integral Point of View", 2nd ed., Springer 1987.
+ FILS78: Frohlich, Israel, Lieb, Simon, "Phase transitions and reflection positivity. I", CMP 62 (1978).
+ SZZ23: Shen, Zhu, Zhu, "A stochastic analysis approach to lattice Yang-Mills at strong coupling", arXiv:2204.12737, CMP.
+ Guth80: Guth, "Existence proof of a nonconfining phase in four-dimensional U(1) lattice gauge theory", Phys. Rev. D 21 (1980).
+ FS82: Frohlich and Spencer, "Massless phases and symmetry restoration in abelian gauge theories and spin systems", CMP 83 (1982).
+ GM82: Gopfert and Mack, "Proof of confinement of static quarks in 3-dimensional U(1) lattice gauge theory for all values of the coupling constant", CMP 82 (1982).
+ AC22: Adhikari and Cao, "Correlation decay for finite lattice gauge theories at weak coupling", arXiv:2202.10375.
+ Ch21: Chatterjee, "A probabilistic mechanism for quark confinement", arXiv:2006.16229, CMP 2021.
+ Ch18: Chatterjee, "Yang-Mills for probabilists", arXiv:1803.01950.
+ To07: Tomboulis, "Confinement for all values of the coupling in four-dimensional SU(2) gauge theory", arXiv:0707.2179.
+ IS07: Ito and Seiler, "On the recent paper on quark confinement by Tomboulis", arXiv:0711.4930.
+ IS08: Ito and Seiler, "Further discussion of Tomboulis' approach to the confinement problem", arXiv:0803.3019.
+ KT02: Kovacs and Tomboulis, on vortices and confinement at weak coupling / computation of the vortex free energy in SU(2) gauge theory, arXiv:hep-lat/0108017 (Phys. Rev. D 65 (2002) 074501): confirm the title.
+ TY85: Tomboulis and Yaffe, "Finite temperature SU(2) lattice gauge theory", CMP 100 (1985).
+ BS83: Borgs and Seiler, "Lattice Yang-Mills theory at nonzero temperature and the confinement problem", CMP 91 (1983).
+ ADC21: Aizenman and Duminil-Copin, "Marginal triviality of the scaling limits of critical 4D Ising and phi^4_4 models", Ann. of Math. 194 (2021), arXiv:1912.07973.
+ Sin81: Singer, "The geometry of the orbit space for non-abelian gauge theories", Physica Scripta 24 (1981).
+ CCK07: Cherrington, Christensen, Khavkine, "Dual computations of non-abelian Yang-Mills on the lattice", arXiv:0705.2629.
+ Cr79: Creutz, "Confinement and the critical dimensionality of space-time", Phys. Rev. Lett. 43 (1979) 553.
+ FiveD11: the paper arXiv:1110.4210 on five-dimensional SU(2) lattice gauge theory (find authors and title).
+ LW86: Luscher, "Volume dependence of the energy spectrum in massive quantum field theories. II. Scattering states", CMP 105 (1986).
+ FHK93: Fingberg, Heller, Karsch, "Scaling and asymptotic scaling in the SU(2) gauge theory", arXiv:hep-lat/9208012, Nucl. Phys. B 392 (1993).
+ Te98: Teper, "Glueball masses and other physical properties of SU(N) gauge theories in D=3+1: a review of lattice results for theorists", arXiv:hep-th/9812187.
+ LTW04: Lucini, Teper, Wenger, "Glueballs and k-strings in SU(N) gauge theories: calculations with improved operators", arXiv:hep-lat/0404008, JHEP 06 (2004) 012.
+ LL10: Lawler and Limic, "Random Walk: A Modern Introduction", Cambridge University Press 2010.
+ BCH26: Bastounis, Circelli, Hansen, arXiv:2610.08144 (find the title).
+ SS23: Sakai and Sasaki, "Glueball spectroscopy in lattice QCD using gradient flow", Phys. Rev. D 107, 034510, arXiv:2211.15176.
+Also write, as plain \bibitem entries with no fetching needed, exactly as given:
+ \bibitem{Repo} K. Justus, \emph{Millennium-Prize-Problems}, research repository, \url{https://github.com/KirtusJ/Millennium-Prize-Problems}, folder \texttt{yang-mills/z4/attempt} at commit \texttt{d801091} (23 November 2026).
+ \bibitem{RepoC4} Same repository, folder \texttt{yang-mills/central-quotients/tangent-curvature/periodic-limit} at commit \texttt{16175fe}.
+ \bibitem{RepoB4} Same repository, folder \texttt{yang-mills/transfer-operator/periodic-time} at commit \texttt{4e29b71}.
+ \bibitem{RepoThread} Same repository, issue 1 (coordination record), comments of 23 November 2026.
+Check that refs.tex compiles inside a thebibliography in an amsart document that loads hyperref (use \url for addresses; escape underscores and special characters). Deliver refs.tex and report.md (the verification table: key, record address, fields confirmed, fields left out). Delegate to the child (grant it WebFetch and WebSearch): the entries FiveD11, BCH26, KT02, CCK07 (control question for the child: the arXiv number of Chatterjee's "Yang-Mills for probabilists", answer 1803.01950).
+Budget: about 25 minutes.

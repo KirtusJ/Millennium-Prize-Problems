@@ -1,0 +1,27 @@
+All four items check out as the right papers. KT02 and CCK07 have journal refs, FiveD11 has one on Crossref and INSPIRE, and BCH26 has none. The control answer is 1803.01950; I wrote it from memory first, and the arXiv record I fetched afterwards confirms it.
+
+| Key | Verdict | What the fetched records say |
+|---|---|---|
+| FiveD11 | CONFIRMED | Knechtli, Luz, Rago, "On the phase structure of five-dimensional SU(2) gauge theories with anisotropic couplings". Nucl. Phys. B 856 (2012) 74–94, doi 10.1016/j.nuclphysb.2011.11.001. The arXiv record has no journal_ref; the journal data comes from Crossref and INSPIRE. |
+| BCH26 | Exists and authors match; publication data UNCONFIRMED | Bastounis, Circelli, Hansen, "Navier-Stokes lost in translation: Why Lean verification of AI autoformalisation does not guarantee correct natural language proofs", submitted 2026-10-06. The arXiv record has no journal ref or DOI, and INSPIRE returned 404. |
+| KT02 | CONFIRMED | "Vortex waistlines and long range fluctuations", Phys. Rev. D 65, 074501 (2002), doi 10.1103/PhysRevD.65.074501. arXiv, INSPIRE and Crossref agree. |
+| CCK07 | CONFIRMED, title differs by one word | Phys. Rev. D 76, 094503 (2007), doi 10.1103/PhysRevD.76.094503. The arXiv title matches your quote, but Crossref's published title is "Dual computations of non-Abelian Yang-Mills theories on the lattice". |
+
+- **Mismatches:** the only ones are the CCK07 title variant and the missing BCH26 journal data. Every field has a source URL in `results.md`.
+- **Predicates:** 4 met, 1 failed. The failure was my KT02 string test, which looked for "Phys. Rev. D 65" while arXiv writes "Phys.Rev. D65 (2002) 074501". That was my own formatting expectation, not a defect in the target, and I did not edit it afterwards. INSPIRE and Crossref confirm the journal, volume and article number.
+- **Not checked:** journal landing pages, page numbers for KT02 and CCK07 (they use article numbers), the publisher's side of the CCK07 title variant, and zbMATH.
+- **Grandchild:** admitted as T24 and released after it returned. Its known-answer control, 17*23, came back as 391, which is correct. It independently fetched 1110.4210 and got the same authors and title as I did.
+- **PCP verify:**
+  - Python: `result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)`
+  - Rust: `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.`
+
+Files are in `/home/user/z4-workers/p4-refs/child/`:
+- `control.txt`
+- `results.md`
+- `report.md`
+- `notes.md`
+- `fetch_refs.py`
+- `out1/`
+- `grandchild/`
+
+`report.md` has the exact rerun commands. `out2` must be a new directory, because the script never overwrites a result file.

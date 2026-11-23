@@ -1,0 +1,9 @@
+N=6 q unrounded=0.269795 rounded=0.270 writer=0.270 match=True
+N=6 xi unrounded=0.724606 rounded=0.72 writer=0.72 match=True
+N=6 xi(1-q) unrounded=0.529111 rounded=0.53 writer=0.53 match=True
+N=8 q unrounded=0.322545 rounded=0.323 writer=0.323 match=True
+N=8 xi unrounded=1.005187 rounded=1.01 writer=1.01 match=True
+N=8 xi(1-q) unrounded=0.680969 rounded=0.68 writer=0.68 match=True
+N=12 q unrounded=0.385091 rounded=0.385 writer=0.385 match=True
+N=12 xi unrounded=1.403568 rounded=1.40 writer=1.40 match=True
+N=12 xi(1-q) unrounded=0.863066 rounded=0.86 writer=0.86 match=True

@@ -1,0 +1,26 @@
+P1 cube word identity exists: MET ((0, 0, 0, 0, 0, 0), (0, 3, 4, 1, 2, 5), (-1, 1, 1, -1, -1, 1))
+   factor: face x1=0 base (0, 0, 0) transport [(0, 0, 0)] sign -1 incidence -1
+   factor: face x2=1 base (0, 1, 0) transport [(0, 0, 0), (0, 1, 0)] sign -1 incidence -1
+   factor: face x3=0 base (0, 0, 0) transport [(0, 0, 0)] sign -1 incidence -1
+   factor: face x1=1 base (1, 0, 0) transport [(0, 0, 0), (1, 0, 0)] sign 1 incidence 1
+   factor: face x2=0 base (0, 0, 0) transport [(0, 0, 0)] sign 1 incidence 1
+   factor: face x3=1 base (0, 0, 1) transport [(0, 0, 0), (0, 0, 1)] sign 1 incidence 1
+P2 signs = +-incidence: MET ratios [1, 1, 1, 1, 1, 1]
+P3 D*: MET D* = 60.192240, c_H = 0.150258
+P4 zhat bound: MET ratios ub/z 13.979, 7.437, 5.079, 4.217, 4.032, 3.890, 3.877
+P4 Haar(B_s) bound: MET min ratio 1.1553
+P5 Hodge Laplacian = scalar Laplacian componentwise: MET size (1536, 1536), d2 d1 = 0: True
+P6 G(0)=1/2: MET G(0) = 0.5000000
+P7 G(n)>0, n=1..8: MET 
+   measured n=1: G=0.06887475  pi^2 n^4 G = 0.67977  n^2(pi^2n^4G-1) = -0.3202
+   measured n=2: G=0.01115272  pi^2 n^4 G = 1.76117  n^2(pi^2n^4G-1) = 3.0447
+   measured n=3: G=0.00226224  pi^2 n^4 G = 1.80852  n^2(pi^2n^4G-1) = 7.2767
+   measured n=4: G=0.00060540  pi^2 n^4 G = 1.52961  n^2(pi^2n^4G-1) = 8.4737
+   measured n=5: G=0.00021313  pi^2 n^4 G = 1.31470  n^2(pi^2n^4G-1) = 7.8676
+   measured n=6: G=0.00009334  pi^2 n^4 G = 1.19396  n^2(pi^2n^4G-1) = 6.9825
+   measured n=7: G=0.00004765  pi^2 n^4 G = 1.12912  n^2(pi^2n^4G-1) = 6.3268
+   measured n=8: G=0.00002702  pi^2 n^4 G = 1.09245  n^2(pi^2n^4G-1) = 5.9165
+P8 Wick Cov: MET MC 0.82744 +- 0.00305, formula 0.83126
+P8 Wick Var: MET MC 2.02401 +- 0.00424, formula 2.02690
+P8 ratio >= (g/G0)^2: MET ratio 0.41011 vs 0.01897
+COUNTS met 11, failed 0, measured only 16

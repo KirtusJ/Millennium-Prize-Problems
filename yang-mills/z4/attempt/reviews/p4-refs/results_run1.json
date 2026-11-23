@@ -1,0 +1,2703 @@
+{
+ "results": {
+  "OS73": {
+   "key": "OS73",
+   "predicates": {
+    "P1": false,
+    "P2": false
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=t+%22Axioms+for+Euclidean+Green%22+and+j+Commun.Math.Phys.%2C31&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 0,
+   "crossref": []
+  },
+  "OS75": {
+   "key": "OS75",
+   "predicates": {
+    "P1": false,
+    "P2": false
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=t+%22Axioms+for+Euclidean+Green%22+and+j+Commun.Math.Phys.%2C42&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 0,
+   "crossref": []
+  },
+  "KQR21": {
+   "key": "KQR21",
+   "predicates": {
+    "P1": true,
+    "P3": true,
+    "P4": false
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=arxiv%3A2104.02090&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 1,
+   "inspire": {
+    "publication_info": [
+     {
+      "journal_volume": "08",
+      "artid": "094",
+      "year": 2021,
+      "journal_record": {
+       "$ref": "https://inspirehep.net/api/journals/1213103"
+      },
+      "page_start": "094",
+      "journal_title": "JHEP"
+     }
+    ],
+    "authors": [
+     {
+      "full_name": "Kravchuk, Petr"
+     },
+     {
+      "full_name": "Qiao, Jiaxin"
+     },
+     {
+      "full_name": "Rychkov, Slava"
+     }
+    ],
+    "imprints": [
+     {
+      "date": "2021-08-18"
+     }
+    ],
+    "control_number": 1856401,
+    "dois": [
+     {
+      "source": "Springer",
+      "value": "10.1007/JHEP08(2021)094"
+     },
+     {
+      "material": "publication",
+      "source": "arXiv",
+      "value": "10.1007/JHEP08(2021)094"
+     }
+    ],
+    "arxiv_eprints": [
+     {
+      "categories": [
+       "hep-th",
+       "math-ph",
+       "math.MP"
+      ],
+      "value": "2104.02090"
+     }
+    ],
+    "titles": [
+     {
+      "source": "Springer",
+      "title": "Distributions in CFT. Part II. Minkowski space"
+     },
+     {
+      "source": "arXiv",
+      "title": "Distributions in CFT II. Minkowski Space"
+     }
+    ],
+    "document_type": [
+     "article"
+    ]
+   },
+   "arxiv_url": "https://export.arxiv.org/api/query?id_list=2104.02090",
+   "arxiv": {
+    "title": "Distributions in CFT II. Minkowski Space",
+    "authors": [
+     "Petr Kravchuk",
+     "Jiaxin Qiao",
+     "Slava Rychkov"
+    ],
+    "published": "2021-04-05T18:00:17Z",
+    "journal_ref": null,
+    "doi": "10.1007/JHEP08(2021)094",
+    "id": "http://arxiv.org/abs/2104.02090v2"
+   },
+   "crossref": [
+    {
+     "url": "https://api.crossref.org/works/10.1007/JHEP08%282021%29094",
+     "rec": {
+      "title": [
+       "Distributions in CFT. Part II. Minkowski space"
+      ],
+      "container-title": [
+       "Journal of High Energy Physics"
+      ],
+      "volume": "2021",
+      "page": null,
+      "article-number": "94",
+      "issued": {
+       "date-parts": [
+        [
+         2021,
+         8,
+         18
+        ]
+       ]
+      },
+      "DOI": "10.1007/jhep08(2021)094",
+      "publisher": "Springer Science and Business Media LLC",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "Petr",
+        "Kravchuk"
+       ],
+       [
+        "Jiaxin",
+        "Qiao"
+       ],
+       [
+        "Slava",
+        "Rychkov"
+       ]
+      ]
+     }
+    },
+    {
+     "url": "https://api.crossref.org/works/10.1007/JHEP08%282021%29094",
+     "rec": {
+      "title": [
+       "Distributions in CFT. Part II. Minkowski space"
+      ],
+      "container-title": [
+       "Journal of High Energy Physics"
+      ],
+      "volume": "2021",
+      "page": null,
+      "article-number": "94",
+      "issued": {
+       "date-parts": [
+        [
+         2021,
+         8,
+         18
+        ]
+       ]
+      },
+      "DOI": "10.1007/jhep08(2021)094",
+      "publisher": "Springer Science and Business Media LLC",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "Petr",
+        "Kravchuk"
+       ],
+       [
+        "Jiaxin",
+        "Qiao"
+       ],
+       [
+        "Slava",
+        "Rychkov"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "OS78": {
+   "key": "OS78",
+   "predicates": {
+    "P1": false,
+    "P2": false
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=t+%22Gauge+field+theories+on+a+lattice%22+and+a+Osterwalder&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 0,
+   "crossref": []
+  },
+  "Lu77": {
+   "key": "Lu77",
+   "predicates": {
+    "P1": true,
+    "P2": true,
+    "P3": true
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=a+Luscher+and+j+Commun.Math.Phys.%2C54&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 1,
+   "inspire": {
+    "publication_info": [
+     {
+      "journal_volume": "54",
+      "artid": "283",
+      "year": 1977,
+      "journal_record": {
+       "$ref": "https://inspirehep.net/api/journals/1214791"
+      },
+      "page_start": "283",
+      "journal_title": "Commun.Math.Phys."
+     }
+    ],
+    "authors": [
+     {
+      "full_name": "Luscher, M."
+     }
+    ],
+    "control_number": 110276,
+    "dois": [
+     {
+      "value": "10.1007/BF01614090"
+     }
+    ],
+    "titles": [
+     {
+      "title": "Construction of a Selfadjoint, Strictly Positive Transfer Matrix for Euclidean Lattice Gauge Theories"
+     },
+     {
+      "title": "SELF-ADJOINT"
+     }
+    ],
+    "document_type": [
+     "article"
+    ]
+   },
+   "crossref": [
+    {
+     "url": "https://api.crossref.org/works/10.1007/BF01614090",
+     "rec": {
+      "title": [
+       "Construction of a selfadjoint, strictly positive transfer matrix for Euclidean lattice gauge theories"
+      ],
+      "container-title": [
+       "Communications in Mathematical Physics"
+      ],
+      "volume": "54",
+      "page": "283-292",
+      "article-number": null,
+      "issued": {
+       "date-parts": [
+        [
+         1977,
+         10
+        ]
+       ]
+      },
+      "DOI": "10.1007/bf01614090",
+      "publisher": "Springer Science and Business Media LLC",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "M.",
+        "Lüscher"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "FILS78": {
+   "key": "FILS78",
+   "predicates": {
+    "P1": true,
+    "P2": true,
+    "P3": false
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=t+%22Phase+transitions+and+reflection+positivity%22+and+j+Commun.Math.Phys.%2C62&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 1,
+   "inspire": {
+    "authors": [
+     {
+      "full_name": "Frohlich, J."
+     },
+     {
+      "full_name": "Israel, R."
+     },
+     {
+      "full_name": "Lieb, Elliott H."
+     },
+     {
+      "full_name": "Simon, B."
+     }
+    ],
+    "publication_info": [
+     {
+      "journal_volume": "62",
+      "page_end": "34",
+      "year": 1978,
+      "journal_record": {
+       "$ref": "https://inspirehep.net/api/journals/1214791"
+      },
+      "page_start": "1",
+      "journal_title": "Commun.Math.Phys."
+     }
+    ],
+    "control_number": 136161,
+    "dois": [
+     {
+      "value": "10.1007/BF01940327"
+     }
+    ],
+    "titles": [
+     {
+      "title": "Phase Transitions and Reflection Positivity. 1. General Theory and Long Range Lattice Models"
+     },
+     {
+      "title": "LONG-RANGE"
+     }
+    ],
+    "document_type": [
+     "article"
+    ]
+   },
+   "crossref": [
+    {
+     "url": "https://api.crossref.org/works/10.1007/BF01940327",
+     "rec": {
+      "title": [
+       "Phase transitions and reflection positivity. I. General theory and long range lattice models"
+      ],
+      "container-title": [
+       "Communications in Mathematical Physics"
+      ],
+      "volume": "62",
+      "page": "1-34",
+      "article-number": null,
+      "issued": {
+       "date-parts": [
+        [
+         1978,
+         8
+        ]
+       ]
+      },
+      "DOI": "10.1007/bf01940327",
+      "publisher": "Springer Science and Business Media LLC",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "Jürg",
+        "Fröhlich"
+       ],
+       [
+        "Robert",
+        "Israel"
+       ],
+       [
+        "Elliot H.",
+        "Lieb"
+       ],
+       [
+        "Barry",
+        "Simon"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "SZZ23": {
+   "key": "SZZ23",
+   "predicates": {
+    "P1": true,
+    "P3": true,
+    "P4": true
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=arxiv%3A2204.12737&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 1,
+   "inspire": {
+    "publication_info": [
+     {
+      "journal_volume": "400",
+      "page_end": "851",
+      "year": 2023,
+      "journal_record": {
+       "$ref": "https://inspirehep.net/api/journals/1214791"
+      },
+      "page_start": "805",
+      "journal_issue": "2",
+      "journal_title": "Commun.Math.Phys."
+     }
+    ],
+    "authors": [
+     {
+      "full_name": "Shen, Hao"
+     },
+     {
+      "full_name": "Zhu, Rongchan"
+     },
+     {
+      "full_name": "Zhu, Xiangchan"
+     }
+    ],
+    "imprints": [
+     {
+      "date": "2022-12-23"
+     }
+    ],
+    "control_number": 2072947,
+    "dois": [
+     {
+      "source": "Springer",
+      "value": "10.1007/s00220-022-04609-1"
+     },
+     {
+      "material": "publication",
+      "source": "arXiv",
+      "value": "10.1007/s00220-022-04609-1"
+     }
+    ],
+    "titles": [
+     {
+      "source": "Springer",
+      "title": "A Stochastic Analysis Approach to Lattice Yang–Mills at Strong Coupling"
+     },
+     {
+      "source": "arXiv",
+      "title": "A stochastic analysis approach to lattice Yang--Mills at strong coupling"
+     }
+    ],
+    "arxiv_eprints": [
+     {
+      "categories": [
+       "math.PR",
+       "math-ph",
+       "math.MP"
+      ],
+      "value": "2204.12737"
+     }
+    ],
+    "document_type": [
+     "article"
+    ]
+   },
+   "arxiv_url": "https://export.arxiv.org/api/query?id_list=2204.12737",
+   "arxiv": {
+    "title": "A stochastic analysis approach to lattice Yang--Mills at strong coupling",
+    "authors": [
+     "Hao Shen",
+     "Rongchan Zhu",
+     "Xiangchan Zhu"
+    ],
+    "published": "2022-04-27T07:11:55Z",
+    "journal_ref": null,
+    "doi": "10.1007/s00220-022-04609-1",
+    "id": "http://arxiv.org/abs/2204.12737v1"
+   },
+   "crossref": [
+    {
+     "url": "https://api.crossref.org/works/10.1007/s00220-022-04609-1",
+     "rec": {
+      "title": [
+       "A Stochastic Analysis Approach to Lattice Yang–Mills at Strong Coupling"
+      ],
+      "container-title": [
+       "Communications in Mathematical Physics"
+      ],
+      "volume": "400",
+      "page": "805-851",
+      "article-number": null,
+      "issued": {
+       "date-parts": [
+        [
+         2022,
+         12,
+         23
+        ]
+       ]
+      },
+      "DOI": "10.1007/s00220-022-04609-1",
+      "publisher": "Springer Science and Business Media LLC",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "Hao",
+        "Shen"
+       ],
+       [
+        "Rongchan",
+        "Zhu"
+       ],
+       [
+        "Xiangchan",
+        "Zhu"
+       ]
+      ]
+     }
+    },
+    {
+     "url": "https://api.crossref.org/works/10.1007/s00220-022-04609-1",
+     "rec": {
+      "title": [
+       "A Stochastic Analysis Approach to Lattice Yang–Mills at Strong Coupling"
+      ],
+      "container-title": [
+       "Communications in Mathematical Physics"
+      ],
+      "volume": "400",
+      "page": "805-851",
+      "article-number": null,
+      "issued": {
+       "date-parts": [
+        [
+         2022,
+         12,
+         23
+        ]
+       ]
+      },
+      "DOI": "10.1007/s00220-022-04609-1",
+      "publisher": "Springer Science and Business Media LLC",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "Hao",
+        "Shen"
+       ],
+       [
+        "Rongchan",
+        "Zhu"
+       ],
+       [
+        "Xiangchan",
+        "Zhu"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "Guth80": {
+   "key": "Guth80",
+   "predicates": {
+    "P1": false,
+    "P2": true,
+    "P3": false
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=a+Guth+and+j+Phys.Rev.D%2C21&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 2,
+   "inspire": {
+    "publication_info": [
+     {
+      "journal_volume": "21",
+      "artid": "1013",
+      "year": 1980,
+      "page_start": "1013",
+      "journal_title": "Phys.Rev.D"
+     }
+    ],
+    "authors": [
+     {
+      "full_name": "Ukawa, Akira"
+     },
+     {
+      "full_name": "Windey, Paul"
+     },
+     {
+      "full_name": "Guth, Alan H."
+     }
+    ],
+    "control_number": 8079,
+    "dois": [
+     {
+      "value": "10.1103/PhysRevD.21.1013"
+     }
+    ],
+    "titles": [
+     {
+      "title": "Dual Variables for Lattice Gauge Theories and the Phase Structure of Z(N) Systems"
+     }
+    ],
+    "document_type": [
+     "article"
+    ]
+   },
+   "crossref": [
+    {
+     "url": "https://api.crossref.org/works/10.1103/PhysRevD.21.1013",
+     "rec": {
+      "title": [
+       "Dual variables for lattice gauge theories and the phase structure of<mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mml:mi>Z</mml:mi><mml:mo>(</mml:mo><mml:mi>N</mml:mi><mml:mo>)</mml:mo><mml:mn/></mml:math>systems"
+      ],
+      "container-title": [
+       "Physical Review D"
+      ],
+      "volume": "21",
+      "page": "1013-1036",
+      "article-number": null,
+      "issued": {
+       "date-parts": [
+        [
+         1980,
+         2,
+         15
+        ]
+       ]
+      },
+      "DOI": "10.1103/physrevd.21.1013",
+      "publisher": "American Physical Society (APS)",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "Akira",
+        "Ukawa"
+       ],
+       [
+        "Paul",
+        "Windey"
+       ],
+       [
+        "Alan H.",
+        "Guth"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "FS82": {
+   "key": "FS82",
+   "predicates": {
+    "P1": true,
+    "P2": true,
+    "P3": true
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=a+Frohlich+and+a+Spencer+and+j+Commun.Math.Phys.%2C83&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 1,
+   "inspire": {
+    "publication_info": [
+     {
+      "journal_volume": "83",
+      "page_end": "454",
+      "year": 1982,
+      "journal_record": {
+       "$ref": "https://inspirehep.net/api/journals/1214791"
+      },
+      "page_start": "411",
+      "journal_title": "Commun.Math.Phys."
+     },
+     {
+      "pubinfo_freetext": "Commun. Math. Phys. 83 ( 1982) 411-454"
+     }
+    ],
+    "authors": [
+     {
+      "full_name": "Frohlich, J."
+     },
+     {
+      "full_name": "Spencer, T."
+     }
+    ],
+    "control_number": 179907,
+    "dois": [
+     {
+      "value": "10.1007/BF01213610"
+     }
+    ],
+    "titles": [
+     {
+      "title": "MASSLESS PHASES AND SYMMETRY RESTORATION IN ABELIAN GAUGE THEORIES AND SPIN SYSTEMS"
+     }
+    ],
+    "document_type": [
+     "article"
+    ]
+   },
+   "crossref": [
+    {
+     "url": "https://api.crossref.org/works/10.1007/BF01213610",
+     "rec": {
+      "title": [
+       "Massless phases and symmetry restoration in abelian gauge theories and spin systems"
+      ],
+      "container-title": [
+       "Communications in Mathematical Physics"
+      ],
+      "volume": "83",
+      "page": "411-454",
+      "article-number": null,
+      "issued": {
+       "date-parts": [
+        [
+         1982,
+         9
+        ]
+       ]
+      },
+      "DOI": "10.1007/bf01213610",
+      "publisher": "Springer Science and Business Media LLC",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "Jürg",
+        "Fröhlich"
+       ],
+       [
+        "Thomas",
+        "Spencer"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "GM82": {
+   "key": "GM82",
+   "predicates": {
+    "P1": true,
+    "P2": false,
+    "P3": false
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=a+Gopfert+and+j+Commun.Math.Phys.%2C82&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 1,
+   "inspire": {
+    "publication_info": [
+     {
+      "journal_volume": "82",
+      "artid": "545",
+      "year": 1981,
+      "journal_record": {
+       "$ref": "https://inspirehep.net/api/journals/1214791"
+      },
+      "page_start": "545",
+      "journal_title": "Commun.Math.Phys."
+     }
+    ],
+    "authors": [
+     {
+      "full_name": "Gopfert, Markus"
+     },
+     {
+      "full_name": "Mack, Gerhard"
+     }
+    ],
+    "control_number": 166542,
+    "dois": [
+     {
+      "value": "10.1007/BF01961240"
+     }
+    ],
+    "titles": [
+     {
+      "title": "Proof of Confinement of Static Quarks in Three-Dimensional U(1) Lattice Gauge Theory for All Values of the Coupling Constant"
+     }
+    ],
+    "document_type": [
+     "article"
+    ]
+   },
+   "crossref": [
+    {
+     "url": "https://api.crossref.org/works/10.1007/BF01961240",
+     "rec": {
+      "title": [
+       "Proof of confinement of static quarks in 3-dimensionalU(1) lattice gauge theory for all values of the coupling constant"
+      ],
+      "container-title": [
+       "Communications in Mathematical Physics"
+      ],
+      "volume": "82",
+      "page": "545-606",
+      "article-number": null,
+      "issued": {
+       "date-parts": [
+        [
+         1982,
+         1
+        ]
+       ]
+      },
+      "DOI": "10.1007/bf01961240",
+      "publisher": "Springer Science and Business Media LLC",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "Markus",
+        "Göpfert"
+       ],
+       [
+        "Gerhard",
+        "Mack"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "AC22": {
+   "key": "AC22",
+   "predicates": {
+    "P1": true,
+    "P3": false,
+    "P4": true
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=arxiv%3A2202.10375&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 1,
+   "inspire": {
+    "publication_info": [
+     {
+      "journal_volume": "53",
+      "page_end": "174",
+      "year": 2025,
+      "journal_record": {
+       "$ref": "https://inspirehep.net/api/journals/1214204"
+      },
+      "page_start": "140",
+      "journal_issue": "1",
+      "journal_title": "Annals Probab."
+     }
+    ],
+    "authors": [
+     {
+      "full_name": "Adhikari, Arka"
+     },
+     {
+      "full_name": "Cao, Sky"
+     }
+    ],
+    "imprints": [
+     {
+      "date": "2025-01-01"
+     }
+    ],
+    "control_number": 2036003,
+    "dois": [
+     {
+      "source": "The Institute of Mathematical Statistics",
+      "value": "10.1214/24-AOP1702"
+     }
+    ],
+    "arxiv_eprints": [
+     {
+      "categories": [
+       "math.PR",
+       "math-ph",
+       "math.MP"
+      ],
+      "value": "2202.10375"
+     }
+    ],
+    "titles": [
+     {
+      "source": "The Institute of Mathematical Statistics",
+      "title": "Correlation decay for finite lattice gauge theories at weak coupling"
+     },
+     {
+      "source": "arXiv",
+      "title": "Correlation decay for finite lattice gauge theories at weak coupling"
+     }
+    ],
+    "document_type": [
+     "article"
+    ]
+   },
+   "arxiv_url": "https://export.arxiv.org/api/query?id_list=2202.10375",
+   "arxiv": {
+    "title": "Correlation decay for finite lattice gauge theories at weak coupling",
+    "authors": [
+     "Arka Adhikari",
+     "Sky Cao"
+    ],
+    "published": "2022-02-21T17:11:39Z",
+    "journal_ref": null,
+    "doi": null,
+    "id": "http://arxiv.org/abs/2202.10375v3"
+   },
+   "crossref": [
+    {
+     "doi": "10.1214/24-AOP1702",
+     "error": "<HTTPError 429: 'Too Many Requests'>"
+    }
+   ]
+  },
+  "Ch21": {
+   "key": "Ch21",
+   "predicates": {
+    "P1": true,
+    "P3": true,
+    "P4": true
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=arxiv%3A2006.16229&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 1,
+   "inspire": {
+    "publication_info": [
+     {
+      "journal_volume": "385",
+      "page_end": "1039",
+      "year": 2021,
+      "journal_record": {
+       "$ref": "https://inspirehep.net/api/journals/1214791"
+      },
+      "page_start": "1007",
+      "journal_issue": "2",
+      "journal_title": "Commun.Math.Phys."
+     }
+    ],
+    "authors": [
+     {
+      "full_name": "Chatterjee, Sourav"
+     }
+    ],
+    "imprints": [
+     {
+      "date": "2021-04-15"
+     }
+    ],
+    "control_number": 1803556,
+    "dois": [
+     {
+      "source": "Springer",
+      "value": "10.1007/s00220-021-04086-y"
+     },
+     {
+      "material": "publication",
+      "source": "arXiv",
+      "value": "10.1007/s00220-021-04086-y"
+     }
+    ],
+    "arxiv_eprints": [
+     {
+      "categories": [
+       "math.PR",
+       "hep-lat",
+       "hep-th",
+       "math-ph",
+       "math.MP"
+      ],
+      "value": "2006.16229"
+     }
+    ],
+    "titles": [
+     {
+      "source": "Springer",
+      "title": "A Probabilistic Mechanism for Quark Confinement"
+     },
+     {
+      "source": "arXiv",
+      "title": "A probabilistic mechanism for quark confinement"
+     },
+     {
+      "source": "arXiv",
+      "title": "A mechanism for quark confinement"
+     }
+    ],
+    "document_type": [
+     "article"
+    ]
+   },
+   "arxiv_url": "https://export.arxiv.org/api/query?id_list=2006.16229",
+   "arxiv": {
+    "title": "A probabilistic mechanism for quark confinement",
+    "authors": [
+     "Sourav Chatterjee"
+    ],
+    "published": "2020-06-29T17:52:05Z",
+    "journal_ref": null,
+    "doi": "10.1007/s00220-021-04086-y",
+    "id": "http://arxiv.org/abs/2006.16229v5"
+   },
+   "crossref": [
+    {
+     "url": "https://api.crossref.org/works/10.1007/s00220-021-04086-y",
+     "rec": {
+      "title": [
+       "A Probabilistic Mechanism for Quark Confinement"
+      ],
+      "container-title": [
+       "Communications in Mathematical Physics"
+      ],
+      "volume": "385",
+      "page": "1007-1039",
+      "article-number": null,
+      "issued": {
+       "date-parts": [
+        [
+         2021,
+         4,
+         15
+        ]
+       ]
+      },
+      "DOI": "10.1007/s00220-021-04086-y",
+      "publisher": "Springer Science and Business Media LLC",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "Sourav",
+        "Chatterjee"
+       ]
+      ]
+     }
+    },
+    {
+     "url": "https://api.crossref.org/works/10.1007/s00220-021-04086-y",
+     "rec": {
+      "title": [
+       "A Probabilistic Mechanism for Quark Confinement"
+      ],
+      "container-title": [
+       "Communications in Mathematical Physics"
+      ],
+      "volume": "385",
+      "page": "1007-1039",
+      "article-number": null,
+      "issued": {
+       "date-parts": [
+        [
+         2021,
+         4,
+         15
+        ]
+       ]
+      },
+      "DOI": "10.1007/s00220-021-04086-y",
+      "publisher": "Springer Science and Business Media LLC",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "Sourav",
+        "Chatterjee"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "Ch18": {
+   "key": "Ch18",
+   "predicates": {
+    "P1": true,
+    "P4": true
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=arxiv%3A1803.01950&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 1,
+   "inspire": {
+    "authors": [
+     {
+      "full_name": "Chatterjee, Sourav"
+     }
+    ],
+    "control_number": 1658853,
+    "titles": [
+     {
+      "source": "arXiv",
+      "title": "Yang-Mills for probabilists"
+     }
+    ],
+    "arxiv_eprints": [
+     {
+      "categories": [
+       "math.PR",
+       "math-ph",
+       "math.MP"
+      ],
+      "value": "1803.01950"
+     }
+    ],
+    "document_type": [
+     "article"
+    ]
+   },
+   "arxiv_url": "https://export.arxiv.org/api/query?id_list=1803.01950",
+   "arxiv": {
+    "title": "Yang-Mills for probabilists",
+    "authors": [
+     "Sourav Chatterjee"
+    ],
+    "published": "2018-03-05T22:15:20Z",
+    "journal_ref": null,
+    "doi": null,
+    "id": "http://arxiv.org/abs/1803.01950v1"
+   },
+   "crossref": []
+  },
+  "To07": {
+   "key": "To07",
+   "predicates": {
+    "P1": true,
+    "P4": true
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=arxiv%3A0707.2179&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 1,
+   "inspire": {
+    "authors": [
+     {
+      "full_name": "Tomboulis, E.T."
+     }
+    ],
+    "control_number": 755847,
+    "titles": [
+     {
+      "title": "Confinement for all values of the coupling in four-dimensional SU(2) gauge theory"
+     },
+     {
+      "source": "arXiv",
+      "title": "Confinement for all values of the coupling in four-dimensional SU(2) gauge theory"
+     }
+    ],
+    "arxiv_eprints": [
+     {
+      "categories": [
+       "hep-th"
+      ],
+      "value": "0707.2179"
+     }
+    ],
+    "document_type": [
+     "article"
+    ]
+   },
+   "arxiv_url": "https://export.arxiv.org/api/query?id_list=0707.2179",
+   "arxiv": {
+    "title": "Confinement for all values of the coupling in four-dimensional SU(2) gauge theory",
+    "authors": [
+     "E. T. Tomboulis"
+    ],
+    "published": "2007-07-15T18:37:41Z",
+    "journal_ref": null,
+    "doi": null,
+    "id": "http://arxiv.org/abs/0707.2179v1"
+   },
+   "crossref": []
+  },
+  "IS07": {
+   "key": "IS07",
+   "predicates": {
+    "P1": true,
+    "P4": true
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=arxiv%3A0711.4930&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 1,
+   "inspire": {
+    "authors": [
+     {
+      "full_name": "Ito, K.R."
+     },
+     {
+      "full_name": "Seiler, E."
+     }
+    ],
+    "control_number": 769129,
+    "titles": [
+     {
+      "title": "On the recent paper on quark confinement by Tomboulis"
+     },
+     {
+      "source": "arXiv",
+      "title": "On the recent paper on quark confinement by Tomboulis"
+     }
+    ],
+    "arxiv_eprints": [
+     {
+      "categories": [
+       "hep-th"
+      ],
+      "value": "0711.4930"
+     }
+    ],
+    "document_type": [
+     "article"
+    ]
+   },
+   "arxiv_url": "https://export.arxiv.org/api/query?id_list=0711.4930",
+   "arxiv": {
+    "title": "On the recent paper on quark confinement by Tomboulis",
+    "authors": [
+     "K. R. Ito",
+     "E. Seiler"
+    ],
+    "published": "2007-11-30T13:17:51Z",
+    "journal_ref": null,
+    "doi": null,
+    "id": "http://arxiv.org/abs/0711.4930v1"
+   },
+   "crossref": []
+  },
+  "IS08": {
+   "key": "IS08",
+   "predicates": {
+    "P1": true,
+    "P4": true
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=arxiv%3A0803.3019&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 1,
+   "inspire": {
+    "authors": [
+     {
+      "full_name": "Ito, K.R."
+     },
+     {
+      "full_name": "Seiler, E."
+     }
+    ],
+    "control_number": 781783,
+    "titles": [
+     {
+      "title": "Further discussion of Tomboulis' approach to the confinement problem"
+     },
+     {
+      "source": "arXiv",
+      "title": "Further discussion of Tomboulis' approach to the confinement problem"
+     }
+    ],
+    "arxiv_eprints": [
+     {
+      "categories": [
+       "hep-th"
+      ],
+      "value": "0803.3019"
+     }
+    ],
+    "document_type": [
+     "article"
+    ]
+   },
+   "arxiv_url": "https://export.arxiv.org/api/query?id_list=0803.3019",
+   "arxiv": {
+    "title": "Further discussion of Tomboulis' approach to the confinement problem",
+    "authors": [
+     "K. R. Ito",
+     "E. Seiler"
+    ],
+    "published": "2008-03-20T15:50:31Z",
+    "journal_ref": null,
+    "doi": null,
+    "id": "http://arxiv.org/abs/0803.3019v1"
+   },
+   "crossref": []
+  },
+  "KT02": {
+   "key": "KT02",
+   "predicates": {
+    "P1": true,
+    "P2": true,
+    "P3": true,
+    "P4": true
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=arxiv%3Ahep-lat%2F0108017&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 1,
+   "inspire": {
+    "publication_info": [
+     {
+      "journal_volume": "65",
+      "artid": "074501",
+      "year": 2002,
+      "journal_title": "Phys.Rev.D"
+     }
+    ],
+    "authors": [
+     {
+      "full_name": "Kovacs, Tamas G."
+     },
+     {
+      "full_name": "Tomboulis, E.T."
+     }
+    ],
+    "control_number": 561491,
+    "dois": [
+     {
+      "value": "10.1103/PhysRevD.65.074501"
+     }
+    ],
+    "arxiv_eprints": [
+     {
+      "categories": [
+       "hep-lat"
+      ],
+      "value": "hep-lat/0108017"
+     }
+    ],
+    "titles": [
+     {
+      "title": "Vortex waistlines and long range fluctuations"
+     },
+     {
+      "title": "LONG-RANGE"
+     },
+     {
+      "source": "arXiv",
+      "title": "Vortex waistlines and long range fluctuations."
+     }
+    ],
+    "document_type": [
+     "article"
+    ]
+   },
+   "arxiv_url": "https://export.arxiv.org/api/query?id_list=hep-lat/0108017",
+   "arxiv": {
+    "title": "Vortex waistlines and long range fluctuations",
+    "authors": [
+     "T. G. Kovacs",
+     "E. T. Tomboulis"
+    ],
+    "published": "2001-08-14T19:03:45Z",
+    "journal_ref": "Phys.Rev. D65 (2002) 074501",
+    "doi": "10.1103/PhysRevD.65.074501",
+    "id": "http://arxiv.org/abs/hep-lat/0108017v2"
+   },
+   "crossref": [
+    {
+     "url": "https://api.crossref.org/works/10.1103/PhysRevD.65.074501",
+     "rec": {
+      "title": [
+       "Vortex waistlines and long range fluctuations"
+      ],
+      "container-title": [
+       "Physical Review D"
+      ],
+      "volume": "65",
+      "page": null,
+      "article-number": "074501",
+      "issued": {
+       "date-parts": [
+        [
+         2002,
+         2,
+         25
+        ]
+       ]
+      },
+      "DOI": "10.1103/physrevd.65.074501",
+      "publisher": "American Physical Society (APS)",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "Tamás G.",
+        "Kovács"
+       ],
+       [
+        "E. T.",
+        "Tomboulis"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "TY85": {
+   "key": "TY85",
+   "predicates": {
+    "P1": true,
+    "P2": true,
+    "P3": true
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=a+Tomboulis+and+a+Yaffe+and+j+Commun.Math.Phys.%2C100&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 1,
+   "inspire": {
+    "publication_info": [
+     {
+      "journal_volume": "100",
+      "artid": "313",
+      "year": 1985,
+      "journal_record": {
+       "$ref": "https://inspirehep.net/api/journals/1214791"
+      },
+      "page_start": "313",
+      "journal_title": "Commun.Math.Phys."
+     }
+    ],
+    "authors": [
+     {
+      "full_name": "Tomboulis, E.T."
+     },
+     {
+      "full_name": "Yaffe, L.G."
+     }
+    ],
+    "control_number": 16018,
+    "dois": [
+     {
+      "value": "10.1007/BF01206134"
+     }
+    ],
+    "titles": [
+     {
+      "title": "FINITE TEMPERATURE SU(2) LATTICE GAUGE THEORY"
+     }
+    ],
+    "document_type": [
+     "article"
+    ]
+   },
+   "crossref": [
+    {
+     "url": "https://api.crossref.org/works/10.1007/BF01206134",
+     "rec": {
+      "title": [
+       "Finite temperature SU(2) lattice gauge theory"
+      ],
+      "container-title": [
+       "Communications in Mathematical Physics"
+      ],
+      "volume": "100",
+      "page": "313-341",
+      "article-number": null,
+      "issued": {
+       "date-parts": [
+        [
+         1985,
+         9
+        ]
+       ]
+      },
+      "DOI": "10.1007/bf01206134",
+      "publisher": "Springer Science and Business Media LLC",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "E. T.",
+        "Tomboulis"
+       ],
+       [
+        "L. G.",
+        "Yaffe"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "BS83": {
+   "key": "BS83",
+   "predicates": {
+    "P1": true,
+    "P2": true,
+    "P3": false
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=a+Borgs+and+a+Seiler+and+j+Commun.Math.Phys.%2C91&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 1,
+   "inspire": {
+    "publication_info": [
+     {
+      "journal_volume": "91",
+      "artid": "329",
+      "year": 1983,
+      "journal_record": {
+       "$ref": "https://inspirehep.net/api/journals/1214791"
+      },
+      "page_start": "329",
+      "journal_title": "Commun.Math.Phys."
+     }
+    ],
+    "authors": [
+     {
+      "full_name": "Borgs, Christian"
+     },
+     {
+      "full_name": "Seiler, Erhard"
+     }
+    ],
+    "control_number": 190516,
+    "dois": [
+     {
+      "value": "10.1007/BF01208780"
+     }
+    ],
+    "titles": [
+     {
+      "title": "Lattice {Yang-Mills} Theory at Nonzero Temperature and the Confinement Problem"
+     },
+     {
+      "title": "LATTICE YANG-MILLS THEORY AT NONZERO TEMPERATURE AND THE CONFINEMENT PROBLEM"
+     }
+    ],
+    "document_type": [
+     "article"
+    ]
+   },
+   "crossref": [
+    {
+     "doi": "10.1007/BF01208780",
+     "error": "<HTTPError 429: 'Too Many Requests'>"
+    }
+   ]
+  },
+  "ADC21": {
+   "key": "ADC21",
+   "predicates": {
+    "P1": true,
+    "P2": true,
+    "P3": true,
+    "P4": true
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=arxiv%3A1912.07973&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 1,
+   "inspire": {
+    "authors": [
+     {
+      "full_name": "Aizenman, Michael"
+     },
+     {
+      "full_name": "Duminil-Copin, Hugo"
+     }
+    ],
+    "publication_info": [
+     {
+      "journal_volume": "194",
+      "pubinfo_freetext": "Annals of Mathematics, July 2021, Vol. 194, No. 1 (July 2021), pp.\n  163-23",
+      "artid": "163",
+      "material": "publication",
+      "year": 2021,
+      "curated_relation": true,
+      "journal_record": {
+       "$ref": "https://inspirehep.net/api/journals/1214864"
+      },
+      "page_start": "163",
+      "journal_issue": "1",
+      "journal_title": "Annals Math."
+     }
+    ],
+    "control_number": 1771365,
+    "dois": [
+     {
+      "material": "publication",
+      "source": "arXiv",
+      "value": "10.4007/annals.2021.194.1.3"
+     }
+    ],
+    "arxiv_eprints": [
+     {
+      "categories": [
+       "math-ph",
+       "cond-mat.stat-mech",
+       "hep-th",
+       "math.MP",
+       "math.PR"
+      ],
+      "value": "1912.07973"
+     }
+    ],
+    "titles": [
+     {
+      "source": "arXiv",
+      "title": "Marginal triviality of the scaling limits of critical 4D Ising and $\\phi_4^4$ models"
+     }
+    ],
+    "document_type": [
+     "article"
+    ]
+   },
+   "arxiv_url": "https://export.arxiv.org/api/query?id_list=1912.07973",
+   "arxiv": {
+    "title": "Marginal triviality of the scaling limits of critical 4D Ising and $φ_4^4$ models",
+    "authors": [
+     "Michael Aizenman",
+     "Hugo Duminil-Copin"
+    ],
+    "published": "2019-12-17T12:41:14Z",
+    "journal_ref": "Annals of Mathematics, July 2021, Vol. 194, No. 1 (July 2021), pp. 163-23",
+    "doi": "10.4007/annals.2021.194.1.3",
+    "id": "http://arxiv.org/abs/1912.07973v4"
+   },
+   "crossref": [
+    {
+     "url": "https://api.crossref.org/works/10.4007/annals.2021.194.1.3",
+     "rec": {
+      "title": [
+       "Marginal triviality of the scaling limits of critical 4D Ising and $\\lambda\\phi_4^4$ models"
+      ],
+      "container-title": [
+       "Annals of Mathematics"
+      ],
+      "volume": "194",
+      "page": "163-235",
+      "article-number": null,
+      "issued": {
+       "date-parts": [
+        [
+         2021,
+         7,
+         1
+        ]
+       ]
+      },
+      "DOI": "10.4007/annals.2021.194.1.3",
+      "publisher": "Annals of Mathematics",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "Michael",
+        "Aizenman"
+       ],
+       [
+        "Hugo",
+        "Duminil-Copin"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "Sin81": {
+   "key": "Sin81",
+   "predicates": {
+    "P1": true,
+    "P2": true,
+    "P3": false
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=a+Singer+and+j+Phys.Scripta%2C24&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 1,
+   "inspire": {
+    "authors": [
+     {
+      "full_name": "Singer, I.M."
+     }
+    ],
+    "publication_info": [
+     {
+      "journal_volume": "24",
+      "page_end": "820",
+      "year": 1981,
+      "journal_record": {
+       "$ref": "https://inspirehep.net/api/journals/1214513"
+      },
+      "page_start": "817",
+      "journal_title": "Phys.Scripta"
+     },
+     {
+      "pubinfo_freetext": "Phys. Scr. 24 ( 1981) 817-820"
+     }
+    ],
+    "control_number": 173110,
+    "dois": [
+     {
+      "value": "10.1088/0031-8949/24/5/002"
+     }
+    ],
+    "titles": [
+     {
+      "title": "The Geometry of the Orbit Space for Nonabelian Gauge Theories. (Talk)"
+     },
+     {
+      "title": "THE GEOMETRY OF THE ORBIT SPACE FOR NONABELIAN GAUGE THEORIES. (TALK)"
+     }
+    ],
+    "document_type": [
+     "article"
+    ]
+   },
+   "crossref": [
+    {
+     "url": "https://api.crossref.org/works/10.1088/0031-8949/24/5/002",
+     "rec": {
+      "title": [
+       "The Geometry of the Orbit Space for Non-Abelian Gauge Theories"
+      ],
+      "container-title": [
+       "Physica Scripta"
+      ],
+      "volume": "24",
+      "page": "817-820",
+      "article-number": null,
+      "issued": {
+       "date-parts": [
+        [
+         1981,
+         11,
+         1
+        ]
+       ]
+      },
+      "DOI": "10.1088/0031-8949/24/5/002",
+      "publisher": "IOP Publishing",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "I M",
+        "Singer"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "CCK07": {
+   "key": "CCK07",
+   "predicates": {
+    "P1": true,
+    "P3": false,
+    "P4": true
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=arxiv%3A0705.2629&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 1,
+   "inspire": {
+    "authors": [
+     {
+      "full_name": "Cherrington, J.Wade"
+     },
+     {
+      "full_name": "Christensen, Dan"
+     },
+     {
+      "full_name": "Khavkine, Igor"
+     }
+    ],
+    "publication_info": [
+     {
+      "journal_volume": "76",
+      "artid": "094503",
+      "year": 2007,
+      "journal_title": "Phys.Rev.D"
+     }
+    ],
+    "control_number": 750870,
+    "dois": [
+     {
+      "value": "10.1103/PhysRevD.76.094503"
+     }
+    ],
+    "arxiv_eprints": [
+     {
+      "categories": [
+       "hep-lat"
+      ],
+      "value": "0705.2629"
+     }
+    ],
+    "titles": [
+     {
+      "title": "Dual computations of non-Abelian Yang-Mills on the lattice"
+     },
+     {
+      "title": "NONABELIAN"
+     },
+     {
+      "source": "arXiv",
+      "title": "Dual Computations of Non-abelian Yang-Mills on the Lattice"
+     }
+    ],
+    "document_type": [
+     "article"
+    ]
+   },
+   "arxiv_url": "https://export.arxiv.org/api/query?id_list=0705.2629",
+   "arxiv": {
+    "title": "Dual Computations of Non-abelian Yang-Mills on the Lattice",
+    "authors": [
+     "J. Wade Cherrington",
+     "J. Daniel Christensen",
+     "Igor Khavkine"
+    ],
+    "published": "2007-05-18T04:23:19Z",
+    "journal_ref": "Phys.Rev.D76:094503,2007",
+    "doi": "10.1103/PhysRevD.76.094503",
+    "id": "http://arxiv.org/abs/0705.2629v3"
+   },
+   "crossref": [
+    {
+     "url": "https://api.crossref.org/works/10.1103/PhysRevD.76.094503",
+     "rec": {
+      "title": [
+       "Dual computations of non-Abelian Yang-Mills theories on the lattice"
+      ],
+      "container-title": [
+       "Physical Review D"
+      ],
+      "volume": "76",
+      "page": null,
+      "article-number": "094503",
+      "issued": {
+       "date-parts": [
+        [
+         2007,
+         11,
+         5
+        ]
+       ]
+      },
+      "DOI": "10.1103/physrevd.76.094503",
+      "publisher": "American Physical Society (APS)",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "J. Wade",
+        "Cherrington"
+       ],
+       [
+        "J. Daniel",
+        "Christensen"
+       ],
+       [
+        "Igor",
+        "Khavkine"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "Cr79": {
+   "key": "Cr79",
+   "predicates": {
+    "P1": true,
+    "P2": true,
+    "P3": true
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=doi+10.1103%2FPhysRevLett.43.553&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 1,
+   "inspire": {
+    "authors": [
+     {
+      "full_name": "Creutz, Michael"
+     }
+    ],
+    "publication_info": [
+     {
+      "journal_volume": "43",
+      "page_end": "556",
+      "year": 1979,
+      "journal_record": {
+       "$ref": "https://inspirehep.net/api/journals/1214495"
+      },
+      "page_start": "553",
+      "journal_title": "Phys.Rev.Lett."
+     },
+     {
+      "journal_volume": "43",
+      "artid": "890",
+      "material": "erratum",
+      "year": 1979,
+      "journal_record": {
+       "$ref": "https://inspirehep.net/api/journals/1214495"
+      },
+      "page_start": "890",
+      "journal_title": "Phys.Rev.Lett."
+     }
+    ],
+    "control_number": 141282,
+    "dois": [
+     {
+      "value": "10.1103/PhysRevLett.43.553"
+     },
+     {
+      "material": "erratum",
+      "value": "10.1103/PhysRevLett.43.890.2"
+     }
+    ],
+    "titles": [
+     {
+      "title": "Confinement and the Critical Dimensionality of Space-Time"
+     }
+    ],
+    "document_type": [
+     "article"
+    ]
+   },
+   "crossref": [
+    {
+     "url": "https://api.crossref.org/works/10.1103/PhysRevLett.43.553",
+     "rec": {
+      "title": [
+       "Confinement and the Critical Dimensionality of Space-Time"
+      ],
+      "container-title": [
+       "Physical Review Letters"
+      ],
+      "volume": "43",
+      "page": "553-556",
+      "article-number": null,
+      "issued": {
+       "date-parts": [
+        [
+         1979,
+         8,
+         20
+        ]
+       ]
+      },
+      "DOI": "10.1103/physrevlett.43.553",
+      "publisher": "American Physical Society (APS)",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "Michael",
+        "Creutz"
+       ]
+      ]
+     }
+    },
+    {
+     "url": "https://api.crossref.org/works/10.1103/PhysRevLett.43.890.2",
+     "rec": {
+      "title": [
+       "Confinement and the Critical Dimensionality of Space-Time."
+      ],
+      "container-title": [
+       "Physical Review Letters"
+      ],
+      "volume": "43",
+      "page": "890-890",
+      "article-number": null,
+      "issued": {
+       "date-parts": [
+        [
+         1979,
+         9,
+         17
+        ]
+       ]
+      },
+      "DOI": "10.1103/physrevlett.43.890.2",
+      "publisher": "American Physical Society (APS)",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "Michael",
+        "Creutz"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "FiveD11": {
+   "key": "FiveD11",
+   "predicates": {
+    "P1": true,
+    "P3": true,
+    "P4": true
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=arxiv%3A1110.4210&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 1,
+   "inspire": {
+    "publication_info": [
+     {
+      "journal_volume": "856",
+      "page_end": "94",
+      "year": 2012,
+      "page_start": "74",
+      "journal_title": "Nucl.Phys.B"
+     }
+    ],
+    "authors": [
+     {
+      "full_name": "Knechtli, Francesco"
+     },
+     {
+      "full_name": "Luz, Magdalena"
+     },
+     {
+      "full_name": "Rago, Antonio"
+     }
+    ],
+    "imprints": [
+     {
+      "date": "2012"
+     }
+    ],
+    "control_number": 940498,
+    "dois": [
+     {
+      "value": "10.1016/j.nuclphysb.2011.11.001"
+     }
+    ],
+    "arxiv_eprints": [
+     {
+      "categories": [
+       "hep-lat"
+      ],
+      "value": "1110.4210"
+     }
+    ],
+    "titles": [
+     {
+      "title": "On the phase structure of five-dimensional SU(2) gauge theories with anisotropic couplings"
+     },
+     {
+      "source": "arXiv",
+      "title": "On the phase structure of five-dimensional SU(2) gauge theories with anisotropic couplings"
+     }
+    ],
+    "document_type": [
+     "article"
+    ]
+   },
+   "arxiv_url": "https://export.arxiv.org/api/query?id_list=1110.4210",
+   "arxiv": {
+    "title": "On the phase structure of five-dimensional SU(2) gauge theories with anisotropic couplings",
+    "authors": [
+     "Francesco Knechtli",
+     "Magdalena Luz",
+     "Antonio Rago"
+    ],
+    "published": "2011-10-19T08:52:36Z",
+    "journal_ref": null,
+    "doi": "10.1016/j.nuclphysb.2011.11.001",
+    "id": "http://arxiv.org/abs/1110.4210v2"
+   },
+   "crossref": [
+    {
+     "url": "https://api.crossref.org/works/10.1016/j.nuclphysb.2011.11.001",
+     "rec": {
+      "title": [
+       "On the phase structure of five-dimensional SU(2) gauge theories with anisotropic couplings"
+      ],
+      "container-title": [
+       "Nuclear Physics B"
+      ],
+      "volume": "856",
+      "page": "74-94",
+      "article-number": null,
+      "issued": {
+       "date-parts": [
+        [
+         2012,
+         3
+        ]
+       ]
+      },
+      "DOI": "10.1016/j.nuclphysb.2011.11.001",
+      "publisher": "Elsevier BV",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "Francesco",
+        "Knechtli"
+       ],
+       [
+        "Magdalena",
+        "Luz"
+       ],
+       [
+        "Antonio",
+        "Rago"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "LW86": {
+   "key": "LW86",
+   "predicates": {
+    "P1": true,
+    "P2": true,
+    "P3": false
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=a+Luscher+and+j+Commun.Math.Phys.%2C105&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 1,
+   "inspire": {
+    "authors": [
+     {
+      "full_name": "Luscher, M."
+     }
+    ],
+    "publication_info": [
+     {
+      "journal_volume": "105",
+      "page_end": "188",
+      "year": 1986,
+      "journal_record": {
+       "$ref": "https://inspirehep.net/api/journals/1214791"
+      },
+      "page_start": "153",
+      "journal_title": "Commun.Math.Phys."
+     },
+     {
+      "pubinfo_freetext": "Hamburg Desy - DESY 86-034 (86,REC.MAR.)"
+     },
+     {
+      "pubinfo_freetext": "Commun. Math. Phys. 105 ( 1986) 153-188 and Hamburg Desy - DESY 86-034 (86,REC.MAR.) 80p"
+     }
+    ],
+    "control_number": 231480,
+    "dois": [
+     {
+      "value": "10.1007/BF01211097"
+     }
+    ],
+    "titles": [
+     {
+      "title": "Volume Dependence of the Energy Spectrum in Massive Quantum Field Theories. 2. Scattering States"
+     }
+    ],
+    "document_type": [
+     "article"
+    ]
+   },
+   "crossref": [
+    {
+     "url": "https://api.crossref.org/works/10.1007/BF01211097",
+     "rec": {
+      "title": [
+       "Volume dependence of the energy spectrum in massive quantum field theories"
+      ],
+      "container-title": [
+       "Communications in Mathematical Physics"
+      ],
+      "volume": "105",
+      "page": "153-188",
+      "article-number": null,
+      "issued": {
+       "date-parts": [
+        [
+         1986,
+         6
+        ]
+       ]
+      },
+      "DOI": "10.1007/bf01211097",
+      "publisher": "Springer Science and Business Media LLC",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "M.",
+        "Lüscher"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "FHK93": {
+   "key": "FHK93",
+   "predicates": {
+    "P1": true,
+    "P2": true,
+    "P3": true,
+    "P4": true
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=arxiv%3Ahep-lat%2F9208012&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 1,
+   "inspire": {
+    "publication_info": [
+     {
+      "journal_volume": "392",
+      "page_end": "517",
+      "year": 1993,
+      "page_start": "493",
+      "journal_title": "Nucl.Phys.B"
+     }
+    ],
+    "authors": [
+     {
+      "full_name": "Fingberg, J."
+     },
+     {
+      "full_name": "Heller, Urs M."
+     },
+     {
+      "full_name": "Karsch, F."
+     }
+    ],
+    "control_number": 337368,
+    "dois": [
+     {
+      "value": "10.1016/0550-3213(93)90682-F"
+     }
+    ],
+    "arxiv_eprints": [
+     {
+      "categories": [
+       "hep-lat"
+      ],
+      "value": "hep-lat/9208012"
+     }
+    ],
+    "titles": [
+     {
+      "title": "Scaling and asymptotic scaling in the SU(2) gauge theory"
+     }
+    ],
+    "document_type": [
+     "article"
+    ]
+   },
+   "arxiv_url": "https://export.arxiv.org/api/query?id_list=hep-lat/9208012",
+   "arxiv": {
+    "title": "Scaling and Asymptotic Scaling in the SU(2) Gauge Theory",
+    "authors": [
+     "J. Fingberg",
+     "U. M. Heller",
+     "F. Karsch"
+    ],
+    "published": "1992-08-14T15:11:03Z",
+    "journal_ref": "Nucl.Phys. B392 (1993) 493-517",
+    "doi": "10.1016/0550-3213(93)90682-F",
+    "id": "http://arxiv.org/abs/hep-lat/9208012v2"
+   },
+   "crossref": [
+    {
+     "url": "https://api.crossref.org/works/10.1016/0550-3213%2893%2990682-F",
+     "rec": {
+      "title": [
+       "Scaling and asymptotic scaling in the SU(2) gauge theory"
+      ],
+      "container-title": [
+       "Nuclear Physics B"
+      ],
+      "volume": "392",
+      "page": "493-517",
+      "article-number": null,
+      "issued": {
+       "date-parts": [
+        [
+         1993,
+         3
+        ]
+       ]
+      },
+      "DOI": "10.1016/0550-3213(93)90682-f",
+      "publisher": "Elsevier BV",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "J.",
+        "Fingberg"
+       ],
+       [
+        "U.",
+        "Heller"
+       ],
+       [
+        "F.",
+        "Karsch"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "Te98": {
+   "key": "Te98",
+   "predicates": {
+    "P1": true,
+    "P4": true
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=arxiv%3Ahep-th%2F9812187&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 1,
+   "inspire": {
+    "authors": [
+     {
+      "full_name": "Teper, Michael J."
+     }
+    ],
+    "control_number": 481344,
+    "titles": [
+     {
+      "title": "Glueball masses and other physical properties of SU(N) gauge theories in D = (3+1): A Review of lattice results for theorists"
+     },
+     {
+      "source": "arXiv",
+      "title": "Glueball masses and other physical properties of SU(N) gauge theories in D = 3+1: A review of lattice results for theorists."
+     }
+    ],
+    "arxiv_eprints": [
+     {
+      "categories": [
+       "hep-th"
+      ],
+      "value": "hep-th/9812187"
+     }
+    ],
+    "document_type": [
+     "article"
+    ]
+   },
+   "arxiv_url": "https://export.arxiv.org/api/query?id_list=hep-th/9812187",
+   "arxiv": {
+    "title": "Glueball masses and other physical properties of SU(N) gauge theories in D=3+1: a review of lattice results for theorists",
+    "authors": [
+     "Michael Teper"
+    ],
+    "published": "1998-12-21T15:20:44Z",
+    "journal_ref": null,
+    "doi": null,
+    "id": "http://arxiv.org/abs/hep-th/9812187v1"
+   },
+   "crossref": []
+  },
+  "LTW04": {
+   "key": "LTW04",
+   "predicates": {
+    "P1": true,
+    "P3": false,
+    "P4": true
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=arxiv%3Ahep-lat%2F0404008&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 1,
+   "inspire": {
+    "publication_info": [
+     {
+      "journal_volume": "06",
+      "artid": "012",
+      "year": 2004,
+      "journal_record": {
+       "$ref": "https://inspirehep.net/api/journals/1213103"
+      },
+      "page_start": "012",
+      "journal_title": "JHEP"
+     }
+    ],
+    "authors": [
+     {
+      "full_name": "Lucini, Biagio"
+     },
+     {
+      "full_name": "Teper, Michael"
+     },
+     {
+      "full_name": "Wenger, Urs"
+     }
+    ],
+    "control_number": 647779,
+    "dois": [
+     {
+      "value": "10.1088/1126-6708/2004/06/012"
+     }
+    ],
+    "arxiv_eprints": [
+     {
+      "categories": [
+       "hep-lat"
+      ],
+      "value": "hep-lat/0404008"
+     }
+    ],
+    "titles": [
+     {
+      "title": "Glueballs and k-strings in SU(N) gauge theories: Calculations with improved operators"
+     },
+     {
+      "source": "arXiv",
+      "title": "Glueballs and k-strings in SU(N) gauge theories: Calculations with improved operators."
+     }
+    ],
+    "document_type": [
+     "article"
+    ]
+   },
+   "arxiv_url": "https://export.arxiv.org/api/query?id_list=hep-lat/0404008",
+   "arxiv": {
+    "title": "Glueballs and k-strings in SU(N) gauge theories : calculations with improved operators",
+    "authors": [
+     "Biagio Lucini",
+     "Michael Teper",
+     "Urs Wenger"
+    ],
+    "published": "2004-04-07T14:27:28Z",
+    "journal_ref": "JHEP0406:012,2004",
+    "doi": "10.1088/1126-6708/2004/06/012",
+    "id": "http://arxiv.org/abs/hep-lat/0404008v1"
+   },
+   "crossref": [
+    {
+     "url": "https://api.crossref.org/works/10.1088/1126-6708/2004/06/012",
+     "rec": {
+      "title": [
+       "Glueballs and\n                    <i>k</i>\n                    -strings in SU(\n                    <i>N</i>\n                    ) gauge theories: calculations with improved operators"
+      ],
+      "container-title": [
+       "Journal of High Energy Physics"
+      ],
+      "volume": "2004",
+      "page": "012-012",
+      "article-number": null,
+      "issued": {
+       "date-parts": [
+        [
+         2004,
+         6,
+         8
+        ]
+       ]
+      },
+      "DOI": "10.1088/1126-6708/2004/06/012",
+      "publisher": "Springer Science and Business Media LLC",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "Biagio",
+        "Lucini"
+       ],
+       [
+        "Michael",
+        "Teper"
+       ],
+       [
+        "Urs",
+        "Wenger"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "BCH26": {
+   "key": "BCH26",
+   "predicates": {
+    "P1": true,
+    "P4": true
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=arxiv%3A2610.08144&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 0,
+   "arxiv_url": "https://export.arxiv.org/api/query?id_list=2610.08144",
+   "arxiv": {
+    "title": "Navier-Stokes lost in translation: Why Lean verification of AI autoformalisation does not guarantee correct natural language proofs",
+    "authors": [
+     "Alexander Bastounis",
+     "Fabian Circelli",
+     "Anders C. Hansen"
+    ],
+    "published": "2026-10-06T10:58:01Z",
+    "journal_ref": null,
+    "doi": null,
+    "id": "http://arxiv.org/abs/2610.08144v1"
+   },
+   "crossref": []
+  },
+  "SS23": {
+   "key": "SS23",
+   "predicates": {
+    "P1": true,
+    "P2": true,
+    "P3": true,
+    "P4": true
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=arxiv%3A2211.15176&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 1,
+   "inspire": {
+    "publication_info": [
+     {
+      "journal_volume": "107",
+      "artid": "034510",
+      "material": "publication",
+      "year": 2023,
+      "journal_record": {
+       "$ref": "https://inspirehep.net/api/journals/1613970"
+      },
+      "journal_issue": "3",
+      "journal_title": "Phys.Rev.D"
+     }
+    ],
+    "authors": [
+     {
+      "full_name": "Sakai, Keita"
+     },
+     {
+      "full_name": "Sasaki, Shoichi"
+     }
+    ],
+    "imprints": [
+     {
+      "date": "2023-02-01"
+     }
+    ],
+    "control_number": 2601248,
+    "dois": [
+     {
+      "material": "publication",
+      "source": "APS",
+      "value": "10.1103/PhysRevD.107.034510"
+     },
+     {
+      "material": "publication",
+      "source": "arXiv",
+      "value": "10.1103/PhysRevD.107.034510"
+     }
+    ],
+    "arxiv_eprints": [
+     {
+      "categories": [
+       "hep-lat"
+      ],
+      "value": "2211.15176"
+     }
+    ],
+    "titles": [
+     {
+      "source": "APS",
+      "title": "Glueball spectroscopy in lattice QCD using gradient flow"
+     },
+     {
+      "source": "arXiv",
+      "title": "Glueball spectroscopy in lattice QCD using gradient flow"
+     }
+    ],
+    "document_type": [
+     "article"
+    ]
+   },
+   "arxiv_url": "https://export.arxiv.org/api/query?id_list=2211.15176",
+   "arxiv": {
+    "title": "Glueball spectroscopy in lattice QCD using gradient flow",
+    "authors": [
+     "Keita Sakai",
+     "Shoichi Sasaki"
+    ],
+    "published": "2022-11-28T09:42:19Z",
+    "journal_ref": null,
+    "doi": "10.1103/PhysRevD.107.034510",
+    "id": "http://arxiv.org/abs/2211.15176v2"
+   },
+   "crossref": [
+    {
+     "url": "https://api.crossref.org/works/10.1103/PhysRevD.107.034510",
+     "rec": {
+      "title": [
+       "Glueball spectroscopy in lattice QCD using gradient flow"
+      ],
+      "container-title": [
+       "Physical Review D"
+      ],
+      "volume": "107",
+      "page": null,
+      "article-number": "034510",
+      "issued": {
+       "date-parts": [
+        [
+         2023,
+         2,
+         27
+        ]
+       ]
+      },
+      "DOI": "10.1103/physrevd.107.034510",
+      "publisher": "American Physical Society (APS)",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "Keita",
+        "Sakai"
+       ],
+       [
+        "Shoichi",
+        "Sasaki"
+       ]
+      ]
+     }
+    },
+    {
+     "url": "https://api.crossref.org/works/10.1103/PhysRevD.107.034510",
+     "rec": {
+      "title": [
+       "Glueball spectroscopy in lattice QCD using gradient flow"
+      ],
+      "container-title": [
+       "Physical Review D"
+      ],
+      "volume": "107",
+      "page": null,
+      "article-number": "034510",
+      "issued": {
+       "date-parts": [
+        [
+         2023,
+         2,
+         27
+        ]
+       ]
+      },
+      "DOI": "10.1103/physrevd.107.034510",
+      "publisher": "American Physical Society (APS)",
+      "ISBN": null,
+      "type": "journal-article",
+      "edition-number": null,
+      "author": [
+       [
+        "Keita",
+        "Sakai"
+       ],
+       [
+        "Shoichi",
+        "Sasaki"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "GJ": {
+   "key": "GJ",
+   "predicates": {
+    "P1": true
+   },
+   "inspire_url": "https://inspirehep.net/api/literature?q=t+%22Quantum+Physics%3A+A+Functional+Integral+Point+of+View%22&fields=titles%2Cauthors.full_name%2Cpublication_info%2Cdois%2Carxiv_eprints%2Cimprints%2Cisbns%2Cdocument_type&size=5",
+   "inspire_nhits": 3,
+   "inspire": {
+    "publication_info": [
+     {
+      "pubinfo_freetext": "New York, Usa: Springer ( 1981) 417p"
+     }
+    ],
+    "authors": [
+     {
+      "full_name": "Glimm, J."
+     },
+     {
+      "full_name": "Jaffe, Arthur M."
+     }
+    ],
+    "control_number": 171716,
+    "titles": [
+     {
+      "title": "QUANTUM PHYSICS. A FUNCTIONAL INTEGRAL POINT OF VIEW"
+     }
+    ],
+    "document_type": [
+     "book"
+    ]
+   },
+   "crossref": []
+  },
+  "GJ_book": {
+   "key": "GJ",
+   "predicates": {},
+   "error": "<HTTPError 429: 'Too Many Requests'>"
+  },
+  "LL10_book": {
+   "key": "LL10",
+   "predicates": {},
+   "error": "<HTTPError 429: 'Too Many Requests'>"
+  }
+ },
+ "failed_predicates": [
+  "OS73:P1",
+  "OS73:P2",
+  "OS75:P1",
+  "OS75:P2",
+  "KQR21:P4",
+  "OS78:P1",
+  "OS78:P2",
+  "FILS78:P3",
+  "Guth80:P1",
+  "Guth80:P3",
+  "GM82:P2",
+  "GM82:P3",
+  "AC22:P3",
+  "BS83:P3",
+  "Sin81:P3",
+  "CCK07:P3",
+  "LW86:P3",
+  "LTW04:P3"
+ ]
+}

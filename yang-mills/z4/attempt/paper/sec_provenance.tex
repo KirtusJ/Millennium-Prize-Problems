@@ -1,0 +1,44 @@
+\section{Provenance and formal checks}\label{sec:provenance}
+
+\subsection{Who did what}
+The author directed the work, set its aim (an attempt at the whole problem, written to be disproved), and is accountable for the paper. He did not write or check the proofs.
+
+The statements, proofs, programs and text were produced by sessions of one model family, Claude (Anthropic). One session acted as director. It wrote the reduction of Section~\ref{sec:reduction} in its first form, chose the routes of Section~\ref{sec:routes}, and assembled the paper. Subordinate sessions, started by the director as separate processes and each with subordinate sessions of its own, did the following: \emph{builders} wrote the proofs of Theorems~\ref{thm:main}, \ref{thm:reduction} and~\ref{thm:conditional} and the arguments of Sections~\ref{sec:routes}--\ref{sec:CE}; \emph{challengers}, given only the text under attack, tried to break each of them with their own programs; \emph{formalizers} wrote the Lean files of Section~\ref{sec:lean}; \emph{readers} located statements in the literature. Every session shares its model family with the director. Their agreement reduces the exposure to error. It is not independent review.
+
+\subsection{What was attacked, and what the attacks found}
+Theorem~\ref{thm:reduction}: one challenge. The proof stood. Eight statements around it were wrong and were corrected, among them the claim that Hypothesis~\ref{hyp:C} concerns locality alone.
+
+Theorem~\ref{thm:main}: three challenges, of successive versions. The first found a circular gauge fixing, which was repaired, and could not check a classification of Gibbs states, which the second version avoids. The second found a mislabelled test and a quantifier missing from one statement. The third, of the two steps written last (Propositions on the Laplace limit and the limit field in Section~\ref{sec:proof}), found no failing line.
+
+Theorem~\ref{thm:conditional}: one challenge. The statement stood. One step of the proof used positivity of the transfer matrix, which the hypotheses do not give; the proof in Section~\ref{sec:reduction} uses the repaired step.
+
+Sections~\ref{sec:routes}--\ref{sec:CE}: the refutation in the curvature route was reproduced by a second session with separate code. The other numerical statements rest on one program each, except where the text says otherwise. A review of the working summaries against the underlying reports found six wrong and ten overstated sentences, which were corrected before this paper was written. The paper itself has had the corresponding review (Section~\ref{sec:paperreview}).
+
+\subsection{Checks by a second model lineage}
+Four other working groups of the same program are sessions of OpenAI Codex. Two of them checked Lemma~\ref{pf:lem-R} (the decomposition of a limit point into a free field and an independent constant background) as it stood at commit \repo{34f97d2} of~\cite{Repo}, each with its own argument for the constancy of the background, and one of them derived the asymptotics $G(n)=\pi^{-2}n^{-4}+O(n^{-6})$ and recomputed the constant in the tail bound of Section~\ref{sec:proof}. Their stated scope is that lemma, the Wick inequality that follows it, and the free correlation; they did not check the identification of the limit of the Wilson measures (the Laplace limit and the limit field). These checks are recorded in~\cite{RepoThread}.
+
+\subsection{What has not been done}
+No mathematician has read the paper. The director session did not read the proofs line by line; it read the statements, the challengers' reports and the tests. The sources cited for attribution were read by reader sessions, several of them only as abstracts; Section~\ref{sec:routes} says so where it matters. The reconstruction theorem used in Theorem~\ref{thm:conditional} was read in~\cite{KQR21}, not in~\cite{OS73,OS75}. The proofs do not depend on any cited result except that reconstruction theorem.
+
+\subsection{Formal checks}\label{sec:lean}
+Lean 4.19.0 with Mathlib at tag \repo{v4.19.0} (commit \repo{c44e0c8}). Each file compiles with exit code $0$, contains no \repo{sorry}, and \repo{\#print axioms} reports only \repo{propext}, \repo{Classical.choice}, \repo{Quot.sound} for every declaration listed. Paths are relative to \repo{yang-mills/z4/attempt/reviews} in~\cite{Repo}. The label \emph{formally checked} below means exactly this; it is not a statement about the analytic steps, none of which is formalized.
+
+\begin{center}
+\begin{tabular}{@{}p{0.36\textwidth}p{0.27\textwidth}p{0.29\textwidth}@{}}
+\toprule
+Printed statement & File & Declarations\\
+\midrule
+Finite-sum inequalities in the proof of Theorem~\ref{thm:reduction} (tail bound, gap bound, Jensen bound, mean energy, sharp constant $e$) & \repo{a2-leanR/A1R.lean} & \repo{A1R.L1}--\repo{L7}, \repo{L6\_sharp'}, \repo{D\_ge}, \repo{mutation\_false}\\
+Reduction step in Section~\ref{sec:proof}: a lower bound on a normalized correlation bounds the gap & \repo{a3-B/S2.lean} & \repo{s2\_gap\_le}, \repo{s2\_power}\\
+Scalar inequalities used in the Laplace limit: $1-\cos x\ge 2x^2/\pi^2$ on $[-\pi,\pi]$, and three quadratic and exponential bounds & \repo{a8-BL34/L34.lean} & \repo{one\_sub\_cos\_ge}, \repo{half\_pos\_part\_sq}, \repo{norm\_add\_sq\_ge}, \repo{exp\_rem}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The formal statements are for finite sums of atoms and for real numbers. Where the text uses a measure in place of a finite sum, the printed statement is more general than the formal one and is proved in the text.
+
+\subsection{Records}
+The working record of the attempt, including every brief given to a subordinate session, every program, result file and report, is in~\cite{Repo}. Each session's runs are recorded in an append-only hash-chained register (PCP OS; the Rust host built from commit \repo{92623fa} of its source verifies each chain), and the hierarchy of sessions for the second half of the work is recorded in that host's task graph. These records show what was run and in what order. They say nothing about whether a result is right.
+
+\subsection{Review of this paper}\label{sec:paperreview}
+\input{sec_paperreview}

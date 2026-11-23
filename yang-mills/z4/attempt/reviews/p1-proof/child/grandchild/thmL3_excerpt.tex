@@ -1,0 +1,56 @@
+\subsection{The conditional law in a box and the uniform Laplace limit}\label{pf:sec-L3}
+
+Fix $R=z+[-N,N]^4$. Under $\mu\in\cL_\beta$, Lemma~\ref{pf:lem-limit}(3) with $\Lambda=\Lambda'_R$ shows that the conditional law of $U_{\Lambda'_R}$ given the links outside $\Lambda'_R$ is $\propto e^{-\beta S_R}\,dU_{\Lambda'_R}$. Every $p\in P_R$ has its links in $\Lambda'_R$ or among the shell links, so this law depends only on the shell links.
+
+\emph{The gauge.} We fix the gauge in two steps that use no interior information. Let $g^s$ be the gauge transformation on shell sites with $g^s_b=1$ and $U^{g^s}=1$ on $T_s$; it is a function of the shell links only. Let $V:=U^{g^s}$ on the shell links, and let $\psi_l:=\sqrt\beta\log V_l$ for the shell links $l\notin T_s$ (and $\psi_l:=0$ on $T_s$). So $\psi$ is a function of the shell links only. Inside the conditional integral we apply Lemma~\ref{pf:lem-forest} with the forest $T_{\rm int}$ and $B=\partial R$: each tree of $T_{\rm int}$ meets $\partial R$ in exactly one site, and the gauge is $1$ there, so the shell links are unchanged.
+
+Let $w$ be a bounded measurable function of the links of $R$ that is invariant under gauge transformations $g$ on $R$ with $g_b=1$, and let $\Psi_w$ be its conditional expectation. A gauge transformation at interior sites is absorbed by Haar invariance of $dU_{\Lambda'_R}$; at shell sites it acts on the argument of $\Psi_w$. Hence $\Psi_w(\text{shell})=\Psi_w(V)$, a function of $\psi$. With the exponential chart $U_l=e^{i\sigma\cdot\varphi_l/\sqrt\beta}$ on $\Lambda''_R$, and $J(x):=(\sin|x|/|x|)^2/(2\pi^2)$ the Haar density in that chart (normalised: $\int_{|x|<\pi}J=\frac{4\pi}{2\pi^2}\cdot\frac\pi2=1$), we obtain $\Psi_w=K_\beta w$ with
+\begin{equation}\label{pf:eq-Kbeta}
+K_\beta(d\varphi\,|\,\psi)=Z_\beta(\psi)^{-1}\exp\big(-\beta S_R(\varphi/\sqrt\beta;\psi/\sqrt\beta)\big)\prod_{l\in\Lambda''_R}J(\varphi_l/\sqrt\beta)\,\mathbf 1\{|\varphi_l|<\pi\sqrt\beta\}\,d\varphi,
+\end{equation}
+where $S_R(x;y)$ is $S_R$ with interior variables $e^{i\sigma\cdot x}$ on $\Lambda''_R$, $1$ on $T_{\rm int}$, and shell variables $e^{i\sigma\cdot y}$ off $T_s$, $1$ on $T_s$. The factors $\beta^{-3\nu_R/2}$ cancel, and $\{|x_l|=\pi\}$ is Haar-null.
+
+\emph{Shell data from shell curvatures.} By Lemma~\ref{pf:lem-shell}, $|\psi_l|=\sqrt\beta\alpha(V_l)\le K_N\max_q\sqrt\beta\alpha_q\le K_N(\pi/\sqrt2)\max_q\sqrt{O_q}$, the maximum over the shell plaquettes $q$. With Corollary~\ref{pf:cor-tail} and a union bound, for every $M$,
+\begin{equation}\label{pf:eq-epsM}
+\mu(|\psi|>M)\le\varepsilon_R(M)\quad\text{for all }\beta\ge1,\ \mu\in\cL_\beta,\qquad\varepsilon_R(M)\xrightarrow[M\to\infty]{}0.
+\end{equation}
+Bounded shell data are thus implied by bounded gauge-invariant shell energies. No holonomy variables arise.
+
+Write $Q(\varphi;\psi):=\sum_{p\in P_R}|(d\varphi+d\psi)_p|^2$ (colours summed), where $\varphi$ and $\psi$ are extended by $0$. Then $\tfrac12Q(\varphi;\psi)=\tfrac12\langle\varphi,Q\varphi\rangle+\langle\varphi,B\psi\rangle+\tfrac12\langle\psi,C\psi\rangle$ for fixed matrices $B,C$, and $Q$ acts on each colour as the form of Corollary~\ref{pf:cor-zero}(2). Let $K_\infty(\cdot|\psi)$ be the Gaussian measure $\propto e^{-\frac12Q(\varphi;\psi)}d\varphi$: three independent colours, each $N(-Q^{-1}B\psi,\,Q^{-1})$.
+
+\begin{theorem}[uniform Laplace limit; L3]\label{pf:thm-L3}
+Fix a box $R$ and $M<\infty$. There are $c>0$ and $\beta_0(M)<\infty$ such that, for all $\beta\ge\beta_0(M)$, all $|\psi|\le M$ and all $\varphi$ in the chart,
+\begin{equation}\label{pf:eq-lower}
+\beta S_R(\varphi/\sqrt\beta;\psi/\sqrt\beta)\ge c|\varphi|^2-7M^2 .
+\end{equation}
+Moreover
+\[
+\lim_{\beta\to\infty}\ \sup_{|\psi|\le M}\ \big\|K_\beta(\cdot|\psi)-K_\infty(\cdot|\psi)\big\|_{TV}=0,
+\]
+so $\sup_{|\psi|\le M}|K_\beta W(\psi)-K_\infty W(\psi)|\to0$ for every bounded measurable $W$, also when $W$ depends on $\psi$ or on further parameters with $\|W\|_\infty$ uniformly bounded. Finally, uniformly in $|\psi|\le M$ and $\beta\ge\beta_0(M)$, $K_\beta(|\varphi|>r\,|\,\psi)\le z_M^{-1}e^{7M^2}\int_{|\varphi|>r}e^{-c|\varphi|^2}d\varphi+o(1)$ as $\beta\to\infty$, with $z_M>0$.
+The constant $c=\min(\lambda_N/16,\eta(\delta)/(2\nu_R\pi^2))$ contains $\eta(\delta)>0$, which is obtained by compactness and is not explicit.
+\end{theorem}
+
+\begin{proof}
+\emph{Choice of $\delta$.} Fix $\delta\in(0,1]$ with $48\delta^2e^{8\delta}\le\min(\lambda_N/16,1)$. Write $x=\varphi/\sqrt\beta$ on the interior and $x=\psi/\sqrt\beta$ on the shell, $\tilde\varphi$ for $\varphi$ on the interior and $\psi$ on the shell, $s_p:=\sum_{i\in p}|x_i|$ and $\tilde s_p:=\sqrt\beta s_p$.
+
+\emph{Near region} $\mathcal N:=\{|x_l|\le\delta\ \forall l\in\Lambda''_R\}$, with $\beta\ge M^2/\delta^2$ so that also every shell $|x_l|\le\delta$. For $p\in P_R$, $s_p\le4\delta$. By (E1), (E2), $\|\sigma\cdot v\|_{HS}=\sqrt2|v|$ and $\|A\|_{HS}\le\sqrt2\|A\|_{op}$,
+$\|U_p-1\|_{HS}\ge\sqrt2\big(|dx_p|-\tfrac12s_p^2e^{s_p}\big)$. With $\beta(1-\cos\alpha_p)=\frac\beta4\|U_p-1\|^2_{HS}$ this gives $\beta(1-\cos\alpha_p)\ge\tfrac12(a_p-b_p)_+^2$ with $a_p:=|(d\tilde\varphi)_p|$ and $b_p:=\tfrac12\sqrt\beta s_p^2e^{s_p}\le2\delta e^{4\delta}\tilde s_p$. The second elementary inequality and $\tilde s_p^2\le4\sum_{i\in p}|\tilde\varphi_i|^2$ give
+$\beta(1-\cos\alpha_p)\ge\tfrac14a_p^2-8\delta^2e^{8\delta}\sum_{i\in p}|\tilde\varphi_i|^2$. Each link lies in at most $6$ plaquettes, so
+$\beta S_R\ge\tfrac14Q(\varphi;\psi)-48\delta^2e^{8\delta}(|\varphi|^2+|\psi|^2)$. The third elementary inequality, Corollary~\ref{pf:cor-zero}(2) and $|(d\psi)_p|^2\le4\sum_{i\in p}|\psi_i|^2$ give $Q(\varphi;\psi)\ge\tfrac12\lambda_N|\varphi|^2-24|\psi|^2$. Hence on $\mathcal N$
+\[
+\beta S_R\ge(\lambda_N/8-48\delta^2e^{8\delta})|\varphi|^2-(6+48\delta^2e^{8\delta})|\psi|^2\ge(\lambda_N/16)|\varphi|^2-7|\psi|^2 .
+\]
+
+\emph{Far region.} The set $\mathcal K_\delta:=\{U_{\Lambda''_R}:\max_l\alpha(U_l)\ge\delta\}$ is compact, and $S_R(\cdot\,;\text{shell}=1)$ is continuous and, by Corollary~\ref{pf:cor-zero}(1), positive on it. Let $\eta(\delta)>0$ be its minimum. By the last relation in \eqref{pf:eq-alpha}, $1-\cos$ being $1$-Lipschitz, and each shell link lying in at most $6$ plaquettes,
+$|S_R(U;\psi/\sqrt\beta)-S_R(U;0)|\le6\sum_l|\psi_l|/\sqrt\beta\le6\sqrt{\nu_s}M/\sqrt\beta$. For $\beta\ge(12\sqrt{\nu_s}M/\eta)^2$ this is $\le\eta/2$, so $S_R\ge\eta/2$ on $\mathcal N^c$. Since $|\varphi|^2<\nu_R\pi^2\beta$ on the chart, $\beta S_R\ge(\eta/(2\nu_R\pi^2))|\varphi|^2$ there. With $\beta_0(M):=\max(M^2/\delta^2,144\nu_sM^2/\eta^2)$ this proves \eqref{pf:eq-lower}.
+
+\emph{Pointwise limit.} Fix $r$ and let $|\varphi|\le r$, $|\psi|\le M$, $\beta$ large. By (E3), $|\sqrt\beta\alpha_p-|(d\tilde\varphi)_p||\le\sqrt\beta|y_p-dx_p|\le\tilde s_p^2e^{\tilde s_p/\sqrt\beta}/\sqrt\beta$, and $\sqrt\beta\alpha_p,|(d\tilde\varphi)_p|\le\tilde s_p\le4(r+M)$. Also $0\le\beta(\alpha^2/2-(1-\cos\alpha))\le\beta\alpha^4/24$. Hence
+\[
+\big|\beta S_R-\tfrac12Q(\varphi;\psi)\big|\le C_N(r+M)^3e^{4(r+M)/\sqrt\beta}/\sqrt\beta+C_N(r+M)^4/\beta,
+\]
+with $C_N$ depending on $N$ only. Moreover $(2\pi^2)^{\nu_R}\prod_lJ(\varphi_l/\sqrt\beta)\to1$ uniformly on $|\varphi|\le r$, and the indicator equals $1$ once $\beta>r^2/\pi^2$.
+
+\emph{Convergence.} Let $f_\beta$ be the unnormalised density in \eqref{pf:eq-Kbeta} times $(2\pi^2)^{\nu_R}$, and $f_\infty:=e^{-\frac12Q(\varphi;\psi)}$. By the pointwise limit, $f_\beta\to f_\infty$ uniformly on $\{|\varphi|\le r,|\psi|\le M\}$. By \eqref{pf:eq-lower} and $J\le1/(2\pi^2)$, $f_\beta\le e^{7M^2}e^{-c|\varphi|^2}$; and $f_\infty\le e^{12M^2}e^{-\lambda_N|\varphi|^2/4}$. Splitting $\int=\int_{|\varphi|\le r}+\int_{|\varphi|>r}$ gives $\sup_{|\psi|\le M}\int|f_\beta-f_\infty|\,d\varphi\to0$. $Z_\infty(\psi):=\int f_\infty$ is continuous and positive, so $z_M:=\min_{|\psi|\le M}Z_\infty>0$. For $|W|\le1$, $|\int Wf_\beta/\int f_\beta-\int Wf_\infty/\int f_\infty|\le2\int|f_\beta-f_\infty|/\int f_\infty$, which gives the total-variation statement. The tail statement follows from the bound on $f_\beta$ and $\int f_\beta\ge z_M-o(1)$.
+\end{proof}
+

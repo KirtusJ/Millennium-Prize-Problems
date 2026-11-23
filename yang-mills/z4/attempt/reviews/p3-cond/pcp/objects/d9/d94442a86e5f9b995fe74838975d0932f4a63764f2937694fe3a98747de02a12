@@ -1,0 +1,29 @@
+`report.md` is written in `/home/user/z4-workers/p3-cond/child/`. The control answer is 6, and the Q2 program meets all three predicates once I fixed a bug in my first version.
+
+**Q1.** I found several statements in `sec_reduction.tex` that got stronger in the rewriting:
+- **Line 3:** it says both theorems are "proved in full". The source tags steps 2 and 11 as sketches and step 7 as cited from a secondary source or claimed.
+- **Lines 15, 39, 328:** T_β ≥ 0 for the Wilson action is called a theorem of Lüscher. CHALLENGE_S says that citation was from memory and unread.
+- **Line 397:** the H2 status "proved" drops the source's caveat "one model family, not independently reviewed".
+- **Lines 395, 405:** H0 is called proved, and reflection positivity of the periodic Wilson states is cited from Osterwalder–Seiler. The source marks that citation as claimed.
+- **Lines 15, 18:** "‖T_β‖ ≤ 1" is added without proof.
+- **Lines 52–55:** hypothesis (C) is generalized from c = 1/2 to any c in (0,1). I can't check Theorem R′ itself because its source isn't among my files.
+
+Line 241 uses P = 4k+2 where the source has P = 4k+1; I flagged it as a differing number.
+
+Weaker statements:
+- The gap lemma (line 312) uses the repaired form |F(s)| ≤ e^{-s}F(0).
+- The E0′ exponent is b+1 instead of b+ε.
+- The free-field section is called an analogue, with qualifications.
+
+Every free-field number and the Theorem S conclusions match the sources.
+
+**Q2.** All five steps of Lemma red:dense follow on reading. `q2b.py` meets all three predicates: rank 6, the conjugation identity in 6 of 6 planes with error 0.0, and W_4 has 384 elements of which 192 have determinant −1.
+
+**Failed predicates:**
+- **`q2.py` (my own bug):** it failed in 5 of 6 planes because of a vacuous `all(())` clause in the sigma search. I kept that output as `out_q2.run1_failed.txt` and fixed it in `q2b.py`.
+- **PCP check `grandchild-rerun` (my own expectation error):** I expected exit 1, but `diff` exits 0 when the files are identical.
+- **Grandchild G1 (my suggested bound was too tight):** with n ≤ 10000 the closest approach to φ = 0.5 is 3.6e-3, at n = 9752, so the 1e-3 target fails. With n ≤ 100000 the best is 2.1e-5. The lemma is not at fault.
+
+**Grandchild T28:** control 2+2 = 4 was correct. The θ = π/2 boundary case gave a group of size 384, which equals |W_4|, so it is finite. I reread its code, reran it with byte-identical output, and released T28.
+
+**Verification:** both verify commands passed. The last lines are quoted in `report.md`.

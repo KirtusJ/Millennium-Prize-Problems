@@ -1,0 +1,13 @@
+# notes p4-refs
+- step0: control.txt written (0.272341)
+- step1: register pcp init; child admitted as T23 (parent T22); child/PROMPT.txt written
+- step2: child-run1 started in background (T23). Network OK for arxiv API, crossref, inspire, zbmath. Next: write fetch.py
+- step3: fetch.py written, predicates P1-P4 fixed in docstring; running run1
+- step4: fetch-run1 done (K2 exit 0). child-run1 done (K1, 68 s); child control 1803.01950 graded CORRECT; T23 released. Child: KT02 title is 'Vortex waistlines and long range fluctuations' (not vortex free energy); CCK07 Crossref title adds 'theories'; FiveD11 = Knechtli-Luz-Rago NPB 856; BCH26 = Navier-Stokes lost in translation
+- step5: run1 results reviewed. Failures: OS73/OS75/OS78 zero hits (my query defect: title phrase); Guth80 first hit is Ukawa-Windey-Guth (my selection defect); GM82 INSPIRE year 1981 vs brief 1982 (Crossref issued 1982-01): to settle on publisher page; P3 fails from Crossref 429 rate limit (AC22, BS83, books) and from genuine title variants: CCK07 published title adds "theories"; Sin81 "Non-Abelian"; LW86 Crossref lacks "II. Scattering states"; FILS78 Crossref "I." vs INSPIRE "1."; LTW04 markup; Guth80 wrong paper. KT02 title = "Vortex waistlines and long range fluctuations" (brief's description wrong). GJ INSPIRE record is 1981 1st ed only.
+- step6: fetch2.py written (Q1-Q4 fixed), running run2
+- step7: run2 (K3) done: OS73/OS75/OS78/Guth80/AC22/BS83/LL10 confirmed; GM82 publisher 1982/01; LW86 publisher title lacks 'II. Scattering states'; OS78 published title 'on a lattice' (INSPIRE 'the'); ADC21 Annals page phi_4^4; JW only INSPIRE 540132 (no crossref); GJ Crossref book 1987 DOI 10.1007/978-1-4612-4728-9, subtitle/edition to check on Springer page
+- step8: GJ Springer page (K4): subtitle 'A Functional Integral Point of View', edition number 2. Writing refs.tex
+- step9: refs.tex written; check_refs.py (C1-C5) written; running
+- step10: check-refs1 (K5) all C1-C5 met (C4 is a weak substring test). Rerunning child program into scratchpad
+- step11: report.md written; final verify

@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/p2-neg/negnum.py", line 100, in <module>
+    main()
+    ~~~~^^
+  File "/home/user/z4-workers/p2-neg/negnum.py", line 72, in main
+    lhs = bessel_i(twoj, b) - bessel_i(twoj + 2, b)
+          ~~~~~~~~^^^^^^^^^
+  File "/home/user/z4-workers/p2-neg/negnum.py", line 39, in bessel_i
+    s += (x / 2) ** (2 * k + nu) / (math.factorial(k) * math.gamma(k + nu + 1))
+                                                        ~~~~~~~~~~^^^^^^^^^^^^
+OverflowError: math range error

@@ -1,0 +1,9 @@
+S1 True
+S2 exit codes [0, 0], error lines 0 -> True
+S3 undefined warnings 0 [] -> True
+S4 required ok=True, stray labels [] -> True
+S5 keys used ['JW', 'KQR21', 'Lu77', 'OS73', 'OS75', 'OS78'] -> True
+S6 banned hits [], footnote False -> True
+S7 section pages 1..12 = 12 -> True
+M1 total pages 12; remark envs 0; word 'first' 0
+SUMMARY met=7 failed=0 measured_only=1
