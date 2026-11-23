@@ -44,3 +44,5 @@ In the weak-coupling tangent field the exterior of a radius-$R$ cube predicts a 
 For C4’s two-mass Gaussian control, the light-mode weight determines polynomial growth of all moments of a bounded on-site scalar. Its moments at fixed distinct points converge to free Wick-square moments under a weaker overlap condition. [All-order growth and fixed-point limits](onsite-growth/README.md)
 
 For the parity-odd Wilson clover, a sine-weighted sum of side-two cells improves the weak-coupling upper bound on the bulk variance density to $C\beta^{-1/24}$. [Reflection comparison and tapered variance](odd-variance/README.md)
+
+For a fixed finite abelian gauge group the free-box correlation bound carries to dyadic periodic limits and the full site-reflection transfer norm. A 64-element nonabelian group illustrates a separate observable-class issue. [Finite-group source audit](finite-groups/README.md)

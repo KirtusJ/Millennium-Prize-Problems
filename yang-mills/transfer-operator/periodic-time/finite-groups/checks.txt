@@ -1,0 +1,3 @@
+equal curl fibres and exact zero period on the binary two-torus
+central twist preserves multiplication and the conjugacy class of each of 64 elements
+two based holonomies admit no common conjugator to their twisted pair
