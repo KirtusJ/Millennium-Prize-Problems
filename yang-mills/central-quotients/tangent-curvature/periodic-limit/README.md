@@ -33,6 +33,8 @@ For a variable last time index, a strided moment certificate and two indistingui
 
 Near product Haar measure the raw odd-clover covariance has a negative quadratic contact correction, with a quartic remainder uniform over every finite smearing. [Strong-coupling susceptibility coefficient](haar-clover-curvature/README.md)
 
+For distributional reconstruction the growth estimate supplies compactness, while one positive smeared norm ensures a field survives. Independent axial spin chains show how a point-normalized clock alone can disappear on smearing. [Conditional reconstruction and the primary OS theorem](distributional-reconstruction/README.md)
+
 ## Verification
 
 Two three-generation PCP OS deployments returned identical Lean source. The parent counted live links and temporal faces, the child counted distinct reflected faces and their multiplicities, and the grandchild computed a geometric crossing and emitted the general spectral implication. Hosted Lean 4.19.0 verified ten supporting declarations. In particular, fixed-lag convergence of moment arrays with the stated exponential lower bounds forces the contraction norms to tend to one. Each run rejected an invalid guest request and four changed mathematical statements. The identification of the Wilson field, reflection estimates and application of the transfer construction remain analytic proofs. [Lean source](PeriodicCriticality.lean) · [Guest source](worker.c) · [Receipts](receipts.zip)
