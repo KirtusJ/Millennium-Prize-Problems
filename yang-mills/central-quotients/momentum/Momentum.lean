@@ -197,6 +197,32 @@ theorem softAtom (x : ℝ) (hx : 1 ≤ x) : x*(1/x) = 1 ∧ x*(1/x)^3 ≤ 1 := b
   · calc x*(1/x)^3 = (x*(1/x)) * ((1/x)*(1/x)) := by ring
          _ ≤ 1 := by rw [h, one_mul]; exact (mul_le_mul_of_nonneg_right small u).trans (by simpa using small)
 
+/-- Recover a positive aligned vacuum vector distance from the rank-one projection distance. -/
+theorem alignedVacuum {z v p : ℝ} (h0 : 0 ≤ z) (h1 : z ≤ 1)
+    (hv : v^2 = 2*(1-z)) (hp : p^2 = 1-z^2) : v^2 ≤ 2*p^2 := by
+  nlinarith [mul_nonneg h0 (sub_nonneg.mpr h1)]
+
+private theorem rmsProduct {ι : Type*} (s : Finset ι) (f g : ι → ℝ) {A B : ℝ}
+    (hA : 0 ≤ A) (hB : 0 ≤ B)
+    (hf : ∑ i ∈ s, f i^2 ≤ A^2) (hg : ∑ i ∈ s, g i^2 ≤ B^2) :
+    ∑ i ∈ s, f i*g i ≤ A*B := by
+  have hfa := (Real.sqrt_le_sqrt hf).trans_eq (Real.sqrt_sq hA)
+  have hgb := (Real.sqrt_le_sqrt hg).trans_eq (Real.sqrt_sq hB)
+  exact (Real.sum_mul_le_sqrt_mul_sqrt s f g).trans
+    (mul_le_mul hfa hgb (Real.sqrt_nonneg _) hA)
+
+/-- Sum pointwise trace-norm errors using the squared norms returned by Parseval. -/
+theorem summedGramError {ι : Type*} (s : Finset ι) (err left right delta : ι → ℝ)
+    {A D h : ℝ} (hA : 0 ≤ A) (hD : 0 ≤ D) (hh : 0 ≤ h)
+    (hl : ∑ i ∈ s, left i^2 ≤ A^2) (hr : ∑ i ∈ s, right i^2 ≤ A^2)
+    (hd : ∑ i ∈ s, delta i^2 ≤ D^2)
+    (terms : ∀ i ∈ s, err i ≤ delta i*left i + delta i*right i + h*right i^2) :
+    ∑ i ∈ s, err i ≤ 2*D*A + h*A^2 := by
+  have hsum := Finset.sum_le_sum terms
+  simp only [Finset.sum_add_distrib, ← Finset.mul_sum] at hsum
+  linarith [rmsProduct s delta left hD hA hd hl,
+    rmsProduct s delta right hD hA hd hr, mul_le_mul_of_nonneg_left hr hh]
+
 end YangMills.Momentum
 
 open YangMills.Momentum
@@ -215,3 +241,5 @@ open YangMills.Momentum
 #print axioms adjointDifferentialFloor
 #print axioms shiftedResidual
 #print axioms quadraticWindowPoint
+#print axioms alignedVacuum
+#print axioms summedGramError

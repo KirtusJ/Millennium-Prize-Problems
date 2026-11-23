@@ -18,4 +18,4 @@ if __name__ == "__main__":
     if sys.argv[1:2] == ["worker"]:
         work(Path(sys.argv[2]), list(map(int, sys.argv[3:])), tasks=TASKS, entry=__file__)
     else:
-        run_case(HERE, __file__, TASKS, "Momentum", 15, MUTATIONS)
+        run_case(HERE, __file__, TASKS, "Momentum", 17, MUTATIONS)
