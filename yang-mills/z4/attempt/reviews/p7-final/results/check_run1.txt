@@ -1,0 +1,12 @@
+Q1	MET	7*8/48=7/6
+Q2	MET	d=3 0.4375, d=1 0.145833
+Q3	MET	d=1..10
+Q4	MET	d/2=3/2, d/8=3/8, (d/2)G(0)^2=3/8
+Q5	MET	0.620245007 vs 0.620245007
+Q6	MET	SU3 +1.21 sigma; SU2 -1.50 sigma; U1 +0.33 sigma
+Q7	MET	hyps=['(A): a gap at all large couplings', '(B): criticality at weak coupling', 'H0: lattice axioms', 'H3: uniform regularity in units of the gap', 'H4: asymptotic rotation invariance, one rotation']; routes=['Positive curvature', 'Center vortices', 'A finite-size criterion', 'Positivity of the character expansion', 'Exclusion']; P=['1', '2', '3', '4', '5', '6']; standard facts=10
+Q8	FAILED	listed declarations=['A1R.L1', 'L7', "L6\\_sharp'", 'D\\_ge', 'mutation\\_false'] -> count 10; printed 11
+Q9	FAILED	exists=False
+M1	measured	('SU2', -1.4999999999999736)
+M2	measured	Pages:           47
+COUNTS met 7, failed 2, measured only 2

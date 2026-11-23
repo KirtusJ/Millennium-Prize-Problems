@@ -1,0 +1,2 @@
+/home/user/z4-workers/p7-final/check.py:9: SyntaxWarning: invalid escape sequence '\i'
+  Q7 counts in paper/: abstract 'H0 to H4' -> 5 hypothesis environments H0,(A),(B),H3,H4 in sec_reduction; routes subsections in sec:routes = 4 + 1 exclusion; items P1..P6 = 6; standard facts \item in pf:sec-standard = 10.

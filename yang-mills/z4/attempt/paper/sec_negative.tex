@@ -454,16 +454,15 @@ in four dimensions.
 \item[P1] Reflection positivity at every $\beta$. Cited \cite{OS78}, as stated in its abstract.
 \item[P2] A strictly positive self-adjoint transfer matrix with a Perron--Frobenius ground
 state. Positivity of the transfer matrix is cited \cite{OS78,Lu77}, as stated in their
-abstracts; the Perron--Frobenius ground state is argued in the worker report from the
-Hamiltonian limit, not cited.
+abstracts; the Perron--Frobenius ground state is argued here from the Hamiltonian limit
+and is not cited.
 \item[P3] Positive character coefficients of the Wilson weight at every $\beta>0$. Proved here
 for $\SU(2)$ (Lemma~\ref{neg:lem-cj}); for $\U(1)$ the coefficients are $I_n(\beta)>0$; for
 $\Z_2$ they are $\cosh\beta$ and $\sinh\beta$.
 \item[P4] A gap and analyticity at small $\beta$. Cited \cite{OS78} for the gap and area law at
 strong coupling for every compact group, as stated in its abstract; analyticity by cluster
 expansion is claimed as standard.
-\item[P5] A positive gap in every finite periodic volume at every $\beta$. Stated in the worker
-reports, not written out there; it follows from P2 by the Perron--Frobenius theorem for the
+\item[P5] A positive gap in every finite periodic volume at every $\beta$. Not written out in a source we read; it follows from P2 by the Perron--Frobenius theorem for the
 compact finite-volume transfer operator.
 \item[P6] A nontrivial center: $\Z_2\subset\SU(2)$; $\U(1)$ and $\Z_2$ are their own centers.
 Elementary.
@@ -556,9 +555,7 @@ $\log C(\xi/2^j)-\log C(\xi)\le\xi\log(1/q)\le2\xi K'm=2K'$, using $-\log(1-x)\l
 $x\le\frac12$.
 \end{proof}
 
-The worker compiled the integer form of this chain (Lean, declaration \texttt{A3C.step\_chain})
-with exit code $0$ and the axioms propext, Classical.choice, Quot.sound; it was not recompiled
-for this section. The real-time convexity argument is not formalized.
+Neither this chain nor the real-time convexity argument is among the formal checks of Section~\ref{sec:lean}.
 
 \begin{observation}\label{neg:obs-Cprime-free}
 (C$'$) fails for lattice-local observables in the free massive lattice field, while (C) holds
@@ -680,7 +677,7 @@ $\xi_2/L$, consistent with the Gaussian scaling limit of \cite{ADC21} (as stated
 These calibrations do not bear on the claims of this paper.
 
 What is not known. No rigorous non-Gaussian scaling limit of a lattice gauge theory in three or
-more dimensions is known to the workers; no search establishing absence was made. The constant
+more dimensions was found; the search was not systematic. The constant
 in the short-distance statement of (E) for the trace of the stress tensor is not derived. Whether
 (E$^*$) can be proved from lattice information is open: it lives at the correlation length,
 where control is the gap problem itself.
