@@ -6,6 +6,8 @@ The [position-space and quaternion control](check.py) constructs all periodic fi
 
 An exact link-product control uses a noncommuting background and a nonconstant field on a three-site-per-direction cube. It evaluates the local plaquette, the squared sine of a winding angle, and a transported plane average in the same configuration. At $h=0.04$ their absolute errors against their three distinct scaled limits are 0.02060, 0.00556 and 0.01365. At $h=0.000625$ these fall to 0.00205, 0.00045 and 0.00157. These pointwise checks test the expansions; they do not sample the interacting vacuum.
 
+The control also evaluates the full winding vector $V_i=(\mathrm{Re}\,H_i)\mathrm{Im}\,H_i/(N_i h)$ in all three directions. Independent site rotations conjugate the winding holonomy at its base. The measured vector agrees with that rotation before and after flipping the final link by the center, to absolute tolerance $3\times10^{-13}$. On the same field at $h=0.000625$, the Euclidean errors against $X_i$ are 0.0059943, 0.0064432 and 0.0064968. This directly tests the vector in the spectral argument, including its sign.
+
 Three native [PCP OS proof-template workers](worker.c) emitted the [Lean source](ObservableWeights.lean) through a host-mediated parent, child and grandchild sequence. Two boot sequences reproduced the same guest executable hashes and emitted source SHA-256 `0897fdf45f3f31223cc4169e02574f5ee69581100bcfa002b0dd22bf87758891`. The measured kernel was `d2fae4ef3df316ff4fa0c1a88744e66cc17bd794856979fa55188b8402f7222f`; each boot recorded 47 register events.
 
 | Guest | Finite control | ELF SHA-256 |
