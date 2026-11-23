@@ -1,0 +1,41 @@
+{
+  "method": {
+    "release_fingerprint": "7ff72eed9162e2c11fc62f6681c4afbc29524bfa96b87d45a455423d027d4707",
+    "core_descriptor_sha256": "9f5998dd75e921afe490687783787847916428f7ee7bcea410a88dad04646fb0",
+    "files": 58,
+    "matches_required": true
+  },
+  "controls": [
+    {
+      "name": "missing-result",
+      "rejected": true,
+      "register_unchanged": true,
+      "reason": "a task is DONE only when its result is in the record; none is named, or the one named is not there"
+    },
+    {
+      "name": "wrong-readback",
+      "rejected": true,
+      "register_unchanged": true,
+      "reason": "a task is DONE only when the digest read back after it exited equals the digest it reported"
+    },
+    {
+      "name": "valid-readback",
+      "accepted": true,
+      "digest": "ec071f35c017006fca0f844adfc9e33c4a342d153dd9868e30c57194a5cb22c9"
+    }
+  ],
+  "verification": {
+    "events": 7,
+    "head": "644dac5c95372b867bcb25825eebc370cae62ae3e8cbd33fbbb4c5e79c69e709",
+    "guard_problems": [],
+    "altered_objects": [],
+    "objects_by_reference_only": 0,
+    "anchor": null,
+    "ok": true
+  },
+  "limits": [
+    "Python host only; no native Rust or freestanding kernel execution",
+    "Local integrity and selected guard behavior, not actor authentication or mathematical correctness",
+    "Old runtime method identity is distinct from current enterprise and historical Fidelity Lab sources"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "cube": {
+    "edge_assignments": 4096,
+    "face_patterns": 32,
+    "multiplicity": 128,
+    "pushforward": "8177/2048",
+    "independent_face_weight": "15625/4096",
+    "difference": "729/4096"
+  },
+  "flat_lifts": {
+    "tuples": 256,
+    "commuting": 46,
+    "noncommuting": 210,
+    "flux_patterns": 36,
+    "nonzero_pattern_multiplicity": 6
+  },
+  "limits": "Finite exact checks. No continuum field theory or spectral gap conclusion."
+}

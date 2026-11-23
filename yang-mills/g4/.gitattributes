@@ -1,0 +1,2 @@
+ReflectionPositivity.lean -text whitespace=cr-at-eol
+evidence/** -text -whitespace

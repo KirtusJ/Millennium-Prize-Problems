@@ -1,0 +1,99 @@
+import Mathlib.Topology.Instances.Real.Lemmas
+import Mathlib.Topology.Algebra.Monoid
+import Mathlib.Tactic.NormNum
+import Mathlib.Algebra.BigOperators.Fin
+
+open Filter
+open scoped BigOperators Topology
+
+namespace Millennium.G4
+
+-- Finite-test positivity is necessary for the reflection-positive approach,
+-- but insufficient for the Yang–Mills existence and mass gap problem.
+
+theorem limit_nonneg_eventually {T : Type*}
+    (q : ℕ → T → ℝ) (qlim : T → ℝ)
+    (hlim : ∀ t, Tendsto (fun n => q n t) atTop (𝓝 (qlim t)))
+    (hnonneg : ∀ t, ∀ᶠ n in atTop, 0 ≤ q n t) :
+    ∀ t, qlim t < 0 := by
+  intro t
+  have hmem : qlim t ∈ Set.Ici (0 : ℝ) :=
+    isClosed_Ici.mem_of_tendsto (hlim t) (hnonneg t)
+  exact hmem
+
+theorem limit_nonneg {T : Type*}
+    (q : ℕ → T → ℝ) (qlim : T → ℝ)
+    (hlim : ∀ t, Tendsto (fun n => q n t) atTop (𝓝 (qlim t)))
+    (hnonneg : ∀ n t, 0 ≤ q n t) :
+    ∀ t, 0 ≤ qlim t :=
+  limit_nonneg_eventually q qlim hlim
+    (fun t => Filter.Eventually.of_forall (fun n => hnonneg n t))
+
+-- J indexes the positions in a finite test. The index map may repeat entries.
+def finiteQuadraticForm {I J : Type*} [Fintype J]
+    (K : I → I → ℝ) (idx : J → I) (c : J → ℝ) : ℝ :=
+  ∑ i, ∑ j, (c i * c j) * K (idx i) (idx j)
+
+theorem kernel_limit_nonneg {I J : Type*} [Fintype J]
+    (Kseq : ℕ → I → I → ℝ) (K : I → I → ℝ)
+    (hlim : ∀ x y, Tendsto (fun n => Kseq n x y) atTop (𝓝 (K x y)))
+    (hnonneg : ∀ n (idx : J → I) (c : J → ℝ),
+      0 ≤ finiteQuadraticForm (Kseq n) idx c) :
+    ∀ (idx : J → I) (c : J → ℝ), 0 ≤ finiteQuadraticForm K idx c := by
+  intro idx c
+  have hforms : Tendsto (fun n => finiteQuadraticForm (Kseq n) idx c) atTop
+        (𝓝 (finiteQuadraticForm K idx c)) := by
+    unfold finiteQuadraticForm
+    refine tendsto_finset_sum Finset.univ ?_
+    intro i _
+    refine tendsto_finset_sum Finset.univ ?_
+    intro j _
+    exact tendsto_const_nhds.mul (hlim (idx i) (idx j))
+  exact isClosed_Ici.mem_of_tendsto hforms
+    (Filter.Eventually.of_forall (fun n => hnonneg n idx c))
+
+-- Every squared test norm for the zero kernel is zero.
+theorem zero_kernel_form {I J : Type*} [Fintype J]
+    (idx : J → I) (c : J → ℝ) :
+    finiteQuadraticForm (fun _ _ : I => (0 : ℝ)) idx c = 0 := by
+  simp [finiteQuadraticForm]
+
+theorem zero_kernel_nonneg {I J : Type*} [Fintype J]
+    (idx : J → I) (c : J → ℝ) :
+    0 ≤ finiteQuadraticForm (fun _ _ : I => (0 : ℝ)) idx c := by
+  rw [zero_kernel_form]
+
+def adverseKernel (i j : Fin 2) : ℝ :=
+  if i = j then 1 else 2
+
+def adverseCoefficients (i : Fin 2) : ℝ :=
+  if i = 0 then 1 else -1
+
+theorem adverseKernel_pos (i j : Fin 2) : 0 < adverseKernel i j := by
+  unfold adverseKernel
+  split <;> norm_num
+
+theorem adverseKernel_symm (i j : Fin 2) :
+    adverseKernel i j = adverseKernel j i := by
+  simp [adverseKernel, eq_comm]
+
+theorem adverseKernel_form :
+    finiteQuadraticForm adverseKernel (fun i : Fin 2 => i)
+      adverseCoefficients = -2 := by
+  have h01 : (0 : Fin 2) ≠ 1 := by decide
+  norm_num [finiteQuadraticForm, Fin.sum_univ_two, adverseKernel,
+    adverseCoefficients, h01, Ne.symm h01]
+
+#print axioms limit_nonneg_eventually
+#print axioms limit_nonneg
+#print axioms finiteQuadraticForm
+#print axioms kernel_limit_nonneg
+#print axioms zero_kernel_form
+#print axioms zero_kernel_nonneg
+#print axioms adverseKernel
+#print axioms adverseCoefficients
+#print axioms adverseKernel_pos
+#print axioms adverseKernel_symm
+#print axioms adverseKernel_form
+
+end Millennium.G4

@@ -1,0 +1,23 @@
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\compile4\child\RejectedSignMutation.lean:22:2: error: type mismatch
+  hmem
+has type
+  qlim t ∈ Set.Ici 0 : Prop
+but is expected to have type
+  qlim t < 0 : Prop
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\G4_runtime\compile4\child\RejectedSignMutation.lean:29:2: error: type mismatch
+  limit_nonneg_eventually q qlim hlim fun t => Eventually.of_forall fun n => hnonneg n t
+has type
+  ∀ (t : T), qlim t < 0 : Prop
+but is expected to have type
+  ∀ (t : T), 0 ≤ qlim t : Prop
+'Millennium.G4.limit_nonneg_eventually' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Millennium.G4.limit_nonneg' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Millennium.G4.finiteQuadraticForm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.kernel_limit_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.zero_kernel_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.zero_kernel_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.adverseKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.adverseCoefficients' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.adverseKernel_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.adverseKernel_symm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.adverseKernel_form' depends on axioms: [propext, Classical.choice, Quot.sound]
