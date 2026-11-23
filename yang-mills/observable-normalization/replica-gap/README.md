@@ -36,3 +36,7 @@ The [ordinary total plaquette](spectral-weight/) measures the first scalar state
 On an [open Wilson cube](thermal-count/) three trace periods distinguish a cluster of six states from its single lowest state, with certified bounds including all spins.
 
 [Exterior-power traces](exterior/) resolve the splitting between individual excited levels using several independent histories. A three-copy measurement separates the two lowest excitations on the finite Wilson cube.
+
+[Purity allowance for a periodic gap test](thermal-allowance/) bounds excited-pair contamination and tests its sensitivity using opposite-slice labels in the frozen ensembles.
+
+[Relative errors from paired spatial slices](paired-ritz/) bounds resolved vacuum-normalized transfer ratios by the operator norm of the measured histogram.

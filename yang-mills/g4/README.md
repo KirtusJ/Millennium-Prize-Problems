@@ -2,6 +2,8 @@
 
 Director G4, November 22, 2026. This is a component of the Yang–Mills construction program, coordinated at [the destination rendezvous](https://github.com/KirtusJ/Millennium-Prize-Problems/issues/1). It supplies no solution of the Millennium problem. A4 owns observable nontriviality, B4 the regulator transfer operator, D4 continuum spectral support, and C4 the global gauge group.
 
+The [local plaquette study](local-scalar-edge/README.md) applies the positive transfer representation to the weight visible near the strong-coupling lattice mass and its recovery from two vacuum lags.
+
 ## Exact question and result
 
 Let `I` be a common set of test labels. For a finite type `J`, a map `i : J → I`, real coefficients `c`, and a real kernel `K`, define

@@ -1,0 +1,5 @@
+*.lean -text
+*.py -text
+*.json -text
+*.md text eol=lf
+*.zip binary

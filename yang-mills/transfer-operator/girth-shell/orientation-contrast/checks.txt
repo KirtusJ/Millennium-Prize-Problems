@@ -1,0 +1,3 @@
+lower-pair product including repeated centers
+125 directional eigenvector and translation corrections
+based cube and frozen-eigenvector ball constants

@@ -40,3 +40,13 @@ For a candidate transfer Hamiltonian and centered vector, the two inputs are the
 [Uniform isolation of the first Wilson transfer band](uniform-band/) gives the volume-independent spectral estimate and its strong-coupling mass expansion.
 
 [Boundary weight above the bulk static spectrum](boundary-weight/) bounds the fraction carried by a fixed open-cube boundary layer.
+
+[Periodic thermal transition frequencies](thermal-transitions/) tests the number of nonzero energy differences visible in the matched slice-flow measurements.
+
+[Minimal two-charge winding supports](winding-count/) counts bends and gives the leading fixed-box Bernoulli witness probability.
+
+[Directional winding-energy bounds](winding-rate/) applies displacement-weighted walks to the charged Wilson sectors.
+
+[Unit-coupling plaquette spectral window](plaquette-window/) bounds both lattice-energy endpoints using two exterior slices and the fundamental-link tensor rule.
+
+[A finite difference of cube-centered plaquettes](filtered-contrast/) isolates the quartic overlap and its eleventh-power spectral weight.

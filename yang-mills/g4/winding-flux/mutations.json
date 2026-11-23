@@ -1,0 +1,20 @@
+[
+  {
+    "label": "negative_cancellation",
+    "find": "chi i * weight i = 0 := by",
+    "replace": "chi i * weight i = 1 := by",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_ratio",
+    "find": "|n| / z ≤ p := by",
+    "replace": "|n| / z < p := by",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_multiplicity",
+    "find": "4^3 = 1312",
+    "replace": "4^3 = 1313",
+    "diagnostic": "error:"
+  }
+]
