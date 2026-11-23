@@ -90,3 +90,7 @@ In the $SU(2)$ vacuum, rooted plaquettes scaled by $\sqrt\beta$ have a joint Gau
 ## Positive physical-time weight in coherently smeared magnetic curvature
 
 On explicit rapidly weakening pure $SU(2)$ Wilson trajectories, a fixed physical spatial smearing of parallel-transported curvature gives positive mean-normalized and variance-normalized connected readings. The full rooted spacetime field has a free Maxwell curvature limit under the stated joint bounds. The coherent magnetic energy has connected physical spectral mass proportional to $\epsilon^8$ near zero. [Trajectories, original-law argument and spectral measures](magnetic-smearing/)
+
+## The visible Lie algebra and a charge-odd Wilson sector
+
+The curvature and explicit free-trajectory results extend to compact character actions in their representation metric. At fixed cells the ordered cube has a nonzero signed correction, and the ordinary imaginary $SU(3)$ plaquette trace has limiting variance $5/12$ after scaling by $\beta^{3/2}$. At fixed physical time, two orthogonal cubic color singlets in $SU(3)$ have reading ratio $5/9$ on the specified trajectories. [Compact groups, cube identity and charge conjugation](lie-curvature/)
