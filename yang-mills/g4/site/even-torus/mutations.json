@@ -1,0 +1,6 @@
+[
+  {"label":"negative_normal","find":"2*m-1-t < m ↔ m ≤ t","replace":"2*m-1-t < m ↔ m < t","diagnostic":"error:"},
+  {"label":"negative_square","find":"w y * Complex.normSq (∫ x, f y x ∂μ) ∂η : ℝ","replace":"2 * w y * Complex.normSq (∫ x, f y x ∂μ) ∂η : ℝ","diagnostic":"error:"},
+  {"label":"negative_copies","find":"copies*energy/8 ≤ energy/2","replace":"copies*energy/8 ≤ energy/3","diagnostic":"error:"},
+  {"label":"negative_mixture","find":"r^2*(A+B+C) ≤ r^2*A+r*B+C","replace":"r*(A+B+C) ≤ r^2*A+r*B+C","diagnostic":"error:"}
+]
