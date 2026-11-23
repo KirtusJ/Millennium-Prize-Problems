@@ -1,0 +1,14 @@
+[
+  {
+    "label": "negative_missing_tail_energy",
+    "find": "(u^2 + e^2)*(x^2 + y^2)",
+    "replace": "u^2*(x^2 + y^2)",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_reversed_angle",
+    "find": "t + h*(1-t) ≤ h+(1-h)*s",
+    "replace": "t + h*(1-t) ≥ h+(1-h)*s",
+    "diagnostic": "error:"
+  }
+]

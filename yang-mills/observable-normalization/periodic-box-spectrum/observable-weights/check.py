@@ -43,6 +43,18 @@ def inv(q):
     return q*np.array([1,-1,-1,-1])
 
 
+def winding_holonomy(line):
+    path = np.array([1.,0.,0.,0.])
+    for link in line:
+        path = box.multiply(path,link)
+    return path
+
+
+def winding_vector(line,h):
+    path = winding_holonomy(line)
+    return path[0]*path[1:]/(len(line)*h)
+
+
 def sample(h, x, z):
     logs = h*x+h**1.5*z
     u = box.qexp(logs)
@@ -63,9 +75,7 @@ def sample(h, x, z):
             total += box.multiply(box.multiply(path,face),inv(path))[1:]
             if (i,j)==(0,0):
                 local = np.sum((f-g)**2)/(2*h**3)
-    winding = uid.copy()
-    for i in range(size):
-        winding = box.multiply(winding,u[i,0,0,0])
+    winding = winding_holonomy(u[:,0,0,0])
     return np.array([local, np.sum(winding[1:]**2)/(size*h)**2,
                      np.linalg.norm(total)/(size**2*h**2)])
 
@@ -84,6 +94,31 @@ def loop_check():
         if prev is not None:
             assert np.max(err) < .65*np.max(prev)
         prev = err
+    # Test the actual covariant vector (Re H) Im H/(N h) in all three directions.
+    rotations = box.qexp(np.random.default_rng(319).normal(size=z.shape[:3]+(3,)))
+    base = rotations[0,0,0]
+    for h in (.4,.01,.000625):
+        links = box.qexp(h*x+h**1.5*z)
+        errors = []
+        for i in range(3):
+            path = [0,0,0]
+            path[i] = slice(None)
+            line = links[tuple(path)+(i,)]
+            g = rotations[tuple(path)]
+            rotated = box.multiply(box.multiply(g,line),inv(np.roll(g,-1,axis=0)))
+            v = winding_vector(line,h)
+            want = box.multiply(box.multiply(base,np.r_[0.,v]),inv(base))[1:]
+            np.testing.assert_allclose(winding_vector(rotated,h),want,atol=3e-13,rtol=0)
+            rotated[-1] *= -1
+            np.testing.assert_allclose(winding_vector(rotated,h),want,atol=3e-13,rtol=0)
+            errors.append(np.linalg.norm(v-x[i]))
+        print("winding-vector errors",h,np.round(errors,8))
+        assert max(errors)<np.sqrt(h)
+    expected_cross = 2*curl@np.cross(x[0],x[1])
+    for h in (1e-3,1e-4,1e-5,1e-6):
+        measured = (sample(h,x,z)[0]-expect[0])/np.sqrt(h)
+        assert abs(measured-expected_cross)<0.13*np.sqrt(h)
+    print("last rescaled plaquette correction",measured,"predicted",expected_cross)
 
 
 def threshold_check():

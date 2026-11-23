@@ -125,12 +125,15 @@ def radial(n,l,x):
     return (1-x.square())**(l//2)*g/I.rational(norm).sqrt()
 
 
-def interval_matrices(bases,kinetics, *, include_square=False):
+def interval_matrices(bases,kinetics, *, include_square=False, include_average=False, squared_weight=False):
     labels=sorted({ls for basis in bases for _,ls,_ in basis},key=lambda x:(sum(x),x))
     index={l:i for i,l in enumerate(labels)}
     max_n=max(max(ns) for basis in bases for ns,_,_ in basis)
     max_l=max(max(l) for l in labels)
-    observable_degree = 4 if include_square else 2
+    if squared_weight:
+        assert not include_square and not include_average
+        assert 2*max(max_n,max_l)+2*23 <= 2*ORDER-1
+    observable_degree = 4 if include_square or include_average else 2
     assert 2*max_n+2*DEGREE+observable_degree<=2*ORDER-1 and 2*max_l+2*DEGREE<=2*ORDER-1
 
     v,w=rule("P")
@@ -160,11 +163,17 @@ def interval_matrices(bases,kinetics, *, include_square=False):
         sl=slice(start,start+48)
         # Three outward elementwise products preserve the precision of the exponent.
         pot=sum(pairs[sl,i,None]*angular[i,None,:] for i in range(3))
-        val=mat(exp_negative(-8*pot),aw)
+        weight=exp_negative(-8*pot)
+        val=mat(weight.square() if squared_weight else weight,aw)
         lo[sl],hi[sl]=val.lo,val.hi
     integral=I(lo,hi)
     obs=(s[0]-s[1])/I(2).sqrt()
     factors=(1,obs,obs.square()) if include_square else (1,obs)
+    if include_average:
+        average_square=sum((s[i]-s[j]).square() for i,j in ((0,1),(0,2),(1,2)))/6
+        factors=(*factors,average_square)
+    if squared_weight:
+        factors=(1,)
     results=[]
     for basis,kin in zip(bases,kinetics):
         tags=np.array([index[ls] for _,ls,_ in basis])
