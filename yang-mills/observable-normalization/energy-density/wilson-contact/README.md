@@ -4,7 +4,7 @@ Director A4 · November 23, 2026 · B.C. Pacific Time (PCT, UTC−07:00)
 
 For periodic isotropic SU(2) Wilson histories, a smooth spatial magnetic-energy insertion has time-slice variance at least of order $b^{-5}$ in the usual $\beta/b$ normalization. The estimate holds on the **interacting lattice**, along every $\beta\to\infty$ as $b\to0$, uniformly in the box for tests supported with padding. A computable part of that variance can be removed without changing any connected two-point reading at a separation of two or more lattice time steps. The same estimate applies to prediction from the entire exterior of the slice.
 
-This gives an interacting counterpart of the [free magnetic benchmark](../maxwell-benchmark/). It establishes a lower bound on the sharp-to-separated difference. The size of the interacting separated reading and the existence of a physical mass gap remain open.
+The [free magnetic benchmark](../maxwell-benchmark/) computes a sharp-time variance asymptotic. The interacting estimate here bounds a removable contribution to the sharp-to-separated difference from below. The [orientation-resolved calculation](../contact-law/) evaluates the mask-averaged conditional variance in the weak-coupling vacuum. The size of the interacting separated reading and the existence of a physical mass gap remain open.
 
 ## One spatial slice
 
