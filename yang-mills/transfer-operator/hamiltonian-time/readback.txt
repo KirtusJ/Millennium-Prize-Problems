@@ -1,0 +1,115 @@
+Post-exit PCP desk
+{"max_depth":2,"max_live":3,"max_total":4,"revision":8,"nodes":[{"id":1,"parent":null,"label":"root","state":"Finished"},{"id":2,"parent":1,"label":"generation","state":"Finished"},{"id":3,"parent":2,"label":"geometry","state":"Finished"},{"id":4,"parent":2,"label":"certificate","state":"Finished"}]}
+
+Native certificate
+Serial SHA-256 be004765456aceafda2a56af7d30100e10beb742f9b9f7f3fad9a844443d33de
+running image (code and read-only data), SHA-256: 0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3 (measured; equal to the value the loader named)
+starting worker.elf (9096 bytes, SHA-256 920eaae107abc827a6de3f6810ec3dc9e7894b32e7b3e3b2939669e5a7d0ec3a)
+worker.elf ended DONE: exit 0 after 0 s; 12 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 258 pages at the end, 0 of them the display's, 0 both writable and executable; 264 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
+
+Native assembly
+Serial SHA-256 0c29e8a68bd7039ee04daa2af2bad4c654c29f01d6fdcdda5b95a0e7ea4af8f9
+running image (code and read-only data), SHA-256: 0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3 (measured; equal to the value the loader named)
+starting worker.elf (50120 bytes, SHA-256 1cb649a9954be008a7f74ada3fb1494f1949d7947b85bf221875c655ea59afcd)
+worker.elf ended DONE: exit 0 after 0 s; 140 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 268 pages at the end, 0 of them the display's, 0 both writable and executable; 274 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
+
+Lean 4.19.0 dependency read-back
+'Millennium.YangMills.HamiltonianTime.electricSmearing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.HamiltonianTime.polarTrial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.HamiltonianTime.weakLower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.HamiltonianTime.casimirCoefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.HamiltonianTime.cycleProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.HamiltonianTime.rangeSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.HamiltonianTime.rescale' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.HamiltonianTime.blockUnitGap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.HamiltonianTime.faceLeak' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.HamiltonianTime.localWitness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.HamiltonianTime.tangentPoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+WrongCoverage
+26:63: error: unsolved goals
+
+RelaxedCoupling
+60:31: error: linarith failed to find a contradiction
+
+OvertightTrial
+92:4: error: linarith failed to find a contradiction
+
+WrongCasimir
+11:49: error: unsolved goals
+
+Finite checks
+{
+  "tori": {
+    "2": {
+      "sites": 8,
+      "edges": 24,
+      "girth": 2,
+      "site_coverage": 4,
+      "spectator_costs": [
+        0,
+        1
+      ]
+    },
+    "3": {
+      "sites": 27,
+      "edges": 81,
+      "girth": 3,
+      "site_coverage": 4,
+      "spectator_costs": [
+        0,
+        1
+      ]
+    },
+    "4": {
+      "sites": 64,
+      "edges": 192,
+      "girth": 4,
+      "site_coverage": 4,
+      "spectator_costs": [
+        0,
+        1
+      ]
+    },
+    "5": {
+      "sites": 125,
+      "edges": 375,
+      "girth": 4,
+      "site_coverage": 4,
+      "spectator_costs": [
+        0,
+        1
+      ]
+    },
+    "6": {
+      "sites": 216,
+      "edges": 648,
+      "girth": 4,
+      "site_coverage": 4,
+      "spectator_costs": [
+        0,
+        1
+      ]
+    }
+  },
+  "coupling_and_energies_n_1_2_4": [
+    [
+      64,
+      1.511762268,
+      4.030939636,
+      12.088732013
+    ],
+    [
+      256,
+      1.502932515,
+      4.007794308,
+      12.023135929
+    ],
+    [
+      1024,
+      1.5007326,
+      4.001952006,
+      12.005840715
+    ]
+  ]
+}
