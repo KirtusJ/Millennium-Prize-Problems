@@ -100,8 +100,27 @@ def resolution_control():
     return counts
 
 
+def secant_controls():
+    count = 0
+    for nodes in ((F(0), F(1, 4), F(4, 5)), (F(1, 5), F(1, 2), F(9, 10)), (F(1, 3),)):
+        def moment(i):
+            return sum(u ** i for u in nodes)
+
+        for target in (17, 33, 65):
+            middle = (target - 1) // 2
+            ratio = moment(middle) / moment(target)
+            for k in (1, 2, 3):
+                # Physical lags r=2+2k and 2r have moment indices k and 2k+1.
+                assert 2 * k + 1 <= middle
+                assert 1 / max(nodes) ** (target - middle) <= ratio
+                assert ratio ** (k + 1) <= (moment(k) / moment(2 * k + 1)) ** (target - middle)
+                count += 1
+    return count
+
+
 if __name__ == "__main__":
     print(json.dumps({"polynomial_points": polynomial_controls(),
                       "spectral_enclosures": integral_controls(),
                       "gamma_control": clock_controls(),
-                      "resolution_ratio_binary_orders": resolution_control()}, indent=2))
+                      "resolution_ratio_binary_orders": resolution_control(),
+                      "two_sided_secants": secant_controls()}, indent=2))

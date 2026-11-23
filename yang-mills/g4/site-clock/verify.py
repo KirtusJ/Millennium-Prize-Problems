@@ -12,7 +12,8 @@ from zipfile import ZipFile
 
 
 ROOT = Path(__file__).resolve().parent
-REVIEWS = ("clock", "chebyshev", "forest", "initial", "clarified", "spectra", "final")
+REVIEWS = ("clock", "chebyshev", "forest", "initial", "clarified", "spectra", "final",
+           "envelope_initial", "envelope")
 PAPERS = ("README.md", "certificate.md", "precision-limit.md", "clock.py")
 A4_BLOBS = {
     "README.md": "29a991f1801da0a9552be8aa4399bf24a05cbe18",
@@ -52,6 +53,8 @@ def verify_workers(archive, source):
             assert candidate.decode().replace("\r\n", "\n").strip() in source.decode()
         else:
             candidate = archive.read("inputs/" + name + ".txt")
+        if name == "envelope":
+            assert candidate == (ROOT / "envelope.md").read_bytes()
         parent = json.loads(archive.read(name + "/receipt.json"))
         assert parent["passed"] and parent["method"]["matches_required"]
         assert parent["method"]["release_fingerprint"] == FINGERPRINT

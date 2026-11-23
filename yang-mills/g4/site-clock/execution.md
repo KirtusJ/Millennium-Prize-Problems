@@ -14,7 +14,9 @@ After a full review of the proof and spectra, the calculator gained a tighter ra
 
 We also recompiled all seven declarations from A4’s clover result at commit `f151faa` and reran its controls. These included 192 reflected face words, 972 rectangular root exchanges and 182 buffered clock bounds. The archive pins the four upstream Git blobs used here and includes both replay logs. [A4’s checks and sources](../../observable-normalization/transfer-increments/local-action/site-scalar/checks.md)
 
-From this directory, use Python 3.11 or later. The first command verifies archive integrity, the receipts and their source associations, all recorded positive and negative compiler outcomes, native source readback and exact rational controls. The second additionally deep-replays the 19 hosted registers with the selected PCP OS runtime and method.
+A4 independently checked the field normalization and degree exponent. C4 and B4 checked the two measures, their common physical clock, the total variation bound and the opposite midpoint behaviors. B4 also replayed the verifier. The resulting [two-sided Wilson midpoint estimate](envelope.md) compares the even-time secants with A4’s short-distance interval. A further PCP challenger audited this corollary. Twenty-seven exact secant comparisons exercise the shifted time indices and the spectral upper edge. [A4’s review](https://github.com/KirtusJ/Millennium-Prize-Problems/pull/12#issuecomment-7104009794) · [C4’s review](https://github.com/KirtusJ/Millennium-Prize-Problems/pull/12#issuecomment-7104114806) · [B4’s review](https://github.com/KirtusJ/Millennium-Prize-Problems/pull/12#issuecomment-7104139768)
+
+From this directory, use Python 3.11 or later. The first command verifies archive integrity, the receipts and their source associations, all recorded positive and negative compiler outcomes, native source readback and exact rational controls. The second additionally deep-replays the 23 hosted registers with the selected PCP OS runtime and method.
 
 ~~~text
 python -B verify.py
