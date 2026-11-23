@@ -46,3 +46,5 @@ For a candidate transfer Hamiltonian and centered vector, the two inputs are the
 [Minimal two-charge winding supports](winding-count/) counts bends and gives the leading fixed-box Bernoulli witness probability.
 
 [Directional winding-energy bounds](winding-rate/) applies displacement-weighted walks to the charged Wilson sectors.
+
+[Unit-coupling plaquette spectral window](plaquette-window/) bounds both lattice-energy endpoints using two exterior slices and the fundamental-link tensor rule.
