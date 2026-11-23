@@ -1,0 +1,21 @@
+C:/Users/donke/z4-workers/r11-flow/FlowWindow.lean:75:4: error: linarith failed to find a contradiction
+ι : Type u_1
+s : Finset ι
+w E : ι → ℝ
+hw : ∀ (i : ι), 0 ≤ w i
+hE : ∀ (i : ι), 0 ≤ E i
+v M : ℝ
+hv : 0 < v
+hM0 : 0 < M
+hsum : v ≤ ∑ i ∈ s, w i
+hmom : ∑ i ∈ s, w i * E i ≤ M
+split : ∑ x ∈ {x ∈ s | E x ≤ 2 * M / v}, w x + ∑ x ∈ {x ∈ s | ¬E x ≤ 2 * M / v}, w x = ∑ x ∈ s, w x
+hB : 2 * M * ∑ i ∈ {i ∈ s | ¬E i ≤ 2 * M / v}, w i ≤ v * ∑ i ∈ {i ∈ s | ¬E i ≤ 2 * M / v}, w i * E i
+hsub : ∑ i ∈ {i ∈ s | ¬E i ≤ 2 * M / v}, w i * E i ≤ ∑ i ∈ s, w i * E i
+hvB : v * ∑ i ∈ {i ∈ s | ¬E i ≤ 2 * M / v}, w i * E i ≤ v * M
+hc : v / 2 < ∑ x ∈ {i ∈ s | 2 * M / v < E i}, w x
+⊢ False failed
+'R11.pow_mul_exp_neg_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'R11.gauss_factor_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'R11.markov_window' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+exit 1

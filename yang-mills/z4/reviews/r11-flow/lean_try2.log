@@ -1,0 +1,4 @@
+'R11.pow_mul_exp_neg_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'R11.gauss_factor_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'R11.markov_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit 0

@@ -1,0 +1,77 @@
+{
+ "rows": [
+  {
+   "id": "2204.12737",
+   "bytes": 525950,
+   "P1": true,
+   "pages": 43,
+   "P2": true,
+   "P3_missing": [],
+   "P3": true,
+   "P4_missing": [],
+   "P4": true
+  },
+  {
+   "id": "2006.16229",
+   "bytes": 335742,
+   "P1": true,
+   "pages": 35,
+   "P2": true,
+   "P3_missing": [],
+   "P3": true,
+   "P4_missing": [],
+   "P4": true
+  },
+  {
+   "id": "2111.12813",
+   "bytes": 733454,
+   "P1": true,
+   "pages": 73,
+   "P2": true,
+   "P3_missing": [],
+   "P3": true,
+   "P4_missing": [],
+   "P4": true
+  },
+  {
+   "id": "2201.03487",
+   "bytes": 1693721,
+   "P1": true,
+   "pages": 159,
+   "P2": true,
+   "P3_missing": [],
+   "P3": true,
+   "P4_missing": [],
+   "P4": true
+  },
+  {
+   "id": "2202.10375",
+   "bytes": 523219,
+   "P1": true,
+   "pages": 35,
+   "P2": true,
+   "P3_missing": [],
+   "P3": true,
+   "P4_missing": [],
+   "P4": true
+  },
+  {
+   "id": "1808.09896",
+   "bytes": 308537,
+   "P1": true,
+   "pages": 5,
+   "P2": true,
+   "P3_missing": [
+    "Chatterjee"
+   ],
+   "P3": false,
+   "P4_missing": [
+    "Wilson loops",
+    "Ising"
+   ],
+   "P4": false
+  }
+ ],
+ "met": 22,
+ "failed": 2
+}
