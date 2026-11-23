@@ -1,0 +1,14 @@
+gap part: N=200000, Q6/Q8 hypothesis sigma_w>0 qualified in 200000 of 200000
+  Q1: met 200000, failed 0, worst margin (positive = violation side) 2.191e-15
+  Q2: met 200000, failed 0, worst margin (positive = violation side) 7.109e-16
+  Q3: met 200000, failed 0, worst margin (positive = violation side) 2.524e-15
+  Q4: met 200000, failed 0, worst margin (positive = violation side) -2.549e-04
+  Q5: met 200000, failed 0, worst margin (positive = violation side) -2.318e-08
+  Q6: met 200000, failed 0, worst margin (positive = violation side) -4.194e-08
+  Q7: met 200000, failed 0, worst margin (positive = violation side) -5.377e-09
+  Q8: met 200000, failed 0, worst margin (positive = violation side) -1.165e-08
+Delta h part: N=200000; H2 hypothesis DS2<S^2 qualified 183571; H3 hypothesis r_b<=S/8 qualified 171468
+  H1: met 200000, failed 0, worst excess -9.614e-09
+  H2: met 183571, failed 0, worst ratio dh/bound 9.591e-01
+  H3: met 171468, failed 0, worst ratio dh/bound 3.333e-01
+FAILED (first few): []

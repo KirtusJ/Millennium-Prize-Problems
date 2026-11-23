@@ -1,0 +1,3012 @@
+{
+ "N1": {
+  "np.float64(0.0001)": {
+   "eta": 0.0001,
+   "min_slack": 3.749859378510134e-05,
+   "worst": {
+    "S": 0.00010000000016666667,
+    "x": 0.0,
+    "a": 0.9999250028124297,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0001110697248729463)": {
+   "eta": 0.0001110697248729463,
+   "min_slack": 4.16494120575317e-05,
+   "worst": {
+    "S": 0.00011106972510131461,
+    "x": 0.0,
+    "a": 0.999916701175885,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.00012336483783351984)": {
+   "eta": 0.00012336483783351984,
+   "min_slack": 4.625967409810361e-05,
+   "worst": {
+    "S": 0.00012336483814643235,
+    "x": 0.0,
+    "a": 0.9999074806518038,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.00013702098597164687)": {
+   "eta": 0.00013702098597164687,
+   "min_slack": 5.1380229630582086e-05,
+   "worst": {
+    "S": 0.00013702098640040267,
+    "x": 0.0,
+    "a": 0.999897239540739,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.00015218883213690651)": {
+   "eta": 0.00015218883213690651,
+   "min_slack": 5.706755509760075e-05,
+   "worst": {
+    "S": 0.00015218883272439195,
+    "x": 0.0,
+    "a": 0.9998858648898047,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.00016903571714181213)": {
+   "eta": 0.00016903571714181213,
+   "min_slack": 6.338437600950098e-05,
+   "worst": {
+    "S": 0.00016903571794679048,
+    "x": 0.0,
+    "a": 0.999873231247981,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.00018774750596642245)": {
+   "eta": 0.00018774750596642245,
+   "min_slack": 7.04003580617174e-05,
+   "worst": {
+    "S": 0.0001877475070694117,
+    "x": 0.0,
+    "a": 0.9998591992838766,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.00020853063833272385)": {
+   "eta": 0.00020853063833272385,
+   "min_slack": 7.819287461163782e-05,
+   "worst": {
+    "S": 0.0002085306398440506,
+    "x": 0.0,
+    "a": 0.9998436142507767,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.00023161440627195507)": {
+   "eta": 0.00023161440627195507,
+   "min_slack": 8.684785892787428e-05,
+   "worst": {
+    "S": 0.0002316144083427899,
+    "x": 0.0,
+    "a": 0.9998263042821443,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.00025725348381236857)": {
+   "eta": 0.00025725348381236857,
+   "min_slack": 9.646075055635972e-05,
+   "worst": {
+    "S": 0.00025725348664984687,
+    "x": 0.0,
+    "a": 0.9998070784988873,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.00028573073669646717)": {
+   "eta": 0.00028573073669646717,
+   "min_slack": 0.00010713754616742399,
+   "worst": {
+    "S": 0.0002857307405844079,
+    "x": 0.0,
+    "a": 0.9997857249076652,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0003173603431262087)": {
+   "eta": 0.0003173603431262087,
+   "min_slack": 0.00011899596638531573,
+   "worst": {
+    "S": 0.0003173603484535034,
+    "x": 0.0,
+    "a": 0.9997620080672295,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0003524912599661183)": {
+   "eta": 0.0003524912599661183,
+   "min_slack": 0.000132166751358187,
+   "worst": {
+    "S": 0.00035249126726563006,
+    "x": 0.0,
+    "a": 0.9997356664972835,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0003915110726455495)": {
+   "eta": 0.0003915110726455495,
+   "min_slack": 0.00014679509922232992,
+   "worst": {
+    "S": 0.00039151108264741245,
+    "x": 0.0,
+    "a": 0.9997064098015553,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0004348502712345323)": {
+   "eta": 0.0004348502712345323,
+   "min_slack": 0.00016304226315311254,
+   "worst": {
+    "S": 0.0004348502849391836,
+    "x": 0.0,
+    "a": 0.9996739154736938,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.00048298699986945576)": {
+   "eta": 0.00048298699986945576,
+   "min_slack": 0.00018108732441202147,
+   "worst": {
+    "S": 0.00048298701864770414,
+    "x": 0.0,
+    "a": 0.9996378253511758,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.000536452331927102)": {
+   "eta": 0.000536452331927102,
+   "min_slack": 0.00020112916068171227,
+   "worst": {
+    "S": 0.0005364523576572431,
+    "x": 0.0,
+    "a": 0.9995977416786365,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0005958361291459369)": {
+   "eta": 0.0005958361291459369,
+   "min_slack": 0.00022338863108073426,
+   "worst": {
+    "S": 0.0005958361644016301,
+    "x": 0.0,
+    "a": 0.9995532227378385,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.000661793549336005)": {
+   "eta": 0.000661793549336005,
+   "min_slack": 0.0002481110015596366,
+   "worst": {
+    "S": 0.0006617935976437037,
+    "x": 0.0,
+    "a": 0.9995037779968806,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0007350522744744069)": {
+   "eta": 0.0007350522744744069,
+   "min_slack": 0.0002755686369412258,
+   "worst": {
+    "S": 0.0007350523406660923,
+    "x": 0.0,
+    "a": 0.9994488627261177,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0008164205389310578)": {
+   "eta": 0.0008164205389310578,
+   "min_slack": 0.0003060639886889316,
+   "worst": {
+    "S": 0.0008164206296275581,
+    "x": 0.0,
+    "a": 0.9993878720226221,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0009067960463969512)": {
+   "eta": 0.0009067960463969512,
+   "min_slack": 0.0003399329106140714,
+   "worst": {
+    "S": 0.0009067961706701913,
+    "x": 0.0,
+    "a": 0.9993201341787717,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "0.001": {
+   "eta": 0.001,
+   "min_slack": 0.00037485941014969715,
+   "worst": {
+    "S": 0.001000000166666675,
+    "x": 0.0,
+    "a": 0.9992502811797007,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0010071758738918481)": {
+   "eta": 0.0010071758738918481,
+   "min_slack": 0.00037754833816550093,
+   "worst": {
+    "S": 0.0010071760441722685,
+    "x": 0.0,
+    "a": 0.9992449033236691,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0011186674721183683)": {
+   "eta": 0.0011186674721183683,
+   "min_slack": 0.0004193243707465433,
+   "worst": {
+    "S": 0.001118667705438282,
+    "x": 0.0,
+    "a": 0.9991613512585069,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.001242500883525015)": {
+   "eta": 0.001242500883525015,
+   "min_slack": 0.0004657208006796365,
+   "worst": {
+    "S": 0.0012425012032222659,
+    "x": 0.0,
+    "a": 0.9990685583986407,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.001380042312875161)": {
+   "eta": 0.001380042312875161,
+   "min_slack": 0.0005172481370330217,
+   "worst": {
+    "S": 0.0013800427509274944,
+    "x": 0.0,
+    "a": 0.998965503725934,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.001532809200040686)": {
+   "eta": 0.001532809200040686,
+   "min_slack": 0.000574473177582413,
+   "worst": {
+    "S": 0.0015328098002643255,
+    "x": 0.0,
+    "a": 0.9988510536448352,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.001702486961312397)": {
+   "eta": 0.001702486961312397,
+   "min_slack": 0.0006380251877203813,
+   "worst": {
+    "S": 0.0017024877837447687,
+    "x": 0.0,
+    "a": 0.9987239496245591,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0018909475839274633)": {
+   "eta": 0.0018909475839274633,
+   "min_slack": 0.0007086027512060999,
+   "worst": {
+    "S": 0.0018909487108324456,
+    "x": 0.0,
+    "a": 0.9985827944975877,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0021002702789598587)": {
+   "eta": 0.0021002702789598587,
+   "min_slack": 0.0007869813642956691,
+   "worst": {
+    "S": 0.002100271823056241,
+    "x": 0.0,
+    "a": 0.9984260372714086,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0023327644204289765)": {
+   "eta": 0.0023327644204289765,
+   "min_slack": 0.0008740218520573162,
+   "worst": {
+    "S": 0.002332766536165173,
+    "x": 0.0,
+    "a": 0.9982519562958854,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0025909950237044447)": {
+   "eta": 0.0025909950237044447,
+   "min_slack": 0.0009706796935861073,
+   "worst": {
+    "S": 0.002590997922707226,
+    "x": 0.0,
+    "a": 0.9980586406128278,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0028778110443002563)": {
+   "eta": 0.0028778110443002563,
+   "min_slack": 0.0010780153514354796,
+   "worst": {
+    "S": 0.002877815016542762,
+    "x": 0.0,
+    "a": 0.9978439692971289,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0031963768092675574)": {
+   "eta": 0.0031963768092675574,
+   "min_slack": 0.0011972057099045585,
+   "worst": {
+    "S": 0.003196382252073931,
+    "x": 0.0,
+    "a": 0.9976055885801909,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0035502069279561353)": {
+   "eta": 0.0035502069279561353,
+   "min_slack": 0.0013295567368899475,
+   "worst": {
+    "S": 0.0035502143857439827,
+    "x": 0.0,
+    "a": 0.9973408865262202,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.003943205067301158)": {
+   "eta": 0.003943205067301158,
+   "min_slack": 0.0014765174948483395,
+   "worst": {
+    "S": 0.003943215286037102,
+    "x": 0.0,
+    "a": 0.9970469650103033,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.004379707019427473)": {
+   "eta": 0.004379707019427473,
+   "min_slack": 0.0016396956380199113,
+   "worst": {
+    "S": 0.0043797210212427615,
+    "x": 0.0,
+    "a": 0.9967206087239601,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.004864528536719211)": {
+   "eta": 0.004864528536719211,
+   "min_slack": 0.001820874545425455,
+   "worst": {
+    "S": 0.004864547722148872,
+    "x": 0.0,
+    "a": 0.9963582509091491,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0054030184620999875)": {
+   "eta": 0.0054030184620999875,
+   "min_slack": 0.0020220322522360723,
+   "worst": {
+    "S": 0.005403044750172141,
+    "x": 0.0,
+    "a": 0.995955935495528,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0060011177406889505)": {
+   "eta": 0.0060011177406889505,
+   "min_slack": 0.0022453623558483793,
+   "worst": {
+    "S": 0.006001153760876892,
+    "x": 0.0,
+    "a": 0.9955092752883034,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0066654249638847885)": {
+   "eta": 0.0066654249638847885,
+   "min_slack": 0.002493297087281854,
+   "worst": {
+    "S": 0.0066654743191222185,
+    "x": 0.0,
+    "a": 0.9950134058254364,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.007403269168999514)": {
+   "eta": 0.007403269168999514,
+   "min_slack": 0.0027685327531800086,
+   "worst": {
+    "S": 0.00740333679606757,
+    "x": 0.0,
+    "a": 0.9944629344936401,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.008222790697611417)": {
+   "eta": 0.008222790697611417,
+   "min_slack": 0.0030740577685225423,
+   "worst": {
+    "S": 0.008222883360946185,
+    "x": 0.0,
+    "a": 0.9938518844629548,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.009133031004715223)": {
+   "eta": 0.009133031004715223,
+   "min_slack": 0.003413183514828888,
+   "worst": {
+    "S": 0.009133157973030446,
+    "x": 0.0,
+    "a": 0.9931736329703421,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "0.01": {
+   "eta": 0.01,
+   "min_slack": 0.0037359725904307917,
+   "worst": {
+    "S": 0.010000166667500003,
+    "x": 0.0,
+    "a": 0.9925280548191384,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.010144032409498082)": {
+   "eta": 0.010144032409498082,
+   "min_slack": 0.0037895782727316307,
+   "worst": {
+    "S": 0.010144206382905002,
+    "x": 0.0,
+    "a": 0.9924208434545368,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.011266948888252023)": {
+   "eta": 0.011266948888252023,
+   "min_slack": 0.004207304490786212,
+   "worst": {
+    "S": 0.011267187268616079,
+    "x": 0.0,
+    "a": 0.9915853910184276,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.012514169131757003)": {
+   "eta": 0.012514169131757003,
+   "min_slack": 0.00467085966352776,
+   "worst": {
+    "S": 0.012514495763366593,
+    "x": 0.0,
+    "a": 0.9906582806729445,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.013899453224777676)": {
+   "eta": 0.013899453224777676,
+   "min_slack": 0.005185221100178716,
+   "worst": {
+    "S": 0.01389990077944844,
+    "x": 0.0,
+    "a": 0.9896295577996426,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.015438084455604427)": {
+   "eta": 0.015438084455604427,
+   "min_slack": 0.005755894869886036,
+   "worst": {
+    "S": 0.01543869770081115,
+    "x": 0.0,
+    "a": 0.9884882102602279,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.017147037930492926)": {
+   "eta": 0.017147037930492926,
+   "min_slack": 0.00638896920842591,
+   "worst": {
+    "S": 0.0171478782074612,
+    "x": 0.0,
+    "a": 0.9872220615831482,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.019045167853258237)": {
+   "eta": 0.019045167853258237,
+   "min_slack": 0.007091172663127199,
+   "worst": {
+    "S": 0.01904631921299983,
+    "x": 0.0,
+    "a": 0.9858176546737457,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.021153415536204735)": {
+   "eta": 0.021153415536204735,
+   "min_slack": 0.007869937235000957,
+   "worst": {
+    "S": 0.02115499314735974,
+    "x": 0.0,
+    "a": 0.9842601255299981,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.02349504043729368)": {
+   "eta": 0.02349504043729368,
+   "min_slack": 0.008733466746882801,
+   "worst": {
+    "S": 0.023497202106953143,
+    "x": 0.0,
+    "a": 0.9825330665062344,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.026095876772489566)": {
+   "eta": 0.026095876772489566,
+   "min_slack": 0.009690810620267887,
+   "worst": {
+    "S": 0.026098838732671683,
+    "x": 0.0,
+    "a": 0.9806183787594641,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.02898461853438723)": {
+   "eta": 0.02898461853438723,
+   "min_slack": 0.01075194317716932,
+   "worst": {
+    "S": 0.02898867707372105,
+    "x": 0.0,
+    "a": 0.9784961136456614,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.032193136061616896)": {
+   "eta": 0.032193136061616896,
+   "min_slack": 0.011927848491531168,
+   "worst": {
+    "S": 0.0321986971668072,
+    "x": 0.0,
+    "a": 0.9761443030169378,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.035756827651611145)": {
+   "eta": 0.035756827651611145,
+   "min_slack": 0.013230610691207123,
+   "worst": {
+    "S": 0.035764447625032864,
+    "x": 0.0,
+    "a": 0.9735387786175858,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.03971501009593808)": {
+   "eta": 0.03971501009593808,
+   "min_slack": 0.014673509448741018,
+   "worst": {
+    "S": 0.03972545121460405,
+    "x": 0.0,
+    "a": 0.9706529811025179,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.04411135244682127)": {
+   "eta": 0.04411135244682127,
+   "min_slack": 0.015107462430046015,
+   "worst": {
+    "S": 0.0441256592341839,
+    "x": 1.0,
+    "a": 0,
+    "b": 0.9394130628134758,
+    "y": 1.0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.048994357800420045)": {
+   "eta": 0.048994357800420045,
+   "min_slack": 0.01345637277692835,
+   "worst": {
+    "S": 0.049013961547145955,
+    "x": 1.0,
+    "a": 0,
+    "b": 0.9394130628134758,
+    "y": 1.0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "0.05": {
+   "eta": 0.05,
+   "min_slack": 0.01311706139715263,
+   "worst": {
+    "S": 0.050020835937655016,
+    "x": 1.0,
+    "a": 0,
+    "b": 0.9394130628134758,
+    "y": 1.0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.05441789841219345)": {
+   "eta": 0.05441789841219345,
+   "min_slack": 0.01162935455302816,
+   "worst": {
+    "S": 0.05444476041252116,
+    "x": 1.0,
+    "a": 0,
+    "b": 0.9394130628134758,
+    "y": 1.0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.06044181004806268)": {
+   "eta": 0.06044181004806268,
+   "min_slack": 0.009608475107486414,
+   "worst": {
+    "S": 0.06047861789910767,
+    "x": 1.0,
+    "a": 0,
+    "b": 0.9394130628134758,
+    "y": 1.0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.06713255212861202)": {
+   "eta": 0.06713255212861202,
+   "min_slack": 0.007374156956779898,
+   "worst": {
+    "S": 0.06718298876151466,
+    "x": 1.0,
+    "a": 0,
+    "b": 0.9394130628134758,
+    "y": 1.0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.07456394094943662)": {
+   "eta": 0.07456394094943662,
+   "min_slack": 0.0049050682393990686,
+   "worst": {
+    "S": 0.07463305335976571,
+    "x": 1.0,
+    "a": 0,
+    "b": 0.9394130628134758,
+    "y": 1.0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0828179640669654)": {
+   "eta": 0.0828179640669654,
+   "min_slack": 0.0021780156455117883,
+   "worst": {
+    "S": 0.08291266872396427,
+    "x": 1.0,
+    "a": 0,
+    "b": 0.9394130628134758,
+    "y": 1.0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.091985684834554)": {
+   "eta": 0.091985684834554,
+   "min_slack": 0.0022060238248828856,
+   "worst": {
+    "S": 0.09211546048733403,
+    "x": 1.0,
+    "a": 0,
+    "b": 0.9394130628134758,
+    "y": 1.0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "0.1": {
+   "eta": 0.1,
+   "min_slack": 0.0023871804905163385,
+   "worst": {
+    "S": 0.10016675001984403,
+    "x": 1.0,
+    "a": 0,
+    "b": 0.9394130628134758,
+    "y": 1.0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.1021682470682346)": {
+   "eta": 0.1021682470682346,
+   "min_slack": 0.002435854089698042,
+   "worst": {
+    "S": 0.10234608452505524,
+    "x": 1.0,
+    "a": 0,
+    "b": 0.9394130628134758,
+    "y": 1.0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.1134779909262002)": {
+   "eta": 0.1134779909262002,
+   "min_slack": 0.0026873655772382543,
+   "worst": {
+    "S": 0.11372169527889826,
+    "x": 1.0,
+    "a": 0,
+    "b": 0.9394130628134758,
+    "y": 1.0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.12603969231307752)": {
+   "eta": 0.12603969231307752,
+   "min_slack": 0.0029619539520736593,
+   "worst": {
+    "S": 0.12637366865706007,
+    "x": 1.0,
+    "a": 0,
+    "b": 0.9394130628134758,
+    "y": 1.0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.13999193948284325)": {
+   "eta": 0.13999193948284325,
+   "min_slack": 0.0032608998512304588,
+   "worst": {
+    "S": 0.14044964209444233,
+    "x": 1.0,
+    "a": 0,
+    "b": 0.9394130628134758,
+    "y": 1.0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.15548866202789546)": {
+   "eta": 0.15548866202789546,
+   "min_slack": 0.0035852859915128654,
+   "worst": {
+    "S": 0.15611595425315497,
+    "x": 1.0,
+    "a": 0,
+    "b": 0.9394130628134758,
+    "y": 1.0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.1727008291230088)": {
+   "eta": 0.1727008291230088,
+   "min_slack": 0.0039358886895020095,
+   "worst": {
+    "S": 0.1735605938992859,
+    "x": 1.0,
+    "a": 0,
+    "b": 0.9394130628134758,
+    "y": 1.0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.191818335760223)": {
+   "eta": 0.191818335760223,
+   "min_slack": 0.004313038220253085,
+   "worst": {
+    "S": 0.19299680444918868,
+    "x": 1.0,
+    "a": 0,
+    "b": 0.9394130628134758,
+    "y": 1.0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "0.2": {
+   "eta": 0.2,
+   "min_slack": 0.004470426232984437,
+   "worst": {
+    "S": 0.20133600254109402,
+    "x": 1.0,
+    "a": 0,
+    "b": 0.9394130628134758,
+    "y": 1.0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.21305209778474404)": {
+   "eta": 0.21305209778474404,
+   "min_slack": 0.00471644194810239,
+   "worst": {
+    "S": 0.21466754137667224,
+    "x": 1.0,
+    "a": 0,
+    "b": 0.9394130628134758,
+    "y": 1.0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.23663637884555572)": {
+   "eta": 0.23663637884555572,
+   "min_slack": 0.005144963966212557,
+   "worst": {
+    "S": 0.23885104952308278,
+    "x": 1.0,
+    "a": 0,
+    "b": 0.9394130628134758,
+    "y": 1.0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.26283137493306136)": {
+   "eta": 0.26283137493306136,
+   "min_slack": 0.005596355242977857,
+   "worst": {
+    "S": 0.26586792402860926,
+    "x": 1.0,
+    "a": 0,
+    "b": 0.9394130628134758,
+    "y": 1.0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.29192608501793316)": {
+   "eta": 0.29192608501793316,
+   "min_slack": 0.006066929144471267,
+   "worst": {
+    "S": 0.2960901530627023,
+    "x": 1.0,
+    "a": 0,
+    "b": 0.9394130628134758,
+    "y": 1.0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.32424149946178166)": {
+   "eta": 0.32424149946178166,
+   "min_slack": 0.006551178751186715,
+   "worst": {
+    "S": 0.3299528285490133,
+    "x": 1.0,
+    "a": 0,
+    "b": 0.9394130628134758,
+    "y": 1.0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.36013414137611655)": {
+   "eta": 0.36013414137611655,
+   "min_slack": 0.007041334480434647,
+   "worst": {
+    "S": 0.36796947557568216,
+    "x": 1.0,
+    "a": 0,
+    "b": 0.9394130628134758,
+    "y": 1.0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.4)": {
+   "eta": 0.4,
+   "min_slack": 0.007526862662730727,
+   "worst": {
+    "S": 0.4107523258028155,
+    "x": 1.0,
+    "a": 0,
+    "b": 0.9394130628134758,
+    "y": 1.0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  }
+ },
+ "N2": {
+  "np.float64(0.0001)": {
+   "eta": 0.0001,
+   "min_slack": 5.624648453317338e-05,
+   "worst": {
+    "S": 0.00010000000016666667,
+    "x": 0.0,
+    "a": 0.9999250028124297,
+    "b": 1.0,
+    "y": 1.8749296892578426e-05,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0001110697248729463)": {
+   "eta": 0.0001110697248729463,
+   "min_slack": 6.24723834127261e-05,
+   "worst": {
+    "S": 0.00011106972510131461,
+    "x": 0.0,
+    "a": 0.999916701175885,
+    "b": 1.0,
+    "y": 2.0824706028738094e-05,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.00012336483783351984)": {
+   "eta": 0.00012336483783351984,
+   "min_slack": 6.938737118966642e-05,
+   "worst": {
+    "S": 0.00012336483814643235,
+    "x": 0.0,
+    "a": 0.9999074806518038,
+    "b": 1.0,
+    "y": 2.3129837049051805e-05,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.00013702098597164687)": {
+   "eta": 0.00013702098597164687,
+   "min_slack": 7.70677045178747e-05,
+   "worst": {
+    "S": 0.00013702098640040267,
+    "x": 0.0,
+    "a": 0.999897239540739,
+    "b": 1.0,
+    "y": 2.5690114815263287e-05,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.00015218883213690651)": {
+   "eta": 0.00015218883213690651,
+   "min_slack": 8.559807594066271e-05,
+   "worst": {
+    "S": 0.00015218883272439195,
+    "x": 0.0,
+    "a": 0.9998858648898047,
+    "b": 1.0,
+    "y": 2.8533777548828132e-05,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.00016903571714181213)": {
+   "eta": 0.00016903571714181213,
+   "min_slack": 9.507254643503771e-05,
+   "worst": {
+    "S": 0.00016903571794679048,
+    "x": 0.0,
+    "a": 0.999873231247981,
+    "b": 1.0,
+    "y": 3.169218800475049e-05,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.00018774750596642245)": {
+   "eta": 0.00018774750596642245,
+   "min_slack": 0.00010559558088218957,
+   "worst": {
+    "S": 0.0001877475070694117,
+    "x": 0.0,
+    "a": 0.9998591992838766,
+    "b": 1.0,
+    "y": 3.52001790308587e-05,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.00020853063833272385)": {
+   "eta": 0.00020853063833272385,
+   "min_slack": 0.00011728319779180651,
+   "worst": {
+    "S": 0.0002085306398440506,
+    "x": 0.0,
+    "a": 0.9998436142507767,
+    "b": 1.0,
+    "y": 3.909643730581891e-05,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.00023161440627195507)": {
+   "eta": 0.00023161440627195507,
+   "min_slack": 0.0001302642458411718,
+   "worst": {
+    "S": 0.0002316144083427899,
+    "x": 0.0,
+    "a": 0.9998263042821443,
+    "b": 1.0,
+    "y": 4.342392946393714e-05,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.00025725348381236857)": {
+   "eta": 0.00025725348381236857,
+   "min_slack": 0.00014468182115812134,
+   "worst": {
+    "S": 0.00025725348664984687,
+    "x": 0.0,
+    "a": 0.9998070784988873,
+    "b": 1.0,
+    "y": 4.823037527817986e-05,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.00028573073669646717)": {
+   "eta": 0.00028573073669646717,
+   "min_slack": 0.0001606948407972819,
+   "worst": {
+    "S": 0.0002857307405844079,
+    "x": 0.0,
+    "a": 0.9997857249076652,
+    "b": 1.0,
+    "y": 5.3568773083711996e-05,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0003173603431262087)": {
+   "eta": 0.0003173603431262087,
+   "min_slack": 0.00017847978953788868,
+   "worst": {
+    "S": 0.0003173603484535034,
+    "x": 0.0,
+    "a": 0.9997620080672295,
+    "b": 1.0,
+    "y": 5.949798319263011e-05,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0003524912599661183)": {
+   "eta": 0.0003524912599661183,
+   "min_slack": 0.00019823265898721854,
+   "worst": {
+    "S": 0.00035249126726563006,
+    "x": 0.0,
+    "a": 0.9997356664972835,
+    "b": 1.0,
+    "y": 6.608337567912126e-05,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0003915110726455495)": {
+   "eta": 0.0003915110726455495,
+   "min_slack": 0.0002201711000322515,
+   "worst": {
+    "S": 0.00039151108264741245,
+    "x": 0.0,
+    "a": 0.9997064098015553,
+    "b": 1.0,
+    "y": 7.339754961116496e-05,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0004348502712345323)": {
+   "eta": 0.0004348502712345323,
+   "min_slack": 0.00024453681195013566,
+   "worst": {
+    "S": 0.0004348502849391836,
+    "x": 0.0,
+    "a": 0.9996739154736938,
+    "b": 1.0,
+    "y": 8.152113157655627e-05,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.00048298699986945576)": {
+   "eta": 0.00048298699986945576,
+   "min_slack": 0.0002715981939990231,
+   "worst": {
+    "S": 0.00048298701864770414,
+    "x": 0.0,
+    "a": 0.9996378253511758,
+    "b": 1.0,
+    "y": 9.054366220603849e-05,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.000536452331927102)": {
+   "eta": 0.000536452331927102,
+   "min_slack": 0.0003016532880832923,
+   "worst": {
+    "S": 0.0005364523576572431,
+    "x": 0.0,
+    "a": 0.9995977416786365,
+    "b": 1.0,
+    "y": 0.00010056458034088389,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0005958361291459369)": {
+   "eta": 0.0005958361291459369,
+   "min_slack": 0.0003350330441406202,
+   "worst": {
+    "S": 0.0005958361644016301,
+    "x": 0.0,
+    "a": 0.9995532227378385,
+    "b": 1.0,
+    "y": 0.00011169431554036713,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.000661793549336005)": {
+   "eta": 0.000661793549336005,
+   "min_slack": 0.00037210494327044596,
+   "worst": {
+    "S": 0.0006617935976437037,
+    "x": 0.0,
+    "a": 0.9995037779968806,
+    "b": 1.0,
+    "y": 0.00012405550077984606,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0007350522744744069)": {
+   "eta": 0.0007350522744744069,
+   "min_slack": 0.0004132770173380651,
+   "worst": {
+    "S": 0.0007350523406660923,
+    "x": 0.0,
+    "a": 0.9994488627261177,
+    "b": 1.0,
+    "y": 0.00013778431847058514,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0008164205389310578)": {
+   "eta": 0.0008164205389310578,
+   "min_slack": 0.00045900230786821705,
+   "worst": {
+    "S": 0.0008164206296275581,
+    "x": 0.0,
+    "a": 0.9993878720226221,
+    "b": 1.0,
+    "y": 0.0001530319943444658,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0009067960463969512)": {
+   "eta": 0.0009067960463969512,
+   "min_slack": 0.0005097838115374342,
+   "worst": {
+    "S": 0.0009067961706701913,
+    "x": 0.0,
+    "a": 0.9993201341787717,
+    "b": 1.0,
+    "y": 0.00016996645530706345,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "0.001": {
+   "eta": 0.001,
+   "min_slack": 0.0005621485956470718,
+   "worst": {
+    "S": 0.001000000166666675,
+    "x": 0.0,
+    "a": 0.9992502811797007,
+    "b": 1.0,
+    "y": 0.00018742970507482082,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0010071758738918481)": {
+   "eta": 0.0010071758738918481,
+   "min_slack": 0.0005661799645005905,
+   "worst": {
+    "S": 0.0010071760441722685,
+    "x": 0.0,
+    "a": 0.9992449033236691,
+    "b": 1.0,
+    "y": 0.0001887741690827227,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0011186674721183683)": {
+   "eta": 0.0011186674721183683,
+   "min_slack": 0.0006288107231919859,
+   "worst": {
+    "S": 0.001118667705438282,
+    "x": 0.0,
+    "a": 0.9991613512585069,
+    "b": 1.0,
+    "y": 0.00020966218537327164,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.001242500883525015)": {
+   "eta": 0.001242500883525015,
+   "min_slack": 0.0006983643051552413,
+   "worst": {
+    "S": 0.0012425012032222659,
+    "x": 0.0,
+    "a": 0.9990685583986407,
+    "b": 1.0,
+    "y": 0.00023286040033981825,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.001380042312875161)": {
+   "eta": 0.001380042312875161,
+   "min_slack": 0.0007756046599142197,
+   "worst": {
+    "S": 0.0013800427509274944,
+    "x": 0.0,
+    "a": 0.998965503725934,
+    "b": 1.0,
+    "y": 0.0002586240685165109,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.001532809200040686)": {
+   "eta": 0.001532809200040686,
+   "min_slack": 0.0008613797469418927,
+   "worst": {
+    "S": 0.0015328098002643255,
+    "x": 0.0,
+    "a": 0.9988510536448352,
+    "b": 1.0,
+    "y": 0.0002872365887912065,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.001702486961312397)": {
+   "eta": 0.001702486961312397,
+   "min_slack": 0.0009566307054404977,
+   "worst": {
+    "S": 0.0017024877837447687,
+    "x": 0.0,
+    "a": 0.9987239496245591,
+    "b": 1.0,
+    "y": 0.0003190125938602184,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0018909475839274633)": {
+   "eta": 0.0018909475839274633,
+   "min_slack": 0.0010624020089501363,
+   "worst": {
+    "S": 0.0018909487108324456,
+    "x": 0.0,
+    "a": 0.9985827944975877,
+    "b": 1.0,
+    "y": 0.00035430137560307773,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0021002702789598587)": {
+   "eta": 0.0021002702789598587,
+   "min_slack": 0.0011798527067757858,
+   "worst": {
+    "S": 0.002100271823056241,
+    "x": 0.0,
+    "a": 0.9984260372714086,
+    "b": 1.0,
+    "y": 0.0003934906821478623,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0023327644204289765)": {
+   "eta": 0.0023327644204289765,
+   "min_slack": 0.0013102688638880755,
+   "worst": {
+    "S": 0.002332766536165173,
+    "x": 0.0,
+    "a": 0.9982519562958854,
+    "b": 1.0,
+    "y": 0.0004370109260286581,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0025909950237044447)": {
+   "eta": 0.0025909950237044447,
+   "min_slack": 0.0014550773213115598,
+   "worst": {
+    "S": 0.002590997922707226,
+    "x": 0.0,
+    "a": 0.9980586406128278,
+    "b": 1.0,
+    "y": 0.00048533984679305364,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0028778110443002563)": {
+   "eta": 0.0028778110443002563,
+   "min_slack": 0.001615860910055389,
+   "worst": {
+    "S": 0.002877815016542762,
+    "x": 0.0,
+    "a": 0.9978439692971289,
+    "b": 1.0,
+    "y": 0.0005390076757177675,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0031963768092675574)": {
+   "eta": 0.0031963768092675574,
+   "min_slack": 0.0017943752633450272,
+   "worst": {
+    "S": 0.003196382252073931,
+    "x": 0.0,
+    "a": 0.9976055885801909,
+    "b": 1.0,
+    "y": 0.0005986028549522793,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0035502069279561353)": {
+   "eta": 0.0035502069279561353,
+   "min_slack": 0.001992567384218269,
+   "worst": {
+    "S": 0.0035502143857439827,
+    "x": 0.0,
+    "a": 0.9973408865262202,
+    "b": 1.0,
+    "y": 0.000664778368444946,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.003943205067301158)": {
+   "eta": 0.003943205067301158,
+   "min_slack": 0.0022125961383598902,
+   "worst": {
+    "S": 0.003943215286037102,
+    "x": 0.0,
+    "a": 0.9970469650103033,
+    "b": 1.0,
+    "y": 0.0007382587474241697,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.004379707019427473)": {
+   "eta": 0.004379707019427473,
+   "min_slack": 0.0024568548552446057,
+   "worst": {
+    "S": 0.0043797210212427615,
+    "x": 0.0,
+    "a": 0.9967206087239601,
+    "b": 1.0,
+    "y": 0.0008198478190099834,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.004864528536719211)": {
+   "eta": 0.004864528536719211,
+   "min_slack": 0.002727996234028085,
+   "worst": {
+    "S": 0.004864547722148872,
+    "x": 0.0,
+    "a": 0.9963582509091491,
+    "b": 1.0,
+    "y": 0.0009104372727127275,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0054030184620999875)": {
+   "eta": 0.0054030184620999875,
+   "min_slack": 0.003028959763924921,
+   "worst": {
+    "S": 0.005403044750172141,
+    "x": 0.0,
+    "a": 0.995955935495528,
+    "b": 1.0,
+    "y": 0.0010110161261180084,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0060011177406889505)": {
+   "eta": 0.0060011177406889505,
+   "min_slack": 0.0033630018816634966,
+   "worst": {
+    "S": 0.006001153760876892,
+    "x": 0.0,
+    "a": 0.9955092752883034,
+    "b": 1.0,
+    "y": 0.0011226811779241619,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0066654249638847885)": {
+   "eta": 0.0066654249638847885,
+   "min_slack": 0.003733729100557248,
+   "worst": {
+    "S": 0.0066654743191222185,
+    "x": 0.0,
+    "a": 0.9950134058254364,
+    "b": 1.0,
+    "y": 0.0012466485436408992,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.007403269168999514)": {
+   "eta": 0.007403269168999514,
+   "min_slack": 0.0041451343561644816,
+   "worst": {
+    "S": 0.00740333679606757,
+    "x": 0.0,
+    "a": 0.9944629344936401,
+    "b": 1.0,
+    "y": 0.0013842663765899765,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.008222790697611417)": {
+   "eta": 0.008222790697611417,
+   "min_slack": 0.004601636821619626,
+   "worst": {
+    "S": 0.008222883360946185,
+    "x": 0.0,
+    "a": 0.9938518844629548,
+    "b": 1.0,
+    "y": 0.001537028884261299,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.009133031004715223)": {
+   "eta": 0.009133031004715223,
+   "min_slack": 0.005108125450537515,
+   "worst": {
+    "S": 0.009133157973030446,
+    "x": 0.0,
+    "a": 0.9931736329703421,
+    "b": 1.0,
+    "y": 0.0017065917574144718,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "0.01": {
+   "eta": 0.01,
+   "min_slack": 0.005590001394449651,
+   "worst": {
+    "S": 0.010000166667500003,
+    "x": 0.0,
+    "a": 0.9925280548191384,
+    "b": 1.0,
+    "y": 0.0018679862952153958,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.010144032409498082)": {
+   "eta": 0.010144032409498082,
+   "min_slack": 0.005670006505612224,
+   "worst": {
+    "S": 0.010144206382905002,
+    "x": 0.0,
+    "a": 0.9924208434545368,
+    "b": 1.0,
+    "y": 0.0018947891363657876,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.011266948888252023)": {
+   "eta": 0.011266948888252023,
+   "min_slack": 0.006293255325101166,
+   "worst": {
+    "S": 0.011267187268616079,
+    "x": 0.0,
+    "a": 0.9915853910184276,
+    "b": 1.0,
+    "y": 0.002103652245393106,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.012514169131757003)": {
+   "eta": 0.012514169131757003,
+   "min_slack": 0.006984472565295219,
+   "worst": {
+    "S": 0.012514495763366593,
+    "x": 0.0,
+    "a": 0.9906582806729445,
+    "b": 1.0,
+    "y": 0.00233542983176388,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.013899453224777676)": {
+   "eta": 0.013899453224777676,
+   "min_slack": 0.0077509451324102585,
+   "worst": {
+    "S": 0.01389990077944844,
+    "x": 0.0,
+    "a": 0.9896295577996426,
+    "b": 1.0,
+    "y": 0.002592610550089358,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.015438084455604427)": {
+   "eta": 0.015438084455604427,
+   "min_slack": 0.008600711979075859,
+   "worst": {
+    "S": 0.01543869770081115,
+    "x": 0.0,
+    "a": 0.9884882102602279,
+    "b": 1.0,
+    "y": 0.002877947434943018,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.017147037930492926)": {
+   "eta": 0.017147037930492926,
+   "min_slack": 0.00954263488509266,
+   "worst": {
+    "S": 0.0171478782074612,
+    "x": 0.0,
+    "a": 0.9872220615831482,
+    "b": 1.0,
+    "y": 0.003194484604212955,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.019045167853258237)": {
+   "eta": 0.019045167853258237,
+   "min_slack": 0.010586474264952517,
+   "worst": {
+    "S": 0.01904631921299983,
+    "x": 0.0,
+    "a": 0.9858176546737457,
+    "b": 1.0,
+    "y": 0.0035455863315635716,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.021153415536204735)": {
+   "eta": 0.021153415536204735,
+   "min_slack": 0.011742969940418568,
+   "worst": {
+    "S": 0.02115499314735974,
+    "x": 0.0,
+    "a": 0.9842601255299981,
+    "b": 1.0,
+    "y": 0.003934968617500478,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.02349504043729368)": {
+   "eta": 0.02349504043729368,
+   "min_slack": 0.013023926678905284,
+   "worst": {
+    "S": 0.023497202106953143,
+    "x": 0.0,
+    "a": 0.9825330665062344,
+    "b": 1.0,
+    "y": 0.0043667333734414004,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.026095876772489566)": {
+   "eta": 0.026095876772489566,
+   "min_slack": 0.014442304119923977,
+   "worst": {
+    "S": 0.026098838732671683,
+    "x": 0.0,
+    "a": 0.9806183787594641,
+    "b": 1.0,
+    "y": 0.004845405310133971,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.02898461853438723)": {
+   "eta": 0.02898461853438723,
+   "min_slack": 0.016012310483668912,
+   "worst": {
+    "S": 0.02898867707372105,
+    "x": 0.0,
+    "a": 0.9784961136456614,
+    "b": 1.0,
+    "y": 0.00537597158858466,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.032193136061616896)": {
+   "eta": 0.032193136061616896,
+   "min_slack": 0.017749499167659777,
+   "worst": {
+    "S": 0.0321986971668072,
+    "x": 0.0,
+    "a": 0.9761443030169378,
+    "b": 1.0,
+    "y": 0.005963924245765556,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.035756827651611145)": {
+   "eta": 0.035756827651611145,
+   "min_slack": 0.019670866977548496,
+   "worst": {
+    "S": 0.035764447625032864,
+    "x": 0.0,
+    "a": 0.9735387786175858,
+    "b": 1.0,
+    "y": 0.0066153053456035615,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.03971501009593808)": {
+   "eta": 0.03971501009593808,
+   "min_slack": 0.021794952293569314,
+   "worst": {
+    "S": 0.03972545121460405,
+    "x": 0.0,
+    "a": 0.9706529811025179,
+    "b": 1.0,
+    "y": 0.007336754724370537,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.04411135244682127)": {
+   "eta": 0.04411135244682127,
+   "min_slack": 0.024141930930155264,
+   "worst": {
+    "S": 0.0441256592341839,
+    "x": 0.0,
+    "a": 0.9674577596235535,
+    "b": 1.0,
+    "y": 0.008135560094111621,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.048994357800420045)": {
+   "eta": 0.048994357800420045,
+   "min_slack": 0.02673370678737763,
+   "worst": {
+    "S": 0.049013961547145955,
+    "x": 0.0,
+    "a": 0.963921163468337,
+    "b": 1.0,
+    "y": 0.009019709132915749,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "0.05": {
+   "eta": 0.05,
+   "min_slack": 0.02726552398765625,
+   "worst": {
+    "S": 0.050020835937655016,
+    "x": 0.0,
+    "a": 0.9631944177208218,
+    "b": 1.0,
+    "y": 0.009201395569794546,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.05441789841219345)": {
+   "eta": 0.05441789841219345,
+   "min_slack": 0.029593993602989976,
+   "worst": {
+    "S": 0.05444476041252116,
+    "x": 0.0,
+    "a": 0.9600082279179252,
+    "b": 1.0,
+    "y": 0.009997943020518707,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.06044181004806268)": {
+   "eta": 0.06044181004806268,
+   "min_slack": 0.032748383177165774,
+   "worst": {
+    "S": 0.06047861789910767,
+    "x": 0.0,
+    "a": 0.9556807573404743,
+    "b": 1.0,
+    "y": 0.011079810664881423,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.06713255212861202)": {
+   "eta": 0.06713255212861202,
+   "min_slack": 0.036224394344420596,
+   "worst": {
+    "S": 0.06718298876151466,
+    "x": 0.0,
+    "a": 0.9508971095919647,
+    "b": 1.0,
+    "y": 0.01227572260200882,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.07456394094943662)": {
+   "eta": 0.07456394094943662,
+   "min_slack": 0.04005149569819233,
+   "worst": {
+    "S": 0.07463305335976571,
+    "x": 0.0,
+    "a": 0.945611987086172,
+    "b": 1.0,
+    "y": 0.013597003228457,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.0828179640669654)": {
+   "eta": 0.0828179640669654,
+   "min_slack": 0.04426109362904218,
+   "worst": {
+    "S": 0.08291266872396427,
+    "x": 0.0,
+    "a": 0.9397762414638711,
+    "b": 1.0,
+    "y": 0.015055939634032234,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.091985684834554)": {
+   "eta": 0.091985684834554,
+   "min_slack": 0.05050683374480258,
+   "worst": {
+    "S": 0.09211546048733403,
+    "x": 0.0,
+    "a": 0.9333367006763746,
+    "b": 1.0,
+    "y": 0.015146734296631048,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "0.1": {
+   "eta": 0.1,
+   "min_slack": 0.0560153291610338,
+   "worst": {
+    "S": 0.10016675001984403,
+    "x": 0.0,
+    "a": 0.9277434863285529,
+    "b": 1.0,
+    "y": 0.015146734296631048,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.1021682470682346)": {
+   "eta": 0.1021682470682346,
+   "min_slack": 0.057499952900117,
+   "worst": {
+    "S": 0.10234608452505524,
+    "x": 0.0,
+    "a": 0.926236029542061,
+    "b": 1.0,
+    "y": 0.015146734296631048,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.1134779909262002)": {
+   "eta": 0.1134779909262002,
+   "min_slack": 0.06520484612623823,
+   "worst": {
+    "S": 0.11372169527889826,
+    "x": 0.0,
+    "a": 0.9184126374750017,
+    "b": 1.0,
+    "y": 0.015146734296631048,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.12603969231307752)": {
+   "eta": 0.12603969231307752,
+   "min_slack": 0.07368638996381138,
+   "worst": {
+    "S": 0.12637366865706007,
+    "x": 0.0,
+    "a": 0.9098006501537069,
+    "b": 1.0,
+    "y": 0.015146734296631048,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.13999193948284325)": {
+   "eta": 0.13999193948284325,
+   "min_slack": 0.08301362475849039,
+   "worst": {
+    "S": 0.14044964209444233,
+    "x": 0.0,
+    "a": 0.9003299654136633,
+    "b": 1.0,
+    "y": 0.015146734296631048,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.15548866202789546)": {
+   "eta": 0.15548866202789546,
+   "min_slack": 0.0932595927916462,
+   "worst": {
+    "S": 0.15611595425315497,
+    "x": 0.0,
+    "a": 0.8899264176061245,
+    "b": 1.0,
+    "y": 0.015146734296631048,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.1727008291230088)": {
+   "eta": 0.1727008291230088,
+   "min_slack": 0.10450104141421368,
+   "worst": {
+    "S": 0.1735605938992859,
+    "x": 0.0,
+    "a": 0.8785120790299722,
+    "b": 1.0,
+    "y": 0.015146734296631048,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.191818335760223)": {
+   "eta": 0.191818335760223,
+   "min_slack": 0.11681795839838871,
+   "worst": {
+    "S": 0.19299680444918868,
+    "x": 0.0,
+    "a": 0.866005731726165,
+    "b": 1.0,
+    "y": 0.015146734296631048,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "0.2": {
+   "eta": 0.2,
+   "min_slack": 0.12203547000758141,
+   "worst": {
+    "S": 0.20133600254109402,
+    "x": 0.0,
+    "a": 0.8607079764250578,
+    "b": 1.0,
+    "y": 0.015146734296631048,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.21305209778474404)": {
+   "eta": 0.21305209778474404,
+   "min_slack": 0.1302929019515594,
+   "worst": {
+    "S": 0.21466754137667224,
+    "x": 0.0,
+    "a": 0.852323547767982,
+    "b": 1.0,
+    "y": 0.015146734296631048,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.23663637884555572)": {
+   "eta": 0.23663637884555572,
+   "min_slack": 0.1450100831571871,
+   "worst": {
+    "S": 0.23885104952308278,
+    "x": 0.0,
+    "a": 0.8373800209319139,
+    "b": 1.0,
+    "y": 0.015146734296631048,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.26283137493306136)": {
+   "eta": 0.26283137493306136,
+   "min_slack": 0.16105415439235393,
+   "worst": {
+    "S": 0.26586792402860926,
+    "x": 0.0,
+    "a": 0.8210891969138726,
+    "b": 1.0,
+    "y": 0.015146734296631048,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.29192608501793316)": {
+   "eta": 0.29192608501793316,
+   "min_slack": 0.17850865405573357,
+   "worst": {
+    "S": 0.2960901530627023,
+    "x": 0.0,
+    "a": 0.8033662525208174,
+    "b": 1.0,
+    "y": 0.015146734296631048,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.32424149946178166)": {
+   "eta": 0.32424149946178166,
+   "min_slack": 0.1974540564565591,
+   "worst": {
+    "S": 0.3299528285490133,
+    "x": 0.0,
+    "a": 0.7841294757738824,
+    "b": 1.0,
+    "y": 0.015146734296631048,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.36013414137611655)": {
+   "eta": 0.36013414137611655,
+   "min_slack": 0.21796537693733886,
+   "worst": {
+    "S": 0.36796947557568216,
+    "x": 0.0,
+    "a": 0.7633026976181224,
+    "b": 1.0,
+    "y": 0.015146734296631048,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  },
+  "np.float64(0.4)": {
+   "eta": 0.4,
+   "min_slack": 0.24010928747578897,
+   "worst": {
+    "S": 0.4107523258028155,
+    "x": 0.0,
+    "a": 0.7408182206817179,
+    "b": 1.0,
+    "y": 0.015146734296631048,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  }
+ },
+ "N3": {
+  "points": 4005,
+  "met": 4005,
+  "failed": 0,
+  "min_slack": 5.986560031127063,
+  "at_eta": 0.4,
+  "table": {
+   "0.4": {
+    "Mc2": 18.047286402488197,
+    "etaMc2": 7.218914560995279,
+    "MA2": 12.060726371361135,
+    "etaMA2": 4.824290548544454
+   },
+   "0.2": {
+    "Mc2": 30.382416631399348,
+    "etaMc2": 6.07648332627987,
+    "MA2": 20.552154475455815,
+    "etaMA2": 4.110430895091163
+   },
+   "0.1": {
+    "Mc2": 54.358856425753224,
+    "etaMc2": 5.435885642575323,
+    "MA2": 37.91491190067701,
+    "etaMA2": 3.7914911900677013
+   },
+   "0.05": {
+    "Mc2": 101.61531948370448,
+    "etaMc2": 5.0807659741852245,
+    "MA2": 72.82360284442738,
+    "etaMA2": 3.641180142221369
+   },
+   "0.01": {
+    "Mc2": 475.72193413824283,
+    "etaMc2": 4.757219341382428,
+    "MA2": 352.5224155701998,
+    "etaMA2": 3.5252241557019985
+   }
+  }
+ },
+ "G": {
+  "MA2_0.4": {
+   "mine": 12.060726371361135,
+   "gc": 12.060726371361,
+   "ok": true
+  },
+  "Mc2_0.4": {
+   "mine": 18.047286402488197,
+   "gc": 18.047286402488,
+   "ok": true
+  },
+  "MA2_0.01": {
+   "mine": 352.5224155701998,
+   "gc": 352.5224155702,
+   "ok": true
+  },
+  "Mc2_0.01": {
+   "mine": 475.72193413824283,
+   "gc": 475.721934138243,
+   "ok": true
+  },
+  "Psum_0.01": {
+   "mine": 0.9694566317521098,
+   "gc": 0.969456631752,
+   "ok": true
+  }
+ },
+ "summary": {
+  "N1": {
+   "etas": 85,
+   "cases_total": 10200,
+   "cases_met": 10200,
+   "cases_failed": 0,
+   "min_slack": 3.749859378510134e-05,
+   "worst": {
+    "eta": 0.0001,
+    "min_slack": 3.749859378510134e-05,
+    "worst": {
+     "S": 0.00010000000016666667,
+     "x": 0.0,
+     "a": 0.9999250028124297,
+     "b": 0,
+     "y": 0,
+     "tag": "corner"
+    },
+    "cases": 120,
+    "cases_met": 120,
+    "cases_failed": 0,
+    "points": 3435960,
+    "points_failed_note": "per-case counts above"
+   }
+  },
+  "N2": {
+   "etas": 85,
+   "cases_total": 10200,
+   "cases_met": 10200,
+   "cases_failed": 0,
+   "min_slack": 5.624648453317338e-05,
+   "worst": {
+    "eta": 0.0001,
+    "min_slack": 5.624648453317338e-05,
+    "worst": {
+     "S": 0.00010000000016666667,
+     "x": 0.0,
+     "a": 0.9999250028124297,
+     "b": 1.0,
+     "y": 1.8749296892578426e-05,
+     "tag": "corner"
+    },
+    "cases": 120,
+    "cases_met": 120,
+    "cases_failed": 0,
+    "points": 3435960,
+    "points_failed_note": "per-case counts above"
+   }
+  }
+ }
+}

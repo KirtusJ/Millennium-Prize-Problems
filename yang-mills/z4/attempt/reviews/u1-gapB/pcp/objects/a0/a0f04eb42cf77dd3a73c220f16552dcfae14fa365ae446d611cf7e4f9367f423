@@ -1,0 +1,411 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./wrap_patched.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(../note/preamble.tex
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsart.cls
+Document Class: amsart 2020/05/29 v2.20.6
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty))))
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./wrap_patched.aux) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(./wrap_patched.out) (./wrap_patched.out) (../note/tun_upper.tex [1{/var/lib/te
+xmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+Overfull \hbox (83.20055pt too wide) detected at line 148
+\OML/cmm/m/it/10.95 c[] \OT1/cmr/m/n/10.95 = [] \OML/cmm/m/it/10.95 ^^T ^^_[] d
+g \OT1/cmr/m/n/10.95 = [] [][] \OML/cmm/m/it/10.95 e[] []\OT1/cmr/m/n/10.95 ((\
+OML/cmm/m/it/10.95 n \OT1/cmr/m/n/10.95 + 1)\OML/cmm/m/it/10.95 ^^R\OT1/cmr/m/n
+/10.95 ) [] \OML/cmm/m/it/10.95 ^^R d^^R \OT1/cmr/m/n/10.95 = [] [][] \OML/cmm/
+m/it/10.95 e[][][] n^^R \OMS/cmsy/m/n/10.95 ^^@ []\OT1/cmr/m/n/10.95 (\OML/cmm/
+m/it/10.95 n \OT1/cmr/m/n/10.95 + 2)\OML/cmm/m/it/10.95 ^^R[]d^^R \OT1/cmr/m/n/
+10.95 = []\OML/cmm/m/it/10.95 :
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd)
+Overfull \hbox (33.5815pt too wide) detected at line 193
+[] \OML/cmm/m/it/10.95 k\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 g\OT1/cmr/m/n/1
+0.95 ) []([] \OML/cmm/m/it/10.95 p \OMS/cmsy/m/n/10.95 ^^A \OML/cmm/m/it/10.95 
+X\OT1/cmr/m/n/10.95 ) \OML/cmm/m/it/10.95 e[] dg \OMS/cmsy/m/n/10.95 ^^T [][][]
+[][][]\OML/cmm/m/it/10.95 e[] \OT1/cmr/m/n/10.95 + [][][][]2\OML/cmm/m/it/10.95
+ ^^Y[] e[][];
+[3]
+Overfull \hbox (77.78058pt too wide) detected at line 212
+[][] \OML/cmm/m/it/10.95 e[][][][][]d[]X \OMS/cmsy/m/n/10.95 ^^U [][] \OML/cmm/
+m/it/10.95 e[][]\OT1/cmr/m/n/10.95 1 \OMS/cmsy/m/n/10.95 ^^@ [][]\OML/cmm/m/it/
+10.95 d[]X \OMS/cmsy/m/n/10.95 ^^U [][] \OML/cmm/m/it/10.95 e[][]\OT1/cmr/m/n/1
+0.95 1 \OMS/cmsy/m/n/10.95 ^^@ [][]\OML/cmm/m/it/10.95 d[]X \OT1/cmr/m/n/10.95 
+= [][][][][]1 \OMS/cmsy/m/n/10.95 ^^@ [][]\OML/cmm/m/it/10.95 ;
+
+Overfull \hbox (33.48949pt too wide) in paragraph at lines 227--231
+\OML/cmm/m/it/10.95 e[]$\OT1/cmr/m/n/10.95 , and the to-tal Haar mass is at mos
+t $1$. So the con-tri-bu-tion is at most $\OML/cmm/m/it/10.95 e[]=Z$\OT1/cmr/m/
+n/10.95 ;
+[4] [5]
+Overfull \hbox (20.16774pt too wide) in paragraph at lines 376--380
+[]\OT1/cmr/m/n/10.95 For $\OML/cmm/m/it/10.95 ^^^ \OMS/cmsy/m/n/10.95 2 \OML/cm
+m/m/it/10.95 L[]$\OT1/cmr/m/n/10.95 , by Cauchy--Schwarz, $\OMS/cmsy/m/n/10.95 
+j\OML/cmm/m/it/10.95 G^^^\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/
+10.95 )\OMS/cmsy/m/n/10.95 j[] ^^T [][] \OML/cmm/m/it/10.95 G\OT1/cmr/m/n/10.95
+ (\OML/cmm/m/it/10.95 x; y\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95  \OT1/cmr/m/n
+/10.95 (\OML/cmm/m/it/10.95 y\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 dy[][][] G
+\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x; y\OT1/cmr/m/n/10.95 )\OMS/cmsy/m/n/1
+0.95 j\OML/cmm/m/it/10.95 ^^^\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 y\OT1/cmr/
+m/n/10.95 )\OMS/cmsy/m/n/10.95 j[]\OML/cmm/m/it/10.95 = \OT1/cmr/m/n/10.95 (\OM
+L/cmm/m/it/10.95 y\OT1/cmr/m/n/10.95 ) \OML/cmm/m/it/10.95 dy[] \OMS/cmsy/m/n/1
+0.95 ^^T
+[6] [7]
+Overfull \hbox (39.86417pt too wide) detected at line 491
+\OML/cmm/m/it/10.95 B\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.9
+5 ) \OMS/cmsy/m/n/10.95 ^^T [] \U/msb/m/n/10.95 E[]\OML/cmm/m/it/10.95 G\OT1/cm
+r/m/n/10.95 (\OML/cmm/m/it/10.95 r; \OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 W[
+]\OMS/cmsy/m/n/10.95 j[]\OT1/cmr/m/n/10.95 ) \OT1/cmr/bx/n/10.95 1[][]\OML/cmm/
+m/it/10.95 ;  W[] \OMS/cmsy/m/n/10.95 ^^X \OML/cmm/m/it/10.95 N[]w=A; \OT1/cmr/
+m/n/10.95 (\OML/cmm/m/it/10.95 ^^LA\OT1/cmr/m/n/10.95 )[]\OML/cmm/m/it/10.95 I[
+][];  G\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 r; r[]\OT1/cmr/m/n/10.95 ) = [][
+][]\OML/cmm/m/it/10.95 ^^L\OT1/cmr/m/n/10.95 (1 \OMS/cmsy/m/n/10.95 ^^@ \OML/cm
+m/m/it/10.95 r\OT1/cmr/m/n/10.95 )(1 \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.9
+5 r[]\OT1/cmr/m/n/10.95 )[]\OML/cmm/m/it/10.95 :
+[8]
+Overfull \hbox (9.23701pt too wide) in paragraph at lines 562--563
+ \OT1/cmr/m/n/10.95 4.1.\OT1/cmr/bx/n/10.95 Factorisation.[][] \OT1/cmr/m/n/10.
+95 By Lemma [][]2.1[][](3), $\OML/cmm/m/it/10.95 K[]$ \OT1/cmr/m/n/10.95 ex-ist
+s and com-mutes with $\OML/cmm/m/it/10.95 K[]$\OT1/cmr/m/n/10.95 . Put $\OML/cm
+m/m/it/10.95 B \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 K[]e[]$\OT1/cmr/m/n/10.
+95 .
+[9] [10] [11]
+Overfull \hbox (71.16176pt too wide) detected at line 782
+\OT1/cmr/m/n/10.95 ^^A \OMS/cmsy/m/n/10.95 ^^T \OT1/cmr/m/n/10.95 4 [] [][] \OM
+L/cmm/m/it/10.95 h\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 )
+\OML/cmm/m/it/10.95 e[]T\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x; y\OT1/cmr/m/
+n/10.95 )\OML/cmm/m/it/10.95 e[]h\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 y\OT1/
+cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^T \OT1/cmr/m/n/10.95 4\OML/cmm/m/it/10.95
+ e[] [] [] h\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 )\OML/c
+mm/m/it/10.95 K\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x; y\OT1/cmr/m/n/10.95 )
+\OML/cmm/m/it/10.95 e[]h\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 y\OT1/cmr/m/n/1
+0.95 ) \OML/cmm/m/it/10.95 dx dy:
+) (../note/tun_lower_patched.tex [12]
+Overfull \hbox (18.61363pt too wide) in paragraph at lines 58--59
+[][]\OT1/cmr/bx/n/10.95 Lemma 5.2 \OT1/cmr/m/n/10.95 (Ground-s-tate rep-re-sen-
+ta-tion)\OT1/cmr/bx/n/10.95 . []\OT1/cmr/m/it/10.95 With $\OML/cmm/m/it/10.95 E
+\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 h\OT1/cmr/m/n/10.95 ) := [] [] [] \OML/
+cmm/m/it/10.95 T\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x; y\OT1/cmr/m/n/10.95 
+)\OML/cmm/m/it/10.95 g\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.
+95 )\OML/cmm/m/it/10.95 g\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 y\OT1/cmr/m/n/
+10.95 )(\OML/cmm/m/it/10.95 h\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x\OT1/cmr/
+m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 h\OT1/cmr/m/n/10.95 (\O
+ML/cmm/m/it/10.95 y\OT1/cmr/m/n/10.95 ))[] \OML/cmm/m/it/10.95 dx dy$
+
+Overfull \hbox (45.61784pt too wide) in paragraph at lines 62--66
+[]\OT1/cmr/m/n/10.95 Write $\OML/cmm/m/it/10.95 h\OT1/cmr/m/n/10.95 (\OML/cmm/m
+/it/10.95 x\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 h\OT1/cmr/m/n/10.95 (\OML/cm
+m/m/it/10.95 y\OT1/cmr/m/n/10.95 ) = [](\OML/cmm/m/it/10.95 h\OT1/cmr/m/n/10.95
+ (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 )[] + \OML/cmm/m/it/10.95 h\OT1/cmr/m
+/n/10.95 (\OML/cmm/m/it/10.95 y\OT1/cmr/m/n/10.95 )[]) \OMS/cmsy/m/n/10.95 ^^@ 
+[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 h\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10
+.95 x\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 h\OT1/cmr
+/m/n/10.95 (\OML/cmm/m/it/10.95 y\OT1/cmr/m/n/10.95 ))[]$ in $\OML/cmm/m/it/10.
+95 ^^U[] \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 f; Tf\OM
+S/cmsy/m/n/10.95 i \OT1/cmr/m/n/10.95 = [] [] \OML/cmm/m/it/10.95 T\OT1/cmr/m/n
+/10.95 (\OML/cmm/m/it/10.95 x; y\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 g\OT1/c
+mr/m/n/10.95 (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 h\OT
+1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 g
+\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 y\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.9
+5 h\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 y\OT1/cmr/m/n/10.95 )$.
+[13]
+Overfull \hbox (28.6002pt too wide) detected at line 109
+\OT1/cmr/m/n/10.95 4 [][] \OML/cmm/m/it/10.95 f[] \OMS/cmsy/m/n/10.95 ^^T \OML/
+cmm/m/it/10.95 n [] []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 h\OT1/cmr/m/n/10.
+95 (\OML/cmm/m/it/10.95 z\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/
+m/it/10.95 h\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 z[]\OT1/cmr/m/n/10.95 ))[] 
+\OML/cmm/m/it/10.95 d^^Y[] \OMS/cmsy/m/n/10.95 ^^T \OML/cmm/m/it/10.95 n^^Z[] [
+] [] T\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 z; z[]\OT1/cmr/m/n/10.95 )\OML/cm
+m/m/it/10.95 g\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 z\OT1/cmr/m/n/10.95 )\OML
+/cmm/m/it/10.95 g\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 z[]\OT1/cmr/m/n/10.95 
+)(\OML/cmm/m/it/10.95 h\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 z\OT1/cmr/m/n/10
+.95 ) \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 h\OT1/cmr/m/n/10.95 (\OML/cmm
+/m/it/10.95 z[]\OT1/cmr/m/n/10.95 ))[] = 2\OML/cmm/m/it/10.95 n^^Z[]E\OT1/cmr/m
+/n/10.95 (\OML/cmm/m/it/10.95 h\OT1/cmr/m/n/10.95 ) = 2\OML/cmm/m/it/10.95 n^^Z
+[]\OT1/cmr/m/n/10.95 ^^A\OML/cmm/m/it/10.95 ;
+
+Overfull \hbox (77.0569pt too wide) in paragraph at lines 134--142
+[][] \OML/cmm/m/it/10.95 g\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n
+/10.95 )[]1[](\OML/cmm/m/it/10.95 z\OT1/cmr/m/n/10.95 )1[](\OML/cmm/m/it/10.95 
+z[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 B\OMS/cmsy/m/n
+/10.95 j[]\OML/cmm/m/it/10.95 dx \OMS/cmsy/m/n/10.95 ^^T [][] \OML/cmm/m/it/10.
+95 g[]\OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 S\OMS/cmsy/m/n/10.95 j\OML/cmm/m
+/it/10.95 =v[]$\OT1/cmr/m/n/10.95 . For $\OML/cmm/m/it/10.95 k \OT1/cmr/m/n/10.
+95 = 0$, $\OML/cmm/m/it/10.95 p[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x; z[]
+\OT1/cmr/m/n/10.95 ) = \OML/cmm/m/it/10.95 g\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/1
+0.95 x\OT1/cmr/m/n/10.95 )[]1[](\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 )1[](\O
+ML/cmm/m/it/10.95 z[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 =\OMS/cmsy/m/n/10.
+95 j\OML/cmm/m/it/10.95 B\OMS/cmsy/m/n/10.95 j ^^T
+[14]
+Overfull \hbox (38.90799pt too wide) in paragraph at lines 198--205
+[]\OT1/cmr/m/n/10.95 On $\OML/cmm/m/it/10.95 B[] \OMS/cmsy/m/n/10.95 ^^B \OML/c
+mm/m/it/10.95 B[]$\OT1/cmr/m/n/10.95 , $\OML/cmm/m/it/10.95 V \OT1/cmr/m/n/10.9
+5 = 2\OML/cmm/m/it/10.95 ^^L\OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 u[] \OMS/c
+msy/m/n/10.95 ^^B \OML/cmm/m/it/10.95 u[]\OMS/cmsy/m/n/10.95 j[] ^^T \OT1/cmr/m
+/n/10.95 2\OML/cmm/m/it/10.95 ^^L [][] a[] [][] a[] \OMS/cmsy/m/n/10.95 ^^T \OT
+1/cmr/m/n/10.95 2\OML/cmm/m/it/10.95 ^^Lr[]$\OT1/cmr/m/n/10.95 . Hence $\OMS/cm
+sy/m/n/10.95 h\OML/cmm/m/it/10.95 b[]; Tb[]\OMS/cmsy/m/n/10.95 i ^^U \OML/cmm/m
+/it/10.95 e[]\OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 b[]; K[]K[]b[]\OMS/cmsy/m
+/n/10.95 i \OT1/cmr/m/n/10.95 =
+[15] [16]
+Overfull \hbox (20.6056pt too wide) detected at line 370
+[]
+[17]
+Overfull \hbox (15.38033pt too wide) in paragraph at lines 422--425
+ []\OT1/cmr/m/it/10.95 Taylor ex-pan-sion with ex-plicit re-main-der.[] \OT1/cm
+r/m/n/10.95 The ra-tio for (E1) is $\OML/cmm/m/it/10.95 T\OT1/cmr/m/n/10.95 (\O
+ML/cmm/m/it/10.95 e[]GE\OT1/cmr/m/n/10.95 )(\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/1
+0.95 )\OML/cmm/m/it/10.95 =\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 e[]GE\OT1/cm
+r/m/n/10.95 )(\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 ) =
+
+Overfull \hbox (41.1714pt too wide) detected at line 436
+\OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 F \OMS/cmsy/m/n/10.95 ^^@ Mj ^^T []\OT
+1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x; r[]\OT1/cmr/m/n/10.95 ) := \OML/cmm/m/i
+t/10.95 h E[] \OT1/cmr/m/n/10.95 + ^^A\OML/cmm/m/it/10.95 h B[] \OT1/cmr/m/n/10
+.95 + [][][]\OML/cmm/m/it/10.95 H[]r[] \OT1/cmr/m/n/10.95 + \OMS/cmsy/m/n/10.95
+ j\OT1/cmr/m/n/10.95 	[](\OML/cmm/m/it/10.95 a[]\OT1/cmr/m/n/10.95 )\OMS/cmsy/m
+/n/10.95 j\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 r[] \OMS/cmsy/m/n/10.95 ^^@ \
+OML/cmm/m/it/10.95 r[]\OT1/cmr/m/n/10.95 )[] + [][][]\OML/cmm/m/it/10.95 H[]r[]
+ \OT1/cmr/m/n/10.95 + \OMS/cmsy/m/n/10.95 j\OT1/cmr/m/n/10.95 ^^B[](\OML/cmm/m/
+it/10.95 a[]\OT1/cmr/m/n/10.95 )\OMS/cmsy/m/n/10.95 j\OT1/cmr/m/n/10.95 (\OML/c
+mm/m/it/10.95 r[] \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 r[]\OT1/cmr/m/n/1
+0.95 )[]\OML/cmm/m/it/10.95 ;
+[18] [19]
+Overfull \hbox (7.64224pt too wide) in paragraph at lines 513--520
+\OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 ^^P[]\OMS/cmsy/m/n/10.95 j \OML/cmm/m/
+it/10.95 > L$ \OT1/cmr/m/n/10.95 un-der $\OML/cmm/m/it/10.95 N\OT1/cmr/m/n/10.9
+5 (\OML/cmm/m/it/10.95 p; I\OT1/cmr/m/n/10.95 )$ has prob-a-bil-ity $\OMS/cmsy/
+m/n/10.95 ^^T \OML/cmm/m/it/10.95 P\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^_[
+] > L \OMS/cmsy/m/n/10.95 ^^@ j\OML/cmm/m/it/10.95 p[]\OMS/cmsy/m/n/10.95 j\OT1
+/cmr/m/n/10.95 )$. Di-vide by $\OML/cmm/m/it/10.95 J \OT1/cmr/m/n/10.95 = \OML/
+cmm/m/it/10.95 e[]$\OT1/cmr/m/n/10.95 .
+
+Overfull \hbox (55.73117pt too wide) in paragraph at lines 538--551
+\OT1/cmr/m/n/10.95 and Lemma [][]6.6[][], the ra-tio is at least $\OML/cmm/m/it
+/10.95 e[]%[]e[]e[] \U/msb/m/n/10.95 E\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 e
+[]\OT1/cmr/m/n/10.95 ; []] = \OML/cmm/m/it/10.95 e[]%[]e[]\OT1/cmr/m/n/10.95 (\
+OML/cmm/m/it/10.95 J \OMS/cmsy/m/n/10.95 ^^@
+[20]
+Overfull \hbox (140.31233pt too wide) detected at line 625
+\OML/cmm/m/it/10.95 T[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 G \OMS/cmsy/m/n/
+10.95 ^^@ \OML/cmm/m/it/10.95 c[]\OT1/cmr/m/n/10.95 )[](\OML/cmm/m/it/10.95 E \
+OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 c[]\OT1/cmr/m/n/10.95 )[]\OML/cmm/m/
+it/10.95 e[][] \OMS/cmsy/m/n/10.95 ^^U \OML/cmm/m/it/10.95 T[]\OT1/cmr/m/n/10.9
+5 (\OML/cmm/m/it/10.95 G \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 c[]\OT1/cm
+r/m/n/10.95 )[]\OML/cmm/m/it/10.95 Ee[][] \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it
+/10.95 c[]T[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 G \OMS/cmsy/m/n/10.95 ^^@ 
+\OML/cmm/m/it/10.95 c[]\OT1/cmr/m/n/10.95 )[]\OML/cmm/m/it/10.95 e[][] \OMS/cms
+y/m/n/10.95 ^^U \OML/cmm/m/it/10.95 T\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 GE
+e[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 c[]T\OT1/cm
+r/m/n/10.95 (\OML/cmm/m/it/10.95 Ee[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^
+^@ \OML/cmm/m/it/10.95 c[]T\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 Ge[]\OT1/cmr
+/m/n/10.95 )\OML/cmm/m/it/10.95 ;
+[21] [22]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 712.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 712.
+
+
+Overfull \hbox (3.55052pt too wide) in paragraph at lines 717--725
+[]$\OML/cmm/m/it/10.95 T \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 B[]K[]B$ \OT1
+/cmr/m/n/10.95 with $\OML/cmm/m/it/10.95 B \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/1
+0.95 K[]e[]$\OT1/cmr/m/n/10.95 , and $\OML/cmm/m/it/10.95 K[]$\OT1/cmr/m/n/10.9
+5 , $1[]$ act as above, so $1[]\OML/cmm/m/it/10.95 T\OT1/cmr/m/n/10.95 1[] = (\
+OML/cmm/m/it/10.95 B\OT1/cmr/m/n/10.95 1[])[]\OML/cmm/m/it/10.95 K[]\OT1/cmr/m/
+n/10.95 (\OML/cmm/m/it/10.95 B\OT1/cmr/m/n/10.95 1[])$
+
+Overfull \hbox (7.60446pt too wide) in paragraph at lines 717--725
+\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 a[]; ^^Y \OMS/cmsy/m/n/10.95 ^^@ \OML/c
+mm/m/it/10.95 a[]\OT1/cmr/m/n/10.95 ]\OMS/cmsy/m/n/10.95 g$\OT1/cmr/m/n/10.95 ;
+ then $1[] = 1[]\OML/cmm/m/it/10.95 P$ \OT1/cmr/m/n/10.95 and $\OMS/cmsy/m/n/10
+.95 k\OT1/cmr/m/n/10.95 1[]\OML/cmm/m/it/10.95 B[]B\OT1/cmr/m/n/10.95 1[]\OMS/c
+msy/m/n/10.95 k ^^T k\OML/cmm/m/it/10.95 PB[]BP\OMS/cmsy/m/n/10.95 k$\OT1/cmr/m
+/n/10.95 . The op-er-a-tor $\OML/cmm/m/it/10.95 B[]B \OT1/cmr/m/n/10.95 = \OML/
+cmm/m/it/10.95 e[]K[]e[]$
+[23]
+Overfull \hbox (10.84389pt too wide) in paragraph at lines 755--761
+[][]\OT1/cmr/bx/n/10.95 Lemma 7.1 \OT1/cmr/m/n/10.95 (El-e-men-tary bounds)\OT1
+/cmr/bx/n/10.95 . []\OT1/cmr/m/it/10.95 (sup) $\OML/cmm/m/it/10.95 g\OT1/cmr/m/
+n/10.95 (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^T \OML
+/cmm/m/it/10.95 ^^U[]k[]$ \OT1/cmr/m/it/10.95 for all $\OML/cmm/m/it/10.95 x$\O
+T1/cmr/m/it/10.95 . (I$[]$ up) $\OML/cmm/m/it/10.95 I[]\OT1/cmr/m/n/10.95 (\OML
+/cmm/m/it/10.95 z\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^T \OT1/cmr/m/n/10.9
+5 (\OML/cmm/m/it/10.95 ^^Y=\OT1/cmr/m/n/10.95 2)\OML/cmm/m/it/10.95 e[]=[]$
+
+Overfull \hbox (25.503pt too wide) detected at line 783
+\OML/cmm/m/it/10.95 T[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x; y\OT1/cmr/m/n
+/10.95 ) \OMS/cmsy/m/n/10.95 ^^U \OML/cmm/m/it/10.95 e[]k[] [] [] [] \OMS/cmsy/
+m/n/10.95 ^^@ \OML/cmm/m/it/10.95 c[]\OT1/cmr/m/n/10.95 ([] \OML/cmm/m/it/10.95
+ V\OT1/cmr/m/n/10.95 )[]\OML/cmm/m/it/10.95 ;  c[]\OT1/cmr/m/n/10.95 (\OML/cmm/
+m/it/10.95 K[]\OT1/cmr/m/n/10.95 ) := \OML/cmm/m/it/10.95 K[] \OT1/cmr/m/n/10.9
+5 + \OML/cmm/m/it/10.95 R[] \OT1/cmr/m/n/10.95 + [](\OML/cmm/m/it/10.95 ^^Y=\OT
+1/cmr/m/n/10.95 2) + 2 [] []\OML/cmm/m/it/10.95 ;
+
+Overfull \hbox (93.96689pt too wide) in paragraph at lines 808--810
+[]\OT1/cmr/m/it/10.95 ($\OML/cmm/m/it/10.95 n[] \OT1/cmr/m/n/10.95 = \OMS/cmsy/
+m/n/10.95 d\OML/cmm/m/it/10.95 a[][]=d\OMS/cmsy/m/n/10.95 e$ \OT1/cmr/m/it/10.9
+5 steps.) Grow $\OML/cmm/m/it/10.95 U[]$ \OT1/cmr/m/it/10.95 from $\OT1/cmr/m/n
+/10.95 1$ \OT1/cmr/m/it/10.95 to $\OML/cmm/m/it/10.95 U[]\OT1/cmr/m/n/10.95 (\O
+ML/cmm/m/it/10.95 y\OT1/cmr/m/n/10.95 )$ \OT1/cmr/m/it/10.95 along its sub-grou
+p; $\OML/cmm/m/it/10.95 V\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t\OT1/cmr/m/n/
+10.95 ) = ([](\OML/cmm/m/it/10.95 ta[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 y
+\OT1/cmr/m/n/10.95 ))\OML/cmm/m/it/10.95 = [] a[]\OT1/cmr/m/n/10.95 (\OML/cmm/m
+/it/10.95 y\OT1/cmr/m/n/10.95 ))[]\OML/cmm/m/it/10.95 V\OT1/cmr/m/n/10.95 (\OML
+/cmm/m/it/10.95 y\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^T
+[24]
+Overfull \hbox (17.88292pt too wide) in paragraph at lines 817--821
+[]\OT1/cmr/m/n/10.95 Phase 0: $\OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 u[] \OM
+S/cmsy/m/n/10.95 ^^B \OML/cmm/m/it/10.95 u[]\OMS/cmsy/m/n/10.95 j \OT1/cmr/m/n/
+10.95 = \OML/cmm/m/it/10.95 s[]s[] []   \OMS/cmsy/m/n/10.95 ^^T \OML/cmm/m/it/1
+0.95 M=[]$ \OT1/cmr/m/n/10.95 from $\OML/cmm/m/it/10.95 V \OMS/cmsy/m/n/10.95 ^
+^T \OT1/cmr/m/n/10.95 2\OML/cmm/m/it/10.95 M[]$\OT1/cmr/m/n/10.95 ; then $(\OML
+/cmm/m/it/10.95 m []  \OT1/cmr/m/n/10.95 )[] \OMS/cmsy/m/n/10.95 ^^T \OML/cmm/m
+/it/10.95 m []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 s\OT1/cmr/m/n/10.95 ) [] 
+\OML/cmm/m/it/10.95   \OT1/cmr/m/n/10.95 =
+
+Overfull \hbox (58.91498pt too wide) detected at line 851
+\OMS/cmsy/m/n/10.95 ^^@ [] \OML/cmm/m/it/10.95 g \OMS/cmsy/m/n/10.95 ^^T \OT1/c
+mr/m/n/10.95 35(\OML/cmm/m/it/10.95 a[] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.9
+5 r[]\OT1/cmr/m/n/10.95 )[] + \OML/cmm/m/it/10.95 R[];  R[] \OT1/cmr/m/n/10.95 
+= (\OML/cmm/m/it/10.95 n[] \OT1/cmr/m/n/10.95 + 3)\OML/cmm/m/it/10.95 c[]\OT1/c
+mr/m/n/10.95 (\OML/cmm/m/it/10.95 K[]\OT1/cmr/m/n/10.95 ) + \OML/cmm/m/it/10.95
+ M[] \OT1/cmr/m/n/10.95 + [] + [] [] = \OML/cmm/m/it/10.95 O\OT1/cmr/m/n/10.95 
+(\OML/cmm/m/it/10.95 M[]^^L[]\OT1/cmr/m/n/10.95 ) + \OML/cmm/m/it/10.95 O\OT1/c
+mr/m/n/10.95 ([] \OML/cmm/m/it/10.95 ^^L\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95
+ ;
+[25]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 906.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 906.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 906.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sigma' on input line 906.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 906.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 906.
+
+[26]
+Overfull \hbox (2.11015pt too wide) in paragraph at lines 923--925
+\OT1/cmr/m/it/10.95 and $\OML/cmm/m/it/10.95 M[] \OMS/cmsy/m/n/10.95 ^^U \OT1/c
+mr/m/n/10.95 1\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 5\OML/cmm/m/it/10.95 ^^Z[
+] \OT1/cmr/m/n/10.95 + [] 2$ \OT1/cmr/m/it/10.95 (im-plied by (M$[]$)). Then fo
+r ev-ery point $\OML/cmm/m/it/10.95 z$ \OT1/cmr/m/it/10.95 of ev-ery ball $\OML
+/cmm/m/it/10.95 B\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 c[]\OT1/cmr/m/n/10.95 
+(\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; ^^Z[]=[]\OT1/cm
+r/m/n/10.95 )$
+
+Overfull \hbox (43.9832pt too wide) detected at line 986
+\OMS/cmsy/m/n/10.95 ^^@ [] \OT1/cmr/m/n/10.95 ^^A \OMS/cmsy/m/n/10.95 ^^T \OT1/
+cmr/m/n/10.95 2 [](\OMS/cmsy/m/n/10.95 ^^@ [] \OML/cmm/m/it/10.95 g\OT1/cmr/m/n
+/10.95 ) + \OML/cmm/m/it/10.95 O\OT1/cmr/m/n/10.95 ([] \OML/cmm/m/it/10.95 ^^L\
+OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^@ [] []\OT1/cmr/m/n/10.95 2 [][] \OML
+/cmm/m/it/10.95 f[][] \OMS/cmsy/m/n/10.95 ^^T [] \OT1/cmr/m/n/10.95 2	(\OML/cmm
+/m/it/10.95 ^^Y=\OT1/cmr/m/n/10.95 2) + 70(\OML/cmm/m/it/10.95 a[] \OT1/cmr/m/n
+/10.95 + \OML/cmm/m/it/10.95 r[]\OT1/cmr/m/n/10.95 )[] + \OML/cmm/m/it/10.95 O\
+OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^L[]\OT1/cmr/m/n/10.95 ) + \OML/cmm/m/i
+t/10.95 O\OT1/cmr/m/n/10.95 ([] \OML/cmm/m/it/10.95 ^^L\OT1/cmr/m/n/10.95 )\OML
+/cmm/m/it/10.95 ;
+[27]) [28] (./wrap_patched.aux) )
+(see the transcript file for additional information) </root/.texlive2023/texmf-
+var/fonts/pk/ljfour/jknappen/ec/tcti1095.600pk> </root/.texlive2023/texmf-var/f
+onts/pk/ljfour/jknappen/ec/tcrm1095.600pk></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmitt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
+.pfb>
+Output written on wrap_patched.pdf (28 pages, 475904 bytes).
+Transcript written on wrap_patched.log.

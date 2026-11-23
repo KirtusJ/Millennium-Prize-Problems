@@ -1,0 +1,2 @@
+check K112: exit 0 (expected 0) in 827114 ms | output 9dbc78eb3335 | event 114 head b5355c6acd4c
+  /home/user/z4-workers/u1-gapB/report.md — verdicts: 5 STANDS, 5 DEFECT (all corrected in note/tun_lower_patched.tex), 0 NOT CHECKED; gaps A, B and C all closed.

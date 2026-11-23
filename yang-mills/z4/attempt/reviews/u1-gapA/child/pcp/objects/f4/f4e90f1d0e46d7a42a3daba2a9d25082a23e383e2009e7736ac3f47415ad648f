@@ -1,0 +1,69 @@
+c* 4.605413194530984
+A1 eta=0.5 {'n': 400003, 'met': 400003, 'failed': 0, 'worst': -2.220446049250313e-16, 'tol': 1e-12}
+A2 eta=0.5 {'n': 100002, 'met': 100002, 'failed': 0, 'worst': 0.4999999999999998, 'tol': 1e-12}
+A3 eta=0.5 {'n': 400003, 'met': 400003, 'failed': 0, 'worst': 1.0054400778306165, 'tol': 1e-12, 'max_abs_gprime': 1.9945599221693835, 'bound': 3.0, 'fd_max': 1.9945599216154124, 'maxdev_analytic_vs_fd_interior': 2.675637488236404e-07}
+A4 eta=0.5 {'n': 2, 'met': 2, 'failed': 0, 'worst': 1.93798744002491, 'tol': 1e-08, 'c_rho': 2.6674257545060738, 'lower': -0.8359848981716693, 'upper': 4.605413194530984}
+A1 eta=0.2 {'n': 400001, 'met': 400001, 'failed': 0, 'worst': -2.220446049250313e-16, 'tol': 1e-12}
+A2 eta=0.2 {'n': 280001, 'met': 280001, 'failed': 0, 'worst': 0.19999999999999973, 'tol': 1e-12}
+A3 eta=0.2 {'n': 400001, 'met': 400001, 'failed': 0, 'worst': 1.5897403485474442, 'tol': 1e-12, 'max_abs_gprime': 3.153676141705125, 'bound': 4.743416490252569, 'fd_max': 3.1536761418075234, 'maxdev_analytic_vs_fd_interior': 1.0527978389074377e-06}
+A4 eta=0.2 {'n': 2, 'met': 2, 'failed': 0, 'worst': 0.6578449954429666, 'tol': 1e-08, 'c_rho': 3.947568199088017, 'lower': 1.1639708688036974, 'upper': 4.605413194530984}
+A1 eta=0.05 {'n': 400001, 'met': 400001, 'failed': 0, 'worst': -2.220446049250313e-16, 'tol': 1e-12}
+A2 eta=0.05 {'n': 370001, 'met': 370001, 'failed': 0, 'worst': 0.04999999999999971, 'tol': 1e-12}
+A3 eta=0.05 {'n': 400001, 'met': 400001, 'failed': 0, 'worst': 3.1794806970948883, 'tol': 1e-12, 'max_abs_gprime': 6.30735228341025, 'bound': 9.486832980505138, 'fd_max': 6.307352283615047, 'maxdev_analytic_vs_fd_interior': 8.4327116527394e-06}
+A4 eta=0.05 {'n': 2, 'met': 2, 'failed': 0, 'worst': 0.1490230833413344, 'tol': 1e-08, 'c_rho': 4.456390111189649, 'lower': 2.8846920316673406, 'upper': 4.605413194530984}
+A1 eta=0.01 {'n': 400003, 'met': 400003, 'failed': 0, 'worst': -2.220446049250313e-16, 'tol': 1e-12}
+A2 eta=0.01 {'n': 394002, 'met': 394002, 'failed': 0, 'worst': 0.009999999999999787, 'tol': 1e-12}
+A3 eta=0.01 {'n': 400003, 'met': 400003, 'failed': 0, 'worst': 7.10953609811223, 'tol': 1e-12, 'max_abs_gprime': 14.103667337484197, 'bound': 21.213203435596427, 'fd_max': 14.103667336590679, 'maxdev_analytic_vs_fd_interior': 9.428000716482643e-05}
+A4 eta=0.01 {'n': 2, 'met': 2, 'failed': 0, 'worst': 0.028170095238161608, 'tol': 1e-08, 'c_rho': 4.577243099292822, 'lower': 3.8358832964338654, 'upper': 4.605413194530984}
+B1a ftilde<=f eta=0.5 tau=0.5 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 0.0, 'tol': 1e-09, 'hypothesis_ok': True}
+B1b f-ftilde<=L tau/2 eta=0.5 tau=0.5 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 0.2712251382341823, 'tol': 1e-09, 'maxdiff': 0.19818235718412242, 'bound': 0.46940749541830473}
+B2 eta=0.5 tau=0.5 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 10.312440114325822, 'tol': 1e-12, 'max_abs': 9.438621149952061, 'bound': 19.751061264277883}
+B3 eta=0.5 tau=0.5 {'n': 1681691, 'met': 1681691, 'failed': 0, 'worst': 1e-12, 'tol': 0, 'max_abs_diff': 0.0}
+B1a ftilde<=f eta=0.5 tau=0.1 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 0.0, 'tol': 1e-09, 'hypothesis_ok': True}
+B1b f-ftilde<=L tau/2 eta=0.5 tau=0.1 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 0.054155697512695146, 'tol': 1e-09, 'maxdiff': 0.0397258015709658, 'bound': 0.09388149908366095}
+B2 eta=0.5 tau=0.1 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 17.158228462072074, 'tol': 1e-12, 'max_abs': 47.65595236236307, 'bound': 64.81418082443514}
+B3 eta=0.5 tau=0.1 {'n': 1936339, 'met': 1936339, 'failed': 0, 'worst': 1e-12, 'tol': 0, 'max_abs_diff': 0.0}
+B1a ftilde<=f eta=0.5 tau=0.02 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 0.0, 'tol': 1e-09, 'hypothesis_ok': True}
+B1b f-ftilde<=L tau/2 eta=0.5 tau=0.02 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 0.010830427473461104, 'tol': 1e-09, 'maxdiff': 0.007945872343271085, 'bound': 0.01877629981673219}
+B2 eta=0.5 tau=0.02 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 51.75661171981591, 'tol': 1e-12, 'max_abs': 238.37316690540553, 'bound': 290.12977862522143}
+B3 eta=0.5 tau=0.02 {'n': 1987268, 'met': 1987268, 'failed': 0, 'worst': 1e-12, 'tol': 0, 'max_abs_diff': 0.0}
+B1a ftilde<=f eta=0.2 tau=0.5 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 0.0, 'tol': 1e-09, 'hypothesis_ok': True}
+B1b f-ftilde<=L tau/2 eta=0.2 tau=0.5 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 0.2488370848082409, 'tol': 1e-09, 'maxdiff': 0.22057041061006383, 'bound': 0.46940749541830473}
+B2 eta=0.2 tau=0.5 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 14.161624604058716, 'tol': 1e-12, 'max_abs': 10.520563150979335, 'bound': 24.68218775503805}
+B3 eta=0.2 tau=0.5 {'n': 1681691, 'met': 1681691, 'failed': 0, 'worst': 1e-12, 'tol': 0, 'max_abs_diff': 0.0}
+B1a ftilde<=f eta=0.2 tau=0.1 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 0.0, 'tol': 1e-09, 'hypothesis_ok': True}
+B1b f-ftilde<=L tau/2 eta=0.2 tau=0.1 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 0.04968716331331522, 'tol': 1e-09, 'maxdiff': 0.044194335770345726, 'bound': 0.09388149908366095}
+B2 eta=0.2 tau=0.1 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 16.72559794318908, 'tol': 1e-12, 'max_abs': 53.019709372006226, 'bound': 69.7453073151953}
+B3 eta=0.2 tau=0.1 {'n': 1936339, 'met': 1936339, 'failed': 0, 'worst': 1e-12, 'tol': 0, 'max_abs_diff': 0.0}
+B1a ftilde<=f eta=0.2 tau=0.02 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 0.0, 'tol': 1e-09, 'hypothesis_ok': True}
+B1b f-ftilde<=L tau/2 eta=0.2 tau=0.02 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 0.009936792630480293, 'tol': 1e-09, 'maxdiff': 0.008839507186251896, 'bound': 0.01877629981673219}
+B2 eta=0.2 tau=0.02 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 29.87838933954987, 'tol': 1e-12, 'max_abs': 265.1825157764317, 'bound': 295.0609051159816}
+B3 eta=0.2 tau=0.02 {'n': 1987268, 'met': 1987268, 'failed': 0, 'worst': 1e-12, 'tol': 0, 'max_abs_diff': 0.0}
+B1a ftilde<=f eta=0.05 tau=0.5 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 0.0, 'tol': 1e-09, 'hypothesis_ok': True}
+B1b f-ftilde<=L tau/2 eta=0.05 tau=0.5 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 0.2384554920581908, 'tol': 1e-09, 'maxdiff': 0.23095200336011393, 'bound': 0.46940749541830473}
+B2 eta=0.05 tau=0.5 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 20.32371521010148, 'tol': 1e-12, 'max_abs': 17.77488040993531, 'bound': 38.09859562003679}
+B3 eta=0.05 tau=0.5 {'n': 1681691, 'met': 1681691, 'failed': 0, 'worst': 1e-12, 'tol': 0, 'max_abs_diff': 0.0}
+B1a ftilde<=f eta=0.05 tau=0.1 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 0.0, 'tol': 1e-09, 'hypothesis_ok': True}
+B1b f-ftilde<=L tau/2 eta=0.05 tau=0.1 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 0.04761445556934577, 'tol': 1e-09, 'maxdiff': 0.046267043514315175, 'bound': 0.09388149908366095}
+B2 eta=0.05 tau=0.1 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 27.65415260458591, 'tol': 1e-12, 'max_abs': 55.50756257560814, 'bound': 83.16171518019405}
+B3 eta=0.05 tau=0.1 {'n': 1936339, 'met': 1936339, 'failed': 0, 'worst': 1e-12, 'tol': 0, 'max_abs_diff': 0.0}
+B1a ftilde<=f eta=0.05 tau=0.02 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 0.0, 'tol': 1e-09, 'hypothesis_ok': True}
+B1b f-ftilde<=L tau/2 eta=0.05 tau=0.02 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 0.009522279755381193, 'tol': 1e-09, 'maxdiff': 0.009254020061350995, 'bound': 0.01877629981673219}
+B2 eta=0.05 tau=0.02 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 30.8592900427264, 'tol': 1e-12, 'max_abs': 277.61802293825394, 'bound': 308.47731298098034}
+B3 eta=0.05 tau=0.02 {'n': 1987268, 'met': 1987268, 'failed': 0, 'worst': 1e-12, 'tol': 0, 'max_abs_diff': 0.0}
+B1a ftilde<=f eta=0.01 tau=0.5 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 0.0, 'tol': 1e-09, 'hypothesis_ok': True}
+B1b f-ftilde<=L tau/2 eta=0.01 tau=0.5 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 0.23576496281878123, 'tol': 1e-09, 'maxdiff': 0.2336425325995235, 'bound': 0.46940749541830473}
+B2 eta=0.01 tau=0.5 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 31.38040129763135, 'tol': 1e-12, 'max_abs': 39.88537859240796, 'bound': 71.26577989003931}
+B3 eta=0.01 tau=0.5 {'n': 1681691, 'met': 1681691, 'failed': 0, 'worst': 1e-12, 'tol': 0, 'max_abs_diff': 0.0}
+B1a ftilde<=f eta=0.01 tau=0.1 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 0.0, 'tol': 1e-09, 'hypothesis_ok': True}
+B1b f-ftilde<=L tau/2 eta=0.01 tau=0.1 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 0.04707723308277125, 'tol': 1e-09, 'maxdiff': 0.046804266000889695, 'bound': 0.09388149908366095}
+B2 eta=0.01 tau=0.1 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 60.176522084280855, 'tol': 1e-12, 'max_abs': 56.152377365915704, 'bound': 116.32889945019656}
+B3 eta=0.01 tau=0.1 {'n': 1936339, 'met': 1936339, 'failed': 0, 'worst': 1e-12, 'tol': 0, 'max_abs_diff': 0.0}
+B1a ftilde<=f eta=0.01 tau=0.02 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 0.0, 'tol': 1e-09, 'hypothesis_ok': True}
+B1b f-ftilde<=L tau/2 eta=0.01 tau=0.02 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 0.009414842275520604, 'tol': 1e-09, 'maxdiff': 0.009361457541211584, 'bound': 0.01877629981673219}
+B2 eta=0.01 tau=0.02 {'n': 2000001, 'met': 2000001, 'failed': 0, 'worst': 60.80332032603661, 'tol': 1e-12, 'max_abs': 280.84117692494624, 'bound': 341.64449725098285}
+B3 eta=0.01 tau=0.02 {'n': 1987268, 'met': 1987268, 'failed': 0, 'worst': 1e-12, 'tol': 0, 'max_abs_diff': 0.0}
+C1 {'n': 1656400, 'met': 1656400, 'failed': 0, 'worst': 0.0, 'tol': 1e-12, 'cases_S2_D': 40400, 'hypothesis_qualifying': 40400}
+D1 {'n': 200199, 'met': 200199, 'failed': 0, 'worst': 0.0, 'tol': 1e-12, 'note': 'margin=x/(2(1-x))-(-0.5log(1-x)), tail pts to 1-x=1e-12'}
+D2 {'n': 7407363, 'met': 7407363, 'failed': 0, 'worst': 0.0, 'tol': 1e-12, 'n_c': 37}
+FAILED ITEMS: []

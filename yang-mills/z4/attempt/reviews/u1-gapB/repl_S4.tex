@@ -1,0 +1,119 @@
+\subsection{Cut-off algebra}
+
+Put
+\[
+m_0:=\tfrac12\big(1-e^{-3\eta/4}\big),\qquad m_1:=\tfrac12\big(1-e^{-1/16}\big),\qquad m:=\min(m_0,m_1),
+\]
+and
+\[
+M_A^2(\eta):=2\sqrt{2+r_0^2}+\max\Big\{\coth\eta\,\log\frac1{m_1},\ \tfrac34\eta\coth\eta+\log\frac1{m_0}\Big\}.
+\]
+($m=m_0\approx3\eta/8$ for $\eta\le1/12$, $m=m_1=0.0303$ for $\eta\ge1/12$; $M_A^2(0.4)=12.06$ and
+$\eta M_A^2(\eta)\downarrow2\log(1/m_1)\cdot\frac12\cdot2=\log(1/m_1)=3.497$ as $\eta\to0$.)
+
+\begin{lemma}[S4-alg]\label{tu:L-S4}
+Let $\eta\in(0,0.4]$ and the parameters $a_-,r_0,\ell,\theta_0$ be as in Section~\ref{tu:L-ansatz}, and assume
+\[
+\text{(M$_A$)}\qquad M^2\ge M_A^2(\eta).
+\]
+Let $0<\lambda\le1$ and $x\in\operatorname{supp}\varphi_L$ with $a_1\in[a_-,\pi/2]$. Assume (E1)--(E3) at $x$ with
+\[
+\delta:=\Delta_1^++\max(\Delta_2^+,\Delta_3^+)\le m/2,
+\]
+and assume $\beta$ so large that $y_\beta:=\exp\big(-\sqrt\beta(\Theta(r_0)-\Theta(\ell))\big)\le m/2$. Then
+\begin{equation}\label{tu:L-cutoff}
+\frac{(T\varphi_L)(x)}{\mu e^{-\sqrt\beta\Psi(a_1)}}\ \ge\ A_1GE-A_2c_1E-A_3c_2G,
+\end{equation}
+and $(T\varphi_L)(x)\ge\lambda\varphi_L(x)$.
+\end{lemma}
+
+\begin{proof}
+\emph{Step 1: the inequality \eqref{tu:L-cutoff}.} Pointwise $(E-c_2)_+\ge E-c_2$, $(G-c_1)_+\ge G-c_1$ and $(G-c_1)_+\le G$.
+Since $T$ is positive,
+\[
+T\big((G-c_1)_+(E-c_2)_+e^{-\sqrt\beta\Psi}\big)\ge T\big((G-c_1)_+Ee^{-\sqrt\beta\Psi}\big)-c_2T\big((G-c_1)_+e^{-\sqrt\beta\Psi}\big)
+\ge T(GEe^{-\sqrt\beta\Psi})-c_1T(Ee^{-\sqrt\beta\Psi})-c_2T(Ge^{-\sqrt\beta\Psi}),
+\]
+and (E1), (E2), (E3) bound the three terms. (E1), (E2), (E3) hold a fortiori with $\Delta_i$ replaced by $\Delta_i^+$; we
+do so.
+
+\emph{Step 2: reduction to a scalar inequality.} Put $x_c:=c_1/G(x)$ and $y_c:=c_2/E(x)$; on $\operatorname{supp}\varphi_L$,
+$x_c,y_c\in(0,1)$, and $\varphi_L(x)=\mu e^{-\sqrt\beta\Psi(a_1)}GE(1-x_c)(1-y_c)$. Write $A_i=A_i^\circ e^{\mp\Delta_i}$, where
+$A_i^\circ$ is $A_i$ with $\Delta_i=0$ (sign $-$ for $i=1$, $+$ for $i=2,3$). By \eqref{tu:L-cutoff} it suffices that
+\[
+A_1\big[1-\tfrac{A_2}{A_1}x_c-\tfrac{A_3}{A_1}y_c-\tfrac{\lambda}{A_1}(1-x_c)(1-y_c)\big]\ge0 ,
+\]
+and since $A_1>0$, $\lambda/A_1\le e^\delta\lambda/A_1^\circ$, $A_j/A_1\le e^\delta A_j^\circ/A_1^\circ$ ($j=2,3$), it suffices that
+\begin{equation}\label{tu:L-scalar}
+e^{\delta}F\le1,\qquad F:=a(1-x_c)(1-y_c)+\frac{A_2^\circ}{A_1^\circ}x_c+b\,y_c,\quad a:=\frac{\lambda}{A_1^\circ},\quad b:=\frac{A_3^\circ}{A_1^\circ}.
+\end{equation}
+
+\emph{Step 3: the three coefficients.} Let $t:=\Theta'(a_2)^2/2$ (on the support $a_2<r_0\le\pi/2$, so $\tilde\Theta'=\Theta'$),
+$k=k(S):=\sqrt{1+S^2}/S$, $\gamma:=1-1/k\in(0,1)$, and $e(S)=2\operatorname{asinh}S$.
+(a) On $[a_-,\pi/2]$, $\chi=1$, so $\Psi'^2/2=\varepsilon(\sin a_1)+\eta$ and $\log A_1^\circ=\eta-D+t$ with
+$D:=e(S)-\varepsilon(\sin a_1)$. Since $\operatorname{asinh}$ is $1$-Lipschitz, $S\ge\sin a_1$ and
+$S-\sin a_1\le(S^2-\sin^2a_1)/(2\sin a_1)$, we get $0\le D\le\sin^2a_2/\sin a_1\le r_0^2/\sin a_-=\eta/4$. With $\lambda\le1$ and
+$t\ge0$: $0<a\le e^{-3\eta/4}=1-2m_0$.
+(b) $b=e^{-t}$. Since $\Theta'(a)=\theta_0a/\sqrt{a^2+\ell^2}$ is increasing, $b\le e^{-\theta_0^2/4}=e^{-1/16}=1-2m_1$ where
+$a_2\ge\ell$, and $b\le1$ everywhere.
+(c) $A_2^\circ/A_1^\circ=e^{e(S)-V(x)/2}$. Since $\beta\alpha(S)q/2=kV/2$ (because $\alpha(S)=2S\sqrt{1+S^2}$ and
+$V=2\beta S^2q$), $G=e^{-kV/2}$ and $x_c=e^{-M^2+kV/2}$, i.e.\ $V/2=(M^2+\log x_c)/k$. Hence
+\[
+\frac{A_2^\circ}{A_1^\circ}x_c=P\,x_c^{\gamma},\qquad P:=e^{e(S)-M^2/k}.
+\]
+(d) Range of $S$: $S^2=\sin^2a_1+\sin^2a_2$ with $a_1\in[a_-,\pi/2]$, $a_2<r_0$, so
+$S\in[s_-,s_+]$ with $s_-=\sin a_-=\sinh\eta$ and $s_+=\sqrt{1+r_0^2}$. On this range $1<k(S)\le k(s_-)=\cosh\eta/\sinh\eta=\coth\eta$
+and $k(S)e(S)\le2\sqrt{1+S^2}\le2\sqrt{2+r_0^2}$ (as $\operatorname{asinh}S\le S$).
+
+\emph{Step 4: the slice $y_c=0$.} By the weighted AM--GM inequality $u^\gamma v^{1-\gamma}\le\gamma u+(1-\gamma)v$ with
+$u=a_1x_c$, $a_1:=e^{-3\eta/4}$, $v=(Pa_1^{-\gamma})^{k}$ (note $1/(1-\gamma)=k$),
+\[
+Px_c^\gamma\le\gamma a_1x_c+\tfrac1kP^ka_1^{1-k}\le a_1x_c+R,\qquad R:=\tfrac1k\,e^{ke(S)-M^2+(k-1)3\eta/4}.
+\]
+By (d), $\log R\le2\sqrt{2+r_0^2}+\tfrac34\eta\coth\eta-\log k-M^2\le\log m_0$ under (M$_A$) (using $k>1$). Hence, with $a\le a_1$,
+\[
+a(1-x_c)+Px_c^\gamma\le a_1(1-x_c)+a_1x_c+R\le1-2m_0+m_0=1-m_0 .
+\]
+
+\emph{Step 5: the slice $y_c=1$.} By (d) and (M$_A$), $\log P=e(S)-M^2/k\le\big(ke(S)-M^2\big)/k\le-\log(1/m_1)$, since
+$M^2-ke(S)\ge\coth\eta\log(1/m_1)\ge k\log(1/m_1)$. So $P\le m_1$ and, where $a_2\ge\ell$,
+$Px_c^\gamma+b\le m_1+1-2m_1=1-m_1$.
+
+\emph{Step 6: all $y_c$.} $F$ is affine in $y_c$: $F=(1-y_c)\big[a(1-x_c)+Px_c^\gamma\big]+y_c\big[Px_c^\gamma+b\big]$.
+Where $a_2\ge\ell$, Steps 4 and 5 give $F\le1-m$. Where $a_2<\ell$, $\Theta(a_2)\le\Theta(\ell)$, so
+$y_c=\exp(-\sqrt\beta(\Theta(r_0)-\Theta(a_2)))\le y_\beta$, and with $b\le1$,
+$F\le a(1-x_c)+Px_c^\gamma+y_c\le1-m_0+y_\beta$. In both cases $F\le1-m/2$.
+
+\emph{Step 7: the errors.} With $u=m/2$: $e^\delta F\le e^{u}(1-u)\le e^ue^{-u}=1$, using $\delta\le u$ and $1-u\le e^{-u}$.
+This is \eqref{tu:L-scalar}, hence $(T\varphi_L)(x)\ge\lambda\varphi_L(x)$.
+\end{proof}
+
+\noindent\emph{Status.} Proved (replaces the qualitative absorption of the earlier version, whose bullets said ``$\gg$'',
+``$\approx0$'', ``$V$ large''). Scalar cores Lean-checked (\repo{corner.lean}: the weighted AM--GM step, the affine
+combination of Steps 4--6, the strip bound, the error absorption of Step 7, and $S-s\le(S^2-s^2)/(2s)$; axioms
+\texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}). The reduction in Steps 2--3 and the bounds in (d) are
+by hand. Grid checks (\repo{check\_gaps.py}, and independently \repo{child/grid.py}): the scalar inequality $F\le1-m$
+(resp.\ $1-m/2$ on the strip) holds on $\ge10^4$ cases $(\eta,S)$ with $\eta\in[10^{-4},0.4]$, minimum slack $7.5\cdot10^{-3}$ at
+$\eta=0.4$, $3.7\cdot10^{-3}$ at $\eta=0.01$; the limit inequality in the original variables $(a_1,a_2,V,y_c)$ with
+$\Delta_i=0$, $\lambda=1$, $M^2=M_A^2$ has slack $\ge m$ (measured $0.039$ at $\eta=0.4$, $0.00995$ at $\eta=0.01$).
+
+\noindent\emph{What the margin is.} The errors must satisfy $\Delta_1^++\max(\Delta_2^+,\Delta_3^+)\le m(\eta)/2
+=\min(1-e^{-3\eta/4},1-e^{-1/16})/4$ ($=0.0151$ at $\eta=0.4$, $\sim3\eta/16$ as $\eta\to0$), and $\beta$ must satisfy
+$\sqrt\beta\,(\Theta(r_0)-\Theta(\ell))\ge\log(2/m)$. Both are ``$\beta\ge\beta_0(\eta)$'' conditions, since $\sup_{\mathcal T}\Delta_i\to0$
+(Proposition~\ref{tu:L-E13}, Lemma~\ref{tu:L-E2}). A margin proportional to $\eta$ cannot be avoided: at $x_c=y_c=0$, $a_2=0$ the
+exact slack in the limit is $1-\lambda e^{-\eta}\approx\eta$; the earlier grid values $0.0100$ at $\eta=0.01$ are this.
+An $M^2$ of order $1/\eta$ cannot be avoided either: in the corner $x_c,y_c\to1$ with $S\approx\sin a_-$ the limit inequality
+needs $P+e^{-t}\le1$; numerically the smallest admissible $M^2$ on the grid is $\eta M^2=3.74,\,2.96,\,2.77,\,2.75$ at
+$\eta=0.4,\,0.1,\,0.01,\,0.001$ (measured only).
+
+\noindent\emph{Relation to the earlier $c_1$ condition.} The earlier condition $e^{-M^2}\le G_{\min}(e^{\eta/2}-1)e^{-C}/4$ with
+$G_{\min}=\exp(-(\sqrt2/\sin a_-)(e(\sqrt2)+1))$, $C=e(\sqrt2)+\eta+\theta_0^2/2+1$, i.e.\
+$M^2\ge M_{c_1}^2:=\frac{\sqrt2(e(\sqrt2)+1)}{\sinh\eta}+\log4+\log\frac1{e^{\eta/2}-1}+C$, implies (M$_A$) for $\eta\in(0,0.4]$:
+$\sqrt2(e(\sqrt2)+1)=4.656\ge1.082\log(1/m_1)\ge\cosh\eta\log(1/m_1)$ handles the first branch (the constants
+$2\sqrt{2+r_0^2}\le2.86<\log4+C$), and the second branch is $\le2.65+3.61/\eta<4.53/\eta\le4.656/\sinh\eta$ (using
+$1-e^{-3\eta/4}\ge0.555\eta$, $\log u\le u-1$, $\sinh\eta\le1.03\eta$). Numerically $M_{c_1}^2-M_A^2\ge5.98$ on $4005$ points
+of $(0,0.4]$. So the earlier choice of $M$ may be kept; (M$_A$) is what the proof uses. Values:
+$M_{c_1}^2=18.05,\,30.38,\,54.36,\,101.6,\,475.7$ and $M_A^2=12.06,\,20.55,\,37.91,\,72.82,\,352.5$ at
+$\eta=0.4,\,0.2,\,0.1,\,0.05,\,0.01$; $\eta M_{c_1}^2=7.22\to\sqrt2(e(\sqrt2)+1)=4.656$ and $\eta M_A^2=4.82\to3.497$ as
+$\eta\to0$. (The working file's ``$M^2=14.8$ at $\eta=0.4$'' and ``$M^2\approx3.4/\eta$'' are not the values of its own $c_1$
+formula; the writer's $18.0$ is.)

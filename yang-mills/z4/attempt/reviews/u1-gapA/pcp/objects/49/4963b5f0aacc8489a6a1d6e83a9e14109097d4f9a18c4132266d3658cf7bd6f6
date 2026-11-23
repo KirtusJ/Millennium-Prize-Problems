@@ -1,0 +1,26 @@
+c* = 4.6054131874
+eta=0.5: P1 max(rho-(e-eta)+)=2.220e-16 True; P2 max((e-2eta)-rho)=-5.000e-01 True; P3 max|g'|/bound=0.6649 True; g' FD-vs-analytic rel=6.51e-09; P4 jumps 5.33e-13,1.36e-13 True
+  P5 c_rho=2.667426 c*_eta=3.286361 lower=-0.835985 True
+  tau=0.5: P6 0.0e+00 True; P7 True; P8 min(ft-f+L tau/2)=2.7123e-01 max(ft-f)=0.0e+00 True; P9 max|ft''|/bound=0.4779 True; P10 True; P11 ratio=0.2257 True
+  tau=0.1: P6 0.0e+00 True; P7 True; P8 min(ft-f+L tau/2)=5.4156e-02 max(ft-f)=0.0e+00 True; P9 max|ft''|/bound=0.7353 True; P10 True; P11 ratio=0.2257 True
+  tau=0.02: P6 0.0e+00 True; P7 True; P8 min(ft-f+L tau/2)=1.0830e-02 max(ft-f)=0.0e+00 True; P9 max|ft''|/bound=0.8216 True; P10 True; P11 ratio=0.2257 True
+  P12 True
+eta=0.2: P1 max(rho-(e-eta)+)=2.220e-16 True; P2 max((e-2eta)-rho)=-2.000e-01 True; P3 max|g'|/bound=0.6649 True; g' FD-vs-analytic rel=3.44e-09; P4 jumps 2.11e-12,5.38e-13 True
+  P5 c_rho=3.947568 c*_eta=4.073048 lower=1.163971 True
+  tau=0.5: P6 0.0e+00 True; P7 True; P8 min(ft-f+L tau/2)=2.4884e-01 max(ft-f)=0.0e+00 True; P9 max|ft''|/bound=0.4262 True; P10 True; P11 ratio=0.2250 True
+  tau=0.1: P6 0.0e+00 True; P7 True; P8 min(ft-f+L tau/2)=4.9687e-02 max(ft-f)=0.0e+00 True; P9 max|ft''|/bound=0.7602 True; P10 True; P11 ratio=0.2250 True
+  tau=0.02: P6 0.0e+00 True; P7 True; P8 min(ft-f+L tau/2)=9.9368e-03 max(ft-f)=0.0e+00 True; P9 max|ft''|/bound=0.8987 True; P10 True; P11 ratio=0.2250 True
+  P12 True
+eta=0.05: P1 max(rho-(e-eta)+)=2.220e-16 True; P2 max((e-2eta)-rho)=-5.000e-02 True; P3 max|g'|/bound=0.6649 True; g' FD-vs-analytic rel=3.51e-09; P4 jumps 1.69e-11,4.30e-12 True
+  P5 c_rho=4.456390 c*_eta=4.471557 lower=2.884692 True
+  tau=0.5: P6 0.0e+00 True; P7 True; P8 min(ft-f+L tau/2)=2.3846e-01 max(ft-f)=0.0e+00 True; P9 max|ft''|/bound=0.4665 True; P10 True; P11 ratio=0.1188 True
+  tau=0.1: P6 0.0e+00 True; P7 True; P8 min(ft-f+L tau/2)=4.7614e-02 max(ft-f)=0.0e+00 True; P9 max|ft''|/bound=0.6675 True; P10 True; P11 ratio=0.1188 True
+  tau=0.02: P6 0.0e+00 True; P7 True; P8 min(ft-f+L tau/2)=9.5223e-03 max(ft-f)=0.0e+00 True; P9 max|ft''|/bound=0.9000 True; P10 True; P11 ratio=0.1188 True
+  P12 True
+eta=0.01: P1 max(rho-(e-eta)+)=2.220e-16 True; P2 max((e-2eta)-rho)=-1.000e-02 True; P3 max|g'|/bound=0.6649 True; g' FD-vs-analytic rel=3.96e-09; P4 jumps 1.89e-10,4.81e-11 True
+  P5 c_rho=4.577243 c*_eta=4.578597 lower=3.835883 True
+  tau=0.5: P6 0.0e+00 True; P7 True; P8 min(ft-f+L tau/2)=2.3576e-01 max(ft-f)=0.0e+00 True; P9 max|ft''|/bound=0.5597 True; P10 True; P11 ratio=0.0533 True
+  tau=0.1: P6 0.0e+00 True; P7 True; P8 min(ft-f+L tau/2)=4.7077e-02 max(ft-f)=0.0e+00 True; P9 max|ft''|/bound=0.4827 True; P10 True; P11 ratio=0.0533 True
+  tau=0.02: P6 0.0e+00 True; P7 True; P8 min(ft-f+L tau/2)=9.4148e-03 max(ft-f)=0.0e+00 True; P9 max|ft''|/bound=0.8220 True; P10 True; P11 ratio=0.0533 True
+  P12 True
+FAILED: []

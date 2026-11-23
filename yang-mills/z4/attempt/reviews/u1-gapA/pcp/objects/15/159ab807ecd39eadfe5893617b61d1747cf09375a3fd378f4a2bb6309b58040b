@@ -1,0 +1,11 @@
+/home/user/z4-workers/u1-gapA/lean/GapA.lean:15:33: warning: unused variable `h0`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+'smoothstep_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'neg_log_one_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+'half_log_one_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'log_one_sub_nonpos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'cross_term' depends on axioms: [propext, Classical.choice, Quot.sound]
+'det_factor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'coeff_diff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'flat_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'delta_h' depends on axioms: [propext, Classical.choice, Quot.sound]

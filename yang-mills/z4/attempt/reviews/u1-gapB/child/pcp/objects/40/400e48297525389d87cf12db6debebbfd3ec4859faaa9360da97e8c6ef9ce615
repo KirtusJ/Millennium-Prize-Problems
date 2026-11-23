@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/u1-gapB/child/grid.py", line 82, in <module>
+    print("N1 slack at named eta:",{t:res["N1"][repr(t)]["min_slack"] for t in [0.4,0.1,0.01,0.001]})
+                                      ~~~~~~~~~^^^^^^^^^
+KeyError: '0.4'

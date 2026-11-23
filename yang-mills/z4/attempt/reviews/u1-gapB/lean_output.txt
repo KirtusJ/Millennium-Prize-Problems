@@ -1,0 +1,15 @@
+/home/user/z4-workers/u1-gapB/corner.lean:17:5: warning: unused variable `hx0`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/user/z4-workers/u1-gapB/corner.lean:18:5: warning: unused variable `ha`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/user/z4-workers/u1-gapB/corner.lean:19:66: warning: unused variable `hm1`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/user/z4-workers/u1-gapB/corner.lean:40:31: warning: unused variable `hb0`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/user/z4-workers/u1-gapB/corner.lean:58:40: warning: unused variable `hS`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+'amgm_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'corner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'strip' depends on axioms: [propext, Classical.choice, Quot.sound]
+'absorb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'sq_step' depends on axioms: [propext, Classical.choice, Quot.sound]

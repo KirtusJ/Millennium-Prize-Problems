@@ -1,0 +1,2 @@
+check K111: exit 0 (expected 0) in 628672 ms | output 34d5f3919599 | event 113 head dea419034ddb
+  /home/user/z4-workers/u1-gapA/report.md: all 4 assigned gaps proved and patched (STANDS 9, DEFECT 0, NOT CHECKED 0; 1 failed predicate — my own docstring-tolerance mismatch — the stated Δh bound was correct, and the note's DG3 label needed a fix).

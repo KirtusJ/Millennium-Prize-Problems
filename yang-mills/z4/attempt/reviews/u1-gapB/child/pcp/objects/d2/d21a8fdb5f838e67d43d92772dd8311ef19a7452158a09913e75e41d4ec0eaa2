@@ -1,0 +1,50 @@
+{
+ "N1": {
+  "etas": 85,
+  "cases_total": 10200,
+  "cases_met": 10200,
+  "cases_failed": 0,
+  "min_slack": 3.749859378510134e-05,
+  "worst": {
+   "eta": 0.0001,
+   "min_slack": 3.749859378510134e-05,
+   "worst": {
+    "S": 0.00010000000016666667,
+    "x": 0.0,
+    "a": 0.9999250028124297,
+    "b": 0,
+    "y": 0,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  }
+ },
+ "N2": {
+  "etas": 85,
+  "cases_total": 10200,
+  "cases_met": 10200,
+  "cases_failed": 0,
+  "min_slack": 5.624648453317338e-05,
+  "worst": {
+   "eta": 0.0001,
+   "min_slack": 5.624648453317338e-05,
+   "worst": {
+    "S": 0.00010000000016666667,
+    "x": 0.0,
+    "a": 0.9999250028124297,
+    "b": 1.0,
+    "y": 1.8749296892578426e-05,
+    "tag": "corner"
+   },
+   "cases": 120,
+   "cases_met": 120,
+   "cases_failed": 0,
+   "points": 3435960,
+   "points_failed_note": "per-case counts above"
+  }
+ }
+}

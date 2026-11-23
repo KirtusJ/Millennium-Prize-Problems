@@ -1,0 +1,50 @@
+\begin{lemma}\label{tu:L-balls}
+Let $M'':=1+2\rho_B+\rho_B^2$ $(=2.25)$ and assume, besides $\beta\ge\beta_0$,
+\[
+\beta\ge4,\qquad \sqrt\beta>\rho_B/r_0,\qquad \sqrt\beta\ge\frac{\theta_0\rho_B^2}{2\ell\log(4/3)},\qquad\sqrt\beta\,\Theta(r_0)\ge\log4 ,
+\]
+and $M^2\ge1.5\rho_B^2+\log2$ (implied by (M$_A$)). Then for every point $z$ of every ball $B(c_k(x),\rho_B/\sqrt\beta)$ of the chain,
+\[
+g(z)\ge\min\big(\mu',\ \tfrac\mu4e^{-1.5\rho_B^2}e^{-\sqrt\beta\Psi(\pi/2)}\big),\qquad
+-\log\mu'\le35a_-\sqrt\beta+R'_\beta,
+\]
+$R'_\beta:=(n_0''+4)c_{\rm ch}(K_{M''})+M''^2+\tfrac12+\log\frac{k_{\sup}^2}{\lambda k_{\min}^2m_B}$, $n_0''=\lceil(\pi/2)\sqrt{M''}\beta^{1/4}/d\rceil$,
+so $R'_\beta=O(\beta^{1/4})$.
+\end{lemma}
+
+\begin{proof}
+The case split is by the type of the ball, not by the value of $a_1$ at the point.
+
+\emph{(I) Balls of steps 1 and 3.} Take step 1 (corner $(0,0)$, $a_1(x),a_2(x)<a_-$, $V(x)\le1$); step 3 is its image under the
+isometry $\sigma_1$, and $g\circ\sigma_1=g$. Phase 0 does not change class angles and phase 1 only decreases $a_2$, so every centre $c$
+has $a_1(c)=a_1(x)<a_-$, $a_2(c)\le a_2(x)<a_-$, and $V(c)\le V(x)\le1$ ($V$ is nonincreasing in phase 0, zero in phase 1).
+For $z$ in the ball, the class angle is $1$-Lipschitz, so $a_i(z)<a_-+\rho_B/\sqrt\beta\le\pi/2$, and by (infl) with $s_i\le1$,
+$\sqrt{V(z)/2}\le\sqrt{1/2}+2\rho_B+\rho_B^2/\sqrt\beta\le M''$. So $z\in D_{M''}$, and Theorem~\ref{tu:L-H4} (with $M''$, $a_*=a_-$,
+$\varkappa=1$, $d=3.65$, $\rho=0.265$) applies at $z$ with
+$n_{12}\le\lceil a_2(z)\sqrt\beta/d\rceil+\lceil(a_1(z)+a_-)\sqrt\beta/d\rceil\le3a_-\sqrt\beta/d+2\rho_B/d+2\le3a_-\sqrt\beta/d+3$ and
+$n_3\le a_-\sqrt\beta/d+1$. With $c_{\rm ch}(K_0)/d\le8.35$, $c_{\rm ch}(K_1)/d\le9.09$ (Corollary~\ref{tu:L-H4cor}) and
+$c_{\rm ch}(K_{M''})\ge c_{\rm ch}(K_0),c_{\rm ch}(K_1)$ ($c_{\rm ch}$ is increasing and $M''\ge1$) this gives
+$-\log g(z)\le(3\cdot8.35+9.09)a_-\sqrt\beta+R'_\beta\le35a_-\sqrt\beta+R'_\beta$.
+
+\emph{(II) Balls of step 2 (valley balls).} The centre is $c=(e^{t\hat n},1)$. Let $z$ be any point of the ball, with any $a_1(z)\in[0,\pi]$.
+Then $|u_2(z)|=\sin a_2(z)\le a_2(z)\le\rho_B/\sqrt\beta<r_0$, so $E(z)>c_2$. Further $|w|\le|u_1||u_2|$ and $S^2\ge|u_1|^2$ give
+$q\le|u_2|^2\le\rho_B^2/\beta$, and $S^2\le1+\rho_B^2/\beta\le1+\rho_B^2/4$, so
+$\beta\alpha(S)q/2=\beta S\sqrt{1+S^2}\,q\le S\sqrt{1+S^2}\rho_B^2\le1.4804\,\rho_B^2\le1.5\rho_B^2$ (for $\rho_B=1/2$, $\beta\ge4$).
+Hence $G(z)-c_1\ge e^{-1.5\rho_B^2}-e^{-M^2}\ge e^{-1.5\rho_B^2}/2$ by $M^2\ge1.5\rho_B^2+\log2$. Since
+$\Theta(a)\le\theta_0a^2/(2\ell)$, $\sqrt\beta\,\Theta(a_2(z))\le\theta_0\rho_B^2/(2\ell\sqrt\beta)\le\log(4/3)$, so $E(z)\ge3/4$, while
+$c_2=e^{-\sqrt\beta\Theta(r_0)}\le1/4$; thus $E(z)-c_2\ge1/2$. In particular $z\in\operatorname{supp}\varphi$. Because
+$(G-c_1)_+(E-c_2)_+$ is $\sigma_1$-invariant, $\varphi=\max(\varphi_L,\varphi_R)=\mu e^{-\sqrt\beta\min(\Psi(a_1),\Psi(\pi-a_1))}(G-c_1)_+(E-c_2)_+$
+at every point of $X$ (not only on $\Omega$), and $\min(\Psi(a_1),\Psi(\pi-a_1))=\Psi(\min(a_1,\pi-a_1))\le\Psi(\pi/2)$ since $\Psi$ is
+nondecreasing. Proposition~\ref{tu:L-sub} ($g\ge\varphi$ on all of $X$) gives
+$g(z)\ge\frac\mu4e^{-1.5\rho_B^2}e^{-\sqrt\beta\Psi(\pi/2)}$.
+
+Every ball of the chain is of type (I) or (II), so every point is covered.
+\end{proof}
+
+\noindent\emph{Status.} Proved. This replaces the earlier case split by the value of $a_1$ at the centre, which left uncovered
+the points of a valley ball with $a_1$ just outside $[a_-,\pi-a_-]$ (``covered by the first case'' was not true as written: such
+points are not in a ball of the first kind). No new estimate is needed: Proposition~\ref{tu:L-sub} is a statement on all of $X$,
+and the bound on $\varphi$ used in (II) holds at every point of a valley ball, whatever $a_1$ is. The bound of (I) is pointwise
+Theorem~\ref{tu:L-H4} on $D_{M''}$. Constants: $\max S\sqrt{1+S^2}=1.4804$ for $S^2\le1+\rho_B^2/4$ and
+$e^{-1.5\rho_B^2}-e^{-M_A^2}-e^{-1.5\rho_B^2}/2\ge0.3436$ for all $\eta\le0.4$ (\repo{check\_gaps.py}, P7). Here $-\log\mu'$ has
+$35a_-$ instead of $35(a_-+r_0)$; the weaker form $35(a_-+r_0)$ used in Theorem~\ref{tu:L-main} follows.

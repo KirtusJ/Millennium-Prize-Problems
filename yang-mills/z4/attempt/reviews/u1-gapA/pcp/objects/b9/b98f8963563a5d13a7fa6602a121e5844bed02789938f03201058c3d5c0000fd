@@ -1,0 +1,8 @@
+E1: n=1000000 met=1000000 failed=0 max ratio=0.999539
+E2: n=1000000 met=1000000 failed=0 max ratio=0.624355
+E3: n=1000000 met=1000000 failed=0 max ratio=0.598658
+E4: n=1000000 met=1000000 failed=0 max ratio=0.900205
+E5a: n=100000 met=100000 failed=0 max ratio=0.999624
+E5b: n=100000 met=100000 failed=0 max ratio=0.987350
+E6: n=1000000 met=1000000 failed=0 max ratio=0.860336
+FAILED: []

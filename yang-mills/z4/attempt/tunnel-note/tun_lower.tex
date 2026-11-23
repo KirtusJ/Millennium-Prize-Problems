@@ -1,7 +1,6 @@
 % tun_lower.tex -- second half of the note
 % "The tunnelling exponent of the one-site SU(2) Wilson transfer operator in two directions".
 % Sections 5--8. Labels prefixed tu:L-. Cites the first half by tu:U-... labels.
-% Writer: t1-wL (task T168). Status lines follow the house style.
 
 \section{Exact reductions}\label{tu:L-sec-exact}
 
@@ -442,18 +441,39 @@ $\sigma_-=S^2-\Delta S^2>0$.
 \begin{proof}
 $W'=|w+\ell\xi+\mathbf r_\xi|^2$, $|w+\ell\xi|\le|w|+\|\ell\|\,|\xi|\le m$ ($\|\ell\|\le S$, $|\xi|\le\sqrt2r_b$),
 so $|W'-|w+\ell\xi|^2|\le2mr+r^2$ and $W'\le(m+r)^2$. Then
-$|h(S')W'-h(S)|w+\ell\xi|^2|\le h|W'-|w+\ell\xi|^2|+|h(S')-h(S)|W'$. The change of $S^2$ comes from
-$x_0'-x_0=-u\cdot\xi-(1-g_0)x_0$. For the tilts, write $g=e^X$ with $|X|=\arcsin|\xi|$ and Taylor expand along the
+$|h(S')W'-h(S)|w+\ell\xi|^2|\le h|W'-|w+\ell\xi|^2|+\Delta h\,W'$ with $\Delta h:=|h(S')-h(S)|$.
+
+\emph{The change of $S^2$.} $S^2=\sum_i(1-x0_i^2)$, and the real part of $(x0_i,u_i)(g_{0i},\xi_i)$ is
+$x0_i'=x0_ig_{0i}-u_i\cdot\xi_i$, so $x0_i'-x0_i=-u_i\cdot\xi_i-(1-g_{0i})x0_i$ and $|x0_i'-x0_i|\le\sin a_i\,r_b+r_b^2$
+(Lemma~\ref{tu:L-exact}(c)). With $|x0_i'+x0_i|\le2$, $|S'^2-S^2|\le\sum_i|x0_i'-x0_i|\,|x0_i'+x0_i|\le\Delta S^2$.
+
+\emph{The change of $h$.} $h$ is a function of $\sigma:=S^2$: $h=1+\sqrt{1+1/\sigma}$. (So $\sigma_-$ in the statement is a
+lower bound for $S'^2$, a value of $S^2$, not of $S$; the bound is dimensionally consistent: $dh/d\sigma=-1/(2\sigma^2\sqrt{1+1/\sigma})$.)
+For $0<\sigma_0\le\sigma_1$, with $A_j=\sqrt{1+1/\sigma_j}$,
+\[
+A_0-A_1=\frac{A_0^2-A_1^2}{A_0+A_1}=\frac{\sigma_1-\sigma_0}{\sigma_0\sigma_1(A_0+A_1)}\le\frac{\sigma_1-\sigma_0}{2\sigma_0^2A_0},
+\]
+because $2\sigma_0A_0\le\sigma_1A_0+\sigma_1A_1$ (both $\sigma_0A_0\le\sigma_1A_0$ and $\sigma_0A_0=\sqrt{\sigma_0^2+\sigma_0}\le\sqrt{\sigma_1^2+\sigma_1}=\sigma_1A_1$).
+Take $\{\sigma_0,\sigma_1\}=\{S^2,S'^2\}$: $\sigma_1-\sigma_0\le\Delta S^2$ and $\sigma_0\ge S^2-\Delta S^2=\sigma_-$; since
+$\sigma\mapsto\sigma^2\sqrt{1+1/\sigma}=\sigma^{3/2}\sqrt{1+\sigma}$ is increasing, $\Delta h\le\Delta S^2/(2\sigma_-^2\sqrt{1+1/\sigma_-})$.
+
+\emph{Explicit form.} If $r_b\le S/8$, then, using $\sin a_1+\sin a_2\le\sqrt2S$,
+$\Delta S^2\le2\sqrt2Sr_b+4r_b^2\le(\frac{\sqrt2}4+\frac1{16})S^2<\frac{S^2}2$, so $\sigma_-\ge S^2/2$ and
+\begin{equation}\label{tu:L-dh-explicit}
+\Delta h\le\frac{\Delta S^2}{2\sigma_-^{3/2}}\le\frac{\sqrt2\,\Delta S^2}{S^3}\le\frac{4r_b}{S^2}+\frac{4\sqrt2\,r_b^2}{S^3}\le\frac{5\,r_b}{S^2}.
+\end{equation} For the tilts, write $g=e^X$ with $|X|=\arcsin|\xi|$ and Taylor expand along the
 geodesic $t\mapsto Ue^{tX}$: the second derivative is the Riemannian Hessian of $F\circ a$, with eigenvalues
 $F''$ and $F'\cot a$, so the remainder is $\le\frac12H|X|^2$; the first-order term is $F'(a)\hat u\cdot X$, and
 $|X-\xi|\le r_b'-r_b$.
 \end{proof}
 
 \noindent\emph{Status.} Proved in the working file as stated, with a pointwise numerical check
-($0$ violations in $1.6\cdot10^6$ samples; a challenger found $0$ in $2\cdot10^4$). The bound on
-$\Delta h$ is stated there without its derivation; it is reproduced here as written (see the list of
-open steps in the writer's report). The bound is vacuous unless $r_b$ is small against $\sin^2\eta'$;
-with $r_b=L/\sqrt\beta\to0$ this holds for $\beta$ large.
+($0$ violations in $1.6\cdot10^6$ samples; a challenger found $0$ in $2\cdot10^4$). The bounds on
+$\Delta S^2$ and $\Delta h$, stated there without derivation, are now derived (the $\Delta h$ step is Lean-checked as
+\texttt{delta\_h}, and \repo{prog/gap\_dh.py} H1--H3 found $0$ violations in $2\cdot10^5$ random samples; worst ratio
+$\Delta h/\text{bound}=0.96$ for the stated bound and $0.33$ for $4r_b/S^2+4\sqrt2r_b^2/S^3$). The stated bound is correct;
+it is not dimensionally wrong, since $\sigma_-$ bounds $S'^2$. On $\mathcal T$ ($S\ge s_-$), $r_b\le s_-/8$ gives
+$\Delta h\le5r_b/s_-^2=O(r_b)$ uniformly.
 
 \subsubsection*{The Gaussian integral and its distance to the flat fixed point}
 
@@ -466,13 +486,25 @@ $b_w=|b|$,
 \]
 \emph{Flat identity.} $(h-2)(1+2S^2h)=h$ and $1+2S^2h=1+2S^2+\alpha(S)=A(S)$, $\log A(S)=e(S)$. Hence at a
 valley point ($b=0$, $\sigma=(S,S,0)$, $p_w=0$): $(h-2)|b|^2+\log J=|p|^2/2-e(S)$.
-\emph{Gap bounds.} Put ${\rm gap}:=[-e(S)+|p|^2/2]-[(h-2)|b|^2+\log J]$. Then
+\emph{Exact gap.} Put ${\rm gap}:=[-e(S)+|p|^2/2]-[(h-2)|b|^2+\log J]$, $A:=1+2hS^2$, $W=|w|^2=|b|^2/\beta$,
+$D_w:=1+2h\sigma_w^2$ and $x:=4hW/A$. Then $\sigma_w^2\ge0$, $D_w=A(1-x)\ge1$, $0\le x<1$, and
+\begin{equation}\label{tu:L-gap-exact}
+{\rm gap}=\tfrac12\log(1-x)+\tfrac12\log(1+hx)+\frac{hx|b|^2}{D_w}+\frac{h|b|^2}{D_w}\Big(\frac{\kappa^2}\beta-\frac{2\kappa}{\sqrt\beta}\Big).
+\end{equation}
+\emph{Gap bounds.} Consequently
 \begin{align*}
-{\rm gap}&\le DG_1:=\frac{2h|b|^2}{\beta S^2}+\frac{\kappa^2|b|^2}{2\beta\sigma_w^2}+\frac{|\kappa||b|^2}{\sqrt\beta\sigma_w^2}+\frac{4h^2|b|^4}\beta,\\
--{\rm gap}&\le DG_3:=\frac{h(2+2/S^2)|b|^2}\beta+\frac{|\kappa_3||b|^2}{\sqrt\beta\sigma_w^2},
+{\rm gap}&\le DG_1':=\frac{2h^2|b|^2}{\beta A}+\frac{4h^2|b|^4}{\beta AD_w}+\frac{h\kappa^2|b|^2}{\beta D_w}+\frac{2h|\kappa||b|^2}{\sqrt\beta D_w}\ \le\ DG_1,\\
+-{\rm gap}&\le DG_3'(\kappa):=\frac{2h|b|^2}{\beta D_w}+\frac{2h|\kappa||b|^2}{\sqrt\beta D_w}\ \le\ DG_3(\kappa),
 \end{align*}
-($\kappa_3=\Psi'\cot a_1$, the value of $\kappa$ without the $\Theta$-tilt), and all terms are
-$O(M^2(1+\bar\kappa)^2/(\sqrt\beta\sin^2\eta'))$ uniformly on $\mathcal T$.
+where $DG_1:=\frac{2h|b|^2}{\beta S^2}+\frac{\kappa^2|b|^2}{2\beta\sigma_w^2}+\frac{|\kappa||b|^2}{\sqrt\beta\sigma_w^2}+\frac{4h^2|b|^4}\beta$ and
+$DG_3(\kappa):=\frac{h(2+2/S^2)|b|^2}\beta+\frac{|\kappa||b|^2}{\sqrt\beta\sigma_w^2}$ are the bounds of the working file (the last two
+inequalities need $\sigma_w>0$). The same holds for ${\rm gap}_3$ (the gap with $\Theta'=0$) with $\kappa$ replaced by
+$\kappa_3=\Psi'\cot a_1$; in particular $-{\rm gap}_3\le DG_3(\kappa_3)$. On $\mathcal T$, with $h_-:=h(s_-)\ge h$, $|b|^2\le M^2$ and
+$|\kappa|,|\kappa_3|\le\bar\kappa$:
+\begin{equation}\label{tu:L-gap-unif}
+|{\rm gap}|,\ |{\rm gap}_3|\ \le\ \frac{2h_-\bar\kappa M^2}{\sqrt\beta}+\frac{h_-M^2(2h_-+4h_-M^2+\bar\kappa^2+2)}{\beta}.
+\end{equation}
+No lower bound on $\sigma_w$ is needed.
 \end{lemma}
 
 \begin{proof}
@@ -483,17 +515,37 @@ $j$ gives $(1+2h\sigma_j^2)^{-1/2}\exp(\frac{(p_j-2h\sigma_jb_j)^2}{2(1+2h\sigma
 Collecting terms gives the formula. The flat identity:
 $(h-2)(1+2S^2h)=h-2+2S^2h^2-4S^2h$, and with $h-1=\sqrt{1+S^2}/S$ one has $S^2(h-1)^2=1+S^2$, i.e.
 $S^2h^2-2S^2h=1$; so $(h-2)(1+2S^2h)=h-2+2=h$. At a valley point $\log J=|p|^2/2-\log(1+2hS^2)=|p|^2/2-e(S)$.
-The gap bounds are obtained by comparing $\sigma_w^2=S^2-2|w|^2$, $\sigma_b^2\le2|w|^2/S^2$ with the
-valley values and using $2h\sigma/(1+2h\sigma^2)\le1/\sigma$ for the cross term.
+\emph{Exact gap.} $\sigma_w^2=S^2-2W\ge0$ because $|w|\le\sin a_1\sin a_2\le S^2/2$ and $S^2\le2$, so $W\le S^4/4\le S^2/2$.
+By (G1), $\sigma_w^2+\sigma_a^2+\sigma_b^2=S^2-2W+S^2$ with $\nu_++\nu_-=S^2$, $\nu_+\nu_-=W$, hence
+\[
+\tfrac12\sum_j\log(1+2h\sigma_j^2)=\tfrac12\log(A-4hW)+\tfrac12\log\big((1+2h\nu_+)(1+2h\nu_-)\big)
+=\tfrac12\log(A-4hW)+\tfrac12\log(A+4h^2W),
+\]
+which is $\log A+\frac12\log(1-x)+\frac12\log(1+hx)=e(S)+\frac12\log(1-x)+\frac12\log(1+hx)$, and $D_w=A-4hW=A(1-x)$.
+In the last term of $\log J$, $\sigma_wp_w=-\kappa|w|$ and $b_w=|b|=\sqrt\beta|w|$, so
+$h p_w^2\sigma_w^2+2h\sigma_wp_wb_w=h|b|^2(\kappa^2/\beta-2\kappa/\sqrt\beta)$. Finally, by the flat identity
+$(h-2)|b|^2=h|b|^2/A$, and $\frac{h|b|^2}{D_w}-\frac{h|b|^2}A=\frac{h|b|^2(A-D_w)}{AD_w}=\frac{hx|b|^2}{D_w}$. Substituting into
+${\rm gap}=-e(S)+\frac{|p|^2}2-(h-2)|b|^2-\log J$ gives \eqref{tu:L-gap-exact}.
+
+\emph{Bounds.} Upper: $\frac12\log(1-x)\le0$, $\frac12\log(1+hx)\le\frac{hx}2=\frac{2h^2|b|^2}{\beta A}$,
+$\frac{hx|b|^2}{D_w}=\frac{4h^2|b|^4}{\beta AD_w}$, and the last term is $\le\frac{h\kappa^2|b|^2}{\beta D_w}+\frac{2h|\kappa||b|^2}{\sqrt\beta D_w}$.
+Lower: $-\frac12\log(1-x)\le\frac{x}{2(1-x)}=\frac{2hW}{D_w}=\frac{2h|b|^2}{\beta D_w}$, $\frac12\log(1+hx)\ge0$, $\frac{hx|b|^2}{D_w}\ge0$,
+and the last term is $\ge-\frac{2h|\kappa||b|^2}{\sqrt\beta D_w}$. Comparison with $DG_1,DG_3$: $A\ge2hS^2$ gives
+$\frac{2h^2}{A}\le\frac{h}{S^2}\le\frac{2h}{S^2}$; $A,D_w\ge1$; and $\frac h{D_w}=\frac{h}{1+2h\sigma_w^2}\le\frac1{2\sigma_w^2}$ (this is the cross-term
+inequality of the working file in the form $2h\sigma/(1+2h\sigma^2)\le1/\sigma$, divided by $\sigma$), so
+$\frac{2h|\kappa|}{D_w}\le\frac{|\kappa|}{\sigma_w^2}$, $\frac{h\kappa^2}{D_w}\le\frac{\kappa^2}{2\sigma_w^2}$, and $\frac{2h}{D_w}\le2h\le h(2+\frac2{S^2})$.
+\eqref{tu:L-gap-unif} follows from $A,D_w\ge1$, $h\le h_-$ ($h$ decreases in $S$ and $S\ge s_-$ on $\mathcal T$).
 \end{proof}
 
 \noindent\emph{Status.} The formula for $\log J$ and the flat identity are proved (the formula was checked against the
-determinant formula to $4\cdot10^{-15}$; the flat identity is Lean-checked in the working file). The gap bounds
-$DG_1,DG_3$ are stated in the working file without a written derivation; only the cross-term inequality
-$2h\sigma/(1+2h\sigma^2)\le1/\sigma$ is given (it replaces an earlier false bound with $1/\sigma$ replaced by $1$;
-the supremum over $\sigma$ of $2h\sigma/(1+2h\sigma^2)$ is $\sqrt{h/2}$). No challenger checked $DG_1,DG_3$. The
-estimates $\Delta_1,\Delta_3$ below use the exact gap, not $DG$; what is needed is only ${\rm gap}=O(\beta^{-1/2})$
-uniformly on $\mathcal T$, which is what $DG_1,DG_3$ assert.
+determinant formula to $4\cdot10^{-15}$; the flat identity is Lean-checked in the working file). The exact gap
+\eqref{tu:L-gap-exact} and the bounds $DG_1',DG_3'$ and their comparison with $DG_1,DG_3$ are written for this note
+(gap DG1/DG3 of the writer's report). Checked: \repo{prog/gap\_dh.py} Q1--Q8, $2\cdot10^5$ random configurations
+($\beta\in[10,10^8]$, arbitrary $a_1,a_2$, directions and tilts), \eqref{tu:L-gap-exact} agrees with the direct
+$6$-dimensional determinant formula to relative $2.5\cdot10^{-15}$, $0$ violations of the four bounds; the scalar steps
+($\log$ bounds, cross term, determinant factorisation, coefficient difference) are Lean-checked. The
+estimates $\Delta_1,\Delta_3$ below use the exact gap; what is needed is ${\rm gap},-{\rm gap}_3=O(\beta^{-1/2})$
+uniformly on $\mathcal T$, which \eqref{tu:L-gap-unif} gives with explicit constants.
 
 \subsubsection*{Tails}
 
@@ -543,11 +595,18 @@ $(h-2)|b|^2+\log J=-e(S)+|p|^2/2-{\rm gap}$ with $|p|^2=\Psi'^2+\Theta'^2$. Note
 (E3). Split into the product ball and the outer region. On the ball use the upper density bound, $F\le\mathcal M+{\rm Err}_3$,
 and extend the Gaussian integral to $\R^6$; this gives $e^{-e(S)+\Psi'^2/2}e^{{\rm Err}_3-{\rm gap}_3}/(\varrho^2(1-r_b^2))$
 relative to $e^{-\sqrt\beta\Psi}G(x)$. The outer region is Lemma~\ref{tu:L-tails}(b).
-Rate: with $L=\sqrt{C\log\beta}$,
-${\rm Err}=O\big(h(M+2L)L^2/\sqrt\beta+L(M+2L)^2/(\sqrt\beta s_-^4)+(H_\Psi+H_\Theta)L^2/\sqrt\beta\big)$,
-${\rm gap}=O(\beta^{-1/2})$ (Lemma~\ref{tu:L-gauss}), ${\rm Tail}/J$ and $Q$ are $O(\beta^{-c})$, $L^4/\beta\to0$, and
+Rate: let $L/\sqrt\beta\le s_-/8$ (so $r_b\le\frac18$). On $\mathcal T$, $|b|\le M$, $S\in[s_-,\sqrt2]$, $h\le h_-:=h(s_-)$, so
+$\sqrt\beta m\le M+2L$, $\sqrt\beta r\le r_b(2r_bM+\frac{81}{64}L)\le r_b(M+2L)$, hence $E_W\le\frac{17}8r_b(M+2L)^2$,
+$B_W\le\frac{81}{64}(M+2L)^2$, and by \eqref{tu:L-dh-explicit} $\Delta h\le5r_b/s_-^2$. With $r_b'\le1.003\,r_b$ and
+$r_b'-r_b\le0.17\,r_b^3$ for $r_b\le\frac18$:
+\begin{equation}\label{tu:L-err-explicit}
+{\rm Err}\le\frac1{\sqrt\beta}\Big[L(M+2L)^2\Big(2.2\,h_-+\frac{6.4}{s_-^2}\Big)+L^2\big(0.51(H_\Psi+H_\Theta)+0.03(\Lambda+\theta_0)\big)\Big].
+\end{equation}
+With $L=\sqrt{C\log\beta}$ this is $O((\log\beta)^{3/2}\beta^{-1/2})$; $|{\rm gap}|,|{\rm gap}_3|$ are bounded by
+\eqref{tu:L-gap-unif}, $O(\beta^{-1/2})$; ${\rm Tail}/J$ and $Q$ are $O(\beta^{-c})$, $L^4/\beta\to0$, and
 $\log\varrho=O(\beta^{-2/3})$, $-\log\varrho\le-\log D_\beta=O(1/\beta)$. On $\mathcal T$: $S\ge s_-$, so
-$h\le1+\sqrt{1+s_-^2}/s_-$ and $\sigma_w^2=S^2-2|w|^2\ge s_-^2-2M^2/\beta$ stay bounded away from $0$.
+$h\le h_-=1+\sqrt{1+s_-^2}/s_-$; no lower bound on $\sigma_w$ is used (the bounds of Lemma~\ref{tu:L-gauss} have $D_w\ge1$
+in the denominators).
 \end{proof}
 
 \noindent\emph{Status.} Proved in writing in the working file and checked by one challenger (all items
@@ -556,9 +615,10 @@ stand except the gap bounds, not checked); numerically the explicit bound is not
 constraints of the ansatz), while Monte Carlo gives the true defects $|\delta|\le0.06$ at $\beta=16384$.
 Change C1: the working file has $\eta'=0.5>a_-$ in its numerical set, and with $\eta'>a_-$ (E1), (E3) are not
 proved on the strip $a_1\in[a_-,\eta')$, which the comparison needs; we take $\eta'=a_-$. The proof takes any
-$\eta'>0$, and its constants depend on $\eta'$ only through $s_-=\sin\eta'$ (via $s_-^{-4}$, $h(s_-)$ and the
-$\Delta h$ bound) and on $H_\Psi,\Lambda$; all are fixed before $\beta\to\infty$. (A wording fix: the assembly
-file says ``only through $\sin^2\eta'$''; $s_-^{-4}$ and $h(s_-)$ also enter.) The hypothesis ``$C^2$ near
+$\eta'>0$, and its constants depend on $\eta'$ only through $s_-=\sin\eta'$ (via $s_-^{-2}$ and $h(s_-)$ in
+\eqref{tu:L-err-explicit} and \eqref{tu:L-gap-unif}, and the condition $L/\sqrt\beta\le s_-/8$) and on $H_\Psi,\Lambda,\bar\kappa$; all are fixed before $\beta\to\infty$. (A wording fix: the assembly
+file says ``only through $\sin^2\eta'$''; $h(s_-)$ also enters. The earlier $s_-^{-4}$ is replaced by $s_-^{-2}$ through
+\eqref{tu:L-dh-explicit}.) The hypothesis ``$C^2$ near
 $[\eta'-0.1,\pi-\eta'+0.1]$'' of the working file is replaced by the global smoothness of
 Lemma~\ref{tu:L-ansatz-props}(i); the margin $0.1$ was only room for steps of length $L/\sqrt\beta\to0$.
 (E1), (E3) are needed only on $a_1\in[a_-,\pi/2]$ (Lemma~\ref{tu:L-ansatz-props}(iv)).
@@ -589,66 +649,123 @@ and $\tilde\Theta\circ a_2$, which is why changes C2 and C3 are made. On $\mathc
 
 \subsection{Cut-off algebra}
 
+Put
+\[
+m_0:=\tfrac12\big(1-e^{-3\eta/4}\big),\qquad m_1:=\tfrac12\big(1-e^{-1/16}\big),\qquad m:=\min(m_0,m_1),
+\]
+and
+\[
+M_A^2(\eta):=2\sqrt{2+r_0^2}+\max\Big\{\coth\eta\,\log\frac1{m_1},\ \tfrac34\eta\coth\eta+\log\frac1{m_0}\Big\}.
+\]
+($m=m_0\approx3\eta/8$ for $\eta\le1/12$, $m=m_1=0.0303$ for $\eta\ge1/12$; $M_A^2(0.4)=12.06$ and
+$\eta M_A^2(\eta)\to\log(1/m_1)=3.497$ as $\eta\to0$.)
+
 \begin{lemma}[S4-alg]\label{tu:L-S4}
-Let $x\in\operatorname{supp}\varphi_L$ with $a_1\in[a_-,\pi/2]$, and assume (E1)--(E3) at $x$ with
-$\Delta_1+\Delta_3\le\eta/4$ and $\Delta_2\le1$. Write $\tilde g=G(x)-c_1>0$, $\tilde e=E(x)-c_2>0$. Then
+Let $\eta\in(0,0.4]$ and the parameters $a_-,r_0,\ell,\theta_0$ be as in Section~\ref{tu:L-ansatz}, and assume
+\[
+\text{(M$_A$)}\qquad M^2\ge M_A^2(\eta).
+\]
+Let $0<\lambda\le1$ and $x\in\operatorname{supp}\varphi_L$ with $a_1\in[a_-,\pi/2]$. Assume (E1)--(E3) at $x$ with
+\[
+\delta:=\Delta_1^++\max(\Delta_2^+,\Delta_3^+)\le m/2,
+\]
+and assume $\beta$ so large that $y_\beta:=\exp\big(-\sqrt\beta(\Theta(r_0)-\Theta(\ell))\big)\le m/2$. Then
 \begin{equation}\label{tu:L-cutoff}
 \frac{(T\varphi_L)(x)}{\mu e^{-\sqrt\beta\Psi(a_1)}}\ \ge\ A_1GE-A_2c_1E-A_3c_2G,
 \end{equation}
-and exactly
-\begin{equation}\label{tu:L-ring}
-A_1GE-A_2c_1E-A_3c_2G-\lambda\tilde g\tilde e=\tilde g\tilde e(A_1-\lambda)+c_1\tilde e(A_1-A_2)+c_2\tilde g(A_1-A_3)+c_1c_2(A_1-A_2-A_3).
-\end{equation}
-Moreover $A_1-\lambda\ge e^{\eta/2}-1$. If in addition $c_1=e^{-M^2}\le G_{\min}(e^{\eta/2}-1)e^{-C}/4$ with
-$G_{\min}=\exp(-(\sqrt2/\sin a_-)(e(\sqrt2)+1))$ and $C=e(\sqrt2)+\eta+\theta_0^2/2+1$, and $\beta\ge\beta_0$, then the
-right side of \eqref{tu:L-ring} is $\ge0$, so $(T\varphi_L)(x)\ge\lambda\varphi_L(x)$.
+and $(T\varphi_L)(x)\ge\lambda\varphi_L(x)$.
 \end{lemma}
 
 \begin{proof}
-\emph{The inequality \eqref{tu:L-cutoff}.} Pointwise $(E-c_2)_+\ge E-c_2$, $(G-c_1)_+\ge G-c_1$ and $(G-c_1)_+\le G$.
+\emph{Step 1: the inequality \eqref{tu:L-cutoff}.} Pointwise $(E-c_2)_+\ge E-c_2$, $(G-c_1)_+\ge G-c_1$ and $(G-c_1)_+\le G$.
 Since $T$ is positive,
 \[
 T\big((G-c_1)_+(E-c_2)_+e^{-\sqrt\beta\Psi}\big)\ge T\big((G-c_1)_+Ee^{-\sqrt\beta\Psi}\big)-c_2T\big((G-c_1)_+e^{-\sqrt\beta\Psi}\big)
 \ge T(GEe^{-\sqrt\beta\Psi})-c_1T(Ee^{-\sqrt\beta\Psi})-c_2T(Ge^{-\sqrt\beta\Psi}),
 \]
-and (E1), (E2), (E3) bound the three terms.
+and (E1), (E2), (E3) bound the three terms. (E1), (E2), (E3) hold a fortiori with $\Delta_i$ replaced by $\Delta_i^+$; we
+do so.
 
-\emph{The identity \eqref{tu:L-ring}.} Substitute $G=\tilde g+c_1$, $E=\tilde e+c_2$ and expand.
+\emph{Step 2: reduction to a scalar inequality.} Put $x_c:=c_1/G(x)$ and $y_c:=c_2/E(x)$; on $\operatorname{supp}\varphi_L$,
+$x_c,y_c\in(0,1)$, and $\varphi_L(x)=\mu e^{-\sqrt\beta\Psi(a_1)}GE(1-x_c)(1-y_c)$. Write $A_i=A_i^\circ e^{\mp\Delta_i}$, where
+$A_i^\circ$ is $A_i$ with $\Delta_i=0$ (sign $-$ for $i=1$, $+$ for $i=2,3$). By \eqref{tu:L-cutoff} it suffices that
+\[
+A_1\big[1-\tfrac{A_2}{A_1}x_c-\tfrac{A_3}{A_1}y_c-\tfrac{\lambda}{A_1}(1-x_c)(1-y_c)\big]\ge0 ,
+\]
+and since $A_1>0$, $\lambda/A_1\le e^\delta\lambda/A_1^\circ$, $A_j/A_1\le e^\delta A_j^\circ/A_1^\circ$ ($j=2,3$), it suffices that
+\begin{equation}\label{tu:L-scalar}
+e^{\delta}F\le1,\qquad F:=a(1-x_c)(1-y_c)+\frac{A_2^\circ}{A_1^\circ}x_c+b\,y_c,\quad a:=\frac{\lambda}{A_1^\circ},\quad b:=\frac{A_3^\circ}{A_1^\circ}.
+\end{equation}
 
-\emph{The first term.} On $[a_-,\pi/2]$, $\chi=1$, so $\Psi'^2/2=\varepsilon(\sin a_1)+\eta$ and
-$A_1\ge\exp(\eta-D-\Delta_1)$ with $D:=e(S)-\varepsilon(\sin a_1)$. Since $e$ is $2$-Lipschitz and
-$S-\sin a_1\le(S^2-\sin^2a_1)/(2\sin a_1)$,
-$D\le2(S-\sin a_1)\le\sin^2a_2/\sin a_1\le r_0^2/\sin a_-=\eta/4$. With $\lambda\le1$ and $\Delta_1\le\eta/4$,
-$A_1-\lambda\ge e^{3\eta/4-\Delta_1}-1\ge e^{\eta/2}-1$.
+\emph{Step 3: the three coefficients.} Let $t:=\Theta'(a_2)^2/2$ (on the support $a_2<r_0\le\pi/2$, so $\tilde\Theta'=\Theta'$),
+$k=k(S):=\sqrt{1+S^2}/S$, $\gamma:=1-1/k\in(0,1)$, and $e(S)=2\operatorname{asinh}S$.
+(a) On $[a_-,\pi/2]$, $\chi=1$, so $\Psi'^2/2=\varepsilon(\sin a_1)+\eta$ and $\log A_1^\circ=\eta-D+t$ with
+$D:=e(S)-\varepsilon(\sin a_1)$. Since $\operatorname{asinh}$ is $1$-Lipschitz, $S\ge\sin a_1$ and
+$S-\sin a_1\le(S^2-\sin^2a_1)/(2\sin a_1)$, we get $0\le D\le\sin^2a_2/\sin a_1\le r_0^2/\sin a_-=\eta/4$. With $\lambda\le1$ and
+$t\ge0$: $0<a\le e^{-3\eta/4}=1-2m_0$.
+(b) $b=e^{-t}$. Since $\Theta'(a)=\theta_0a/\sqrt{a^2+\ell^2}$ is increasing, $b\le e^{-\theta_0^2/4}=e^{-1/16}=1-2m_1$ where
+$a_2\ge\ell$, and $b\le1$ everywhere.
+(c) $A_2^\circ/A_1^\circ=e^{e(S)-V(x)/2}$. Since $\beta\alpha(S)q/2=kV/2$ (because $\alpha(S)=2S\sqrt{1+S^2}$ and
+$V=2\beta S^2q$), $G=e^{-kV/2}$ and $x_c=e^{-M^2+kV/2}$, i.e.\ $V/2=(M^2+\log x_c)/k$. Hence
+\[
+\frac{A_2^\circ}{A_1^\circ}x_c=P\,x_c^{\gamma},\qquad P:=e^{e(S)-M^2/k}.
+\]
+(d) Range of $S$: $S^2=\sin^2a_1+\sin^2a_2$ with $a_1\in[a_-,\pi/2]$, $a_2<r_0$, so
+$S\in[s_-,s_+]$ with $s_-=\sin a_-=\sinh\eta$ and $s_+=\sqrt{1+r_0^2}$. On this range $1<k(S)\le k(s_-)=\cosh\eta/\sinh\eta=\coth\eta$
+and $k(S)e(S)\le2\sqrt{1+S^2}\le2\sqrt{2+r_0^2}$ (as $\operatorname{asinh}S\le S$).
 
-\emph{The other terms} (as in the working file).
-\begin{itemize}
-\item $A_1-A_3=e^{-e(S)+\Psi'^2/2}(e^{\Theta'^2/2-\Delta_1}-e^{\Delta_3})$. Where $a_2\ge\ell$, $\Theta'\ge\theta_0/\sqrt2$ and
-this is positive for $\beta$ large. Where $a_2<\ell$ it is $\ge-(\Delta_1+\Delta_3)e^{\eta+O(1)}=-o(1)$, and there
-$\tilde e\ge E/2\ge e^{-\sqrt\beta\Theta(\ell)}/2$, which is $\gg c_2=e^{-\sqrt\beta\Theta(r_0)}$; so
-$c_2\tilde g|A_1-A_3|$ is absorbed by a quarter of $\tilde g\tilde e(A_1-\lambda)$.
-\item $A_1-A_2=e^{(\Psi'^2+\Theta'^2)/2}(e^{-e(S)-\Delta_1}-e^{-V(x)/2+\Delta_2})$. It is positive where
-$V(x)/2\ge e(S)+1$ (for $\beta$ large). Where $V(x)/2<e(S)+1$, one has $\beta\alpha q/2=(\sqrt{1+S^2}/S)\,V/2$, so
-$G\ge\exp(-(\sqrt{1+S^2}/S)(e(S)+1))\ge G_{\min}$, hence $\tilde g\ge G_{\min}-c_1\ge G_{\min}/2$. Also
-$|A_1-A_2|\le e^{C}$ because $(\Psi'^2+\Theta'^2)/2\le e(\sqrt2)+\eta+\theta_0^2/2$ and $S\le\sqrt2$. So
-$c_1\tilde e|A_1-A_2|\le\tilde g\tilde e(e^{\eta/2}-1)/2$ by the condition on $c_1$.
-\item $c_1c_2(A_1-A_2-A_3)$. At the $a_2$-edge with $\tilde g\gg c_1$ it is absorbed by $c_2\tilde g(A_1-A_3)$, which is
-$\ge c_2\tilde g\,c\,\theta_0^2$ there. At the transverse edge ($V$ large, $A_2\approx0$) it is absorbed by
-$c_1\tilde e(A_1-A_2)\ge c_1\tilde eA_1/2$ when $\tilde e\gg c_2$. In the corner it is $c_1c_2((A_1-A_3)-A_2)$, with
-$A_1-A_3>0$ where $|\nabla\Theta|\ge\theta_0/2$.
-\end{itemize}
+\emph{Step 4: the slice $y_c=0$.} By the weighted AM--GM inequality $u^\gamma v^{1-\gamma}\le\gamma u+(1-\gamma)v$ with
+$u=a_1x_c$, $a_1:=e^{-3\eta/4}$, $v=(Pa_1^{-\gamma})^{k}$ (note $1/(1-\gamma)=k$),
+\[
+Px_c^\gamma\le\gamma a_1x_c+\tfrac1kP^ka_1^{1-k}\le a_1x_c+R,\qquad R:=\tfrac1k\,e^{ke(S)-M^2+(k-1)3\eta/4}.
+\]
+By (d), $\log R\le2\sqrt{2+r_0^2}+\tfrac34\eta\coth\eta-\log k-M^2\le\log m_0$ under (M$_A$) (using $k>1$). Hence, with $a\le a_1$,
+\[
+a(1-x_c)+Px_c^\gamma\le a_1(1-x_c)+a_1x_c+R\le1-2m_0+m_0=1-m_0 .
+\]
+
+\emph{Step 5: the slice $y_c=1$.} By (d) and (M$_A$), $\log P=e(S)-M^2/k\le\big(ke(S)-M^2\big)/k\le-\log(1/m_1)$, since
+$M^2-ke(S)\ge\coth\eta\log(1/m_1)\ge k\log(1/m_1)$. So $P\le m_1$ and, where $a_2\ge\ell$,
+$Px_c^\gamma+b\le m_1+1-2m_1=1-m_1$.
+
+\emph{Step 6: all $y_c$.} $F$ is affine in $y_c$: $F=(1-y_c)\big[a(1-x_c)+Px_c^\gamma\big]+y_c\big[Px_c^\gamma+b\big]$.
+Where $a_2\ge\ell$, Steps 4 and 5 give $F\le1-m$. Where $a_2<\ell$, $\Theta(a_2)\le\Theta(\ell)$, so
+$y_c=\exp(-\sqrt\beta(\Theta(r_0)-\Theta(a_2)))\le y_\beta$, and with $b\le1$,
+$F\le a(1-x_c)+Px_c^\gamma+y_c\le1-m_0+y_\beta$. In both cases $F\le1-m/2$.
+
+\emph{Step 7: the errors.} With $u=m/2$: $e^\delta F\le e^{u}(1-u)\le e^ue^{-u}=1$, using $\delta\le u$ and $1-u\le e^{-u}$.
+This is \eqref{tu:L-scalar}, hence $(T\varphi_L)(x)\ge\lambda\varphi_L(x)$.
 \end{proof}
 
-\noindent\emph{Status.} The inequality \eqref{tu:L-cutoff}, the identity \eqref{tu:L-ring} (Lean-checked in the
-working file) and $A_1-\lambda\ge e^{\eta/2}-1$ are proved. The absorption of the last two bullets is written in the
-working files only qualitatively (``$\gg$'', ``$\approx0$'', ``$V$ large''); no quantitative case split is given.
-The writer checked the resulting inequality numerically in the limit $\Delta_i\to0$, $\lambda=1$: with $x:=c_1/G$,
-$y:=c_2/E\in[0,1)$ it reads $1\ge A_1^{-1}(1-x)(1-y)+(A_2/A_1)x+(A_3/A_1)y$, and on a grid of the support with
-$a_1\in[a_-,\pi/2]$ and $M^2$ at equality in the $c_1$ condition it holds with slack $\ge0.107,\,0.107,\,0.095,\,0.049,\,0.0100$
-at $\eta=0.4,0.2,0.1,0.05,0.01$ (measured; in the corner $A_2/A_1\le0.006$ because the $c_1$ condition forces
-$M^2\sin a_-$ to be large). This is evidence, not a proof of the corner case; see the report.
-The working file used $\Delta_1\le\eta/4$; the form above also uses $\Delta_3$ and $\Delta_2$ bounded, which hold for
-$\beta\ge\beta_0(\eta)$ by Proposition~\ref{tu:L-E13} and Lemma~\ref{tu:L-E2}.
+\noindent\emph{Status.} Proved (replaces the qualitative absorption of the earlier version, whose bullets said ``$\gg$'',
+``$\approx0$'', ``$V$ large''). Scalar cores Lean-checked (\repo{corner.lean}: the weighted AM--GM step, the affine
+combination of Steps 4--6, the strip bound, the error absorption of Step 7, and $S-s\le(S^2-s^2)/(2s)$; axioms
+\texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}). The reduction in Steps 2--3 and the bounds in (d) are
+by hand. Grid checks (\repo{check\_gaps.py}, and independently \repo{child/grid.py}): the scalar inequality $F\le1-m$
+(resp.\ $1-m/2$ on the strip) holds on $\ge10^4$ cases $(\eta,S)$ with $\eta\in[10^{-4},0.4]$, minimum slack $7.5\cdot10^{-3}$ at
+$\eta=0.4$, $3.7\cdot10^{-3}$ at $\eta=0.01$; the limit inequality in the original variables $(a_1,a_2,V,y_c)$ with
+$\Delta_i=0$, $\lambda=1$, $M^2=M_A^2$ has slack $\ge m$ (measured $0.039$ at $\eta=0.4$, $0.00995$ at $\eta=0.01$).
+
+\noindent\emph{What the margin is.} The errors must satisfy $\Delta_1^++\max(\Delta_2^+,\Delta_3^+)\le m(\eta)/2
+=\min(1-e^{-3\eta/4},1-e^{-1/16})/4$ ($=0.0151$ at $\eta=0.4$, $\sim3\eta/16$ as $\eta\to0$), and $\beta$ must satisfy
+$\sqrt\beta\,(\Theta(r_0)-\Theta(\ell))\ge\log(2/m)$. Both are ``$\beta\ge\beta_0(\eta)$'' conditions, since $\sup_{\mathcal T}\Delta_i\to0$
+(Proposition~\ref{tu:L-E13}, Lemma~\ref{tu:L-E2}). A margin proportional to $\eta$ cannot be avoided: at $x_c=y_c=0$, $a_2=0$ the
+exact slack in the limit is $1-\lambda e^{-\eta}\approx\eta$; the earlier grid values $0.0100$ at $\eta=0.01$ are this.
+An $M^2$ of order $1/\eta$ cannot be avoided either: in the corner $x_c,y_c\to1$ with $S\approx\sin a_-$ the limit inequality
+needs $P+e^{-t}\le1$; numerically the smallest admissible $M^2$ on the grid is $\eta M^2=3.74,\,2.96,\,2.77,\,2.75$ at
+$\eta=0.4,\,0.1,\,0.01,\,0.001$ (measured only).
+
+\noindent\emph{Relation to the earlier $c_1$ condition.} The earlier condition $e^{-M^2}\le G_{\min}(e^{\eta/2}-1)e^{-C}/4$ with
+$G_{\min}=\exp(-(\sqrt2/\sin a_-)(e(\sqrt2)+1))$, $C=e(\sqrt2)+\eta+\theta_0^2/2+1$, i.e.\
+$M^2\ge M_{c_1}^2:=\frac{\sqrt2(e(\sqrt2)+1)}{\sinh\eta}+\log4+\log\frac1{e^{\eta/2}-1}+C$, implies (M$_A$) for $\eta\in(0,0.4]$:
+$\sqrt2(e(\sqrt2)+1)=4.656\ge1.082\log(1/m_1)\ge\cosh\eta\log(1/m_1)$ handles the first branch (the constants
+$2\sqrt{2+r_0^2}\le2.86<\log4+C$), and the second branch is $\le2.65+3.61/\eta<4.53/\eta\le4.656/\sinh\eta$ (using
+$1-e^{-3\eta/4}\ge0.555\eta$, $\log u\le u-1$, $\sinh\eta\le1.03\eta$). Numerically $M_{c_1}^2-M_A^2\ge5.98$ on $4005$ points
+of $(0,0.4]$. So the earlier choice of $M$ may be kept; (M$_A$) is what the proof uses. Values:
+$M_{c_1}^2=18.05,\,30.38,\,54.36,\,101.6,\,475.7$ and $M_A^2=12.06,\,20.55,\,37.91,\,72.82,\,352.5$ at
+$\eta=0.4,\,0.2,\,0.1,\,0.05,\,0.01$; $\eta M_{c_1}^2=7.22\to\sqrt2(e(\sqrt2)+1)=4.656$ and $\eta M_A^2=4.82\to3.497$ as
+$\eta\to0$. (The working file's ``$M^2=14.8$ at $\eta=0.4$'' and ``$M^2\approx3.4/\eta$'' are not the values of its own $c_1$
+formula; the writer's $18.0$ is.)
 
 \subsection{The norm of $T$ on the tube, and the comparison}
 
@@ -685,7 +802,7 @@ $\varphi_R=\varphi_L\circ\sigma_1$ and $T$ commutes with $\sigma_1$, so $T\varph
 $\varphi\le\mu\le g$. $\varphi\in L^2$ since $\varphi\le\mu$; $g$, $\varphi$ are continuous.
 \end{proof}
 
-\noindent\emph{Status.} Proved given (E1)--(E3), S4-alg (with the corner absorption as noted), and the inputs of the first half.
+\noindent\emph{Status.} Proved given (E1)--(E3), S4-alg (corner absorption now quantified: Lemma~\ref{tu:L-S4} under (M$_A$)), and the inputs of the first half.
 The kink of the tent at $a_1=\pi/2$ is a minimum of $\varphi$ and lies inside $\Omega$; the inequality there is
 given by the max argument, not by a separate comparison.
 
@@ -807,7 +924,7 @@ $(0,0)$ of $C_\eta\cap\{V\le1\}$, which carries one quarter of the mass in Lemma
 
 \noindent\emph{Status.} Proved given M4. The constants $8.35$, $9.09$ were recomputed by the writer ($8.346$ at $d=3.645$, $\rho=0.264$;
 $9.085$). The working file states ``$M^2=O(\log(1/\eta))$''; this is wrong: $G_{\min}\sim e^{-c/\sin a_-}$, so the $c_1$ condition
-gives $M^2\sim1/\sin a_-\sim1/\eta$. $M$ enters only the $\beta^{1/4}$ term, so nothing else changes.
+gives $M^2\sim1/\sin a_-\sim1/\eta$; the condition (M$_A$) actually used in Lemma~\ref{tu:L-S4} also has $M^2\sim3.5/\eta$, and an $M^2$ of order $1/\eta$ is necessary there. $M$ enters only the $\beta^{1/4}$ term, so nothing else changes.
 
 \section{Assembly}\label{tu:L-sec-assembly}
 
@@ -820,20 +937,22 @@ First fix $\eta\in(0,0.4]$. Then fix, in this order:
 \item $\varkappa=1$;
 \item $\rho=0.265$, $d=3.65$ (Section~\ref{tu:L-sec-harnack});
 \item the ball radius $\rho_B=1/2$ for the path balls of Section~\ref{tu:L-chainsec};
-\item $M=M(\eta)$ with $c_1=e^{-M^2}\le G_{\min}(e^{\eta/2}-1)e^{-C}/4$ (Lemma~\ref{tu:L-S4}) and $M^2\ge2\rho_B^2$;
+\item $M=M(\eta)$ with $M^2\ge M_A^2(\eta)$ (condition (M$_A$) of Lemma~\ref{tu:L-S4}; the earlier choice $c_1=e^{-M^2}\le G_{\min}(e^{\eta/2}-1)e^{-C}/4$ implies it) and $M^2\ge1.5\rho_B^2+\log2$ (Lemma~\ref{tu:L-balls}; implied by (M$_A$));
 \item $\eta'=a_-$ (change C1);
 \item $\mu:=\exp\big(-35(a_-+r_0)\sqrt\beta-R_\beta\big)$ (Corollary~\ref{tu:L-H4cor}).
 \end{itemize}
 Then let $\beta\to\infty$, and only at the end let $\eta\to0$. All $o(1)$ terms are as $\beta\to\infty$ with the quantities above
 fixed. The $\beta$-dependent auxiliary parameters are the parameter $\beta^{-1/8}$ of Lemma~\ref{tu:U-K} and $L=\sqrt{C\log\beta}$ of
-Proposition~\ref{tu:L-E13}. $\beta_0(\eta)$ is chosen so that: $\Delta_1+\Delta_3\le\eta/4$ and $\Delta_2\le1$ on $\mathcal T$;
+Proposition~\ref{tu:L-E13}. $\beta_0(\eta)$ is chosen so that: $\Delta_1^++\max(\Delta_2^+,\Delta_3^+)\le m(\eta)/2$ on $\mathcal T$ and $\sqrt\beta(\Theta(r_0)-\Theta(\ell))\ge\log(2/m(\eta))$ (Lemma~\ref{tu:L-S4}); the four conditions on $\beta$ in Lemma~\ref{tu:L-balls};
 $\lambda,\lambda_{eo}\ge e^{-\eta/4}$ (Lemma~\ref{tu:L-L4}); Lemma~\ref{tu:U-F} holds with $\eta/2$; (B) holds; $m_B\ge1/8$ and
 $\int_{C_\eta\cap\{V\le1\}}f^2\ge1/2$ (Lemma~\ref{tu:L-M4}); and the finitely many ``$\beta$ large'' conditions below.
 
-\noindent\emph{Remark on $M$.} The condition $M^2\ge2\rho_B^2$ is the one written at assembly; it does not by itself give the
-bound $e^{-1.5\rho_B^2}-e^{-M^2}\ge e^{-1.5\rho_B^2}/2$ used below (that needs $M^2\ge1.5\rho_B^2+\log2$; at $M^2=2\rho_B^2=1/2$ the left
-side is $0.081$ against $0.344$). The $c_1$ condition forces $M^2\ge18.0$ already at $\eta=0.4$ (and $M^2\sim1/\eta$), so the needed
-bound holds. The constraints are consistent for every $\eta\in(0,0.4]$.
+\noindent\emph{Remark on $M$.} The condition $M^2\ge2\rho_B^2$ written at assembly does not give the bound
+$e^{-1.5\rho_B^2}-e^{-M^2}\ge e^{-1.5\rho_B^2}/2$ used in Lemma~\ref{tu:L-balls} (that needs $M^2\ge1.5\rho_B^2+\log2=1.068$; at $M^2=2\rho_B^2=1/2$
+the left side is $0.081$ against $0.344$); it is replaced by $M^2\ge1.5\rho_B^2+\log2$. (M$_A$) gives $M^2\ge M_A^2(0.4)=12.06$ and
+$M_A^2$ is decreasing in $\eta$, so this holds. The earlier $c_1$ condition at equality gives $M^2=18.05$ at $\eta=0.4$ (not $14.8$ as
+quoted in a working file) and $\eta M^2\to4.656$ (not $3.4$) as $\eta\to0$. $M$ also enters $\mathcal T$, the constants of
+Proposition~\ref{tu:L-E13} and $R_\beta$, all fixed before $\beta\to\infty$. The constraints are consistent for every $\eta\in(0,0.4]$.
 
 \noindent\emph{Inputs at fixed $\eta$, $\beta\ge\beta_0(\eta)$.}
 \begin{enumerate}
@@ -858,31 +977,55 @@ The number of steps is $n\le(\pi+2a_-)\sqrt\beta/d+O(\beta^{1/4})=O(\sqrt\beta)$
 phase-0 rotation is an explicit function of $(U_1,U_2)$.
 
 \begin{lemma}\label{tu:L-balls}
-For $\beta\ge\beta_0$ and every ball $B(c_k(x),\rho_B/\sqrt\beta)$ of the chain,
-$\inf_{\rm ball}g\ge\min\big(\mu',\ \tfrac\mu4e^{-1.5\rho_B^2}e^{-\sqrt\beta\Psi(\pi/2)}\big)$ with
-$-\log\mu'\le35(a_-+r_0)\sqrt\beta+O(\beta^{1/4})$.
+Let $M'':=1+2\rho_B+\rho_B^2$ $(=2.25)$ and assume, besides $\beta\ge\beta_0$,
+\[
+\beta\ge4,\qquad \sqrt\beta>\rho_B/r_0,\qquad \sqrt\beta\ge\frac{\theta_0\rho_B^2}{2\ell\log(4/3)},\qquad\sqrt\beta\,\Theta(r_0)\ge\log4 ,
+\]
+and $M^2\ge1.5\rho_B^2+\log2$ (implied by (M$_A$)). Then for every point $z$ of every ball $B(c_k(x),\rho_B/\sqrt\beta)$ of the chain,
+\[
+g(z)\ge\min\big(\mu',\ \tfrac\mu4e^{-1.5\rho_B^2}e^{-\sqrt\beta\Psi(\pi/2)}\big),\qquad
+-\log\mu'\le35a_-\sqrt\beta+R'_\beta,
+\]
+$R'_\beta:=(n_0''+4)c_{\rm ch}(K_{M''})+M''^2+\tfrac12+\log\frac{k_{\sup}^2}{\lambda k_{\min}^2m_B}$, $n_0''=\lceil(\pi/2)\sqrt{M''}\beta^{1/4}/d\rceil$,
+so $R'_\beta=O(\beta^{1/4})$.
 \end{lemma}
 
 \begin{proof}
-\emph{Balls around points of steps 1 and 3, and around valley points with $a_1\notin[a_-,\pi-a_-]$.} By (infl), $V\le2(1+2\rho_B+\rho_B^2)^2$ on
-them, and $a_i\le\pi/2$ after $\sigma_1$ where needed; so they lie in $D_{M'}\cup\sigma_1D_{M'}$ with $M'$ fixed, and
-Theorem~\ref{tu:L-H4} (as in Corollary~\ref{tu:L-H4cor}, with $M'$ in place of $M$) gives $g\ge\mu'$.
-\emph{Balls around valley points with $a_1\in[a_-,\pi-a_-]$.} For $z$ in such a ball, $|u_2(z)|\le\rho_B/\sqrt\beta$, so
-$q\le|u_2|^2\le\rho_B^2/\beta$ and $\beta\alpha(S)q/2\le S\sqrt{1+S^2}\rho_B^2\le\sqrt2(1+\rho_B^2/\beta)\rho_B^2\le1.5\rho_B^2$ for $\beta$ large
-($S^2\le1+\rho_B^2/\beta$). Also $a_2(z)\le\rho_B/\sqrt\beta<r_0$. Hence $z\in\operatorname{supp}\varphi$,
-$G-c_1\ge e^{-1.5\rho_B^2}-e^{-M^2}\ge e^{-1.5\rho_B^2}/2$ (see the remark on $M$), and, since $\Theta(a)\le\theta_0a^2/(2\ell)$,
-$E-c_2\ge e^{-\theta_0\rho_B^2/(2\ell\sqrt\beta)}-c_2\ge\frac12$. Proposition~\ref{tu:L-sub} gives
-$g(z)\ge\frac\mu4e^{-1.5\rho_B^2}e^{-\sqrt\beta\min(\Psi(a_1),\Psi(\pi-a_1))}\ge\frac\mu4e^{-1.5\rho_B^2}e^{-\sqrt\beta\Psi(\pi/2)}$.
-Points of such a ball with $a_1$ just outside $[a_-,\pi-a_-]$ are covered by the first case.
+The case split is by the type of the ball, not by the value of $a_1$ at the point.
+
+\emph{(I) Balls of steps 1 and 3.} Take step 1 (corner $(0,0)$, $a_1(x),a_2(x)<a_-$, $V(x)\le1$); step 3 is its image under the
+isometry $\sigma_1$, and $g\circ\sigma_1=g$. Phase 0 does not change class angles and phase 1 only decreases $a_2$, so every centre $c$
+has $a_1(c)=a_1(x)<a_-$, $a_2(c)\le a_2(x)<a_-$, and $V(c)\le V(x)\le1$ ($V$ is nonincreasing in phase 0, zero in phase 1).
+For $z$ in the ball, the class angle is $1$-Lipschitz, so $a_i(z)<a_-+\rho_B/\sqrt\beta\le\pi/2$, and by (infl) with $s_i\le1$,
+$\sqrt{V(z)/2}\le\sqrt{1/2}+2\rho_B+\rho_B^2/\sqrt\beta\le M''$. So $z\in D_{M''}$, and Theorem~\ref{tu:L-H4} (with $M''$, $a_*=a_-$,
+$\varkappa=1$, $d=3.65$, $\rho=0.265$) applies at $z$ with
+$n_{12}\le\lceil a_2(z)\sqrt\beta/d\rceil+\lceil(a_1(z)+a_-)\sqrt\beta/d\rceil\le3a_-\sqrt\beta/d+2\rho_B/d+2\le3a_-\sqrt\beta/d+3$ and
+$n_3\le a_-\sqrt\beta/d+1$. With $c_{\rm ch}(K_0)/d\le8.35$, $c_{\rm ch}(K_1)/d\le9.09$ (Corollary~\ref{tu:L-H4cor}) and
+$c_{\rm ch}(K_{M''})\ge c_{\rm ch}(K_0),c_{\rm ch}(K_1)$ ($c_{\rm ch}$ is increasing and $M''\ge1$) this gives
+$-\log g(z)\le(3\cdot8.35+9.09)a_-\sqrt\beta+R'_\beta\le35a_-\sqrt\beta+R'_\beta$.
+
+\emph{(II) Balls of step 2 (valley balls).} The centre is $c=(e^{t\hat n},1)$. Let $z$ be any point of the ball, with any $a_1(z)\in[0,\pi]$.
+Then $|u_2(z)|=\sin a_2(z)\le a_2(z)\le\rho_B/\sqrt\beta<r_0$, so $E(z)>c_2$. Further $|w|\le|u_1||u_2|$ and $S^2\ge|u_1|^2$ give
+$q\le|u_2|^2\le\rho_B^2/\beta$, and $S^2\le1+\rho_B^2/\beta\le1+\rho_B^2/4$, so
+$\beta\alpha(S)q/2=\beta S\sqrt{1+S^2}\,q\le S\sqrt{1+S^2}\rho_B^2\le1.4804\,\rho_B^2\le1.5\rho_B^2$ (for $\rho_B=1/2$, $\beta\ge4$).
+Hence $G(z)-c_1\ge e^{-1.5\rho_B^2}-e^{-M^2}\ge e^{-1.5\rho_B^2}/2$ by $M^2\ge1.5\rho_B^2+\log2$. Since
+$\Theta(a)\le\theta_0a^2/(2\ell)$, $\sqrt\beta\,\Theta(a_2(z))\le\theta_0\rho_B^2/(2\ell\sqrt\beta)\le\log(4/3)$, so $E(z)\ge3/4$, while
+$c_2=e^{-\sqrt\beta\Theta(r_0)}\le1/4$; thus $E(z)-c_2\ge1/2$. In particular $z\in\operatorname{supp}\varphi$. Because
+$(G-c_1)_+(E-c_2)_+$ is $\sigma_1$-invariant, $\varphi=\max(\varphi_L,\varphi_R)=\mu e^{-\sqrt\beta\min(\Psi(a_1),\Psi(\pi-a_1))}(G-c_1)_+(E-c_2)_+$
+at every point of $X$ (not only on $\Omega$), and $\min(\Psi(a_1),\Psi(\pi-a_1))=\Psi(\min(a_1,\pi-a_1))\le\Psi(\pi/2)$ since $\Psi$ is
+nondecreasing. Proposition~\ref{tu:L-sub} ($g\ge\varphi$ on all of $X$) gives
+$g(z)\ge\frac\mu4e^{-1.5\rho_B^2}e^{-\sqrt\beta\Psi(\pi/2)}$.
+
+Every ball of the chain is of type (I) or (II), so every point is covered.
 \end{proof}
 
-\noindent\emph{Status.} Proved except for one step stated but not written out (below); change C4: the chain from $x$ to $\sigma_1x$ was not written in any working file. The step
-``covered by the first case'' for points of a valley ball with $a_1$ just outside $[a_-,\pi-a_-]$ is as written at assembly: such
-points are within $\rho_B/\sqrt\beta$ of a valley point with $a_1\in[a_--\rho_B/\sqrt\beta,a_-)$, i.e.\ of a centre of the first kind,
-but they are not themselves in a ball of the first kind; a bound for them needs either Proposition~\ref{tu:L-sub} (they lie in
-$\operatorname{supp}\varphi$ with $\varphi_L$ evaluated at $a_1\ge a_-/2$, possibly where $\Psi$ is in its transition) or
-Theorem~\ref{tu:L-H4} at a slightly larger $D_{M'}$. Both give a bound of the stated form; the writer records it as a step
-stated but not written out.
+\noindent\emph{Status.} Proved. This replaces the earlier case split by the value of $a_1$ at the centre, which left uncovered
+the points of a valley ball with $a_1$ just outside $[a_-,\pi-a_-]$ (``covered by the first case'' was not true as written: such
+points are not in a ball of the first kind). No new estimate is needed: Proposition~\ref{tu:L-sub} is a statement on all of $X$,
+and the bound on $\varphi$ used in (II) holds at every point of a valley ball, whatever $a_1$ is. The bound of (I) is pointwise
+Theorem~\ref{tu:L-H4} on $D_{M''}$. Constants: $\max S\sqrt{1+S^2}=1.4804$ for $S^2\le1+\rho_B^2/4$ and
+$e^{-1.5\rho_B^2}-e^{-M_A^2}-e^{-1.5\rho_B^2}/2\ge0.3436$ for all $\eta\le0.4$ (\repo{check\_gaps.py}, P7). Here $-\log\mu'$ has
+$35a_-$ instead of $35(a_-+r_0)$; the weaker form $35(a_-+r_0)$ used in Theorem~\ref{tu:L-main} follows.
 
 \noindent\emph{$T_{\min}$.} For consecutive ball points the link distance is $\le(d+2\rho_B)/\sqrt\beta$ and $V\le V_{\max}$ (bounded,
 by (infl)), so (k$_{\min}$) gives $T\ge e^{-V_{\max}}(\sqrt{2/\pi}\beta^{3/2}e^{-(d+2\rho_B)^2/2})^2$, polynomial in $\beta$.
@@ -911,7 +1054,7 @@ for every $\eta\in(0,0.4]$. As $\eta\to0$, $a_-\to0$ and $r_0\to0$.
 
 \noindent\emph{Status.} Proved in writing, conditional on the results of the first half (Lemmas~\ref{tu:U-kernel},
 \ref{tu:U-K}, \ref{tu:U-R}, \ref{tu:U-F}, Proposition~\ref{tu:U-B}), on the gap bounds of Lemma~\ref{tu:L-gauss} and the $\Delta h$
-bound of Lemma~\ref{tu:L-taylor} as stated, and on the qualitative absorption step in Lemma~\ref{tu:L-S4}. Not independently
+bound of Lemma~\ref{tu:L-taylor} as stated. (The absorption step in Lemma~\ref{tu:L-S4} is now quantified.) Not independently
 reviewed: the working files and the assembly were written by sessions of the same model family. The constant $70(a_-+r_0)$ is far
 from sharp, but it vanishes as $\eta\to0$, which is all that is used.
 
