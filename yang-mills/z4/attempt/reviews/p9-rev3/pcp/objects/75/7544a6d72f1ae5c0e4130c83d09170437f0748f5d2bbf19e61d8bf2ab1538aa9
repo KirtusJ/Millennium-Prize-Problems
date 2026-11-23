@@ -1,0 +1,7 @@
+MET	P1 C1 supp shift	63 cases qualify, 0 violations
+MET	P2a tau{0,1,2}->A+	7 cases, 0 violations
+MET	P2b leaves A+ iff slice N/2 in S	15 cases, 8 leave, 0 violations
+MET	P3 C3 theta tau = tau^-1 theta	4000 evals, max diff 0
+MET	P4 C4 tau' U0 -> U_{N-1} outside A+	supp=[5]
+met=5 failed=0
+

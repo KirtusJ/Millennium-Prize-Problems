@@ -1,0 +1,14 @@
+# notes p9-rev3
+
+- control: -ln(tanh 1)=0.272341 written.
+- register pcp init; child admitted as T64 (parent T62); child started (child-run1) with tau-convention check on Z/6.
+- Read sec_proof.tex l.105-154. Chessboard: file defines only theta_r (reflection x_j -> 2r - x_j in direction j) and the induced action on block indices t -> t' with t'_j = 2r-1-t_j (l.146). theta_a is never defined: a notational defect. Correct text: theta_r S := {t' : t in S}. At doubling i (direction 1) r = -2^i+1, so t_1 -> -2^{i+1}+1-t_1, mapping [-2^i+1,0] onto [-2^{i+1}+1,-2^i]. Same r (so same theta_r) used in Doubling step and Iteration -> consistent.
+- tau: printed (tau F)(U)=F(U_{.-e0}) moves support backward (F on link at time 0 -> tau F on time -1, outside A_+). Corrected: (tau F)(U)=F(U_{.+e0}), (U_{.+e0})_b := U_{b+e0}. supp(tau F)=supp F + e0.
+  Three-line example (Z/6 time, toy one variable per slice): F(U)=U_0 => (tau F)(U)=(U_{.+e0})_0=U_1 (forward, in A_+); (theta F)(U)=U_{theta 0}=U_0, tau^{-1}theta F = U_{-1}=U_5 and theta tau F = (theta^*U)_1 = U_{-1}=U_5 => theta tau = tau^{-1} theta on this F; tau^n O_{p0}(U)=O_{p0}(U_{.+n e0})=O_{p0+n e0}=O_{p_n} => <v,T^n v>=mu(theta v . tau^n v)=Cov(O_{p0},O_{p_n}) literally (old convention gave O_{p_{-n}}, equal only via reflection symmetry).
+  The transfer-lemma proof (mu(theta F' tau F)=mu(tau^{-1}theta F' F) by translation invariance; tau^{-1}theta=theta tau) holds for either sign; only the half-space claim depended on the sign.
+- Preprint read (PDF in scratchpad, not in this dir): Bhattacharjee, Bhattacharya, Lockwood, Romanov, "Yang-Mills Mass Gap on the Lattice and One Cube from the Continuum", Hexagon preprint 2610.00341v6, dated 2 November 2026 (title page footnote says "version 5" - internal inconsistency of the preprint, noted). Lemma 139 / Theorem 140 on pp. 77-78: torus L=2^m>=4 (dyadic, confirmed via page image), reflection positivity in hyperplanes through sites, chessboard for cube events, "each plaquette lies in exactly four unit cubes" -> at least L^4/4 bad plaquettes; q = min(1, exp(6(log beta_W + C0) - beta_W rho^2/16)) per cube, C0 from Lemma 139. With t = beta_W rho^2/4 the exponent is 6(log beta_W + C0) - t/4: matches reviewer N5. Note: Thm 140 cites the chessboard estimate ([37],[21]) rather than re-proving the doubling.
+- check_rev3.py run (K2): P1: MET cases=14 P2: MET cases=1360 P3: MET cases=9 P4: MET cases=30000 P5: MET cases=15 
+- child control.txt = 0 : CORRECT (graded before reading anything else)
+- Edits applied (sec_proof chess theta_r + induced action; tau forward + tau^n O_{p0}=O_{p_n}; N4 sentences in sec_proof & sec_reduction; BhattEtAl26 bib + chess subsection + outline; main.tex related results (joint bound, even-L dissemination) + Disclosure; provenance V7 + not-verified list; paperreview third-revision paragraph). Originals in orig/.
+- child released T64; child rerun K3 identical; diff in rev3.diff
+- report.md and CHANGES.md written; done.
