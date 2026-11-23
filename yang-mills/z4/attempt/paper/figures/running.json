@@ -1,0 +1,13 @@
+{
+  "title": "Box side times finite-volume gap at beta = 2.3",
+  "provenance": "model",
+  "source": "Monte Carlo on L^3 x 12 lattices; intervals are one standard error",
+  "x_label": "box side L",
+  "y_label": "L times effective mass at one step",
+  "x_domain": [0, 8],
+  "y_domain": [0, 9],
+  "series": [
+    {"name": "SU(2)", "data": [[2, "546/1000", "578/1000"], [4, "206/100", "218/100"], [6, "762/100", "842/100"]]},
+    {"name": "U(1)", "data": [[2, "311/1000", "359/1000"], [4, "475/1000", "631/1000"], [6, "616/1000", "752/1000"]]}
+  ]
+}

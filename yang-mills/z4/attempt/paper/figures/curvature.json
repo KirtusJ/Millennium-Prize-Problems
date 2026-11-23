@@ -1,0 +1,77 @@
+{
+ "title": "Horizontal curvature of equilibrium configurations",
+ "provenance": "model",
+ "source": "SU(2) Wilson, Monte Carlo, range over samples; Ricci constant is 1",
+ "x_label": "coupling beta",
+ "y_label": "smallest horizontal curvature",
+ "x_domain": [
+  0,
+  52
+ ],
+ "y_domain": [
+  -3,
+  25
+ ],
+ "series": [
+  {
+   "name": "periodic 3^4, range over samples",
+   "data": [
+    [
+     4,
+     "-179/100",
+     "-146/100"
+    ],
+    [
+     6,
+     "-196/100",
+     "-139/100"
+    ],
+    [
+     12,
+     "-152/100",
+     "-112/100"
+    ],
+    [
+     24,
+     "-193/100",
+     "-112/100"
+    ],
+    [
+     48,
+     "-204/100",
+     "-155/100"
+    ]
+   ]
+  },
+  {
+   "name": "open 4^4, range or rounded value as reported",
+   "data": [
+    [
+     4,
+     "-240/100",
+     "-167/100"
+    ],
+    [
+     6,
+     "-32/100",
+     "16/100"
+    ],
+    [
+     12,
+     3,
+     3
+    ],
+    [
+     24,
+     "96/10",
+     "96/10"
+    ],
+    [
+     48,
+     23,
+     23
+    ]
+   ]
+  }
+ ]
+}

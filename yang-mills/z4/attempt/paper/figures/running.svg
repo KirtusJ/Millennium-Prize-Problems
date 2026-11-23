@@ -1,0 +1,69 @@
+<svg width="900" height="540" viewBox="0 0 900 540" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="900" height="540" opacity="1" fill="#FFFFFF" stroke="none"/>
+<text x="24" y="29" dy="0.5ex" text-anchor="start" font-family="monospace" font-size="16.935483870967744" opacity="1" fill="#1E2A3A">
+Box side times finite-volume gap at beta = 2.3
+</text>
+<text x="24" y="58" dy="0.5ex" text-anchor="start" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+Finite model calculation | Monte Carlo on L^3 x 12 lattices; intervals are one standard error
+</text>
+<text x="24" y="92" dy="0.5ex" text-anchor="start" font-family="monospace" font-size="12.096774193548388" opacity="1" fill="#1E2A3A">
+L times effective mass at one step
+</text>
+<text x="155" y="111" dy="0.5ex" text-anchor="start" font-family="monospace" font-size="12.096774193548388" opacity="1" fill="#1E2A3A">
+SU(2)
+</text>
+<line opacity="1" stroke="#D4DCE2" stroke-width="1" x1="155" y1="126" x2="775" y2="126"/>
+<text x="146" y="126" dy="0.5ex" text-anchor="end" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+9
+</text>
+<line opacity="1" stroke="#D4DCE2" stroke-width="1" x1="155" y1="234" x2="775" y2="234"/>
+<text x="146" y="234" dy="0.5ex" text-anchor="end" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+0
+</text>
+<circle cx="310" cy="227" r="4" opacity="1" fill="none" stroke="#046379" stroke-width="1"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="465" y1="209" x2="465" y2="208"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="462" y1="209" x2="468" y2="209"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="462" y1="208" x2="468" y2="208"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="620" y1="143" x2="620" y2="133"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="617" y1="143" x2="623" y2="143"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="617" y1="133" x2="623" y2="133"/>
+<text x="155" y="251" dy="0.5ex" text-anchor="middle" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+0
+</text>
+<text x="775" y="251" dy="0.5ex" text-anchor="middle" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+8
+</text>
+<text x="155" y="276" dy="0.5ex" text-anchor="start" font-family="monospace" font-size="12.096774193548388" opacity="1" fill="#1E2A3A">
+U(1)
+</text>
+<line opacity="1" stroke="#D4DCE2" stroke-width="1" x1="155" y1="291" x2="775" y2="291"/>
+<text x="146" y="291" dy="0.5ex" text-anchor="end" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+9
+</text>
+<line opacity="1" stroke="#D4DCE2" stroke-width="1" x1="155" y1="399" x2="775" y2="399"/>
+<text x="146" y="399" dy="0.5ex" text-anchor="end" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+0
+</text>
+<circle cx="310" cy="395" r="4" opacity="1" fill="none" stroke="#046379" stroke-width="1"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="465" y1="393" x2="465" y2="391"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="462" y1="393" x2="468" y2="393"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="462" y1="391" x2="468" y2="391"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="620" y1="392" x2="620" y2="390"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="617" y1="392" x2="623" y2="392"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="617" y1="390" x2="623" y2="390"/>
+<text x="155" y="416" dy="0.5ex" text-anchor="middle" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+0
+</text>
+<text x="775" y="416" dy="0.5ex" text-anchor="middle" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+8
+</text>
+<text x="465" y="465" dy="0.5ex" text-anchor="middle" font-family="monospace" font-size="12.096774193548388" opacity="1" fill="#1E2A3A">
+box side L
+</text>
+<text x="24" y="495" dy="0.5ex" text-anchor="start" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+Filled dot: point. Bar: interval. Open circle: nonzero interval with coincident rounded endpoints.
+</text>
+<text x="24" y="520" dy="0.5ex" text-anchor="start" font-family="monospace" font-size="9.67741935483871" opacity="1" fill="#1E2A3A">
+Input SHA-256  e56f47719e9c8632a6643a0e319f01e1084ee17fa6f74b77e86e78086bbbb1d0
+</text>
+</svg>

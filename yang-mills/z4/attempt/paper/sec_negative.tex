@@ -112,6 +112,13 @@ seeds. Thermalization was short ($30+4k$ sweeps in program~1; cold start plus $3
 program~2).
 \end{observation}
 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.92\textwidth]{figures/curvature.pdf}
+\caption{Smallest horizontal curvature of equilibrium configurations, from the second of the two programs (ranges over its samples). Upper panel: periodic $3^4$ lattice. Lower panel: open $4^4$ box; at $\beta=4$ and $6$ a range, at $\beta=12,24,48$ the rounded values reported. Both panels share axes. Measured on small lattices; not used in any proof. Rendered from exact rational input by the plot instrument of the PCP~OS Rust host (branch \repo{director-g/science-math-svg}, commit \repo{e8d62e4b}); the digest of the input is printed on the figure and the input is \repo{figures/curvature.json}.}
+\label{neg:fig-curv}
+\end{figure}
+
 \begin{table}[ht]
 \centering
 \small
@@ -312,6 +319,13 @@ factor $2$ of $1/(2\beta)=0.217$ at $L=4,6$'' failed; that was an expectation of
 author, which ignored the finite temporal extent. A rotor model fitted afterwards reproduces the drift with
 residuals of $1.5$ to $2.6$ standard errors.
 \end{observation}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.92\textwidth]{figures/running.pdf}
+\caption{Box side times the effective mass at one time step, at $\beta=2.3$ on $L^3\times12$ lattices, for $\SU(2)$ and $\U(1)$; intervals are one standard error, from one program. For $\U(1)$ the expected value is $1/(2\beta)=0.22$ at every $L$, and the upward drift is attributed after the fact to the finite time extent. Measured on small lattices; not used in any proof. Rendered as Figure~\ref{neg:fig-curv}; input \repo{figures/running.json}.}
+\label{neg:fig-run}
+\end{figure}
 
 \begin{table}[ht]
 \centering

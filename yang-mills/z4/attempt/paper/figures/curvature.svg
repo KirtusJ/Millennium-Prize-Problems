@@ -1,0 +1,79 @@
+<svg width="900" height="540" viewBox="0 0 900 540" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="900" height="540" opacity="1" fill="#FFFFFF" stroke="none"/>
+<text x="24" y="29" dy="0.5ex" text-anchor="start" font-family="monospace" font-size="16.935483870967744" opacity="1" fill="#1E2A3A">
+Horizontal curvature of equilibrium configurations
+</text>
+<text x="24" y="58" dy="0.5ex" text-anchor="start" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+Finite model calculation | SU(2) Wilson, Monte Carlo, range over samples; Ricci constant is 1
+</text>
+<text x="24" y="92" dy="0.5ex" text-anchor="start" font-family="monospace" font-size="12.096774193548388" opacity="1" fill="#1E2A3A">
+smallest horizontal curvature
+</text>
+<text x="155" y="111" dy="0.5ex" text-anchor="start" font-family="monospace" font-size="12.096774193548388" opacity="1" fill="#1E2A3A">
+periodic 3^4, range over samples
+</text>
+<line opacity="1" stroke="#D4DCE2" stroke-width="1" x1="155" y1="126" x2="775" y2="126"/>
+<text x="146" y="126" dy="0.5ex" text-anchor="end" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+25
+</text>
+<line opacity="1" stroke="#D4DCE2" stroke-width="1" x1="155" y1="234" x2="775" y2="234"/>
+<text x="146" y="234" dy="0.5ex" text-anchor="end" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+-3
+</text>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="203" y1="229" x2="203" y2="228"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="200" y1="229" x2="206" y2="229"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="200" y1="228" x2="206" y2="228"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="227" y1="230" x2="227" y2="228"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="224" y1="230" x2="230" y2="230"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="224" y1="228" x2="230" y2="228"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="298" y1="228" x2="298" y2="227"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="295" y1="228" x2="301" y2="228"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="295" y1="227" x2="301" y2="227"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="441" y1="230" x2="441" y2="227"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="438" y1="230" x2="444" y2="230"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="438" y1="227" x2="444" y2="227"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="727" y1="230" x2="727" y2="228"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="724" y1="230" x2="730" y2="230"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="724" y1="228" x2="730" y2="228"/>
+<text x="155" y="251" dy="0.5ex" text-anchor="middle" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+0
+</text>
+<text x="775" y="251" dy="0.5ex" text-anchor="middle" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+52
+</text>
+<text x="155" y="276" dy="0.5ex" text-anchor="start" font-family="monospace" font-size="12.096774193548388" opacity="1" fill="#1E2A3A">
+open 4^4, range or rounded value as reported
+</text>
+<line opacity="1" stroke="#D4DCE2" stroke-width="1" x1="155" y1="291" x2="775" y2="291"/>
+<text x="146" y="291" dy="0.5ex" text-anchor="end" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+25
+</text>
+<line opacity="1" stroke="#D4DCE2" stroke-width="1" x1="155" y1="399" x2="775" y2="399"/>
+<text x="146" y="399" dy="0.5ex" text-anchor="end" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+-3
+</text>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="203" y1="397" x2="203" y2="394"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="200" y1="397" x2="206" y2="397"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="200" y1="394" x2="206" y2="394"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="227" y1="389" x2="227" y2="387"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="224" y1="389" x2="230" y2="389"/>
+<line opacity="1" stroke="#046379" stroke-width="1" x1="224" y1="387" x2="230" y2="387"/>
+<circle cx="298" cy="376" r="3" opacity="1" fill="#046379" stroke="none" stroke-width="1"/>
+<circle cx="441" cy="350" r="3" opacity="1" fill="#046379" stroke="none" stroke-width="1"/>
+<circle cx="727" cy="299" r="3" opacity="1" fill="#046379" stroke="none" stroke-width="1"/>
+<text x="155" y="416" dy="0.5ex" text-anchor="middle" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+0
+</text>
+<text x="775" y="416" dy="0.5ex" text-anchor="middle" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+52
+</text>
+<text x="465" y="465" dy="0.5ex" text-anchor="middle" font-family="monospace" font-size="12.096774193548388" opacity="1" fill="#1E2A3A">
+coupling beta
+</text>
+<text x="24" y="495" dy="0.5ex" text-anchor="start" font-family="monospace" font-size="10.483870967741936" opacity="1" fill="#1E2A3A">
+Filled dot: point. Bar: interval. Open circle: nonzero interval with coincident rounded endpoints.
+</text>
+<text x="24" y="520" dy="0.5ex" text-anchor="start" font-family="monospace" font-size="9.67741935483871" opacity="1" fill="#1E2A3A">
+Input SHA-256  1f3adbb9ec7d09a5f3caae6c45d723b71d6ec363ce697ed40cbd8442dcbc1b69
+</text>
+</svg>
