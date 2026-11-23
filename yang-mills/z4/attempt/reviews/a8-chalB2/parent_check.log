@@ -1,0 +1,2 @@
+check K46: exit 0 (expected 0) in 507387 ms | output a9accd9aed98 | event 48 head 344167c63e3c
+  /home/user/z4-workers/a8-chalB2/report.md: 12 stand, 2 defects, 2 not checked. Checks: 118 met, 1 failed (a mislabelled test in the file), 112 measured only.

@@ -1,0 +1,10 @@
+Q1 N=1 free links=7 plaquettes=24 lambda_min=0.837722 C_pp(p0)=0.291667 (3/2)C_pp=0.437500
+Q1 N=2 free links=351 plaquettes=864 lambda_min=0.147122 C_pp(p0)=0.492675 (3/2)C_pp=0.739012
+Q2 N=1 shell V=80 E=208 P=192 rank d0=79 dim ker d1=79 H1=0:True connected:True
+Q2 N=2 shell V=544 E=1568 P=1536 rank d0=543 dim ker d1=543 H1=0:True connected:True
+Q2 N=3 shell V=1776 E=5232 P=5184 rank d0=1775 dim ker d1=1775 H1=0:True connected:True
+Q3/Q4 a=0.05: cases 6667/6667 qualify; max(lhs-rhs) Q3=-1.133e-03 Q4=-3.817e-03
+Q3/Q4 a=0.3: cases 6667/6667 qualify; max(lhs-rhs) Q3=-5.550e-02 Q4=-1.549e-01
+Q3/Q4 a=1.0: cases 6667/6667 qualify; max(lhs-rhs) Q3=-2.244e+00 Q4=-4.976e+00
+Q5 min(1-cos x - 2x^2/pi^2) on grid = 0.000e+00
+FAILED: none

@@ -1,0 +1,1 @@
+beta=1000 mean=0.437844 SE=0.001777 target=0.437500 dev=0.000344 reldev=0.0008 acc=0.050 ac1(chain-avg)=0.913 within max(4SE,5%T)=True

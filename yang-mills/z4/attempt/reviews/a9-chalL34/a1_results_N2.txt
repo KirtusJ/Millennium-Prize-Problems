@@ -1,0 +1,8 @@
+N=2 |links|=2000 |Lambda'|=432 |T_int|=81 |Lambda''|=351 |P_R|=864
+Q1 lambda=0.14712176 author=0.147122 pass=True
+   C_pp min=0.315632108383 max=0.492674804845 (7/24=0.291666666667)
+   start 0: end S=8.478e-12 max angle=1.933e-06 sweeps=277
+   start 1: end S=8.809e-12 max angle=1.845e-06 sweeps=263
+   start 2: end S=8.522e-12 max angle=1.834e-06 sweeps=263
+   start 3: end S=9.275e-12 max angle=1.829e-06 sweeps=276
+Q5 runs=4 qualifying(S<1e-8)=4 violations=0 pass=True

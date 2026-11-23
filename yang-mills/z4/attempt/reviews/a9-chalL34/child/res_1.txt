@@ -1,0 +1,5 @@
+N=1 V=80 E=208 F=192 c=1 E-V+1=129 cyclespace(E-V+c)=129
+d1d2=0:True
+rank GF2=129 rank mod p=129 unit-pivot Z rank=129 leftover nonzero cols=0
+b1 GF2=0 b1 Q(modp)=0 b1 Z-elim=0
+H1 torsion-free & zero over Z: True

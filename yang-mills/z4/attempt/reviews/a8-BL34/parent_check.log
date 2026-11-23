@@ -1,0 +1,2 @@
+check K47: exit 0 (expected 0) in 687618 ms | output 2303b99e37ec | event 49 head 87afa280a953
+  /home/user/z4-workers/a8-BL34/report.md — STANDS 11, DEFECT 4, NOT CHECKED 1. L3 and L4 are proved; Theorem B′ still falls short of fully proved only because six standard probability facts are used without a source read, and the far-region constant in L3(b) is proved positive but not explicit.

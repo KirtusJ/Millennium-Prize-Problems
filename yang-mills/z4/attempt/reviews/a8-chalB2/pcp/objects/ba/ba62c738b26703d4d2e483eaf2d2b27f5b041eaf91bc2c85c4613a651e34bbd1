@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/a8-chalB2/lemmaGD.py", line 27, in <module>
+    import scipy.sparse as sp
+ModuleNotFoundError: No module named 'scipy'

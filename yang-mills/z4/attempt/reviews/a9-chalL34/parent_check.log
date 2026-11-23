@@ -1,0 +1,2 @@
+check K50: exit 0 (expected 0) in 790943 ms | output 7a5d0c25fce6 | event 52 head 858c20cf6c45
+  /home/user/z4-workers/a9-chalL34/report.md — 11 STANDS, 1 DEFECT (non-fatal: η(δ) not explicit, already declared by the author), 0 NOT CHECKED; no failing line found in L3_L4.md, but Lemmas D and G of PROOF_B_v2 were not re-audited and L34.lean (absent) was not rerun.

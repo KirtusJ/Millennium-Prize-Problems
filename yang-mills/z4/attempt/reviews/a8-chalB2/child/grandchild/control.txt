@@ -1,0 +1,2 @@
+np.float64(1.9999999999999998)
+abs err 2.220e-16 PASS=True

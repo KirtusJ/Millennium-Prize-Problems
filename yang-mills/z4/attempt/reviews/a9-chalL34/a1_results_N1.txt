@@ -1,0 +1,12 @@
+N=1 |links|=216 |Lambda'|=8 |T_int|=1 |Lambda''|=7 |P_R|=24
+Q1 lambda=0.83772234 author=0.837722 pass=True
+   C_pp min=0.291666666667 max=0.291666666667 (7/24=0.291666666667)
+Q2 pass=True
+Q3 runs=400 qualifying(S<1e-10)=400 violations=0 pass=True
+   distinct end actions (rounded 1e-6): [np.float64(0.0)]
+Q4 end states with 1e-10<S<0.5: 0 pass=True
+Q6 min action with one free link = -1, per link: [np.float64(12.0), np.float64(11.834101), np.float64(11.834101), np.float64(11.834101), np.float64(11.834101), np.float64(11.834101), np.float64(11.834101)] pass=True
+   centre flip of the 7 free links (T_int link kept = +1): S=12.000000
+Q7 delta=0.03 min S=1.350e-03 min S/delta^2=1.499972 pass=True
+Q8 lowest S=1.048328e-02; end states within lowest+0.5: 200, max interior angle among them=0.0309; pass=True
+   distinct end actions: [np.float64(0.01048)]

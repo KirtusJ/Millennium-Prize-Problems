@@ -1,0 +1,4 @@
+G0 0.5000000000018987 maxdiff 2.8482882719060854e-11
+p 4.0944725363252985 c 0.13349422728200372
+local p [np.float64(4.177), np.float64(4.133), np.float64(4.104), np.float64(4.084), np.float64(4.07), np.float64(4.059), np.float64(4.051), np.float64(4.044)]
+P1 True P2 True P3 True P4 True

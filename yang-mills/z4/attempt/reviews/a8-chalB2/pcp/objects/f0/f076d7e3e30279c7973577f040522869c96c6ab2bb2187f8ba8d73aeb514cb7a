@@ -1,0 +1,26 @@
+Waiting for the grandchild to finish. I'll read and rerun its output when it does.
+
+The claim that G(0) = 1/2 holds, G(n) is positive for n = 1..16, and the decay exponent comes out near 4. `report.md` has the full table, and all four predicates I fixed before the first run passed.
+
+- **Control:** `control.txt` contains 1.0.
+- **(a) G(0):** 0.5000000000, accurate to 1e-9. It is exact by hypercubic symmetry, since each of the four terms s_μ/k̂² contributes 1/4.
+- **(b) G(n):** I did the k₀ integral in closed form and the remaining 3D integral numerically on grids of 64, 128 and 256 points.
+  - Self-convergence: the 256 and 128 grids differ by less than 1e-10 absolute for every n.
+  - G(1) = 0.0688747458, G(2) = 0.0111527177, G(8) = 2.70232e-5, G(16) = 1.5773e-6.
+- **(c) Sign:** G(n) > 0 for all n from 1 to 16.
+- **(d) Exponent:** the log-log fit over n = 8..16 gives p = 4.09 (c = 0.133).
+  - The local exponent falls from 4.18 to 4.04 over that range, so the asymptotic value is 4 with 1/n² lattice corrections.
+  - n⁴G(n) falls from 0.1084 toward the continuum value 1/π² = 0.1013.
+  - I put the fit-range uncertainty on p at about ±0.05.
+- **Failed predicates:** none.
+- **PCP OS:** `verify --ws pcp` printed "result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)". The Rust `pcpos verify` last line was "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+- **Grandchild:**
+  - Its control passed (2.0 to 2e-16).
+  - It recomputed G(0) and G(1) from a direct 4D grid sum with no closed form. G(0) came out 0.5 to 2e-16.
+  - G(1) came out 0.0688747462 with an error estimate of 3e-9, which agrees with my value to 4e-10.
+  - I read its output and reran its scripts in a copy (`gc_rerun/`) with identical numbers.
+  - I did not audit its code line by line.
+
+To rerun, from `child/`: `rm -f G_results.txt analysis.txt; python3 g.py; python3 a.py`. For the grandchild, `cd grandchild; rm -f results.txt control.txt; python3 control.py; python3 g4d.py`.
+
+Everything is in `/home/user/z4-workers/a8-chalB2/child/`; start with `report.md`.

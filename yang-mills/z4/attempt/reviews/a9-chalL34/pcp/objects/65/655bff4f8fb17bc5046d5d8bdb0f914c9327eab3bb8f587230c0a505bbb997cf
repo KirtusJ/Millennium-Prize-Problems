@@ -1,0 +1,38 @@
+For both N=1 and N=2, H_1 of the shell is 0 over Z, with no torsion. So the 2-skeleton is homologically simply connected. I did not check π_1.
+
+Control: 80 sites of Z^4 have sup-norm exactly 1 (3^4 − 1), written to `control.txt`.
+
+| | N=1 | N=2 |
+|---|---|---|
+| V (sites) | 80 | 544 |
+| E (links) | 208 | 1568 |
+| F (plaquettes) | 192 | 1536 |
+| components c | 1 | 1 |
+| E − V + 1 | 129 | 1025 |
+| rank of boundary map, GF(2) | 129 | 1025 |
+| rank of boundary map, mod 2^31−1 (equals the rank over Q unless that prime divides an elementary divisor) | 129 | 1025 |
+| rank by integer elimination with ±1 pivots | 129 | 1025 |
+| b1 over GF(2), Q, Z-elimination | 0, 0, 0 | 0, 0, 0 |
+
+- **Torsion:** every pivot in the integer elimination was ±1 and it used up the whole matrix. All nonzero elementary divisors are therefore 1, so H_1 has no torsion. The Q figure rests on that exact elimination, not on the mod-p rank.
+- **Boundary of boundary:** I checked that the link boundary of every plaquette boundary is zero.
+- **Failed predicates:** none. The predicates are in the docstring of `shell_h1.py`, written before the first run. There is no tolerance, because all arithmetic is exact integer.
+- **Not checked:** π_1 itself, H_2 or higher, and an exact rational-elimination rank. I did not list the wrap-around plaquettes separately. Every unit square with all four corners in the shell is included, as you specified.
+- **Delegated check:**
+  - **Control:** the sub-agent's control, the number of sites of Z^3 with sup-norm 1, came back as 26, correct.
+  - **N=1 result:** it independently found V=80, E=208, F=192, c=1, GF(2) rank 129 and b1=0, with no failed predicates.
+  - **My rerun:** I reread its output and reran its `shell.py` in a copy at `/tmp/gc`. The numbers were the same, and that run is registered in the PCP register as check K3.
+- **PCP verify:**
+  - Python: `result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)`
+  - Rust: `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.`
+
+Exact rerun commands are in `report.md`. The result files open with mode `x`, so delete `res_1.txt` and `res_2.txt` before rerunning in place.
+
+Files are in `/home/user/z4-workers/a9-chalL34/child`:
+- `control.txt`
+- `report.md`
+- `notes.md`
+- `shell_h1.py`
+- `res_1.txt`
+- `res_2.txt`
+- `grandchild/`

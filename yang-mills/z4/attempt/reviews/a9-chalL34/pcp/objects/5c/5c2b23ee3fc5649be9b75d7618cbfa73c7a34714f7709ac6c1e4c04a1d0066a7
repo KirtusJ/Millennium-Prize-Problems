@@ -1,0 +1,6 @@
+N=2 V=544 E=1568 F=1536 c=1 E-V+1=1025 cyclespace(E-V+c)=1025
+d1d2=0:True
+rank GF2=1025 rank mod p=1025 unit-pivot Z rank=1025 leftover nonzero cols=0
+b1 GF2=0 b1 Q(modp)=0 b1 Z-elim=0
+H1 torsion-free & zero over Z: True
+

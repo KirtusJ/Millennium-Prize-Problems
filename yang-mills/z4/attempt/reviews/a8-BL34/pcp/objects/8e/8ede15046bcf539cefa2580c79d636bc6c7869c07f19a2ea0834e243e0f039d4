@@ -1,0 +1,32 @@
+All three tasks ran, and `report.md` is written. Predicates P1, P2 and P4 are met, P3 is measured only, and P5 is met but weakly informative. Both PCP OS verifies pass.
+
+- **Control:** the smallest eigenvalue of the 5x5 path Laplacian is 0.267949 (= 2 − √3), written to `control.txt`.
+- **T1:** λ = 0.837722 and C_pp = 7/24 = 0.291667, so the Gaussian-limit target (3/2)·C_pp is 0.4375. λ/16 is 0.052358.
+- **T2:** c_eff is about 0.174 to 0.266 across all six (β, M) settings, and every one of the 120 cases is above λ/16. P2 (c_eff > 0) is trivially true, because the numerator is at least 7M² > 0. I added P2b (c_eff ≥ λ/16) before running, and it holds in 120 of 120 cases. Scipy isn't installed and there is no network, so I used my own BFGS instead of `scipy.optimize`. A local minimiser only gives an upper bound on the true minimum.
+
+| β | MC mean (run `t3b`) | SE |
+|---|---|---|
+| 10 | 0.438867 | 0.000822 |
+| 100 | 0.437357 | 0.000853 |
+| 1000 | 0.437448 | 0.000852 |
+
+- **T3:** the means above match 0.4375 within 1.7 SE or less. P4 holds at β = 1000, with a deviation of about 0.06 SE. P5 holds, with relative deviations of 0.0001 at β = 1000 against 0.0031 at β = 10. The SE is about 0.2% of the target, so the deviations at β = 100 and 1000 are within noise and the MC can't resolve the expected O(β^-1/2) bias.
+- **Failed expectation:** my first run (`t3`) had only about 5% Metropolis acceptance, where I had expected 30–60%. That was my own step-size mistake, not a defect of the target. I retuned the step in `t3b` and kept both runs; both satisfy P4 and P5.
+- **Sub-agent:** it passed its known-answer control (0.585786 = 2 − √2) and independently got λ = 0.837722 and C_pp = 0.291667. I reran its `grandchild/prog.py` and got the same output.
+- **PCP OS:** the method was reported as not found, as expected, and all ten checks exited 0.
+  - `$P verify --ws pcp` last line: `result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)`
+  - `pcpos verify pcp/register.jsonl` last line: `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.` The line before it is `register file SHA-256: 9fe847e03472adb3d221c43f1c7b8a8354aa58b05fb7c16b6cfe140956301d6c`.
+
+Result files are opened with mode "x", so rerunning needs a fresh `out/` and `pcp/`. The rerun commands are in `report.md`.
+
+Everything is in `/home/user/z4-workers/a8-BL34/child`:
+- `report.md`
+- `notes.md`
+- `control.txt`
+- `su2lib.py`
+- `t1.py`
+- `t2.py`
+- `t3.py`
+- `t3b.py`
+- `out/`
+- `grandchild/`

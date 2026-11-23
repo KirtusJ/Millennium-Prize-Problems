@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/a8-chalB2/lemmaGD.py", line 121, in <module>
+    cpp, cp1 = Cpq(N, p0, p1); Cs[N] = cpp
+               ~~~^^^^^^^^^^^
+  File "/home/user/z4-workers/a8-chalB2/lemmaGD.py", line 116, in Cpq
+    eq = np.zeros(D.shape[0]); eq[rows[q]] = 1.0
+                                  ~~~~^^^
+KeyError: ((1, 0, 0, 0), 1, 2)

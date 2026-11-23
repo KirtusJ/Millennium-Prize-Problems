@@ -1,0 +1,9 @@
+# notes a9-chalL34
+- step0: control.txt = 0.272341 (-ln tanh 1). Register pcp initialised.
+- step1: child launched (A3 homology of shell N=1,2; control 80)
+- step2: child returned in 56 s. Control graded first: 80 = correct. Child: shell N=1 (V80,E208,F192), N=2 (V544,E1568,F1536), H1=0 over GF2, mod p, Z (unit-pivot elimination exhausts). Reread shell_h1.py (correct boundary map, valid unimodular elimination). Reran in rerun_child/: identical output. Grandchild (N=1 GF2, control 26) agreed per child.
+- step3: wrote prog_a1.py (A1/A2: lambda, C_pp, cooling minima search N=1, N=2, forced -1 link, eta proxy, near-flat shell). Pre-run timing test in scratchpad: lambda(1)=0.83772234, lambda(2)=0.14712176 match author; N=2 reduced to 4 starts x1500 sweeps for time (docstring changed before first real run).
+- step4: wrote prog_a8.py (A8 MC, KP heatbath, N=1 flat shell). Smoke run (3000 sweeps, scratchpad copy) consistent. N=1 results of prog_a1 so far: lambda, C_pp=7/24 confirmed; 400/400 cooled starts end at U=1, S=0; no other end state.
+- step5: prog_a1 done (K4, exit 0). All predicates Q1-Q8 met. N=1: unique zero U=1 (400/400 starts), no other stationary end states; one free link forced to -1 => min S = 11.834 (12 for the e0- link); centre flip of free links S=12; eta(0.03)/delta^2 ~ 1.50; near-flat shell (angles<=0.05): single end state S=0.01048, max interior angle 0.031. N=2: lambda=0.14712176 matches; 4/4 cooled starts reach U=1 (S~1e-11). C_pp(N=2) max 0.492675 = v2's "N=4" 0.4927 (confirms author's labeling remark).
+- step6: prog_a8 done (K5). beta=500: O_bar 0.437354+-0.000423 vs 0.4375; X 0.291507+-0.000709 vs 7/24. beta=50: O_bar 0.437709+-0.000457; X 0.293787+-0.000773 (2.7 SE above C_pp; within tolerance only because of my 0.5/beta allowance... actually within 4SE too). All M1-M3 met.
+- step7: report.md written; both verifiers run.

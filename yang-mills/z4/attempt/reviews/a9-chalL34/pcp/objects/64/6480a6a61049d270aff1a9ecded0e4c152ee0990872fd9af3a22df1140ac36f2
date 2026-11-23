@@ -1,0 +1,20 @@
+N=1 |links|=216 |Lambda'|=8 |T_int|=1 |Lambda''|=7 |P_R|=24
+Q1 lambda=0.83772234 author=0.837722 pass=True
+   C_pp min=0.291666666667 max=0.291666666667 (7/24=0.291666666667)
+Q2 pass=True
+Q3 runs=400 qualifying(S<1e-10)=400 violations=0 pass=True
+   distinct end actions (rounded 1e-6): [np.float64(0.0)]
+Q4 end states with 1e-10<S<0.5: 0 pass=True
+Q6 min action with one free link = -1, per link: [np.float64(12.0), np.float64(11.834101), np.float64(11.834101), np.float64(11.834101), np.float64(11.834101), np.float64(11.834101), np.float64(11.834101)] pass=True
+   centre flip of the 7 free links (T_int link kept = +1): S=12.000000
+Q7 delta=0.03 min S=1.350e-03 min S/delta^2=1.499972 pass=True
+Q8 lowest S=1.048328e-02; end states within lowest+0.5: 200, max interior angle among them=0.0309; pass=True
+   distinct end actions: [np.float64(0.01048)]
+N=2 |links|=2000 |Lambda'|=432 |T_int|=81 |Lambda''|=351 |P_R|=864
+Q1 lambda=0.14712176 author=0.147122 pass=True
+   C_pp min=0.315632108383 max=0.492674804845 (7/24=0.291666666667)
+   start 0: end S=8.478e-12 max angle=1.933e-06 sweeps=277
+   start 1: end S=8.809e-12 max angle=1.845e-06 sweeps=263
+   start 2: end S=8.522e-12 max angle=1.834e-06 sweeps=263
+   start 3: end S=9.275e-12 max angle=1.829e-06 sweeps=276
+Q5 runs=4 qualifying(S<1e-8)=4 violations=0 pass=True

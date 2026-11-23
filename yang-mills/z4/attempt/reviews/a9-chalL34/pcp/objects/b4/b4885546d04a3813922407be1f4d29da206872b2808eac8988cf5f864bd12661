@@ -1,0 +1,4 @@
+beta=500.0: mean O_bar=0.437354 +- 0.000423  target (3/2)C_pp=0.437500  diff=-0.000146  tol=0.002692  pass=True
+beta=500.0: mean X=0.291507 +- 0.000709  target C_pp=0.291667  diff=-0.000159  tol=0.003835  pass=True
+beta=50.0: mean O_bar=0.437709 +- 0.000457  target (3/2)C_pp=0.437500  diff=+0.000209  tol=0.011829  pass=True
+beta=50.0: mean X=0.293787 +- 0.000773  target C_pp=0.291667  diff=+0.002120  tol=0.013091  pass=True
