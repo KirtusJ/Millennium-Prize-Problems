@@ -1,0 +1,64 @@
+C:/Users/donke/z4-workers/r2-char/CharTransfer_draft1_failed.lean:37:4: error: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Complex.instNormedAddCommGroup', and it does not have executable code
+C:/Users/donke/z4-workers/r2-char/CharTransfer_draft1_failed.lean:40:4: error: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Complex.instNormedAddCommGroup', and it does not have executable code
+C:/Users/donke/z4-workers/r2-char/CharTransfer_draft1_failed.lean:43:4: error: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Complex.instNormedAddCommGroup', and it does not have executable code
+Try this: ring_nf
+C:/Users/donke/z4-workers/r2-char/CharTransfer_draft1_failed.lean:72:14: error: unsolved goals
+case succ.h
+G : Type u_1
+inst✝¹ : Group G
+inst✝ : Fintype G
+w f : G → ℂ
+n : ℕ
+ih : (conv w)^[n + 1] f = conv (kern w n) f
+x g : G
+x✝¹ : g ∈ univ
+y : G
+x✝ : y ∈ univ
+⊢ w (g * y) * kern w n g * f (x * (y⁻¹ * (g⁻¹ * g⁻¹))) = kern w n y * w (y⁻¹ * g) * f (x * g⁻¹)
+
+case succ.h.hs
+G : Type u_1
+inst✝¹ : Group G
+inst✝ : Fintype G
+w f : G → ℂ
+n : ℕ
+ih : (conv w)^[n + 1] f = conv (kern w n) f
+x g : G
+x✝ : g ∈ univ
+⊢ {a | (Equiv.mulLeft g) a ≠ a} ⊆ ↑univ
+C:/Users/donke/z4-workers/r2-char/CharTransfer_draft1_failed.lean:105:67: error: unsolved goals
+case hs
+G : Type u_1
+inst✝¹ : Group G
+inst✝ : Fintype G
+w : G → ℝ
+ψ : G → ℂ
+hψ : ∀ (x y : G), ψ (x * y) = ψ x * ψ y
+hu : ∀ (y : G), ‖ψ y‖ = 1
+heven : ∀ (y : G), w y⁻¹ = w y
+h1 : ψ 1 = 1
+hinv : ∀ (y : G), ψ y⁻¹ = (starRingEnd ℂ) (ψ y)
+hA : coeff (fun y => ↑(w y)) ψ = ∑ y, ↑(w y) * (starRingEnd ℂ) (ψ y)
+⊢ {a | (Equiv.inv G) a ≠ a} ⊆ ↑univ
+C:/Users/donke/z4-workers/r2-char/CharTransfer_draft1_failed.lean:110:17: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  ∑ y, ↑(w y) * (starRingEnd ℂ) (ψ y)
+G : Type u_1
+inst✝¹ : Group G
+inst✝ : Fintype G
+w : G → ℝ
+ψ : G → ℂ
+hψ : ∀ (x y : G), ψ (x * y) = ψ x * ψ y
+hu : ∀ (y : G), ‖ψ y‖ = 1
+heven : ∀ (y : G), w y⁻¹ = w y
+h1 : ψ 1 = 1
+hinv : ∀ (y : G), ψ y⁻¹ = (starRingEnd ℂ) (ψ y)
+hA : coeff (fun y => ↑(w y)) ψ = ∑ y, ↑(w y) * (starRingEnd ℂ) (ψ y)
+hB : coeff (fun y => ↑(w y)) ψ = ∑ y, ↑(w y) * ψ y
+⊢ coeff (fun y => ↑(w y)) ψ + coeff (fun y => ↑(w y)) ψ = 2 * ↑(∑ y, w y * (ψ y).re)
+'Z4Char.conv_char' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Z4Char.iterate_char' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Z4Char.iterate_eq_kern' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Z4Char.coeff_real_even' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Z4Char.coeff_eq_lam1' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Z4Char.coeff_one_eq_lam0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Z4Char.iterate_eq_lam1_pow' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

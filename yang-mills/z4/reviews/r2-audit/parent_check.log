@@ -1,0 +1,2 @@
+check K11: exit 0 (expected 0) in 569720 ms | output da7cf5046117 | event 17 head b91fa70653c6
+  C:/Users/donke/z4-workers/r2-audit/report.md — 12 stand, 1 defect, 1 not checked; the defect is that the task's complementary statement (A2.v) is false unless the spacing b stays bounded, while the input notes agree with each other (κ_A = 2/κ_B, g = z/2).

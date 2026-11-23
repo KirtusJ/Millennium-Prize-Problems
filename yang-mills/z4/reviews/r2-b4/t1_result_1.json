@@ -1,0 +1,108 @@
+{
+ "2": {
+  "enumerated": 301,
+  "expected_count": 301,
+  "admissible_incl_empty": 13,
+  "admissible_nonempty": 12,
+  "min_cost": 6,
+  "threshold": 6,
+  "n_attaining": 12,
+  "expected_attaining": 12,
+  "attaining_equal_expected": true,
+  "below_threshold": 0,
+  "example_support": [
+   [
+    [
+     0,
+     0,
+     0
+    ],
+    [
+     1,
+     0,
+     0
+    ],
+    0
+   ],
+   [
+    [
+     1,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0
+    ],
+    0
+   ]
+  ]
+ },
+ "3": {
+  "enumerated": 88723,
+  "expected_count": 88723,
+  "admissible_incl_empty": 28,
+  "admissible_nonempty": 27,
+  "min_cost": 9,
+  "threshold": 9,
+  "n_attaining": 27,
+  "expected_attaining": 27,
+  "attaining_equal_expected": true,
+  "below_threshold": 0,
+  "example_support": [
+   [
+    [
+     0,
+     0,
+     0
+    ],
+    [
+     1,
+     0,
+     0
+    ],
+    0
+   ],
+   [
+    [
+     1,
+     0,
+     0
+    ],
+    [
+     2,
+     0,
+     0
+    ],
+    0
+   ],
+   [
+    [
+     2,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0
+    ],
+    0
+   ]
+  ]
+ },
+ "L2_mixed_measured": {
+  "enumerated_cost_le_16": 62379,
+  "admissible_with_n2": 12,
+  "min_cost_with_n2": 16
+ },
+ "girth": {
+  "2": 2,
+  "3": 3,
+  "4": 4,
+  "5": 4,
+  "6": 4
+ },
+ "failed": []
+}

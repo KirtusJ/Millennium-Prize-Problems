@@ -1,0 +1,2 @@
+check K9: exit 0 (expected 0) in 349166 ms | output f33a38a1d35f | event 15 head 40d617ae29fd
+  C:\Users\donke\z4-workers\r2-b4\report.md — 13 STANDS, 0 DEFECT, 0 NOT CHECKED (T2e stands with caveats); predicates (met, failed, measured only): my programs 24, 1, 2 (the failure was my own expectation, not a target defect), child rerun 49, 0, 0, Lean 1, 0, 0.

@@ -1,0 +1,6 @@
+'L_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'w_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'L_tendsto_top' depends on axioms: [propext, Classical.choice, Quot.sound]
+'w_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'L_bounded_forces' depends on axioms: [propext, Classical.choice, Quot.sound]
+'complementary_needs_b_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

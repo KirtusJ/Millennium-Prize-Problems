@@ -1,0 +1,62 @@
+MET  P1 beta=0.1 b=0.1 B: direct=0.005 closed=0.005 rel=0.00e+00
+MET  P1 beta=0.1 b=0.1 A: direct=223.880597 closed=223.880597 rel=1.27e-16
+MET  P1 beta=0.1 b=0.1 D: direct=1724329.004 closed=1724329.004 rel=0.00e+00
+MET  P1 beta=0.1 b=0.1 L: direct=13.99253731 closed=13.99253731 rel=1.27e-16
+MET  P1 beta=0.1 b=0.1 U: direct=30808.01154 closed=30808.01154 rel=1.18e-16
+MET  P1 beta=0.1 b=0.1 w: direct=0.003633480154 closed=0.003633480154 rel=2.39e-16
+MET  P1 beta=0.1 b=0.0001 B: direct=0.005 closed=0.005 rel=0.00e+00
+MET  P1 beta=0.1 b=0.0001 A: direct=223880.597 closed=223880.597 rel=0.00e+00
+MET  P1 beta=0.1 b=0.0001 D: direct=1.724329004e+12 closed=1.724329004e+12 rel=2.83e-16
+MET  P1 beta=0.1 b=0.0001 L: direct=13992.53731 closed=13992.53731 rel=0.00e+00
+MET  P1 beta=0.1 b=0.0001 U: direct=30808011.54 closed=30808011.54 rel=1.21e-16
+MET  P1 beta=0.1 b=0.0001 w: direct=0.003633480154 closed=0.003633480154 rel=1.19e-16
+MET  P2 beta=0.1: w=0.003633480154
+MET  P1 beta=1 b=0.1 B: direct=0.5 closed=0.5 rel=0.00e+00
+MET  P1 beta=1 b=0.1 A: direct=15 closed=15 rel=1.18e-16
+MET  P1 beta=1 b=0.1 D: direct=54352.9004 closed=54352.9004 rel=2.68e-16
+MET  P1 beta=1 b=0.1 L: direct=0.9375 closed=0.9375 rel=1.18e-16
+MET  P1 beta=1 b=0.1 U: direct=14494.10677 closed=14494.10677 rel=1.25e-16
+MET  P1 beta=1 b=0.1 w: direct=0.0005174516869 closed=0.0005174516869 rel=2.10e-16
+MET  P1 beta=1 b=0.0001 B: direct=0.5 closed=0.5 rel=0.00e+00
+MET  P1 beta=1 b=0.0001 A: direct=15000 closed=15000 rel=1.21e-16
+MET  P1 beta=1 b=0.0001 D: direct=5.43529004e+10 closed=5.43529004e+10 rel=0.00e+00
+MET  P1 beta=1 b=0.0001 L: direct=937.5 closed=937.5 rel=1.21e-16
+MET  P1 beta=1 b=0.0001 U: direct=14494106.77 closed=14494106.77 rel=1.29e-16
+MET  P1 beta=1 b=0.0001 w: direct=0.0005174516869 closed=0.0005174516869 rel=2.10e-16
+MET  P2 beta=1: w=0.0005174516869
+MET  P1 beta=10 b=0.1 B: direct=15.2135191 closed=15.2135191 rel=1.17e-16
+MET  P1 beta=10 b=0.1 A: direct=0.138773081 closed=0.138773081 rel=0.00e+00
+MET  P1 beta=10 b=0.1 D: direct=5536.434128 closed=5536.434128 rel=4.93e-16
+MET  P1 beta=10 b=0.1 L: direct=0.008673317565 closed=0.008673317565 rel=0.00e+00
+MET  P1 beta=10 b=0.1 U: direct=159582.3653 closed=159582.3653 rel=5.47e-16
+MET  P1 beta=10 b=0.1 w: direct=4.348008027e-07 closed=4.348008027e-07 rel=7.31e-16
+MET  P1 beta=10 b=0.0001 B: direct=15.2135191 closed=15.2135191 rel=1.17e-16
+MET  P1 beta=10 b=0.0001 A: direct=138.773081 closed=138.773081 rel=0.00e+00
+MET  P1 beta=10 b=0.0001 D: direct=5536434128 closed=5536434128 rel=5.17e-16
+MET  P1 beta=10 b=0.0001 L: direct=8.673317565 closed=8.673317565 rel=0.00e+00
+MET  P1 beta=10 b=0.0001 U: direct=159582365.3 closed=159582365.3 rel=7.47e-16
+MET  P1 beta=10 b=0.0001 w: direct=4.348008027e-07 closed=4.348008027e-07 rel=4.87e-16
+MET  P2 beta=10: w=4.348008027e-07
+MET  P1 beta=1000 b=0.1 B: direct=1502.78941 closed=1502.78941 rel=0.00e+00
+MET  P1 beta=1000 b=0.1 A: direct=1.496220139e-05 closed=1.496220139e-05 rel=1.13e-16
+MET  P1 beta=1000 b=0.1 D: direct=39.97441669 closed=39.97441669 rel=1.78e-16
+MET  P1 beta=1000 b=0.1 L: direct=9.351375868e-07 closed=9.351375868e-07 rel=1.13e-16
+MET  P1 beta=1000 b=0.1 U: direct=10686774.13 closed=10686774.13 rel=0.00e+00
+MET  P1 beta=1000 b=0.1 w: direct=7.000335745e-13 closed=7.000335745e-13 rel=1.44e-16
+MET  P1 beta=1000 b=0.0001 B: direct=1502.78941 closed=1502.78941 rel=0.00e+00
+MET  P1 beta=1000 b=0.0001 A: direct=0.01496220139 closed=0.01496220139 rel=0.00e+00
+MET  P1 beta=1000 b=0.0001 D: direct=39974416.69 closed=39974416.69 rel=1.86e-16
+MET  P1 beta=1000 b=0.0001 L: direct=0.0009351375868 closed=0.0009351375868 rel=0.00e+00
+MET  P1 beta=1000 b=0.0001 U: direct=1.068677413e+10 closed=1.068677413e+10 rel=0.00e+00
+MET  P1 beta=1000 b=0.0001 w: direct=7.000335745e-13 closed=7.000335745e-13 rel=0.00e+00
+MET  P2 beta=1000: w=7.000335745e-13
+MET  P3 B: ratio=1.000000
+MET  P3 A: ratio=0.999999
+MET  P3 D: ratio=1.001224
+MET  P3 L: ratio=0.999999
+MET  P3 U: ratio=1.001225
+MET  P3 w: ratio=0.998776
+MET  P4 j=0.5: 4.05405405405 vs 4.05405405405
+MET  P4 j=1: 10.8108108108 vs 10.8108108108
+MET  P4 j=1.5: 20.2702702703 vs 20.2702702703
+SUMMARY met=61 failed=0

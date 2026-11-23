@@ -1,0 +1,2 @@
+check K10: exit 0 (expected 0) in 478407 ms | output fcd6661cc0e0 | event 16 head 34cdf3cd62fa
+  C:/Users/donke/z4-workers/r2-char/report.md — STANDS 6, DEFECT 0, NOT CHECKED 2 (in Lean: completeness of the character basis, and the lattice-to-T_w^N reduction); predicates met 5, failed 0, measured only 0.

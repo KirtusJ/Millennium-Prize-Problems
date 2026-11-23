@@ -1,0 +1,7 @@
+'Z4Char.conv_char' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Z4Char.iterate_char' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Z4Char.iterate_eq_kern' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Z4Char.coeff_real_even' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Z4Char.coeff_eq_lam1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Z4Char.coeff_one_eq_lam0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Z4Char.iterate_eq_lam1_pow' depends on axioms: [propext, Classical.choice, Quot.sound]

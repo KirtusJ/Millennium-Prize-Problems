@@ -1,0 +1,11 @@
+# Z4 challenger notes on B4 note (T1-T4)
+Step 0: control.txt = 0.272341 (-ln tanh 1).
+Step 1: read input/ (README.md, plaquette.md, geometry.py, readback.txt, HamiltonianTime.lean). PCP register pcp initialised.
+Step 2: Yarotsky math-ph/0412040 fetched to ref/, text extracted (ref/yarotsky.txt). Sec.1: h_x acts on H_{Lambda0+x} (blocks allowed), "possibly infinite-dimensional" site spaces, hx possibly unbounded, translation-invariant interactions only, eq.(1) gap>=1 nondegenerate product ground state, eq.(2) relative form bound alpha<1, periodic cubic volume "for simplicity"; Thm 1 gamma "independent of Lambda". No explicit lower bound on cube side relative to Lambda0 in statement.
+Step 3: delegated one-plaquette check of M=(2/kappa)(4-s) to sub-agent in child/ (background).
+Step 4: T4 by hand: all arithmetic verified (eps<=8z/3<=1/144, d<=1/12, s>=1-4d>=2/3, v>=1-4d-16d^2>=1-1/3-1/9=5/9, M<=(2/k)(10/3)=20/(3k), M/v<=12/k; trace-distance |tr((rho-sigma)O)|<=||rho-sigma||_1 ||O-c|| = 2d*2 = 4d for spectrum in an interval of length 4). |grad_e F|^2=4-F^2 per link since F=2x(U_e g) and |grad x|^2=1-x^2 on unit S^3.
+Step 5: t1_enum.py run (PCP check K1, exit 0) -> t1_result_1.json. L=2: 301 enumerated, 13 admissible (12 nonempty), min cost 6 = 3*2, attained exactly by the 12 parallel pairs. L=3: 88723 enumerated, 28 admissible (27 nonempty), min cost 9 attained exactly by 27 winding lines. No admissible below threshold. Girth 2,3,4,4,4 for L=2..6. Sub-agent returned (one-plaquette M check, see child/results.txt).
+Step 6: t23_geom.py (PCP K2, exit 1 expected 0) -> t23_result_1.json. All T2a/T2d/T3a (L=2,3,4), T2b, T2c, T3a' (MC dev 0.015 < 0.035), T3b (rel err 1.0e-6 < 1e-5) met. FAILED T3c: Riemann errors 1.1e-7, 6.1e-7, 6.1e-7 at b=0.4,0.2,0.1 are not monotone (all < 1e-3). Own expectation wrong (aliasing errors of smooth bumps oscillate); not a defect: diagnostic shows b=0.05 and b=1e-3 agree to 3e-7 relative.
+Step 7: reread child/gap_test.py (matrix H_nn=(2/k)n(n+2)+lam, H_{n,n+1}=-lam/2, F off-diag 1: correct) and reran it (PCP K3 exit 0, child/results_2.txt): ALL PASS, |M-(2/k)(4-s)|<=4e-15 at 12 points.
+Step 8: Lean copy compiled from z4-lean: exit 0, 11 theorems, axioms propext/Classical.choice/Quot.sound only, no sorry (lean_out.txt).
+Step 9: report.md written. Verdicts: 13 STANDS, 0 DEFECT, 0 NOT CHECKED (T2e with caveats).

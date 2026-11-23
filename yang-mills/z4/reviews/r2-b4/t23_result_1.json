@@ -1,0 +1,40 @@
+{
+ "L2": {
+  "T2a": true,
+  "T2d": true,
+  "faces_distinct": 24,
+  "T3a": true
+ },
+ "L3": {
+  "T2a": true,
+  "T2d": true,
+  "faces_distinct": 81,
+  "T3a": true
+ },
+ "L4": {
+  "T2a": true,
+  "T2d": true,
+  "faces_distinct": 192,
+  "T3a": true
+ },
+ "T2b_block_min_excitation": "1",
+ "T3a_prime_MC": {
+  "N": 20000,
+  "max_dev_from_identity": 0.015031144965585625,
+  "tol_5SE": 0.035355339059327376
+ },
+ "T2c": {
+  "bound": "8z/3*3*max|phi|=8z",
+  "sampled_max_abs_sum_phi": 2.714315631922627
+ },
+ "T3b_rel_err_casimir12": 1.0033135455137125e-06,
+ "T3c_riemann_errors": {
+  "0.4": 1.1184021531649747e-07,
+  "0.2": 6.055631762492183e-07,
+  "0.1": 6.055631762503025e-07
+ },
+ "T3c_integral": 0.0016020203813124888,
+ "failed": [
+  "T3c"
+ ]
+}

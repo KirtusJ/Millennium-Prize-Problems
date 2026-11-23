@@ -95,7 +95,7 @@ What ran, on the principal's Windows 11 machine:
 
 | Item | Status |
 |---|---|
-| PCP OS | Python implementation at pcp-os `59f26eb`, workspace created for this subproject; register of 15 events replays with every guard passing and all objects matching (`pcpos verify`: PASS). Copy in [`pcp/register.jsonl`](pcp/register.jsonl). |
+| PCP OS | Python implementation at pcp-os `59f26eb`, workspace created for this subproject; register of 20 events replays (15 at the first round) with every guard passing and all objects matching (`pcpos verify`: PASS). Copy in [`pcp/register.jsonl`](pcp/register.jsonl). |
 | ACR method | Not pinned. The packet on this machine has fingerprint `6b6d3a680f3f`; this build requires `7ff72eed9162`. ACR is not in use; the register holds retrievals, inspections and checks only. |
 | Native Rust host, kernel guests | Not available on this machine (no Rust toolchain, no QEMU). Not used. |
 | PCP workers, recursive hierarchy | Run after the principal signed the `claude` program in. Three headless workers (challenger and builder on Opus, micro-review on Sonnet), each started by the director through `pcpos check` (register checks K6, K7, K8, exit 0) from [`reviews/launch.sh`](reviews/launch.sh), each with its own PCP register, and each with one sub-agent below it holding a register of its own: three levels, director, worker, sub-agent. All six worker registers replay (chain intact). Every worker answered the known-answer control correctly (key hashed before launch, `reviews/control_answer.sha256`). The first version of this folder (commit `a44dede`) was written before any worker ran. No chat, browser or app sub-agent was used by the director. |
@@ -135,3 +135,64 @@ Director, workers and sub-agents are one model family. Their agreement reduces e
 At blob `399a8481d5ac`, on this machine: `lake env lean` exit 0, both theorems on the three standard axioms (register check K5), same Lean and Mathlib revisions as A4's receipt. This reproduces the compilation only. Reading of the statements: `momentLowerBound` uses neither E ≥ 0 nor t ≥ 0; the note's upper bound C_n(t) ≤ V does use E ≥ 0 and t ≥ 0, and is not in the Lean file. The guest-boot provenance in A4's receipt was not examined.
 
 All checks here were made by one model family. Agreement with the other directors' readings reduces exposure and is not independent review.
+
+## Second round: A4's and B4's fixed-mesh bounds in physical units
+
+Later on 22 November 2026. Three further workers (register checks K9, K10, K11), each with one sub-agent and its own register; all six registers replay. Reports, programs and results are in [`reviews/r2-b4/`](reviews/r2-b4/), [`reviews/r2-audit/`](reviews/r2-audit/), [`reviews/r2-char/`](reviews/r2-char/). The director reread each report, recompiled the two new Lean files (K12, K13, exit 0, standard axioms only, no `sorry`), reran the challenger's enumeration in a fresh directory (bytes identical) and recomputed one row of the table below by hand.
+
+### The trajectory audit (Z4's lane applied to the other directors' results)
+
+Conventions, derived from the two texts and found consistent: B4's H = (1/2κ_B)ΣA_e + λΣ(1 − φ_p), A4's κ_A = 2/κ_B, g = z/2. On B4's bare tree-level matching with spatial spacing b: κ_B = βb, λ = β/b, z = β², g = β²/2. The coefficients carry 1/length, so the bounds below are already physical energies.
+
+| Quantity | In (β, b) | b → 0 at fixed β | b → 0 with β = c·log(1/(bΛ)) |
+|---|---|---|---|
+| B4 small-z gap bound 3γ/(8κ_B) | 3γ/(8βb), for β² below an unquantified threshold | ∝ 1/b | trajectory leaves the regime |
+| B4 M/v ≤ 12/κ_B | 12/(βb), for β ≤ 0.051 | ∝ 1/b | leaves the regime |
+| B4 large-z first moment | between 3/(4β²b) and 48/(β²b), β ≥ 6 | ∝ 1/b | diverges like 1/(b·log²) |
+| A4 lower endpoint L = A/16 | 9/(64βb(1+B)) | ∝ 1/b | ≈ 0.0936/(β²b), diverges |
+| A4 upper endpoint U = 4D/A | 64(6+8√B)²(1+B)/(9βb) | ∝ 1/b | ≈ 1028·β/b, diverges |
+| A4 weight w = A²/(8D) | 81/(512(1+B)²(6+8√B)²) | constant | ≈ 7.3·10⁻⁴/β³, tends to 0 |
+
+B = min{β²/2, 17β/(8√2) + 3/16}. With c = 1, Λ = 1 (illustrative, not a claim about the real trajectory): at bΛ = 10⁻⁴ the window is [10.2, 1.5·10⁸] with weight 5.4·10⁻⁷; at 10⁻⁸ it is [2.6·10⁴, 2.6·10¹²] with weight 8.2·10⁻⁸.
+
+Proved in [`lean/Z4YM/TrajectoryAudit.lean`](lean/Z4YM/TrajectoryAudit.lean), for real β > 0, b > 0:
+
+- `L_lower`: L ≥ (9/64)/(β(1+2β)b).
+- `w_upper`: w ≤ 9/(512(1+β)²) for every D ≥ 36κ_A² (covers A4's D and D_*).
+- `L_tendsto_top`: if β_n(1+2β_n)b_n → 0 then L_n → +∞.
+- `w_tendsto_zero`: if β_n → ∞ then w_n → 0.
+- `L_bounded_forces`: if b ≤ b₀ and L ≤ C then β²b ≥ min(c/4, c²/(4b₀)), c = 9/(64C).
+- `complementary_needs_b_bound`: without b ≤ b₀ the last statement is false (β = 1/n, b = n).
+
+What this shows. On every trajectory with b → 0 and β growing more slowly than b^(−1/2), in particular at fixed β and on any logarithmic (asymptotic-freedom-like) trajectory, the whole interval in which A4 locates plaquette spectral weight leaves every fixed physical window, and if β → ∞ the guaranteed weight tends to zero. B4's volume-uniform gap lives at β below a fixed threshold and is of order 1/b there. These are the bounds their authors say they are, at a fixed mesh; A4's and B4's notes both state that the scale is 1/b on this trajectory. The audit adds the lower endpoint, the weight, the exact condition β²b bounded below, and the machine check. It says nothing about the true spectrum, only about what these bounds guarantee. The single lattice plaquette is an observable of size b; a statement in a fixed physical window needs an observable of fixed physical size with a renormalization factor, and every one-link or one-face estimate redone at that size. That is a suggestion of the worker, not a result.
+
+Not checked: A4's coefficient chain 336, 1152, 1200, C_K; whether tree-level matching is the right trajectory. The third-moment improvement D_* < D takes effect only for β > 862.
+
+Defect of the director's own brief, kept: the brief asked for "L_n bounded only if β_n²b_n is bounded below" with no bound on b. That is false as stated; the worker refuted it in Lean and proved the corrected form.
+
+### Challenge of B4's Hamiltonian time limit, as B4 requested
+
+Thirteen items, none broken ([report](reviews/r2-b4/report.md)).
+
+- Winding-cycle threshold 3·min(L,4)/(2κ): enumeration of all edge labellings n_e ∈ {0,1,2} within the threshold with the SU(2) fusion test at every vertex. L = 2: 301 enumerated, 12 nonempty admissible, minimum cost 6, attained exactly by the 12 parallel-link pairs. L = 3: 88 723 enumerated, 27 nonempty admissible, minimum 9, exactly the 27 winding triangles. L ≥ 4 by derivation only.
+- Block hypotheses: fourfold cover, rescaling 8κ/3, unit block gap, ‖v_x‖ ≤ 8z and the plaquette supports checked exactly for L = 2, 3, 4. Yarotsky's hypotheses as stated in the paper admit a term acting on a block, infinite-dimensional sites and unbounded classical terms. Caveats: the worker did not check that the paper's proof holds on periodic cubes of side 2 or 3, and the threshold and γ are not quantified (B4 says so).
+- Rotation control: the computation stands. Remark: the Hamiltonian is not rescaled as b → 0, only the smearing is refined, so the failure of the z↔t rotation is built in for any uncoupled anisotropic regulator; "spatial refinement" overstates it.
+- plaquette.md, first section: s ≥ 2/3, v ≥ 5/9, M = (2/κ)(4 − s), M/v ≤ 12/κ stand; the one-plaquette identity was confirmed numerically to 4·10⁻¹⁵ by the sub-agent and rerun.
+- B4's `HamiltonianTime.lean` recompiles (exit 0, standard axioms). It proves real-number algebra and finite sums; the trace-distance step and the energy identity are hypotheses there.
+
+One failed predicate, the worker's own expectation (monotone Riemann error), kept. Not checked: B4's time-limit and compactness argument, the large-z section, the general-group extension.
+
+### The character eigenvalue step, abelian case
+
+Section 2 used, without proof, that the transfer eigenvalues are c_r^N. [`lean/Z4YM/CharTransfer.lean`](lean/Z4YM/CharTransfer.lean) proves, for any finite group G and any multiplicative ψ : G → ℂ:
+
+- `conv_char`: convolution by w maps ψ to c_ψ·ψ, c_ψ = Σ_y w(y)ψ(y⁻¹).
+- `iterate_char`: the N-fold iterate maps ψ to c_ψ^N·ψ.
+- `iterate_eq_kern`: the iterate is convolution by the chain kernel Σ w(g₁)w(g₁⁻¹g₂)⋯w(g_{N−1}⁻¹x).
+- `coeff_real_even`, `coeff_eq_lam1`, `coeff_one_eq_lam0`, `iterate_eq_lam1_pow`: for a real even weight and a unitary ψ the coefficient is the `lam1` of `LevelsControl.lean`, and `lam0` for ψ = 1.
+
+Commutativity was not needed. Numerical check on Z₂×Z₄ (sub-agent, rerun, bytes identical): the 8 eigenvalues of T³ are the c_ψ³. Still not proved: that the characters exhaust the spectrum; the reduction from the lattice transfer operator to the N-fold convolution (gauge fixing, integrating the time links); anything for characters of dimension above one, so SU(2) remains a numerical check on one lattice.
+
+Counts for the round, as met, failed, measured only. Challenger programs 24, 1, 2 and its sub-agent 49, 0, 0; audit table program 36, 8, 8 (the 8 failures are one predicate the worker expected to fail: D_* < D on the grid) and its sub-agent 61, 0, 0; formalizer numerics 5, 0, 0. Lean: 13 new theorems, first drafts of both files failed and were fixed (the failed draft of `CharTransfer.lean` is kept in `reviews/r2-char/`). No mutation test was run.
+
+Director, workers and sub-agents are one model family; this is not independent review. Nothing here constructs a four-dimensional theory or bounds its gap.
