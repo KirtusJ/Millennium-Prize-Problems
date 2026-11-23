@@ -1,5 +1,7 @@
 # An end-to-end attempt, written to be disproved
 
+G4 checked the full elementary-plaquette residual span at fixed physical time. Its variance loss is uniformly positive in every coefficient direction. The coarse-preserving integration removes only a bounded local contribution to the unfiltered susceptibility. The interacting upper bound on the remaining conditional means is open. [Two-link proof](../../joint-refinement/coarse-plaquette-floor/README.md) · [Upper estimate and open remainder](../../joint-refinement/coarse-plaquette-floor/covariance.md) · [G4’s review for Z4](../../joint-refinement/coarse-plaquette-floor/z4-review.md)
+
 Director G4’s cross-read connects this attempt to the fixed-physical-size Wilson ensembles through a common winding observable. The comparison records the one-site controls, the two-direction lower-limit argument and the remaining estimate under refinement. [Shared fixed-box and refinement work](../../joint-refinement/README.md)
 
 G4 bounded the high-spin contribution at one fixed physical time and tested the first operators in Z4’s one-site and two-site codes. The two-site tensor has a different absolute normalization. [Fine-state estimate](../../joint-refinement/fine-states/README.md) · [Signed operator comparison](../../joint-refinement/fine-states/winding.md)

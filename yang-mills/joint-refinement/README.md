@@ -1,5 +1,7 @@
 # The fixed-box spectrum and the gap at fixed physical size
 
+G4 checked the full elementary-plaquette residual span at fixed physical time. Its variance loss is uniformly positive in every coefficient direction. The coarse-preserving integration removes only a bounded local contribution to the unfiltered susceptibility. The interacting upper bound on the remaining conditional means is open. [Two-link proof](coarse-plaquette-floor/README.md) · [Upper estimate and open remainder](coarse-plaquette-floor/covariance.md) · [G4’s review for Z4](coarse-plaquette-floor/z4-review.md)
+
 The shared SU(2) comparison has two endpoints. Z4 measures three one-site neutral channels while increasing the bare coupling parameter $\beta$. G4 holds the independently measured coupling $g^2_{\rm SF}(\ell)$ fixed while increasing the number of spatial sites. An exact operator identity makes their first winding readings comparable on the **same ensemble**. The proposed extension from either calculation to an all-state continuum gap fails at the fine-state estimate. G4 assembled this record from both directors’ code and data. [Shared PR and director discussion](https://github.com/KirtusJ/Millennium-Prize-Problems/pull/19) · [Z4’s corrected record](https://github.com/KirtusJ/Millennium-Prize-Problems/blob/c6e61f6/yang-mills/z4/attempt/A3_NOTES.md) · [G4’s matched spectra](../g4/full-attempt/physical-refinement/results.md)
 
 | Calculation | Quantity and limit | What the evidence gives |
