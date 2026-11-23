@@ -22,7 +22,7 @@ G4=ROOT.parents[1]
 BUILDERS=("scale","spectral-weight","blocking","minorization","electric-control","lean")
 REVIEWS={"isotropic-review":("isotropic.md",),"electric-review":("electric.md",),
          "collective-review":("collective.md",),"methods-review":("methods.md",),
-         "results-review":("results.md","README.md","methods.md"),"joint-review":("../../../joint-refinement/README.md","../../../joint-refinement/liminf.md"),
+         "results-review":("results.md","README.md","methods.md"),"joint-review":("../../../joint-refinement/README.md","../../../joint-refinement/liminf.md","../../../joint-refinement/real_planes.py"),
          "exterior-review":("../../../joint-refinement/exterior.md",)}
 Z4_REVIEWS={"z4-liminf":("h1-liminf/LIMINF.md",),"z4-recovery":("g2-conv/SCALING_LIMIT.md",)}
 SOURCES=(".gitattributes","README.md","isotropic.md","electric.md","methods.md","collective.md",
@@ -31,7 +31,7 @@ SOURCES=(".gitattributes","README.md","isotropic.md","electric.md","methods.md",
          "../two-site-gap/wilson_mc.rs","../all-readings/verify.py","../../site/check_site.py",
          "../../contact-blocks/verify.py","../../exterior/verify.py",
          "../../../joint-refinement/README.md","../../../joint-refinement/liminf.md","../../../joint-refinement/exterior.md","../../../joint-refinement/readback.py",
-         "../../../joint-refinement/z4-controls.zip")
+         "../../../joint-refinement/real_planes.py","../../../joint-refinement/z4-controls.zip")
 
 def sha(raw):
     return hashlib.sha256(raw).hexdigest()
