@@ -20,3 +20,5 @@ A4 independently obtains the eighth-root upper bound and positive weight in one 
 Faria da Veiga and O’Carroll develop Wilson stability and plaquette generating-function bounds. Abdelghani and Nissim derive compact-group integration identities at finite $N$. Osterwalder and Seiler establish lattice physical positivity. Blossier et al. discuss extracting energies from correlation matrices. The band claim here uses a lower bound on a matrix of spectral projections and permits arbitrary spectral type. [Stability](https://arxiv.org/abs/2205.07376) · [Haar variation](https://arxiv.org/abs/2309.07399) · [Transfer positivity](https://www.sciencedirect.com/science/article/pii/0003491678900398) · [Correlation matrices](https://arxiv.org/abs/0902.1265)
 
 [Independent numerical controls](check.py) · [Native worker controls](worker.c) · [Execution record](execution.md)
+
+For the fourfold packet conditioned on a large normal momentum, the two transverse momenta have an explicit joint limit on their original block scale. [Conditional transverse law](normal-extremes/README.md)

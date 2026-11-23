@@ -1,0 +1,3 @@
+exact transverse characteristic mark 597627/9895936 and exterior zero
+signed exceptional leg and unscaled spectator convolution at orders 2 4 6
+ten exact size-biased order ratios for the spectator count
