@@ -1,0 +1,28 @@
+I checked all 20 items in `src/tun_upper.tex` against the sources. One is WRONG, a minor numeric constant; 10 MATCH and 9 are CHANGED. For every CHANGED item the cause is a listed correction or a writer addition that I re-derived and found correct. This is not independent review, since I share a model family with the authors. I did not compile the Lean files, check the second-half lemma `tu:L-L4`, or check that (W1) and (W3) exist.
+
+Control: 2·asinh(1) = 1.762747.
+
+- **WRONG:** `tun_upper.tex` line 432 (proof of `tu:U-I1`) says "D(1)>0.039". The actual value is D(1) = 0.038931, so the claim is false. The sources had the rounded 0.039, and nothing downstream uses the number, only D > 0. My predicate C3 tested this, failed, and the defect is in the target.
+- **Nits, not counted as WRONG:**
+  - Line 297 writes C_h⁻¹F_aC_h, which should be C_hF_aC_h⁻¹.
+  - The ω(β) in `tu:U-schur` is only defined once β′ > 0, and the statement doesn't say "β large".
+  - Intro item 4 says c = 4.599 agrees with c* to "about 0.1%", but it is 0.14%.
+- **Lemma K:** the first bound's constants equal the source exactly, and my numeric check passed in 150 of 150 qualifying cases. The radial form is a writer addition and checks out.
+- **`tu:U-F-master`:** M_in and M_out are identical to the source term by term. The deficit at β ≤ 4096 comes out 8.73 to 14.23 nats. The deficit first falls below 0.2 at β ≈ 2.2e13.
+- **`tu:U-outer`:** the Taylor step is correct, and the inequality passed in 707 of 707 qualifying cases.
+- **`tu:U-flux`:** the prefactor is 4, as the task says. The source had 2, and CHAL_conditional item 10 corrects it.
+- **`tu:U-weight`:** the tex uses c^ρ in place of c*_η in the barrier inequality, and the source's version does not follow. (3) and (4) are correct.
+- **`tu:U-B`:** the constant C(η) works out, and the η ≤ 1/2 restriction is a writer addition.
+- **`tu:U-main`:** the final inequality re-derives, with the constants 4, 2 and 8 consistent.
+
+**Grandchild:**
+- **Question:** is the flux prefactor 4 on symmetric positive 3×3 matrices?
+- **Id:** T172, admitted by me under T170 and released at event 343.
+- **Control:** its top-eigenvalue control, 3.000000, was correct.
+- **Outcome:** the ratio was 4.0000000000 in 6 of 6 cases (3 matrices × 2 splits). I reread its program and reran it in `gc_rerun/`; it gave the same result.
+
+**Verify lines:**
+- `pcp_os.py verify --ws pcp`: result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)
+- `pcpos verify pcp/register.jsonl`: A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.
+
+Everything is in `/home/user/z4-workers/t1-wU/child/`; start with `report.md`, with the full table in `findings.md`.

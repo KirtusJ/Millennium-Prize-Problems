@@ -1,0 +1,9 @@
+P1 MET : c*=4.605413245
+P2/P4 MET : eta=0.4 a-=0.423279 r0=0.202670 r0^2/sin=1.000e-01(eta/4=1.000e-01); eta=0.2 a-=0.202722 r0=0.100333 r0^2/sin=5.000e-02(eta/4=5.000e-02); eta=0.1 a-=0.100335 r0=0.050042 r0^2/sin=2.500e-02(eta/4=2.500e-02); eta=0.05 a-=0.050042 r0=0.025005 r0^2/sin=1.250e-02(eta/4=1.250e-02); eta=0.01 a-=0.010000 r0=0.005000 r0^2/sin=2.500e-03(eta/4=2.500e-03)
+P2b MET : arcsin(sinh .65)=0.77085 arcsin(sinh .66)=0.78804 pi/4=0.78540
+P3 MET : corner 34.14 junction a-coef 25.79 r0 coef 8.35
+P5 MET : M^2 = 0.4:18.05, 0.3:22.22, 0.2:30.38, 0.1:54.36, 0.05:101.62, 0.02:242.22, 0.01:475.72, 0.005:942.04 ; 3.4/eta+O(1) check eta*M^2 = 7.22, 6.66, 6.08, 5.44, 5.08, 4.84, 4.76, 4.71
+P6 MET : beta=10000 L=0.0138 (claim 0.014) P_k=0.8000; beta=1e+06 L=0.0965 (claim 0.096) P_k=0.9814; beta=1e+09 L=0.3083 (claim 0.310) P_k=1.0000; beta=1e+12 L=0.5313 (claim 0.530) P_k=1.0000; beta=1e+16 L=0.7519 (claim 0.750) P_k=1.0000
+P7 MET : logJ closed-vs-direct 6.395e-14 G1 3.331e-16 G2 1.110e-16 flat 2.665e-15
+P8 MET : vol min ratio 1.384; z=1 ratio 0.3318; z=10 ratio 0.6119; z=100 ratio 0.6342; z=1000 ratio 0.6364; z=10000 ratio 0.6366
+P9 MET : eta=0.4 min slack 0.1088 (claimed 0.1070); eta=0.2 min slack 0.1077 (claimed 0.1070); eta=0.1 min slack 0.0952 (claimed 0.0950); eta=0.05 min slack 0.0488 (claimed 0.0490); eta=0.01 min slack 0.0100 (claimed 0.0100)

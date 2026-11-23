@@ -1,0 +1,803 @@
+% tun_upper.tex -- first half of the note
+% "The tunnelling exponent of the one-site SU(2) Wilson transfer operator in two directions".
+% Written by worker t1-wU (task T167) from parts/TUNNEL_THEOREM.md, parts/LEMMA_F.md,
+% with the corrections of parts/CHAL_conditional.md, parts/CHAL_lemmaF.md and the
+% assembly changes of parts/TUNNEL_LOWER_FULL.md. ASCII only.
+
+\section{Setting, statement, and what is claimed}\label{tu:U-sec-intro}
+
+\subsection{Setting}
+Let $X=\SU(2)^2$ with Haar probability measure $dx=dU_1\,dU_2$. A point of $X$ is $x=(U_1,U_2)$.
+We write a unit quaternion as $U=(x_0,u)$ with $x_0\in\R$, $u\in\R^3$, $x_0^2+|u|^2=1$, and we write
+$U_i=(x_{0,i},u_i)$. The class angle $a_i\in[0,\pi]$ of $U_i$ is defined by $\cos a_i=x_{0,i}$; then
+$|u_i|=\sin a_i$. For $U,U'\in\SU(2)$ let $\langle U,U'\rangle$ be the inner product of $U$ and $U'$ as
+vectors of $\R^4$.
+
+Let $\beta>1$. Put
+\[
+k(U,U')=\frac{e^{\beta\langle U,U'\rangle}}{Z},\qquad Z=\frac{2I_1(\beta)}{\beta},
+\]
+where $I_\nu$ is the modified Bessel function of the first kind. By Lemma~\ref{tu:U-kernel},
+$\int k(U,U')\,dU'=1$ for every $U$. Let $K_i$ be the operator on $L^2(X)$ that integrates against $k$
+in link $i$, $(K_1\psi)(U_1,U_2)=\int k(U_1,U_1')\psi(U_1',U_2)\,dU_1'$ and similarly for $K_2$, and put
+$K=K_1K_2$. Put
+\[
+V=2\beta\,|u_1\times u_2|^2,\qquad T=e^{-V/2}\,K\,e^{-V/2}.
+\]
+$T$ is a bounded self-adjoint operator on $L^2(X)$ with a continuous, strictly positive, symmetric
+kernel
+\[
+T(x,y)=e^{-V(x)/2}\,k(U_1,U_1')\,k(U_2,U_2')\,e^{-V(y)/2},\qquad x=(U_1,U_2),\ y=(U_1',U_2').
+\]
+The center flips are $\sigma_1(U_1,U_2)=(-U_1,U_2)$ and $\sigma_2(U_1,U_2)=(U_1,-U_2)$; $\sigma_1$ acts on
+class angles by $a_1\mapsto\pi-a_1$. Gauge transformations act by simultaneous conjugation,
+$(U_1,U_2)\mapsto(hU_1h^{-1},hU_2h^{-1})$. Since $\langle -U,-U'\rangle=\langle U,U'\rangle$,
+$\langle hUh^{-1},hU'h^{-1}\rangle=\langle U,U'\rangle$, and $V$ is invariant under both flips and under
+gauge transformations, $T$ commutes with $\sigma_1$, $\sigma_2$ and with gauge transformations.
+
+Since the kernel of $T$ is continuous and strictly positive on the compact space $X$, $T$ is compact
+(Hilbert--Schmidt), its largest eigenvalue $\lambda:=\|T\|$ is simple, and its eigenvector can be chosen
+strictly positive. We call it $g$, with $\|g\|=1$. Because the eigenvalue is simple and $T$ commutes with
+the flips and gauge transformations, $g$ is invariant under them; in particular $g$ lies in the sector
+even under $\sigma_1$ and $\sigma_2$, and $\lambda=\lambda_{ee}$, the top eigenvalue of $T$ on the
+gauge-invariant functions even under both flips.
+
+Let $\lambda_{eo}$ be the top eigenvalue of $T$ on the gauge-invariant functions that are odd under
+$\sigma_1$ and even under $\sigma_2$, and $f$ a real eigenvector, $\|f\|=1$, $Tf=\lambda_{eo}f$. Since
+$f\perp g$ and $\lambda$ is simple, $\lambda_{eo}<\lambda$. Put
+\[
+\Delta=\lambda-\lambda_{eo},\qquad m_{eo}=\log\frac{\lambda_{ee}}{\lambda_{eo}}.
+\]
+(The first half of the note does not use gauge invariance of $f$. Every statement of this half
+holds verbatim if $\lambda_{eo}$ is defined as the top eigenvalue on all functions odd under
+$\sigma_1$ and even under $\sigma_2$, because the trial function of Section~\ref{tu:U-sec-flux}
+is gauge invariant and $\lambda_{eo}\le\lambda$ in either case.)
+
+Single-link valley energy: for $S\ge0$ put
+\[
+e(S)=2\operatorname{asinh}(S),\qquad \alpha(S)=2S\sqrt{1+S^2},\qquad
+A(S)=1+2S^2+2S\sqrt{1+S^2},
+\]
+and write $\varepsilon(a)=e(\sin a)=2\operatorname{asinh}(\sin a)$ for $a\in[0,\pi]$. Note
+$A(S)=(S+\sqrt{1+S^2})^2$, so $\log A(S)=e(S)$, and $e(S)=\operatorname{arccosh}(1+2S^2)$. Put
+\[
+c^*=\int_0^\pi\sqrt{2\varepsilon(a)}\,da=4.6054132\ldots
+\]
+(the value was computed by Gauss--Legendre quadrature; Section~\ref{tu:U-sec-status}).
+
+\subsection{Statement}
+
+\begin{theorem}\label{tu:U-thm}
+In the setting above,
+\[
+\lim_{\beta\to\infty}\frac{-\log m_{eo}}{\sqrt\beta}=c^*=\int_0^\pi\sqrt{2\varepsilon(a)}\,da .
+\]
+\end{theorem}
+
+The theorem has two halves. This half proves
+$\liminf_{\beta\to\infty}(-\log m_{eo})/\sqrt\beta\ge c^*$ (Theorem~\ref{tu:U-main}); it bounds the
+splitting from above. The second half of the note proves $\limsup\le c^*$. This half uses one result of
+the second half: Lemma~\ref{tu:L-L4}, that $\lambda_{ee}\to1$ and $\lambda_{eo}\to1$ as
+$\beta\to\infty$. The lower bound on $\lambda_{ee}$ and $\lambda_{eo}$ is all that is used from it.
+
+\subsection{What is and is not claimed}\label{tu:U-sec-status}
+\begin{enumerate}
+\item \emph{Status.} Theorem~\ref{tu:U-thm} is proved in writing in this note. The proofs were written
+by sessions of one model family (Claude, Anthropic), working as a director and workers, and were
+attacked by other sessions of the same family. Agreement among them is not independent review. The
+note has not been read by a session of another model lineage or by a person.
+\item \emph{No rate.} The theorem is a limit statement. No rate of convergence is proved.
+\item \emph{Thresholds.} The thresholds in $\beta$ beyond which the estimates of this note are
+effective are explicit in principle and useless in practice. For example the explicit form of
+Lemma~\ref{tu:U-F} (Theorem~\ref{tu:U-F-master}) gives a deficit below $0.2$ uniformly in
+$\sin a\in[0.1,1]$ only for $\beta$ of order $10^{13}$ to $10^{14}$; at $\beta\le4096$ its deficit is $8.6$
+to $14$ nats. Other steps (in the second half) become effective only for $\beta$ of order $10^{8}$ or
+beyond. These numbers are measurements of the explicit bounds, not of the operator.
+\item \emph{Numerics.} Measured splittings of $T$ up to $\beta=256$ (double and double-double
+arithmetic, reported in the companion paper, not recomputed here) are fitted by
+$-\log m\approx c\sqrt\beta+q\beta^{1/6}$ with $c=4.599$. This agrees with $c^*$ to about
+$0.1\%$. A fit at finite $\beta$ does not establish the limit and is not used in any proof.
+\item \emph{Lean.} The scalar inequalities $1-\cos t\ge\frac{t^2}{2}(1-\frac{5\delta^2}{48})$ for
+$|t|\le\delta\le1$, the identities $\alpha/2-S^2=c/A$ and $\log A=2\operatorname{asinh}S$ of
+Lemma~\ref{tu:U-fixed}, the inequality of Lemma~\ref{tu:U-amgm} and the duality bound of
+Lemma~\ref{tu:U-outer} (not its Taylor step) were checked in Lean 4 with Mathlib by the authors of the
+working files. Nothing else in this note is formalised. These Lean files were not compiled in the
+preparation of this text.
+\end{enumerate}
+
+\section{The kernel, coordinates, exponential moments, and the fibre reduction}\label{tu:U-sec-kernel}
+
+\begin{lemma}[Kernel identity]\label{tu:U-kernel}
+Let $\beta>0$.
+\begin{enumerate}
+\item For $U,U'\in\SU(2)$, $\tfrac12\Tr(U^{-1}U')=\langle U,U'\rangle=\cos\theta(U^{-1}U')$, where
+$\theta(g)\in[0,\pi]$ is the class angle of $g$. Hence $k(U,U')$ depends only on $U^{-1}U'$, and
+\[
+e^{\beta\langle U,U'\rangle}=e^{\beta}e^{-\frac\beta2|U-U'|^2}.
+\]
+\item $\int_{\SU(2)}e^{\beta\langle U,U'\rangle}\,dU'=2I_1(\beta)/\beta=Z$. Hence $\int k(U,U')\,dU'=1$.
+\item $K_i$ is self-adjoint and nonnegative. On the subspace of functions of $U_i$ of Peter--Weyl degree
+$n$ (spin $n/2$) it acts as multiplication by $I_{n+1}(\beta)/I_1(\beta)\in(0,1]$. In particular
+$K_i^{1/2}$ exists, $\|K_i\|\le1$, and $K_1$, $K_2$, $K_1^{1/2}$, $K_2^{1/2}$ commute.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(1) For unit quaternions $U^{-1}=\bar U$, and the real part of $\bar UU'$ is the $\R^4$ inner product
+$\langle U,U'\rangle$. For $g\in\SU(2)$ with class angle $\theta$, $\tfrac12\Tr g=\operatorname{Re}g=\cos\theta$.
+Since $|U|=|U'|=1$, $|U-U'|^2=2-2\langle U,U'\rangle$.
+
+(2) Under Haar probability measure the class angle $\theta$ of $g=U^{-1}U'$ has density
+$\frac2\pi\sin^2\theta$ on $[0,\pi]$. Hence the integral is
+$\frac2\pi\int_0^\pi e^{\beta\cos\theta}\sin^2\theta\,d\theta$. Integrating by parts with
+$\frac{d}{d\theta}e^{\beta\cos\theta}=-\beta\sin\theta\,e^{\beta\cos\theta}$,
+\[
+\int_0^\pi e^{\beta\cos\theta}\sin^2\theta\,d\theta=\frac1\beta\int_0^\pi e^{\beta\cos\theta}\cos\theta\,d\theta
+=\frac{\pi I_1(\beta)}{\beta},
+\]
+using $I_1(\beta)=\frac1\pi\int_0^\pi e^{\beta\cos\theta}\cos\theta\,d\theta$. This gives $Z=2I_1(\beta)/\beta$.
+
+(3) $K_i$ is convolution by the central function $\kappa(g)=e^{\beta\cos\theta(g)}/Z$, which is real and
+satisfies $\kappa(g^{-1})=\kappa(g)$, so $K_i$ is self-adjoint. Expand $\kappa$ in characters
+$\chi_n(\theta)=\sin((n+1)\theta)/\sin\theta$: the coefficient is
+\[
+c_n=\int\kappa\,\chi_n\,dg=\frac{2}{\pi Z}\int_0^\pi e^{\beta\cos\theta}\sin((n+1)\theta)\sin\theta\,d\theta
+=\frac{1}{\pi Z}\int_0^\pi e^{\beta\cos\theta}\bigl(\cos n\theta-\cos(n+2)\theta\bigr)d\theta
+=\frac{I_n(\beta)-I_{n+2}(\beta)}{Z}.
+\]
+By the recurrence $I_n-I_{n+2}=\frac{2(n+1)}{\beta}I_{n+1}$, $c_n=(n+1)I_{n+1}(\beta)/I_1(\beta)$. By Schur
+orthogonality, convolution by $\chi_n$ acts on the degree-$n$ isotypic component as multiplication by
+$1/(n+1)$ and annihilates the others. Hence $K_i$ acts on degree $n$ as $I_{n+1}(\beta)/I_1(\beta)$, which is
+positive for $\beta>0$ and at most $1$ (the sequence $I_{n}(\beta)$ is decreasing in $n\ge0$). The
+operators act on different variables or are functions of the same operator, so they commute.
+\end{proof}
+
+\begin{remark}
+Part (3) is stated without proof in the working files (TUNNEL\_THEOREM \S0); the proof above was
+written for this note. The monotonicity $I_{n+1}\le I_n$ is used only for $\|K_i\|\le1$, which also follows
+from $k\ge0$ and $\int k=1$ (Lemma~\ref{tu:U-F-cor}(a)).
+\end{remark}
+
+\subsection{Coordinates}
+\emph{Ambient coordinates.} Write $U=(x_0,x_1,x_2,x_3)$, $w=(x_1,x_2)$, $r=|w|^2=x_1^2+x_2^2$,
+$\rho=\sqrt r$, $R=\sqrt{1-r}$ and $(x_0,x_3)=(R\cos\varphi,R\sin\varphi)$. Then $w$ ranges over the unit
+disc $D\subset\R^2$ and $\varphi$ over $[0,2\pi)$, and
+\begin{equation}\label{tu:U-eq-haar}
+dU=\frac{d^2w\,d\varphi}{2\pi^2}.
+\end{equation}
+Indeed, in $\R^4=\R^2_w\times\R^2_{(x_0,x_3)}$ with polar coordinates $(\varrho,\varphi)$ in the second
+factor, surface measure on $S^3$ is $\delta(\sqrt{\varrho^2+r}-1)\,d^2w\,\varrho\,d\varrho\,d\varphi=d^2w\,d\varphi$,
+since $\partial_\varrho\sqrt{\varrho^2+r}=\varrho$ at $\varrho^2+r=1$. The total is
+$2\pi\cdot\pi=2\pi^2=|S^3|$.
+
+\emph{Exponential coordinates.} Write $g=\exp(X)$ with $X\in\mathfrak{su}(2)\cong\R^3$ and
+$\theta=|X|\le\pi$; then $\theta$ is the class angle of $g$ and the geodesic distance from $1$ to $g$
+in the round metric of $S^3$, and
+\begin{equation}\label{tu:U-eq-exp}
+dg=\frac{1}{2\pi^2}\Bigl(\frac{\sin\theta}{\theta}\Bigr)^2d^3X,\qquad |X|\le\pi .
+\end{equation}
+The total mass of $(\sin\theta/\theta)^2d^3X$ on $\{|X|\le\pi\}$ is $\int_0^\pi4\pi\sin^2\theta\,d\theta=2\pi^2$.
+
+\subsection{Exponential moments of the kernel}
+
+We write $k(g)=e^{\beta\cos\theta(g)}/Z$ for the kernel as a function of $g=U^{-1}U'$.
+
+\begin{lemma}[Lemma K]\label{tu:U-K}
+Let $\beta>1$, $p\in\R^3$, $H\ge0$, $0<\eta\le1$, and put $\beta'=\beta(1-5\eta^2/48)-\sqrt\beta H$.
+If $\beta'>0$, then
+\[
+\int k(g)\cosh(\sqrt\beta\,p\cdot X)\,e^{\sqrt\beta H\theta^2/2}\,dg\le
+\frac{1}{1-1/\beta}\Bigl[\Bigl(\frac{\beta}{\beta'}\Bigr)^{3/2}e^{\frac{|p|^2\beta}{2\beta'}}
++\Bigl(\frac{\beta}{2\pi}\Bigr)^{3/2}2\pi^2\,e^{-\beta(1-\cos\eta)+\sqrt\beta(|p|\pi+H\pi^2/2)}\Bigr],
+\]
+where $g=\exp X$ and $\theta=|X|$. Moreover, for $L\ge0$, with $H=0$ and $\beta_0'=\beta(1-5\eta^2/48)$,
+\[
+\int k(g)\,e^{\sqrt\beta L\theta}\,dg\le
+\frac{1}{1-1/\beta}\Bigl[\Bigl(\frac{\beta}{\beta_0'}\Bigr)^{3/2}\E\bigl[e^{L\sqrt{\beta/\beta_0'}\,|N|}\bigr]
++\Bigl(\frac{\beta}{2\pi}\Bigr)^{3/2}2\pi^2\,e^{-\beta(1-\cos\eta)+\sqrt\beta L\pi}\Bigr],
+\]
+where $N$ is a standard Gaussian vector in $\R^3$.
+\end{lemma}
+
+\begin{proof}
+By \eqref{tu:U-eq-exp}, $Z=\int e^{\beta\cos\theta}dg=\frac{e^\beta}{2\pi^2}\int_{|X|\le\pi}e^{-\beta(1-\cos\theta)}(\sin\theta/\theta)^2d^3X$.
+
+\emph{Denominator.} We have $1-\cos\theta\le\theta^2/2$, and $\sin\theta/\theta\ge1-\theta^2/6\ge0$ for
+$\theta\le\sqrt3$, so $(\sin\theta/\theta)^2\ge1-\theta^2/3$ there. On $\theta>\sqrt3$ the function
+$e^{-\beta\theta^2/2}(1-\theta^2/3)$ is negative. Since $\sqrt3<\pi$,
+\[
+\int_{|X|\le\pi}e^{-\beta(1-\cos\theta)}\Bigl(\frac{\sin\theta}\theta\Bigr)^2d^3X\ge\int_{\theta\le\sqrt3}e^{-\beta\theta^2/2}\Bigl(1-\frac{\theta^2}3\Bigr)d^3X
+\ge\int_{\R^3}e^{-\beta|X|^2/2}\Bigl(1-\frac{|X|^2}3\Bigr)d^3X=\Bigl(\frac{2\pi}{\beta}\Bigr)^{3/2}\Bigl(1-\frac1\beta\Bigr),
+\]
+using $\int e^{-\beta|X|^2/2}|X|^2d^3X=(2\pi/\beta)^{3/2}\cdot3/\beta$. Hence
+$Z\ge\frac{e^\beta}{2\pi^2}(2\pi/\beta)^{3/2}(1-1/\beta)$.
+
+\emph{Inner region, $\theta\le\eta$.} For $0\le\theta\le\eta\le1$,
+$1-\cos\theta\ge\frac{\theta^2}2(1-\frac{5\eta^2}{48})$. (From $\cos\theta\le1-\theta^2/2+\theta^4/24$,
+$1-\cos\theta\ge\frac{\theta^2}{2}(1-\frac{\theta^2}{12})\ge\frac{\theta^2}{2}(1-\frac{5\eta^2}{48})$; the
+Lean proof uses Mathlib's \texttt{Real.cos\_bound}.) Also $(\sin\theta/\theta)^2\le1$. So the integrand
+times $Z$ is at most $\frac{e^\beta}{2\pi^2}e^{-\beta'\theta^2/2}\cosh(\sqrt\beta p\cdot X)$, and extending to
+$\R^3$,
+\[
+\int_{\R^3}e^{-\beta'|X|^2/2}\cosh(\sqrt\beta\,p\cdot X)\,d^3X=\Bigl(\frac{2\pi}{\beta'}\Bigr)^{3/2}e^{\beta|p|^2/(2\beta')}.
+\]
+Dividing by the lower bound on $Z$ gives the first term.
+
+\emph{Outer region, $\eta<\theta\le\pi$.} Here $\cos\theta\le\cos\eta$, $\cosh(\sqrt\beta p\cdot X)\le e^{\sqrt\beta|p|\pi}$
+and $e^{\sqrt\beta H\theta^2/2}\le e^{\sqrt\beta H\pi^2/2}$, and the total Haar mass is at most $1$. So
+the contribution is at most $e^{\beta\cos\eta+\sqrt\beta(|p|\pi+H\pi^2/2)}/Z$; with the lower bound on $Z$ this
+is the second term.
+
+\emph{Radial form.} The same three steps with $\cosh(\sqrt\beta p\cdot X)e^{\sqrt\beta H\theta^2/2}$ replaced by
+$e^{\sqrt\beta L\theta}$: in the inner region,
+$\int_{\R^3}e^{-\beta_0'|X|^2/2}e^{\sqrt\beta L|X|}d^3X=(2\pi/\beta_0')^{3/2}\E[e^{L\sqrt{\beta/\beta_0'}|N|}]$,
+and in the outer region $e^{\sqrt\beta L\theta}\le e^{\sqrt\beta L\pi}$.
+\end{proof}
+
+\begin{remark}[Use and limits of Lemma~\ref{tu:U-K}]\label{tu:U-K-rem}
+Take $\eta=\beta^{-1/8}$. Then $\beta(1-\cos\eta)\ge\frac12\beta^{3/4}(1-\frac5{48}\beta^{-1/4})$, so the second
+term in each bound is $O(\beta^{3/2}e^{-\beta^{3/4}/2+O(\sqrt\beta)})$, and $\beta/\beta'=1+O(\beta^{-1/4})$ with
+constants depending only on $H$. Hence, for $|p|\le P$ and $0\le H\le H_0$, the first bound is
+$e^{|p|^2/2+\omega(\beta)}$ with $\omega(\beta)\to0$ depending only on $(P,H_0)$; precisely one may take
+\[
+\omega(\beta)=\log\Bigl[\Bigl(\frac{\beta}{\beta'}\Bigr)^{3/2}e^{\frac{P^2}{2}(\frac{\beta}{\beta'}-1)}
++\Bigl(\frac{\beta}{2\pi}\Bigr)^{3/2}2\pi^2e^{-\beta(1-\cos\eta)+\sqrt\beta(P\pi+H_0\pi^2/2)}\Bigr]-\log\Bigl(1-\frac1\beta\Bigr),
+\]
+with $\beta'=\beta(1-5\eta^2/48)-\sqrt\beta H_0$, using $e^{|p|^2/2}\ge1$. The error is additive in the exponent,
+not multiplicative in $|p|^2$. The radial bound tends to $\E[e^{L|N|}]<\infty$; in particular
+$C_L:=\sup_{\beta\ge\beta_L}\int k\,e^{\sqrt\beta L\theta}dg<\infty$ for some $\beta_L$. (Radial form: written
+for this note; in the working files it is used with the words ``the radial version of Lemma K'',
+and the challenger listed it as a missing line.)
+
+A bound of the form $\int k\,e^{\sqrt\beta p\,\theta}dg\le e^{(p^2/2)(1+O(p/\sqrt\beta))}$ with the radial distance
+$\theta$ in place of a $C^2$ weight is false at small $p$: the left side tends to $\E e^{p|N|}\approx1+1.6p$.
+This is why the weights below are $C^2$ functions and the linear part is symmetrised by $\cosh$.
+\end{remark}
+
+\subsection{Fibre reduction}
+
+Fix $U_1$ with class angle $a$ and put $s=\sin a\in[0,1]$. Choose $h\in\SU(2)$ with
+$hu_1h^{-1}$ (as a vector of $\R^3$) equal to $s\,e_3$. Then for $U_2=(x_0,x_1,x_2,x_3)$ in the conjugated
+frame, $|u_1\times u_2|^2=s^2(x_1^2+x_2^2)$, so
+\[
+V_a(U_2):=2\beta s^2(x_1^2+x_2^2)=2\beta s^2r .
+\]
+Define on $L^2(\SU(2))$
+\[
+F_a=e^{-V_a/2}\,K\,e^{-V_a/2},\qquad \varepsilon_{\mathrm{eff}}(a)=-\log\|F_a\|,
+\]
+where $K$ is convolution by $k$. For $x=(U_1,U_2)$ let $F_{U_1}=e^{-V(U_1,\cdot)/2}Ke^{-V(U_1,\cdot)/2}$ act on
+functions of $U_2$. $F_a$ and $\varepsilon_{\mathrm{eff}}(a)$ depend on $a$ only through $s=\sin a$, so
+$\varepsilon_{\mathrm{eff}}(\pi-a)=\varepsilon_{\mathrm{eff}}(a)$.
+
+\begin{lemma}[Lemma R, fibre reduction]\label{tu:U-R}
+Let $\beta>0$.
+\begin{enumerate}
+\item The operator $e^{-V/2}K_2e^{-V/2}$ on $L^2(X)$ acts fibrewise: for $\psi\in L^2(X)$ and a.e.\ $U_1$,
+$(e^{-V/2}K_2e^{-V/2}\psi)(U_1,\cdot)=F_{U_1}\psi(U_1,\cdot)$. Each $F_{U_1}$ is unitarily equivalent to
+$F_{a(U_1)}$, so $\|F_{U_1}\|=e^{-\varepsilon_{\mathrm{eff}}(a_1)}$.
+\item For every bounded measurable $m(U_1)\ge0$ and $\psi\in L^2(X)$,
+\[
+\int_X m(U_1)\,\bigl|(K_2^{1/2}e^{-V/2}\psi)(x)\bigr|^2dx\le\int_Xm(U_1)\,e^{-\varepsilon_{\mathrm{eff}}(a_1)}|\psi(x)|^2dx .
+\]
+\item The well of $V_a$ is the circle $\{x_1=x_2=0\}$, the set of $U_2$ that commute with $U_1$ (for $s>0$).
+\item (Reduction to one variable.) Put $t=x_0^2+x_3^2-x_1^2-x_2^2\in[-1,1]$. For $s>0$, $\|F_a\|$ is the
+largest eigenvalue of the matrix
+\[
+M_{jk}=\sqrt{l_j}\,\bigl\langle\tilde P_j,\ e^{-\beta s^2(1-t)}\tilde P_k\bigr\rangle_{L^2(dt/2)}\sqrt{l_k},\qquad j,k\ge0,
+\]
+where $\tilde P_j=\sqrt{2j+1}\,P_j$ with $P_j$ the Legendre polynomials and $l_j=I_{2j+1}(\beta)/I_1(\beta)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(1) $e^{-V/2}$ is multiplication and $K_2$ acts on $U_2$ only; with $U_1$ frozen this is $F_{U_1}$. For
+$h$ as above, $V(U_1,U_2)=V_{a}(hU_2h^{-1})$, and conjugation $C_h\psi(U_2)=\psi(hU_2h^{-1})$ is unitary on
+$L^2(\SU(2))$ and commutes with $K$ (Lemma~\ref{tu:U-kernel}(1): $k(hUh^{-1},hU'h^{-1})=k(U,U')$). Hence
+$F_{U_1}=C_h^{-1}F_aC_h$.
+
+(2) Multiplication by $m(U_1)^{1/2}$ commutes with $K_2^{1/2}$ and with $e^{-V/2}$. So the left side is
+$\|K_2^{1/2}e^{-V/2}m^{1/2}\psi\|^2=\langle m^{1/2}\psi,e^{-V/2}K_2e^{-V/2}m^{1/2}\psi\rangle
+=\int m(U_1)\langle\psi(U_1,\cdot),F_{U_1}\psi(U_1,\cdot)\rangle\,dU_1$ by (1) and Fubini. Each inner product is at
+most $\|F_{U_1}\|\,\|\psi(U_1,\cdot)\|^2=e^{-\varepsilon_{\mathrm{eff}}(a_1)}\|\psi(U_1,\cdot)\|^2$.
+
+(3) $V_a=2\beta s^2(x_1^2+x_2^2)$ vanishes exactly where $x_1=x_2=0$, i.e.\ $u_2\parallel e_3$, i.e.\ $U_2$
+commutes with $hU_1h^{-1}$.
+
+(4) $F_a$ commutes with $U\mapsto e^{\phi\mathbf{k}}Ue^{\psi\mathbf{k}}$ (with $\mathbf{k}$ the unit quaternion
+in direction $e_3$): these maps rotate the $(x_0,x_3)$-plane and the $(x_1,x_2)$-plane, so they preserve
+$V_a$, and $K$ commutes with left and right translations. The kernel of $F_a$ is continuous and strictly
+positive, so $\|F_a\|$ is a simple eigenvalue with a positive eigenvector, which is therefore invariant
+under the symmetry and so a function of $t$. In Hopf coordinates $x_0+ix_3=\cos\chi\,e^{i\xi_1}$,
+$x_1+ix_2=\sin\chi\,e^{i\xi_2}$, Haar measure is proportional to $\sin\chi\cos\chi\,d\chi\,d\xi_1d\xi_2$, and
+$t=\cos2\chi$; so $t$ is uniform on $[-1,1]$. The bi-invariant functions in Peter--Weyl degree $2j$ are the
+multiples of $D^j_{00}$, and $D^j_{00}=P_j(t)$; $\tilde P_j$ has norm one in $L^2(dt/2)$. By
+Lemma~\ref{tu:U-kernel}(3), $K\tilde P_j=l_j\tilde P_j$. Finally $V_a=2\beta s^2\sin^2\chi=\beta s^2(1-t)$. Now
+$\|F_a\|=\|e^{-V_a/2}K^{1/2}\|^2=\|K^{1/2}e^{-V_a}K^{1/2}\|$, the top eigenvector of $K^{1/2}e^{-V_a}K^{1/2}$ is
+$K^{1/2}e^{-V_a/2}$ applied to that of $F_a$, hence a function of $t$, and the matrix of
+$K^{1/2}e^{-V_a}K^{1/2}$ on functions of $t$ in the basis $\tilde P_j$ is $M$.
+\end{proof}
+
+\begin{remark}[Status of Lemma~\ref{tu:U-R}]\label{tu:U-R-rem}
+Parts (1) and (2) are used in Section~\ref{tu:U-sec-agmon}. Part (4) is not used in any proof in this
+note; it serves only to compute $\varepsilon_{\mathrm{eff}}$ numerically. The top eigenfunction of $F_a$ is
+spread along the circle of (3) and Gaussian across it; it is not concentrated at two points.
+\emph{Measured} (working file TUNNEL\_THEOREM \S1(iii), not recomputed here):
+$\varepsilon_{\mathrm{eff}}(a)-\varepsilon(a)=-c(a)/\beta$ with $c(a)=0.98,0.95,0.86,0.76,0.68,0.65$ at
+$a=0.05,0.1,0.3,0.6,1.0,\pi/2$, the same at $\beta=64,256,1024$ to within $2\%$. A challenger
+reproduced $\beta(\varepsilon_{\mathrm{eff}}-\varepsilon)\in[-1.14,-0.65]$ over $24$ cases with an independent
+Nystr\"om discretisation.
+\end{remark}
+
+\section{The fibre bound (Lemma F)}\label{tu:U-sec-F}
+
+\begin{lemma}[Lemma F]\label{tu:U-F}
+For every $\eta>0$ there is $\beta_0(\eta)$ such that for all $\beta\ge\beta_0(\eta)$ and all $a\in[0,\pi]$,
+\[
+\varepsilon_{\mathrm{eff}}(a)\ge\varepsilon(a)-\eta=2\operatorname{asinh}(\sin a)-\eta .
+\]
+Moreover $\varepsilon_{\mathrm{eff}}(a)\ge0$ for all $a$ and all $\beta>0$.
+\end{lemma}
+
+The proof is a Schur (Barta) test with the Gaussian test function $\psi=e^{-\beta\alpha r/2}$ of the flat
+problem, Theorem~\ref{tu:U-F-master} below. It gives an explicit bound for each $s=\sin a\in(0,1]$ which
+tends to $2\operatorname{asinh}s$ uniformly on $[s_0,1]$ for each $s_0>0$; small $s$ are handled by
+$\varepsilon_{\mathrm{eff}}\ge0$. No rate uniform in $s$ is proved.
+
+Throughout this section $s\in(0,1]$ is fixed, $U=(x_0,x_1,x_2,x_3)\in\SU(2)$, and $w,r,\rho,R,\varphi$ are as in
+\eqref{tu:U-eq-haar}. We write $F=F_a$, so $V_a/2=\beta s^2r$, and put
+\[
+\alpha=\alpha(s)=2s\sqrt{1+s^2},\qquad c=s^2+\frac\alpha2,\qquad A=1+2c=A(s)=1+2s^2+2s\sqrt{1+s^2}.
+\]
+
+\subsection{Ingredients}
+
+\begin{lemma}[$F$ on radial functions]\label{tu:U-Frad}
+For measurable $\psi=\psi(r)\ge0$,
+\[
+(F\psi)(U)=e^{-\beta s^2r}\,\frac{1}{\pi Z}\int_De^{\beta w\cdot w'}\,I_0(\beta RR')\,e^{-\beta s^2r'}\psi(r')\,d^2w',
+\]
+with $r'=|w'|^2$, $R'=\sqrt{1-r'}$. In particular $F\psi$ is again a function of $r$.
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{tu:U-kernel}(1), $k(U,U')=e^{\beta\langle U,U'\rangle}/Z$ and
+$\langle U,U'\rangle=RR'\cos(\varphi-\varphi')+w\cdot w'$. By \eqref{tu:U-eq-haar}, $dU'=d^2w'd\varphi'/(2\pi^2)$, and
+$\int_0^{2\pi}e^{\beta RR'\cos(\varphi-\varphi')}d\varphi'=2\pi I_0(\beta RR')$. The factor is $2\pi/(2\pi^2Z)=1/(\pi Z)$.
+\end{proof}
+
+\begin{lemma}[Schur--Barta test]\label{tu:U-barta}
+Let $G$ be a bounded self-adjoint operator on $L^2(\Omega,\mu)$ with a symmetric kernel $G(x,y)\ge0$. If
+$\psi$ is measurable with $0<\inf\psi\le\sup\psi<\infty$ and $G\psi\le\Lambda\psi$ pointwise, then $\|G\|\le\Lambda$.
+\end{lemma}
+
+\begin{proof}
+For $\phi\in L^2$, by Cauchy--Schwarz,
+$|G\phi(x)|^2\le\bigl(\int G(x,y)\psi(y)dy\bigr)\bigl(\int G(x,y)|\phi(y)|^2/\psi(y)\,dy\bigr)\le\Lambda\psi(x)\int G(x,y)|\phi(y)|^2/\psi(y)\,dy$.
+Integrating in $x$, using Tonelli (nonnegative integrands), the symmetry of $G$ and $G\psi\le\Lambda\psi$ again,
+$\|G\phi\|^2\le\Lambda\int|\phi(y)|^2\psi(y)^{-1}(G\psi)(y)\,dy\le\Lambda^2\|\phi\|^2$.
+\end{proof}
+
+The test function will be $\psi=e^{-\beta\alpha r/2}$, which is continuous with values in
+$[e^{-\beta\alpha/2},1]$; so the hypothesis on $\psi$ holds and no truncation is needed.
+
+\begin{lemma}[Flat fixed point]\label{tu:U-fixed}
+$\alpha/2-s^2=c/A$ and $\log A=2\operatorname{asinh}s$. For every $w\in\R^2$,
+\[
+e^{\beta(\alpha/2-s^2)r}\,\frac{\beta}{2\pi}\int_{\R^2}e^{-\frac\beta2|w-w'|^2-\beta c\,r'}\,d^2w'=\frac1A ,
+\]
+and, as a function of $w'$, $A$ times the integrand (including the prefactor) is the density of the Gaussian
+$N(w/A,(\beta A)^{-1}I_2)$.
+\end{lemma}
+
+\begin{proof}
+With $x=\alpha/2$ and $y=s^2$, $(x-y)(1+2x+2y)=x+y$ is equivalent to $x^2=y^2+y$, i.e.\ $\alpha/2=s\sqrt{1+s^2}$; this is
+$\alpha/2-s^2=c/A$. Next $A=(s+\sqrt{1+s^2})^2=e^{2\operatorname{asinh}s}$. Completing the square,
+$-\frac\beta2|w-w'|^2-\beta c|w'|^2=-\frac{\beta A}2|w'-w/A|^2-\frac\beta2 r(1-\frac1A)$, so the integral equals
+$\frac{2\pi}{\beta A}e^{-\frac\beta2r(1-1/A)}$, and $\frac12(1-\frac1A)=\frac cA=\frac\alpha2-s^2$. The density
+statement is read off from the same computation. (Lean: \texttt{fixed\_point}, \texttt{two\_arsinh\_eq\_log}.)
+\end{proof}
+
+So $\varepsilon=\log A=\operatorname{arccosh}(1+2s^2)=2\operatorname{asinh}s$ is the decay rate of the flat
+Gaussian problem.
+
+\begin{lemma}[Bessel envelope]\label{tu:U-bessel}
+For $0<\delta\le1$ and $z>0$,
+\[
+e^{-z}I_0(z)\le\tilde H_\delta(z):=\min(1,H_\delta(z)),\qquad
+H_\delta(z)=\bigl[2\pi z(1-5\delta^2/48)\bigr]^{-1/2}+e^{-z(1-\cos\delta)},
+\]
+and $\tilde H_\delta$ is nonincreasing in $z$.
+\end{lemma}
+
+\begin{proof}
+$I_0(z)=\frac1\pi\int_0^\pi e^{z\cos t}dt\le e^z$. On $[0,\delta]$, $1-\cos t\ge\frac{t^2}2(1-\frac{5\delta^2}{48})$ (proof of
+Lemma~\ref{tu:U-K}); extending to $[0,\infty)$, $\frac1\pi\int_0^\delta e^{-z(1-\cos t)}dt\le[2\pi z(1-5\delta^2/48)]^{-1/2}$. On
+$[\delta,\pi]$, $e^{z(\cos t-1)}\le e^{-z(1-\cos\delta)}$, and $(\pi-\delta)/\pi\le1$. Both terms of $H_\delta$ decrease in $z$.
+\end{proof}
+
+\begin{lemma}[Lower bound on $I_1$]\label{tu:U-I1}
+For $z>0$, $I_1(z)\ge e^z(1-\frac1{2z})/\sqrt{2\pi z}-\frac12$. Hence, for $\beta>1$,
+\[
+\frac{e^\beta}{I_1(\beta)}\le\frac{\sqrt{2\pi\beta}}{D},\qquad D=D(\beta)=1-\frac1{2\beta}-\frac{\sqrt{2\pi\beta}\,e^{-\beta}}2>0 .
+\]
+\end{lemma}
+
+\begin{proof}
+$I_1(z)=\frac1\pi\int_0^\pi e^{z\cos t}\cos t\,dt$. On $[\pi/2,\pi]$ the integrand is $\ge-1$, contributing $\ge-\frac12$. On
+$[0,\pi/2]$, $e^{z\cos t}\cos t\ge e^{z(1-t^2/2)}(1-t^2/2)$: where $1-t^2/2\ge0$ both factors on the right are
+nonnegative lower bounds of the factors on the left ($\cos t\ge1-t^2/2$); where $1-t^2/2<0$ the right side is
+negative. The right side is negative on $[\pi/2,\infty)$, so its integral over $[0,\pi/2]$ is at least its integral
+over $[0,\infty)$, which is $e^z\sqrt{\pi/(2z)}(1-\frac1{2z})$. Dividing by $\pi$ gives the first claim. The second follows
+by rearranging; $D(\beta)$ is increasing for $\beta\ge1$ and $D(1)>0.039$.
+\end{proof}
+
+\begin{lemma}[AM--GM]\label{tu:U-amgm}
+For $x,y\in[0,1]$, $xy\le\sqrt{xy}\le(x+y)/2$. With $x=1-r$, $y=1-r'$:
+$(1-r)(1-r')\le RR'\le1-(r+r')/2$. (Lean: \texttt{amgm\_pair}.)
+\end{lemma}
+
+\begin{lemma}[Outer exponent]\label{tu:U-outer}
+Let $r\in[0,1]$, $p=(R,\rho)$ with $R=\sqrt{1-r}$, $\rho=\sqrt r$, and $c\ge0$, $A=1+2c$. Then
+\[
+\Phi_{\rm out}(r):=\frac cA\,r-1+\max_{q\in S^1}\bigl(p\cdot q-c\,q_2^2\bigr)\le-\frac{r^2}{64}\Bigl(1-\frac1{A^2}\Bigr)^2 .
+\]
+\end{lemma}
+
+\begin{proof}
+For unit $q$ and $\mu>0$, adding $\frac\mu2(1-q_1^2-q_2^2)=0$ and maximising each coordinate separately,
+\[
+p\cdot q-cq_2^2\le\frac{1-r}{2\mu}+\frac{r}{2(\mu+2c)}+\frac\mu2
+\]
+(Lean: \texttt{weak\_duality}, \texttt{quad\_step}). Let $\gamma_r(\mu)$ be the right side minus $1-\frac cAr$. Then
+$\gamma_r(1)=-\frac r2+\frac{r(1+2c)}{2A}=0$, $\gamma_r'(1)=\gamma:=\frac r2(1-A^{-2})\in[0,\frac12)$, and
+$\gamma_r''(\mu)=\frac{1-r}{\mu^3}+\frac{r}{(\mu+2c)^3}\le\frac1{\mu^3}\le8$ on $[\frac12,1]$. With $h=\gamma/8\in[0,\frac1{16}]$,
+Taylor's formula gives $\gamma_r(1-h)\le-h\gamma+4h^2=-\gamma^2/16$. So
+$\Phi_{\rm out}(r)\le\gamma_r(1-\gamma/8)\le-\gamma^2/16=-\frac{r^2}{64}(1-A^{-2})^2$.
+\end{proof}
+
+\subsection{The master bound}
+
+\begin{theorem}[Master bound]\label{tu:U-F-master}
+Let $\beta>1$, $s\in(0,1]$, $0<\tau<1/5$ and $0<\delta\le1$. Then
+\[
+\|F_a\|\le\frac1A\max\bigl(M_{\rm in},\,A\,M_{\rm out}\bigr),
+\]
+where, with $D$ as in Lemma~\ref{tu:U-I1},
+\begin{align*}
+M_{\rm in}&=\frac1D\Bigl\{\bigl[(1-\tau)(1-4\tau)(1-5\delta^2/48)\bigr]^{-1/2}+\sqrt{2\pi\beta}\,e^{-\beta(1-5\tau)(1-\cos\delta)}+\sqrt{2\pi\beta}\,e^{-\beta A\tau/2}\Bigr\},\\
+M_{\rm out}&=\frac{\beta\sqrt{2\pi\beta}}{2D}\exp\Bigl(-\frac{\beta\tau^2}{64}\Bigl(1-\frac1{A^2}\Bigr)^2\Bigr).
+\end{align*}
+Consequently $\varepsilon_{\mathrm{eff}}(a)\ge2\operatorname{asinh}(s)-\log\max(M_{\rm in},AM_{\rm out})$.
+\end{theorem}
+
+\begin{proof}
+Let $\psi=e^{-\beta\alpha r/2}$. By Lemma~\ref{tu:U-barta} it suffices to show that
+$B(w):=(F\psi)(U)/\psi(U)\le\max(M_{\rm in}/A,M_{\rm out})$ for every $U$. By Lemma~\ref{tu:U-Frad}, using
+$\alpha/2+s^2=c$,
+\[
+B(w)=e^{\beta(\alpha/2-s^2)r}\frac{1}{\pi Z}\int_DI_0(\beta RR')\,e^{\beta w\cdot w'-\beta cr'}\,d^2w'.
+\]
+
+\emph{Interior, $r\le\tau$.} By Lemma~\ref{tu:U-bessel}, $I_0(\beta RR')\le e^{\beta RR'}\tilde H_\delta(\beta RR')$. By
+Lemma~\ref{tu:U-amgm}, $e^{\beta RR'}\le e^{\beta(1-(r+r')/2)}$, and since $\tilde H_\delta$ is nonincreasing and
+$RR'\ge(1-r)(1-r')$, $\tilde H_\delta(\beta RR')\le\tilde H_\delta(\beta(1-r)(1-r'))$. Now
+$-(r+r')/2+w\cdot w'=-|w-w'|^2/2$ and $\frac1{\pi Z}=\frac{\beta}{2\pi}\frac1{I_1(\beta)}$. By Lemma~\ref{tu:U-fixed}
+(the integrand is nonnegative, so the disc may be replaced by $\R^2$ after inserting the indicator of $D$),
+\[
+B(w)\le\frac1A\,\E\bigl[G(r,|W'|^2)\,\mathbf 1_{|W'|<1}\bigr],\qquad W'\sim N\bigl(w/A,(\beta A)^{-1}I_2\bigr),\quad
+G(r,r')=\frac{e^\beta}{I_1(\beta)}\tilde H_\delta\bigl(\beta(1-r)(1-r')\bigr).
+\]
+On $\{|W'|^2\le4\tau\}$: $(1-r)(1-r')\ge(1-\tau)(1-4\tau)>0$, so by Lemma~\ref{tu:U-I1} and the monotonicity of
+$\tilde H_\delta$, $G\le\frac{\sqrt{2\pi\beta}}DH_\delta(\beta(1-\tau)(1-4\tau))$; using $(1-\tau)(1-4\tau)\ge1-5\tau$ in the
+exponential, this is at most the sum of the first two terms of $M_{\rm in}$. On $\{|W'|^2>4\tau\}$: since
+$|w/A|\le\sqrt\tau$, we have $|W'-w/A|>\sqrt\tau$, an event of probability exactly $e^{-\beta A\tau/2}$ for a
+two-dimensional Gaussian with covariance $(\beta A)^{-1}I_2$; and $G\le e^\beta/I_1(\beta)\le\sqrt{2\pi\beta}/D$ because
+$\tilde H_\delta\le1$. Adding, $B(w)\le M_{\rm in}/A$.
+
+\emph{Outer region, $r>\tau$.} Use $I_0(z)\le e^z$. For $w'\in D$, $RR'+w\cdot w'\le RR'+\rho|w'|=p\cdot q$ with
+$q=(R',|w'|)\in S^1$ and $r'=q_2^2$. With $\alpha/2-s^2=c/A$ (Lemma~\ref{tu:U-fixed}) and Lemma~\ref{tu:U-outer},
+the exponent satisfies $\beta[(c/A)r+RR'+w\cdot w'-cr']\le\beta(1+\Phi_{\rm out}(r))$. The area of $D$ is $\pi$, so
+\[
+B(w)\le\frac{\pi}{\pi Z}e^{\beta(1+\Phi_{\rm out}(r))}=\frac{\beta e^\beta}{2I_1(\beta)}e^{\beta\Phi_{\rm out}(r)}
+\le\frac{\beta\sqrt{2\pi\beta}}{2D}e^{-\frac{\beta r^2}{64}(1-A^{-2})^2}\le M_{\rm out},
+\]
+the last step because $r>\tau$. Hence $\sup B\le\frac1A\max(M_{\rm in},AM_{\rm out})$. Taking $-\log$ and using
+$\log A=2\operatorname{asinh}s$ gives the last statement.
+\end{proof}
+
+\begin{remark}\label{tu:U-F-unif}
+$M_{\rm in}$ does not increase with $s$, since $A\ge1$ enters only through $e^{-\beta A\tau/2}$. For $s\ge s_0>0$,
+$A\le1+2+2\sqrt2<5.83$ and $1-A^{-2}\ge1-(1+2s_0)^{-2}$, because $A\ge1+2s$.
+\end{remark}
+
+\subsection{Proof of Lemma~\ref{tu:U-F}}
+
+\begin{corollary}\label{tu:U-F-cor}
+\begin{enumerate}
+\item[(a)] For all $\beta>0$ and $a\in[0,\pi]$, $\|F_a\|\le1$, so $\varepsilon_{\mathrm{eff}}(a)\ge0$.
+\item[(b)] Let $\eta>0$ and $\tau=\delta=\beta^{-1/3}$. As $\beta\to\infty$,
+$\log\max(M_{\rm in},AM_{\rm out})\to0^+$ uniformly in $s\in[\eta/2,1]$. (It is the logarithm that tends to $0$; $M_{\rm in}\to1$
+and $AM_{\rm out}\to0$.)
+\end{enumerate}
+Lemma~\ref{tu:U-F} follows.
+\end{corollary}
+
+\begin{proof}
+(a) $\|e^{-V_a/2}\|\le1$ since $V_a\ge0$, and $\|K\|\le1$ by the Schur test with $\psi\equiv1$
+(Lemma~\ref{tu:U-barta}), since $k\ge0$ is symmetric and $\int k=1$.
+
+(b) For $\beta>125$, $\tau=\beta^{-1/3}<1/5$. In $M_{\rm in}$: the first term tends to $1$ (and $1/D\to1$); in the
+second, $\beta(1-5\tau)(1-\cos\delta)\ge\beta(1-5\tau)\frac{\delta^2}2(1-\frac{5\delta^2}{48})\sim\frac12\beta^{1/3}$, so the term is
+$O(\sqrt\beta e^{-\beta^{1/3}/3})$ for large $\beta$; the third is at most $\sqrt{2\pi\beta}e^{-\beta^{2/3}/2}$ since $A\ge1$. These
+bounds do not depend on $s$, so $\log M_{\rm in}=O(\beta^{-1/3})\to0$. In $AM_{\rm out}$, $\beta\tau^2=\beta^{1/3}$ and, for
+$s\ge\eta/2$, $A\ge1+\eta$, so
+\[
+\log(AM_{\rm out})\le\log\Bigl(5.83\,\frac{\beta^{3/2}\sqrt{2\pi}}{2D}\Bigr)-\frac{\beta^{1/3}}{64}\bigl(1-(1+\eta)^{-2}\bigr)^2\to-\infty,
+\]
+uniformly in $s\in[\eta/2,1]$. Since $M_{\rm in}\ge1/D\cdot[\ldots]^{-1/2}\ge1$, the maximum is $\ge1$ and its logarithm tends to
+$0$ from above.
+
+\emph{Lemma~\ref{tu:U-F}.} Let $s=\sin a$. If $s\le\eta/2$, then $2\operatorname{asinh}s\le2s\le\eta$, so (a) gives
+$\varepsilon_{\mathrm{eff}}(a)\ge0\ge\varepsilon(a)-\eta$. If $s\in[\eta/2,1]$, choose by (b) $\beta_0(\eta)>125$ such that
+$\log\max(M_{\rm in},AM_{\rm out})\le\eta$ for $\beta\ge\beta_0$; Theorem~\ref{tu:U-F-master} gives
+$\varepsilon_{\mathrm{eff}}(a)\ge\varepsilon(a)-\eta$.
+\end{proof}
+
+\begin{remark}[Size of $\beta_0$; measured]\label{tu:U-F-num}
+$\beta_0(\eta)$ is explicit but large. For $\eta=0.2$ (so $s_0=0.1$) the deficit $\log\max(M_{\rm in},AM_{\rm out})$, maximised
+over $s\in[0.1,1]$ on a grid, first falls below $0.2$ at $\beta\approx2.2\cdot10^{13}$ (worst $s=0.1$); at $s=0.1$,
+$\beta=10^{12}$ it is $24.9$; at $s=1$, $\beta=10^{11}$ it is $5\cdot10^{-4}$. At $\beta\le4096$ the deficit is $8.6$ to $14$ nats.
+The loss is in the outer region ($I_0\le e^z$ and the area-times-supremum bound), not in the choice of test
+function: the Barta ratio of $\psi$ computed by quadrature satisfies $-\log\sup B-\varepsilon=-O(1/\beta)$ (between
+$-4.1\cdot10^{-4}$ and $-2\cdot10^{-4}$ at $\beta=4096$ for $s\ge0.1$). These are measurements by the author and a challenger
+of the working file, not recomputed here. A rate $\varepsilon_{\mathrm{eff}}\ge2\operatorname{asinh}s-3(648\log\beta/\beta)^{1/4}$
+is claimed in the working file with a sketch only; it is not proved and not used.
+\end{remark}
+
+\section{The weighted bound and the upper bound on the splitting}\label{tu:U-sec-agmon}
+
+\subsection{Factorisation}
+By Lemma~\ref{tu:U-kernel}(3), $K_2^{1/2}$ exists and commutes with $K_1$. Put $B=K_2^{1/2}e^{-V/2}$. Then
+\begin{equation}\label{tu:U-eq-fact}
+T=e^{-V/2}K_2^{1/2}K_1K_2^{1/2}e^{-V/2}=B^*K_1B ,\qquad B^*B=e^{-V/2}K_2e^{-V/2}.
+\end{equation}
+By Lemma~\ref{tu:U-R}(1), $B^*B$ acts fibrewise by $F_{U_1}$, with $\|F_{U_1}\|=e^{-\varepsilon_{\mathrm{eff}}(a_1)}$.
+Multiplication by a bounded function of $U_1$ alone commutes with $B$. Symmetrically, with
+$B'=K_1^{1/2}e^{-V/2}$, $T=B'^*K_2B'$, and since $V(U_1,U_2)=V(U_2,U_1)$, $B'^*B'$ acts fibrewise in $U_1$ by
+operators unitarily equivalent to $F_{a_2}$.
+
+\subsection{The weight}\label{tu:U-sec-weight}
+Fix $\eta\in(0,\frac12]$ and $\delta,\tau\in(0,1)$. Put $L=\sqrt{2\varepsilon(\pi/2)}=\sqrt{4\operatorname{asinh}1}=1.8776\ldots$ and
+$I=\{a\in[0,\pi]:\varepsilon(a)<\eta\}$, an open neighbourhood of $\{0,\pi\}$ in $[0,\pi]$; we also write $I$ for
+$\{x\in X:a_1(x)\in I\}$. The weight is built from the following objects.
+\begin{enumerate}
+\item[(W1)] A function $\rho_\eta:[0,\infty)\to[0,\infty)$ with $\sqrt{\rho_\eta}$ smooth, $\rho_\eta(\varepsilon)\le(\varepsilon-\eta)_+$ for
+all $\varepsilon$, and $\rho_\eta(\varepsilon)\ge\varepsilon-2\eta$ for $\varepsilon\ge3\eta$.
+\item[(W2)] $f(a)=\int_0^a\sqrt{2\rho_\eta(\varepsilon(b))}\,db$ for $a\in[0,\pi/2]$, and $f(\pi-a)=f(a)$. Then $f=0$ on $I$,
+$f$ is smooth on $[0,\pi]\setminus\{\pi/2\}$, $|f'|\le\sqrt{2\varepsilon}\le L$, and $f$ has a concave kink at $\pi/2$.
+\item[(W3)] A $C^2$ function $\tilde f$ on $[0,\pi]$ with $\tilde f(\pi-a)=\tilde f(a)$, $\tilde f=f$ outside
+$(\frac\pi2-\frac\tau2,\frac\pi2+\frac\tau2)$, and $|\tilde f'|\le|f'|$ wherever $f'$ is defined, $|\tilde f'|\le L$ on the window.
+\item[(W4)] $\Phi=(1-\delta)\tilde f$, used as the function $\Phi(a_1(x))$ on $X$.
+\end{enumerate}
+The working file asserts that such $\rho_\eta$ and $\tilde f$ exist (``smooth the concave kink at $\pi/2$ on a window of
+width $\tau$, keeping $|\tilde f'|\le|f'|$''); neither is constructed there, and neither is constructed here.
+
+\begin{lemma}[Properties of the weight]\label{tu:U-weight}
+Assume (W1)--(W4).
+\begin{enumerate}
+\item $\Phi=0$ and $\Phi'=0$ on $I$; on $[0,\pi]\setminus I$,
+$\Phi'^2/2\le(1-\delta)^2(\varepsilon-\eta)$; everywhere $|\Phi'|\le L$.
+\item $\Phi\circ a$ is $C^2$ on $\SU(2)$, $|\nabla(\Phi\circ a)|=|\Phi'(a)|$, and every geodesic second derivative of
+$\Phi\circ a$ along a unit-speed geodesic is bounded by $H:=\sup_{a\in(0,\pi)}\max(|\Phi''(a)|,|\Phi'(a)\cot a|)<\infty$, which
+depends only on $(\eta,\delta,\tau)$ and the choices in (W1), (W3).
+\item $\tilde f\ge f-L\tau$, and with $c^\rho_\eta:=2f(\pi/2)=2\int_0^{\pi/2}\sqrt{2\rho_\eta(\varepsilon(a))}\,da$,
+\[
+c^*-\pi\sqrt{6\eta}\le c^\rho_\eta\le c^*_\eta:=\int_0^\pi\sqrt{2(\varepsilon-\eta)_+}\,da\le c^* .
+\]
+\item For $a_x<\pi/2<a_y$ in $[0,\pi]$: $\Phi(a_x)+\Phi(a_y)\ge(1-\delta)\bigl(c^\rho_\eta-2L\tau-L(a_y-a_x)\bigr)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(1) On $I$, $\rho_\eta(\varepsilon)\le(\varepsilon-\eta)_+=0$, so $f'=0$ on $I\cap[0,\pi/2]$ and $f=0$ there (and on
+$I\cap[\pi/2,\pi]$ by symmetry). The window $(\frac\pi2-\frac\tau2,\frac\pi2+\frac\tau2)$ does not meet $I$: there
+$\varepsilon\ge2\operatorname{asinh}(\cos\frac12)>1.3>\eta$. Hence $\Phi=0$ on the open set $I$, so $\Phi'=0$ there. Outside $I$,
+$\Phi'^2/2\le(1-\delta)^2f'^2/2\le(1-\delta)^2\rho_\eta(\varepsilon)\le(1-\delta)^2(\varepsilon-\eta)$, using (W3) and (W1).
+$|\Phi'|\le L$ since $\varepsilon\le\varepsilon(\pi/2)$.
+
+(2) Near $a=0$ and $a=\pi$, $\Phi$ vanishes, so $\Phi\circ a$ vanishes near $U=\pm1$. On $\{0<a<\pi\}$, $a$ is the
+geodesic distance to $1$ on the unit sphere $S^3$, with $|\nabla a|=1$ and
+$\operatorname{Hess}a=\cot a\,(g-da\otimes da)$; hence
+$\operatorname{Hess}(\Phi\circ a)=\Phi''\,da\otimes da+\Phi'\cot a\,(g-da\otimes da)$, whose norm is at most $H$. $H$ is finite
+because $\Phi'$ vanishes near $0$ and $\pi$ and $\Phi$ is $C^2$.
+
+(3) By the symmetry of $f$ and $\tilde f$ it suffices to take $a\in[\frac\pi2-\frac\tau2,\frac\pi2]$. There
+$\tilde f(a)\ge\tilde f(\frac\pi2-\frac\tau2)-L\frac\tau2=f(\frac\pi2-\frac\tau2)-L\frac\tau2$ and
+$f(a)\le f(\frac\pi2-\frac\tau2)+L\frac\tau2$, since $|\tilde f'|,|f'|\le L$. So $\tilde f(a)\ge f(a)-L\tau$. For the
+second claim: $\rho_\eta\le(\varepsilon-\eta)_+$ gives $c^\rho_\eta\le c^*_\eta\le c^*$ (using the symmetry
+$\varepsilon(\pi-a)=\varepsilon(a)$). Where $\varepsilon\ge3\eta$, $\sqrt{2\varepsilon}-\sqrt{2\rho_\eta}\le\sqrt{2\varepsilon}-\sqrt{2(\varepsilon-2\eta)}\le2\sqrt\eta$;
+where $\varepsilon<3\eta$, $0\le\sqrt{2\varepsilon}-\sqrt{2\rho_\eta}\le\sqrt{6\eta}$. Integrating over $[0,\pi]$ gives
+$c^*-c^\rho_\eta\le\pi\sqrt{6\eta}$.
+
+(4) $f$ is $L$-Lipschitz and nondecreasing on $[0,\pi/2]$, so $f(a_x)\ge f(\pi/2)-L(\frac\pi2-a_x)$ and
+$f(a_y)=f(\pi-a_y)\ge f(\pi/2)-L(a_y-\frac\pi2)$. Adding, $f(a_x)+f(a_y)\ge c^\rho_\eta-L(a_y-a_x)$. With (3) and (W4)
+the claim follows.
+\end{proof}
+
+\begin{remark}[One point in the weight where the working file is not followed literally]\label{tu:U-weight-rem}
+The working file (TUNNEL\_THEOREM \S5) states $\Phi(x)+\Phi(y)\ge(1-\delta)(c^*_\eta-2L\tau-Ld_1(x,y))$ with
+$c^*_\eta=\int_0^\pi\sqrt{2(\varepsilon-\eta)_+}$. Since $f$ is built from $\rho_\eta\le(\varepsilon-\eta)_+$, $2f(\pi/2)=c^\rho_\eta\le c^*_\eta$,
+so the inequality with $c^*_\eta$ does not follow; it holds with $c^\rho_\eta$, which also tends to $c^*$
+(Lemma~\ref{tu:U-weight}(3); the bound $\pi\sqrt{6\eta}$ and the proof of $\tilde f\ge f-L\tau$ from (W3) were
+written for this note; the working file says ``$O(\sqrt\eta)$'' and uses $\tilde f\ge f-L\tau$ without comment).
+\end{remark}
+
+\subsection{The Schur step and inequality (A)}
+
+\begin{lemma}[Schur step]\label{tu:U-schur}
+Let $\Phi$ be as in \S\ref{tu:U-sec-weight}, $W=e^{\sqrt\beta\Phi(a_1)}K_1e^{-\sqrt\beta\Phi(a_1)}$, and for $U_1\in\SU(2)$
+\[
+w(U_1)=\int k(\gamma)\cosh\bigl(\sqrt\beta(\Phi(a(U_1\gamma))-\Phi(a(U_1)))\bigr)\,d\gamma .
+\]
+Then $\langle F,WF\rangle\le\int_Xw(U_1)F(x)^2dx$ for every real $F\in L^2(X)$, and $w(U_1)$ depends only on
+$a_1=a(U_1)$. Moreover, with $\omega(\beta)$ from Remark~\ref{tu:U-K-rem} taken with $P=L$ and $H_0=H$,
+\[
+\log w(U_1)\le\frac{\Phi'(a_1)^2}{2}+\omega(\beta),\qquad\omega(\beta)\to0\ (\beta\to\infty),
+\]
+where $\omega$ depends only on $(L,H)$, i.e.\ on $(\eta,\delta,\tau)$ and the choices in (W1), (W3).
+\end{lemma}
+
+\begin{proof}
+The kernel of $W$ in link $1$ is $k(U_1^{-1}U_1')e^{\sqrt\beta(\Phi(x)-\Phi(y))}\ge0$, writing $\Phi(x)=\Phi(a_1(x))$. With
+$|F(x)F(y)|\le\frac12(F(x)^2+F(y)^2)$ and the symmetry $k(U_1^{-1}U_1')=k(U_1'^{-1}U_1)$, exchanging the roles of
+$x$ and $y$ in the second half,
+\[
+\langle F,WF\rangle\le\int F(x)^2\,\frac12\int k(U_1^{-1}U_1')\bigl(e^{\sqrt\beta(\Phi(x)-\Phi(y))}+e^{\sqrt\beta(\Phi(y)-\Phi(x))}\bigr)dU_1'\,dx
+=\int w(U_1)F(x)^2dx ,
+\]
+the spectator $U_2$ being the same in $x$ and $y$. $w$ is invariant under conjugation of $U_1$ because $k$ is.
+
+\emph{Taylor step.} Write $\gamma=\exp X$, $\theta=|X|$. The curve $t\mapsto U_1\exp(tX)$, $t\in[0,1]$, is a geodesic of
+speed $\theta$. By Lemma~\ref{tu:U-weight}(2), $\Phi(a(U_1\gamma))-\Phi(a(U_1))=p\cdot X+R_X$ with
+$p=\nabla(\Phi\circ a)(U_1)$ in the left-invariant frame, $|p|=|\Phi'(a_1)|\le L$, and $|R_X|\le H\theta^2/2$. Since
+$\cosh(x+y)\le\cosh(x)\,e^{|y|}$,
+\[
+\cosh\bigl(\sqrt\beta(p\cdot X+R_X)\bigr)\le\cosh(\sqrt\beta\,p\cdot X)\,e^{\sqrt\beta H\theta^2/2}.
+\]
+Lemma~\ref{tu:U-K} with $\eta=\beta^{-1/8}$ and Remark~\ref{tu:U-K-rem} give the bound on $\log w$.
+\end{proof}
+
+\begin{remark}
+The Taylor step above is the line the challenger of the working file found missing (``the Taylor reduction
+$\cosh(\sqrt\beta(p\cdot X+R))\le\cosh(\sqrt\beta p\cdot X)e^{\sqrt\beta H\theta^2/2}$ with $|R|\le H\theta^2/2$'').
+\end{remark}
+
+\begin{lemma}[Inequality (A)]\label{tu:U-A}
+Let $u\in L^2(X)$ be real with $Tu=\mu u$, and $h=e^{\sqrt\beta\Phi(a_1)}u$. Then
+\[
+\mu\|h\|^2\le\int_Xw(U_1)\,e^{-\varepsilon_{\mathrm{eff}}(a_1)}\,h(x)^2\,dx .
+\]
+\end{lemma}
+
+\begin{proof}
+$\Phi(a_1)$ is bounded, so $h\in L^2$. Multiplying $Tu=\mu u$ by $e^{\sqrt\beta\Phi}$ and using \eqref{tu:U-eq-fact} and the
+fact that $e^{\pm\sqrt\beta\Phi}$ commutes with $B$ and $B^*$, $\mu h=B^*WBh$. Hence
+$\mu\|h\|^2=\langle Bh,WBh\rangle\le\int w(U_1)(Bh)^2$ by Lemma~\ref{tu:U-schur} with $F=Bh$ (real), and
+$\int w(U_1)(Bh)^2\le\int w(U_1)e^{-\varepsilon_{\mathrm{eff}}(a_1)}h^2$ by Lemma~\ref{tu:U-R}(2) with $m=w$, which is bounded
+and measurable.
+\end{proof}
+
+No positivity of $u$ is used. This is why (B) below holds for $f$ as well as for $g$.
+
+\subsection{The weighted bound (B)}
+
+\begin{proposition}[Estimate (B)]\label{tu:U-B}
+Fix $\eta\in(0,\frac12]$, $\delta,\tau\in(0,1)$ and $\Phi$ as in \S\ref{tu:U-sec-weight}. Put
+\[
+C(\eta)=1+\frac{e^{\eta/2}-e^{-\eta/4}}{e^{-\eta/4}-e^{-\eta/2}} .
+\]
+There is $\beta_1=\beta_1(\eta,\delta,\tau)$ (depending also on the choices in (W1), (W3)) such that for every
+$\beta\ge\beta_1$ and every real eigenfunction $u$ of $T$ with eigenvalue $\mu\ge e^{-\eta/4}$:
+\begin{enumerate}
+\item $\|e^{\sqrt\beta\Phi(a_1)}u\|^2\le C(\eta)\|u\|^2$;
+\item $\|e^{\sqrt\beta\Phi(a_2)}u\|^2\le C(\eta)\|u\|^2$.
+\end{enumerate}
+In particular, by Lemma~\ref{tu:L-L4}, both hold for $u=g$ and for $u=f$ once $\beta$ is also so large that
+$\lambda_{ee},\lambda_{eo}\ge e^{-\eta/4}$.
+\end{proposition}
+
+\begin{proof}
+(1) Choose $\beta_1\ge\beta_0(\eta/4)$ of Lemma~\ref{tu:U-F} such that $\omega(\beta)\le\eta/4$ for $\beta\ge\beta_1$
+(Lemma~\ref{tu:U-schur}). Let $q(a_1)=\log w-\varepsilon_{\mathrm{eff}}(a_1)$. By Lemma~\ref{tu:U-schur} and
+Lemma~\ref{tu:U-F} with $\eta/4$:
+on $I^c$, by Lemma~\ref{tu:U-weight}(1), $q\le(1-\delta)^2(\varepsilon-\eta)-\varepsilon+\frac\eta4+\omega\le-\frac{3\eta}4+\omega\le-\frac\eta2$;
+on $I$, $\Phi'=0$, so $q\le\omega-(\varepsilon-\frac\eta4)\le\frac\eta4+\omega\le\frac\eta2$.
+By Lemma~\ref{tu:U-A}, $\int(\mu-e^{q})h^2\le0$, i.e.
+\[
+\int_{I^c}(\mu-e^q)h^2\le\int_I(e^q-\mu)h^2 .
+\]
+On $I^c$, $\mu-e^q\ge e^{-\eta/4}-e^{-\eta/2}>0$; on $I$, $h=u$ (since $\Phi=0$) and $e^q-\mu\le e^{\eta/2}-e^{-\eta/4}$. Hence
+$\int_{I^c}h^2\le\frac{e^{\eta/2}-e^{-\eta/4}}{e^{-\eta/4}-e^{-\eta/2}}\|u\|^2$ and $\|h\|^2\le C(\eta)\|u\|^2$.
+
+(2) The same proof with the links exchanged: $T=B'^*K_2B'$, the fibre operators in $U_1$ are unitarily equivalent
+to $F_{a_2}$, and Lemmas~\ref{tu:U-schur} and~\ref{tu:U-A} hold verbatim with $K_2$, $a_2$ in place of $K_1$, $a_1$.
+\end{proof}
+
+\begin{remark}
+In the working file the lower bound $\lambda_{ee}\ge e^{-\eta/4}$ was a sketch (a bump of radius $\beta^{-1/3}$ at
+$(1,1)$; a challenger noted that with an indicator bump the error is $O(\beta^{-1/6})$, not $O(\beta^{-1/3})$, which still
+suffices), and $\lambda_{eo}\ge e^{-\eta/4}$ was a sketch in TUNNEL\_LOWER2 \S3. Following change C5 of the assembly,
+both are taken from Lemma~\ref{tu:L-L4}. Part (2) is from TUNNEL\_LOWER2 \S3 (``Exchange'').
+\end{remark}
+
+\subsection{The flux identity and the upper bound on the splitting}\label{tu:U-sec-flux}
+
+Let $A_-=\{x\in X:a_1(x)<\pi/2\}$ and $\varsigma=\mathbf 1_{A_-}-\mathbf 1_{A_-^c}$ (the set $a_1=\pi/2$ is null). $\varsigma$ is gauge
+invariant, odd under $\sigma_1$, even under $\sigma_2$, and $\varsigma^2=1$.
+
+\begin{lemma}[Flux identity]\label{tu:U-flux}
+\[
+\Delta=\lambda-\lambda_{eo}\le\lambda-\langle\varsigma g,T\varsigma g\rangle
+=\frac12\iint(\varsigma(x)-\varsigma(y))^2g(x)T(x,y)g(y)\,dx\,dy=4\,\langle g\mathbf 1_{A_-},\,T\,g\mathbf 1_{A_-^c}\rangle .
+\]
+\end{lemma}
+
+\begin{proof}
+$\varsigma g$ is gauge invariant, odd under $\sigma_1$, even under $\sigma_2$, and $\|\varsigma g\|=1$, so
+$\lambda_{eo}\ge\langle\varsigma g,T\varsigma g\rangle$. Next $\lambda=\langle g,Tg\rangle$ and
+$\lambda-\langle\varsigma g,T\varsigma g\rangle=\iint g(x)T(x,y)g(y)(1-\varsigma(x)\varsigma(y))$, and
+$1-\varsigma(x)\varsigma(y)=\frac12(\varsigma(x)-\varsigma(y))^2$, which is $2$ when $x,y$ lie on different sides and $0$
+otherwise. Both orderings ($x\in A_-,y\in A_-^c$ and the reverse) contribute, and by the symmetry of $T(x,y)$ they
+contribute equally. So the integral is $2\cdot2\langle g\mathbf 1_{A_-},Tg\mathbf 1_{A_-^c}\rangle$.
+\end{proof}
+
+\begin{remark}
+The working file (TUNNEL\_THEOREM \S5) has the prefactor $2$ in the last expression. The correct prefactor is $4$
+(challenger CHAL\_conditional, item 10; checked there in a one-dimensional analogue, ratio $2.0000000$). The
+exponent is unaffected.
+\end{remark}
+
+\begin{theorem}\label{tu:U-main}
+$\displaystyle\liminf_{\beta\to\infty}\frac{-\log m_{eo}}{\sqrt\beta}\ge c^*$.
+\end{theorem}
+
+\begin{proof}
+Fix $\eta\in(0,\frac12]$, $\delta,\tau\in(0,1)$, and $\Phi$ as in \S\ref{tu:U-sec-weight}. By Lemma~\ref{tu:L-L4} there is
+$\beta_2(\eta)$ with $\lambda,\lambda_{eo}\ge e^{-\eta/4}$ for $\beta\ge\beta_2$. Let $\beta\ge\max(\beta_1,\beta_2,\beta_L)$, with
+$\beta_L$, $C_L$ from Remark~\ref{tu:U-K-rem}.
+
+Put $h=e^{\sqrt\beta\Phi(a_1)}g\ge0$. By Proposition~\ref{tu:U-B}(1) with $u=g$, $\|h\|^2\le C(\eta)$. For $x\in A_-$,
+$y\in A_-^c$, let $d_1(x,y)=\theta(U_1^{-1}U_1')$ be the geodesic distance of the first links. The class angle is
+$1$-Lipschitz for this distance, so $a_1(y)-a_1(x)\le d_1(x,y)$, and by Lemma~\ref{tu:U-weight}(4),
+\[
+\Phi(x)+\Phi(y)\ge(1-\delta)\bigl(c^\rho_\eta-2L\tau-L\,d_1(x,y)\bigr).
+\]
+Since $V\ge0$, $T(x,y)\le K(x,y)=k(U_1^{-1}U_1')k(U_2^{-1}U_2')$. Hence, by Lemma~\ref{tu:U-flux},
+\[
+\Delta\le4\iint_{A_-\times A_-^c}h(x)e^{-\sqrt\beta\Phi(x)}T(x,y)e^{-\sqrt\beta\Phi(y)}h(y)
+\le4e^{-\sqrt\beta(1-\delta)(c^\rho_\eta-2L\tau)}\iint h(x)K(x,y)e^{\sqrt\beta Ld_1(x,y)}h(y)\,dx\,dy .
+\]
+The kernel $K(x,y)e^{\sqrt\beta Ld_1(x,y)}$ is symmetric and nonnegative, so by $h(x)h(y)\le\frac12(h(x)^2+h(y)^2)$ the
+double integral is at most $\|h\|^2\sup_x\int K(x,y)e^{\sqrt\beta Ld_1(x,y)}dy=\|h\|^2\int k(\gamma)e^{\sqrt\beta L\theta(\gamma)}d\gamma\le C(\eta)C_L$
+(using $\int k=1$ in link $2$ and the radial bound of Lemma~\ref{tu:U-K}). Thus
+\[
+\Delta\le4C(\eta)C_L\,e^{-\sqrt\beta(1-\delta)(c^\rho_\eta-2L\tau)} .
+\]
+Finally $m_{eo}=\log(\lambda/\lambda_{eo})\le\lambda/\lambda_{eo}-1=\Delta/\lambda_{eo}\le e^{\eta/4}\Delta\le2\Delta$. So
+\[
+\frac{-\log m_{eo}}{\sqrt\beta}\ge(1-\delta)(c^\rho_\eta-2L\tau)-\frac{\log(8C(\eta)C_L)}{\sqrt\beta},
+\]
+and $\liminf_{\beta\to\infty}(-\log m_{eo})/\sqrt\beta\ge(1-\delta)(c^*-\pi\sqrt{6\eta}-2L\tau)$ by Lemma~\ref{tu:U-weight}(3).
+Letting $\delta,\tau,\eta\to0$ gives the claim.
+\end{proof}
+
+\begin{remark}[What the proof uses]\label{tu:U-uses}
+Theorem~\ref{tu:U-main} uses: Lemma~\ref{tu:U-kernel}; Lemma~\ref{tu:U-K} (with its radial form);
+Lemma~\ref{tu:U-R}(1),(2); Lemma~\ref{tu:U-F}; the weight of \S\ref{tu:U-sec-weight}, whose ingredients (W1) and (W3) are
+asserted to exist and not constructed; Proposition~\ref{tu:U-B}(1) for $u=g$; Lemma~\ref{tu:U-flux}; and the lower
+bounds $\lambda_{ee},\lambda_{eo}\ge e^{-\eta/4}$ from Lemma~\ref{tu:L-L4} of the second half. The order of limits is:
+$\eta,\delta,\tau$ and the weight fixed, then $\beta\to\infty$, then $\delta,\tau,\eta\to0$. The harmonic picture of the
+two-dimensional valley (the minimising tunnelling path runs along $\sin a_2=0$) explains why a weight in the slow
+link alone loses nothing, but it is not used: Lemma~\ref{tu:U-F} already takes the supremum over all of link~$2$.
+\end{remark}

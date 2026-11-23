@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/t1-wL/child/fid_check.py", line 50, in <module>
+    rec("P5", all(M2(t) >= 1.5*.25+log(2) for t in etas), "M^2 = " + ", ".join("%g:%.2f" % (t, M2(t)) for t in etas) + " ; 3.4/eta+O(1) check eta*M^2 = " + ", ".join("%.2f" % (t*M2(t)) for t in etas))
+              ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/z4-workers/t1-wL/child/fid_check.py", line 50, in <genexpr>
+    rec("P5", all(M2(t) >= 1.5*.25+log(2) for t in etas), "M^2 = " + ", ".join("%g:%.2f" % (t, M2(t)) for t in etas) + " ; 3.4/eta+O(1) check eta*M^2 = " + ", ".join("%.2f" % (t*M2(t)) for t in etas))
+                  ~~^^^
+  File "/home/user/z4-workers/t1-wL/child/fid_check.py", line 48, in M2
+    return -log(Gm*(exp(eta/2)-1)*exp(-C)/4)
+            ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: math domain error

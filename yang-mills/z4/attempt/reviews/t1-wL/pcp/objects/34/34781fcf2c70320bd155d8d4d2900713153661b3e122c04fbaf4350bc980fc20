@@ -1,0 +1,44 @@
+I checked every lemma, proposition, theorem and corollary of `tun_lower.tex`, and every numerical constant I could find, against the parts. I found nothing WRONG. The table is in `findings.md`.
+
+- **MATCHES:** 33 of the 38 items.
+- **CHANGED, justified by a listed correction:** four items.
+  - Lemma L-flux (I2): the prefactor goes from 2 to 4, justified by CHAL_conditional #10.
+  - Lemma L-ansatz-props: justified by C2, C3, C6 and C7.
+  - Proposition L-E13: justified by C1 and C2.
+  - Lemma L-S4 (S4-alg): the threshold becomes e^{η/2}−1, justified by the re-proved absorption in TUNNEL_LOWER_FULL §2.
+- **CHANGED, not covered by C1–C7 or the CHAL files:** one item (Lemma L-M4). There is also one unlisted repair, the remark on M after the parameter list. All unlisted changes are harmless; `findings.md` lists them.
+- **Not compared:** `parts/` has no TUNNEL_THEOREM.md or LEMMA_F.md, so the first-half statements the file cites are not compared. I compiled no Lean.
+
+**Control:** `control.txt` holds 1.570796.
+
+**Constants:**
+- c* recomputes to 4.605413245.
+- 35, 70 and the 34.14 and 25.79 coefficient checks hold.
+- 8.35 is the minimum, 8.3458 at d≈3.645, ρ≈0.264.
+- 9.09 is the value 9.0850 at (3.65, 0.265), not a minimum, and the tex does not claim one.
+- The L_β values 0.014, 0.096, 0.31, 0.53 and 0.75 reproduce.
+- The S4-alg slacks reproduce as lower bounds: 0.1088, 0.1077, 0.0952, 0.0488 and 0.0100.
+- M² ≥ 18.0 at η=0.4 reproduces (18.05). The "3.4/η" and the 14.8…339 table in TUNNEL_LOWER_FULL do not match my recomputation, and the tex dropped them.
+- The G1, G2, flat-identity and log J formulas agree with direct computation to about 6e−14.
+
+**Open points:**
+- The S4-alg absorption bullets stay qualitative, as in the sources.
+- The "a₁ just outside [a₋,π−a₋]" step in Lemma L-balls is not written out, although the tex marks that lemma "Proved".
+- The corner claim A₂/A₁ ≤ 0.006 is not checked.
+
+**Failures kept:**
+- My program's first run failed because G_min underflowed at small η. That was my defect. I fixed it with a log-domain formula and left the predicates unchanged.
+- The grandchild's P3 failed. That was its own two-decimal expectation, not a defect in the claim.
+
+**Sub-agent:** grandchild T171 was admitted, its program reread, rerun under `pcp check` (identical output), and released.
+
+**PCP OS:** both `verify` commands pass; the last lines are quoted in `findings.md`.
+
+Files are in `/home/user/z4-workers/t1-wL/child`:
+- `findings.md`
+- `notes.md`
+- `fid_check.py`
+- `results_fid_run2.txt`
+- `control.txt`
+- `grandchild/`
+- `rerun_gc/`

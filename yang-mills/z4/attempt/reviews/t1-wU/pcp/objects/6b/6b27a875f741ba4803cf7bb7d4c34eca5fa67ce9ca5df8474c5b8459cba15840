@@ -1,0 +1,14 @@
+C1 {'ok': True, 'cstar': 4.605413245014258}
+C2 {'ok': True, 'L': 1.877629981673219}
+C3_D1_gt_0.039 {'ok': False, 'D1': 0.038931495552105455}
+C3b_D_pos_incr {'ok': True, 'n': 2000}
+C4 {'ok': True, 'n': 400, 'min_margin': 1.575478132878963e-06}
+C5 {'ok': True, 'n': 1800, 'bad': 0, 'min_margin': 3.9690378984420446e-05}
+C6 {'ok': True, 'n': 707, 'bad': 0, 'min_margin': -0.0}
+C7 {'ok': True, 'n': 707, 'qualifying': 707, 'bad': 0}
+C8 {'ok': True, 'n': 15000, 'bad': 0}
+C9 {'ok': True, 'n_total': 150, 'qualifying': 150, 'bad': 0, 'max_lhs_minus_rhs': np.float64(-0.020314649631369135)}
+C10a {'ok': True, 'n': 273, 'min': np.float64(8.734426502828414), 'max': np.float64(14.229811842343642)}
+C10b {'ok': True, 'first_beta': 22387211385683.38}
+C11 {'ok': True, 'bad': 0}
+FAILED: ['C3_D1_gt_0.039']
