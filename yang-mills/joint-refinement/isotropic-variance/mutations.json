@@ -1,0 +1,14 @@
+[
+  {
+    "label": "negative_sign",
+    "find": "= -4*a*d := by ring",
+    "replace": "= 4*a*d := by ring",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_shell",
+    "find": "≤ 18*r^2 := by",
+    "replace": "≤ 17*r^2 := by",
+    "diagnostic": "error:"
+  }
+]
