@@ -1,0 +1,14 @@
+[
+  {
+    "label": "negative_translation_sign",
+    "find": "reading (translate u w) X = reading w (fun x => X (x+u))",
+    "replace": "reading (translate u w) X = reading w (fun x => X (x-u))",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_variance_power",
+    "find": "‖(T.card : ℝ)⁻¹ • ∑ i ∈ T, v i‖^2 ≤ C / T.card := by",
+    "replace": "‖(T.card : ℝ)⁻¹ • ∑ i ∈ T, v i‖^2 ≤ C / (T.card : ℝ)^2 := by",
+    "diagnostic": "error:"
+  }
+]

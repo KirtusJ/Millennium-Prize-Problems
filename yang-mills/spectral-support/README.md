@@ -70,3 +70,7 @@ In the original isotropic four-dimensional Wilson law, coarse rectilinear holono
 ## Ordinary signed Wilson traces at fixed physical size
 
 For the original four-dimensional isotropic $SU(2)$ Wilson transfer vacuum, ordinary fixed-size square traces have a positive connected reading after multiplying each centered trace by $\beta$ on explicit rapidly weakening trajectories. The measured two-time ratio has a positive limit even without that multiplication. A difference of two orderings of three loops detects the cubic color singlet. Together their limiting energy measures have low-energy powers eight and twelve. The sharp-time variance diverges for the rescaled square. [Contour computation, checked identities and scope](ordinary-loop/)
+
+## A squared Wilson link action at positive energy and momentum
+
+A single time-oriented link-star insertion has a continuum energy–momentum density on explicit very weak trajectories. Four reflection-even orientation averages separate the free scalar action from the temporal stress component. Their spectral coefficients reproduce Meyer's zero-temperature normalization. The scalar three-point reading vanishes while its collinear fourth cumulant gives a normalized $2/9$. A bounded function of ordinary plaquette traces suffices at each cutoff. [Wilson estimates, director cross-review and execution](electric-slab/)

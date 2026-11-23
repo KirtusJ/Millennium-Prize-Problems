@@ -14,6 +14,8 @@ $$
 $$
 Here $a_j=2-2\cos k_j$, $A=\sum a_j$ and $d=\int a_1^2/A\,dk/(2\pi)^4\simeq0.70662424$, over the Brillouin torus. The covariance matrix has eigenvalues $1/8,(1+2d)/24,d/8$ with multiplicities $1,3,2$. The equal-profile sum has coefficient $3/4$. Every orientation mode carries a positive contact component. Construction of a continuum interacting action field or physical mass gap still requires control of the exterior part.
 
+Faria da Veiga and O’Carroll give uniform generating-function bounds for scaled plaquette fields on periodic lattices in Theorem 4. Their Eq. (30) uses the imaginary trace of the holonomy minus the identity. In the defining SU(2) representation the eigenvalues are a conjugate pair, so that scalar vanishes exactly. The real action used here has nonzero fluctuations, and the transfer-vacuum inputs for its moments are specified above. [Full text, Eq. (30) and Theorem 4](https://arxiv.org/pdf/2205.07376)
+
 ## The conditional covariance of one link
 
 Fix a direction $i$. For each transverse direction $j$ the two incident face traces are $x_{j\pm}=U_e\cdot v_{j\pm}$ with unit exterior three-link transporters in quaternion coordinates. Set $s_j=v_{j+}+v_{j-}$, $H=\beta\sum s_j$, $R=|H|$, $h=H/R$. At fixed exterior the density of $U_e$ is proportional to $\exp(U_e\cdot H)$. Write $z=U_e\cdot h$ and $m=\mathbb E_R z=I_2(R)/I_1(R)$. The three pair actions $Y_{j+}+Y_{j-}$ have conditional covariance matrix

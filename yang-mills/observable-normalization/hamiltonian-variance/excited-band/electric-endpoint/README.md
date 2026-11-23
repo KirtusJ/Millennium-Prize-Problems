@@ -2,10 +2,10 @@
 
 Director A4 · November 23, 2026 · B.C. Pacific Time (PCT, UTC−07:00)
 
-Z4’s corrected lower endpoint holds. Keeping the exact plaquette variance and sharing one energy budget between its electric and magnetic parts yields the stronger uniform choice $L=\kappa/18$. On the same finite periodic SU(2) Hamiltonian boxes as the [original band estimate](../), let $M_j=\int E^j\,d\nu(E)$ for the centered fundamental trace. For every $g=\lambda/\kappa>0$ and $\kappa>0$,
+The energy budget gives a coupling-independent lower endpoint $\kappa/18$. Z4 identified a crossover in comparing it with the earlier endpoint $A/16$. The two estimates together give $L=\max(A/16,\kappa/18)$. On the same finite periodic SU(2) Hamiltonian boxes as the [original band estimate](../), let $M_j=\int E^j\,d\nu(E)$ for the centered fundamental trace. For every $g=\lambda/\kappa>0$ and $\kappa>0$,
 $$
  M_1\ge (2\kappa/9)M_0,\qquad
- \nu([\kappa/18,\,4D_*/A])\ge A^2/(8D_*) ,
+ \nu([L,\,4D_*/A])\ge A^2/(8D_*) ,
 $$
 with $A=9\kappa/[8(1+B)]$ and the [previous second-moment bound](../third-moment/) $D_*$. At $g=0$ the spectral measure has unit weight at $3\kappa$. This provides a guaranteed band; it allows additional spectral weight below the band. [Z4’s challenge and independent review](../../../../z4/reviews/r7-wild/report.md)
 
@@ -21,6 +21,8 @@ $$
 $$
 The last inequality follows by completing the square. Since $S(K+3/2)\ge9/16$, division by the positive $K+3/2$ gives $2u-u^2\le(11/2)S$. This proves the claimed relation between $M_0$ and $M_1$.
 
-For $U=4D_*/A$ and $L=\kappa/18$, the integrated pointwise estimate gives $M_1\le L M_0+D_*/U+U\nu([L,U])$. The two terms before the band are at most $M_1/4$ and $A/4$, respectively. Since $A\le M_1$, this leaves at least $A/2$ for $U\nu([L,U])$. The upper endpoint exceeds $L$ by its explicit formula.
+For $U=4D_*/A$ and the candidate $L=\kappa/18$, the integrated pointwise estimate gives $M_1\le L M_0+D_*/U+U\nu([L,U])$. The two terms before the band are at most $M_1/4$ and $A/4$, respectively. Since $A\le M_1$, this leaves at least $A/2$ for $U\nu([L,U])$. The upper endpoint exceeds $L$ by its explicit formula.
 
-On the specified trajectory $\kappa=2/(\beta b)$ the guaranteed lower edge is $1/(9\beta b)$, so it diverges whenever $\beta b\to0$. This conclusion concerns the band guaranteed by the estimates. It supplies neither a full spectral gap nor a lower bound for a reading at fixed positive physical time. The original $A/16$ band remains valid with its original asymptotics. [Lean coverage and replay](execution.md)
+The [earlier bound](../third-moment/) gives the identical upper endpoint and weight with $L=A/16$. For each $g$ choose the interval whose lower endpoint is larger. The comparison $A/16\ge\kappa/18$ is equivalent to $B\le17/64$, which holds exactly when $g\le17/64$: if $g>17/64$ then $\sqrt g>1/2$ and both entries in the minimum defining $B$ exceed $17/64$. At equality the endpoints coincide. [Z4’s comparison](https://github.com/KirtusJ/Millennium-Prize-Problems/issues/1#issuecomment-7096620075)
+
+On the specified trajectory $\kappa=2/(\beta b)$ the combined lower edge is at least $1/(9\beta b)$, so it diverges whenever $\beta b\to0$. This conclusion concerns the band guaranteed by the estimates. It supplies neither a full spectral gap nor a lower bound for a reading at fixed positive physical time. [Lean coverage and replay](execution.md)

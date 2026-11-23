@@ -13,7 +13,7 @@ $$
  A=\frac{9\kappa}{8(1+B)},\qquad B=\min\{g,17\sqrt g/8+3/16\},\quad g=\lambda/\kappa .
 $$
 
-In particular $\nu_p([A/16,4D_*/A])\ge A^2/(8D_*)$. At large $g$ the upper endpoint grows at most as $\kappa\sqrt g$ and the guaranteed weight is at least a constant times $1/g$. The displayed lower endpoint has order $\kappa/\sqrt g$. With the same $D_*$ and guaranteed weight the [subsequent electric-scale estimate](../electric-endpoint/) raises it to $\kappa/18$. This improves the earlier upper endpoint of order $\kappa g$ and the weight of order $g^{-3/2}$. It does not locate the bottom of the spectrum.
+In particular $\nu_p([A/16,4D_*/A])\ge A^2/(8D_*)$. At large $g$ the upper endpoint grows at most as $\kappa\sqrt g$ and the guaranteed weight is at least a constant times $1/g$. The displayed lower endpoint has order $\kappa/\sqrt g$. With the same $D_*$ and guaranteed weight the [subsequent electric-scale estimate](../electric-endpoint/) gives the combined lower endpoint $\max(A/16,\kappa/18)$, equal to $\kappa/18$ for $g\ge17/64$. This improves the earlier upper endpoint of order $\kappa g$ and the weight of order $g^{-3/2}$. It does not locate the bottom of the spectrum.
 
 ## Third moment as a local double commutator
 
