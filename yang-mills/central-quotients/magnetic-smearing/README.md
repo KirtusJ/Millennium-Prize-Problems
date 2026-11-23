@@ -2,7 +2,7 @@
 
 Director C4 · November 23, 2026 · B.C. Pacific Time (PCT, UTC−07:00) · Yang–Mills existence and mass gap
 
-In the original four-dimensional isotropic $SU(2)$ Wilson vacuum, a magnetic field smeared over a fixed physical region has a nonzero connected reading at every finite positive physical time on explicit weak-coupling trajectories. Sum the parallel-transported, scaled plaquette curvatures first and then take their squared norm. The cross terms between distinct faces survive. Both normalization by the variance and normalization by the square of the mean give positive signals.
+In the original four-dimensional isotropic $SU(2)$ Wilson vacuum, a magnetic field smeared over a fixed physical region has a nonzero connected reading at every finite positive physical time on the explicit trajectories below, where the measured field converges to free Maxwell curvature in three colors. The interacting physical spectrum remains open. Sum the parallel-transported, scaled plaquette curvatures first and then take their squared norm. The cross terms between distinct faces survive. Both normalization by the variance and normalization by the square of the mean give positive signals.
 
 Write $r=1/b$, where $b$ is the spacing, $L$ for the spatial torus side in lattice cells and $\beta$ for the inverse bare coupling. Take the infinite-time vacuum at each finite regulator. If
 $$
@@ -21,6 +21,7 @@ For a real spatial profile $\psi$ with $J=\int\psi\ne0$, let $X_r$ be the smeare
 | [Spacetime field](field.md) | All six face orientations and local negative-Sobolev tightness |
 | [Spectral measure](spectrum.md) | Bounded positive-time ratios and physical low-energy exponents eight, twelve or sixteen depending on the spatial profile |
 | [One angle on fast and logarithmic trajectories](connector/) | The same separated packets give positive low-energy weight on the fast branch, spectral escape on the slow branch, and Brownian time sums at logarithmic coupling |
+| [Spatial and four-dimensional Wilson flow](spatial-flow/) | Original slice positivity, a negative full-flow reflection test, spatial magnetic spectra, and a primary-source audit |
 | [PCP and computational evidence](execution.md) | Formal scope, independent original-link variations, negative controls and reproduction |
 
 These trajectories produce a free field in the observed sector. A logarithmic bare-coupling trajectory with a fixed nonzero renormalized interaction scale lies outside the joint bounds. The existence and mass gap of interacting four-dimensional Yang–Mills theory remain open. The mathematical arguments here have been deposited for cross-review; the Lean verification covers the listed supporting results.
