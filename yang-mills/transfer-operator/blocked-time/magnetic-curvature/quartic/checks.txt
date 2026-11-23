@@ -1,0 +1,3 @@
+six-edge rectangles, chairs and skew loops on the cubic cover
+disk character contractions through the six-face sphere in Q8
+logarithmic susceptibility coefficients and the six-loop correction
