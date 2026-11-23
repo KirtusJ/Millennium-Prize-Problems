@@ -1,0 +1,3 @@
+exact shared-link projection in the quaternion subgroup
+twelve edge-sharing squares on three cubic tori
+rational Hamiltonian coefficient and vacuum subtraction
