@@ -1,0 +1,2 @@
+check K107: exit 0 (expected 0) in 764176 ms | output 08f1eb38df14 | event 109 head 1a83e1fe2841
+  /home/user/z4-workers/r1-chal/report.md: 21 STANDS, 1 DEFECT, 5 NOT CHECKED. None of the three proofs broke; the one minor defect is E13's numerical parameters, which violate the TUNNEL_LOWER2 §2 constraints.

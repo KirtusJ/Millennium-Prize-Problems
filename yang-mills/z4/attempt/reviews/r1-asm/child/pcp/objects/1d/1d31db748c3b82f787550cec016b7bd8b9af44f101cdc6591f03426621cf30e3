@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/r1-asm/child/run_beta.py", line 53, in <module>
+    if n < 0: Kd[n] = Kd[-n]; continue
+                      ~~^^^^
+KeyError: 51

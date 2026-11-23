@@ -1,0 +1,15 @@
+H_Psi 3.3622538643669713 Lambda 2.006363463602289 H_Theta 6.25
+EP1 max|logJ_det-logJ_svd| = 3.552713678800501e-15 MET
+EP2 D<=rho<=1 at 10 of 11 FAILED
+EP3 Taylor: qualifying 20000 of 20000; violations 0 worst |F-M|/Err 0.2713988838178046 MET
+beta 4096 sup_K Delta1 36.9304 at a1,a2,chi [np.float64(2.642), np.float64(0.15), np.float64(0.296)] npts 432
+beta 16384 sup_K Delta1 13.8409 at a1,a2,chi [np.float64(1.571), np.float64(0.15), np.float64(0.088)] npts 442
+beta 65536 sup_K Delta1 7.0099 at a1,a2,chi [np.float64(1.571), np.float64(0.15), np.float64(0.044)] npts 442
+beta 262144 sup_K Delta1 3.7109 at a1,a2,chi [np.float64(1.571), np.float64(0.15), np.float64(0.022)] npts 442
+beta 1048576 sup_K Delta1 1.9955 at a1,a2,chi [np.float64(1.571), np.float64(0.15), np.float64(0.011)] npts 442
+beta 4194304 sup_K Delta1 1.0815 at a1,a2,chi [np.float64(1.571), np.float64(0.15), np.float64(0.006)] npts 442
+beta 16777216 sup_K Delta1 0.5864 at a1,a2,chi [np.float64(1.571), np.float64(0.15), np.float64(0.003)] npts 442
+beta 67108864 sup_K Delta1 0.3171 at a1,a2,chi [np.float64(1.571), np.float64(0.15), np.float64(0.001)] npts 442
+beta 268435456 sup_K Delta1 0.171 at a1,a2,chi [np.float64(1.571), np.float64(0.15), np.float64(0.001)] npts 442
+EP4 MET 13.840912636108829 0.1709913617531328
+EP5 MET

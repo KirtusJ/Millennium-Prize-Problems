@@ -1,0 +1,10 @@
+# Result
+
+```
+N=100 h=0.06283185
+lambda_e=0.823739739329
+lambda_o=0.823739739329
+m=0.0000000000e+00
+-log(m)/sqrt(beta)=inf
+```
+Even/odd sectors via T[:H,:H]+-T[:H,H:] (H=N/2).

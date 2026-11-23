@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/r1-chal/e13_recompute.py", line 15, in <module>
+    from scipy.special import ive, erfc
+ModuleNotFoundError: No module named 'scipy'

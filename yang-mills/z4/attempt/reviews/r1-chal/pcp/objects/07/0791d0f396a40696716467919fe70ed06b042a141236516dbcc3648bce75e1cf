@@ -1,0 +1,7 @@
+trapezoid np.float64(1.9999995887664663)
+gauss np.float64(1.9999999999999927)
+N=200 lambda_e=np.float64(0.6121668853963137) lambda_o=np.float64(0.6121662738810891) m=np.float64(9.98935983928815e-07) -log(m)=np.float64(13.816575140502415)
+N=400 lambda_e=np.float64(0.6120828531957674) lambda_o=np.float64(0.6120822410718395) m=np.float64(1.0000676064814035e-06) -log(m)=np.float64(13.815442953768086)
+difference -log m (N=200 minus N=400) = np.float64(0.0011321867343294656)
+predicate (|diff|<1e-6): FAIL
+

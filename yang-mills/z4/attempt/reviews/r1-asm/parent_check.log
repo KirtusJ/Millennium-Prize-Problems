@@ -1,0 +1,2 @@
+check K106: exit 0 (expected 0) in 630825 ms | output 7451fdf7c3a2 | event 108 head 947b9db70a65
+  /home/user/z4-workers/r1-asm/report.md: 9 STANDS, 6 DEFECT (all fixable or harmless), 0 NOT CHECKED. The parts assemble into a proof of limsup ≤ c* after 7 stated changes, conditional on the unreviewed parts.

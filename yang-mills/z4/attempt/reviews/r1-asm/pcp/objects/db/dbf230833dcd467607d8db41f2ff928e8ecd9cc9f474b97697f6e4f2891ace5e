@@ -1,0 +1,30 @@
+Numerically, c* is right and 2c* is wrong. Reading (d), a chain bound needs 2·sup(−log g) ≈ c*√β, not 2c*√β. The tent function passes (c) at all four β. These are measurements at β up to 4096, not proofs.
+
+The control gives c* = 4.605413, written to `control.txt`. Float64 can't resolve λ_e − λ_o ~ e^(−c*√β), so I computed λ_e, λ_o and the even eigenvector in Python `decimal` at 77 to 189 digits. The inverse-iteration residuals were far below the bound I set.
+
+| β | N | r = −log m/√β | q (check b) | 2q/r | min of Tφ/(λ_e φ): set ε≥2η, kink window, kink |
+|---|---|---|---|---|---|
+| 64 | 52 | 3.936 | 1.947 | 0.989 | 1.568, 1.751, 3.363 |
+| 256 | 100 | 4.182 | 2.074 | 0.992 | 1.488, 1.553, 3.022 |
+| 1024 | 200 | 4.335 | 2.155 | 0.994 | 1.420, 1.451, 2.818 |
+| 4096 | 404 | 4.432 | 2.208 | 0.996 | 1.373, 1.388, 2.693 |
+
+q is (−log g(π/2) + log g(0))/√β, to be compared with c*/2 = 2.3027.
+
+| Item | Verdict | Evidence |
+|---|---|---|
+| (a) | STANDS | r rises toward c* = 4.605, and |r−c*| shrinks 0.669 → 0.424 → 0.270 → 0.173. A fit with an O(log β/√β) correction on the last three points gives 4.570. 2c* = 9.21 is nowhere near. |
+| (b) | STANDS | q rises toward c*/2 = 2.3027; the fit gives 2.285. |
+| (c) | STANDS | Tφ ≥ λ_e φ holds on the whole set ε ≥ 2η, in the window |x−π/2| ≤ 0.2, and at the kink, at all four β. The margin on the set shrinks slowly (1.57 → 1.37), so I haven't shown it holds as β → ∞. |
+| (d) | STANDS | 2q/r is 0.989 to 0.996, and r → c*. I read "sup_chain" as −log g(π/2) + log g(0), not a maximum over arbitrary chains. |
+
+The fit tolerances (3%) and the 10% bound for (d) were my own guesses. Each fit has three parameters on three points, so the monotone approach is the stronger evidence.
+
+- **Failed runs:** four failures, all my own bugs or wrong expectations rather than defects of the target. They were scipy missing, a kernel-loop KeyError, truncated Decimal printing, and a JSON bool error. A fifth, the float64 route, also failed and is covered below. Superseded files are kept.
+- **Grandchild (T161, admitted and released):** it matched the control (4.605413), but in float64 it got λ_e = λ_o, so m = 0 at β=256. It did not independently reproduce r = 4.182. Its λ_e = 0.8237397393 matches mine, and I reread and reran its code with the same output. So r is checked by one method only.
+- **Not checked:** β > 4096, other η, whether the margin in (c) stays above 1 as β → ∞, and the chain bound Δ ≥ poly·min g(z)g(z')T(z,z') itself.
+- **PCP OS:** `pcp_os verify` printed "result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)". The Rust `pcpos verify` printed "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right." The register also records the two `check` runs that exited 1 against an expected 0.
+
+Counts as met, failed, measured only.
+
+Everything is in `/home/user/z4-workers/r1-asm/child/`; `report.md` has the exact rerun commands and `notes.md` the step log.

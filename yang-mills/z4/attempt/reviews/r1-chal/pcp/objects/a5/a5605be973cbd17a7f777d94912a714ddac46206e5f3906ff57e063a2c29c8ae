@@ -1,0 +1,22 @@
+The numerical check did not refute the claim, but four β values can't establish a limsup. The report is in `report.md` in the working directory.
+
+- **Control:** c* = 4.6054, checked with 400 and 800 quadrature nodes.
+- **Method:** the plain double-precision eigenvalue difference can't resolve m at larger β, so I refined each eigenpair in 300-digit arithmetic. That gives λ_e and λ_o to about 250 digits (at β=4096 their difference is about 7e-124). At β=16 it matches the plain double result to 5e-10.
+- **Values:** these are Richardson-extrapolated, because the grid error shrinks by exactly 4 per halving of h. That is O(h²), caused by the kink of eps at 0 and π.
+
+| β | −log m | (−log m)/√β |
+|---|---|---|
+| 64 | 31.1867 | 3.8983 |
+| 256 | 66.6491 | 4.1656 |
+| 1024 | 138.5105 | 4.3285 |
+| 4096 | 283.494 (single grid, N=806, not extrapolated) | 4.4296 |
+
+- **Q1** (−log m ≤ c*√β + 3 log β): met at all four β, with margins of 18, 24, 30 and 36.
+- **Q2** (ratio increasing and below c*): met. The gap to c* is 0.71, 0.44, 0.28, 0.18.
+- **Q3** (fit a within 0.2 of c*): a = 4.55 on the three extrapolated points, which is an exact fit with no residual. With the single-grid 4096 point added, a ≈ 4.56. Nothing contradicts the claim, but this is weak evidence.
+- **Grid predicate (my own):** failed at every β. I set 1e-3 for the difference between N and 2N, and the O(h²) error is larger than that at these grids. That was my tolerance being too tight, not a defect in the target.
+- **β=4096:** the finer grid (N=1612) was cut at the 5-minute limit, so 283.494 has no convergence check. I estimate the grid error at about 0.01 from the other β values, but that is not measured.
+- **Sub-agent (task T163):** it recomputed −log m at β=16 in plain double precision on the unfolded circle. Its control ∫₀^π sin = 2 came out right. Its −log m was 13.8166 at N=200 and 13.8154 at N=400. It agrees with my folded double result and my 300-digit refinement. Its own 1e-6 predicate failed for the same O(h²) reason. I reran its script and got identical numbers, then released T163.
+- **PCP OS:** both verifications pass. Python `verify`: `result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)`. Rust `pcpos verify`: last line `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.` The killed 4096/1612 run has no check record. The exact rerun commands are in the report.
+
+Everything is in `/home/user/z4-workers/r1-chal/child`; start with `report.md`, with `control.txt` and `table.txt` alongside.
