@@ -1,0 +1,1 @@
+{'top': 1, 'central-quotients': 17, 'spectral-support': 11} total=29 P1=True P2=True

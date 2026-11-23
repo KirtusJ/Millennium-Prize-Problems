@@ -1,0 +1,16 @@
+
+ROLE: disposition extractor (micro-review, wide). Input: input/ holds the notes (.md only) of two lanes of other directors of the same program on the Yang-Mills existence and mass gap problem, and yang-mills_README.md with the problem as the program states it. The director needs an overall disposition: what each lane has actually established, in which regime, and what it has not. You do not judge whether proofs are correct; you extract what each note claims, how it qualifies the claim, and what evidence class the note itself reports. Do not upgrade any claim. Do not paraphrase a conditional result as unconditional.
+
+For EACH note (one row per .md file that states a result; skip pure execution logs but use them for the evidence column) give:
+ 1 file path;
+ 2 the main statement in one sentence, with its hypotheses;
+ 3 regime class, exactly one of: FIXED (all cutoffs fixed: finite lattice or fixed mesh and volume), ONE-LIMIT (one cutoff removed - say which: time step, spatial volume, or mesh - with the others fixed), ITERATED (two limits in a stated order), JOINT (a simultaneous limit along a stated schedule), CONTINUUM-4D (a statement about a four-dimensional continuum theory), CONDITIONAL (an implication whose hypothesis is not established in the lane - name the hypothesis), CONTROL (a toy or lower-dimensional or uncoupled model);
+ 4 gauge group and dimension covered;
+ 5 units: is the bound stated in lattice units or in physical units, and what the note says about its behaviour as the mesh tends to zero (quote the location; write "not stated" if silent);
+ 6 evidence class as the note or its execution file reports it: text proof only / Lean declarations (how many, and whether the note says the analytic steps are hypotheses there) / numerical check / mutation tests (how many rejected);
+ 7 what the note itself says remains open (location).
+Then, per lane, a table against the requirements of the problem (yang-mills_README.md and the standard Jaffe-Witten statement): (a) existence of a continuum limit on R^4, (b) reflection positivity / Osterwalder-Schrader axioms, (c) Euclidean invariance, (d) nontriviality, (e) mass gap > 0 in physical units, (f) all compact simple groups. For each: NOT ADDRESSED / ADDRESSED AT FIXED REGULATOR / PARTIAL (say what) / CLAIMED. Use CLAIMED only if a note asserts the requirement itself for the four-dimensional continuum theory; quote it.
+Then: a list of any two statements, within or across the two lanes, that contradict each other or use incompatible conventions without a stated conversion (file and section for both); and the three statements of each lane that the lane's own text marks as most in need of independent review.
+Hypothesis first: count the .md files in input/, say how many state a result and how many you read in full; a note you did not read in full must be marked NOT READ, not summarized from its title.
+Delegation (rule 7): give the sub-agent the smaller of the two lanes with this same template; do the larger yourself; then check five of its rows against the files and report how many matched.
+No program is required beyond the control and a file-count script run through your register. Budget: about 15 minutes. report.md is the deliverable.

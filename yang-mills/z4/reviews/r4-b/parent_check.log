@@ -1,0 +1,2 @@
+check K19: exit 0 (expected 0) in 351605 ms | output 6da75ff62fcf | event 25 head ac6f6171a252
+  C:/Users/donke/z4-workers/r4-b/report.md — 6 met, 0 failed, 1 measured only (Lean/mutation counts not rerun); neither lane claims any requirement for the 4D continuum; sub-agent rows 6/6 matched.

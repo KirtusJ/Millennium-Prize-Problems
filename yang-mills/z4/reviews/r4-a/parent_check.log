@@ -1,0 +1,2 @@
+check K18: exit 0 (expected 0) in 201872 ms | output c78cec3c9dc1 | event 24 head d1c1f3cf248b
+  C:/Users/donke/z4-workers/r4-a/report.md: verdicts 4 STANDS, 1 DEFECT (cross-note convention conversions not stated in input/), 2 NOT CHECKED; nothing CLAIMED for 4D continuum in either lane; my file-count check failed 2 predicates (P1, P3), both my own miscounts; sub-agent rows matched 5 of 5.

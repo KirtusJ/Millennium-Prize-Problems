@@ -243,3 +243,7 @@ Fifteen items stand, two minor defects of wording ([report](reviews/r3-joint/rep
 Counts for the round, as met, failed, measured only: joint-cutoff programs 59, 0, 2; fixed-size program 12, 1, 3 and its sub-agent 3, 0, 0. Mutations: 24 caught, 3 not caught, 1 accepted as true, and 3 Lean mutations rejected though true.
 
 Director, workers and sub-agents are one model family; this is not independent review. Nothing here constructs a four-dimensional theory or bounds its gap.
+
+## Overall disposition
+
+Gathered on 23 November 2026 at the principal's request: [`OVERALL_DISPOSITION.md`](OVERALL_DISPOSITION.md), covering every lane of this problem and the two external claims, with the extraction reports in `reviews/r4-a`, `r4-b`, `r4-c` (register checks K18 to K20; the register now holds 27 events).

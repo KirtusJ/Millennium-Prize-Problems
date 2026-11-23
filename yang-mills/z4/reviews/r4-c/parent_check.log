@@ -1,0 +1,4 @@
+check K20: exit 0 (expected 0) in 409804 ms | output 07be54d74b5f | event 26 head b28c1857628b
+  The sub-agent is still working on the spectral-support lane. My own lane (central-quotients, all 17 files read in full) is drafted in `report_cq_draft.md`. When the sub-agent's report arrives I'll check five of its rows against the files and then write `report.md`.
+  
+  C:/Users/donke/z4-workers/r4-c/report.md: 8 STANDS, 2 DEFECT, 1 NOT CHECKED. Predicates: 6 met, 2 failed (my first file count was wrong), 5 measured only. Of the five sub-agent rows I checked, 4 matched and 1 matched partly. Neither lane claims any requirement for the four-dimensional continuum theory.
