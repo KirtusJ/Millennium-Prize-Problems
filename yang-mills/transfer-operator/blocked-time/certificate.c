@@ -58,6 +58,13 @@ __attribute__((noreturn, used)) static void run(void) {
     put(") : 2*δ+");
     integer(magnetic);
     put("*p < 1 := by linarith\n");
+    put("theorem capError {x J : ℝ} (hx : 0 ≤ x) (hJ : 0 < J) : |x-min x J| ≤ x^2/J := by\n"
+        "  by_cases within : x ≤ J\n"
+        "  · rw [min_eq_left within, sub_self, abs_zero]\n"
+        "    positivity\n"
+        "  · rw [min_eq_right (le_of_not_ge within), abs_of_nonneg (by linarith)]\n"
+        "    apply (le_div_iff₀ hJ).2\n"
+        "    nlinarith [mul_nonneg hx (show 0 ≤ x-J by linarith), sq_nonneg J]\n");
     flush();
     stop(0);
 }

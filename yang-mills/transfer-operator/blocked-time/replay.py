@@ -16,6 +16,7 @@ from replay import AXIOMS, KERNEL_SHA, MATHLIB, PCP, digest, guest
 SOURCE = HERE / "BlockedTime.lean"
 ASSEMBLER = "1cb649a9954be008a7f74ada3fb1494f1949d7947b85bf221875c655ea59afcd"
 THEOREMS = {"blockDenominator", "weightedBridge", "rowAtTilt", "rowAtOne",
+            "capError", "threeReadings", "contractionProduct", "filterPerturbation",
             "crossingFace", "fourierBound", "spatialShell", "groupRowAtTilt", "mixtureWindow", "haarVariance", "rowMargin", "iterateInfluence", "finitePropagation", "physicalRate"}
 
 
@@ -85,6 +86,7 @@ def task(node, out):
         lean(cfg, checked)
         for name, old, new, error in [
                 ("Overmixing", "44 ≤ (1+3/(2*g))^m", "46 ≤ (1+3/(2*g))^m", "unsolved goals"),
+                ("ZeroFilterNorm", "≤ 3*‖x-y‖", "≤ 0*‖x-y‖", "error: linarith failed"),
                 ("ReversedOrientation", "u*hy*v⁻¹*hx⁻¹", "u*hy*v⁻¹*hx", "unsolved goals"),
                 ("Overtilt", "(3+1/3) ≤ 569/576", "(4+1/4) ≤ 569/576", "error: linarith failed"),
                 ("ClosedEndpoint", "small : z < 2/455", "small : z ≤ 2/455", "error: linarith failed"),

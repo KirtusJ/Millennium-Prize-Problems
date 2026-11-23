@@ -45,6 +45,13 @@ theorem groupRowAtTilt {δ p : ℝ} (heat : δ ≤ 1/10) (interaction : p ≤ 1/
 -- PCP begin certificate
 theorem rowAtOne {δ p z : ℝ} (heat : δ ≤ 1/10) (interaction : p ≤ 13*z/4)
     (small : z < 2/455) : 2*δ+56*p < 1 := by linarith
+theorem capError {x J : ℝ} (hx : 0 ≤ x) (hJ : 0 < J) : |x-min x J| ≤ x^2/J := by
+  by_cases within : x ≤ J
+  · rw [min_eq_left within, sub_self, abs_zero]
+    positivity
+  · rw [min_eq_right (le_of_not_ge within), abs_of_nonneg (by linarith)]
+    apply (le_div_iff₀ hJ).2
+    nlinarith [mul_nonneg hx (show 0 ≤ x-J by linarith), sq_nonneg J]
 -- PCP end certificate
 
 theorem rowMargin {δ p : ℝ} (heat : δ ≤ 1/10) (interaction : p ≤ 13/1536) :
@@ -134,6 +141,32 @@ theorem crossingFace {G : Type*} [Group G] (u v hx hy left right : G) :
     left*(u*hy*v⁻¹*hx⁻¹)*left⁻¹ := by
   simp [mul_assoc]
 
+theorem threeReadings (x : ℝ) : x-2*x^2+x^3 = x*(1-x)^2 := by ring
+
+theorem contractionProduct {A : Type*} [NormedRing A] (x y u v : A)
+    (hu : ‖u‖ ≤ 1) (hy : ‖y‖ ≤ 1) : ‖x*u-y*v‖ ≤ ‖x-y‖+‖u-v‖ := by
+  rw [show x*u-y*v = (x-y)*u+y*(u-v) by rw [sub_mul, mul_sub]; abel]
+  apply (norm_add_le _ _).trans
+  apply add_le_add
+  · exact (norm_mul_le _ _).trans (by simpa using mul_le_mul_of_nonneg_left hu (norm_nonneg (x-y)))
+  · exact (norm_mul_le _ _).trans (by simpa using mul_le_mul_of_nonneg_right hy (norm_nonneg (u-v)))
+
+theorem filterPerturbation {A : Type*} [NormedRing A] (x y : A)
+    (hy : ‖y‖ ≤ 1) (hx' : ‖1-x‖ ≤ 1) (hy' : ‖1-y‖ ≤ 1) :
+    ‖x*(1-x)*(1-x)-y*(1-y)*(1-y)‖ ≤ 3*‖x-y‖ := by
+  have inner := contractionProduct x y (1-x) (1-y) hx' hy
+  have hn : ‖y*(1-y)‖ ≤ 1 := (norm_mul_le _ _).trans
+    (by simpa using mul_le_mul hy hy' (norm_nonneg _) (by norm_num))
+  have outer := contractionProduct (x*(1-x)) (y*(1-y)) (1-x) (1-y) hx' hn
+  have diff : ‖(1-x)-(1-y)‖ = ‖x-y‖ := by
+    rw [show (1-x)-(1-y) = -(x-y) by abel, norm_neg]
+  rw [diff] at inner outer
+  linarith
+
+#print axioms capError
+#print axioms threeReadings
+#print axioms contractionProduct
+#print axioms filterPerturbation
 #print axioms crossingFace
 #print axioms fourierBound
 #print axioms spatialShell

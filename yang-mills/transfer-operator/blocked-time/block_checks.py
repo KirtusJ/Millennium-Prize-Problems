@@ -7,6 +7,7 @@ import math
 
 import numpy as np
 from scipy.special import ive
+from scipy.linalg import eigh
 
 
 def spatial_faces(L):
@@ -124,6 +125,41 @@ def quotient_check():
     return records
 
 
+def capped_energy_check():
+    # One four-edge SU(2) rotor, with a measured electric term and a magnetic
+    # term. Filtering annihilates the vacuum even for an uncentered insertion.
+    size, gamma, lam, t = 32, 0.25, 8., 0.25
+    n = np.arange(size)
+    electric = gamma*n*(n+2)
+    ident = np.eye(size)
+    W = lam*(ident-(np.eye(size, k=1)+np.eye(size, k=-1))/2)
+    H = np.diag(4*electric)+W
+    E, basis = eigh(H)
+    mu, V = eigh(W)
+    O = np.diag(electric)-0.3*W
+    v = basis.T @ (O @ basis[:,0])
+    x = np.exp(-t*(E-E[0]))
+    target = np.dot(abs(v)**2, x*(1-x)**2)
+    rows = []
+    for a, cap in ((1/64, 1.), (1/256, 3.), (1/1024, 8.), (1/4096, 20.)):
+        g = 1/(2*gamma*a)
+        kinetic = (ive(n+1, g)/ive(1, g))**4
+        M = (V*np.exp(-a*mu/2)) @ V.T
+        tau, U = eigh((M*kinetic) @ M)
+        observable = np.diag(np.minimum(electric, cap))-0.3*W
+        vcut = U.T @ (observable @ U[:,-1])
+        X = (np.clip(tau/tau[-1], 0., 1.))**round(t/a)
+        w = abs(vcut)**2
+        integral = np.dot(w, X*(1-X)**2)
+        readings = sum(c*np.dot(w, X**j) for j,c in ((1, 1), (2, -2), (3, 1)))
+        if abs(readings-integral) > 1e-12:
+            raise ValueError("three readings do not reproduce the cutoff filter")
+        rows.append([a, cap, float(readings), float(abs(target-readings))])
+    if target <= 0 or rows[-1][-1] > 1e-4 or rows[-1][-1] > rows[0][-1]/100:
+        raise ValueError("bounded energy insertion failed the rotor convergence control")
+    return {"dimension": size, "target": float(target), "time_cap_signal_error": rows}
+
+
 def recover(out):
     rows = {size: counts(size) for size in (2, 3, 4, 5)}
     left, mid, right = rows[2]
@@ -144,5 +180,6 @@ def recover(out):
     (out/"geometry").write_text(proof)
     record = {"magnetic_incidence_by_time_offset": rows, "tilt_three_row": str(q),
               "tilt_four_row": str(limiting), "endpoint_density": kernel_check(),
-              "finite_bridge": bridge_check(), "SO3_and_lift": quotient_check()}
+              "finite_bridge": bridge_check(), "SO3_and_lift": quotient_check(),
+              "capped_energy": capped_energy_check()}
     (out/"incidence.json").write_text(json.dumps(record, indent=2)+"\n")

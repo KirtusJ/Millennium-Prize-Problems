@@ -11,20 +11,24 @@ PCP desk after root exit
 Incidence worker supplied bytes 101810
 
 native/search serial excerpts
-Serial SHA-256 74fadc3df6dd9cf62fa4188b43c410f886813cda4c199f066980ddd28b8f2c4e
+Serial SHA-256 983a440b71836def6237b8f2ed1ff30c76c61d0a644e6e22df70ba7dc5146885
 running image (code and read-only data), SHA-256: 0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3 (measured; equal to the value the loader named)
-starting worker.elf (9064 bytes, SHA-256 e816793f826981ca45130fa6627be830a4fd19791c4acefabf75ad168042a57e)
-worker.elf ended DONE: exit 0 after 0 s; 7 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 258 pages at the end, 0 of them the display's, 0 both writable and executable; 264 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
+starting worker.elf (9064 bytes, SHA-256 7a85ec52c0b214d0b2796975a7d29d94ca2baadd4f115c4382be2945bda96b6c)
+worker.elf ended DONE: exit 0 after 0 s; 15 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 258 pages at the end, 0 of them the display's, 0 both writable and executable; 264 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
 Emulator exit 33 (checked by runner)
 
 assembly serial excerpts
-Serial SHA-256 e3b1f34ea4f09e4c415ba14eec8df2e22f5857676b64af7dfaabcaf5c353f77f
+Serial SHA-256 a9f2051ecac61b3784f875cae9aedc35be8158d3c661a297e8a212fed6a7ee7f
 running image (code and read-only data), SHA-256: 0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3 (measured; equal to the value the loader named)
 starting worker.elf (50120 bytes, SHA-256 1cb649a9954be008a7f74ada3fb1494f1949d7947b85bf221875c655ea59afcd)
-worker.elf ended DONE: exit 0 after 0 s; 151 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 268 pages at the end, 0 of them the display's, 0 both writable and executable; 274 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
+worker.elf ended DONE: exit 0 after 0 s; 185 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 268 pages at the end, 0 of them the display's, 0 both writable and executable; 274 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
 Emulator exit 33 (checked by runner)
 
-Matched assembled Lean source, 6427 bytes, SHA-256 a8f13300021699c0f5cadf06dbc3b15426495af43feacdf56052b12e808cb4d3
+Matched assembled Lean source, 8055 bytes, SHA-256 9fe9b942ca426aed3c62c109c1e249369d04e8f29370bdf2cdf652bd938ea18c
+'Millennium.YangMills.BlockedTime.capError' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.BlockedTime.threeReadings' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.BlockedTime.contractionProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.BlockedTime.filterPerturbation' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Millennium.YangMills.BlockedTime.crossingFace' depends on axioms: [propext]
 'Millennium.YangMills.BlockedTime.fourierBound' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Millennium.YangMills.BlockedTime.spatialShell' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -42,10 +46,11 @@ Matched assembled Lean source, 6427 bytes, SHA-256 a8f13300021699c0f5cadf06dbc3b
 
 First diagnostic in each rejected mutation
 Overmixing.lean:19:30: error: unsolved goals
-ReversedOrientation.lean:134:33: error: unsolved goals
+ZeroFilterNorm.lean:164:2: error: linarith failed to find a contradiction
+ReversedOrientation.lean:141:33: error: unsolved goals
 Overtilt.lean:40:42: error: linarith failed to find a contradiction
 ClosedEndpoint.lean:47:45: error: linarith failed to find a contradiction
-BadRate.lean:93:2: error: linarith failed to find a contradiction
+BadRate.lean:100:2: error: linarith failed to find a contradiction
 
 Numerical read-back
 {
@@ -152,5 +157,55 @@ Numerical read-back
       1.0048151745667901,
       -1.1070470859046445e-16
     ]
-  ]
+  ],
+  "capped_energy": {
+    "dimension": 32,
+    "target": 0.18805705912741422,
+    "time_cap_signal_error": [
+      [
+        0.015625,
+        1.0,
+        0.13669499497406712,
+        0.0513620641533471
+      ],
+      [
+        0.00390625,
+        3.0,
+        0.18463845661422906,
+        0.003418602513185154
+      ],
+      [
+        0.0009765625,
+        8.0,
+        0.18803890765909265,
+        1.8151468321569997e-05
+      ],
+      [
+        0.000244140625,
+        20.0,
+        0.18805282289150743,
+        4.236235906784902e-06
+      ]
+    ]
+  }
 }
+
+B4 fresh replay of A4's cf121b21 energy-density suite
+A4 EnergyDensity.lean SHA-256 e6ea17f293bd1b2b8e8180487eef603bf2515da68596dbd3b0cd1012651464cf
+'YangMills.EnergyDensity.coordinateCasimir' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.EnergyDensity.localDiagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.EnergyDensity.zeroRowForm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.EnergyDensity.bareCoefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.EnergyDensity.filterPoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.EnergyDensity.lowFilter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.EnergyDensity.highFilter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.EnergyDensity.restrictedFilter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.EnergyDensity.filteredTails' depends on axioms: [propext, Classical.choice, Quot.sound]
+side, maximum degree, maximum center distance (mesh units) 3 16 1.0
+side, maximum degree, maximum center distance (mesh units) 4 16 1.0
+side, maximum degree, maximum center distance (mesh units) 5 16 1.0
+synthetic coefficient, four Fourier errors 9.0 5.23802 1.32616 0.33259 0.0832133
+0 0 0 0
+1 0.0461539519 0.73846323 0.000461539519
+16 6.70552898 107.288464 0.0670552898
+256 513.439175 8215.02681 5.13439175
