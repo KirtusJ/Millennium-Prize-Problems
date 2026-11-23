@@ -60,6 +60,36 @@ theorem retainWeight {A D U M low band : ℝ} (ha : 0 < A) (hd : 0 < D)
     A^2/(8*D)=(A/2)/U := by rw [hu]; field_simp; ring
     _ ≤ band := (div_le_iff₀ u_pos).2 (by simpa [mul_comm] using hb)
 
+/-- Both extractions use the same upper endpoint and guaranteed weight. -/
+theorem combinedBand (μ : Set ℝ → ℝ) {a b u m : ℝ}
+    (ha : m ≤ μ (Set.Icc a u)) (hb : m ≤ μ (Set.Icc b u)) :
+    m ≤ μ (Set.Icc (max a b) u) := by
+  rcases le_total a b with h | h
+  · simpa [max_eq_right h] using hb
+  · simpa [max_eq_left h] using ha
+
+theorem crossover {κ B : ℝ} (hk : 0 < κ) (hB : 0 ≤ B) :
+    κ/18 ≤ (9*κ/(8*(1+B)))/16 ↔ B ≤ 17/64 := by
+  rw [div_div, le_div_iff₀ (by positivity)]
+  constructor
+  · intro h
+    by_contra! hc
+    nlinarith only [h, mul_pos hk (sub_pos.mpr hc)]
+  · intro hc
+    nlinarith only [mul_nonneg hk.le (sub_nonneg.mpr hc)]
+
+theorem budgetCrossover {g : ℝ} (hg : 0 ≤ g) :
+    min g (17*Real.sqrt g/8+3/16) ≤ 17/64 ↔ g ≤ 17/64 := by
+  constructor
+  · intro h
+    by_contra! hn
+    have hs : 1/2 < Real.sqrt g := by
+      by_contra! hh
+      have := mul_self_le_mul_self (Real.sqrt_nonneg g) hh
+      nlinarith [Real.sq_sqrt hg]
+    exact not_lt_of_ge h (lt_min hn (by linarith))
+  · exact fun h => (min_le_left _ _).trans h
+
 end YangMills.ElectricEndpoint
 #print axioms YangMills.ElectricEndpoint.varianceIdentity
 #print axioms YangMills.ElectricEndpoint.jointBudget
@@ -69,3 +99,6 @@ end YangMills.ElectricEndpoint
 #print axioms YangMills.ElectricEndpoint.normBound
 #print axioms YangMills.ElectricEndpoint.endpoint
 #print axioms YangMills.ElectricEndpoint.retainWeight
+#print axioms YangMills.ElectricEndpoint.combinedBand
+#print axioms YangMills.ElectricEndpoint.crossover
+#print axioms YangMills.ElectricEndpoint.budgetCrossover
