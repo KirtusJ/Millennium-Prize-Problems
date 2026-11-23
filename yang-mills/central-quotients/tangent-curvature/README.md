@@ -14,6 +14,7 @@ For one face $Y_p=\beta(1-\operatorname{tr}U_p/2)$ converges to $\chi^2_3/4$ wit
 | Exponential tails for the scaled Wilson action and convergence of its moments | [Reflection estimates on arbitrary sides](moments.md) |
 | A bounded two-plaquette difference with a distinct low-energy exponent of twelve | [Time correlations and spectral measures](dipole.md) |
 | What has been formally checked and what has a written proof | [Native PCP and independent controls](execution.md) |
+| What changes when all four periodic sides go to infinity together at fixed coupling? | A temporal-forest pressure estimate supplies the required mean and exponential bounds in each periodic limit state. A bounded spatial dipole then gives the vanishing lattice gap as $\beta\to\infty$. [Isotropic periodic limit](periodic-limit/README.md) |
 
 For the action and the two bounded observables, connected correlations at any fixed positive physical time tend to zero even after normalization by the variance or by the square of the mean. Their nonzero microscopic correlations have the lattice clock held fixed first. No rate for the physical-time limit is established here. The construction of an interacting continuum field with nonzero positive-time weight and a positive mass gap remains open.
 
