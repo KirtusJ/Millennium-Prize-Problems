@@ -1,0 +1,23 @@
+{
+ "values": {
+  "B4_beta_max": 0.05004172927849127,
+  "SZZ_b_max_d4": 0.020833333333333332,
+  "SZZ_coeff_ReTr_max_SU2_d4": 0.041666666666666664,
+  "convA_coeff": 0.05004172927849127,
+  "convB_coeff": 0.025020864639245636,
+  "ratio_convA": 1.2010015026837906,
+  "ratio_convB": 0.6005007513418953,
+  "AC_beta_min_Z2": 58.38629436111989,
+  "AC_beta_min_Z3": 78.92963276978163,
+  "AC_rate_at_threshold_Z2": 58.38629436111989,
+  "AC_rate_at_threshold_general": "(114+4 log|G|)/2 >= 57 per lattice unit"
+ },
+ "predicates": {
+  "C1": true,
+  "C2": true,
+  "C3": true,
+  "C4": true,
+  "C5": true,
+  "C6": true
+ }
+}

@@ -1,0 +1,2 @@
+check K47: exit 0 (expected 0) in 775598 ms | output 8e9fb0e4f56d | event 53 head f5905e5f6b11
+  C:/Users/donke/z4-workers/r11-flow/report.md — verdicts: 11 STANDS (3 of these hold only with a part not proved or with outside facts assumed), 2 DEFECT (my own finite-volume predicate failed; "√(8s)" is the wrong radius for the spatial flow), 1 OPEN (B3), 1 measured only (convergence as b → 0); predicates 87 met, 2 failed, 4 measured only; the proved energy window is valid but 10⁴–10⁵ times too wide to be useful as a number.

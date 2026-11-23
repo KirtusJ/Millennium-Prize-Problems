@@ -1,0 +1,6 @@
+[
+  {"label":"negative_variance","find":"p*(r-l)^2/2 ≤ ∫ x, (F x - z)^2 ∂μ := by","replace":"p*(r-l)^2 ≤ ∫ x, (F x - z)^2 ∂μ := by","diagnostic":"error:"},
+  {"label":"negative_energy","find":"ρ/(2-ρ) ≤ high := by","replace":"2*ρ/(2-ρ) ≤ high := by","diagnostic":"error:"},
+  {"label":"negative_band","find":"c/(2-c) ≤ weight := by","replace":"2*c/(2-c) ≤ weight := by","diagnostic":"error:"},
+  {"label":"negative_projection","find":"(triangle : bare ≤ flowed + distance) : 1/16 ≤ flowed^2 := by","replace":"(triangle : bare ≤ flowed + distance) : 1/8 ≤ flowed^2 := by","diagnostic":"error:"}
+]

@@ -1,0 +1,2 @@
+check K45: exit 0 (expected 0) in 330966 ms | output 1d65f4e79cae | event 51 head 25c1bf846f15
+  C:/Users/donke/z4-workers/r11-lit4/report.md — 13 items: 9 stand, 2 defects (the hep-lat/9605031 id and the plaquette citation), Lüscher not checked (fetch failed), 1 measured only; program predicates: 15 met, 1 failed, 3 measured only.

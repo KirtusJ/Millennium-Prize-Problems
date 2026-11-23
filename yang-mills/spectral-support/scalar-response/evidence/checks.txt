@@ -1,0 +1,196 @@
+Director D4 · separated Wilson scalar response · 23 November 2026
+
+1032 cumulative events, 507 admissions, every admission released. Previous 869 events identical.
+
+chain intact: 1032 events, head 2e25ec88aa025b4d7665d746150debf0e756113c1e87df5ab36eb5b85fe13a41
+guards replayed: 0 problem(s)
+The guards are those of pcpos 1.0.22. A register is read under the rules of the program that reads it: an event an earlier build accepted may be reported here, and its bytes are unchanged.
+register file SHA-256: 0f3e55e4d3e6228b4669389b12df89e4c5791845710ba3f3c353b0783cc974fe
+A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.
+
+
+Producing serial SHA-256
+5a0cd575dad9d2b4aa32e68a0376fd82946acce676143ff9e30598052d22d689  assemble.serial.txt
+857658ac3ced584b2ae3e362e2fa4eaa621c1aec036f8495005008241e989e31  factor.serial.txt
+5f6a9638f1df1964d7824b9dddb6fdd59b287efa9304de7d698ad3483194f53b  residues.serial.txt
+
+final-lean
+'Millennium.YangMills.D4.ScalarResponse.tilt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ScalarResponse.tiltCovariance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ScalarResponse.radialDerivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ScalarResponse.integratedResponse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ScalarResponse.firstRadialTerm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ScalarResponse.relativeSquare' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ScalarResponse.singleRadial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ScalarResponse.radialMatch' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ScalarResponse.sphereAtUnit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ScalarResponse.wilsonRelative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ScalarResponse.matchedRelative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ScalarResponse.separatedSign' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ScalarResponse.boxResidues' does not depend on any axioms
+'Millennium.YangMills.D4.ScalarResponse.triangleResidues' does not depend on any axioms
+'Millennium.YangMills.D4.ScalarResponse.crossNull' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ScalarResponse.timeFilter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ScalarResponse.spaceFilter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ScalarResponse.nullResidues' does not depend on any axioms
+
+
+cases-final
+sphere weights [1.0, 1.0, 1.0, 1.0, 1.0, 1.0] A 0.10416666666666667 extrapolation error 1.0581892032207607e-06
+sphere weights [0.7, 1.3, 2.0, 0.8, 1.2, 0.9] A 0.05840413843360124 extrapolation error 1.5570222024127722e-06
+5x1x1x1@0,2,4 R0 0.10314454838605827 Wilson R1 0.16823349373591834 matched R1 -0.03501020855703388
+7x1x1x1@1,3,5 R0 0.10302685637662684 Wilson R1 0.16819369021670766 matched R1 -0.03496493373204121
+7x1x1x1@0,2,6 R0 0.11008586122554496 Wilson R1 0.14045456352298055 matched R1 -0.028896452042409097
+5x2x1x1@0,2,4 R0 0.11085962974256883 Wilson R1 0.16440610137003514 matched R1 -0.03408243771272857
+2x2x2x2 corners R0 -0.5012146795097412 Wilson R1 -0.1869500211186036 matched R1 -0.08345109102855494
+Exact local and integrated responses, gauge-tree invariance and source controls passed.
+
+
+null-final
+relative source weights [0.16477115017235122, -0.6647969959293997, 1.0]
+unscaled integer-source T1 -2163371292976720482949353550804927043839127224389342806578453800923697620809658154768695067496088877/4603692617714223699086508340883662795288287602500
+variance-normalized Wilson response -8.301578440385579e-16 tree and both Abelian responses exactly zero
+relative response of endpoint covariance -0.0003065565536996879
+relative source weights [-0.0028104281023822687, -1.0, 0.7867963963123211]
+unscaled integer-source T1 -7595866708986133349925514852923774256656066516448911654132452424218337456027295247739774008610367794576603844597599118222823864840598170361883887274554984832203369925088476444227667367883942828569484871631711/7023473508862556476292922291336137141848111791430476531145544043817461010704000
+variance-normalized Wilson response -1.9638999334289654e-07 tree and both Abelian responses exactly zero
+relative response of endpoint covariance -0.03944515743044874
+
+
+words-final
+96 compact oriented words, maximum absolute cubic/quartic extrapolation error 1.903013068828285359e-08
+exact character sums of distinct face scores, extrapolation errors [-4.32050575073506e-08, -2.6633084807860252e-08]
+
+
+parts
+reverse False
+haar -3294482327720189/17741068526047932450 -0.00018569807804322147
+quartic 21555212399965457865621049903/359984731104779639260248000 59.87812964681396
+cubic -502947148413840353911619179541/8399643725778191582739120000 -59.87720013294307
+wilson 18743362972614416149495387/25198931177334574748217360000 0.0007438157928489173
+reverse True
+haar -38025098814331/657076612075849350 -5.787011455818121e-05
+quartic -80525863338563566253359/5714043350869518083496000 -0.014092623803127041
+cubic 375320685329655819396922177/25198931177334574748217360000 0.014894309710534138
+wilson 18743362972614416149495387/25198931177334574748217360000 0.0007438157928489173
+
+
+mutations
+reverse the tilt sign: rejected at tilt
+remove one explicit coupling: rejected at integratedResponse
+change the integrated slope: rejected at firstRadialTerm
+lose the circle improvement: rejected at radialMatch
+change the character sphere: rejected at sphereAtUnit
+alter a native Wilson pair: rejected at boxResidues
+force temporal Wilson null: rejected at timeFilter
+reverse transverse response: rejected at spaceFilter
+alter a native filtered residue: rejected at nullResidues
+
+
+peer-lean
+Try this: ring_nf
+'YangMills.StarOrders.geomFour' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StarOrders.separateModes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StarOrders.poleBudget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StarOrders.mixedStep' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StarOrders.mixedVanish' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StarOrders.squaredCoefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StarOrders.quarticTail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StarOrders.slowerLeak' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StarOrders.fourSources' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StarOrders.resolventFour' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StarOrders.momentBounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StarOrders.integratedError' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StarOrders.exponentError' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+
+peer-numeric
+rational interval for d 5285/8192 6439/8192
+independent radial quadrature: largest quadratic residual, quartic overlap 8.881413872538749e-16 0.014185498006779118
+d and distinct variances 0.7066242375573288 0.3533121187786644 0.43112525414755704
+order, step, covariance, scaled/target 1 1 0.0654634236 0.307143912
+order, step, covariance, scaled/target 1 8 1.46086816e-8 1.14993719
+order, step, covariance, scaled/target 1 64 7.58693416e-16 1.00195751
+order, step, covariance, scaled/target 1 256 1.15555358e-20 1.00012206
+order, step, covariance, scaled/target 2 1 8.5575892e-8 0.431280986
+order, step, covariance, scaled/target 2 8 9.30971841e-22 1.32064233
+order, step, covariance, scaled/target 2 64 2.51425924e-36 1.00391864
+order, step, covariance, scaled/target 2 256 5.83253951e-46 1.00024413
+order, step, covariance, scaled/target 3 1 5.60684225e-19 0.327163769
+order, step, covariance, scaled/target 3 8 5.5077148e-40 1.51767226
+order, step, covariance, scaled/target 3 64 7.73003629e-62 1.00588371
+order, step, covariance, scaled/target 3 256 2.73119673e-76 1.00036622
+damaged/undamaged covariance at n=24 1.16592956e+9
+large-step u,v amplitudes relative to analytic limits 1.0002136742733705 1.0000610269631371
+
+
+replay-scalar-response
+guest ELF fbef68827e33f0d6d7b988f427d998e79264b207f71103721cba20c416cad8d0
+Lean source e00513d0e0693aa0b7c6c745bcd56e96d8173377e0487e5f9818f68e6cb68e68 (13211 bytes)
+factor ba5cd2a66de8d8ac2686641086e01519c1c6f850a683f6964322e1ebc72f5cf3
+residues ccabcff85113fc52855df0262095ea2a6ab31459f0980741f32cc707e5331ea2
+assemble 74802dbc9144174bd6232dc0d9f0778bfb7506483ab198f3eba7cca4b45ff483
+
+
+replay-electric-slab
+guest ELF 5421565fe5e86cf5ee2929f527756c23ca55ce67165795af956b19afa251f5cf
+Lean source 459f0bcfdd4488208748fdbbd9bc087f18ce2e5778a4c86c3aa22dff8416f22e (6375 bytes)
+factor 0e8e2824d56337f924912513e4f8e893bee6928ccce4eb67242cbaa2d71eaf05
+faces 02d0c0258e02b93e7aa932b79811c326b00343834efbd65547e9f2d61f3c8044
+assemble 9f8494d6dc54c4f8504879d5140982f01d539282b731e2aba3a910b8cff960b6
+
+
+replay-ordinary-loop
+guest ELF 31ef074312c1e517cefab984318c0128e50242a89118fda5a0eb8963d68ec87b
+Lean source 886c0b6b0453e135ad1cd4df6ddb359af6f7a9b8f764001fc10f8eb4260fbdd1 (7272 bytes)
+factor b0c62194a6cbe1d2c54f391a51b94b6a1d2717699ae33e3ce869c1854788f9e0
+wick 8da7c435b2bbe6ef70650fc51294b081beeb0422a5039461e3becc174d76c7f4
+assemble 5b5dfc27950094b5e632d393523587ca6c06306ae18fe9c46ccf63b126a5d5aa
+
+
+replay-graph-holonomies
+guest ELF d6dc835b7ff0acf67d21882bf6106964d120861a9ea3f821c0e396496169efdc
+Lean source 988a04e72b0d28189958b60f586600607a6fca58e528b525f8e9e1a7772dd580 (9242 bytes)
+factor 2058602dd17809534143ea42074db5bcd5848607e8ca438913251349e3cb8d82
+words 6290faf2d439b4a5a3c29d9e3051157740bbdd6aa788f01d7adc2cefa000d2de
+assemble 21f16d938e3e2c1055d345c00ba5bde817a0109ea40421280c6db346a587f47b
+
+
+replay-electric-scale
+guest ELF 9a0c055625830f7377cbd54bbc3e4e2fa0e86d23df35bb5a471160673c69381c
+Lean source d8b44086b7234ac94b9d4acb4d71c868b8a888ddb3645d4ac0e3962295bcd792 (9001 bytes)
+factor b3dae08456150f928d746f141698c352bac98bce5d9616abd4854ebe2230fde4
+flux 60a8ec0a890fa88bc178beedb7b6436567787ad36695eac3c065b2e351d1a77d
+assemble 46c2e60b67b9fbf8a17756a3eb8f2db720910050051d97e3649f9681fdc56c9a
+
+
+replay-finite-readings
+guest ELF 974b4663a8f26a4b11868e967c4e0a3bda96b766e9b9d1a022113a180b71450d
+Lean source 029ce009e020212b7f7dbd45bcb574b80a7e831c2de8bf137eda55c9857aee68 (19442 bytes)
+factor 04de011dad7a9e8051e6f780ed74ffaae660cacbedb07a73d88574d621cc3d59
+moments cbd80b3d6d5a31a8c4a89b05081bebeec1b58f2133530293a45e00f7f0d1d084
+assemble ce2907b2c94f30f51a9ed33cbe32c8828c59301bde70553b6d9e11cc11ac24eb
+
+
+replay-adjoint
+guest ELF 215b28f7d03d4f722a75bc86123ecdb6966b1d9f9a49865ad1ff6b1e13d32128
+Lean source e03ee1d3bef8f6fca3b41b74e08c2f70bdbc524a63161a68633c0bdd1ecef508 (9637 bytes)
+factor dc98c6222a803f68b9b021a44dd26d89f31e8d9d3b79fadb3fdc2c9700a28f72
+divergence 21d5e3b187609cf713605b667fd99ac01e50531841a74c989d69c4cb49519176
+assemble 6c51081a0d2200ecbf7c8fc2d35bdc6197befe90caa0169a91b2bb8d42c63a60
+
+
+replay-difference
+guest ELF 81ee0657560726917fcae43810d3faac7e2827c2a3250bcff4a481369552d198
+Lean source 2002c660d00ff94e5714aa7e3f3c69fa8946181174dc518fbee21e13845ad6d8 (5873 bytes)
+factor 806e8008f78482f5671a25b34860e50befffee6cc60887541be2becc21d2915c
+square bcc54bf538498562ac87f01c96a0365abe5d76aa9eba8a03dd025721c8d33964
+assemble 24b3b6d67cda478953dc79ebc6d6fa1b88028e1735b371221066c07170f7525c
+
+
+replay-basic
+guest ELF aeb03ab77f4f9ca4ba7d877d55e55d76f1e02243b742acd9a552791dc29850b6
+Lean source 1fd54f3cb4f7bf54bfcdfbae55fd03c66e2cfe9f3f7282c9680087d9b605e391 (12919 bytes)
+factor 73b61fef218349f348b68985870e2bfcfe036ffbf74726161e5aec9a68cddd5e
+square 9e88ed34c572095490aabdb1e71412eabb147e898eafb22fbf46479c1b38e83b
+assemble 5a1e2d0e9c04c435f95a6327a6d2c54b4bd8ea7fc7a28187a7a8885699241de4

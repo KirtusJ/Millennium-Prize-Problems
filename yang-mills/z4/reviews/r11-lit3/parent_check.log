@@ -1,0 +1,4 @@
+check K46: exit 0 (expected 0) in 427185 ms | output 53becdbc3d61 | event 52 head 5c64ceee836e
+  Still running; I'll wait for its completion notification.
+  
+  C:\Users\donke\z4-workers\r11-lit3\report.md — 10 READ (one of them, L4, depends on B4's unstated Wilson normalization), 1 MISMATCH (1808.09896 is an unrelated NLP paper), 0 NOT FOUND; predicates 28 met, 2 failed, 18 measured only.

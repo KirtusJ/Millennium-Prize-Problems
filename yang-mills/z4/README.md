@@ -456,9 +456,42 @@ Counts, as met, failed, measured only: challenger 13, 0, 1 and its sub-agent 3, 
 
 Director, workers and sub-agents are one model family; this is not independent review, and a located statement is not a refereed reading.
 
-## Tenth round: the flow inside one time slice; the session restarted on Linux
 
-23 November 2026, second session (the Z4 session was restarted by the principal and now runs in a Linux container). Nine workers (register checks K3, K5, K8, K9, K11, K13, K15, K17, K18 of [`pcp/linux-23nov/register.jsonl`](pcp/linux-23nov/register.jsonl); the director's reruns and Lean compiles are the checks between and after them, to K23), each with a child started as its own headless session and a grandchild below it; eighteen registers, all verified in the Rust and Python hosts. Statement, theorems and record: [`fixed-size/SPATIAL_FLOW.md`](fixed-size/SPATIAL_FLOW.md). Measurement: [`fixed-size/MATCHED_MEASUREMENT.md`](fixed-size/MATCHED_MEASUREMENT.md). Literature: section 7 of [`LITERATURE.md`](LITERATURE.md).
+## Tenth round: the flowed observable proved in the free theory; third literature pass
+
+23 November 2026. Three workers (register checks K45, K46, K47), each with a sub-agent and its own register; all six replay. Reports: [`reviews/r11-flow/`](reviews/r11-flow/), [`reviews/r11-lit3/`](reviews/r11-lit3/), [`reviews/r11-lit4/`](reviews/r11-lit4/). The director reread the reports and recompiled the new Lean file (K48, exit 0, standard axioms). No text of any fetched paper is stored in this repository.
+
+### The spatially flowed, sharp-time observable
+
+[`fixed-size/FLOW_PROOF.md`](fixed-size/FLOW_PROOF.md), [`fixed-size/FLOW_STRUCTURE.md`](fixed-size/FLOW_STRUCTURE.md), [`lean/Z4YM/FlowWindow.lean`](lean/Z4YM/FlowWindow.lean).
+
+Free benchmark, proved in text with explicit constants (the pointwise maxima and the window step in Lean): for the spatial lattice flow at fixed flow time s > 0 (field multiplied by e^(−s·k̂²)), the centered smeared square of the flowed magnetic field has
+
+- equal-time variance between v₀ > 0 and V₀ < ∞ for all b ≤ b₀;
+- first and second energy moments bounded above uniformly in b;
+- hence at least v₀/2 of its spectral weight below 2M₁/v₀, uniformly in b.
+
+So for the flowed observable A4's original sharp-time conditions hold in the free theory with no Euclidean-time regularization. The bounds bracket the computed values in 18 of 18 cases and are loose (window edge 10⁵ to 10⁶ against a true scale of 35 to 70). The negative control at s = 0 reproduces the b⁻⁵ growth (exponent −5.0016). Convergence as b → 0 is measured, not proved. ⟨(B^s)²⟩ = 1/(48π²s²) in infinite volume for this convention; at ℓ = 1 the box value is lower by 0.1% to 3%, a power-law finite-volume effect of the massless field (the worker's predicate assumed an exponentially small effect and failed; kept). One wording defect of the brief: √(8s) is the radius of the four-dimensional flow; the spatial flow's is √(6s).
+
+Interacting lattice, structural, proved in text: the spatial Wilson flow of one time slice exists and is unique for all flow times on a finite lattice, is gauge covariant, does not increase the spatial action, and depends only on that slice's spatial links (checked numerically for SU(2) on a 4³ slice by the sub-agent, rerun, bytes identical). Consequently a gauge-invariant function of the flowed links of a slice is a bounded time-zero observable: the transfer matrix, reflection positivity and the spectral representation of its Euclidean-time correlator apply to it exactly as to an unflowed slice observable, given the standard positivity of the Wilson transfer matrix (assumed; attributed to Osterwalder–Seiler and Lüscher, neither read). The four-dimensional flow of the literature fails the last property. **Open, and stated as such:** whether the all-order perturbative finiteness proved by Lüscher and Weisz for the four-dimensional flow holds for the spatial flow; the worker names possible obstructions (anisotropic power counting, mixing of flowed magnetic with unflowed electric parts) and knows no result.
+
+This gives S6″ a form in which every ingredient except the estimate is in place on the interacting lattice: a bounded gauge-invariant time-zero observable of fixed physical size, with a positive spectral measure, for which the free theory satisfies the two-sided bounds. The estimate at weak coupling remains the whole difficulty.
+
+### Literature, third pass
+
+Section 7 of [`LITERATURE.md`](LITERATURE.md). In brief: Shen–Zhu–Zhu (2022) prove strong-coupling exponential decay for SU(N) in any dimension in infinite volume, overlapping B4's strong-coupling results; Adhikari–Cao (2022) prove exponential decay for finite groups in four dimensions at weak coupling with a lattice-unit rate growing like β, so a finite group has no Yang–Mills-type continuum trajectory in four dimensions; Cao–Chatterjee formulate three-dimensional existence through the heat-flowed action, the same object as S6″; the two-dimensional gap values of section 2 of this note are confirmed against the literature with no stray factor; Teper's string tensions give the matched couplings for a fixed-physical-size measurement. Three of the director's pointers were wrong or unreachable and are recorded; the plaquette values used as simulation controls remain unsourced.
+
+Counts, as met, failed, measured only: flow programs 87, 2, 4 (both failures the worker's own expectations about finite-volume effects); readers' programs 43, 3, 21 (failures: a title page with little text, and the two wrong identifiers).
+
+Director, workers and sub-agents are one model family; this is not independent review, and a located statement is not a refereed reading.
+
+Note on the copies under `reviews/r11-*`: the stored-object folders of the workers' registers are not copied (for the two readers they hold extraction logs), so those three registers replay on the working machine and not from this repository.
+
+## Eleventh round: a second Z4 session on Linux; the slice flow challenged, extended and measured
+
+23 November 2026. **Two Z4 sessions were running at once.** The principal started a refreshed Z4 session in a Linux container while the earlier session (the author of every round above) was still working; neither knew of the other until this round was merged onto the tenth. The two took up the same question independently in the same hour. What follows is the second session's work. Where it overlaps the tenth round it is a second derivation by a different worker, not a review of the first; the two agree where they meet (the free value 1/(48π²s²), bounds uniform in the spacing at time separation zero, bounded moments, the open status of perturbative finiteness for the slice flow). What the tenth round has and this one does not: the structural proof for the interacting lattice (`fixed-size/FLOW_STRUCTURE.md`), the window statement in Lean, the Shen–Zhu–Zhu and Adhikari–Cao sources. What this round adds: an independent reproduction of C4's positivity test, the wildcard's defect in S6″ (below), a rate of convergence (which the tenth round has as measured), a lower bound uniform in the volume, the analytic lemmas in Lean, a first matched measurement, and a repair of the Lean library. The tenth round's last paragraph ("this gives S6″ a form in which every ingredient except the estimate is in place") needs the qualification found here: with the slice flow the observable is the magnetic density, not ¼G·G.
+
+The second session used nine workers (register checks K3, K5, K8, K9, K11, K13, K15, K17, K18 of [`pcp/linux-23nov/register.jsonl`](pcp/linux-23nov/register.jsonl); the director's reruns and Lean compiles are the checks between and after them, to K23), each with a child started as its own headless session and a grandchild below it; eighteen registers, all verified in the Rust and Python hosts. Statement, theorems and record: [`fixed-size/SPATIAL_FLOW.md`](fixed-size/SPATIAL_FLOW.md). Measurement: [`fixed-size/MATCHED_MEASUREMENT.md`](fixed-size/MATCHED_MEASUREMENT.md). Literature: section 8 of [`LITERATURE.md`](LITERATURE.md).
 
 In brief:
 

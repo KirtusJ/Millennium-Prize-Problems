@@ -1,0 +1,14 @@
+[
+  {
+    "label": "negative_seam",
+    "find": "(d+1)*(s+1)*l + s + d*s + (d+1) =",
+    "replace": "(d+1)*(s+1)*l + (s+1) + d*s + (d+1) =",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_sign",
+    "find": "form < -m₂/6 ∧ form < 0 := by",
+    "replace": "form < -m₂/6 ∧ 0 < form := by",
+    "diagnostic": "error:"
+  }
+]

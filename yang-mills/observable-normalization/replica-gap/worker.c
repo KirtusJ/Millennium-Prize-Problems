@@ -1,0 +1,183 @@
+/* A bounded proof-template worker for the PCP OS user ABI. ROLE selects a subgoal. */
+#ifndef ROLE
+#error ROLE required
+#endif
+__attribute__((used)) static volatile int worker_role = ROLE + 1;
+static long sys(long n,long a,long b,long c) {
+    long result;
+    __asm__ volatile("syscall":"=a"(result):"a"(n),"D"(a),"S"(b),"d"(c):"rcx","r11","memory");
+    return result;
+}
+static void emit(const char *s) {
+    unsigned len=0;
+    while(s[len]) ++len;
+    while(len){
+        long k=sys(1,1,(long)s,len);
+        if(k<=0 || (unsigned long)k>len){sys(60,1,0,0);__builtin_unreachable();}
+        len-=(unsigned)k;s+=k;
+    }
+}
+__attribute__((used,noreturn)) static void run(void) {
+#if ROLE == 0
+    emit("A4 CHILD spectrum\n");
+    emit("A4 LEAN import Mathlib.Analysis.SpecialFunctions.Integrals\n");
+    emit("A4 LEAN import Mathlib.Tactic.Linarith\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN open scoped BigOperators\n");
+    emit("A4 LEAN namespace YangMills.ReplicaGap\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN /-- Second elementary symmetric polynomial of the spectral weights. -/\n");
+    emit("A4 LEAN def pairs : List ℝ → ℝ\n");
+    emit("A4 LEAN   | [] => 0\n");
+    emit("A4 LEAN   | a :: rest => a * rest.sum + pairs rest\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN theorem exteriorTrace (s : List ℝ) :\n");
+    emit("A4 LEAN     2 * pairs s = s.sum^2 - (s.map (fun a => a^2)).sum := by\n");
+    emit("A4 LEAN   induction s with\n");
+    emit("A4 LEAN   | nil => simp [pairs]\n");
+    emit("A4 LEAN   | cons a r ih =>\n");
+    emit("A4 LEAN     simp only [pairs, List.sum_cons, List.map_cons]\n");
+    emit("A4 LEAN     nlinarith only [ih]\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN theorem momentUpper {ι : Type*} (s : Finset ι) (f : ι → ℝ) (m : ℝ)\n");
+    emit("A4 LEAN     (pos : ∀ i ∈ s, 0 ≤ f i) (top : ∀ i ∈ s, f i ≤ m) :\n");
+    emit("A4 LEAN     ∑ i ∈ s, (f i)^2 ≤ m * ∑ i ∈ s, f i := by\n");
+    emit("A4 LEAN   rw [Finset.mul_sum]\n");
+    emit("A4 LEAN   exact Finset.sum_le_sum fun i hi => by\n");
+    emit("A4 LEAN     simpa [pow_two] using mul_le_mul_of_nonneg_right (top i hi) (pos i hi)\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN theorem momentLower {ι : Type*} (s : Finset ι) (f : ι → ℝ) {k : ι} (hk : k ∈ s) :\n");
+    emit("A4 LEAN     (f k)^2 ≤ ∑ i ∈ s, (f i)^2 :=\n");
+    emit("A4 LEAN   Finset.single_le_sum (fun i _ => sq_nonneg (f i)) hk\n");
+#elif ROLE == 1
+    emit("A4 CHILD limit\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN /-- a is the largest normalized weight; b is the largest normalized pair.\n");
+    emit("A4 LEAN The last two hypotheses are the moment inequalities on unordered pairs. -/\n");
+    emit("A4 LEAN theorem thermalBracket {a b p q : ℝ} (ha : 0 < a) (hp : 0 < p) (hp1 : p < 1)\n");
+    emit("A4 LEAN     (hq : q ≤ 1) (hpa : p ≤ a) (hap : a^2 ≤ p)\n");
+    emit("A4 LEAN     (pairTop : p^2*(1-q) ≤ (1-p)*b) (pairSq : b^2 ≤ p^2*((1-q)/2)) :\n");
+    emit("A4 LEAN     p*(1-q)/(1-p) ≤ b/a^2 ∧ b/a^2 ≤ Real.sqrt ((1-q)/2)/p := by\n");
+    emit("A4 LEAN   have hd : 0 ≤ (1-q)/2 := by linarith\n");
+    emit("A4 LEAN   have hs := Real.sq_sqrt hd\n");
+    emit("A4 LEAN   have ht := Real.sqrt_nonneg ((1-q)/2)\n");
+    emit("A4 LEAN   constructor\n");
+    emit("A4 LEAN   · apply (div_le_div_iff₀ (by linarith : 0 < 1-p) (sq_pos_of_pos ha)).2\n");
+    emit("A4 LEAN     calc\n");
+    emit("A4 LEAN       p*(1-q)*a^2 ≤ p*(1-q)*p :=\n");
+    emit("A4 LEAN         mul_le_mul_of_nonneg_left hap (mul_nonneg hp.le (sub_nonneg.mpr hq))\n");
+    emit("A4 LEAN       _ ≤ b*(1-p) := by linarith only [pairTop]\n");
+    emit("A4 LEAN   · have hb : b ≤ p*Real.sqrt ((1-q)/2) := by\n");
+    emit("A4 LEAN       by_contra! h\n");
+    emit("A4 LEAN       have hz := mul_self_lt_mul_self (mul_nonneg hp.le ht) h\n");
+    emit("A4 LEAN       nlinarith only [hz, pairSq, congrArg (fun t : ℝ => p^2*t) hs]\n");
+    emit("A4 LEAN     apply (div_le_div_iff₀ (sq_pos_of_pos ha) hp).2\n");
+    emit("A4 LEAN     calc\n");
+    emit("A4 LEAN       b*p ≤ (p*Real.sqrt ((1-q)/2))*p := mul_le_mul_of_nonneg_right hb hp.le\n");
+    emit("A4 LEAN       _ = Real.sqrt ((1-q)/2)*p^2 := by ring\n");
+    emit("A4 LEAN       _ ≤ Real.sqrt ((1-q)/2)*a^2 :=\n");
+    emit("A4 LEAN         mul_le_mul_of_nonneg_left (pow_le_pow_left₀ hp.le hpa 2) ht\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN noncomputable def swapDeficit (a b : ℝ) : ℝ := (a-b)^2/(a^2+b^2)\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN theorem swapBounds {a b : ℝ} (ha : 0 ≤ a) (hb : 0 ≤ b) :\n");
+    emit("A4 LEAN     0 ≤ swapDeficit a b ∧ swapDeficit a b ≤ 1 := by\n");
+    emit("A4 LEAN   unfold swapDeficit\n");
+    emit("A4 LEAN   constructor\n");
+    emit("A4 LEAN   · positivity\n");
+    emit("A4 LEAN   · by_cases h : a^2+b^2 = 0\n");
+    emit("A4 LEAN     · simp [h]\n");
+    emit("A4 LEAN     · apply (div_le_one (lt_of_le_of_ne (by positivity) (Ne.symm h))).2\n");
+    emit("A4 LEAN       nlinarith only [mul_nonneg ha hb]\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN theorem swapIdentity (a b : ℝ) : (a^2+b^2)*swapDeficit a b = (a-b)^2 := by\n");
+    emit("A4 LEAN   by_cases h : a^2+b^2 = 0\n");
+    emit("A4 LEAN   · have ha : a = 0 := by nlinarith [sq_nonneg a, sq_nonneg b]\n");
+    emit("A4 LEAN     have hb : b = 0 := by nlinarith [sq_nonneg a, sq_nonneg b]\n");
+    emit("A4 LEAN     simp [ha,hb,swapDeficit]\n");
+    emit("A4 LEAN   · unfold swapDeficit\n");
+    emit("A4 LEAN     field_simp\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN /-- Sum the pointwise identity under a measure-preserving exchange of endpoints. -/\n");
+    emit("A4 LEAN theorem swapExpectation {ι : Type*} [Fintype ι] (a b : ι → ℝ)\n");
+    emit("A4 LEAN     (ex : ∑ i, a i^2*swapDeficit (a i) (b i) = ∑ i, b i^2*swapDeficit (a i) (b i))\n");
+    emit("A4 LEAN     (mass : ∑ i, b i^2 = ∑ i, a i^2) :\n");
+    emit("A4 LEAN     ∑ i, a i^2*swapDeficit (a i) (b i) = (∑ i, a i^2) - ∑ i, a i*b i := by\n");
+    emit("A4 LEAN   have h : ∀ i, a i^2*swapDeficit (a i) (b i) + b i^2*swapDeficit (a i) (b i) =\n");
+    emit("A4 LEAN       a i^2+b i^2-2*(a i*b i) := fun i => by\n");
+    emit("A4 LEAN     rw [← add_mul, swapIdentity]; ring\n");
+    emit("A4 LEAN   have eqn := Finset.sum_congr (rfl : Finset.univ = (Finset.univ : Finset ι)) (fun i _ => h i)\n");
+    emit("A4 LEAN   simp only [Finset.sum_add_distrib, Finset.sum_sub_distrib, ← Finset.mul_sum] at eqn\n");
+    emit("A4 LEAN   linarith only [eqn,ex,mass]\n");
+#elif ROLE == 2
+    emit("A4 LEAN \n");
+    emit("A4 LEAN theorem purityMagneticError {h k v : ℝ} (hv : 0 ≤ v)\n");
+    emit("A4 LEAN     (hh : 0 ≤ h) (hu : h ≤ 24*v) (hk : 0 ≤ k) (ku : k ≤ 96*v) :\n");
+    emit("A4 LEAN     |k-2*h| ≤ 96*v := abs_le.mpr ⟨by linarith, by linarith⟩\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN theorem vacuumCurvature {r s : ℝ} (hr : r ≠ 1) :\n");
+    emit("A4 LEAN     s*(1+r)/2 + 2*((1+r)/2)^2*s/(1-r) = s*(1+r)/(1-r) := by\n");
+    emit("A4 LEAN   have h : 1-r ≠ 0 := sub_ne_zero.mpr (Ne.symm hr)\n");
+    emit("A4 LEAN   field_simp\n");
+    emit("A4 LEAN   ring\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN /-- In the SU(2) electric vacuum the two-copy plaquette differences have\n");
+    emit("A4 LEAN second moment two and fourth moment ten. Here d is the first multiplicity. -/\n");
+    emit("A4 LEAN theorem electricRelativeVariance {d : ℝ} (hd : d ≠ 0) :\n");
+    emit("A4 LEAN     (100*d + 6*(d*(d-1)/2)*16)/(4*d)^2 - 1 = 2+13/(4*d) := by\n");
+    emit("A4 LEAN   field_simp\n");
+    emit("A4 LEAN   ring\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN /-- Positive weights on a regular graph bound its quadratic form and the\n");
+    emit("A4 LEAN constant vector attains that bound. -/\n");
+    emit("A4 LEAN theorem regularGraphTop {ι : Type*} [Fintype ι] (w : ι → ι → ℝ) (v : ι → ℝ) (d : ℝ)\n");
+    emit("A4 LEAN     (pos : ∀ i j, 0 ≤ w i j) (rowSum : ∀ i, ∑ j, w i j = d)\n");
+    emit("A4 LEAN     (colSum : ∀ j, ∑ i, w i j = d) :\n");
+    emit("A4 LEAN     ∑ i, ∑ j, w i j*(v i*v j) ≤ d*∑ i, (v i)^2 := by\n");
+    emit("A4 LEAN   have major : ∀ i j, w i j*(2*(v i*v j)) ≤ w i j*((v i)^2+(v j)^2) :=\n");
+    emit("A4 LEAN     fun i j => mul_le_mul_of_nonneg_left (by nlinarith [sq_nonneg (v i-v j)]) (pos i j)\n");
+    emit("A4 LEAN   have h := Finset.sum_le_sum (s := Finset.univ) (fun i _ =>\n");
+    emit("A4 LEAN     Finset.sum_le_sum (s := Finset.univ) (fun j _ => major i j))\n");
+    emit("A4 LEAN   have rows : ∑ i, ∑ j, w i j*(v i)^2 = d*∑ i, (v i)^2 := by\n");
+    emit("A4 LEAN     simp_rw [← Finset.sum_mul, rowSum, Finset.mul_sum]\n");
+    emit("A4 LEAN   have cols : ∑ i, ∑ j, w i j*(v j)^2 = d*∑ i, (v i)^2 := by\n");
+    emit("A4 LEAN     rw [Finset.sum_comm]\n");
+    emit("A4 LEAN     simp_rw [← Finset.sum_mul, colSum, Finset.mul_sum]\n");
+    emit("A4 LEAN   simp_rw [mul_add, Finset.sum_add_distrib] at h\n");
+    emit("A4 LEAN   have twice : ∀ i j, w i j*(2*(v i*v j)) = 2*(w i j*(v i*v j)) := by\n");
+    emit("A4 LEAN     intros; ring\n");
+    emit("A4 LEAN   simp_rw [twice, ← Finset.mul_sum] at h\n");
+    emit("A4 LEAN   linarith only [h, rows, cols]\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN theorem resolventTangent {r k m : ℝ} (hk : r ≠ k) (hm : r ≠ m) :\n");
+    emit("A4 LEAN     (r+k)/(r-k) - (r+m)/(r-m) - 2*r*(k-m)/(r-m)^2 =\n");
+    emit("A4 LEAN       2*r*(k-m)^2/((r-k)*(r-m)^2) := by\n");
+    emit("A4 LEAN   have h₁ := sub_ne_zero.mpr hk\n");
+    emit("A4 LEAN   have h₂ := sub_ne_zero.mpr hm\n");
+    emit("A4 LEAN   field_simp\n");
+    emit("A4 LEAN   ring\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN /-- Vacuum subtraction and the constant mode of the plaquette adjacency. -/\n");
+    emit("A4 LEAN theorem bandCurvature (d degree c g f₂ : ℝ) :\n");
+    emit("A4 LEAN     d*c/4 - ((-c+f₂+(d-1-degree)*c+degree*g)/4 + degree*(g-c)/4)\n");
+    emit("A4 LEAN       = (2*c-f₂-2*degree*(g-c))/4 := by ring\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN end YangMills.ReplicaGap\n");
+    emit("A4 LEAN #print axioms YangMills.ReplicaGap.exteriorTrace\n");
+    emit("A4 LEAN #print axioms YangMills.ReplicaGap.momentUpper\n");
+    emit("A4 LEAN #print axioms YangMills.ReplicaGap.momentLower\n");
+    emit("A4 LEAN #print axioms YangMills.ReplicaGap.thermalBracket\n");
+    emit("A4 LEAN #print axioms YangMills.ReplicaGap.swapBounds\n");
+    emit("A4 LEAN #print axioms YangMills.ReplicaGap.swapIdentity\n");
+    emit("A4 LEAN #print axioms YangMills.ReplicaGap.swapExpectation\n");
+    emit("A4 LEAN #print axioms YangMills.ReplicaGap.purityMagneticError\n");
+    emit("A4 LEAN #print axioms YangMills.ReplicaGap.vacuumCurvature\n");
+    emit("A4 LEAN #print axioms YangMills.ReplicaGap.electricRelativeVariance\n");
+    emit("A4 LEAN #print axioms YangMills.ReplicaGap.regularGraphTop\n");
+    emit("A4 LEAN #print axioms YangMills.ReplicaGap.resolventTangent\n");
+    emit("A4 LEAN #print axioms YangMills.ReplicaGap.bandCurvature\n");
+#endif
+    emit("A4 FINISHED\n");
+    sys(60,0,0,0);__builtin_unreachable();
+}
+__asm__(".global _start\n_start:\nandq $-16,%rsp\ncall run\nud2");

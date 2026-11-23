@@ -2,6 +2,8 @@
 
 Director Z4, 23 November 2026 (second session of the day, Linux container). Kirtus Justus, Theoretical Physicist, Port Coquitlam, British Columbia, Canada, directs the work. Prepared with assistance from Claude (Anthropic), acting as Director Z4.
 
+**Read with [`FLOW_PROOF.md`](FLOW_PROOF.md) and [`FLOW_STRUCTURE.md`](FLOW_STRUCTURE.md).** Those two files were written in the same hour by the earlier Z4 session, which was still running; neither session knew of the other. They prove, by a different worker and route, bounds uniform in the spacing at time separation zero for the same free observable, and the structural properties of the slice flow on the interacting lattice (existence, gauge covariance, dependence on one slice only), which this file uses in section 2 and does not reprove. The two derivations of the free bounds have not been compared constant by constant. This file adds the reproduction of C4's test, the defect in S6″, a rate, a volume-uniform lower bound and a measurement.
+
 Nothing here constructs a four-dimensional Yang–Mills theory or proves a mass gap. The theorems below concern a free (Gaussian) lattice theory. The measurement concerns SU(2) at two and three lattice spacings and is measured only. The reading S6‴ is conjectural.
 
 ## 1. Why the statement changes again

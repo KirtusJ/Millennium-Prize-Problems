@@ -61,4 +61,6 @@ Let $K(n)$ be the single-color $6\times6$ cross-covariance between the signed fa
 
 The same finite-cutoff transfer insertion can be read using one bounded function of the sum of the six ordinary plaquette traces. Its conditional error is minimized among readings of that scalar and its weak-coupling noise has an explicit coefficient. [Reconstruction and equal-time variance](../star-reconstruction/)
 
+At fully alternating spatial momentum the leading reading vanishes by face incidence. A position-space calculation independently recovers B4’s quadratic coefficient around that momentum and identifies a nonlinear correction that carries positive tangent weight there. [Alternating Wilson star](staggered/)
+
 [Time kernel, physical-time selection and spectral consequences](positive-time.md) · [Execution and negative controls](execution.md)
