@@ -1,0 +1,143 @@
+D4 adjoint plaquette, 2026-11-22
+
+Lean 4.19.0, mathlib c44e0c8ee63ca166450922a373c7409c5d26b00b
+'Millennium.YangMills.D4.Adjoint.scoreMultiplier' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.Adjoint.adjointFirstMoment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.Adjoint.crossCharacterIdentity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.Adjoint.squareCommutator' depends on axioms: [propext]
+'Millennium.YangMills.D4.Adjoint.adjointGraphNorm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.Adjoint.magneticCount' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.Adjoint.quadraticMinorant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.Adjoint.quadraticBand' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.Adjoint.massCapBand' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.Adjoint.improvedBand' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.Adjoint.jointSelection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.Adjoint.prescribedDiagonalFails' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.Adjoint.sphericalDivergence' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+Fresh measured replay with the shared driver (serial hashes refer to the separate replay).
+guest ELF 215b28f7d03d4f722a75bc86123ecdb6966b1d9f9a49865ad1ff6b1e13d32128
+Lean source e03ee1d3bef8f6fca3b41b74e08c2f70bdbc524a63161a68633c0bdd1ecef508 (9637 bytes)
+factor 0558d636115f0671a3bb2000af34ae2f503ae48e957e3e3174c3a6f48304f01b
+divergence b08f64980af9a06adc811f36aab64a33072cf51500db328dcee616c48aff597b
+assemble a49c40525b69673f771a87f2d1c1c5c1c73d22b66945345da069cf4472159c62
+
+Initial admitted run, SHA-256.
+2ca140ae7f03b47b1a213109411ca4b2a704d84dd1c614c2739d21813226f443  factor.serial
+4a8a97d1427b912a32b45a710e89de309a9a4224c7a81075cbfb75f6504e133e  divergence.serial
+bc962cd5ac390179075b8e82adc1c7c9fd6d4521c3f9b34ffc16b2e93fbdfde6  assemble.serial
+03a8dfd0eafc7079dade6653c6e50078b38ae800342c2919f7a8fab6e4dc3b99  factor.out
+2db0f74515489b963c4a80e27bcfd95db40bb12df768279241f21356fb9de3fa  certificate
+215b28f7d03d4f722a75bc86123ecdb6966b1d9f9a49865ad1ff6b1e13d32128  d4.elf
+e03ee1d3bef8f6fca3b41b74e08c2f70bdbc524a63161a68633c0bdd1ecef508  AdjointBand.lean
+
+Regression replay of D4 positive-time and vacuum guest modes.
+guest ELF aeb03ab77f4f9ca4ba7d877d55e55d76f1e02243b742acd9a552791dc29850b6
+Lean source 1fd54f3cb4f7bf54bfcdfbae55fd03c66e2cfe9f3f7282c9680087d9b605e391 (12919 bytes)
+factor bd0061e836583cfbf87fa49bc94ccf672a2bb8e8250dacc195f9a8f81441feb9
+square 81f303469ff3709e9b11a27de352b4dde886285c70e3bec8deeb21e527a08b3e
+assemble 7f8788353e8b01fe4612ae34943fda923353e72ffa816b2520fca8f913bed83d
+guest ELF 81ee0657560726917fcae43810d3faac7e2827c2a3250bcff4a481369552d198
+Lean source 2002c660d00ff94e5714aa7e3f3c69fa8946181174dc518fbee21e13845ad6d8 (5873 bytes)
+factor de1ff82ce2fdb967dcb884295543fd19fa4977c16a25750722eda2dcfab20d0b
+square 661018820b8cb521be6f6ad796c4993102c64246c801e27b5e13aaea7d8b5b07
+assemble 87cdf5e4a7b937e04226ff210b415e9d9092755e2d598dd36544add204e3341d
+
+Adversarial Lean reruns: one false statement per fresh complete source.
+divergence 1 negative-divergence.lean:177:64: error: unsolved goals
+weight 1 negative-weight.lean:105:63: error: linarith failed to find a contradiction
+time 1 negative-time.lean:168:2: error: unsolved goals
+score 1 negative-score.lean:29:2: error: linarith failed to find a contradiction
+
+Quaternion geometry, local spectrum, cross-character sum rule and window checks.
+period 3: 12 single-edge neighbors, max residual 9.884e-09, sign control 3.409
+period 4: 12 single-edge neighbors, max residual 9.304e-09, sign control 3.757
+rotor g=0, characters 72/120: M1=8.00000000, M2=64.00000000, mass=1.00000000, chain residual=0.00e+00
+rotor g=1, characters 72/120: M1=8.18370033, M2=66.11625041, mass=1.04423952, chain residual=4.97e-15
+rotor g=16, characters 72/120: M1=11.49825027, M2=141.58090689, mass=1.02070898, chain residual=1.45e-11
+rotor g=256, characters 72/120: M1=6.43505186, M2=286.36784761, mass=0.14545139, chain residual=2.78e-12
+rotor g=4096, characters 72/120: M1=1.97969082, M2=356.12319207, mass=0.01100896, chain residual=1.93e-11
+rotor g=65536, characters 120/160: M1=0.52125176, M2=376.79035857, mass=0.00072112, chain residual=5.64e-10
+Diagnostic at g=65536, 72 characters: chain residual 2.095955669e-4. Increasing the independent cutoffs to 120/160 restored the unchanged 1e-8 tolerance.
+
+Independent host replays: B4 HamiltonianTime, C4 LocalResponse, A4 ExcitedBand, A4 CubicMoment. Each SHA-1 line is the source git blob. The final numerical rows are A4’s two rotor programs.
+088025a03514294ceb4e1e23a1dd108b69e86a35
+'Millennium.YangMills.HamiltonianTime.electricSmearing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.HamiltonianTime.polarTrial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.HamiltonianTime.weakLower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.HamiltonianTime.casimirCoefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.HamiltonianTime.cycleProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.HamiltonianTime.rangeSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.HamiltonianTime.rescale' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.HamiltonianTime.blockUnitGap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.HamiltonianTime.faceLeak' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.HamiltonianTime.localWitness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.HamiltonianTime.tangentPoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+51eecb0a4152def4b576f336d9cd5ed2ea6c411f
+'YangMills.CentralQuotient.LocalResponse.lateralCensus' depends on axioms: [propext]
+'YangMills.CentralQuotient.LocalResponse.cubeParityAverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.CentralQuotient.LocalResponse.conditionalSlope' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.CentralQuotient.LocalResponse.transmissionBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.CentralQuotient.LocalResponse.signedChannelExample' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMills.CentralQuotient.LocalResponse.centerSquareSums' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.CentralQuotient.LocalResponse.cubicCenterSquareSum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMills.CentralQuotient.LocalResponse.zeroFieldSharp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.CentralQuotient.LocalResponse.stripPropagation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.CentralQuotient.LocalResponse.endpointCovariance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.CentralQuotient.LocalResponse.twoStepDifference' depends on axioms: [propext]
+'YangMills.CentralQuotient.LocalResponse.twoStepEnergy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.CentralQuotient.LocalResponse.fluxDerivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.CentralQuotient.LocalResponse.fibreSeparation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.CentralQuotient.LocalResponse.deckSumFixes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.CentralQuotient.LocalResponse.gradientSeparation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.CentralQuotient.LocalResponse.torusRelations' depends on axioms: [propext]
+846e4d836dca75b165ab5ee2fcd2ccd8a85ae053
+'YangMills.ExcitedBand.scoreFloor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ExcitedBand.pointBand' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ExcitedBand.momentWindow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ExcitedBand.windowWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ExcitedBand.differenceKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ExcitedBand.integratedDifference' depends on axioms: [propext, Classical.choice, Quot.sound]
+42b11805dcd20b9d2449a2dfbc8b0ff5d6507dd0
+'YangMills.CubicMoment.kineticDouble' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.CubicMoment.localThird' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.CubicMoment.momentInterpolation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.CubicMoment.smallLoss' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.CubicMoment.largeLoss' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.CubicMoment.uniformSecond' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.CubicMoment.numericCeiling' depends on axioms: [propext, Classical.choice, Quot.sound]
+0 3 9 1 0.150809061
+1 2.95385292 9.35980118 0.942197855 0.148799466
+16 1.67638225 17.0780627 0.166632846 0.0456209191
+256 0.501405445 22.0782287 0.0113945112 0.00014010977
+0 3 9 27 27 0
+1 2.95385292 9.35980118 30.4584762 29.1766457 1.28183048
+16 1.67638225 17.0780627 178.019628 111.979673 66.0399554
+256 0.501405445 22.0782287 973.409386 514.824847 458.584539
+4096 0.130757283 23.5070377 4226.33057 2142.68736 2083.64322
+
+B4 JointCutoff; git blob 9dcbd206b5b9965c83fd408a0c389b26250f455d.
+'Millennium.YangMills.JointCutoff.commonPotential' depends on axioms: [propext]
+'Millennium.YangMills.JointCutoff.commonPotentialNorm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.JointCutoff.wilsonResolventError' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.JointCutoff.gapError' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.JointCutoff.ratioFromScore' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.JointCutoff.kineticBounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.JointCutoff.productBounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.JointCutoff.freeResolvent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.JointCutoff.energyFromResolvent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.JointCutoff.logLift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.JointCutoff.combinedError' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.JointCutoff.sandwichControl' depends on axioms: [propext, Classical.choice, Quot.sound]
+40 noncommuting 5x5 pairs; ordered residual 2.309e-13; reversed residual 4.007e-05; max shift-factor norm/envelope 1.000000000
+
+PCP OS final copy, 193-event prefix identical to the previous vacuum register.
+chain intact: 266 events, head 69c5b9903568eeac494d3c70c2dcc683d16c101ed01df8306a543282746d0ffc
+guards replayed: 0 problem(s)
+The guards are those of pcpos 1.0.22. A register is read under the rules of the program that reads it: an event an earlier build accepted may be reported here, and its bytes are unchanged.
+register file SHA-256: 68509855af095bc844bdf6c9d0fa290c84e511b94f616300d6da413acfc231d3
+A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.

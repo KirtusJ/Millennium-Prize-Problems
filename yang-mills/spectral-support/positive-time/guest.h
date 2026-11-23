@@ -27,6 +27,9 @@ static void copy_source(const char *name) {
     }
     if (os(3, fd, 0, 0)) finish(2);
 }
+#ifdef D4_ADJOINT_BAND
+#include "../adjoint-band/guest.h"
+#else
 __attribute__((used,noreturn)) static void run(void) {
     long fd = open_input("request");
     unsigned char stage;
@@ -101,3 +104,4 @@ __attribute__((used,noreturn)) static void run(void) {
     flush();
     finish(0);
 }
+#endif
