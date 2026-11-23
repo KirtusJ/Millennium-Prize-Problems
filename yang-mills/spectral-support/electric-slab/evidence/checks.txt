@@ -1,0 +1,191 @@
+Director D4 · electric slab and energy–momentum measures · 23 November 2026
+
+869 cumulative register events, 426 admissions, all matched by releases. Previous 720 events identical.
+
+chain intact: 869 events, head 7d57ffd0d2ad553120c320a3105d313c80f5f981a0944e71f74cff22df5a1f74
+guards replayed: 0 problem(s)
+The guards are those of pcpos 1.0.22. A register is read under the rules of the program that reads it: an event an earlier build accepted may be reported here, and its bytes are unchanged.
+register file SHA-256: f234d166e3ea91afe84952c2269489bbb17b963d394fb9cd401d9afd26fd64ee
+A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.
+
+
+SHA-256 of original producing serial transcripts
+e014ae41a3cccd6f1e13f9311a535b049511e00fd138629a3afa5f4303b284a0  assemble.serial.txt
+ae222cd20540f40a087473f285f54b8a34c93765ae857fdb1a85c6db984db78c  faces.serial.txt
+93681f68ff22f1a0679da6f4604c5b0350c1ec6f00b3688a7ed5976b8a0040ed  factor.serial.txt
+
+lean-final
+'Millennium.YangMills.D4.ElectricSlab.oddTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricSlab.collinearWeights' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricSlab.scalarOrientation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricSlab.tensorInverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricSlab.splitChannels' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricSlab.mixedConeValue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricSlab.slabCenter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricSlab.cutoffLaplacian' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricSlab.momentStep' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricSlab.angularExpansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricSlab.angularIntegral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricSlab.phasePositive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricSlab.threshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricSlab.restReading' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricSlab.latticeIncidence' depends on axioms: [propext]
+'Millennium.YangMills.D4.ElectricSlab.marginalPolynomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricSlab.marginalConstant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.D4.ElectricSlab.marginalIntegral' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+
+adjacent
+adjacent conditional fourth reading 0.7 0.4248752054991568 absolute residuals [np.float64(9.43689570931383e-16), np.float64(4.996003610813204e-16)]
+adjacent conditional fourth reading 2.4 1.8240152777327174 absolute residuals [np.float64(4.0448673299664506e-08), np.float64(2.3092638912203256e-14)]
+cofacial adverse pair mixed action difference -1.6044042973974175
+four two-slab orientation averages invariant; forward temporal reading changed by 13.260042074845812
+six exact transfer lags; adjacent centered reading 1/4, off-by-one alternative 1/8
+
+
+spectrum
+Schwinger-parameter d 0.7066242375215113 six contact eigenvalues [0.08832803 0.08832803 0.10055202 0.10055202 0.10055202 0.125     ]
+two-body angular shell, E^7 marginal, inverse transform at four displaced points passed
+64 spacetime displacements: 16 orientation pairs, mixed cancellation, signed tensor node and both Meyer coefficients passed
+lag/spacing n=8,16,32,64; x= (0, 0, 0) relative errors [0.14981774007356785, 0.03244274050622731, 0.007883622243776589, 0.0019575209903919255] quadrature change 6.219724735245791e-10
+lag/spacing n=8,16,32,64; x= (0.5, 0.25, 0) relative errors [0.011508402235391513, 0.0023583146856724913, 0.0005615573063402213, 0.00013869939510446905] quadrature change 1.417825856719901e-09
+lag/spacing n=8,16,32,64; x= (1, 0, 0) relative errors [0.10070312658388736, 0.023832124111422548, 0.005883504613160007, 0.0014663410519262232] quadrature change 2.5010837845229617e-09
+
+
+green
+h=3: h^4 ||residual||inf=0.0729625, ||grad||1/h=3.6942096; product and shell verified
+h=5: h^4 ||residual||inf=0.0745303, ||grad||1/h=3.5743964; product and shell verified
+h=8: h^4 ||residual||inf=0.0596876, ||grad||1/h=3.2411839; product and shell verified
+
+
+duality
+labeled Wick enumeration; 3 scalar four-cycles with 16 assignments each; normalized 2/9 and squared electric triangle 8/9
+178 noncollinear cycles with odd scalar count, Hodge sign and a nonzero even control passed
+
+
+contact
+'YangMills.ContactLaw.radialTilt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ContactLaw.orderedSquaredError' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ContactLaw.integratedQuantileLoss' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ContactLaw.contractionProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ContactLaw.triangularLimit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ContactLaw.perpendicularGram' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ContactLaw.localGram' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ContactLaw.rowFloor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ContactLaw.equalWeights' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ContactLaw.gammaThird' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ContactLaw.cubicTaylor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.ContactLaw.integratedTaylor' depends on axioms: [propext, Classical.choice, Quot.sound]
+radial R, centered quantile squared error 0.25 1.2329106122671516
+radial R, centered quantile squared error 1.0 0.615079751332501
+radial R, centered quantile squared error 6.0 0.0054233612034036895
+radial R, centered quantile squared error 30.0 0.00011657530734952178
+radial R, centered quantile squared error 120.0 6.689282710130519e-06
+Fourier d and contrast Gram error 0.7066242376583302 0.000211492331883667
+scalar, three orientation differences, two zero-row-sum eigenvalues 0.125 0.10055201980486084 0.08832802970729127
+mixed mask, selected links by orientation 64 64 64 64
+beta 0.7 maximum absolute block-standardized covariance residual 1.44374
+beta 3.5 maximum absolute block-standardized covariance residual 1.894
+beta 12 maximum absolute block-standardized covariance residual 0.753527
+
+
+mutations-final
+insert an extra centered term: rejected at slabCenter
+reverse cutoff product term: rejected at cutoffLaplacian
+alter two-particle phase angular weight: rejected at angularIntegral
+remove the threshold weight: rejected at threshold
+share a face on adjacent slabs: rejected at latticeIncidence
+replace the traceless angular node: rejected at splitChannels
+double the fourth connected ratio: rejected at collinearWeights
+shift the marginal normalization: rejected at marginalIntegral
+
+
+replay-electric-slab
+guest ELF 5421565fe5e86cf5ee2929f527756c23ca55ce67165795af956b19afa251f5cf
+Lean source 459f0bcfdd4488208748fdbbd9bc087f18ce2e5778a4c86c3aa22dff8416f22e (6375 bytes)
+factor f3b4cbf9df8b2aa0fd7691ee77dd298640ed594047af886a61dccd70688af8b3
+faces 3a8a1b721369a9bf7a0475a239fb8fe07d82df3d3a103c3fb0d79f1c47a035c7
+assemble 396b1a28dda84218c36694394c7795fb09519d6ea05f0d75f488b50f21b9f548
+
+
+replay-ordinary-loop
+guest ELF 31ef074312c1e517cefab984318c0128e50242a89118fda5a0eb8963d68ec87b
+Lean source 886c0b6b0453e135ad1cd4df6ddb359af6f7a9b8f764001fc10f8eb4260fbdd1 (7272 bytes)
+factor 673fff941f621f430f37655ffc690e00a1d1886ac8280c3749647e31a3d6bc77
+wick 2dba9c1cd7092568fd67e2c6409da34729cfe249095c06f2d4e1c8a274867550
+assemble 5845ec07ee762cad7e0fe9373a1e6e00074bfe50777125052ad95861d64e4736
+
+
+replay-graph-holonomies
+guest ELF d6dc835b7ff0acf67d21882bf6106964d120861a9ea3f821c0e396496169efdc
+Lean source 988a04e72b0d28189958b60f586600607a6fca58e528b525f8e9e1a7772dd580 (9242 bytes)
+factor 88e61e7b73f30b4a16dea7f6f470657c2e5c6317ae4ffb1a669ec50f1a45b817
+words 6675b2fccd3ce91c1b179bb4628bc32b17acb9a0c84143ac428e664a13a42246
+assemble 634e183273a7aaf0580dd0232b72fe59d1ec2d7b520a7c6861a9bf5a67ab749c
+
+
+replay-electric-scale
+guest ELF 9a0c055625830f7377cbd54bbc3e4e2fa0e86d23df35bb5a471160673c69381c
+Lean source d8b44086b7234ac94b9d4acb4d71c868b8a888ddb3645d4ac0e3962295bcd792 (9001 bytes)
+factor 6699f14f26d2e3576b9bb1f21bd04599dd8c688c53e3d17cd5c3fb99035c94ee
+flux 0e7c87414d4db63b58f29cfda1ecc1100d7de983a866f575952d4040acf0476b
+assemble 2230bb162e96d8efe12d35ef56e311f797cdb7e4555cc9deefc682eceaac0273
+
+
+replay-finite-readings
+guest ELF 974b4663a8f26a4b11868e967c4e0a3bda96b766e9b9d1a022113a180b71450d
+Lean source 029ce009e020212b7f7dbd45bcb574b80a7e831c2de8bf137eda55c9857aee68 (19442 bytes)
+factor 7f0f33fc1d77412b6949eba66da54a31ce83c09fabe537462dcda4ed683be454
+moments 56d12f05312079722f1ea73ee529513c2ebcdca52ce2fea380a97c2e79b2f954
+assemble e136ef6d0e2ba2822c92397fa3370d4cf86308052f32ab5cf0152eb699fa03fa
+
+
+replay-adjoint
+guest ELF 215b28f7d03d4f722a75bc86123ecdb6966b1d9f9a49865ad1ff6b1e13d32128
+Lean source e03ee1d3bef8f6fca3b41b74e08c2f70bdbc524a63161a68633c0bdd1ecef508 (9637 bytes)
+factor bcbd656c7970b4a6a43a4873f6711aba907364a47b2ea436521b1274899ac090
+divergence 39598dbe727e0fd171d11683d365be971b07c4953271031af63258df46dda5b6
+assemble eae7f22105d31c697ee62ac17eef0c46bc9f743ba0ded543e6561b8a9cb35c68
+
+
+replay-difference
+guest ELF 81ee0657560726917fcae43810d3faac7e2827c2a3250bcff4a481369552d198
+Lean source 2002c660d00ff94e5714aa7e3f3c69fa8946181174dc518fbee21e13845ad6d8 (5873 bytes)
+factor 09bc1c121633d6a58daa079d8c0fb3f70aed5cf5dbceda323f22574cf98cd0d8
+square c3a169d764a28f4c854a10172a19b6ce896ae4b67f243870a92c9b31757ba38b
+assemble 38ca2b0a0269e057c06972c1b132a32c52744003bf6d57350bbe78618e9dcdb2
+
+
+replay-basic
+guest ELF aeb03ab77f4f9ca4ba7d877d55e55d76f1e02243b742acd9a552791dc29850b6
+Lean source 1fd54f3cb4f7bf54bfcdfbae55fd03c66e2cfe9f3f7282c9680087d9b605e391 (12919 bytes)
+factor 00dea232d8dc3c4cddc0dae1da6937af50b5bd9c04d0c5830e68668cfd39ae45
+square 28d34a2e006c6574b155e1a40d13cb779bf69fd3668931c7cac9872f72ab0af6
+assemble 32bd98568725f6ae56e6e4a21873147f8608b3fdfefbf4ba9958c60e49e7ca77
+
+
+peer
+'YangMills.StapleResponse.boundaryInsertion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StapleResponse.squaredFiber' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StapleResponse.tiltedVariance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StapleResponse.reciprocalRemainder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StapleResponse.reciprocalSquare' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StapleResponse.environmentExpansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StapleResponse.secondMean' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StapleResponse.wickContraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StapleResponse.projectedSignal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StapleResponse.transferTail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StapleResponse.spatialCoefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+beta, actual staple norm, boundary kernel residual 0.35 0.882231377370883 2.498001805406602e-16
+beta, actual staple norm, boundary kernel residual 2.0 5.041322156405046 4.0592529337857286e-16
+beta, actual staple norm, boundary kernel residual 5.0 12.603305391012615 3.6637359812630166e-14
+beta, scaled variance corrections at staple deficits 0,3,7 100 -0.031341472792745226 -0.09447179022108522 -0.17964168912275424
+beta, scaled variance corrections at staple deficits 0,3,7 1000 -0.031259117839973365 -0.09382167061800496 -0.17733586524989914
+beta, scaled variance corrections at staple deficits 0,3,7 10000 -0.031250911490886844 -0.09375716201827422 -0.1771085539603013
+complex-grid vs octant largest entry difference 4.1926452476470644e-08
+n, coefficient, n^8 coefficient / asymptote 1 2.242077784362643e-05 0.27955041152293775
+n, coefficient, n^8 coefficient / asymptote 2 6.232713862414799e-07 1.9894206202277132
+n, coefficient, n^8 coefficient / asymptote 4 2.302331015527083e-09 1.8812960997167112
+n, coefficient, n^8 coefficient / asymptote 16 1.9279537386215103e-14 1.0324426347324434
+n, coefficient, n^8 coefficient / asymptote 64 2.854959890421102e-19 1.0019574146675583
+n, coefficient, n^8 coefficient / asymptote 256 4.348342951074284e-24 1.0001219804761432

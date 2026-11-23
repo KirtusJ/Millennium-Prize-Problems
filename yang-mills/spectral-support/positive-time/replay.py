@@ -18,6 +18,9 @@ ADJOINT_MARKER = b"-- BEGIN PCP OS generated spherical divergence\n"
 
 
 def result_spec(mode):
+    if mode == "slab":
+        return (HERE.parent / "electric-slab/ElectricSlab.lean",
+                b"-- BEGIN PCP OS generated slab controls\n", "faces")
     if mode == "loop":
         return (HERE.parent / "ordinary-loop/OrdinaryLoop.lean",
                 b"-- BEGIN PCP OS generated trace contractions\n", "wick")
@@ -41,7 +44,7 @@ def launch(stage, folder, config):
     command = [sys.executable, "-I", __file__, "--worker", stage, str(folder)]
     if config["dispatcher"]:
         register = config["register"] if stage == "factor" else "-"
-        prefix = {"adjoint": "adjoint-", "finite": "readings-", "scale": "electric-", "graph": "graph-", "loop": "loop-"}.get(config["mode"], "positive-")
+        prefix = {"adjoint": "adjoint-", "finite": "readings-", "scale": "electric-", "graph": "graph-", "loop": "loop-", "slab": "slab-"}.get(config["mode"], "positive-")
         command = [config["dispatcher"], "--register", register, config["actor"],
                    prefix + stage, "--", *command]
     subprocess.run(command, check=True)
@@ -51,7 +54,7 @@ def worker(stage, folder):
     config = json.loads((folder / "config.json").read_text())
     mode = config["mode"]
     filename, marker, intermediate = result_spec(mode)
-    coefficient = {"positive": 2, "difference": 1, "adjoint": 3, "finite": 4, "scale": 6, "graph": 7, "loop": 8}[mode]
+    coefficient = {"positive": 2, "difference": 1, "adjoint": 3, "finite": 4, "scale": 6, "graph": 7, "loop": 8, "slab": 9}[mode]
     if stage == "factor":
         request = b"F" + bytes([coefficient])
     elif stage == intermediate:
@@ -84,6 +87,8 @@ def worker(stage, folder):
             for n in range(1, 4):
                 payload.extend(factorial(2 * n + 1).to_bytes(2, "little"))
             expected_factor = bytes(payload)
+        if mode == "slab":
+            expected_factor = bytes([6, 0, 1, 23, 16, 8, 16])
         if output != expected_factor:
             raise ValueError("unexpected guest coefficient vector")
         (folder / "factor.out").write_bytes(output)
@@ -104,7 +109,9 @@ def generate(folder, kernel, pcp_source, qemu, firmware, template, dispatcher=No
     filename, _, _ = result_spec(mode)
     package = kernel_package(kernel, pcp_source)
     flags = ["-DD4_POSITIVE_TIME"]
-    if mode == "loop":
+    if mode == "slab":
+        flags.append("-DD4_ELECTRIC_SLAB")
+    elif mode == "loop":
         flags.append("-DD4_ORDINARY_LOOP")
     elif mode == "graph":
         flags.append("-DD4_GRAPH_HOLONOMIES")
@@ -127,7 +134,7 @@ def generate(folder, kernel, pcp_source, qemu, firmware, template, dispatcher=No
 
 
 def main():
-    if len(sys.argv) == 4 and sys.argv[1] == "--worker" and sys.argv[2] in (*STAGES, "divergence", "moments", "flux", "words", "wick"):
+    if len(sys.argv) == 4 and sys.argv[1] == "--worker" and sys.argv[2] in (*STAGES, "divergence", "moments", "flux", "words", "wick", "faces"):
         worker(sys.argv[2], Path(sys.argv[3]))
         return
     p = argparse.ArgumentParser(description=__doc__)
@@ -139,6 +146,8 @@ def main():
     p.add_argument("--register", type=Path)
     p.add_argument("--actor", default="Director-D4")
     modes = p.add_mutually_exclusive_group()
+    modes.add_argument("--electric-slab", dest="mode", action="store_const", const="slab",
+                       help="replay the temporal-slab and energy–momentum module")
     modes.add_argument("--ordinary-loop", dest="mode", action="store_const", const="loop",
                        help="replay the ordinary Wilson trace and Wick module")
     modes.add_argument("--graph-holonomies", dest="mode", action="store_const", const="graph",
