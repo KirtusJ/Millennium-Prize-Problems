@@ -1,0 +1,133 @@
+[
+ {
+  "name": "P1",
+  "ok": true,
+  "value": "4.116719585",
+  "note": ""
+ },
+ {
+  "name": "P2",
+  "ok": true,
+  "value": "1.8977806 2.2696457",
+  "note": ""
+ },
+ {
+  "name": "P3",
+  "ok": true,
+  "value": "1.499e-07 bound 3.150e-07",
+  "note": ""
+ },
+ {
+  "name": "P4",
+  "ok": true,
+  "value": "1.9749640",
+  "note": ""
+ },
+ {
+  "name": "P5",
+  "ok": true,
+  "value": {
+   "32": 1.63554,
+   "64": 1.75977,
+   "128": 1.83697,
+   "256": 1.88662,
+   "512": 1.91859,
+   "1024": 1.9391
+  },
+  "note": ""
+ },
+ {
+  "name": "P6",
+  "ok": true,
+  "value": "below 15.61%,23.07%; log-form 0.95%,1.27%",
+  "note": ""
+ },
+ {
+  "name": "P7",
+  "ok": true,
+  "value": [
+   2.8761,
+   2.043,
+   1.5381
+  ],
+  "note": ""
+ },
+ {
+  "name": "P8",
+  "ok": true,
+  "value": [
+   -0.68,
+   -0.78,
+   -1.632
+  ],
+  "note": ""
+ },
+ {
+  "name": "P9",
+  "ok": true,
+  "value": "1.774",
+  "note": ""
+ },
+ {
+  "name": "P10",
+  "ok": true,
+  "value": "c=4.605413195 d=2.6827994 E0d=8.9888 cct=4.7925609 conv=[3.552713678800501e-14, 7.105427357601002e-15, 4.085620730620576e-14]",
+  "note": ""
+ },
+ {
+  "name": "P11",
+  "ok": false,
+  "value": "9.90% / 10.99%; with q=-7.9 (record l.100): 12.12%; with -8.08 vs -8.989: 10.11%",
+  "note": ""
+ },
+ {
+  "name": "P12",
+  "ok": false,
+  "value": [
+   2.16,
+   3.62,
+   5.73
+  ],
+  "note": ""
+ },
+ {
+  "name": "P13",
+  "ok": true,
+  "value": [
+   5.06,
+   5.83,
+   3.53
+  ],
+  "note": "beta>=64, >=96 (beta>=32 shown for info)"
+ },
+ {
+  "name": "P14",
+  "ok": false,
+  "value": "1.64 sigma at 1024; 3.08 at 256; -0.17 at 4096",
+  "note": ""
+ },
+ {
+  "name": "P15",
+  "ok": true,
+  "value": "kinetic and quartic coefficients = s/2, 2s",
+  "note": ""
+ },
+ {
+  "name": "P16",
+  "ok": true,
+  "value": "scale 1.587401051968 1.587401051968 vs 4^(1/3)=1.587401051968",
+  "note": ""
+ },
+ {
+  "name": "P17",
+  "ok": true,
+  "value": "3/2",
+  "note": ""
+ },
+ {
+  "name": "P18",
+  "ok": false,
+  "value": "values 2.00000 x3, 1.99998 at 256",
+  "note": ""
+ }
+]

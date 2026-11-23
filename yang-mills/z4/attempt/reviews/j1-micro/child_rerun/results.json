@@ -1,0 +1,154 @@
+{
+ "Q1": {
+  "value": "4.116719585071129110669886544671692637359",
+  "claim": "4.1167196",
+  "tol": 5e-08,
+  "ok": true,
+  "src": "half unit of 7th decimal"
+ },
+ "Q2": {
+  "value": "1.897780649864625654457323937819673378500",
+  "claim": "1.89778",
+  "tol": 5e-06,
+  "ok": true,
+  "src": "half unit of 5th decimal"
+ },
+ "Q3": {
+  "value": "2.269645717780572521601783764952538837057",
+  "claim": "2.26965",
+  "tol": 5e-06,
+  "ok": true,
+  "src": "half unit of 5th decimal"
+ },
+ "Q4a": {
+  "value": "1.49928870889330113455328307362641E-7",
+  "claim": "1.5e-7",
+  "tol": 5e-09,
+  "ok": true,
+  "src": "half unit of 2nd sig digit"
+ },
+ "Q4b": {
+  "value": "1.49928870889330113455328307362641E-7 < 3.149802624737182911918026518195570876427E-7",
+  "claim": "smaller than rounding bound",
+  "tol": null,
+  "ok": true,
+  "src": "propagated rounding of 6.534885 = 0.5e-6/4^(1/3)"
+ },
+ "Q5": {
+  "value": "1.9749640",
+  "claim": "1.974964",
+  "tol": 5e-07,
+  "ok": true,
+  "src": "half unit of 6th decimal"
+ },
+ "Q6a": {
+  "value": "2.876117",
+  "claim": 2.88,
+  "tol": 0.005,
+  "ok": true,
+  "src": "half unit of 2nd decimal"
+ },
+ "Q6b": {
+  "value": "2.042968282009786311035855835754683661591",
+  "claim": 2.04,
+  "tol": 0.005,
+  "ok": true,
+  "src": "half unit of 2nd decimal"
+ },
+ "Q6c": {
+  "value": "1.538080501283547517071170145060117642741",
+  "claim": 1.54,
+  "tol": 0.005,
+  "ok": true,
+  "src": "half unit of 2nd decimal"
+ },
+ "Q7a": {
+  "value": "-0.6804979253112033195020746887966804979300",
+  "claim": -0.7,
+  "tol": 0.05,
+  "ok": true,
+  "src": "half unit of 1st decimal (percent)"
+ },
+ "Q7b": {
+  "value": "-0.7800829875518672199170124481327800829900",
+  "claim": -0.8,
+  "tol": 0.05,
+  "ok": true,
+  "src": "half unit of 1st decimal (percent)"
+ },
+ "Q7c": {
+  "value": "-1.632063950260908182524703008770955923170",
+  "claim": -1.6,
+  "tol": 0.05,
+  "ok": true,
+  "src": "half unit of 1st decimal (percent)"
+ },
+ "Q8": {
+  "value": "1.773809523809523809523809523809523809524",
+  "claim": 1.8,
+  "tol": 0.05,
+  "ok": true,
+  "src": "half unit of 1st decimal"
+ },
+ "Q9": {
+  "value": "max diff 8.370e-15; 1000/1000 points qualify",
+  "claim": "identity",
+  "tol": 1e-12,
+  "ok": true,
+  "src": "double-precision rounding, my choice"
+ },
+ "conv_c": {
+  "value": "4.6054131945 vs200 4.6054131945 diff 2.66e-14",
+  "ok": true
+ },
+ "conv_d": {
+  "value": "2.6827994012 vs200 2.6827994012 diff 5.33e-15",
+  "ok": true
+ },
+ "conv_q13": {
+  "value": "4.7925609389 vs200 4.7925609389 diff 3.20e-14",
+  "ok": true
+ },
+ "Q10": {
+  "value": "4.605413195",
+  "claim": "4.6054132",
+  "tol": 5e-08,
+  "ok": true,
+  "src": "half unit of 7th decimal"
+ },
+ "Q11": {
+  "value": "2.682799401",
+  "claim": "2.6828",
+  "tol": 5e-05,
+  "ok": true,
+  "src": "half unit of 4th decimal"
+ },
+ "Q12": {
+  "value": "8.988808",
+  "claim": "8.99",
+  "tol": 0.005,
+  "ok": true,
+  "src": "half unit of 2nd decimal"
+ },
+ "Q13": {
+  "value": "4.792560939",
+  "claim": "4.7926",
+  "tol": 5e-05,
+  "ok": true,
+  "src": "half unit of 4th decimal"
+ },
+ "Q14": {
+  "value": "9.900% and 10.988%",
+  "claim": "about 12%",
+  "tol": 0.5,
+  "ok": false,
+  "src": "'about 12' read as 12 +-0.5 (integer rounding); neither matches"
+ },
+ "Q14_either": {
+  "value": "9.900% / 10.988%",
+  "claim": "about 12%",
+  "tol": 0.5,
+  "ok": false,
+  "src": "same, either ratio"
+ }
+}

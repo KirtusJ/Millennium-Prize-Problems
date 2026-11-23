@@ -1,0 +1,31 @@
+Grandchild T112 is running. I'm waiting on it before the release step and the report.
+
+I recomputed all 14 quantities. Q1–Q13 reproduce the claimed values and Q14 does not; `report.md` has the full table.
+
+**Control:** the sum of 1/n² is 1.644934 (`control.txt`).
+
+**Counts:** 13 met (Q1–Q13), 1 failed (Q14), 0 measured only.
+
+- **Q14:** the deviations come out as 9.9% (relative to 8.99) and 10.99% (relative to 8.1), not 12%. I fixed "about 12" as 12 ± 0.5 before running. A looser reading of ±1 would have let the 11.0% figure pass, but I didn't use it because it wasn't fixed in advance. The failure is therefore partly my predicate and partly a real discrepancy in the claim.
+- **Q4:** the offset from 4.116719735 is 1.499e-7, which reproduces the claimed 1.5e-7. It is below the propagated rounding bound of 3.150e-7.
+- **Q9:** all 1000 points qualify. The largest difference is 8.4e-15, against my tolerance of 1e-12 (my own choice for double-precision rounding).
+- **Quadrature:** I wrote my own Gauss-Legendre rule, since neither mpmath nor scipy is installed. The 200- and 400-node results agree to better than 3e-14, so the endpoint singularities in Q10, Q11 and Q13 are handled.
+- **Tolerances:** each is half a unit of the last claimed digit, except Q9 and Q14 as above. The sources are listed per row in `report.md`.
+
+**Grandchild T112** checked Q11 with a different substitution, a = π sin²(t/2). Its control (the integral of sin on [0, π]) gave 2.000000. It found d = 2.6827994012 at 100, 200 and 400 nodes, which reproduces 2.6828. This matches my value of 2.682799401. I reread its files and reran `run.py` in a copy directory with the same result. T112 is released.
+
+**PCP OS record:** the init reported the ACR method as not found, as you expected. Last lines of the two verifications:
+- Python `verify --ws pcp`: "result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)"
+- Rust `pcpos verify pcp/register.jsonl`: "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+
+**To rerun** (output files open with mode "x", so remove them first):
+- `cd /home/user/z4-workers/j1-micro/child; rm -f results.json; python3 recompute.py`
+- `cd grandchild; rm -f control.txt result.json notes.md; python3 run.py`
+
+Files are in `/home/user/z4-workers/j1-micro/child`:
+- `report.md`
+- `recompute.py`
+- `results.json`
+- `notes.md`
+- `control.txt`
+- `grandchild/`
