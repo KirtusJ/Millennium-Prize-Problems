@@ -43,6 +43,8 @@ The [reflected-tail theorem](block-recovery/README.md) bounds a translated magne
 
 The [contact-field audit](contact-blocks/README.md) checks A4's fixed even-shift averaging under the joint microscopic tangent and moment estimates. Lean proves the weighted averaging and covariance row bounds. The written argument extends conditional convergence to the full six-component residual in local negative Sobolev spaces. The [literature comparison](contact-blocks/literature.md) checks the observable in the published plaquette estimates and identifies the established two-copy criterion used for conditional convergence.
 
+The [site-plane projection](exterior/README.md) characterizes which sparse Wilson link masks preserve the gauge-invariant half-cylinder quotient. Keeping the spatial links on the reflection slice gives exterior representatives with the same physical transfer spectrum. A [two-time boundary measurement](exterior/spectral-test.md) certifies weight in a compact positive energy interval and distinguishes C4's fast and slow magnetic-angle trajectories under their stated hypotheses.
+
 All lanes must refer to the same gauge group, regulator trajectory, physical units, observables and limit. The following are outstanding construction obligations, not assumptions proved by this file:
 
 1. Construct the four-dimensional gauge-invariant regulator and specify its positive-time observable algebra and reflection.
