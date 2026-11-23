@@ -71,7 +71,7 @@ For the 24-plaquette Wilson site scalar, the [gap-clock covariance and midpoint 
 
 The [two-sided estimate for the Wilson midpoint ratio](site-clock/envelope.md) gives a limit inferior of at least $\sqrt e$. A4’s short-distance estimate supplies the upper bound, and the paired spectral controls show how large it may be with the available information.
 
-For fixed periodic $SU(2)$ Wilson boxes, the [compact zero-mode calculation](periodic-zero-modes/README.md) gives the leading partition function and the logarithmic correction to the mean plaquette. It determines the weak-coupling step for this observable at two fixed lattice sizes.
+For fixed periodic $SU(2)$ Wilson boxes, the [compact zero-mode calculation](periodic-zero-modes/README.md) gives the leading partition function and the logarithmic correction to the mean plaquette. It determines the weak-coupling step for this observable at two fixed lattice sizes. The [large-box limit of the coefficient](periodic-zero-modes/box-size.md) relates its finite part to the determinant of the unit flat torus.
 
 ## Reproduction
 

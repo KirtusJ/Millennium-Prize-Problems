@@ -11,10 +11,11 @@ from zipfile import ZipFile
 
 
 ROOT = Path(__file__).resolve().parent
-SOURCES = {"README.md", "proof.md", "determinant.md", "step.md", "execution.md",
-           "PeriodicZeroModes.lean", "mutations.json", "check.py", "quadrature.py", "verify.py"}
-REVIEWS = ("pivot", "forest", "expansion", "coefficient", "determinant", "step", "full", "finite")
-PAPERS = {"full": ("proof.md", "determinant.md"), "finite": ("README.md", "step.md")}
+SOURCES = {"README.md", "proof.md", "determinant.md", "step.md", "box-size.md", "execution.md",
+           "PeriodicZeroModes.lean", "mutations.json", "check.py", "quadrature.py", "size_check.py", "verify.py"}
+REVIEWS = ("pivot", "forest", "expansion", "coefficient", "determinant", "step", "full", "finite", "size")
+PAPERS = {"full": ("proof.md", "determinant.md"), "finite": ("README.md", "step.md"),
+          "size": ("box-size.md",)}
 METHOD = "7ff72eed9162e2c11fc62f6681c4afbc29524bfa96b87d45a455423d027d4707"
 KERNEL = "d2fae4ef3df316ff4fa0c1a88744e66cc17bd794856979fa55188b8402f7222f"
 
@@ -108,6 +109,12 @@ def verify(runtime, method):
         assert all(sha((ROOT / k).read_bytes()) == digest for k, digest in manifest["sources"].items())
         checks = json.loads(subprocess.check_output([sys.executable, "-B", ROOT / "check.py"]))
         assert checks == report(archive, "controls.json")
+        sizes = json.loads(subprocess.check_output([sys.executable, "-B", ROOT / "size_check.py"]))
+        recorded_sizes = report(archive, "size_check.json")
+        assert sizes["sides"] == recorded_sizes["sides"]
+        assert isclose(sizes["unit_torus_log_determinant"], recorded_sizes["unit_torus_log_determinant"], abs_tol=1e-6)
+        assert all(isclose(a, b, abs_tol=1e-6) for a, b in
+                   zip(sizes["spectral_finite_parts"], recorded_sizes["spectral_finite_parts"], strict=True))
         quadrature = check_quadrature(archive)
         registers = check_workers(archive, source)
         receipt, count = check_compiler(archive, "compiler", source, "Millennium.G4.PeriodicZeroModes")
@@ -130,7 +137,7 @@ def verify(runtime, method):
             exterior["deep_replay"](archive, registers, runtime, method)
     return {"lean": count, "rejected": len(rejected), "native_cases": len(native["observations"]),
             "pcp_registers": len(registers), "deep_replayed": len(registers) if runtime else 0,
-            "source_sha256": sha(source), "controls": checks, "quadrature": quadrature}
+            "source_sha256": sha(source), "controls": checks, "quadrature": quadrature, "box_sizes": sizes}
 
 
 if __name__ == "__main__":
