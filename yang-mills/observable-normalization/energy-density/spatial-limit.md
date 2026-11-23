@@ -2,7 +2,7 @@
 
 On the bare tree-level trajectory $\kappa=2/(\beta b)$, $\lambda=\beta/b$, $g=\beta^2/2$, take $\beta\ge1$ and let the spatial mesh $b$ decrease to zero. The [local diagonal estimate](README.md) gives $b^3D_H\le25$ because $B\le5\beta/2$. No prescribed running law or derivative of $\beta$ enters. Take a fixed smooth compactly supported real test function $\varphi$ in a cube of side $\ell$, with its support and the neighboring cells embedded in the physical torus. The box may grow. Alternatively use a smooth periodic test on a fixed physical torus, with periodic sampling throughout. [B4’s bare regulator matching](../../transfer-operator/hamiltonian-time/)
 
-Use $w_i=b^2\varphi(x_i)$ at the link and face centers. The power $b^2$ is a normalization that the bound permits. Its identification with a physically normalized stress-energy tensor would require further evidence. On an active pair $|w_i-w_j|\le b^3\|\nabla\varphi\|_\infty$. At most $6(\ell/b+2)^3$ terms meet the support, with at most sixteen pairs per such term. Hence
+Use $w_i=b^2\varphi(x_i)$ at the link and face centers. The power $b^2$ is a normalization that the bound permits. For a Lorentz-covariant conserved stress tensor with a nonzero positive-energy vacuum excitation, this normalization fails the [positive-time shell test](lorentz-test/). On an active pair $|w_i-w_j|\le b^3\|\nabla\varphi\|_\infty$. At most $6(\ell/b+2)^3$ terms meet the support, with at most sixteen pairs per such term. Hence
 $$
  M_1(w)\le2400(\ell+2b)^3\|\nabla\varphi\|_\infty^2.
 $$

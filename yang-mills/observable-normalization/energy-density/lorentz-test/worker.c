@@ -1,0 +1,169 @@
+/* A bounded proof-template worker for the PCP OS user ABI. ROLE selects a subgoal. */
+#ifndef ROLE
+#error ROLE required
+#endif
+__attribute__((used)) static volatile int worker_role = ROLE + 1;
+static long sys(long n,long a,long b,long c) {
+    long result;
+    __asm__ volatile("syscall":"=a"(result):"a"(n),"D"(a),"S"(b),"d"(c):"rcx","r11","memory");
+    return result;
+}
+static void emit(const char *s) {
+    unsigned len=0;
+    while(s[len]) ++len;
+    while(len){
+        long k=sys(1,1,(long)s,len);
+        if(k<=0 || (unsigned long)k>len){sys(60,1,0,0);__builtin_unreachable();}
+        len-=(unsigned)k;s+=k;
+    }
+}
+__attribute__((used,noreturn)) static void run(void) {
+#if ROLE == 0
+    emit("A4 CHILD spectrum\n");
+    emit("A4 LEAN import Mathlib.MeasureTheory.Integral.Bochner.Set\n");
+    emit("A4 LEAN import Mathlib.Analysis.SpecialFunctions.Exp\n");
+    emit("A4 LEAN import Mathlib.Tactic.Linarith\n");
+    emit("A4 LEAN import Mathlib.Tactic.Ring\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN open MeasureTheory\n");
+    emit("A4 LEAN open scoped ENNReal\n");
+    emit("A4 LEAN namespace YangMills.LorentzTest\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN /-- The rest-frame Ward identities kill the time row and column. -/\n");
+    emit("A4 LEAN theorem massiveBoost {c h m k a : ℝ} (hm : 0 < m) (boost : h=k/m) :\n");
+    emit("A4 LEAN     c^2*0+2*c*h*0+h^2*a=(k^2/m^2)*a := by\n");
+    emit("A4 LEAN   rw [boost]\n");
+    emit("A4 LEAN   field_simp [hm.ne']\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN /-- On a null ray, T00, T0n and Tnn have equal matrix elements. -/\n");
+    emit("A4 LEAN theorem nullBoost (c h a : ℝ) :\n");
+    emit("A4 LEAN     c^2*a+2*c*h*a+h^2*a=(c+h)^2*a := by ring\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN theorem shellMoment {E k m a : ℝ} (hE : 0 < E) (hm : 0 < m) :\n");
+    emit("A4 LEAN     E*((k^2/m^2)^2*a/(2*E))=k^4*(a/(2*m^4)) := by\n");
+    emit("A4 LEAN   field_simp\n");
+    emit("A4 LEAN   ring\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN theorem projectedChannels (x c₀ c₂ : ℝ) :\n");
+    emit("A4 LEAN     c₀*x^2/3+c₂*(x*x-x^2/3)=x^2*((c₀+2*c₂)/3) := by ring\n");
+    emit("A4 LEAN \n");
+#elif ROLE == 1
+    emit("A4 CHILD limit\n");
+    emit("A4 LEAN /-- A locally recovered positive-energy law retains the budget under exhaustion. -/\n");
+    emit("A4 LEAN theorem recoveredMoment {α : Type*} [MeasurableSpace α] (μ : Measure α)\n");
+    emit("A4 LEAN     (f : ℕ → α → ℝ≥0∞) (h : α → ℝ≥0∞) (C : ℝ≥0∞)\n");
+    emit("A4 LEAN     (meas : ∀ n, Measurable (f n)) (mono : Monotone f)\n");
+    emit("A4 LEAN     (exhaust : ∀ x, h x=⨆ n, f n x) (budget : ∀ n, (∫⁻ x, f n x ∂μ) ≤ C) :\n");
+    emit("A4 LEAN     (∫⁻ x, h x ∂μ) ≤ C := by\n");
+    emit("A4 LEAN   simpa only [exhaust,lintegral_iSup meas mono] using (iSup_le budget)\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN theorem finiteScale {c B A K L : ℝ} (hB : 0 < B) (hL : 0 < L)\n");
+    emit("A4 LEAN     (lower : c*(L*B) ≤ K) (upper : K ≤ A/L) :\n");
+    emit("A4 LEAN     c ≤ A/(L^2*B) := by\n");
+    emit("A4 LEAN   apply (le_div_iff₀ (mul_pos (sq_pos_of_pos hL) hB)).mpr\n");
+    emit("A4 LEAN   have h := (le_div_iff₀ hL).mp (lower.trans upper)\n");
+    emit("A4 LEAN   linarith only [h]\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN /-- Every fixed test is passed to the limit before taking arbitrarily large dilation. -/\n");
+    emit("A4 LEAN theorem rigidity {c B A : ℝ} (hc : 0 ≤ c) (hB : 0 < B) (hA : 0 ≤ A)\n");
+    emit("A4 LEAN     (allTests : ∀ L : ℝ, 1 ≤ L → c*(L^2*B) ≤ A) : c=0 := by\n");
+    emit("A4 LEAN   by_contra! neq\n");
+    emit("A4 LEAN   have cp := lt_of_le_of_ne hc (Ne.symm neq)\n");
+    emit("A4 LEAN   let L : ℝ := 1+A/(c*B)\n");
+    emit("A4 LEAN   have hL : 1 ≤ L := by dsimp [L]; linarith only [div_nonneg hA (mul_pos cp hB).le]\n");
+    emit("A4 LEAN   have bound := allTests L hL\n");
+    emit("A4 LEAN   have identity : c*B*L=c*B+A := by\n");
+    emit("A4 LEAN     dsimp [L]\n");
+    emit("A4 LEAN     field_simp\n");
+    emit("A4 LEAN   have grow : L ≤ L^2 := by nlinarith only [mul_nonneg (sub_nonneg.mpr hL) (by linarith : 0 ≤ L)]\n");
+    emit("A4 LEAN   nlinarith only [bound, identity, mul_le_mul_of_nonneg_left grow (mul_pos cp hB).le,mul_pos cp hB]\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN noncomputable def detector (u : ℝ) := Real.exp (-u)*(1-Real.exp (-u))^2\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN theorem detectorUpper {u : ℝ} (hu : 0 ≤ u) : detector u ≤ u := by\n");
+    emit("A4 LEAN   have hp := (Real.exp_pos (-u)).le\n");
+    emit("A4 LEAN   have he := Real.exp_le_one_iff.mpr (neg_nonpos.mpr hu)\n");
+    emit("A4 LEAN   have hf : 0 ≤ 1-Real.exp (-u) := by linarith\n");
+    emit("A4 LEAN   have hb := Real.add_one_le_exp (-u)\n");
+    emit("A4 LEAN   have h2 := mul_nonneg hp hf\n");
+    emit("A4 LEAN   have h3 := mul_le_mul_of_nonneg_right he (sq_nonneg (1-Real.exp (-u)))\n");
+    emit("A4 LEAN   unfold detector\n");
+    emit("A4 LEAN   nlinarith only [h2,h3,hb]\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN theorem detectorCore {u : ℝ} (lo : 1 ≤ u) (hi : u ≤ 3) :\n");
+    emit("A4 LEAN     Real.exp (-3)*(1-Real.exp (-1))^2 ≤ detector u := by\n");
+    emit("A4 LEAN   have a := Real.exp_le_exp.mpr (neg_le_neg hi)\n");
+    emit("A4 LEAN   have b := Real.exp_le_exp.mpr (neg_le_neg lo)\n");
+    emit("A4 LEAN   have c : 0 ≤ 1-Real.exp (-1) := by\n");
+    emit("A4 LEAN     linarith only [Real.exp_le_one_iff.mpr (by norm_num : (-1:ℝ) ≤ 0)]\n");
+    emit("A4 LEAN   have bound := mul_self_le_mul_self c (sub_le_sub_left b 1)\n");
+    emit("A4 LEAN   exact mul_le_mul a (by simpa only [← sq] using bound) (sq_nonneg _) (Real.exp_pos _).le\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN theorem tripleBudget (μ : Measure ℝ) {t : ℝ} (ht : 0 ≤ t)\n");
+    emit("A4 LEAN     (supp : ∀ᵐ E ∂μ, 0 ≤ E) (h1 : Integrable (fun E : ℝ => E) μ)\n");
+    emit("A4 LEAN     (hi : Integrable (fun E => detector (t*E)) μ) :\n");
+    emit("A4 LEAN     (∫ E, detector (t*E) ∂μ) ≤ t*∫ E : ℝ, E ∂μ := by\n");
+    emit("A4 LEAN   have h := integral_mono_ae hi (h1.const_mul t)\n");
+    emit("A4 LEAN     (supp.mono fun E he => detectorUpper (mul_nonneg ht he))\n");
+    emit("A4 LEAN   exact h.trans_eq (integral_const_mul t (fun x : ℝ => x))\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN theorem shellDetectorLower {L E : ℝ} (hL : 0 < L) (lo : L ≤ E) (hi : E ≤ 3*L) :\n");
+    emit("A4 LEAN     Real.exp (-3)*(1-Real.exp (-1))^2/(6*L) ≤ detector (E/L)/(2*E) := by\n");
+    emit("A4 LEAN   let k := Real.exp (-3)*(1-Real.exp (-1))^2\n");
+    emit("A4 LEAN   have hk : 0 ≤ k := mul_nonneg (Real.exp_pos _).le (sq_nonneg _)\n");
+    emit("A4 LEAN   have core := detectorCore ((one_le_div hL).mpr lo) ((div_le_iff₀ hL).mpr hi)\n");
+    emit("A4 LEAN   change k ≤ detector (E/L) at core\n");
+    emit("A4 LEAN   change k/(6*L) ≤ detector (E/L)/(2*E)\n");
+    emit("A4 LEAN   apply (div_le_div_iff₀ (by linarith) (by linarith)).mpr\n");
+    emit("A4 LEAN   nlinarith only [mul_le_mul_of_nonneg_left hi hk,\n");
+    emit("A4 LEAN     mul_le_mul_of_nonneg_right core hL.le]\n");
+    emit("A4 LEAN \n");
+#elif ROLE == 2
+    emit("A4 LEAN /-- A countably exhausted interval of timelike invariant masses has zero measure. -/\n");
+    emit("A4 LEAN theorem massBandsVanish (σ : Measure ℝ) (bands : ℕ → Set ℝ)\n");
+    emit("A4 LEAN     (cover : Set.Ioi 0 ⊆ ⋃ n, bands n)\n");
+    emit("A4 LEAN     (fin : ∀ n, σ (bands n) ≠ ⊤) {A B : ℝ} (hA : 0 ≤ A) (hB : 0 < B)\n");
+    emit("A4 LEAN     (tests : ∀ n (L : ℝ), 1 ≤ L → σ.real (bands n)*(L^2*B) ≤ A) :\n");
+    emit("A4 LEAN     σ (Set.Ioi 0) = 0 := by\n");
+    emit("A4 LEAN   have hz (n : ℕ) : σ (bands n)=0 := by\n");
+    emit("A4 LEAN     have h := rigidity (measureReal_nonneg : 0 ≤ σ.real (bands n)) hB hA (tests n)\n");
+    emit("A4 LEAN     exact ((ENNReal.toReal_eq_zero_iff _).mp h).resolve_right (fin n)\n");
+    emit("A4 LEAN   exact measure_mono_null cover (measure_iUnion_null hz)\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN theorem nullWeightVanishes {a A B : ℝ} (ha : 0 ≤ a) (hA : 0 ≤ A) (hB : 0 < B)\n");
+    emit("A4 LEAN     (tests : ∀ L : ℝ, 1 ≤ L → a*(L^2*B) ≤ A) : a=0 :=\n");
+    emit("A4 LEAN   rigidity ha hB hA tests\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN /-- Arbitrarily fine tests suffice, with the limit in the cutoff taken for each fixed test. -/\n");
+    emit("A4 LEAN theorem diagonalObstruction {c A : ℝ} (hA : 0 ≤ A) (hc : 0 ≤ c)\n");
+    emit("A4 LEAN     (probes : ∀ R : ℝ, ∃ L : ℝ, R ≤ L ∧ c*L^2 ≤ A) : c=0 := by\n");
+    emit("A4 LEAN   by_contra! hn\n");
+    emit("A4 LEAN   have pos := lt_of_le_of_ne hc (Ne.symm hn)\n");
+    emit("A4 LEAN   obtain ⟨L,hL,bound⟩ := probes (1+A/c)\n");
+    emit("A4 LEAN   have hlo : 1 ≤ L := by linarith only [hL,div_nonneg hA hc]\n");
+    emit("A4 LEAN   have grow : L ≤ L^2 := by\n");
+    emit("A4 LEAN     nlinarith only [mul_nonneg (sub_nonneg.mpr hlo) (by linarith only [hlo] : 0 ≤ L)]\n");
+    emit("A4 LEAN   have h := mul_le_mul_of_nonneg_left hL hc\n");
+    emit("A4 LEAN   have id : c*(1+A/c)=c+A := by field_simp\n");
+    emit("A4 LEAN   nlinarith only [h,id,bound,mul_le_mul_of_nonneg_left grow hc,pos]\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN end YangMills.LorentzTest\n");
+    emit("A4 LEAN #print axioms YangMills.LorentzTest.massiveBoost\n");
+    emit("A4 LEAN #print axioms YangMills.LorentzTest.nullBoost\n");
+    emit("A4 LEAN #print axioms YangMills.LorentzTest.shellMoment\n");
+    emit("A4 LEAN #print axioms YangMills.LorentzTest.projectedChannels\n");
+    emit("A4 LEAN #print axioms YangMills.LorentzTest.recoveredMoment\n");
+    emit("A4 LEAN #print axioms YangMills.LorentzTest.finiteScale\n");
+    emit("A4 LEAN #print axioms YangMills.LorentzTest.rigidity\n");
+    emit("A4 LEAN #print axioms YangMills.LorentzTest.massBandsVanish\n");
+    emit("A4 LEAN #print axioms YangMills.LorentzTest.nullWeightVanishes\n");
+    emit("A4 LEAN #print axioms YangMills.LorentzTest.detectorUpper\n");
+    emit("A4 LEAN #print axioms YangMills.LorentzTest.detectorCore\n");
+    emit("A4 LEAN #print axioms YangMills.LorentzTest.tripleBudget\n");
+    emit("A4 LEAN #print axioms YangMills.LorentzTest.diagonalObstruction\n");
+    emit("A4 LEAN #print axioms YangMills.LorentzTest.shellDetectorLower\n");
+#endif
+    emit("A4 FINISHED\n");
+    sys(60,0,0,0);__builtin_unreachable();
+}
+__asm__(".global _start\n_start:\nandq $-16,%rsp\ncall run\nud2");
