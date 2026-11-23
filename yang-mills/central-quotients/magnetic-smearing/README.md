@@ -20,6 +20,7 @@ For a real spatial profile $\psi$ with $J=\int\psi\ne0$, let $X_r$ be the smeare
 | [Ordinary profiles](ordinary-profile.md) | Site reflection recovers undifferenced magnetic profiles and all fixed polynomial moments |
 | [Spacetime field](field.md) | All six face orientations and local negative-Sobolev tightness |
 | [Spectral measure](spectrum.md) | Bounded positive-time ratios and physical low-energy exponents eight, twelve or sixteen depending on the spatial profile |
+| [One angle on fast and logarithmic trajectories](connector/) | The same separated packets give positive low-energy weight on the fast branch, spectral escape on the slow branch, and Brownian time sums at logarithmic coupling |
 | [PCP and computational evidence](execution.md) | Formal scope, independent original-link variations, negative controls and reproduction |
 
 These trajectories produce a free field in the observed sector. A logarithmic bare-coupling trajectory with a fixed nonzero renormalized interaction scale lies outside the joint bounds. The existence and mass gap of interacting four-dimensional Yang–Mills theory remain open. The mathematical arguments here have been deposited for cross-review; the Lean verification covers the listed supporting results.
