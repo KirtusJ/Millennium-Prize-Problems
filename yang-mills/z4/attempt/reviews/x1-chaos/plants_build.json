@@ -1,0 +1,171 @@
+{
+ "plants": {
+  "1": {
+   "file": "tun_upper.tex",
+   "changed_lines": [
+    215
+   ],
+   "old": [
+    "\\emph{Denominator.} We have $1-\\cos\\theta\\le\\theta^2/2$, and $\\sin\\theta/\\theta\\ge1-\\theta^2/6\\ge0$ for"
+   ],
+   "new": [
+    "\\emph{Denominator.} We have $1-\\cos\\theta\\ge\\theta^2/2$, and $\\sin\\theta/\\theta\\ge1-\\theta^2/6\\ge0$ for"
+   ],
+   "uniq": true,
+   "diff_ok": true,
+   "tex_rc": 0,
+   "pages": "Output written on main.pdf (32 pages, 538839 bytes).",
+   "tex_ok": true
+  },
+  "2": {
+   "file": "tun_lower.tex",
+   "changed_lines": [
+    661
+   ],
+   "old": [
+    "m_0:=\\tfrac12\\big(1-e^{-3\\eta/4}\\big),\\qquad m_1:=\\tfrac12\\big(1-e^{-1/16}\\big),\\qquad m:=\\min(m_0,m_1),"
+   ],
+   "new": [
+    "m_0:=\\big(1-e^{-3\\eta/4}\\big),\\qquad m_1:=\\tfrac12\\big(1-e^{-1/16}\\big),\\qquad m:=\\min(m_0,m_1),"
+   ],
+   "uniq": true,
+   "diff_ok": true,
+   "tex_rc": 0,
+   "pages": "Output written on main.pdf (32 pages, 538823 bytes).",
+   "tex_ok": true
+  },
+  "3": {
+   "file": "tun_upper.tex",
+   "changed_lines": [
+    788
+   ],
+   "old": [
+    "$\\beta\\ge\\beta_1$ and every real eigenfunction $u$ of $T$ with eigenvalue $\\mu\\ge e^{-\\eta/4}$:"
+   ],
+   "new": [
+    "$\\beta\\ge\\beta_1$ and every real eigenfunction $u$ of $T$ with eigenvalue $\\mu>0$:"
+   ],
+   "uniq": true,
+   "diff_ok": true,
+   "tex_rc": 0,
+   "pages": "Output written on main.pdf (32 pages, 538820 bytes).",
+   "tex_ok": true
+  },
+  "4": {
+   "file": "tun_lower.tex",
+   "changed_lines": [
+    315,
+    316
+   ],
+   "old": [
+    "\\item $\\Omega:=\\{\\varphi>0\\}\\cap\\{a_1\\in[a_-,\\pi-a_-]\\}$ and",
+    "$R_{\\rm well}:=\\{\\varphi>0\\}\\cap\\{a_1<a_-\\text{ or }a_1>\\pi-a_-\\}$."
+   ],
+   "new": [
+    "\\item $\\Omega:=\\{\\varphi>0\\}\\cap\\{a_1\\in[a_-/2,\\pi-a_-/2]\\}$ and",
+    "$R_{\\rm well}:=\\{\\varphi>0\\}\\cap\\{a_1<a_-/2\\text{ or }a_1>\\pi-a_-/2\\}$."
+   ],
+   "uniq": true,
+   "diff_ok": true,
+   "tex_rc": 0,
+   "pages": "Output written on main.pdf (32 pages, 538861 bytes).",
+   "tex_ok": true
+  },
+  "5": {
+   "file": "tun_lower.tex",
+   "changed_lines": [
+    1039,
+    1040
+   ],
+   "old": [
+    "$(G-c_1)_+(E-c_2)_+$ is $\\sigma_1$-invariant, $\\varphi=\\max(\\varphi_L,\\varphi_R)=\\mu e^{-\\sqrt\\beta\\min(\\Psi(a_1),\\Psi(\\pi-a_1))}(G-c_1)_+(E-c_2)_+$",
+    "at every point of $X$ (not only on $\\Omega$), and $\\min(\\Psi(a_1),\\Psi(\\pi-a_1))=\\Psi(\\min(a_1,\\pi-a_1))\\le\\Psi(\\pi/2)$ since $\\Psi$ is"
+   ],
+   "new": [
+    "$(G-c_1)_+(E-c_2)_+$ is $\\sigma_1$-invariant, $\\varphi\\ge\\varphi_L=\\mu e^{-\\sqrt\\beta\\Psi(a_1)}(G-c_1)_+(E-c_2)_+$",
+    "at every point of $X$ (not only on $\\Omega$), and $\\Psi(a_1)\\le\\Psi(\\pi/2)$ since $\\Psi$ is"
+   ],
+   "uniq": true,
+   "diff_ok": true,
+   "tex_rc": 0,
+   "pages": "Output written on main.pdf (32 pages, 538647 bytes).",
+   "tex_ok": true
+  },
+  "6": {
+   "file": "tun_lower.tex",
+   "changed_lines": [
+    947
+   ],
+   "old": [
+    "\\item $M=M(\\eta)$ with $M^2:=M_A^2(\\eta)$, so $M^2\\ge M_A^2(\\eta)$ (condition (M$_A$) of Lemma~\\ref{tu:L-S4}; the earlier choice $c_1=e^{-M^2}\\le G_{\\min}(e^{\\eta/2}-1)e^{-C}/4$ implies it) and $M^2\\ge1.5\\rho_B^2+\\log2$ (Lemma~\\ref{tu:L-balls}; implied by (M$_A$));"
+   ],
+   "new": [
+    "\\item $M=M(\\eta,\\beta)$ with $M^2:=M_A^2(\\eta)+\\log\\beta$, so $M^2\\ge M_A^2(\\eta)$ (condition (M$_A$) of Lemma~\\ref{tu:L-S4}; the earlier choice $c_1=e^{-M^2}\\le G_{\\min}(e^{\\eta/2}-1)e^{-C}/4$ implies it) and $M^2\\ge1.5\\rho_B^2+\\log2$ (Lemma~\\ref{tu:L-balls}; implied by (M$_A$));"
+   ],
+   "uniq": true,
+   "diff_ok": true,
+   "tex_rc": 0,
+   "pages": "Output written on main.pdf (32 pages, 538846 bytes).",
+   "tex_ok": true
+  },
+  "7": {
+   "file": "tun_upper.tex",
+   "changed_lines": [
+    829,
+    839
+   ],
+   "old": [
+    "=\\frac12\\iint(\\varsigma(x)-\\varsigma(y))^2g(x)T(x,y)g(y)\\,dx\\,dy=4\\,\\langle g\\mathbf 1_{A_-},\\,T\\,g\\mathbf 1_{A_-^c}\\rangle .",
+    "contribute equally. So the integral is $2\\cdot2\\langle g\\mathbf 1_{A_-},Tg\\mathbf 1_{A_-^c}\\rangle$."
+   ],
+   "new": [
+    "=\\frac12\\iint(\\varsigma(x)-\\varsigma(y))^2g(x)T(x,y)g(y)\\,dx\\,dy=2\\,\\langle g\\mathbf 1_{A_-},\\,T\\,g\\mathbf 1_{A_-^c}\\rangle .",
+    "contribute equally. So the integral is $2\\langle g\\mathbf 1_{A_-},Tg\\mathbf 1_{A_-^c}\\rangle$."
+   ],
+   "uniq": true,
+   "diff_ok": true,
+   "tex_rc": 0,
+   "pages": "Output written on main.pdf (32 pages, 538821 bytes).",
+   "tex_ok": true
+  },
+  "8": {
+   "file": "tun_upper.tex",
+   "changed_lines": [
+    504,
+    506
+   ],
+   "old": [
+    "On $\\{|W'|^2\\le4\\tau\\}$: $(1-r)(1-r')\\ge(1-\\tau)(1-4\\tau)>0$, so by Lemma~\\ref{tu:U-I1} and the monotonicity of",
+    "exponential, this is at most the sum of the first two terms of $M_{\\rm in}$. On $\\{|W'|^2>4\\tau\\}$: since"
+   ],
+   "new": [
+    "On $\\{|W'|^2\\le2\\tau\\}$: $(1-r)(1-r')\\ge(1-\\tau)(1-4\\tau)>0$, so by Lemma~\\ref{tu:U-I1} and the monotonicity of",
+    "exponential, this is at most the sum of the first two terms of $M_{\\rm in}$. On $\\{|W'|^2>2\\tau\\}$: since"
+   ],
+   "uniq": true,
+   "diff_ok": true,
+   "tex_rc": 0,
+   "pages": "Output written on main.pdf (32 pages, 538817 bytes).",
+   "tex_ok": true
+  }
+ },
+ "controls": {
+  "c1": {
+   "identical": true,
+   "tex_rc": 0,
+   "pages": "Output written on main.pdf (32 pages, 538821 bytes).",
+   "tex_ok": true
+  },
+  "c2": {
+   "identical": true,
+   "tex_rc": 0,
+   "pages": "Output written on main.pdf (32 pages, 538821 bytes).",
+   "tex_ok": true
+  }
+ },
+ "predicates": {
+  "failed": [],
+  "met_count": 28,
+  "failed_count": 0
+ }
+}

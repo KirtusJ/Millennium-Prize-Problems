@@ -1,0 +1,11 @@
+1 {'tool_calls': 8, 'final_present': True, 'duration_ms': 229250, 'num_turns': 9, 'is_error': False} leaks: 0
+2 {'tool_calls': 6, 'final_present': True, 'duration_ms': 347990, 'num_turns': 7, 'is_error': False} leaks: 0
+3 {'tool_calls': 6, 'final_present': True, 'duration_ms': 200265, 'num_turns': 7, 'is_error': False} leaks: 0
+4 {'tool_calls': 7, 'final_present': True, 'duration_ms': 335033, 'num_turns': 8, 'is_error': False} leaks: 0
+5 {'tool_calls': 6, 'final_present': True, 'duration_ms': 324126, 'num_turns': 7, 'is_error': False} leaks: 0
+6 {'tool_calls': 7, 'final_present': True, 'duration_ms': 348751, 'num_turns': 8, 'is_error': False} leaks: 0
+7 {'tool_calls': 6, 'final_present': True, 'duration_ms': 185153, 'num_turns': 7, 'is_error': False} leaks: 0
+8 {'tool_calls': 7, 'final_present': True, 'duration_ms': 195824, 'num_turns': 8, 'is_error': False} leaks: 0
+c1 {'tool_calls': 7, 'final_present': True, 'duration_ms': 262217, 'num_turns': 8, 'is_error': False} leaks: 0
+c2 {'tool_calls': 8, 'final_present': True, 'duration_ms': 476985, 'num_turns': 9, 'is_error': False} leaks: 0
+failed: []

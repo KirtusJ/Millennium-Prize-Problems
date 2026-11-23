@@ -1,0 +1,22 @@
+{
+ "V1_cases": 10000,
+ "V1_planted_holds": 0,
+ "V1_met": true,
+ "V2_cases": 4000,
+ "V2_planted_holds": 0,
+ "V2_max_abs(bar_a+m0-1)": 0.0,
+ "V2_met": true,
+ "V7_ratio_lhs_over_4cross": 0.9999999999999994,
+ "V7_ratio_lhs_over_2cross": 1.999999999999999,
+ "V7_met": true,
+ "V8_claimed": 0.01831563888873418,
+ "V8_honest_bound": 0.5034396167555493,
+ "V8_mc_P(|W'|^2>2tau)": 0.15345,
+ "V8_mc_se": 0.0008059252369171721,
+ "V8_met": true,
+ "counts": {
+  "met": 4,
+  "failed": 0,
+  "measured_only": 0
+ }
+}

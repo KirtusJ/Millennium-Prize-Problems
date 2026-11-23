@@ -1,0 +1,14 @@
+[
+  {
+    "label": "negative_floor",
+    "find": "v ≤ 504*j",
+    "replace": "v ≤ 503*j",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_gate",
+    "find": "(b-k)*g ≤ d*(g+r)",
+    "replace": "b*g ≤ d*(g+r)",
+    "diagnostic": "error:"
+  }
+]

@@ -1,0 +1,5 @@
+'Millennium.G4.RareCoarse.sum_weighted_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.RareCoarse.gaussian_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.RareCoarse.gated_deficit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.RareCoarse.rare_suppression' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.RareCoarse.weighted_step' depends on axioms: [propext, Classical.choice, Quot.sound]

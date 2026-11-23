@@ -1,0 +1,1 @@
+{'cases': 4000, 'chain_holds': 3471, 'chain_fails': 529, 'fail_from_eta': 0.3472, 'max_sinh_over_eta': 1.0268808145070387, 'needed_ratio': 1.0278145695364238, 'L769_met': False}

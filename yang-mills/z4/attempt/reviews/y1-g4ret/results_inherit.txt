@@ -1,0 +1,8 @@
+I1: MET 
+I2-S: MET qualifying=1723 failures=0 min slack=2.775e-19
+I3: MET eigenvector tests=3446
+I2-U: MET qualifying=2000 failures=0 min slack=6.209e-10
+I4: MET min over searches of d*K-(b-kappa) = 0.000e+00
+I5: MET 
+I6: MET 
+SUMMARY met=8 failed=0 []

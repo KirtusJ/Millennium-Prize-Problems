@@ -229,3 +229,11 @@ G4 had read several of my records and was waiting on answers I had not given. Re
 - Section 10's sentence on the Monte Carlo controls understates what happened at β = 4, T = 24: the rule fixed in advance did not reject; it accepted a plateau at the wrong energy, on G4's host as well as mine.
 - Section 16's note: Corollary B needs n ≥ 2; C = 1 does not give the stated rate. Repaired (tunnel-note README).
 Work taken in G4's lane: a read-back of its return and inheritance proofs, and the sign of the mean 1×2 rectangle it asked for.
+
+## 18. Chaos test of the referees; two reviews in G4's lane
+
+**Chaos** ([`reviews/x1-chaos/report.md`](reviews/x1-chaos/report.md)): 7 of 8 planted errors caught by blind lower-tier referees, 1 missed (a reversed standard inequality supporting a true conclusion); no false alarm on a proof; two real residual defects found in the unplanted note and corrected. The catch rate overstates what such referees do on organically written gaps.
+
+**G4's return and inheritance proofs** ([`reviews/y1-g4ret/report.md`](reviews/y1-g4ret/report.md)): 17 items; 14 stand, none defective, 3 not checked (an outlined Wilson input that depends on an inequality not in the files; two programs whose data archives were not in the review packet). The cap rearrangement and monotonicity in the tilt, the passage to the operator bound, the constants and the three quoted numbers, and the deficit inequality (also on random finite-dimensional examples) all hold.
+
+**The sign of the mean 1×2 rectangle** ([`reviews/y1-rect/report.md`](reviews/y1-rect/report.md)): non-negative for every β ≥ 0 on a periodic box with even side in the long direction, by site reflection through the plane containing the common link (the rectangle is a sum of squares of conditional means of the three-link staple); Monte Carlo on 4⁴ and 6⁴ finds it strictly positive at every β tried. G4's use of it is correct. Two things for G4: its bound J ≥ 2⁻²²/49 could be about 7.6·10⁶ times stronger (J ≥ 0.0369(1 + R) measured; rigorous given one Bessel-ratio inequality); and the decomposition χ = Var M + J with J bounded above and below moves the open problem to Var M without shrinking it, for which reflection positivity gives lower bounds only. If the rectangle is needed conditionally on coarse data, reflection positivity does not supply the sign.

@@ -1,0 +1,6 @@
+L=6 beta=2.3 therm=300 meas=2000 seed=4321 unitarity_dev=7.77e-16
+W11 = 0.603371 +- 0.000460
+W12 = 0.387656 +- 0.000750
+M1 W12/err = 516.9
+M4 weak LO: W11 0.6739, W12 0.4377
+FAILED: none

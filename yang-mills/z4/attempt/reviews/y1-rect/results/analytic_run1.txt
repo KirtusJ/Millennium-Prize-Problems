@@ -1,0 +1,20 @@
+A1 max rel err CF vs series = 8.051e-16
+A2 max abs err R' formula vs FD = 2.794e-11
+A3 min m = 3.749062e-07 (>0: True); R'<=R/k on grid: True
+A4 c1 = inf (1+k)^2 m(k) = 0.250000 at k=0.0000; 2^-22 = 2.384e-07; (1+k)^2 m at k=2000: 1.50112 (asymptote 3/2)
+A5 c2 = inf max(1,k/6)^2 m(k) = 0.036886 at k=6.0000; tail k=2000: 0.041656 (asymptote 1/24=0.041667); target constant 2^-22/49 = 4.866e-09; ratio 7.581e+06
+   u(beta=0.5) = I2/I1 = 0.12371793, u^2 = 0.01530613
+   u(beta=1) = I2/I1 = 0.24019372, u^2 = 0.05769302
+   u(beta=2) = I2/I1 = 0.43312743, u^2 = 0.18759937
+   u(beta=2.3) = I2/I1 = 0.47927908, u^2 = 0.22970843
+   u(beta=3.4) = I2/I1 = 0.60835922, u^2 = 0.37010094
+A6 L=4 every xy face has exactly one selected x-link: True
+A7 L=4 reflection maps a+ to a-, rectangle excludes common link, no plaquette straddles, plane links fixed: True
+A6 L=6 every xy face has exactly one selected x-link: True
+A7 L=6 reflection maps a+ to a-, rectangle excludes common link, no plaquette straddles, plane links fixed: True
+A8 L=48: G0-G(e)=0.12499998 (1/8 - 2.35e-08), G0-G(1,1)=0.14221864, G0-G(2,0)=0.14668779, r=1.724500
+A8 L=64: G0-G(e)=0.12499999 (1/8 - 7.45e-09), G0-G(1,1)=0.14221867, G0-G(2,0)=0.14668785, r=1.724501
+   weak coupling LO beta=2: W11 ~ 0.6250, W12 ~ 0.3533
+   weak coupling LO beta=2.3: W11 ~ 0.6739, W12 ~ 0.4377
+   weak coupling LO beta=3.4: W11 ~ 0.7794, W12 ~ 0.6196
+FAILED PREDICATES: none

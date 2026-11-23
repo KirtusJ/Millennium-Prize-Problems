@@ -1,0 +1,115 @@
+{
+ "audit": {
+  "1": {
+   "present": true,
+   "tool_calls": 8,
+   "final_present": true,
+   "leaks": [],
+   "duration_ms": 229250,
+   "num_turns": 9,
+   "total_cost_usd": 0.6671897,
+   "is_error": false,
+   "subtype": "success"
+  },
+  "2": {
+   "present": true,
+   "tool_calls": 6,
+   "final_present": true,
+   "leaks": [],
+   "duration_ms": 347990,
+   "num_turns": 7,
+   "total_cost_usd": 1.0168308,
+   "is_error": false,
+   "subtype": "success"
+  },
+  "3": {
+   "present": true,
+   "tool_calls": 6,
+   "final_present": true,
+   "leaks": [],
+   "duration_ms": 200265,
+   "num_turns": 7,
+   "total_cost_usd": 0.5737454,
+   "is_error": false,
+   "subtype": "success"
+  },
+  "4": {
+   "present": true,
+   "tool_calls": 7,
+   "final_present": true,
+   "leaks": [],
+   "duration_ms": 335033,
+   "num_turns": 8,
+   "total_cost_usd": 0.9619026,
+   "is_error": false,
+   "subtype": "success"
+  },
+  "5": {
+   "present": true,
+   "tool_calls": 6,
+   "final_present": true,
+   "leaks": [],
+   "duration_ms": 324126,
+   "num_turns": 7,
+   "total_cost_usd": 0.9606690999999998,
+   "is_error": false,
+   "subtype": "success"
+  },
+  "6": {
+   "present": true,
+   "tool_calls": 7,
+   "final_present": true,
+   "leaks": [],
+   "duration_ms": 348751,
+   "num_turns": 8,
+   "total_cost_usd": 1.0094715,
+   "is_error": false,
+   "subtype": "success"
+  },
+  "7": {
+   "present": true,
+   "tool_calls": 6,
+   "final_present": true,
+   "leaks": [],
+   "duration_ms": 185153,
+   "num_turns": 7,
+   "total_cost_usd": 0.5877356,
+   "is_error": false,
+   "subtype": "success"
+  },
+  "8": {
+   "present": true,
+   "tool_calls": 7,
+   "final_present": true,
+   "leaks": [],
+   "duration_ms": 195824,
+   "num_turns": 8,
+   "total_cost_usd": 0.6030091,
+   "is_error": false,
+   "subtype": "success"
+  },
+  "c1": {
+   "present": true,
+   "tool_calls": 7,
+   "final_present": true,
+   "leaks": [],
+   "duration_ms": 262217,
+   "num_turns": 8,
+   "total_cost_usd": 0.7441774000000001,
+   "is_error": false,
+   "subtype": "success"
+  },
+  "c2": {
+   "present": true,
+   "tool_calls": 8,
+   "final_present": true,
+   "leaks": [],
+   "duration_ms": 476985,
+   "num_turns": 9,
+   "total_cost_usd": 1.305517,
+   "is_error": false,
+   "subtype": "success"
+  }
+ },
+ "failed": []
+}

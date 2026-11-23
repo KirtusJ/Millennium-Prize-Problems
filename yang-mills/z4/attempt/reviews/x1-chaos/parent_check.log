@@ -1,0 +1,2 @@
+check K118: exit 0 (expected 0) in 2296127 ms | output 16be77f6ca78 | event 120 head 1e84dea66f15
+  /home/user/z4-workers/x1-chaos/report.md — the referees caught 7 of 8 plants (missed plant 1, a reversed inequality inside a proof whose conclusion stays true), no false alarms on the 2 controls, and 3 real defects found in the unplanted note; verdicts: 5 STANDS, 3 DEFECT, 1 NOT CHECKED.

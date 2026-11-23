@@ -1,0 +1,32 @@
+W12 came out positive at all five betas on L=4, and at the three betas I ran on L=6, each by far more than 3σ. `report.md` has the verdict table, measured table, failed predicates, what I didn't check, the sub-agent outcome and the rerun commands.
+
+The control value in `control.txt` is 0.480000.
+
+**Measured values** (heatbath plus overrelaxation; errors from blocking)
+
+u(0.5) = I₂/I₁ = 0.123718 and u² = 0.015306, both computed by power series.
+
+| β | L | W11 | W12 |
+|---|---|---|---|
+| 0.5 | 4 | 0.12406(26) | 0.01551(18) |
+| 1 | 4 | 0.24302(30) | 0.05908(20) |
+| 2 | 4 | 0.50150(55) | 0.25960(60) |
+| 2.3 | 4 | 0.60903(49) | 0.39805(74) |
+| 3.4 | 4 | 0.76103(16) | 0.61622(27) |
+| 0.5 | 6 | 0.12415(19) | 0.01557(15) |
+| 2.3 | 6 | 0.60302(34) | 0.38716(50) |
+| 3.4 | 6 | 0.76043(14) | 0.61418(23) |
+
+- **Qualifying cases:** all five L=4 cases have W12 > 3σ. W12/err runs from 85 at β=0.5 to 2274 at β=3.4. The L=6 cases give 103, 777 and 2670.
+- **Ordering:** 0 < W12 < W11 holds in all eight cases, and W11 increases with β on L=4.
+- **Strong coupling at β=0.5:** W11 is 1.3σ (L=4) and 2.2σ (L=6) above u. W12 is 1.1σ and 1.8σ above u². Both are inside my tolerance of 3σ + 1e-3.
+- **Update check:** a cold start at L=4, β=0.5 agrees with the hot start (−0.75σ in W11).
+- **Possible small offset:** W11 sits above u in all three independent estimates, including the sub-agent's 2⁴ run (+2.5σ). None is significant alone, and I did not resolve whether it is real.
+- **Failed predicates:** none.
+- **Not checked:** reflection positivity at other betas or sizes, L > 6, and autocorrelation times. The L=6 error bars come from only 800 sweeps, so they are rough.
+
+**Sub-agent:** T198 (admitted, then released by me) recomputed u(0.5) = 0.12371793, which matches mine. Its control answer 41 was correct. It found W11 = −0.00008(36) and W12 = 0.00039(34) at β=0, so both are zero within errors. On 2⁴ at β=0.5 it got W11 = 0.12508(54). I read its `result.md` but did not rerun `gc.py`. Its sampler draws the angle from a 4000-point grid, so it is not exact.
+
+**PCP OS:** the last line of `$P verify --ws pcp` is "result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)". The last line of the Rust `pcpos verify pcp/register.jsonl` is "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+
+Everything is in `/home/user/z4-workers/y1-rect/child/`; start with `report.md`, with raw results in `res/` and `analysis.txt`.

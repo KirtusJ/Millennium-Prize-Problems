@@ -1,0 +1,21 @@
+{
+ "U1_min": 8.832988538509117,
+ "U1_min_at_beta": 100,
+ "U1_max": 14.22981184234364,
+ "U1_max_at_beta": 4096,
+ "U1_at_beta100_s1": 8.832988538509117,
+ "U1_at_beta100_worst": 8.832988538509117,
+ "U1_note_met": false,
+ "U2_ratio_first_last": [
+  14802.720146510335,
+  9.380950995551517e+18
+ ],
+ "U2_ratio_increasing_at_end": true,
+ "U2_note_met": false,
+ "U2_Q_exponent_C1": -0.20264236728467555,
+ "counts": {
+  "met": 0,
+  "failed": 2,
+  "measured_only": 0
+ }
+}

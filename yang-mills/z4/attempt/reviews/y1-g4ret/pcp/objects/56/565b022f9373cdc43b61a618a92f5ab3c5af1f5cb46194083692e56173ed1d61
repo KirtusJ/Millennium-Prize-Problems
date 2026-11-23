@@ -1,0 +1,6 @@
+/home/user/z4-workers/y1-g4ret/check_inherit.py:38: RuntimeWarning: overflow encountered in exp
+  def fexp(h, V, s): return (V*np.exp(-s*h))@V.T
+/home/user/z4-workers/y1-g4ret/check_inherit.py:68: RuntimeWarning: invalid value encountered in multiply
+  M = fexp(-h, V, 1)*0  # placeholder
+/home/user/z4-workers/y1-g4ret/check_inherit.py:38: RuntimeWarning: invalid value encountered in matmul
+  def fexp(h, V, s): return (V*np.exp(-s*h))@V.T

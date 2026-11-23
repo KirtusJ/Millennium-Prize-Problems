@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/y1-g4ret/tcopy/rare-coarse-fields/verify.py", line 92, in <module>
+    verify(args.runtime, args.method)
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/z4-workers/y1-g4ret/tcopy/rare-coarse-fields/verify.py", line 20, in verify
+    with ZipFile(ROOT / "evidence.zip") as archive:
+         ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/zipfile/__init__.py", line 1414, in __init__
+    self.fp = io.open(file, filemode)
+              ~~~~~~~^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/user/z4-workers/y1-g4ret/tcopy/rare-coarse-fields/evidence.zip'

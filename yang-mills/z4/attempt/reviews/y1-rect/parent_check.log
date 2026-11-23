@@ -1,0 +1,2 @@
+check K117: exit 0 (expected 0) in 727395 ms | output 5afc0534a7f7 | event 119 head 2fc68ced87c0
+  /home/user/z4-workers/y1-rect/report.md: the mean 1×2 rectangle is ≥ 0 for all β ≥ 0 (site-reflection proof, MC positive at every β tested); verdicts 7 STANDS, 1 DEFECT, 1 NOT CHECKED; predicates 8 met, 0 failed, 2 measured only.

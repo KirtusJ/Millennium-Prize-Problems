@@ -1,0 +1,2 @@
+check K116: exit 0 (expected 0) in 383778 ms | output 932fcdea5f38 | event 118 head 7c7c0fff2b68
+  /home/user/z4-workers/y1-g4ret/report.md — 14 STANDS, 0 DEFECT, 3 NOT CHECKED (returns.zip and evidence.zip are missing, so measurements.md and verify.py were not checked)

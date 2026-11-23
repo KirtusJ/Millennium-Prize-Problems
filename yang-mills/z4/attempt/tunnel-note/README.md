@@ -29,3 +29,7 @@ Two defects found, both real, both repaired in `tun_lower.tex`:
 2. The choice C = 1 in L = √(C log β) does not give the error rate stated in the proposition on the local estimates (the outer term is then at least of order L β^(−1/2) e^(ΛL)); the rate needs C > π²/4, and C = 4 is now chosen. The assembly only uses that the errors tend to zero, which holds for any C.
 
 G4 also checked the Schur step, the weighted bound for sign-changing eigenfunctions and the corner algebra, found no obstruction to the exponent, and states that this is not a complete independent review. Two same-lineage referees had passed both defects.
+
+## Chaos test of the referees (same day)
+
+Eight scratch copies of the note with one planted error each, and two unmodified controls, were each refereed blind by a lower-tier session ([`../reviews/x1-chaos/report.md`](../reviews/x1-chaos/report.md); plants hashed before testing). Seven of eight plants were caught; the one missed was a reversed textbook inequality inside a proof whose conclusion stays true. No false alarm on a proof step. The test is easier than real errors: each plant left a visible seam with untouched text. The blind referees also found two residual defects in the real note that the two earlier referees had passed (a numerical range in a remark; a false scalar inequality in an unused aside), both now corrected. Reading: two clean same-lineage referee passes are fair evidence against a gross local error and no evidence against a consistently written gap or a wrong justification of a true-looking step.

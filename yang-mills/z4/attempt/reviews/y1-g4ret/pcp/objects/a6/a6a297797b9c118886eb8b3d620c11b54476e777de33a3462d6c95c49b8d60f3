@@ -1,0 +1,31 @@
+Both statements ran. Statement A had no failures in 3000 random cases, and the Statement B quadratures agree across two orders. The report is in `report.md` in `/home/user/z4-workers/y1-g4ret/child`.
+
+- **Control:** the integral of sin²r over [0, π] is 1.570796, in `control.txt`.
+- **Statement A (seed 195):**
+  - All 3000 cases qualified (γ > 0).
+  - There were 0 failures, using a failure tolerance of 1e-9, which is my own float64 margin.
+  - The minimal slack is 0.00642263, at case 846 (n=3, tiny smallest eigenvalue).
+  - Per-case data is in `A_cases.csv`.
+  - This is a random-sample test, not a proof.
+- **Statement B** (k = 20.398861452, C = 4.068056677):
+
+| θ | p_k (order 200) | p_k (order 400) | Agree | Envelope |
+|---|---|---|---|---|
+| 0.05 | 0.003072388 | 0.003072388 | yes | 0.050336499 |
+| 0.20 | 0.156180437 | 0.156180437 | yes | 1.000000000 |
+| 0.60 | 0.934803630 | 0.934803630 | yes | 1.000000000 |
+
+- **Grandchild:**
+  - The task id was T196, and I released it.
+  - Its control gave 2.000000, and its Simpson run (20000 intervals) gave p_k(0.2) = 0.156180436616.
+  - That matches the Gauss–Legendre value above, and my rerun gave the same number.
+
+Two caveats:
+- I did not see the stdout of `stmtA.py`, which includes the count of cases where the bisection and eigenvalue γ disagreed. The PCP check only kept a hash of that output. The slack and failure figures come from `A_cases.csv`.
+- The "p(π) = 1" self-check in `stmtB.py` is trivial, because it divides a quantity by itself, so it checks nothing.
+
+Last lines of the two verify commands:
+- **Python:** `result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)`
+- **Rust:** `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.`
+
+The rerun commands are in `report.md`. `stmtA.py` writes `A_cases.csv` in mode "x", so rename or delete that file before rerunning it.

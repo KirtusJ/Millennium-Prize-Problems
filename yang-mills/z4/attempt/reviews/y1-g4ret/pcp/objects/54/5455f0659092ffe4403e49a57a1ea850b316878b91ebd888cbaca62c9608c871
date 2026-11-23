@@ -1,0 +1,9 @@
+beta=3.399810242, theta=0.05, sharp one-link cap=0.003072388
+beta=3.399810242, theta=0.2, sharp one-link cap=0.156180437
+beta=3.399810242, theta=0.6, sharp one-link cap=0.934803630
+120 centered Markov spectral-window checks passed
+disk beta=16, three-update quotient=0.06634829
+disk beta=64, three-update quotient=0.01789844
+disk beta=256, three-update quotient=0.00457024
+disk beta=1024, three-update quotient=0.00114879
+disk beta=4096, three-update quotient=0.00028759

@@ -1,0 +1,22 @@
+# notes x1-chaos (T188)
+- step0: control.txt = 0.272341 (-ln tanh 1). Lean READY exists (not used). PCP register initialised in pcp/.
+- step1: make_plants.py (PCP check K1, exit 0): 8 planted copies + 2 controls; predicates 28 met, 0 failed (P-uniq, P-diff, P-tex, P-ctrl). plants_build.json.
+- step2: PLANTS.md written and hashed into plants.sha256 BEFORE any referee launched.
+- deviation from common rule 7: the brief says each referee child gets ONLY its copy and the referee instruction, so the
+  referee children get no control question, no PCP rules, no grandchild instruction. Recorded as a deviation.
+- step3: run_referees.sh started 2026-11-23T23:11:39Z (pairs 1/2,3/4,5/6,7/8,c1/c2; 45 s stagger)
+- step4: verify_plants.py (PCP K2, exit 0): planted claims numerically false for plants 1,2,7,8: met 4, failed 0. V8: true tail P(|W'|^2>2tau)=0.153 vs claimed e^{-4}=0.018 at beta*A*tau=8.
+- step5: pair 1 done. Referee 1 (plant 1, Sections 1-4): MISSED -- says "Lemma K and its radial form ... stand" (line 215 flipped not seen). Raised: deficit range 7.33 vs recomputed 8.83 (lines 101, 564-565; unplanted text) + notation nit K. Referee 2 (plant 2, Sections 5-8): CAUGHT at line 661 exactly, with consequence (Step 4-7 do not close). Also raised: rate O((log b)^{3/2} b^{-1/2}) in Prop E13 line 591 false for C=1 (unplanted text).
+- step6: check_unplanted.py (K5) FAILED exit 1: scipy not installed (my defect; kept). check_unplanted2.py (K6, exit 0):
+  U1 note claim "deficit 7.33 to 14.23 for 100<=beta<=4096" -> recomputed 8.833 (beta=100, s=1) to 14.230: lower end WRONG in the real note (referee 1's claim confirmed by my independent code).
+  U2 Prop E13 rate O((log b)^{3/2} b^{-1/2}) with C=1: the Q bound of Lemma tails(b) decays only like b^{-2/pi^2}=b^{-0.203}; ratio to the claimed rate grows to 9e18 at b=1e40. Rate UNPROVED as stated (referee 2's claim confirmed); not used downstream (only Delta_i -> 0).
+- step7: pair 2 done. Referee 3 (plant 3): CAUGHT, line 788, exact reason (proof uses mu>=e^{-eta/4} at 807). Referee 4 (plant 4): CAUGHT, line 315, consequences in L-norm (786-787), ansatz (iv), L-sub 805 -- all as recorded in PLANTS.md.
+  Referee 3 said deficit range 7.33-14.23 reproduces (contradicting referee 1). check_unplanted3.py (K9): joint min over (beta,s) = 7.3304 at beta=100, s=0.1. So the note's "7.33" is the joint (beta,s) range; on the s-maximised reading (the sentence before) it is 8.83. U1 failure = my own reading (expectation), the target is AMBIGUOUS, not wrong. Referee 1's item 1 is downgraded to an ambiguity (false-alarm grade on unplanted text).
+- step8: pair 3 done. Referee 5 (plant 5): CAUGHT, lines 1039-1042, correct reason (Psi nondecreasing gives >= for a1>pi/2); proposed fix = the original tent text; judged Theorem L-main unaffected after fix (true: the planted error is a local regression). Also raised: Lemma L-C (lines 73-74) continuity => everywhere needs open sets of positive measure (minor, real-note; plausible, not checked further).
+  Referee 6 (plant 6): CAUGHT, line 947, with a concrete mechanism (tail prefactor ~ beta^{0.6} vs Q ~ beta^{-0.2}); also raised line 769 chain (unplanted) -> check_line769.py.
+  check_line769.py (K12): chain 2.65+3.61/eta<4.53/eta FAILS for eta in [0.3472,0.4] (529 of 4000 grid pts). Real-note defect in a side remark (not used: M^2:=M_A^2 directly). Referee 6 claim confirmed.
+- step9: pair 4 done. Referee 7 (plant 7): CAUGHT lines 829/839, with the contradiction to Remark 842 and line 865. Referee 8 (plant 8): CAUGHT lines 504-509, correct tail e^{-beta A (sqrt2-1)^2 tau/2} and the fix (split at 4 tau).
+  Deficit range: referees 1, 7, 8 flag "7.33" (s-maximised reading, line 562 defines deficit as max over s); referee 3 reproduced it on the joint reading. With line 562's definition the number is misstated (8.83). Final grade: real cosmetic DEFECT of the real note (I revise my step-7 downgrade; ambiguity resolved by line 562's own definition).
+  Running tally: plants caught 7 of 8 (missed: plant 1, Lemma K denominator inequality flipped).
+- step10: controls done (c1: deficit-range item real + nit 0.139% + unverified L4-circularity concern; L4 proof lines 179-226 cite no tu:U- label -> concern unfounded. c2: line 769 item real). extract_reports (K17): 10 finals, 0 leaks, tool calls 6-8. Python verify PASS; Rust verify run; PLANTS.md hash OK.
+- step11: report.md written. Plants caught 7/8 (missed plant 1); controls 0 false alarms on proofs; real-note defects R1-R3 confirmed.

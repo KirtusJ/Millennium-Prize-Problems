@@ -1,0 +1,13 @@
+  theta=0.05 p20000=0.003072387580 p40000=0.003072387580 target=0.003072388
+  theta=0.2 p20000=0.156180436616 p40000=0.156180436616 target=0.156180437
+  theta=0.6 p20000=0.934803629970 p40000=0.934803629970 target=0.93480363
+R1: MET 
+  C = 4.068056677368
+R2: MET 
+R3: MET max(off-centre - aligned) = 2.442e-15
+  sanity alpha=0 reproduces aligned: 0.00e+00
+R4: MET 
+R5: MET max |MC-quad|/SE = 2.12
+R6: MET 
+R7: MET max(||RSR|| - row sup) = 2.220e-16
+SUMMARY met=7 failed=0 []

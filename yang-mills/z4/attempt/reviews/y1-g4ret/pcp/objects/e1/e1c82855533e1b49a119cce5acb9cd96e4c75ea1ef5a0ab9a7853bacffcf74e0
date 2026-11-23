@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/y1-g4ret/tcopy/rare-coarse-fields/returns.py", line 26, in <module>
+    with ZipFile(Path(__file__).with_name("returns.zip")) as archive:
+         ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/zipfile/__init__.py", line 1414, in __init__
+    self.fp = io.open(file, filemode)
+              ~~~~~~~^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/user/z4-workers/y1-g4ret/tcopy/rare-coarse-fields/returns.zip'
