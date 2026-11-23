@@ -1,0 +1,14 @@
+[
+  {
+    "label": "negative_missing_spin_two",
+    "find": "1+(4*p^2-1)+(16*p^4-12*p^2+1)",
+    "replace": "1+(4*p^2-1)",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_doubled_innovation",
+    "find": "t/r ≤ 1-d/u",
+    "replace": "t/r ≤ 1-2*d/u",
+    "diagnostic": "error:"
+  }
+]
