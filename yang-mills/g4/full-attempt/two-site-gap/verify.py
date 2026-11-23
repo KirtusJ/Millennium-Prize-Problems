@@ -1,6 +1,7 @@
 """Replay the G4 even-box Wilson checks and optionally re-execute native instruments."""
 import argparse
 import csv
+import hashlib
 from importlib.util import module_from_spec, spec_from_file_location
 import io
 import json
@@ -9,6 +10,7 @@ from pathlib import Path
 import runpy
 import subprocess
 import sys
+from tempfile import TemporaryDirectory
 from zipfile import ZipFile
 
 import cube
@@ -17,11 +19,18 @@ import measurements
 ROOT=Path(__file__).resolve().parent
 G4=ROOT.parents[1]
 BUILDERS=("valley","freeze","full-kernel","signed-cube","integration","cube-lean","dressing",
-          "electric-gap","open-boundary","flat-slab")
+          "electric-gap","open-boundary","flat-slab","refinement")
 REVIEWS={"kernel-review":("kernel.md",),"fast-review":("fast-vacuum.md",),
          "slab-review":("flat-slab.md",),"data-review":("measurements.md",),
-         "chain-review":("README.md","flat-slab.md")}
-SOURCES=(".gitattributes","README.md","kernel.md","flat-slab.md","fast-vacuum.md","measurements.md","checks.md",
+         "chain-review":("README.md","flat-slab.md"),"refinement-review":("ordered-spectrum.md",)}
+ORDERED="yang-mills/central-quotients/tangent-curvature/periodic-limit/two-site-ordered-spectrum/README.md"
+EXTERIOR="yang-mills/central-quotients/tangent-curvature/periodic-limit/two-site-exterior/README.md"
+PATCH="yang-mills/observable-normalization/second-box/joint-spectrum/README.md"
+PEERS={"c4-minmax":(ORDERED,EXTERIOR),"c4-compactness":(ORDERED,PATCH)}
+PEER_BLOBS={ORDERED:"987377c1298ae4caba32d3264151bff7ae3ae989",
+            EXTERIOR:"531e72ada941ac6df0e3ec461387e027693f42e9",
+            PATCH:"7581dd01cf040b71fd5e20f3bf7e3eb0512d403d"}
+SOURCES=(".gitattributes","README.md","kernel.md","flat-slab.md","fast-vacuum.md","measurements.md","checks.md","ordered-spectrum.md",
          "TwoSite.lean","mutations.json","coefficients.csv","cube.py","quadrature.py","harmonic.py","controls.py",
          "wilson_mc.rs","measurements.py","wilson-blocks.zip","verify.py",
          "figures/starts.json","figures/starts.svg","figures/starts.receipt.txt",
@@ -38,6 +47,21 @@ def shared():
 
 def close(a,b):
     return (isnan(a) and isnan(b)) or isclose(a,b,rel_tol=2e-9,abs_tol=3e-12)
+
+
+def peer_registers(archive,source):
+    common=shared()
+    with TemporaryDirectory() as tmp:
+        common.ROOT=Path(tmp)
+        for k,blob in PEER_BLOBS.items():
+            raw=archive.read("peer-sources/"+k)
+            prefix=f"blob {len(raw)}".encode()+bytes([0])
+            assert hashlib.sha1(prefix+raw).hexdigest()==blob
+            p=common.ROOT/k
+            p.parent.mkdir(parents=True,exist_ok=True)
+            p.write_bytes(raw)
+        common.BUILDERS,common.REVIEWS=(),PEERS
+        return common.workers(archive,source)
 
 
 def measurements_check(archive,host):
@@ -75,6 +99,17 @@ def rerun_samples(exe):
             opened,l,t,b,s,h,burn,n,sweeps=measurements.SPEC.fullmatch(name).groups()
             sample=subprocess.check_output([exe,l,t,b,s,h,burn,n,sweeps,"open" if opened else "periodic"])
             assert sample.splitlines()==data.read(name).splitlines(),name
+    for t in range(4,15):
+        for boundary in ("open","periodic"):
+            sample=subprocess.check_output([exe,"2",str(t),"0","1","0","0","1","1",boundary],text=True)
+            rows=list(csv.DictReader(io.StringIO(sample)))
+            lag=measurements.max_lag(t,boundary=="open")
+            assert len(rows)==3 and rows[0].get(f"moment{lag+1}") is None
+            for item in rows:
+                vec=[float(x) for k,x in item.items() if k not in ("block","observable")]
+                assert len(vec)==2+lag+(t if boundary=="open" else 0)
+                quantities=measurements.observables(vec,t,boundary=="open",item["observable"])
+                assert len(quantities)==2+lag+min(3,lag-1)
 
 
 def verify(args):
@@ -89,9 +124,10 @@ def verify(args):
         assert all(common.sha(archive.read(k))==v for k,v in m["entries"].items())
         assert all(common.sha((ROOT/k).read_bytes())==v for k,v in m["sources"].items())
         registers=common.workers(archive,source)
+        registers.extend(peer_registers(archive,source))
         receipt,count=comp(archive,"compiler",source,"Millennium.G4.TwoSite")
         mutations=(ROOT/"mutations.json").read_bytes()
-        assert count==7 and receipt["mutations_sha256"]==common.sha(mutations)
+        assert count==9 and receipt["mutations_sha256"]==common.sha(mutations)
         assert b"warning:" not in archive.read("compiler/child/positive.log")
         assert b"invalid field 'popcount'" in archive.read("development/missing-popcount.log")
         assert b"Invalid mutation label" in archive.read("development/mutation-label.log")

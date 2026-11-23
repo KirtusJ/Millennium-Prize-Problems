@@ -259,7 +259,9 @@ fn main() {
     let open = args[9] == "open";
     let mut lat = Lattice::new(l, t, open, integer(5) == 1, &mut rng);
     lat.controls(&mut rng);
-    let lags = 6.min(t / 2);
+    assert!(sweeps > 0 && beta.is_finite() && beta >= 0.);
+    let max_lag = if open { t - 2 * (t / 4) - 1 } else { t / 2 };
+    let lags = 6.min(max_lag);
     print!("block,observable,mean");
     for lag in 0..=lags {
         print!(",moment{lag}");

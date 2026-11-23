@@ -59,6 +59,22 @@ theorem row_jensen {ι : Type*} (t : Finset ι) (w angle : ι → ℝ)
   simp only [mul_sub, mul_one, Finset.sum_sub_distrib, hs]
   linarith
 
+theorem scale_bound (m a L h C d : ℝ) (ha : 0 < a) (hd : 0 < d) (hm : 0 ≤ m)
+    (hbox : d ≤ a*L) (hgap : m*L ≤ C*h) : m/a ≤ C*h/d := by
+  apply (div_le_div_iff₀ ha hd).2
+  calc m*d ≤ m*(a*L) := mul_le_mul_of_nonneg_left hbox hm
+       _ = (m*L)*a := by ring
+       _ ≤ (C*h)*a := mul_le_mul_of_nonneg_right hgap ha.le
+
+open Filter Topology in
+theorem uniform_bare_scale {m a L h : ℕ → ℝ} {C d : ℝ} (hd : 0 < d)
+    (ha : ∀ n, 0 < a n) (hm : ∀ n, 0 ≤ m n) (hbox : ∀ n, d ≤ a n * L n)
+    (hgap : ∀ n, m n * L n ≤ C*h n) (hh : Tendsto h atTop (𝓝 0)) :
+    Tendsto (fun n => m n / a n) atTop (𝓝 0) := by
+  apply squeeze_zero (fun n => div_nonneg (hm n) (ha n).le)
+    (fun n => scale_bound _ _ _ _ _ _ (ha n) hd (hm n) (hbox n) (hgap n))
+  simpa using (hh.const_mul C).div_const d
+
 #print axioms symmetry
 #print axioms flux
 #print axioms doubled_square
@@ -66,5 +82,7 @@ theorem row_jensen {ι : Type*} (t : Finset ι) (w angle : ι → ℝ)
 #print axioms spin_bound
 #print axioms gaussian_denominator
 #print axioms row_jensen
+#print axioms scale_bound
+#print axioms uniform_bare_scale
 
 end Millennium.G4.TwoSite

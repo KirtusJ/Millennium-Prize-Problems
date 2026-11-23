@@ -14,6 +14,10 @@ SPEC = re.compile(r"(open-)?L(\d+)-T(\d+)-b(\d+)-seed(\d+)-h([01])-burn(\d+)-n(\
 NAN = float("nan")
 
 
+def max_lag(t, open_time):
+    return min(6, t-2*(t//4)-1 if open_time else t//2)
+
+
 def read_data(archive):
     ensembles = defaultdict(list)
     with ZipFile(archive) as files:
@@ -32,7 +36,8 @@ def read_data(archive):
                     rows[obs].append([float(row[k]) for k in cols])
             assert set(rows) == {"plaquette","adjoint","tensor"}
             for obs, chain in rows.items():
-                assert len(chain) == n and all(len(r)==8+(t if boundary else 0) for r in chain)
+                width = 2+max_lag(t,bool(boundary))+(t if boundary else 0)
+                assert len(chain) == n and all(len(r)==width for r in chain)
                 protocol = ("open-long" if burn >= 200 else "open") if boundary else "periodic"
                 key = (protocol, l, t, beta, obs)
                 ensembles[key].append((hot, chain))
@@ -43,14 +48,15 @@ def read_data(archive):
 
 
 def observables(row, t, open_time, obs):
-    means = row[8:]
+    end = 2+max_lag(t,open_time)
+    means = row[end:]
     if open_time:
         cut = t//4
         mean = statistics.fmean(means[cut:t-cut])
     else:
         mean = row[0]
     corr = []
-    for j, moment in enumerate(row[1:8]):
+    for j, moment in enumerate(row[1:end]):
         if obs=="tensor":
             # Axis permutation fixes the tensor expectation to zero at every slice.
             baseline = 0.
@@ -59,7 +65,8 @@ def observables(row, t, open_time, obs):
         else:
             baseline = mean*mean
         corr.append(moment-baseline)
-    eff = [math.log(corr[j]/corr[j+1]) if min(corr[j:j+2])>0 else NAN for j in (1,2,3)]
+    eff = [math.log(corr[j]/corr[j+1]) if min(corr[j:j+2])>0 else NAN
+           for j in range(1,min(4,len(corr)-1))]
     return [mean,*corr,*eff]
 
 
@@ -88,9 +95,11 @@ def report(source, dest):
     writer=csv.writer(dest,lineterminator="\n")
     writer.writerow(["boundary","L","T","beta","observable","stream","group_blocks",
                      "quantity","estimate","batch_error"])
-    quantities=["mean",*(f"C{i}" for i in range(7)), "m12","m23","m34"]
     for key,chains in sorted(read_data(source).items()):
         boundary,l,t,beta,obs=key
+        lag=max_lag(t,boundary!="periodic")
+        quantities=["mean",*(f"C{i}" for i in range(lag+1)),
+                    *(f"m{j}{j+1}" for j in range(1,min(4,lag)))]
         for label,sample in [("pooled",chains),("cold",chains[:1]),("hot",chains[1:])]:
             for group in ([1,4,8] if label=="pooled" else [4]):
                 vals,errs=stats(key,sample,group)

@@ -28,5 +28,11 @@
     "find": "w i * angle i) ≤ ∑ i ∈ t, w i * (1 - Real.cos",
     "replace": "w i * angle i) ≥ ∑ i ∈ t, w i * (1 - Real.cos",
     "diagnostic": "error:"
+  },
+  {
+    "label": "negative_shrinking_physical_box",
+    "find": "(hbox : d ≤ a*L) (hgap : m*L ≤ C*h)",
+    "replace": "(hbox : a*L ≤ d) (hgap : m*L ≤ C*h)",
+    "diagnostic": "error:"
   }
 ]
