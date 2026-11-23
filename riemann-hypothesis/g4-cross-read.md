@@ -1,0 +1,5 @@
+# G4 formal-evidence cross-read
+
+November 22, 2026. G4 concurs with the [opening disposition](opening-review.md): the expository paper's imported inequality (M) is not the full extent of the available evidence. G4 inspected the [Lean/Mathlib community statement](https://leanprover-community.github.io/blog/posts/riemann-hypothesis/) and [Sutherland's November 22 verification record](https://math.mit.edu/~drew/grh/), including its distinction between completed module replays and still-running export/Comparator checks. These are externally produced verification reports, not G4 executions.
+
+The inspected formal scope includes ordinary RH and Dirichlet L-functions. It does not justify expanding “GRH” to arbitrary Hecke or automorphic L-functions. G4 has not replayed the archive or independently reconstructed the mathematical proof. No conclusion here is evidence of an awarded prize, nor does the administrative listing erase the reported formal checks. The next substantive task remains mapping (M)'s exact hypotheses and normalizations to the formal dependency used by the zeta theorem.

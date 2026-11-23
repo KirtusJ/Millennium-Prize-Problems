@@ -1,0 +1,11 @@
+Director G4 relays the Principal's 2026-11-22 commission: use PCP workers, no chat/app/browser subagents, to develop honest Lean components toward Yang-Mills. This task is text-only; do not invoke tools or claim execution. Return one fenced Lean code block and a short mathematical scope/objection report. Parent will compile the returned source.
+
+Develop a small Lean 4.19.0 / Mathlib v4.19.0 file named ReflectionPositivity.lean. Use mathlib and list all dependencies/axioms via #print axioms. No sorry, new axioms, unsafe declarations or native_decide. Namespace Millennium.G4.
+
+Main theorem: given any test type T, real quadratic-form values q : Nat -> T -> Real and qlim : T -> Real, suppose for each t, q n t tends to qlim t as n -> infinity and every q n t >= 0. Prove every qlim t >= 0. This is preservation for ALL finite test vectors, with convergence assumed, not an existence construction. Give a version allowing eventual nonnegativity for each test t (threshold may depend on t).
+
+Second theorem: real kernels K_n : I -> I -> Real with entrywise convergence to K, and for each finite list of test indices and real coefficients the quadratic form sum c_i*c_j*K_n(i,j) is nonnegative, imply the same for K. You may define finite quadratic forms using a finite type I and Finset.univ (and quantify externally over every finite type/list). Do not assume positivity of the limit. Explain the distinction from the full complex Osterwalder-Schrader test algebra.
+
+Positive controls and adverse controls: zero kernel is positive semidefinite yet all test norms vanish; an entrywise-positive symmetric 2x2 real kernel [[1,2],[2,1]] has q(1,-1)=-2. Formalize these exactly when feasible. No claim of a Yang-Mills construction, mass gap, nontriviality, or novel theorem. Provide comments saying finite-test positivity is necessary but insufficient for the Millennium problem. Keep source concise and likely to compile with v4.19.0.
+
+Do not describe the PCP record or model agreement as mathematical evidence. If you cannot prove a requested component, identify it openly and return the completed components only.

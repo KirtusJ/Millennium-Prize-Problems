@@ -1,0 +1,15 @@
+C:\Users\donke\OneDrive\Documents\ChatGPT\From Prephysical Hypotheses to Physical_Models\Session\Millennium_G4\yang-mills\g4\ReflectionPositivity.lean:37:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+Use `set_option maxHeartbeats <num>` to set the limit.
+
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+'Millennium.G4.limit_nonneg_eventually' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.limit_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.finiteQuadraticForm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.kernel_limit_nonneg' does not depend on any axioms
+'Millennium.G4.zero_kernel_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.zero_kernel_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.adverseKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.adverseCoefficients' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.adverseKernel_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.adverseKernel_symm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.G4.adverseKernel_form' depends on axioms: [propext, Classical.choice, Quot.sound]
