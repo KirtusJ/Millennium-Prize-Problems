@@ -1,0 +1,2 @@
+check K31: exit 0 (expected 0) in 583867 ms | output cca8c69f50ae | event 37 head b0b00fcd6a82
+  C:\Users\donke\z4-workers\r7-wild\report.md — 4 STANDS, 1 DEFECT, 1 NOT CHECKED. The defect: Z4's "exact condition β²b bounded below" is an artifact of A4's choice L = A/16. A4's own estimates give a lower endpoint above κ/153 for every coupling (Lean-checked lemma), so the band escapes whenever βb → 0.

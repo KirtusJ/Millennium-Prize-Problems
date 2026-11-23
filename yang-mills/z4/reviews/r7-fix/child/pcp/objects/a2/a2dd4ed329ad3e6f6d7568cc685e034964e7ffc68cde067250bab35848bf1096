@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "C:\Users\donke\z4-workers\r7-fix\child\mut\m2\two_dim_control_v2.py", line 270, in <module>
+    print("P1 factors", res["P1"]["factors"], "M", res["P1"]["M"][-1])
+                                                   ~~~~~~~~~~~~~~^^^^
+IndexError: list index out of range

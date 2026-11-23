@@ -1,0 +1,8 @@
+H_all_cases MET
+P1 MET
+P2 MET
+P3 MET
+negative_controls ALL FAIL AS EXPECTED
+tolerance_table OK
+VERIFY compared 281 leaves, 0 differences
+VERIFY identical

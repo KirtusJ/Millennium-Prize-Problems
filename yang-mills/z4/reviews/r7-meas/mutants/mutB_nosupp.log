@@ -1,0 +1,39 @@
+C:/Users/donke/z4-workers/r7-meas/mutants/mutB_nosupp.lean:25:0: warning: automatically included section variable(s) unused in theorem 'MH.ae_nonneg':
+  [IsFiniteMeasure ν]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsFiniteMeasure ν] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+C:/Users/donke/z4-workers/r7-meas/mutants/mutB_nosupp.lean:63:0: warning: automatically included section variable(s) unused in theorem 'MH.C_nonneg':
+  [IsFiniteMeasure ν]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsFiniteMeasure ν] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+C:/Users/donke/z4-workers/r7-meas/mutants/mutB_nosupp.lean:64:23: warning: unused variable `E`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+C:/Users/donke/z4-workers/r7-meas/mutants/mutB_nosupp.lean:247:30: error: unknown identifier 'hsupp'
+C:/Users/donke/z4-workers/r7-meas/mutants/mutB_nosupp.lean:250:29: error: unknown identifier 'hsupp'
+C:/Users/donke/z4-workers/r7-meas/mutants/mutB_nosupp.lean:235:76: error: unsolved goals
+ν : Measure ℝ
+inst✝ : IsFiniteMeasure ν
+τ : ℝ
+hτ : 0 < τ
+key : ∀ (E : ℝ), 0 ≤ E → E ^ 2 * rexp (-τ * E) ≤ 4 / (rexp 1 ^ 2 * τ ^ 2)
+hpt : ∀ᵐ (E : ℝ) ∂ν, E ^ 2 * rexp (-(2 * τ) * E) ≤ 4 / (rexp 1 ^ 2 * τ ^ 2) * rexp (-τ * E)
+⊢ Integrable (fun E => E ^ 2 * rexp (-(2 * τ) * E)) ν ∧
+    ∫ (E : ℝ), E ^ 2 * rexp (-(2 * τ) * E) ∂ν ≤ 4 * C ν τ / (rexp 1 ^ 2 * τ ^ 2)
+C:/Users/donke/z4-workers/r7-meas/mutants/mutB_nosupp.lean:266:0: warning: automatically included section variable(s) unused in theorem 'MH.exists_Icc_pos':
+  [IsFiniteMeasure ν]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsFiniteMeasure ν] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'MH.integrable_exp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MH.M2_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MH.M2_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MH.M4_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MH.M1a' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MH.M6' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MH.M3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MH.M1b' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'MH.exists_Icc_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MH.M5_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MH.M5_no_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

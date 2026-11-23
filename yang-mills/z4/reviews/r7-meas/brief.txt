@@ -1,0 +1,13 @@
+
+ROLE: formalizer. Input: input/HeatRegularized.lean (compiles; finite sums of atoms) and input/STATEMENT.md (statement S5 and its review record). The other directors of the program state their conditions for positive Borel measures, not finite sums. Lift S5 to measures in Lean 4 with Mathlib (rule 6), in a new file MeasureHeat.lean that does not modify the input.
+ Setting: nu a finite measure on Real (IsFiniteMeasure) supported on [0, infinity) - state the support hypothesis in the form the proofs use, for example nu (Set.Iio 0) = 0 or "ae nonneg" - and C t = integral of exp(-t*E) d nu.
+ M1 (a): for tau > 0, integral of E*exp(-2*tau*E) d nu <= C(tau)/(e*tau). (b): integral of E^2*exp(-2*tau*E) d nu <= 4*C(tau)/(e^2*tau^2). Integrability of each integrand is part of the statement: prove it, do not assume it.
+ M2 (d): for tau >= 0 and real E0: integral over {E > E0} of exp(-2*tau*E) d nu <= exp(-tau*E0)*C(tau); hence the mass form: integral over {E <= E0} of exp(-2*tau*E) >= C(2*tau) - exp(-tau*E0)*C(tau).
+ M3 (e): v > 0, v <= C(2 tau), C(tau) <= V, E0 = (1/tau)*log(2V/v) gives the integral over {E <= E0} of exp(-2*tau*E) at least v/2.
+ M4 (f): if nu (Set.Ioo 0 m) = 0 and P0 = nu {0} then for s <= t: C(t) - P0 <= exp(-m*(t-s))*(C(s) - P0).
+ M5 (g), measure form: if nu (Set.Ioo 0 m) > 0 then there is no K with C(t) - P0 <= K*exp(-m*t) for all t >= T; prove an explicit version (choose a compact [a, b] inside (0, m) of positive mass via inner regularity or via countable union of intervals [1/n, m - 1/n], then C(t) - P0 >= nu([a,b])*exp(-t*b)).
+ M6 (c) log-convexity: C((s+t)/2)^2 <= C(s)*C(t) (Cauchy-Schwarz for integrals).
+Order of work: M2, M4, M1(a), M6, M3, M1(b), M5. Stop where the budget ends and report exactly which are proved; an unproved item is NOT CHECKED, never a sorry left in the file (delete unfinished theorems from the final file and keep the attempt in a separate *_failed.lean).
+Mutation check of your own file in scratch copies: drop the support hypothesis from (b); change e to 2 in (a). Record the outcome and whether the mutated statement is actually false (give the counterexample measure).
+Suggested delegation (rule 7): M6 or M5 to the sub-agent, recompile yourself.
+Report the exact theorem signatures, the #print axioms output, unused hypotheses, and which Mathlib lemmas carried the integrability. Budget: about 25 minutes.

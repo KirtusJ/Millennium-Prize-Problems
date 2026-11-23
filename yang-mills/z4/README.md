@@ -288,3 +288,40 @@ Counts, as met, failed, measured only: heat-trace programs 14, 1, 3; electric-sc
 Three lanes now have statements at weak bare coupling, and all three are of one kind: a named probe, normalized at one time, has its weight at or beyond the cutoff scale. B4's heat trace escapes above x^η/a; D4's surviving family lives at 1/b; A4's bands were audited in the second round. None is in a fixed physical window. The benchmark of this folder shows the same behaviour in a free theory for sharp-time normalization, and shows that a positive-time or mean normalization of a fixed-size observable does have a limit there. No lane has yet stated a result for such a normalization on the interacting lattice.
 
 Director, workers and sub-agents are one model family; this is not independent review.
+
+
+## Sixth round: a sharper band found by the wildcard, measure forms in Lean, the check repaired
+
+23 November 2026. Three workers (register checks K30, K31, K32), each with a sub-agent and its own register; all six replay. Reports: [`reviews/r7-wild/`](reviews/r7-wild/), [`reviews/r7-meas/`](reviews/r7-meas/), [`reviews/r7-fix/`](reviews/r7-fix/). The director reread the three reports, rederived the wildcard's proof by hand, recompiled both new Lean files (K33, K34, exit 0, standard axioms) and reran the repaired program in a fresh directory (bytes identical, and its verify mode against the worker's result: 281 leaves, 0 differences).
+
+### Correction to the second round, found by the wildcard worker
+
+The second round said of A4's window: "the exact condition β²b bounded below" (this file, section "Second round", and the Z4 row of `OVERALL_DISPOSITION.md`), and the thread comment repeated it. That is exact only for A4's particular lower endpoint L = A/16. The Lean statements `L_bounded_forces` and `L_tendsto_top` are about that L and remain true; the prose presented a property of one choice of endpoint as a property of the band. Kept as written above; scoped here.
+
+### A4's fundamental band, sharpened (favourable; for A4 to adopt or refute)
+
+With A4's own inputs the lower endpoint can be taken at a fixed fraction of the electric scale, uniformly in the magnetic coupling.
+
+- Var F = 4·Var x ≤ 4·E(1−x)² ≤ 8u, because 0 ≤ 1−x ≤ 2. A4's ground-energy identity gives g·u ≤ B(g). So the total mass of the spectral measure is at most K_F = min(4, 8B/g).
+- A4's pointwise inequality E ≤ L + E²/U + U·1_[L,U], integrated, gives A ≤ L·K_F + D/U + U·ν([L,U]). With L′ = A/(4K_F) and U = 4D/A: ν([L′, U]) ≥ A²/(8D), the same weight as A4's.
+- L′/κ = 9/(32·K_F·(1+B)) ≥ 9/(32·43) = 1/152.9 for every g > 0, since K_F(1+B) ≤ 43 ([`lean/Z4YM/KBound.lean`](lean/Z4YM/KBound.lean), `KB_bound`; the supremum on a grid is 41.6 near g = 18.9).
+
+On the tree-level trajectory κ_A = 2/(βb), so L′ ≥ 9/(688·βb): the band's lower edge leaves every fixed physical window whenever βb → 0, a wider class of trajectories than β²b → 0. Numerically on β = b^(−0.75), L′ rises from 0.048 to 15.6 as b falls from 10⁻² to 10⁻¹², while A4's L falls to 9.4·10⁻⁸. The weight is unchanged, so when β → ∞ it still tends to zero and the window then guarantees nothing in any fixed window whichever endpoint is used. The director checked the three steps by hand and the cited line of A4's note (K_e + g·u ≤ B, each term nonnegative). A4's proofs of that bound and of A and D are taken as given.
+
+Reading across lanes: every positive-energy band guaranteed in the repository now has its lower endpoint at a fixed fraction of the electric scale κ = 2/(βb), uniformly in the coupling ratio: D4's adjoint band at κ/576, C4's smeared adjoint band at δκ/12288, the fundamental band at κ/153. The moment method locates weight at the electric cutoff scale on every trajectory.
+
+The wildcard also checked C4's `momentum/adjoint-refinement.md` by hand (sphere identities, first-moment bound, window algebra, constants 1024, 12288, 1728) and found no fault.
+
+### S5 for measures
+
+[`lean/Z4YM/MeasureHeat.lean`](lean/Z4YM/MeasureHeat.lean): every part of S5 of `fixed-size/STATEMENT.md`, with (f) and (g), for a finite Borel measure ν on ℝ with ν((−∞, 0)) = 0 and C(t) = ∫e^(−tE)dν. Eleven declarations: `M1a`, `M1b` (integrability proved, not assumed; constants 1/(eτ) and 4/(e²τ²)), `M2_tail`, `M2_window`, `M3`, `M4_gap` (no mass in (0, m) gives C(t) − P₀ ≤ e^(−m(t−s))(C(s) − P₀)), `M5_lower`, `M5_no_bound` (mass in (0, m) defeats every bound K·e^(−mt)), `M6` (log-convexity), `exists_Icc_pos`. The sub-agent proved M6 independently by a different route. Hypotheses that turned out unnecessary: E₀ > 0, m > 0, v ≤ V. Mutations: replacing e by 3 in (a) and dropping the support in (b) are rejected and false (counterexamples δ at 1/τ and δ at −1); replacing e by 2 is rejected although true. A point about Lean's integral worth knowing: without integrability the Bochner integral is 0, so a bound can hold vacuously; the statements here prove integrability as part of the conclusion.
+
+This is the form A4, C4 and D4 use (positive measures, not finite sums). The gap criterion (`M4_gap`, `M5_no_bound`) and the two-value reduction (`M3`) are now available to them as stated.
+
+### The check-design defect of the third round, repaired
+
+[`computation/two_dim_control_v2.py`](computation/two_dim_control_v2.py) with its result file; the first program and its published result are unchanged. Tolerances and windows are written into the result with their sources and compared with a hashed table; four negative controls run on every execution (a perturbed closed form must fail H, a ratio 1 + 10⁻⁵ must fail P3, a wrong Bessel order must fail P1, the coupling 2N² must fail P2); a verify mode recomputes and compares an existing result number by number. The 221 numbers common to both programs are identical to the published ones. All eight mutations of the third round are now caught, including the two that passed before and the changed digit. What it still cannot catch: a consistent edit of table, hash and code within the negative-control margins, which only the verify mode against a trusted stored result detects; and an error common to a closed form and its check. The worker's own first run failed its new self-check (precision set after the constants) and is kept.
+
+Counts, as met, failed, measured only: wildcard 6, 0, 2 and its sub-agent 2, 0, 0; measure-form Lean 4, 0, 0 on the final file with failed intermediate compiles kept; repair 11 of 13 register checks as expected (two the worker's own defect, kept).
+
+Director, workers and sub-agents are one model family; this is not independent review.

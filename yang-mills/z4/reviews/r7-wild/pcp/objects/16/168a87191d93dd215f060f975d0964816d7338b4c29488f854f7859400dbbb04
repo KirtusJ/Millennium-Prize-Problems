@@ -1,0 +1,7 @@
+P1 MET 4002/4002 grid points
+P2 MET sup=41.598967 at g=18.8799
+P3 MET min L'/kappa=0.00676099 vs 0.0065407
+P4 MET violations A4-form 0, D4-form 0; min ratio D4-form 1.1382
+P5 MET L' escapes all p<1: True; L_A4 shrinks for p>1/2: True
+P6/P7 MET beta=1/b: L' in [0.01543,0.01557]
+counts met,failed: 6 0

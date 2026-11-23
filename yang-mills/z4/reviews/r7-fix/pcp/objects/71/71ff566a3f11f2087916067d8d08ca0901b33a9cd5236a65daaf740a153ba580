@@ -1,0 +1,8 @@
+H_all_cases MET
+P1 MET
+P2 MET
+P3 MET
+negative_controls ALL FAIL AS EXPECTED
+tolerance_table OK
+VERIFY compared 281 leaves, 3 differences
+VERIFY first difference: /tolerance_table_sha256: recomputed "604e02b503f07c0f1a863fe96c4066f43828b92c7f0e644f995f12cad85ffde7", file "258778899530ea9458b69290d8b5e6db077ff47703f9e0cd850e3b724c316d81"

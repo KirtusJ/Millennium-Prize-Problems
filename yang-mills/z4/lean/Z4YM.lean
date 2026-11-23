@@ -6,3 +6,5 @@ import Z4YM.CharTransfer
 import Z4YM.TrajectoryAudit
 import Z4YM.WilsonLimit
 import Z4YM.HeatRegularized
+import Z4YM.MeasureHeat
+import Z4YM.KBound

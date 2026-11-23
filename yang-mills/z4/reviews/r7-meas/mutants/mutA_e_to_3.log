@@ -1,0 +1,40 @@
+C:/Users/donke/z4-workers/r7-meas/mutants/mutA_e_to_3.lean:25:0: warning: automatically included section variable(s) unused in theorem 'MH.ae_nonneg':
+  [IsFiniteMeasure ν]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsFiniteMeasure ν] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+C:/Users/donke/z4-workers/r7-meas/mutants/mutA_e_to_3.lean:63:0: warning: automatically included section variable(s) unused in theorem 'MH.C_nonneg':
+  [IsFiniteMeasure ν]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsFiniteMeasure ν] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+C:/Users/donke/z4-workers/r7-meas/mutants/mutA_e_to_3.lean:64:23: warning: unused variable `E`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+C:/Users/donke/z4-workers/r7-meas/mutants/mutA_e_to_3.lean:135:56: error: unsolved goals
+case calc.step
+ν : Measure ℝ
+inst✝ : IsFiniteMeasure ν
+hsupp : ν (Iio 0) = 0
+τ : ℝ
+hτ : 0 < τ
+key : ∀ (E : ℝ), E * rexp (-τ * E) ≤ 1 / (rexp 1 * τ)
+hpt : ∀ (E : ℝ), E * rexp (-(2 * τ) * E) ≤ 1 / (rexp 1 * τ) * rexp (-τ * E)
+hg : Integrable (fun x => 1 / (rexp 1 * τ) * rexp (-τ * x)) ν
+hint : Integrable (fun E => E * rexp (-(2 * τ) * E)) ν
+⊢ C ν τ / (rexp 1 * τ) ≤ C ν τ / (3 * τ)
+C:/Users/donke/z4-workers/r7-meas/mutants/mutA_e_to_3.lean:266:0: warning: automatically included section variable(s) unused in theorem 'MH.exists_Icc_pos':
+  [IsFiniteMeasure ν]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsFiniteMeasure ν] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'MH.integrable_exp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MH.M2_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MH.M2_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MH.M4_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MH.M1a' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'MH.M6' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MH.M3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MH.M1b' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MH.exists_Icc_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MH.M5_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MH.M5_no_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,240 @@
+{
+ "m1": {
+  "pcp_check_id": "K2",
+  "exit": 1,
+  "expected_exit": 1,
+  "timeout": false,
+  "duration_ms": 2623,
+  "stdout_sha256": "beb05dd84feb046f09c9d89b578109a519dcd75b14f4c9fb8305029965b4b7a9",
+  "verdict_lines": [
+   "H_all_cases MET",
+   "P1 FAILED",
+   "P2 MET",
+   "P3 MET",
+   "negative_controls ALL FAIL AS EXPECTED",
+   "tolerance_table OK",
+   "P1 factors ['0.2559424', '0.25147214', '0.25036669', '0.25009158'] M 1.5001831166364289694616922868",
+   "P2 factors ['4.0109836', '4.0028855', '4.0007297', '4.0001829'] M 0.37501144426638787699818158543",
+   "P3 Z_2 ['0.00268370112389', '4.05253297571e-13', '3.29242799698e-54', '2.24127541097e-220'] 1.0",
+   "P3 Z_3 ['0.0297083430418', '1.81206458122e-9', '3.89969791245e-40', '1.30701378831e-164'] 1.0",
+   "P3 Z_5 ['0.331703482839', '0.000349274340181', '5.50694227662e-18', '5.31704187502e-75'] 1.0"
+  ],
+  "self_check_defect_lines": [],
+  "verify_lines": [],
+  "description": "U(1) real P1 gap I_1/I_0 -> I_2/I_1",
+  "old": "M = {N: -mp.mpf(N) ** 2 * mp.log(mp.besseli(1, mp.mpf(N) ** 2) / mp.besseli(0, mp.mpf(N) ** 2)) for N in qual_u1}",
+  "new": "M = {N: -mp.mpf(N) ** 2 * mp.log(mp.besseli(2, mp.mpf(N) ** 2) / mp.besseli(1, mp.mpf(N) ** 2)) for N in qual_u1}",
+  "predicted_mechanism": "P1 FAILED"
+ },
+ "m2": {
+  "pcp_check_id": "K3",
+  "exit": 1,
+  "expected_exit": 1,
+  "timeout": false,
+  "duration_ms": 4294,
+  "stdout_sha256": "607b9e0799d59d7956af886121b662e228196970c8cd868b9c9347d448dfde11",
+  "verdict_lines": [
+   "H_all_cases FAILED",
+   "P1 FAILED",
+   "P2 MET",
+   "P3 MET",
+   "negative_controls ALL FAIL AS EXPECTED",
+   "tolerance_table OK"
+  ],
+  "self_check_defect_lines": [],
+  "verify_lines": [],
+  "description": "u1_closed uses I_{n+1}",
+  "old": "def u1_closed(n, b):  return mp.besseli(n, b) * mp.exp(-b)",
+  "new": "def u1_closed(n, b):  return mp.besseli(n + 1, b) * mp.exp(-b)",
+  "predicted_mechanism": "H_all_cases FAILED, P1 FAILED (no qualifying U(1) N)"
+ },
+ "m3": {
+  "pcp_check_id": "K4",
+  "exit": 1,
+  "expected_exit": 1,
+  "timeout": false,
+  "duration_ms": 4590,
+  "stdout_sha256": "cc79b58671e092caaac9fe6d6aff18c32e265fc7791e88e369e4af89a1ddcdee",
+  "verdict_lines": [
+   "H_all_cases MET",
+   "P1 FAILED",
+   "P2 MET",
+   "P3 MET",
+   "negative_controls ALL FAIL AS EXPECTED",
+   "tolerance_table OK",
+   "P1 factors ['0.97918121', '0.99467506', '0.99866018', '0.99966449'] M 0.499938978501329501648323331828",
+   "P2 factors ['4.0109836', '4.0028855', '4.0007297', '4.0001829'] M 0.37501144426638787699818158543",
+   "P3 Z_2 ['0.00268370112389', '4.05253297571e-13', '3.29242799698e-54', '2.24127541097e-220'] 1.0",
+   "P3 Z_3 ['0.0297083430418', '1.81206458122e-9', '3.89969791245e-40', '1.30701378831e-164'] 1.0",
+   "P3 Z_5 ['0.331703482839', '0.000349274340181', '5.50694227662e-18', '5.31704187502e-75'] 1.0"
+  ],
+  "self_check_defect_lines": [],
+  "verify_lines": [],
+  "description": "U(1) real P1 beta N^2 -> N^2+1",
+  "old": "M = {N: -mp.mpf(N) ** 2 * mp.log(mp.besseli(1, mp.mpf(N) ** 2) / mp.besseli(0, mp.mpf(N) ** 2)) for N in qual_u1}",
+  "new": "M = {N: -mp.mpf(N) ** 2 * mp.log(mp.besseli(1, mp.mpf(N) ** 2 + 1) / mp.besseli(0, mp.mpf(N) ** 2 + 1)) for N in qual_u1}",
+  "predicted_mechanism": "P1 FAILED (M < 1/2)"
+ },
+ "m4": {
+  "pcp_check_id": "K5",
+  "exit": 1,
+  "expected_exit": 1,
+  "timeout": false,
+  "duration_ms": 2591,
+  "stdout_sha256": "6ce81849de9b7d05caf84c18d45a810f229e8fba030298180361210b35fe7596",
+  "verdict_lines": [
+   "H_all_cases MET",
+   "P1 MET",
+   "P2 FAILED",
+   "P3 MET",
+   "negative_controls ALL FAIL AS EXPECTED",
+   "tolerance_table OK",
+   "P1 factors ['4.2935041', '4.0659803', '4.016105', '4.0040028'] M 0.500061048820197297973140334154",
+   "P2 factors ['1.0234577', '1.0058619', '1.001465', '1.0003662'] M 0.750045777763659568912351158712",
+   "P3 Z_2 ['0.00268370112389', '4.05253297571e-13', '3.29242799698e-54', '2.24127541097e-220'] 1.0",
+   "P3 Z_3 ['0.0297083430418', '1.81206458122e-9', '3.89969791245e-40', '1.30701378831e-164'] 1.0",
+   "P3 Z_5 ['0.331703482839', '0.000349274340181', '5.50694227662e-18', '5.31704187502e-75'] 1.0"
+  ],
+  "self_check_defect_lines": [],
+  "verify_lines": [],
+  "description": "SU(2) real P2 beta 4N^2 -> 2N^2",
+  "old": "M2 = {N: -mp.mpf(N) ** 2 * mp.log(mp.besseli(2, 4 * mp.mpf(N) ** 2) / mp.besseli(1, 4 * mp.mpf(N) ** 2)) for N in qual_su2}",
+  "new": "M2 = {N: -mp.mpf(N) ** 2 * mp.log(mp.besseli(2, 2 * mp.mpf(N) ** 2) / mp.besseli(1, 2 * mp.mpf(N) ** 2)) for N in qual_su2}",
+  "predicted_mechanism": "P2 FAILED"
+ },
+ "m5": {
+  "pcp_check_id": "K6",
+  "exit": 1,
+  "expected_exit": 1,
+  "timeout": false,
+  "duration_ms": 2628,
+  "stdout_sha256": "28cd3efb265b9bb739221473faa0de0a901a80764acef46919d1631555369450",
+  "verdict_lines": [
+   "H_all_cases MET",
+   "P1 MET",
+   "P2 MET",
+   "P3 FAILED",
+   "negative_controls ALL FAIL AS EXPECTED",
+   "tolerance_table OK",
+   "P1 factors ['4.2935041', '4.0659803', '4.016105', '4.0040028'] M 0.500061048820197297973140334154",
+   "P2 factors ['4.0109836', '4.0028855', '4.0007297', '4.0001829'] M 0.37501144426638787699818158543",
+   "P3 Z_2 ['0.00268370112389', '4.05253297571e-13', '3.29242799698e-54', '2.24127541097e-220'] 2.0",
+   "P3 Z_3 ['0.0297083430418', '1.81206458122e-9', '3.89969791245e-40', '1.30701378831e-164'] 2.0",
+   "P3 Z_5 ['0.331703482839', '0.000349274340181', '5.50694227662e-18', '5.31704187502e-75'] 2.0"
+  ],
+  "self_check_defect_lines": [],
+  "verify_lines": [],
+  "description": "Z_n asymptote halved",
+  "old": "A = b * k * d * mp.exp(-b * d)",
+  "new": "A = b * k * d / 2 * mp.exp(-b * d)",
+  "predicted_mechanism": "P3 FAILED"
+ },
+ "m6": {
+  "pcp_check_id": "K7",
+  "exit": 2,
+  "expected_exit": 2,
+  "timeout": false,
+  "duration_ms": 3677,
+  "stdout_sha256": "2703defcaf20467f2d2b7138959e2a9ae9ff1fea6b3547bba54b9570153ca39e",
+  "verdict_lines": [
+   "H_all_cases MET",
+   "P1 MET",
+   "P2 MET",
+   "P3 MET",
+   "negative_controls DEFECT",
+   "tolerance_table DEFECT",
+   "P1 factors ['4.2935041', '4.0659803', '4.016105', '4.0040028'] M 0.500061048820197297973140334154",
+   "P2 factors ['4.0109836', '4.0028855', '4.0007297', '4.0001829'] M 0.37501144426638787699818158543",
+   "P3 Z_2 ['0.00268370112389', '4.05253297571e-13', '3.29242799698e-54', '2.24127541097e-220'] 1.0",
+   "P3 Z_3 ['0.0297083430418', '1.81206458122e-9', '3.89969791245e-40', '1.30701378831e-164'] 1.0",
+   "P3 Z_5 ['0.331703482839', '0.000349274340181', '5.50694227662e-18', '5.31704187502e-75'] 1.0"
+  ],
+  "self_check_defect_lines": [
+   "SELF-CHECK DEFECT: TOL_H in use 1.0e-19 != table 1e-25",
+   "SELF-CHECK DEFECT: negative control NC_H passed (expected FAIL)"
+  ],
+  "verify_lines": [],
+  "description": "TOL_H x1e6 (code only)",
+  "old": "TOL_H = mp.mpf(10) ** -25",
+  "new": "TOL_H = mp.mpf(10) ** -19",
+  "predicted_mechanism": "self-check: TOL_H in use != table; NC_H passed"
+ },
+ "m7": {
+  "pcp_check_id": "K8",
+  "exit": 2,
+  "expected_exit": 2,
+  "timeout": false,
+  "duration_ms": 4087,
+  "stdout_sha256": "bfae71c811394d0e380171175adfc8a501400c14da17434fd5d48b95b073a185",
+  "verdict_lines": [
+   "H_all_cases MET",
+   "P1 MET",
+   "P2 MET",
+   "P3 MET",
+   "negative_controls DEFECT",
+   "tolerance_table DEFECT",
+   "P1 factors ['4.2935041', '4.0659803', '4.016105', '4.0040028'] M 0.500061048820197297973140334154",
+   "P2 factors ['4.0109836', '4.0028855', '4.0007297', '4.0001829'] M 0.37501144426638787699818158543",
+   "P3 Z_2 ['0.00268370112389', '4.05253297571e-13', '3.29242799698e-54', '2.24127541097e-220'] 1.0",
+   "P3 Z_3 ['0.0297083430418', '1.81206458122e-9', '3.89969791245e-40', '1.30701378831e-164'] 1.0",
+   "P3 Z_5 ['0.331703482839', '0.000349274340181', '5.50694227662e-18', '5.31704187502e-75'] 1.0"
+  ],
+  "self_check_defect_lines": [
+   "SELF-CHECK DEFECT: TOL_P3 in use 1.0 != table 1e-6",
+   "SELF-CHECK DEFECT: negative control NC_P3 passed (expected FAIL)"
+  ],
+  "verify_lines": [],
+  "description": "TOL_P3 x1e6 (code only)",
+  "old": "TOL_P3 = mp.mpf(10) ** -6",
+  "new": "TOL_P3 = mp.mpf(10) ** 0",
+  "predicted_mechanism": "self-check: TOL_P3 in use != table; NC_P3 passed"
+ },
+ "m8_baseline": {
+  "pcp_check_id": "K9",
+  "exit": 0,
+  "expected_exit": 0,
+  "timeout": false,
+  "duration_ms": 3489,
+  "stdout_sha256": "b9c8582e8804f6f854132eabf7997ff8c35d67c7b1cedb7e075ee005bad4fb3d",
+  "verdict_lines": [
+   "H_all_cases MET",
+   "P1 MET",
+   "P2 MET",
+   "P3 MET",
+   "negative_controls ALL FAIL AS EXPECTED",
+   "tolerance_table OK"
+  ],
+  "self_check_defect_lines": [],
+  "verify_lines": [
+   "VERIFY compared 281 leaves, 0 differences",
+   "VERIFY identical"
+  ],
+  "description": "unmutated program --verify on unmodified result copy",
+  "predicted_mechanism": "identical, exit 0"
+ },
+ "m8": {
+  "pcp_check_id": "K10",
+  "exit": 3,
+  "expected_exit": 3,
+  "timeout": false,
+  "duration_ms": 2925,
+  "stdout_sha256": "07a6ea25367a7b0a600ae1ecfa982f8f511cb6f7417e20e5a0d36bd467f3a408",
+  "verdict_lines": [
+   "H_all_cases MET",
+   "P1 MET",
+   "P2 MET",
+   "P3 MET",
+   "negative_controls ALL FAIL AS EXPECTED",
+   "tolerance_table OK"
+  ],
+  "self_check_defect_lines": [],
+  "verify_lines": [
+   "VERIFY compared 281 leaves, 1 differences",
+   "VERIFY first difference: /P1/M[1]: recomputed \"0.503963426931821535322121931884\", file \"0.503963426931821535322121931885\""
+  ],
+  "description": "unmutated program --verify on result with P1 M[N=8] last digit 4->5",
+  "old": "0.503963426931821535322121931884",
+  "new": "0.503963426931821535322121931885",
+  "predicted_mechanism": "verify exit 3, first difference /P1/M[1]"
+ }
+}

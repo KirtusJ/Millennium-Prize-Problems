@@ -1,0 +1,5 @@
+- step1: control.txt = 0.333333 (midpoint rule n=1e5)
+- step2: pcp init exit 0
+- step3: first compile failed (fun_prop aestronglyMeasurable); fixed via Continuous.aestronglyMeasurable
+- step4: compile exit 0, axioms [propext, Classical.choice, Quot.sound]
+- step5: pcp check m6child exit 0 (K1); verify PASS, 3 events, chain intact

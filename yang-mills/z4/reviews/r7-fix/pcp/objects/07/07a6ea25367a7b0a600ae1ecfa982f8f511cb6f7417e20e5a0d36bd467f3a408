@@ -1,0 +1,8 @@
+H_all_cases MET
+P1 MET
+P2 MET
+P3 MET
+negative_controls ALL FAIL AS EXPECTED
+tolerance_table OK
+VERIFY compared 281 leaves, 1 differences
+VERIFY first difference: /P1/M[1]: recomputed "0.503963426931821535322121931884", file "0.503963426931821535322121931885"

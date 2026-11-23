@@ -1,0 +1,7 @@
+H_all_cases FAILED
+P1 FAILED
+P2 MET
+P3 MET
+negative_controls ALL FAIL AS EXPECTED
+tolerance_table OK
+H qualify {'U(1)': [], 'SU(2)': [4, 8, 16, 32, 64], 'of': [4, 8, 16, 32, 64]}

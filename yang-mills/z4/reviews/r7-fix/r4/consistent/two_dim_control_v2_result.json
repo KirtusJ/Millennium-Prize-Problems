@@ -1,0 +1,421 @@
+{
+ "H": [
+  {
+   "N": 4,
+   "beta": "16.0",
+   "group": "U(1)",
+   "label": 0,
+   "met": true,
+   "rel_diff": "0.0"
+  },
+  {
+   "N": 4,
+   "beta": "16.0",
+   "group": "U(1)",
+   "label": 1,
+   "met": true,
+   "rel_diff": "0.0"
+  },
+  {
+   "N": 4,
+   "beta": "64.0",
+   "group": "SU(2)",
+   "label": "2j=0",
+   "met": true,
+   "rel_diff": "0.0"
+  },
+  {
+   "N": 4,
+   "beta": "64.0",
+   "group": "SU(2)",
+   "label": "2j=1",
+   "met": true,
+   "rel_diff": "0.0"
+  },
+  {
+   "N": 8,
+   "beta": "64.0",
+   "group": "U(1)",
+   "label": 0,
+   "met": true,
+   "rel_diff": "1.4359e-41"
+  },
+  {
+   "N": 8,
+   "beta": "64.0",
+   "group": "U(1)",
+   "label": 1,
+   "met": true,
+   "rel_diff": "0.0"
+  },
+  {
+   "N": 8,
+   "beta": "256.0",
+   "group": "SU(2)",
+   "label": "2j=0",
+   "met": true,
+   "rel_diff": "0.0"
+  },
+  {
+   "N": 8,
+   "beta": "256.0",
+   "group": "SU(2)",
+   "label": "2j=1",
+   "met": true,
+   "rel_diff": "0.0"
+  },
+  {
+   "N": 16,
+   "beta": "256.0",
+   "group": "U(1)",
+   "label": 0,
+   "met": true,
+   "rel_diff": "1.438e-41"
+  },
+  {
+   "N": 16,
+   "beta": "256.0",
+   "group": "U(1)",
+   "label": 1,
+   "met": true,
+   "rel_diff": "0.0"
+  },
+  {
+   "N": 16,
+   "beta": "1024.0",
+   "group": "SU(2)",
+   "label": "2j=0",
+   "met": true,
+   "rel_diff": "0.0"
+  },
+  {
+   "N": 16,
+   "beta": "1024.0",
+   "group": "SU(2)",
+   "label": "2j=1",
+   "met": true,
+   "rel_diff": "1.4414e-41"
+  },
+  {
+   "N": 32,
+   "beta": "1024.0",
+   "group": "U(1)",
+   "label": 0,
+   "met": true,
+   "rel_diff": "0.0"
+  },
+  {
+   "N": 32,
+   "beta": "1024.0",
+   "group": "U(1)",
+   "label": 1,
+   "met": true,
+   "rel_diff": "0.0"
+  },
+  {
+   "N": 32,
+   "beta": "4096.0",
+   "group": "SU(2)",
+   "label": "2j=0",
+   "met": true,
+   "rel_diff": "1.4389e-41"
+  },
+  {
+   "N": 32,
+   "beta": "4096.0",
+   "group": "SU(2)",
+   "label": "2j=1",
+   "met": true,
+   "rel_diff": "1.4394e-41"
+  },
+  {
+   "N": 64,
+   "beta": "4096.0",
+   "group": "U(1)",
+   "label": 0,
+   "met": true,
+   "rel_diff": "0.0"
+  },
+  {
+   "N": 64,
+   "beta": "4096.0",
+   "group": "U(1)",
+   "label": 1,
+   "met": true,
+   "rel_diff": "1.4389e-41"
+  },
+  {
+   "N": 64,
+   "beta": "16384.0",
+   "group": "SU(2)",
+   "label": "2j=0",
+   "met": true,
+   "rel_diff": "1.4388e-41"
+  },
+  {
+   "N": 64,
+   "beta": "16384.0",
+   "group": "SU(2)",
+   "label": "2j=1",
+   "met": true,
+   "rel_diff": "0.0"
+  }
+ ],
+ "H_qualify": {
+  "SU(2)": [
+   4,
+   8,
+   16,
+   32,
+   64
+  ],
+  "U(1)": [
+   4,
+   8,
+   16,
+   32,
+   64
+  ],
+  "of": [
+   4,
+   8,
+   16,
+   32,
+   64
+  ]
+ },
+ "P1": {
+  "D": [
+   "0.0157113209349",
+   "0.00365932363658",
+   "0.000899985586931",
+   "0.000224094138003",
+   "5.59675281325e-5"
+  ],
+  "M": [
+   "0.516606957558429332625608032459",
+   "0.503963426931821535322121931884",
+   "0.500980078068698950926465031655",
+   "0.500244359466931643611147313919",
+   "0.500061048820197297973140334154"
+  ],
+  "N": [
+   4,
+   8,
+   16,
+   32,
+   64
+  ],
+  "factors": [
+   "4.2935041",
+   "4.0659803",
+   "4.016105",
+   "4.0040028"
+  ]
+ },
+ "P2": {
+  "M": [
+   "0.377940566957932509013050008195",
+   "0.375733128641831729550233210555",
+   "0.375183150040851305411126621053",
+   "0.375045779159107242365423071699",
+   "0.37501144426638787699818158543"
+  ],
+  "M_minus_3_8": [
+   "0.00294056695793",
+   "0.000733128641832",
+   "0.000183150040851",
+   "4.57791591072e-5",
+   "1.14442663879e-5"
+  ],
+  "N": [
+   4,
+   8,
+   16,
+   32,
+   64
+  ],
+  "factors": [
+   "4.0109836",
+   "4.0028855",
+   "4.0007297",
+   "4.0001829"
+  ]
+ },
+ "P3": {
+  "Z_2": {
+   "M": [
+    "0.00268370112389",
+    "4.05253297571e-13",
+    "3.29242799698e-54",
+    "2.24127541097e-220"
+   ],
+   "M_over_A": [
+    "1.00000003751173",
+    "1.0",
+    "1.0",
+    "1.0"
+   ],
+   "N": [
+    2,
+    4,
+    8,
+    16
+   ],
+   "ratio_within_1e-6_at_N16": true,
+   "strictly_decreasing": true
+  },
+  "Z_3": {
+   "M": [
+    "0.0297083430418",
+    "1.81206458122e-9",
+    "3.89969791245e-40",
+    "1.30701378831e-164"
+   ],
+   "M_over_A": [
+    "0.998766749169272",
+    "0.999999999981124",
+    "1.0",
+    "1.0"
+   ],
+   "N": [
+    2,
+    4,
+    8,
+    16
+   ],
+   "ratio_within_1e-6_at_N16": true,
+   "strictly_decreasing": true
+  },
+  "Z_5": {
+   "M": [
+    "0.331703482839",
+    "0.000349274340181",
+    "5.50694227662e-18",
+    "5.31704187502e-75"
+   ],
+   "M_over_A": [
+    "0.951816225855101",
+    "0.99997936727571",
+    "1.0",
+    "1.0"
+   ],
+   "N": [
+    2,
+    4,
+    8,
+    16
+   ],
+   "ratio_within_1e-6_at_N16": true,
+   "strictly_decreasing": true
+  }
+ },
+ "argv": [
+  "<mpmath site directory>"
+ ],
+ "dps": 40,
+ "negative_controls": {
+  "NC_H": {
+   "expected": "FAIL",
+   "passed_predicate": false,
+   "rel_diff": "1.0e-22",
+   "what": "u1_closed(1,16)*(1+NC_H_PERT) vs quadrature"
+  },
+  "NC_P1": {
+   "expected": "FAIL",
+   "factors": [
+    "0.2559424",
+    "0.25147214",
+    "0.25036669",
+    "0.25009158"
+   ],
+   "passed_predicate": false,
+   "what": "U(1) gap with I_2/I_1"
+  },
+  "NC_P2": {
+   "M_minus_3_8": [
+    "0.386800780876",
+    "0.377935271979",
+    "0.375732777394",
+    "0.375183127788",
+    "0.375045777764"
+   ],
+   "expected": "FAIL",
+   "factors": [
+    "1.0234577",
+    "1.0058619",
+    "1.001465",
+    "1.0003662"
+   ],
+   "passed_predicate": false,
+   "what": "SU(2) gap on beta = 2 N^2"
+  },
+  "NC_P3": {
+   "expected": "FAIL",
+   "passed_predicate": false,
+   "ratio": "1.00001",
+   "what": "ratio 1 + NC_P3_OFF"
+  }
+ },
+ "program": "two_dim_control_v2.py",
+ "self_check": {
+  "defects": [],
+  "ok": true
+ },
+ "tolerance_table_sha256": "604e02b503f07c0f1a863fe96c4066f43828b92c7f0e644f995f12cad85ffde7",
+ "tolerances": {
+  "DPS": {
+   "in_use": "40",
+   "source": "working precision for H, P1, P2 (v1 code)",
+   "table": "40"
+  },
+  "DPS_P3": {
+   "in_use": "400",
+   "source": "P3 precision: ratio-1 as small as exp(-256 d_n) (v1 code)",
+   "table": "400"
+  },
+  "NC_H_PERT": {
+   "in_use": "1.0e-22",
+   "source": "NC_H perturbation: 3 decades above TOL_H, 3 below TOL_H*1e6 (r7)",
+   "table": "1e-22"
+  },
+  "NC_P3_OFF": {
+   "in_use": "0.00001",
+   "source": "NC_P3 offset: 1 decade above TOL_P3, as set by the task R1(ii) (r7)",
+   "table": "1e-5"
+  },
+  "QUAD_CUT": {
+   "in_use": "6",
+   "source": "quadrature split at 6/sqrt(b): weight < exp(-18) beyond (v1 code)",
+   "table": "6"
+  },
+  "TOL_H": {
+   "in_use": "1.0e-25",
+   "source": "H rel. tolerance: 15 guard digits below the 40 carried (v1 docstring)",
+   "table": "1e-25"
+  },
+  "TOL_P3": {
+   "in_use": "5.0e-6",
+   "source": "P3 ratio tolerance: next term exp(-N^2 e_n) far below it at N=16 (v1)",
+   "table": "5e-6"
+  },
+  "WIN_HI": {
+   "in_use": "5",
+   "source": "doubling-factor window high: 4 + 25 per cent (v1)",
+   "table": "5"
+  },
+  "WIN_LO": {
+   "in_use": "3",
+   "source": "doubling-factor window low: 4 - 25 per cent, N^-2 correction (v1)",
+   "table": "3"
+  }
+ },
+ "verdicts": {
+  "H_all_cases": "MET",
+  "P1": "MET",
+  "P2": "MET",
+  "P3": "MET",
+  "negative_controls": "ALL FAIL AS EXPECTED",
+  "tolerance_table": "OK"
+ }
+}

@@ -1,0 +1,6 @@
+check K30: exit 0 (expected 0) in 410502 ms | output 1bee56c387d4 | event 36 head 289f803ea2e0
+  m7 (P3 tolerance × 1e6) exited 2, as the sub-agent predicted. Only m8 is left: the baseline and changed-digit --verify runs.
+  
+  The m8 baseline --verify exited 0, as expected. Only the changed-digit --verify run is still outstanding.
+  
+  C:/Users/donke/z4-workers/r7-fix/report.md: 7 STANDS, 0 DEFECT, 1 measured only (counts met, failed, measured only = 7, 0, 1); 8 of 8 mutations caught; 2 of my 13 checks failed (K1, K2: my own precision-order bug, now fixed).
