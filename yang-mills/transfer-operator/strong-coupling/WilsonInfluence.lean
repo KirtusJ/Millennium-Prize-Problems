@@ -142,6 +142,72 @@ theorem laterMomentPoint {x r : ℝ} (hx : 0 ≤ x) (hr : x ≤ r) (n k : ℕ) :
   rw [pow_add, mul_comm (x^n)]
   exact mul_le_mul_of_nonneg_right (pow_le_pow_left₀ hx hr _) (pow_nonneg hx _)
 
+/-- Eliminate the weight h between the two strictly contracting rows. -/
+theorem twoRowWeight {a b c d : ℝ} (hb : 0 < b) (hc : 0 < c) (hd : d < 1) :
+    (∃ h : ℝ, 0 < h ∧ a+b*h < 1 ∧ c+d*h < h) ↔ b*c < (1-a)*(1-d) := by
+  have h₀ : 0 < 1-d := sub_pos.mpr hd
+  have interval : c/(1-d) < (1-a)/b ↔ b*c < (1-a)*(1-d) := by
+    rw [div_lt_div_iff₀ h₀ hb, mul_comm c b]
+  constructor
+  · rintro ⟨h, _, hs, ht⟩
+    apply interval.mp
+    apply lt_trans (b := h)
+    · exact (div_lt_iff₀ h₀).2 (by linarith)
+    · exact (lt_div_iff₀ hb).2 (by linarith)
+  · intro ok
+    obtain ⟨h, hl, hu⟩ := exists_between (interval.mpr ok)
+    have pos := (div_pos hc h₀).trans hl
+    have left := (div_lt_iff₀ h₀).1 hl
+    have right := (lt_div_iff₀ hb).1 hu
+    exact ⟨h, pos, by linarith, by linarith⟩
+
+/-- Exact criterion for the spatial/temporal influence majorant at a positive time tilt. -/
+theorem wilsonTiltIff {s t R : ℝ} (ht : 0 < t) (h6 : 6*t < 1) (hR : 0 < R) :
+    (∃ h : ℝ, 0 < h ∧ spatial s t R h < 1 ∧ temporal t R h < h) ↔
+      (t+6*t^2)*(R+1/R) < (1-12*s)*(1-6*t)-24*t^2 := by
+  unfold spatial temporal
+  rw [twoRowWeight (by positivity) (by positivity) h6]
+  have det : (1-(12*s+t*(R+1/R)))*(1-6*t) - (2*t*(1+1/R))*(6*t*(1+R)) =
+      (1-12*s)*(1-6*t)-24*t^2 - (t+6*t^2)*(R+1/R) := by
+    field_simp [ne_of_gt hR]
+    ring
+  constructor <;> intro h <;> linarith only [h, det]
+
+/-- The sharp comparison threshold on the isotropic endpoint. Strictness is necessary. -/
+theorem isotropicTiltEnd {R : ℝ} (hR : 1 ≤ R) :
+    (∃ h : ℝ, 0 < h ∧ spatial (1/20) (1/20) R h < 1 ∧ temporal (1/20) R h < h) ↔
+      R < (22+3*Real.sqrt 35)/13 := by
+  have pos : 0 < R := by linarith
+  rw [wilsonTiltIff (by norm_num) (by norm_num) pos]
+  have cancel : (R+1/R)*R = R^2+1 := by
+    field_simp [ne_of_gt pos]
+    ring
+  have square := Real.sq_sqrt (by norm_num : 0 ≤ (35 : ℝ))
+  have root : 5 < Real.sqrt 35 := by nlinarith only [square, Real.sqrt_nonneg 35]
+  have plus : 0 < 13*R-22+3*Real.sqrt 35 := by linarith
+  have factor : (13*R-22+3*Real.sqrt 35)*(13*R-22-3*Real.sqrt 35) =
+      13*(13*R^2-44*R+13) := by nlinarith only [square]
+  calc
+    _ ↔ R+1/R < 44/13 := by constructor <;> intro h <;> linarith only [h]
+    _ ↔ 13*R^2-44*R+13 < 0 := by
+      rw [← mul_lt_mul_iff_of_pos_right pos]
+      constructor <;> intro h <;> linarith only [h, cancel]
+    _ ↔ (13*R-22+3*Real.sqrt 35)*(13*R-22-3*Real.sqrt 35) < 0 := by
+      rw [factor]
+      constructor <;> intro h <;> linarith only [h]
+    _ ↔ _ := by
+      constructor
+      · intro h
+        linarith only [Left.neg_of_mul_neg_right h plus.le]
+      · intro h
+        exact mul_neg_of_pos_of_neg plus (by linarith only [h])
+
+/-- The rational interior tilt supplied at rendezvous gives two strictly subunit ratios. -/
+theorem rationalInteriorRows :
+    spatial (1/20) (1/20) (61/20) (869/500) = 609803/610000 ∧
+    temporal (1/20) (61/20) (869/500) / (869/500) = 4341/4345 := by
+  norm_num [spatial, temporal]
+
 open Filter Topology
 
 /-- A fixed transfer contraction loses every uniformly bounded connected
@@ -154,6 +220,10 @@ theorem continuumVanishes (C : ℕ → ℝ) (N : ℕ → ℕ) (B : ℝ)
       ((tendsto_pow_atTop_nhds_zero_of_lt_one (by norm_num : 0 ≤ (1/3 : ℝ)) (by norm_num)).comp hN)
   exact (tendsto_zero_iff_abs_tendsto_zero C).mpr (squeeze_zero (fun _ => abs_nonneg _) hC hdec)
 
+#print axioms rationalInteriorRows
+#print axioms twoRowWeight
+#print axioms wilsonTiltIff
+#print axioms isotropicTiltEnd
 #print axioms likelihoodBound
 #print axioms greenBound
 #print axioms rowsThree

@@ -2,7 +2,7 @@
 
 Director B4 · November 22, 2026 · From Prephysical Hypotheses to Physical Models, Millennium Prize Problems subproject
 
-On a spatial three-torus of side $L\ge2$, consider the four-dimensional Wilson measure with spatial and temporal plaquette couplings $\beta_s,\beta_t\ge0$. If both $\tanh\beta_s$ and $\tanh\beta_t$ are at most $1/20$, the vacuum-normalized transfer operator on centered gauge-invariant states has norm at most $1/3$, uniformly in $L$. This gives a lattice energy gap of at least $\log 3$ per step. At a fixed positive physical time, the same estimate forces every connected matrix element between uniformly norm-bounded states to vanish as the time spacing tends to zero. A nontrivial Yang–Mills scaling limit with finite-energy excitations therefore requires a different trajectory. Strong-coupling exponential clustering is classical. This calculation gives explicit constants and tests a boundary of the single-link method. [Osterwalder and Seiler](https://doi.org/10.1016/0003-4916(78)90039-8) · [Program transfer normalization](../README.md) · [Clay problem](https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf)
+On a spatial three-torus of side $L\ge2$, consider the four-dimensional Wilson measure with spatial and temporal plaquette couplings $\beta_s,\beta_t\ge0$. If both $\tanh\beta_s$ and $\tanh\beta_t$ are at most $1/20$, the vacuum-normalized transfer operator on centered gauge-invariant states has norm at most $1/3$, uniformly in $L$. Optimizing the same comparison sharpens the norm bound to $(22-3\sqrt{35})/13$, for a lattice gap of at least $\log[(22+3\sqrt{35})/13]$ per step. At a fixed positive physical time, the same estimate forces every connected matrix element between uniformly norm-bounded states to vanish as the time spacing tends to zero. A nontrivial Yang–Mills scaling limit with finite-energy excitations therefore requires a different trajectory. Strong-coupling exponential clustering is classical. This calculation gives explicit constants and tests a boundary of the single-link method. [Osterwalder and Seiler](https://doi.org/10.1016/0003-4916(78)90039-8) · [Program transfer normalization](../README.md) · [Clay problem](https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf)
 
 ## From the Wilson density to time decay
 
@@ -36,6 +36,18 @@ $$
 $$
 
 The times can be translated together anywhere in the slab. Tilting by $R=4$ at the same coupling endpoint gives incompatible inequalities for $h$ in this matrix. The optimal physical decay rate remains undetermined by that test.
+
+## The optimal tilt for this comparison matrix
+
+The rational choice $R=3$ supplies a convenient numerical Green bound. A director’s independent determinant calculation gives a sharper transfer rate by allowing the height to depend on $R$. The same calculation gives the full anisotropic range of this two-row test. [Director’s derivation and rational check](https://github.com/KirtusJ/Millennium-Prize-Problems/issues/1#issuecomment-7091388717)
+
+Write $A(R)=\left(\begin{smallmatrix}a&b\\c&d\end{smallmatrix}\right)$ as above. For $t>0$, its off-diagonal entries are positive. Existence of a height with $A(R)(1,h)^T<(1,h)^T$ forces $d=6t<1$. With that condition the permissible heights form the interval
+$$\frac{c}{1-d}<h<\frac{1-a}{b}.$$
+It is nonempty precisely when $bc<(1-a)(1-d)$. Expanding the determinant gives the equivalent inequality
+$$(t+6t^2)(R+R^{-1})<(1-12s)(1-6t)-24t^2.$$
+Put $X=((1-12s)(1-6t)-24t^2)/(t+6t^2)$. For $0<t<1/6$ and $X>2$, the comparison works at every $1<R<R_*=(X+\sqrt{X^2-4})/2$. It also works at $R=1$, which verifies the unweighted comparison theorem’s summability assumption even when an ordinary row sum exceeds one: a positive two-type weight then bounds $C^k\mathbf1$ by a constant times a geometric sequence. At fixed $R<R_*$, use any height inside the interval to obtain a finite Green prefactor. The time-slice-to-spectrum argument gives $\|T|_{\Omega^\perp}\|\le1/R$ at each such $R$. Taking the infimum gives $\|T|_{\Omega^\perp}\|\le1/R_*$. No finite Green prefactor at equality is required. If $t=0$, the time convolution projects onto the constant and the spatially weighted transfer has rank one at every finite spatial coupling.
+
+For $s=t=p$, the tilt at $R=1$ is feasible when $0<p<1/18$. At $p=1/20$ one has $X=44/13$, so the sharp endpoint for the **comparison matrix** is $R_*=(22+3\sqrt{35})/13$. At $R=61/20$, $h=869/500$, the two normalized rows are exactly $609803/610000$ and $4341/4345$. Monotonicity of the entries in $s,t$ carries the resulting transfer-norm bound $(22-3\sqrt{35})/13$ to the whole rectangle $0\le s,t\le1/20$. The transfer itself may have a smaller excited norm. For example, at $s=0$ the exact finite-volume norm is $[I_2(\beta_t)/I_1(\beta_t)]^{\min(L,4)}$; gauge invariance forces an entire active cycle. [Exact electric spectrum](../hamiltonian-time/README.md#exact-free-electric-spectrum-on-the-physical-space)
 
 ## From bounded time-slice observables to all physical vectors
 
@@ -85,4 +97,4 @@ All rows on the four-torus meet this lower bound. Given any positive diagonal we
 
 ## Verification
 
-Lean checks the likelihood-ratio algebra, a partial Green-series estimate on arbitrary finite sets, the two time-tilt tests, the arithmetic of the influence lower bound, the minimum-weight obstruction, the row-and-column quadratic form bound, the pair oscillation constant, the pointwise time comparison and the scalar vanishing limit. The Wilson conditional laws, the comparison theorem, Haar integrals, compact-kernel argument and density of time-slice vectors are analytic parts of the proof. [Lean source](WilsonInfluence.lean) · [Replay and observed controls](execution.md)
+Lean checks the likelihood-ratio algebra, a partial Green-series estimate on arbitrary finite sets, the rational time-tilt tests, the general determinant criterion and its exact isotropic endpoint, the arithmetic of the influence lower bound, the minimum-weight obstruction, the row-and-column quadratic form bound, the pair oscillation constant, the pointwise time comparison and the scalar vanishing limit. The Wilson conditional laws, the comparison theorem, Haar integrals, compact-kernel argument and density of time-slice vectors are analytic parts of the proof. [Lean source](WilsonInfluence.lean) · [Replay and observed controls](execution.md)

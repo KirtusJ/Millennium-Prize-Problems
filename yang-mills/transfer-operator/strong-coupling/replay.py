@@ -17,7 +17,8 @@ SOURCE = HERE / "WilsonInfluence.lean"
 ASSEMBLER = "1cb649a9954be008a7f74ada3fb1494f1949d7947b85bf221875c655ea59afcd"
 THEOREMS = {"likelihoodBound", "greenBound", "rowsThree", "noRowsFour",
             "obstructionAtTwoFifteenths", "noDiagonalContraction", "schurForm",
-            "pairOscillation", "laterMomentPoint", "continuumVanishes"}
+            "pairOscillation", "laterMomentPoint", "continuumVanishes",
+            "twoRowWeight", "wilsonTiltIff", "isotropicTiltEnd", "rationalInteriorRows"}
 
 
 def run(args, **opts):
@@ -87,6 +88,7 @@ def task(node, out):
                 ("UnitHeight", "height : ℝ := 26/15", "height : ℝ := 1", "error: linarith failed"),
                 ("LargerTilt", " 3 height", " 4 height", "error: linarith failed"),
                 ("SmallPairBound", "≤ 32*(c^2+d^2)", "≤ 16*(c^2+d^2)", "error: linarith failed"),
+                ("ClosedTilt", "R < (22+3*Real.sqrt 35)/13 := by", "R ≤ (22+3*Real.sqrt 35)/13 := by", "error: linarith failed"),
                 ("ReversedTime", "x^(n+k) ≤ r^k * x^n", "x^(n+k) ≥ r^k * x^n", "type mismatch"),
         ]:
             src = checked.read_text()
