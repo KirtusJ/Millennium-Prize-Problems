@@ -1,0 +1,249 @@
+Director B4 | 2026-11-23 | Electric staple energy and momentum on the Wilson lattice
+PCP OS 92623fa6759bbb4e4f27ce5aa381de213a55ae0c
+Mathlib c44e0c8ee63ca166450922a373c7409c5d26b00b
+Lean 4.19.0 6caaee842e94
+Boot kernel SHA-256 d2fae4ef3df316ff4fa0c1a88744e66cc17bd794856979fa55188b8402f7222f
+
+Run 1 post-exit desk
+{"max_depth":2,"max_live":3,"max_total":4,"revision":8,"nodes":[{"id":1,"parent":null,"label":"root","state":"Finished"},{"id":2,"parent":1,"label":"generation","state":"Finished"},{"id":3,"parent":2,"label":"links","state":"Finished"},{"id":4,"parent":2,"label":"certificate","state":"Finished"}]}
+native/search serial SHA-256 a0a7eb65415c1e1d747f0ea3b6e50948adb8c3a9ed3c3ca79fbba01784461c60
+running image (code and read-only data), SHA-256: 0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3 (measured; equal to the value the loader named)
+starting worker.elf (9096 bytes, SHA-256 574a3a2e3c620caeb1b9fb727747a7ae6b35a192963c27c83c7c67412717ab50)
+worker.elf ended DONE: exit 0 after 0 s; 9 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 258 pages at the end, 0 of them the display's, 0 both writable and executable; 264 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
+kernel register: 48 events, head 0d319f56d4a0c21dbc920861a8827c041ecc1e85d813d63011edf771182ea0a5
+ALL SELF-TESTS PASS. Guest Ethernet support is compiled in. Access requires a matching image grant and a supported NIC.
+assembly serial SHA-256 755d99f8422ff9f3af3db58b4dee1f67f41a80b69260884efa16bf545fffb5e8
+running image (code and read-only data), SHA-256: 0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3 (measured; equal to the value the loader named)
+starting worker.elf (50120 bytes, SHA-256 1cb649a9954be008a7f74ada3fb1494f1949d7947b85bf221875c655ea59afcd)
+worker.elf ended DONE: exit 0 after 0 s; 171 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 268 pages at the end, 0 of them the display's, 0 both writable and executable; 274 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
+kernel register: 51 events, head 7816b5f5023f0ed2f63373b3ff35123e5894ea77fe858f6b384c1cd50eff4ea1
+ALL SELF-TESTS PASS. Guest Ethernet support is compiled in. Access requires a matching image grant and a supported NIC.
+
+Run 2 post-exit desk
+{"max_depth":2,"max_live":3,"max_total":4,"revision":8,"nodes":[{"id":1,"parent":null,"label":"root","state":"Finished"},{"id":2,"parent":1,"label":"generation","state":"Finished"},{"id":3,"parent":2,"label":"links","state":"Finished"},{"id":4,"parent":2,"label":"certificate","state":"Finished"}]}
+native/search serial SHA-256 2bf4f3a9a2fc7d11ffec3351c389ef911ea0c8c35db8f55f9b7d1fde328504de
+running image (code and read-only data), SHA-256: 0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3 (measured; equal to the value the loader named)
+starting worker.elf (9096 bytes, SHA-256 574a3a2e3c620caeb1b9fb727747a7ae6b35a192963c27c83c7c67412717ab50)
+worker.elf ended DONE: exit 0 after 0 s; 9 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 258 pages at the end, 0 of them the display's, 0 both writable and executable; 264 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
+kernel register: 48 events, head 3c51658fac634497fcacc7a66750cd4a4a4fa761caea836e8acbebc0c6286038
+ALL SELF-TESTS PASS. Guest Ethernet support is compiled in. Access requires a matching image grant and a supported NIC.
+assembly serial SHA-256 6bd2049d1203d66f99f6faa4753c23d2b54b67a7094cdb0ce9037dc30ac41cff
+running image (code and read-only data), SHA-256: 0232c02a8946d66216da0ac65953a246ce3d41d7a966ae31aa83c3335b3259e3 (measured; equal to the value the loader named)
+starting worker.elf (50120 bytes, SHA-256 1cb649a9954be008a7f74ada3fb1494f1949d7947b85bf221875c655ea59afcd)
+worker.elf ended DONE: exit 0 after 0 s; 171 system calls; 0 frames shown (0.0 a second); the processor idled 0% of the time; 0 ms of sound played, the device ran out of sound 0 time(s); 0 music register writes so far, the latest 0 ms late; 268 pages at the end, 0 of them the display's, 0 both writable and executable; 274 frames given back, 2560 free before and 2560 after; the store holds 0 file(s), 0 bytes
+kernel register: 51 events, head 0c5f70db7dd6114de9e888b3f7c89d7ac634c51274b3978861c5cf9f8bcd0161
+ALL SELF-TESTS PASS. Guest Ethernet support is compiled in. Access requires a matching image grant and a supported NIC.
+
+geometry | identical in both runs | SHA-256 d2c99ecad98471538629838ecf22fbc27f3832fd2a2861d0033734f7c4143d7b
+counts.bin | identical in both runs | SHA-256 14971d97dbbe770258a26bfe2f7992d8b28d05974092d454912fb7fa716b8cf6
+certificate | identical in both runs | SHA-256 29e7f009b575a6eb91644a23f1b1a8f4a2f07d6b62b5d2cd56b83b10eab19d19
+assembly/basis | identical in both runs | SHA-256 ee90d1a89554a7cc7a17395d1d7baa0a9d0ba072095894700179a557d3b6e26a
+assembly.out | identical in both runs | SHA-256 2e82227cdc857a99bda8dc41ad6771152f61ea00094c38321b7835f7287117d3
+StapleSpectrum.lean | identical in both runs | SHA-256 2e82227cdc857a99bda8dc41ad6771152f61ea00094c38321b7835f7287117d3
+checks.json | identical in both runs | SHA-256 35d66be2037a9254435fcfde86090bf1cf5d3e03bef51689395630f354aac7a8
+StapleSpectrum.log | identical in both runs | SHA-256 f668e690160c46d8fb6b5fd2848f760d3394a6c9f9072f79adc034c9910da9b9
+A4.log | identical in both runs | SHA-256 e304e77024665c4c5d866f1f9d9cbd545c7208493e2978441e1cbcc9acd5ad95
+certificate.c | SHA-256 ffb0de3c8d86ea17c537af75c68702695fc1b02c873cd141dcda88a74878def1
+controls.py | SHA-256 5a64e9867346df68dea79f77252dd884f8a174d2bf870c347c0862a85976e101
+replay.py | SHA-256 41963c48d91c100b5d0b8d956b69312f38cfb5f3239bd2ddb50641924793b234
+
+Lean axiom read-back
+'Millennium.YangMills.StapleSpectrum.polynomialReadings' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.StapleSpectrum.reconstruct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.StapleSpectrum.slabOffset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.StapleSpectrum.checkerboard' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.StapleSpectrum.phaseNorm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.StapleSpectrum.endpointAverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.StapleSpectrum.transverseCorner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.StapleSpectrum.upperDispersion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.StapleSpectrum.lowerDispersion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.StapleSpectrum.cornerCoefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.StapleSpectrum.irCoefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.StapleSpectrum.edgeRatio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.StapleSpectrum.zeroMomentumWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.StapleSpectrum.zeroMomentumIR' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.StapleSpectrum.continuumShell' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Millennium.YangMills.StapleSpectrum.shellToPoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+Both runs rejected these variants
+Offset.lean:64:52: error: type mismatch
+Corner.lean:113:47: error: unsolved goals
+Checker.lean:69:45: error: simp made no progress
+Polarizations.lean:132:34: error: unsolved goals
+Upper.lean:94:2: error: linarith failed to find a contradiction
+
+Independent A4 source SHA-256 7e8b05b28b7572751bde5fe4643dbcd0366bfb7529a817a249ca10eff889b87b
+'YangMills.StapleResponse.boundaryInsertion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StapleResponse.squaredFiber' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StapleResponse.tiltedVariance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StapleResponse.reciprocalRemainder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StapleResponse.reciprocalSquare' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StapleResponse.environmentExpansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StapleResponse.secondMean' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StapleResponse.wickContraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StapleResponse.projectedSignal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StapleResponse.transferTail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StapleResponse.spatialCoefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+Numerical controls (both runs)
+{
+  "fourier": {
+    "symbol_vs_projectors": 3.0357660829594124e-18,
+    "mixed_Fourier_errors": [
+      2.371692252312041e-20,
+      8.86440559939836e-23,
+      2.519152434487438e-24
+    ],
+    "wrong_zero_step_over_adjacent": 53.563295604373984
+  },
+  "momentum": {
+    "energy_bands_and_adjacent_weights": [
+      [
+        [
+          0,
+          0,
+          0
+        ],
+        0.0,
+        5.267831587699267,
+        5.8888157007767264e-05
+      ],
+      [
+        [
+          0.6,
+          0.8,
+          1.1
+        ],
+        1.3309102014351715,
+        5.187988876379099,
+        4.158058639551027e-05
+      ],
+      [
+        [
+          3.141592653589793,
+          0.7,
+          3.141592653589793
+        ],
+        2.3392949690640803,
+        4.559954685939937,
+        1.2258731184417079e-05
+      ],
+      [
+        [
+          3.141592653589793,
+          3.141592653589793,
+          3.141592653589793
+        ],
+        2.633915793849633,
+        4.126874137791121,
+        3.1672723919796917e-37
+      ]
+    ],
+    "near_corner_weight_over_squared_distance": [
+      [
+        2.6564576695666138e-06,
+        2.6564968156579874e-06,
+        2.6564991979238523e-06
+      ],
+      [
+        2.6569045604026904e-06,
+        2.656889823033533e-06,
+        2.6568893754642723e-06
+      ],
+      [
+        2.6568306468422473e-06,
+        2.656829218861741e-06,
+        2.6568316620713007e-06
+      ]
+    ]
+  },
+  "continuum_shell_relative_errors": [
+    0.0,
+    2.220446049250313e-16,
+    1.9984014443252818e-15
+  ],
+  "untwisted_time_tail": [
+    [
+      1,
+      1.1903527740253148
+    ],
+    [
+      8,
+      1.0205688593695297
+    ],
+    [
+      32,
+      1.0012244738101017
+    ],
+    [
+      128,
+      1.000076307791329
+    ]
+  ],
+  "staggered_packet": {
+    "derivative_coefficient": 2.656897531777926e-06,
+    "packet_scaled_ratio": [
+      [
+        4,
+        0.9374330072892383
+      ],
+      [
+        16,
+        0.985061353649116
+      ],
+      [
+        64,
+        0.9967982997068207
+      ],
+      [
+        256,
+        0.9995736399843116
+      ]
+    ]
+  },
+  "upper_tail_scaled_ratio": [
+    [
+      0.04,
+      1.005424332321859
+    ],
+    [
+      0.01,
+      1.0012918138617715
+    ],
+    [
+      0.0025,
+      1.0003191408193322
+    ]
+  ],
+  "adjacent_two_fiber_residual": [
+    4.996003610813204e-16,
+    2.6645352591003757e-14
+  ]
+}
+
+Supplemental read-back from A4 fae562d68b51a8f6ec475c85cc239d9655801bc3
+StarReconstruction.lean SHA-256 11c16780f6646ec94df0dfef41deaab72a144a79baac5652811a3c3c77001425
+check_reconstruction.py SHA-256 1609ce512c1c40c4c1979c346b9e495774f4f48e75fc65d86f34cc60b5ee8f4b
+'YangMills.StarReconstruction.kernelPrimitive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StarReconstruction.betaIntegral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StarReconstruction.kernelIntegrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StarReconstruction.integrablePair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StarReconstruction.abelTwice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StarReconstruction.reconstructDerivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StarReconstruction.inverseForward' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StarReconstruction.signLoss' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StarReconstruction.integratedMinimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StarReconstruction.rawReciprocal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StarReconstruction.inverseCoefficients' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.StarReconstruction.irreducibleVariance' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+R, reconstructed mean, absolute mean error, R^4 variance 1.0 0.22172607687937482 2.7347622552631456e-07 0.03516193051137945
+R, reconstructed mean, absolute mean error, R^4 variance 4.0 1.1750134955924085 1.1706509095432693e-09 21.399071085181294
+R, reconstructed mean, absolute mean error, R^4 variance 15.0 1.4443144542580295 1.8038237570294768e-10 2.1009978003056733
+R, reconstructed mean, absolute mean error, R^4 variance 60.0 1.4871780447758496 1.1965983759409937e-12 0.9959735458202579
+R, reconstructed mean, absolute mean error, R^4 variance 180.0 1.4957982694552403 3.921085678371128e-12 0.8901743688769508
+R, reconstructed mean, absolute mean error, R^4 variance 500.0 1.4984954841821603 5.539124714459831e-11 0.8600201340223466
+x, inverse x^-2 residual 20.0 0.03212660020897873
+x, inverse x^-2 residual 80.0 0.007257792557024967
+x, inverse x^-2 residual 250.0 0.0022727192834398786
+x, inverse x^-2 residual 750.0 0.0007525161114358379
