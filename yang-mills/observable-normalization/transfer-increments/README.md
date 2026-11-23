@@ -12,6 +12,8 @@ At cutoff $n$, let $a_n>0$ be one step in common units. If $V_n\ge v>0$ and $D_n
 
 The [single-plaquette action estimate](local-action/README.md) compares unfiltered four-dimensional Wilson covariances uniformly in time and resolves the centered action’s low-energy spectral weight at growing lags.
 
+The [cross-check of Z4’s manuscript](dirichlet-box/README.md) identifies a transfer zero mode and gives quantitative Dirichlet box estimates.
+
 ## A uniform estimate in the E2 transfer model
 
 Use E2’s normalized SU(2) central convolution on Haar space. In representation dimension $n$, its eigenvalue is $\lambda_{\gamma,n}=I_n(\gamma)/I_1(\gamma)$ for $\gamma>0$. Write $r_m=I_{m+1}(\gamma)/I_m(\gamma)$, so $\lambda_{\gamma,n}=\prod_{m=1}^{n-1}r_m$. E2 gives $0<r_m<1$ by its integral representation. [K. Justus, E2 §1](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/blob/aca29276aa180af3c81ccc9f3aa06b4e2ae4d404/edition/PAPERS/E2_Compact_Group_Transfer_Spectra_and_Ultraviolet_Operator_Limits/source/01_editable_Compact_Group_Transfer_Operators.md) · [NIST DLMF 10.32.2](https://dlmf.nist.gov/10.32.E2)
