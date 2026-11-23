@@ -9,7 +9,7 @@ python ../../transfer-increments/replay-guests.py /path/to/kernel.elf32 --proof 
 python check_shells.py
 ```
 
-The second run returned
+At the [first revision](https://github.com/KirtusJ/Millennium-Prize-Problems/tree/ad7901cc3ed9db23f3f4c2d4a91a7c1083da9175/yang-mills/observable-normalization/energy-density/lorentz-test) the second run returned
 
 ```text
 w0.elf c8332f9de0f9d1b4f0f0e49529a57af757c02af6c59a4137d9ecd48b0527a3b4 kernel register: 47 events, head 9881b99239bc13f14a4c53b77f33d1bef9195b675035a8b973b85fa5f43ffe65
@@ -31,3 +31,18 @@ maximum matrix residual 6e-15
 16 1.094083639 1.095531582 0.001628050898
 64 1.09544101 1.095531582 0.0001018836476
 ```
+
+## Polarization of the full symmetric tensor
+
+The current source adds two declarations for the timelike contractions. Repeating the generation and the replay above returned
+
+```text
+w0.elf c8332f9de0f9d1b4f0f0e49529a57af757c02af6c59a4137d9ecd48b0527a3b4 kernel register: 47 events, head bda1e5ec53fd8bdacc63a8d4a77bbcbcab066a1f2e7faf94df2ab59883bec7e7
+w1.elf 2cae35e5c3d2ffb56f3d3582a1a7e48e5839ec0930a15d6d27758f4b56d4ab13 kernel register: 47 events, head 26903259e7576240b76b460540d44a97baf79f95b35e61e796303e3fc7ed428b
+w2.elf 721a5c08b423212032717d0b5a2a35d3aa45f5efbd3daeab4d9e0a7f0dede970 kernel register: 47 events, head 5d9ae3ccc003570c904b5ae32a7e2c965745c03a3ca0a808580f6aa6dc0d3003
+generated source SHA-256 af4ae926fa38e297c8cd8e9fc26110b219cbba850403c27d8a92ccd876141532
+```
+
+All sixteen declarations checked with the same three standard axioms, without warnings. In a copy of the source, deleting the shear contribution from the diagonal measurement made `shearPolarization` fail. The tensor with unit 12 and 21 entries and all other entries zero satisfies the altered premises.
+
+The control script uses NumPy and SymPy. It constructs the observation matrix in the four diagonal and six off-diagonal components over the rationals. Its absolute determinant is 1/64, its first seven rows have rank seven, and the maximum absolute row sum of its inverse is eight. The annular controls reproduced the values above. These checks verify polarization and numerical conditioning. Lorentz covariance of a candidate field and invariance of its vacuum remain hypotheses.

@@ -118,6 +118,18 @@ __attribute__((used,noreturn)) static void run(void) {
     emit("A4 LEAN   nlinarith only [mul_le_mul_of_nonneg_left hi hk,\n");
     emit("A4 LEAN     mul_le_mul_of_nonneg_right core hL.le]\n");
     emit("A4 LEAN \n");
+    emit("A4 LEAN /-- Measurements in the two opposite half-speed directions recover a mixed\n");
+    emit("A4 LEAN time-space entry and a spatial diagonal entry. Evaluate the distribution\n");
+    emit("A4 LEAN against any fixed spacetime test and dual vector before applying this lemma. -/\n");
+    emit("A4 LEAN theorem axialPolarization {a b c : ℝ} (rest : a = 0)\n");
+    emit("A4 LEAN     (forward : a+b+c/4 = 0) (backward : a-b+c/4 = 0) : b=0 ∧ c=0 := by\n");
+    emit("A4 LEAN   constructor <;> linarith\n");
+    emit("A4 LEAN \n");
+    emit("A4 LEAN /-- A third, timelike direction with two spatial components recovers the shear. -/\n");
+    emit("A4 LEAN theorem shearPolarization {a b c d e f : ℝ}\n");
+    emit("A4 LEAN     (rest : a=0) (first : a+b+d/4=0) (second : a+c+e/4=0)\n");
+    emit("A4 LEAN     (diagonal : a+b+c+d/4+e/4+f/2=0) : f=0 := by linarith\n");
+    emit("A4 LEAN \n");
 #elif ROLE == 2
     emit("A4 LEAN /-- A countably exhausted interval of timelike invariant masses has zero measure. -/\n");
     emit("A4 LEAN theorem massBandsVanish (σ : Measure ℝ) (bands : ℕ → Set ℝ)\n");
@@ -162,6 +174,8 @@ __attribute__((used,noreturn)) static void run(void) {
     emit("A4 LEAN #print axioms YangMills.LorentzTest.tripleBudget\n");
     emit("A4 LEAN #print axioms YangMills.LorentzTest.diagonalObstruction\n");
     emit("A4 LEAN #print axioms YangMills.LorentzTest.shellDetectorLower\n");
+    emit("A4 LEAN #print axioms YangMills.LorentzTest.axialPolarization\n");
+    emit("A4 LEAN #print axioms YangMills.LorentzTest.shearPolarization\n");
 #endif
     emit("A4 FINISHED\n");
     sys(60,0,0,0);__builtin_unreachable();

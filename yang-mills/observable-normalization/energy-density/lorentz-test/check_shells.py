@@ -1,5 +1,8 @@
 """Independent four-tensor and positive-time tests with one compact spatial bump."""
+from itertools import combinations
+
 import numpy as np
+from sympy import Matrix, Rational
 from numpy.polynomial.legendre import leggauss
 
 METRIC = np.diag([1., -1., -1., -1.])
@@ -46,6 +49,28 @@ def tensor_check():
     return worst
 
 
+def observer_check():
+    basis = Matrix.eye(4)
+    rest = basis.col(0)
+    axes = [basis.col(i) for i in range(1, 4)]
+    directions = [rest]
+    for axis in axes:
+        directions.extend([rest + axis/2, rest - axis/2])
+    directions.extend(rest + (a+b)/2 for a, b in combinations(axes, 2))
+    rows = []
+    for v in directions:
+        assert v[0]**2 > sum(x**2 for x in v[1:])
+        rows.append([x**2 for x in v] +
+                    [2*v[i]*v[j] for i, j in combinations(range(4), 2)])
+    observations = Matrix(rows)
+    inverse = observations.inv()
+    norm = max(sum(abs(x) for x in inverse.row(i)) for i in range(10))
+    determinant = abs(observations.det())
+    axial_rank = observations[:7, :].rank()
+    assert (determinant, axial_rank, norm) == (Rational(1, 64), 7, 8)
+    return determinant, axial_rank, norm
+
+
 def interval(order, a, b):
     x, w = leggauss(order)
     return (a+b)/2 + (b-a)/2*x, (b-a)/2*w
@@ -67,6 +92,7 @@ def core(order, L, mass, rank):
 
 
 if __name__ == "__main__":
+    print("observer determinant magnitude, axial rank, inverse row norm", *observer_check())
     print("maximum matrix residual", f"{tensor_check():.3g}")
     for L in (1., 4., 16., 64.):
         cases = [(1., 2), (0., 2), (1., 1)]

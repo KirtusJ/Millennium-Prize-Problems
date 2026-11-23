@@ -94,6 +94,18 @@ theorem shellDetectorLower {L E : ℝ} (hL : 0 < L) (lo : L ≤ E) (hi : E ≤ 3
   nlinarith only [mul_le_mul_of_nonneg_left hi hk,
     mul_le_mul_of_nonneg_right core hL.le]
 
+/-- Measurements in the two opposite half-speed directions recover a mixed
+time-space entry and a spatial diagonal entry. Evaluate the distribution
+against any fixed spacetime test and dual vector before applying this lemma. -/
+theorem axialPolarization {a b c : ℝ} (rest : a = 0)
+    (forward : a+b+c/4 = 0) (backward : a-b+c/4 = 0) : b=0 ∧ c=0 := by
+  constructor <;> linarith
+
+/-- A third, timelike direction with two spatial components recovers the shear. -/
+theorem shearPolarization {a b c d e f : ℝ}
+    (rest : a=0) (first : a+b+d/4=0) (second : a+c+e/4=0)
+    (diagonal : a+b+c+d/4+e/4+f/2=0) : f=0 := by linarith
+
 /-- A countably exhausted interval of timelike invariant masses has zero measure. -/
 theorem massBandsVanish (σ : Measure ℝ) (bands : ℕ → Set ℝ)
     (cover : Set.Ioi 0 ⊆ ⋃ n, bands n)
@@ -137,3 +149,5 @@ end YangMills.LorentzTest
 #print axioms YangMills.LorentzTest.tripleBudget
 #print axioms YangMills.LorentzTest.diagonalObstruction
 #print axioms YangMills.LorentzTest.shellDetectorLower
+#print axioms YangMills.LorentzTest.axialPolarization
+#print axioms YangMills.LorentzTest.shearPolarization

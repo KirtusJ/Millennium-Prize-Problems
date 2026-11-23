@@ -13,3 +13,23 @@ Equivalently, write the two positive rest-frame weights as $c_0(ds)$ on the scal
 **Two fields giving different answers.** For a free scalar field $\Phi$, the improvement tensor $(\partial^\mu\partial^\nu-\eta^{\mu\nu}\Box)\Phi$ is symmetric and identically conserved. Its $00$ component is $\Delta\Phi$. It gives exactly the quartic spectral weight at nonzero or zero mass. It is a control on the transformation law and need not generate translations. For a free massive Proca field $A^\mu$ of mass one the positive polarization sum is $P^{\mu\nu}$. Its conserved time component instead has shell weight $|\mathbf k|^2$. Its first moment is $\|\nabla\varphi\|_2^2/2$ in the same Fourier convention. Thus an argument based only on first-moment compactness could not have excluded all nonzero covariant fields.
 
 The [control script](check_shells.py) transports explicit four-tensors, checks conservation in the moving frame, and integrates a compact smooth radial test in the momentum annulus used in the proof. At dilation 64 the massive improvement tensor and the null improvement tensor give annular triples about 1.09544 and 1.09553, respectively. The massive vector gives about 0.00010188. Those numbers depend on the Fourier convention and the chosen test. The different dilation powers are fixed by the tensor and shell measure.
+
+## Recovering all components from the vanishing energy density
+
+The shell test controls the vacuum two-point measure of $T^{00}$ at every nonzero momentum. There is a further question on a null shell, where there is no rest frame. Could a transverse component still excite the vacuum even when the time-time coefficient is zero?
+
+Let $P_*$ be the joint translation-spectral projection away from four-momentum zero. If the $00;00$ measure vanishes there, positivity gives $P_*T(e_0,e_0)(f)\Omega=0$ for every spacetime test $f$ for which the field is defined. The set of nonzero momenta is Lorentz invariant. Applying covariance, transforming the test, and then letting it vary over all tests gives the same identity with any future timelike covector $v$ in place of $e_0$. A positive scalar multiple of a unit covector only rescales the contraction. This step is made **after** the shell argument establishes vanishing of the whole measure. There is no need for a Lorentz action on the lattice or for observations in ten laboratory frames.
+
+For explicit polarization take the following ten covectors in one inertial coordinate system, with $1\le i<j\le3$:
+$$
+e_0,\qquad e_0\pm e_i/2,\qquad e_0+(e_i+e_j)/2 .
+$$
+Their squared Minkowski lengths are respectively $1,3/4,1/2$. Fix a spacetime test and denote their projected vacuum vectors by $Q_0,Q_i^\pm,Q_{ij}$. By bilinearity of the symmetric tensor, its projected components are
+$$
+T_{00}=Q_0,\qquad T_{0i}=(Q_i^+-Q_i^-)/2,\qquad
+T_{ii}=2(Q_i^++Q_i^--2Q_0),\qquad
+T_{ij}=2(Q_{ij}-Q_i^+-Q_j^++Q_0).
+$$
+Here the subscripts label components of the bilinear form on covectors in the displayed basis. All vanish. These identities also bound every component vector in norm by $8\eta$ if each of these *unnormalized* vectors has norm at most $\eta$. This last estimate would require control of the appropriately transformed tests. It is not an error estimate from one finite lattice triple. The two local Lean polarization lemmas certify the zero implications on scalar pairings, which apply separately to real and imaginary parts of tested vector matrix elements.
+
+Omitting the last three directions leaves a real ambiguity. A symmetric tensor with only its $12$ and $21$ entries equal to one has zero contraction on the first seven directions and contraction $1/2$ on the $12$ direction. Thus the null-shell argument does not implicitly discard transverse shear. A component supported at four-momentum zero remains invisible to the original detector.
