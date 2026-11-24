@@ -1,0 +1,181 @@
+{
+ "command": "python3 chal6.py 20261124 20000 20000 result_run1.json",
+ "seed": 20261124,
+ "TOL": 1e-09,
+ "numpy": "2.5.3",
+ "control": {
+  "x": 0.5,
+  "rho": 3,
+  "lhs": 0.4375,
+  "rhs": 1.5
+ },
+ "part_a": {
+  "instances": 20000,
+  "hypothesis_qualifying": 20000,
+  "gamma_positive": 20000,
+  "with_singleton_cell": 14389,
+  "good_empty": 2475,
+  "good_everything": 2495,
+  "A1_min_eigenvalue": -1.1157107747838166e-15,
+  "predicates": {
+   "A1": {
+    "tested": 20000,
+    "failed": 0
+   },
+   "A2": {
+    "tested": 20000,
+    "failed": 0
+   },
+   "A3": {
+    "tested": 20000,
+    "failed": 0
+   },
+   "A4": {
+    "tested": 20000,
+    "failed": 0
+   },
+   "A5": {
+    "tested": 9585,
+    "failed": 3662
+   },
+   "A6": {
+    "tested": 14908,
+    "failed": 820
+   },
+   "A7": {
+    "tested": 14908,
+    "failed": 0
+   },
+   "B1": {
+    "tested": 18590,
+    "failed": 0
+   },
+   "B2": {
+    "tested": 18590,
+    "failed": 7743
+   },
+   "B3": {
+    "tested": 18590,
+    "failed": 419
+   }
+  },
+  "first_failures": {}
+ },
+ "part_b4": [
+  {
+   "eps": 0.5,
+   "d": 0.0,
+   "entropy_nats": 0.6931471805599453,
+   "mutual_information_nats": 0.6931471805599453,
+   "rho": 0.9999999999999999,
+   "loss_over_norm2": 0.0
+  },
+  {
+   "eps": 0.5,
+   "d": 0.1,
+   "entropy_nats": 0.6931471805599453,
+   "mutual_information_nats": 0.49463193721407284,
+   "rho": 0.8999999999999999,
+   "loss_over_norm2": 0.18999999999999995
+  },
+  {
+   "eps": 0.1,
+   "d": 0.0,
+   "entropy_nats": 0.3250829733914482,
+   "mutual_information_nats": 0.32508297339144826,
+   "rho": 1.0,
+   "loss_over_norm2": 0.0
+  },
+  {
+   "eps": 0.1,
+   "d": 0.1,
+   "entropy_nats": 0.3250829733914482,
+   "mutual_information_nats": 0.24442781016233572,
+   "rho": 0.9000000000000001,
+   "loss_over_norm2": 0.19000000000000003
+  },
+  {
+   "eps": 0.01,
+   "d": 0.0,
+   "entropy_nats": 0.056001534354847345,
+   "mutual_information_nats": 0.05600153435484741,
+   "rho": 0.9999999999999999,
+   "loss_over_norm2": 0.0
+  },
+  {
+   "eps": 0.01,
+   "d": 0.1,
+   "entropy_nats": 0.056001534354847345,
+   "mutual_information_nats": 0.04494455002660053,
+   "rho": 0.9000000000000001,
+   "loss_over_norm2": 0.19000000000000006
+  },
+  {
+   "eps": 0.001,
+   "d": 0.0,
+   "entropy_nats": 0.007907255112232087,
+   "mutual_information_nats": 0.007907255112231953,
+   "rho": 1.0,
+   "loss_over_norm2": 0.0
+  },
+  {
+   "eps": 0.001,
+   "d": 0.1,
+   "entropy_nats": 0.007907255112232087,
+   "mutual_information_nats": 0.006562383908876476,
+   "rho": 0.9000000000000001,
+   "loss_over_norm2": 0.18999999999999997
+  },
+  {
+   "eps": 1e-06,
+   "d": 0.0,
+   "entropy_nats": 1.4815510057992861e-05,
+   "mutual_information_nats": 1.481551005796974e-05,
+   "rho": 0.9999999999999999,
+   "loss_over_norm2": 0.0
+  },
+  {
+   "eps": 1e-06,
+   "d": 0.1,
+   "entropy_nats": 1.4815510057992861e-05,
+   "mutual_information_nats": 1.2778619456036174e-05,
+   "rho": 0.9,
+   "loss_over_norm2": 0.19000000000000006
+  }
+ ],
+ "part_c": {
+  "instances": 20000,
+  "hypothesis_checks_qualifying": 40000,
+  "skipped": 0,
+  "with_k_gt_m": 26322,
+  "with_b_minus_kappa_positive": 39712,
+  "both": 26148,
+  "C1_min_slack": 2.7234047259394427e-06,
+  "tightest": {
+   "it": 2665,
+   "d": 3,
+   "m": 3,
+   "j": 1,
+   "k": 2,
+   "gamma": 0.0020302315767801197,
+   "b": 0.9843247829572394,
+   "kappa": 0.0,
+   "lhs": 0.0014992501249989632,
+   "rhs": 0.0014965267202730237
+  },
+  "predicates": {
+   "C1": {
+    "tested": 40000,
+    "failed": 0
+   },
+   "C2": {
+    "tested": 40000,
+    "failed": 9352
+   },
+   "C3": {
+    "tested": 40000,
+    "failed": 7
+   }
+  }
+ }
+}

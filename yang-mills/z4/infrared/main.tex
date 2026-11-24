@@ -25,8 +25,9 @@ gauge theories, and that one is handed its correlation functions. Two questions 
 \item If the lattice theories have gaps in a fixed physical box, what would allow a gap to survive as the
 mesh is halved again and again?
 \end{enumerate}
-By a \emph{mass gap} we mean a number $\Delta>0$ such that the Hamiltonian $H\ge0$ has no spectrum in
-$(0,\Delta)$ and has some spectrum in $[\Delta,\infty)$. The lattice terms used in this introduction (link, plaquette,
+We say the theory has a \emph{mass gap} if there is a number $\Delta>0$ such that $0$ is an eigenvalue of the
+Hamiltonian $H\ge0$ (the vacuum), $H$ has no spectrum in $(0,\Delta)$, and $H$ has some spectrum in
+$[\Delta,\infty)$; the mass is the largest such $\Delta$. The lattice terms used in this introduction (link, plaquette,
 mesh, fixed physical box) are defined in Section~\ref{s:set}.
 
 This paper does not prove a mass gap. It records what we can prove about the two questions, states what is
@@ -45,7 +46,7 @@ Here the answer is an elementary fact about self-adjoint operators, worth statin
 known through correlation functions. If $H\ge0$ is the Hamiltonian and $v$ a vector, the numbers
 $\langle v,e^{-n\tau H}v\rangle$ are correlation functions at Euclidean time separation $n\tau$. Their
 successive differences $d_{v,n}$ are non-negative, receive no contribution from the vacuum, and decay at a
-rate set by the lowest positive energy present in $v$. Theorem~\ref{t:crit} says that $H$ has no spectrum in
+rate set by the bottom of the positive energies present in $v$, when that is positive. Theorem~\ref{t:crit} says that $H$ has no spectrum in
 $(0,\Delta)$ exactly when these differences decay at one common rate for a family of vectors with dense
 linear span.
 
@@ -63,7 +64,7 @@ Suppose three things.
 except for detail carried by an exceptional set of coarse fields.
 \item[(c)] The dynamics seldom returns to that exceptional set.
 \end{enumerate}
-Then the fine lattice keeps the coarse decay up to two losses, which must both be small: the return to
+Then the fine lattice keeps the decay of its guesses up to two losses, which must both be small: the return to
 the exceptional set, and a factor that is close to one when the detail is lost in few steps compared with
 the time considered. Theorem~\ref{t:inh} makes this precise.
 
@@ -117,6 +118,8 @@ part;
 \item the exceptional part overlaps with itself after $j$ steps by at most $\kappa$;
 \item the coarse part alone already has deficit $b$ after $m$ steps.
 \end{itemize}
+The third hypothesis only names the deficit $b$ of the coarse part; that $b$ is close to the deficit of the
+coarse lattice, as~(a) supposes, is a separate statement (Hypothesis~\ref{h:coarse}).
 The conclusion is that the whole space has deficit at least $b-\kappa$, divided by a factor that tends to $1$
 when $m\gamma\to\infty$.
 
@@ -128,7 +131,8 @@ $\mathcal K$ is the space of gauge-invariant functions of one time slice of the 
 expectation zero, $A$ is one step of the transfer semigroup in the vacuum representation, $P$ is the
 conditional expectation given the coarse links, and $B$ is the part of $Q$ supported on an exceptional set of
 coarse fields. A physical time $t$ corresponds to $m=t/a$ steps, so $m$ doubles when the mesh is halved. On
-this space $1-\|A^m\|>0$ is a gap of that lattice.
+this space $1-\|A^m\|>0$ says that this lattice has a gap, with $\Delta=-t^{-1}\log\|A^m\|$; at one fixed
+lattice that is elementary (Section~\ref{s:not}), and the question is what survives refinement.
 
 \begin{theorem}[Return to a coarse plaquette gate]\label{t:ret}
 Consider the Wilson measure with weight $\exp\big(\beta\sum_p\tfrac12\Tr U_p\big)$, $\beta\ge0$, for the gauge
@@ -218,8 +222,8 @@ $\Lambda_0$ is its largest eigenvalue and $\Omega>0$ the corresponding eigenfunc
 The \emph{vacuum representation} is $L^2(\Omega^2\,d\mathrm{Haar})$ with
 $S_1f=\Lambda_0^{-1}\Omega^{-1}\mathsf L(\Omega f)$, a self-adjoint contraction with $0\le S_1\le I$ and $S_11=1$,
 and $S_n=S_1^n$. Time is counted in lattice steps; one step is the mesh $a$ in physical units. On the
-gauge-invariant functions $S_1$ is injective, so there $S_n=e^{-nH}$ with $H=-\log S_1\ge0$, and $H/a$ is the
-Hamiltonian in physical units. We do not need $H$: Theorem~\ref{t:inh} is applied with $A=S_1$ restricted to the
+gauge-invariant functions $S_1$ is injective, so there $S_n=e^{-naH}$ with $H=-a^{-1}\log S_1\ge0$ the Hamiltonian in physical
+units. We do not need $H$: Theorem~\ref{t:inh} is applied with $A=S_1$ restricted to the
 gauge-invariant functions that are \emph{centred}, that is, have vacuum expectation zero.
 
 \emph{Coarse links.} For even $N$, the coarse links of a slice are the products of two consecutive fine
@@ -336,12 +340,14 @@ time slice predicts the fine detail of the present one when the coarse field of 
 At a fixed lattice let $X$ and $Y$ be consecutive time slices of the stationary process with one-step operator
 $A=S_1$, so that $(Af)(x)=\E[f(Y)\mid X=x]$, and let $C$ be the coarse field of $X$. For a coarse field $c$ let
 $\varrho(c)$ be the maximal correlation of $X$ and $Y$ given $C=c$, that is, the supremum of the correlation
-of $f(X)$ and $g(Y)$ under the conditional law, over square-integrable $f$ and $g$. Let $\mathcal G$ be a
-measurable set of coarse fields and $G=\mathbf 1_{\mathcal G}(C)\,(I-P)$. If $\varrho(c)^2\le1-\gamma$ for
+of $f(X)$ and $g(Y)$ under the conditional law, over square-integrable complex $f$ and $g$ (centred under
+that law and of non-zero variance there; $\varrho(c)=0$ if there are none). Let $\mathcal G$ be a
+measurable set of coarse fields, invariant under gauge transformations of the coarse lattice, and $G=\mathbf 1_{\mathcal G}(C)\,(I-P)$. If $\varrho(c)^2\le1-\gamma$ for
 almost every $c\in\mathcal G$, then $\langle f,(I-A^2)f\rangle\ge\gamma\|Gf\|^2$ for every $f$.
 \end{proposition}
 \begin{proof}
-The pair $(X,Y)$ is exchangeable because $A$ is self-adjoint, so $\|Af\|^2=\E\,|\E[f(X)\mid Y]|^2$ and
+The configuration spaces are compact and metrisable, so regular conditional laws exist and $\varrho$ is
+measurable (a supremum over a countable dense family). The pair $(X,Y)$ is exchangeable because $A$ is self-adjoint, so $\|Af\|^2=\E\,|\E[f(X)\mid Y]|^2$ and
 $\langle f,(I-A^2)f\rangle=\E\operatorname{Var}(f(X)\mid Y)$. Conditioning on more cannot increase the expected
 conditional variance, so this is at least $\E\operatorname{Var}(f(X)\mid Y,C)$. Under the conditional law given
 $C=c$, the expected conditional variance of $f(X)$ given $Y$ equals its variance minus the variance of its
@@ -355,7 +361,8 @@ with $\sum_ia_i/\gamma_i<\infty$. We have no such bound for the Wilson measure a
 proposition replaces one open estimate by another and proves nothing about the theory. It does say what the
 measurement of Section~\ref{s:time} is a trial for: a correlation between a function of one slice and a
 function of the next, given the coarse field of the first, is a lower trial value for $\varrho(c)$ on that
-coarse field. A small average amount of shared information is not enough, since $\varrho$ is a supremum over
+coarse field. Here $g$ must be a function of the next slice alone, and the measurement is on a periodic lattice
+with one slice frozen, not in the vacuum. A small mutual information of $X$ and $Y$ given $C$ is not enough, since $\varrho$ is a supremum over
 normalised functions, including those concentrated on rare configurations.
 
 \begin{hypothesis}[Coarse comparison; open]\label{h:coarse}
@@ -505,8 +512,8 @@ gives $\|BS_tB\|=e^{-\ell t}$ whatever the probability of the event.
 If the first hypothesis in~\eqref{e:hyp} is replaced by $\langle f,(I-A^{2k})f\rangle\ge\gamma\|Gf\|^2$ for an
 integer $k\ge1$, the same proof, with $\rho=2k/m$ in Lemma~\ref{l:scal}, gives~\eqref{e:inh} with denominator
 $1+2k/(m\gamma)$. Along a refinement the products in Corollary~\ref{c:acc} then stay bounded when
-$\sum_ik_ia_i/\gamma_i<\infty$, so the detail may take a number of steps that grows, provided the physical
-time $k_ia_i$ it takes is summable.
+$\sum_ik_ia_i/\gamma_i<\infty$, with $K_i=1+2k_i/(m_i\gamma_i)$ in Hypothesis~\ref{h:budget}. So the detail may take a number of steps that
+grows, provided the physical times $k_ia_i$, each divided by $\gamma_i$, are summable.
 \end{remark}
 
 \section{Return to a coarse plaquette gate}\label{s:ret}
