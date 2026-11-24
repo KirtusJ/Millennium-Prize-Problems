@@ -1,0 +1,14 @@
+[
+  {
+    "label": "negative_count",
+    "find": "V/Q ≤ D*(S^2/Q)",
+    "replace": "V/Q ≤ D*(S^2/Q)-1",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_degree",
+    "find": "2*(a+b) ≤ 10",
+    "replace": "2*(a+b) ≤ 9",
+    "diagnostic": "error:"
+  }
+]
