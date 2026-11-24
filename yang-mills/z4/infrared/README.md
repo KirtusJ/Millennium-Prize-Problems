@@ -56,6 +56,8 @@ On the Principal's instruction the worker tests were stopped (two background che
 
 - **Two further formal checks (24 November, later).** `Gates.lean`: for commuting self-adjoint idempotents χ and P, B = χ(I − P) is a self-adjoint idempotent with BP = PB = 0 and inherits a bound on χSχ (the last sentence of Corollary 6.4). `Prediction.lean`: the Hilbert-space core of Proposition 3.4, with the conditional expectations as abstract projections satisfying the tower property. Both compile clean with standard axioms; one statement of each pinned. The measure theory behind both is not formalised. Totals now: six files, 66 theorems, 24 pinned.
 
+- **One-separation test (24 November, later).** `OneSeparation.lean`: Proposition 4.2 on finite-dimensional real spaces. Totals: seven files, 70 theorems, 25 pinned.
+
 ## Sixth draft (24 November)
 
 A first-time-reader review of the fifth draft (`../../papers/spectral-criteria/supplement/S10-review-records/first-reader/report.md`, sub-agent of the same family) supplied a replacement abstract, introduction and Measurements section; the director read them, adjusted them and spliced them in. No theorem, number or claim was added or removed in the Measurements section (its 162 numerals were compared by script before and after; the later edits only add two clarifying values, 1.14 and the unrounded 0.93574 + 2 x 0.00271).

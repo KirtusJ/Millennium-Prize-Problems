@@ -817,7 +817,7 @@ We cannot estimate the distance to any of these, and we do not know that this ro
 \toprule
 Statement & Status \\
 \midrule
-Theorem~\ref{t:crit}, Proposition~\ref{p:three} & proved (Section~\ref{s:crit}) \\
+Theorem~\ref{t:crit}, Proposition~\ref{p:three} & proved (Section~\ref{s:crit}); Proposition~\ref{p:three} checked in Lean in finite dimension \\
 Theorem~\ref{t:inh}, Remark~\ref{r:lag} & proved; checked in Lean on all non-zero real inner product spaces \\
 Corollary~\ref{c:acc} & proved; its inequality checked in Lean \\
 Theorem~\ref{t:ret} & proved; $\SU(2)$, periodic time \\
@@ -1250,7 +1250,7 @@ links and whose variances it does not control.
 \end{remark}
 
 \section{Machine-checked parts}\label{s:lean}
-Six Lean~4 files with Mathlib accompany the paper (Supplement~S7; Lean 4.19.0, Mathlib v4.19.0); all compile with no \texttt{sorry} and use
+Seven Lean~4 files with Mathlib accompany the paper (Supplement~S7; Lean 4.19.0, Mathlib v4.19.0); all compile with no \texttt{sorry} and use
 only the axioms \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}.
 \begin{itemize}
 \item \texttt{Hilbert.lean}: Theorem~\ref{t:inh}, together with the longer lag of Remark~\ref{r:lag}, on
@@ -1282,6 +1282,10 @@ tower property and the commutation they have. If the squared norm of the second,
 $(1-\gamma)\|Gf\|^2$, then $\|f\|^2-\|\E[f\mid Y]\|^2\ge\gamma\|Gf\|^2$. The measure theory, that is, the
 identification of these operators and the passage from the maximal correlation to that hypothesis, is not
 formalised.
+\item \texttt{OneSeparation.lean}: Proposition~\ref{p:three} on finite-dimensional real spaces. For a
+symmetric linear map $S$ and $r\le1$, $S$ has no eigenvalue in $(r,1)$ if and only if
+$(1+r)\langle v,Sv\rangle-\langle v,S^2v\rangle\le r\langle v,v\rangle$ for every $v$. The general statement,
+for the spectrum of an operator on a Hilbert space and a dense subspace, is not formalised.
 \item \texttt{Inheritance.lean}: Lemma~\ref{l:scal} for real exponents; the scalar conclusion of
 Theorem~\ref{t:inh}; the inequality of Corollary~\ref{c:acc} (not its statement about boundedness of the
 products, nor the limit inferior); and Theorem~\ref{t:inh} in the special case of a real finite-dimensional
@@ -1295,9 +1299,9 @@ derivative formulas entered as algebraic expressions in real variables; the redu
 $\beta^2\lambda_{\min}(k)\ge R'(\ell)$ given the monotonicities; and the first-zero principle. The Bessel identities are not
 formalised.
 \end{itemize}
-Theorems~\ref{t:crit} and~\ref{t:ret}, Propositions~\ref{p:three} and~\ref{p:vac}, Lemmas~\ref{l:cap}
+Theorems~\ref{t:crit} and~\ref{t:ret}, Proposition~\ref{p:vac}, Lemmas~\ref{l:cap}
 and~\ref{l:trace}, and the analytic part of Corollary~\ref{c:vac} are not formalised.
-The six files contain $66$ theorems. For $24$ of them, those cited above and their main lemmas, a digest of the statement text is recorded
+The seven files contain $70$ theorems. For $25$ of them, those cited above and their main lemmas, a digest of the statement text is recorded
 with the digests of the files (Supplement~S7), so that a later change of a statement or a file can be
 detected; a digest of a statement does not cover the definitions it depends on.
 

@@ -112,3 +112,7 @@ The algebra of the exceptional projection built from a gate (last sentence of th
 |---|---|---|---|---|---|
 | `Gates.lean` | `f858942e5f13c796c47e1e6760a00939c2fcde47162d92cd8d1b49b313176916` | `Gates.gate_projection` | `6048a80557cb70635ab7b418ac952747d3439c2345319d4d156a0dcdde8352cd` | exit 0 | exit 1 |
 | `Prediction.lean` | `65abf6bce4e8028dc6faa5ffc1bcf7bb4c132577f276e635ab06580e072beec6` | `Prediction.conditional_prediction` | `8a1bc3c39afea200c2b3a90770243e8968d31068a0ad1b7283f8b985fae1a252` | exit 0 | exit 1 |
+
+## Added 24 November 2026: `OneSeparation.lean`
+
+The test at one time separation on finite-dimensional real spaces (symmetric `S`, `r ≤ 1`): no eigenvalue in `(r,1)` if and only if the quadratic inequality holds for every vector. File SHA-256 `a00fd234d6d26f650d1358005d2eee7b41b7492c919e0e881e953e2eca9d0af5`. Lean 4.19.0: exit 0, no `sorry`, no warning, standard axioms. Statement `OneSeparation.one_separation` pinned at `2f31cae1cfa1eedf47d806a0460f328953a508fb2d69457d590674d628a08e64`: with pin exit 0, wrong pin exit 1.
