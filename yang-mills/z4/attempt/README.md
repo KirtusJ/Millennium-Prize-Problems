@@ -22,6 +22,8 @@ Rules of the folder: one numbered chain; every link marked proved here, taken fr
 | [`THEOREM_B.md`](THEOREM_B.md) | The one link that held: statement, proof by file, challenges, limits |
 | [`A2_LEDGER.md`](A2_LEDGER.md) | Attempt 2: the whole chain as one conditional theorem (five lattice hypotheses, two proved); what "interacting" has to mean; why exclusion fails |
 | [`A3_NOTES.md`](A3_NOTES.md) | After attempt 2: the theorem extended to every compact Lie group of positive dimension; an idea about the running coupling dropped; a cross-review for A4 |
+| [`../infrared/`](../infrared/README.md) | *Spectral criteria and conditional infrared estimates for four-dimensional lattice Yang–Mills theory* (24 November): a separate manuscript stating a spectral criterion, a refinement inequality with an exceptional set, a return bound and a one-link covariance bound, with the two open hypotheses and the measurements bearing on them. No mass gap is claimed |
+| [`tunnel-note/`](tunnel-note/README.md) | The tunnelling exponent of the one-site SU(2) transfer operator in two directions: a 32-page written proof checked within one model family, with two repairs from a first cross-lineage reading |
 | [`paper/`](paper/) | *An upper bound on the lattice mass gap at weak coupling, and routes to a lower bound that fail*: working draft (`main.pdf`), revised once after a referee read by a session of the same model family; not reviewed by a mathematician |
 | [`reviews/`](reviews/) | Every worker's brief, chain, programs, result files and register |
 
