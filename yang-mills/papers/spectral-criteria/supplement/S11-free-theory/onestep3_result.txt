@@ -1,0 +1,15 @@
+r=2 N=8 all momenta: c_r=0.759326 c_r/r=0.379663
+r=2 N=16 all momenta: c_r=0.759326 c_r/r=0.379663
+r=2 N=2048 lowest axial momentum: c=0.567298 c/r=0.283649
+r=3 N=12 all momenta: c_r=1.039043 c_r/r=0.346348
+r=3 N=24 all momenta: c_r=1.039043 c_r/r=0.346348
+r=3 N=3072 lowest axial momentum: c=0.638560 c/r=0.212853
+r=4 N=16 all momenta: c_r=1.337221 c_r/r=0.334305
+r=4 N=32 all momenta: c_r=1.337221 c_r/r=0.334305
+r=4 N=4096 lowest axial momentum: c=0.759838 c/r=0.189959
+r=6 N=24 all momenta: c_r=1.953024 c_r/r=0.325504
+r=6 N=6144 lowest axial momentum: c=1.039901 c/r=0.173317
+r=8 N=32 all momenta: c_r=2.579001 c_r/r=0.322375
+r=8 N=8192 lowest axial momentum: c=1.338407 c/r=0.167301
+P1 MET
+P2 FAILED (ratio of the values at r=8 and r=6: 0.9653)

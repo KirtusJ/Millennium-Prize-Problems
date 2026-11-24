@@ -895,7 +895,10 @@ matched coupling and no budget appear. The price is that the first statement mus
 detail below the coarse scale at once, and whether it does depends on the coarse variables.
 Appendix~\ref{app:free} shows this in the free theory: for coarse links that are sums of $r$ fine links
 the constant $\kappa$ grows like $r$ in units of the coarse mesh, while for block averages of the plaquette
-field it is $0.46$ to $0.72$ coarse meshes for $r=2$ to $8$, still growing slowly. Both parts were tested on
+field with a triangular weight it stays near $1/\pi$ coarse meshes for $r=2$ to $8$, the value forced by the
+resolution. So in the free theory the first statement holds uniformly in the blocking factor for suitable
+coarse variables, and the criterion gives a deficit of at least $b/(1+a_0/(\pi t))$ up to the accuracy of that
+observation, $a_0$ being the coarse mesh. Both parts were tested on
 $20{,}000$ random finite-dimensional instances and the minorisation on $2{,}000$ random reversible chains
 (Supplement~S13). Neither statement is established for the Wilson measure with any choice of coarse
 variables.
@@ -1967,7 +1970,14 @@ the computation failed. A line sum does not average over the directions transver
 low energy whose transverse momentum is a multiple of $2\pi/r$ alias into it. With block averages of the
 plaquette field (the flux through an $r\times r$ face, averaged over the $r$ parallel faces of the block),
 which are gauge invariant and not products of links, the same quantity is $0.46$, $0.50$, $0.56$, $0.65$,
-$0.72$: within the bound, and still increasing (Supplement~S11). So the choice of coarse variables matters
+$0.72$: within the bound, and still increasing. With a smoother average, the box average applied twice in each
+direction (a triangular weight), the supremum over coarse momenta is $0.380$, $0.346$, $0.334$, $0.326$,
+$0.322$ coarse meshes for the same factors, the same at sides $4r$ and $8r$, and it equals to six figures the
+inverse energy $1/\omega(\pi/r,0,0)$ of the lowest mode at the edge of the coarse Brillouin zone. That value
+tends to $1/\pi$ coarse meshes and is the one forced by the resolution of the coarse lattice, since such a mode
+and its mirror image cannot both be seen. This identification is an observation at the sizes computed
+(Supplement~S11, where a predicate written to detect growth failed in the favourable direction and is kept).
+So the choice of coarse variables matters
 for the one-step form even in the free theory, and the sums along lines that the lattice gauge theory
 suggests are a poor choice at large blocking factor; the refinement by factors of two of
 Section~\ref{s:arch} does not meet this difficulty.

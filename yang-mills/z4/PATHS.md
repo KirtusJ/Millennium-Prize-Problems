@@ -154,3 +154,5 @@ Stipulations and tests.
 3. For SU(2) the same two statements. (i) is a statement at all scales below the coarse one and is of the kind renormalisation-group analyses control; (ii) concerns finitely many variables. Nothing is known for either.
 
 What would make this path empty: if for every admissible finite set of coarse variables (i) forces `κ` to grow with the regulator. The free theory already shows the question is not trivial.
+
+**Outcome of Path F, test 1 (24 November 2026).** With the box average of the plaquette field applied twice in each direction (triangular weight), the free-theory constant is `1/ω(π/r,0,0)` in fine units to six figures for `r` = 2, 3, 4, 6, 8, that is, about `1/π` coarse meshes, bounded and equal to the value forced by the resolution. The stipulation holds in the free theory. The predicate as written failed because the axial values decrease by more than its two-sided tolerance; recorded. Next: test 2 (the two-time law of these coarse variables), then what the analogue of these variables is for SU(2), where a block average of the field strength needs parallel transport to a common point.
