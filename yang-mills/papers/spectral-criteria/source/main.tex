@@ -897,7 +897,7 @@ variables on it, and apply Theorem~\ref{t:inh} once.
 
 \begin{proposition}[A one-step criterion]\label{p:onestep}
 Let $H\ge0$ be self-adjoint on a non-zero Hilbert space, let $P$ and $B$ be mutually orthogonal projections
-and $G=I-P-B$, and let $0<s\le t$.
+and $G=I-P-B$, and let $0<s\le t$ and $\kappa,\kappa'\ge0$.
 \begin{enumerate}
 \item[(a)] If $\|Gf\|^2\le\kappa\langle f,Hf\rangle$ for all $f$ in the form domain of $H$,
 $\|Pe^{-tH}P\|\le1-b$ and $\|Be^{-sH}B\|\le\kappa'$, then
@@ -918,9 +918,13 @@ $txe^{-tx}\le1-e^{-tx}$: $b-\kappa'\le(1-e^{-tx})(1+\kappa/t)$.
 
 With $B=0$ this is the criterion in its plain form, with $Q=I-P$ in place of $G$; with $B$ built from gates
 the return bound of Section~\ref{s:ret} can be used. The proof given here, which needs no inverse of $H$, no
-subdivision of the time and no restriction on $s/t$, and allows $H$ to have a kernel, is due to an OpenAI GPT
+subdivision of the time and no arithmetic condition on $s/t$ beyond $0<s\le t$, and allows $H$ to have a
+kernel, is due to an OpenAI GPT
 model used as reviewer; our first proof went through Theorem~\ref{t:inh} with many small steps. Both parts
 were checked on random finite-dimensional instances, including instances with a kernel (Supplement~S13).
+The order $s\le t$ cannot be dropped: for $H=\log2$ on a one-dimensional space with $B=I$, $t=1$ and $s=2$
+the hypotheses hold with $b=1$, $\kappa=0$, $\kappa'=\tfrac14$, and the deficit is $\tfrac12<\tfrac34$ (an
+example of a second reviewing GPT model).
 
 \begin{figure}[tbp]
 \centering
@@ -1291,10 +1295,10 @@ these two notions of a coarse field, and an estimate from the renormalisation of
 used in Hypothesis~\ref{h:mix} or~\ref{h:coarse} only after they are related. The free theory shows that the
 difference is not a matter of convention when many scales are blocked at once: with coarse links that are sums
 of fine links the fine detail is not bounded by the energy uniformly in the blocking factor, and with a
-smooth block average it is (Proposition~\ref{p:freeblock}). For the one-step form of
-Proposition~\ref{p:onestep} an averaged block variable is therefore needed, and for a non-abelian group that
-means an average of parallel transports of the kind used in renormalisation-group constructions, not the
-product of links along one line.
+smooth block average it is (Proposition~\ref{p:freeblock}). This is a statement about the free calibration and about one uniform estimate. It does not prove that
+averaged block variables are necessary for the interacting non-abelian theory; it makes an average of
+parallel transports, of the kind used in renormalisation-group constructions, the motivated candidate for
+the one-step form of Proposition~\ref{p:onestep}, in preference to the product of links along one line.
 \item The class of observables on which convergence holds, and the component theory selected.
 \item The relation between the lattice transfer semigroup at fixed regulator, to which
 Theorems~\ref{t:inh} and~\ref{t:ret} refer, and the Hamiltonian of the limit.
@@ -1848,9 +1852,9 @@ $\beta^2\lambda_{\min}(k)\ge R'(\ell)$ given the monotonicities; and the first-z
 formalised.
 \end{itemize}
 Theorem~\ref{t:ret}, Proposition~\ref{p:vac}, Lemmas~\ref{l:cap}
-and~\ref{l:trace}, and the analytic part of Corollary~\ref{c:vac} are not formalised. Nor are
-Proposition~\ref{p:onestep}, which is a consequence of Theorem~\ref{t:inh} through the functional calculus of
-an unbounded operator, and the propositions of Appendix~\ref{app:free}.
+and~\ref{l:trace}, and the analytic part of Corollary~\ref{c:vac} are not formalised. Nor are the spectral-subspace arguments that prove
+Propositions~\ref{p:wstep} and~\ref{p:onestep}, of which only the last scalar step of the first is
+formalised, and the propositions of Appendix~\ref{app:free}.
 The eleven files contain $97$ theorems. For $38$ of them, those cited above and their main lemmas, a digest of the statement text is recorded
 with the digests of the files (Supplement~S7), so that a later change of a statement or a file can be
 detected; a digest of a statement does not cover the definitions it depends on.
@@ -2061,7 +2065,8 @@ In the setting of this appendix, for every even $N\ge4$, on the square-integrabl
 I-P\ \le\ c\,a\,H,\qquad c=\sup_k\big\|Q\,\omega^{-1}Q\big\|\ \le\ \frac{14}{\sqrt3}\cdot\frac{\sqrt{15}}{\operatorname{arcosh}4}+\frac1{\operatorname{arcosh}2}\ <\ 15.94 ,
 \]
 where $\omega$ is the one-particle energy in lattice units, $Q$ the projection of~\eqref{e:freeres} and the
-supremum is over coarse momenta. Consequently $\|(I-P)H^{-1}(I-P)\|\le c\,a$ and
+supremum is over coarse momenta. Consequently, with $H^{-1}$ taken on the functions orthogonal to the
+constants, on which $I-P$ is supported, $\|(I-P)H^{-1}(I-P)\|\le c\,a$ and
 $\|(I-P)E((0,u])(I-P)\|\le c\,a\,u$ for every $u>0$: the bound~\eqref{e:wlin} holds with $c_{\mathrm w}=c$ and
 no exceptional set.
 \end{proposition}
