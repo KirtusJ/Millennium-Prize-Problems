@@ -1005,6 +1005,12 @@ $20{,}000$ random finite-dimensional instances and the minorisation on $2{,}000$
 coarse variables. (Each is trivial for one extreme choice, the first when $P$ is the identity and the second
 when $P$ is zero on the centred functions, and the other statement is then the gap itself.)
 
+There is one class of interacting fields in which the first statement is proved, uniformly in the volume,
+in the fine mesh and in the strength of the interaction: a scalar field with a convex interaction, in
+continuous time, with block sums as coarse variables (Proposition~\ref{p:convex}). The constant there is the
+free one, half a coarse mesh, and the proof uses convexity only to show that along the fibres of the block
+map the vacuum is at least as log-concave as the free vacuum. It says nothing about gauge fields.
+
 \section{Return to a coarse plaquette gate}\label{s:ret}
 The return bound comes from a single link. Given all the other links, one link of the plaquette has an
 explicit law on the sphere $S^3$, and for that law the probability of any cap is at most the probability of
@@ -1350,6 +1356,7 @@ Proposition~\ref{p:linesum} & proved (free theory: for sums of links along lines
 Proposition~\ref{p:freeblock} & proved (free theory: a block average for which the first statement of Proposition~\ref{p:onestep} holds uniformly in the blocking factor and the side); not formalised \\
 Proposition~\ref{p:onestep} & proved (a gap in a box is equivalent to two regulator-uniform statements for coarse variables of one's choice; neither is established for the Wilson measure) \\
 Proposition~\ref{p:wstep} & proved (a refinement step from the weight bound~\eqref{e:wlin}, which is open for the Wilson measure and proved in the free theory, Proposition~\ref{p:freeweight}); its last step checked in Lean \\
+Proposition~\ref{p:convex} & proved, using Pr\'ekopa's theorem, the variance inequality for log-concave measures and Kato's product formula as cited and not reread (a scalar field with a convex interaction in continuous time: the first statement of Proposition~\ref{p:onestep} with the free constant; not about gauge fields); tested on two and three sites; not formalised \\
 Hypothesis~\ref{h:mix} & open; not measured (Appendix~\ref{s:time} tests one combination's carry-over in time and gives no bound) \\
 Auxiliary local mixing & open; estimates for trial functions on two frozen backgrounds, one lattice, one coupling (Table~\ref{tab:local}) \\
 Hypothesis~\ref{h:coarse} & open; not measured; one trial function compared on one pair of lattices (Appendix~\ref{s:cross}) \\
@@ -1886,6 +1893,7 @@ S11 & Programs and outputs for the free theory, and for the two-link test of Pro
 S12 & Programs and outputs for the compact $\mathrm U(1)$ example, with the expectation written before the runs & Appendix~\ref{app:free} \\
 S13 & Random finite-dimensional tests of Propositions~\ref{p:wstep} and~\ref{p:onestep} & Section~\ref{s:inh} \\
 S14 & Programs and outputs for the non-abelian example, with finite subgroups of $\SU(2)$ and with $\SU(2)$ in a spin-network basis, with the expectations written before the runs & Appendix~\ref{app:free} \\
+S15 & Programs and outputs for the scalar field with a convex interaction (Proposition~\ref{p:convex}), with the predicates that failed & Appendix~\ref{app:free} \\
 \bottomrule
 \end{tabular}
 \caption{Supplementary material.}\label{tab:supp}
@@ -2323,15 +2331,129 @@ over this range it grows slowly. What the example shows is a mechanism in one sm
 need not make the constant of the first statement of Proposition~\ref{p:onestep} large, because the slow
 state's weight in the fine detail is small for the same reason as its energy.
 
+At spin cut-offs $3$ and $4$ the four sectors of the two flips can be diagonalised completely, and the
+one-step criterion can then be compared with the truth in the truncated model. With the coarse space of
+degree $10$ the best constant $\kappa$ in $I-P\le\kappa H$ at cut-off $4$ is $0.63$, $0.78$, $0.78$, $0.76$,
+$0.78$ at $\beta=1,\dots,5$ on the whole centred space, and $0.54$ to $0.59$ for $\beta=2$ to $5$ in the
+sector even under both flips, whose gap stays between $0.92$ and $1.19$. For $\beta=2$ to $5$ and in every
+sector the bound of Proposition~\ref{p:onestep}(a) with $B=0$ is between $0.68$ and $0.81$ of the true
+deficit at $t=1$ and at least $0.95$ of it at $t=16$. Between the two cut-offs the constant differs by at
+most $3.4$ per cent up to $\beta=4$ and by $17$ per cent at $\beta=5$, so the last value is not established
+to better than that.
+
+\medskip\noindent\emph{An interacting class in which the first statement holds with the free constant.}
+The next proposition is not about gauge fields. It shows that the first statement of
+Proposition~\ref{p:onestep} can survive an interaction of any strength, uniformly in the volume and in the
+fine mesh, and it isolates the property of the vacuum that makes it do so.
+
+\begin{proposition}[Convex interactions of a scalar field]\label{p:convex}
+Let $\Lambda$ be a finite set, $K$ a positive definite real symmetric matrix on $\R^\Lambda$,
+$\omega=K^{1/2}$, and $V:\R^\Lambda\to[0,\infty)$ convex. Let
+$H=-\tfrac12\Delta+\tfrac12\langle\phi,K\phi\rangle+V(\phi)$ on $L^2(\R^\Lambda)$, with lowest eigenvalue
+$E_0$ and ground state $\Omega>0$. Let $B:\R^\Lambda\to\R^m$ be linear with kernel $N\ne\{0\}$, and let $P$
+be the projection on the closure of the functions $g(B\phi)\,\Omega$. Then
+\[
+I-P\ \le\ \frac1{\lambda_N}\,(H-E_0),\qquad \lambda_N=\min_{n\in N,\ |n|=1}\langle n,\omega n\rangle ,
+\]
+and for $V=0$ no smaller constant will do. If $\Lambda$ is a box in $\Z^d$, periodic or not, with sides
+divisible by $r\ge2$, $K=m^2-\Delta_\Lambda$ with $m>0$, and $B\phi$ is the family of sums of $\phi$ over the
+cubes of side $r$, then $\lambda_N\ge(m^2+4\sin^2(\pi/2r))^{1/2}\ge2/r$, with equality in the first place on
+a periodic box with an even number of cubes in some direction. So
+\[
+I-P\ \le\ \frac1{2\sin(\pi/2r)}\,(H-E_0)\ \le\ \frac r2\,(H-E_0)
+\]
+for every convex $V$, every $m>0$, every dimension and every such box: half a coarse mesh, in units in which
+the fine mesh is one.
+\end{proposition}
+\begin{proof}
+\emph{The vacuum is the free vacuum times a log-concave function.} Let
+$\phi_0=\exp(-\tfrac12\langle\phi,\omega\phi\rangle)$ and $H_0=H-V$. Then
+$H_0(\phi_0g)=\phi_0(\tfrac12\operatorname{tr}\omega+Lg)$ with
+$L=-\tfrac12\Delta+\langle\omega\phi,\nabla\rangle$, and by Mehler's formula
+$e^{-tL}g(\phi)=\int g(e^{-t\omega}\phi+\sigma_tz)\,\gamma(dz)$, $\gamma$ the standard Gaussian measure and
+$\sigma_t=((I-e^{-2t\omega})/2\omega)^{1/2}$. If $g$ is log-concave the integrand times the Gaussian density
+is log-concave in $(\phi,z)$, so $e^{-tL}g$ is log-concave by Pr\'ekopa's theorem~\cite{BL76}; and
+$e^{-tV}g$ is log-concave because $V$ is convex. By the Trotter product formula, in Kato's form for sums of forms~\cite{Ka78},
+$e^{-tH}\phi_0=\lim_n(e^{-tH_0/n}e^{-tV/n})^n\phi_0$ in $L^2$, and every term is $\phi_0$ times a log-concave
+function. A limit almost everywhere of log-concave functions agrees almost everywhere with a log-concave
+function, $\Omega$ is continuous, and
+$e^{-t(H-E_0)}\phi_0\to\langle\Omega,\phi_0\rangle\Omega$ with $\langle\Omega,\phi_0\rangle>0$. Hence
+$\Omega=\phi_0F$ with $F$ log-concave. (This is the argument of~\cite{BL76} for the log-concavity of ground
+states, kept relative to the Gaussian.)
+
+\emph{A Poincar\'e inequality on the fibres.} The measure $\mu=\Omega^2d\phi$ has density
+$e^{-\langle\phi,\omega\phi\rangle}F^2$. Its conditional measure on a fibre $\phi'+N$ of $B$ has, in the
+coordinate $n\in N$, a density $e^{-U}$ with $U(n)-\langle n,\omega n\rangle$ convex, and
+$\langle n,\omega n\rangle\ge\lambda_N|n|^2$. For such a density
+$\operatorname{Var}(u)\le(2\lambda_N)^{-1}\int|\nabla_Nu|^2e^{-U}$ (the variance inequality
+of~\cite{BL76} for smooth $U$, and in general by approximation).
+
+\emph{Conclusion.} For $f=u\,\Omega$ in the form domain,
+$\langle f,(H-E_0)f\rangle=\tfrac12\int|\nabla u|^2d\mu$, and $P$ acts on $u$ as the conditional
+expectation given $B\phi$. So
+$\|(I-P)f\|^2=\int\operatorname{Var}(u\mid B\phi)\,d\mu\le(2\lambda_N)^{-1}\int|\nabla_Nu|^2d\mu
+\le\lambda_N^{-1}\langle f,(H-E_0)f\rangle$.
+
+\emph{The free case.} Let $V=0$, so that $\mu$ is Gaussian with covariance $(2\omega)^{-1}$, and let
+$n\in N$. The function $g=\langle\omega n,\phi\rangle\Omega$ is orthogonal to the range of $P$, because the
+covariance of $\langle\omega n,\phi\rangle$ with $B\phi$ is $B(2\omega)^{-1}\omega n=\tfrac12Bn=0$. On linear
+functions $H-E_0$ acts by $\omega$ on the coefficient vector, so
+$\langle g,(H-E_0)^{-1}g\rangle=\langle\omega n,(2\omega)^{-1}n\rangle=\tfrac12|n|^2$, while
+$\|g\|^2=\tfrac12\langle n,\omega n\rangle$. The best constant is $\|(I-P)(H-E_0)^{-1}(I-P)\|$, which is
+therefore at least $|n|^2/\langle n,\omega n\rangle$ for every $n\in N$.
+
+\emph{Block sums.} The form of $-\Delta_\Lambda$ is a sum over bonds; dropping the bonds between different
+cubes gives $-\Delta_\Lambda\ge D$, the direct sum of the Neumann Laplacians of the cubes. The square root is
+operator monotone, so $\omega\ge(m^2+D)^{1/2}$. The space $N$ of fields with zero sum on every cube is the
+orthogonal complement of the kernel of $D$, it is invariant under $D$, and on it
+$D\ge2-2\cos(\pi/r)=4\sin^2(\pi/2r)$, the first non-zero Neumann eigenvalue of a path of $r$ sites. This
+gives the bound for $\lambda_N$, and $\sin(\pi/2r)\ge1/r$. On a periodic box with an even number of cubes in
+the first direction the field $n(x)=\cos(\pi(x_1+\tfrac12)/r)$ changes sign under $x_1\mapsto x_1+r$, has
+zero sum on every cube and is an eigenvector of $K$ with eigenvalue $m^2+4\sin^2(\pi/2r)$, which gives the
+equality.
+\end{proof}
+
+Three remarks. First, in this class the gap itself is at least the lowest eigenvalue of $\omega$, by the same
+inequality applied without block variables, so nothing new is learned about the gap; what the proposition says is that the constant of
+the first statement does not depend on the mass, on the interaction or on the volume, so that for these
+fields the whole dependence on the infrared is in the second statement of Proposition~\ref{p:onestep}.
+Here $H$ is the Hamiltonian in continuous time; the corresponding statement for a transfer operator with a
+time step was not attempted. Secondly, the proof uses the convexity of $V$ only through one consequence:
+along the fibres of the block map the vacuum measure is at least as log-concave as the free one. Convexity is
+not necessary for the conclusion and its failure along the fibres is fatal to it. On two sites with
+$K=\tfrac14+\big(\begin{smallmatrix}1&-1\\-1&1\end{smallmatrix}\big)$ and the block variable
+$\phi_1+\phi_2$, where $1/\lambda_N=\tfrac23$, the best constant computed on a grid is $0.667$ for $V=0$,
+between $0.25$ and $0.60$ for $V=\lambda\sum_x\phi_x^4$ with $\lambda=10,1,0.1$, and still below $\tfrac23$
+for two on-site double wells $\lambda\sum_x(\phi_x^2-v^2)^2$, which we had expected to violate the bound and
+which do not, because their slow motion is a common change of sign of both sites and the block variable sees
+it. For $V=\lambda((\phi_1-\phi_2)^2-v^2)^2$, a double well in the fine direction, the constant is
+$1/(E_1-E_0)$, the inverse of the tunnelling splitting: $2.50$ at $(\lambda,v)=(\tfrac14,2)$ and $5845$ at
+$(\tfrac12,\tfrac52)$ (Supplement~S15; a third case was below the resolution of the program, and the
+predicate that included it is recorded as failed). On three sites with the block variables $\phi_1+\phi_2$ and $\phi_3$ the computed
+constants are $1.000$, $0.92$, $0.71$, $0.41$ of $1/\lambda_N$ for $V=0$ and the three quartic couplings. A
+control in that program asserted a different value for $V=0$ and failed; the assertion was wrong, and the
+computed value is what led to the statement about the free case in the proposition.
+Thirdly, for a gauge field none of the hypotheses holds as stated: the configuration space is compact, the
+action is not convex, the block variables of interest are not linear and the statement is wanted on
+gauge-invariant functions. What the proposition suggests for that case is the form a proof of the first
+statement could take: a lower bound, uniform in the fine mesh, for the convexity of minus the logarithm of
+the vacuum density along the fibres of the block map and transversally to the gauge orbits, to which the
+Ricci curvature of the group contributes with the favourable sign. We do not know such a bound. Statements
+of this kind for the effective actions of block variables at weak coupling are what renormalisation-group
+analyses of the small-field region aim at; the vacuum density is a different object.
+
 \begin{thebibliography}{99}\raggedright
 \bibitem{BL76} H.~J.~Brascamp and E.~H.~Lieb, \emph{On extensions of the Brunn--Minkowski and
 Pr\'ekopa--Leindler theorems, including inequalities for log concave functions, and with an application to
 the diffusion equation}, J. Funct. Anal. \textbf{22} (1976), 366--389. Cited for the weighted inequality on
-$\R^n$; not reread for this paper.
+$\R^n$, for Pr\'ekopa's theorem and for the log-concavity of ground states; not reread for this paper.
 \bibitem{DLMF} \emph{NIST Digital Library of Mathematical Functions}, \S10.29, \url{https://dlmf.nist.gov/10.29}.
 \bibitem{GOVW09} N.~Grunewald, F.~Otto, C.~Villani and M.~G.~Westdickenberg, \emph{A two-scale approach to
 logarithmic Sobolev inequalities and the hydrodynamic limit}, Ann. Inst. H. Poincar\'e Probab. Stat.
 \textbf{45} (2009), 302--351. Read: Sections 2.1, 2.2 and 3 (the criterion and its proof).
+\bibitem{Ka78} T.~Kato, \emph{Trotter's product formula for an arbitrary pair of self-adjoint contraction
+semigroups}, in Topics in Functional Analysis, Adv. Math. Suppl. Stud. \textbf{3}, Academic Press (1978),
+185--195. Cited for the statement; not reread.
 \bibitem{JSTV04} M.~Jerrum, J.-B.~Son, P.~Tetali and E.~Vigoda, \emph{Elementary bounds on Poincar\'e and
 log-Sobolev constants for decomposable Markov chains}, Ann. Appl. Probab. \textbf{14} (2004), 1741--1765.
 Cited for the existence of this line of work; only the abstract was read.

@@ -64,3 +64,21 @@ A reviewer checked the deposited outputs against what the README above and the p
 3. **Three rounded numbers stated as bounds.** Weight over energy at β = 4 is 0.4020, not "at most 0.40". The five-state cluster ratio is at most 0.5110, not 0.51. The rate at β = 6 is 0.799847, not "at or above 0.80".
 4. **A wrong range.** I wrote that the lowest states odd under the x-flip have energy "0.67 to 0.94 at β = 3 to 5". The file has 0.944106, 0.673825, 0.506740 at β = 3, 4, 5. So these energies also fall with β, more slowly than the y-flux state (0.0385, 0.0062, 0.0012). The statement "only the centre-charged state becomes light" should read: over β = 3 to 5 at cut-off 5, the y-flux state falls by a factor 31, the lowest x-flux state by a factor 1.9, and the lowest state even under both flips stays between 0.92 and 0.94. Nothing is known about larger β from these runs.
 5. **Solvers.** The rate is computed with an iterative eigensolver and conjugate gradients to the stated tolerances. An under-converged largest eigenvalue would overstate the rate. The values are numerically converged estimates, not certified bounds. With the comparison `2/γ − 2 ≤ κ ≤ 2/γ − 1` (the reviewer's sharpening of the upper side; verified), the rate at β = 6 would put `κ` between 0.50 and 1.50.
+
+## Calibration of the one-step criterion (`su2onestep.py`)
+
+At cut-offs 3 and 4 the four sectors of the two centre flips are small enough to diagonalise completely, so the best constant `κ` in `I − P ≤ κH` (coarse space of degree 10, mesh one) and the decorrelation `b(t) = 1 − ‖P e^{−tH} P‖` are exact for the truncated model, and the bound `b/(1 + κ/t)` of the one-step criterion can be set against the true deficit `1 − e^{−tΔ}`.
+
+Commands: `python3 su2onestep.py su2onestep_J3_result.txt 3` and `python3 su2onestep.py su2onestep_J4_result.txt 4` (about half a minute and twenty minutes).
+
+| β | κ, whole space, cut-off 3 | cut-off 4 | κ, sector even under both flips, cut-off 4 | gap of that sector |
+|---|---|---|---|---|
+| 1 | 0.631 | 0.631 | 0.355 | 2.489 |
+| 2 | 0.776 | 0.781 | 0.542 | 1.193 |
+| 3 | 0.759 | 0.775 | 0.591 | 0.923 |
+| 4 | 0.738 | 0.764 | 0.578 | 0.924 |
+| 5 | 0.651 | 0.783 | 0.562 | 0.939 |
+
+For β = 2 to 5, in every sector, the bound is between 0.68 and 0.81 of the true deficit at `t = 1` and at least 0.95 of it at `t = 16`. Controls S1 (the bound never exceeds the truth), S2 (the two-sided comparison of `κ` with `γ`) and S4 (the coarse basis splits by sector) are met at both cut-offs. S3 (comparison with `su2cluster_result.txt`) needs cut-off 5 and has not been run. Expectation X1 was met. Expectation X2 (the constant of the even sector changes by less than 10 per cent between β = 3 and 5) was not met at cut-off 3 (13.5 per cent) and was met at cut-off 4 (4.8 per cent).
+
+What to keep in mind. The whole-space constant at β = 5 differs by 17 per cent between the two cut-offs, so it is not established to better than that; up to β = 4 the difference is at most 3.4 per cent. A first trial stopped with an error (eigenvalues of the transfer matrix below rounding came out negative) and is kept as `su2onestep_trial1_failed.py`; the program now brackets the contribution of the unresolved states (`kappa_lo`, `kappa_hi`), which turned out to be below 1e-4.

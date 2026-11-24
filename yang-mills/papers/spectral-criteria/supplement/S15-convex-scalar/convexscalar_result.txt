@@ -1,0 +1,25 @@
+system A: lambda_N = 1.500000, 1/lambda_N = 0.666667, free one-particle constant 0.666667; grids n = 161/227, half-width 8.0
+  free                   kappa_exact 0.666669 (coarser grid 0.666676, rel 1.0e-05)  E0 0.999999  kappa*lambda_N 1.0000 control MET
+  quartic 0.1            kappa_exact 0.604250 (coarser grid 0.604259, rel 1.3e-05)  E0 1.155046  kappa*lambda_N 0.9064
+  quartic 1              kappa_exact 0.448613 (coarser grid 0.448626, rel 2.8e-05)  E0 1.655002  kappa*lambda_N 0.6729
+  quartic 10             kappa_exact 0.251937 (coarser grid 0.251964, rel 1.1e-04)  E0 3.040151  kappa*lambda_N 0.3779
+  cosh                   kappa_exact 0.539743 (coarser grid 0.539752, rel 1.6e-05)  E0 1.493092  kappa*lambda_N 0.8096
+  (phi1-phi2)^4          kappa_exact 0.329427 (coarser grid 0.329449, rel 6.6e-05)  E0 1.503922  kappa*lambda_N 0.4941
+  (phi1+phi2)^4          kappa_exact 0.666669 (coarser grid 0.666676, rel 1.0e-05)  E0 1.832849  kappa*lambda_N 1.0000
+  |phi1|+|phi2|          kappa_exact 0.527018 (coarser grid 0.526959, rel 1.1e-04)  E0 2.047565  kappa*lambda_N 0.7905
+  double well 0.5, 1.5   kappa_exact 0.520225 (coarser grid 0.520222, rel 4.2e-06)  E0 3.356477  kappa*lambda_N 0.7803 (not convex; rel between grids 4.2e-06)
+  double well 1, 2       kappa_exact 0.185881 (coarser grid 0.185903, rel 1.2e-04)  E0 6.563578  kappa*lambda_N 0.2788 (not convex; rel between grids 1.2e-04)
+system B: lambda_N = 1.631590, 1/lambda_N = 0.612899, free one-particle constant 0.593306; grids n = 49/61, half-width 6.0
+  free                   kappa_exact 0.613060 (coarser grid 0.613287, rel 3.7e-04)  E0 1.710309  kappa*lambda_N 1.0003 control FAILED
+  quartic 0.1            kappa_exact 0.565181 (coarser grid 0.565436, rel 4.5e-04)  E0 1.903471  kappa*lambda_N 0.9221
+  quartic 1              kappa_exact 0.432503 (coarser grid 0.432883, rel 8.8e-04)  E0 2.597561  kappa*lambda_N 0.7057
+  quartic 10             kappa_exact 0.249532 (coarser grid 0.250282, rel 3.0e-03)  E0 4.620402  kappa*lambda_N 0.4071 V4-FAILED
+  cosh                   kappa_exact 0.508901 (coarser grid 0.509175, rel 5.4e-04)  E0 2.383438  kappa*lambda_N 0.8303
+  (phi1-phi2)^4          kappa_exact 0.323008 (coarser grid 0.323630, rel 1.9e-03)  E0 2.195042  kappa*lambda_N 0.5270
+  (phi1+phi2)^4          kappa_exact 0.611578 (coarser grid 0.611805, rel 3.7e-04)  E0 2.478238  kappa*lambda_N 0.9978
+  |phi1|+|phi2|          kappa_exact 0.494859 (coarser grid 0.494823, rel 7.2e-05)  E0 2.704840  kappa*lambda_N 0.8074
+V1 MET
+V2 FAILED
+V3 MET
+V4 FAILED
+X1 NOT as expected

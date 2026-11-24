@@ -1,0 +1,18 @@
+d=1 r= 2: r*lambda_N = 2.828427 at k r/pi = [1.] ; r*2sin(pi/2r) = 2.828427 ; kappa_free/r = 0.353553 at k r/pi = [1.] ; 1/(r lambda_N) = 0.353553
+d=1 r= 3: r*lambda_N = 3.000000 at k r/pi = [1.] ; r*2sin(pi/2r) = 3.000000 ; kappa_free/r = 0.333333 at k r/pi = [1.] ; 1/(r lambda_N) = 0.333333
+d=1 r= 4: r*lambda_N = 3.061467 at k r/pi = [1.] ; r*2sin(pi/2r) = 3.061467 ; kappa_free/r = 0.326641 at k r/pi = [1.] ; 1/(r lambda_N) = 0.326641
+d=1 r= 6: r*lambda_N = 3.105829 at k r/pi = [1.] ; r*2sin(pi/2r) = 3.105829 ; kappa_free/r = 0.321975 at k r/pi = [1.] ; 1/(r lambda_N) = 0.321975
+d=1 r= 8: r*lambda_N = 3.121445 at k r/pi = [1.] ; r*2sin(pi/2r) = 3.121445 ; kappa_free/r = 0.320364 at k r/pi = [1.] ; 1/(r lambda_N) = 0.320364
+d=1 r=16: r*lambda_N = 3.136548 at k r/pi = [1.] ; r*2sin(pi/2r) = 3.136548 ; kappa_free/r = 0.318822 at k r/pi = [1.] ; 1/(r lambda_N) = 0.318822
+d=2 r= 2: r*lambda_N = 2.828427 at k r/pi = [0. 1.] ; r*2sin(pi/2r) = 2.828427 ; kappa_free/r = 0.353553 at k r/pi = [0. 1.] ; 1/(r lambda_N) = 0.353553
+d=2 r= 3: r*lambda_N = 3.000000 at k r/pi = [0. 1.] ; r*2sin(pi/2r) = 3.000000 ; kappa_free/r = 0.333333 at k r/pi = [0. 1.] ; 1/(r lambda_N) = 0.333333
+d=2 r= 4: r*lambda_N = 3.061467 at k r/pi = [0. 1.] ; r*2sin(pi/2r) = 3.061467 ; kappa_free/r = 0.326641 at k r/pi = [0. 1.] ; 1/(r lambda_N) = 0.326641
+d=2 r= 6: r*lambda_N = 3.105829 at k r/pi = [0. 1.] ; r*2sin(pi/2r) = 3.105829 ; kappa_free/r = 0.321975 at k r/pi = [0. 1.] ; 1/(r lambda_N) = 0.321975
+d=2 r= 8: r*lambda_N = 3.121445 at k r/pi = [0. 1.] ; r*2sin(pi/2r) = 3.121445 ; kappa_free/r = 0.320364 at k r/pi = [0. 1.] ; 1/(r lambda_N) = 0.320364
+d=3 r= 2: r*lambda_N = 2.828427 at k r/pi = [0. 0. 1.] ; r*2sin(pi/2r) = 2.828427 ; kappa_free/r = 0.353553 at k r/pi = [0. 0. 1.] ; 1/(r lambda_N) = 0.353553
+d=3 r= 3: r*lambda_N = 3.000000 at k r/pi = [0. 0. 1.] ; r*2sin(pi/2r) = 3.000000 ; kappa_free/r = 0.333333 at k r/pi = [0. 0. 1.] ; 1/(r lambda_N) = 0.333333
+d=3 r= 4: r*lambda_N = 3.061467 at k r/pi = [0. 0. 1.] ; r*2sin(pi/2r) = 3.061467 ; kappa_free/r = 0.326641 at k r/pi = [0. 0. 1.] ; 1/(r lambda_N) = 0.326641
+d=3 r= 6: r*lambda_N = 3.105829 at k r/pi = [0. 0. 1.] ; r*2sin(pi/2r) = 3.105829 ; kappa_free/r = 0.321975 at k r/pi = [0. 0. 1.] ; 1/(r lambda_N) = 0.321975
+B1 MET
+B2 MET
+B3 MET

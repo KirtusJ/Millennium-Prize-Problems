@@ -1,0 +1,6 @@
+lam 0.00 v 0.0: kappa_exact 0.666669  1/lambda_N 0.666667  ratio 1.000  E1-E0 4.999998e-01  kappa*(E1-E0) 0.3333
+lam 0.25 v 2.0: kappa_exact 2.500615  1/lambda_N 0.666667  ratio 3.751  E1-E0 3.999015e-01  kappa*(E1-E0) 1.0000
+lam 0.50 v 2.5: kappa_exact 5845.212943  1/lambda_N 0.666667  ratio 8767.819  E1-E0 1.709802e-04  kappa*(E1-E0) 0.9994
+lam 1.00 v 3.0: kappa_exact 9999980.365210  1/lambda_N 0.666667  ratio 14999970.548  E1-E0 2.273737e-13  kappa*(E1-E0) 0.0000
+W1 MET
+W2 NOT as expected

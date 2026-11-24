@@ -28,6 +28,13 @@ Read this section first; sections 1 to 5 are the earlier note and are kept as wr
 - Not done and worth doing next, cheapest first: a certified computation that the free rate is at least its small-momentum limit; the next size of the compact toy; a trial-function probe of (i) for SU(2) on the existing samplers with block-averaged variables held fixed (the samplers are Rust programs in Supplement S1; no Rust toolchain was installed in this session).
 - Reproducibility: fifteen programs of Supplements S11 to S13 were rerun in a fresh directory at the end and their result files are byte-identical to the deposited ones; the long runs of S12 were not rerun (the entry "Rerun of the deposited programs" in `infrared/README.md` lists which).
 
+### Added after that (24 November, night)
+
+- A third audit of the SU(2) numbers was checked and adopted (scope, rounded values given as bounds, a wrong energy range, the coarse space not being one-sided). Entry "Third audit of the SU(2) numbers" in `infrared/README.md`.
+- Paper: 46 pages. **Proposition E.7 (new):** for a scalar field with any convex interaction, statement (i) of the one-step form holds with the free constant, half a coarse mesh for block sums, uniformly in everything. Not about gauge fields; continuous time only. Programs in Supplement S15.
+- The SU(2) ladder now has an exact calibration of the one-step criterion per centre sector (`su2onestep.py`); cut-off 5 has not been run.
+- Next, in `PATHS.md` §11: fibre Poincaré constants of the vacuum in the two compact toys against the exact constant; the convex abelian gauge case; a discrete-time version of Proposition E.7.
+
 ## 1. Where things stand
 
 **No mass gap is proved. Never say otherwise.** The interacting hypotheses 3.1, 3.2, 3.3 are open for SU(2); volume uniformity, identification with a continuum theory and all other groups are untouched. Rendezvous issue: `KirtusJ/Millennium-Prize-Problems#1` (keep open). Last comment of mine: 7122902283.
