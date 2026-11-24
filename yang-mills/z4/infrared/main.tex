@@ -4,14 +4,13 @@
 \title[Spectral criteria and conditional infrared estimates]{Spectral criteria and conditional infrared estimates\\ for four-dimensional lattice Yang--Mills theory}
 \author{Kirtus Justus}
 \address{Theoretical Physicist, Port Coquitlam, British Columbia, Canada}
-\date{24 November 2026. Second draft.}
+\date{24 November 2026. Third draft.}
 \begin{document}
 \begin{abstract}
-We ask how a mass gap could be recognised in a quantum Yang--Mills theory given by its correlation functions,
-and how a gap could be carried from a coarse lattice to a finer one. We prove a spectral criterion, a
-refinement inequality that tolerates an exceptional set of coarse fields, and, for $\SU(2)$ Wilson lattice
-gauge theory, a bound on the return to such a set. Two interacting estimates that the refinement inequality
-needs remain open; we state them and report measurements. No mass gap is proved.
+We ask how a mass gap could be recognised in a Yang--Mills theory known through its correlation functions,
+and what would let a gap survive when a lattice is refined. We prove a spectral criterion for the first
+question and, for the second, an inequality that reduces one refinement step to three estimates. We prove one
+of the three for $\SU(2)$; the other two are open, and no mass gap is proved.
 \end{abstract}
 \maketitle
 \tableofcontents
@@ -23,13 +22,13 @@ gauge theories, and that one is handed its correlation functions. How would one 
 And if the lattice theories have gaps in a fixed physical box, what would allow a gap to survive as the mesh is
 halved again and again?
 
-These questions are no longer hypothetical in their first half. A construction of a continuum theory as a
-scaling limit of Wilson lattice gauge theory, for every simple compact gauge group, was submitted in formal
-form in October 2026~\cite{OAI}; its assessors judge that it yields a theory satisfying the Wightman axioms
-and state that it proves neither a mass gap nor uniqueness of the infinite-volume limit~\cite[p.~1]{YMG}. The
-problem of Jaffe and Witten~\cite[\S4]{JW} asks for both existence and a gap, so the gap is what is missing.
-We do not supply it. This paper collects what we can prove about the two questions above, says exactly what
-is left open, and reports numerical measurements that show what the open statements are up against.
+The first question now has an object to be asked about. A continuum theory, obtained as a scaling limit of
+Wilson lattice gauge theory for every simple compact gauge group, was submitted in formal form in October
+2026~\cite{OAI}. Its assessors judge that it satisfies the Wightman axioms, and state that it proves neither a
+mass gap nor uniqueness of the infinite-volume limit~\cite[p.~1]{YMG}. The problem of Jaffe and
+Witten~\cite[\S4]{JW} asks for existence and a gap, so the gap is what is missing. This paper does not supply
+it. It records what we can prove about the two questions, states what is open, and reports measurements of
+the quantities that the open statements concern.
 
 \subsection{The two questions}
 For the first question the answer is an elementary fact about self-adjoint operators, worth stating because
@@ -39,18 +38,28 @@ successive differences $d_{v,n}$ are non-negative, forget the vacuum, and decay 
 positive energy present in $v$. A gap is the same thing as a common rate for a family of vectors that spans
 (Theorem~\ref{t:crit}).
 
-For the second question we follow one route. Consider a fine lattice and the coarse lattice of twice the
-mesh inside it. A function of a time slice of the fine lattice splits into the part predictable from the
-coarse links and the remainder. If the predictable part decays in time as on the coarse lattice, and the
-remainder decays quickly because fine fluctuations relax in a few lattice steps, then the fine lattice
-inherits the coarse decay with a small loss. The second requirement cannot hold uniformly: there are coarse
-backgrounds on which fine fluctuations relax slowly under local updates. Theorem~\ref{t:inh} shows that the
-inheritance survives if those backgrounds form a set to which the dynamics seldom returns, and
-Theorem~\ref{t:ret} proves such a return bound for $\SU(2)$. What remains open are the two interacting
-estimates themselves: relaxation off the exceptional set, and the comparison of the predictable part with the
-coarse lattice.
+For the second question we follow one route. Consider a fine lattice and, inside it, the coarse lattice of
+twice the mesh. Each coarse link is the product of two consecutive fine links. A function of the fine links at
+one time splits into the part that can be predicted from the coarse links and the remainder. Suppose the
+predictable part decays in time as it does on the coarse lattice, and the remainder decays within a few
+lattice steps. Then the fine lattice inherits the coarse decay with a small loss. We do not expect the second
+supposition to hold on every coarse background: under the local updates of Section~\ref{s:set} we measure
+backgrounds on which fine fluctuations relax slowly (Section~\ref{s:local}). Theorem~\ref{t:inh} shows that the
+inheritance survives if such backgrounds are put in an exceptional set to which the dynamics seldom returns,
+and Theorem~\ref{t:ret} proves a return bound of that kind for $\SU(2)$. Two estimates for the interacting
+theory remain open: decay of the remainder off the exceptional set, and the comparison of the predictable
+part with the coarse lattice.
 
-\subsection{Statements}
+\subsection{The idea in words}
+Draw a square grid, and over it a second grid with squares twice as wide. A field on the fine grid gives one
+on the coarse grid: multiply the two fine links under each coarse link. With six fine sites on a side there
+are three coarse ones, and a coarse square has eight fine links on its boundary. Any observable of the fine
+field is the sum of its best guess from the coarse field and a remainder, the detail that the coarse field
+does not see. If the guess decays in time as on the coarse lattice, and the detail is forgotten within a few
+steps except on rare coarse fields that seldom recur, then the fine lattice keeps almost all of the coarse
+decay. Theorem~\ref{t:inh} makes this precise.
+
+\subsection{Main results}
 \begin{theorem}[Spectral criterion]\label{t:crit}
 Let $H\ge0$ be a self-adjoint operator on a Hilbert space $\cH$, let $\tau>0$, and let $D\subset\cH$ have dense
 linear span. For $v\in\cH$ and $n\ge0$ put
@@ -82,19 +91,25 @@ d\ \ge\ \frac{(b-\kappa)_+}{1+2a/(\gamma t)} .
 \end{equation}
 \end{theorem}
 
-In the application $\mathcal K$ consists of the centred gauge-invariant functions of a time slice of the
-fine lattice, $S_s$
-is the transfer semigroup in the vacuum representation at times $s$ that are multiples of the mesh $a$, $P$
-is the conditional expectation given the coarse links, and $B$ is the part of $Q$ carried by an exceptional
-set of coarse fields. The proof uses only the spectral calculus of $S_a$, so nothing changes when time is
-discrete.
+In words. Split the space into a coarse part $P$, an exceptional part $B$ and a good part $G$. The first
+hypothesis says that a function loses, within time $2a$, at least the fraction $\gamma$ of the squared norm of
+its good part. The second says that the exceptional part overlaps with itself after time $\tau$ by at most
+$\kappa$. The third says that the coarse part alone already has deficit $b$ at time $t$. The conclusion is that
+the whole space has deficit at least $b-\kappa$, divided by a factor that tends to $1$ when $a/\gamma\to0$.
+
+In the application (terms are defined in Section~\ref{s:set}) $\mathcal K$ is the space of gauge-invariant
+functions of one time slice of the fine lattice with vacuum expectation zero, $S_s$ is the transfer semigroup
+at multiples $s$ of the mesh $a$, $P$ is the conditional expectation given the coarse links, and $B$ is the
+part of $Q$ supported on an exceptional set of coarse fields. On this space $\lambda$ is the gap of the lattice
+Hamiltonian, so $d>0$ is a gap at that lattice. The proof uses only the spectral calculus of $S_a$, so it
+holds for discrete time.
 
 \begin{theorem}[Return to a coarse plaquette gate]\label{t:ret}
 Consider the Wilson measure with weight $\exp\big(\beta\sum_p\tfrac12\Tr U_p\big)$, $\beta\ge0$, for the gauge
 group $\SU(2)$ on a periodic lattice with even spatial side $N\ge6$ and $T\ge2$ time slices. Fix a spatial
 plaquette of side two (a coarse plaquette) and $0\le\theta\le\pi$. For the spatial links $x$ of a time slice
 let $A_\theta$ be the event that the holonomy around that plaquette lies within round distance $\theta$ of
-$-I$. Let $x$ and $y$ be the spatial links of two time slices that are distinct modulo $T$. Then for every
+$-I$; we call $A_\theta$ a \emph{gate}. Let $x$ and $y$ be the spatial links of two time slices that are distinct modulo $T$. Then for every
 complex square-integrable function $g$ of a slice, with $h=\mathbf 1_{A_\theta}g$,
 \begin{equation}\label{e:ret}
 \big|\E\big[\overline{h(x)}\,h(y)\big]\big|\ \le\ p_{6\beta}(\theta)\,\E\big[|h(x)|^2\big],
@@ -104,19 +119,18 @@ p_k(\theta)=\frac{\int_0^\theta\sin^2\!r\,e^{k(\cos r-1)}\,dr}{\int_0^\pi\sin^2\
 and $p_k(\theta)\le\min\{1,\ \tfrac{\pi^2\sqrt e}{4}(1+k)^{3/2}\theta^3\}$.
 \end{theorem}
 
-The bound does not depend on the spatial volume, on the time separation or on the rest of the field.
-Corollary~\ref{c:vac} carries it to the vacuum on an infinite time axis at fixed spatial lattice, where, on the gauge-invariant functions, it
-becomes the second inequality of~\eqref{e:hyp}; that step uses the transfer-matrix representation
-of~\cite{Lu77,OS78}, which we cite and do not rederive.
+In words: whatever the field is at one time, the conditional probability that the chosen plaquette is within
+$\theta$ of $-I$ at another time is at most $p_{6\beta}(\theta)$, which is of order $\theta^3$. The bound does not
+depend on the spatial volume, on the time separation or on the rest of the field. (The holonomy of a
+plaquette is the ordered product of the links around it; the round distance is the angle on $S^3$; see
+Section~\ref{s:set}.) The gate is centred at $-I$ because that is where the measurements of
+Section~\ref{s:local} find slow local relaxation. Corollary~\ref{c:vac} carries the bound to the vacuum on an
+infinite time axis, where, on the gauge-invariant functions, it becomes the second inequality
+of~\eqref{e:hyp}. That step uses the transfer-matrix representation of~\cite{Lu77,OS78}, which we cite.
 
-\begin{proposition}[One-link covariance]\label{p:haar}
-For $k>0$ let $u$ be a point of the unit sphere $S^3\subset\R^4$ with density proportional to
-$e^{k\,u\cdot v}$ with respect to the uniform measure, $v$ a unit vector. Its covariance has the eigenvalue
-$R'(k)$ in the direction $v$ and $R(k)/k$ on $v^\perp$, where $R=I_2/I_1$ is a ratio of modified Bessel
-functions. For all $k>0$: $R'(k)<R(k)/k$; $R'$ is strictly decreasing; $k^2R'(k)$ is strictly increasing.
-Consequently, for $L>0$, $\beta\ge1$ and $0<k\le L\beta$, the smallest eigenvalue $m(k)$ of the covariance
-satisfies $\beta^2m(k)\ge R'(L)$, and $0.036885895<R'(6)<0.036885896$.
-\end{proposition}
+A fourth result, Proposition~\ref{p:haar} in Section~\ref{s:haar}, gives a sharp lower bound for the
+conditional variance of a single link. It bounds one term of an auxiliary statement and is not an input of
+Theorem~\ref{t:inh}.
 
 \subsection{What is not claimed}\label{s:not}
 \begin{enumerate}
@@ -135,22 +149,8 @@ whether a useful exceptional set exists is open.
 statistics. They are trial values, one-sided by nature, and none is used in a proof.
 \end{enumerate}
 
-\subsection{Sources of the results and status of verification}\label{s:disc}
-This paper was assembled by the author with the assistance of sessions of two artificial-intelligence model
-families working in a shared repository~\cite{Repo}. Theorem~\ref{t:crit} in this form, and the monotonicity
-statements of Proposition~\ref{p:haar}, were proposed with proofs by sessions of OpenAI GPT models acting as
-auditors of the repository; the same sessions reviewed the first draft of this paper, and their corrections
-are incorporated. Theorems~\ref{t:inh} and~\ref{t:ret}, the latter in its vacuum form, were proposed with
-proofs by a session of OpenAI Codex~\cite{RepoRet,RepoInh}. Sessions of Claude (Anthropic) attacked those
-source derivations and Proposition~\ref{p:haar} at their authors' request and found no defect in the steps
-they checked (three items of the return derivation, which needed data archives that were absent, were not
-checked), wrote the
-proofs as they appear here, including the periodic-time form of Theorem~\ref{t:ret} and
-Proposition~\ref{p:vac}, and made the measurements of Section~\ref{s:evid}; a session of OpenAI Codex reduced
-part of the raw data again and corrected it. Lemma~\ref{l:scal}, the inequality of Corollary~\ref{c:acc}, the
-finite-dimensional form of Theorem~\ref{t:inh} and the scalar steps of Proposition~\ref{p:haar} are checked
-in Lean~4 with Mathlib (Section~\ref{s:lean}); nothing else is. No one other than the author has read the paper, and no mathematician has reviewed it. Agreement
-among such sessions, within one family or across two, is not peer review.
+How the results were obtained, which parts are machine-checked, and the fact that the paper has not been
+peer reviewed are set out in Section~\ref{s:disc}.
 
 \section{Setting and notation}\label{s:set}
 \emph{Lattice.} A periodic lattice has $N$ sites in each of three spatial directions and $T$ time slices.
@@ -194,7 +194,7 @@ $H$, $S_s=e^{-sH}$ & Hamiltonian; transfer semigroup & Thms~\ref{t:crit}, \ref{t
 $d_{v,n}$ & differences of the correlation of $v$ with itself & Thm~\ref{t:crit} \\
 $P$, $Q$, $B$, $G$ & coarse projection; its complement; exceptional and good parts & Thm~\ref{t:inh} \\
 $a$, $t$, $\tau$ & fine mesh; physical time; a lag with $0<\tau\le t$ & Thm~\ref{t:inh} \\
-$\gamma$, $\kappa$, $b$, $d$ & mixing rate; return weight; inherited deficit; deficit $1-\|S_t\|$ & \eqref{e:hyp}, \eqref{e:inh} \\
+$\gamma$, $\kappa$, $b$, $d$ & mixing rate; return weight; deficit of the coarse part; deficit $1-\|S_t\|$ & \eqref{e:hyp}, \eqref{e:inh} \\
 $N$, $T$, $\beta$ & spatial side; time slices; bare coupling & Section~\ref{s:set} \\
 $\mathsf L$, $\Omega$ & transfer operator at fixed spatial lattice; its vacuum & Section~\ref{s:set} \\
 $A_\theta$, $p_k(\theta)$ & gate around $-I$; cap probability at tilt $k$ & Thm~\ref{t:ret} \\
@@ -206,15 +206,16 @@ $\mathsf R(f)$ & two-time quotient $1-C_f(\text{lag})/C_f(0)$ & Section~\ref{s:c
 \caption{Principal symbols.}\label{tab:sym}
 \end{table}
 
-\section{Architecture}\label{s:arch}
-Figure~\ref{f:arch} shows how the statements relate. Solid boxes are proved in this paper. Dashed boxes are
-open. The dotted box is an external result that we cite and have not verified. An arrow means that the
-statement at its tail is an input of the statement at its head. The route through Theorem~\ref{t:inh} and
-Corollary~\ref{c:acc} is an implication: its conclusion is available only where all its inputs are, and three
-of them are open. Nothing below it in the
-figure is proved. The route through Theorem~\ref{t:inh} is one sufficient route to a gap in a box; it is not
-the only way in which the criterion of Theorem~\ref{t:crit} could be met, and a direct estimate of the
-moments $d_{v,n}$ in the continuum theory would bypass it.
+\section{Outline and the open hypotheses}\label{s:arch}
+Figure~\ref{f:arch} is the outline. Read it from the top. Theorem~\ref{t:inh} treats one halving of the mesh and
+has three inputs: the return bound, which is Theorem~\ref{t:ret} with Corollary~\ref{c:vac}; decay off the
+gates (Hypothesis~\ref{h:mix}); and comparison with the coarse lattice (Hypothesis~\ref{h:coarse}).
+Corollary~\ref{c:acc} chains the halvings and needs one more input, the budget (Hypothesis~\ref{h:budget}). The
+three hypotheses are open, so every box on the path from Theorem~\ref{t:inh} down to the mass gap is open.
+Theorem~\ref{t:crit} enters only at the bottom: it says what would have to be checked in a continuum theory.
+
+This is one sufficient route to a gap in a box. A direct estimate of the differences $d_{v,n}$ in the
+continuum theory would meet the criterion of Theorem~\ref{t:crit} without it.
 
 \begin{figure}[ht]
 \centering
@@ -230,27 +231,30 @@ moments $d_{v,n}$ in the continuum theory would bypass it.
 \node[prov,below=9mm of mix,xshift=19mm] (inh) {Refinement inequality\\ Thm~\ref{t:inh}, Cor.~\ref{c:acc}};
 \node[open,above=of mix] (aux) {Local mixing (auxiliary)\\ Section~\ref{s:local}};
 \node[prov,above=of ret] (haar) {One-link covariance\\ Prop.~\ref{p:haar}};
-\node[open,below=of inh] (box) {Positive deficit in a fixed\\ physical box};
-\node[open,below=of box] (vol) {Uniform in the volume;\\ same theory as~\cite{OAI}};
-\node[ext,left=of vol] (ext) {Continuum Wightman theory\\ \cite{OAI,YMG} (cited)};
-\node[prov,right=of vol] (crit) {Spectral criterion\\ Thm~\ref{t:crit}};
-\node[open,below=of vol] (gap) {Mass gap};
+\node[open,below=of inh] (box) {Positive deficit in a fixed\\ physical box (Cor.~\ref{c:acc})};
+\node[open,below=of box] (vol) {Uniform in the volume};
+\node[open,below=of vol] (same) {Same theory as~\cite{OAI}};
+\node[ext,left=of same] (ext) {Continuum Wightman theory\\ \cite{OAI,YMG} (cited)};
+\node[prov,right=of same] (crit) {Spectral criterion\\ Thm~\ref{t:crit}};
+\node[open,below=of same] (gap) {Mass gap};
 \draw[->] (ret) -- (inh);
 \draw[->,dashed] (mix) -- (inh);
 \draw[->,dashed] (coarse) -- (inh);
 \draw[->,dashed] (budget) -- (inh);
 \draw[->,dashed] (aux) -- (mix);
-\draw[->,dashed] (haar) -- (aux);
+\draw[->] (haar) -- (aux);
 \draw[->,dashed] (inh) -- (box);
 \draw[->,dashed] (box) -- (vol);
-\draw[->,dashed] (vol) -- (gap);
-\draw[->,dotted,thick] (ext) -- (vol);
-\draw[->,dashed] (crit) |- (gap);
+\draw[->,dashed] (vol) -- (same);
+\draw[->,dashed] (same) -- (gap);
+\draw[->,dotted,thick] (ext) -- (same);
+\draw[->] (crit) |- (gap);
 \end{tikzpicture}
-\caption{Dependencies. Solid boxes: proved here (Corollary~\ref{c:vac} uses the cited transfer-matrix
-representation). Dashed boxes: open. Dotted: cited, not verified here. A dashed arrow is an implication that
-would hold if the open statement at its tail were proved; the arrow from Proposition~\ref{p:haar} means only
-that it bounds one term from below.}\label{f:arch}
+\caption{Outline. Solid boxes are proved in this paper; Corollary~\ref{c:vac} uses the transfer-matrix
+representation of~\cite{Lu77,OS78}. Dashed boxes are open. The dotted box is cited. An arrow from $X$ to $Y$
+means that $X$ is an input of $Y$; it is solid when $X$ is proved and dashed when $X$ is open.
+Proposition~\ref{p:haar} bounds one term of the auxiliary statement and does not imply it.
+Hypothesis~\ref{h:budget} enters through Corollary~\ref{c:acc}.}\label{f:arch}
 \end{figure}
 
 \begin{hypothesis}[Short-time decay off the gates; open]\label{h:mix}
@@ -259,12 +263,12 @@ from gates as in Theorem~\ref{t:ret} and $G_i=Q_i-B_i$, there are $\gamma_i>0$ w
 $\langle f,(I-S_{2a_i})f\rangle\ge\gamma_i\|G_if\|^2$ for all centred $f$, and $\sum_ia_i/\gamma_i<\infty$.
 \end{hypothesis}
 
-This is a statement about the transfer semigroup. A route to it goes through the local updates of
-Section~\ref{s:set}: a derivation in~\cite{RepoInh}, which we neither reproduce nor verify here, bounds the form
-$\langle f,(I-S_{2a})f\rangle$ from below by the expected loss of $f$ under those updates; granting it, a
-lower bound for the local quotient over all functions on good backgrounds would suffice. We call that the \emph{auxiliary} local mixing statement. It is stronger
-than what Hypothesis~\ref{h:mix} needs, and the implication goes one way only: a function that the local
-updates relax slowly may still decay quickly under the transfer semigroup.
+Hypothesis~\ref{h:mix} is about the transfer semigroup. One route to it uses the local updates of
+Section~\ref{s:set}. A derivation in~\cite{RepoInh}, not reproduced or checked here, bounds
+$\langle f,(I-S_{2a})f\rangle$ from below by the expected loss of $f$ under those updates. Given that, it would
+suffice to bound the local quotient $\mathcal J(F)/\mathcal V(F)$ from below for every function $F$ on every
+background outside the gates. We call this the \emph{auxiliary local mixing statement}. It is stronger than
+Hypothesis~\ref{h:mix}: a function that the local updates relax slowly may still decay quickly in time.
 
 \begin{hypothesis}[Coarse comparison; open]\label{h:coarse}
 With $d_{i-1}$ the deficit of the lattice of mesh $2a_i$ at the same physical time $t$ and matched coupling,
@@ -284,36 +288,6 @@ trajectory, Corollaries~\ref{c:acc} and~\ref{c:vac} would give a positive lower 
 fixed physical box. Summability of the $\kappa_i$ and $\varepsilon_i$ alone would not: the budget is a
 separate condition (Remark~\ref{r:budget}). A positive limit of deficits in a box is still not a mass gap;
 uniformity in the volume and the identification of the limit with a continuum theory would remain.
-
-\subsection{The external construction and what compatibility would require}\label{s:ext}
-According to its assessors~\cite[pp.~1, 3]{YMG}, the construction~\cite{OAI} obtains continuum correlation
-functions as a scaling limit of Wilson lattice correlation functions at a fixed physical volume, then an
-infinite-volume limit along a subsequence, not proved unique; any such limit decomposes into component
-theories, each satisfying the Osterwalder--Schrader axioms and hence, by reconstruction, the Wightman axioms;
-renormalised local operators corresponding to gauge-invariant polynomials in the curvature are defined, with
-an operator product expansion that is not shown to match perturbation theory; and there is no evidence for or
-against a mass gap. The assessors' own independent check of the Osterwalder--Schrader axioms concerns a
-selected family of stress-tensor trace correlations, tested against functions that vanish to all orders where
-points coincide, and so does not see contact terms~\cite[Part~II]{YMG}; the wider reconstruction rests on
-the submission. We take all of this from the assessment and have not examined the construction.
-
-If that construction is accepted as existence in the sense of~\cite{JW}, which also asks for local fields and
-short-distance behaviour that the assessment discusses and we do not, then what remains is a spectral
-statement: for each compact simple $G$, in at least one of its non-trivial component theories, a $\Delta_G>0$
-with no spectrum of the Hamiltonian in $(0,\Delta_G)$, and some spectrum above it, so that the mass is finite.
-On our reading of~\cite{JW}, which neither it nor the assessment states in this form, a constant depending
-on $G$ in one non-trivial component would suffice, and the value of the mass is not asked for; the
-assessment records uniqueness of the limit and agreement of the components as unresolved. Theorem~\ref{t:crit} is a form of the first half of that statement suited to a
-theory given by correlation functions: a common exponential rate for the differences $d_{v,n}$ on a family of
-vectors with dense span, for instance those generated from the vacuum by the smeared fields.
-
-For anything in this paper to bear on it, the following would have to be fixed and matched to the
-construction, and none of it is done here: the group and the lattice action; the sequence of meshes and
-couplings and the physical units; the order of the limits (mesh at fixed volume, then volume); the class of
-observables on which convergence holds; the component theory selected; and the relation between the lattice
-transfer semigroup at fixed regulator, to which Theorems~\ref{t:inh} and~\ref{t:ret} refer, and the
-Hamiltonian of the limit. The lattices of Section~\ref{s:evid} are matched to one another by a renormalised
-coupling~\cite{RepoData}; they are not known to lie on the sequence of~\cite{OAI}.
 
 \section{The spectral criterion}\label{s:crit}
 \begin{proof}[Proof of Theorem~\ref{t:crit}]
@@ -506,6 +480,15 @@ centre; it is far from the sharp $\SU(2)$ estimate and we make no use of it.
 \end{remark}
 
 \section{The one-link covariance}\label{s:haar}
+\begin{proposition}[One-link covariance]\label{p:haar}
+For $k>0$ let $u$ be a point of the unit sphere $S^3\subset\R^4$ with density proportional to
+$e^{k\,u\cdot v}$ with respect to the uniform measure, $v$ a unit vector. Its covariance has the eigenvalue
+$R'(k)$ in the direction $v$ and $R(k)/k$ on $v^\perp$, where $R=I_2/I_1$ is a ratio of modified Bessel
+functions. For all $k>0$: $R'(k)<R(k)/k$; $R'$ is strictly decreasing; $k^2R'(k)$ is strictly increasing.
+Consequently, for $L>0$, $\beta\ge1$ and $0<k\le L\beta$, the smallest eigenvalue $m(k)$ of the covariance
+satisfies $\beta^2m(k)\ge R'(L)$, and $0.036885895<R'(6)<0.036885896$.
+\end{proposition}
+
 \begin{proof}[Proof of Proposition~\ref{p:haar}]
 With $Z(k)=\int e^{k\,u\cdot v}du=2I_1(k)/k$, the mean of $u\cdot v$ is $(\log Z)'=I_1'/I_1-1/k=I_2/I_1=R$ by
 $I_1'=I_2+I_1/k$, and its variance is $R'$. By symmetry the covariance is a multiple of the identity on
@@ -551,22 +534,26 @@ links and whose variances it does not control.
 \end{remark}
 
 \section{Measurements}\label{s:evid}
-All numbers in this section are Monte Carlo estimates for $\SU(2)$ with jackknife errors over independent
-streams. Programs, seeds, raw data or the commands that regenerate them, the predicates fixed before each
-run and those that failed are in~\cite{RepoData}. The measurements are reported to show what the open
-hypotheses face. None supports them, and none is a bound.
+This section reports Monte Carlo estimates for $\SU(2)$. A \emph{stream} is an independent run of the sampler
+with its own seed; errors are jackknife errors over streams, and a digit in parentheses is the standard error
+in the last digit. Each measurement tries particular test functions in an inequality that an open
+hypothesis, or the auxiliary statement, would need for all functions. A trial can therefore show that a
+constant is at most some value; it cannot show that a hypothesis holds, and none is used in a proof. Couplings
+were taken from a calibration in~\cite{RepoData} and not recalibrated. Programs, seeds, raw data, the pass
+rules fixed before each run and the rules that failed are in~\cite{RepoData}.
 
 \subsection{The local quotient on a frozen coarse background}\label{s:local}
-This subsection concerns the auxiliary local mixing statement, not Hypothesis~\ref{h:mix} itself.
+\emph{Question.} On a coarse background with holonomy $-I$, how small can the local quotient
+$\mathcal J/\mathcal V$ be? This concerns the auxiliary local mixing statement, not Hypothesis~\ref{h:mix}.
 
-Side $N=6$, $T=12$, $\beta=3.276133577$ (a point of a line of constant renormalised coupling determined
-in~\cite{RepoData}; not recalibrated here). The coarse links of one slice are frozen, all equal to the
-identity except two: one coarse link equal to $-I$, so that the three coarse plaquettes through it have
-holonomy $-I$, and one adjacent coarse link equal to the quaternion $\mathbf i$, which supplies a reference
-direction (four coarse plaquettes then have holonomy $\pm\mathbf i$). The tests are linear combinations of
-gauge-invariant marks built from the fine plaquettes inside coarse plaquettes. For each span of marks, the
-combination with the smallest quotient $\mathcal J/\mathcal V$ is selected on $16$ streams, and
-Table~\ref{tab:local} gives its quotient on $16$ other streams.
+\emph{Setup.} Side $N=6$, $T=12$, $\beta=3.276133577$, a point on a line of constant renormalised coupling.
+The coarse links of one slice are held fixed (a \emph{frozen background}) and the fine links are sampled
+around them. All coarse links are the identity except two. One is $-I$, so the three coarse plaquettes through
+it have holonomy $-I$. An adjacent one is the quaternion $\mathbf i$, which supplies a reference direction;
+four coarse plaquettes then have holonomy $\pm\mathbf i$. A \emph{mark} is a gauge-invariant function of the fine
+plaquettes inside one coarse plaquette; the list of marks is in~\cite{RepoData}. For each span of marks we
+select, on $16$ streams, the linear combination with the smallest quotient, and report in
+Table~\ref{tab:local} its quotient on $16$ other streams. Smaller means slower relaxation.
 
 \begin{table}[ht]
 \centering\small
@@ -601,12 +588,12 @@ average the ratio is $1.034(13)$, and one of that run's four burn-in checks fail
 not an interval, but the low quotient is not confined to the immediate neighbourhood of $-I$ that
 Theorem~\ref{t:ret} controls usefully.
 
-These are trial values for the local quotient under artificial updates. They bound from above the best
-constant in the auxiliary statement on these two backgrounds, and say nothing about the constant $\gamma$ of
-Hypothesis~\ref{h:mix}.
+These trial values bound from above the best constant in the auxiliary statement on these two backgrounds.
 
 \subsection{Carry-over in time of the locally slow combination}\label{s:time}
-Same lattice and frozen slice, fresh streams. The $308$-mark combination selected above was regressed on the
+\emph{Question.} Is the combination that the local updates relax most slowly also slow to change in time?
+
+\emph{Setup and result.} Same lattice and frozen slice, fresh streams. The $308$-mark combination selected above was regressed on the
 same $308$ marks one time slice later, in two gauge-invariant forms: with reference directions taken on the
 later slice, and with the later marks transported back along time-like links to the frozen reference (a mark
 of the second form is not a function of the later slice alone). A rule fixed before the runs called for a
@@ -623,11 +610,15 @@ are different properties, which is the reason for separating Hypothesis~\ref{h:m
 statement.
 
 \subsection{Comparison across a factor of two in the mesh}\label{s:cross}
-Sides $N=5$ and $N=10$ at couplings $3.196581051$ and $3.493705679$ (matched in~\cite{RepoData} at a fixed
-renormalised coupling; not recalibrated here), time extents two and four times the side, and a common physical
+\emph{Question.} Does a function of the coarse links decay in time on the fine lattice as it does on the
+coarse one?
+
+\emph{Setup and result.} Sides $N=5$ and $N=10$ at couplings $3.196581051$ and $3.493705679$ (matched at a
+fixed renormalised coupling), time extents two and four times the side, and a common physical
 lag (one and two time steps). The tests are functions of the coarse links of side $10$, and the same
 functions of the links of side $5$. For a test $f$ let $\mathsf R(f)=1-C_f(\mathrm{lag})/C_f(0)$ with $C_f$ its
-connected two-time correlation, so that $1-\mathsf R$ is the correlation retained over the lag.
+connected two-time correlation, so that $1-\mathsf R$ is the correlation retained over the lag, and let
+$\mathcal E_N(f)=C_f(0)-C_f(\mathrm{lag})$ on the lattice of side $N$ be its two-time energy.
 \begin{enumerate}
 \item \emph{Unnormalised energies.} In a first span of $16$ slice-averaged functions, one test selected on
 training streams has two-time energy on side $10$ equal to $0.00407(5)$ times that on side $5$, because its
@@ -661,6 +652,53 @@ $\beta^2m(k)\ge R'(L)$ given the monotonicities; and the first-zero principle. T
 formalised.
 \end{itemize}
 Theorems~\ref{t:crit} and~\ref{t:ret}, Proposition~\ref{p:vac} and Corollary~\ref{c:vac} are not formalised.
+
+\section{The external construction and what compatibility would require}\label{s:ext}
+According to its assessors~\cite[pp.~1, 3]{YMG}, the construction~\cite{OAI} obtains continuum correlation
+functions as a scaling limit of Wilson lattice correlation functions at a fixed physical volume, then an
+infinite-volume limit along a subsequence, not proved unique; any such limit decomposes into component
+theories, each satisfying the Osterwalder--Schrader axioms and hence, by reconstruction, the Wightman axioms;
+renormalised local operators corresponding to gauge-invariant polynomials in the curvature are defined, with
+an operator product expansion that is not shown to match perturbation theory; and there is no evidence for or
+against a mass gap. The assessors' own independent check of the Osterwalder--Schrader axioms concerns a
+selected family of stress-tensor trace correlations, tested against functions that vanish to all orders where
+points coincide, and so does not see contact terms~\cite[Part~II]{YMG}; the wider reconstruction rests on
+the submission. We take all of this from the assessment and have not examined the construction.
+
+If that construction is accepted as existence in the sense of~\cite{JW}, which also asks for local fields and
+short-distance behaviour that the assessment discusses and we do not, then what remains is a spectral
+statement: for each compact simple $G$, in at least one of its non-trivial component theories, a $\Delta_G>0$
+with no spectrum of the Hamiltonian in $(0,\Delta_G)$, and some spectrum above it, so that the mass is finite.
+On our reading of~\cite{JW}, which neither it nor the assessment states in this form, a constant depending
+on $G$ in one non-trivial component would suffice, and the value of the mass is not asked for; the
+assessment records uniqueness of the limit and agreement of the components as unresolved. Theorem~\ref{t:crit} is a form of the first half of that statement suited to a
+theory given by correlation functions: a common exponential rate for the differences $d_{v,n}$ on a family of
+vectors with dense span, for instance those generated from the vacuum by the smeared fields.
+
+For anything in this paper to bear on it, the following would have to be fixed and matched to the
+construction, and none of it is done here: the group and the lattice action; the sequence of meshes and
+couplings and the physical units; the order of the limits (mesh at fixed volume, then volume); the class of
+observables on which convergence holds; the component theory selected; and the relation between the lattice
+transfer semigroup at fixed regulator, to which Theorems~\ref{t:inh} and~\ref{t:ret} refer, and the
+Hamiltonian of the limit. The lattices of Section~\ref{s:evid} are matched to one another by a renormalised
+coupling~\cite{RepoData}; they are not known to lie on the sequence of~\cite{OAI}.
+
+\section{Sources of the results and status of verification}\label{s:disc}
+This paper was assembled by the author with the assistance of sessions of two artificial-intelligence model
+families working in a shared repository~\cite{Repo}. Theorem~\ref{t:crit} in this form, and the monotonicity
+statements of Proposition~\ref{p:haar}, were proposed with proofs by sessions of OpenAI GPT models acting as
+auditors of the repository; the same sessions reviewed the first draft of this paper, and their corrections
+are incorporated. Theorems~\ref{t:inh} and~\ref{t:ret}, the latter in its vacuum form, were proposed with
+proofs by a session of OpenAI Codex~\cite{RepoRet,RepoInh}. Sessions of Claude (Anthropic) attacked those
+source derivations and Proposition~\ref{p:haar} at their authors' request and found no defect in the steps
+they checked (three items of the return derivation, which needed data archives that were absent, were not
+checked), wrote the
+proofs as they appear here, including the periodic-time form of Theorem~\ref{t:ret} and
+Proposition~\ref{p:vac}, and made the measurements of Section~\ref{s:evid}; a session of OpenAI Codex reduced
+part of the raw data again and corrected it. Lemma~\ref{l:scal}, the inequality of Corollary~\ref{c:acc}, the
+finite-dimensional form of Theorem~\ref{t:inh} and the scalar steps of Proposition~\ref{p:haar} are checked
+in Lean~4 with Mathlib (Section~\ref{s:lean}); nothing else is. No one other than the author has read the paper, and no mathematician has reviewed it. Agreement
+among such sessions, within one family or across two, is not peer review.
 
 \section{What remains}\label{s:rem}
 Table~\ref{tab:status} lists every statement and its status. To turn Figure~\ref{f:arch} into a proof of a
