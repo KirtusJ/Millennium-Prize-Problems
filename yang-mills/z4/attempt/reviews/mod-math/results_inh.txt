@@ -1,0 +1,13 @@
+generic: instances 40000, qualifying 40000, with b>kappa 33480, min slack 3.613e-08, at (m,j,n,p,r,gamma,kappa,b)=(7, 6, 4, 2, 1, 0.000136, 0.081141, 0.395662)
+m=j=1: instances 40000, qualifying 40000, with b>kappa 29511, min slack 5.956e-10, at (m,j,n,p,r,gamma,kappa,b)=(1, 1, 5, 0, 0, 4e-05, 0.0, 1.0)
+kernel: instances 40000, qualifying 40000, with b>kappa 37416, min slack 8.067e-09, at (m,j,n,p,r,gamma,kappa,b)=(4, 4, 6, 2, 2, 0.000126, 0.553757, 0.781712)
+kernel,m=j=1: instances 40000, qualifying 40000, with b>kappa 35141, min slack 8.324e-09, at (m,j,n,p,r,gamma,kappa,b)=(1, 1, 7, 1, 5, 0.000197, 0.455212, 0.942039)
+||A||=1 generic position (expected: few qualify): instances 20000, qualifying 9058, with b>kappa 33, min slack -3.997e-13, at (m,j,n,p,r,gamma,kappa,b)=(8, 6, 2, 1, 0, 1.1e-05, 0.0, 0.0)
+||A||=1 aligned: instances 40000, qualifying 40000, with b>kappa 0, min slack -7.550e-15, at (m,j,n,p,r,gamma,kappa,b)=(8, 7, 7, 7, 0, 1.0, 0.0, -0.0)
+||A||=1 aligned,kernel,m=j=1: instances 40000, qualifying 40000, with b>kappa 0, min slack -1.295e-15, at (m,j,n,p,r,gamma,kappa,b)=(1, 1, 6, 6, 0, 1.0, 0.0, 0.0)
+A=0: instances 5000, qualifying 5000, with b>kappa 5000, min slack 2.000e-01, at (m,j,n,p,r,gamma,kappa,b)=(8, 7, 6, 6, 0, 1.0, 0.0, 1.0)
+search m=1,j=1: min slack -5.044e-14 at (n,p,r,gamma,kappa,b)=(2, 1, 0, 0.0, 0.0, 9.7e-05)
+search m=2,j=1: min slack -9.991e-14 at (n,p,r,gamma,kappa,b)=(4, 3, 0, 0.0, 0.0, 6.2e-05)
+search m=4,j=2: min slack -6.561e-14 at (n,p,r,gamma,kappa,b)=(2, 1, 0, 0.0, 0.0, 1.0)
+P4 lemma l:scal grid violations: 0
+P1-P3 PASS (global min slack -3.997e-13); P4 PASS

@@ -1,0 +1,40 @@
+T1 G-d0 L1: MET record 0.020831(0.000471) -> 0.0208(5) manuscript 0.0208(5) train 0.02134
+T1 G-d0 L2: MET record 0.016680(0.000443) -> 0.0167(4) manuscript 0.0167(4) train 0.01724
+T1 G-d0 L3: MET record 0.015871(0.000420) -> 0.0159(4) manuscript 0.0159(4) train 0.01625
+T1 G-d0 L4: MET record 0.015428(0.000396) -> 0.0154(4) manuscript 0.0154(4) train 0.01571
+   G-d0 steps per cent [19.93, 4.85, 2.79]; A4 hot/cold [('opt_L4', 0.01557, 0.00025, 1.56, True), ('f1', 0.06112, 0.00044, 0.88, True), ('f4', 0.04733, 0.00048, 2.22, False)]
+T2 step: MET 19.93 vs 20
+T2 step: MET 4.85 vs 5
+T2 step: MET 2.79 vs 3
+T3 share: MET 0.8116
+T4 G-d0 L1->L2: MET paired z -38.44 (paired se 1.08e-04); unpaired z -6.42; pre-fixed G1 'stopped falling' met: False
+T4 G-d0 L2->L3: MET paired z -15.25 (paired se 5.31e-05); unpaired z -1.33; pre-fixed G1 'stopped falling' met: True
+T4 G-d0 L3->L4: MET paired z -11.76 (paired se 3.77e-05); unpaired z -0.77; pre-fixed G1 'stopped falling' met: True
+T1 G-clear0 L1: MET record 0.058945(0.000759) -> 0.0589(8) manuscript 0.0589(8) train 0.05874
+T1 G-clear0 L2: MET record 0.053325(0.000531) -> 0.0533(5) manuscript 0.0533(5) train 0.05135
+T1 G-clear0 L3: MET record 0.050952(0.000399) -> 0.0510(4) manuscript 0.0510(4) train 0.04820
+T1 G-clear0 L4: MET record 0.042828(0.000438) -> 0.0428(4) manuscript 0.0428(4) train 0.04097
+   G-clear0 steps per cent [9.53, 4.45, 15.94]; A4 hot/cold [('opt_L4', 0.04188, 0.00034, 0.21, True), ('f1', 0.07711, 0.00078, -0.07, True), ('f4', 0.08927, 0.00087, -0.75, True)]
+T4 G-clear0 L1->L2: MET paired z -8.62 (paired se 6.52e-04); unpaired z -6.06; pre-fixed G1 'stopped falling' met: False
+T4 G-clear0 L2->L3: MET paired z -5.78 (paired se 4.11e-04); unpaired z -3.57; pre-fixed G1 'stopped falling' met: False
+T4 G-clear0 L3->L4: MET paired z -15.25 (paired se 5.33e-04); unpaired z -13.71; pre-fixed G1 'stopped falling' met: False
+   contrast clear/-I: L1 2.830, L4 2.776
+X1 2l held (8+8 chains) ratio: MET 0.94093 vs 0.94092
+X1 2l held (8+8 chains) se: MET 0.00489 vs 0.00490
+X1 2l held (8+8 chains) bound: MET 0.95072 vs 0.95071; z below 1 = 12.1; 1-R_f 0.0682(0.0040) 1-R_c 0.0097(0.0030)
+X1 4l all (16+16 chains) ratio: MET 0.93574 vs 0.93574
+X1 4l all (16+16 chains) se: MET 0.00271 vs 0.00271
+X1 4l all (16+16 chains) bound: MET 0.94116 vs 0.94117; z below 1 = 23.7; 1-R_f 0.0683(0.0025) 1-R_c 0.0043(0.0011)
+X2 threshold: MET max bound 0.95071; 4l bound 0.94117
+X3 1-R_5: MET 2l 0.97 per cent; 4l 0.43 per cent
+X3 1-R_10: MET 2l 6.82 per cent; 4l 6.83 per cent
+   f2-cross2 2l: 25 frozen tests; three smallest ratio+2SE: [(0.95071, 'Z:ratio-opt'), (1.00042, 'L:ratio-opt'), (1.00256, 'P1:ratio-opt')]
+X4 E = Var*R: MET Var ratio 0.003357 x R ratio 1.2122 = 0.004069 vs E ratio 0.004069
+X4 E + 2se: MET 0.004173 (4l lines: ['0.00407+-0.00005', '0.00409+-0.00007', '0.00407+-0.00005', '0.00409+-0.00007'])
+   e2-cross 2l: 25 frozen tests in the 16-function span
+D1 offset: MET -p/(N-p-1) = -0.0170; p/N = 0.0167; record R2_train at lag 3: .0165, .0168; held: -.0161(16), -.0189(16)
+   time: R2_held(loc) + p/(N-p-1) = +0.0037 (rough offset-corrected value; not an estimator with a stated error)
+   time: R2_held(tr) + p/(N-p-1) = +0.0147 (rough offset-corrected value; not an estimator with a stated error)
+   time: rho difference .0834(56) - .0321(50) = 0.0513(0.0075); rho^2 = 0.0070; 15-mark R2 at +1/-1: .0113(17)/.0052(19), z = 2.39
+   repair: Q1 1.0037  Q4 1.0334  (z of Q4 above 1: 2.62)
+counts: met 30, failed 0

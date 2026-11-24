@@ -1,0 +1,12 @@
+A Z2 1+1 ring: slices 4, gauge transformations 4, rank Pi 2, min eig C 2.3018e+00, min kernel L 1.0000e+00; T3 [CPi=PiC, L sym, T0Pi=PiT0, L>0 entrywise, C>0, rank L=rank Pi, L(1-Pi)=0] = [True, True, True, True, True, np.True_, True]
+A Z2 1+1 ring T=3: T1 max rel err 4.06e-14 PASS; T2 control without Pi min rel err 6.36e-03, control without W min rel err 2.52e-14 (n/a W=1) PASS
+A Z2 1+1 ring T=2: T1 max rel err 2.89e-15 PASS; T2 control without Pi min rel err 1.56e-02, control without W min rel err 8.88e-16 (n/a W=1) PASS
+A Z2 1+1 ring: T4 vacuum limit |diff| 4.16e-17, Omega>0 True, Pi Omega=Omega True, Lam1/Lam0 0.3653 PASS
+B Z3 1+1 ring: slices 9, gauge transformations 9, rank Pi 3, min eig C 1.7137e+00, min kernel L 1.1116e+00; T3 [CPi=PiC, L sym, T0Pi=PiT0, L>0 entrywise, C>0, rank L=rank Pi, L(1-Pi)=0] = [True, True, True, True, True, np.True_, True]
+B Z3 1+1 ring T=3: T1 max rel err 1.40e-14 PASS; T2 control without Pi min rel err 2.00e-02, control without W min rel err 4.66e-15 (n/a W=1) PASS
+B Z3 1+1 ring T=2: T1 max rel err 1.93e-14 PASS; T2 control without Pi min rel err 6.85e-04, control without W min rel err 3.66e-15 (n/a W=1) PASS
+B Z3 1+1 ring: T4 vacuum limit |diff| 3.47e-17, Omega>0 True, Pi Omega=Omega True, Lam1/Lam0 0.1462 PASS
+C Z2 2+1 open plaquette: slices 16, gauge transformations 16, rank Pi 2, min eig C 5.2983e+00, min kernel L 1.3970e+00; T3 [CPi=PiC, L sym, T0Pi=PiT0, L>0 entrywise, C>0, rank L=rank Pi, L(1-Pi)=0] = [True, True, True, True, True, np.True_, True]
+C Z2 2+1 open plaquette T=3: T1 max rel err 1.67e-14 PASS; T2 control without Pi min rel err 1.60e-02, control without W min rel err 5.89e-02 () PASS
+C Z2 2+1 open plaquette: T4 vacuum limit |diff| 2.08e-17, Omega>0 True, Pi Omega=Omega True, Lam1/Lam0 0.0764 PASS
+ALL PASS

@@ -1,0 +1,6 @@
+M1 F values [np.float64(0.17124999999999996), np.float64(0.17124999999999996), np.float64(-0.007500000000000002)] PASS
+M2 max rel err 5.28e-11, all positive True PASS; convolution eigenvalue on spin n/2 is c_n/(n+1)=2 I_{n+1}(beta)/beta
+M3 p_6beta = [0.00307, 0.15618, 0.9348], envelope True PASS
+M4 R'(6) = 0.036885895498 in interval True; /beta^2: 0.00344, 0.00319 PASS
+M5 equality every step True, budget sum == d0(1-2^-40) True, d_40 = 1.907e-13, M_40 = 2.3842 PASS
+M6 PASS

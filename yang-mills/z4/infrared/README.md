@@ -1,18 +1,21 @@
 # Spectral criteria and conditional infrared estimates (manuscript)
 
-`main.tex` / `main.pdf` (11 pages, 24 November 2026). A separate manuscript from the upper-bound paper in `../attempt/paper/`, which is unchanged. It says what is proved, what is conditional and what is open; it does not claim a mass gap.
+**Current state: fifth draft, 24 November 2026, 17 pages** (`main.tex`, `main.pdf`). Earlier drafts are `main_draft1.tex` to `main_draft4.tex`. This is a rough draft under revision. It states what is proved, what is conditional and what is open. It does not claim a mass gap, and no reader outside the two model families, and no person other than the author, has checked it.
 
-Written after GPTAuditor2's final handoff (rendezvous issue, comment 7120159737) and the Principal's instruction to state only what we have, with the organisation (not the claims) of OpenAI's Navier–Stokes paper: short abstract, theorems stated on the first page with their domain, an architecture figure whose boxes are numbered statements, proofs in dependency order, a status table at the end.
+It is a separate manuscript from the upper-bound paper in `../attempt/paper/`, which is unchanged.
 
-## Statement-to-proof ledger
+## Statement-to-proof ledger (fifth draft)
 
-| Statement | Quantifiers and domain | Proof | Origin | Checks |
+| Statement | Domain | Proof | Origin | Checks (none is independent review) |
 |---|---|---|---|---|
-| Thm 1.1 spectral criterion | any self-adjoint H ≥ 0, any τ > 0, any set with dense span | §4, complete | proposed by a GPT auditor session (issue comments 7119587014, 7119986944) | none formal |
-| Thm 1.2 refinement inequality; Cor 5.2 | abstract Hilbert space; three operator hypotheses | §5, complete | `yang-mills/joint-refinement/rare-coarse-fields/inheritance.md` (Codex session) | attacked `../attempt/reviews/y1-g4ret`; Lean, finite dimension: `../attempt/reviews/f2-lean/Inheritance.lean` |
-| Thm 1.3 return bound | SU(2), Wilson action, periodic lattice, even N ≥ 6, two distinct slices | §6, complete for periodic time | `rare-coarse-fields/return.md` (Codex session) | attacked `../attempt/reviews/y1-g4ret` |
-| Prop 1.4 one-link covariance | tilted law on S³, all k > 0 | §7, complete | GPT auditor sessions (issue comments 7117411812, 7117416203) | attacked and partly formalised: `../attempt/reviews/b2-haar` |
-| Hyp 3.1, Hyp 3.2 | — | open | — | measurements only: `../attempt/reviews/{b2-matrix,c2-grow,d2-time,e2-repair,e2-cross,f2-cross2}` |
+| Thm 1.1 spectral criterion; Prop 4.2 test at one separation | any self-adjoint H ≥ 0, τ > 0; a set with dense span (1.1), a dense linear subspace (4.2) | §4 | GPT auditor sessions (issue comments 7119587014, 7119986944) | `../attempt/reviews/mod-math` |
+| Thm 1.2 refinement inequality; Cor 5.2 | positive self-adjoint contraction A on a Hilbert space, integers m ≥ j ≥ 1, three operator hypotheses | §5 | `yang-mills/joint-refinement/rare-coarse-fields/inheritance.md` (Codex session); discrete form suggested by a GPT auditor session | `y1-g4ret`, `mod-math` (265,000 random instances); Lean for the finite-dimensional semigroup case only: `f2-lean/Inheritance.lean` |
+| Thm 1.3 return bound | SU(2), Wilson action, periodic lattice, even N ≥ 6, two slices distinct modulo T | §6 | `rare-coarse-fields/return.md` (Codex session) | `y1-g4ret`, `mod-math` |
+| Lemma 6.2 trace formula; Prop 6.3; Cor 6.4 (return bound in the vacuum) | SU(2), β > 0, gauge-averaged transfer operator | §6.1, self-contained (Peter–Weyl and positive character coefficients; Lüscher's paper is referred to, not relied on, and was not reread) | this side | `ref2-math`, `mod-math` (full enumeration on Z₂ and Z₃ toy lattices) |
+| Prop 7.1 one-link covariance | tilted law on S³, all k > 0 | §7 | GPT auditor sessions (issue comments 7117411812, 7117416203) | `b2-haar` (partly formalised) |
+| Hyp 3.1, 3.2, 3.3; auxiliary local mixing | — | open | — | not measured; trial estimates only: `b2-matrix`, `c2-grow`, `d2-time`, `e2-repair`, `e2-cross`, `f2-cross2`; their statistics reviewed in `mod-sci` |
+
+Paths in the last column are under `../attempt/reviews/`. Lean statement digests: `LEAN_PINS.md`.
 
 ## External grounding
 
@@ -20,9 +23,25 @@ Written after GPTAuditor2's final handoff (rendezvous issue, comment 7120159737)
 - Yang–Mills group, *Validation of the OpenAI Yang–Mills construction*, 10 November 2026: first page and contents read; it states that the assessed construction proves a Wightman theory as a scaling limit of Wilson lattice gauge theory for any simple compact group and does not prove a mass gap or uniqueness of the infinite-volume limit. The construction itself was not read. Nothing in this manuscript is shown to belong to it.
 - OpenAI, *Finite Time Blowup for Navier–Stokes*: first pages, contents, figure captions and the proof-outline section read for organisation only.
 
-## Not done
+## Known gaps in the record
 
-No reader outside the two model families; no person other than the author. Theorem 1.3 is not carried to the infinite time axis. Theorems 1.1 and 1.3 are not formalised. The figure prepared with the PCP OS plot instrument for Table 2 was left out: the table carries the four numbers per row more clearly.
+- The time-carry-over run (`d2-time`) left no result file in the deposit; its numbers are those of its report.
+- Per-stream data of the local-quotient run (`c2-grow`) are not deposited (regenerated from seeds; across rebuilds of the sampler this is statistical, not byte for byte).
+- Theorems 1.1 and 1.3, Lemma 6.2, Propositions 4.2 and 6.3 and Corollary 6.4 are not formalised.
+
+# History of the drafts
+
+## Fifth draft (24 November)
+
+Reviews of the fourth draft under the PCP mathematics, science and statistics modules (`../attempt/reviews/mod-math/report.md`, `../attempt/reviews/mod-sci/report.md`; both by sub-agents of the same model family). Their programs were rerun by the director in fresh directories and all result files reproduce byte for byte (statistics: 30 predicates met, 0 failed).
+
+- **Mathematics: no error found in a statement.** Repaired: a letter used for two things in the proof of Corollary 6.4; a wrong description of the character coefficients in Lemma 6.2 (the convolution eigenvalue on spin n/2 is 2 I_{n+1}(β)/β), after which the lemma no longer leans on the cited paper; undefined P_i, M_0 and lag of κ_i in the hypotheses; two wrong reasons in the proof of Theorem 1.2; the sign in Remark 4.3; "centred" in Remark 6.5(c).
+- **Measurements section rewritten.** No number was wrong in value. Four passages said more than the design supports, and the section omitted failed checks and rules. Now stated: the rule fixed in advance for "stopped falling" was met on the −I background (the paired comparison was not the rule); the time test's rule had three outcomes, and the formally met one is uninformative because of an over-fitting offset; the sentence that the time test "shows" two kinds of slowness differ is withdrawn; the failed hot/cold check behind 1.016(11); the further displacement 4/β; the number of streams behind every error; the 25 tests examined before the reported cross-lattice one; an unexplained 3.4-standard-error disagreement with an earlier run; that 0.951 is not a confidence limit at a stated level.
+- **Symbols.** Gate Γ_θ (was A_θ); multiplication operator χ (was R); λ_∥, λ_⊥, λ_min, ℓ in Proposition 7.1 (were p, q, m, L); S in Proposition 4.2 (was T); n_g gates (was M).
+
+## Fourth draft (24 November)
+
+Theorem 1.2 restated for one transfer step and whole numbers of steps; Lemma 6.2 proved rather than cited; Proposition 4.2 added; wording reduced after the auditors' reviews of the second draft (issue comment 7120815551 lists every change).
 
 ## Second draft (24 November): what changed and why
 
