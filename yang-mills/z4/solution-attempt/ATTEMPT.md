@@ -58,6 +58,19 @@ Every route below fails at the same point: **no volume-uniform control of the co
 
 This is the situation that Bałaban's renormalisation group treats with local large-field expansions. I did not attempt to reproduce or adapt that work, and I have not read it for this attempt; the comparison is from general knowledge and should be checked before it is relied on.
 
+### 4.1 The same wall, stated once
+
+Two further reductions were tried and reach the same point from another side.
+
+- **Removing the unknown vacuum.** `E Var(f(X) | Y) ≥ E Var(f(X) | Y, Z)` with `Z` the previous slice, and given both neighbouring slices the law of `X` is explicit: density proportional to `exp(β Σ_e x_e·(y_e + z_e)) W(x)²`, a three-dimensional gauge theory with an external field on every link. The unknown `Ω` is gone. What remains unknown is how well `(Y, Z)` predicts the fine part of `X`, which is again a statement about correlations in the vacuum.
+- **Regularity from energy.** If `‖Af‖` is close to `‖f‖` then `f` is close to `Af`, and the derivative of `Af` in one link is a covariance, under the kernel of §2.1, of `f(Y)` with the score of that link. Summing over links needs the scores of different links to be nearly orthogonal under the kernel.
+
+Both need the following, which I state as the distilled missing lemma. *It is a conjecture, and the claim that it would suffice for Hypothesis 3.1 is heuristic.*
+
+> **Spatial mixing of the one-step kernel.** Under the law of the next slice given the present one (§2.1), covariances of local functions of the next slice decay exponentially in their distance, at a rate and with constants that are at worst `e^{cβ}`, `c < 2.33`, uniformly in the volume, for almost every present slice.
+
+In the small-field region this is the statement that a field pinned to the present slice with strength β has mass of order one in lattice units. Outside it I have no argument.
+
 ## 5. What would be worth doing next (not done)
 
 1. State the missing estimate as a single conjecture: a Poincaré inequality for the vacuum slice measure conditioned on the coarse field, with constant at most `C e^{cβ}`, `c < 2.33`, uniform in volume and in the coarse field. Test it numerically as a function of β and of the side at fixed β, which the existing programs can do.
