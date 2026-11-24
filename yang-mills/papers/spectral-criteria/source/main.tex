@@ -907,6 +907,26 @@ $B=0$ gives $1-\|A^m\|\ge b_+/(1+2/m+\kappa/t)$; let $m\to\infty$. For general $
 $H+\varepsilon$, for which both hypotheses hold with the same $\kappa$ and $b$, and let $\varepsilon\to0$.
 \end{proof}
 
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[node distance=7mm and 9mm,
+ open/.style={draw,dashed,rounded corners=2pt,align=center,font=\footnotesize,inner sep=3pt,text width=58mm},
+ prov/.style={draw,rounded corners=2pt,align=center,font=\footnotesize,inner sep=3pt,text width=58mm},
+ >={Stealth[length=2mm]}]
+\node[open] (fine) {Fine detail bounded by the energy\\ $\|(I-P)f\|^2\le\kappa\langle f,Hf\rangle$\\ (scales below the coarse mesh)};
+\node[open,right=of fine] (coarse) {Coarse variables decorrelate\\ $\|Pe^{-tH}P\|\le1-b$\\ (finitely many variables per cell)};
+\node[prov,below=of fine,xshift=34mm] (crit) {One-step criterion\\ Prop.~\ref{p:onestep}: equivalence};
+\node[open,below=of crit] (gap) {Gap on one lattice, uniform in the regulator:\\ $1-\|e^{-tH}\|\ge b/(1+\kappa/t)$};
+\draw[->,dashed] (fine) -- (crit);
+\draw[->,dashed] (coarse) -- (crit);
+\draw[<->] (crit) -- (gap);
+\end{tikzpicture}
+\caption{The one-step form. Both statements at the top are open for the Wilson measure and hold in the free
+theory in a box (Propositions~\ref{p:freeblock} and~\ref{p:freecoarse}); the criterion itself is proved. No
+second lattice enters. Volume uniformity in the free theory fails through the statement on the right.}
+\label{f:onestep}
+\end{figure}
+
 The same proof with an exceptional projection $B$ inside the range of $Q$ gives
 $1-\|e^{-tH}\|\ge(b-\kappa')_+/(1+\kappa/t)$ when $\|(Q-B)f\|^2\le\kappa\langle f,Hf\rangle$ and
 $\|Be^{-sH}B\|\le\kappa'$ for some $0<s\le t$ that is a rational multiple of $t$ (take $\tau=t/m$ with $s$ a
