@@ -912,6 +912,20 @@ $1-\|e^{-tH}\|\ge(b-\kappa')_+/(1+\kappa/t)$ when $\|(Q-B)f\|^2\le\kappa\langle 
 $\|Be^{-sH}B\|\le\kappa'$ for some $0<s\le t$ that is a rational multiple of $t$ (take $\tau=t/m$ with $s$ a
 multiple of $\tau$), so the return bound of Section~\ref{s:ret} can be used here as well.
 
+The first hypothesis of the proposition has an equivalent form at one time. For $s>0$ and $0<\gamma\le1$,
+\[
+I-e^{-sH}\ \ge\ \gamma\,Q\quad\Longrightarrow\quad Q\le\frac s\gamma\,H,
+\qquad\text{and}\qquad
+Q\le\kappa H\quad\Longrightarrow\quad I-e^{-sH}\ \ge\ \frac{Q}{1+\kappa/s},
+\]
+the first because $1-e^{-sx}\le sx$ and the second because $(1-e^{-sx})^{-1}\le1+1/(sx)$, as in the proof. So
+a bound of the fine detail by the energy with $\kappa$ of the order of the coarse mesh $a_0$ is the same as a
+loss of a fixed fraction of the fine detail over a time of order $a_0$. In the terms of
+Proposition~\ref{p:pred}, whose proof applies to any pair of times: if, given the coarse variables of a
+slice, the maximal correlation between that slice and the slice a time $s/2$ later is at most
+$(1-\gamma)^{1/2}$, then $Q\le(s/\gamma)H$. This is the statement about one step of coarse-graining that the
+one-step form needs, at the coarse scale and uniformly in the fine mesh.
+
 Bounds for the spectral gap of a Markov chain in terms of a chain on the blocks of a partition and chains
 inside the blocks are classical in the theory of Markov chains (see~\cite{JSTV04} and the works cited there).
 Theorem~\ref{t:inh} and the proposition are of that family. They differ in that the coarse part enters through
