@@ -17,3 +17,13 @@ Programs and outputs for the proposition on convex interactions at the end of Ap
 - **X1 not as expected**: the two on-site double wells do not violate the bound (0.78 and 0.28 of it). Their slow motion is a common sign change of both sites, which the block variable `φ₁ + φ₂` sees.
 - **Follow-up (`convexscalar2.py`)**: with the double well in the fine direction, `V = λ((φ₁ − φ₂)² − v²)²`, the constant is the inverse tunnelling splitting: 2.50 at (λ, v) = (0.25, 2) and 5845 at (0.5, 2.5), against `1/λ_N = 0.667`. **W2 failed as written** because the third case, (1, 3), has a splitting of 2e-13, below what the program resolves; the first two cases behave as expected.
 - **`blockscalar.py`**: B1 to B3 met. `λ_N = 2 sin(π/2r)` exactly, at the edge of the coarse Brillouin zone, in dimensions 1, 2, 3. The quantity printed as `kappa_free` is the one-particle ratio of the mistaken control above; it happens to coincide with `1/λ_N` here because the extremal field is an eigenvector of `ω`.
+
+## The version with a time step (`convexstep.py`): an interrupted run
+
+For the second proposition (the transfer operator `T = e^{−aW/2} e^{aΔ/2} e^{−aW/2}`; `I − A² ≥ γ₀(I − P)` with the free rate `γ₀`). **The run was stopped before it finished and wrote no result file.** What it had printed is kept as `convexstep_interrupted_log.txt`; a complete run in a fresh directory is still owed (`python3 convexstep.py convexstep_result.txt`, several hours for the three-site part on four cores).
+
+What the log contains:
+- Two sites, time steps 1 and ½, all cases: the free control D1 is met to eight figures (0.93750000 and 0.76936027); for the seven convex interactions the ratio of the best rate to `γ₀` is between 1.000000 and 1.06 at step 1 and between 1.000000 and 1.25 at step ½ (statement D3, no violation); the double well in the fine direction gives 0.51 and 0.39 (expectation X1, as expected).
+- Three sites, time step 1 only: the free control D2 is met to eight figures (0.94807078), and the quartic interaction with coefficient 0.1 gives a ratio 1.0094. The other six interactions at step 1 and all of step ½ were **not computed**.
+
+So D1 is met, D2 is met at one of its two time steps, and D3 is untested for thirteen of its sixteen three-site cases. The paper states exactly this.

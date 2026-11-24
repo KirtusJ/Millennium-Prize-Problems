@@ -208,7 +208,8 @@ Proposition~\ref{p:onestep} dispenses with the chain of lattices: on one fine la
 variables of one's choice, a gap in a box is equivalent to a bound of the fine detail by the energy together
 with decorrelation of the coarse variables; Remark~\ref{r:where} explains why the chain does not separate the
 infrared problem from its conclusion. Appendix~\ref{app:free} proves all of these statements in the free
-theory and computes them in one compact interacting example at the smallest size.
+theory and computes them in one compact interacting example at the smallest size; its last two
+propositions prove the first of them, with the free constants, for a scalar field with a convex interaction.
 
 \subsection{What is not claimed}\label{s:not}
 \begin{enumerate}
@@ -1006,10 +1007,12 @@ coarse variables. (Each is trivial for one extreme choice, the first when $P$ is
 when $P$ is zero on the centred functions, and the other statement is then the gap itself.)
 
 There is one class of interacting fields in which the first statement is proved, uniformly in the volume,
-in the fine mesh and in the strength of the interaction: a scalar field with a convex interaction, in
-continuous time, with block sums as coarse variables (Proposition~\ref{p:convex}). The constant there is the
-free one, half a coarse mesh, and the proof uses convexity only to show that along the fibres of the block
-map the vacuum is at least as log-concave as the free vacuum. It says nothing about gauge fields.
+in the fine mesh and in the strength of the interaction: a scalar field with a convex interaction, with block
+sums as coarse variables (Proposition~\ref{p:convex} in continuous time, Proposition~\ref{p:convexstep}
+with a time step, where the inequality of Hypothesis~\ref{h:mix} holds at the free rate). The constant is
+the free one, half a coarse mesh, and the proofs use convexity only to show that along the fibres of the
+block map the vacuum is at least as log-concave as the free vacuum. They extend to a non-compact abelian
+gauge field with a convex interaction and say nothing about a compact group.
 
 \section{Return to a coarse plaquette gate}\label{s:ret}
 The return bound comes from a single link. Given all the other links, one link of the plaquette has an
@@ -1356,7 +1359,7 @@ Proposition~\ref{p:linesum} & proved (free theory: for sums of links along lines
 Proposition~\ref{p:freeblock} & proved (free theory: a block average for which the first statement of Proposition~\ref{p:onestep} holds uniformly in the blocking factor and the side); not formalised \\
 Proposition~\ref{p:onestep} & proved (a gap in a box is equivalent to two regulator-uniform statements for coarse variables of one's choice; neither is established for the Wilson measure) \\
 Proposition~\ref{p:wstep} & proved (a refinement step from the weight bound~\eqref{e:wlin}, which is open for the Wilson measure and proved in the free theory, Proposition~\ref{p:freeweight}); its last step checked in Lean \\
-Proposition~\ref{p:convex} & proved, using Pr\'ekopa's theorem, the variance inequality for log-concave measures and Kato's product formula as cited and not reread (a scalar field with a convex interaction in continuous time: the first statement of Proposition~\ref{p:onestep} with the free constant; not about gauge fields); tested on two and three sites; not formalised \\
+Propositions~\ref{p:convex} and~\ref{p:convexstep} & proved, using Pr\'ekopa's theorem, the variance inequality for log-concave measures and Kato's product formula as cited and not reread (a scalar field with a convex interaction: the first statement of Proposition~\ref{p:onestep} with the free constant, and with a time step the inequality of Hypothesis~\ref{h:mix} at the free rate; not about gauge fields with a compact group); the first tested on two and three sites, the second on two sites and, incompletely, on three; not formalised \\
 Hypothesis~\ref{h:mix} & open; not measured (Appendix~\ref{s:time} tests one combination's carry-over in time and gives no bound) \\
 Auxiliary local mixing & open; estimates for trial functions on two frozen backgrounds, one lattice, one coupling (Table~\ref{tab:local}) \\
 Hypothesis~\ref{h:coarse} & open; not measured; one trial function compared on one pair of lattices (Appendix~\ref{s:cross}) \\
@@ -2413,12 +2416,94 @@ zero sum on every cube and is an eigenvector of $K$ with eigenvalue $m^2+4\sin^2
 equality.
 \end{proof}
 
-Three remarks. First, in this class the gap itself is at least the lowest eigenvalue of $\omega$, by the same
+\begin{proposition}[The same with a time step: the mixing inequality at the free rate]\label{p:convexstep}
+In the setting of Proposition~\ref{p:convex} let $a>0$, $W=\tfrac12\langle\phi,K\phi\rangle+V$ and
+$T=e^{-aW/2}e^{a\Delta/2}e^{-aW/2}$, with largest eigenvalue $\lambda$ and eigenvector $\Omega>0$; let
+$A=T/\lambda$ and let $P$ be the projection on the closure of the functions $g(B\phi)\,\Omega$ for this
+$\Omega$. Put $\tilde\omega=(K+\tfrac14a^2K^2)^{1/2}$ and $A_2=\tfrac1a+\tfrac a2K+\tilde\omega$. Then
+\[
+I-A^2\ \ge\ \gamma_0\,(I-P),\qquad
+\frac1{\gamma_0}=1+\sup_{n\in N}\frac{\langle n,(a^2A_2)^{-1}n\rangle}{\langle n,2\tilde\omega n\rangle},
+\]
+and for $V=0$ no larger constant will do. In particular $\gamma_0\ge2a\lambda_N/(1+2a\lambda_N)$ with
+$\lambda_N$ as in Proposition~\ref{p:convex}, and with $H=-a^{-1}\log A$,
+\[
+I-P\ \le\ \Big(a+\frac1{\lambda_N}\Big)H ,
+\]
+which for block sums over cubes of side $r$ is at most $(a+r/2)H$.
+\end{proposition}
+\begin{proof}
+\emph{The vacuum.} With $\alpha=\tfrac1a+\tfrac a2K$ the kernel of $T$ for $V=0$ is a constant times
+$\exp(-\tfrac12\langle x,\alpha x\rangle+\tfrac1a\langle x,y\rangle-\tfrac12\langle y,\alpha y\rangle)$, and
+$\alpha^2-\tilde\omega^2=a^{-2}$. Let $\phi_a=\exp(-\tfrac12\langle\phi,\tilde\omega\phi\rangle)$ and
+$R=(aA_2)^{-1}$. Completing the square,
+\[
+-\tfrac12\langle x,\alpha x\rangle+\tfrac1a\langle x,y\rangle-\tfrac12\langle y,A_2y\rangle
+=-\tfrac12\langle x,\tilde\omega x\rangle-\tfrac12\langle y-Rx,A_2(y-Rx)\rangle ,
+\]
+because $A_2R=1/a$ and $RA_2R=(a^2A_2)^{-1}=\alpha-\tilde\omega$. So for $V=0$ the operator maps $\phi_ag$ to
+$\phi_a$ times a Gaussian average of $g$ centred at $Rx$, which is log-concave if $g$ is, by Pr\'ekopa's
+theorem; multiplication by $e^{-aV/2}$ preserves log-concavity; and $T^n\phi_a$, normalised, converges to
+$\Omega$. Hence $\Omega=\phi_aF$ with $F$ log-concave.
+
+\emph{Two slices.} Let $(X,Y)$ have the density proportional to $\Omega(x)T(x,y)\Omega(y)$. Given $X=x$,
+the density of $Y$ is $\exp(\tfrac1a\langle x,y\rangle-\tfrac12\langle y,A_2y\rangle)$ times a log-concave
+function, so its covariance matrix satisfies $\Sigma_x\le A_2^{-1}$ by the variance inequality
+of~\cite{BL76}. The law of $X$ is $\Omega^2$, and as in the proof of Proposition~\ref{p:convex} its
+conditional law on a fibre of $B$ satisfies
+$\operatorname{Var}(h)\le\E\langle\nabla_Nh,(2\tilde\omega_N)^{-1}\nabla_Nh\rangle$, $\tilde\omega_N$ being
+the compression of $\tilde\omega$ to $N$.
+
+\emph{The inequality.} Now the proof of Proposition~\ref{p:dir} applies word for word with $1/a$ in the
+place of $\beta$, the weight $M=(2\tilde\omega_N)^{-1}$ on $N$ and all slices admitted: for $g=Af$ and
+$h(x)=\E[g(Y)\mid X=x]$ the gradient of $h$ is $a^{-1}\Cov(Y,g(Y)\mid X=x)$, so that
+$\operatorname{Var}(h\mid BX)\le z\,\E[\operatorname{Var}(g(Y)\mid X)\mid BX]$ with
+$z=a^{-2}\|M^{1/2}A_2^{-1}M^{1/2}\|$, and~\eqref{e:dir1} gives
+$\langle f,(I-A^2)f\rangle\ge(1+z)^{-1}\|(I-P)f\|^2$. The norm is the supremum in the statement.
+
+\emph{The free case.} Let $V=0$ and $n\in N$. As before $g=\langle\tilde\omega n,\phi\rangle\Omega$ is
+orthogonal to the range of $P$. On linear functions $A$ acts by $R$ on the coefficient vector, and
+$R^2(1-R^2)^{-1}=(a^2A_2^2-1)^{-1}=(2a^2\tilde\omega A_2)^{-1}$. Hence
+$\langle g,(I-A^2)^{-1}g\rangle/\|g\|^2=1+\langle n,(a^2A_2)^{-1}n\rangle/\langle n,2\tilde\omega n\rangle$,
+and the best constant is the inverse of $\|(I-P)(I-A^2)^{-1}(I-P)\|$.
+
+\emph{The consequences.} Since $A_2\ge1/a$ and $\tilde\omega\ge\omega$, the supremum is at most
+$1/(2a\lambda_N)$. The bound for $I-P$ is Remark~\ref{r:forms}(a) in the form
+$\|(I-P)H^{-1}(I-P)\|\le2a(1/\gamma_0-\tfrac12)$.
+\end{proof}
+
+So for these fields the inequality of Hypothesis~\ref{h:mix} holds at every lattice with the rate of the
+free field, whatever the convex interaction, the volume and the mass; with blocks of side two and the time
+step equal to the mesh, $\gamma_0\ge4\sin(\pi/4)/(1+4\sin(\pi/4))>0.73$. The two propositions were found
+in this order: the second is Proposition~\ref{p:dir} applied with the weight that the convexity provides, and
+it is the first instance we have in which the weighted inequality~\eqref{e:wpi} holds with useful constants
+for a measure that is not Gaussian. On two sites the best rate was computed on a grid for the same list of
+convex interactions and time steps $1$ and $\tfrac12$: its ratio to $\gamma_0$ is $1.000000$ for $V=0$ and
+for $V=(\phi_1+\phi_2)^4$, between $1.01$ and $1.06$ for the others at time step $1$ and between $1.04$ and
+$1.25$ at time step $\tfrac12$; for the double well in the fine direction it is $0.51$ and $0.39$.
+On three sites the run was stopped early: the value for $V=0$ at time step $1$ agrees with $\gamma_0$ to
+eight figures and one quartic case gives $1.009$; the remaining three-site cases were not computed
+(Supplement~S15 keeps the log of the interrupted run). The proof of the proposition uses of $e^{-aV/2}$ only
+that it is log-concave, so it holds as well with any log-concave function in its place, for instance the
+indicator of a convex set.
+
+\emph{Abelian gauge fields with a convex interaction.} The two propositions apply as they stand to a
+non-compact abelian gauge field in a finite box with free boundary conditions, restricted to gauge-invariant
+functions: these are the functions on the quotient of the space of link variables by the gauge
+transformations, a Euclidean space on which the form $\langle A,KA\rangle$ of the squared plaquette field
+is positive definite, the heat kernel in the link variables acts on them as the heat kernel of the quotient,
+and block averages of the plaquette field are linear maps on it. So if a convex function of the plaquette
+field of each slice is added to the free action, the inequality of Hypothesis~\ref{h:mix} and the bound of
+the fine detail by the energy hold with the constants of the free field in that box. This is the nearest
+that the argument comes to the subject of this paper. It does not reach a compact group, for which the
+weight of the Wilson action is not log-concave and the sum over windings of the Villain form is a mixture
+of log-concave weights, not one of them.
+
+Three remarks on the two propositions. First, in this class the gap itself is at least the lowest eigenvalue of $\omega$, by the same
 inequality applied without block variables, so nothing new is learned about the gap; what the proposition says is that the constant of
 the first statement does not depend on the mass, on the interaction or on the volume, so that for these
 fields the whole dependence on the infrared is in the second statement of Proposition~\ref{p:onestep}.
-Here $H$ is the Hamiltonian in continuous time; the corresponding statement for a transfer operator with a
-time step was not attempted. Secondly, the proof uses the convexity of $V$ only through one consequence:
+Secondly, the proof uses the convexity of $V$ only through one consequence:
 along the fibres of the block map the vacuum measure is at least as log-concave as the free one. Convexity is
 not necessary for the conclusion and its failure along the fibres is fatal to it. On two sites with
 $K=\tfrac14+\big(\begin{smallmatrix}1&-1\\-1&1\end{smallmatrix}\big)$ and the block variable

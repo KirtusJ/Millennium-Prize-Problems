@@ -1,0 +1,23 @@
+system A, a = 1.0: gamma_0 = 0.93750000
+  free                       gamma_opt 0.93750000  ratio to gamma_0 1.000000  (1 - lambda_1^2 = 0.628373) control MET
+  quartic 0.1                gamma_opt 0.94967141  ratio to gamma_0 1.012983  (1 - lambda_1^2 = 0.799033)
+  quartic 1                  gamma_opt 0.97389398  ratio to gamma_0 1.038820  (1 - lambda_1^2 = 0.940685)
+  quartic 10                 gamma_opt 0.99349891  ratio to gamma_0 1.059732  (1 - lambda_1^2 = 0.990731)
+  cosh                       gamma_opt 0.96307848  ratio to gamma_0 1.027284  (1 - lambda_1^2 = 0.893944)
+  (phi1-phi2)^4              gamma_opt 0.98670094  ratio to gamma_0 1.052481  (1 - lambda_1^2 = 0.628373)
+  (phi1+phi2)^4              gamma_opt 0.93750000  ratio to gamma_0 1.000000  (1 - lambda_1^2 = 0.937500)
+  |phi1|+|phi2|              gamma_opt 0.96851406  ratio to gamma_0 1.033082  (1 - lambda_1^2 = 0.919578)
+  fine double well 0.25, 2   gamma_opt 0.47589897  ratio to gamma_0 0.507626  (1 - lambda_1^2 = 0.475899)
+system A, a = 0.5: gamma_0 = 0.76936027
+  free                       gamma_opt 0.76936027  ratio to gamma_0 1.000000  (1 - lambda_1^2 = 0.392685) control MET
+  quartic 0.1                gamma_opt 0.79925018  ratio to gamma_0 1.038850  (1 - lambda_1^2 = 0.569160)
+  quartic 1                  gamma_opt 0.87455298  ratio to gamma_0 1.136728  (1 - lambda_1^2 = 0.799081)
+  quartic 10                 gamma_opt 0.95997198  ratio to gamma_0 1.247754  (1 - lambda_1^2 = 0.950090)
+  cosh                       gamma_opt 0.83290325  ratio to gamma_0 1.082592  (1 - lambda_1^2 = 0.691151)
+  (phi1-phi2)^4              gamma_opt 0.92814381  ratio to gamma_0 1.206384  (1 - lambda_1^2 = 0.392685)
+  (phi1+phi2)^4              gamma_opt 0.76936027  ratio to gamma_0 1.000000  (1 - lambda_1^2 = 0.769360)
+  |phi1|+|phi2|              gamma_opt 0.84243278  ratio to gamma_0 1.094978  (1 - lambda_1^2 = 0.719121)
+  fine double well 0.25, 2   gamma_opt 0.30069161  ratio to gamma_0 0.390833  (1 - lambda_1^2 = 0.300692)
+system B, a = 1.0: gamma_0 = 0.94807078
+  free                       gamma_opt 0.94807078  ratio to gamma_0 1.000000  (1 - lambda_1^2 = 0.628374) control MET
+  quartic 0.1                gamma_opt 0.95701696  ratio to gamma_0 1.009436  (1 - lambda_1^2 = 0.791635)

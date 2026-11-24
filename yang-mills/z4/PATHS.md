@@ -200,3 +200,17 @@ What this changes for the path.
 - Not learned: anything about statement (ii), or about compact groups at weak coupling, where the vacuum is not log-concave on the whole fibre (large fields).
 
 A mistake to remember: I fixed a "known answer" for a control (the free constant on three sites) from a formula I had not derived carefully; it confused the supremum of norm over energy on states inside the fine detail with `‖Q H⁻¹ Q‖`. The program was right and the control was wrong. Derive the control's value twice, by two routes, before fixing it.
+
+## 12. At the stop of 24 November 2026
+
+**Done since §11.** Proposition E.8: the discrete-time version. For a convex interaction the inequality of Hypothesis 3.1 holds with the exact free rate; test 3 of §11 is therefore answered in the affirmative, by Proposition 3.7 itself. Both propositions extend to a non-compact abelian gauge field with a convex interaction (test 2 of §11 in principle; `λ_N` for the averaged plaquette variable was not computed).
+
+**Owed before anything new.**
+1. Finish `convexstep.py` (three sites) in a fresh directory and replace the interrupted log by a result file.
+2. An adversarial reading of the proofs of E.7 and E.8, in particular: the limit of log-concave functions; the use of the variance inequality on fibres without smoothness; the step "the proof of Proposition 3.7 applies word for word"; the claim about the quotient for the abelian gauge field.
+3. `su2onestep.py` at cut-off 5.
+
+**Stipulated next, not started.**
+- A constrained compact U(1) model: all plaquettes within δ ≤ π/2 of the identity in a box with free boundary. The spatial weight `exp(β cos F)·1{|F| ≤ δ}` is log-concave in the lifted field, so with a Gaussian time-like weight it is inside Proposition E.8. With the Wilson time-like weight the kernel is the free kernel times a jointly log-concave function; the vacuum step and the covariance step go through, and the gradient step needs a bound for the variance of the score, which looks available from the same variance inequality (`Var(s'(x − Y)) ≤ sup s''`). Not written out; not checked. Against: a constant that depends on β after rescaling.
+- For SU(2) the same idea fails as it stands: after gauge fixing the action is convex only in a region that shrinks with the volume. This is the place where the abelian argument stops.
+- The fibre Poincaré test in the compact U(1) toy (§11, test 1) was costed and not started: it needs the conditional covariance of the next slice on a five-dimensional family of configurations.

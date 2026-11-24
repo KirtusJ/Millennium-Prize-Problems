@@ -35,6 +35,13 @@ Read this section first; sections 1 to 5 are the earlier note and are kept as wr
 - The SU(2) ladder now has an exact calibration of the one-step criterion per centre sector (`su2onestep.py`); cut-off 5 has not been run.
 - Next, in `PATHS.md` §11: fibre Poincaré constants of the vacuum in the two compact toys against the exact constant; the convex abelian gauge case; a discrete-time version of Proposition E.7.
 
+### At the stop of 24 November (read this first tomorrow)
+
+- Paper: 48 pages, on `main`. Still no mass gap; Hypotheses 3.1 to 3.3 open for the Wilson measure.
+- New and unreviewed: Propositions E.7 and E.8 (convex scalar interactions: the fine detail bounded by the energy with the free constant; with a time step, the mixing inequality at the free rate). Written and tested in one session by one system.
+- Unfinished runs: `convexstep.py` three-site part (only a log is deposited); `su2onestep.py` at cut-off 5 (nothing produced).
+- Order for tomorrow: `PATHS.md` §12.
+
 ## 1. Where things stand
 
 **No mass gap is proved. Never say otherwise.** The interacting hypotheses 3.1, 3.2, 3.3 are open for SU(2); volume uniformity, identification with a continuum theory and all other groups are untouched. Rendezvous issue: `KirtusJ/Millennium-Prize-Problems#1` (keep open). Last comment of mine: 7122902283.
