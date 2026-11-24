@@ -1,0 +1,10 @@
+r=2 N=16: largest rho(k)/r = 1.696199 ; largest c(k) - rho(k) - 1/w(pi/r) = -1.865e-01
+r=3 N=24: largest rho(k)/r = 1.684437 ; largest c(k) - rho(k) - 1/w(pi/r) = -3.375e-01
+r=4 N=32: largest rho(k)/r = 1.600861 ; largest c(k) - rho(k) - 1/w(pi/r) = -4.699e-01
+r=6 N=24: largest rho(k)/r = 1.514561 ; largest c(k) - rho(k) - 1/w(pi/r) = -7.242e-01
+r=8 N=32: largest rho(k)/r = 1.479549 ; largest c(k) - rho(k) - 1/w(pi/r) = -9.743e-01
+G0=6.177429 G1=18.758287 H0=1.089361 H1=3.494082 (direct sums agree: True True) ; combination = 1055.163
+Q1 MET
+Q2 MET
+Q3 MET
+Q4 FAILED

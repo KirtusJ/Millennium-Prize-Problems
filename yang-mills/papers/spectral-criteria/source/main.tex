@@ -902,8 +902,8 @@ Appendix~\ref{app:free} shows this in the free theory: for coarse links that are
 the constant $\kappa$ grows like $r$ in units of the coarse mesh, while for block averages of the plaquette
 field with a triangular weight it stays near $1/\pi$ coarse meshes for $r=2$ to $8$, the value forced by the
 resolution. So in the free theory the first statement holds uniformly in the blocking factor for suitable
-coarse variables, and the criterion gives a deficit of at least $b/(1+a_0/(\pi t))$ up to the accuracy of that
-observation, $a_0$ being the coarse mesh. Both parts were tested on
+coarse variables: Proposition~\ref{p:freeblock} proves it with the constant $1056$ coarse meshes, and the
+computed constant gives a deficit of at least $b/(1+a_0/(\pi t))$, $a_0$ being the coarse mesh. Both parts were tested on
 $20{,}000$ random finite-dimensional instances and the minorisation on $2{,}000$ random reversible chains
 (Supplement~S13). Neither statement is established for the Wilson measure with any choice of coarse
 variables.
@@ -1235,6 +1235,7 @@ Lemma~\ref{l:trace}, Proposition~\ref{p:vac}, Corollary~\ref{c:vac} & proved, $\
 Proposition~\ref{p:haar} & proved; scalar steps checked in Lean \\
 Proposition~\ref{p:pred} & proved (a reduction between open estimates; it bounds nothing in the theory); its Hilbert-space core checked in Lean \\
 Proposition~\ref{p:dir} & proved (a reduction of the same kind); exact in the free theory; its two algebraic steps checked in Lean \\
+Proposition~\ref{p:freeblock} & proved (free theory: a block average for which the first statement of Proposition~\ref{p:onestep} holds uniformly in the blocking factor and the side); not formalised \\
 Proposition~\ref{p:onestep} & proved (a gap in a box is equivalent to two regulator-uniform statements for coarse variables of one's choice; neither is established for the Wilson measure) \\
 Proposition~\ref{p:wstep} & proved (a refinement step from the weight bound~\eqref{e:wlin}, which is open for the Wilson measure and proved in the free theory, Proposition~\ref{p:freeweight}); its last step checked in Lean \\
 Hypothesis~\ref{h:mix} & open; not measured (Appendix~\ref{s:time} tests one combination's carry-over in time and gives no bound) \\
@@ -1982,6 +1983,55 @@ inverse energy $1/\omega(\pi/r,0,0)$ of the lowest mode at the edge of the coars
 tends to $1/\pi$ coarse meshes and is the one forced by the resolution of the coarse lattice, since such a mode
 and its mirror image cannot both be seen. This identification is an observation at the sizes computed
 (Supplement~S11, where a predicate written to detect growth failed in the favourable direction and is kept).
+For this last choice a bound uniform in the factor and in the side can be proved.
+
+\begin{proposition}[A block average with a uniform one-step constant]\label{p:freeblock}
+In the free theory let the coarse variables be the plaquette field averaged twice over blocks of side $r$ in
+each direction, so that at every alias $p$ of a coarse momentum it is multiplied by
+$\prod_l\mathsf S(p_l)^2$ up to normalisation, $\mathsf S(x)=\sum_{\ell<r}e^{i\ell x}$. Then for every
+$r\ge2$ and every side divisible by $r$, $I-P_r\le c_r\,a\,H$ with $c_r\le1056\,r$.
+\end{proposition}
+\begin{proof}
+By the argument of Proposition~\ref{p:freeweight} it suffices to bound $\langle u,\omega^{-1}u\rangle$ by
+$c_r\|u\|^2$ on the fine detail at each coarse momentum. Let $k\in[-\pi/r,\pi/r)^3$ be the low momentum and
+$p_\eta=k+2\pi\eta/r$ its aliases, with multipliers $s_\eta$. A transverse amplitude $u_\eta$ contributes
+$s_\eta$ times a plaquette field of squared length $\tanh(\omega_\eta/2)|u_\eta|^2$, so on the fine detail
+$|s_0|^2\tanh(\omega_k/2)|u_0|^2\le\big(\sum_{\eta\ne0}|s_\eta|^2\tanh(\omega_\eta/2)\big)\|u_H\|^2$, and
+\[
+\langle u,\omega^{-1}u\rangle\le\Big(\rho(k)+\frac1{\omega(\pi/r,0,0)}\Big)\|u\|^2,\qquad
+\rho(k)=\frac{\sum_{\eta\ne0}|s_\eta|^2\tanh(\omega_\eta/2)}{|s_0|^2\tanh(\omega_k/2)\,\omega_k},
+\]
+because every alias other than $k$ has a component of modulus at least $\pi/r$. (For $k=0$ all
+$s_\eta$ vanish and only the second term is present.) Write $a_l=|\sin(k_l/2)|$ and
+$b_l=|\sin(p_{\eta,l}/2)|$. Since $|\mathsf S(x)|=|\sin(rx/2)/\sin(x/2)|$ and $\sin(rp_l/2)=\pm\sin(rk_l/2)$,
+$|s_\eta|^2/|s_0|^2=\prod_l(a_l/b_l)^4$, the factor being $1$ when $\eta_l=0$. For $\eta_l\ne0$ let
+$j_l=\min(\eta_l,r-\eta_l)\ge1$; then $(2j_l-1)/r\le b_l\le\pi(2j_l+1)/(2r)$ and $a_l\le\pi/(2r)$,
+$a_l\le b_l$. Hence $(a_l/b_l)^4\le h(j_l)=\min\{1,g(j_l)\}$ with $g(j)=(\pi/(4j-2))^4$, and also
+$(a_l/b_l)^4\le a_l^2\,r^2\,\tfrac4{\pi^2}g(j_l)$. Moreover
+$\tanh(\omega_\eta/2)\le\sum_lb_l\le\tfrac\pi{2r}\sum_l(2j_l+1)$ with $j_l=0$ when $\eta_l=0$, and
+$\tanh(\omega_k/2)\,\omega_k\ge2\tanh^2(\omega_k/2)\ge\tfrac45|a|^2$ because $|a|^2\le\tfrac32$. Using the
+second bound for one non-zero component of $\eta$ and the first for the others, and summing over $\eta$ (each
+$j\ge1$ occurs for at most two values of $\eta_l$),
+\[
+\rho(k)\le\frac5{2\pi}\,r\,\Big[6(G_1+2G_0)+12(G_1H_0+G_0H_1+G_0H_0)+8(G_1H_0^2+2G_0H_0H_1)\Big]\le1055.2\,r,
+\]
+where the sums over $j\ge1$ are
+\[
+G_0=\sum_jg(j)=\frac{\pi^8}{1536},\qquad
+G_1=\sum_j(2j+1)g(j)=\Big(\frac\pi2\Big)^4\Big(\frac78\zeta(3)+\frac{\pi^4}{48}\Big),
+\]
+$H_0=\sum_jh(j)=1+G_0-g(1)$ and $H_1=\sum_j(2j+1)h(j)=3+G_1-3g(1)$. Finally
+$\omega(\pi/r,0,0)=2\operatorname{arsinh}(\sin(\pi/2r))\ge2\operatorname{arsinh}(1)/r$.
+\end{proof}
+
+The constant is far from the truth: the computed value is the $0.32$ to $0.38$ coarse meshes given above, and
+the largest value of $\rho(k)/r$ found is $1.70$. The identity for the multipliers, the step to $\rho$, the bound
+on $\rho$ and the series were checked numerically for $r=2,3,4,6,8$ (Supplement~S11; a first hand evaluation of
+the bracket as below $1055$ was wrong by $0.2$ and is recorded there). The average applied once does not have
+this proof: its series behaves like $\sum_j1/j$, which matches the slow growth seen above. With
+Proposition~\ref{p:onestep} this gives, in the free theory in a box, a deficit of at least
+$b/(1+1056\,a_0/t)$ from the decorrelation $b$ of these block variables alone, for every fine lattice.
+
 So the choice of coarse variables matters
 for the one-step form even in the free theory, and the sums along lines that the lattice gauge theory
 suggests are a poor choice at large blocking factor; the refinement by factors of two of
