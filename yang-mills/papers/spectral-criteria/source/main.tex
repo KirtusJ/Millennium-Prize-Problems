@@ -238,7 +238,7 @@ not certify an inequality over all functions or its limit, and none is
 used in a proof.
 \item The examples of Appendix~\ref{app:free} are calibrations. The free theory is not Yang--Mills theory and
 has no gap in infinite volume; the compact $\mathrm U(1)$ example and the non-abelian example are at the
-smallest sizes, in one dimension less, and the second uses finite subgroups in place of the group. A
+smallest sizes, in one dimension less, and the second is computed in a truncated basis. A
 statement that holds in them is not thereby known, or even made likely, for the Wilson measure in four
 dimensions.
 \end{enumerate}
@@ -1883,7 +1883,7 @@ S10 & Records of the internal reviews of this paper and their test programs & Se
 S11 & Programs and outputs for the free theory, and for the two-link test of Proposition~\ref{p:dir} & Section~\ref{s:arch}, Appendix~\ref{app:free} \\
 S12 & Programs and outputs for the compact $\mathrm U(1)$ example, with the expectation written before the runs & Appendix~\ref{app:free} \\
 S13 & Random finite-dimensional tests of Propositions~\ref{p:wstep} and~\ref{p:onestep} & Section~\ref{s:inh} \\
-S14 & Program and output for the non-abelian example with finite subgroups of $\SU(2)$, with the expectation written before the run & Appendix~\ref{app:free} \\
+S14 & Programs and outputs for the non-abelian example, with finite subgroups of $\SU(2)$ and with $\SU(2)$ in a spin-network basis, with the expectations written before the runs & Appendix~\ref{app:free} \\
 \bottomrule
 \end{tabular}
 \caption{Supplementary material.}\label{tab:supp}
@@ -2263,22 +2263,50 @@ times.
 
 All of this is one model at one size: nothing is shown for a larger lattice or another group.
 
-\emph{A non-abelian example with a finite group.} The same quantities were computed for lattice gauge theory
-in $2+1$ dimensions on a torus of $2\times1$ sites, blocked by two in the long direction, with the binary
-octahedral and binary icosahedral subgroups of $\SU(2)$ in place of the group (Supplement~S14). A finite
-subgroup is a stand-in, valid only while the two groups agree: they do to $5\times10^{-5}$ in the lattice gap
-at $\beta=1$ and to $2$ per cent at $\beta=2$, and they part at $\beta=3$. In both, at every coupling
-computed, the lowest excited state is one unit of centre flux through the short direction, almost a function
-of the coarse field, and its weight in the fine detail follows its energy: for the icosahedral group the
-energy falls from $1.0$ at $\beta=1$ to $2\times10^{-7}$ at $\beta=8$ while the ratio of weight to energy rises
-only from $0.25$ to $0.70$, and the rate $\gamma_{\mathrm{opt}}$ falls from $0.949$ to $0.741$. Where the groups
-agree the ratio is $0.252$ and $0.308$, close to the abelian values $0.245$ and $0.310$ of
-Table~\ref{tab:u1}. An expectation written before the run had left open whether the ratio would stay
-bounded or grow with the collapse of the energy; it does neither, growing slowly. The collapse of the gap
-beyond $\beta=3$ is at least in part an effect of the finite group and is not a statement about $\SU(2)$. What
-the example shows is a mechanism: a very small gap need not make the constant of the first statement of
-Proposition~\ref{p:onestep} large, because the slow state's weight in the fine detail is small for the same
-reason as its energy.
+\emph{A non-abelian example.} The same quantities were computed for lattice gauge theory in $2+1$
+dimensions on a torus of $2\times1$ sites, blocked by two in the long direction, first with the binary
+octahedral and binary icosahedral subgroups of $\SU(2)$ in place of the group, where everything is a finite
+matrix computation, and then for $\SU(2)$ itself in a basis of spin networks cut off at spin $6$
+(Supplement~S14). The numbers for $\SU(2)$ are those of the truncated model; agreement between cut-offs and
+with the finite groups is a numerical check, not a bound. The icosahedral group agrees with $\SU(2)$ to
+$5\times10^{-9}$ in the lattice gap at $\beta=1$, to $0.3$ per cent at $\beta=3$ and to $4.5$ per cent at
+$\beta=4$, and then falls away.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}rcccc@{}}
+\toprule
+$\beta$ & lattice gap & icosahedral / $\SU(2)$ & weight / energy & rate $\gamma_{\mathrm{opt}}$ \\
+\midrule
+1 & 1.00896 & 1.000 & 0.252 & 0.949 \\
+2 & 0.24308 & 1.000 & 0.308 & 0.878 \\
+3 & 0.03855 & 0.997 & 0.354 & 0.847 \\
+4 & 0.00617 & 0.955 & $\le0.40$ & 0.830 \\
+5 & 0.00123 & 0.749 & $\le0.45$ & 0.816 \\
+6 & 0.00030 & 0.333 & $\le0.50$ & 0.800 \\
+\bottomrule
+\end{tabular}
+\caption{$\SU(2)$ on a $2\times1$ torus in $2+1$ dimensions, blocked by two, in a spin-network basis cut off
+at spin $6$ (Supplement~S14). The weight is that of the lowest excited state in the fine detail, computed
+with a coarse space of polynomials of degree $12$ in the coarse loops; where marked it was still decreasing
+with the degree. The last column is computed with the same coarse space and would rise with it. Values of a
+truncated model, not bounds.}
+\label{tab:su2}
+\end{table}
+
+The gap falls by a factor $3{,}400$ between $\beta=1$ and $6$; between $\beta=3$ and $6$ its logarithm is closer
+to linear in $\sqrt\beta$ than in $\beta$. The state that becomes light is one unit of centre flux through the
+short direction, odd under multiplication of the links in that direction by $-1$; the lowest excited state
+that is even under both centre flips keeps an energy between $0.92$ and $0.94$ for $\beta=3,4,5$. The light
+state is almost a function of the coarse field, and its weight in the fine detail falls with its energy: the
+ratio rises only from $0.25$ to at most $0.5$, and for the five lowest states together the compressed weight
+divided by the energy is at most $0.51$. The rate stays at or above $0.80$. Where the comparison is possible
+the ratios, $0.252$ and $0.308$ at $\beta=1,2$, are close to the abelian values $0.245$ and $0.310$ of
+Table~\ref{tab:u1}. Expectations written before the runs were partly wrong: we had expected the flux to be
+through the long direction, and had left open whether the ratio would stay bounded or grow with the collapse
+of the energy; it does neither, growing slowly. What the example shows is a mechanism in one small model: a
+very small gap need not make the constant of the first statement of Proposition~\ref{p:onestep} large,
+because the slow state's weight in the fine detail is small for the same reason as its energy.
 
 \begin{thebibliography}{99}\raggedright
 \bibitem{BL76} H.~J.~Brascamp and E.~H.~Lieb, \emph{On extensions of the Brunn--Minkowski and

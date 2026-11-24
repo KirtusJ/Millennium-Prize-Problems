@@ -1,0 +1,12 @@
+R1 control: 0.240193723870 against 0.240193723870 : MET
+J = 5.0: 73282 basis states
+J = 6.0: 189917 basis states
+beta 1.00: gap 1.00896024 (J-1: 1.00896024, rel 2.0e-13) ; icosahedral 1.00896023, rel 5.4e-09 ; weight/gap for D=4..12: 0.2518 0.2518 0.2518 0.2518 0.2518 (coarse dim 455) ; gamma_opt >= 0.948922
+beta 2.00: gap 0.24308283 (J-1: 0.24308283, rel 2.2e-09) ; icosahedral 0.24307687, rel 2.5e-05 ; weight/gap for D=4..12: 0.3091 0.3077 0.3076 0.3076 0.3076 (coarse dim 455) ; gamma_opt >= 0.878035
+beta 3.00: gap 0.03854941 (J-1: 0.03854939, rel 4.5e-07) ; icosahedral 0.03843853 (ratio 0.997) ; weight/gap for D=4..12: 0.4308 0.3658 0.3561 0.3543 0.3539 (coarse dim 455) ; gamma_opt >= 0.846686
+beta 4.00: gap 0.00616713 (J-1: 0.00616706, rel 1.3e-05) ; icosahedral 0.00589253 (ratio 0.955) ; weight/gap for D=4..12: 0.9394 0.5167 0.4304 0.4079 0.4020 (coarse dim 455) ; gamma_opt >= 0.829676
+beta 5.00: gap 0.00122860 (J-1: 0.00122849, rel 8.9e-05) ; icosahedral 0.00092039 (ratio 0.749) ; weight/gap for D=4..12: 2.2680 0.8586 0.5571 0.4697 0.4455 (coarse dim 455) ; gamma_opt >= 0.815661
+beta 6.00: gap 0.00029786 (J-1: 0.00029815, rel 9.8e-04) ; icosahedral 0.00009913 (ratio 0.333) ; weight/gap for D=4..12: 5.1594 1.5121 0.7713 0.5582 0.4952 (coarse dim 455) ; gamma_opt >= 0.799847
+R2 MET (2 compared)
+R3 MET
+R4 MET

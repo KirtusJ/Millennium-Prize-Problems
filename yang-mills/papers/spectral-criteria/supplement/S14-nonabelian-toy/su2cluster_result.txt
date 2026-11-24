@@ -1,0 +1,27 @@
+beta 2.0: weight of the lowest state at D=10: J=4 7.477952e-02, J=5 7.477967e-02, relative difference 2.00e-06
+    state 1: energy 0.243083  y-parity -1.000000  x-parity +1.000000  weight 7.4780e-02  F(E_k) 7.4780e-02  F/E 0.3076
+    state 2: energy 1.193369  y-parity +1.000000  x-parity +1.000000  weight 3.0783e-01  F(E_k) 3.0783e-01  F/E 0.2580
+    state 3: energy 1.489623  y-parity +1.000000  x-parity -1.000000  weight 5.2964e-03  F(E_k) 3.0783e-01  F/E 0.2066
+    state 4: energy 1.810098  y-parity -1.000000  x-parity -1.000000  weight 8.2720e-02  F(E_k) 3.0783e-01  F/E 0.1701
+    state 5: energy 1.913235  y-parity -1.000000  x-parity +1.000000  weight 9.0585e-01  F(E_k) 9.7760e-01  F/E 0.5110
+beta 3.0: weight of the lowest state at D=10: J=4 1.365052e-02, J=5 1.364964e-02, relative difference 6.43e-05
+    state 1: energy 0.038549  y-parity -1.000000  x-parity +1.000000  weight 1.3650e-02  F(E_k) 1.3650e-02  F/E 0.3541
+    state 2: energy 0.922646  y-parity +1.000000  x-parity +1.000000  weight 2.4189e-01  F(E_k) 2.4189e-01  F/E 0.2622
+    state 3: energy 0.944106  y-parity +1.000000  x-parity -1.000000  weight 7.4332e-03  F(E_k) 2.4189e-01  F/E 0.2562
+    state 4: energy 1.024755  y-parity -1.000000  x-parity -1.000000  weight 2.0261e-02  F(E_k) 2.4189e-01  F/E 0.2360
+    state 5: energy 1.345677  y-parity -1.000000  x-parity -1.000000  weight 1.5266e-01  F(E_k) 2.4189e-01  F/E 0.1798
+beta 4.0: weight of the lowest state at D=10: J=4 2.499529e-03, J=5 2.503860e-03, relative difference 1.73e-03
+    state 1: energy 0.006167  y-parity -1.000000  x-parity +1.000000  weight 2.5039e-03  F(E_k) 2.5039e-03  F/E 0.4060
+    state 2: energy 0.673825  y-parity +1.000000  x-parity -1.000000  weight 4.5412e-03  F(E_k) 4.5412e-03  F/E 0.0067
+    state 3: energy 0.690847  y-parity -1.000000  x-parity -1.000000  weight 6.7144e-03  F(E_k) 6.7144e-03  F/E 0.0097
+    state 4: energy 0.923987  y-parity +1.000000  x-parity +1.000000  weight 2.4444e-01  F(E_k) 2.4444e-01  F/E 0.2645
+    state 5: energy 1.105210  y-parity -1.000000  x-parity -1.000000  weight 1.5655e-01  F(E_k) 2.4444e-01  F/E 0.2212
+beta 5.0: weight of the lowest state at D=10: J=4 5.698406e-04, J=5 5.738801e-04, relative difference 7.04e-03
+    state 1: energy 0.001228  y-parity -1.000000  x-parity +1.000000  weight 5.7388e-04  F(E_k) 5.7388e-04  F/E 0.4671
+    state 2: energy 0.506740  y-parity +1.000000  x-parity -1.000000  weight 2.7323e-03  F(E_k) 2.7323e-03  F/E 0.0054
+    state 3: energy 0.510402  y-parity -1.000000  x-parity -1.000000  weight 3.3690e-03  F(E_k) 3.3690e-03  F/E 0.0066
+    state 4: energy 0.938012  y-parity +1.000000  x-parity +1.000000  weight 2.4614e-01  F(E_k) 2.4614e-01  F/E 0.2624
+    state 5: energy 0.966120  y-parity -1.000000  x-parity -1.000000  weight 1.5244e-01  F(E_k) 2.4614e-01  F/E 0.2548
+C1 MET
+C2 MET
+C3 MET

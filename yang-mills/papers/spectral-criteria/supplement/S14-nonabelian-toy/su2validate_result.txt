@@ -1,0 +1,6 @@
+V1 largest error 4.44e-16 : MET
+V2 largest error 8.44e-15 : MET
+V3 largest error 2.05e-15 : MET
+V4 largest error 1.33e-15 : MET
+V5 largest error 1.04e-15 : MET
+basis size at J = 3/2: 314 ; pointwise errors by operator: W0 1.2e-15 W1 1.3e-15 C 2.0e-15 AB 1.6e-15 ABC 2.0e-15
