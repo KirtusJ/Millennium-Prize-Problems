@@ -64,7 +64,7 @@ the coarse transfer. Only the second is proved here, for a narrow exceptional se
 
 \begin{theorem}[Return to a coarse plaquette gate]\label{t:ret}
 Consider the Wilson measure with weight $\exp\big(\beta\sum_p\tfrac12\Tr U_p\big)$, $\beta\ge0$, for $G=\SU(2)$
-on a periodic lattice with even spatial side $N\ge4$ and $T\ge2$ time slices. Fix a spatial
+on a periodic lattice with even spatial side $N\ge6$ and $T\ge2$ time slices. Fix a spatial
 plaquette of side two (a coarse plaquette) and $0\le\theta\le\pi$, and let $A_\theta$ be the event, for a time
 slice, that the holonomy around it lies within round distance $\theta$ of $-I$. Let $x$ and $y$ be the
 configurations of two distinct time slices. Then, for every square-integrable function $g$ of a slice,
@@ -221,6 +221,29 @@ of gates, Corollary~\ref{c:acc} would give a positive lower limit of the deficit
 is still not a mass gap: uniformity in the volume and the identification of the limit with a continuum theory
 would remain, and Theorem~\ref{t:crit} is the form in which a gap would then have to be verified on a total
 family of vectors.
+
+\subsection{The external construction and what compatibility would require}\label{s:ext}
+According to its assessors~\cite[p.~1]{YMG}, the construction~\cite{OAI} obtains continuum correlation functions
+as a scaling limit of Wilson lattice correlation functions at a fixed physical volume, then an infinite-volume
+limit along a subsequence, not proved unique; any such limit decomposes into component theories, each
+satisfying the Osterwalder--Schrader axioms and hence, by reconstruction, the Wightman axioms; and no mass gap
+is claimed. We take this description from the assessment and have not examined the construction.
+
+If that construction is accepted, what the problem of~\cite{JW} still requires is a spectral statement: for
+each compact simple $G$, in at least one of its non-trivial component theories, a $\Delta_G>0$ with no spectrum
+of the Hamiltonian in $(0,\Delta_G)$. A constant depending on $G$ suffices; the value of the mass, uniqueness of
+the limit and a gap in every component are not required. Theorem~\ref{t:crit} is a form of that statement
+suited to a theory given by correlation functions: it asks for a common exponential rate for the
+moments $d_{v,n}$ on a family of vectors with dense span, for instance those generated from the vacuum by the
+smeared fields.
+
+For anything in this paper to bear on it, the following would have to be fixed and matched to the
+construction, and none of it is done here: the group and the lattice action; the sequence of meshes and
+couplings and the physical units; the order of the limits (mesh at fixed volume, then volume); the class of
+observables on which convergence holds; the component theory selected; and the relation between the lattice
+transfer semigroup at fixed regulator, to which Theorems~\ref{t:inh} and~\ref{t:ret} refer, and the
+Hamiltonian of the limit. The lattices of Section~\ref{s:evid} are matched to one another by a renormalised
+coupling in~\cite{Repo}; they are not known to lie on the sequence of~\cite{OAI}.
 
 \section{The spectral criterion}\label{s:crit}
 \begin{proof}[Proof of Theorem~\ref{t:crit}]
