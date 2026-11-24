@@ -1,0 +1,14 @@
+/home/user/Millennium-Prize-Problems/yang-mills/z4/attempt/reviews/b2-haar/haar.lean:29:44: warning: unused variable `hp`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+'B2Haar.a_at_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'B2Haar.b_at_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'B2Haar.c_w_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'B2Haar.c_formulas_equal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'B2Haar.c_second_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'B2Haar.c_second_at_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'B2Haar.s_root' depends on axioms: [propext, Classical.choice, Quot.sound]
+'B2Haar.riccati_gives' depends on axioms: [propext, Classical.choice, Quot.sound]
+'B2Haar.B_crossing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'B2Haar.B_sprime_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'B2Haar.d_reduction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'B2Haar.first_zero' depends on axioms: [propext, Classical.choice, Quot.sound]

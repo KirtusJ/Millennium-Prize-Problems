@@ -1,0 +1,43 @@
+{
+ "files": {
+  "analysis-2l.txt": {
+   "regenerated_sha256": "bb18d90730f968c7ae1c2f9039fd7bb3aec3056c7cd09775ad93f3b8d628d76f",
+   "deposited_sha256": "bb18d90730f968c7ae1c2f9039fd7bb3aec3056c7cd09775ad93f3b8d628d76f",
+   "identical": true
+  },
+  "analysis-4l.txt": {
+   "regenerated_sha256": "6eabb965f1d0506a3381bbd48783f1cfe2a8350586535cbf466a512d2da251ce",
+   "deposited_sha256": "6eabb965f1d0506a3381bbd48783f1cfe2a8350586535cbf466a512d2da251ce",
+   "identical": true
+  },
+  "cross-eval-2l-frozen-on-4l.txt": {
+   "regenerated_sha256": "47022242e3e3bf60721e5646ecc6431fdcb198e5107222a1172b64be5afee37f",
+   "deposited_sha256": "47022242e3e3bf60721e5646ecc6431fdcb198e5107222a1172b64be5afee37f",
+   "identical": true
+  }
+ },
+ "json_roundtrip_bit_identical": true,
+ "held_2l": {
+  "R_f(R_10)": "0.93177(0.00396)",
+  "R_c(R_5)": "0.99027(0.00297)",
+  "ratio": "0.94092(0.00490)",
+  "ratio+2SE": "0.95071",
+  "Vf/Vc": "1.1852"
+ },
+ "eval_4l": {
+  "R_f(R_10)": "0.93173(0.00248)",
+  "R_c(R_5)": "0.99571(0.00114)",
+  "ratio": "0.93574(0.00271)",
+  "ratio+2SE": "0.94117",
+  "Vf/Vc": "1.1822"
+ },
+ "leading8": "w1p1 -1.00, w1 +0.76, w2p2 +0.27, hh12 +0.23, hh10 +0.21, w2 -0.20, ww12 -0.15, p1 +0.15",
+ "leading8_matches_deposited_line": true,
+ "nonzero_coefficients": 54,
+ "predicates": {
+  "Q1": true,
+  "Q2": true,
+  "Q3": true,
+  "Q4": true
+ }
+}
