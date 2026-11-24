@@ -205,8 +205,8 @@ Section~\ref{s:arch} and is not an input of Theorem~\ref{t:inh}.
 \item No mass gap is proved in infinite volume or in the continuum, and no lower bound uniform along a
 refinement, for any gauge group. (At a fixed finite lattice a gap exists for elementary reasons and is not
 the issue.)
-\item No continuum theory is constructed. We have not examined the construction~\cite{OAI}; we rely on its
-assessment~\cite{YMG} for what it does and does not contain, and we have not shown that any object of this
+\item No continuum theory is constructed. We have not examined the construction~\cite{OAI} beyond two declarations
+(Section~\ref{s:ext}); we rely on its assessment~\cite{YMG} for what it does and does not contain, and we have not shown that any object of this
 paper belongs to it (Section~\ref{s:ext}).
 \item Theorem~\ref{t:inh} is conditional. Of its three hypotheses the second is proved for $\SU(2)$
 (Corollary~\ref{c:vac}). The first and the third are open (Hypotheses~\ref{h:mix} and~\ref{h:coarse}), and so
@@ -851,8 +851,8 @@ result files of the second measurement were not kept, and one disagreement betwe
 unexplained. Each is named in Appendix~\ref{app:meas} at the number it bears on.
 
 \section{The external construction and what compatibility would require}\label{s:ext}
-We summarise the construction~\cite{OAI} as its assessors describe it~\cite[pp.~1, 3]{YMG}; we have not
-examined it ourselves.
+We summarise the construction~\cite{OAI} as its assessors describe it~\cite[pp.~1, 3]{YMG}; apart from the two
+declarations named below we have not examined it ourselves.
 \begin{itemize}
 \item Continuum correlation functions are obtained as a scaling limit of Wilson lattice correlation
 functions at a fixed physical volume, followed by an infinite-volume limit along a subsequence, which is not
@@ -862,7 +862,13 @@ hence, by reconstruction, the Wightman axioms.
 \item Renormalised local operators corresponding to gauge-invariant polynomials in the curvature are defined.
 The assessment reports substantial leading short-distance agreement, and states that perturbative
 agreement of the operator product expansion to all orders remains unproved.
-\item No mass gap is proved.
+\item No mass gap is proved. What the submission has at low energy is polynomial. For each finite sum of
+words of smeared fields the spectral weight of its vector at energies in $(0,u]$ is at most a constant times
+$u^2$ for $u\le1$, and after the zero-energy projection is removed its heat matrix element at time $s\ge1$ is at
+most a constant times $s^{-2}$. We read these two statements in the sources (\texttt{light\_bound} and
+\texttt{inverse\_square} in \texttt{YM/EveryPhase/}, revision \texttt{3456e5e}) and did not build them. By
+Remark~\ref{r:crit}(b) such bounds do not give the common exponential rate of Theorem~\ref{t:crit}; a gap
+needs an interval above zero with no spectral weight at all.
 \item The assessors' own independent check of the Osterwalder--Schrader axioms concerns a selected family of
 stress-tensor trace correlations, tested against functions that vanish to all orders where points coincide,
 and so does not see contact terms~\cite[Part~II]{YMG}. The wider reconstruction rests on the submission.
@@ -1612,8 +1618,8 @@ description, \url{https://www.claymath.org/wp-content/uploads/2022/06/yangmills.
 Euclidean lattice gauge theories}, Comm. Math. Phys. \textbf{54} (1977), 283--292. Referred to for positivity
 of the temporal-gauge transfer operator; not reread by the author.
 \bibitem{OAI} OpenAI, Lean formalisation of a construction of continuum Yang--Mills theory, submitted
-28 October 2026, repository \texttt{yang-mills-group/OpenAI-YM-20261028} (GitHub). Not read by the author;
-cited through~\cite{YMG}.
+28 October 2026, repository \texttt{yang-mills-group/OpenAI-YM-20261028} (GitHub). Cited through~\cite{YMG}; of the
+sources only the README and the two declarations named in Section~\ref{s:ext} were read, and nothing was built.
 \bibitem{OS78} K.~Osterwalder and E.~Seiler, \emph{Gauge field theories on a lattice}, Ann. Physics
 \textbf{110} (1978), 440--471. Cited for the lattice framework; not reread for this paper.
 \bibitem{YMG} Yang--Mills group, \emph{Validation of the OpenAI Yang--Mills construction}, release of

@@ -76,6 +76,8 @@ On the Principal's instruction the worker tests were stopped (two background che
 
 - **Further calculations (24 November, later).** In the free theory the sufficient form of Remark 3.6(b) is nearly sharp: βP tends to 0.617 and βL to 1, giving 0.618 against the exact 0.675 (`supplement/S11-free-theory/bridge.py`). Remark 6.5(f): the return bound holds for squares of any side. The external trajectory's normalisation is matched for SU(2).
 
+- **External sources read (24 November, later).** The external construction's repository was cloned read-only at revision 3456e5e. Its low-energy statements are polynomial (weight at most M u² below energy u; heat decay at most M s⁻² after removing the zero-energy projection), read in `YM/EveryPhase/Light.lean` and `Decay.lean`, not built. Section 8 says so and relates it to Remark 4.1(b). No transfer-operator or finite-regulator Hamiltonian estimate was found there by a search for the obvious names; that search is not a proof of absence.
+
 ## Sixth draft (24 November)
 
 A first-time-reader review of the fifth draft (`../../papers/spectral-criteria/supplement/S10-review-records/first-reader/report.md`, sub-agent of the same family) supplied a replacement abstract, introduction and Measurements section; the director read them, adjusted them and spliced them in. No theorem, number or claim was added or removed in the Measurements section (its 162 numerals were compared by script before and after; the later edits only add two clarifying values, 1.14 and the unrounded 0.93574 + 2 x 0.00271).
