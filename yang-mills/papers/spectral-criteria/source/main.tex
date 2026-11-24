@@ -828,6 +828,37 @@ inequalities of the proposition were tested on $20{,}000$ random finite-dimensio
 (Supplement~S13), and the step from the first claim to the second is checked in Lean
 (Appendix~\ref{s:lean}).
 
+\begin{remark}[Where the infrared problem sits]\label{r:where}
+Let $b^*=1-\|PA^mP\|$ be the true deficit of the coarse part and $d=1-\|A^m\|$ that of the whole space. A
+compression has norm at most that of the operator, and Theorem~\ref{t:inh} bounds $d$ below, so under the
+first two hypotheses of~\eqref{e:hyp}
+\[
+d\ \le\ b^*\ \le\ \Big(1+\frac2{m\gamma}\Big)d+\kappa .
+\]
+With $\gamma$ and $\kappa$ as in Hypotheses~\ref{h:mix} and~\ref{h:budget} the two deficits therefore agree up
+to a factor tending to one and a summable error, and Hypothesis~\ref{h:coarse}, read for the true $b^*_i$,
+says nothing other than that the deficit of the lattice of mesh $a_i$ is at least that of the lattice of
+mesh $2a_i$ up to the losses $\varepsilon_i$. That is the persistence of the gap under refinement at matched
+coupling, which is the conclusion. So the first hypothesis and the return bound do not carry the infrared
+problem. What they supply is a reduction of the class of functions: it is enough to bound the correlations
+over the time $t$ of functions of the \emph{coarse} field in the fine theory, and all of the comparison
+between the two lattices is then a comparison of two laws on histories of the same coarse field, the image
+of the fine measure and the Wilson measure of the coarse lattice. Hypothesis~\ref{h:coarse} is useful only if
+$b_i$ is bounded by such a comparison and not through $d_i$; no estimate of that kind is known to us, and
+the infrared difficulty of the problem is there. The first hypothesis concerns one step at the scale of the
+mesh, where the coupling is weak; its difficulty is uniformity in the volume and in the coarse field.
+In the free theory $b^*\ge d$ is visible in Table~\ref{tab:free}, where $b$ exceeds the deficit of the same
+lattice in every row (for instance $0.9670$ against $0.9550$ at $N=16$). There the comparison of the two laws
+can also be made directly, momentum by momentum. A linear function of the coarse field at coarse momentum
+$2k$ is carried in the fine theory by the aliases of $k$, of which $k$ has the lowest energy, so its
+correlation after $m$ fine steps is at most $e^{-m\omega(k)}$; in the coarse theory the same momentum decays
+by $e^{-(m/2)\omega(2k)}$; and with $s_j=\sin^2(k_j/2)$,
+$\cosh2\omega(k)-\cosh\omega(2k)=8\big((\sum_js_j)^2+\sum_js_j^2\big)\ge0$, so $2\omega(k)\ge\omega(2k)$. Every
+coarse momentum decays at least as fast in the finer theory, and so does every product of such functions.
+This is a comparison of the kind Hypothesis~\ref{h:coarse} needs, with no loss, and it rests on the explicit
+dispersion relation; we know no substitute for it in an interacting theory.
+\end{remark}
+
 \section{Return to a coarse plaquette gate}\label{s:ret}
 The return bound comes from a single link. Given all the other links, one link of the plaquette has an
 explicit law on the sphere $S^3$, and for that law the probability of any cap is at most the probability of

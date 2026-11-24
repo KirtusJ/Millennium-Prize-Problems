@@ -94,6 +94,8 @@ On the Principal's instruction the worker tests were stopped (two background che
 
 - **The constant in `G ≤ κH` for the compact toy (24 November, later).** `κ` = 0.352, 0.577, 0.740, 0.803, 0.833, 0.863 at β = 0.5, 1, 2, 3, 4, 6; below 1 and consistent with the limit 0.9208 written before the run (approach like 0.35/β). Appendix E says so. `supplement/S12-compact-toy/u1kappa.py`, three predicates met.
 
+- **Remark 5.8, where the infrared problem sits (24 November, later; 37 pages).** `d ≤ b* ≤ (1 + 2/(mγ))d + κ` for the true deficit `b*` of the coarse part. So, given the first hypothesis and the return bound, Hypothesis 3.2 read for `b*` is the persistence of the gap under refinement, which is the conclusion; it is useful only if `b_i` is bounded by comparing two laws on histories of the coarse field (image of the fine measure, Wilson measure of the coarse lattice). In the free theory that comparison holds momentum by momentum: `cosh 2ω(k) − cosh ω(2k) = 8((Σs_j)² + Σs_j²) ≥ 0` (checked on 100,000 random momenta in the build session, not deposited). The first hypothesis is a statement at the scale of the mesh. Placed at the end of Section 5; nothing renumbered.
+
 ## Sixth draft (24 November)
 
 A first-time-reader review of the fifth draft (`../../papers/spectral-criteria/supplement/S10-review-records/first-reader/report.md`, sub-agent of the same family) supplied a replacement abstract, introduction and Measurements section; the director read them, adjusted them and spliced them in. No theorem, number or claim was added or removed in the Measurements section (its 162 numerals were compared by script before and after; the later edits only add two clarifying values, 1.14 and the unrounded 0.93574 + 2 x 0.00271).
