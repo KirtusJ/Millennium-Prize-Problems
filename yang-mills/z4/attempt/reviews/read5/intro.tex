@@ -1,0 +1,185 @@
+% Proposed replacement for the abstract and Section 1 of main.tex (lines 9--15 and 19--168 of the fourth draft as of 03:31 UTC, 24 November 2026).
+% Theorems 1.1 and 1.2 are verbatim. In Theorem 1.3 only the sentences introducing x, y and the gate are
+% reordered; the hypotheses and the conclusion are unchanged. The list "What is not claimed" is verbatim.
+% Labels kept: s:intro, t:crit, t:inh, e:hyp, e:inh, t:ret, e:ret, s:not.
+
+\begin{abstract}
+Suppose a Yang--Mills theory is known only through its correlation functions. How could a mass gap be
+recognised in it, and what would let a gap survive when a lattice is refined? For the first question we prove
+a spectral criterion. For the second we prove an inequality that reduces one refinement step to three
+estimates, and we prove one of the three for $\SU(2)$. The other two are open, and so is a further condition
+needed to chain the steps. No mass gap is proved.
+\end{abstract}
+
+\section{Introduction}\label{s:intro}
+
+Suppose that a quantum Yang--Mills theory in four dimensions has been constructed, as a limit of lattice
+gauge theories, and that one is handed its correlation functions. Two questions come to mind.
+\begin{enumerate}
+\item How would one see that the theory has a mass gap?
+\item If the lattice theories have gaps in a fixed physical box, what would allow a gap to survive as the
+mesh is halved again and again?
+\end{enumerate}
+By a \emph{mass gap} we mean a number $\Delta>0$ such that the Hamiltonian $H\ge0$ has no spectrum in
+$(0,\Delta)$ and has some spectrum above it. The lattice terms used in this introduction (link, plaquette,
+mesh, fixed physical box) are defined in Section~\ref{s:set}.
+
+This paper does not prove a mass gap. It records what we can prove about the two questions, states what is
+open, and reports measurements of the quantities that the open statements concern.
+
+The first question has recently become more concrete. A construction of a continuum theory, as a scaling
+limit of Wilson lattice gauge theory for every simple compact gauge group, was submitted in formal form in
+October 2026~\cite{OAI}. Its assessors judge that it satisfies the Wightman axioms, and state that it proves
+neither a mass gap nor uniqueness of the infinite-volume limit~\cite[p.~1]{YMG}. The problem of Jaffe and
+Witten~\cite[\S4]{JW} asks for existence and a gap. Whether that construction is accepted as existence is not
+for us to say, and it has further conditions (Section~\ref{s:ext}); if it is, a gap is what would still be
+missing.
+
+\subsection{The first question}
+Here the answer is an elementary fact about self-adjoint operators, worth stating because it fits a theory
+known through correlation functions. If $H\ge0$ is the Hamiltonian and $v$ a vector, the numbers
+$\langle v,e^{-n\tau H}v\rangle$ are correlation functions at Euclidean time separation $n\tau$. Their
+successive differences $d_{v,n}$ are non-negative, receive no contribution from the vacuum, and decay at a
+rate set by the lowest positive energy present in $v$. Theorem~\ref{t:crit} says that $H$ has no spectrum in
+$(0,\Delta)$ exactly when these differences decay at one common rate for a family of vectors with dense
+linear span.
+
+\subsection{The second question: one route}
+Draw a square grid, and over it a second grid with squares twice as wide. A lattice gauge field puts a group
+element on each edge of the grid; the edges are called \emph{links}. A field on the fine grid gives one on
+the coarse grid: multiply the two fine links under each coarse link. Any function of the fine field at one
+time is then the sum of its best guess from the coarse field and a remainder, the detail that the coarse
+field does not see.
+
+Suppose three things.
+\begin{enumerate}
+\item[(a)] The guess decays in time as on the coarse lattice.
+\item[(b)] Every function, whatever its guess, loses within two time steps a fixed fraction of its detail,
+except for detail carried by an exceptional set of coarse fields.
+\item[(c)] The dynamics seldom returns to that exceptional set.
+\end{enumerate}
+Then the fine lattice keeps the coarse decay up to two losses, which must both be small: the return to
+the exceptional set, and a factor that is close to one when the detail is lost in few steps compared with
+the time considered. Theorem~\ref{t:inh} makes this precise.
+
+The exceptions are allowed for a reason. A natural way to prove~(b) goes through local updates of the fine
+links, and that route meets slow trial directions on selected coarse fields (Section~\ref{s:local}).
+
+Where this stands: Theorem~\ref{t:ret} proves a bound of the kind~(c) for $\SU(2)$. Statements (b) and~(a)
+are open (Hypotheses~\ref{h:mix} and~\ref{h:coarse}). Chaining the refinement steps needs, in addition, a
+bound on the accumulated losses, which is also open (Hypothesis~\ref{h:budget}).
+
+\subsection{Main results}
+\begin{theorem}[Spectral criterion]\label{t:crit}
+Let $H\ge0$ be a self-adjoint operator on a Hilbert space $\cH$, let $\tau>0$, and let $D\subset\cH$ have dense
+linear span. For $v\in\cH$ and $n\ge0$ put
+\[
+d_{v,n}=\big\langle v,\,e^{-n\tau H}\big(I-e^{-\tau H}\big)v\big\rangle\ \ge0 .
+\]
+Let $0<r<1$ and $\Delta=-\tau^{-1}\log r$. The following are equivalent.
+\begin{enumerate}
+\item $H$ has no spectrum in $(0,\Delta)$.
+\item $\limsup_{n\to\infty}d_{v,n}^{1/n}\le r$ for every $v\in D$.
+\end{enumerate}
+\end{theorem}
+
+Only the rate $r$ is common in (2); constants and the onset of the decay may depend on $v$. The criterion is
+satisfied trivially when $H=0$, so by itself it says nothing about whether there is any positive energy; the
+problem of~\cite{JW} also requires the mass to be finite.
+
+\begin{theorem}[Refinement with an exceptional set]\label{t:inh}
+Let $A$ be a self-adjoint operator on a non-zero Hilbert space $\mathcal K$ with $0\le A\le I$. Let $P$ be an
+orthogonal projection, $Q=I-P$, and let $B$ be an orthogonal projection with range inside the range of $Q$;
+put $G=Q-B$. Let $m\ge j\ge1$ be integers, $\gamma>0$, $\kappa\ge0$ and $b\in\R$, and suppose
+\begin{equation}\label{e:hyp}
+\langle f,(I-A^{2})f\rangle\ge\gamma\|Gf\|^2\ \ (f\in\mathcal K),\qquad
+\|BA^{j}B\|\le\kappa,\qquad \|PA^{m}P\|\le1-b .
+\end{equation}
+Then
+\begin{equation}\label{e:inh}
+1-\|A^m\|\ \ge\ \frac{(b-\kappa)_+}{1+2/(m\gamma)} .
+\end{equation}
+\end{theorem}
+
+Here $(s)_+=\max\{s,0\}$. The space splits into a coarse part $P$, an exceptional part $B$ and a good part
+$G$, and the three hypotheses are (b), (c) and (a) above, in that order:
+\begin{itemize}
+\item a function loses, within two steps, at least the fraction $\gamma$ of the squared norm of its good
+part;
+\item the exceptional part overlaps with itself after $j$ steps by at most $\kappa$;
+\item the coarse part alone already has deficit $b$ after $m$ steps.
+\end{itemize}
+The conclusion is that the whole space has deficit at least $b-\kappa$, divided by a factor that tends to $1$
+when $m\gamma\to\infty$.
+
+In the application $A$ is one step of a transfer semigroup. If $A=e^{-aH}$ with $H\ge0$ and mesh $a$, then
+$A^m=e^{-tH}$ for $t=ma$, the left side of~\eqref{e:inh} is the \emph{deficit} $d=1-e^{-t\inf\sigma(H)}$ at
+physical time $t$, and the denominator is $1+2a/(\gamma t)$. No logarithm of $A$ is needed, and $A$ may have
+a kernel. In detail (terms are defined in Section~\ref{s:set}; symbols are listed in Table~\ref{tab:sym}),
+$\mathcal K$ is the space of gauge-invariant functions of one time slice of the fine lattice with vacuum
+expectation zero, $A$ is one step of the transfer semigroup in the vacuum representation, $P$ is the
+conditional expectation given the coarse links, and $B$ is the part of $Q$ supported on an exceptional set of
+coarse fields. A physical time $t$ corresponds to $m=t/a$ steps, so $m$ doubles when the mesh is halved. On
+this space $1-\|A^m\|>0$ is a gap of that lattice.
+
+\begin{theorem}[Return to a coarse plaquette gate]\label{t:ret}
+Consider the Wilson measure with weight $\exp\big(\beta\sum_p\tfrac12\Tr U_p\big)$, $\beta\ge0$, for the gauge
+group $\SU(2)$ on a periodic lattice with even spatial side $N\ge6$ and $T\ge2$ time slices. Fix a spatial
+plaquette of side two (a coarse plaquette) and $0\le\theta\le\pi$. Let $x$ and $y$ be the spatial links of
+two time slices that are distinct modulo $T$. For the spatial links of a time slice let $\Gamma_\theta$ be the
+event that the holonomy around that plaquette (the ordered product of its eight fine links) lies within round
+distance $\theta$ of $-I$ (the angle between the two as points of $S^3$); we call $\Gamma_\theta$ a
+\emph{gate}. Then for every complex square-integrable function $g$ of a slice, with
+$h=\mathbf 1_{\Gamma_\theta}g$,
+\begin{equation}\label{e:ret}
+\big|\E\big[\overline{h(x)}\,h(y)\big]\big|\ \le\ p_{6\beta}(\theta)\,\E\big[|h(x)|^2\big],
+\qquad
+p_k(\theta)=\frac{\int_0^\theta\sin^2\!r\,e^{k(\cos r-1)}\,dr}{\int_0^\pi\sin^2\!r\,e^{k(\cos r-1)}\,dr},
+\end{equation}
+and $p_k(\theta)\le\min\{1,\ \tfrac{\pi^2\sqrt e}{4}(1+k)^{3/2}\theta^3\}$.
+\end{theorem}
+
+In words: whatever the field is at one time, the conditional probability that the chosen plaquette is within
+$\theta$ of $-I$ at another time is at most $p_{6\beta}(\theta)$, which is of order $\theta^3$. Three remarks
+on its reach.
+\begin{itemize}
+\item The order $\theta^3$ is for fixed $\beta$; the bound is small only for $\theta$ well below
+$(6\beta)^{-1/2}$.
+\item The bound does not depend on the spatial volume, on the time separation or on the rest of the field.
+\item The gate is centred at $-I$ because the smallest local quotients we measured are on a background with
+three plaquettes at $-I$ (Section~\ref{s:local}: two backgrounds, one lattice, one coupling); this is a
+choice suggested by those trials, not a result.
+\end{itemize}
+Corollary~\ref{c:vac} carries the bound to the vacuum on an infinite time axis, where it becomes the second
+inequality of~\eqref{e:hyp}.
+
+Two further results are proved. Proposition~\ref{p:three} in Section~\ref{s:crit} is a form of the criterion
+that uses a single time separation. Proposition~\ref{p:haar} in Section~\ref{s:haar} gives an explicit lower
+bound for the conditional variance of a single link; it bounds one term of the auxiliary statement of
+Section~\ref{s:arch} and is not an input of Theorem~\ref{t:inh}.
+
+\subsection{What is not claimed}\label{s:not}
+\begin{enumerate}
+\item No mass gap is proved in infinite volume or in the continuum, and no lower bound uniform along a
+refinement, for any gauge group. (At a fixed finite lattice a gap exists for elementary reasons and is not
+the issue.)
+\item No continuum theory is constructed. We have not examined the construction~\cite{OAI}; we rely on its
+assessment~\cite{YMG} for what it does and does not contain, and we have not shown that any object of this
+paper belongs to it (Section~\ref{s:ext}).
+\item Theorem~\ref{t:inh} is conditional. Of its three hypotheses the second is proved for $\SU(2)$
+(Corollary~\ref{c:vac}). The first and the third are open (Hypotheses~\ref{h:mix} and~\ref{h:coarse}), and so
+is the budget that chaining the steps needs (Hypothesis~\ref{h:budget}); none is proved on any trajectory of
+matched couplings. Even with all of them the conclusion concerns a fixed physical box and is not a gap in
+infinite volume.
+\item Theorem~\ref{t:ret} and all measurements are for $\SU(2)$. The gate around $-I$ and the constant $p_{6\beta}(\theta)$
+are special to it; that constant is the largest value over the conditional laws that one link can have, and
+is not shown to be attained on any Wilson background. For other groups only a cruder return bound is available (Remark~\ref{r:ret}(d)), and
+whether a useful exceptional set exists is open.
+\item The measurements of Section~\ref{s:evid} are Monte Carlo estimates on lattices of side $5$ to $10$,
+one coupling each, with statistical errors. The exact value of a trial function limits a constant from one
+side; an estimate of it is not a bound. No measurement is evidence for or against a hypothesis, and none is
+used in a proof.
+\end{enumerate}
+
+How the results were obtained, which parts are machine-checked, and the fact that the paper has not been
+peer reviewed are set out in Section~\ref{s:disc}.

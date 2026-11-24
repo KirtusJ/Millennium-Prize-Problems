@@ -7,11 +7,11 @@
 \date{24 November 2026. Fourth draft.}
 \begin{document}
 \begin{abstract}
-We ask how a mass gap could be recognised in a Yang--Mills theory known through its correlation functions,
-and what would let a gap survive when a lattice is refined. We prove a spectral criterion for the first
-question and, for the second, an inequality that reduces one refinement step to three estimates. We prove one
-of the three for $\SU(2)$. The other two are open, and so is a third condition needed to chain the
-steps; no mass gap is proved.
+Suppose a Yang--Mills theory is known only through its correlation functions. How could a mass gap be
+recognised in it, and what would let a gap survive when a lattice is refined? For the first question we prove
+a spectral criterion. For the second we prove an inequality that reduces one refinement step to three
+estimates, and we prove one of the three for $\SU(2)$, for exceptional sets of a particular kind. The other two are open, and so is a further condition
+needed to chain the steps. No mass gap is proved.
 \end{abstract}
 \maketitle
 \tableofcontents
@@ -19,50 +19,63 @@ steps; no mass gap is proved.
 \section{Introduction}\label{s:intro}
 
 Suppose that a quantum Yang--Mills theory in four dimensions has been constructed, as a limit of lattice
-gauge theories, and that one is handed its correlation functions. How would one see that it has a mass gap?
-And if the lattice theories have gaps in a fixed physical box, what would allow a gap to survive as the mesh is
-halved again and again?
+gauge theories, and that one is handed its correlation functions. Two questions come to mind.
+\begin{enumerate}
+\item How would one see that the theory has a mass gap?
+\item If the lattice theories have gaps in a fixed physical box, what would allow a gap to survive as the
+mesh is halved again and again?
+\end{enumerate}
+By a \emph{mass gap} we mean a number $\Delta>0$ such that the Hamiltonian $H\ge0$ has no spectrum in
+$(0,\Delta)$ and has some spectrum in $[\Delta,\infty)$. The lattice terms used in this introduction (link, plaquette,
+mesh, fixed physical box) are defined in Section~\ref{s:set}.
 
-The first question now has an object to be asked about. A continuum theory, obtained as a scaling limit of
-Wilson lattice gauge theory for every simple compact gauge group, was submitted in formal form in October
-2026~\cite{OAI}. Its assessors judge that it satisfies the Wightman axioms, and state that it proves neither a
-mass gap nor uniqueness of the infinite-volume limit~\cite[p.~1]{YMG}. The problem of Jaffe and
-Witten~\cite[\S4]{JW} asks for existence and a gap. If that construction is accepted as existence, which is
-not for us to say and has further conditions (Section~\ref{s:ext}), the gap is what is missing. This paper
-does not supply it. It records what we can prove about the two questions, states what is open, and reports measurements of
-the quantities that the open statements concern.
+This paper does not prove a mass gap. It records what we can prove about the two questions, states what is
+open, and reports measurements of the quantities that the open statements concern.
 
-\subsection{The two questions}
-For the first question the answer is an elementary fact about self-adjoint operators, worth stating because
-it fits a theory known through correlation functions. If $H\ge0$ is the Hamiltonian and $v$ a vector, the
-numbers $\langle v,e^{-n\tau H}v\rangle$ are correlation functions at Euclidean time separation $n\tau$. Their
-successive differences $d_{v,n}$ are non-negative, forget the vacuum, and decay at a rate set by the lowest
-positive energy present in $v$. A gap is the same thing as a common rate for a family of vectors that spans
-(Theorem~\ref{t:crit}).
+The first question has recently become more concrete. A construction of a continuum theory, as a scaling
+limit of Wilson lattice gauge theory for every simple compact gauge group, was submitted in formal form in
+October 2026~\cite{OAI}. Its assessors judge that it satisfies the Wightman axioms, and state that it proves
+neither a mass gap nor uniqueness of the infinite-volume limit~\cite[p.~1]{YMG}. The problem of Jaffe and
+Witten~\cite[\S4]{JW} asks for existence and a gap. Whether that construction is accepted as existence is not
+for us to say, and it has further conditions (Section~\ref{s:ext}); if it is, a gap is what would still be
+missing.
 
-For the second question we follow one route. Consider a fine lattice and, inside it, the coarse lattice of
-twice the mesh. Each coarse link is the product of two consecutive fine links. A function of the fine links at
-one time splits into the part that can be predicted from the coarse links and the remainder. Suppose the
-predictable part decays in time as it does on the coarse lattice, and every function loses, within a few
-lattice steps, a fixed fraction of the squared norm of its remainder. Then the fine lattice inherits the coarse decay with a small loss. A natural way to prove the second supposition goes through local updates of the fine links, and that
-route meets slow trial directions on selected coarse backgrounds (Section~\ref{s:local}). This is a reason to allow exceptions. Theorem~\ref{t:inh} shows
-that the inheritance survives if some backgrounds are put in an exceptional set to which the dynamics seldom
-returns,
-and Theorem~\ref{t:ret} proves a return bound of that kind for $\SU(2)$. Three statements about the
-interacting theory remain open: decay of the remainder off the exceptional set (Hypothesis~\ref{h:mix}), the
-comparison of the predictable part with the coarse lattice (Hypothesis~\ref{h:coarse}), and, for chaining the
-refinement steps, a bound on the accumulated losses (Hypothesis~\ref{h:budget}).
+\subsection{The first question}
+Here the answer is an elementary fact about self-adjoint operators, worth stating because it fits a theory
+known through correlation functions. If $H\ge0$ is the Hamiltonian and $v$ a vector, the numbers
+$\langle v,e^{-n\tau H}v\rangle$ are correlation functions at Euclidean time separation $n\tau$. Their
+successive differences $d_{v,n}$ are non-negative, receive no contribution from the vacuum, and decay at a
+rate set by the lowest positive energy present in $v$. Theorem~\ref{t:crit} says that $H$ has no spectrum in
+$(0,\Delta)$ exactly when these differences decay at one common rate for a family of vectors with dense
+linear span.
 
-\subsection{The idea in words}
-Draw a square grid, and over it a second grid with squares twice as wide. A field on the fine grid gives one
-on the coarse grid: multiply the two fine links under each coarse link. With six fine sites on a side there
-are three coarse ones, and a coarse square has eight fine links on its boundary. Any observable of the fine
-field is the sum of its best guess from the coarse field and a remainder, the detail that the coarse field
-does not see. Suppose three things. The guess decays in time as on the coarse lattice. Every observable, whatever its guess,
-loses within two steps a fixed fraction of its detail, except for detail carried by an exceptional set of coarse fields. And
-the dynamics seldom returns to that set. Then the fine lattice keeps the coarse decay up to two losses, which must both
-be small: the recurrence of the rare fields, and a factor that is close to one when the detail is lost in few
-steps compared with the time considered. Theorem~\ref{t:inh} makes this precise.
+\subsection{The second question: one route}
+Draw a square grid, and over it a second grid with squares twice as wide. A lattice gauge field puts a group
+element on each edge of the grid; the edges are called \emph{links}. A field on the fine grid gives one on
+the coarse grid: multiply the two fine links under each coarse link. Any function of the fine field at one
+time is then the sum of its best guess from the coarse field and a remainder, the detail that the coarse
+field does not see.
+
+Suppose three things.
+\begin{enumerate}
+\item[(a)] The guess decays in time as on the coarse lattice.
+\item[(b)] Every function, whatever its guess, loses within two time steps a fixed fraction of its detail,
+except for detail carried by an exceptional set of coarse fields.
+\item[(c)] The dynamics seldom returns to that exceptional set.
+\end{enumerate}
+Then the fine lattice keeps the coarse decay up to two losses, which must both be small: the return to
+the exceptional set, and a factor that is close to one when the detail is lost in few steps compared with
+the time considered. Theorem~\ref{t:inh} makes this precise.
+
+The exceptions are allowed for a reason. A natural way to prove~(b) goes through local updates of the fine
+links, and in our trials that route meets slow directions on selected coarse fields (Section~\ref{s:local}).
+This is motivation only; the trials are not evidence for or against any hypothesis.
+
+Where this stands: Theorem~\ref{t:ret} proves a bound of the kind~(c) for $\SU(2)$, for exceptional sets
+built from narrow neighbourhoods of one group element (we call them gates); it is not shown that~(b) can
+hold with such sets. Statements (b) and~(a)
+are open (Hypotheses~\ref{h:mix} and~\ref{h:coarse}). Chaining the refinement steps needs, in addition, a
+bound on the accumulated losses, which is also open (Hypothesis~\ref{h:budget}).
 
 \subsection{Main results}
 \begin{theorem}[Spectral criterion]\label{t:crit}
@@ -96,30 +109,36 @@ Then
 \end{equation}
 \end{theorem}
 
-Here $A$ is one step of a transfer semigroup. If $A=e^{-aH}$ with $H\ge0$ and mesh $a$, then $A^m=e^{-tH}$ for
-$t=ma$, the left side of~\eqref{e:inh} is the \emph{deficit} $d=1-e^{-t\inf\sigma(H)}$ at physical time $t$, and
-the denominator is $1+2a/(\gamma t)$. No logarithm of $A$ is needed, and $A$ may have a kernel.
+Here $(s)_+=\max\{s,0\}$. The space splits into a coarse part $P$, an exceptional part $B$ and a good part
+$G$, and the three hypotheses are (b), (c) and (a) above, in that order:
+\begin{itemize}
+\item a function loses, within two steps, at least the fraction $\gamma$ of the squared norm of its good
+part;
+\item the exceptional part overlaps with itself after $j$ steps by at most $\kappa$;
+\item the coarse part alone already has deficit $b$ after $m$ steps.
+\end{itemize}
+The conclusion is that the whole space has deficit at least $b-\kappa$, divided by a factor that tends to $1$
+when $m\gamma\to\infty$.
 
-In words. Split the space into a coarse part $P$, an exceptional part $B$ and a good part $G$. The first
-hypothesis says that a function loses, within two steps, at least the fraction $\gamma$ of the squared norm of
-its good part. The second says that the exceptional part overlaps with itself after $j$ steps by at most
-$\kappa$. The third says that the coarse part alone already has deficit $b$ after $m$ steps. The conclusion is
-that the whole space has deficit at least $b-\kappa$, divided by a factor that tends to $1$ when $m\gamma\to\infty$.
-
-In the application (terms are defined in Section~\ref{s:set}; symbols are listed in Table~\ref{tab:sym}) $\mathcal K$ is the space of gauge-invariant
-functions of one time slice of the fine lattice with vacuum expectation zero, $A$ is one step of the transfer
-semigroup in the vacuum representation, $P$ is the conditional expectation given the coarse links, and $B$
-is the part of $Q$ supported on an exceptional set of coarse fields. A physical time $t$ corresponds to
-$m=t/a$ steps, so $m$ doubles when the mesh is halved. On this space $1-\|A^m\|>0$ is a gap of that lattice.
+In the application $A$ is one step of a transfer semigroup. If $A=e^{-aH}$ with $H\ge0$ and mesh $a$, then
+$A^m=e^{-tH}$ for $t=ma$, the left side of~\eqref{e:inh} is the \emph{deficit} $d=1-e^{-t\inf\sigma(H)}$ at
+physical time $t$, and the denominator is $1+2a/(\gamma t)$. No logarithm of $A$ is needed, and $A$ may have
+a kernel. In detail (terms are defined in Section~\ref{s:set}; symbols are listed in Table~\ref{tab:sym}),
+$\mathcal K$ is the space of gauge-invariant functions of one time slice of the fine lattice with vacuum
+expectation zero, $A$ is one step of the transfer semigroup in the vacuum representation, $P$ is the
+conditional expectation given the coarse links, and $B$ is the part of $Q$ supported on an exceptional set of
+coarse fields. A physical time $t$ corresponds to $m=t/a$ steps, so $m$ doubles when the mesh is halved. On
+this space $1-\|A^m\|>0$ is a gap of that lattice.
 
 \begin{theorem}[Return to a coarse plaquette gate]\label{t:ret}
 Consider the Wilson measure with weight $\exp\big(\beta\sum_p\tfrac12\Tr U_p\big)$, $\beta\ge0$, for the gauge
 group $\SU(2)$ on a periodic lattice with even spatial side $N\ge6$ and $T\ge2$ time slices. Fix a spatial
-plaquette of side two (a coarse plaquette) and $0\le\theta\le\pi$. For the spatial links $x$ of a time slice
-let $\Gamma_\theta$ be the event that the holonomy around that plaquette (the ordered product of its eight fine
-links) lies within round distance $\theta$ of $-I$ (the angle between the two as points of $S^3$); we call
-$\Gamma_\theta$ a \emph{gate}. Let $x$ and $y$ be the spatial links of two time slices that are distinct modulo $T$. Then for every
-complex square-integrable function $g$ of a slice, with $h=\mathbf 1_{\Gamma_\theta}g$,
+plaquette of side two (a coarse plaquette) and $0\le\theta\le\pi$. Let $x$ and $y$ be the spatial links of
+two time slices that are distinct modulo $T$. For the spatial links of a time slice let $\Gamma_\theta$ be the
+event that the holonomy around that plaquette (the ordered product of its eight fine links) lies within round
+distance $\theta$ of $-I$ (the angle between the two as points of $S^3$); we call $\Gamma_\theta$ a
+\emph{gate}. Then for every complex square-integrable function $g$ of a slice, with
+$h=\mathbf 1_{\Gamma_\theta}g$,
 \begin{equation}\label{e:ret}
 \big|\E\big[\overline{h(x)}\,h(y)\big]\big|\ \le\ p_{6\beta}(\theta)\,\E\big[|h(x)|^2\big],
 \qquad
@@ -129,17 +148,23 @@ and $p_k(\theta)\le\min\{1,\ \tfrac{\pi^2\sqrt e}{4}(1+k)^{3/2}\theta^3\}$.
 \end{theorem}
 
 In words: whatever the field is at one time, the conditional probability that the chosen plaquette is within
-$\theta$ of $-I$ at another time is at most $p_{6\beta}(\theta)$, which is of order $\theta^3$. The order $\theta^3$ is for
-fixed $\beta$; the bound is small only for $\theta$ well below $(6\beta)^{-1/2}$. The bound does not
-depend on the spatial volume, on the time separation or on the rest of the field. The gate is centred at $-I$ because the smallest local quotients we measured are
-on a background with three plaquettes at $-I$ (Section~\ref{s:local}: two backgrounds, one lattice, one
-coupling); this is a choice suggested by those trials, not a result. Corollary~\ref{c:vac} carries the bound to the vacuum on an
-infinite time axis, where it becomes the second inequality of~\eqref{e:hyp}.
+$\theta$ of $-I$ at another time is at most $p_{6\beta}(\theta)$, which is of order $\theta^3$. Three remarks
+on its reach.
+\begin{itemize}
+\item The order $\theta^3$ is for fixed $\beta$; the bound is small only for $\theta$ well below
+$(6\beta)^{-1/2}$.
+\item The bound does not depend on the spatial volume, on the time separation or on the rest of the field.
+\item The gate is centred at $-I$ because the smallest local quotients we measured are on a background with
+three plaquettes at $-I$ (Section~\ref{s:local}: two backgrounds, one lattice, one coupling); this is a
+choice suggested by those trials, not a result.
+\end{itemize}
+Corollary~\ref{c:vac} carries the bound to the vacuum on an infinite time axis, where it becomes the second
+inequality of~\eqref{e:hyp}.
 
 Two further results are proved. Proposition~\ref{p:three} in Section~\ref{s:crit} is a form of the criterion
 that uses a single time separation. Proposition~\ref{p:haar} in Section~\ref{s:haar} gives an explicit lower
-bound for the conditional variance of a single link; it bounds one term of an auxiliary statement and is not
-an input of Theorem~\ref{t:inh}.
+bound for the conditional variance of a single link; it bounds one term of the auxiliary statement of
+Section~\ref{s:arch} and is not an input of Theorem~\ref{t:inh}.
 
 \subsection{What is not claimed}\label{s:not}
 \begin{enumerate}
@@ -170,6 +195,7 @@ used in a proof.
 
 How the results were obtained, which parts are machine-checked, and the fact that the paper has not been
 peer reviewed are set out in Section~\ref{s:disc}.
+
 
 \section{Setting and notation}\label{s:set}
 \emph{Lattice.} A periodic lattice has $N$ sites in each of three spatial directions and $T$ time slices.
@@ -245,13 +271,13 @@ Corollary~\ref{c:acc} chains the halvings and needs one more input, the budget (
 three hypotheses are open, so every box on the path from Theorem~\ref{t:inh} down to the mass gap is open.
 Theorem~\ref{t:crit} enters only at the bottom: it says what would have to be checked in a continuum theory.
 
-This is one sufficient route to a gap in a box. A direct estimate of the differences $d_{v,n}$ in the
+This would be one sufficient route to a gap in a box, if the three hypotheses held. A direct estimate of the differences $d_{v,n}$ in the
 continuum theory would meet the criterion of Theorem~\ref{t:crit} without it.
 
 \begin{figure}[ht]
 \centering
 \begin{tikzpicture}[node distance=6mm and 6mm,
- prov/.style={draw,rounded corners=2pt,align=center,font=\footnotesize,inner sep=3pt,text width=31mm},
+ prov/.style={draw,rounded corners=2pt,align=center,font=\footnotesize,inner sep=3pt,text width=31.5mm},
  open/.style={prov,dashed},
  ext/.style={prov,dotted,thick},
  >={Stealth[length=2mm]}]
@@ -587,8 +613,10 @@ lies in those of $\chi$ and of $I-P$, and $BS_nB=B\,(\chi S_n\chi)\,B$.
 \[\min\big(1,\,n_{\mathrm g}\,p_{6\beta}(\theta)\big)\]
 in place of $p_{6\beta}(\theta)$; no independence between plaquettes is used. Take all the
 $n_{\mathrm g}=3(N/2)^3$ coarse plaquettes and the radius $\theta=c(1+6\beta)^{-1/2}N^{-4/3}$, with $c>0$ such that
-$\theta\le\pi$. Then the bound is at most $\tfrac{3\pi^2\sqrt e}{32}\,c^3/N$, which is summable over dyadic $N$.
-(b) At $\beta=3.399810242$ the bound $p_{6\beta}(\theta)$ is $0.00307$, $0.156$ and $0.935$ for
+$\theta\le\pi$. Then the bound is at most $\tfrac{3\pi^2\sqrt e}{32}\,c^3/N$, which is summable over dyadic $N$. Summability of the return weights is not the budget of
+Hypothesis~\ref{h:budget}, and gates this narrow need not contain the fields that Hypothesis~\ref{h:mix}
+would have to exclude.
+(b) At $\beta=3.399810242$ (the matched coupling of the lattice of side $8$) the bound $p_{6\beta}(\theta)$ is $0.00307$, $0.156$ and $0.935$ for
 $\theta=0.05$, $0.2$ and $0.6$. The gates it controls usefully are narrow. (c) Corollary~\ref{c:vac} is the
 second inequality of~\eqref{e:hyp} with $A=S_1$ and any $j\ge1$. The bound restricts to the gauge-invariant functions without change: $S_n$ and $\chi$ commute with gauge
 transformations of the slice, and so does $P$, because the vacuum measure is gauge invariant and a gauge
@@ -657,48 +685,103 @@ links and whose variances it does not control.
 \end{remark}
 
 \section{Measurements}\label{s:evid}
-This section reports Monte Carlo estimates for $\SU(2)$. Nothing in it is used in a proof.
-
-\emph{Conventions.} A \emph{stream} is an independent run of the sampler with its own seed, started hot or
-cold in alternation; the stream is the unit of replication. Errors are delete-one-stream jackknife standard
-errors, a digit in parentheses is the standard error in the last digit, and the number of streams behind
-each error is stated with it. Where a test function was selected from a span, the selection used one set of
-streams and the reported value comes from other streams; the error is then that of the selected function with
-its coefficients fixed, and does not include the variability of the selection.
+This section reports Monte Carlo estimates for $\SU(2)$. Nothing in it is used in a proof. Each subsection
+asks a question, says in a sentence what was found, and then gives the setup, the numbers, the checks that
+failed and what the numbers do not show. The design of the main runs is collected in Table~\ref{tab:runs}.
 
 \emph{What a measurement can show.} Each measurement tries particular test functions in an inequality that an
 open hypothesis, or the auxiliary statement, would need for all functions. The exact value for a trial
 function limits a constant from one side. What is reported is an estimate of that value with a statistical
 error, which is not a bound, and no measurement can show that a hypothesis holds.
 
-\emph{Limits common to all of them.} One coupling per lattice; lattices of side $5$ to $10$ with periodic
-time; heat-bath sampling. Thermalisation was checked only by comparing hot with cold starts and first with
-second halves, and some of these checks failed; they are named where they bear on a number. Couplings were
-taken from a calibration in~\cite{RepoData} and not recalibrated, so every statement at ``matched'' couplings
-inherits it. Programs, seeds, the rules fixed before each run, the rules that failed and summary files are
+\emph{Conventions.}
+\begin{itemize}
+\item A \emph{stream} is an independent run of the sampler with its own seed, started hot or cold in
+alternation; the stream is the unit of replication.
+\item Errors are delete-one-stream jackknife standard errors, a digit in parentheses is the standard error in
+the last digit, and the number of streams behind each error is stated with it.
+\item Where a test function was selected from a span, the selection used one set of streams and the reported
+value comes from other streams; the error is then that of the selected function with its coefficients fixed,
+and does not include the variability of the selection.
+\end{itemize}
+
+\emph{Limits common to all of them.}
+\begin{itemize}
+\item One coupling per lattice; lattices of side $5$ to $10$ with periodic time; heat-bath sampling.
+\item Thermalisation was checked only by comparing hot with cold starts and first with second halves, and
+some of these checks failed; they are named where they bear on a number.
+\item Couplings were taken from a calibration in~\cite{RepoData} and not recalibrated, so every statement at
+``matched'' couplings inherits it.
+\item Programs, seeds, the rules fixed before each run, the rules that failed and summary files are
 in~\cite{RepoData}. Per-stream data are deposited for Section~\ref{s:cross} and for the single-mark runs; for
 the others they are regenerated from the seeds, which reproduces them statistically but, across rebuilds of
 the sampler, not byte for byte.
+\end{itemize}
+
+\begin{table}[t]
+\centering\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.19\textwidth}>{\raggedright\arraybackslash}p{0.27\textwidth}>{\raggedright\arraybackslash}p{0.24\textwidth}>{\raggedright\arraybackslash}p{0.22\textwidth}@{}}
+\toprule
+Runs & Lattice and coupling & Streams and length & Use of the streams \\
+\midrule
+Frozen backgrounds A and B (Section~\ref{s:local}) &
+side $N=6$, $T=12$, $\beta=3.276133577$, a point on a line of constant renormalised coupling &
+each background has one run of $32$ streams ($576$ sweeps discarded, then $1152$ measurements six sweeps apart) &
+selection on streams $0$ to $15$; reported value on streams $16$ to $31$ \\
+\addlinespace
+Carry-over in time (Section~\ref{s:time}) &
+same lattice, coupling and frozen slice (background A); the later slices are not frozen &
+$32$ fresh streams &
+$16$ for fitting and $16$ held out \\
+\addlinespace
+First span (Section~\ref{s:cross}) &
+sides $N=5$ and $N=10$ at couplings $3.196581051$ and $3.493705679$ (matched at a fixed renormalised
+coupling); time extents two and four times the side; a common physical lag (one and two time steps) &
+$16$ streams per lattice, $500$ measurements each &
+half of the streams used for selection; reported value on the $8+8$ held-out streams \\
+\addlinespace
+Second study (Section~\ref{s:cross}), designed after the first was seen &
+as for the first span &
+new streams ($16$ per lattice, $2000$ measurements each) &
+tests fixed on the selection streams; reported values on the $8+8$ held-out streams \\
+\addlinespace
+Longer ensembles (Section~\ref{s:cross}) &
+ensembles of twice the time extent &
+$16+16$ streams; $1000$ measurements per stream on side $10$ &
+no selection; they share no stream with the selection \\
+\bottomrule
+\end{tabular}
+\caption{Design of the main runs. The runs on displaced backgrounds and the single-mark runs of
+Section~\ref{s:local} are described there and in~\cite{RepoData}.}\label{tab:runs}
+\end{table}
 
 \subsection{The local quotient on a frozen coarse background}\label{s:local}
 \emph{Question.} On a coarse background with holonomy $-I$, how small can the local quotient
 $\mathcal J/\mathcal V$ be?
 
-\emph{Setup.} Side $N=6$, $T=12$, $\beta=3.276133577$, a point on a line of constant renormalised coupling.
-The coarse links of one slice are held fixed (a \emph{frozen background}) and the fine links are sampled
-around them. On background~A all coarse links are the identity except two. One is $-I$; of the four coarse
+\emph{What we found.} On the backgrounds tried, the paired differences show the selected quotient still
+decreasing at the largest span of trial functions, although the rule fixed before the run called the decrease
+stopped on A; no lowest value is indicated. For these spans the quotient is smaller on the background with
+holonomy $-I$ than on the other. All values are estimates for trial functions, not bounds.
+
+\emph{Setup.} Lattice, coupling and streams are in Table~\ref{tab:runs}. The coarse links of one slice are
+held fixed (a \emph{frozen background}) and the fine links are sampled around them.
+\begin{itemize}
+\item \emph{Background~A.} All coarse links are the identity except two. One is $-I$; of the four coarse
 spatial plaquettes through it, three have holonomy $-I$ and the fourth also contains the second altered link.
 That link, adjacent to the first, is the quaternion $\mathbf i$, which supplies a reference direction; four
-coarse plaquettes, the fourth among them, then have holonomy $\pm\mathbf i$. Background~B is a single
-configuration: the first of $60$ drawn from the unconditioned measure whose coarse plaquettes are all farther
-than $\pi/4$ from $-I$ ($40$ qualified), a rule fixed in advance. A \emph{mark} is a gauge-invariant function
-of the fine plaquettes inside one coarse plaquette; the list of marks is in~\cite{RepoData}. Four nested spans
-were fixed before the runs: the $15$ marks on the three $-I$ plaquettes; $49$ marks on the seven coarse
-plaquettes that contain an altered link; $181$ and $308$ marks that add the $33$ plaquettes sharing a coarse
-edge with those. Each background has one run of $32$ streams ($576$ sweeps discarded, then $1152$ measurements
-six sweeps apart). For each span the linear combination with the smallest quotient is selected on streams $0$
-to $15$, and Table~\ref{tab:local} reports its quotient on streams $16$ to $31$. Smaller means slower
-relaxation under the local updates.
+coarse plaquettes, the fourth among them, then have holonomy $\pm\mathbf i$.
+\item \emph{Background~B.} A single configuration: the first of $60$ drawn from the unconditioned measure
+whose coarse plaquettes are all farther than $\pi/4$ from $-I$ ($40$ qualified), a rule fixed in advance.
+\item \emph{Marks.} A \emph{mark} is a gauge-invariant function of the fine plaquettes inside one coarse
+plaquette; the list of marks is in~\cite{RepoData}.
+\item \emph{Spans.} Four nested spans were fixed before the runs: the $15$ marks on the three $-I$
+plaquettes; $49$ marks on the seven coarse plaquettes that contain an altered link; $181$ and $308$ marks
+that add the $33$ plaquettes sharing a coarse edge with those.
+\item \emph{Selection.} For each span the linear combination with the smallest quotient is selected on the
+selection streams, and Table~\ref{tab:local} reports its quotient on the held-out streams. Smaller means
+slower relaxation under the local updates.
+\end{itemize}
 
 \begin{table}[ht]
 \centering\small
@@ -720,125 +803,194 @@ B & held-out quotient  & .0589(8) & .0533(5) & .0510(4) & .0428(4) \\
 \caption{Local quotient $\mathcal J/\mathcal V$ (dimensionless) of the combination of marks selected on $16$
 streams and evaluated on the $16$ other streams of the same run. A: frozen background with three coarse
 plaquettes of holonomy $-I$. B: one frozen background drawn from the unconditioned measure, every coarse
-plaquette at round distance greater than $1.1$ from $-I$. Errors are over the $16$ held-out streams with the
+plaquette at round distance greater than $1.1$ from $-I$ (the selection rule asked for $\pi/4$; the smallest
+distance on the configuration drawn is $1.14$). Errors are over the $16$ held-out streams with the
 selected coefficients fixed. The entries of a row are computed on the same streams and are strongly
-correlated; the two rows come from independent runs. All entries are estimates, not bounds. For comparison,
-in the same runs and on all $32$ streams, the unselected average of the four plaquette marks of one coarse
-plaquette gives $.0473(5)$ on A and $.0893(9)$ on B, and a single plaquette mark gives $.0611(4)$ on A.}
+correlated; the two rows come from independent runs. All entries are estimates, not bounds.}
 \label{tab:local}
 \end{table}
 
-(i) \emph{The selected combination is collective.} In the $308$-mark span on A, $81$ per cent of the sum of
-its squared coefficients, each scaled by the standard deviation of its mark, belongs to the three coarse
-plaquettes with holonomy $-I$. Four exact linear relations among these marks were removed and the
-coefficients of least norm taken, so the share depends on that convention; the marks are also correlated, so
-this is a statement about coefficients and not a decomposition of the variance. On B the
-selected direction is less stable: for the $49$-mark span the directions selected on the two halves of the
-streams have cosine $0.41$.
+\emph{Unselected functions, for comparison.} In the same runs and on all $32$ streams, the unselected average
+of the four plaquette marks of one coarse plaquette gives $.0473(5)$ on A and $.0893(9)$ on B, and a single
+plaquette mark gives $.0611(4)$ on A.
 
-(ii) \emph{No lowest value is indicated.} The spans are nested, so the smallest quotient of a span cannot
-increase as it grows; what is measured is the size of the steps. The rule fixed before the run compared
-successive entries as if independent and called the decrease stopped when they differ by less than two
-combined standard errors. By that rule the decrease stopped after $49$ marks on A and did not stop on B. The
-entries of a row share their streams, however, and the paired differences, which the rule did not use, are
-$38$, $15$ and $12$ standard errors on A and $9$, $6$ and $15$ on B. On B the last step is the largest. The
-ratio of the two rows, about $2.8$, is for these spans only.
+\emph{{\upshape(i)} Where the weight of the selected combination lies.} In the $308$-mark span on A, $81$ per cent of
+the sum of its squared coefficients, each scaled by the standard deviation of its mark, belongs to the three
+coarse plaquettes with holonomy $-I$.
 
-(iii) \emph{Displaced backgrounds: a few points, not an interval.} With the frozen holonomy at round distance
-$1/\beta$ from $-I$, the same $15$ marks give $.0207(2)$, against $.0216(5)$ at $-I$ in a separate, earlier
-run of the same design. For the single plaquette mark, the ratio of the quotient at distance $2/\beta$ to that
-at $-I$ is $1.016(11)$ in a first run and $1.004(11)$ in a second run whose rules were registered beforehand;
-at $4/\beta$ it is $1.075(11)$. For the four-mark average the ratio at $2/\beta$ is $1.034(13)$. Two checks
-failed: the hot-against-cold check of the first run at $2/\beta$ ($2.7$ standard errors; it had been reported
-as passed because of an error in the reduction program, since repaired), and one of the four burn-in checks
-of the second run, in which all four drifts have the same sign. These points indicate that quotients like
-those at $-I$ are also found at distances of order $1/\beta$; they do not determine how far. For
-comparison, the bound of Theorem~\ref{t:ret} at this coupling is $p_{6\beta}(\theta)\approx0.02$, $0.15$,
-$0.39$ and $0.93$ at $\theta=0.1$, $0.2$, $1/\beta$ and $2/\beta$: it is small only well inside the distances
-tried.
+\emph{Caveats.} Four exact linear relations among these marks were removed and the coefficients of least norm
+taken, so the share depends on that convention. The marks are also correlated, so this is a statement about
+coefficients and not a decomposition of the variance. On B the selected direction is less stable: for the
+$49$-mark span the directions selected on the two halves of the streams have cosine $0.41$.
+
+\emph{{\upshape(ii)} No lowest value is indicated.} The spans are nested, so the smallest quotient of a span
+cannot increase as it grows; what is measured is the size of the steps.
+\begin{itemize}
+\item \emph{By the rule fixed before the run.} The rule compared successive entries as if independent and
+called the decrease stopped when they differ by less than two combined standard errors. By that rule the
+decrease stopped after $49$ marks on A and did not stop on B.
+\item \emph{By paired differences, which the rule did not use.} The entries of a row share their streams,
+however, and the paired differences are $38$, $15$ and $12$ standard errors on A and $9$, $6$ and $15$ on B.
+On B the last step is the largest.
+\end{itemize}
+The ratio of the two rows, about $2.8$, is for these spans only.
+
+\emph{{\upshape(iii)} Displaced backgrounds: a few points, not an interval.} Here the frozen holonomy is at a
+stated round distance from $-I$.
+\begin{itemize}
+\item \emph{The same $15$ marks.} At distance $1/\beta$ they give $.0207(2)$, against $.0216(5)$ at $-I$ in a
+separate, earlier run of the same design.
+\item \emph{The single plaquette mark.} The ratio of the quotient at distance $2/\beta$ to that at $-I$ is
+$1.016(11)$ in a first run and $1.004(11)$ in a second run whose rules were registered beforehand; at
+$4/\beta$ it is $1.075(11)$.
+\item \emph{The four-mark average.} The ratio at $2/\beta$ is $1.034(13)$.
+\end{itemize}
+
+\emph{Checks that failed.} Two checks failed:
+\begin{itemize}
+\item the hot-against-cold check of the first run at $2/\beta$ ($2.7$ standard errors; it had been reported
+as passed because of an error in the reduction program, since repaired);
+\item one of the four burn-in checks of the second run, in which all four drifts have the same sign.
+\end{itemize}
+
+\emph{Reading.} These points are compatible with the view that quotients like those at $-I$ are also found at distances of order
+$1/\beta$; they do not determine how far.
+
+\emph{Comparison with the proved bound.} The bound of Theorem~\ref{t:ret} at this coupling is
+$p_{6\beta}(\theta)\approx0.02$, $0.15$, $0.39$ and $0.93$ at $\theta=0.1$, $0.2$, $1/\beta$ and $2/\beta$: it
+is small only well inside the distances tried.
 
 \subsection{Carry-over in time of the locally slow combination}\label{s:time}
 \emph{Question.} Is the combination that the local updates relax most slowly also slow to change in time?
 
-\emph{Setup.} Same lattice, coupling and frozen slice (background A); $32$ fresh streams, $16$ for fitting
-and $16$ held out. The later slices are not frozen. The $308$-mark combination selected above was regressed on
-the same $308$ marks one time slice later, in two gauge-invariant forms: with reference directions taken on
-the later slice, and with the later marks transported back along time-like links to the frozen reference (a
-mark of the second form is not a function of the later slice alone). The rule fixed before the runs had three
-outcomes: persistence, if the held-out coefficient of determination exceeds $0.1$ and exceeds that on
-background B by three standard errors; no persistence, if it is below $0.02$ with error below $0.01$;
-otherwise unresolved.
+\emph{What we found.} A clause of the rule fixed before the runs is met formally, but we draw no verdict
+from it. For
+this one combination on this one frozen slice, the linear predictors that were tried recovered, in these estimates, at most a few
+per cent of its variance one slice later. This is not a measurement of Hypothesis~\ref{h:mix}.
 
-\emph{Result under the rule.} The values are $-0.013(2)$ and $-0.002(2)$ in the two forms (errors over the
-held-out streams with the fitted coefficients fixed; the uncertainty of the fit is not included). With $308$
-regressors and $18432$ fitting measurements an uncorrelated target gives about $-0.017$, and the same fit at a
-lag of three slices, where no correlation is seen, gives $-0.016(2)$ and $-0.019(2)$. The second clause of the
-rule is therefore met formally, but with this offset it cannot exclude a coefficient of determination up to
-about $0.03$, and we draw no verdict from it.
+\emph{Setup.} Lattice, background and streams are in Table~\ref{tab:runs}. The $308$-mark combination
+selected above was regressed on the same $308$ marks one time slice later, in two gauge-invariant forms:
+\begin{itemize}
+\item the \emph{later-slice form}, with reference directions taken on the later slice;
+\item the \emph{transported form}, with the later marks transported back along time-like links to the frozen
+reference (a mark of this form is not a function of the later slice alone).
+\end{itemize}
+The rule fixed before the runs had three outcomes:
+\begin{itemize}
+\item persistence, if the held-out coefficient of determination exceeds $0.1$ and exceeds that on
+background B by three standard errors;
+\item no persistence, if it is below $0.02$ with error below $0.01$;
+\item otherwise unresolved.
+\end{itemize}
 
-\emph{Outside the rule} (chosen after the data were seen). A fit on $15$ marks in the transported form gives
-$0.011(2)$ at lag $+1$ and $0.005(2)$ at lag $-1$, which estimate the same quantity. The correlation of the
-combination with its own copy one slice later (all $32$ streams) is $0.083(6)$ in the transported form and
-$0.022(4)$ in the later-slice form, and $0.016(6)$ in the transported form at two slices. On background B the
-combination selected there gives $0.032(5)$ and $-0.003(6)$. The unselected four-mark average gives $0.076(5)$
-on A and $0.009(6)$ on B in the transported form, so the larger correlation on A is not particular to the
-selected combination. The result files of this run are not in the deposit; these numbers are those of the
-run's report~\cite{RepoData}.
+\emph{Result under the rule.} The values are $-0.013(2)$ in the later-slice form and $-0.002(2)$ in the transported form (errors over the
+held-out streams with the fitted coefficients fixed; the uncertainty of the fit is not included).
 
-\emph{Reading.} For this one combination on this one frozen slice, the linear predictors that were tried
-recover at most a few per cent of its variance one slice later. The later slice is not frozen, so its coarse
-background is not the one for which the combination was selected. The test is a correlation conditional on
-the coarse links of one slice. In the later-slice form it is a lower trial value for the conditional maximal
-correlation of Proposition~\ref{p:pred} on this one coarse field; it is not a matrix element of the transfer
-operator and it is not a measurement of Hypothesis~\ref{h:mix}. It does not bound the best prediction from the later slice, and it does not exclude
-other combinations that propagate slowly. The local quotient and a correlation over one time step are not on
-a common scale, so the two are not compared. The distinction between Hypothesis~\ref{h:mix} and the auxiliary
-statement is the logical one of Section~\ref{s:arch}; this measurement neither supports nor contradicts
-either.
+\emph{Why no verdict is drawn.} With $308$ regressors and $18432$ fitting measurements an uncorrelated target
+gives about $-0.017$, and the same fit at a lag of three slices, where no correlation is seen, gives
+$-0.016(2)$ and $-0.019(2)$ in the same order. The second clause of the rule is therefore met formally, but with this offset it
+cannot exclude a coefficient of determination up to about $0.03$, and we draw no verdict from it.
+
+\emph{Outside the rule} (chosen after the data were seen).
+\begin{itemize}
+\item A fit on $15$ marks in the transported form gives $0.011(2)$ at lag $+1$ and $0.005(2)$ at lag $-1$,
+which estimate the same quantity.
+\item The correlation of the combination with its own copy one slice later (all $32$ streams) is $0.083(6)$
+in the transported form and $0.022(4)$ in the later-slice form, and $0.016(6)$ in the transported form at two
+slices.
+\item On background B the combination selected there gives $0.032(5)$ in the transported form and
+$-0.003(6)$ in the later-slice form.
+\item The unselected four-mark average gives $0.076(5)$ on A and $0.009(6)$ on B in the transported form, so,
+in these estimates, the larger correlation on A is not particular to the selected combination.
+\end{itemize}
+The result files of this run are not in the deposit; these numbers are those of the run's
+report~\cite{RepoData}.
+
+\emph{What this does not show.}
+\begin{itemize}
+\item The later slice is not frozen, so its coarse background is not the one for which the combination was
+selected.
+\item The test is a correlation conditional on the coarse links of one slice, not a matrix element of the
+transfer operator. In the later-slice form it is a lower trial value for the conditional maximal correlation
+of Proposition~\ref{p:pred} on this one coarse field.
+\item It does not bound the best prediction from the later slice, and it does not exclude other combinations
+that propagate slowly.
+\item The local quotient and a correlation over one time step are not on a common scale, so the two are not
+compared.
+\item The distinction between Hypothesis~\ref{h:mix} and the auxiliary statement is the logical one of
+Section~\ref{s:arch}; this measurement neither supports nor contradicts either.
+\end{itemize}
 
 \subsection{Comparison across a factor of two in the mesh}\label{s:cross}
 \emph{Question.} Does a function of the coarse links decay in time on the fine lattice as it does on the
 coarse one?
 
-\emph{Setup.} Sides $N=5$ and $N=10$ at couplings $3.196581051$ and $3.493705679$ (matched at a fixed
-renormalised coupling), time extents two and four times the side, and a common physical lag (one and two time
-steps). The tests are functions of the coarse links of side $10$, and the same functions of the links of side
-$5$. For a test $f$ let $\mathsf R(f)=1-C_f(\mathrm{lag})/C_f(0)$ with $C_f$ its connected two-time
-correlation, so that $1-\mathsf R$ is the correlation retained over the lag, and let
-$\mathcal E_N(f)=C_f(0)-C_f(\mathrm{lag})$ on the lattice of side $N$ be its two-time energy.
-\begin{enumerate}
-\item \emph{Unnormalised energies.} In a first span of $16$ slice-averaged functions ($16$ streams per
-lattice, $500$ measurements each, half of the streams used for selection), the test selected to minimise the
-ratio of energies has, on the $8+8$ held-out streams, $\mathcal E_{10}=0.00407(5)\,\mathcal E_5$. This is the
-ratio of its stationary variances, $0.0034$, times the ratio of its quotients, $1.21$: the function has a much
-smaller variance on the finer lattice and decays slightly faster there. An inequality
-$\mathcal E_{10}(f)\ge c\,\mathcal E_5(f)$ with $c$ of order one therefore fails for this function on this
-pair as a matter of normalisation, and a comparison of deficits must account for the change of variance. In
-this span no test had a quotient ratio below one.
-\item \emph{Normalised quotients.} A second study, designed after the first was seen, used new streams ($16$
-per lattice, $2000$ measurements each), a span of $54$ functions ($48$ linearly independent among the
-slice-averaged ones on the selection streams) and five classes of test. Of the $25$ tests
-fixed on the selection streams, one, selected to minimise $\mathsf R_{10}/\mathsf R_5$ among slice-averaged
-functions, has a ratio below one on the $8+8$ held-out streams: $\mathsf R_5=0.990(3)$,
-$\mathsf R_{10}=0.932(4)$, ratio $0.941(5)$. The other $24$ have ratio plus two standard errors above one. The
-same fixed test on ensembles of twice the time extent, which share no stream with the selection ($16+16$
-streams; $1000$ measurements per stream on side $10$), gives $\mathsf R_5=0.996(1)$, $\mathsf R_{10}=0.932(2)$,
-ratio $0.936(3)$. So this test retains about $7$ per cent of its correlation over the lag on the finer lattice
-and between $0.4$ and $1$ per cent on the coarser. The rule fixed in advance reads off the ratio plus two
-standard errors on both pairs, $0.951$ and $0.941$: for this test, on this pair, at these couplings, the
-estimates do not support $\mathsf R_{10}\ge\alpha\,\mathsf R_5$ with $\alpha>0.951$. The figure is two jackknife
-standard errors over few streams, not a confidence limit at a stated level, and it inherits the coupling
-match.
-\item \emph{An unexplained discrepancy.} For a different statistic on the same finer lattice, an earlier and
-shorter run by another program in~\cite{RepoData} gives $0.0041(7)$ where these ensembles give $0.0016(1)$,
-$3.4$ combined standard errors apart. The cause is not determined.
-\item \emph{What this does not show.} Hypothesis~\ref{h:coarse} compares the smallest deficits on the two
-lattices, not the values of one test, and $\varepsilon_i$ is an allowed loss in that comparison. One test cannot measure
-it, and this result is neither evidence for nor against the hypothesis. The lattices have periodic time of
-finite extent and are not the vacuum; one pair of sides, one renormalised coupling and one lag were used. The
-first span contained no such test, so the outcome depends on the span, and a larger span could change it
-again.
-\end{enumerate}
+\emph{What we found.} The unnormalised comparison of energies fails for the selected test, because its variance differs
+between the two lattices. With normalisation, a test of the second study has a quotient ratio below
+one, on held-out streams and again on longer ensembles; the other tests fixed there do not, at the stated
+margin. A discrepancy between programs is unexplained. None of this measures
+Hypothesis~\ref{h:coarse}.
+
+\emph{Setup.} Lattices, couplings and streams are in Table~\ref{tab:runs}. The tests are functions of the
+coarse links of side $10$, and the same functions of the links of side $5$. For a test $f$ let
+\[
+\mathsf R(f)=1-C_f(\mathrm{lag})/C_f(0),\qquad \mathcal E_N(f)=C_f(0)-C_f(\mathrm{lag}),
+\]
+with $C_f$ its connected two-time correlation. So $1-\mathsf R$ is the correlation retained over the lag, and
+$\mathcal E_N(f)$, taken on the lattice of side $N$, is its two-time energy.
+
+\emph{{\upshape(i)} Unnormalised energies.} In a first span of $16$ slice-averaged functions, the test
+selected to minimise the ratio of energies has, on the held-out streams,
+$\mathcal E_{10}=0.00407(5)\,\mathcal E_5$. This is the ratio of its stationary variances, $0.0034$, times the
+ratio of its quotients, $1.21$: the function has a much smaller variance on the finer lattice and decays
+slightly faster there. An inequality $\mathcal E_{10}(f)\ge c\,\mathcal E_5(f)$ with $c$ of order one
+therefore fails, in these estimates, for this function on this pair as a matter of normalisation, and a comparison of deficits
+must account for the change of variance. In this span no test had a quotient ratio below one.
+
+\emph{{\upshape(ii)} Normalised quotients.} The second study used a span of $54$ functions ($48$ linearly
+independent among the slice-averaged ones on the selection streams) and five classes of test. Of the $25$
+tests fixed on the selection streams, one has a ratio below one on the held-out streams: the test selected to
+minimise $\mathsf R_{10}/\mathsf R_5$ among slice-averaged functions. The other $24$ have ratio plus two
+standard errors above one. The same fixed test was then evaluated on the longer ensembles.
+Table~\ref{tab:cross} gives both evaluations.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Evaluation of the one fixed test & $\mathsf R_5$ & $\mathsf R_{10}$ & ratio & ratio plus two standard errors \\
+\midrule
+held-out streams of the second study & $0.990(3)$ & $0.932(4)$ & $0.941(5)$ & $0.951$ \\
+longer ensembles & $0.996(1)$ & $0.932(2)$ & $0.936(3)$ & $0.941$\rlap{$^{*}$} \\
+\bottomrule
+\end{tabular}
+\caption{The test selected to minimise $\mathsf R_{10}/\mathsf R_5$, evaluated with its coefficients fixed.
+Estimates with jackknife errors over the streams of Table~\ref{tab:runs}; not bounds. $^{*}$Computed from
+unrounded values ($0.93574+2\times0.00271$).}\label{tab:cross}
+\end{table}
+
+So, in these estimates, this test retains about $7$ per cent of its correlation over the lag on the finer lattice and between
+$0.4$ and $1$ per cent on the coarser. The rule fixed in advance reads off the last column on both pairs: for
+this test, on this pair, at these couplings, the estimates do not support
+$\mathsf R_{10}\ge\alpha\,\mathsf R_5$ with $\alpha>0.951$.
+
+\emph{Caveat on that figure.} It is two jackknife standard errors over few streams, not a confidence limit at
+a stated level, and it inherits the coupling match.
+
+\emph{A check that failed: an unexplained discrepancy.} For a different statistic on the same finer lattice,
+an earlier and shorter run by another program in~\cite{RepoData} gives $0.0041(7)$ where these ensembles give
+$0.0016(1)$, $3.4$ combined standard errors apart. The cause is not determined.
+
+\emph{What this does not show.}
+\begin{itemize}
+\item Hypothesis~\ref{h:coarse} compares the smallest deficits on the two lattices, not the values of one
+test, and $\varepsilon_i$ is an allowed loss in that comparison. One test cannot measure it, and this result
+is neither evidence for nor against the hypothesis.
+\item The lattices have periodic time of finite extent and are not the vacuum; one pair of sides, one
+renormalised coupling and one lag were used.
+\item The first span contained no such test, so the outcome depends on the span, and a larger span could
+change it again.
+\end{itemize}
 
 \section{Machine-checked parts}\label{s:lean}
 Two Lean~4 files with Mathlib accompany the paper~\cite{RepoLean} (Lean 4.19.0, Mathlib v4.19.0); both compile with no \texttt{sorry} and use
@@ -911,7 +1063,7 @@ among such sessions, within one family or across two, is not peer review.
 \section{What remains}\label{s:rem}
 Table~\ref{tab:status} lists the numbered statements and the steps of Figure~\ref{f:arch} with their status. To turn Figure~\ref{f:arch} into a proof of a
 mass gap by this route one would need, at least: Hypothesis~\ref{h:mix}, with gates wide enough to contain
-whatever backgrounds turn out to have slow decay in time (none has been identified: Section~\ref{s:local}
+whatever backgrounds, if any, have slow decay in time (none has been identified: Section~\ref{s:local}
 concerns the local updates only, on two backgrounds) and still within the budget of Hypothesis~\ref{h:budget};
 Hypothesis~\ref{h:coarse}; estimates uniform in the physical volume; the identification of the limiting
 semigroup with the Hamiltonian of a continuum theory satisfying the axioms, for which~\cite{OAI} is a
@@ -921,7 +1073,7 @@ right one.
 
 \begin{table}[ht]
 \centering\small
-\begin{tabular}{@{}p{0.36\textwidth}p{0.58\textwidth}@{}}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.38\textwidth}>{\raggedright\arraybackslash}p{0.56\textwidth}@{}}
 \toprule
 Statement & Status \\
 \midrule
@@ -941,10 +1093,12 @@ Finite mass; all compact simple groups & open; not addressed \\
 Mass gap & not proved \\
 \bottomrule
 \end{tabular}
-\caption{Status of the numbered statements and of the steps of Figure~\ref{f:arch}.}\label{tab:status}
+\caption{Status of the numbered statements and of the steps of Figure~\ref{f:arch}. ``Proved'' means that a
+proof is written in this paper; none has been independently reviewed (Section~\ref{s:disc}).}\label{tab:status}
 \end{table}
 
-Two other manuscripts from the same project are in the repository~\cite{Repo} and are not used here: an
+Two other manuscripts from the same project are in the repository~\cite{Repo} and are not used here; neither has
+been independently reviewed. They are: an argument for an
 upper bound on the gap of four-dimensional $\SU(2)$ lattice gauge theory in lattice units at weak coupling,
 along infinite-volume limits of periodic states; and results on a reduced model, the theory on a single
 spatial site.

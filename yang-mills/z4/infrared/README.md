@@ -1,10 +1,10 @@
 # Spectral criteria and conditional infrared estimates (manuscript)
 
-**Current state: fifth draft with later additions, 24 November 2026, 19 pages** (`main.tex`, `main.pdf`). Earlier drafts are `main_draft1.tex` to `main_draft4.tex`. This is a rough draft under revision. It states what is proved, what is conditional and what is open. It does not claim a mass gap, and no reader outside the two model families, and no person other than the author, has checked it.
+**Current state: sixth draft, 24 November 2026, 21 pages** (`main.tex`, `main.pdf`). Earlier drafts are `main_draft1.tex` to `main_draft5.tex`. This is a rough draft under revision. It states what is proved, what is conditional and what is open. It does not claim a mass gap, and no reader outside the two model families, and no person other than the author, has checked it.
 
 It is a separate manuscript from the upper-bound paper in `../attempt/paper/`, which is unchanged.
 
-## Statement-to-proof ledger (fifth draft)
+## Statement-to-proof ledger (sixth draft)
 
 | Statement | Domain | Proof | Origin | Checks (none is independent review) |
 |---|---|---|---|---|
@@ -31,6 +31,17 @@ Paths in the last column are under `../attempt/reviews/`. Lean statement digests
 - Theorems 1.1 and 1.3, Lemma 6.2, Propositions 4.2 and 6.3 and Corollary 6.4 are not formalised.
 
 # History of the drafts
+
+## Sixth draft (24 November)
+
+A first-time-reader review of the fifth draft (`../attempt/reviews/read5/report.md`, sub-agent of the same family) supplied a replacement abstract, introduction and Measurements section; the director read them, adjusted them and spliced them in. No theorem, number or claim was added or removed in the Measurements section (its 162 numerals were compared by script before and after; the later edits only add two clarifying values, 1.14 and the unrounded 0.93574 + 2 x 0.00271).
+
+- **Opening.** The paper starts from a supposition and two numbered questions, defines "mass gap" in one sentence, and says in its own paragraph that no gap is proved. The refinement idea is told once, as suppositions (a), (b), (c), and the theorem's hypotheses are mapped to them.
+- **Measurements.** A table of runs carries the designs; each subsection runs Question, What we found, Setup, results, failed checks, what this does not show. The two forms of the time test are now named with each value.
+- **Wording that could be read as a claim** (17 places listed by the reader) qualified: "one of the three is proved" now says for exceptional sets of a particular kind; estimates are marked as estimates; the status table says what "proved" means here.
+- **Layout.** Caption spacing, ragged-right status table, wider figure boxes.
+
+Not done from that report: turning Remarks 4.1 and 6.5 into lists; several undefined-at-first-use terms outside the introduction (colour classes, slabs, tilt); remaining letter clashes (A as operator and as background, r, C, E).
 
 ## Fifth draft (24 November)
 
