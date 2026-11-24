@@ -818,7 +818,8 @@ We cannot estimate the distance to any of these, and we do not know that this ro
 Statement & Status \\
 \midrule
 Theorem~\ref{t:crit}, Proposition~\ref{p:three} & proved (Section~\ref{s:crit}) \\
-Theorem~\ref{t:inh}, Corollary~\ref{c:acc} & proved; a finite-dimensional special case and scalar steps checked in Lean \\
+Theorem~\ref{t:inh}, Remark~\ref{r:lag} & proved; checked in Lean on finite-dimensional real spaces \\
+Corollary~\ref{c:acc} & proved; its inequality checked in Lean \\
 Theorem~\ref{t:ret} & proved; $\SU(2)$, periodic time \\
 Lemma~\ref{l:scal}, Lemma~\ref{l:cap} & proved; Lemma~\ref{l:scal} checked in Lean \\
 Lemma~\ref{l:trace}, Proposition~\ref{p:vac}, Corollary~\ref{c:vac} & proved, $\beta>0$ (positive character coefficients, Peter--Weyl) \\
@@ -1249,15 +1250,21 @@ links and whose variances it does not control.
 \end{remark}
 
 \section{Machine-checked parts}\label{s:lean}
-Two Lean~4 files with Mathlib accompany the paper (Supplement~S7; Lean 4.19.0, Mathlib v4.19.0); both compile with no \texttt{sorry} and use
+Three Lean~4 files with Mathlib accompany the paper (Supplement~S7; Lean 4.19.0, Mathlib v4.19.0); all compile with no \texttt{sorry} and use
 only the axioms \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}.
 \begin{itemize}
+\item \texttt{Discrete.lean}: Theorem~\ref{t:inh} as stated, together with the longer lag of
+Remark~\ref{r:lag}, on every finite-dimensional real inner product space. The formal statement
+(\texttt{refinement\_fin}) takes an arbitrary symmetric linear map $A$ with $0\le\langle w,Aw\rangle\le\|w\|^2$,
+which may have a kernel, self-adjoint idempotent maps $P$ and $B$ with $BP=0$, integers $k$, $m\ge1$ and
+$j\le m$, and the three inequalities~\eqref{e:hyp} with $A^{2k}$ in the first, and concludes
+$\|A^mw\|\le\big(1-(b-\kappa)_+/(1+2k/(\gamma m))\big)\|w\|$ for every $w$. The eigenbasis comes from the
+spectral theorem of Mathlib and is not assumed. Infinite-dimensional and complex spaces are not formalised.
 \item \texttt{Inheritance.lean}: Lemma~\ref{l:scal} for real exponents; the scalar conclusion of
 Theorem~\ref{t:inh}; the inequality of Corollary~\ref{c:acc} (not its statement about boundedness of the
 products, nor the limit inferior); and Theorem~\ref{t:inh} in the special case of a real finite-dimensional
 space with $A=e^{-aH}$ injective, $H$ given by an orthonormal eigenbasis and non-negative eigenvalues. The
-three inequalities~\eqref{e:hyp} are hypotheses of the formal statement. The general case proved above
-(infinite dimension; $A$ with a kernel) is not formalised. The formal statement has real times $t>0$,
+three inequalities~\eqref{e:hyp} are hypotheses of the formal statement. This earlier file is superseded for the theorem by \texttt{Discrete.lean}. Its formal statement has real times $t>0$,
 $\tau\le t$ and $a\ge0$, hypotheses for $e^{-2aH}$, $e^{-\tau H}$ and $e^{-tH}$, and denominator
 $1+2a/(\gamma t)$; Theorem~\ref{t:inh} for $A=e^{-aH}$ is the case $t=ma$, $\tau=ja$. The file also checks the
 example of Remark~\ref{r:reset}.
@@ -1268,7 +1275,7 @@ formalised.
 \end{itemize}
 Theorems~\ref{t:crit} and~\ref{t:ret}, Propositions~\ref{p:three} and~\ref{p:vac}, Lemma~\ref{l:trace} and
 Corollary~\ref{c:vac} are not formalised.
-The two files contain $30$ theorems. For the $11$ cited above, a digest of the statement text is recorded
+The three files contain $45$ theorems. For $16$ of them, those cited above and their main lemmas, a digest of the statement text is recorded
 with the digests of the files (Supplement~S7), so that a later change of a statement or a file can be
 detected; a digest of a statement does not cover the definitions it depends on.
 

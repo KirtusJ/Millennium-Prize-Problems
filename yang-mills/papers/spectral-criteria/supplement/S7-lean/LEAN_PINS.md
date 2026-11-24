@@ -78,3 +78,15 @@ Toolchain `leanprover/lean4:v4.19.0` (Lean 4.19.0, commit 6caaee842e94), Mathlib
 - `c_second_pos` assumes `w < 2`; the paper's proof supplies `w < 3/2` (`c_w_lt`). Consistent.
 - This rerun is internal checking within one model family and one toolchain. It shows that the files compile
   and that the statements are the pinned ones. It does not show that the paper's proofs are correct.
+
+## Added 24 November 2026: `Discrete.lean`
+
+The refinement theorem in its discrete form, for an arbitrary symmetric contraction on a finite-dimensional real inner product space (kernel allowed, general lag `2k`). File SHA-256 `8706286bd607ea69005a8e3859726c190078fa4033a2ed72ae760c035d7e9c78`. Compiled with Lean 4.19.0 and Mathlib v4.19.0: exit 0, no `sorry`, no warning, `#print axioms` gives `[propext, Classical.choice, Quot.sound]` for all five declarations printed. Each statement below was run through the same instrument with its pin (exit 0, digest equals the pin, three probes clear) and with a wrong pin (exit 1). Written and run by the same model family that wrote the paper's proof; this is a machine check of the stated formal statement, not a review of whether that statement is the right one.
+
+| File | Theorem | SHA-256 of the statement (pinned) | With pin | Wrong pin |
+|---|---|---|---|---|
+| `Discrete.lean` | `Discrete.refinement_fin` | `5af97e33c656ad19f48e05ab409eab58d49d5bb02bcefddacf2b455b589faefe` | exit 0 | exit 1 |
+| `Discrete.lean` | `Discrete.refinement_norm` | `1b9e104c16cc89e3fdde0c79ec8f85f7c84d03dd2e4469e148c03bc7b5e795b6` | exit 0 | exit 1 |
+| `Discrete.lean` | `Discrete.refinement_main` | `b8e952df34480c2fb532cd5f0e07e4080e5ad239e4bcc510ca53b88d4b1fcb9f` | exit 0 | exit 1 |
+| `Discrete.lean` | `Discrete.pow_eq_Apow` | `d57faeeaa57896d810bbecbe01842c6a667305f272d5929376a711e2dd3bbaed` | exit 0 | exit 1 |
+| `Discrete.lean` | `Discrete.Apow_norm_le` | `9e875e716958dc411048719d481debf1c2d7a926ba1380ea2413b8a571696c56` | exit 0 | exit 1 |

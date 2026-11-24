@@ -1,0 +1,5 @@
+'Discrete.refinement_main' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Discrete.refinement_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Discrete.Apow_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Discrete.Apow_eig' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Discrete.refinement_fin' depends on axioms: [propext, Classical.choice, Quot.sound]
