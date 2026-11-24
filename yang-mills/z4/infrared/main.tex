@@ -82,7 +82,8 @@ d\ \ge\ \frac{(b-\kappa)_+}{1+2a/(\gamma t)} .
 \end{equation}
 \end{theorem}
 
-In the application $\mathcal K$ consists of the centred functions of a time slice of the fine lattice, $S_s$
+In the application $\mathcal K$ consists of the centred gauge-invariant functions of a time slice of the
+fine lattice, $S_s$
 is the transfer semigroup in the vacuum representation at times $s$ that are multiples of the mesh $a$, $P$
 is the conditional expectation given the coarse links, and $B$ is the part of $Q$ carried by an exceptional
 set of coarse fields. The proof uses only the spectral calculus of $S_a$, so nothing changes when time is
@@ -104,7 +105,7 @@ and $p_k(\theta)\le\min\{1,\ \tfrac{\pi^2\sqrt e}{4}(1+k)^{3/2}\theta^3\}$.
 \end{theorem}
 
 The bound does not depend on the spatial volume, on the time separation or on the rest of the field.
-Corollary~\ref{c:vac} carries it to the vacuum on an infinite time axis at fixed spatial lattice, where it
+Corollary~\ref{c:vac} carries it to the vacuum on an infinite time axis at fixed spatial lattice, where, on the gauge-invariant functions, it
 becomes the second inequality of~\eqref{e:hyp}; that step uses the transfer-matrix representation
 of~\cite{Lu77,OS78}, which we cite and do not rederive.
 
@@ -161,11 +162,14 @@ with $U_p$ the ordered product of the four links of $p$. A \emph{slice} is the c
 one time.
 
 \emph{Transfer operator.} At a fixed spatial lattice, $\mathsf L$ denotes the transfer operator
-of~\cite{Lu77,OS78} on $L^2$ of the slice configurations with Haar measure, $\Lambda_0$ its largest eigenvalue
-and $\Omega>0$ the corresponding eigenfunction. The \emph{vacuum representation} is $L^2(\Omega^2\,d\mathrm{Haar})$
-with $S_1f=\Lambda_0^{-1}\Omega^{-1}\mathsf L(\Omega f)$, a self-adjoint contraction with $S_11=1$, and
-$S_n=S_1^n$. As $\mathsf L$ is strictly positive, $S_1$ is positive and injective, and $S_n=e^{-nH}$ with
-$H=-\log S_1\ge0$ self-adjoint; time is counted here in lattice steps.
+of~\cite{Lu77,OS78}, with the time-like links integrated, on $L^2$ of the slice configurations with Haar
+measure. It is self-adjoint and positive semidefinite, it vanishes on the orthogonal complement of the
+gauge-invariant functions, and it is strictly positive on the gauge-invariant functions. $\Lambda_0$ is its
+largest eigenvalue and $\Omega>0$ the corresponding eigenfunction. The \emph{vacuum representation} is
+$L^2(\Omega^2\,d\mathrm{Haar})$ with $S_1f=\Lambda_0^{-1}\Omega^{-1}\mathsf L(\Omega f)$, a self-adjoint positive
+contraction with $S_11=1$, and $S_n=S_1^n$. On the closed subspace of gauge-invariant functions, which $S_1$
+preserves, $S_1$ is injective and $S_n=e^{-nH}$ with $H=-\log S_1\ge0$ self-adjoint; Theorem~\ref{t:inh} is
+used on this subspace. Time is counted here in lattice steps.
 
 \emph{Coarse links.} For even $N$, the coarse links of a slice are the products of two consecutive fine
 spatial links between sites with even coordinates. A function of a slice is \emph{coarse-measurable} if it
@@ -205,8 +209,9 @@ $\mathsf R(f)$ & two-time quotient $1-C_f(\text{lag})/C_f(0)$ & Section~\ref{s:c
 \section{Architecture}\label{s:arch}
 Figure~\ref{f:arch} shows how the statements relate. Solid boxes are proved in this paper. Dashed boxes are
 open. The dotted box is an external result that we cite and have not verified. An arrow means that the
-statement at its tail is an input of the statement at its head. Theorem~\ref{t:inh} is an implication: its
-conclusion is available only where all its inputs are, and three of them are open. Nothing below it in the
+statement at its tail is an input of the statement at its head. The route through Theorem~\ref{t:inh} and
+Corollary~\ref{c:acc} is an implication: its conclusion is available only where all its inputs are, and three
+of them are open. Nothing below it in the
 figure is proved. The route through Theorem~\ref{t:inh} is one sufficient route to a gap in a box; it is not
 the only way in which the criterion of Theorem~\ref{t:crit} could be met, and a direct estimate of the
 moments $d_{v,n}$ in the continuum theory would bypass it.
@@ -330,8 +335,8 @@ projection onto the kernel of $H$; the matrix elements $\langle v,e^{-n\tau H}w\
 since the vacuum contributes a constant. (b) A polynomial bound on the low-energy weight,
 $\mu_v((0,s])\le Cs^p$, does not give (2) for any $r<1$. (c) In a theory with several pure phases the criterion
 may be applied in one component; a gap there says nothing about the others. (d) The criterion is on the
-diagonal, for single vectors, and positivity is what excludes cancellation; a test on finitely many vectors
-can refute a proposed rate and cannot establish a gap.
+diagonal, for single vectors, and positivity is what excludes cancellation; in infinite dimension a test
+on finitely many vectors can refute a proposed rate and cannot establish a gap.
 \end{remark}
 
 \section{The refinement inequality}\label{s:inh}
@@ -380,7 +385,8 @@ $\liminf_nd_n>0$.
 \end{corollary}
 \begin{proof}
 $M_id_i\ge M_{i-1}(b_i-\kappa_i)\ge M_{i-1}d_{i-1}-M_{i-1}(\varepsilon_i+\kappa_i)$; sum over $i$. The product of
-factors $1+c_i$ with $c_i>0$ is bounded exactly when $\sum c_i<\infty$.
+factors $1+c_i$ with $c_i>0$ is bounded exactly when $\sum c_i<\infty$. Under Hypothesis~\ref{h:budget} the
+partial sums of the budget converge to a limit $s<d_0$, so $\liminf_nd_n\ge(d_0-s)/\sup_nM_n>0$.
 \end{proof}
 
 \begin{remark}[The budget is needed]\label{r:budget}
@@ -436,8 +442,9 @@ $\tfrac{4}{\pi^2}e^{-1/2}\cdot\tfrac13(1+k)^{-3/2}$.
 
 \subsection{Passage to the vacuum}
 We use the following standard facts about the Wilson action at a fixed finite spatial
-lattice~\cite{Lu77,OS78}, without proof: there is a self-adjoint, strictly positive integral operator
-$\mathsf L$ with continuous, strictly positive kernel on $L^2$ of the slice configurations, such that for
+lattice~\cite{Lu77,OS78}, without proof: there is a self-adjoint, positive semidefinite integral operator
+$\mathsf L$ with continuous, strictly positive kernel on $L^2$ of the slice configurations, strictly positive
+as an operator on the gauge-invariant functions, such that for
 bounded functions $f_0,\dots,f_{T-1}$ of a slice the periodic expectation is
 \begin{equation}\label{e:trace}
 \E_T\Big[\prod_{s}f_s(x_s)\Big]=\frac{\Tr\big(M_{f_0}\mathsf L\,M_{f_1}\mathsf L\cdots M_{f_{T-1}}\mathsf L\big)}{\Tr(\mathsf L^T)},
@@ -474,8 +481,8 @@ $L^2(\Omega^2)$ and $B=R(I-P)$, then $B$ is an orthogonal projection with range 
 $\|BS_nB\|\le p_{6\beta}(\theta)$.
 \end{corollary}
 \begin{proof}
-For bounded $g$ and $h=\mathbf 1_{A_\theta}g$, apply~\eqref{e:ret} with $T>n$ and let $T\to\infty$ using
-Proposition~\ref{p:vac} for both sides: $|\langle h,S_nh\rangle|\le p_{6\beta}(\theta)\|h\|^2$. Bounded functions
+For bounded $g$ and $h=\mathbf 1_{A_\theta}g$, apply~\eqref{e:ret} with $T>n+1$ and let $T\to\infty$ using
+Proposition~\ref{p:vac} for both sides (for the right side with $f=|h|^2$, $g=1$ and $j=1$, as $S_11=1$): $|\langle h,S_nh\rangle|\le p_{6\beta}(\theta)\|h\|^2$. Bounded functions
 are dense and $RS_nR$ is self-adjoint, so $\|RS_nR\|\le p_{6\beta}(\theta)$. The indicator of $A_\theta$ is
 coarse-measurable, so $R$ commutes with $P$; then $B=R(I-P)$ is a product of commuting projections, its range
 lies in those of $R$ and of $I-P$, and $BS_nB=B\,(RS_nR)\,B$.
@@ -489,12 +496,12 @@ $M=3(N/2)^3$ coarse plaquettes and the radius $\theta=c(1+6\beta)^{-1/2}N^{-4/3}
 $\theta\le\pi$. Then the bound is at most $\tfrac{3\pi^2\sqrt e}{32}\,c^3/N$, which is summable over dyadic $N$.
 (b) At $\beta=3.399810242$ the bound $p_{6\beta}(\theta)$ is $0.00307$, $0.156$ and $0.935$ for
 $\theta=0.05$, $0.2$ and $0.6$. The gates it controls usefully are narrow. (c) Corollary~\ref{c:vac} is the
-second inequality of~\eqref{e:hyp} with $\tau$ any positive multiple of the mesh. It is restricted to the
-gauge-invariant functions without change, since $S_n$, $R$ and $P$ commute with gauge transformations of the
-slice. (d) For a general compact group with the Wilson action normalised so that each plaquette term lies in
+second inequality of~\eqref{e:hyp} with $\tau$ any positive multiple of the mesh. Theorem~\ref{t:inh} is applied on the gauge-invariant functions, where $H$ exists; the bound restricts to
+them without change, since $S_n$, $R$ and $P$ commute with gauge transformations of the slice. (d) For a general compact group with the Wilson action normalised so that each plaquette term lies in
 $[-1,1]$, the conditional density of one link given the others is at most $e^{12\beta}$ times Haar measure,
-so for a conjugation-invariant set $A$ of holonomies the conditional probability of return is at most
-$\min\{1,e^{12\beta}\mu_{\mathrm{Haar}}(A)\}$. This crude bound shows that the mechanism is not tied to a
+so for a measurable set $A$ of holonomies (conjugation-invariant, so that the event does not depend on the
+base point) the event is a two-sided translate of $A$ for the link, and the conditional probability of return
+is at most $\min\{1,e^{12\beta}\mu_{\mathrm{Haar}}(A)\}$. This crude bound shows that the mechanism is not tied to a
 centre; it is far from the sharp $\SU(2)$ estimate and we make no use of it.
 \end{remark}
 
@@ -674,7 +681,7 @@ Statement & Status \\
 Theorem~\ref{t:crit} & proved (Section~\ref{s:crit}) \\
 Theorem~\ref{t:inh}, Corollary~\ref{c:acc} & proved; finite-dimensional case and scalar steps checked in Lean \\
 Theorem~\ref{t:ret} & proved; $\SU(2)$, periodic time \\
-Proposition~\ref{p:vac}, Corollary~\ref{c:vac} & proved from the cited transfer-matrix representation~\eqref{e:trace} \\
+Proposition~\ref{p:vac}, Corollary~\ref{c:vac} & proved from the cited transfer-matrix representation~\eqref{e:trace}; a referee's check on a toy model found that representation to hold for the gauge-averaged operator, as now stated \\
 Proposition~\ref{p:haar} & proved; scalar steps checked in Lean \\
 Hypothesis~\ref{h:mix} & open; not measured \\
 Auxiliary local mixing & open; trial values on two frozen backgrounds (Table~\ref{tab:local}) \\
