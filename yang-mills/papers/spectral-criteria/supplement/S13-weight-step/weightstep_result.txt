@@ -1,0 +1,5 @@
+instances 20000 ; right side of T4 positive in 11190 ; largest K 62196.107
+T1: failures 0, smallest slack 1.416e-03 : MET
+T2: failures 0, smallest slack 2.293e-01 : MET
+T3: failures 0, smallest slack 3.243e-04 : MET
+T4: failures 0, smallest slack 3.193e-04 : MET

@@ -779,6 +779,53 @@ in Lean for all non-zero inner product spaces, real or complex (Appendix~\ref{s:
 completeness.
 \end{remark}
 
+Hypothesis~\ref{h:mix} can be replaced by a statement about the low-energy weight of the fine detail alone
+(Remark~\ref{r:weight}), and then the step needs no rate and no lower bound on the gap given in advance.
+
+\begin{proposition}[A refinement step from a linear bound on the low-energy weight]\label{p:wstep}
+Let $H$ be a self-adjoint operator on a non-zero Hilbert space with $\inf\sigma(H)>0$ and spectral measure
+$E$, let $a>0$ and $A=e^{-aH}$, and let $P$, $B$, $G$ and the integers $m\ge j\ge1$ be as in
+Theorem~\ref{t:inh}, with $\|BA^jB\|\le\kappa$ and $\|PA^mP\|\le1-b$. Suppose there is a constant
+$c_{\mathrm w}\ge0$ with
+\begin{equation}\label{e:wlin}
+\big\|G\,E((0,u])\,G\big\|\ \le\ c_{\mathrm w}\,a\,u\qquad\text{for }0<u\le1/a .
+\end{equation}
+Then the deficit $d=1-\|A^m\|$ satisfies
+\[
+d\,\Big(1+\frac{3+c_{\mathrm w}\log(m/d)}m\Big)\ \ge\ b-\kappa ,
+\qquad\text{and hence}\qquad
+d\ \ge\ \frac{b-\kappa-c_{\mathrm w}/(e\,m)}{1+(3+c_{\mathrm w}\log m)/m}.
+\]
+\end{proposition}
+\begin{proof}
+Let $x=\inf\sigma(H)$ and $F(u)=\|GE((0,u])G\|$. Then $F(u)=0$ for $u<x$ and $F\le1$, so by the second
+inequality of Remark~\ref{r:weight}
+\[
+\|GH^{-1}G\|\ \le\ \int_x^{1/a}\frac{c_{\mathrm w}a}{u}\,du+\int_{1/a}^\infty\frac{du}{u^2}
+=a\big(1+c_{\mathrm w}\log\tfrac1{ax}\big)
+\]
+if $x\le1/a$, and $\|GH^{-1}G\|\le1/x<a$ otherwise. By Remark~\ref{r:forms}(a),
+$\|G(I-A^2)^{-1}G\|\le1+\|GH^{-1}G\|/(2a)$, so the first inequality of~\eqref{e:hyp} holds with
+$1/\gamma=\tfrac32+\tfrac12c_{\mathrm w}\log^+\!\big(1/(ax)\big)$. Theorem~\ref{t:inh} gives
+$d\,(1+2/(m\gamma))\ge b-\kappa$. Now $d=1-e^{-max}\le max$, so $1/(ax)\le m/d$, and $m/d\ge1$; this is the
+first claim. For the second, $\log(m/d)=\log m+\log(1/d)$ and $d\log(1/d)\le1/e$.
+\end{proof}
+
+The point of the logarithm is that the gap enters its own bound only through $\log(1/d)$, and
+$d\log(1/d)$ is bounded. Along a dyadic refinement with $m_i=t/a_i$ and one constant $c_{\mathrm w}$, the factors
+$K_i=1+(3+c_{\mathrm w}\log m_i)/m_i$ have a bounded product and the additional losses $c_{\mathrm w}/(e\,m_i)$
+are summable, so Corollary~\ref{c:acc} applies with $\kappa_i+c_{\mathrm w}/(e\,m_i)$ in place of
+$\kappa_i$. In this form the first hypothesis reads: at each regulator, a unit vector whose energies lie
+below $u$ has at most the fraction $c_{\mathrm w}\,a\,u$ of its squared norm in the fine detail off the
+gates. That is a statement about how well low-energy states are determined by the coarse field. It neither
+asks for a gap nor follows from one. In the free theory the soft photon has the fraction
+$0.911\,a\,u$ (Remark~\ref{r:weight}), and in the compact example of Appendix~\ref{app:free} the flux state has
+$0.35$ times its energy in lattice units; these are values on particular vectors, not bounds
+on~\eqref{e:wlin}, which is not established in either example and is open for the Wilson measure. The
+inequalities of the proposition were tested on $20{,}000$ random finite-dimensional instances
+(Supplement~S13), and the step from the first claim to the second is checked in Lean
+(Appendix~\ref{s:lean}).
+
 \section{Return to a coarse plaquette gate}\label{s:ret}
 The return bound comes from a single link. Given all the other links, one link of the plaquette has an
 explicit law on the sphere $S^3$, and for that law the probability of any cap is at most the probability of
@@ -1106,6 +1153,7 @@ Lemma~\ref{l:trace}, Proposition~\ref{p:vac}, Corollary~\ref{c:vac} & proved, $\
 Proposition~\ref{p:haar} & proved; scalar steps checked in Lean \\
 Proposition~\ref{p:pred} & proved (a reduction between open estimates; it bounds nothing in the theory); its Hilbert-space core checked in Lean \\
 Proposition~\ref{p:dir} & proved (a reduction of the same kind); exact in the free theory; its two algebraic steps checked in Lean \\
+Proposition~\ref{p:wstep} & proved (a refinement step from the weight bound~\eqref{e:wlin}, which is open); its last step checked in Lean \\
 Hypothesis~\ref{h:mix} & open; not measured (Appendix~\ref{s:time} tests one combination's carry-over in time and gives no bound) \\
 Auxiliary local mixing & open; estimates for trial functions on two frozen backgrounds, one lattice, one coupling (Table~\ref{tab:local}) \\
 Hypothesis~\ref{h:coarse} & open; not measured; one trial function compared on one pair of lattices (Appendix~\ref{s:cross}) \\
@@ -1531,7 +1579,7 @@ links and whose variances it does not control.
 \end{remark}
 
 \section{Machine-checked parts}\label{s:lean}
-Ten Lean~4 files with Mathlib accompany the paper (Supplement~S7; Lean 4.19.0, Mathlib v4.19.0); all compile with no \texttt{sorry} and use
+Eleven Lean~4 files with Mathlib accompany the paper (Supplement~S7; Lean 4.19.0, Mathlib v4.19.0); all compile with no \texttt{sorry} and use
 only the axioms \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}.
 \begin{itemize}
 \item \texttt{Criterion.lean}: Theorem~\ref{t:crit} in the following form. Let $S$ be a bounded self-adjoint
@@ -1579,6 +1627,10 @@ $\langle b,Mb\rangle\le JV$; in finite dimension, for symmetric $\Sigma$, the ra
 the last inequality. The conditional laws, the derivative of the conditional expectation and the integration
 over coarse fields are not formalised, and the weighted Poincar\'e inequality is a hypothesis of the
 proposition.
+\item \texttt{WeightStep.lean}: the last step of the proof of Proposition~\ref{p:wstep}. For real $d>0$,
+$m\ge1$, $c\ge0$ and $\delta$ with $\delta\le d\,(1+(3+c\log(m/d))/m)$, one has
+$(\delta-c/(e\,m))/(1+(3+c\log m)/m)\le d$; with the lemma $d\log(1/d)\le1/e$. The operator inequalities
+before that step are not formalised.
 \item \texttt{SeparationHilbert.lean}: Proposition~\ref{p:three} on complex Hilbert spaces. For a bounded
 self-adjoint operator $S$, a real $r\le1$ and a dense set $D_0$ of vectors, the real spectrum of $S$ does not
 meet $(r,1)$ if and only if
@@ -1601,7 +1653,7 @@ formalised.
 \end{itemize}
 Theorem~\ref{t:ret}, Proposition~\ref{p:vac}, Lemmas~\ref{l:cap}
 and~\ref{l:trace}, and the analytic part of Corollary~\ref{c:vac} are not formalised.
-The ten files contain $93$ theorems. For $36$ of them, those cited above and their main lemmas, a digest of the statement text is recorded
+The eleven files contain $95$ theorems. For $37$ of them, those cited above and their main lemmas, a digest of the statement text is recorded
 with the digests of the files (Supplement~S7), so that a later change of a statement or a file can be
 detected; a digest of a statement does not cover the definitions it depends on.
 
@@ -1628,6 +1680,7 @@ S9 & Working notes with related hypotheses on the centre-neutral space & Section
 S10 & Records of the internal reviews of this paper and their test programs & Section~\ref{s:disc} \\
 S11 & Programs and outputs for the free theory, and for the two-link test of Proposition~\ref{p:dir} & Section~\ref{s:arch}, Appendix~\ref{app:free} \\
 S12 & Programs and outputs for the compact $\mathrm U(1)$ example, with the expectation written before the runs & Appendix~\ref{app:free} \\
+S13 & Random finite-dimensional test of Proposition~\ref{p:wstep} & Section~\ref{s:inh} \\
 \bottomrule
 \end{tabular}
 \caption{Supplementary material.}\label{tab:supp}

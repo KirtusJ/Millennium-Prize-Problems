@@ -161,3 +161,13 @@ The instrument used for the earlier pins was not available in this container. Th
 Not pinned: `scalar_step_zero`, `mem_range_of_cs`.
 
 The seven earlier Mathlib files (`Criterion`, `Hilbert`, `Discrete`, `Gates`, `Prediction`, `SeparationHilbert`, `OneSeparation`) were recompiled in the same new project on this occasion: exit 0 each, no warning.
+
+## Added 24 November 2026 (later): `WeightStep.lean`
+
+The scalar step of the refinement step under a linear bound on the low-energy weight of the fine detail (Proposition 5.7): from `δ ≤ d (1 + (3 + K log(m/d))/m)`, `d > 0`, `m ≥ 1`, `K ≥ 0` to `(δ − K/(e m))/(1 + (3 + K log m)/m) ≤ d`, with the lemma `d log(1/d) ≤ 1/e`. File SHA-256 `114dd8112a73768e6076064a36fbc1276c497a19c78e3830728c7791f8eaa72c`. Lean 4.19.0, Mathlib v4.19.0: exit 0, no `sorry`, no warning, standard axioms (`WeightStep.axioms.txt`). Not formalised: the spectral integral and the comparison of `(I − A²)⁻¹` with `H⁻¹` that lead to the hypothesis. Digest by `statement_digest.py`.
+
+| Theorem | SHA-256 of the statement (pinned) | With pin | Wrong pin |
+|---|---|---|---|
+| `WeightStep.explicit` | `0728771ecbfd4eeff22e8908e5cb8507678ab9814d3de09ee045defdc250deb0` | exit 0 | exit 1 |
+
+Not pinned: `mul_neg_log_le`.
