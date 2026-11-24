@@ -2,8 +2,8 @@
 
 For the paper *Spectral criteria and conditional infrared estimates for four-dimensional lattice Yang–Mills theory* (Kirtus Justus, 24 November 2026), part of the research program [From Prephysical Hypotheses to Physical Models](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models).
 
-- Reading copy: [`Spectral criteria and conditional infrared estimates for four-dimensional lattice Yang-Mills theory.pdf`](Spectral%20criteria%20and%20conditional%20infrared%20estimates%20for%20four-dimensional%20lattice%20Yang-Mills%20theory.pdf) (SHA-256 `614c28388b6e51b77447eb6cd9894f47e5c94674eadfac48e7bb9029469e8769`)
-- Source: [`source/main.tex`](source/main.tex) (SHA-256 `cc8207f8c8c6fee6a992913ec74d3ac0a9b9ece3683834784ac6c8bdb2b1d3a8`) with [`source/preamble.tex`](source/preamble.tex); three passes of `pdflatex`.
+- Reading copy: [`Spectral criteria and conditional infrared estimates for four-dimensional lattice Yang-Mills theory.pdf`](Spectral%20criteria%20and%20conditional%20infrared%20estimates%20for%20four-dimensional%20lattice%20Yang-Mills%20theory.pdf) (SHA-256 `9d68301db9652ec4e4f2d8e0cf15ac667edb680b9c08e4861cf8b70a2bd0b2ae`)
+- Source: [`source/main.tex`](source/main.tex) (SHA-256 `604d62fe4abfbc15408e453aa469343a661c29ceb5b2fa282e96ea7c3ba0de03`) with [`source/preamble.tex`](source/preamble.tex); three passes of `pdflatex`.
 - The paper does not prove a mass gap and has not been peer reviewed.
 
 The paper cites the items below as "Supplement S*n*". Locations are relative to this folder. A digest is given for single files; folders carry their own records.
