@@ -9,7 +9,7 @@ It is a separate manuscript from the upper-bound paper in `../attempt/paper/`, w
 | Statement | Domain | Proof | Origin | Checks (none is independent review) |
 |---|---|---|---|---|
 | Thm 1.1 spectral criterion; Prop 4.2 test at one separation | any self-adjoint H ≥ 0, τ > 0; a set with dense span (1.1), a dense linear subspace (4.2) | §4 | GPT auditor sessions (issue comments 7119587014, 7119986944) | `../../papers/spectral-criteria/supplement/S10-review-records/mathematics-review` |
-| Thm 1.2 refinement inequality; Cor 5.2 | positive self-adjoint contraction A on a Hilbert space, integers m ≥ j ≥ 1, three operator hypotheses | §5 | `yang-mills/joint-refinement/rare-coarse-fields/inheritance.md` (Codex session); discrete form suggested by a GPT auditor session | `y1-g4ret`, `mod-math` (265,000 random instances); Lean for the finite-dimensional semigroup case only: `f2-lean/Inheritance.lean` |
+| Thm 1.2 refinement inequality; Cor 5.2 | positive self-adjoint contraction A on a Hilbert space, integers m ≥ j ≥ 1, three operator hypotheses | §5 | `yang-mills/joint-refinement/rare-coarse-fields/inheritance.md` (Codex session); discrete form suggested by a GPT auditor session | earlier same-family checks and 265,000 random instances; **Lean, all non-zero real inner product spaces: `S7-lean/Hilbert.lean`**; a second Lean proof in finite dimension: `S7-lean/Discrete.lean` |
 | Thm 1.3 return bound | SU(2), Wilson action, periodic lattice, even N ≥ 6, two slices distinct modulo T | §6 | `rare-coarse-fields/return.md` (Codex session) | `y1-g4ret`, `mod-math` |
 | Lemma 6.2 trace formula; Prop 6.3; Cor 6.4 (return bound in the vacuum) | SU(2), β > 0, gauge-averaged transfer operator | §6.1, self-contained (Peter–Weyl and positive character coefficients; Lüscher's paper is referred to, not relied on, and was not reread) | this side | `ref2-math`, `mod-math` (full enumeration on Z₂ and Z₃ toy lattices) |
 | Prop 3.4 conditional prediction (numbered 3.2 until the final ordering); Remark 5.5 longer lag | reversible stationary one-step operator; any measurable set of coarse fields | §3, §5 | a GPT auditor session (pass 2, relayed) | `aud5-check` (finite-state program) |
@@ -57,6 +57,8 @@ On the Principal's instruction the worker tests were stopped (two background che
 - **Two further formal checks (24 November, later).** `Gates.lean`: for commuting self-adjoint idempotents χ and P, B = χ(I − P) is a self-adjoint idempotent with BP = PB = 0 and inherits a bound on χSχ (the last sentence of Corollary 6.4). `Prediction.lean`: the Hilbert-space core of Proposition 3.4, with the conditional expectations as abstract projections satisfying the tower property. Both compile clean with standard axioms; one statement of each pinned. The measure theory behind both is not formalised. Totals now: six files, 66 theorems, 24 pinned.
 
 - **One-separation test (24 November, later).** `OneSeparation.lean`: Proposition 4.2 on finite-dimensional real spaces. Totals: seven files, 70 theorems, 25 pinned.
+
+- **Remark 5.6 and abstract.** The paper now states in Section 5 the idea of the second proof of Theorem 1.2 (approximate eigenvectors, no spectral projection, no completeness), which is the one formalised, and the abstract says the inequality is machine-checked for real inner product spaces. Placed after Remark 5.5 so that no existing number changes.
 
 ## Sixth draft (24 November)
 

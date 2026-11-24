@@ -16,7 +16,8 @@ Suppose a Yang--Mills theory is known only through its correlation functions. Ho
 recognised in it, and what would let a gap survive when a lattice is refined? For the first question we prove
 a spectral criterion. For the second we prove an inequality that reduces one refinement step to three
 estimates, and we prove one of the three for $\SU(2)$, for exceptional sets of a particular kind. The other two are open, and so is a further condition
-needed to chain the steps. No mass gap is proved.
+needed to chain the steps. The inequality is machine-checked in Lean for real inner product spaces. No mass
+gap is proved.
 \end{abstract}
 \maketitle
 \setcounter{tocdepth}{1}
@@ -572,6 +573,15 @@ integer $k\ge1$, the same proof, with $\rho=2k/m$ in Lemma~\ref{l:scal}, gives~\
 $1+2k/(m\gamma)$. Along a refinement the products in Corollary~\ref{c:acc} then stay bounded when
 $\sum_ik_ia_i/\gamma_i<\infty$, with $K_i=1+2k_i/(m_i\gamma_i)$ in Hypothesis~\ref{h:budget}. So the detail may take a number of steps that
 grows, provided the physical times $k_ia_i$, each divided by $\gamma_i$, are summable.
+\end{remark}
+
+\begin{remark}[A second proof, machine-checked]\label{r:second}
+The theorem can also be proved without a spectral projection. For a positive self-adjoint $A$ and every
+$\eta>0$ there is a unit vector $w$ with $\|Aw-\|A\|w\|\le\eta$; then $\|A^nw-\|A\|^nw\|\le n\eta$ when
+$\|A\|\le1$, and the three estimates of the proof above hold for $w$ up to errors of order $\eta$, the
+exceptional and coarse parts by the Cauchy--Schwarz inequality for the positive form
+$\langle\cdot,A^n\cdot\rangle$. Letting $\eta\to0$ gives~\eqref{e:inh}. This is the proof that is formalised
+in Lean for all non-zero real inner product spaces (Appendix~\ref{s:lean}); it does not use completeness.
 \end{remark}
 
 \section{Return to a coarse plaquette gate}\label{s:ret}
