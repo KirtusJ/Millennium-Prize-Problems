@@ -23,3 +23,20 @@ Written after GPTAuditor2's final handoff (rendezvous issue, comment 7120159737)
 ## Not done
 
 No reader outside the two model families; no person other than the author. Theorem 1.3 is not carried to the infinite time axis. Theorems 1.1 and 1.3 are not formalised. The figure prepared with the PCP OS plot instrument for Table 2 was left out: the table carries the four numbers per row more clearly.
+
+## Second draft (24 November): what changed and why
+
+`main.tex` / `main.pdf` are now the second draft (13 pages); `main_draft1.tex` is the first.
+
+Two reviews of the first draft, a same-family referee ([`../attempt/reviews/g2-fid/report.md`](../attempt/reviews/g2-fid/report.md)) and GPTAuditor2's adversarial review (relayed by the Principal), agreed that the four proofs stand and that the surrounding sentences said too much. Changes:
+
+- **Opening.** The introduction starts from the two questions the paper is about, before any statement.
+- **Vacuum bridge.** The return bound was proved for periodic time, while the refinement inequality needs the vacuum semigroup. Added Proposition 6.2 (vacuum limit of two-slice expectations, from the cited transfer-matrix representation) and Corollary 6.3 (the return bound in the vacuum representation, and for B = R(I - P)). The figure's arrow is solid only because of this; the transfer-matrix representation is cited (Luescher; Osterwalder-Seiler), not rederived.
+- **Budget.** The accumulation needs the weighted sum of losses to stay below the initial deficit, not only summability. Now Hypothesis 3.3, with GPTAuditor2's exact counterexample as Remark 5.3.
+- **Two kinds of mixing.** Hypothesis 3.1 (decay under the transfer semigroup) is separated from the auxiliary local mixing statement (relaxation under artificial local updates). The measured local quotients concern only the latter and are no longer described as bounds on the rate in Hypothesis 3.1.
+- **Theorem 1.3.** Complex test functions with absolute squares; slices of spatial links, distinct modulo the period.
+- **Remark 4.1(a)** corrected: matrix elements do not decay; the vacuum must be projected out.
+- **Remark 7.1.** The "three to four orders" comparison removed; the one-link floors are given with their scope.
+- **Measurements.** The frozen background has three plaquettes at -I; "81 per cent" is a share of standardised squared coefficients; the paired decreases are kept; the time test is reported as limited carry-over in the observables tried, with the long-lag control named as such; the cross-lattice result is stated as correlation retained (about 1 per cent against about 7 per cent), with the rejection threshold 0.951 and the statement that one test does not measure the loss in Hypothesis 3.2.
+- **Scope.** Finite mass; local fields and short-distance behaviour; the limit of the assessors' independent check; a crude return bound for general groups (Remark 6.4(d)).
+- **References** pinned to files; Luescher and Osterwalder-Seiler added.
