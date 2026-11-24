@@ -1,0 +1,6 @@
+side 256: 357759 classes; five smallest rates: 0.684798795 (1, 0, 0) 0.684798795 (127, 0, 0) 0.688797224 (1, 1, 0) 0.688797224 (127, 1, 0) 0.688797224 (127, 127, 0)
+Z1 FAILED
+side 2^20: rate(1,0,0) = 0.674943804 ; smallest excess over it among the other small momenta: 1.011e-06 at (1, 1, 0)
+Z2 MET
+axis, side 256: rate at j=1,2,4,8,16,32,64,127: 0.684799 0.694379 0.712724 0.746285 0.801969 0.876241 0.928203 0.684799 ; first decrease for j<=64: none
+Z3 MET (monotone up to 64: yes)
