@@ -10,6 +10,7 @@ Models}~\cite{Prog}, as part of its study of the Millennium Prize problems. It h
 \keywords{Yang--Mills theory, lattice gauge theory, mass gap, transfer operator, spectral gap}
 \hypersetup{pdftitle={Spectral criteria and conditional infrared estimates for four-dimensional lattice Yang-Mills theory},pdfauthor={Kirtus Justus},pdfsubject={From Prephysical Hypotheses to Physical Models},pdfkeywords={Yang-Mills theory, lattice gauge theory, mass gap, transfer operator, spectral gap}}
 \begin{document}
+\noindent{\small\sffamily From Prephysical Hypotheses to Physical Models\hfill Millennium Prize Problems: Yang--Mills\par}
 \begin{abstract}
 Suppose a Yang--Mills theory in four dimensions is known only through its correlation functions. How could a
 mass gap be recognised in it, and what would let the gaps of the lattice theories survive when the lattice is
@@ -728,18 +729,18 @@ The projection $E((0,\Delta))$ is bounded and vanishes on a set with dense span,
 \begin{remark}\label{r:crit}
 \leavevmode
 \begin{enumerate}
-\item[(a)] The differences matter. Under (1), $|\langle v,e^{-n\tau H}(I-E_0)w\rangle|\le r^n\|v\|\,\|w\|$ with $E_0$ the
+\item[(a)] \emph{The differences matter.} Under (1), $|\langle v,e^{-n\tau H}(I-E_0)w\rangle|\le r^n\|v\|\,\|w\|$ with $E_0$ the
 projection onto the kernel of $H$; the matrix elements $\langle v,e^{-n\tau H}w\rangle$ themselves need not decay,
 since the vacuum contributes a constant.
-\item[(b)] A polynomial bound on the low-energy weight,
-$\mu_v((0,s])\le Cs^\nu$, does not give (2) for any $r<1$: a measure with density $s^{\nu-1}$ near $0$
+\item[(b)] \emph{A polynomial bound is not enough.} A bound on the low-energy weight of the form
+$\mu_v((0,s])\le Cs^\nu$ does not give (2) for any $r<1$: a measure with density $s^{\nu-1}$ near $0$
 satisfies it, and its differences $d_{v,n}$ decay only like a power of $n$.
-\item[(c)] In a theory with several pure phases the criterion
-may be applied in one component; a gap there says nothing about the others.
-\item[(d)] The criterion is on the
-diagonal, for single vectors, and positivity is what excludes cancellation; a test on finitely many vectors
-can refute a proposed rate; it establishes a gap only if those vectors are known to span a dense subspace or, more generally, to
-generate a dense subspace under bounded functions of $H$.
+\item[(c)] \emph{Several phases.} In a theory with several pure phases the criterion may be applied in one
+component; a gap there says nothing about the others.
+\item[(d)] \emph{Finitely many vectors.} The criterion is on the diagonal, for single vectors, and
+positivity is what excludes cancellation. A test on finitely many vectors can refute a proposed rate; it
+establishes a gap only if those vectors are known to span a dense subspace or, more generally, to generate
+a dense subspace under bounded functions of $H$.
 \end{enumerate}
 \end{remark}
 
@@ -1201,27 +1202,27 @@ lies in those of $\chi$ and of $I-P$, and $BS_nB=B\,(\chi S_n\chi)\,B$.
 \begin{remark}\label{r:ret}
 \leavevmode
 \begin{enumerate}
-\item[(a)] For a union of $n_{\mathrm g}$ gates of radius $\theta$ the same proofs give
+\item[(a)] \emph{Many gates.} For a union of $n_{\mathrm g}$ gates of radius $\theta$ the same proofs give
 \[\min\big(1,\,n_{\mathrm g}\,p_{6\beta}(\theta)\big)\]
 in place of $p_{6\beta}(\theta)$; no independence between plaquettes is used. Take all the
 $n_{\mathrm g}=3(N/2)^3$ coarse plaquettes and the radius $\theta=c(1+6\beta)^{-1/2}N^{-4/3}$, with $c>0$ such that
 $\theta\le\pi$. Then the bound is at most $\tfrac{3\pi^2\sqrt e}{32}\,c^3/N$, which is summable over dyadic $N$. Summability of the return weights is not the budget of
 Hypothesis~\ref{h:budget}, and gates this narrow need not contain the fields that Hypothesis~\ref{h:mix}
 would have to exclude.
-\item[(b)] At $\beta=3.399810242$ (the matched coupling of the lattice of side $8$) the bound $p_{6\beta}(\theta)$ is $0.00307$, $0.156$ and $0.935$ for
+\item[(b)] \emph{Numbers.} At $\beta=3.399810242$ (the matched coupling of the lattice of side $8$) the bound $p_{6\beta}(\theta)$ is $0.00307$, $0.156$ and $0.935$ for
 $\theta=0.05$, $0.2$ and $0.6$. The gates it controls usefully are narrow.
-\item[(c)] Corollary~\ref{c:vac} is the
-second inequality of~\eqref{e:hyp} with $A=S_1$ and any $j\ge1$. The bound restricts to the gauge-invariant functions without change: $S_n$ and $\chi$ commute with gauge
+\item[(c)] \emph{Use in Theorem~\ref{t:inh}.} Corollary~\ref{c:vac} is the second inequality
+of~\eqref{e:hyp} with $A=S_1$ and any $j\ge1$. The bound restricts to the gauge-invariant functions without change: $S_n$ and $\chi$ commute with gauge
 transformations of the slice, and so does $P$, because the vacuum measure is gauge invariant and a gauge
 transformation acts on the coarse links by a gauge transformation of the coarse lattice. The constants are also respected: $P1=1$ and $B1=0$, so the self-adjoint $P$ and $B$ map the
 centred functions to themselves.
-\item[(d)] For a general compact group with the Wilson action normalised so that each plaquette term lies in
+\item[(d)] \emph{Other groups.} For a general compact group with the Wilson action normalised so that each plaquette term lies in
 $[-1,1]$, the conditional density of one link given the others is at most $e^{12\beta}$ times Haar measure,
 so for a measurable set $\Gamma$ of holonomies (conjugation-invariant, so that the event does not depend on the
 base point) the event is a two-sided translate of $\Gamma$ for the link, and the conditional probability of return
 is at most $\min\{1,e^{12\beta}\mu_{\mathrm{Haar}}(\Gamma)\}$. This crude bound shows that the mechanism is not tied to a
 centre; it is far weaker than the $\SU(2)$ estimate and we make no use of it.
-\item[(e)] The same lemma, read the other way, shows that plaquettes far from the identity are typical. Given
+\item[(e)] \emph{Plaquettes far from the identity are typical.} This follows from the same lemma, read the other way. Given
 all other links, a plaquette lies within angle $\varphi_0$ of the identity with probability at most
 $p_{6\beta}(\varphi_0)$. Take $n$ plaquettes of a slice, each with a link on no other; conditioning in turn,
 the probability that all of them lie within $\varphi_0$ of the identity is at most $p_{6\beta}(\varphi_0)^n$.
@@ -1232,13 +1233,13 @@ for each time slice separately. So such configurations cannot be excluded on gro
 are put in the exceptional set, its return weight $\|BA^jB\|$ has to be controlled separately, and frequent
 occupation does not by itself make that weight large, since a region that is often occupied may still forget
 its fine detail quickly. Nothing is shown this way near $-I$.
-\item[(f)] Theorem~\ref{t:ret} and Corollary~\ref{c:vac} use only that the loop contains a link that it
+\item[(f)] \emph{Larger loops.} Theorem~\ref{t:ret} and Corollary~\ref{c:vac} use only that the loop contains a link that it
 traverses once. They hold, with the same proof and the same constant, for a square of any side $r$ in place of
 the coarse plaquette, on a lattice of side at least $2r$. The probability bound needs nothing about the
 position of the square. The last statement of Corollary~\ref{c:vac} does: for $B=\chi(I-P)$ to be a
 projection the gate must be measurable with respect to the coarse field, which holds when the corners of the
 square are vertices of the lattice blocked by the factor $r$ and may fail otherwise.
-\item[(g)] For $n$ loops of a slice, each containing a link that it traverses once and that lies on none of
+\item[(g)] \emph{Simultaneous defects.} For $n$ loops of a slice, each containing a link that it traverses once and that lies on none of
 the others, the probability given the other slice that all $n$ holonomies lie in their gates is at most
 $p_{6\beta}(\theta)^n$: condition on all links but the distinguished link of the last loop, on which the
 other $n-1$ events do not depend, and repeat. The proofs of Theorem~\ref{t:ret} and Corollary~\ref{c:vac}
@@ -1306,15 +1307,15 @@ unexplained. Each is named in Appendix~\ref{app:meas} at the number it bears on.
 We summarise the construction~\cite{OAI} as its assessors describe it~\cite[pp.~1, 3]{YMG}; apart from the two
 declarations named below we have not examined it ourselves.
 \begin{itemize}
-\item Continuum correlation functions are obtained as a scaling limit of Wilson lattice correlation
+\item \emph{Scaling limit.} Continuum correlation functions are obtained as a scaling limit of Wilson lattice correlation
 functions at a fixed physical volume, followed by an infinite-volume limit along a subsequence, which is not
 proved unique.
-\item Any such limit decomposes into component theories. Each satisfies the Osterwalder--Schrader axioms and
+\item \emph{Axioms.} Any such limit decomposes into component theories. Each satisfies the Osterwalder--Schrader axioms and
 hence, by reconstruction, the Wightman axioms.
-\item Renormalised local operators corresponding to gauge-invariant polynomials in the curvature are defined.
+\item \emph{Local operators.} Renormalised local operators corresponding to gauge-invariant polynomials in the curvature are defined.
 The assessment reports substantial leading short-distance agreement, and states that perturbative
 agreement of the operator product expansion to all orders remains unproved.
-\item No mass gap is proved. What the submission has at low energy is polynomial. For each finite sum of
+\item \emph{Low energy.} No mass gap is proved. What the submission has at low energy is polynomial. For each finite sum of
 words of smeared fields the spectral weight of its vector at energies in $(0,u]$ is at most a constant times
 $u^2$ for $u\le1$, and after the zero-energy projection is removed its heat matrix element at time $s\ge1$ is at
 most a constant times $s^{-2}$. The constant depends on the sum of words and is the same in every component
@@ -1325,7 +1326,7 @@ spacelike separation, with a constant fixed by the norms of the vector and of it
 radius beyond which the commutator vanishes; these are properties that theories without a gap also have. By
 Remark~\ref{r:crit}(b) such bounds do not give the common exponential rate of Theorem~\ref{t:crit}; a gap
 needs an interval above zero with no spectral weight at all.
-\item What the polynomial bound does give is a finite inverse-energy moment for each of those vectors. If
+\item \emph{What the polynomial bound gives.} It gives a finite inverse-energy moment for each of those vectors. If
 $\mu_v((0,u])\le M_vu^2$ for $u\le1$ and $v_+$ is the part of $v$ orthogonal to the zero-energy vectors, then
 by the identity in Remark~\ref{r:weight} $\|H^{-1/2}v_+\|^2\le M_v+\|v_+\|^2$. This is the quantity of
 Remark~\ref{r:forms}(a), but for one continuum vector at a time. Hypothesis~\ref{h:mix} asks for a bound
@@ -1334,7 +1335,7 @@ set do not give one: on $L^2((0,1),2E\,dE)$ with $H$ multiplication by $E$, ever
 $\mu_f((0,u])\le\|f\|_\infty^2u^2$, while the unit vectors $\varepsilon^{-1}\mathbf 1_{(0,\varepsilon)}$ have
 $\langle h,H^{-1}h\rangle=2/\varepsilon$, and the spectrum is $[0,1]$. (This item is due to an OpenAI GPT
 model used as reviewer.)
-\item The assessors' own independent check of the Osterwalder--Schrader axioms concerns a selected family of
+\item \emph{Independent check.} The assessors' own independent check of the Osterwalder--Schrader axioms concerns a selected family of
 stress-tensor trace correlations, tested against functions that vanish to all orders where points coincide,
 and so does not see contact terms~\cite[Part~II]{YMG}. The wider reconstruction rests on the submission.
 \end{itemize}
@@ -1353,17 +1354,17 @@ vectors with dense span, for instance those generated from the vacuum by the sme
 \emph{What compatibility would require.} For anything in this paper to bear on that statement, the following
 would have to be fixed and matched to the construction. None of it is done here.
 \begin{itemize}
-\item The group and the lattice action.
-\item The sequence of meshes and couplings, and the physical units. The construction uses meshes
+\item \emph{The group and the lattice action.}
+\item \emph{The sequence of meshes and couplings, and the physical units.} The construction uses meshes
 $a_n=1/D_n$ with $D_n=\prod_{k<n}b_k$, the $b_k\ge3$ odd and non-decreasing with $\log b_n/\log D_n\to0$
 (appendix of~\cite{YMG}, entry on the lattice spacings). No two of these meshes differ by a power of two, so the dyadic sequence of this paper is
 not that sequence. Theorem~\ref{t:inh} does not need factors of two, the return bound holds for any factor
 (Remark~\ref{r:ret}(f)), and the free theory satisfies the mixing hypothesis for any factor
 (Proposition~\ref{p:freer}); the hypotheses are stated here for factors of two.
-\item The order of the limits. The construction takes the mesh to zero on a four-dimensional periodic torus
+\item \emph{The order of the limits.} The construction takes the mesh to zero on a four-dimensional periodic torus
 of fixed size and then the size to infinity along a subsequence. This paper takes the time extent to infinity
 first, at a fixed spatial lattice. The two orders are not known to agree.
-\item The growth of the coupling. On its own trajectory the construction has the limit
+\item \emph{The growth of the coupling.} On its own trajectory the construction has the limit
 $\beta_{n,p}/\log(1/a_n)\to11C_{\mathfrak g}/(24\pi^2)$, uniformly in the volume index
 \cite[Theorem~4.1, eq.~(7)]{YMG}, which is the growth condition of Remark~\ref{r:rate} there. For
 $\SU(2)$ its action~\cite[eq.~(3)]{YMG} has the weight $\exp(\beta\sum_p\tfrac12\operatorname{Re}\Tr U_p)$
@@ -1371,7 +1372,7 @@ up to a constant, as here, and with its inner product $-\tfrac12\operatorname{Re
 $i\sigma_a$ are orthonormal with structure constants $-2\epsilon_{abc}$, so $C_{\mathfrak g}=8$ and the limit
 is $11/(3\pi^2)$, the one-loop value of Remark~\ref{r:rate}. So on that trajectory, by the assessment's
 account, the growth condition holds for every $s>11/(3\pi^2)$.
-\item The blocking. The detailed theorem of the construction is stated for every positive value of a
+\item \emph{The blocking.} The detailed theorem of the construction is stated for every positive value of a
 penalty in a blocking kernel (its README). In this paper the coarse field is the ordered product of fine
 links and $P$ is the conditional expectation given it. Matching the action and the couplings does not match
 these two notions of a coarse field, and an estimate from the renormalisation of the construction could be
@@ -1385,8 +1386,8 @@ estimate. It does not prove that averaged block variables are necessary for the 
 theory; it makes an average of parallel transports, of the kind used in renormalisation-group
 constructions, the motivated candidate for the one-step form of Proposition~\ref{p:onestep}, in preference
 to the product of links along one line.
-\item The class of observables on which convergence holds, and the component theory selected.
-\item The relation between the lattice transfer semigroup at fixed regulator, to which
+\item \emph{The class of observables} on which convergence holds, and the component theory selected.
+\item \emph{The Hamiltonian.} The relation between the lattice transfer semigroup at fixed regulator, to which
 Theorems~\ref{t:inh} and~\ref{t:ret} refer, and the Hamiltonian of the limit.
 \end{itemize}
 The lattices of Section~\ref{s:evid} are matched to one another by a renormalised coupling (Supplement~S6);
