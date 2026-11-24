@@ -7,3 +7,10 @@ One section added; no theorem of the paper changed.
 - `refs_add.tex`: van Baal 2000 (read in full); Lüscher 1983 and Lüscher–Münster 1984 (abstracts only), so marked in the text.
 - Section drafted by a worker and checked for fidelity by its child (record: `../reviews/i1-sec/`); the false-start paragraph rewritten by the director to state the inequality that failed (coefficient one on the weight), since the form recorded in the notes was true as written.
 - Not done in this revision: no outside-lineage reading of the new section; the three-direction limit is checked by Monte Carlo only (added to the section the same day; record `../reviews/i1-mc3/`).
+
+## 24 November: front matter only
+
+- Abstract shortened to the main result and its direction (the fuller description is in the Introduction and the status table, unchanged).
+- Contents moved to the front.
+- One sentence in "Relation to the mass gap problem" citing the external assessment of a continuum construction, with the statement that it is not used here.
+- No theorem, proof, hypothesis or status changed.

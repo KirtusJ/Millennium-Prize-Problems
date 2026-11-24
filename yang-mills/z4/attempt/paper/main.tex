@@ -5,9 +5,15 @@
 \date{23 November 2026. Working draft; not reviewed by a mathematician. See Section~\ref{sec:provenance}.}
 \begin{document}
 \begin{abstract}
-For $\SU(2)$ Wilson lattice gauge theory in four dimensions, consider the infinite-volume limits of periodic states along boxes of side $2^k$. We prove that, along every sequence of couplings $\beta\to\infty$ and of such states, every subsequential limit, in finite-dimensional distributions, of the rescaled curvature field is a free lattice Maxwell field in three independent colours plus an independent random constant. Consequently the normalized correlation of rescaled plaquette energies at time separation $n$ has limit inferior at least $(G(n)/G(0))^2$, with $G$ the free field-strength correlation, and the mass gap of the transfer matrix in lattice units tends to zero or is zero. This is an upper bound and does not address whether the gap is positive. An extension to every compact Lie group of positive dimension, with a weaker standing, is given in Section~\ref{gen:sec}. We also record a conditional reduction of the continuum problem to five lattice hypotheses, H0 to H4, of which two are proved; four routes to the principal one, each failing at a stated step, and an argument by exclusion that fails; and six properties shared with $\U(1)$ and $\Z_2$ lattice gauge theories that therefore cannot prove a gap. The paper was written and checked by sessions of artificial-intelligence systems and has not been reviewed by a mathematician.
+For $\SU(2)$ Wilson lattice gauge theory in four dimensions we prove that the mass gap of the transfer matrix,
+in lattice units, tends to zero or is zero as the coupling $\beta\to\infty$, along infinite-volume limits of
+periodic states on boxes of side $2^k$. This is an upper bound; whether the gap is positive is not addressed.
+We also record a conditional reduction of the continuum problem to lattice hypotheses, and routes to the
+principal one that fail. The paper was written and checked by sessions of artificial-intelligence systems and
+has not been reviewed by a mathematician.
 \end{abstract}
 \maketitle
+\tableofcontents
 
 \section{Introduction}\label{sec:intro}
 
@@ -26,7 +32,7 @@ where $G(n)$ is the correlation of one field-strength component of the free latt
 The limits are taken in this order: the box, then the coupling, then the separation. The statement allows $m_\mu(\beta)=0$. The proof (Section~\ref{sec:proof}) shows that every limit of the rescaled curvature field is a free lattice Maxwell field plus an independent random constant (Proposition~\ref{pf:prop-L4} and Lemma~\ref{pf:lem-R}); the inequality follows from Wick's theorem.
 
 \subsection*{Relation to the mass gap problem}
-The official problem statement~\cite[p.~6]{JW} asks: ``Prove that for any compact simple gauge group $G$, a non-trivial quantum Yang--Mills theory exists on $\R^4$ and has a mass gap $\Delta>0$.'' The next sentence there requires axiomatic properties at least as strong as those of Osterwalder--Schrader and Wightman, and the mass gap means that the Hamiltonian has no spectrum in $(0,\Delta)$. Theorem~\ref{thm:main} is not the mass gap; it is an upper bound and closes in the direction opposite to what the problem asks. It is not a step of a proof of that statement. What the mass gap problem needs on the lattice is the opposite inequality at all large couplings, Hypothesis~\ref{hyp:A} below ($m(\beta)>0$ for all $\beta\ge\beta_1$; at small $\beta$ the gap is known~\cite{OS78}), and this paper does not prove it.
+The official problem statement~\cite[p.~6]{JW} asks: ``Prove that for any compact simple gauge group $G$, a non-trivial quantum Yang--Mills theory exists on $\R^4$ and has a mass gap $\Delta>0$.'' The next sentence there requires axiomatic properties at least as strong as those of Osterwalder--Schrader and Wightman, and the mass gap means that the Hamiltonian has no spectrum in $(0,\Delta)$. Theorem~\ref{thm:main} is not the mass gap; it is an upper bound and closes in the direction opposite to what the problem asks. It is not a step of a proof of that statement. A construction of a continuum theory as a scaling limit of Wilson lattice gauge theory has been submitted and assessed elsewhere~\cite{YMG}; by that assessment it does not prove a mass gap. It is not used here, and no object of this paper is shown to belong to it. What the mass gap problem needs on the lattice is the opposite inequality at all large couplings, Hypothesis~\ref{hyp:A} below ($m(\beta)>0$ for all $\beta\ge\beta_1$; at small $\beta$ the gap is known~\cite{OS78}), and this paper does not prove it.
 
 \begin{table}[ht]
 \centering
@@ -58,7 +64,6 @@ Other working groups of the same research program, whose sessions state their sy
 \subsection*{Disclosure}
 Every statement and proof in this paper was written by sessions of one artificial-intelligence model family (Claude, Anthropic), working as a director with subordinate workers, at the direction of the author, who is accountable for the paper. Each proof was then attacked by other sessions of the same family. Agreement among them is not independent review. The exception is the one-site lower bound reported in Section~\ref{sec:smallbox}: its proof was written by a session of a second model lineage (OpenAI Codex), checked step by step by a session of the first, and has not been read by a person. Sessions of a second model lineage (OpenAI Codex) reviewed specific steps of Section~\ref{sec:proof}: Lemma~\ref{pf:lem-R} and the Wick inequality, the asymptotics of $G$ and the constant $D^*$, the cube identity of Proposition~\ref{pf:prop-L4}(b), the shell reconstruction used in Proposition~\ref{pf:prop-L4}(e), the class of states, and the Lean files (Section~\ref{sec:provenance}). Two of their groups verified the chessboard estimate (Lemma~\ref{pf:lem-chess}) and the uniform tail (Corollary~\ref{pf:cor-tail}) at their stated scope \cite[comments 7105946691, 7105949912]{RepoThread}. Certification of the whole proof is open: the uniform Laplace limit (Theorem~\ref{pf:thm-L3}) as a whole and Theorem~\ref{thm:conditional} were not verified. Three of their groups independently recommended major revision, each retaining the upper bound on the transfer gap in lattice units \cite[comments 7105100783, 7105348719, 7105447358]{RepoThread}; the present text is the revision made in response and has not been seen by them. No mathematician has read the paper. It should be read as a claim awaiting review.
 
-\tableofcontents
 
 \section{What is not claimed}\label{sec:notclaimed}
 
