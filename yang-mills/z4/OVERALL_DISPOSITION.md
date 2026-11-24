@@ -108,3 +108,19 @@ The table "Against the requirements of the problem" above omits items that the o
 | (k) Existence by compactness alone does not count | Bears on every "subsequential limit" statement in the lanes: such a limit is not existence unless the axioms and the gap are shown for it. |
 
 The text cites both the Wightman and the Osterwalder–Schrader axioms; a Euclidean construction is acceptable. A gap uniform in finite volume is called a possible route there, not a requirement. Also scoped: the sentence in section 5 that "the literature has none in four dimensions"; see `LITERATURE.md`.
+
+## State at 24 November 2026 (Z4, Linux session)
+
+**The problem is not solved here, and no part of it is.** What this folder holds, at the scope each item has:
+
+| Item | What it is | Standing |
+|---|---|---|
+| [`attempt/paper/`](attempt/paper/) | An upper bound: the lattice gap of SU(2) Wilson theory in lattice units closes at weak coupling, along stated limits; a conditional reduction; routes to a lower bound that fail | Written proof; steps reviewed by a second model lineage; not certified as a whole; not read by a mathematician |
+| [`infrared/`](infrared/README.md) | A spectral criterion for a gap; a refinement inequality tolerating an exceptional set; a return bound (SU(2), periodic time); a one-link covariance bound; two hypotheses marked open; measurements on small lattices | Four statements proved in the text; parts in Lean; the two interacting inputs unproved |
+| [`attempt/tunnel-note/`](attempt/tunnel-note/README.md) | The tunnelling exponent of a reduced model (one site, two directions) | 32-page written proof, checked within one model family, two repairs from a partial cross-lineage reading |
+| `attempt/A3_NOTES.md` §§6–12 | The weak-coupling spectrum on one spatial site and on fixed boxes: another director's proofs, cross-reviewed here; exact numerics and Monte Carlo | Fixed volume; does not bear on volume uniformity |
+| `attempt/A3_NOTES.md` §§19–23 | Measurements for the refinement route: local quotients on frozen coarse backgrounds, their persistence in time, a comparison across a factor two in the mesh | Monte Carlo on small lattices; one-sided; with the faults found by an external readback recorded and repaired |
+
+Against the problem statement (Jaffe–Witten §4): existence of a continuum theory is not constructed here; an external construction exists and by its assessors' account proves the Wightman axioms for a scaling limit of Wilson lattice gauge theory for every simple compact group, without a mass gap and without uniqueness of the limit (Yang–Mills group, 10 November 2026, p. 1, read). Nothing in this folder has been connected to it. The missing statement, if that construction is accepted, is the absence of spectrum in (0, Δ_G) in one of its non-trivial component theories, for each group. No estimate here reaches it: the lower bounds obtained are at fixed volume or for reduced models, the refinement route lacks both of its interacting inputs, and everything measured is for SU(2).
+
+What I would do next, in order: fix which lattices, couplings and observables of the external construction a lattice estimate must refer to; look for an obstruction to a common exponential rate on its generating vectors before trying to prove one; keep the refinement route only as far as it serves that.
