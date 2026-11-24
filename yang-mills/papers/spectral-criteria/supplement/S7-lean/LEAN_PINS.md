@@ -175,3 +175,13 @@ Not pinned: `mul_neg_log_le`.
 ## Recompilation of all eleven files (24 November 2026, later)
 
 In the project recreated in a new container (Lean 4.19.0, Mathlib v4.19.0): `Criterion`, `Hilbert`, `Discrete`, `Gates`, `Prediction`, `SeparationHilbert`, `OneSeparation`, `Directional`, `WeightStep`, `refinement-inequality/Inheritance` and `haar` each exit 0 with no `sorry`. `haar.lean` gives the one warning recorded above (an unused hypothesis); the others give none. The outputs of `Directional` and `WeightStep` are byte-identical to the deposited `*.axioms.txt`.
+
+## `WeightStep.lean` extended (24 November 2026, later)
+
+Proposition 5.7 now has a sharper statement and a direct proof (from a reviewer). The file gained the scalar step of that proof: `mul_exp_neg_le` (`y e^{-y} ≤ 1 − e^{-y}`) and `direct` (from `δ ≤ (1 − e^{-y}) + C (y/m) e^{-y}`, `m > 0`, `C ≥ 0`, to `δ/(1 + C/m) ≤ 1 − e^{-y}`). The two theorems of the earlier form are kept. New file SHA-256 `1f6d4097300271794a7d7cd1f298119f5f4a5eaa97fa9479c84f777902b5e446`. Lean 4.19.0, Mathlib v4.19.0: exit 0, no `sorry`, no warning, standard axioms. The pin of `WeightStep.explicit` recorded above still holds for the new file.
+
+| Theorem | SHA-256 of the statement (pinned) | With pin | Wrong pin |
+|---|---|---|---|
+| `WeightStep.direct` | `bfdd4410038991996c009867fe26cabdf6c21649094c230981ef72704d75eb11` | exit 0 | exit 1 |
+
+Totals: eleven files, 97 theorems, 38 pinned.

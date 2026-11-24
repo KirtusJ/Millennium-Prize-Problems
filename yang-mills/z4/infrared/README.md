@@ -1,6 +1,6 @@
 # Spectral criteria and conditional infrared estimates (manuscript)
 
-**Current state: seventh version with later additions, 24 November 2026, 42 pages, three figures.** The entries below, newest first above "Sixth draft", record every change. The paper, its source and its supplementary material are now in [`../../papers/spectral-criteria/`](../../papers/spectral-criteria/); this folder keeps the earlier versions and the change record. Earlier versions are `main_draft1.tex` to `main_draft6.tex`. The reading copy and the catalogue of supplementary material are in [`../../papers/spectral-criteria/`](../../papers/spectral-criteria/). This is a rough draft under revision. It states what is proved, what is conditional and what is open. It does not claim a mass gap, and no reader outside the two model families, and no person other than the author, has checked it.
+**Current state: seventh version with later additions, 24 November 2026, 43 pages, three figures.** The entries below, newest first above "Sixth draft", record every change. The paper, its source and its supplementary material are now in [`../../papers/spectral-criteria/`](../../papers/spectral-criteria/); this folder keeps the earlier versions and the change record. Earlier versions are `main_draft1.tex` to `main_draft6.tex`. The reading copy and the catalogue of supplementary material are in [`../../papers/spectral-criteria/`](../../papers/spectral-criteria/). This is a rough draft under revision. It states what is proved, what is conditional and what is open. It does not claim a mass gap, and no reader outside the two model families, and no person other than the author, has checked it.
 
 It is a separate manuscript from the upper-bound paper in `../attempt/paper/`, which is unchanged.
 
@@ -115,6 +115,16 @@ On the Principal's instruction the worker tests were stopped (two background che
 - **A non-abelian toy (24 November, later; 42 pages).** Lattice gauge theory in 2+1 dimensions on a 2 × 1 torus with the binary octahedral and binary icosahedral subgroups of SU(2), blocked by two (`supplement/S14-nonabelian-toy/`; controls met; expectation committed before the run). The groups agree at β = 1 and 2 and part at 3. In both, the lowest state is centre flux through the short direction, and its fine-detail weight follows its energy through six orders of magnitude (ratio 0.25 to 0.70 for the icosahedral group between β = 1 and 8); γ_opt falls slowly from 0.949 to 0.741. The expectation's item on which direction carries the flux was wrong; its open alternative (bounded or exploding ratio) was answered by neither. Paragraph added to Appendix E. The collapse of the gap beyond β = 3 is not attributed to SU(2).
 
 - **Tidying for a baseline (24 November, later).** No statement changed. The statement on the use of AI systems now names the propositions, formal proofs and computations added in this period; "What is not claimed" gains an item on the examples of Appendix E; the status table gains a row for Propositions E.1 to E.4; Appendix C says that Proposition 5.9 and the propositions of Appendix E are not formalised; Appendix E opens with a guide to its parts; the organisation paragraph mentions the two interacting examples. Catalogue digests rechecked against the files.
+
+- **After the audit of the 42-page baseline `844a3cd` (24 November, later; 43 pages).** Each point checked by calculation before use (`supplement/S13-weight-step/directstep.py`, `directstep2.py`; `supplement/S11-free-theory/linesum.py`).
+  - Proposition 5.7 restated with the reviewer's sharper bound `d ≥ (b − κ)_+/(1 + C/m)`, `C = max(1, c_w)`, and its direct proof from the bottom of the spectrum; no logarithm, no additional loss. Scalar step in Lean (`WeightStep.direct`); totals 97 theorems, 38 pinned.
+  - Proposition 5.9 restated with an exceptional projection and proved directly; no restriction on `s/t`, a kernel allowed.
+  - Two caveats added: the conditional maximal-correlation bound is sufficient and not necessary (four-state example); the minorisation can be exponentially poor in the number of coarse variables.
+  - Proposition E.6 (new, at the end of its paragraph): for sums along lines `sup_N c_{r,N} ≥ Σ 1/sinh ω_{lj} ≥ (r² − 1)/√24`.
+  - Proposition 3.7's proof: complex test vectors named; the case `z = 0` separated.
+  - The author's address line removed from the title page at the Principal's request.
+  - Failed checks kept: `directstep.py` D1 (rounding in my program), `linesum.py` S3 second half (my 2 per cent guess).
+  - Not yet done from the audit: the reporting distinctions for the SU(2) toy (truncated model, weights across spin cut-offs, centre sectors); pending the end of that run.
 
 ## Sixth draft (24 November)
 

@@ -3,7 +3,6 @@
 \usetikzlibrary{positioning,arrows.meta}
 \title[Spectral criteria and conditional infrared estimates]{Spectral criteria and conditional infrared estimates\\ for four-dimensional lattice Yang--Mills theory}
 \author{Kirtus Justus}
-\address{Theoretical Physicist, Port Coquitlam, British Columbia, Canada}
 \date{24 November 2026}
 \thanks{This paper belongs to the research program \emph{From Prephysical Hypotheses to Physical
 Models}~\cite{Prog}, as part of its study of the Millennium Prize problems. It has not been peer reviewed.}
@@ -556,12 +555,13 @@ $g(Y)$ given $C=c$ is $V_h+W$. Hence
 Let $b_x=\Cov(Y,g(Y)\mid X=x)$, a vector with one entry in $\mathbb C^4$ for each link. For a tangent vector $v$ at
 $x$ the derivative of $h$ along $v$ is $\beta\langle v,b_x\rangle$, so the gradient of $h$ on the product of
 spheres is $\beta$ times the tangential part of $b_x$, and because $M_c(x)$ vanishes on the vectors orthogonal
-to the fibre, $\langle\nabla h,M_c\nabla h\rangle=\beta^2\langle b_x,M_c(x)b_x\rangle$. For every real vector
-$w$ the Cauchy--Schwarz inequality for covariances gives
+to the fibre, $\langle\nabla h,M_c\nabla h\rangle=\beta^2\langle b_x,M_c(x)b_x\rangle$. For every vector
+$w$, real or complex, the Cauchy--Schwarz inequality for covariances gives
 $|\langle w,b_x\rangle|^2\le\langle w,\Sigma_xw\rangle\operatorname{Var}(g(Y)\mid X=x)$. So
 $b_x=\Sigma_x^{1/2}u$ with $|u|^2\le\operatorname{Var}(g(Y)\mid X=x)$, and
 $\langle b_x,M_c(x)b_x\rangle\le J_c\operatorname{Var}(g(Y)\mid X=x)$. With~\eqref{e:wpi} this is
-$V_h\le\beta^2J_cW$. Put $z=\beta^2J_c$. Then the right side of~\eqref{e:dir1} is at least
+$V_h\le\beta^2J_cW$. Put $z=\beta^2J_c$. If $z=0$ then $V_h=0$ and the right side of~\eqref{e:dir1} is at
+least $V_f$. Otherwise the right side of~\eqref{e:dir1} is at least
 $V_f+(1+1/z)V_h-2(V_fV_h)^{1/2}\ge V_f/(1+z)$, the minimum over $V_h\ge0$. Integrating over
 $c\in\mathcal G$ gives the claim, since $\|Gf\|^2=\E[\mathbf 1_{\mathcal G}(C)\operatorname{Var}(f(X)\mid C)]$.
 \end{proof}
@@ -822,30 +822,28 @@ $c_{\mathrm w}\ge0$ with
 \end{equation}
 Then the deficit $d=1-\|A^m\|$ satisfies
 \[
-d\,\Big(1+\frac{3+c_{\mathrm w}\log(m/d)}m\Big)\ \ge\ b-\kappa ,
-\qquad\text{and hence}\qquad
-d\ \ge\ \frac{b-\kappa-c_{\mathrm w}/(e\,m)}{1+(3+c_{\mathrm w}\log m)/m}.
+d\ \ge\ \frac{(b-\kappa)_+}{1+C/m},\qquad C=\max\{1,c_{\mathrm w}\},
 \]
+and $C$ may be replaced by $c_{\mathrm w}$ if $\inf\sigma(H)<1/a$.
 \end{proposition}
 \begin{proof}
-Let $x=\inf\sigma(H)$ and $F(u)=\|GE((0,u])G\|$. Then $F(u)=0$ for $u<x$ and $F\le1$, so by the second
-inequality of Remark~\ref{r:weight}
+Let $x=\inf\sigma(H)$ and $t=ma$. A compression of a spectral projection has norm at most one, so
+$\|GE((0,u])G\|\le C\,a\,u$ for all $u>0$. Take $u>x$ and a unit vector $v$ in the range of $E((0,u])$. Then
+$w=e^{tH/2}v$ has $\|w\|^2\le e^{tu}$ and
+$\|Pv\|^2=\|Pe^{-tH/2}w\|^2\le\|Pe^{-tH}P\|\,\|w\|^2\le(1-b)e^{tu}$; in the same way
+$\|Bv\|^2\le\kappa\,e^{jau}$; and $\|Gv\|^2\le\|GE((0,u])G\|\le C\,a\,u$. The three projections are mutually
+orthogonal with sum $I$, so the three squared norms add up to one, and after multiplication by $e^{-tu}$
 \[
-\|GH^{-1}G\|\ \le\ \int_x^{1/a}\frac{c_{\mathrm w}a}{u}\,du+\int_{1/a}^\infty\frac{du}{u^2}
-=a\big(1+c_{\mathrm w}\log\tfrac1{ax}\big)
+e^{-tu}\ \le\ 1-b+\kappa\,e^{-(t-ja)u}+C\,a\,u\,e^{-tu}\ \le\ 1-b+\kappa+C\,a\,u\,e^{-tu}.
 \]
-if $x\le1/a$, and $\|GH^{-1}G\|\le1/x<a$ otherwise. By Remark~\ref{r:forms}(a),
-$\|G(I-A^2)^{-1}G\|\le1+\|GH^{-1}G\|/(2a)$, so the first inequality of~\eqref{e:hyp} holds with
-$1/\gamma=\tfrac32+\tfrac12c_{\mathrm w}\log^+\!\big(1/(ax)\big)$. Theorem~\ref{t:inh} gives
-$d\,(1+2/(m\gamma))\ge b-\kappa$. Now $d=1-e^{-max}\le max$, so $1/(ax)\le m/d$, and $m/d\ge1$; this is the
-first claim. For the second, $\log(m/d)=\log m+\log(1/d)$ and $d\log(1/d)\le1/e$.
+Let $u\downarrow x$ and put $y=tx$, so that $ax=y/m$ and $d=1-e^{-y}$. Since $ye^{-y}\le1-e^{-y}$,
+$b-\kappa\le d\,(1+C/m)$. If $x<1/a$ only values $u\le1/a$ are needed and $c_{\mathrm w}$ may be used.
 \end{proof}
 
-The point of the logarithm is that the gap enters its own bound only through $\log(1/d)$, and
-$d\log(1/d)$ is bounded. Along a dyadic refinement with $m_i=t/a_i$ and one constant $c_{\mathrm w}$, the factors
-$K_i=1+(3+c_{\mathrm w}\log m_i)/m_i$ have a bounded product and the additional losses $c_{\mathrm w}/(e\,m_i)$
-are summable, so Corollary~\ref{c:acc} applies with $\kappa_i+c_{\mathrm w}/(e\,m_i)$ in place of
-$\kappa_i$. In this form the first hypothesis reads: at each regulator, a unit vector whose energies lie
+The proof uses neither Theorem~\ref{t:inh} nor the inverse of $H$: it looks only at the bottom of the
+spectrum. Along a dyadic refinement with $m_i=t/a_i$ and one constant, the factors $K_i=1+C/m_i$ have a
+bounded product, so Corollary~\ref{c:acc} applies with these factors and no additional loss. In this form
+the first hypothesis reads: at each regulator, a unit vector whose energies lie
 below $u$ has at most the fraction $c_{\mathrm w}\,a\,u$ of its squared norm in the fine detail off the
 gates. That is a statement about how well low-energy states are determined by the coarse field. It neither
 asks for a gap nor follows from one. In the free theory the soft photon has the fraction
@@ -853,10 +851,15 @@ $0.911\,a\,u$ (Remark~\ref{r:weight}), and in the compact example of Appendix~\r
 $0.35$ times its energy in lattice units; these are values on particular vectors. In the free theory the
 bound~\eqref{e:wlin} is proved on the whole space, with $c_{\mathrm w}<15.94$ and a computed value near $1.45$
 (Proposition~\ref{p:freeweight}). In the compact example it is computed, not proved, with a constant below
-$0.87$ up to $\beta=6$. It is open for the Wilson measure. The
-inequalities of the proposition were tested on $20{,}000$ random finite-dimensional instances
-(Supplement~S13), and the step from the first claim to the second is checked in Lean
-(Appendix~\ref{s:lean}).
+$0.87$ up to $\beta=6$. It is open for the Wilson measure.
+
+An earlier version of this proposition, proved through the inverse-energy integral of
+Remark~\ref{r:weight} and Theorem~\ref{t:inh}, had the weaker factor $1+(3+c_{\mathrm w}\log m)/m$ and an
+additional loss $c_{\mathrm w}/(e\,m)$. The present statement and its proof are due to an OpenAI GPT model
+used as reviewer. We checked the three inequalities of the proof and the conclusion on $20{,}000$ random
+finite-dimensional instances, in which the new bound was never below the old one (Supplement~S13; a first
+check of the three inequalities failed through rounding in our program and is kept with its successor), and
+the last step is checked in Lean (Appendix~\ref{s:lean}).
 
 \begin{remark}[Where the infrared problem sits]\label{r:where}
 Let $b^*=1-\|PA^mP\|$ be the true deficit of the coarse part and $d=1-\|A^m\|$ that of the whole space. A
@@ -893,27 +896,33 @@ The remark suggests doing without the chain of lattices. Fix one fine lattice an
 variables on it, and apply Theorem~\ref{t:inh} once.
 
 \begin{proposition}[A one-step criterion]\label{p:onestep}
-Let $H\ge0$ be self-adjoint on a non-zero Hilbert space, $P$ an orthogonal projection, $Q=I-P$ and $t>0$.
+Let $H\ge0$ be self-adjoint on a non-zero Hilbert space, let $P$ and $B$ be mutually orthogonal projections
+and $G=I-P-B$, and let $0<s\le t$.
 \begin{enumerate}
-\item[(a)] If $\|Qf\|^2\le\kappa\langle f,Hf\rangle$ for all $f$ in the form domain of $H$ and
-$\|Pe^{-tH}P\|\le1-b$, then
+\item[(a)] If $\|Gf\|^2\le\kappa\langle f,Hf\rangle$ for all $f$ in the form domain of $H$,
+$\|Pe^{-tH}P\|\le1-b$ and $\|Be^{-sH}B\|\le\kappa'$, then
 \[
-1-\|e^{-tH}\|\ \ge\ \frac{b_+}{1+\kappa/t}.
+1-\|e^{-tH}\|\ \ge\ \frac{(b-\kappa')_+}{1+\kappa/t}.
 \]
-\item[(b)] Conversely, if $H\ge\Delta>0$, then $\|Qf\|^2\le\Delta^{-1}\langle f,Hf\rangle$ and
+\item[(b)] Conversely, if $H\ge\Delta>0$ and $B=0$, then $\|Gf\|^2\le\Delta^{-1}\langle f,Hf\rangle$ and
 $\|Pe^{-tH}P\|\le e^{-t\Delta}$.
 \end{enumerate}
 \end{proposition}
 \begin{proof}
-(b) is immediate. For (a) suppose first $H\ge\varepsilon>0$. Then $H^{-1/2}QH^{-1/2}\le\kappa$, so
-$\|QH^{-1}Q\|\le\kappa$. For an integer $m$ put $\tau=t/m$ and $A=e^{-\tau H}$. Since
-$(1-e^{-2\tau x})^{-1}\le1+1/(2\tau x)$, $Q(I-A^2)^{-1}Q\le(1+\kappa/(2\tau))Q$, and as in
-Remark~\ref{r:forms}(a) this is $I-A^2\ge\gamma Q$ with $1/\gamma=1+\kappa/(2\tau)$. Theorem~\ref{t:inh} with
-$B=0$ gives $1-\|A^m\|\ge b_+/(1+2/m+\kappa/t)$; let $m\to\infty$. For general $H\ge0$ apply this to
-$H+\varepsilon$, for which both hypotheses hold with the same $\kappa$ and $b$, and let $\varepsilon\to0$.
+(b) is immediate. For (a) let $x=\inf\sigma(H)$, take $u>x$ and a unit vector $v$ in the range of the
+spectral projection $E([0,u])$. Then $\|Gv\|^2\le\kappa\langle v,Hv\rangle\le\kappa u$, and as in the proof
+of Proposition~\ref{p:wstep} $\|Pv\|^2\le(1-b)e^{tu}$ and $\|Bv\|^2\le\kappa'e^{su}$. Adding the three and
+multiplying by $e^{-tu}$ gives $e^{-tu}\le1-b+\kappa'+\kappa\,u\,e^{-tu}$. Let $u\downarrow x$ and use
+$txe^{-tx}\le1-e^{-tx}$: $b-\kappa'\le(1-e^{-tx})(1+\kappa/t)$.
 \end{proof}
 
-\begin{figure}[ht]
+With $B=0$ this is the criterion in its plain form, with $Q=I-P$ in place of $G$; with $B$ built from gates
+the return bound of Section~\ref{s:ret} can be used. The proof given here, which needs no inverse of $H$, no
+subdivision of the time and no restriction on $s/t$, and allows $H$ to have a kernel, is due to an OpenAI GPT
+model used as reviewer; our first proof went through Theorem~\ref{t:inh} with many small steps. Both parts
+were checked on random finite-dimensional instances, including instances with a kernel (Supplement~S13).
+
+\begin{figure}[tbp]
 \centering
 \begin{tikzpicture}[node distance=7mm and 9mm,
  open/.style={draw,dashed,rounded corners=2pt,align=center,font=\footnotesize,inner sep=3pt,text width=58mm},
@@ -933,11 +942,6 @@ second lattice enters. Volume uniformity in the free theory fails through the st
 \label{f:onestep}
 \end{figure}
 
-The same proof with an exceptional projection $B$ inside the range of $Q$ gives
-$1-\|e^{-tH}\|\ge(b-\kappa')_+/(1+\kappa/t)$ when $\|(Q-B)f\|^2\le\kappa\langle f,Hf\rangle$ and
-$\|Be^{-sH}B\|\le\kappa'$ for some $0<s\le t$ that is a rational multiple of $t$ (take $\tau=t/m$ with $s$ a
-multiple of $\tau$), so the return bound of Section~\ref{s:ret} can be used here as well.
-
 The first hypothesis of the proposition has an equivalent form at one time. For $s>0$ and $0<\gamma\le1$,
 \[
 I-e^{-sH}\ \ge\ \gamma\,Q\quad\Longrightarrow\quad Q\le\frac s\gamma\,H,
@@ -950,7 +954,11 @@ loss of a fixed fraction of the fine detail over a time of order $a_0$. In the t
 Proposition~\ref{p:pred}, whose proof applies to any pair of times: if, given the coarse variables of a
 slice, the maximal correlation between that slice and the slice a time $s/2$ later is at most
 $(1-\gamma)^{1/2}$, then $Q\le(s/\gamma)H$. This is the statement about one step of coarse-graining that the
-one-step form needs, at the coarse scale and uniformly in the fine mesh.
+one-step form needs, at the coarse scale and uniformly in the fine mesh. The condition on the maximal
+correlation is sufficient and not necessary: on the path with four states and the step $I-\tfrac14L$, $L$
+the graph Laplacian, with the two end states in one coarse cell, the next state determines which end the
+chain is at, so the conditional maximal correlation is one, while $Q\le\kappa H$ holds with a finite
+$\kappa$ (an example of the same reviewer).
 
 Bounds for the spectral gap of a Markov chain in terms of a chain on the blocks of a partition and chains
 inside the blocks are classical in the theory of Markov chains (see~\cite{JSTV04} and the works cited there).
@@ -968,7 +976,11 @@ decorrelate over the time $t$. If $P$ is the conditional expectation given finit
 $C$, the second statement concerns the law of the pair $(C_0,C_t)$ on a fixed finite-dimensional space, and
 it holds with $b=\varepsilon$ as soon as that law is at least $\varepsilon$ times the product of its
 marginals: for centred $f$ and $g$ the measure $\rho-\varepsilon\,\nu\otimes\nu$ is positive with marginals
-$(1-\varepsilon)\nu$, so $|\E f(C_0)g(C_t)|\le(1-\varepsilon)\|f\|\,\|g\|$. In this form no second lattice, no
+$(1-\varepsilon)\nu$, so $|\E f(C_0)g(C_t)|\le(1-\varepsilon)\|f\|\,\|g\|$. This minorisation is a
+sufficient condition that can be far from the truth when the coarse variables are many: for $n$ independent
+stationary two-valued spins with correlation $\rho$ in time the constant is $(1-\rho)^n$, while the norm of
+the compression stays $\rho$ (the same reviewer). It is suited to a fixed finite number of variables, not to
+a volume. In this form no second lattice, no
 matched coupling and no budget appear. Nor does the box: the proposition applies as it stands on an infinite
 spatial lattice, with $P$ the conditional expectation given all the coarse variables, and a gap uniform in the
 mesh and in the volume is then equivalent to the bound of the fine detail by the energy, which is a statement
@@ -1313,7 +1325,7 @@ group, where averaging needs parallel transport, is not settled here. Items~3 to
 We cannot estimate the distance to any of these, and we do not know that this route is the right one.
 
 \begin{table}[ht]
-\centering\small
+\centering\footnotesize
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.38\textwidth}>{\raggedright\arraybackslash}p{0.56\textwidth}@{}}
 \toprule
 Statement & Status \\
@@ -1328,6 +1340,7 @@ Proposition~\ref{p:haar} & proved; scalar steps checked in Lean \\
 Proposition~\ref{p:pred} & proved (a reduction between open estimates; it bounds nothing in the theory); its Hilbert-space core checked in Lean \\
 Proposition~\ref{p:dir} & proved (a reduction of the same kind); exact in the free theory; its two algebraic steps checked in Lean \\
 Propositions~\ref{p:freecoarse} to~\ref{p:freeweight} & proved (free theory only: coarse comparison, uniform mixing for factor two and for any factor, the fine detail bounded by the energy); not formalised \\
+Proposition~\ref{p:linesum} & proved (free theory: for sums of links along lines the same statement fails uniformly in the factor and the side); not formalised \\
 Proposition~\ref{p:freeblock} & proved (free theory: a block average for which the first statement of Proposition~\ref{p:onestep} holds uniformly in the blocking factor and the side); not formalised \\
 Proposition~\ref{p:onestep} & proved (a gap in a box is equivalent to two regulator-uniform statements for coarse variables of one's choice; neither is established for the Wilson measure) \\
 Proposition~\ref{p:wstep} & proved (a refinement step from the weight bound~\eqref{e:wlin}, which is open for the Wilson measure and proved in the free theory, Proposition~\ref{p:freeweight}); its last step checked in Lean \\
@@ -1372,7 +1385,9 @@ measurements of Section~\ref{s:evid}, and drafted the text. It also proposed and
 Propositions~\ref{p:wstep} and~\ref{p:onestep}, Remark~\ref{r:where}, Propositions~\ref{p:freeweight}
 and~\ref{p:freeblock} and the lower inequality of Remark~\ref{r:weight}, wrote the formal proofs of
 Appendix~\ref{s:lean}, and designed, ran and reported the computations of Appendix~\ref{app:free}, including
-those whose predicates failed.
+those whose predicates failed. The present forms and proofs of Propositions~\ref{p:wstep}
+and~\ref{p:onestep}, and Proposition~\ref{p:linesum}, are due to a reviewing GPT model, as stated where they
+appear.
 \end{itemize}
 
 \subsection*{Status of verification}
@@ -1808,10 +1823,10 @@ $\langle b,Mb\rangle\le JV$; in finite dimension, for symmetric $\Sigma$, the ra
 the last inequality. The conditional laws, the derivative of the conditional expectation and the integration
 over coarse fields are not formalised, and the weighted Poincar\'e inequality is a hypothesis of the
 proposition.
-\item \texttt{WeightStep.lean}: the last step of the proof of Proposition~\ref{p:wstep}. For real $d>0$,
-$m\ge1$, $c\ge0$ and $\delta$ with $\delta\le d\,(1+(3+c\log(m/d))/m)$, one has
-$(\delta-c/(e\,m))/(1+(3+c\log m)/m)\le d$; with the lemma $d\log(1/d)\le1/e$. The operator inequalities
-before that step are not formalised.
+\item \texttt{WeightStep.lean}: the last step of the proof of Proposition~\ref{p:wstep}. For real $m>0$,
+$C\ge0$, $y$ and $\delta$ with $\delta\le(1-e^{-y})+C(y/m)e^{-y}$, one has $\delta/(1+C/m)\le1-e^{-y}$; with
+the lemma $ye^{-y}\le1-e^{-y}$. The inequalities for the three projections before that step are not
+formalised. The file also keeps the corresponding step of the earlier, weaker form of the proposition.
 \item \texttt{SeparationHilbert.lean}: Proposition~\ref{p:three} on complex Hilbert spaces. For a bounded
 self-adjoint operator $S$, a real $r\le1$ and a dense set $D_0$ of vectors, the real spectrum of $S$ does not
 meet $(r,1)$ if and only if
@@ -1836,7 +1851,7 @@ Theorem~\ref{t:ret}, Proposition~\ref{p:vac}, Lemmas~\ref{l:cap}
 and~\ref{l:trace}, and the analytic part of Corollary~\ref{c:vac} are not formalised. Nor are
 Proposition~\ref{p:onestep}, which is a consequence of Theorem~\ref{t:inh} through the functional calculus of
 an unbounded operator, and the propositions of Appendix~\ref{app:free}.
-The eleven files contain $95$ theorems. For $37$ of them, those cited above and their main lemmas, a digest of the statement text is recorded
+The eleven files contain $97$ theorems. For $38$ of them, those cited above and their main lemmas, a digest of the statement text is recorded
 with the digests of the files (Supplement~S7), so that a later change of a statement or a file can be
 detected; a digest of a statement does not cover the definitions it depends on.
 
@@ -2138,6 +2153,36 @@ the bracket as below $1055$ was wrong by $0.2$ and is recorded there). The avera
 this proof: its series behaves like $\sum_j1/j$, which matches the slow growth seen above. With
 Proposition~\ref{p:onestep} this gives, in the free theory in a box, a deficit of at least
 $b/(1+1056\,a_0/t)$ from the decorrelation $b$ of these block variables alone, for every fine lattice.
+
+For sums along lines the failure is not only a numerical trend.
+
+\begin{proposition}[Sums along lines have no uniform one-step constant]\label{p:linesum}
+In the free theory let the coarse links be sums of $r$ consecutive fine links. Then
+\[
+\sup_Nc_{r,N}\ \ge\ \sum_{\substack{0\le\ell,j<r\\(\ell,j)\ne(0,0)}}\frac1{\sinh\omega_{\ell j}}\ \ge\ \frac{r^2-1}{\sqrt{24}},
+\qquad\cosh\omega_{\ell j}=1+2\sin^2\frac{\pi\ell}r+2\sin^2\frac{\pi j}r ,
+\]
+so that $c_{r,N}\le c\,r$ cannot hold with $c$ independent of both $r$ and $N$.
+\end{proposition}
+\begin{proof}
+Take the momentum $k=(k_1,0,0)$ and the polarisation $e_2$. The aliases
+$p_{\ell j}=(k_1+2\pi\ell/r,\,0,\,2\pi j/r)$ all have the vector $e_2$ transverse, and for all of them the
+multiplier of the line sum in the second direction is $\mathsf S(0)=r$, so the coarse observation of the
+amplitudes $u_{\ell j}$ along $e_2$ is $\sum f_{\ell j}u_{\ell j}$ with $f_{\ell j}=r(2\sinh\omega(p_{\ell j}))^{-1/2}$,
+and they enter no other component of it. Let $u_{\ell j}=f_{\ell j}$ for $(\ell,j)\ne(0,0)$ and choose
+$u_{00}$ so that the sum vanishes; this vector is in the fine detail. As $k_1\to0$,
+$f_{00}^2\omega_k\to r^2/2$, so $|u_{00}|^2/\omega_k\to2\big(\sum'f_{\ell j}^2\big)^2/r^2$ while
+$\|u\|^2\to\sum'f_{\ell j}^2$, the sums being over $(\ell,j)\ne(0,0)$. Hence
+$\langle u,\omega^{-1}u\rangle/\|u\|^2$ is at least $2\sum'f_{\ell j}^2/r^2$ in the limit, which is the sum in
+the statement. Finally $\cosh\omega_{\ell j}\le5$.
+\end{proof}
+
+In units of the coarse mesh the lower bound is $0.46$, $1.42$, $3.43$, $7.47$ for $r=2,4,8,16$, and the
+computed constants above exceed it by $0.7$ per cent at $r=8$ and by more at smaller $r$, where other modes
+contribute (Supplement~S11, where a predicate that asked for $2$ per cent at every $r$ failed). The bound is
+for the supremum over the side, that is, for large volume at fixed mesh; in one fixed physical box the gap of
+the free theory itself bounds the fine detail by the energy. The proposition and its proof are due to an
+OpenAI GPT model used as reviewer.
 
 So the choice of coarse variables matters
 for the one-step form even in the free theory, and the sums along lines that the lattice gauge theory

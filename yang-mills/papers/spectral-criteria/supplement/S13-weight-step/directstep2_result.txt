@@ -1,0 +1,2 @@
+instances 20000, skipped 48, failures 0, largest excess in logarithm 3.969e-12
+E1 MET

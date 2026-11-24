@@ -42,7 +42,31 @@ theorem explicit (d δ K m : ℝ) (hd0 : 0 < d) (hm : 1 ≤ m) (hK : 0 ≤ K)
     rw [div_mul_div_comm, mul_one, mul_comm m]
   linarith
 
+/-- `y e^{-y} ≤ 1 - e^{-y}` for real `y` (used for `y ≥ 0`). -/
+theorem mul_exp_neg_le (y : ℝ) : y * Real.exp (-y) ≤ 1 - Real.exp (-y) := by
+  have h1 : y + 1 ≤ Real.exp y := Real.add_one_le_exp y
+  have he : 0 < Real.exp (-y) := Real.exp_pos _
+  have h2 : Real.exp y * Real.exp (-y) = 1 := by rw [← Real.exp_add]; simp
+  nlinarith [mul_le_mul_of_nonneg_right h1 he.le]
+
+/-- The scalar step of the direct form (after a reviewer's proof): from
+`δ ≤ (1 - e^{-y}) + C (y/m) e^{-y}` with `m > 0`, `C ≥ 0` one gets `δ / (1 + C/m) ≤ 1 - e^{-y}`.
+Here `y = t x`, `x` the bottom of the spectrum, `m` the number of steps and `δ = b - κ`. -/
+theorem direct (δ C m y : ℝ) (hm : 0 < m) (hC : 0 ≤ C)
+    (h : δ ≤ (1 - Real.exp (-y)) + C * (y / m) * Real.exp (-y)) :
+    δ / (1 + C / m) ≤ 1 - Real.exp (-y) := by
+  have hD : 0 < 1 + C / m := by positivity
+  rw [div_le_iff₀ hD]
+  have h1 := mul_exp_neg_le y
+  have hCm : 0 ≤ C / m := div_nonneg hC hm.le
+  have e : C * (y / m) * Real.exp (-y) = C / m * (y * Real.exp (-y)) := by ring
+  have h2 : C / m * (y * Real.exp (-y)) ≤ C / m * (1 - Real.exp (-y)) :=
+    mul_le_mul_of_nonneg_left h1 hCm
+  nlinarith [h2]
+
 end WeightStep
 
 #print axioms WeightStep.mul_neg_log_le
 #print axioms WeightStep.explicit
+#print axioms WeightStep.mul_exp_neg_le
+#print axioms WeightStep.direct

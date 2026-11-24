@@ -1,0 +1,5 @@
+D1 failures 749, smallest slack -1.000e+00 : FAILED
+D2 failures 0, smallest slack 1.055e-05, right side positive in 14017 instances : MET
+D3 failures 0, smallest slack 5.326e-06 : MET
+D4 failures 0, smallest slack -1.776e-15 : MET
+D5 failures 0, smallest difference 2.772e-04, strictly larger in 14737 instances : MET

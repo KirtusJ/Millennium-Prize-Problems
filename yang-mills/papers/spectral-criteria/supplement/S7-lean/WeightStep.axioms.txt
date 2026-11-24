@@ -1,2 +1,4 @@
 'WeightStep.mul_neg_log_le' depends on axioms: [propext, Classical.choice, Quot.sound]
 'WeightStep.explicit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightStep.mul_exp_neg_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightStep.direct' depends on axioms: [propext, Classical.choice, Quot.sound]
