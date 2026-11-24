@@ -1,0 +1,16 @@
+beta 2 n  1: eps = 2.442874e-03  b = 3.415768e-01  eps/b = 0.0072  (outer shell 5.6e-15)
+beta 2 n  2: eps = 3.407720e-02  b = 5.337495e-01  eps/b = 0.0638  (outer shell 1.3e-28)
+beta 2 n  4: eps = 2.815288e-01  b = 7.594934e-01  eps/b = 0.3707  (outer shell 5.4e-54)
+beta 2 n  8: eps = 7.594278e-01  b = 9.355930e-01  eps/b = 0.8117  (outer shell 1.6e-103)
+beta 2 n 16: eps = 9.816092e-01  b = 9.953801e-01  eps/b = 0.9862  (outer shell 3.7e-202)
+beta 2 n 32: eps = 9.999049e-01  b = 9.999762e-01  eps/b = 0.9999  (outer shell 0.0e+00)
+beta 4 n  1: eps = 1.434613e-08  b = 1.635698e-01  eps/b = 0.0000  (outer shell 1.0e-08)
+beta 4 n  2: eps = 1.639352e-05  b = 2.768428e-01  eps/b = 0.0001  (outer shell 1.1e-16)
+beta 4 n  4: eps = 6.150481e-03  b = 4.528060e-01  eps/b = 0.0136  (outer shell 1.4e-31)
+beta 4 n  8: eps = 1.535053e-01  b = 6.858694e-01  eps/b = 0.2238  (outer shell 6.2e-61)
+beta 4 n 16: eps = 6.291393e-01  b = 8.964660e-01  eps/b = 0.7018  (outer shell 1.9e-119)
+beta 4 n 32: eps = 9.555192e-01  b = 9.887532e-01  eps/b = 0.9664  (outer shell 2.8e-236)
+N1 MET
+N2 MET
+N3 FAILED
+N4 MET

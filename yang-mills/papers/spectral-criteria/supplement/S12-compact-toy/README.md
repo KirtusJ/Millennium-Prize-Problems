@@ -49,3 +49,19 @@ The quadratic approximation of `PREDICTION.md`, evaluated exactly, gives `‖G(I
 | κ | 0.3523 | 0.5774 | 0.7398 | 0.8032 | 0.8335 | 0.8629 |
 
 The maximum is in the sector with one unit of flux at every coupling. The expectation committed before the run was `κ < 1` throughout and `κ → 1/arcosh 3 + 1/(2√2) = 0.9208`. The values are below 1 and increase; `(0.9208 − κ)·β` is 0.353, 0.349, 0.347 at β = 3, 4, 6, so they are consistent with that limit approached like `0.35/β`. The limit itself is not computed. So in this toy `G ≤ κH` holds with a constant bounded in the coupling over the range computed, which is the weight bound of Proposition 5.7 with `c_w = κ` and no exceptional set, for a = 1.
+
+## The minorisation constant against the true decorrelation (added later the same day)
+
+Three runs, all kept: `u1minor.py` (N1 and N3 failed), `u1minor2.py` (N1 failed), `u1minor3.py` (N1, N2, N4 met; N3 failed at one entry). The docstrings give the diagnoses: an absolute tolerance below rounding; a flux cut-off too small for the entry β = 4, n = 1; and a grid of 16 points whose frequency range is not symmetric, which spoils high fluxes at β = 4. In the third run the only failure is N3 at β = 4, n = 1, where the outermost shell of fluxes (1.0e-8) is not small against ε (1.4e-8); that run cut the fluxes at 12 again while refining the grid, which was my oversight. The value there agrees with the run that cut at 20 on the coarser grid to four figures (1.4346e-8 against 1.4344e-8). Every other entry agrees between the second and third runs to relative 1e-5 (N4).
+
+| β | n | ε(n) | b(n) | ε/b |
+|---|---|---|---|---|
+| 2 | 1 | 2.44e-3 | 0.3416 | 0.007 |
+| 2 | 4 | 0.2815 | 0.7595 | 0.37 |
+| 2 | 16 | 0.9816 | 0.9954 | 0.99 |
+| 4 | 1 | 1.4e-8 | 0.1636 | 1e-7 |
+| 4 | 8 | 0.1535 | 0.6859 | 0.22 |
+| 4 | 16 | 0.6291 | 0.8965 | 0.70 |
+| 4 | 32 | 0.9555 | 0.9888 | 0.97 |
+
+`b(n)` is the true decorrelation of the two coarse holonomies after `n` steps and `ε(n)` the lower bound of their joint density against the product of the marginals. The minorisation never exceeds the truth (N2). It is useless at short times, where the joint law is concentrated near the diagonal, and close to the truth once the time is a few correlation times (the gap is 0.33 at β = 2 and 0.14 at β = 4). So as a route to statement (ii) of Proposition 5.9 it costs little at a fixed physical time of the order of the inverse gap, in this toy.

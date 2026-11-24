@@ -104,6 +104,8 @@ On the Principal's instruction the worker tests were stopped (two background che
 
 - **Abstract, introduction and Section 9 brought up to date (24 November, later).** The abstract states the one-step equivalence; the paragraph on further results names Propositions 3.7, 5.7, 5.9 and Remark 5.8; Section 9 says that items 1 and 2 may be replaced by the two statements of Proposition 5.9. No statement added or changed.
 
+- **Minorisation against the truth in the compact toy (24 November, later).** The lower bound of the joint density of the two coarse holonomies at lags 0 and n against the product of the marginals, compared with their true decorrelation: at β = 4, 1e-8, 0.15, 0.63, 0.96 against 0.16, 0.69, 0.90, 0.99 for n = 1, 8, 16, 32. Three runs (`supplement/S12-compact-toy/u1minor*.py`), two with failed predicates from tolerances and an asymmetric frequency range, the third with one failed entry from a flux cut-off; all kept and explained in the folder's README. One sentence added to Appendix E.
+
 ## Sixth draft (24 November)
 
 A first-time-reader review of the fifth draft (`../../papers/spectral-criteria/supplement/S10-review-records/first-reader/report.md`, sub-agent of the same family) supplied a replacement abstract, introduction and Measurements section; the director read them, adjusted them and spliced them in. No theorem, number or claim was added or removed in the Measurements section (its 162 numerals were compared by script before and after; the later edits only add two clarifying values, 1.14 and the unrounded 0.93574 + 2 x 0.00271).
