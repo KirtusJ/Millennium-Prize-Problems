@@ -135,3 +135,13 @@ The test at one time separation on complex Hilbert spaces, by the continuous fun
 |---|---|---|---|
 | `SeparationHilbert.one_separation_hilbert` | `1bfc2882b1a8acdc5b4115a69e749ce8082e973bd63f3fc1e434a7ea69049f81` | exit 0 | exit 1 |
 | `SeparationHilbert.one_separation_dense` | `e80ea0fe0171a66b3282b5c5bf1f2af319c16757ef7b4aca13496afeae680ceb` | exit 0 | exit 1 |
+
+## Added 24 November 2026: `Criterion.lean`
+
+The spectral criterion for a bounded self-adjoint operator `S` on a complex Hilbert space with real spectrum in `[0,1]`: the spectrum misses `(r,1)` if and only if, for every `v` in a set with dense span and every `ρ > r`, the differences `dd v n = re⟪S^n (v - S v), v⟫` are bounded by a constant times `ρ^n`. Proof by the continuous functional calculus and a tent function. File SHA-256 `70b78c50b6bd98b1dc3d1e0be34a337d9f815f97299db25e77161567843f6f4d`. Lean 4.19.0: exit 0, no `sorry`, no warning, standard axioms. The statements use the definition `Criterion.dd`, which a statement digest does not cover. Not formalised: the passage from the Hamiltonian to `S = e^{-τH}`, and the equivalence of the rate condition with the paper's `limsup` form.
+
+| Theorem | SHA-256 of the statement (pinned) | With pin | Wrong pin |
+|---|---|---|---|
+| `Criterion.spectral_criterion` | `36868f7a4e3d9c2bfbff7554ea122aeba7b3c30438c5caa82d9c666e2c10ba4a` | exit 0 | exit 1 |
+| `Criterion.gap_implies_rate` | `9ac6ac5862777a86ea9c694ec8b5cdc18a112a3f8c8190457e1b050606c38dca` | exit 0 | exit 1 |
+| `Criterion.rate_implies_gap` | `be239f28454efeb60008b506efda200e9c7ca8f74f8baea61155eeb51a1bed3b` | exit 0 | exit 1 |

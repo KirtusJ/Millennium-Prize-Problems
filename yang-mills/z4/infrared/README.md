@@ -64,6 +64,8 @@ On the Principal's instruction the worker tests were stopped (two background che
 
 - **Proposition 4.2 in general (24 November, later).** `SeparationHilbert.lean`: the one-separation test for bounded self-adjoint operators on complex Hilbert spaces, tested on a dense set, by Mathlib's continuous functional calculus. Totals: eight files, 77 theorems, 30 pinned.
 
+- **Theorem 1.1 (24 November, later).** `Criterion.lean`: the spectral criterion for a bounded self-adjoint operator with spectrum in [0,1] on a complex Hilbert space, in rate form (for every ρ > r a constant C with d ≤ Cρⁿ), both directions, for a set with dense span. Not formalised: the passage from H to e^{−τH} and the equivalence with the limsup form. Totals: nine files, 88 theorems, 33 pinned.
+
 ## Sixth draft (24 November)
 
 A first-time-reader review of the fifth draft (`../../papers/spectral-criteria/supplement/S10-review-records/first-reader/report.md`, sub-agent of the same family) supplied a replacement abstract, introduction and Measurements section; the director read them, adjusted them and spliced them in. No theorem, number or claim was added or removed in the Measurements section (its 162 numerals were compared by script before and after; the later edits only add two clarifying values, 1.14 and the unrounded 0.93574 + 2 x 0.00271).

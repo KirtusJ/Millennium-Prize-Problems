@@ -16,7 +16,8 @@ Suppose a Yang--Mills theory is known only through its correlation functions. Ho
 recognised in it, and what would let a gap survive when a lattice is refined? For the first question we prove
 a spectral criterion. For the second we prove an inequality that reduces one refinement step to three
 estimates, and we prove one of the three for $\SU(2)$, for exceptional sets of a particular kind. The other two are open, and so is a further condition
-needed to chain the steps. The inequality is machine-checked in Lean. No mass
+needed to chain the steps. The criterion, in its form for the bounded operator $e^{-\tau H}$, and the inequality are machine-checked
+in Lean. No mass
 gap is proved.
 \end{abstract}
 \maketitle
@@ -828,7 +829,7 @@ We cannot estimate the distance to any of these, and we do not know that this ro
 \toprule
 Statement & Status \\
 \midrule
-Theorem~\ref{t:crit}, Proposition~\ref{p:three} & proved (Section~\ref{s:crit}); Proposition~\ref{p:three} checked in Lean for bounded self-adjoint operators on complex Hilbert spaces \\
+Theorem~\ref{t:crit}, Proposition~\ref{p:three} & proved (Section~\ref{s:crit}); both checked in Lean in the form for the bounded operator $e^{-\tau H}$ on a complex Hilbert space \\
 Theorem~\ref{t:inh}, Remark~\ref{r:lag} & proved; checked in Lean on all non-zero inner product spaces, real or complex \\
 Corollary~\ref{c:acc} & proved; its inequality checked in Lean \\
 Theorem~\ref{t:ret} & proved; $\SU(2)$, periodic time \\
@@ -1261,9 +1262,18 @@ links and whose variances it does not control.
 \end{remark}
 
 \section{Machine-checked parts}\label{s:lean}
-Eight Lean~4 files with Mathlib accompany the paper (Supplement~S7; Lean 4.19.0, Mathlib v4.19.0); all compile with no \texttt{sorry} and use
+Nine Lean~4 files with Mathlib accompany the paper (Supplement~S7; Lean 4.19.0, Mathlib v4.19.0); all compile with no \texttt{sorry} and use
 only the axioms \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}.
 \begin{itemize}
+\item \texttt{Criterion.lean}: Theorem~\ref{t:crit} in the following form. Let $S$ be a bounded self-adjoint
+operator on a complex Hilbert space with spectrum in $[0,1]$ (in the theorem, $S=e^{-\tau H}$), let $0<r<1$,
+and let $D$ have dense linear span. Then the spectrum of $S$ does not meet $(r,1)$ if and only if for every
+$v\in D$ and every $\rho>r$ there is a constant $C$ with $d_{v,n}\le C\rho^n$ for all $n$, where
+$d_{v,n}=\operatorname{Re}\langle S^n(v-Sv),v\rangle$. One direction holds with $C=\|v\|^2$ and $\rho=r$. The
+proof uses the continuous functional calculus of Mathlib, with a continuous tent function in place of the
+indicator of an interval. Two steps between this and the theorem as stated are not formalised: the passage
+from $H$ to $S=e^{-\tau H}$, and the equivalence of the rate condition with
+$\limsup_nd_{v,n}^{1/n}\le r$.
 \item \texttt{Hilbert.lean}: Theorem~\ref{t:inh}, together with the longer lag of Remark~\ref{r:lag}, on
 every non-zero inner product space, real or complex, of any dimension. The statement for complex scalars is
 \texttt{refinement\_complex}. It takes a bounded operator $A$ with
@@ -1310,9 +1320,9 @@ derivative formulas entered as algebraic expressions in real variables; the redu
 $\beta^2\lambda_{\min}(k)\ge R'(\ell)$ given the monotonicities; and the first-zero principle. The Bessel identities are not
 formalised.
 \end{itemize}
-Theorems~\ref{t:crit} and~\ref{t:ret}, Proposition~\ref{p:vac}, Lemmas~\ref{l:cap}
+Theorem~\ref{t:ret}, Proposition~\ref{p:vac}, Lemmas~\ref{l:cap}
 and~\ref{l:trace}, and the analytic part of Corollary~\ref{c:vac} are not formalised.
-The eight files contain $77$ theorems. For $30$ of them, those cited above and their main lemmas, a digest of the statement text is recorded
+The nine files contain $88$ theorems. For $33$ of them, those cited above and their main lemmas, a digest of the statement text is recorded
 with the digests of the files (Supplement~S7), so that a later change of a statement or a file can be
 detected; a digest of a statement does not cover the definitions it depends on.
 
