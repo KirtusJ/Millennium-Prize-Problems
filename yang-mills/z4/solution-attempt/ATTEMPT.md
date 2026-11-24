@@ -81,6 +81,16 @@ To see whether the hypotheses can hold together at all, I computed them exactly 
 
 So the route is at least consistent in the one case where everything is computable. This is the quadratic part of the Wilson action, it has no gap in infinite volume, and it says nothing about the interacting hypotheses.
 
+## 4.3 Corrections after an outside review (same day)
+
+A reviewing GPT model examined this record. I checked its points and accept the following. The paper carries the corrected forms (Remarks 3.5 and 3.6, Appendix E).
+
+1. **"Gates cannot absorb the problem" was overstated.** The union bound shows only for which gate widths the *available* bound is useful; it does not show that wider gates have large return weight. And my large-field count was unsound in three ways: a lowest-order mean does not give a large-deviation tail; a diverging expected number does not give probability tending to one; and the angle exactly π has probability zero. What can be proved is narrower. By the cap lemma, a plaquette has angle at least φ₀ from the identity with conditional probability at least `1 − p_{6β}(φ₀)` given the other links, so for about N³ plaquettes with disjoint boundaries the probability that none exceeds φ₀ is at most `p_{6β}(φ₀)^{N³}`. Under `β ≤ s log(1/a) + const` this tends to zero whenever `6s(1 − cos φ₀) < 3`. So plaquettes at angle up to roughly 100° do occur in every slice with probability tending to one; nothing is shown near −I. Whether a global exceptional set can work is therefore open, not excluded.
+2. **The distilled lemma of §4.1 was not shown to suffice.** The reviewer supplied a bridge that is: if the law of the slice given the coarse field has Poincaré constant `P_c` along the fibre and the covariance of the next slice given the present one has operator norm at most `L_c`, then `ρ(c)² ≤ β²P_cL_c/(1 + β²P_cL_c)`. I re-derived it; it is Remark 3.6(b) of the paper. The exponential allowance of §3 must be shared: `p + q < 1/s` for `P ≤ e^{pβ}`, `L ≤ e^{qβ}`.
+3. **An exact form of the hypothesis.** `γ_opt = 1/‖G(I − A²)⁻¹G‖` (Remark 3.6(a)). The hypothesis asks only that fine detail off the gates not retain too much correlation summed over time; it does not ask for spatial mixing of everything.
+4. **§3: the measured slope 0.43 is an illustration**, not a bound on the trajectory, and any `γ_i` with `Σ a_i/γ_i < ∞` would do.
+5. **Free theory.** The reviewer reproduced the table of §4.2 independently and supplied proofs that hold for every side (now Propositions E.1 and E.2). It also pointed out what the example warns against: the free theory satisfies the whole refinement architecture and has no mass gap.
+
 ## 5. What would be worth doing next (not done)
 
 1. State the missing estimate as a single conjecture: a Poincaré inequality for the vacuum slice measure conditioned on the coarse field, with constant at most `C e^{cβ}`, `c < 2.33`, uniform in volume and in the coarse field. Test it numerically as a function of β and of the side at fixed β, which the existing programs can do.
