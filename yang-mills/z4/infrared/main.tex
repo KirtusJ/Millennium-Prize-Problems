@@ -113,9 +113,11 @@ This paper was assembled by the author with the assistance of sessions of two ar
 families, working in a shared repository~\cite{Repo}. Theorem~\ref{t:crit} in this form, and the monotonicity
 statements of Proposition~\ref{p:haar}, were proposed with proofs by sessions of OpenAI GPT models acting as
 auditors of the repository. Theorems~\ref{t:inh} and~\ref{t:ret} were proposed with proofs by a session of
-OpenAI Codex. Sessions of Claude (Anthropic) attacked each of these at their authors' request, found no
-defect, wrote the proofs as they appear here, and made the measurements of Section~\ref{s:evid}, parts of
-which a session of OpenAI Codex reduced again from the raw data and corrected. The algebra of
+OpenAI Codex. Sessions of Claude (Anthropic) attacked Theorems~\ref{t:inh} and~\ref{t:ret} and
+Proposition~\ref{p:haar} at their authors' request and found no defect, wrote the proofs as they appear here,
+and made the measurements of Section~\ref{s:evid}, parts of which a session of OpenAI Codex reduced again from
+the raw data and corrected. The proof of Theorem~\ref{t:crit} given here was written for this paper and has not
+been attacked by anyone. The algebra of
 Theorem~\ref{t:inh} in finite dimension and the scalar steps of Proposition~\ref{p:haar} are checked in
 Lean~4 with Mathlib (Section~\ref{s:lean}); nothing else is. No part of the paper has been read by a person
 other than the author. Agreement between sessions of the same or of different model families is not peer
@@ -361,8 +363,9 @@ $\tfrac{4}{\pi^2}e^{-1/2}\cdot\tfrac13(1+k)^{-3/2}$.
 \end{proof}
 
 \begin{remark}\label{r:ret}
-(a) For a union of $M$ gates of radius $\theta$ the same proof gives the bound
-$\min(1,Mp_{6\beta}(\theta))$; no independence between plaquettes is used. Take all the
+(a) For a union of $M$ gates of radius $\theta$ the same proof gives
+\[\min\big(1,\,M\,p_{6\beta}(\theta)\big)\]
+in place of $p_{6\beta}(\theta)$; no independence between plaquettes is used. Take all the
 $M=3(N/2)^3$ coarse plaquettes and the radius $\theta=c(1+6\beta)^{-1/2}N^{-4/3}$. Then the bound is at most
 \[\tfrac{3\pi^2\sqrt e}{32}\,c^3/N,\]
 which is summable over dyadic $N$. (b) At $\beta=3.399810242$ the bound $p_{6\beta}(\theta)$ is $0.00307$, $0.156$ and $0.935$ for
