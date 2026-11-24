@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/d2-time/child/grandchild/rho.py", line 4, in <module>
+    w=[float(t) for t in open(D+'w.txt').read().split()]
+                         ~~~~^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../data/w.txt'

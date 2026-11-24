@@ -1,0 +1,32 @@
+Control and the main analysis are done. The sub-agent (task T228) is running its independent rho check, and I'm waiting for it to return before writing report.md.
+
+I finished the control, the analysis, the sub-agent check and `report.md`. Nothing in the analysis failed its predicates. One PCP check failed, and that was my own mistake.
+
+The control R² for (0,0), (1,1), (2,1), (3,3) is 0.852632, written to `control.txt`.
+
+All numbers use m_0 only; the jackknife is over 32 streams for rho and over the 16 held streams for R2_held.
+
+| | b=0 | b=1 |
+|---|---|---|
+| rho | 0.0224141 | 0.0834115 |
+| rho jackknife se | 0.00403291 | 0.00557360 |
+| R2_held | −0.0132590 | −0.00233129 |
+| R2_held se | 0.00209182 | 0.00175550 |
+| R2_train | 0.0189070 | 0.0286924 |
+| Discarded directions | 0 | 0 |
+
+- **R2_held is negative:** the TRAIN fit does slightly worse on HELD than predicting HELD's own mean.
+- **Predicates:** all passed, so I have no analysis failures to report. They were fixed in `analyze.py`'s docstring before the first run.
+- **Sub-agent (T228):** its independent recomputation of block-0 rho gave 0.022414127551879784, matching mine to about 13 digits. I reread its code and reran it with the same result, then released T228.
+- **Failed PCP check:** my first PCP rerun of the grandchild script (check K2, exit 1) ran from the wrong directory, because `rho.py` reads `../data` relative to where it runs. I reran it from `grandchild/` as K3, which exited 0. Both checks stay in the register.
+- **Verify lines:** `pcp_os.py verify` printed "result: PASS", and the last line was the "a pass is a fact about these bytes…" disclaimer. `pcpos verify` printed only that same disclaimer line, with no separate verdict line, and I did not look further into why.
+
+I did not check the `smy` layout or the "m_0 is the first component" convention against the data producer, and the grandchild couldn't either. Blocks 2–7 are not analysed. The exact rerun commands are in `report.md`.
+
+Everything is in `/home/user/z4-workers/d2-time/child/`:
+- `report.md`
+- `results.json`
+- `control.txt`
+- `notes.md`
+- `analyze.py`
+- `grandchild/`

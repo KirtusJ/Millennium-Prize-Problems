@@ -1,0 +1,4 @@
+T-P2 max |Y(0) - X| = 0.000e0
+T-P1 max |Y change| under random full gauge transformation (t=1,2,3,T-1; loc and tr; 2464 marks) = 2.442e-15; max|Y| 0.998
+T-P2 max |Y(0) - X| = 0.000e0
+T-P1 max |Y change| under random full gauge transformation (t=1,2,3,T-1; loc and tr; 2464 marks) = 2.665e-15; max|Y| 0.995

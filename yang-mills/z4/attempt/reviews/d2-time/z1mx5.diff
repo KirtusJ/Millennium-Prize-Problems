@@ -1,0 +1,159 @@
+32a33,46
+> // z1mx5 (d2-time, T226) = z1mx4 + mode "time" (and Y marks in gauge mode). Modes fixed/gen are untouched (byte-identity predicate
+> // T-P0 checked outside: z1mx5 fixed == z1mx4 fixed, all five output files, same arguments).
+> // Y marks on slice t (site index x + t*n^3; root_t = t*n^3): the SAME step lists as the 308 X marks, started at root_t.
+> //   Y^loc_k(t) = Re(B_t L_k(t))  (B-type; B_t = coarse xz holonomy at root_t, all links free), Re(L_k(t)) (T-type).
+> //   Y^tr_k(t)  = Re(B_0 P L_k(t) P^-1) (B-type; P = temporal path root_0 -> root_t along the root's time-like links,
+> //                 upward for t=1,2,3, downward for t=-1=T-1; B_0 = coarse xz holonomy at root_0 = frozen); T-type = Re(L_k(t)) (P drops out).
+> // Predicates fixed before the first run (asserted in gauge mode):
+> //  T-P1 every Y^loc_k(t), Y^tr_k(t) (t = 1,2,3,T-1) unchanged to 1e-10 under a random full gauge transformation.
+> //  T-P2 Y^loc_k(0) and Y^tr_k(0) equal X_k to 1e-12 (shift code reproduces the slice-0 marks).
+> // Mode time: identical chain (the same cond_sweep calls on rng; the two-copy refresh is NOT done, it used only the separate
+> //  meas RNG and restored the links, so the chain is unchanged: checked outside as T-P3, X.csv byte-identical to fixed mode).
+> //  Per stream it accumulates, for each of 8 blocks (t in 1,2,3,T-1) x (loc,tr): sum Y, sum Y Y^T (upper triangle),
+> //  sum m_j Y for the K weight vectors w_j (m_j = w_j . X(0)); plus sum m, sum m m^T. Also a small per-measurement csv of
+> //  m_j and w_j.Y(t) (8K columns) and the mean spatial plaquette of slices 0,1,2,3,T-1.
+402a417,553
+>     // ---- d2-time additions (z1mx5) ----
+>     fn closed_at(lat: &Lattice, x0: usize, steps: &[usize]) -> Q {
+>         let (h, y) = path(lat, x0, steps); assert_eq!(y, x0, "loop not closed"); h
+>     }
+>     // temporal transport root_0 -> root_t: t in 1..T-1 upward if t <= T/2, else downward (T-t steps)
+>     fn tpath(lat: &Lattice, t: usize) -> Q {
+>         let tp = lat.time; let steps: Vec<usize> = if 2 * t <= tp { vec![3; t] } else { vec![7; tp - t] };
+>         let (h, y) = path(lat, 0, &steps); assert_eq!(y, t * lat.l.pow(3)); h
+>     }
+>     // returns (loc, tr) for slice t
+>     fn ymarks(lat: &Lattice, ml: &[(String, usize, Vec<usize>)], t: usize) -> (Vec<f64>, Vec<f64>) {
+>         let r = t * lat.l.pow(3);
+>         let bt = { let (h, y) = path(lat, r, &[0, 0, 2, 2, 4, 4, 6, 6]); assert_eq!(y, r); h };
+>         let b0 = loop_hol(lat, 0, 0, 2, 2);
+>         let p = tpath(lat, t);
+>         let mut lo = Vec::with_capacity(ml.len()); let mut tr = Vec::with_capacity(ml.len());
+>         for (_, kind, s) in ml {
+>             let l = closed_at(lat, r, s);
+>             if *kind == 0 { lo.push(mul(bt, l)[0]); tr.push(mul(b0, mul(mul(p, l), conj(p)))[0]); }
+>             else { lo.push(l[0]); tr.push(l[0]); }
+>         }
+>         (lo, tr)
+>     }
+>     fn ymarks0(lat: &Lattice, ml: &[(String, usize, Vec<usize>)]) -> (Vec<f64>, Vec<f64>) {
+>         let bt = loop_hol(lat, 0, 0, 2, 2);
+>         let lo: Vec<f64> = ml.iter().map(|(_, k, s)| { let l = closed_at(lat, 0, s); if *k == 0 { mul(bt, l)[0] } else { l[0] } }).collect();
+>         (lo.clone(), lo)
+>     }
+>     fn slices(tp: usize) -> [usize; 4] { [1, 2, 3, tp - 1] }
+>     fn slice_plaq(lat: &Lattice, t: usize) -> f64 {
+>         let n = lat.l; let mut s = 0.;
+>         for x in 0..n.pow(3) { for i in 0..3 { s += lat.plaquette(x + t * n.pow(3), i, (i + 1) % 3); } }
+>         s / (3 * n.pow(3)) as f64
+>     }
+>     fn ygauge(lat: &mut Lattice, rng: &mut Rng) {
+>         let ml = mark_loops(); let tp = lat.time;
+>         let x0 = marks_with(lat, &ml);
+>         let (l0, t0) = ymarks0(lat, &ml);
+>         let mut d0 = 0f64; for k in 0..x0.len() { d0 = d0.max((x0[k] - l0[k]).abs()).max((x0[k] - t0[k]).abs()); }
+>         println!("T-P2 max |Y(0) - X| = {d0:.3e}"); assert!(d0 < 1e-12, "T-P2 failed");
+>         let before: Vec<(Vec<f64>, Vec<f64>)> = slices(tp).iter().map(|&t| ymarks(lat, &ml, t)).collect();
+>         let g: Vec<Q> = (0..lat.links.len()).map(|_| unit([rng.u() - 0.5, rng.u() - 0.5, rng.u() - 0.5, rng.u() - 0.5])).collect();
+>         let orig = lat.links.clone();
+>         for x in 0..orig.len() { for mu in 0..4 { lat.links[x][mu] = mul(mul(g[x], orig[x][mu]), conj(g[lat.plus[x][mu]])); } }
+>         let after: Vec<(Vec<f64>, Vec<f64>)> = slices(tp).iter().map(|&t| ymarks(lat, &ml, t)).collect();
+>         lat.links = orig;
+>         let mut w = 0f64; let mut spread = 0f64;
+>         for (b, a) in before.iter().zip(after.iter()) { for k in 0..b.0.len() {
+>             w = w.max((b.0[k] - a.0[k]).abs()).max((b.1[k] - a.1[k]).abs()); spread = spread.max(b.0[k].abs());
+>         } }
+>         println!("T-P1 max |Y change| under random full gauge transformation (t=1,2,3,T-1; loc and tr; {} marks) = {w:.3e}; max|Y| {spread:.3}", 2 * 4 * x0.len());
+>         assert!(w < 1e-10, "T-P1 failed");
+>     }
+> 
+>     // time <beta> <seed> <hot> <burn> <samples> <spacing> <n> <T> <skeleton file> <weights file> <writeX 0|1> <out prefix>
+>     fn time(a: &[String]) {
+>         let beta: f64 = a[2].parse().unwrap();
+>         assert!(beta < 8.0);
+>         let seed: u64 = a[3].parse().unwrap();
+>         let hot = a[4] == "1";
+>         let burn: usize = a[5].parse().unwrap();
+>         let samples: usize = a[6].parse().unwrap();
+>         let spacing: usize = a[7].parse().unwrap();
+>         let n: usize = a[8].parse().unwrap();
+>         let tp: usize = a[9].parse().unwrap();
+>         let skel = read_skeleton(&a[10], n);
+>         let wtxt = std::fs::read_to_string(&a[11]).unwrap();
+>         let ws: Vec<Vec<f64>> = wtxt.lines().filter(|l| !l.starts_with('#') && !l.trim().is_empty())
+>             .map(|l| l.split_whitespace().map(|v| v.parse::<f64>().unwrap()).collect()).collect();
+>         let write_x = a[12] == "1";
+>         let pre = &a[13];
+>         let mut rng = Rng { state: seed };
+>         let mut lat = Lattice::new(n, tp, false, hot, &mut rng);
+>         for &(x, i, q) in &skel { lat.links[x][i] = q; }
+>         let ml = mark_loops(); let nm = ml.len(); let kw = ws.len();
+>         for w in &ws { assert_eq!(w.len(), nm, "weight vector length"); }
+>         let open = |s: &str| std::fs::OpenOptions::new().write(true).create_new(true).open(format!("{pre}{s}")).unwrap();
+>         let mut fh = open(".meta.txt");
+>         writeln!(fh, "args {}", a[1..].join(" ")).unwrap();
+>         let mut fx = if write_x { let mut f = open(".X.csv"); writeln!(f, "{}", mark_names(&lat).join(",")).unwrap(); Some(f) } else { None };
+>         let mut fs = open(".series.csv");
+>         let sl = slices(tp);
+>         let mut hdr: Vec<String> = (0..kw).map(|j| format!("m{j}")).collect();
+>         for &t in &sl { for d in ["loc", "tr"] { for j in 0..kw { hdr.push(format!("wY{j}_t{t}_{d}")); } } }
+>         for t in [0usize, 1, 2, 3, tp - 1] { hdr.push(format!("plaq_t{t}")); }
+>         writeln!(fs, "{}", hdr.join(",")).unwrap();
+>         let nb = 2 * sl.len();
+>         let mut sy = vec![vec![0f64; nm]; nb];
+>         let mut syy = vec![vec![0f64; nm * nm]; nb];
+>         let mut smy = vec![vec![0f64; kw * nm]; nb];
+>         let mut sm = vec![0f64; kw]; let mut smm = vec![0f64; kw * kw];
+>         for _ in 0..burn { cond_sweep(&mut lat, beta, &mut rng); }
+>         for _ in 0..samples {
+>             for _ in 0..spacing { cond_sweep(&mut lat, beta, &mut rng); }
+>             let x0 = marks_with(&lat, &ml);
+>             if let Some(f) = fx.as_mut() { writeln!(f, "{}", x0.iter().map(|v| format!("{v:.12}")).collect::<Vec<_>>().join(",")).unwrap(); }
+>             let m: Vec<f64> = ws.iter().map(|w| w.iter().zip(&x0).map(|(a, b)| a * b).sum()).collect();
+>             for j in 0..kw { sm[j] += m[j]; for k in 0..kw { smm[j * kw + k] += m[j] * m[k]; } }
+>             let mut row: Vec<String> = m.iter().map(|v| format!("{v:.10e}")).collect();
+>             for (ti, &t) in sl.iter().enumerate() {
+>                 let (lo, tr) = ymarks(&lat, &ml, t);
+>                 for (di, y) in [lo, tr].iter().enumerate() {
+>                     let b = 2 * ti + di;
+>                     for u in 0..nm { sy[b][u] += y[u]; let yu = y[u]; let r = &mut syy[b][u * nm..(u + 1) * nm]; for v in u..nm { r[v] += yu * y[v]; } }
+>                     for j in 0..kw { for u in 0..nm { smy[b][j * nm + u] += m[j] * y[u]; } }
+>                     for w in &ws { let v: f64 = w.iter().zip(y).map(|(a, b)| a * b).sum(); row.push(format!("{v:.10e}")); }
+>                 }
+>             }
+>             for t in [0usize, 1, 2, 3, tp - 1] { row.push(format!("{:.10e}", slice_plaq(&lat, t))); }
+>             writeln!(fs, "{}", row.join(",")).unwrap();
+>             for &(x, i, q) in &skel { assert_eq!(lat.links[x][i], q, "frozen link changed"); }
+>         }
+>         let mut fmom = open(".mom.txt");
+>         writeln!(fmom, "# z1mx5 time moments: samples {samples} marks {nm} weights {kw} slices {:?} ; blocks b = 2*slice_index + (0 loc, 1 tr)", sl).unwrap();
+>         writeln!(fmom, "sm {}", sm.iter().map(|v| format!("{v:.15e}")).collect::<Vec<_>>().join(" ")).unwrap();
+>         writeln!(fmom, "smm {}", smm.iter().map(|v| format!("{v:.15e}")).collect::<Vec<_>>().join(" ")).unwrap();
+>         for b in 0..nb {
+>             writeln!(fmom, "sy {b} {}", sy[b].iter().map(|v| format!("{v:.15e}")).collect::<Vec<_>>().join(" ")).unwrap();
+>             writeln!(fmom, "smy {b} {}", smy[b].iter().map(|v| format!("{v:.15e}")).collect::<Vec<_>>().join(" ")).unwrap();
+>             let mut up = Vec::with_capacity(nm * (nm + 1) / 2);
+>             for u in 0..nm { for v in u..nm { up.push(format!("{:.11e}", syy[b][u * nm + v])); } }
+>             writeln!(fmom, "syy {b} {}", up.join(" ")).unwrap();
+>         }
+>     }
+>     fn gauge_t(a: &[String]) {
+>         // gauge_t <seed> <n> <T> <skeleton> : random hot configuration with the skeleton; T-P1, T-P2
+>         let seed: u64 = a[2].parse().unwrap(); let n: usize = a[3].parse().unwrap(); let tp: usize = a[4].parse().unwrap();
+>         let skel = read_skeleton(&a[5], n);
+>         let mut rng = Rng { state: seed };
+>         let mut lat = Lattice::new(n, tp, false, true, &mut rng);
+>         for &(x, i, q) in &skel { lat.links[x][i] = q; }
+>         ygauge(&mut lat, &mut rng);
+>         // also after 20 conditional sweeps (a thermal configuration)
+>         for _ in 0..20 { cond_sweep(&mut lat, 3.276133577, &mut rng); }
+>         ygauge(&mut lat, &mut rng);
+>     }
+> 
+409c560,562
+<             _ => panic!("mode fixed|gen"),
+---
+>             Some("time") => { assert_eq!(a.len(), 14, "time beta seed hot burn samples spacing n T skel weights writeX out"); time(&a) }
+>             Some("gauge_t") => { assert_eq!(a.len(), 6, "gauge_t seed n T skel"); gauge_t(&a) }
+>             _ => panic!("mode fixed|gen|time|gauge_t"),

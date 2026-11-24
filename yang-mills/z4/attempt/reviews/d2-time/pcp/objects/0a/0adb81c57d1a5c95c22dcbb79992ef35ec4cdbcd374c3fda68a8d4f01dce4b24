@@ -1,0 +1,43 @@
+PASS b0 N=36864 36864
+PASS b0 C_YY PSD (full pool) min/max=5.470e-04
+PASS b0 |rho|<=1 0.02241412755187925
+PASS b0 rho jackknife finite>0 0.0040329136514944885
+PASS b0 C_YY(train) PSD min/max=5.341e-04
+PASS b0 R2_train in [0,1] 0.018906973155139783
+PASS b0 R2_held<=1 -0.013258961150394155
+PASS b0 R2_held jackknife finite>0 0.002091820327106253
+PASS b1 N=36864 36864
+PASS b1 C_YY PSD (full pool) min/max=1.342e-02
+PASS b1 |rho|<=1 0.08341148921107408
+PASS b1 rho jackknife finite>0 0.005573602495764971
+PASS b1 C_YY(train) PSD min/max=1.257e-02
+PASS b1 R2_train in [0,1] 0.028692447729210646
+PASS b1 R2_held<=1 -0.0023312920741671572
+PASS b1 R2_held jackknife finite>0 0.0017554989012335796
+{
+ "b0": {
+  "rho": 0.02241412755187925,
+  "rho_se": 0.0040329136514944885,
+  "R2_held": -0.013258961150394155,
+  "R2_held_se": 0.002091820327106253,
+  "R2_train": 0.018906973155139783,
+  "discarded": 0,
+  "eig_max_train": 19.458225981602318,
+  "eig_min_train": 0.010392573105285874,
+  "n_streams_rho": 32,
+  "n_held": 16
+ },
+ "b1": {
+  "rho": 0.08341148921107408,
+  "rho_se": 0.005573602495764971,
+  "R2_held": -0.0023312920741671572,
+  "R2_held_se": 0.0017554989012335796,
+  "R2_train": 0.028692447729210646,
+  "discarded": 0,
+  "eig_max_train": 0.800468850907874,
+  "eig_min_train": 0.010065124426119261,
+  "n_streams_rho": 32,
+  "n_held": 16
+ },
+ "failed_predicates": []
+}

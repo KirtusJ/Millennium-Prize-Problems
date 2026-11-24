@@ -1,0 +1,2 @@
+check K125: exit 0 (expected 0) in 858504 ms | output 781d33851be7 | event 127 head 4132aff2e97d
+  /home/user/z4-workers/d2-time/report.md — 8 STANDS, 1 DEFECT, 2 NOT CHECKED (the slow mode does not persist in physical time: R²_held(1) is −.013 (local reference) and −.002 (transported), with a small, real −I carry-over of R² ≈ .01 in the transported marks only).

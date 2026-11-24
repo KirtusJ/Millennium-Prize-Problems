@@ -1,0 +1,21 @@
+T-P0 d0c .csv: MET
+T-P0 d0c .colours.csv: MET
+T-P0 d0c .meta.txt: FAILED
+T-P0 d0c .X.csv: MET
+T-P0 d0c .Dc.txt: MET
+T-P3 d0c: MET
+T-P4 d0c: max dev 5.12e-11 MET
+T-P0 d0h .csv: MET
+T-P0 d0h .colours.csv: MET
+T-P0 d0h .meta.txt: FAILED
+T-P0 d0h .X.csv: MET
+T-P0 d0h .Dc.txt: MET
+T-P3 d0h: MET
+T-P4 d0h: max dev 4.41e-11 MET
+T-P0 clc .csv: MET
+T-P0 clc .colours.csv: MET
+T-P0 clc .meta.txt: FAILED
+T-P0 clc .X.csv: MET
+T-P0 clc .Dc.txt: MET
+T-P3 clc: MET
+T-P4 clc: max dev 4.01e-11 MET

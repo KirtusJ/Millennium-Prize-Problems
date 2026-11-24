@@ -1,0 +1,8 @@
+ADMITTED T226
+WRITTEN as event 453: TASK_ADMITTED by principal (DECLARED)
+head ce3a2de9e59d8fef5db61f5ec6a23b21fe157030d7163f6519be957ac3ddf1ce
+previous head 24db296d9f9056ac0a712a95c6cde4ee38a7841be1649bd72ba736ba1ced5d5f
+RELEASED T226
+WRITTEN as event 458: TASK_RELEASED by principal (DECLARED)
+head dff467b48562d0b2130be15f1f4d56e8b5e152d437d7099b4c6449d5f9f1e819
+previous head de03f897b0b2a0e2eed9f38a87ae65a049921162d1b88aebbe1b83c6dcd4fefa

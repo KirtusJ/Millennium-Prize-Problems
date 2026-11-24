@@ -1,0 +1,18 @@
+T-P0b d0c .csv: MET
+T-P0b d0c .colours.csv: MET
+T-P0b d0c .meta.txt: MET
+T-P0b d0c .X.csv: MET
+T-P0b d0c .Dc.txt: MET
+T-P0b d0h .csv: MET
+T-P0b d0h .colours.csv: MET
+T-P0b d0h .meta.txt: MET
+T-P0b d0h .X.csv: MET
+T-P0b d0h .Dc.txt: MET
+T-P0b clc .csv: MET
+T-P0b clc .colours.csv: MET
+T-P0b clc .meta.txt: MET
+T-P0b clc .X.csv: MET
+T-P0b clc .Dc.txt: MET
+T-P4 d0c: max dev 5.12e-11 MET
+T-P4 d0h: max dev 4.94e-11 MET
+T-P4 clc: max dev 4.01e-11 MET
