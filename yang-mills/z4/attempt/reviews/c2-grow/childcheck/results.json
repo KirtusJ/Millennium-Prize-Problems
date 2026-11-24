@@ -1,0 +1,42 @@
+{
+ "lambda_train": 0.015708940952962526,
+ "cond_Ctrain_range": 359.2504295979185,
+ "cond_Ctrain_full_numpy": 2.372750969042226e+16,
+ "q": 0.015427727815758643,
+ "jackknife_err": 0.00039567334747415175,
+ "top3": [
+  [
+   "B.yz204.g01",
+   0.38237641359613256
+  ],
+  [
+   "B.yz204.L_no11",
+   0.3586282226763061
+  ],
+  [
+   "B.xy200.g00",
+   0.3347293557644606
+  ]
+ ],
+ "min_single_held": [
+  "B.yz204.Rv",
+  0.04558118683753429
+ ],
+ "B_xy000_g00_held": 0.060563773411165506,
+ "cond_first15": 42.679051317933805,
+ "lambda_next": [
+  0.03407565391185451,
+  0.03986819009697628,
+  0.040217631809472014
+ ],
+ "failed": [],
+ "preds": {
+  "P1 rank/nullspace": true,
+  "P2 D(TRAIN) sym+PSD": true,
+  "P4 residual": true,
+  "P6 range cond<1e6": true,
+  "P3 lambda<=every single-mark train quotient": true,
+  "P5 q>=lam-3err": true,
+  "P7 jackknife mean within 3err of q": true
+ }
+}

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/c2-grow/child/analyze.py", line 38, in <module>
+    Li=np.linalg.inv(L)
+                     ^
+NameError: name 'L' is not defined

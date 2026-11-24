@@ -1,0 +1,5 @@
+check K3: exit 0 (expected 0) in 1707 ms | output c14b586077a1 | event 4 head 69ab3e5bf362
+
+real	0m1.810s
+user	0m1.990s
+sys	0m0.128s

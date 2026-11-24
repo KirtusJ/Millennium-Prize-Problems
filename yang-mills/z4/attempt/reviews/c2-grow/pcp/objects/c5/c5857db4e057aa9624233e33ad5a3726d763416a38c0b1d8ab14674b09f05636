@@ -1,0 +1,20 @@
+I finished the task and wrote `report.md` in `child/`. The control answer is 0.784750, written to `control.txt`.
+
+My first predicate failed: C(TRAIN) is not positive definite, so Cholesky is out. It has rank 304 of 308, and the 4 zero directions are shared by C and D for both TRAIN and HELD. The target data cause this, and my expectation of positive definiteness was wrong. I whitened on the range of C instead (eigendecomposition, dropping the 4 near-zero eigenvalues). Every predicate in the revised program passed.
+
+| Item | Result |
+|---|---|
+| (a) smallest lambda (lambda_train) | 0.015708940953 |
+| (a) cond(C(TRAIN)) on its range | 359.25043 (infinite over all 308 dimensions) |
+| (b) held-out quotient q | 0.015427727816 |
+| (c) jackknife error | 0.00039567335 (q is below lambda_train by 0.7 of this) |
+| (d) top three marks | B.yz204.g01 0.38237641, B.yz204.L_no11 0.35862822, B.xy200.g00 0.33472936 |
+| (e) smallest single-mark held quotient | B.yz204.Rv, 0.045581187 |
+
+- **Predicates:** the two crashed runs were my own bugs. Neither wrote a results file.
+- **Sub-agent check (task T225):** it answered its control question correctly (2.000000). It found a held-out quotient of 0.06056377341 for B.xy000.g00 and a 2-norm condition number of 42.67905132 for the first 15 marks. I reran its script, and both numbers match my own computation. I released T225.
+- **PCP OS:**
+  - Both verifies passed: `pcp_os.py verify` gave "PASS", and the Rust `pcpos verify` gave "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+  - The register has 5 checks, K1 to K5.
+
+`results.txt` in `child/` is the output of my rerun of the sub-agent's script, not a separate result.

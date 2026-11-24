@@ -1,0 +1,5 @@
+k=0 D_kk=0.007667365438 C_kk=0.1265998634
+quotient=0.06056377341
+cond2=42.67905132  eig min=0.011244 max=0.479885
+P1 symmetric=True (max asym 0) cholesky_ok=True  -> PASS
+P2 finite&positive=True

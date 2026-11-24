@@ -1,0 +1,2 @@
+check K124: exit 0 (expected 0) in 849815 ms | output c00bc7c327f8 | event 126 head 482130b05750
+  /home/user/z4-workers/c2-grow/report.md — 9 STANDS, 1 DEFECT, 3 NOT CHECKED (predicates: 51 met, 8 failed, 33 measured only); held-out optimum at −I falls .0208 → .0167 → .0159 → .0154, meeting "stopped falling" from L2 on though still dropping 3–5% per step, while the clear skeleton keeps falling (.0428), and the gated Q2 signal had only 52 pairs at t = 1 (under 200), so no gated C(t) is reported.

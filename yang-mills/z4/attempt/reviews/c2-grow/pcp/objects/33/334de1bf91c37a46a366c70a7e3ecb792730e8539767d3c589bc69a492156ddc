@@ -1,0 +1,43 @@
+face xy000 holonomy (-1.000000,0.000000,0.000000,0.000000) angle_from_-I 0.000000
+face xz000 holonomy (0.000000,1.000000,0.000000,0.000000) angle_from_-I 1.570796
+face xy200 holonomy (-1.000000,0.000000,0.000000,0.000000) angle_from_-I 0.000000
+face xz200 holonomy (0.000000,-1.000000,0.000000,0.000000) angle_from_-I 1.570796
+face yz200 holonomy (0.000000,1.000000,0.000000,0.000000) angle_from_-I 1.570796
+face yz204 holonomy (-1.000000,0.000000,0.000000,0.000000) angle_from_-I 0.000000
+face yz240 holonomy (0.000000,1.000000,0.000000,0.000000) angle_from_-I 1.570796
+face yz000 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face xy002 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face xz002 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face xy004 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face xz004 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face yz004 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face xy020 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face xz020 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face xz024 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face xy040 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face xz040 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face yz040 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face xy042 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face xy202 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face xz202 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face yz202 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face xy204 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face xz204 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face xy220 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face xz220 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face yz220 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face xz224 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face yz224 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face xy240 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face xz240 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face xy242 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face yz242 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face yz244 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face xy400 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face xz400 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face yz400 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face yz404 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+face yz440 holonomy (1.000000,0.000000,0.000000,0.000000) angle_from_-I 3.141593
+marks 308 names B.xy000.g00,B.xy000.g10,B.xy000.g01,B.xy000.g11,B.xy000.Rv,B.xy000.Rh,B.xy000.L_no11,B.xz000.g00,B.xz000.g10,B.xz000.g01,B.xz000.g11,B.xz000.Rv,B.xz000.Rh,B.xz000.L_no11,B.xy200.g00,B.xy200.g10,B.xy200.g01,B.xy200.g11,B.xy200.Rv,B.xy200.Rh,B.xy200.L_no11,B.xz200.g00,B.xz200.g10,B.xz200.g01,B.xz200.g11,B.xz200.Rv,B.xz200.Rh,B.xz200.L_no11,B.yz200.g00,B.yz200.g10,B.yz200.g01,B.yz200.g11,B.yz200.Rv,B.yz200.Rh,B.yz200.L_no11,B.yz204.g00,B.yz204.g10,B.yz204.g01,B.yz204.g11,B.yz204.Rv,B.yz204.Rh,B.yz204.L_no11,B.yz240.g00,B.yz240.g10,B.yz240.g01,B.yz240.g11,B.yz240.Rv,B.yz240.Rh,B.yz240.L_no11,B.yz000.g00,B.yz000.g10,B.yz000.g01,B.yz000.g11,B.xy002.g00,B.xy002.g10,B.xy002.g01,B.xy002.g11,B.xz002.g00,B.xz002.g10,B.xz002.g01,B.xz002.g11,B.xy004.g00,B.xy004.g10,B.xy004.g01,B.xy004.g11,B.xz004.g00,B.xz004.g10,B.xz004.g01,B.xz004.g11,B.yz004.g00,B.yz004.g10,B.yz004.g01,B.yz004.g11,B.xy020.g00,B.xy020.g10,B.xy020.g01,B.xy020.g11,B.xz020.g00,B.xz020.g10,B.xz020.g01,B.xz020.g11,B.xz024.g00,B.xz024.g10,B.xz024.g01,B.xz024.g11,B.xy040.g00,B.xy040.g10,B.xy040.g01,B.xy040.g11,B.xz040.g00,B.xz040.g10,B.xz040.g01,B.xz040.g11,B.yz040.g00,B.yz040.g10,B.yz040.g01,B.yz040.g11,B.xy042.g00,B.xy042.g10,B.xy042.g01,B.xy042.g11,B.xy202.g00,B.xy202.g10,B.xy202.g01,B.xy202.g11,B.xz202.g00,B.xz202.g10,B.xz202.g01,B.xz202.g11,B.yz202.g00,B.yz202.g10,B.yz202.g01,B.yz202.g11,B.xy204.g00,B.xy204.g10,B.xy204.g01,B.xy204.g11,B.xz204.g00,B.xz204.g10,B.xz204.g01,B.xz204.g11,B.xy220.g00,B.xy220.g10,B.xy220.g01,B.xy220.g11,B.xz220.g00,B.xz220.g10,B.xz220.g01,B.xz220.g11,B.yz220.g00,B.yz220.g10,B.yz220.g01,B.yz220.g11,B.xz224.g00,B.xz224.g10,B.xz224.g01,B.xz224.g11,B.yz224.g00,B.yz224.g10,B.yz224.g01,B.yz224.g11,B.xy240.g00,B.xy240.g10,B.xy240.g01,B.xy240.g11,B.xz240.g00,B.xz240.g10,B.xz240.g01,B.xz240.g11,B.xy242.g00,B.xy242.g10,B.xy242.g01,B.xy242.g11,B.yz242.g00,B.yz242.g10,B.yz242.g01,B.yz242.g11,B.yz244.g00,B.yz244.g10,B.yz244.g01,B.yz244.g11,B.xy400.g00,B.xy400.g10,B.xy400.g01,B.xy400.g11,B.xz400.g00,B.xz400.g10,B.xz400.g01,B.xz400.g11,B.yz400.g00,B.yz400.g10,B.yz400.g01,B.yz400.g11,B.yz404.g00,B.yz404.g10,B.yz404.g01,B.yz404.g11,B.yz440.g00,B.yz440.g10,B.yz440.g01,B.yz440.g11,B.yz000.Rv,B.yz000.Rh,B.yz000.L_no11,B.xy002.Rv,B.xy002.Rh,B.xy002.L_no11,B.xz002.Rv,B.xz002.Rh,B.xz002.L_no11,B.xy004.Rv,B.xy004.Rh,B.xy004.L_no11,B.xz004.Rv,B.xz004.Rh,B.xz004.L_no11,B.yz004.Rv,B.yz004.Rh,B.yz004.L_no11,B.xy020.Rv,B.xy020.Rh,B.xy020.L_no11,B.xz020.Rv,B.xz020.Rh,B.xz020.L_no11,B.xz024.Rv,B.xz024.Rh,B.xz024.L_no11,B.xy040.Rv,B.xy040.Rh,B.xy040.L_no11,B.xz040.Rv,B.xz040.Rh,B.xz040.L_no11,B.yz040.Rv,B.yz040.Rh,B.yz040.L_no11,B.xy042.Rv,B.xy042.Rh,B.xy042.L_no11,B.xy202.Rv,B.xy202.Rh,B.xy202.L_no11,B.xz202.Rv,B.xz202.Rh,B.xz202.L_no11,B.yz202.Rv,B.yz202.Rh,B.yz202.L_no11,B.xy204.Rv,B.xy204.Rh,B.xy204.L_no11,B.xz204.Rv,B.xz204.Rh,B.xz204.L_no11,B.xy220.Rv,B.xy220.Rh,B.xy220.L_no11,B.xz220.Rv,B.xz220.Rh,B.xz220.L_no11,B.yz220.Rv,B.yz220.Rh,B.yz220.L_no11,B.xz224.Rv,B.xz224.Rh,B.xz224.L_no11,B.yz224.Rv,B.yz224.Rh,B.yz224.L_no11,B.xy240.Rv,B.xy240.Rh,B.xy240.L_no11,B.xz240.Rv,B.xz240.Rh,B.xz240.L_no11,B.xy242.Rv,B.xy242.Rh,B.xy242.L_no11,B.yz242.Rv,B.yz242.Rh,B.yz242.L_no11,B.yz244.Rv,B.yz244.Rh,B.yz244.L_no11,B.xy400.Rv,B.xy400.Rh,B.xy400.L_no11,B.xz400.Rv,B.xz400.Rh,B.xz400.L_no11,B.yz400.Rv,B.yz400.Rh,B.yz400.L_no11,B.yz404.Rv,B.yz404.Rh,B.yz404.L_no11,B.yz440.Rv,B.yz440.Rh,B.yz440.L_no11,T.xy000.g00,T.xy000.g10,T.xy000.g01,T.xy000.g11,T.xz000.g00,T.xz000.g10,T.xz000.g01,T.xz000.g11,T.xy200.g00,T.xy200.g10,T.xy200.g01,T.xy200.g11,T.xz200.g00,T.xz200.g10,T.xz200.g01,T.xz200.g11,T.yz200.g00,T.yz200.g10,T.yz200.g01,T.yz200.g11,T.yz204.g00,T.yz204.g10,T.yz204.g01,T.yz204.g11,T.yz240.g00,T.yz240.g10,T.yz240.g01,T.yz240.g11
+P6 max |mark change| under random full gauge transformation = 1.221e-15
+global exp(i pi/8): max frozen-link change 0.000e0; Re(j g1) -0.535573335 -> -0.210212996; Re(k g1) -0.238287265 -> -0.547202078

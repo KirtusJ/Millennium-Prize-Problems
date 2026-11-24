@@ -1,0 +1,4 @@
+L1 n 15 lambda_on_held 0.05844 q_on_train 0.05925 gap_fwd +0.00021 gap_swap +0.00080 sym_gap +0.00050 S1 MET cos(w,w_swap)_C 0.9773
+L2 n 49 lambda_on_held 0.05221 q_on_train 0.05405 gap_fwd +0.00197 gap_swap +0.00184 sym_gap +0.00190 S1 MET cos(w,w_swap)_C 0.4126
+L3 n 181 lambda_on_held 0.04894 q_on_train 0.05038 gap_fwd +0.00276 gap_swap +0.00145 sym_gap +0.00210 S1 MET cos(w,w_swap)_C 0.8595
+L4 n 308 lambda_on_held 0.04110 q_on_train 0.04263 gap_fwd +0.00186 gap_swap +0.00154 sym_gap +0.00170 S1 MET cos(w,w_swap)_C 0.9596

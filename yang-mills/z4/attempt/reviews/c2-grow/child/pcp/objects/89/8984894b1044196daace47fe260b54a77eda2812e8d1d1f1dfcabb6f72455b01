@@ -1,0 +1,2 @@
+P1 C(TRAIN),C(HELD) PD False 
+P2 D(TRAIN) sym+PSD True mineig -3.059e-17

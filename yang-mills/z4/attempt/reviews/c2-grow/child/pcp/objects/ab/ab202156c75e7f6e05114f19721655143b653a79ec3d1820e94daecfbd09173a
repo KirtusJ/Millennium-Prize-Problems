@@ -1,0 +1,7 @@
+P1 rank/nullspace True 
+P2 D(TRAIN) sym+PSD True mineig -3.059e-17
+P4 residual True 6.753e-15
+P6 range cond<1e6 True 359.2504296
+P3 lambda<=every single-mark train quotient True 308/308 marks qualify
+P5 q>=lam-3err True q=0.01542772782 err=0.000395673
+P7 jackknife mean within 3err of q True 0.0154287451

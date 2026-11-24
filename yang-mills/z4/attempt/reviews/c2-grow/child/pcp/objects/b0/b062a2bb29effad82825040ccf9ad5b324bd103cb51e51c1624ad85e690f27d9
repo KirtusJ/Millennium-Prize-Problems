@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/c2-grow/child/analyze2.py", line 60, in <module>
+    print(json.dumps(res,indent=1,default=float))
+          ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/json/__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/usr/local/lib/python3.13/json/encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/local/lib/python3.13/json/encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+TypeError: only 0-dimensional arrays can be converted to Python scalars

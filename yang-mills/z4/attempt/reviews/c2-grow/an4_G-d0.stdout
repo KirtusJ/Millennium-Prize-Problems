@@ -1,0 +1,14 @@
+tag G-d0  marks 308  A1 True
+L1                 n  15 cond 49.1 drop 0 train 0.02134 held 0.02083(0.00047) rel 0.023 gap -0.00051 beta*q 0.0682 A3 True faces yz204:0.422 xy000:0.291 xy200:0.287
+L2                 n  49 cond 82.8 drop 0 train 0.01724 held 0.01668(0.00044) rel 0.027 gap -0.00056 beta*q 0.0546 A3 True faces yz204:0.339 xy200:0.266 xy000:0.258 yz200:0.119 xz200:0.008 xz000:0.008
+L3                 n 181 cond 86.3 drop 0 train 0.01625 held 0.01587(0.00042) rel 0.026 gap -0.00038 beta*q 0.0520 A3 True faces yz204:0.305 xy200:0.232 xy000:0.229 yz200:0.102 xz224:0.020 xz204:0.013
+L4                 n 308 cond 2.37e+16 drop 4 train 0.01571 held 0.01543(0.00040) rel 0.026 gap -0.00028 beta*q 0.0505 A3 True faces yz204:0.315 xy200:0.251 xy000:0.246 yz200:0.090 xz224:0.010 xz000:0.007
+L2_minus_i_faces   n  21 cond 80.5 drop 0 train 0.01830 held 0.01792(0.00044) rel 0.025 gap -0.00037 beta*q 0.0587 A3 True faces yz204:0.404 xy200:0.302 xy000:0.294
+L1_marked_only     n   7 cond 40.2 drop 0 train 0.03313 held 0.03299(0.00046) rel 0.014 gap -0.00014 beta*q 0.1081 A3 True faces xy000:1.000
+G1 L1->L2: diff -0.00415 comb_se 0.00065 z -6.42 stopped_falling False (paired z -38.44)
+G1 L2->L3: diff -0.00081 comb_se 0.00061 z -1.33 stopped_falling True (paired z -15.25)
+G1 L3->L4: diff -0.00044 comb_se 0.00058 z -0.77 stopped_falling True (paired z -11.76)
+G2 {'L1': (0.0226, True), 'L2': (0.0266, True), 'L3': (0.0265, True), 'L4': (0.0256, True)}
+A4 {'opt_L4': (0.01557, 0.00025, 1.56, True), 'f1': (0.06112, 0.00044, 0.88, True), 'f4': (0.04733, 0.00048, 2.22, False)}
+A5 {'z_r1': np.float64(-0.3019230327893216), 'z_r4': np.float64(0.6297738817891466), 'met': True}  A6 {'z': np.float64(-1.1227513388906152), 'met': True}
+colour diag share L4 (nonzero) {0: 0.1313, 1: 0.1343, 2: 0.1223, 3: 0.1247, 8: 0.0181, 9: 0.0184, 12: 0.0147, 13: 0.0151, 16: 0.1048, 18: 0.1035, 20: 0.1047, 22: 0.1081}

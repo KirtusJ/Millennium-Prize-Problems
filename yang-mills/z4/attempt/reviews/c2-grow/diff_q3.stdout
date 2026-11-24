@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/c2-grow/diff_q3.py", line 5, in <module>
+    ns = {}; exec(src, ns)
+             ~~~~^^^^^^^^^
+  File "<string>", line 13, in <module>
+NameError: name '__file__' is not defined. Did you mean: '__name__'?
