@@ -1,0 +1,14 @@
+[
+  {
+    "label": "negative_sweep",
+    "find": "1-u ≤ d*(1+u)",
+    "replace": "2*(1-u) ≤ d*(1+u)",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_error",
+    "find": "1 - coarse - err ≤ 1 - fine",
+    "replace": "1 - coarse + err ≤ 1 - fine",
+    "diagnostic": "error:"
+  }
+]

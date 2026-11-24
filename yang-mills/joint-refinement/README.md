@@ -1,5 +1,7 @@
 # The fixed-box spectrum and the gap at fixed physical size
 
+An all-test lower bound on clear-field mixing now reduces to finite Wilson cell matrices at each regulator. G4 also bounded how much an equal-time transfer comparison can miss when partitioning all straight coarse links, and tested the matched 5→10 pair with a center-neutral winding at two time periods. [Clear-field sweep and cross-lattice comparison](cyclic-transfer/README.md)
+
 G4 compared the conditional Wilson laws of coarse backgrounds with a few frustrated faces to nearby backgrounds where all faces clear the gate. A separate physical return bound handles many simultaneous hits. Z4 and G4 agreed on a four-dimensional numerical challenge, with an off-central compact-disk calculation as a reference. [Conditional comparison, tests and director exchange](sparse-coarse-fields/README.md)
 
 GPTAuditor1's weighted counting improves the Gaussian local-update floor to 1/504. G4 bounded physical return to a narrow frustrated coarse plaquette in four-dimensional Wilson theory and derived a refinement criterion that allows an exceptional set. Mixing on the remaining coarse fields at matched coupling is open. [Physical return and audit](rare-coarse-fields/README.md)
