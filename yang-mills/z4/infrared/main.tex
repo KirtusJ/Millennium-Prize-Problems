@@ -744,13 +744,13 @@ the sampler, not byte for byte.
 \toprule
 Runs & Lattice and coupling & Streams and length & Use of the streams \\
 \midrule
-Frozen backgrounds A and B (Section~\ref{s:local}) &
+Frozen backgrounds \textsf{A} and \textsf{B} (Section~\ref{s:local}) &
 side $N=6$, $T=12$, $\beta=3.276133577$, a point on a line of constant renormalised coupling &
 each background has one run of $32$ streams ($576$ sweeps discarded, then $1152$ measurements six sweeps apart) &
 selection on streams $0$ to $15$; reported value on streams $16$ to $31$ \\
 \addlinespace
 Carry-over in time (Section~\ref{s:time}) &
-same lattice, coupling and frozen slice (background A); the later slices are not frozen &
+same lattice, coupling and frozen slice (background \textsf{A}); the later slices are not frozen &
 $32$ fresh streams &
 $16$ for fitting and $16$ held out \\
 \addlinespace
@@ -781,17 +781,17 @@ $\mathcal J/\mathcal V$ be?
 
 \emph{What we found.} On the backgrounds tried, the paired differences show the selected quotient still
 decreasing at the largest span of trial functions, although the rule fixed before the run called the decrease
-stopped on A; no lowest value is indicated. For these spans the quotient is smaller on the background with
+stopped on \textsf{A}; no lowest value is indicated. For these spans the quotient is smaller on the background with
 holonomy $-I$ than on the other. All values are estimates for trial functions, not bounds.
 
 \emph{Setup.} Lattice, coupling and streams are in Table~\ref{tab:runs}. The coarse links of one slice are
 held fixed (a \emph{frozen background}) and the fine links are sampled around them.
 \begin{itemize}
-\item \emph{Background~A.} All coarse links are the identity except two. One is $-I$; of the four coarse
+\item \emph{Background~\textsf{A}.} All coarse links are the identity except two. One is $-I$; of the four coarse
 spatial plaquettes through it, three have holonomy $-I$ and the fourth also contains the second altered link.
 That link, adjacent to the first, is the quaternion $\mathbf i$, which supplies a reference direction; four
 coarse plaquettes, the fourth among them, then have holonomy $\pm\mathbf i$.
-\item \emph{Background~B.} A single configuration: the first of $60$ drawn from the unconditioned measure
+\item \emph{Background~\textsf{B}.} A single configuration: the first of $60$ drawn from the unconditioned measure
 whose coarse plaquettes are all farther than $\pi/4$ from $-I$ ($40$ qualified), a rule fixed in advance.
 \item \emph{Marks.} A \emph{mark} is a gauge-invariant function of the fine plaquettes inside one coarse
 plaquette; the list of marks is in~\cite{RepoData}.
@@ -811,18 +811,18 @@ slower relaxation under the local updates.
 \cmidrule(l){3-6}
 Background & & 15 & 49 & 181 & 308 \\
 \midrule
-A & held-out quotient  & .0208(5) & .0167(4) & .0159(4) & .0154(4) \\
+\textsf{A} & held-out quotient  & .0208(5) & .0167(4) & .0159(4) & .0154(4) \\
   & quotient on selection streams & .0213 & .0172 & .0163 & .0157 \\
   & decrease from the span to its left &  & 20\% & 5\% & 3\% \\
 \addlinespace
-B & held-out quotient  & .0589(8) & .0533(5) & .0510(4) & .0428(4) \\
+\textsf{B} & held-out quotient  & .0589(8) & .0533(5) & .0510(4) & .0428(4) \\
   & quotient on selection streams & .0587 & .0514 & .0482 & .0410 \\
   & decrease from the span to its left &  & 10\% & 4\% & 16\% \\
 \bottomrule
 \end{tabular}
 \caption{Local quotient $\mathcal J/\mathcal V$ (dimensionless) of the combination of marks selected on $16$
-streams and evaluated on the $16$ other streams of the same run. A: frozen background with three coarse
-plaquettes of holonomy $-I$. B: one frozen background drawn from the unconditioned measure, every coarse
+streams and evaluated on the $16$ other streams of the same run. \textsf{A}: frozen background with three coarse
+plaquettes of holonomy $-I$. \textsf{B}: one frozen background drawn from the unconditioned measure, every coarse
 plaquette at round distance greater than $1.1$ from $-I$ (the selection rule asked for $\pi/4$; the smallest
 distance on the configuration drawn is $1.14$). Errors are over the $16$ held-out streams with the
 selected coefficients fixed. The entries of a row are computed on the same streams and are strongly
@@ -831,16 +831,16 @@ correlated; the two rows come from independent runs. All entries are estimates, 
 \end{table}
 
 \emph{Unselected functions, for comparison.} In the same runs and on all $32$ streams, the unselected average
-of the four plaquette marks of one coarse plaquette gives $.0473(5)$ on A and $.0893(9)$ on B, and a single
-plaquette mark gives $.0611(4)$ on A.
+of the four plaquette marks of one coarse plaquette gives $.0473(5)$ on \textsf{A} and $.0893(9)$ on \textsf{B}, and a single
+plaquette mark gives $.0611(4)$ on \textsf{A}.
 
-\emph{{\upshape(i)} Where the weight of the selected combination lies.} In the $308$-mark span on A, $81$ per cent of
+\emph{{\upshape(i)} Where the weight of the selected combination lies.} In the $308$-mark span on \textsf{A}, $81$ per cent of
 the sum of its squared coefficients, each scaled by the standard deviation of its mark, belongs to the three
 coarse plaquettes with holonomy $-I$.
 
 \emph{Caveats.} Four exact linear relations among these marks were removed and the coefficients of least norm
 taken, so the share depends on that convention. The marks are also correlated, so this is a statement about
-coefficients and not a decomposition of the variance. On B the selected direction is less stable: for the
+coefficients and not a decomposition of the variance. On \textsf{B} the selected direction is less stable: for the
 $49$-mark span the directions selected on the two halves of the streams have cosine $0.41$.
 
 \emph{{\upshape(ii)} No lowest value is indicated.} The spans are nested, so the smallest quotient of a span
@@ -848,10 +848,10 @@ cannot increase as it grows; what is measured is the size of the steps.
 \begin{itemize}
 \item \emph{By the rule fixed before the run.} The rule compared successive entries as if independent and
 called the decrease stopped when they differ by less than two combined standard errors. By that rule the
-decrease stopped after $49$ marks on A and did not stop on B.
+decrease stopped after $49$ marks on \textsf{A} and did not stop on \textsf{B}.
 \item \emph{By paired differences, which the rule did not use.} The entries of a row share their streams,
-however, and the paired differences are $38$, $15$ and $12$ standard errors on A and $9$, $6$ and $15$ on B.
-On B the last step is the largest.
+however, and the paired differences are $38$, $15$ and $12$ standard errors on \textsf{A} and $9$, $6$ and $15$ on \textsf{B}.
+On \textsf{B} the last step is the largest.
 \end{itemize}
 The ratio of the two rows, about $2.8$, is for these spans only.
 
@@ -898,7 +898,7 @@ reference (a mark of this form is not a function of the later slice alone).
 The rule fixed before the runs had three outcomes:
 \begin{itemize}
 \item persistence, if the held-out coefficient of determination exceeds $0.1$ and exceeds that on
-background B by three standard errors;
+background \textsf{B} by three standard errors;
 \item no persistence, if it is below $0.02$ with error below $0.01$;
 \item otherwise unresolved.
 \end{itemize}
@@ -918,10 +918,10 @@ which estimate the same quantity.
 \item The correlation of the combination with its own copy one slice later (all $32$ streams) is $0.083(6)$
 in the transported form and $0.022(4)$ in the later-slice form, and $0.016(6)$ in the transported form at two
 slices.
-\item On background B the combination selected there gives $0.032(5)$ in the transported form and
+\item On background \textsf{B} the combination selected there gives $0.032(5)$ in the transported form and
 $-0.003(6)$ in the later-slice form.
-\item The unselected four-mark average gives $0.076(5)$ on A and $0.009(6)$ on B in the transported form, so,
-in these estimates, the larger correlation on A is not particular to the selected combination.
+\item The unselected four-mark average gives $0.076(5)$ on \textsf{A} and $0.009(6)$ on \textsf{B} in the transported form, so,
+in these estimates, the larger correlation on \textsf{A} is not particular to the selected combination.
 \end{itemize}
 The result files of this run are not in the deposit; these numbers are those of the run's
 report~\cite{RepoData}.
@@ -997,7 +997,8 @@ $\mathsf R_{10}\ge\alpha\,\mathsf R_5$ with $\alpha>0.951$.
 \emph{Caveat on that figure.} It is two jackknife standard errors over few streams, not a confidence limit at
 a stated level, and it inherits the coupling match.
 
-\emph{A check that failed: an unexplained discrepancy.} For a different statistic on the same finer lattice,
+\emph{A check that failed: an unexplained discrepancy.} For a different statistic on the same finer lattice (the largest lag correlation among functions of the
+squared winding of a line, binned in four bins),
 an earlier and shorter run by another program in~\cite{RepoData} gives $0.0041(7)$ where these ensembles give
 $0.0016(1)$, $3.4$ combined standard errors apart. The cause is not determined.
 
