@@ -171,3 +171,7 @@ The scalar step of the refinement step under a linear bound on the low-energy we
 | `WeightStep.explicit` | `0728771ecbfd4eeff22e8908e5cb8507678ab9814d3de09ee045defdc250deb0` | exit 0 | exit 1 |
 
 Not pinned: `mul_neg_log_le`.
+
+## Recompilation of all eleven files (24 November 2026, later)
+
+In the project recreated in a new container (Lean 4.19.0, Mathlib v4.19.0): `Criterion`, `Hilbert`, `Discrete`, `Gates`, `Prediction`, `SeparationHilbert`, `OneSeparation`, `Directional`, `WeightStep`, `refinement-inequality/Inheritance` and `haar` each exit 0 with no `sorry`. `haar.lean` gives the one warning recorded above (an unused hypothesis); the others give none. The outputs of `Directional` and `WeightStep` are byte-identical to the deposited `*.axioms.txt`.
