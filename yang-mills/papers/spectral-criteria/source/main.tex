@@ -574,6 +574,19 @@ that is an indication of what $M_c$ might be, not a result that applies. No ineq
 useful constants is known for the Wilson measure at weak coupling, and the proposition, like
 Proposition~\ref{p:pred}, replaces one open estimate by another.
 
+\emph{Related work.} The proposition is the counterpart, for one time step and for variances, of the
+two-scale criterion for logarithmic Sobolev inequalities of Grunewald, Otto, Villani and
+Westdickenberg~\cite{GOVW09}, which Leli\`evre extended to non-linear coarse-graining maps~\cite{Lel09}. Both
+rest, as here, on the identity that the gradient of a conditional expectation is a covariance with the
+score, and both are exact for Gaussian measures. They bound that covariance through a supremum, a
+Lipschitz constant of the score along the fibre; for variances the Cauchy--Schwarz inequality with the
+conditional covariance matrix is available, and it is what lets a covariance of order $1/\beta$ compensate
+one of the two factors $\beta$. For the two-dimensional Wilson measure at any fixed coupling a logarithmic
+Sobolev inequality uniform in the volume has been proved by a two-scale argument of this kind, with blocks
+whose boundary links are the coarse variables~\cite{PS26}; its constant grows faster than any exponential of
+the coupling, and its authors note that in higher dimension the conditional integrations produce larger,
+non-local loops that are much harder to analyse.
+
 Two checks were made. In the free theory, with $M_c$ the covariance of the fibre, the proposition gives the
 exact rate: there $\beta^2J_c=\|Q(I-R^2)^{-1}Q\|-1$ in the notation of Appendix~\ref{app:free}, so that
 $\gamma=\gamma_{\mathrm{opt}}$ (computed at every coarse momentum for sides $4$ to $64$; the largest
@@ -899,6 +912,13 @@ $1-\|e^{-tH}\|\ge(b-\kappa')_+/(1+\kappa/t)$ when $\|(Q-B)f\|^2\le\kappa\langle 
 $\|Be^{-sH}B\|\le\kappa'$ for some $0<s\le t$ that is a rational multiple of $t$ (take $\tau=t/m$ with $s$ a
 multiple of $\tau$), so the return bound of Section~\ref{s:ret} can be used here as well.
 
+Bounds for the spectral gap of a Markov chain in terms of a chain on the blocks of a partition and chains
+inside the blocks are classical in the theory of Markov chains (see~\cite{JSTV04} and the works cited there).
+Theorem~\ref{t:inh} and the proposition are of that family. They differ in that the coarse part enters through
+the compression $PA^mP$ at a long time, which is not the transition operator of a chain on the coarse
+variables, and the fine part through a bound of $Q$ by the generator and not through gaps of restricted
+chains.
+
 So along any family of regulated theories in a box, a gap bounded below is \emph{equivalent} to two
 statements with constants independent of the regulator, for projections of one's choice: the part of a
 function not determined by the coarse variables is bounded by its energy, and the coarse variables
@@ -907,7 +927,12 @@ $C$, the second statement concerns the law of the pair $(C_0,C_t)$ on a fixed fi
 it holds with $b=\varepsilon$ as soon as that law is at least $\varepsilon$ times the product of its
 marginals: for centred $f$ and $g$ the measure $\rho-\varepsilon\,\nu\otimes\nu$ is positive with marginals
 $(1-\varepsilon)\nu$, so $|\E f(C_0)g(C_t)|\le(1-\varepsilon)\|f\|\,\|g\|$. In this form no second lattice, no
-matched coupling and no budget appear. The price is that the first statement must hold for all the fine
+matched coupling and no budget appear. Nor does the box: the proposition applies as it stands on an infinite
+spatial lattice, with $P$ the conditional expectation given all the coarse variables, and a gap uniform in the
+mesh and in the volume is then equivalent to the bound of the fine detail by the energy, which is a statement
+at scales below the coarse mesh, together with a gap for the correlations in time of the coarse variables at
+one fixed coarse mesh. (In the free theory the first holds uniformly in the side by
+Proposition~\ref{p:freeblock}, and the second fails in infinite volume, as it must.) The price is that the first statement must hold for all the fine
 detail below the coarse scale at once, and whether it does depends on the coarse variables.
 Appendix~\ref{app:free} shows this in the free theory: for coarse links that are sums of $r$ fine links
 the constant $\kappa$ grows like $r$ in units of the coarse mesh, while for block averages of the plaquette
@@ -2126,14 +2151,22 @@ $0.16$, $0.69$, $0.90$, $0.99$. It is useless at short times and close to the tr
 times. This is an extrapolation and a heuristic, not a proof; sectors with more than two units
 of flux were not examined, and nothing is shown for a larger lattice or another group.
 
-\begin{thebibliography}{9}\raggedright
+\begin{thebibliography}{99}\raggedright
 \bibitem{BL76} H.~J.~Brascamp and E.~H.~Lieb, \emph{On extensions of the Brunn--Minkowski and
 Pr\'ekopa--Leindler theorems, including inequalities for log concave functions, and with an application to
 the diffusion equation}, J. Funct. Anal. \textbf{22} (1976), 366--389. Cited for the weighted inequality on
 $\R^n$; not reread for this paper.
 \bibitem{DLMF} \emph{NIST Digital Library of Mathematical Functions}, \S10.29, \url{https://dlmf.nist.gov/10.29}.
+\bibitem{GOVW09} N.~Grunewald, F.~Otto, C.~Villani and M.~G.~Westdickenberg, \emph{A two-scale approach to
+logarithmic Sobolev inequalities and the hydrodynamic limit}, Ann. Inst. H. Poincar\'e Probab. Stat.
+\textbf{45} (2009), 302--351. Read: Sections 2.1, 2.2 and 3 (the criterion and its proof).
+\bibitem{JSTV04} M.~Jerrum, J.-B.~Son, P.~Tetali and E.~Vigoda, \emph{Elementary bounds on Poincar\'e and
+log-Sobolev constants for decomposable Markov chains}, Ann. Appl. Probab. \textbf{14} (2004), 1741--1765.
+Cited for the existence of this line of work; only the abstract was read.
 \bibitem{JW} A.~Jaffe and E.~Witten, \emph{Quantum Yang--Mills theory}, Clay Mathematics Institute problem
 description, \url{https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf}. Sections 4 and 5 read.
+\bibitem{Lel09} T.~Leli\`evre, \emph{A general two-scale criteria for logarithmic Sobolev inequalities},
+J. Funct. Anal. \textbf{256} (2009), 2211--2221. Read: the statement and its set-up.
 \bibitem{Lu77} M.~L\"uscher, \emph{Construction of a selfadjoint, strictly positive transfer matrix for
 Euclidean lattice gauge theories}, Comm. Math. Phys. \textbf{54} (1977), 283--292. Referred to for positivity
 of the temporal-gauge transfer operator; not reread by the author.
@@ -2142,6 +2175,8 @@ of the temporal-gauge transfer operator; not reread by the author.
 sources only the README, the two declarations named in Section~\ref{s:ext} and the proof of the first were read, and nothing was built.
 \bibitem{OS78} K.~Osterwalder and E.~Seiler, \emph{Gauge field theories on a lattice}, Ann. Physics
 \textbf{110} (1978), 440--471. Cited for the lattice framework; not reread for this paper.
+\bibitem{PS26} J.~Piazza and H.~Shen, \emph{Log-Sobolev inequality for 2D $\mathrm{SU}(N)$ lattice gauge theory at
+all couplings}, preprint, arXiv:2610.35286 (26 October 2026). Read in full; not peer reviewed as far as we know.
 \bibitem{YMG} Yang--Mills group, \emph{Validation of the OpenAI Yang--Mills construction}, release of
 10 November 2026, \url{https://alexisdpc.github.io/yang-mills/references/assessment-1-2026-11-10.pdf}. Read:
 p.~1, Part~I \S\S1--2 (requirements; what the construction provides), the paragraph on the independent
