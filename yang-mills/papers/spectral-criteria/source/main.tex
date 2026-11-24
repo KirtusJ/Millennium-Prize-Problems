@@ -172,7 +172,7 @@ $h=\mathbf 1_{\Gamma_\theta}g$,
 \begin{equation}\label{e:ret}
 \big|\E\big[\overline{h(x)}\,h(y)\big]\big|\ \le\ p_{6\beta}(\theta)\,\E\big[|h(x)|^2\big],
 \qquad
-p_k(\theta)=\frac{\int_0^\theta\sin^2\!r\,e^{k(\cos r-1)}\,dr}{\int_0^\pi\sin^2\!r\,e^{k(\cos r-1)}\,dr},
+p_k(\theta)=\frac{\int_0^\theta\sin^2\!\varphi\,e^{k(\cos\varphi-1)}\,d\varphi}{\int_0^\pi\sin^2\!\varphi\,e^{k(\cos\varphi-1)}\,d\varphi},
 \end{equation}
 and $p_k(\theta)\le\min\{1,\ \tfrac{\pi^2\sqrt e}{4}(1+k)^{3/2}\theta^3\}$.
 \end{theorem}
@@ -433,6 +433,9 @@ there nor a statement about almost every field. A small mutual information of $X
 normalised functions, including those concentrated on rare configurations.
 
 \section{The spectral criterion}\label{s:crit}
+The proof is the spectral theorem and one observation: a positive measure with mass just above zero energy
+cannot hide it, because the differences $d_{v,n}$ are integrals of a non-negative function.
+
 \begin{proof}[Proof of Theorem~\ref{t:crit}]
 Let $E$ be the spectral measure of $H$ and $\mu_v(\cdot)=\langle v,E(\cdot)v\rangle$, a finite positive measure
 on $[0,\infty)$. Then $d_{v,n}=\int_{[0,\infty)}e^{-n\tau s}(1-e^{-\tau s})\,d\mu_v(s)$; the integrand is
@@ -453,7 +456,8 @@ The projection $E((0,\Delta))$ is bounded and vanishes on a set with dense span,
 projection onto the kernel of $H$; the matrix elements $\langle v,e^{-n\tau H}w\rangle$ themselves need not decay,
 since the vacuum contributes a constant.
 \item[(b)] A polynomial bound on the low-energy weight,
-$\mu_v((0,s])\le Cs^\nu$, does not give (2) for any $r<1$.
+$\mu_v((0,s])\le Cs^\nu$, does not give (2) for any $r<1$: a measure with density $s^{\nu-1}$ near $0$
+satisfies it, and its differences $d_{v,n}$ decay only like a power of $n$.
 \item[(c)] In a theory with several pure phases the criterion
 may be applied in one component; a gap there says nothing about the others.
 \item[(d)] The criterion is on the
@@ -485,6 +489,10 @@ every finite linear combination.
 \end{remark}
 
 \section{The refinement inequality}\label{s:inh}
+The idea of the proof is to look at a vector that decays as slowly as anything can. Each hypothesis says that
+such a vector has little weight in one of the three parts of the space, and the three weights add up to one.
+We need one scalar inequality first.
+
 \begin{lemma}\label{l:scal}
 For $0\le x\le1$ and real $\rho\ge0$, $x(1-x^\rho)\le\rho(1-x)$.
 \end{lemma}
@@ -495,16 +503,16 @@ $-x\log x\le1-x$ because $\log(1/x)\le1/x-1$.
 
 \begin{proof}[Proof of Theorem~\ref{t:inh}]
 Let $q=\|A\|$. If $q=0$ then $\|A^m\|=0$ and~\eqref{e:inh} holds because $b\le1$ by the third hypothesis and
-$\kappa\ge0$. Let $q>0$, fix $0<q'<q$ and let $E=\mathbf 1_{[q',q]}(A)$. Since $A\ge0$ is self-adjoint, $q=\max\sigma(A)$, so $E\ne0$. Since $E$ commutes
-with $A$ and $A^k(I-E)\ge0$, we have $A^k\ge A^kE\ge q'^kE$ for every integer $k\ge1$. Let $v$ be a unit
-vector in the range of $E$.
+$\kappa\ge0$. Let $q>0$, fix $0<q'<q$ and let $F=\mathbf 1_{[q',q]}(A)$. Since $A\ge0$ is self-adjoint, $q=\max\sigma(A)$, so $F\ne0$. Since $F$ commutes
+with $A$ and $A^k(I-F)\ge0$, we have $A^k\ge A^kF\ge q'^kF$ for every integer $k\ge1$. Let $v$ be a unit
+vector in the range of $F$.
 
 \emph{Good part.} By the first hypothesis, $\gamma\|Gv\|^2\le\langle v,(I-A^2)v\rangle\le1-q'^2$.
 
-\emph{Exceptional part.} $BA^jB\ge q'^jBEB$, so $\|EB\|^2=\|BEB\|\le\kappa/q'^j$, and
-$\|Bv\|=\|BEv\|\le\|BE\|=\|EB\|$. Hence $\|Bv\|^2\le\kappa/q'^j$.
+\emph{Exceptional part.} $BA^jB\ge q'^jBFB$, so $\|FB\|^2=\|BFB\|\le\kappa/q'^j$, and
+$\|Bv\|=\|BFv\|\le\|BF\|=\|FB\|$. Hence $\|Bv\|^2\le\kappa/q'^j$.
 
-\emph{Coarse part.} In the same way $\|Pv\|^2\le\|EP\|^2=\|PEP\|\le\|PA^mP\|/q'^m\le(1-b)/q'^m$.
+\emph{Coarse part.} In the same way $\|Pv\|^2\le\|FP\|^2=\|PFP\|\le\|PA^mP\|/q'^m\le(1-b)/q'^m$.
 
 Since $B$ and $G$ are orthogonal projections with $B+G=Q$ and $BG=0$, $\|Qv\|^2=\|Gv\|^2+\|Bv\|^2$, and
 $\|Pv\|^2=1-\|Qv\|^2$. Therefore
@@ -544,9 +552,12 @@ not a lattice theory.
 
 \begin{remark}[Rarity alone is not enough]\label{r:reset}
 The second hypothesis in~\eqref{e:hyp} is about return at a later time, not about the probability of the
-exceptional set. For the reversible process $S_t=e^{-\ell t}I+(1-e^{-\ell t})\E$ with $\ell>0$ and an exceptional event of
-arbitrarily small positive probability carrying two equally likely fine labels, the difference of the labels
-gives $\|BS_tB\|=e^{-\ell t}$ whatever the probability of the event.
+exceptional set. An example: a process that, at rate $c>0$, replaces its state by an independent sample from
+the stationary law, so that its semigroup is $e^{-ct}I+(1-e^{-ct})\,\E$ with $\E$ the stationary expectation.
+Let the exceptional event have arbitrarily small positive probability and carry a label taking two values
+with equal probability. The function equal to $\pm1$ on the event according to the label, and $0$ elsewhere,
+lies in the range of $B$ and is an eigenfunction with eigenvalue $e^{-ct}$. So the return weight at time $t$ is
+$e^{-ct}$, whatever the probability of the event.
 \end{remark}
 
 \begin{remark}[A longer mixing lag]\label{r:lag}
@@ -558,9 +569,13 @@ grows, provided the physical times $k_ia_i$, each divided by $\gamma_i$, are sum
 \end{remark}
 
 \section{Return to a coarse plaquette gate}\label{s:ret}
+The return bound comes from a single link. Given all the other links, one link of the plaquette has an
+explicit law on the sphere $S^3$, and for that law the probability of any cap is at most the probability of
+the cap around the favoured point.
+
 \begin{lemma}[Caps under a tilted law]\label{l:cap}
 Let $u\in S^3$ have density $f_k(u)=e^{k\,u\cdot v}/Z(k)$ with respect to the uniform probability measure,
-$k\ge0$, $v$ a unit vector. For every $c\in S^3$ and $0\le\theta\le\pi$, the probability of the cap
+$k\ge0$, $v$ a unit vector; we call $k$ the \emph{tilt}. For every $c\in S^3$ and $0\le\theta\le\pi$, the probability of the cap
 $\{u:\operatorname{dist}(u,c)\le\theta\}$ is at most that of the cap of the same radius centred at $v$, which
 equals $p_k(\theta)$ and is non-decreasing in $k$.
 \end{lemma}
@@ -568,9 +583,9 @@ equals $p_k(\theta)$ and is non-decreasing in $k$.
 The superlevel sets $\{f_k>s\}$ are caps centred at $v$. For a cap $\mathrm{Cap}_c$ centred at $c$ and the cap $\mathrm{Cap}_v$ of the
 same radius centred at $v$, the uniform measure of $\{f_k>s\}\cap\mathrm{Cap}_c$ is at most the smaller of the measures of
 the two sets, which is the measure of $\{f_k>s\}\cap\mathrm{Cap}_v$ because those two caps are concentric. Integrating
-over $s$ gives $\int_{\mathrm{Cap}_c}f_k\le\int_{\mathrm{Cap}_v}f_k$. In the polar angle $r$ from $v$ the uniform measure is
-$\tfrac2\pi\sin^2r\,dr$, which gives the formula for $p_k$. Finally $\frac{d}{dk}\P_k(\mathrm{Cap}_v)=
-\Cov_k(\mathbf 1_{\{r\le\theta\}},\cos r)\ge0$, because both are non-increasing functions of $r$.
+over $s$ gives $\int_{\mathrm{Cap}_c}f_k\le\int_{\mathrm{Cap}_v}f_k$. In the polar angle $\varphi$ from $v$ the uniform measure is
+$\tfrac2\pi\sin^2\varphi\,d\varphi$, which gives the formula for $p_k$. Finally $\frac{d}{dk}\P_k(\mathrm{Cap}_v)=
+\Cov_k(\mathbf 1_{\{\varphi\le\theta\}},\cos\varphi)\ge0$, because both are non-increasing functions of $\varphi$.
 \end{proof}
 
 \begin{proof}[Proof of Theorem~\ref{t:ret}]
@@ -585,22 +600,22 @@ $k=\beta|\Sigma|\le6\beta$. By Lemma~\ref{l:cap}, $\P(y\in \Gamma_\theta\mid\tex
 p_{6\beta}(\theta)$, and by the tower property $\P(y\in \Gamma_\theta\mid x)\le p_{6\beta}(\theta)$ almost surely.
 
 The joint law of $(x,y)$ is invariant under exchanging the two slices: the reflection of the time coordinate
-$s\mapsto s_x+s_y-s$ modulo $T$ preserves the Wilson measure and swaps them. Hence
+$s\mapsto s_x+s_y-s$ modulo $T$, where $s_x$ and $s_y$ are the times of the two slices, preserves the Wilson measure and swaps them. Hence
 \begin{align*}
 \big|\E[\overline{h(x)}h(y)]\big|&\le\tfrac12\E\big[\mathbf 1_{\Gamma_\theta}(x)\mathbf 1_{\Gamma_\theta}(y)(|g(x)|^2+|g(y)|^2)\big]\\
 &=\E\big[|h(x)|^2\,\P(y\in \Gamma_\theta\mid x)\big]\ \le\ p_{6\beta}(\theta)\,\E|h(x)|^2 .
 \end{align*}
-For the envelope: the numerator of $p_k$ is at most $\theta^3/3$. On $0\le r\le(1+k)^{-1/2}\le1$ we have
-$\sin r\ge2r/\pi$ and $k(1-\cos r)\le kr^2/2\le\tfrac12$, so the denominator is at least
+For the envelope: the numerator of $p_k$ is at most $\theta^3/3$. On $0\le\varphi\le(1+k)^{-1/2}\le1$ we have
+$\sin\varphi\ge2\varphi/\pi$ and $k(1-\cos\varphi)\le k\varphi^2/2\le\tfrac12$, so the denominator is at least
 $\tfrac{4}{\pi^2}e^{-1/2}\cdot\tfrac13(1+k)^{-3/2}$.
 \end{proof}
 
 \subsection{Passage to the vacuum}
 \begin{lemma}[Trace formula]\label{l:trace}
 Fix a finite spatial lattice, $\beta>0$ and $T\ge2$. Let $W$ be multiplication by the square root of the
-weight of the spatial plaquettes of a slice, $C$ the operator with kernel
+weight of the spatial plaquettes of a slice, $\mathsf C$ the operator with kernel
 $\prod_e\exp\big(\beta\,\tfrac12\Tr(U_eV_e^{-1})\big)$, the product over the spatial links $e$ of the slice, and
-$\mathsf T_0=WCW$. Then $\mathsf L=\mathsf T_0\Pi=\Pi\mathsf T_0$ is a self-adjoint, positive semidefinite
+$\mathsf T_0=W\mathsf CW$. Then $\mathsf L=\mathsf T_0\Pi=\Pi\mathsf T_0$ is a self-adjoint, positive semidefinite
 integral operator with a continuous, strictly positive kernel, and for bounded functions
 $f_0,\dots,f_{T-1}$ of a slice
 \begin{equation}\label{e:trace}
@@ -611,17 +626,17 @@ $f$. On the gauge-invariant functions $\mathsf L$ is injective.
 \end{lemma}
 \begin{proof}
 A plaquette with two time-like links between consecutive slices $U$ and $V$ has half-trace
-$\tfrac12\Tr(U_eg_yV_e^{-1}g_x^{-1})$, where $g_x,g_y$ are the time-like links at the ends of $e$. Integrating the
-time-like links between the two slices is therefore integrating $C(U,V^g)$ over independent gauge
-transformations $g$ of the slice $V$, which gives the kernel of $C\Pi$; $C$ commutes with gauge transformations
-applied to both arguments, so $C\Pi=\Pi C$, and $W$ is gauge invariant. Each spatial plaquette weight is split
-between the two slabs adjoining its slice, which gives the factors $W$. Multiplying the kernels around the
+$\tfrac12\Tr(U_eg_{+}V_e^{-1}g_{-}^{-1})$, where $g_-$ and $g_+$ are the time-like links at the two ends of $e$. Integrating the
+time-like links between the two slices is therefore integrating the kernel $\mathsf C(U,V^g)$ over independent gauge
+transformations $g$ of the slice $V$, which gives the kernel of $\mathsf C\Pi$; $\mathsf C$ commutes with gauge transformations
+applied to both arguments, so $\mathsf C\Pi=\Pi\mathsf C$, and $W$ is gauge invariant. Each spatial plaquette weight is split
+between the two layers of time-like plaquettes that adjoin its slice, which gives the factors $W$. Multiplying the kernels around the
 time circle gives the Wilson weight exactly, and~\eqref{e:trace} follows by Fubini, the kernels being
 continuous on a compact space. The kernel of $\mathsf L$ is an integral of strictly positive continuous
-functions. The operator $C$ is a tensor product over the links of convolutions on $\SU(2)$ by the class function
+functions. The operator $\mathsf C$ is a tensor product over the links of convolutions on $\SU(2)$ by the class function
 $e^{\beta\frac12\Tr}$. On the isotypic component of spin $n/2$ this convolution is multiplication by
 $2I_{n+1}(\beta)/\beta>0$ ($I_{n+1}$ a modified Bessel function), and these components span $L^2(\SU(2))$ by the
-Peter--Weyl theorem. So $C$ is positive and injective (cf.~\cite{Lu77}), though without bounded inverse; $W$ is bounded with bounded inverse; hence
+Peter--Weyl theorem. So $\mathsf C$ is positive and injective (cf.~\cite{Lu77}), though without bounded inverse; $W$ is bounded with bounded inverse; hence
 $\mathsf T_0$ is positive and injective, and so is its restriction $\mathsf L$ to the range of $\Pi$.
 \end{proof}
 
@@ -637,8 +652,8 @@ where $\Omega$ is the normalised positive eigenfunction of $\mathsf L$ for its l
 A continuous kernel on a compact space gives a Hilbert--Schmidt operator, so $\mathsf L^2$ is trace class.
 A strictly positive kernel gives a simple largest eigenvalue $\Lambda_0=\|\mathsf L\|$ with a strictly positive
 eigenfunction (Jentzsch's theorem), and the rest of the spectrum of the positive compact operator $\mathsf L$
-lies in $[0,\Lambda_1]$ with $\Lambda_1<\Lambda_0$. Hence $(\mathsf L/\Lambda_0)^m\to P_\Omega$ in operator norm,
-and $(\mathsf L/\Lambda_0)^{m+2}=(\mathsf L/\Lambda_0)^2(\mathsf L/\Lambda_0)^m\to P_\Omega$ in trace norm. By
+lies in $[0,\Lambda_1]$ with $\Lambda_1<\Lambda_0$. Let $P_\Omega$ be the orthogonal projection onto $\Omega$. Then $(\mathsf L/\Lambda_0)^n\to P_\Omega$ in
+operator norm as $n\to\infty$, and $(\mathsf L/\Lambda_0)^{n+2}=(\mathsf L/\Lambda_0)^2(\mathsf L/\Lambda_0)^n\to P_\Omega$ in trace norm. By
 \eqref{e:trace} and cyclicity,
 \[
 \E_T[f(x_0)g(x_j)]=\frac{\Tr\big((\mathsf L/\Lambda_0)^{T-j}M_f(\mathsf L/\Lambda_0)^jM_g\big)}{\Tr\big((\mathsf L/\Lambda_0)^T\big)}
@@ -686,11 +701,15 @@ $[-1,1]$, the conditional density of one link given the others is at most $e^{12
 so for a measurable set $\Gamma$ of holonomies (conjugation-invariant, so that the event does not depend on the
 base point) the event is a two-sided translate of $\Gamma$ for the link, and the conditional probability of return
 is at most $\min\{1,e^{12\beta}\mu_{\mathrm{Haar}}(\Gamma)\}$. This crude bound shows that the mechanism is not tied to a
-centre; it is far from the sharp $\SU(2)$ estimate and we make no use of it.
+centre; it is far weaker than the $\SU(2)$ estimate and we make no use of it.
 \end{enumerate}
 \end{remark}
 
 \section{The one-link covariance}\label{s:haar}
+This section is not used by the refinement inequality. It answers a smaller question that the auxiliary
+local mixing statement raises: how much does a single link fluctuate when all the others are held fixed? The
+answer is explicit for $\SU(2)$.
+
 \begin{proposition}[One-link covariance]\label{p:haar}
 For $k>0$ let $u$ be a point of the unit sphere $S^3\subset\R^4$ with density proportional to
 $e^{k\,u\cdot v}$ with respect to the uniform measure, $v$ a unit vector. Its covariance has the eigenvalue
