@@ -1,0 +1,5 @@
+chain intact: 9 events, head 5a313f0fc9ee4e2e3ac7c3305d82353821cd6c95a4c56afffb0000b0c8f1555e
+guards replayed: 0 problem(s)
+The guards are those of pcpos 1.0.22. A register is read under the rules of the program that reads it: an event an earlier build accepted may be reported here, and its bytes are unchanged.
+register file SHA-256: 6a9133b6c84d0f998c5c51fc2948b792f32d8bc1e02ae7c1ffd18d07faf10191
+A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.

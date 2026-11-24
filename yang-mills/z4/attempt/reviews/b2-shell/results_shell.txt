@@ -1,0 +1,60 @@
+  m=1 antipode count 7 w_m=7/3 (2D w_m=3/2)
+  m=2 antipode count 37 w_m=37/3 (2D w_m=7/2)
+  m=3 antipode count 91 w_m=91/3 (2D w_m=11/2)
+  m=4 antipode count 169 w_m=169/3 (2D w_m=15/2)
+  m=5 antipode count 271 w_m=271/3 (2D w_m=19/2)
+  m=6 antipode count 397 w_m=397/3 (2D w_m=23/2)
+  m=7 antipode count 547 w_m=547/3 (2D w_m=27/2)
+  m=8 antipode count 721 w_m=721/3 (2D w_m=31/2)
+  m=9 antipode count 919 w_m=919/3 (2D w_m=35/2)
+  m=10 antipode count 1141 w_m=1141/3 (2D w_m=39/2)
+  m=11 antipode count 1387 w_m=1387/3 (2D w_m=43/2)
+  m=12 antipode count 1657 w_m=1657/3 (2D w_m=47/2)
+MET    P1 3D weights cases met 78 failed 0
+MET    P1b antipode count & total cases met 12 failed 0
+MET    P5 2D weights/totals cases met 78 failed 0
+MET    P2a cases met 828 failed 0
+MET    P2b cases met 828 failed 0
+MET    P2c cases met 840 failed 0
+MET    P2e cases met 840 failed 0
+MET    P2d unfolding cases met 144 failed 0
+  sharp m=4 ratio=3.934245
+  sharp m=16 ratio=6.372000
+  sharp m=64 ratio=7.480280
+  sharp m=256 ratio=7.751285
+  sharp m=1024 ratio=7.875326
+  sharp m=4096 ratio=7.937581
+  sharp m=16384 ratio=7.968770
+  sharp m=65536 ratio=7.984380
+  sharp m=262144 ratio=7.992189
+  sharp m=1048576 ratio=7.996094
+MET    P2f sharpness monotone <8 last ratio 7.996094
+  chain m=1: chi=14.0800 shell=15.5600 8I-bound=24.9600
+  chain m=2: chi=42.6901 shell=55.9588 8I-bound=102.9975
+  chain m=3: chi=106.6211 shell=135.8429 8I-bound=338.4562
+  chain m=4: chi=87.0066 shell=385.1182 8I-bound=739.7154
+  chain m=5: chi=106.2901 shell=158.2696 8I-bound=388.4758
+  chain m=6: chi=196.1482 shell=234.7607 8I-bound=402.2059
+MET    P2g chain cases met 6 failed 0
+MET    P3 two-sided W vs I cases met 840 failed 0; min W/I=0.25015 (1/(48e)=0.00766) max W/I=2.00000
+MET    P3b floor and e-step cases met 840 failed 0
+MET    P4 kernel bounds cases met 2208 failed 0
+MET    P4b kernel identity cases met 2208 failed 0
+  ex N=4 1_{x_j=0}: min eig 0 chi=16.0000 D0=16.0000 D1=0.0000
+  ex N=4 delta+N^-2: min eig 1 chi=5.0000 D0=2.0000 D1=1.0000
+  ex N=6 1_{x_j=0}: min eig 0 chi=36.0000 D0=36.0000 D1=0.0000
+  ex N=6 delta+N^-2: min eig 1 chi=7.0000 D0=2.0000 D1=1.0000
+  ex N=8 1_{x_j=0}: min eig 0 chi=64.0000 D0=64.0000 D1=0.0000
+  ex N=8 delta+N^-2: min eig 1 chi=9.0000 D0=2.0000 D1=1.0000
+MET    P4c scope examples cases met 6 failed 0
+MET    P5b 2D hybrid kernel cases met 828 failed 0
+MET    P6 2coth(1/2)==2tanh(1/2)coth^2(1/2) 2coth(1/2)=4.3279068275
+  N=16 chi=4.329314 W=3.8921 W/N^2=0.015204
+  N=32 chi=4.328259 W=14.0197 W/N^2=0.013691
+  N=64 chi=4.327995 W=53.4948 W/N^2=0.013060
+  N=128 chi=4.327929 W=209.1028 W/N^2=0.012763
+  N=256 chi=4.327912 W=826.8418 W/N^2=0.012617
+  N=512 chi=4.327908 W=3288.3562 W/N^2=0.012544
+MET    P6 chi brute==closed cases met 6 failed 0
+FAILED P6 W quadratic growth W(512)/W(256)=3.97701
+SUMMARY met 0 -- see lines; failed predicates: ['P6 W quadratic growth']

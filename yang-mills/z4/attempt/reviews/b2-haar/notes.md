@@ -1,0 +1,14 @@
+# notes b2-haar (T214)
+- step 0: control.txt = 0.272341 (-ln tanh 1). Lean READY exists. register pcp initialised.
+- step 1: child admitted T216, PROMPT.txt written (w'' formulas question; control sum 1/n^2 = 1.644934), child-run1 started in background
+- step 2: DLMF read: curl https://dlmf.nist.gov/10.29 (saved dl/10.29.html), alttext of eqs 10.29.1 (Z_{v-1}-Z_{v+1}=(2v/z)Z_v), 10.29.2 (Z_v' = Z_{v-1}-(v/z)Z_v = Z_{v+1}+(v/z)Z_v), with Z = I_v or e^{v pi i}K_v (page header).
+- step 3 (hand derivation): R'=I2'/I1 - R I1'/I1 with I1'=I2+I1/k, I2'=I1-2I2/k -> R' = 1-2R/k - R(R+1/k) = 1-3R/k-R^2. q'=(p-q)/k. p'=-(2R+3/k)p+3R/k^2; at p=q: p'=-2Rq. p''=-2p^2+6p/k^2-(2R+3/k)p'-6R/k^3, at p'=0: -2p^2+6(p-q)/k^2. w'=3R-(2R+1/k)w. w''=p(3-2w)+w/k^2-(2R+1/k)w'; at w'=0: p(3-2w)+p = p(4-2w) = (4-2w)w/k^2 since w/k^2=p. THE TWO AUDITOR FORMULAS ARE THE SAME EXPRESSION. At w'=0, w=3Rk/(2Rk+1)<3/2<2, so positive given p>0.
+- Proof B: s=(sqrt(4+k^2)-2)/k; s'=2s/(k sqrt(4+k^2)); at R=s, R'=1-3s/k-s^2 = s/k (using 1-s^2=4s/k). R-s = k^3/192+... near 0. R'-R/k = 1-4R/k-R^2 = g(R), g decreasing on x>0, g(s)=0.
+- step 4: check_identities.py run (K1, exit 0): P1-P10 all MET; R5=1/1536, p-q=-k^2/48, p'=-k/16, w'=k/2, R-s=k^3/192 leading. P8 confirms auditor formulas identical.
+- step 5: enclosure.py (K3, exit 0): E1-E5 MET. R'(6)=0.03688589549764222..., R'(12)=0.00991862532892444..., both inside claimed brackets; tail ratios r<=0.0303; grid 800/800.
+- step 6: child-run1 returned (K2, exit 0, 80 s). Not yet graded. Starting Lean file haar.lean.
+- step 7: lean trial 1 (unrecorded) failed: 3 nlinarith/linarith goals + filter .and misuse; fixed, trial 2 running. Lean load ~5 min on shared machine.
+- step 8: child control graded: 1.644934 = pi^2/6 to 6 dp: CORRECT.
+- step 9: child report read after grading control. Child: (A) and (B) both CORRECT at w'=0, equal via p=w/k^2 (same as mine). Grandchild T220 (admitted/released by child), w(1,2,5)=0.221726,0.650838,1.273619, w'>0. Reran child check2.py (K4), regrand.py (K5), grandchild.py (K6) in child_rerun/: outputs reproduce (P1-P7, PASS; grandchild (c) FAIL at k=5 by FD tolerance, reproduced; grandchild.py exits 0 despite "SOME FAIL" = defect of child's program, exit code does not encode predicates). check2.py writes no mode-"x" result file (rule 3 deviation by child). T216 released (event 444).
+- step 10: lean trial 2 exit 0, all 12 decls axioms [propext, Classical.choice, Quot.sound]; b_at_zero does not use p>0 (linter). Recorded run started.
+- step 11: Lean recorded K7 exit 0 (12 axiom lines, no sorry). verify py PASS, rust PASS. report.md written.

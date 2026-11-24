@@ -1,0 +1,8 @@
+E1 L=6 enclosure inside claim: MET lo=0.036885895497642 hi=0.036885895497642 width=1.021e-45 tails T1=3.644e-44 T2=3.123e-45
+E4 L=6 width<1e-12: MET width=1.021e-45
+E2 L=12 enclosure inside claim: MET lo=0.009918625328924 hi=0.009918625328924 width=6.383e-28 tails T1=5.503e-24 T2=9.426e-25
+E4 L=12 width<1e-12: MET width=6.383e-28
+E3 r<1 all cases: MET 4/4 qualify; L=6,nu=1: r=0.0076, L=6,nu=2: r=0.0074, L=12,nu=1: r=0.0303, L=12,nu=2: r=0.0294
+E5 grid sanity (finite grid only): MET 800 points qualify (k>0); counts p-q<0:800/800, p'<0:800/800, w'>0:800/800, p>0:800/800; min margins p-q<0:5.207e-05, p'<0:4.595e-05, w'>0:5.064e-04, p>0:9.253e-04
+info: R'(6) = 0.0368858954976422227980719 (Decimal, 400 terms)
+info: R'(12) = 0.0099186253289244477006287 (Decimal, 400 terms)

@@ -1,0 +1,11 @@
+N=40, compared orders 0..33
+P1 R'=1-3R/k-R^2: MET 
+P2 R=k/4-k^3/96+...: MET R1=1/4 R3=-1/96 R5=1/1536 R7=-1/23040
+P3 q'=(p-q)/k: MET 
+P4 k^2 p' = -(2Rk^2+3k)p + 3R: MET 
+P5 k^3 p'' general identity: MET 
+P6 k w' = 3Rk-(2Rk+1)w: MET 
+P7 k^2 w'' general identity: MET 
+P8 auditor formulas identical: MET 
+P9 leading terms: MET p-q[2]=-1/48 p'[1]=-1/16 w'[1]=1/2 (R-s)[3]=1/192 s[1]=1/4 s[3]=-1/64
+P10 s identities: MET 

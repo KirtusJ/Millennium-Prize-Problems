@@ -1,0 +1,4 @@
+k=1 w=0.2217258034 wprime_FD=0.3923410458 wprime_formula=0.3923410754 diff=2.97e-08 (b)=PASS (c)=PASS
+k=2 w=0.6508379686 wprime_FD=0.4101720365 wprime_formula=0.4101717468 diff=2.90e-07 (b)=PASS (c)=PASS
+k=5 w=1.2736194789 wprime_FD=0.0709700657 wprime_formula=0.0709654955 diff=4.57e-06 (b)=PASS (c)=FAIL
+SOME FAIL

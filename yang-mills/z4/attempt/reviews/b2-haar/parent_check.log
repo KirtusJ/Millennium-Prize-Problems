@@ -1,0 +1,2 @@
+check K122: exit 0 (expected 0) in 673463 ms | output 8b3280d53e7d | event 124 head 3c5b84b6b8be
+  /home/user/z4-workers/b2-haar/report.md — 16 STANDS, 0 DEFECT, 0 NOT CHECKED; predicates 16 met, 0 failed, 1 measured only. The two (c) second-derivative formulas are the same expression; two presentation gaps, none affecting a conclusion.

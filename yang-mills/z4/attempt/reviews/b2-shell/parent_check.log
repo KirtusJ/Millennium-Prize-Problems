@@ -1,0 +1,2 @@
+check K121: exit 0 (expected 0) in 258944 ms | output 24760770e358 | event 123 head c4e14e434e1e
+  /home/user/z4-workers/b2-shell/report.md — 6 STANDS, 0 DEFECT, 0 NOT CHECKED (claims 4 and 5 hold only under hypotheses the auditor does not state; the preamble's s^r+s^{N−r} indexing is a wording defect only; predicates 24 met, 1 failed by my own too-tight tolerance, 0 measured only).

@@ -1,0 +1,4 @@
+register: 9 events, chain intact, head 5a313f0fc9ee4e2e3ac7c3305d82353821cd6c95a4c56afffb0000b0c8f1555e
+guards replayed: every event passes
+objects: all stored objects match their digests; 0 recorded by reference only
+result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)

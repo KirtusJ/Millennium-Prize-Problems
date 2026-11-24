@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/b2-haar/child/check.py", line 27, in <module>
+    res['P1']=max(abs(p(k)-(1-3*R(k)/k-R(k)**2)) for k in ks)
+              ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/z4-workers/b2-haar/child/check.py", line 27, in <genexpr>
+    res['P1']=max(abs(p(k)-(1-3*R(k)/k-R(k)**2)) for k in ks)
+                      ~^^^
+  File "/home/user/z4-workers/b2-haar/child/check.py", line 17, in p
+    def p(k,h=1e-5): return (R(k+h)-R(k-h))/(2*h)
+                             ~^^^^^
+  File "/home/user/z4-workers/b2-haar/child/check.py", line 16, in R
+    def R(k): return I(2,k)/I(1,k)
+                     ~^^^^^
+  File "/home/user/z4-workers/b2-haar/child/check.py", line 15, in I
+    return sum((k/2)**(2*m+nu)/(factorial(m)*factorial(m+nu)) for m in range(M))
+  File "/home/user/z4-workers/b2-haar/child/check.py", line 15, in <genexpr>
+    return sum((k/2)**(2*m+nu)/(factorial(m)*factorial(m+nu)) for m in range(M))
+               ~~~~~~~~~~~~~~~^^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+OverflowError: int too large to convert to float

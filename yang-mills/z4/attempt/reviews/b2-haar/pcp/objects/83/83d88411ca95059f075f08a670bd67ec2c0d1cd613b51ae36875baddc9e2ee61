@@ -1,0 +1,39 @@
+I've run the main check, and it passes. It confirms the derivation. Formulas (A) and (B) both hold at zeros of w'. T220 (the grandchild) is running to compute w at k = 1, 2, 5. I'm waiting on it before releasing T220, running the two verify commands and writing report.md.
+
+Both formulas are correct, but only at zeros of w', and I found no zero of w' for k > 0. So I tested the general (not-at-zero) identity for w'' instead, and that held numerically.
+
+**Derivation** (no sympy installed, so by hand plus an exact power-series check)
+- (i) w' = R(3−2w) − w/k.
+- (ii) In general, w'' = p(3−2w) + w/k² − w'(2R + 1/k). At w' = 0 this gives (A) exactly. Substituting p = w/k² gives (B) = (4−2y)y/k², so (A) and (B) are the same formula there.
+
+**Verdicts**
+- **(A) CORRECT** at zeros of w'. The general identity matched a finite-difference w'' to 7.7e-8, and (A) is that identity with w' = 0.
+- **(B) CORRECT** at zeros of w'. It equals (A) after p = w/k², and |A−B| < 3e-14 on 1000 random points.
+- **No zero of w'.** On a grid over k in (0.05, 60), step 0.05, w' stays positive (minimum 2.2e-4) and w approaches 3/2. A grid scan does not prove there is no zero anywhere.
+- **Away from a zero.** (A) and (B) differ from the true w'' by 0.58 at k = 1, 2, 5. That is expected, because of the extra −w'(2R + 1/k) term.
+
+**Other checks**
+- Control: the sum is 1.644934, written to control.txt.
+- The formula for w' agrees with finite differences to 1.7e-9.
+- The w' series coefficients match exactly through k¹³.
+
+**Grandchild T220** (released)
+- Its control gave 1.644934.
+- w(1), w(2), w(5) = 0.221726, 0.650838, 1.273619.
+- w' = 0.3923, 0.4102, 0.0710, all positive.
+- Its predicate (c) (formula vs finite difference within 1e-6) failed at k=5 with a difference of 4.6e-6. The tolerance was too tight for nested differences. That was my expectation, not a target defect.
+- I reran independently in `regrand.py` with a wider step. It passed, with agreement of about 5e-9 at k=5.
+
+**Failed predicates**
+- `check.py` exited 1 with an OverflowError in my own Bessel series (factorial division). I fixed it in `check2.py` with the predicates unchanged. The failed run stays in the register.
+- The grandchild (c) failure is the tolerance issue above.
+
+**Rerun**
+- `cd /home/user/z4-workers/b2-haar/child && python3 check2.py && python3 regrand.py`
+- `grandchild.py` writes its `results.txt` in mode `'x'`, so delete that file before rerunning it.
+
+**Last lines of the two verify commands**
+- `pcp_os.py verify --ws pcp`: result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)
+- `pcpos verify pcp/register.jsonl`: A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.
+
+Everything is in `/home/user/z4-workers/b2-haar/child/`; `report.md` has the full write-up.
