@@ -859,6 +859,47 @@ This is a comparison of the kind Hypothesis~\ref{h:coarse} needs, with no loss, 
 dispersion relation; we know no substitute for it in an interacting theory.
 \end{remark}
 
+The remark suggests doing without the chain of lattices. Fix one fine lattice and one set of coarse
+variables on it, and apply Theorem~\ref{t:inh} once.
+
+\begin{proposition}[A one-step criterion]\label{p:onestep}
+Let $H\ge0$ be self-adjoint on a non-zero Hilbert space, $P$ an orthogonal projection, $Q=I-P$ and $t>0$.
+\begin{enumerate}
+\item[(a)] If $\|Qf\|^2\le\kappa\langle f,Hf\rangle$ for all $f$ in the form domain of $H$ and
+$\|Pe^{-tH}P\|\le1-b$, then
+\[
+1-\|e^{-tH}\|\ \ge\ \frac{b_+}{1+\kappa/t}.
+\]
+\item[(b)] Conversely, if $H\ge\Delta>0$, then $\|Qf\|^2\le\Delta^{-1}\langle f,Hf\rangle$ and
+$\|Pe^{-tH}P\|\le e^{-t\Delta}$.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+(b) is immediate. For (a) suppose first $H\ge\varepsilon>0$. Then $H^{-1/2}QH^{-1/2}\le\kappa$, so
+$\|QH^{-1}Q\|\le\kappa$. For an integer $m$ put $\tau=t/m$ and $A=e^{-\tau H}$. Since
+$(1-e^{-2\tau x})^{-1}\le1+1/(2\tau x)$, $Q(I-A^2)^{-1}Q\le(1+\kappa/(2\tau))Q$, and as in
+Remark~\ref{r:forms}(a) this is $I-A^2\ge\gamma Q$ with $1/\gamma=1+\kappa/(2\tau)$. Theorem~\ref{t:inh} with
+$B=0$ gives $1-\|A^m\|\ge b_+/(1+2/m+\kappa/t)$; let $m\to\infty$. For general $H\ge0$ apply this to
+$H+\varepsilon$, for which both hypotheses hold with the same $\kappa$ and $b$, and let $\varepsilon\to0$.
+\end{proof}
+
+So along any family of regulated theories in a box, a gap bounded below is \emph{equivalent} to two
+statements with constants independent of the regulator, for projections of one's choice: the part of a
+function not determined by the coarse variables is bounded by its energy, and the coarse variables
+decorrelate over the time $t$. If $P$ is the conditional expectation given finitely many coarse variables
+$C$, the second statement concerns the law of the pair $(C_0,C_t)$ on a fixed finite-dimensional space, and
+it holds with $b=\varepsilon$ as soon as that law is at least $\varepsilon$ times the product of its
+marginals: for centred $f$ and $g$ the measure $\rho-\varepsilon\,\nu\otimes\nu$ is positive with marginals
+$(1-\varepsilon)\nu$, so $|\E f(C_0)g(C_t)|\le(1-\varepsilon)\|f\|\,\|g\|$. In this form no second lattice, no
+matched coupling and no budget appear. The price is that the first statement must hold for all the fine
+detail below the coarse scale at once, and whether it does depends on the coarse variables.
+Appendix~\ref{app:free} shows this in the free theory: for coarse links that are sums of $r$ fine links
+the constant $\kappa$ grows like $r$ in units of the coarse mesh, while for block averages of the plaquette
+field it is $0.46$ to $0.72$ coarse meshes for $r=2$ to $8$, still growing slowly. Both parts were tested on
+$20{,}000$ random finite-dimensional instances and the minorisation on $2{,}000$ random reversible chains
+(Supplement~S13). Neither statement is established for the Wilson measure with any choice of coarse
+variables.
+
 \section{Return to a coarse plaquette gate}\label{s:ret}
 The return bound comes from a single link. Given all the other links, one link of the plaquette has an
 explicit law on the sphere $S^3$, and for that law the probability of any cap is at most the probability of
@@ -1186,6 +1227,7 @@ Lemma~\ref{l:trace}, Proposition~\ref{p:vac}, Corollary~\ref{c:vac} & proved, $\
 Proposition~\ref{p:haar} & proved; scalar steps checked in Lean \\
 Proposition~\ref{p:pred} & proved (a reduction between open estimates; it bounds nothing in the theory); its Hilbert-space core checked in Lean \\
 Proposition~\ref{p:dir} & proved (a reduction of the same kind); exact in the free theory; its two algebraic steps checked in Lean \\
+Proposition~\ref{p:onestep} & proved (a gap in a box is equivalent to two regulator-uniform statements for coarse variables of one's choice; neither is established for the Wilson measure) \\
 Proposition~\ref{p:wstep} & proved (a refinement step from the weight bound~\eqref{e:wlin}, which is open for the Wilson measure and proved in the free theory, Proposition~\ref{p:freeweight}); its last step checked in Lean \\
 Hypothesis~\ref{h:mix} & open; not measured (Appendix~\ref{s:time} tests one combination's carry-over in time and gives no bound) \\
 Auxiliary local mixing & open; estimates for trial functions on two frozen backgrounds, one lattice, one coupling (Table~\ref{tab:local}) \\
@@ -1713,7 +1755,7 @@ S9 & Working notes with related hypotheses on the centre-neutral space & Section
 S10 & Records of the internal reviews of this paper and their test programs & Section~\ref{s:disc} \\
 S11 & Programs and outputs for the free theory, and for the two-link test of Proposition~\ref{p:dir} & Section~\ref{s:arch}, Appendix~\ref{app:free} \\
 S12 & Programs and outputs for the compact $\mathrm U(1)$ example, with the expectation written before the runs & Appendix~\ref{app:free} \\
-S13 & Random finite-dimensional test of Proposition~\ref{p:wstep} & Section~\ref{s:inh} \\
+S13 & Random finite-dimensional tests of Propositions~\ref{p:wstep} and~\ref{p:onestep} & Section~\ref{s:inh} \\
 \bottomrule
 \end{tabular}
 \caption{Supplementary material.}\label{tab:supp}
@@ -1915,6 +1957,20 @@ and the Hamiltonian is the same as $\|GH^{-1}G\|\le\kappa$, so by Remark~\ref{r:
 Hypothesis~\ref{h:mix} is the statement that $G_i\le\kappa_iH_i$ with $\sum_i\kappa_i<\infty$: the variance of
 a function given the coarse field, off the gates, is bounded by its energy. The free theory has
 $\kappa_i=c\,a_i$.
+
+\emph{Blocking in one step.} For Proposition~\ref{p:onestep} the relevant constant is that of
+$I-P_r\le c_r\,a\,H$ when the coarse variables are obtained in one step by a factor $r$; in units of the
+coarse mesh it is $c_r/r$. With coarse links that are sums of $r$ fine links, at the lowest axial momentum
+of a lattice of side $1024\,r$, $c_r/r$ is $0.72$, $1.11$, $1.56$, $2.50$, $3.45$ for $r=2,3,4,6,8$, so $c_r$
+grows like $r^2$ ($c_r/r^2$ between $0.36$ and $0.43$); a bound $c_r\le2r$ that we had written down before
+the computation failed. A line sum does not average over the directions transverse to the line, and modes of
+low energy whose transverse momentum is a multiple of $2\pi/r$ alias into it. With block averages of the
+plaquette field (the flux through an $r\times r$ face, averaged over the $r$ parallel faces of the block),
+which are gauge invariant and not products of links, the same quantity is $0.46$, $0.50$, $0.56$, $0.65$,
+$0.72$: within the bound, and still increasing (Supplement~S11). So the choice of coarse variables matters
+for the one-step form even in the free theory, and the sums along lines that the lattice gauge theory
+suggests are a poor choice at large blocking factor; the refinement by factors of two of
+Section~\ref{s:arch} does not meet this difficulty.
 
 So in the free theory the three hypotheses hold together along an infinite refinement, and the architecture
 closes in a fixed box, with a bound about six times smaller than the truth at $N=64$.
