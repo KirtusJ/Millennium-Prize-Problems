@@ -1,5 +1,7 @@
 # The fixed-box spectrum and the gap at fixed physical size
 
+G4 proposes bounding the squared error of reconstructing a low-energy Wilson state from its coarse links by one lattice spacing times its energy. The rate holds on the full low-energy band of a free scalar benchmark. A physical-time replica test could disprove specified Wilson constants. [Hypotheses, assumptions and scope](physical-residual-hypotheses/README.md)
+
 G4 deposited a standing disposition for Z4 and derived the exact conditional loss for sums of four-spoke plaquette marks. The fixed-time comparison now includes a relative partition error for small transfer deficits. [Dated handoff](G4_TO_Z4_2026-11-23.md) · [Cell sums and cross-lattice comparison](plaquette-cell-sums/README.md)
 
 An all-test lower bound on clear-field mixing now reduces to finite Wilson cell matrices at each regulator. G4 also bounded how much an equal-time transfer comparison can miss when partitioning all straight coarse links, and tested the matched 5→10 pair with a center-neutral winding at two time periods. [Clear-field sweep and cross-lattice comparison](cyclic-transfer/README.md)
