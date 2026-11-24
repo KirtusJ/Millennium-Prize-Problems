@@ -237,6 +237,11 @@ one coupling each, with statistical errors. The exact value of a trial function 
 side; an estimate of it is not a bound. The estimates are statistical evidence about the functions tried; they do
 not certify an inequality over all functions or its limit, and none is
 used in a proof.
+\item The examples of Appendix~\ref{app:free} are calibrations. The free theory is not Yang--Mills theory and
+has no gap in infinite volume; the compact $\mathrm U(1)$ example and the non-abelian example are at the
+smallest sizes, in one dimension less, and the second uses finite subgroups in place of the group. A
+statement that holds in them is not thereby known, or even made likely, for the Wilson measure in four
+dimensions.
 \end{enumerate}
 
 How the results were obtained, which parts are machine-checked, and the fact that the paper has not been
@@ -248,7 +253,8 @@ shows, in Figure~\ref{f:arch}, how the proved and the open statements fit togeth
 Sections~\ref{s:crit} to~\ref{s:ret}. Section~\ref{s:evid} summarises the measurements, Section~\ref{s:ext}
 relates the paper to the external construction, and Section~\ref{s:rem} lists what remains. The appendices
 hold the measurements in full, the one-link covariance bound, the machine-checked parts and the catalogue of
-supplementary material, and a check of the outline in the free theory. A reader who wants only the mathematics can read Sections~\ref{s:set}
+supplementary material, and a check of the outline in the free theory, followed by two small interacting
+examples. A reader who wants only the mathematics can read Sections~\ref{s:set}
 to~\ref{s:ret}; a reader who wants only the state of the question can read this introduction,
 Section~\ref{s:arch} and Section~\ref{s:rem}.
 
@@ -1321,6 +1327,7 @@ Lemma~\ref{l:trace}, Proposition~\ref{p:vac}, Corollary~\ref{c:vac} & proved, $\
 Proposition~\ref{p:haar} & proved; scalar steps checked in Lean \\
 Proposition~\ref{p:pred} & proved (a reduction between open estimates; it bounds nothing in the theory); its Hilbert-space core checked in Lean \\
 Proposition~\ref{p:dir} & proved (a reduction of the same kind); exact in the free theory; its two algebraic steps checked in Lean \\
+Propositions~\ref{p:freecoarse} to~\ref{p:freeweight} & proved (free theory only: coarse comparison, uniform mixing for factor two and for any factor, the fine detail bounded by the energy); not formalised \\
 Proposition~\ref{p:freeblock} & proved (free theory: a block average for which the first statement of Proposition~\ref{p:onestep} holds uniformly in the blocking factor and the side); not formalised \\
 Proposition~\ref{p:onestep} & proved (a gap in a box is equivalent to two regulator-uniform statements for coarse variables of one's choice; neither is established for the Wilson measure) \\
 Proposition~\ref{p:wstep} & proved (a refinement step from the weight bound~\eqref{e:wlin}, which is open for the Wilson measure and proved in the free theory, Proposition~\ref{p:freeweight}); its last step checked in Lean \\
@@ -1361,7 +1368,11 @@ in the first reduction.
 defect in the steps it checked (three items of the return derivation, which needed data archives that were
 absent, were not checked). It wrote the proofs as they appear here, including the periodic-time form of
 Theorem~\ref{t:ret}, Lemma~\ref{l:trace}, Proposition~\ref{p:vac} and Corollary~\ref{c:vac}, made the
-measurements of Section~\ref{s:evid}, and drafted the text.
+measurements of Section~\ref{s:evid}, and drafted the text. It also proposed and proved
+Propositions~\ref{p:wstep} and~\ref{p:onestep}, Remark~\ref{r:where}, Propositions~\ref{p:freeweight}
+and~\ref{p:freeblock} and the lower inequality of Remark~\ref{r:weight}, wrote the formal proofs of
+Appendix~\ref{s:lean}, and designed, ran and reported the computations of Appendix~\ref{app:free}, including
+those whose predicates failed.
 \end{itemize}
 
 \subsection*{Status of verification}
@@ -1822,7 +1833,9 @@ $\beta^2\lambda_{\min}(k)\ge R'(\ell)$ given the monotonicities; and the first-z
 formalised.
 \end{itemize}
 Theorem~\ref{t:ret}, Proposition~\ref{p:vac}, Lemmas~\ref{l:cap}
-and~\ref{l:trace}, and the analytic part of Corollary~\ref{c:vac} are not formalised.
+and~\ref{l:trace}, and the analytic part of Corollary~\ref{c:vac} are not formalised. Nor are
+Proposition~\ref{p:onestep}, which is a consequence of Theorem~\ref{t:inh} through the functional calculus of
+an unbounded operator, and the propositions of Appendix~\ref{app:free}.
 The eleven files contain $95$ theorems. For $37$ of them, those cited above and their main lemmas, a digest of the statement text is recorded
 with the digests of the files (Supplement~S7), so that a later change of a statement or a file can be
 detected; a digest of a statement does not cover the definitions it depends on.
@@ -1863,6 +1876,13 @@ The outline of Section~\ref{s:arch} can be tested in full where everything is co
 torus of side $N$. This is the theory obtained from the Wilson action by keeping the quadratic term. It is
 not Yang--Mills theory, and nothing here bears on the open hypotheses for $\SU(2)$; the purpose is to see
 whether the hypotheses and the budget are mutually consistent in one example with a gap in a fixed box.
+
+The appendix has grown with the paper, and its parts are these. The table and the three items after it test
+the outline of Section~\ref{s:arch}; Propositions~\ref{p:freecoarse} to~\ref{p:freer} prove what the table
+shows. Proposition~\ref{p:freeweight} and the paragraph on blocking in one step, with
+Proposition~\ref{p:freeblock}, concern the forms of Section~\ref{s:inh} that do without a mixing rate or
+without the chain of lattices. The paragraph on what the example does not show applies to all of it. Two
+interacting examples at the smallest sizes close the appendix.
 
 \emph{Setting.} We take the gauge-invariant functions of the spatial plaquettes of one slice (winding modes
 are left out). The measure is Gaussian. For jointly Gaussian vectors the conditional expectation is the
