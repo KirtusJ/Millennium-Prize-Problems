@@ -35,3 +35,7 @@ Compact U(1) lattice gauge theory in 2+1 dimensions on a 2 × 2 spatial torus, b
 ## The ratio weight/energy (added later the same day)
 
 `softweight.py`, `softweight_result.txt` (`softweight_firstrun.txt` is the identical first output, kept because the docstring was corrected after it; see the docstring). The weight of the slow state in the fine detail divided by its energy has a closed form in both models: `1/√8 = 0.353553` for one unit of flux in this toy (extrapolated from β = 64 and 128: 0.353557), and `2/√8 + 1/√24 = 0.911231` for the soft photon of the free theory in three dimensions (0.911230909 at side 2²⁸). β × energy extrapolates to 0.499985. One predicate, read against a mistyped decimal in the docstring, fails; against the closed form all three are met.
+
+## The limit of the rate (added later the same day; an extrapolation, not a proof)
+
+The quadratic approximation of `PREDICTION.md`, evaluated exactly, gives `‖G(I − A²)⁻¹G‖ → 1/(1 − (3 − √8)²) + 1/(4√2) = (1 + √2)/2 = 1.207107`, so `γ_opt → 2(√2 − 1) = 0.828427`. The sector suprema in `u1sector_result.txt` at β = 8 and 16 (1.187438, 1.197279) differ from that value by 0.01967 and 0.00983, a ratio of 2.00, and extrapolate linearly in 1/β to 1.207120. No program was run for this; it is arithmetic on the deposited file.
