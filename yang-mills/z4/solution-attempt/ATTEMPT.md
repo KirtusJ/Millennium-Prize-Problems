@@ -91,6 +91,17 @@ A reviewing GPT model examined this record. I checked its points and accept the 
 4. **§3: the measured slope 0.43 is an illustration**, not a bound on the trajectory, and any `γ_i` with `Σ a_i/γ_i < ∞` would do.
 5. **Free theory.** The reviewer reproduced the table of §4.2 independently and supplied proofs that hold for every side (now Propositions E.1 and E.2). It also pointed out what the example warns against: the free theory satisfies the whole refinement architecture and has no mass gap.
 
+## 4.4 Second outside review, of revision 93c7a41 (same day)
+
+Checked by calculation and against the assessment's own text; all accepted.
+
+- **Inverse-Hamiltonian form.** `½‖GH⁻¹G‖ ≤ a‖G(I − A²)⁻¹G‖ ≤ a + ½‖GH⁻¹G‖`, so Hypothesis 3.1 holds for some rates if and only if `Σ‖G_iH_i⁻¹G_i‖ < ∞`. Re-derived; now in Remark 3.6(a).
+- **Temporal gauge in Remark 3.6(b).** The covariance of individual links belongs to the unprojected kernel; the remark now says so.
+- **Remark 6.5(e).** "Hypothesis 3.1 has to hold on such slices" did not follow: frequent occupation does not make the return weight of the fine-detail projection large. Reworded as the review proposed.
+- **Appendix E.** Zero-momentum convention stated; the minimiser is "in every case computed", not proved. My program `resolvent_check.py` tested random combinations in the kernel, not the whole kernel as its docstring says; `blockr.py` (predicate B3) tests the whole kernel by an eigenvalue and is met.
+- **Other blocking factors.** `γ_{r,N} ≥ (1 + r/4 + π²r³/16)⁻¹`: I re-derived each step (one step needs Cauchy–Schwarz component by component to avoid a factor 3) and checked it at every coarse momentum for r = 2..5 (`blockr.py`: four predicates met, including the reviewer's three axial values to six digits). Now Proposition E.3.
+- **External construction, read in the assessment itself:** coupling asymptotics uniform in the volume index (Theorem 4.1, eq. (7)); meshes `1/D_n` with odd factors at least 3, so not dyadic; mesh limit on a four-torus before the volume limit; "perturbative agreement to all orders remains unproved". Section 8 of the paper now names these. The value of the Casimir constant for SU(2) in that normalisation I did not verify.
+
 ## 5. What would be worth doing next (not done)
 
 1. State the missing estimate as a single conjecture: a Poincaré inequality for the vacuum slice measure conditioned on the coarse field, with constant at most `C e^{cβ}`, `c < 2.33`, uniform in volume and in the coarse field. Test it numerically as a function of β and of the side at fixed β, which the existing programs can do.

@@ -1,0 +1,25 @@
+r=2 N=4 gamma=0.928203 (maxwell.py 0.928203)
+r=2 N=8 gamma=0.876241 (maxwell.py 0.876241)
+r=2 N=16 gamma=0.801969 (maxwell.py 0.801969)
+B1 MET
+r=2 N=4 min gamma=0.928203 bound=0.155405 max eig J-compression=-3.582916
+r=2 N=6 min gamma=0.905376 bound=0.155405 max eig J-compression=-4.796692
+r=2 N=8 min gamma=0.876241 bound=0.155405 max eig J-compression=-3.582916
+r=3 N=6 min gamma=0.854102 bound=0.054333 max eig J-compression=-4.142695
+r=3 N=9 min gamma=0.796887 bound=0.054333 max eig J-compression=-6.510138
+r=3 N=12 min gamma=0.738684 bound=0.054333 max eig J-compression=-4.142695
+r=3 N=24 min gamma=0.609454 bound=0.054333 max eig J-compression=-4.142695
+r=4 N=8 min gamma=0.775895 bound=0.024109 max eig J-compression=-4.986051
+r=4 N=12 min gamma=0.694148 bound=0.024109 max eig J-compression=-8.105461
+r=4 N=16 min gamma=0.620871 bound=0.024109 max eig J-compression=-4.986051
+r=5 N=10 min gamma=0.703941 bound=0.012601 max eig J-compression=-5.913627
+r=5 N=15 min gamma=0.608064 bound=0.012601 max eig J-compression=-9.751355
+r=5 N=20 min gamma=0.529281 bound=0.012601 max eig J-compression=-5.913627
+r=2 N=16 with constant 14/sqrt3: max eig J-compression=-2.089351
+r=2 N=32 with constant 14/sqrt3: max eig J-compression=-1.197349
+B2 MET
+B3 MET
+axial r=3 N=24 gamma=0.609454 (claimed 0.609454)
+axial r=4 N=32 gamma=0.470448 (claimed 0.470448)
+axial r=5 N=40 gamma=0.376053 (claimed 0.376053)
+B4 MET

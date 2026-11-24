@@ -447,7 +447,8 @@ $\gamma_i\ge Ce^{-c\beta_i}$ with $c<1/s$ is enough, because $a_i/\gamma_i$ is t
 $a_i^{1-cs}$, which is summable over dyadic meshes. Logarithmic growth is what asymptotic freedom predicts:
 at one loop $s=11/(3\pi^2)\approx0.37$ for $\SU(2)$, and the matched couplings of
 Appendix~\ref{app:meas} give $s\approx0.43$ between sides $5$ and $10$. We do not prove the growth
-condition. The remark says that the difficulty of Hypothesis~\ref{h:mix} is not the size of the rate, for
+condition; for the trajectory of the external construction it is reported in its assessment
+(Section~\ref{s:ext}). The remark says that the difficulty of Hypothesis~\ref{h:mix} is not the size of the rate, for
 which a bound exponentially small in $\beta$ would do if the growth condition holds, but its uniformity in
 the volume and in the coarse field. (The measured slope is an illustration, not a bound on the trajectory;
 and any $\gamma_i$ with $\sum_ia_i/\gamma_i<\infty$ would do, for instance $\gamma_i=a_i\,i^{1+\delta}$.)
@@ -465,18 +466,27 @@ for a projection $G\ne0$ the best constant in $I-A^2\ge\gamma G$ is
 Indeed the inequality is equivalent to $I\ge\gamma(I-A^2)^{-1/2}G(I-A^2)^{-1/2}$, and the operator on the
 right has the norm of $G(I-A^2)^{-1}G$. So Hypothesis~\ref{h:mix} is the statement that
 $\sum_ia_i\|G_i(I-A_i^2)^{-1}G_i\|<\infty$: the fine detail off the gates must not retain too much
-correlation summed over time. It does not ask for more.
-\item[(b)] \emph{Sufficient.} By Remark~\ref{r:doob} below, the next slice $Y$ given $X=x$ has density
-proportional to $\exp(\beta\sum_ex_e\cdot y_e)\phi(y)$, links being unit vectors in $\R^4$. For a function $g$
+correlation summed over time. It does not ask for more. In terms of the Hamiltonian, $A_i=e^{-a_iH_i}$ on the
+centred gauge-invariant functions and $1/x\le1/(1-e^{-x})\le1+1/x$ give
+$\tfrac12\|GH^{-1}G\|\le a\,\|G(I-A^2)^{-1}G\|\le a+\tfrac12\|GH^{-1}G\|$. Since the meshes are summable,
+Hypothesis~\ref{h:mix} holds for some choice of the $\gamma_i$ if and only if
+$\sum_i\|G_iH_i^{-1}G_i\|<\infty$.
+\item[(b)] \emph{Sufficient.} Work in temporal gauge, before the gauge projection: let $Y$ given $X=x$ have
+density proportional to $\mathsf C(x,y)\phi(y)=\exp(\beta\sum_ex_e\cdot y_e)\phi(y)$, links being unit vectors in
+$\R^4$ and $\phi=W\Omega$ as in Remark~\ref{r:doob} below. The joint density of $(X,Y)$ is
+$\phi(x)\mathsf C(x,y)\phi(y)/\Lambda_0$, which is symmetric, and this process has the same action on
+gauge-invariant functions as the transfer step, so Proposition~\ref{p:pred} may be applied to it and its
+conclusion restricted to those functions. For a function $g$
 of $Y$ and $h(x)=\E[g(Y)\mid X=x]$, the derivative of $h$ along a tangent vector $v$ is
 $\beta\Cov(g(Y),\sum_ev_e\cdot Y_e\mid X=x)$. Suppose that on a coarse field $c$ the covariance of $Y$ given
 $X=x$ has operator norm at most $L_c$, and that the law of $X$ given $C=c$ satisfies a Poincar\'e inequality
-$\operatorname{Var}(h)\le P_c\,\E|\nabla h|^2$ along the fibre. Then
+$\operatorname{Var}(h)\le P_c\,\E|\nabla h|^2$ with the gradient along the fibre (the variations of the
+links that keep the coarse links fixed). Then
 $\operatorname{Var}(h(X)\mid C=c)\le\beta^2P_cL_c\,\E[\operatorname{Var}(g(Y)\mid X)\mid C=c]$, and by the
 law of total variance
 \[
 \varrho(c)^2\le\frac{\beta^2P_cL_c}{1+\beta^2P_cL_c},\qquad\text{so that}\qquad
-\gamma\ge\frac1{1+\beta^2\sup_cP_cL_c}
+\gamma\ge\frac1{1+\beta^2\operatorname*{ess\,sup}_{c\in\mathcal G}P_cL_c}
 \]
 in Proposition~\ref{p:pred}. With Remark~\ref{r:rate}, bounds $P_c\le C_1e^{p\beta}$ and
 $L_c\le C_2e^{q\beta}$, uniform in the volume, would suffice when $p+q<1/s$. Neither bound is known for the
@@ -772,10 +782,11 @@ $p_{6\beta}(\varphi_0)$. Take $n$ plaquettes of a slice, each with a link on no 
 the probability that all of them lie within $\varphi_0$ of the identity is at most $p_{6\beta}(\varphi_0)^n$.
 Since $1-p_{6\beta}(\varphi_0)$ is at least a constant times $e^{-6\beta(1-\cos\varphi)}$ for any
 $\varphi>\varphi_0$, with $n$ of order $N^3$ and $\beta\le s\log N+\text{const}$ this probability tends to zero
-whenever $6s(1-\cos\varphi_0)<3$. For $s\approx0.4$ that covers angles up to about $100^\circ$. So an
-exceptional set defined by one plaquette leaving a fixed neighbourhood of the identity is not rare, and
-Hypothesis~\ref{h:mix} has to hold on slices that contain such plaquettes. Nothing is shown this way near
-$-I$.
+whenever $6s(1-\cos\varphi_0)<3$. For $s\approx0.4$ that covers angles up to about $100^\circ$. The statement is
+for each time slice separately. So such configurations cannot be excluded on grounds of rarity alone; if they
+are put in the exceptional set, its return weight $\|BA^jB\|$ has to be controlled separately, and frequent
+occupation does not by itself make that weight large, since a region that is often occupied may still forget
+its fine detail quickly. Nothing is shown this way near $-I$.
 \end{enumerate}
 \end{remark}
 
@@ -843,7 +854,8 @@ proved unique.
 \item Any such limit decomposes into component theories. Each satisfies the Osterwalder--Schrader axioms and
 hence, by reconstruction, the Wightman axioms.
 \item Renormalised local operators corresponding to gauge-invariant polynomials in the curvature are defined.
-Their operator product expansion is not shown to match perturbation theory.
+The assessment reports substantial leading short-distance agreement, and states that perturbative
+agreement of the operator product expansion to all orders remains unproved.
 \item No mass gap is proved.
 \item The assessors' own independent check of the Osterwalder--Schrader axioms concerns a selected family of
 stress-tensor trace correlations, tested against functions that vanish to all orders where points coincide,
@@ -865,8 +877,18 @@ vectors with dense span, for instance those generated from the vacuum by the sme
 would have to be fixed and matched to the construction. None of it is done here.
 \begin{itemize}
 \item The group and the lattice action.
-\item The sequence of meshes and couplings, and the physical units.
-\item The order of the limits (mesh at fixed volume, then volume).
+\item The sequence of meshes and couplings, and the physical units. The construction uses meshes
+$a_n=1/D_n$ with $D_n=\prod_{k<n}b_k$, the $b_k\ge3$ odd and non-decreasing with $\log b_n/\log D_n\to0$
+\cite[appendix, entry \texttt{WilsonFamily.denominator}]{YMG}. No two of these meshes differ by a power of two, so the dyadic sequence of this paper is
+not that sequence; Theorem~\ref{t:inh} does not need factors of two, but Theorem~\ref{t:ret} and the
+hypotheses are stated for them here.
+\item The order of the limits. The construction takes the mesh to zero on a four-dimensional periodic torus
+of fixed size and then the size to infinity along a subsequence. This paper takes the time extent to infinity
+first, at a fixed spatial lattice. The two orders are not known to agree.
+\item The growth of the coupling. On its own trajectory the construction has
+$\beta_{n,p}/\log(1/a_n)\to11C_{\mathfrak g}/(24\pi^2)$ uniformly in the volume index
+\cite[Theorem~4.1, eq.~(7)]{YMG}, which is the growth condition of Remark~\ref{r:rate} there. We have not
+matched its normalisation of the action and of the Casimir constant to ours.
 \item The class of observables on which convergence holds, and the component theory selected.
 \item The relation between the lattice transfer semigroup at fixed regulator, to which
 Theorems~\ref{t:inh} and~\ref{t:ret} refer, and the Hamiltonian of the limit.
@@ -1428,7 +1450,8 @@ whether the hypotheses and the budget are mutually consistent in one example wit
 
 \emph{Setting.} We take the gauge-invariant functions of the spatial plaquettes of one slice (winding modes
 are left out). The measure is Gaussian. For jointly Gaussian vectors the conditional expectation is the
-second quantisation of a contraction, so every maximal correlation below is the largest canonical correlation
+second quantisation of a contraction (this is Gebelein's inequality in several dimensions), so every maximal
+correlation below is the largest canonical correlation
 of linear functionals, which is a finite matrix computation at each spatial momentum. The plaquette field at
 spatial momentum $p$ and time lag $\tau$ has covariance $M(p)e^{-\omega_p\tau}/(2\sinh\omega_p)$, with
 $\cosh\omega_p=1+\tfrac12\sum_i4\sin^2(p_i/2)$ and $M(p)$ the matrix of the lattice curl. A coarse plaquette
@@ -1460,8 +1483,9 @@ floating point from the formulas above (Supplement~S11); they are exact up to ro
 
 Three things are seen in the table, and each can be proved for all sides.
 \begin{itemize}
-\item \emph{Hypothesis~\ref{h:mix} holds without any exceptional set.} The smallest $\gamma$ is attained at the
-lowest non-zero coarse momentum, and along that momentum it decreases to the limit $0.674941$.
+\item \emph{Hypothesis~\ref{h:mix} holds without any exceptional set.} In every case computed the smallest
+$\gamma$ is at the lowest non-zero coarse momentum, and along that momentum it decreases to the limit
+$0.674941$.
 Proposition~\ref{p:freemix} below proves $\gamma\ge0.195$ for every even side.
 \item \emph{Hypothesis~\ref{h:coarse} holds with no loss.} In every row $b\ge d_{\mathrm c}$.
 Proposition~\ref{p:freecoarse} proves this for every side.
@@ -1502,7 +1526,8 @@ $\eta\in\{0,1\}^3$, its eight fine momenta. Put $\mathsf d_j(p)=e^{ip_j}-1$ and
 $\mathsf D(p)=\operatorname{diag}(1+e^{ip_j})$, so that $\mathsf D(p)\mathsf d(p)=\mathsf d(2p)$. A coarse
 link is the sum of its two fine links, so the coarse observation is $F=\sum_\eta F_\eta$ with
 $F_\eta=\Pi\,\mathsf D(p_\eta)(2\sinh\omega_{p_\eta})^{-1/2}$ on the vectors orthogonal to $\mathsf d(p_\eta)$,
-where $\Pi$ projects orthogonally to $\mathsf d(2k)$.
+where $\Pi$ projects orthogonally to $\mathsf d(2k)$. For $k=0$ the coarse plaquette field has no component
+in this sector and the observation is defined to be zero.
 
 \emph{Low momentum.} For $k\ne0$ the entries of $\mathsf D(k)$ have modulus $2\cos(k_j/2)\ge\sqrt2$. For $u_0$
 orthogonal to $\mathsf d(k)$, $\|\Pi\mathsf D(k)u_0\|=\min_\lambda\|\mathsf D(k)(u_0-\lambda\mathsf d(k))\|
@@ -1519,17 +1544,43 @@ $\|u_0\|^2\le\tfrac{14}{\sqrt3}\sinh\omega_k\,\|u_H\|^2$: fine detail cannot con
 \emph{Resolvent.} On the high components $(1-R^2)^{-1}\le C_*=(1-(2-\sqrt3)^2)^{-1}$. On the low one,
 $(1-e^{-2\omega})^{-1}=1+e^{-\omega}/(2\sinh\omega)$, so its contribution is at most
 $\|u_0\|^2+\tfrac{7}{\sqrt3}\|u_H\|^2$. Altogether
-$\langle u,(I-R^2)^{-1}u\rangle\le(C_*+7/\sqrt3)\|u\|^2$. For $k=0$ the low momentum is absent from the
-plaquette sector and the bound $C_*$ applies to all components. By~\eqref{e:freeres} this proves the claim.
+$\langle u,(I-R^2)^{-1}u\rangle\le(C_*+7/\sqrt3)\|u\|^2$. For $k=0$ there is no low component and no constraint, and the bound $C_*$ applies to all components. By~\eqref{e:freeres} this proves the claim.
 \end{proof}
 
 The identity~\eqref{e:freeres}, the inequality for the fine detail and the bound were checked numerically at
 every coarse momentum for $N=8$, $16$ and $32$ (Supplement~S11). The limit $0.674941$ is $1/\lambda$ with
 $\lambda$ the largest eigenvalue of $\operatorname{diag}(h(3),h(3),h(5))+\tfrac14vv^{\mathsf T}$,
-$h(c)=(1-(c-\sqrt{c^2-1})^2)^{-1}$ and $v=(8^{-1/4}\sqrt2,\,8^{-1/4}\sqrt2,\,24^{-1/4}\sqrt2)$; we have not
-proved that the lowest axial momentum is the minimiser for every $N$, and Proposition~\ref{p:freemix} does not
-need it. Both propositions, the identity and the limiting matrix were proposed by an OpenAI GPT model used
-as reviewer; the proofs were checked and written out here.
+$h(c)=(1-(c-\sqrt{c^2-1})^2)^{-1}$ and $v=(8^{-1/4}\sqrt2,\,8^{-1/4}\sqrt2,\,24^{-1/4}\sqrt2)$; this is
+the limit along the lowest axial momentum, which is the minimiser in every case computed; we have not proved
+that it is the minimiser for every $N$, and Proposition~\ref{p:freemix} does not need it. Both propositions, the identity, the limiting matrix and Proposition~\ref{p:freer} below were proposed by an
+OpenAI GPT model used as reviewer; the proofs were checked and written out here.
+
+\begin{proposition}[Other blocking factors]\label{p:freer}
+Let $r\ge2$ be an integer, let $N$ be divisible by $r$ with $N/r\ge2$, and let a coarse link be the sum of
+$r$ consecutive fine links. Then the mixing rate of the free theory satisfies
+\[
+\gamma_{r,N}\ \ge\ \Big(1+\frac r4+\frac{\pi^2r^3}{16}\Big)^{-1}.
+\]
+\end{proposition}
+\begin{proof}
+As for Proposition~\ref{p:freemix}, with the $r^3$ fine momenta $p_\eta=k+2\pi\eta/r$, $k\in[-\pi/r,\pi/r)^3$,
+and $\mathsf D_r(p)=\operatorname{diag}(\sum_{\ell<r}e^{i\ell p_j})$, for which
+$\mathsf D_r(k)\mathsf d(k)=\mathsf d(rk)$. The entries of $\mathsf D_r(k)$ have modulus
+$|\sin(rk_j/2)/\sin(k_j/2)|\ge2r/\pi$, so $\|F_0u_0\|^2\ge2r^2\|u_0\|^2/(\pi^2\sinh\omega_k)$. A high
+momentum has a component of modulus at least $\pi/r$, so $\sinh\omega\ge2/r$. For each $j$,
+$\sum_\eta|\mathsf D_r(p_\eta)_{jj}|^2=r^4$ by orthogonality of characters, and the Cauchy--Schwarz inequality
+in each component gives $\|\sum_{\eta\ne0}F_\eta u_\eta\|^2\le\tfrac{r^5}4\|u_H\|^2$. Hence on the fine detail
+$\|u_0\|^2\le\tfrac{\pi^2r^3}8\sinh\omega_k\|u_H\|^2$. With $(1-e^{-2\omega})^{-1}=1+e^{-\omega}/(2\sinh\omega)$,
+which is at most $1+r/4$ on the high components, the resolvent form is at most
+$(1+\tfrac r4+\tfrac{\pi^2r^3}{16})\|u\|^2$.
+\end{proof}
+
+The bound is uniform in the side but not in the factor. It was checked at every coarse momentum for
+$r=2,\dots,5$ and sides up to $24$ (Supplement~S11); the computed rates lie well above it, for instance
+$0.609$ at $r=3$, $N=24$. Its interest is that the construction~\cite{OAI} does not refine by factors of
+two (Section~\ref{s:ext}). If the factors $r_n$ satisfy $\log r_n/\log(1/a_n)\to0$, as reported there, then
+$a_{n+1}/\gamma_{r_n,N}$ is of order $r_n^2a_n$ and is summable, so the free theory also satisfies
+Hypothesis~\ref{h:mix} along such a schedule. Theorem~\ref{t:inh} itself does not depend on the factor.
 
 So in the free theory the three hypotheses hold together along an infinite refinement, and the architecture
 closes in a fixed box, with a bound about six times smaller than the truth at $N=64$.
@@ -1556,8 +1607,8 @@ cited through~\cite{YMG}.
 \textbf{110} (1978), 440--471. Cited for the lattice framework; not reread for this paper.
 \bibitem{YMG} Yang--Mills group, \emph{Validation of the OpenAI Yang--Mills construction}, release of
 10 November 2026, \url{https://alexisdpc.github.io/yang-mills/references/assessment-1-2026-11-10.pdf}. Read:
-p.~1, Part~I \S\S1--2 (requirements; what the construction provides), and the paragraph on the independent
-OS comparison.
+p.~1, Part~I \S\S1--2 (requirements; what the construction provides), the paragraph on the independent
+OS comparison, Theorem~4.1, \S7.4, and the appendix entry on the lattice spacings.
 
 \medskip
 \item[] \emph{Self-citations (same author and research program; not peer reviewed).}
