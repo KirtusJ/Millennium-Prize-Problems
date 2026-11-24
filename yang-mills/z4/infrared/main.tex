@@ -199,10 +199,12 @@ peer reviewed are set out in Section~\ref{s:disc}.
 
 \section{Setting and notation}\label{s:set}
 \emph{Lattice.} A periodic lattice has $N$ sites in each of three spatial directions and $T$ time slices.
+A \emph{link} joins two neighbouring sites and a \emph{plaquette} is an elementary square of four links.
 Links carry elements of $\SU(2)$, identified with unit quaternions and with the unit sphere $S^3\subset\R^4$;
 $\tfrac12\Tr(U^{-1}V)$ is the inner product of $U$ and $V$ in $\R^4$, and the round distance
 $\operatorname{dist}(U,V)\in[0,\pi]$ is the angle between them. The Wilson measure has density proportional
-to $\exp(\beta\sum_p\tfrac12\Tr U_p)$ with respect to Haar measure on the links, the sum over plaquettes $p$,
+to $\exp(\beta\sum_p\tfrac12\Tr U_p)$ with respect to Haar measure on the links, the sum over plaquettes $p$ and $\beta\ge0$ the coupling
+(large $\beta$ is weak coupling),
 with $U_p$ the ordered product of the four links of $p$. A \emph{slice} is the collection of spatial links at
 one time.
 
@@ -397,14 +399,20 @@ The projection $E((0,\Delta))$ is bounded and vanishes on a set with dense span,
 \end{proof}
 
 \begin{remark}\label{r:crit}
-(a) The differences matter. Under (1), $|\langle v,e^{-n\tau H}(I-E_0)w\rangle|\le r^n\|v\|\,\|w\|$ with $E_0$ the
+\leavevmode
+\begin{enumerate}
+\item[(a)] The differences matter. Under (1), $|\langle v,e^{-n\tau H}(I-E_0)w\rangle|\le r^n\|v\|\,\|w\|$ with $E_0$ the
 projection onto the kernel of $H$; the matrix elements $\langle v,e^{-n\tau H}w\rangle$ themselves need not decay,
-since the vacuum contributes a constant. (b) A polynomial bound on the low-energy weight,
-$\mu_v((0,s])\le Cs^\nu$, does not give (2) for any $r<1$. (c) In a theory with several pure phases the criterion
-may be applied in one component; a gap there says nothing about the others. (d) The criterion is on the
+since the vacuum contributes a constant.
+\item[(b)] A polynomial bound on the low-energy weight,
+$\mu_v((0,s])\le Cs^\nu$, does not give (2) for any $r<1$.
+\item[(c)] In a theory with several pure phases the criterion
+may be applied in one component; a gap there says nothing about the others.
+\item[(d)] The criterion is on the
 diagonal, for single vectors, and positivity is what excludes cancellation; a test on finitely many vectors
 can refute a proposed rate; it establishes a gap only if those vectors are known to span a dense subspace or, more generally, to
 generate a dense subspace under bounded functions of $H$.
+\end{enumerate}
 \end{remark}
 
 \begin{proposition}[A test at one time separation]\label{p:three}
@@ -609,24 +617,29 @@ lies in those of $\chi$ and of $I-P$, and $BS_nB=B\,(\chi S_n\chi)\,B$.
 \end{proof}
 
 \begin{remark}\label{r:ret}
-(a) For a union of $n_{\mathrm g}$ gates of radius $\theta$ the same proofs give
+\leavevmode
+\begin{enumerate}
+\item[(a)] For a union of $n_{\mathrm g}$ gates of radius $\theta$ the same proofs give
 \[\min\big(1,\,n_{\mathrm g}\,p_{6\beta}(\theta)\big)\]
 in place of $p_{6\beta}(\theta)$; no independence between plaquettes is used. Take all the
 $n_{\mathrm g}=3(N/2)^3$ coarse plaquettes and the radius $\theta=c(1+6\beta)^{-1/2}N^{-4/3}$, with $c>0$ such that
 $\theta\le\pi$. Then the bound is at most $\tfrac{3\pi^2\sqrt e}{32}\,c^3/N$, which is summable over dyadic $N$. Summability of the return weights is not the budget of
 Hypothesis~\ref{h:budget}, and gates this narrow need not contain the fields that Hypothesis~\ref{h:mix}
 would have to exclude.
-(b) At $\beta=3.399810242$ (the matched coupling of the lattice of side $8$) the bound $p_{6\beta}(\theta)$ is $0.00307$, $0.156$ and $0.935$ for
-$\theta=0.05$, $0.2$ and $0.6$. The gates it controls usefully are narrow. (c) Corollary~\ref{c:vac} is the
+\item[(b)] At $\beta=3.399810242$ (the matched coupling of the lattice of side $8$) the bound $p_{6\beta}(\theta)$ is $0.00307$, $0.156$ and $0.935$ for
+$\theta=0.05$, $0.2$ and $0.6$. The gates it controls usefully are narrow.
+\item[(c)] Corollary~\ref{c:vac} is the
 second inequality of~\eqref{e:hyp} with $A=S_1$ and any $j\ge1$. The bound restricts to the gauge-invariant functions without change: $S_n$ and $\chi$ commute with gauge
 transformations of the slice, and so does $P$, because the vacuum measure is gauge invariant and a gauge
 transformation acts on the coarse links by a gauge transformation of the coarse lattice. The constants are also respected: $P1=1$ and $B1=0$, so the self-adjoint $P$ and $B$ map the
-centred functions to themselves. (d) For a general compact group with the Wilson action normalised so that each plaquette term lies in
+centred functions to themselves.
+\item[(d)] For a general compact group with the Wilson action normalised so that each plaquette term lies in
 $[-1,1]$, the conditional density of one link given the others is at most $e^{12\beta}$ times Haar measure,
 so for a measurable set $\Gamma$ of holonomies (conjugation-invariant, so that the event does not depend on the
 base point) the event is a two-sided translate of $\Gamma$ for the link, and the conditional probability of return
 is at most $\min\{1,e^{12\beta}\mu_{\mathrm{Haar}}(\Gamma)\}$. This crude bound shows that the mechanism is not tied to a
 centre; it is far from the sharp $\SU(2)$ estimate and we make no use of it.
+\end{enumerate}
 \end{remark}
 
 \section{The one-link covariance}\label{s:haar}

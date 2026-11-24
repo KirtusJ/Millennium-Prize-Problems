@@ -41,7 +41,7 @@ A first-time-reader review of the fifth draft (`../attempt/reviews/read5/report.
 - **Wording that could be read as a claim** (17 places listed by the reader) qualified: "one of the three is proved" now says for exceptional sets of a particular kind; estimates are marked as estimates; the status table says what "proved" means here.
 - **Layout.** Caption spacing, ragged-right status table, wider figure boxes.
 
-Not done from that report: turning Remarks 4.1 and 6.5 into lists; several undefined-at-first-use terms outside the introduction (colour classes, slabs, tilt); remaining letter clashes (A as operator and as background, r, C, E).
+Remarks 4.1 and 6.5 are now lists. Not done from that report: several undefined-at-first-use terms outside the introduction (colour classes, slabs, tilt); remaining letter clashes (A as operator and as background, r, C, E).
 
 ## Fifth draft (24 November)
 
