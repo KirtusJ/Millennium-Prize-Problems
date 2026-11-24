@@ -1,0 +1,10 @@
+S1 control: gamma_opt 0.9898439188 exact 0.9602938576 : FAILED
+beta 1.00 n 12: gamma_opt = 0.98967504 in sector (1, 0) ; sector sups: w=(0,0) 1.003952  (1,0) 1.010433  (0,1) 1.010433  (1,1) 1.001789  (2,0) 1.000477
+    one unit of flux: energy 1.30497340 (beta*energy 1.304973) fine-detail weight 6.886785e-02 (beta*weight 0.068868) weight/energy 0.052773 ; plaquette gap in the sector w=0: 2.768749
+beta 1.00 n 16: gamma_opt = 0.98967504 in sector (0, 1) ; sector sups: w=(0,0) 1.003952  (1,0) 1.010433  (0,1) 1.010433  (1,1) 1.001789  (2,0) 1.000477
+    one unit of flux: energy 1.30497340 (beta*energy 1.304973) fine-detail weight 6.886785e-02 (beta*weight 0.068868) weight/energy 0.052773 ; plaquette gap in the sector w=0: 2.768749
+beta 1.00: relative difference between n=12 and n=16: 8.84e-12 (tolerance 1.78e-04) ; five-dimensional program (n=10) gave 0.96091308, relative difference 2.99e-02 S2-FAILED
+S2 FAILED (1 couplings compared)
+S3 MET
+S4 MET
+expectation (PREDICTION.md): beta*energy -> 0.5, weight/energy -> 0.354, gamma_opt -> at most about 0.83
