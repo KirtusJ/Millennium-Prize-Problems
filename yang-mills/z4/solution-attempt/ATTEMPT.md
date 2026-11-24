@@ -37,7 +37,7 @@ Hypothesis 3.1 needs only `Σ a_i/γ_i < ∞`. Therefore:
 
 Equivalently, in the continuous form of the auxiliary statement: the Poincaré constant of the vacuum slice measure conditioned on the coarse field may grow like `e^{cβ}` with `c < c*`, provided the bound is uniform in the volume and in the coarse field outside the gates.
 
-The physical expectation is `γ = O(1)`: given the coarse field the fine field is massive at the scale of the mesh. The existing trial data agree with no decay in β at all: the single-mark local quotient is 0.061 at β = 3.28, 0.060 at β = 6 and 0.062 at β = 12 (side 6; the last two are not matched points; `../../papers/spectral-criteria/supplement/S3-displaced-backgrounds/other-couplings/report.md`). These are trial functions and bound nothing.
+The physical expectation is `γ = O(1)`: given the coarse field the fine field is massive at the scale of the mesh. The existing trial data agree with no decay in β at all: the single-mark local quotient is 0.061 at β = 3.28, 0.060 at β = 6 and 0.062 at β = 12 (side 6; the last two are not matched points; `../../papers/spectral-criteria/supplement/S3-displaced-backgrounds/other-couplings/report.md`). Nor does it move with the volume in the one comparison available: 0.0605(24) on side 8 at β = 3.40 against 0.0611(4) on side 6 at β = 3.28 (`side-8/report.md` in the same folder). At β = 0 the exact value for this mark is 3/24 = 0.125. These are trial functions and bound nothing.
 
 So the gap between what is needed (anything better than `a^{1−ε}`) and what is expected (`O(1)`) is enormous. The difficulty is not the size of the constant. It is uniformity in the volume.
 

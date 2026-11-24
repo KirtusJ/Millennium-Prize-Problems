@@ -66,6 +66,8 @@ On the Principal's instruction the worker tests were stopped (two background che
 
 - **Theorem 1.1 (24 November, later).** `Criterion.lean`: the spectral criterion for a bounded self-adjoint operator with spectrum in [0,1] on a complex Hilbert space, in rate form (for every ρ > r a constant C with d ≤ Cρⁿ), both directions, for a set with dense span. Not formalised: the passage from H to e^{−τH} and the equivalence with the limsup form. Totals: nine files, 88 theorems, 33 pinned.
 
+- **Two remarks from the solution attempt (24 November, later).** Remark 3.5: under logarithmic growth of the coupling, a mixing rate exponentially small in β with exponent below 1/s suffices for Hypothesis 3.1 (arithmetic; the growth condition is not proved). Remark 6.6: the vacuum transfer step is a product kernel reweighted by φ = WΩ (checked numerically on random finite instances in `../solution-attempt/`). The attempt itself produced no proof; its record is `../solution-attempt/ATTEMPT.md`.
+
 ## Sixth draft (24 November)
 
 A first-time-reader review of the fifth draft (`../../papers/spectral-criteria/supplement/S10-review-records/first-reader/report.md`, sub-agent of the same family) supplied a replacement abstract, introduction and Measurements section; the director read them, adjusted them and spliced them in. No theorem, number or claim was added or removed in the Measurements section (its 162 numerals were compared by script before and after; the later edits only add two clarifying values, 1.14 and the unrounded 0.93574 + 2 x 0.00271).

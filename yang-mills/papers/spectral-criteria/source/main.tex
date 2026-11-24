@@ -440,6 +440,18 @@ no estimate of their difference. And a Monte Carlo estimate at one coarse field 
 there nor a statement about almost every field. A small mutual information of $X$ and $Y$ given $C$ is not enough, since $\varrho$ is a supremum over
 normalised functions, including those concentrated on rare configurations.
 
+\begin{remark}[How weak the mixing rate may be]\label{r:rate}
+Hypothesis~\ref{h:mix} asks only for $\sum_ia_i/\gamma_i<\infty$. Suppose that along the trajectory the
+couplings grow at most logarithmically in the mesh, $\beta_i\le s\log(1/a_i)+\text{const}$. Then a rate
+$\gamma_i\ge Ce^{-c\beta_i}$ with $c<1/s$ is enough, because $a_i/\gamma_i$ is then at most a constant times
+$a_i^{1-cs}$, which is summable over dyadic meshes. Logarithmic growth is what asymptotic freedom predicts:
+at one loop $s=11/(3\pi^2)\approx0.37$ for $\SU(2)$, and the matched couplings of
+Appendix~\ref{app:meas} give $s\approx0.43$ between sides $5$ and $10$. We do not prove the growth
+condition. The remark says that the difficulty of Hypothesis~\ref{h:mix} is not the size of the rate, for
+which a bound exponentially small in $\beta$ with $c$ below about $2.3$ would do, but its uniformity in the
+volume and in the coarse field.
+\end{remark}
+
 \section{The spectral criterion}\label{s:crit}
 The proof is the spectral theorem and one observation: a positive measure with mass just above zero energy
 cannot hide it, because the differences $d_{v,n}$ are integrals of a non-negative function.
@@ -722,6 +734,17 @@ base point) the event is a two-sided translate of $\Gamma$ for the link, and the
 is at most $\min\{1,e^{12\beta}\mu_{\mathrm{Haar}}(\Gamma)\}$. This crude bound shows that the mechanism is not tied to a
 centre; it is far weaker than the $\SU(2)$ estimate and we make no use of it.
 \end{enumerate}
+\end{remark}
+
+\begin{remark}[The vacuum step as a transformed product kernel]\label{r:doob}
+Let $\phi=W\Omega$. Since $\mathsf L\Omega=\Lambda_0\Omega$ gives $\mathsf C\phi=\Lambda_0\Omega/W$, for
+gauge-invariant $f$
+\[
+(S_1f)(x)=\frac{\int\mathsf C(x,y)\,\phi(y)\,f(y)\,dy}{\int\mathsf C(x,y)\,\phi(y)\,dy}.
+\]
+So, given the present slice $x$, the next slice has the law of independent links with densities proportional
+to $\exp(\beta\tfrac12\Tr(x_e^{-1}y_e))$, reweighted by the single function $\phi(y)$. All the dependence
+between links, and all that is unknown, sits in $\phi$.
 \end{remark}
 
 \section{Measurements: a summary}\label{s:evid}
