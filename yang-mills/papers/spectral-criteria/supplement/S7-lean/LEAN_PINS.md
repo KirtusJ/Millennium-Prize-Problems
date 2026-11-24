@@ -90,3 +90,16 @@ The refinement theorem in its discrete form, for an arbitrary symmetric contract
 | `Discrete.lean` | `Discrete.refinement_main` | `b8e952df34480c2fb532cd5f0e07e4080e5ad239e4bcc510ca53b88d4b1fcb9f` | exit 0 | exit 1 |
 | `Discrete.lean` | `Discrete.pow_eq_Apow` | `d57faeeaa57896d810bbecbe01842c6a667305f272d5929376a711e2dd3bbaed` | exit 0 | exit 1 |
 | `Discrete.lean` | `Discrete.Apow_norm_le` | `9e875e716958dc411048719d481debf1c2d7a926ba1380ea2413b8a571696c56` | exit 0 | exit 1 |
+
+## Added 24 November 2026: `Hilbert.lean`
+
+The refinement theorem (general lag `2k`) on every non-zero real inner product space, for a bounded symmetric positive operator of norm at most one. No spectral projection, no completeness, no dimension restriction; the proof uses approximate eigenvectors at the top of the spectrum and a Cauchy–Schwarz inequality for the forms of the powers. File SHA-256 `4cf810d6cbb7e359bf3a20672de899794c99d63b9f776c8aebb954e72d111472`. Lean 4.19.0, Mathlib v4.19.0: exit 0, no `sorry`, no warning; axioms printed in `Hilbert.axioms.txt` are `[propext, Classical.choice, Quot.sound]`. Each statement below: with its pin exit 0 and three probes clear; with a wrong pin exit 1. Written and run by the same model family that wrote the paper; a machine check of the formal statement, not a review of whether that statement is the right one. Complex scalars are not formalised.
+
+| File | Theorem | SHA-256 of the statement (pinned) | With pin | Wrong pin |
+|---|---|---|---|---|
+| `Hilbert.lean` | `RefinementHilbert.refinement_hilbert` | `0f6e3b8ec02f629b977e62f60d5c3cbd88fe0b15a8ca629676a58c6fa621b11b` | exit 0 | exit 1 |
+| `Hilbert.lean` | `RefinementHilbert.refinement_hilbert_norm` | `cdaf5b6ab399fb64c467e000515ff6d054c74eeeb1a3ae81ebda17c215e6f50e` | exit 0 | exit 1 |
+| `Hilbert.lean` | `RefinementHilbert.exists_approx_eig` | `34d8c789672c0a7f8785f4d7a95756260fc966ace15a7a1b63d0c712e17039d8` | exit 0 | exit 1 |
+| `Hilbert.lean` | `RefinementHilbert.proj_step` | `f14eaa8a4ffc4e0a753b73373e86708dfb1673016f317642aaff37b1dcd657bd` | exit 0 | exit 1 |
+| `Hilbert.lean` | `RefinementHilbert.cs_form` | `dcc25a22971ae8070b4bb57e55240db1df593e9bb37de5aea8dce566d9cdecef` | exit 0 | exit 1 |
+| `Hilbert.lean` | `RefinementHilbert.approx_pow` | `bff576fdf2c4630a93ec80e2fbf370db42b9b08b63b8d1ea0c19f8bb4d76e338` | exit 0 | exit 1 |

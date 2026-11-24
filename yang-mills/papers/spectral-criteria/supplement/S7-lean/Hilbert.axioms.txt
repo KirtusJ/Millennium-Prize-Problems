@@ -1,0 +1,4 @@
+'RefinementHilbert.refinement_hilbert' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinementHilbert.refinement_hilbert_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinementHilbert.exists_approx_eig' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinementHilbert.proj_step' depends on axioms: [propext, Classical.choice, Quot.sound]
