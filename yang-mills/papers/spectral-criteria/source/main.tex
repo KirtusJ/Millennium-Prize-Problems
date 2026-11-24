@@ -94,7 +94,7 @@ the exceptional set, and a factor that is close to one when the detail is lost i
 the time considered. Theorem~\ref{t:inh} makes this precise.
 
 The exceptions are allowed for a reason. A natural way to prove~(b) goes through local updates of the fine
-links, and in our trials that route meets slow directions on selected coarse fields (Section~\ref{s:local}).
+links, and in our trials that route meets slow directions on selected coarse fields (Appendix~\ref{s:local}).
 This is motivation only: the trials are statistical evidence about the particular functions tried, and
 certify nothing about all functions.
 
@@ -185,14 +185,14 @@ on its reach.
 $(6\beta)^{-1/2}$.
 \item The bound does not depend on the spatial volume, on the time separation or on the rest of the field.
 \item The gate is centred at $-I$ because the smallest local quotients we measured are on a background with
-three plaquettes at $-I$ (Section~\ref{s:local}: two backgrounds, one lattice, one coupling); this is a
+three plaquettes at $-I$ (Appendix~\ref{s:local}: two backgrounds, one lattice, one coupling); this is a
 choice suggested by those trials, not a result.
 \end{itemize}
 Corollary~\ref{c:vac} carries the bound to the vacuum on an infinite time axis, where it becomes the second
 inequality of~\eqref{e:hyp}.
 
 Two further results are proved. Proposition~\ref{p:three} in Section~\ref{s:crit} is a form of the criterion
-that uses a single time separation. Proposition~\ref{p:haar} in Section~\ref{s:haar} gives an explicit lower
+that uses a single time separation. Proposition~\ref{p:haar} in Appendix~\ref{s:haar} gives an explicit lower
 bound for the conditional variance of a single link; it bounds one term of the auxiliary statement of
 Section~\ref{s:arch} and is not an input of Theorem~\ref{t:inh}.
 
@@ -230,11 +230,12 @@ peer reviewed are set out in Section~\ref{s:disc}.
 \subsection{Organisation}
 Section~\ref{s:set} fixes the setting and the notation. Section~\ref{s:arch} states the open hypotheses and
 shows, in Figure~\ref{f:arch}, how the proved and the open statements fit together. The proofs follow in
-Sections~\ref{s:crit} to~\ref{s:haar}. Section~\ref{s:evid} reports the measurements. Section~\ref{s:ext}
-relates the paper to the external construction, and Section~\ref{s:rem} lists what remains. A reader who
-wants only the mathematics can read Sections~\ref{s:set} to~\ref{s:haar}; a reader who wants only the state
-of the question can read this introduction, Section~\ref{s:arch} and Section~\ref{s:rem}.
-
+Sections~\ref{s:crit} to~\ref{s:ret}. Section~\ref{s:evid} summarises the measurements, Section~\ref{s:ext}
+relates the paper to the external construction, and Section~\ref{s:rem} lists what remains. The appendices
+hold the measurements in full, the one-link covariance bound, the machine-checked parts and the catalogue of
+supplementary material. A reader who wants only the mathematics can read Sections~\ref{s:set}
+to~\ref{s:ret}; a reader who wants only the state of the question can read this introduction,
+Section~\ref{s:arch} and Section~\ref{s:rem}.
 
 \section{Setting and notation}\label{s:set}
 \emph{Lattice.} A periodic lattice has $N$ sites in each of three spatial directions and $T$ time slices.
@@ -302,7 +303,7 @@ $\varepsilon_i$ & loss allowed in the comparison with the coarser lattice & Hyp.
 $\varrho(c)$ & maximal correlation of consecutive slices given the coarse field $c$ & Prop.~\ref{p:pred} \\
 $R=I_2/I_1$ & mean of $u\cdot v$ under the tilted law on $S^3$ & Prop.~\ref{p:haar} \\
 $\mathcal J$, $\mathcal V$ & loss under local updates; conditional variance & Section~\ref{s:set} \\
-$\mathsf R(f)$ & two-time quotient $1-C_f(\text{lag})/C_f(0)$ & Section~\ref{s:cross} \\
+$\mathsf R(f)$ & two-time quotient $1-C_f(\text{lag})/C_f(0)$ & Appendix~\ref{s:cross} \\
 \bottomrule
 \end{tabular}
 \caption{Principal symbols.}\label{tab:sym}
@@ -331,7 +332,7 @@ continuum theory would meet the criterion of Theorem~\ref{t:crit} without it.
 \node[open,right=of mix] (coarse) {Coarse comparison\\ Hyp.~\ref{h:coarse}};
 \node[open,right=of coarse] (budget) {Weighted budget\\ Hyp.~\ref{h:budget}};
 \node[prov,below=9mm of mix,xshift=19mm] (inh) {Refinement inequality\\ Thm~\ref{t:inh}, Cor.~\ref{c:acc}};
-\node[open,above=of mix] (aux) {Local mixing\\ (auxiliary)\\ trials in \S\ref{s:local}};
+\node[open,above=of mix] (aux) {Local mixing\\ (auxiliary)\\ trials in App.~\ref{s:local}};
 \node[prov,above=of ret] (haar) {One-link covariance\\ Prop.~\ref{p:haar}};
 \node[open,below=of inh] (box) {Positive deficit in a\\ fixed physical box};
 \node[open,below=of box] (vol) {Uniform in the volume\\ (a further estimate,\\ not supplied)};
@@ -426,7 +427,7 @@ $\gamma\,\E[\mathbf 1_{\mathcal G}(C)\operatorname{Var}(f(X)\mid C)]=\gamma\|Gf\
 So Hypothesis~\ref{h:mix} would follow from a bound on the conditional maximal correlation outside the gates,
 with $\sum_ia_i/\gamma_i<\infty$. We have no such bound for the Wilson measure at weak coupling; the
 proposition replaces one open estimate by another and proves nothing about the theory. It does say what the
-measurement of Section~\ref{s:time} is a trial for: a correlation between a function of one slice and a
+measurement of Appendix~\ref{s:time} is a trial for: a correlation between a function of one slice and a
 function of the next, given the coarse field of the first, is, in the population, a lower value for the conditional maximal
 correlation on that coarse field. Three reservations apply. Here $g$ must be a function of the next slice
 alone. The measurement is on a periodic lattice with one slice frozen, so the quantity concerned is the
@@ -709,67 +710,173 @@ centre; it is far weaker than the $\SU(2)$ estimate and we make no use of it.
 \end{enumerate}
 \end{remark}
 
-\section{The one-link covariance}\label{s:haar}
-This section is not used by the refinement inequality. It answers a smaller question that the auxiliary
-local mixing statement raises: how much does a single link fluctuate when all the others are held fixed? The
-answer is explicit for $\SU(2)$.
+\section{Measurements: a summary}\label{s:evid}
+Three sets of Monte Carlo estimates for $\SU(2)$, on lattices of side $5$ to $10$, accompany the paper.
+Appendix~\ref{app:meas} reports them in full: the designs, the rules fixed before each run, the checks that
+failed and what the numbers do not show. Nothing in them is used in a proof. Each tries particular test
+functions in an inequality that an open statement would need for all functions, so the estimates are
+statistical evidence about the functions tried and certify nothing about all functions.
+Table~\ref{tab:meas} gives the three questions and the outcome of each.
 
-\begin{proposition}[One-link covariance]\label{p:haar}
-For $k>0$ let $u$ be a point of the unit sphere $S^3\subset\R^4$ with density proportional to
-$e^{k\,u\cdot v}$ with respect to the uniform measure, $v$ a unit vector. Its covariance has the eigenvalue
-$R'(k)$ in the direction $v$ and $R(k)/k$ on $v^\perp$, where $R=I_2/I_1$ is a ratio of modified Bessel
-functions. (For $k=0$ the covariance is $\tfrac14I$.) For all $k>0$: $R'(k)<R(k)/k$; $R'$ is strictly decreasing;
-$k^2R'(k)$ is strictly increasing.
-Consequently, for $\ell>0$, $\beta\ge1$ and $0<k\le\ell\beta$, the smallest eigenvalue $\lambda_{\min}(k)$ of the
-covariance satisfies $\beta^2\lambda_{\min}(k)\ge R'(\ell)$, and $0.036885895<R'(6)<0.036885896$.
-\end{proposition}
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.39\textwidth}>{\raggedright\arraybackslash}p{0.29\textwidth}@{}}
+\toprule
+Question & Estimate & What it does not show \\
+\midrule
+How small can the local quotient be on a frozen coarse background with holonomy $-I$?
+(Appendix~\ref{s:local}; concerns the auxiliary local mixing statement) &
+For the combination selected from $308$ marks: $.0154(4)$ on a background with three plaquettes at $-I$,
+$.0428(4)$ on one background drawn from the measure. The value still decreases as the span of trial
+functions grows; no lowest value is indicated. &
+Relaxation in time. Two backgrounds, one lattice, one coupling. \\
+\addlinespace
+Is that locally slow combination also slow to change in time? (Appendix~\ref{s:time}; concerns the periodic
+analogue of the quantity in Proposition~\ref{p:pred}) &
+Its correlation with its copy on the next slice is $0.022(4)$ when the copy is a function of that slice
+alone. Under the rule fixed in advance no verdict is drawn. &
+A bound on the best prediction; the vacuum; other coarse fields. \\
+\addlinespace
+Does a function of the coarse links decay in time on the fine lattice as on the coarse one?
+(Appendix~\ref{s:cross}; concerns Hypothesis~\ref{h:coarse}) &
+Of $25$ tests fixed in advance, one has a ratio of normalised decay below one by the criterion fixed in
+advance: $0.941(5)$, and $0.936(3)$ on independent longer ensembles. &
+The hypothesis, which compares smallest deficits and not one test. One pair of lattices; the coupling match
+is inherited. \\
+\bottomrule
+\end{tabular}
+\caption{The three measurements. A digit in parentheses is the standard error in the last digit. All
+entries are estimates for trial functions, not bounds.}\label{tab:meas}
+\end{table}
 
-\begin{proof}[Proof of Proposition~\ref{p:haar}]
-With $Z(k)=\int e^{k\,u\cdot v}du=2I_1(k)/k$, the mean of $u\cdot v$ is $(\log Z)'=I_1'/I_1-1/k=I_2/I_1=R$ by
-$I_1'=I_2+I_1/k$, and its variance is $R'$. By symmetry the covariance is a multiple of the identity on
-$v^\perp$; since $|u|=1$, its trace there is $1-\E(u\cdot v)^2=1-R'-R^2$. From $I_1'=I_2+I_1/k$ and
-$I_2'=I_1-2I_2/k$~\cite[10.29.2]{DLMF},
-\begin{equation}\label{e:ric}
-\lambda_\parallel:=R'=1-\frac{3R}{k}-R^2,
-\end{equation}
-so the transverse eigenvalue is $(3R/k)/3=\lambda_\perp:=R/k$. Differentiating,
-\[
-\lambda_\parallel'=-\Big(2R+\frac3k\Big)\lambda_\parallel+\frac{3R}{k^2},\qquad \lambda_\perp'=\frac{\lambda_\parallel-\lambda_\perp}{k},\qquad
-w'=3R-\Big(2R+\frac1k\Big)w\ \text{ for }w:=k^2\lambda_\parallel .
-\]
-From the series $R=k/4-k^3/96+O(k^5)$: $\lambda_\parallel-\lambda_\perp=-k^2/48+O(k^4)$, $\lambda_\parallel'=-k/16+O(k^3)$ and $w'=k/2+O(k^3)$ as
-$k\downarrow0$. Each of the three claims is that a continuously differentiable function $\phi$ on $(0,\infty)$,
-of a definite sign near $0$, has no zero; if it had one, the zero set, closed in $(0,\infty)$ and bounded away
-from $0$, would have a least element $k_0$, and $\phi'(k_0)$ would have the sign opposite to that of $\phi$
-near $0$, or vanish.
+Some thermalisation checks failed, one reduction program had an error that was found and repaired, the
+result files of the second measurement were not kept, and one disagreement between two programs is
+unexplained. Each is named in Appendix~\ref{app:meas} at the number it bears on.
 
-\emph{$\lambda_\parallel<\lambda_\perp$.} Take $\phi=\lambda_\parallel-\lambda_\perp<0$ near $0$. At a zero, $\lambda_\perp'=0$ and $\lambda_\parallel'=-(2R+3/k)\lambda_\perp+3\lambda_\perp/k=-2R\lambda_\perp<0$, so $\phi'<0$:
-impossible at a first zero of a function negative before it.
+\section{The external construction and what compatibility would require}\label{s:ext}
+We summarise the construction~\cite{OAI} as its assessors describe it~\cite[pp.~1, 3]{YMG}; we have not
+examined it ourselves.
+\begin{itemize}
+\item Continuum correlation functions are obtained as a scaling limit of Wilson lattice correlation
+functions at a fixed physical volume, followed by an infinite-volume limit along a subsequence, which is not
+proved unique.
+\item Any such limit decomposes into component theories. Each satisfies the Osterwalder--Schrader axioms and
+hence, by reconstruction, the Wightman axioms.
+\item Renormalised local operators corresponding to gauge-invariant polynomials in the curvature are defined.
+Their operator product expansion is not shown to match perturbation theory.
+\item No mass gap is proved.
+\item The assessors' own independent check of the Osterwalder--Schrader axioms concerns a selected family of
+stress-tensor trace correlations, tested against functions that vanish to all orders where points coincide,
+and so does not see contact terms~\cite[Part~II]{YMG}. The wider reconstruction rests on the submission.
+\end{itemize}
 
-\emph{$\lambda_\parallel'<0$.} Take $\phi=\lambda_\parallel'<0$ near $0$. Differentiating the equation for $\lambda_\parallel'$ and setting $\lambda_\parallel'=0$ gives
-$\lambda_\parallel''=-2\lambda_\parallel^{2}+6(\lambda_\parallel-\lambda_\perp)/k^2<0$ by the previous step: impossible.
+\emph{What would remain.} The problem of~\cite{JW} also asks for local fields and short-distance behaviour,
+which the assessment discusses and we do not. Suppose the construction is accepted as existence in that
+sense. What remains is then a spectral statement: for each compact simple $G$, in at least one of its
+non-trivial component theories, a $\Delta_G>0$ with no spectrum of the Hamiltonian in $(0,\Delta_G)$ and some
+spectrum in $[\Delta_G,\infty)$, so that the mass is finite. This is our reading of~\cite{JW}; neither it nor
+the assessment states it in this form. On that reading a constant depending on $G$, in one non-trivial
+component, would suffice, and the value of the mass is not asked for. The assessment records uniqueness of
+the limit and agreement of the components as unresolved. Theorem~\ref{t:crit} is a form of the first half of that statement suited to a
+theory given by correlation functions: a common exponential rate for the differences $d_{v,n}$ on a family of
+vectors with dense span, for instance those generated from the vacuum by the smeared fields.
 
-\emph{$w'>0$.} Take $\phi=w'>0$ near $0$. At a zero of $w'$, $w=3R/(2R+1/k)<\tfrac32$ and
-$w''=3\lambda_\parallel-(2\lambda_\parallel-1/k^2)w=\lambda_\parallel(4-2w)>0$, using $w/k^2=\lambda_\parallel$ and $\lambda_\parallel>0$ (a variance): impossible.
+\emph{What compatibility would require.} For anything in this paper to bear on that statement, the following
+would have to be fixed and matched to the construction. None of it is done here.
+\begin{itemize}
+\item The group and the lattice action.
+\item The sequence of meshes and couplings, and the physical units.
+\item The order of the limits (mesh at fixed volume, then volume).
+\item The class of observables on which convergence holds, and the component theory selected.
+\item The relation between the lattice transfer semigroup at fixed regulator, to which
+Theorems~\ref{t:inh} and~\ref{t:ret} refer, and the Hamiltonian of the limit.
+\end{itemize} The lattices of Section~\ref{s:evid} are matched to one another by a renormalised
+coupling (Supplement~S6); they are not known to lie on the sequence of~\cite{OAI}.
 
-For the last statement, if $\beta\ge1$ and $0<k\le \ell\beta$ then
-$\beta^2\lambda_{\min}(k)=\beta^2\lambda_\parallel(k)\ge\beta^2\lambda_\parallel(\ell\beta)=w(\ell\beta)/\ell^2\ge w(\ell)/\ell^2=\lambda_\parallel(\ell)$. The enclosure of $R'(6)$ follows
-from~\eqref{e:ric} and the power series of $I_1,I_2$ summed in rational arithmetic with a geometric bound on
-the tail (33 terms).
-\end{proof}
+\section{What remains}\label{s:rem}
+Table~\ref{tab:status} lists the numbered statements and the steps of Figure~\ref{f:arch} with their status. To turn
+Figure~\ref{f:arch} into a proof of a mass gap by this route one would need, at least, the following.
+\begin{enumerate}
+\item Hypothesis~\ref{h:mix}, with gates wide enough to contain whatever backgrounds, if any, have slow decay
+in time, and still within the budget of Hypothesis~\ref{h:budget}. No such background has been identified:
+Appendix~\ref{s:local} concerns the local updates only, on two backgrounds.
+\item Hypothesis~\ref{h:coarse}.
+\item Estimates uniform in the physical volume.
+\item The identification of the limiting semigroup with the Hamiltonian of a continuum theory satisfying the
+axioms. The construction~\cite{OAI} is a candidate that we have not connected to these lattices.
+\item A finite mass.
+\item All of this for every compact simple group.
+\end{enumerate}
+We cannot estimate the distance to any of these, and we do not know that this route is the right one.
 
-\begin{remark}\label{r:haar}
-The conditional law of one link given the others is of this form with $k\le6\beta$, as in the proof of
-Theorem~\ref{t:ret}. So for $\beta\ge1$ every unit linear functional of one link has conditional variance at
-least $R'(6)/\beta^2$, which is $0.00344$ at $\beta=3.276133577$ (Section~\ref{s:local}) and $0.00319$ at
-$\beta=3.399810242$ (Remark~\ref{r:ret}(b)). This is
-a lower bound for the loss of a one-link functional under the resampling of that link. It is not a bound for
-the local quotient of the multi-link combinations of Section~\ref{s:local}, whose losses involve pairs of
-links and whose variances it does not control.
-\end{remark}
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.38\textwidth}>{\raggedright\arraybackslash}p{0.56\textwidth}@{}}
+\toprule
+Statement & Status \\
+\midrule
+Theorem~\ref{t:crit}, Proposition~\ref{p:three} & proved (Section~\ref{s:crit}) \\
+Theorem~\ref{t:inh}, Corollary~\ref{c:acc} & proved; a finite-dimensional special case and scalar steps checked in Lean \\
+Theorem~\ref{t:ret} & proved; $\SU(2)$, periodic time \\
+Lemma~\ref{l:scal}, Lemma~\ref{l:cap} & proved; Lemma~\ref{l:scal} checked in Lean \\
+Lemma~\ref{l:trace}, Proposition~\ref{p:vac}, Corollary~\ref{c:vac} & proved, $\beta>0$ (positive character coefficients, Peter--Weyl) \\
+Proposition~\ref{p:haar} & proved; scalar steps checked in Lean \\
+Proposition~\ref{p:pred}, Remark~\ref{r:lag} & proved (reductions between open estimates; they bound nothing in the theory) \\
+Hypothesis~\ref{h:mix} & open; not measured (Appendix~\ref{s:time} tests one combination's carry-over in time and gives no bound) \\
+Auxiliary local mixing & open; estimates for trial functions on two frozen backgrounds, one lattice, one coupling (Table~\ref{tab:local}) \\
+Hypothesis~\ref{h:coarse} & open; not measured; one trial function compared on one pair of lattices (Appendix~\ref{s:cross}) \\
+Hypothesis~\ref{h:budget} & open \\
+Volume uniformity; continuum identification & open; not addressed \\
+Finite mass; all compact simple groups & open; not addressed \\
+Mass gap & not proved \\
+\bottomrule
+\end{tabular}
+\caption{Status of the numbered statements and of the steps of Figure~\ref{f:arch}. ``Proved'' means that a
+proof is written in this paper; none has been independently reviewed (Section~\ref{s:disc}).}\label{tab:status}
+\end{table}
 
-\section{Measurements}\label{s:evid}
-This section reports Monte Carlo estimates for $\SU(2)$. Nothing in it is used in a proof. Each subsection
+\section{Provenance, use of AI systems, and availability}\label{s:disc}
+\subsection*{Relation to the research program}
+This paper is part of the research program \emph{From Prephysical Hypotheses to Physical
+Models}~\cite{Prog} and was written within its study of the Millennium Prize problems. No result of the
+program's other papers is used in a proof here. Two other manuscripts from the same study are in the
+supplementary repository~\cite{Supp} and are also not used; neither has been independently reviewed. They
+are an argument for an upper bound on the gap of four-dimensional $\SU(2)$ lattice gauge theory in lattice
+units at weak coupling, along infinite-volume limits of periodic states, and results on a reduced model, the
+theory on a single spatial site.
+
+\subsection*{Use of artificial-intelligence systems}
+The author is responsible for the content of this paper. It was prepared with substantial assistance from
+large language models of two families, and they are not authors.
+\begin{itemize}
+\item \emph{OpenAI GPT models}, used as reviewers, proposed Theorem~\ref{t:crit} in this form, the
+monotonicity statements of Proposition~\ref{p:haar}, Proposition~\ref{p:pred} and Remark~\ref{r:lag}, with
+proofs. They also reviewed successive versions of the paper, and their corrections are incorporated.
+\item \emph{OpenAI Codex} proposed Theorem~\ref{t:inh} and Theorem~\ref{t:ret} in its vacuum form, with proofs
+(Supplement~S8), and reduced part of the raw data of Appendix~\ref{s:local} a second time, correcting an error
+in the first reduction.
+\item \emph{Claude} (Anthropic) checked those source derivations and Proposition~\ref{p:haar} and found no
+defect in the steps it checked (three items of the return derivation, which needed data archives that were
+absent, were not checked). It wrote the proofs as they appear here, including the periodic-time form of
+Theorem~\ref{t:ret}, Lemma~\ref{l:trace}, Proposition~\ref{p:vac} and Corollary~\ref{c:vac}, made the
+measurements of Section~\ref{s:evid}, and drafted the text.
+\end{itemize}
+
+\subsection*{Status of verification}
+The machine-checked parts are listed in Appendix~\ref{s:lean}; nothing else is machine-checked. No person
+other than the author has read the paper, and there has been no independent human mathematical review.
+Agreement among language models, within one family or across two, is not peer review. The records of the
+internal reviews are in Supplement~S10.
+
+\subsection*{Data and code availability}
+Programs, seeds, summary files, the formal proofs and the review records are public in the supplementary
+repository~\cite{Supp} and are catalogued in Appendix~\ref{app:supp}. Two limits apply: the run of
+Appendix~\ref{s:time} left no result file, and the per-stream data of Table~\ref{tab:local} are regenerated
+from seeds and not stored.
+
+\appendix
+\section{The measurements in full}\label{app:meas}
+This appendix reports the Monte Carlo estimates for $\SU(2)$ that Section~\ref{s:evid} summarises. Nothing in it is used in a proof. Each subsection
 asks a question, says in a sentence what was found, and then gives the setup, the numbers, the checks that
 failed and what the numbers do not show. The design of the main runs is collected in Table~\ref{tab:runs}.
 
@@ -797,7 +904,7 @@ some of these checks failed; they are named where they bear on a number.
 \item Couplings were taken from an earlier calibration (Supplement~S6) and not recalibrated, so every statement at
 ``matched'' couplings inherits it.
 \item Programs, seeds, the rules fixed before each run, the rules that failed and summary files are
-in Supplement S1 to S5. Per-stream data are stored there for Section~\ref{s:cross} and for the single-mark runs; for
+in Supplement S1 to S5. Per-stream data are stored there for Appendix~\ref{s:cross} and for the single-mark runs; for
 the others they are regenerated from the seeds, which reproduces them statistically but, across rebuilds of
 the sampler, not byte for byte.
 \end{itemize}
@@ -808,35 +915,35 @@ the sampler, not byte for byte.
 \toprule
 Runs & Lattice and coupling & Streams and length & Use of the streams \\
 \midrule
-Frozen backgrounds \textsf{A} and \textsf{B} (Section~\ref{s:local}) &
+Frozen backgrounds \textsf{A} and \textsf{B} (Appendix~\ref{s:local}) &
 side $N=6$, $T=12$, $\beta=3.276133577$, a point on a line of constant renormalised coupling &
 each background has one run of $32$ streams ($576$ sweeps discarded, then $1152$ measurements six sweeps apart) &
 selection on streams $0$ to $15$; reported value on streams $16$ to $31$ \\
 \addlinespace
-Carry-over in time (Section~\ref{s:time}) &
+Carry-over in time (Appendix~\ref{s:time}) &
 same lattice, coupling and frozen slice (background \textsf{A}); the later slices are not frozen &
 $32$ fresh streams &
 $16$ for fitting and $16$ held out \\
 \addlinespace
-First span (Section~\ref{s:cross}) &
+First span (Appendix~\ref{s:cross}) &
 sides $N=5$ and $N=10$ at couplings $3.196581051$ and $3.493705679$ (matched at a fixed renormalised
 coupling); time extents two and four times the side; a common physical lag (one and two time steps) &
 $16$ streams per lattice, $500$ measurements each &
 half of the streams used for selection; reported value on the $8+8$ held-out streams \\
 \addlinespace
-Second study (Section~\ref{s:cross}), designed after the first was seen &
+Second study (Appendix~\ref{s:cross}), designed after the first was seen &
 as for the first span &
 new streams ($16$ per lattice, $2000$ measurements each) &
 tests fixed on the selection streams; reported values on the $8+8$ held-out streams \\
 \addlinespace
-Longer ensembles (Section~\ref{s:cross}) &
+Longer ensembles (Appendix~\ref{s:cross}) &
 ensembles of twice the time extent &
 $16+16$ streams; $1000$ measurements per stream on side $10$ &
 no selection; they share no stream with the selection \\
 \bottomrule
 \end{tabular}
 \caption{Design of the main runs. The runs on displaced backgrounds and the single-mark runs of
-Section~\ref{s:local} are described there and in Supplement~S3.}\label{tab:runs}
+Appendix~\ref{s:local} are described there and in Supplement~S3.}\label{tab:runs}
 \end{table}
 
 \subsection{The local quotient on a frozen coarse background}\label{s:local}
@@ -1080,128 +1187,65 @@ renormalised coupling and one lag were used.
 change it again.
 \end{itemize}
 
-\section{The external construction and what compatibility would require}\label{s:ext}
-We summarise the construction~\cite{OAI} as its assessors describe it~\cite[pp.~1, 3]{YMG}; we have not
-examined it ourselves.
-\begin{itemize}
-\item Continuum correlation functions are obtained as a scaling limit of Wilson lattice correlation
-functions at a fixed physical volume, followed by an infinite-volume limit along a subsequence, which is not
-proved unique.
-\item Any such limit decomposes into component theories. Each satisfies the Osterwalder--Schrader axioms and
-hence, by reconstruction, the Wightman axioms.
-\item Renormalised local operators corresponding to gauge-invariant polynomials in the curvature are defined.
-Their operator product expansion is not shown to match perturbation theory.
-\item No mass gap is proved.
-\item The assessors' own independent check of the Osterwalder--Schrader axioms concerns a selected family of
-stress-tensor trace correlations, tested against functions that vanish to all orders where points coincide,
-and so does not see contact terms~\cite[Part~II]{YMG}. The wider reconstruction rests on the submission.
-\end{itemize}
+\section{The one-link covariance}\label{s:haar}
+This appendix is not used by the refinement inequality. It answers a smaller question that the auxiliary
+local mixing statement raises: how much does a single link fluctuate when all the others are held fixed? The
+answer is explicit for $\SU(2)$.
 
-\emph{What would remain.} The problem of~\cite{JW} also asks for local fields and short-distance behaviour,
-which the assessment discusses and we do not. Suppose the construction is accepted as existence in that
-sense. What remains is then a spectral statement: for each compact simple $G$, in at least one of its
-non-trivial component theories, a $\Delta_G>0$ with no spectrum of the Hamiltonian in $(0,\Delta_G)$ and some
-spectrum in $[\Delta_G,\infty)$, so that the mass is finite. This is our reading of~\cite{JW}; neither it nor
-the assessment states it in this form. On that reading a constant depending on $G$, in one non-trivial
-component, would suffice, and the value of the mass is not asked for. The assessment records uniqueness of
-the limit and agreement of the components as unresolved. Theorem~\ref{t:crit} is a form of the first half of that statement suited to a
-theory given by correlation functions: a common exponential rate for the differences $d_{v,n}$ on a family of
-vectors with dense span, for instance those generated from the vacuum by the smeared fields.
+\begin{proposition}[One-link covariance]\label{p:haar}
+For $k>0$ let $u$ be a point of the unit sphere $S^3\subset\R^4$ with density proportional to
+$e^{k\,u\cdot v}$ with respect to the uniform measure, $v$ a unit vector. Its covariance has the eigenvalue
+$R'(k)$ in the direction $v$ and $R(k)/k$ on $v^\perp$, where $R=I_2/I_1$ is a ratio of modified Bessel
+functions. (For $k=0$ the covariance is $\tfrac14I$.) For all $k>0$: $R'(k)<R(k)/k$; $R'$ is strictly decreasing;
+$k^2R'(k)$ is strictly increasing.
+Consequently, for $\ell>0$, $\beta\ge1$ and $0<k\le\ell\beta$, the smallest eigenvalue $\lambda_{\min}(k)$ of the
+covariance satisfies $\beta^2\lambda_{\min}(k)\ge R'(\ell)$, and $0.036885895<R'(6)<0.036885896$.
+\end{proposition}
 
-\emph{What compatibility would require.} For anything in this paper to bear on that statement, the following
-would have to be fixed and matched to the construction. None of it is done here.
-\begin{itemize}
-\item The group and the lattice action.
-\item The sequence of meshes and couplings, and the physical units.
-\item The order of the limits (mesh at fixed volume, then volume).
-\item The class of observables on which convergence holds, and the component theory selected.
-\item The relation between the lattice transfer semigroup at fixed regulator, to which
-Theorems~\ref{t:inh} and~\ref{t:ret} refer, and the Hamiltonian of the limit.
-\end{itemize} The lattices of Section~\ref{s:evid} are matched to one another by a renormalised
-coupling (Supplement~S6); they are not known to lie on the sequence of~\cite{OAI}.
+\begin{proof}[Proof of Proposition~\ref{p:haar}]
+With $Z(k)=\int e^{k\,u\cdot v}du=2I_1(k)/k$, the mean of $u\cdot v$ is $(\log Z)'=I_1'/I_1-1/k=I_2/I_1=R$ by
+$I_1'=I_2+I_1/k$, and its variance is $R'$. By symmetry the covariance is a multiple of the identity on
+$v^\perp$; since $|u|=1$, its trace there is $1-\E(u\cdot v)^2=1-R'-R^2$. From $I_1'=I_2+I_1/k$ and
+$I_2'=I_1-2I_2/k$~\cite[10.29.2]{DLMF},
+\begin{equation}\label{e:ric}
+\lambda_\parallel:=R'=1-\frac{3R}{k}-R^2,
+\end{equation}
+so the transverse eigenvalue is $(3R/k)/3=\lambda_\perp:=R/k$. Differentiating,
+\[
+\lambda_\parallel'=-\Big(2R+\frac3k\Big)\lambda_\parallel+\frac{3R}{k^2},\qquad \lambda_\perp'=\frac{\lambda_\parallel-\lambda_\perp}{k},\qquad
+w'=3R-\Big(2R+\frac1k\Big)w\ \text{ for }w:=k^2\lambda_\parallel .
+\]
+From the series $R=k/4-k^3/96+O(k^5)$: $\lambda_\parallel-\lambda_\perp=-k^2/48+O(k^4)$, $\lambda_\parallel'=-k/16+O(k^3)$ and $w'=k/2+O(k^3)$ as
+$k\downarrow0$. Each of the three claims is that a continuously differentiable function $\phi$ on $(0,\infty)$,
+of a definite sign near $0$, has no zero; if it had one, the zero set, closed in $(0,\infty)$ and bounded away
+from $0$, would have a least element $k_0$, and $\phi'(k_0)$ would have the sign opposite to that of $\phi$
+near $0$, or vanish.
 
-\section{What remains}\label{s:rem}
-Table~\ref{tab:status} lists the numbered statements and the steps of Figure~\ref{f:arch} with their status. To turn
-Figure~\ref{f:arch} into a proof of a mass gap by this route one would need, at least, the following.
-\begin{enumerate}
-\item Hypothesis~\ref{h:mix}, with gates wide enough to contain whatever backgrounds, if any, have slow decay
-in time, and still within the budget of Hypothesis~\ref{h:budget}. No such background has been identified:
-Section~\ref{s:local} concerns the local updates only, on two backgrounds.
-\item Hypothesis~\ref{h:coarse}.
-\item Estimates uniform in the physical volume.
-\item The identification of the limiting semigroup with the Hamiltonian of a continuum theory satisfying the
-axioms. The construction~\cite{OAI} is a candidate that we have not connected to these lattices.
-\item A finite mass.
-\item All of this for every compact simple group.
-\end{enumerate}
-We cannot estimate the distance to any of these, and we do not know that this route is the right one.
+\emph{$\lambda_\parallel<\lambda_\perp$.} Take $\phi=\lambda_\parallel-\lambda_\perp<0$ near $0$. At a zero, $\lambda_\perp'=0$ and $\lambda_\parallel'=-(2R+3/k)\lambda_\perp+3\lambda_\perp/k=-2R\lambda_\perp<0$, so $\phi'<0$:
+impossible at a first zero of a function negative before it.
 
-\begin{table}[ht]
-\centering\small
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.38\textwidth}>{\raggedright\arraybackslash}p{0.56\textwidth}@{}}
-\toprule
-Statement & Status \\
-\midrule
-Theorem~\ref{t:crit}, Proposition~\ref{p:three} & proved (Section~\ref{s:crit}) \\
-Theorem~\ref{t:inh}, Corollary~\ref{c:acc} & proved; a finite-dimensional special case and scalar steps checked in Lean \\
-Theorem~\ref{t:ret} & proved; $\SU(2)$, periodic time \\
-Lemma~\ref{l:scal}, Lemma~\ref{l:cap} & proved; Lemma~\ref{l:scal} checked in Lean \\
-Lemma~\ref{l:trace}, Proposition~\ref{p:vac}, Corollary~\ref{c:vac} & proved, $\beta>0$ (positive character coefficients, Peter--Weyl) \\
-Proposition~\ref{p:haar} & proved; scalar steps checked in Lean \\
-Proposition~\ref{p:pred}, Remark~\ref{r:lag} & proved (reductions between open estimates; they bound nothing in the theory) \\
-Hypothesis~\ref{h:mix} & open; not measured (Section~\ref{s:time} tests one combination's carry-over in time and gives no bound) \\
-Auxiliary local mixing & open; estimates for trial functions on two frozen backgrounds, one lattice, one coupling (Table~\ref{tab:local}) \\
-Hypothesis~\ref{h:coarse} & open; not measured; one trial function compared on one pair of lattices (Section~\ref{s:cross}) \\
-Hypothesis~\ref{h:budget} & open \\
-Volume uniformity; continuum identification & open; not addressed \\
-Finite mass; all compact simple groups & open; not addressed \\
-Mass gap & not proved \\
-\bottomrule
-\end{tabular}
-\caption{Status of the numbered statements and of the steps of Figure~\ref{f:arch}. ``Proved'' means that a
-proof is written in this paper; none has been independently reviewed (Section~\ref{s:disc}).}\label{tab:status}
-\end{table}
+\emph{$\lambda_\parallel'<0$.} Take $\phi=\lambda_\parallel'<0$ near $0$. Differentiating the equation for $\lambda_\parallel'$ and setting $\lambda_\parallel'=0$ gives
+$\lambda_\parallel''=-2\lambda_\parallel^{2}+6(\lambda_\parallel-\lambda_\perp)/k^2<0$ by the previous step: impossible.
 
-\section{Provenance, use of AI systems, and availability}\label{s:disc}
-\subsection*{Relation to the research program}
-This paper is part of the research program \emph{From Prephysical Hypotheses to Physical
-Models}~\cite{Prog} and was written within its study of the Millennium Prize problems. No result of the
-program's other papers is used in a proof here. Two other manuscripts from the same study are in the
-supplementary repository~\cite{Supp} and are also not used; neither has been independently reviewed. They
-are an argument for an upper bound on the gap of four-dimensional $\SU(2)$ lattice gauge theory in lattice
-units at weak coupling, along infinite-volume limits of periodic states, and results on a reduced model, the
-theory on a single spatial site.
+\emph{$w'>0$.} Take $\phi=w'>0$ near $0$. At a zero of $w'$, $w=3R/(2R+1/k)<\tfrac32$ and
+$w''=3\lambda_\parallel-(2\lambda_\parallel-1/k^2)w=\lambda_\parallel(4-2w)>0$, using $w/k^2=\lambda_\parallel$ and $\lambda_\parallel>0$ (a variance): impossible.
 
-\subsection*{Use of artificial-intelligence systems}
-The author is responsible for the content of this paper. It was prepared with substantial assistance from
-large language models of two families, and they are not authors.
-\begin{itemize}
-\item \emph{OpenAI GPT models}, used as reviewers, proposed Theorem~\ref{t:crit} in this form, the
-monotonicity statements of Proposition~\ref{p:haar}, Proposition~\ref{p:pred} and Remark~\ref{r:lag}, with
-proofs. They also reviewed successive versions of the paper, and their corrections are incorporated.
-\item \emph{OpenAI Codex} proposed Theorem~\ref{t:inh} and Theorem~\ref{t:ret} in its vacuum form, with proofs
-(Supplement~S8), and reduced part of the raw data of Section~\ref{s:local} a second time, correcting an error
-in the first reduction.
-\item \emph{Claude} (Anthropic) checked those source derivations and Proposition~\ref{p:haar} and found no
-defect in the steps it checked (three items of the return derivation, which needed data archives that were
-absent, were not checked). It wrote the proofs as they appear here, including the periodic-time form of
-Theorem~\ref{t:ret}, Lemma~\ref{l:trace}, Proposition~\ref{p:vac} and Corollary~\ref{c:vac}, made the
-measurements of Section~\ref{s:evid}, and drafted the text.
-\end{itemize}
+For the last statement, if $\beta\ge1$ and $0<k\le \ell\beta$ then
+$\beta^2\lambda_{\min}(k)=\beta^2\lambda_\parallel(k)\ge\beta^2\lambda_\parallel(\ell\beta)=w(\ell\beta)/\ell^2\ge w(\ell)/\ell^2=\lambda_\parallel(\ell)$. The enclosure of $R'(6)$ follows
+from~\eqref{e:ric} and the power series of $I_1,I_2$ summed in rational arithmetic with a geometric bound on
+the tail (33 terms).
+\end{proof}
 
-\subsection*{Status of verification}
-The machine-checked parts are listed in Appendix~\ref{s:lean}; nothing else is machine-checked. No person
-other than the author has read the paper, and there has been no independent human mathematical review.
-Agreement among language models, within one family or across two, is not peer review. The records of the
-internal reviews are in Supplement~S10.
+\begin{remark}\label{r:haar}
+The conditional law of one link given the others is of this form with $k\le6\beta$, as in the proof of
+Theorem~\ref{t:ret}. So for $\beta\ge1$ every unit linear functional of one link has conditional variance at
+least $R'(6)/\beta^2$, which is $0.00344$ at $\beta=3.276133577$ (Appendix~\ref{s:local}) and $0.00319$ at
+$\beta=3.399810242$ (Remark~\ref{r:ret}(b)). This is
+a lower bound for the loss of a one-link functional under the resampling of that link. It is not a bound for
+the local quotient of the multi-link combinations of Appendix~\ref{s:local}, whose losses involve pairs of
+links and whose variances it does not control.
+\end{remark}
 
-\subsection*{Data and code availability}
-Programs, seeds, summary files, the formal proofs and the review records are public in the supplementary
-repository~\cite{Supp} and are catalogued in Appendix~\ref{app:supp}. Two limits apply: the run of
-Section~\ref{s:time} left no result file, and the per-stream data of Table~\ref{tab:local} are regenerated
-from seeds and not stored.
-
-\appendix
 \section{Machine-checked parts}\label{s:lean}
 Two Lean~4 files with Mathlib accompany the paper (Supplement~S7; Lean 4.19.0, Mathlib v4.19.0); both compile with no \texttt{sorry} and use
 only the axioms \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}.
@@ -1237,12 +1281,12 @@ in the text as ``Supplement S$n$''.
 \toprule
 Item & Content & Used in \\
 \midrule
-S1 & Sampling programs (Rust), with digests, seeds and the commands of every run & Sections~\ref{s:set}, \ref{s:evid} \\
-S2 & Local quotients on frozen backgrounds: programs, lists of marks, rules fixed in advance, summary files, reports & Section~\ref{s:local}, Table~\ref{tab:local} \\
-S3 & Single-mark runs on displaced backgrounds, per-stream data, and the second reduction of those data & Section~\ref{s:local}\,(iii) \\
-S4 & Time carry-over run: programs, selected weights, report (no result file) & Section~\ref{s:time} \\
-S5 & Cross-lattice runs: programs, per-stream archive, the coefficient vector of the reported test, and a recipe that reproduces Table~\ref{tab:cross} from the archive & Section~\ref{s:cross} \\
-S6 & Calibration of the matched couplings & Sections~\ref{s:evid}, \ref{s:ext} \\
+S1 & Sampling programs (Rust), with digests, seeds and the commands of every run & Section~\ref{s:set}, Appendix~\ref{app:meas} \\
+S2 & Local quotients on frozen backgrounds: programs, lists of marks, rules fixed in advance, summary files, reports & Appendix~\ref{s:local}, Table~\ref{tab:local} \\
+S3 & Single-mark runs on displaced backgrounds, per-stream data, and the second reduction of those data & Appendix~\ref{s:local}\,(iii) \\
+S4 & Time carry-over run: programs, selected weights, report (no result file) & Appendix~\ref{s:time} \\
+S5 & Cross-lattice runs: programs, per-stream archive, the coefficient vector of the reported test, and a recipe that reproduces Table~\ref{tab:cross} from the archive & Appendix~\ref{s:cross} \\
+S6 & Calibration of the matched couplings & Appendix~\ref{app:meas}, Section~\ref{s:ext} \\
 S7 & Lean files, statement and file digests & Appendix~\ref{s:lean} \\
 S8 & Working notes with the source derivations of Theorems~\ref{t:inh} and~\ref{t:ret}, the bound of the transfer form by local losses, and strong-coupling estimates & Sections~\ref{s:arch}, \ref{s:disc} \\
 S9 & Working notes with related hypotheses on the centre-neutral space & Section~\ref{s:not} \\
