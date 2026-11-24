@@ -143,3 +143,14 @@ Changes to the order of §4. B1 is done and counts against Path B in its scalar 
 ## 8. Outcome of test A1 (24 November 2026)
 
 The compact toy over all low states: `κ = ‖GH⁻¹G‖` is 0.352, 0.577, 0.740, 0.803, 0.833, 0.863 at β = 0.5, 1, 2, 3, 4, 6. It is below 1 throughout, and `(0.9208 − κ)·β` is 0.353, 0.349, 0.347 at the last three couplings, so the values are consistent with the limit written before the run. The outcome that would have counted against Path A, a constant growing without bound in β, is not seen. This is one toy with a single coarse site; test A2 (the next size, in quadratic approximation, with the coarse comparison of Path E) is next.
+
+## 9. A sixth path, found after Remark 5.8 (24 November 2026)
+
+**Path F: one step on one lattice (Proposition 5.9).** A uniform gap in a box is equivalent to: (i) `I − P ≤ κH` with `κ` independent of the regulator, and (ii) decorrelation of the coarse variables over the time `t`, `‖P e^{−tH} P‖ ≤ 1 − b`, for a projection `P` of one's choice. This removes the chain, Hypotheses 3.2 and 3.3 and Path E.
+
+Stipulations and tests.
+1. There are gauge-invariant block variables, finitely many per coarse cell, for which (i) holds in the free theory with `κ` at most a constant times the coarse mesh, uniformly in the blocking factor. Tested so far: line sums fail (constant grows like `r` coarse meshes; predicate failed and kept); box averages of the plaquette field give 0.46 to 0.72 coarse meshes for `r` = 2 to 8 and are still increasing. Next: a smoother kernel (iterated box average, or a triangular weight). Against: growth for every kernel of bounded support.
+2. For such variables, (ii) holds in the free theory in a box with `b` equal to the deficit (trivially, by compression), and the joint law of the coarse variables at two times has a density with respect to the product of its marginals that is bounded below, uniformly in the regulator. The second half is a Gaussian computation: it fails if some linear combination of coarse variables has correlation tending to one. Against: such a combination.
+3. For SU(2) the same two statements. (i) is a statement at all scales below the coarse one and is of the kind renormalisation-group analyses control; (ii) concerns finitely many variables. Nothing is known for either.
+
+What would make this path empty: if for every admissible finite set of coarse variables (i) forces `κ` to grow with the regulator. The free theory already shows the question is not trivial.
