@@ -1,0 +1,138 @@
+U0 gcd of minors 1 : MET
+U1 control: gamma_opt 0.9602938576 exact 0.9602938576 : MET
+free-theory value for comparison 0.970563
+beta 0.50 n 8: Lambda0-normalised eigenvalues 1.00000000 0.06727694 0.06727694 0.06727694 0.06727694 0.05185511 0.05185511 0.05185511
+   state 1 energy 2.698938 fine-detail weight 4.408840e-01 ; F(energy) = 4.408840e-01, F/energy = 0.163355
+   state 2 energy 2.698938 fine-detail weight 4.408840e-01 ; F(energy) = 4.408840e-01, F/energy = 0.163355
+   state 3 energy 2.698938 fine-detail weight 4.408840e-01 ; F(energy) = 4.408840e-01, F/energy = 0.163355
+   state 4 energy 2.698938 fine-detail weight 4.408840e-01 ; F(energy) = 4.408840e-01, F/energy = 0.163355
+   state 5 energy 2.959302 fine-detail weight 5.596642e-01 ; F(energy) = 1.000000e+00, F/energy = 0.337918
+   state 6 energy 2.959302 fine-detail weight 5.596642e-01 ; F(energy) = 1.000000e+00, F/energy = 0.337918
+   state 7 energy 2.959302 fine-detail weight 5.596642e-01 ; F(energy) = 1.000000e+00, F/energy = 0.337918
+beta 0.50 n 8: gamma_opt = 0.99650064   lattice gap = 2.698938
+beta 0.50 n 12: Lambda0-normalised eigenvalues 1.00000000 0.06727694 0.06727694 0.06727694 0.06727694 0.05185511 0.05185511 0.05185511
+   state 1 energy 2.698938 fine-detail weight 4.408840e-01 ; F(energy) = 4.408840e-01, F/energy = 0.163355
+   state 2 energy 2.698938 fine-detail weight 4.408840e-01 ; F(energy) = 4.408840e-01, F/energy = 0.163355
+   state 3 energy 2.698938 fine-detail weight 4.408840e-01 ; F(energy) = 4.408840e-01, F/energy = 0.163355
+   state 4 energy 2.698938 fine-detail weight 4.408840e-01 ; F(energy) = 4.408840e-01, F/energy = 0.163355
+   state 5 energy 2.959302 fine-detail weight 5.596642e-01 ; F(energy) = 1.000000e+00, F/energy = 0.337918
+   state 6 energy 2.959302 fine-detail weight 5.596642e-01 ; F(energy) = 1.000000e+00, F/energy = 0.337918
+   state 7 energy 2.959302 fine-detail weight 5.596642e-01 ; F(energy) = 1.000000e+00, F/energy = 0.337918
+beta 0.50 n 12: gamma_opt = 0.99650064   lattice gap = 2.698938
+beta 0.50: relative difference of gamma_opt between n=8 and n=12: 1.23e-15 (tolerance 1.55e-03) 
+beta 1.00 n 8: Lambda0-normalised eigenvalues 1.00000000 0.31279169 0.31279169 0.31279169 0.31279169 0.11871080 0.11871080 0.11871076
+   state 1 energy 1.162218 fine-detail weight 2.844649e-01 ; F(energy) = 2.844649e-01, F/energy = 0.244760
+   state 2 energy 1.162218 fine-detail weight 2.844649e-01 ; F(energy) = 2.844649e-01, F/energy = 0.244760
+   state 3 energy 1.162218 fine-detail weight 2.844649e-01 ; F(energy) = 2.844649e-01, F/energy = 0.244760
+   state 4 energy 1.162218 fine-detail weight 2.844649e-01 ; F(energy) = 2.844649e-01, F/energy = 0.244760
+   state 5 energy 2.131065 fine-detail weight 4.808655e-01 ; F(energy) = 4.808655e-01, F/energy = 0.225646
+   state 6 energy 2.131065 fine-detail weight 4.808655e-01 ; F(energy) = 4.808655e-01, F/energy = 0.225646
+   state 7 energy 2.131065 fine-detail weight 4.808650e-01 ; F(energy) = 4.808655e-01, F/energy = 0.225646
+beta 1.00 n 8: gamma_opt = 0.96091330   lattice gap = 1.162218
+beta 1.00 n 12: Lambda0-normalised eigenvalues 1.00000000 0.31279044 0.31279044 0.31279044 0.31279044 0.11870985 0.11870985 0.11870985
+   state 1 energy 1.162222 fine-detail weight 2.844684e-01 ; F(energy) = 2.844684e-01, F/energy = 0.244763
+   state 2 energy 1.162222 fine-detail weight 2.844684e-01 ; F(energy) = 2.844684e-01, F/energy = 0.244763
+   state 3 energy 1.162222 fine-detail weight 2.844684e-01 ; F(energy) = 2.844684e-01, F/energy = 0.244763
+   state 4 energy 1.162222 fine-detail weight 2.844684e-01 ; F(energy) = 2.844684e-01, F/energy = 0.244763
+   state 5 energy 2.131073 fine-detail weight 4.808737e-01 ; F(energy) = 4.808737e-01, F/energy = 0.225649
+   state 6 energy 2.131073 fine-detail weight 4.808737e-01 ; F(energy) = 4.808737e-01, F/energy = 0.225649
+   state 7 energy 2.131073 fine-detail weight 4.808737e-01 ; F(energy) = 4.808737e-01, F/energy = 0.225649
+beta 1.00 n 12: gamma_opt = 0.96091307   lattice gap = 1.162222
+beta 1.00: relative difference of gamma_opt between n=8 and n=12: 2.39e-07 (tolerance 2.16e-02) 
+beta 2.00 n 12: Lambda0-normalised eigenvalues 1.00000000 0.71938730 0.71938730 0.71938730 0.71938730 0.51879635 0.51879635 0.51879635
+   state 1 energy 0.329355 fine-detail weight 1.020938e-01 ; F(energy) = 1.020938e-01, F/energy = 0.309981
+   state 2 energy 0.329355 fine-detail weight 1.020938e-01 ; F(energy) = 1.020938e-01, F/energy = 0.309981
+   state 3 energy 0.329355 fine-detail weight 1.020938e-01 ; F(energy) = 1.020938e-01, F/energy = 0.309981
+   state 4 energy 0.329355 fine-detail weight 1.020938e-01 ; F(energy) = 1.020938e-01, F/energy = 0.309981
+   state 5 energy 0.656244 fine-detail weight 1.930649e-01 ; F(energy) = 1.930649e-01, F/energy = 0.294197
+   state 6 energy 0.656244 fine-detail weight 1.930649e-01 ; F(energy) = 1.930649e-01, F/energy = 0.294197
+   state 7 energy 0.656244 fine-detail weight 1.930649e-01 ; F(energy) = 1.930649e-01, F/energy = 0.294197
+beta 2.00 n 12: gamma_opt = 0.89000377   lattice gap = 0.329355
+beta 2.00 n 16: Lambda0-normalised eigenvalues 1.00000000 0.71938727 0.71938727 0.71938727 0.71938727 0.51879631 0.51879631 0.51879631
+   state 1 energy 0.329355 fine-detail weight 1.020941e-01 ; F(energy) = 1.020941e-01, F/energy = 0.309981
+   state 2 energy 0.329355 fine-detail weight 1.020941e-01 ; F(energy) = 1.020941e-01, F/energy = 0.309981
+   state 3 energy 0.329355 fine-detail weight 1.020941e-01 ; F(energy) = 1.020941e-01, F/energy = 0.309981
+   state 4 energy 0.329355 fine-detail weight 1.020941e-01 ; F(energy) = 1.020941e-01, F/energy = 0.309981
+   state 5 energy 0.656244 fine-detail weight 1.930655e-01 ; F(energy) = 1.930655e-01, F/energy = 0.294198
+   state 6 energy 0.656244 fine-detail weight 1.930655e-01 ; F(energy) = 1.930655e-01, F/energy = 0.294198
+   state 7 energy 0.656244 fine-detail weight 1.930655e-01 ; F(energy) = 1.930655e-01, F/energy = 0.294198
+beta 2.00 n 16: gamma_opt = 0.89000348   lattice gap = 0.329355
+beta 2.00: relative difference of gamma_opt between n=12 and n=16: 3.27e-07 (tolerance 7.02e-03) 
+beta 3.00 n 12: Lambda0-normalised eigenvalues 1.00000000 0.82407680 0.82407680 0.82407680 0.67915506 0.67915506 0.67915457 0.67915457
+   state 1 energy 0.193492 fine-detail weight 6.403560e-02 ; F(energy) = 6.403560e-02, F/energy = 0.330948
+   state 2 energy 0.193492 fine-detail weight 6.403560e-02 ; F(energy) = 6.403560e-02, F/energy = 0.330948
+   state 3 energy 0.193492 fine-detail weight 6.403560e-02 ; F(energy) = 6.403560e-02, F/energy = 0.330948
+   state 4 energy 0.386906 fine-detail weight 1.238362e-01 ; F(energy) = 1.238362e-01, F/energy = 0.320068
+   state 5 energy 0.386906 fine-detail weight 1.238362e-01 ; F(energy) = 1.238362e-01, F/energy = 0.320068
+   state 6 energy 0.386907 fine-detail weight 1.238354e-01 ; F(energy) = 1.238362e-01, F/energy = 0.320068
+   state 7 energy 0.386907 fine-detail weight 1.238354e-01 ; F(energy) = 1.238362e-01, F/energy = 0.320068
+beta 3.00 n 12: gamma_opt = 0.86675260   lattice gap = 0.193492
+beta 3.00 n 16: Lambda0-normalised eigenvalues 1.00000000 0.82407613 0.82407613 0.82407613 0.82407613 0.67915388 0.67915388 0.67915388
+   state 1 energy 0.193492 fine-detail weight 6.404989e-02 ; F(energy) = 6.404989e-02, F/energy = 0.331020
+   state 2 energy 0.193492 fine-detail weight 6.404989e-02 ; F(energy) = 6.404989e-02, F/energy = 0.331020
+   state 3 energy 0.193492 fine-detail weight 6.404989e-02 ; F(energy) = 6.404989e-02, F/energy = 0.331020
+   state 4 energy 0.193492 fine-detail weight 6.404989e-02 ; F(energy) = 6.404989e-02, F/energy = 0.331020
+   state 5 energy 0.386908 fine-detail weight 1.238656e-01 ; F(energy) = 1.238656e-01, F/energy = 0.320143
+   state 6 energy 0.386908 fine-detail weight 1.238656e-01 ; F(energy) = 1.238656e-01, F/energy = 0.320143
+   state 7 energy 0.386908 fine-detail weight 1.238656e-01 ; F(energy) = 1.238656e-01, F/energy = 0.320143
+beta 3.00 n 16: gamma_opt = 0.86672444   lattice gap = 0.193492
+beta 3.00: relative difference of gamma_opt between n=12 and n=16: 3.25e-05 (tolerance 4.44e-02) 
+beta 4.00 n 16: Lambda0-normalised eigenvalues 1.00000000 0.87045550 0.87045550 0.87045550 0.87045550 0.75770308 0.75770308 0.75770308
+   state 1 energy 0.138739 fine-detail weight 4.690145e-02 ; F(energy) = 4.690145e-02, F/energy = 0.338056
+   state 2 energy 0.138739 fine-detail weight 4.690145e-02 ; F(energy) = 4.690145e-02, F/energy = 0.338056
+   state 3 energy 0.138739 fine-detail weight 4.690145e-02 ; F(energy) = 4.690145e-02, F/energy = 0.338056
+   state 4 energy 0.138739 fine-detail weight 4.690145e-02 ; F(energy) = 4.690145e-02, F/energy = 0.338056
+   state 5 energy 0.277464 fine-detail weight 9.155708e-02 ; F(energy) = 9.155708e-02, F/energy = 0.329979
+   state 6 energy 0.277464 fine-detail weight 9.155708e-02 ; F(energy) = 9.155708e-02, F/energy = 0.329979
+   state 7 energy 0.277464 fine-detail weight 9.155708e-02 ; F(energy) = 9.155708e-02, F/energy = 0.329979
+beta 4.00 n 16: gamma_opt = 0.85651206   lattice gap = 0.138739
+beta 4.00 n 20: Lambda0-normalised eigenvalues 1.00000000 0.87045549 0.87045549 0.87045549 0.87045549 0.75770307 0.75770307 0.75770307
+   state 1 energy 0.138739 fine-detail weight 4.690176e-02 ; F(energy) = 4.690176e-02, F/energy = 0.338058
+   state 2 energy 0.138739 fine-detail weight 4.690176e-02 ; F(energy) = 4.690176e-02, F/energy = 0.338058
+   state 3 energy 0.138739 fine-detail weight 4.690176e-02 ; F(energy) = 4.690176e-02, F/energy = 0.338058
+   state 4 energy 0.138739 fine-detail weight 4.690176e-02 ; F(energy) = 4.690176e-02, F/energy = 0.338058
+   state 5 energy 0.277464 fine-detail weight 9.155773e-02 ; F(energy) = 9.155773e-02, F/energy = 0.329981
+   state 6 energy 0.277464 fine-detail weight 9.155773e-02 ; F(energy) = 9.155773e-02, F/energy = 0.329981
+   state 7 energy 0.277464 fine-detail weight 9.155773e-02 ; F(energy) = 9.155773e-02, F/energy = 0.329981
+beta 4.00 n 20: gamma_opt = 0.85651116   lattice gap = 0.138739
+beta 4.00: relative difference of gamma_opt between n=16 and n=20: 1.06e-06 (tolerance 8.68e-03) 
+beta 6.00 n 16: Lambda0-normalised eigenvalues 1.00000000 0.91484968 0.91484968 0.91484968 0.83695167 0.83695167 0.83695091 0.83695091
+   state 1 energy 0.088996 fine-detail weight 3.058345e-02 ; F(energy) = 3.058345e-02, F/energy = 0.343652
+   state 2 energy 0.088996 fine-detail weight 3.058345e-02 ; F(energy) = 3.058345e-02, F/energy = 0.343652
+   state 3 energy 0.088996 fine-detail weight 3.058345e-02 ; F(energy) = 3.058345e-02, F/energy = 0.343652
+   state 4 energy 0.177989 fine-detail weight 6.021844e-02 ; F(energy) = 6.021844e-02, F/energy = 0.338327
+   state 5 energy 0.177989 fine-detail weight 6.021844e-02 ; F(energy) = 6.021844e-02, F/energy = 0.338327
+   state 6 energy 0.177990 fine-detail weight 6.021759e-02 ; F(energy) = 6.021844e-02, F/energy = 0.338325
+   state 7 energy 0.177990 fine-detail weight 6.021759e-02 ; F(energy) = 6.021844e-02, F/energy = 0.338325
+beta 6.00 n 16: gamma_opt = 0.84693408   lattice gap = 0.088996
+beta 6.00 n 24: Lambda0-normalised eigenvalues 1.00000000 0.91484942 0.91484942 0.91484942 0.91484942 0.83695099 0.83695099 0.83695099
+   state 1 energy 0.088996 fine-detail weight 3.060167e-02 ; F(energy) = 3.060167e-02, F/energy = 0.343855
+   state 2 energy 0.088996 fine-detail weight 3.060167e-02 ; F(energy) = 3.060167e-02, F/energy = 0.343855
+   state 3 energy 0.088996 fine-detail weight 3.060167e-02 ; F(energy) = 3.060167e-02, F/energy = 0.343855
+   state 4 energy 0.088996 fine-detail weight 3.060167e-02 ; F(energy) = 3.060167e-02, F/energy = 0.343855
+   state 5 energy 0.177990 fine-detail weight 6.025522e-02 ; F(energy) = 6.025522e-02, F/energy = 0.338532
+   state 6 energy 0.177990 fine-detail weight 6.025522e-02 ; F(energy) = 6.025522e-02, F/energy = 0.338532
+   state 7 energy 0.177990 fine-detail weight 6.025522e-02 ; F(energy) = 6.025522e-02, F/energy = 0.338532
+beta 6.00 n 24: gamma_opt = 0.84684769   lattice gap = 0.088996
+beta 6.00: relative difference of gamma_opt between n=16 and n=24: 1.02e-04 (tolerance 6.29e-02) 
+beta 8.00 n 20: Lambda0-normalised eigenvalues 1.00000000 0.93652400 0.93652400 0.93652400 0.87707764 0.87707764 0.87707759 0.87707759
+   state 1 energy 0.065580 fine-detail weight 2.271934e-02 ; F(energy) = 2.271934e-02, F/energy = 0.346436
+   state 2 energy 0.065580 fine-detail weight 2.271934e-02 ; F(energy) = 2.271934e-02, F/energy = 0.346436
+   state 3 energy 0.065580 fine-detail weight 2.271934e-02 ; F(energy) = 2.271934e-02, F/energy = 0.346436
+   state 4 energy 0.131160 fine-detail weight 4.491776e-02 ; F(energy) = 4.491776e-02, F/energy = 0.342466
+   state 5 energy 0.131160 fine-detail weight 4.491776e-02 ; F(energy) = 4.491776e-02, F/energy = 0.342466
+   state 6 energy 0.131160 fine-detail weight 4.491771e-02 ; F(energy) = 4.491776e-02, F/energy = 0.342466
+   state 7 energy 0.131160 fine-detail weight 4.491771e-02 ; F(energy) = 4.491776e-02, F/energy = 0.342466
+beta 8.00 n 20: gamma_opt = 0.84216459   lattice gap = 0.065580
+beta 8.00 n 24: Lambda0-normalised eigenvalues 1.00000000 0.93652397 0.93652397 0.93652397 0.93652397 0.87707758 0.87707758 0.87707758
+   state 1 energy 0.065580 fine-detail weight 2.272162e-02 ; F(energy) = 2.272162e-02, F/energy = 0.346471
+   state 2 energy 0.065580 fine-detail weight 2.272162e-02 ; F(energy) = 2.272162e-02, F/energy = 0.346471
+   state 3 energy 0.065580 fine-detail weight 2.272162e-02 ; F(energy) = 2.272162e-02, F/energy = 0.346471
+   state 4 energy 0.065580 fine-detail weight 2.272162e-02 ; F(energy) = 2.272162e-02, F/energy = 0.346471
+   state 5 energy 0.131160 fine-detail weight 4.492237e-02 ; F(energy) = 4.492237e-02, F/energy = 0.342501
+   state 6 energy 0.131160 fine-detail weight 4.492237e-02 ; F(energy) = 4.492237e-02, F/energy = 0.342501
+   state 7 energy 0.131160 fine-detail weight 4.492237e-02 ; F(energy) = 4.492237e-02, F/energy = 0.342501
+beta 8.00 n 24: gamma_opt = 0.84214962   lattice gap = 0.065580
+beta 8.00: relative difference of gamma_opt between n=20 and n=24: 1.78e-05 (tolerance 2.68e-02) 
+U2 MET
+U3 MET
