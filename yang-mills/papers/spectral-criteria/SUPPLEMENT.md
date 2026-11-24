@@ -2,8 +2,8 @@
 
 For the paper *Spectral criteria and conditional infrared estimates for four-dimensional lattice Yang–Mills theory* (Kirtus Justus, 24 November 2026), part of the research program [From Prephysical Hypotheses to Physical Models](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models).
 
-- Reading copy: [`Spectral criteria and conditional infrared estimates for four-dimensional lattice Yang-Mills theory.pdf`](Spectral%20criteria%20and%20conditional%20infrared%20estimates%20for%20four-dimensional%20lattice%20Yang-Mills%20theory.pdf) (SHA-256 `89b4aafbe043d8c593ce8cd41ebc2f104d909a3b5bf5e083b5fb72e2ba458a31`)
-- Source: [`../../z4/infrared/main.tex`](../../z4/infrared/main.tex) with `preamble.tex` (SHA-256 `d0ffdd9fe0c4abde6c7900677a8da40b62f08efcc8f1df6a2e9a5ddb458a9422`); earlier versions and the change record are beside it.
+- Reading copy: [`Spectral criteria and conditional infrared estimates for four-dimensional lattice Yang-Mills theory.pdf`](Spectral%20criteria%20and%20conditional%20infrared%20estimates%20for%20four-dimensional%20lattice%20Yang-Mills%20theory.pdf) (SHA-256 `1a7c8a627218821ca68cfc5266edfe0466987be86759f086bc07120de70d0777`)
+- Source: [`../../z4/infrared/main.tex`](../../z4/infrared/main.tex) with `preamble.tex` (SHA-256 `98fb6d33a8a42dff15db4eed6fe67ed0733748a3ed4e434fae08ca90e7c6d381`); earlier versions and the change record are beside it.
 - The paper does not prove a mass gap and has not been peer reviewed.
 
 The paper cites the items below as "Supplement S*n*". Paths are relative to `yang-mills/`. Folder names are those of the working records, which use the project's internal names for its contributors; the paper names the systems instead (Claude, OpenAI Codex, OpenAI GPT). A digest is given for single files; folders carry their own records.
