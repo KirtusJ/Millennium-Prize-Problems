@@ -41,6 +41,7 @@ Read this section first; sections 1 to 5 are the earlier note and are kept as wr
 - New and unreviewed: Propositions E.7 and E.8 (convex scalar interactions: the fine detail bounded by the energy with the free constant; with a time step, the mixing inequality at the free rate). Written and tested in one session by one system.
 - Unfinished runs: `convexstep.py` three-site part (only a log is deposited); `su2onestep.py` at cut-off 5 (nothing produced).
 - Order for tomorrow: `PATHS.md` §12.
+- After that note an editorial pass was made over the whole paper (49 pages; no statement or number changed; entry "Editorial pass over the whole paper" in `infrared/README.md`).
 
 ## 1. Where things stand
 

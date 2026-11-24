@@ -6,6 +6,7 @@
 \usepackage{booktabs,array,longtable}
 \usepackage{graphicx}
 \usepackage[margin=1.15in]{geometry}
+\usepackage{microtype}
 \usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
 \numberwithin{equation}{section}
 \newtheorem{theorem}{Theorem}[section]
@@ -33,3 +34,11 @@
 \renewcommand{\P}{\mathbb{P}}
 \newcommand{\repo}[1]{\texttt{#1}}
 \setlength{\abovecaptionskip}{6pt}
+\setlength{\belowcaptionskip}{6pt}
+% Floats: let a table or figure stay near its first reference instead of queueing to the end.
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.08}
+\renewcommand{\floatpagefraction}{0.75}
+\setcounter{topnumber}{3}
+\setcounter{totalnumber}{4}

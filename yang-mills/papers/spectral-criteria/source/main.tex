@@ -11,17 +11,18 @@ Models}~\cite{Prog}, as part of its study of the Millennium Prize problems. It h
 \hypersetup{pdftitle={Spectral criteria and conditional infrared estimates for four-dimensional lattice Yang-Mills theory},pdfauthor={Kirtus Justus},pdfsubject={From Prephysical Hypotheses to Physical Models},pdfkeywords={Yang-Mills theory, lattice gauge theory, mass gap, transfer operator, spectral gap}}
 \begin{document}
 \begin{abstract}
-Suppose a Yang--Mills theory is known only through its correlation functions. How could a mass gap be
-recognised in it, and what would let a gap survive when a lattice is refined? For the first question we prove
-a spectral criterion. For the second we prove an inequality that reduces one refinement step to three
-estimates, and we prove one of the three for $\SU(2)$, for exceptional sets of a particular kind. The other two are open, and so is a further condition
-needed to chain the steps. We also show that a gap in a box that is uniform in the regulator is equivalent to two
-statements on a single fine lattice, for coarse variables of one's choice: the part of a function that the
-coarse variables do not determine is bounded by its energy, and the coarse variables decorrelate in time.
-Both hold in the free theory, the first for a suitable block average uniformly in the blocking factor;
-neither is known for the Wilson measure. The criterion, in its form for the bounded operator $e^{-\tau H}$, and the inequality are machine-checked
-in Lean. No mass
-gap is proved.
+Suppose a Yang--Mills theory in four dimensions is known only through its correlation functions. How could a
+mass gap be recognised in it, and what would let the gaps of the lattice theories survive when the lattice is
+refined? For the first question we prove a spectral criterion. For the second we prove an inequality that
+reduces one refinement step to three estimates. One of the three is proved here for $\SU(2)$, for
+exceptional sets of a particular kind; the other two are open, and so is a further condition needed to chain
+the steps. We also show that a gap in a box, uniform in the regulator, is equivalent to two statements on a
+single fine lattice, for coarse variables of one's choice: the part of a function that the coarse variables
+do not determine is bounded by its energy, and the coarse variables decorrelate in time. Both statements
+hold for the free theory in a box, and the first is proved, with the constant of the free field, for scalar
+fields with a convex interaction; neither is known for the Wilson measure. The criterion, in its form for the
+bounded operator $e^{-\tau H}$, and the refinement inequality are machine-checked in Lean. No mass gap is
+proved.
 \end{abstract}
 \maketitle
 \setcounter{tocdepth}{1}
@@ -38,8 +39,9 @@ mesh is halved again and again?
 \end{enumerate}
 We say the theory has a \emph{mass gap} if there is a number $\Delta>0$ such that $0$ is an eigenvalue of the
 Hamiltonian $H\ge0$ (the vacuum), $H$ has no spectrum in $(0,\Delta)$, and $H$ has some spectrum in
-$[\Delta,\infty)$; the mass is the largest such $\Delta$. The lattice terms used in this introduction (link, plaquette,
-mesh, fixed physical box) are defined in Section~\ref{s:set}.
+$[\Delta,\infty)$; the mass is the largest such $\Delta$. The lattice terms used in this introduction (link,
+plaquette, mesh, fixed physical box) are defined in Section~\ref{s:set}, and the principal symbols are
+listed in Table~\ref{tab:sym}.
 
 This paper does not prove a mass gap. It records what we can prove about the two questions, states what is
 open, and reports measurements of the quantities that the open statements concern. The results proved
@@ -70,7 +72,7 @@ the coarse grid: multiply the two fine links under each coarse link. Any functio
 time is then the sum of its best guess from the coarse field and a remainder, the detail that the coarse
 field does not see (Figure~\ref{f:grid}).
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[scale=0.62]
 \draw[gray!70,line width=0.4pt] (0,0) grid (6,4);
@@ -95,21 +97,21 @@ Suppose three things.
 except for detail carried by an exceptional set of coarse fields.
 \item[(c)] The dynamics seldom returns to that exceptional set.
 \end{enumerate}
-Then every function on the fine lattice decays almost as fast as the guesses do, up to two losses, which must
-both be small: the return to
-the exceptional set, and a factor that is close to one when the detail is lost in few steps compared with
-the time considered. Theorem~\ref{t:inh} makes this precise.
+Then every function on the fine lattice decays almost as fast as the guesses do, up to two losses, which
+must both be small. One is the return to the exceptional set. The other is a factor that is close to one
+when the detail is lost in few steps compared with the time considered. Theorem~\ref{t:inh} makes this
+precise.
 
 The exceptions are allowed for a reason. A natural way to prove~(b) goes through local updates of the fine
 links, and in our trials that route meets slow directions on selected coarse fields (Appendix~\ref{s:local}).
 This is motivation only: the trials are statistical evidence about the particular functions tried, and
 certify nothing about all functions.
 
-Where this stands: Theorem~\ref{t:ret} proves a bound of the kind~(c) for $\SU(2)$, for exceptional sets
-built from narrow neighbourhoods of one group element (we call them gates); it is not shown that~(b) can
-hold with such sets. Statements (b) and~(a)
-are open (Hypotheses~\ref{h:mix} and~\ref{h:coarse}). Chaining the refinement steps needs, in addition, a
-bound on the accumulated losses, which is also open (Hypothesis~\ref{h:budget}).
+Where this stands. Theorem~\ref{t:ret} proves a bound of the kind~(c) for $\SU(2)$, for exceptional sets
+built from narrow neighbourhoods of one group element, which we call \emph{gates}; it is not shown that~(b)
+can hold with such sets. Statements (b) and~(a) are open (Hypotheses~\ref{h:mix} and~\ref{h:coarse}).
+Chaining the refinement steps needs, in addition, a bound on the accumulated losses, which is also open
+(Hypothesis~\ref{h:budget}).
 
 \subsection{Main results}
 \begin{theorem}[Spectral criterion]\label{t:crit}
@@ -198,27 +200,33 @@ choice suggested by those trials, not a result.
 Corollary~\ref{c:vac} carries the bound to the vacuum on an infinite time axis, where it becomes the second
 inequality of~\eqref{e:hyp}.
 
-Further results are proved. Proposition~\ref{p:three} in Section~\ref{s:crit} is a form of the criterion
-that uses a single time separation. Proposition~\ref{p:haar} in Appendix~\ref{s:haar} gives an explicit lower
-bound for the conditional variance of a single link; it bounds one term of the auxiliary statement of
-Section~\ref{s:arch} and is not an input of Theorem~\ref{t:inh}. Three propositions restate what is open.
-Proposition~\ref{p:dir} reduces statement~(b) to an inequality on the fibres of the coarse field.
-Proposition~\ref{p:wstep} replaces~(b) by a bound on how much of a low-energy state lies in the fine detail.
-Proposition~\ref{p:onestep} dispenses with the chain of lattices: on one fine lattice, with coarse
-variables of one's choice, a gap in a box is equivalent to a bound of the fine detail by the energy together
-with decorrelation of the coarse variables; Remark~\ref{r:where} explains why the chain does not separate the
-infrared problem from its conclusion. Appendix~\ref{app:free} proves all of these statements in the free
-theory and computes them in one compact interacting example at the smallest size; its last two
-propositions prove the first of them, with the free constants, for a scalar field with a convex interaction.
+Besides the three theorems the paper proves the following.
+\begin{itemize}
+\item \emph{A test at one time separation.} Proposition~\ref{p:three} is a form of the criterion that uses
+the correlations at lags $0$, $\tau$ and $2\tau$ only.
+\item \emph{Three restatements of what is open.} Proposition~\ref{p:dir} reduces statement~(b) to an
+inequality on the fibres of the coarse field. Proposition~\ref{p:wstep} replaces~(b) by a bound on how much
+of a low-energy state lies in the fine detail. Proposition~\ref{p:onestep} dispenses with the chain of
+lattices: on one fine lattice, with coarse variables of one's choice, a gap in a box is equivalent to a
+bound of the fine detail by the energy together with decorrelation of the coarse variables.
+Remark~\ref{r:where} explains why the chain does not separate the infrared problem from its conclusion.
+\item \emph{Calibrations.} Appendix~\ref{app:free} proves all of these statements for the free theory in a
+box and computes them in two small interacting gauge models. Its last two propositions prove the bound of
+the fine detail by the energy, with the constants of the free field, for a scalar field with a convex
+interaction.
+\item \emph{One link.} Proposition~\ref{p:haar} in Appendix~\ref{s:haar} gives an explicit lower bound for
+the conditional variance of a single link. It bounds one term of the auxiliary statement of
+Section~\ref{s:arch} and is not an input of Theorem~\ref{t:inh}.
+\end{itemize}
 
 \subsection{What is not claimed}\label{s:not}
 \begin{enumerate}
 \item No mass gap is proved in infinite volume or in the continuum, and no lower bound uniform along a
 refinement, for any gauge group. (At a fixed finite lattice a gap exists for elementary reasons and is not
 the issue.)
-\item No continuum theory is constructed. We have not examined the construction~\cite{OAI} beyond two declarations
-(Section~\ref{s:ext}); we rely on its assessment~\cite{YMG} for what it does and does not contain, and we have not shown that any object of this
-paper belongs to it (Section~\ref{s:ext}).
+\item No continuum theory is constructed. We have not examined the construction~\cite{OAI} beyond two
+declarations; we rely on its assessment~\cite{YMG} for what it does and does not contain, and we have not
+shown that any object of this paper belongs to it (Section~\ref{s:ext}).
 \item Theorem~\ref{t:inh} is conditional. Of its three hypotheses the second is proved for $\SU(2)$
 (Corollary~\ref{c:vac}). The first and the third are open (Hypotheses~\ref{h:mix} and~\ref{h:coarse}), and so
 is the budget that chaining the steps needs (Hypothesis~\ref{h:budget}); none is proved on any trajectory of
@@ -238,10 +246,10 @@ side; an estimate of it is not a bound. The estimates are statistical evidence a
 not certify an inequality over all functions or its limit, and none is
 used in a proof.
 \item The examples of Appendix~\ref{app:free} are calibrations. The free theory is not Yang--Mills theory and
-has no gap in infinite volume; the compact $\mathrm U(1)$ example and the non-abelian example are at the
-smallest sizes, in one dimension less, and the second is computed in a truncated basis. A
-statement that holds in them is not thereby known, or even made likely, for the Wilson measure in four
-dimensions.
+has no gap in infinite volume. The compact $\mathrm U(1)$ example and the non-abelian example are at the
+smallest sizes, in one dimension less, and the second is computed in a truncated basis. The scalar field
+with a convex interaction is not a gauge theory with a compact group. A statement that holds in them is not
+thereby known, or even made likely, for the Wilson measure in four dimensions.
 \end{enumerate}
 
 How the results were obtained, which parts are machine-checked, and the fact that the paper has not been
@@ -252,9 +260,9 @@ Section~\ref{s:set} fixes the setting and the notation. Section~\ref{s:arch} sta
 shows, in Figure~\ref{f:arch}, how the proved and the open statements fit together. The proofs follow in
 Sections~\ref{s:crit} to~\ref{s:ret}. Section~\ref{s:evid} summarises the measurements, Section~\ref{s:ext}
 relates the paper to the external construction, and Section~\ref{s:rem} lists what remains. The appendices
-hold the measurements in full, the one-link covariance bound, the machine-checked parts and the catalogue of
-supplementary material, and a check of the outline in the free theory, followed by two small interacting
-examples. A reader who wants only the mathematics can read Sections~\ref{s:set}
+hold the measurements in full, the one-link covariance bound, the machine-checked parts, the catalogue of
+supplementary material, and the calibrations: the free theory, two small interacting gauge models and a
+scalar field with a convex interaction. A reader who wants only the mathematics can read Sections~\ref{s:set}
 to~\ref{s:ret}; a reader who wants only the state of the question can read this introduction,
 Section~\ref{s:arch} and Section~\ref{s:rem}.
 
@@ -264,10 +272,9 @@ A \emph{link} joins two neighbouring sites and a \emph{plaquette} is an elementa
 Links carry elements of $\SU(2)$, identified with unit quaternions and with the unit sphere $S^3\subset\R^4$;
 $\tfrac12\Tr(U^{-1}V)$ is the inner product of $U$ and $V$ in $\R^4$, and the round distance
 $\operatorname{dist}(U,V)\in[0,\pi]$ is the angle between them. The Wilson measure has density proportional
-to $\exp(\beta\sum_p\tfrac12\Tr U_p)$ with respect to Haar measure on the links, the sum over plaquettes $p$ and $\beta\ge0$ the coupling
-(large $\beta$ is weak coupling),
-with $U_p$ the ordered product of the four links of $p$. A \emph{slice} is the collection of spatial links at
-one time.
+to $\exp(\beta\sum_p\tfrac12\Tr U_p)$ with respect to Haar measure on the links. The sum is over the
+plaquettes $p$, $U_p$ is the ordered product of the four links of $p$, and $\beta\ge0$ is the coupling
+(large $\beta$ is weak coupling). A \emph{slice} is the collection of spatial links at one time.
 
 \emph{Transfer operator.} Fix a finite spatial lattice and $\beta>0$. On $L^2$ of the slice configurations
 with Haar measure let $\mathsf T_0$ be the transfer operator in temporal gauge~\cite{Lu77,OS78} and $\Pi$ the
@@ -279,15 +286,25 @@ $\Lambda_0$ is its largest eigenvalue and $\Omega>0$ the corresponding eigenfunc
 The \emph{vacuum representation} is $L^2(\Omega^2\,d\mathrm{Haar})$ with
 $S_1f=\Lambda_0^{-1}\Omega^{-1}\mathsf L(\Omega f)$, a self-adjoint contraction with $0\le S_1\le I$ and $S_11=1$,
 and $S_n=S_1^n$. Time is counted in lattice steps; one step is the mesh $a$ in physical units. On the
-gauge-invariant functions $S_1$ is injective, so there $S_n=e^{-naH}$ with $H=-a^{-1}\log S_1\ge0$ the Hamiltonian in physical
-units. We do not need $H$: Theorem~\ref{t:inh} is applied with $A=S_1$ restricted to the
-gauge-invariant functions that are \emph{centred}, that is, have vacuum expectation zero.
+gauge-invariant functions $S_1$ is injective, so there $S_n=e^{-naH}$ with $H=-a^{-1}\log S_1\ge0$ the
+Hamiltonian in physical units. We do not need $H$ for Theorem~\ref{t:inh}, which is applied with $A=S_1$
+restricted to the gauge-invariant functions that are \emph{centred}, that is, have vacuum expectation zero.
 
 \emph{Coarse links.} For even $N$, the coarse links of a slice are the products of two consecutive fine
 spatial links between sites with even coordinates. A function of a slice is \emph{coarse-measurable} if it
 depends on the coarse links only. A \emph{coarse plaquette} is a spatial square of side two with even corners;
 its holonomy is the product of its eight fine links. A \emph{background} is a configuration of the coarse
 links of a slice.
+
+\emph{Coarse part, fine detail, deficit.} These three words are used throughout. Let $P$ be the conditional
+expectation given the coarse links, or given whatever coarse variables are in use, acting on the functions
+of a slice in the vacuum representation. The \emph{coarse part} of a function $f$ is $Pf$, its best
+prediction from the coarse variables; its \emph{fine detail} is the remainder $(I-P)f$, whose squared norm
+is the mean conditional variance of $f$ given the coarse variables. The \emph{deficit} of an operator $A^m$
+on the centred functions is $1-\|A^m\|$; for $A^m=e^{-tH}$ it is $1-e^{-t\Delta}$ with $\Delta$ the bottom
+of the spectrum of $H$ there, so a deficit bounded below at a fixed time $t$ is the same as a gap bounded
+below. A \emph{regulator} is whatever makes the theory finite, here the mesh and the size of the lattice;
+\emph{uniform in the regulator} means with constants that do not depend on it.
 
 \emph{Refinement sequence.} A \emph{fixed physical box} is a sequence of lattices of mesh $a_i=a_0/2^i$ and
 spatial side $N_i=2^iN_0$, so that the side $N_ia_i$ in physical units does not change. Couplings $\beta_i$ are
@@ -296,16 +313,19 @@ of the sequence; such a sequence of lattices and couplings is a \emph{trajectory
 
 \emph{Local updates.} A \emph{colour} is one of $24$ classes of pairs of fine links inside coarse cells, such
 that the pairs of one class can be resampled together from their conditional law given all other links,
-leaving the coarse links unchanged; the classes are those of the sampling program (Supplement~S1; the supplement is catalogued in
-Appendix~\ref{app:supp}). For a function
-$F$ of a slice, on a fixed coarse background, $\mathcal J(F)$ is the average over the $24$ colours of the
+leaving the coarse links unchanged; the classes are those of the sampling program (Supplement~S1; the
+supplement is catalogued in Appendix~\ref{app:supp}). For a function $F$ of a slice, on a fixed coarse background, $\mathcal J(F)$ is the average over the $24$ colours of the
 expected conditional variance of $F$ under the resampling of that colour, and $\mathcal V(F)$ is the
 conditional variance of $F$ given the coarse links. We call $\mathcal J(F)/\mathcal V(F)$ the \emph{local
 quotient} of $F$. It measures relaxation under these artificial updates, not under the transfer operator.
 
-\begin{table}[ht]
+\begin{table}[htbp]
+\caption{Principal symbols. The letter $\kappa$ has two uses: in Theorem~\ref{t:inh} and along the chain of
+lattices it is the return weight; in Proposition~\ref{p:onestep} and in the examples of
+Appendix~\ref{app:free} it is the constant that bounds the fine detail by the energy, and the return weight
+is $\kappa'$.}\label{tab:sym}
 \centering\small
-\begin{tabular}{@{}lll@{}}
+\begin{tabular}{@{}l>{\raggedright\arraybackslash}p{0.56\textwidth}l@{}}
 \toprule
 Symbol & Meaning & Where \\
 \midrule
@@ -315,6 +335,9 @@ $d_{v,n}$ & differences of the correlation of $v$ with itself & Thm~\ref{t:crit}
 $P$, $Q$, $B$, $G$ & coarse projection; its complement; exceptional and good parts & Thm~\ref{t:inh} \\
 $a$, $t$, $m$, $j$ & fine mesh; physical time; $m=t/a$ steps; a lag of $j\le m$ steps & Thm~\ref{t:inh} \\
 $\gamma$, $\kappa$, $b$, $d$ & mixing rate; return weight; deficit of the coarse part; deficit $1-\|A^m\|$ & \eqref{e:hyp}, \eqref{e:inh} \\
+$\gamma_{\mathrm{opt}}$ & best mixing rate, $\|G(I-A^2)^{-1}G\|^{-1}$ & Rem.~\ref{r:forms} \\
+$\kappa$, $\kappa'$ (one step) & constant in $\|Gf\|^2\le\kappa\langle f,Hf\rangle$; return weight & Prop.~\ref{p:onestep} \\
+$F(u)$, $c_{\mathrm w}$ & low-energy weight of the fine detail; constant in its linear bound & Rem.~\ref{r:weight}, \eqref{e:wlin} \\
 $N$, $T$, $\beta$ & spatial side; time slices; bare coupling & Section~\ref{s:set} \\
 $\mathsf L$, $\Omega$ & transfer operator at fixed spatial lattice; its vacuum & Section~\ref{s:set} \\
 $\Gamma_\theta$, $p_k(\theta)$ & gate around $-I$; cap probability at tilt $k$ & Thm~\ref{t:ret} \\
@@ -327,7 +350,6 @@ $\mathcal J$, $\mathcal V$ & loss under local updates; conditional variance & Se
 $\mathsf R(f)$ & two-time quotient $1-C_f(\text{lag})/C_f(0)$ & Appendix~\ref{s:cross} \\
 \bottomrule
 \end{tabular}
-\caption{Principal symbols.}\label{tab:sym}
 \end{table}
 
 \section{Outline and the open hypotheses}\label{s:arch}
@@ -338,10 +360,11 @@ Corollary~\ref{c:acc} chains the halvings and needs one more input, the budget (
 three hypotheses are open, so every box on the path from Theorem~\ref{t:inh} down to the mass gap is open.
 Theorem~\ref{t:crit} enters only at the bottom: it says what would have to be checked in a continuum theory.
 
-This would be one sufficient route to a gap in a box, if the three hypotheses held. A direct estimate of the differences $d_{v,n}$ in the
-continuum theory would meet the criterion of Theorem~\ref{t:crit} without it.
+This would be one sufficient route to a gap in a box, if the three hypotheses held. A direct estimate of
+the differences $d_{v,n}$ in the continuum theory would meet the criterion of Theorem~\ref{t:crit} without
+it. A second route, on a single lattice, is Proposition~\ref{p:onestep} with Figure~\ref{f:onestep}.
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[node distance=6mm and 6mm,
  prov/.style={draw,rounded corners=2pt,align=center,font=\footnotesize,inner sep=3pt,text width=31.5mm},
@@ -381,38 +404,48 @@ Hypothesis~\ref{h:budget} enters through Corollary~\ref{c:acc}.}\label{f:arch}
 \end{figure}
 
 \begin{hypothesis}[Short-time decay off the gates; open]\label{h:mix}
-For a sequence of lattices of mesh $a_i=a_0/2^i$ in a fixed physical box, with one-step operators $A_i$ on the
-centred gauge-invariant functions, exceptional projections $B_i$ built from gates as in Corollary~\ref{c:vac},
-$Q_i=I-P_i$ the complement of the coarse projection $P_i$ and $G_i=Q_i-B_i$, there are $\gamma_i>0$ with $\langle f,(I-A_i^2)f\rangle\ge\gamma_i\|G_if\|^2$ for all $f$, and
-$\sum_ia_i/\gamma_i<\infty$.
+Consider a sequence of lattices of mesh $a_i=a_0/2^i$ in a fixed physical box. On the centred
+gauge-invariant functions of the $i$th lattice let $A_i$ be the one-step operator, $P_i$ the coarse
+projection, $Q_i=I-P_i$, $B_i$ an exceptional projection built from gates as in Corollary~\ref{c:vac}, and
+$G_i=Q_i-B_i$. Then there are numbers $\gamma_i>0$ such that
+\[
+\langle f,(I-A_i^2)f\rangle\ \ge\ \gamma_i\,\|G_if\|^2\quad\text{for all }f,\qquad\text{and}\qquad
+\sum_i\frac{a_i}{\gamma_i}<\infty .
+\]
 \end{hypothesis}
 
 \begin{hypothesis}[Coarse comparison; open]\label{h:coarse}
-Fix a physical time $t$ that is a multiple of $a_0$, and let $m_i=t/a_i$. For $i\ge1$ let $P_i$ be the conditional
-expectation given the coarse links (of mesh $2a_i$) of the lattice of mesh $a_i$, on the centred gauge-invariant functions. With $d_{i-1}=1-\|A_{i-1}^{m_{i-1}}\|$
-the deficit of the lattice of mesh $2a_i$ at matched coupling, $\|P_iA_i^{m_i}P_i\|\le1-b_i$ with
-$b_i\ge d_{i-1}-\varepsilon_i$, for real numbers $b_i$ and $\varepsilon_i\ge0$ that are constrained only through
+Fix a physical time $t$ that is a multiple of $a_0$, and let $m_i=t/a_i$. For $i\ge1$ let $P_i$ be the
+conditional expectation given the coarse links (of mesh $2a_i$) of the lattice of mesh $a_i$, on the centred
+gauge-invariant functions, and let $d_{i-1}=1-\|A_{i-1}^{m_{i-1}}\|$ be the deficit of the lattice of mesh
+$2a_i$ at matched coupling. Then
+\[
+\|P_iA_i^{m_i}P_i\|\le1-b_i\qquad\text{with}\qquad b_i\ge d_{i-1}-\varepsilon_i ,
+\]
+for real numbers $b_i$ and $\varepsilon_i\ge0$ that are constrained only through
 Hypothesis~\ref{h:budget}.
 \end{hypothesis}
 
 \begin{hypothesis}[Weighted budget; open]\label{h:budget}
-With $\gamma_i$ as in Hypothesis~\ref{h:mix}, $K_i=1+2/(m_i\gamma_i)=1+2a_i/(\gamma_it)$, $M_0=1$, $M_i=K_1\cdots K_i$, $\kappa_i\ge0$ such
-that $\|B_iA_i^{j_i}B_i\|\le\kappa_i$ for some integer $1\le j_i\le m_i$, and $\varepsilon_i$ as in
-Hypothesis~\ref{h:coarse}, the series below converges and
+Let $\gamma_i$ be as in Hypothesis~\ref{h:mix} and $\varepsilon_i$ as in Hypothesis~\ref{h:coarse}. Put
+$K_i=1+2/(m_i\gamma_i)=1+2a_i/(\gamma_it)$, $M_0=1$ and $M_i=K_1\cdots K_i$, and let $\kappa_i\ge0$ be such
+that $\|B_iA_i^{j_i}B_i\|\le\kappa_i$ for some integer $1\le j_i\le m_i$. Then the series below converges and
 \[
 \sum_{i=1}^\infty M_{i-1}(\varepsilon_i+\kappa_i)\ <\ d_0 .
 \]
 \end{hypothesis}
 
-At a fixed finite lattice each $A_i$ is compact and, on the centred functions, has norm below one (the eigenvalue
-one of the full operator is simple and belongs to the constants; the largest eigenvalue on the centred
-functions may be degenerate). So some $\gamma_i>0$ and some deficit exist, with no uniformity; and at strong coupling
-there are estimates of this kind (working notes, Supplement~S8; not used here). What is
-not proved is the three statements together, with the stated sums, on one trajectory of matched couplings
-tending to weak coupling. If all held on one trajectory, Corollaries~\ref{c:acc} and~\ref{c:vac} would give a positive lower limit of the deficits in a
-fixed physical box. Summability of the $\kappa_i$ and $\varepsilon_i$ alone would not: the budget is a
-separate condition (Remark~\ref{r:budget}). Uniformity in the volume and the identification of the limit with
-a continuum theory would remain.
+\emph{What is and is not known about them.} At a fixed finite lattice each $A_i$ is compact and, on the
+centred functions, has norm below one (the eigenvalue one of the full operator is simple and belongs to the
+constants; the largest eigenvalue on the centred functions may be degenerate). So some $\gamma_i>0$ and some
+deficit exist, with no uniformity; and at strong coupling there are estimates of this kind (working notes,
+Supplement~S8; not used here). What is not proved is the three statements together, with the stated sums, on
+one trajectory of matched couplings tending to weak coupling.
+
+If all three held on one trajectory, Corollaries~\ref{c:acc} and~\ref{c:vac} would give a positive lower
+limit of the deficits in a fixed physical box. Summability of the $\kappa_i$ and $\varepsilon_i$ alone would
+not: the budget is a separate condition (Remark~\ref{r:budget}). Uniformity in the volume and the
+identification of the limit with a continuum theory would remain.
 
 \subsection{Two ways one might approach Hypothesis~\ref{h:mix}}
 Hypothesis~\ref{h:mix} is about the transfer semigroup. One route to it uses the local updates of
@@ -445,17 +478,23 @@ over $c\in\mathcal G$ and discarding the rest gives
 $\gamma\,\E[\mathbf 1_{\mathcal G}(C)\operatorname{Var}(f(X)\mid C)]=\gamma\|Gf\|^2$.
 \end{proof}
 
-So Hypothesis~\ref{h:mix} would follow from a bound on the conditional maximal correlation outside the gates,
-with $\sum_ia_i/\gamma_i<\infty$. We have no such bound for the Wilson measure at weak coupling; the
-proposition replaces one open estimate by another and proves nothing about the theory. It does say what the
-measurement of Appendix~\ref{s:time} is a trial for: a correlation between a function of one slice and a
-function of the next, given the coarse field of the first, is, in the population, a lower value for the conditional maximal
-correlation on that coarse field. Three reservations apply. Here $g$ must be a function of the next slice
-alone. The measurement is on a periodic lattice with one slice frozen, so the quantity concerned is the
+So Hypothesis~\ref{h:mix} would follow from a bound on the conditional maximal correlation outside the
+gates, with $\sum_ia_i/\gamma_i<\infty$. We have no such bound for the Wilson measure at weak coupling; the
+proposition replaces one open estimate by another and proves nothing about the theory.
+
+It does say what the measurement of Appendix~\ref{s:time} is a trial for. A correlation between a function
+of one slice and a function of the next, given the coarse field of the first, is, in the population, a lower
+value for the conditional maximal correlation on that coarse field. Three reservations apply.
+\begin{itemize}
+\item Here $g$ must be a function of the next slice alone.
+\item The measurement is on a periodic lattice with one slice frozen, so the quantity concerned is the
 analogue $\varrho_T(c)$ for period $T$, not the vacuum quantity $\varrho(c)$ of the proposition, and we have
-no estimate of their difference. And a Monte Carlo estimate at one coarse field is neither a certified bound
-there nor a statement about almost every field. A small mutual information of $X$ and $Y$ given $C$ is not enough, since $\varrho$ is a supremum over
-normalised functions, including those concentrated on rare configurations.
+no estimate of their difference.
+\item A Monte Carlo estimate at one coarse field is neither a certified bound there nor a statement about
+almost every field.
+\end{itemize}
+A small mutual information of $X$ and $Y$ given $C$ would not be enough either, since $\varrho$ is a
+supremum over normalised functions, including those concentrated on rare configurations.
 
 \begin{remark}[How weak the mixing rate may be]\label{r:rate}
 Hypothesis~\ref{h:mix} asks only for $\sum_ia_i/\gamma_i<\infty$. Suppose that along the trajectory the
@@ -508,12 +547,15 @@ law of total variance
 \gamma\ge\frac1{1+\beta^2\operatorname*{ess\,sup}_{c\in\mathcal G}P_cL_c}
 \]
 in Proposition~\ref{p:pred}. With Remark~\ref{r:rate}, bounds $P_c\le C_1e^{p\beta}$ and
-$L_c\le C_2e^{q\beta}$, uniform in the volume, would suffice when $p+q<1/s$. The displayed bound on
+$L_c\le C_2e^{q\beta}$, uniform in the volume, would suffice when $p+q<1/s$.
+
+The displayed bound on
 $\varrho(c)$, which is a supremum over all functions, uses the Poincar\'e inequality for all functions on the
 fibre. If the inequality is assumed only for gauge-invariant functions, that bound does not follow, but the
 conclusion of Proposition~\ref{p:pred} for gauge-invariant $f$ does (Proposition~\ref{p:dir}); and the
-restriction is forced if $P_c$ is to be small (Remark~\ref{r:gaugedir}). Neither bound is known for the Wilson
-measure at weak coupling. In the free theory the reduction loses little: along the lowest axial momentum
+restriction is forced if $P_c$ is to be small (Remark~\ref{r:gaugedir}).
+
+Neither bound is known for the Wilson measure at weak coupling. In the free theory the reduction loses little: along the lowest axial momentum
 $\beta P_c$ tends to $0.6176$ and $\beta L_c$ to $1$ as the side grows, which gives $\gamma\ge0.6182$ where the
 value along that momentum tends to $0.6749$; at every side computed, $4$ to $64$, that momentum carries the
 largest $\beta P_c$ and the smallest $\gamma$ (Appendix~\ref{app:free}, Supplement~S11).
@@ -723,6 +765,11 @@ every finite linear combination.
 \end{remark}
 
 \section{The refinement inequality}\label{s:inh}
+This section proves Theorem~\ref{t:inh} and its corollary for a chain of lattices, and then gives two
+variants: a step that needs no mixing rate (Proposition~\ref{p:wstep}) and a criterion on a single lattice
+that needs no chain (Proposition~\ref{p:onestep}).
+
+\subsection*{Proof of the theorem}
 The idea of the proof is to look at a vector that decays as slowly as anything can. Each hypothesis says that
 such a vector has little weight in one of the three parts of the space, and the three weights add up to one.
 We need one scalar inequality first.
@@ -812,6 +859,7 @@ in Lean for all non-zero inner product spaces, real or complex (Appendix~\ref{s:
 completeness.
 \end{remark}
 
+\subsection*{A step from the low-energy weight}
 Hypothesis~\ref{h:mix} can be replaced by a statement about the low-energy weight of the fine detail alone
 (Remark~\ref{r:weight}), and then the step needs no rate and no lower bound on the gap given in advance.
 
@@ -845,16 +893,20 @@ $b-\kappa\le d\,(1+C/m)$. If $x<1/a$ only values $u\le1/a$ are needed and $c_{\m
 
 The proof uses neither Theorem~\ref{t:inh} nor the inverse of $H$: it looks only at the bottom of the
 spectrum. Along a dyadic refinement with $m_i=t/a_i$ and one constant, the factors $K_i=1+C/m_i$ have a
-bounded product, so Corollary~\ref{c:acc} applies with these factors and no additional loss. In this form
-the first hypothesis reads: at each regulator, a unit vector whose energies lie
-below $u$ has at most the fraction $c_{\mathrm w}\,a\,u$ of its squared norm in the fine detail off the
-gates. That is a statement about how well low-energy states are determined by the coarse field. It neither
-asks for a gap nor follows from one. In the free theory the soft photon has the fraction
-$0.911\,a\,u$ (Remark~\ref{r:weight}), and in the compact example of Appendix~\ref{app:free} the flux state has
-$0.35$ times its energy in lattice units; these are values on particular vectors. In the free theory the
-bound~\eqref{e:wlin} is proved on the whole space, with $c_{\mathrm w}<15.94$ and a computed value near $1.45$
-(Proposition~\ref{p:freeweight}). In the compact example it is computed, not proved, with a constant below
-$0.87$ up to $\beta=6$. It is open for the Wilson measure.
+bounded product, so Corollary~\ref{c:acc} applies with these factors and no additional loss.
+
+In this form the first hypothesis reads: at each regulator, a unit vector whose energies lie below $u$ has
+at most the fraction $c_{\mathrm w}\,a\,u$ of its squared norm in the fine detail off the gates. That is a
+statement about how well low-energy states are determined by the coarse field. It neither asks for a gap
+nor follows from one. What is known about it:
+\begin{itemize}
+\item in the free theory the bound~\eqref{e:wlin} is proved on the whole space, with $c_{\mathrm w}<15.94$
+and a computed value near $1.45$ (Proposition~\ref{p:freeweight}); on one vector, the soft photon, the
+fraction is $0.911\,a\,u$ (Remark~\ref{r:weight});
+\item in the compact example of Appendix~\ref{app:free} it is computed, not proved, with a constant below
+$0.87$ up to $\beta=6$; the flux state alone has $0.35$ times its energy in lattice units;
+\item it is open for the Wilson measure.
+\end{itemize}
 
 An earlier version of this proposition, proved through the inverse-energy integral of
 Remark~\ref{r:weight} and Theorem~\ref{t:inh}, had the weaker factor $1+(3+c_{\mathrm w}\log m)/m$ and an
@@ -863,6 +915,10 @@ used as reviewer. We checked the three inequalities of the proof and the conclus
 finite-dimensional instances, in which the new bound was never below the old one (Supplement~S13; a first
 check of the three inequalities failed through rounding in our program and is kept with its successor), and
 the last step is checked in Lean (Appendix~\ref{s:lean}).
+
+\subsection*{One step on one lattice}
+The next remark asks which of the three hypotheses carries the difficulty, and the answer motivates a form
+of the criterion in which the chain of lattices does not appear.
 
 \begin{remark}[Where the infrared problem sits]\label{r:where}
 Let $b^*=1-\|PA^mP\|$ be the true deficit of the coarse part and $d=1-\|A^m\|$ that of the whole space. A
@@ -875,7 +931,9 @@ With $\gamma$ and $\kappa$ as in Hypotheses~\ref{h:mix} and~\ref{h:budget} the t
 to a factor tending to one and a summable error, and Hypothesis~\ref{h:coarse}, read for the true $b^*_i$,
 says nothing other than that the deficit of the lattice of mesh $a_i$ is at least that of the lattice of
 mesh $2a_i$ up to the losses $\varepsilon_i$. That is the persistence of the gap under refinement at matched
-coupling, which is the conclusion. So the first hypothesis and the return bound do not carry the infrared
+coupling, which is the conclusion.
+
+So the first hypothesis and the return bound do not carry the infrared
 problem. What they supply is a reduction of the class of functions: it is enough to bound the correlations
 over the time $t$ of functions of the \emph{coarse} field in the fine theory, and all of the comparison
 between the two lattices is then a comparison of two laws on histories of the same coarse field, the image
@@ -883,6 +941,7 @@ of the fine measure and the Wilson measure of the coarse lattice. Hypothesis~\re
 $b_i$ is bounded by such a comparison and not through $d_i$; no estimate of that kind is known to us, and
 the infrared difficulty of the problem is there. The first hypothesis concerns one step at the scale of the
 mesh, where the coupling is weak; its difficulty is uniformity in the volume and in the coarse field.
+
 In the free theory $b^*\ge d$ is visible in Table~\ref{tab:free}, where $b$ exceeds the deficit of the same
 lattice in every row (for instance $0.9670$ against $0.9550$ at $N=16$). There the comparison of the two laws
 can also be made directly, momentum by momentum. A linear function of the coarse field at coarse momentum
@@ -919,37 +978,43 @@ multiplying by $e^{-tu}$ gives $e^{-tu}\le1-b+\kappa'+\kappa\,u\,e^{-tu}$. Let $
 $txe^{-tx}\le1-e^{-tx}$: $b-\kappa'\le(1-e^{-tx})(1+\kappa/t)$.
 \end{proof}
 
-With $B=0$ this is the criterion in its plain form, with $Q=I-P$ in place of $G$; with $B$ built from gates
-the return bound of Section~\ref{s:ret} can be used. The proof given here, which needs no inverse of $H$, no
-subdivision of the time and no arithmetic condition on $s/t$ beyond $0<s\le t$, and allows $H$ to have a
-kernel, is due to an OpenAI GPT
-model used as reviewer; our first proof went through Theorem~\ref{t:inh} with many small steps. Both parts
-were checked on random finite-dimensional instances, including instances with a kernel (Supplement~S13).
-The order $s\le t$ cannot be dropped: for $H=\log2$ on a one-dimensional space with $B=I$, $t=1$ and $s=2$
-the hypotheses hold with $b=1$, $\kappa=0$, $\kappa'=\tfrac14$, and the deficit is $\tfrac12<\tfrac34$ (an
-example of a second reviewing GPT model).
+\emph{Reading the statement.} With $B=0$ this is the criterion in its plain form, with $Q=I-P$ in place of
+$G$; with $B$ built from gates the return bound of Section~\ref{s:ret} can be used. Note the letters: here
+$\kappa$ is the constant that bounds the fine detail by the energy and $\kappa'$ is the return weight, which
+Theorem~\ref{t:inh} calls $\kappa$. Figure~\ref{f:onestep} shows the plain form.
 
-\begin{figure}[tbp]
+\begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[node distance=7mm and 9mm,
  open/.style={draw,dashed,rounded corners=2pt,align=center,font=\footnotesize,inner sep=3pt,text width=58mm},
  prov/.style={draw,rounded corners=2pt,align=center,font=\footnotesize,inner sep=3pt,text width=58mm},
  >={Stealth[length=2mm]}]
-\node[open] (fine) {Fine detail bounded by the energy\\ $\|(I-P)f\|^2\le\kappa\langle f,Hf\rangle$\\ (scales below the coarse mesh)};
-\node[open,right=of fine] (coarse) {Coarse variables decorrelate\\ $\|Pe^{-tH}P\|\le1-b$\\ (finitely many variables per cell)};
+\node[open] (fine) {(i) Fine detail bounded by the energy\\ $\|(I-P)f\|^2\le\kappa\langle f,Hf\rangle$\\ (scales below the coarse mesh)};
+\node[open,right=of fine] (coarse) {(ii) Coarse variables decorrelate\\ $\|Pe^{-tH}P\|\le1-b$\\ (finitely many variables per cell)};
 \node[prov,below=of fine,xshift=34mm] (crit) {One-step criterion\\ Prop.~\ref{p:onestep}: equivalence};
 \node[open,below=of crit] (gap) {Gap on one lattice, uniform in the regulator:\\ $1-\|e^{-tH}\|\ge b/(1+\kappa/t)$};
 \draw[->,dashed] (fine) -- (crit);
 \draw[->,dashed] (coarse) -- (crit);
 \draw[<->] (crit) -- (gap);
 \end{tikzpicture}
-\caption{The one-step form. Both statements at the top are open for the Wilson measure and hold in the free
-theory in a box (Propositions~\ref{p:freeblock} and~\ref{p:freecoarse}); the criterion itself is proved. No
-second lattice enters. Volume uniformity in the free theory fails through the statement on the right.}
+\caption{The one-step form with $B=0$. Dashed boxes are open for the Wilson measure; the criterion itself
+is proved. Both statements at the top hold in the free theory in a box (Propositions~\ref{p:freeblock}
+and~\ref{p:freecoarse}), where uniformity in the volume fails through the statement on the right. The
+statement on the left is proved for scalar fields with a convex interaction
+(Proposition~\ref{p:convex}). No second lattice enters.}
 \label{f:onestep}
 \end{figure}
 
-The first hypothesis of the proposition has an equivalent form at one time. For $s>0$ and $0<\gamma\le1$,
+\emph{The proof.} The proof given above needs no inverse of $H$, no subdivision of the time and no
+arithmetic condition on $s/t$ beyond $0<s\le t$, and it allows $H$ to have a kernel. It is due to an OpenAI
+GPT model used as reviewer; our first proof went through Theorem~\ref{t:inh} with many small steps. The
+order $s\le t$ cannot be dropped: for $H=\log2$ on a one-dimensional space with $B=I$, $t=1$ and $s=2$ the
+hypotheses hold with $b=1$, $\kappa=0$, $\kappa'=\tfrac14$, and the deficit is $\tfrac12<\tfrac34$ (an
+example of a second reviewing GPT model). Both parts were tested on $20{,}000$ random finite-dimensional
+instances, including instances with a kernel (Supplement~S13).
+
+\emph{The first statement at one time.} The first hypothesis of the proposition has an equivalent form at
+one time. For $s>0$ and $0<\gamma\le1$,
 \[
 I-e^{-sH}\ \ge\ \gamma\,Q\quad\Longrightarrow\quad Q\le\frac s\gamma\,H,
 \qquad\text{and}\qquad
@@ -961,58 +1026,65 @@ loss of a fixed fraction of the fine detail over a time of order $a_0$. In the t
 Proposition~\ref{p:pred}, whose proof applies to any pair of times: if, given the coarse variables of a
 slice, the maximal correlation between that slice and the slice a time $s/2$ later is at most
 $(1-\gamma)^{1/2}$, then $Q\le(s/\gamma)H$. This is the statement about one step of coarse-graining that the
-one-step form needs, at the coarse scale and uniformly in the fine mesh. The condition on the maximal
-correlation is sufficient and not necessary: on the path with four states and the step $I-\tfrac14L$, $L$
-the graph Laplacian, with the two end states in one coarse cell, the next state determines which end the
-chain is at, so the conditional maximal correlation is one, while $Q\le\kappa H$ holds with a finite
-$\kappa$ (an example of the same reviewer).
+one-step form needs, at the coarse scale and uniformly in the fine mesh.
 
-Bounds for the spectral gap of a Markov chain in terms of a chain on the blocks of a partition and chains
-inside the blocks are classical in the theory of Markov chains (see~\cite{JSTV04} and the works cited there).
-Theorem~\ref{t:inh} and the proposition are of that family. They differ in that the coarse part enters through
-the compression $PA^mP$ at a long time, which is not the transition operator of a chain on the coarse
-variables, and the fine part through a bound of $Q$ by the generator and not through gaps of restricted
-chains.
+The condition on the maximal correlation is sufficient and not necessary. On the path with four states and
+the step $I-\tfrac14L$, $L$ the graph Laplacian, with the two end states in one coarse cell, the next state
+determines which end the chain is at, so the conditional maximal correlation is one, while $Q\le\kappa H$
+holds with a finite $\kappa$ (an example of the same reviewer).
 
-In the application the Hilbert space is that of the centred gauge-invariant functions of a slice, on which
-the conditional expectation given the coarse variables acts as a projection.
+\emph{The equivalence in the application.} There the Hilbert space is that of the centred gauge-invariant
+functions of a slice, on which the conditional expectation given the coarse variables acts as a projection.
 So along any family of regulated theories in a box, a gap bounded below is \emph{equivalent} to two
-statements with constants independent of the regulator, for projections of one's choice: the part of a
-function not determined by the coarse variables is bounded by its energy, and the coarse variables
-decorrelate over the time $t$. If $P$ is the conditional expectation given finitely many coarse variables
-$C$, the second statement concerns the law of the pair $(C_0,C_t)$ on a fixed finite-dimensional space, and
-it holds with $b=\varepsilon$ as soon as that law is at least $\varepsilon$ times the product of its
-marginals: for centred $f$ and $g$ the measure $\rho-\varepsilon\,\nu\otimes\nu$ is positive with marginals
-$(1-\varepsilon)\nu$, so $|\E f(C_0)g(C_t)|\le(1-\varepsilon)\|f\|\,\|g\|$. This minorisation is a
-sufficient condition that can be far from the truth when the coarse variables are many: for $n$ independent
-stationary two-valued spins with correlation $\rho$ in time the constant is $(1-\rho)^n$, while the norm of
-the compression stays $\rho$ (the same reviewer). It is suited to a fixed finite number of variables, not to
-a volume. In this form no second lattice, no
-matched coupling and no budget appear. Nor does the box: the proposition applies as it stands on an infinite
-spatial lattice, with $P$ the conditional expectation given all the coarse variables, and a gap uniform in the
-mesh and in the volume is then equivalent to the bound of the fine detail by the energy, which is a statement
-at scales below the coarse mesh, together with a gap for the correlations in time of the coarse variables at
-one fixed coarse mesh. (In the free theory the first holds uniformly in the side by
-Proposition~\ref{p:freeblock}, and the second fails in infinite volume, as it must.) The price is that the first statement must hold for all the fine
-detail below the coarse scale at once, and whether it does depends on the coarse variables.
-Appendix~\ref{app:free} shows this in the free theory: for coarse links that are sums of $r$ fine links
-the constant $\kappa$ grows like $r$ in units of the coarse mesh, while for block averages of the plaquette
-field with a triangular weight it stays near $1/\pi$ coarse meshes for $r=2$ to $8$, the value forced by the
-resolution. So in the free theory the first statement holds uniformly in the blocking factor for suitable
-coarse variables: Proposition~\ref{p:freeblock} proves it with the constant $1056$ coarse meshes, and the
-computed constant gives a deficit of at least $b/(1+a_0/(\pi t))$, $a_0$ being the coarse mesh. Both parts were tested on
-$20{,}000$ random finite-dimensional instances and the minorisation on $2{,}000$ random reversible chains
-(Supplement~S13). For the Wilson measure the two statements are not established together for any choice of
-coarse variables. (Each is trivial for one extreme choice, the first when $P$ is the identity and the second
-when $P$ is zero on the centred functions, and the other statement is then the gap itself.)
+statements with constants independent of the regulator, for projections of one's choice:
+\begin{enumerate}
+\item[(i)] the part of a function not determined by the coarse variables is bounded by its energy;
+\item[(ii)] the coarse variables decorrelate over the time $t$.
+\end{enumerate}
+No second lattice, no matched coupling and no budget appear. Each statement is trivial for one extreme
+choice, (i) when $P$ is the identity and (ii) when $P$ is zero on the centred functions, and the other
+statement is then the gap itself. For the Wilson measure the two are not established together for any
+choice of coarse variables.
 
-There is one class of interacting fields in which the first statement is proved, uniformly in the volume,
-in the fine mesh and in the strength of the interaction: a scalar field with a convex interaction, with block
-sums as coarse variables (Proposition~\ref{p:convex} in continuous time, Proposition~\ref{p:convexstep}
-with a time step, where the inequality of Hypothesis~\ref{h:mix} holds at the free rate). The constant is
-the free one, half a coarse mesh, and the proofs use convexity only to show that along the fibres of the
-block map the vacuum is at least as log-concave as the free vacuum. They extend to a non-compact abelian
-gauge field with a convex interaction and say nothing about a compact group.
+\emph{A sufficient condition for} (ii). If $P$ is the conditional expectation given finitely many coarse
+variables $C$, statement~(ii) concerns the law of the pair $(C_0,C_t)$ on a fixed finite-dimensional space,
+and it holds with $b=\varepsilon$ as soon as that law is at least $\varepsilon$ times the product of its
+marginals: for centred $f$ and $g$ the measure $\rho-\varepsilon\,\nu\otimes\nu$ is positive with marginals
+$(1-\varepsilon)\nu$, so $|\E f(C_0)g(C_t)|\le(1-\varepsilon)\|f\|\,\|g\|$. This minorisation can be far
+from the truth when the coarse variables are many: for $n$ independent stationary two-valued spins with
+correlation $\rho$ in time the constant is $(1-\rho)^n$, while the norm of the compression stays $\rho$
+(the same reviewer). It is suited to a fixed finite number of variables, not to a volume. It was tested on
+$2{,}000$ random reversible chains (Supplement~S13).
+
+\emph{No box is needed.} The proposition applies as it stands on an infinite spatial lattice, with $P$ the
+conditional expectation given all the coarse variables. A gap uniform in the mesh and in the volume is then
+equivalent to~(i), which is a statement at scales below the coarse mesh, together with a gap for the
+correlations in time of the coarse variables at one fixed coarse mesh. In the free theory (i) holds
+uniformly in the side by Proposition~\ref{p:freeblock}, and (ii) fails in infinite volume, as it must.
+
+\emph{The choice of coarse variables matters.} The price of the one-step form is that (i) must hold for all
+the fine detail below the coarse scale at once, and whether it does depends on the coarse variables.
+Appendix~\ref{app:free} shows this in the free theory. For coarse links that are sums of $r$ fine links the
+constant $\kappa$ grows like $r$ in units of the coarse mesh (Proposition~\ref{p:linesum}). For block
+averages of the plaquette field with a triangular weight it stays near $1/\pi$ coarse meshes for $r=2$ to
+$8$, the value forced by the resolution; Proposition~\ref{p:freeblock} proves a uniform bound with the
+constant $1056$ coarse meshes, and the computed constant gives a deficit of at least $b/(1+a_0/(\pi t))$,
+$a_0$ being the coarse mesh.
+
+\emph{An interacting class in which} (i) \emph{is proved.} For a scalar field with a convex interaction and
+block sums as coarse variables, (i) holds uniformly in the volume, in the fine mesh and in the strength of
+the interaction (Proposition~\ref{p:convex} in continuous time; Proposition~\ref{p:convexstep} with a time
+step, where the inequality of Hypothesis~\ref{h:mix} holds at the free rate). The constant is the free one,
+half a coarse mesh. The proofs use convexity only to show that along the fibres of the block map the vacuum
+is at least as log-concave as the free vacuum. They extend to a non-compact abelian gauge field with a
+convex interaction and say nothing about a compact group.
+
+\emph{Related work.} Bounds for the spectral gap of a Markov chain in terms of a chain on the blocks of a
+partition and chains inside the blocks are classical in the theory of Markov chains (see~\cite{JSTV04} and
+the works cited there). Theorem~\ref{t:inh} and the proposition are of that family. They differ in that the
+coarse part enters through the compression $PA^mP$ at a long time, which is not the transition operator of a
+chain on the coarse variables, and the fine part through a bound of $Q$ by the generator and not through
+gaps of restricted chains.
 
 \section{Return to a coarse plaquette gate}\label{s:ret}
 The return bound comes from a single link. Given all the other links, one link of the plaquette has an
@@ -1195,7 +1267,9 @@ functions in an inequality that an open statement would need for all functions, 
 statistical evidence about the functions tried and certify nothing about all functions.
 Table~\ref{tab:meas} gives the three questions and the outcome of each.
 
-\begin{table}[ht]
+\begin{table}[htbp]
+\caption{The three measurements. A digit in parentheses is the standard error in the last digit. All
+entries are estimates for trial functions, not bounds.}\label{tab:meas}
 \centering\small
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.39\textwidth}>{\raggedright\arraybackslash}p{0.29\textwidth}@{}}
 \toprule
@@ -1222,8 +1296,6 @@ The hypothesis, which compares smallest deficits and not one test. One pair of l
 is inherited. \\
 \bottomrule
 \end{tabular}
-\caption{The three measurements. A digit in parentheses is the standard error in the last digit. All
-entries are estimates for trial functions, not bounds.}\label{tab:meas}
 \end{table}
 
 Some thermalisation checks failed, one reduction program had an error that was found and repaired, the
@@ -1303,18 +1375,22 @@ account, the growth condition holds for every $s>11/(3\pi^2)$.
 penalty in a blocking kernel (its README). In this paper the coarse field is the ordered product of fine
 links and $P$ is the conditional expectation given it. Matching the action and the couplings does not match
 these two notions of a coarse field, and an estimate from the renormalisation of the construction could be
-used in Hypothesis~\ref{h:mix} or~\ref{h:coarse} only after they are related. The free theory shows that the
-difference is not a matter of convention when many scales are blocked at once: with coarse links that are sums
-of fine links the fine detail is not bounded by the energy uniformly in the blocking factor, and with a
-smooth block average it is (Proposition~\ref{p:freeblock}). This is a statement about the free calibration and about one uniform estimate. It does not prove that
-averaged block variables are necessary for the interacting non-abelian theory; it makes an average of
-parallel transports, of the kind used in renormalisation-group constructions, the motivated candidate for
-the one-step form of Proposition~\ref{p:onestep}, in preference to the product of links along one line.
+used in Hypothesis~\ref{h:mix} or~\ref{h:coarse} only after they are related.
+
+The free theory shows that the difference is not a matter of convention when many scales are blocked at
+once: with coarse links that are sums of fine links the fine detail is not bounded by the energy uniformly
+in the blocking factor (Proposition~\ref{p:linesum}), and with a smooth block average it is
+(Proposition~\ref{p:freeblock}). This is a statement about the free calibration and about one uniform
+estimate. It does not prove that averaged block variables are necessary for the interacting non-abelian
+theory; it makes an average of parallel transports, of the kind used in renormalisation-group
+constructions, the motivated candidate for the one-step form of Proposition~\ref{p:onestep}, in preference
+to the product of links along one line.
 \item The class of observables on which convergence holds, and the component theory selected.
 \item The relation between the lattice transfer semigroup at fixed regulator, to which
 Theorems~\ref{t:inh} and~\ref{t:ret} refer, and the Hamiltonian of the limit.
-\end{itemize} The lattices of Section~\ref{s:evid} are matched to one another by a renormalised
-coupling (Supplement~S6); they are not known to lie on the sequence of~\cite{OAI}.
+\end{itemize}
+The lattices of Section~\ref{s:evid} are matched to one another by a renormalised coupling (Supplement~S6);
+they are not known to lie on the sequence of~\cite{OAI}.
 
 \section{What remains}\label{s:rem}
 Table~\ref{tab:status} lists the numbered statements and the steps of Figure~\ref{f:arch} with their status. To turn
@@ -1331,46 +1407,54 @@ axioms. The construction~\cite{OAI} is a candidate that we have not connected to
 \item All of this for every compact simple group.
 \end{enumerate}
 By Proposition~\ref{p:onestep}, items~1 and~2 may be replaced by two statements on a single fine lattice,
-uniform in the regulator: for some finite set of gauge-invariant coarse variables, that the part of a function
-they do not determine is bounded by its energy, and that the coarse variables decorrelate over a fixed
-physical time. In the free theory the first holds for a twice-averaged block field strength and fails to be
-uniform for sums of links (Appendix~\ref{app:free}); what the corresponding variables are for a non-abelian
-group, where averaging needs parallel transport, is not settled here. Items~3 to~6 are unchanged.
+uniform in the regulator, for some finite set of gauge-invariant coarse variables: (i) the part of a
+function they do not determine is bounded by its energy, and (ii) the coarse variables decorrelate over a
+fixed physical time. In the free theory (i) holds for a twice-averaged block field strength and fails to be
+uniform for sums of links; it also holds, with the free constant, for scalar fields with a convex
+interaction (Appendix~\ref{app:free}). What the corresponding variables are for a non-abelian group, where
+averaging needs parallel transport, is not settled here, and the argument for convex interactions does not
+reach a compact group. Items~3 to~6 are unchanged.
 
 We cannot estimate the distance to any of these, and we do not know that this route is the right one.
 
-\begin{table}[ht]
+\begin{table}[tbp]
+\caption{Status of the numbered statements and of the steps of Figure~\ref{f:arch}. ``Proved'' means that a
+proof is written in this paper; none has been independently reviewed (Section~\ref{s:disc}).}\label{tab:status}
 \centering\footnotesize
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.38\textwidth}>{\raggedright\arraybackslash}p{0.56\textwidth}@{}}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.33\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
 \toprule
 Statement & Status \\
 \midrule
-Theorem~\ref{t:crit}, Proposition~\ref{p:three} & proved (Section~\ref{s:crit}); both checked in Lean in the form for the bounded operator $e^{-\tau H}$ on a complex Hilbert space \\
-Theorem~\ref{t:inh}, Remark~\ref{r:lag} & proved; checked in Lean on all non-zero inner product spaces, real or complex \\
-Corollary~\ref{c:acc} & proved; its inequality checked in Lean \\
-Theorem~\ref{t:ret} & proved; $\SU(2)$, periodic time \\
-Lemma~\ref{l:scal}, Lemma~\ref{l:cap} & proved; Lemma~\ref{l:scal} checked in Lean \\
-Lemma~\ref{l:trace}, Proposition~\ref{p:vac}, Corollary~\ref{c:vac} & proved, $\beta>0$ (positive character coefficients, Peter--Weyl); the algebra of $B=\chi(I-P)$ checked in Lean \\
-Proposition~\ref{p:haar} & proved; scalar steps checked in Lean \\
-Proposition~\ref{p:pred} & proved (a reduction between open estimates; it bounds nothing in the theory); its Hilbert-space core checked in Lean \\
-Proposition~\ref{p:dir} & proved (a reduction of the same kind); exact in the free theory; its two algebraic steps checked in Lean \\
-Propositions~\ref{p:freecoarse} to~\ref{p:freeweight} & proved (free theory only: coarse comparison, uniform mixing for factor two and for any factor, the fine detail bounded by the energy); not formalised \\
-Proposition~\ref{p:linesum} & proved (free theory: for sums of links along lines the same statement fails uniformly in the factor and the side); not formalised \\
-Proposition~\ref{p:freeblock} & proved (free theory: a block average for which the first statement of Proposition~\ref{p:onestep} holds uniformly in the blocking factor and the side); not formalised \\
-Proposition~\ref{p:onestep} & proved (a gap in a box is equivalent to two regulator-uniform statements for coarse variables of one's choice; neither is established for the Wilson measure) \\
-Proposition~\ref{p:wstep} & proved (a refinement step from the weight bound~\eqref{e:wlin}, which is open for the Wilson measure and proved in the free theory, Proposition~\ref{p:freeweight}); its last step checked in Lean \\
-Propositions~\ref{p:convex} and~\ref{p:convexstep} & proved, using Pr\'ekopa's theorem, the variance inequality for log-concave measures and Kato's product formula as cited and not reread (a scalar field with a convex interaction: the first statement of Proposition~\ref{p:onestep} with the free constant, and with a time step the inequality of Hypothesis~\ref{h:mix} at the free rate; not about gauge fields with a compact group); the first tested on two and three sites, the second on two sites and, incompletely, on three; not formalised \\
-Hypothesis~\ref{h:mix} & open; not measured (Appendix~\ref{s:time} tests one combination's carry-over in time and gives no bound) \\
-Auxiliary local mixing & open; estimates for trial functions on two frozen backgrounds, one lattice, one coupling (Table~\ref{tab:local}) \\
-Hypothesis~\ref{h:coarse} & open; not measured; one trial function compared on one pair of lattices (Appendix~\ref{s:cross}) \\
-Hypothesis~\ref{h:budget} & open \\
-Volume uniformity; continuum identification & open; not addressed \\
-Finite mass; all compact simple groups & open; not addressed \\
-Mass gap & not proved \\
+\multicolumn{2}{@{}l}{\emph{Proved, in general}}\\[2pt]
+Theorem~\ref{t:crit}, Proposition~\ref{p:three} & Spectral criterion and its form at one time separation. Checked in Lean for the bounded operator $e^{-\tau H}$ on a complex Hilbert space. \\
+Theorem~\ref{t:inh}, Remark~\ref{r:lag}, Lemma~\ref{l:scal} & Refinement inequality. Checked in Lean on all non-zero inner product spaces, real or complex. \\
+Corollary~\ref{c:acc} & Accumulation along a refinement. Its inequality checked in Lean. \\
+Theorem~\ref{t:ret}, Lemma~\ref{l:cap} & Return bound; $\SU(2)$, periodic time. Not formalised. \\
+Lemma~\ref{l:trace}, Proposition~\ref{p:vac}, Corollary~\ref{c:vac} & Passage to the vacuum, $\beta>0$. The algebra of $B=\chi(I-P)$ checked in Lean. \\
+Proposition~\ref{p:haar} & One-link covariance. Scalar steps checked in Lean. \\
+\addlinespace
+\multicolumn{2}{@{}l}{\emph{Proved reductions between open estimates (they bound nothing in the theory)}}\\[2pt]
+Proposition~\ref{p:pred} & From a conditional maximal correlation to Hypothesis~\ref{h:mix}. Hilbert-space core checked in Lean. \\
+Proposition~\ref{p:dir} & From a weighted inequality on the fibres to Hypothesis~\ref{h:mix}. Exact in the free theory; two algebraic steps checked in Lean. \\
+Proposition~\ref{p:wstep} & A refinement step from the weight bound~\eqref{e:wlin}. Last step checked in Lean. \\
+Proposition~\ref{p:onestep} & A gap in a box is equivalent to two regulator-uniform statements for coarse variables of one's choice. Neither is established for the Wilson measure. \\
+\addlinespace
+\multicolumn{2}{@{}l}{\emph{Proved in calibrating models only (Appendix~\ref{app:free}); not formalised}}\\[2pt]
+Propositions~\ref{p:freecoarse}, \ref{p:freemix}, \ref{p:freer}, \ref{p:freeweight} & Free theory: coarse comparison; uniform mixing for factor two and for any factor; the fine detail bounded by the energy. \\
+Proposition~\ref{p:freeblock} & Free theory: a block average for which the first statement of Proposition~\ref{p:onestep} holds uniformly in the blocking factor and the side. \\
+Proposition~\ref{p:linesum} & Free theory: for sums of links along lines that statement is not uniform. \\
+Propositions~\ref{p:convex}, \ref{p:convexstep} & Scalar field with a convex interaction: the first statement of Proposition~\ref{p:onestep} with the free constant, and the inequality of Hypothesis~\ref{h:mix} at the free rate. They use Pr\'ekopa's theorem, the variance inequality for log-concave measures and Kato's product formula as cited, none reread. The first was tested on two and three sites, the second on two sites and incompletely on three. Not about a compact gauge group. \\
+\addlinespace
+\multicolumn{2}{@{}l}{\emph{Open}}\\[2pt]
+Hypothesis~\ref{h:mix} & Not measured (Appendix~\ref{s:time} tests one combination's carry-over in time and gives no bound). \\
+Auxiliary local mixing & Estimates for trial functions on two frozen backgrounds, one lattice, one coupling (Table~\ref{tab:local}). \\
+Hypothesis~\ref{h:coarse} & Not measured; one trial function compared on one pair of lattices (Appendix~\ref{s:cross}). \\
+Hypothesis~\ref{h:budget} & No estimate. \\
+Volume uniformity; continuum identification & Not addressed. \\
+Finite mass; all compact simple groups & Not addressed. \\
+Mass gap & Not proved. \\
 \bottomrule
 \end{tabular}
-\caption{Status of the numbered statements and of the steps of Figure~\ref{f:arch}. ``Proved'' means that a
-proof is written in this paper; none has been independently reviewed (Section~\ref{s:disc}).}\label{tab:status}
 \end{table}
 
 \section{Provenance, use of AI systems, and availability}\label{s:disc}
@@ -1401,7 +1485,8 @@ measurements of Section~\ref{s:evid}, and drafted the text. It also proposed and
 Propositions~\ref{p:wstep} and~\ref{p:onestep}, Remark~\ref{r:where}, Propositions~\ref{p:freeweight}
 and~\ref{p:freeblock} and the lower inequality of Remark~\ref{r:weight}, wrote the formal proofs of
 Appendix~\ref{s:lean}, and designed, ran and reported the computations of Appendix~\ref{app:free}, including
-those whose predicates failed. The present forms and proofs of Propositions~\ref{p:wstep}
+those whose predicates failed. It proposed and proved Propositions~\ref{p:convex} and~\ref{p:convexstep};
+these two have been read by no other system and by no person other than the author. The present forms and proofs of Propositions~\ref{p:wstep}
 and~\ref{p:onestep}, and Proposition~\ref{p:linesum}, are due to a reviewing GPT model, as stated where they
 appear.
 \end{itemize}
@@ -1453,7 +1538,9 @@ the others they are regenerated from the seeds, which reproduces them statistica
 the sampler, not byte for byte.
 \end{itemize}
 
-\begin{table}[t]
+\begin{table}[tbp]
+\caption{Design of the main runs. The runs on displaced backgrounds and the single-mark runs of
+Appendix~\ref{s:local} are described there and in Supplement~S3.}\label{tab:runs}
 \centering\small
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.19\textwidth}>{\raggedright\arraybackslash}p{0.27\textwidth}>{\raggedright\arraybackslash}p{0.24\textwidth}>{\raggedright\arraybackslash}p{0.22\textwidth}@{}}
 \toprule
@@ -1486,8 +1573,6 @@ $16+16$ streams; $1000$ measurements per stream on side $10$ &
 no selection; they share no stream with the selection \\
 \bottomrule
 \end{tabular}
-\caption{Design of the main runs. The runs on displaced backgrounds and the single-mark runs of
-Appendix~\ref{s:local} are described there and in Supplement~S3.}\label{tab:runs}
 \end{table}
 
 \subsection{The local quotient on a frozen coarse background}\label{s:local}
@@ -1518,7 +1603,14 @@ selection streams, and Table~\ref{tab:local} reports its quotient on the held-ou
 slower relaxation under the local updates.
 \end{itemize}
 
-\begin{table}[ht]
+\begin{table}[htbp]
+\caption{Local quotient $\mathcal J/\mathcal V$ (dimensionless) of the combination of marks selected on $16$
+streams and evaluated on the $16$ other streams of the same run. \textsf{A}: frozen background with three coarse
+plaquettes of holonomy $-I$. \textsf{B}: one frozen background drawn from the unconditioned measure, every coarse
+plaquette at round distance greater than $1.1$ from $-I$ (the selection rule asked for $\pi/4$; the smallest
+distance on the configuration drawn is $1.14$). Errors are over the $16$ held-out streams with the
+selected coefficients fixed. The entries of a row are computed on the same streams and are strongly
+correlated; the two rows come from independent runs. All entries are estimates, not bounds.}\label{tab:local}
 \centering\small
 \begin{tabular}{@{}llcccc@{}}
 \toprule
@@ -1535,14 +1627,6 @@ Background & & 15 & 49 & 181 & 308 \\
   & decrease from the span to its left &  & 10\% & 4\% & 16\% \\
 \bottomrule
 \end{tabular}
-\caption{Local quotient $\mathcal J/\mathcal V$ (dimensionless) of the combination of marks selected on $16$
-streams and evaluated on the $16$ other streams of the same run. \textsf{A}: frozen background with three coarse
-plaquettes of holonomy $-I$. \textsf{B}: one frozen background drawn from the unconditioned measure, every coarse
-plaquette at round distance greater than $1.1$ from $-I$ (the selection rule asked for $\pi/4$; the smallest
-distance on the configuration drawn is $1.14$). Errors are over the $16$ held-out streams with the
-selected coefficients fixed. The entries of a row are computed on the same streams and are strongly
-correlated; the two rows come from independent runs. All entries are estimates, not bounds.}
-\label{tab:local}
 \end{table}
 
 \emph{Unselected functions, for comparison.} In the same runs and on all $32$ streams, the unselected average
@@ -1692,7 +1776,10 @@ standard errors below one: the test selected to minimise $\mathsf R_{10}/\mathsf
 functions. For the other $24$ that sum is above one. The same fixed test was then evaluated on the longer ensembles.
 Table~\ref{tab:cross} gives both evaluations.
 
-\begin{table}[ht]
+\begin{table}[htbp]
+\caption{The test selected to minimise $\mathsf R_{10}/\mathsf R_5$, evaluated with its coefficients fixed.
+Estimates with jackknife errors over the streams of Table~\ref{tab:runs}; not bounds. $^{*}$Computed from
+unrounded values ($0.93574+2\times0.00271$).}\label{tab:cross}
 \centering\small
 \begin{tabular}{@{}lcccc@{}}
 \toprule
@@ -1702,9 +1789,6 @@ held-out streams of the second study & $0.990(3)$ & $0.932(4)$ & $0.941(5)$ & $0
 longer ensembles & $0.996(1)$ & $0.932(2)$ & $0.936(3)$ & $0.941$\rlap{$^{*}$} \\
 \bottomrule
 \end{tabular}
-\caption{The test selected to minimise $\mathsf R_{10}/\mathsf R_5$, evaluated with its coefficients fixed.
-Estimates with jackknife errors over the streams of Table~\ref{tab:runs}; not bounds. $^{*}$Computed from
-unrounded values ($0.93574+2\times0.00271$).}\label{tab:cross}
 \end{table}
 
 So, in these estimates, this test retains about $7$ per cent of its correlation over the lag on the finer lattice and between
@@ -1876,7 +1960,8 @@ The supplementary material is in the repository~\cite{Supp}. Its file \texttt{SU
 named there, gives for every item below the exact location and, for single files, SHA-256 digests. Items are cited
 in the text as ``Supplement S$n$''.
 
-\begin{table}[ht]
+\begin{table}[htbp]
+\caption{Supplementary material.}\label{tab:supp}
 \centering\small
 \begin{tabular}{@{}l>{\raggedright\arraybackslash}p{0.60\textwidth}>{\raggedright\arraybackslash}p{0.24\textwidth}@{}}
 \toprule
@@ -1896,25 +1981,36 @@ S11 & Programs and outputs for the free theory, and for the two-link test of Pro
 S12 & Programs and outputs for the compact $\mathrm U(1)$ example, with the expectation written before the runs & Appendix~\ref{app:free} \\
 S13 & Random finite-dimensional tests of Propositions~\ref{p:wstep} and~\ref{p:onestep} & Section~\ref{s:inh} \\
 S14 & Programs and outputs for the non-abelian example, with finite subgroups of $\SU(2)$ and with $\SU(2)$ in a spin-network basis, with the expectations written before the runs & Appendix~\ref{app:free} \\
-S15 & Programs and outputs for the scalar field with a convex interaction (Proposition~\ref{p:convex}), with the predicates that failed & Appendix~\ref{app:free} \\
+S15 & Programs and outputs for the scalar field with a convex interaction (Propositions~\ref{p:convex} and~\ref{p:convexstep}), with the predicates that failed and the log of a run that was interrupted & Appendix~\ref{app:free} \\
 \bottomrule
 \end{tabular}
-\caption{Supplementary material.}\label{tab:supp}
 \end{table}
 
-\section{The free theory as a check of the architecture}\label{app:free}
-The outline of Section~\ref{s:arch} can be tested in full where everything is computable: the free
-(non-compact $\mathrm U(1)$) lattice gauge theory in $3+1$ dimensions, with infinite time and a spatial
-torus of side $N$. This is the theory obtained from the Wilson action by keeping the quadratic term. It is
-not Yang--Mills theory, and nothing here bears on the open hypotheses for $\SU(2)$; the purpose is to see
-whether the hypotheses and the budget are mutually consistent in one example with a gap in a fixed box.
+\section{Calibrations: the free theory and three interacting examples}\label{app:free}
+The statements of the paper can be tested where they can be computed. This appendix does so in four models.
+None of them is four-dimensional Yang--Mills theory, and nothing here bears on the open hypotheses for
+$\SU(2)$; the purpose is to see whether the hypotheses are mutually consistent, how much the inequalities
+lose, and which choices matter. Its parts are these.
+\begin{itemize}
+\item \emph{The free theory} (non-compact $\mathrm U(1)$ in $3+1$ dimensions). The chain of lattices of
+Section~\ref{s:arch} is tested in Table~\ref{tab:free}, and what the table shows is proved in
+Propositions~\ref{p:freecoarse} to~\ref{p:freer}. Proposition~\ref{p:freeweight} bounds the fine detail by
+the energy. Propositions~\ref{p:freeblock} and~\ref{p:linesum} concern the one-step form of
+Proposition~\ref{p:onestep}: they show that the choice of coarse variables decides whether its first
+statement is uniform.
+\item \emph{A compact abelian example}: $\mathrm U(1)$ in $2+1$ dimensions on a $2\times2$ torus
+(Table~\ref{tab:u1}).
+\item \emph{A non-abelian example}: $\SU(2)$ in $2+1$ dimensions on a $2\times1$ torus
+(Table~\ref{tab:su2}).
+\item \emph{A scalar field with a convex interaction}, for which the first statement of the one-step form
+and the inequality of Hypothesis~\ref{h:mix} are proved with the constants of the free field
+(Propositions~\ref{p:convex} and~\ref{p:convexstep}).
+\end{itemize}
 
-The appendix has grown with the paper, and its parts are these. The table and the three items after it test
-the outline of Section~\ref{s:arch}; Propositions~\ref{p:freecoarse} to~\ref{p:freer} prove what the table
-shows. Proposition~\ref{p:freeweight} and the paragraph on blocking in one step, with
-Proposition~\ref{p:freeblock}, concern the forms of Section~\ref{s:inh} that do without a mixing rate or
-without the chain of lattices. The paragraph on what the example does not show applies to all of it. Two
-interacting examples at the smallest sizes close the appendix.
+\subsection*{The free theory: setting and the chain of lattices}
+The free lattice gauge theory is obtained from the Wilson action by keeping the quadratic term. We take it
+in $3+1$ dimensions, with infinite time and a spatial torus of side $N$. It has a gap in a fixed box and
+none in infinite volume.
 
 \emph{Setting.} We take the gauge-invariant functions of the spatial plaquettes of one slice (winding modes
 are left out). The measure is Gaussian. For jointly Gaussian vectors the conditional expectation is the
@@ -1931,7 +2027,9 @@ coarse plaquettes at lag $m$; the rate $\gamma$, equal to one minus the largest 
 between a slice and the next given the coarse plaquettes of the first (Proposition~\ref{p:pred}); and the
 factor $K=1+2/(m\gamma)$.
 
-\begin{table}[ht]
+\begin{table}[htbp]
+\caption{The free theory on a spatial torus of side $N$, physical time half the side. Values computed in
+floating point from the formulas above (Supplement~S11); they are exact up to rounding, not proved bounds.}\label{tab:free}
 \centering\small
 \begin{tabular}{@{}rccccc@{}}
 \toprule
@@ -1944,9 +2042,6 @@ $N$ & $d_{\mathrm c}$ & $b$ & $b-d_{\mathrm c}$ & $\gamma$ & $K$ \\
 64 & 0.9564 & 0.9602 & 0.0039 & 0.7127 & 1.0877 \\
 \bottomrule
 \end{tabular}
-\caption{The free theory on a spatial torus of side $N$, physical time half the side. Values computed in
-floating point from the formulas above (Supplement~S11); they are exact up to rounding, not proved bounds.}
-\label{tab:free}
 \end{table}
 
 Three things are seen in the table, and each can be proved for all sides.
@@ -1962,6 +2057,10 @@ budget of Hypothesis~\ref{h:budget} is empty. The products $M_i$ reach $5.43$ at
 along an infinite dyadic refinement because $\gamma$ is bounded below. Corollary~\ref{c:acc} gives a deficit
 of at least $0.828/5.43=0.152$ at $N=64$, where the true deficit is $0.957$.
 \end{itemize}
+So in the free theory the three hypotheses hold together along an infinite refinement, and the outline
+closes in a fixed box, with a bound about six times smaller than the truth at $N=64$.
+
+\subsection*{The free theory: proofs for the chain}
 
 \begin{proposition}[Coarse comparison in the free theory]\label{p:freecoarse}
 For every even $N\ge4$, $b_N\ge d_N\ge d_{N/2}$ at a common physical time.
@@ -2015,18 +2114,25 @@ $\|u_0\|^2+\tfrac{7}{\sqrt3}\|u_H\|^2$. Altogether
 $\langle u,(I-R^2)^{-1}u\rangle\le(C_*+7/\sqrt3)\|u\|^2$. For $k=0$ there is no low component and no constraint, and the bound $C_*$ applies to all components. By~\eqref{e:freeres} this proves the claim.
 \end{proof}
 
-The identity~\eqref{e:freeres}, the inequality for the fine detail and the bound were checked numerically at
-every coarse momentum for $N=8$, $16$ and $32$ (Supplement~S11). The limit $0.674941$ is $1/\lambda$ with
-$\lambda$ the largest eigenvalue of $\operatorname{diag}(h(3),h(3),h(5))+\tfrac14vv^{\mathsf T}$,
-$h(c)=(1-(c-\sqrt{c^2-1})^2)^{-1}$ and $v=(8^{-1/4}\sqrt2,\,8^{-1/4}\sqrt2,\,24^{-1/4}\sqrt2)$; this is
-the limit along the lowest axial momentum, which is the minimiser in every case computed; we have not proved
-that it is the minimiser for every $N$, and Proposition~\ref{p:freemix} does not need it. The rate at a coarse
-momentum depends on the side only through the momentum. At side $256$, over all coarse momenta, the smallest
-rate is at the lowest axial momentum and its mirror image under $k\mapsto\pi-k$, and along the axis the rate
-increases up to the middle; at side $2^{20}$, among the momenta with components up to $8$, the smallest rate after the axial one is at
-$(1,1,0)$, and the excesses of the two over the limit are in the ratio $1.41$, the ratio of their lengths
-(Supplement~S11). The limit at small momentum does not depend on the direction, and this can be seen from
-the constraint. As $k\to0$ the soft part of the observation tends to $(2/\sinh\omega_k)^{1/2}$ times the
+\emph{Checks.} The identity~\eqref{e:freeres}, the inequality for the fine detail and the bound were checked
+numerically at every coarse momentum for $N=8$, $16$ and $32$ (Supplement~S11).
+
+\emph{The limiting rate.} The limit $0.674941$ is $1/\lambda$, where $\lambda$ is the largest eigenvalue of
+\[
+\operatorname{diag}\big(h(3),h(3),h(5)\big)+\tfrac14vv^{\mathsf T},\qquad
+h(c)=\big(1-(c-\sqrt{c^2-1})^2\big)^{-1},
+\]
+with $v=(8^{-1/4}\sqrt2,\,8^{-1/4}\sqrt2,\,24^{-1/4}\sqrt2)$.
+This is the limit along the lowest axial momentum, which is the minimiser in every case computed. We have
+not proved that it is the minimiser for every $N$, and Proposition~\ref{p:freemix} does not need it. The
+rate at a coarse momentum depends on the side only through the momentum. At side $256$, over all coarse
+momenta, the smallest rate is at the lowest axial momentum and its mirror image under $k\mapsto\pi-k$, and
+along the axis the rate increases up to the middle. At side $2^{20}$, among the momenta with components up
+to $8$, the smallest rate after the axial one is at $(1,1,0)$, and the excesses of the two over the limit
+are in the ratio $1.41$, the ratio of their lengths (Supplement~S11).
+
+\emph{Why the limit does not depend on the direction.} The limit at small momentum does not depend on the
+direction, and this can be seen from the constraint. As $k\to0$ the soft part of the observation tends to $(2/\sinh\omega_k)^{1/2}$ times the
 projection $\Pi$ orthogonal to $k$, and the row of the constraint for the component $e_j$ involves three
 aliases of its own, those shifted by $\pi$ in one or both of the other two directions and polarised along
 $e_j$, with the vector $v$ above; the three rows share no alias and polarisation. Eliminating the soft
@@ -2035,13 +2141,16 @@ $\operatorname{diag}(h(3),h(3),h(5))\otimes I_3+\tfrac14vv^{\mathsf T}\otimes\Pi
 that of $\operatorname{diag}(h(3),h(3),h(5))+\tfrac14vv^{\mathsf T}$ for every direction of $k$. At side
 $2^{22}$ the rate is $0.674941+0.407\,|k|$ in six directions, with the coefficient the same to three
 figures. So the lowest axial momentum appears to be the minimiser because it is the shortest. What is not
-proved is that the rate at every momentum is at least its limit at zero. The constants of
-Remark~\ref{r:forms}(b) are limits of the same kind: along the lowest axial momentum $\beta P_c$ tends to the
+proved is that the rate at every momentum is at least its limit at zero.
+
+\emph{The constants of Remark~\ref{r:forms}(b)} are limits of the same kind: along the lowest axial momentum $\beta P_c$ tends to the
 largest eigenvalue of
 $\operatorname{diag}\big(\tfrac1{2\sqrt8},\tfrac1{2\sqrt8},\tfrac1{2\sqrt{24}}\big)+\tfrac14vv^{\mathsf T}$,
 which is $0.617601$, and the bound $1/(1+\beta^2P_cL_c)$ to $0.618200$; that momentum carries the largest
-$\beta P_c$ at every side from $8$ to $64$, and we have not proved that it does so for every side. Both propositions, the identity, the limiting matrix and Proposition~\ref{p:freer} below were proposed by an
-OpenAI GPT model used as reviewer; the proofs were checked and written out here.
+$\beta P_c$ at every side from $8$ to $64$, and we have not proved that it does so for every side.
+
+\emph{Attribution.} Both propositions, the identity, the limiting matrix and Proposition~\ref{p:freer} below
+were proposed by an OpenAI GPT model used as reviewer; the proofs were checked and written out here.
 
 \begin{proposition}[Other blocking factors]\label{p:freer}
 Let $r\ge2$ be an integer, let $N$ be divisible by $r$ with $N/r\ge2$, and let a coarse link be the sum of
@@ -2072,6 +2181,7 @@ Hypothesis~\ref{h:mix} along such a schedule. The proof of Proposition~\ref{p:fr
 $\Delta_N$ increases with $N$, so it holds for any integer ratio of the sides, at a physical time that is a
 whole number of steps on every lattice of the schedule. Theorem~\ref{t:inh} itself does not depend on the factor.
 
+\subsection*{The free theory: the fine detail and the energy}
 \begin{proposition}[The fine detail is dominated by the energy in the free theory]\label{p:freeweight}
 In the setting of this appendix, for every even $N\ge4$, on the square-integrable functions of a slice,
 \[
@@ -2107,23 +2217,38 @@ Hypothesis~\ref{h:mix} is the statement that $G_i\le\kappa_iH_i$ with $\sum_i\ka
 a function given the coarse field, off the gates, is bounded by its energy. The free theory has
 $\kappa_i=c\,a_i$.
 
-\emph{Blocking in one step.} For Proposition~\ref{p:onestep} the relevant constant is that of
-$I-P_r\le c_r\,a\,H$ when the coarse variables are obtained in one step by a factor $r$; in units of the
-coarse mesh it is $c_r/r$. With coarse links that are sums of $r$ fine links, at the lowest axial momentum
-of a lattice of side $1024\,r$, $c_r/r$ is $0.72$, $1.11$, $1.56$, $2.50$, $3.45$ for $r=2,3,4,6,8$, so $c_r$
-grows like $r^2$ ($c_r/r^2$ between $0.36$ and $0.43$); a bound $c_r\le2r$ that we had written down before
-the computation failed. A line sum does not average over the directions transverse to the line, and modes of
-low energy whose transverse momentum is a multiple of $2\pi/r$ alias into it. With block averages of the
-plaquette field (the flux through an $r\times r$ face, averaged over the $r$ parallel faces of the block),
-which are gauge invariant and not products of links, the same quantity is $0.46$, $0.50$, $0.56$, $0.65$,
-$0.72$: within the bound, and still increasing. With a smoother average, the box average applied twice in each
-direction (a triangular weight), the supremum over coarse momenta is $0.380$, $0.346$, $0.334$, $0.326$,
-$0.322$ coarse meshes for the same factors, the same at sides $4r$ and $8r$, and it equals to six figures the
-inverse energy $1/\omega(\pi/r,0,0)$ of the lowest mode at the edge of the coarse Brillouin zone. That value
-tends to $1/\pi$ coarse meshes and is the one forced by the resolution of the coarse lattice, since such a mode
-and its mirror image cannot both be seen. This identification is an observation at the sizes computed
-(Supplement~S11, where a predicate written to detect growth failed in the favourable direction and is kept).
-For this last choice a bound uniform in the factor and in the side can be proved.
+\subsection*{The free theory: blocking in one step}
+For Proposition~\ref{p:onestep} the relevant constant is that of $I-P_r\le c_r\,a\,H$ when the coarse
+variables are obtained in one step by a factor $r$; in units of the coarse mesh it is $c_r/r$.
+Computed values for three choices of coarse variables (Supplement~S11; the first two rows at the lowest
+axial momentum of a lattice of side $1024\,r$, the third the supremum over coarse momenta, the same at
+sides $4r$ and $8r$):
+\begin{center}\small
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Coarse variables & $r=2$ & $3$ & $4$ & $6$ & $8$ \\
+\midrule
+sums of $r$ fine links along a line & 0.72 & 1.11 & 1.56 & 2.50 & 3.45 \\
+plaquette field averaged once over the block & 0.46 & 0.50 & 0.56 & 0.65 & 0.72 \\
+plaquette field averaged twice & 0.380 & 0.346 & 0.334 & 0.326 & 0.322 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\begin{itemize}
+\item \emph{Sums along lines.} Here $c_r$ grows like $r^2$ ($c_r/r^2$ lies between $0.36$ and $0.43$); a
+bound $c_r\le2r$ that we had written down before the computation failed. A line sum does not average over
+the directions transverse to the line, and modes of low energy whose transverse momentum is a multiple of
+$2\pi/r$ alias into it. Proposition~\ref{p:linesum} proves that the growth is real.
+\item \emph{One average.} The flux through an $r\times r$ face, averaged over the $r$ parallel faces of the
+block, is gauge invariant and not a product of links. Its constant is within the bound $2r$ and still
+increasing.
+\item \emph{Two averages.} With the box average applied twice in each direction the constant equals, to six
+figures, the inverse energy $1/\omega(\pi/r,0,0)$ of the lowest mode at the edge of the coarse Brillouin
+zone. That value tends to $1/\pi$ coarse meshes and is the one forced by the resolution of the coarse
+lattice, since such a mode and its mirror image cannot both be seen. The identification is an observation
+at the sizes computed (Supplement~S11, where a predicate written to detect growth failed in the favourable
+direction and is kept). For this choice a bound uniform in the factor and in the side can be proved.
+\end{itemize}
 
 \begin{proposition}[A block average with a uniform one-step constant]\label{p:freeblock}
 In the free theory let the coarse variables be the plaquette field averaged twice over blocks of side $r$ in
@@ -2202,15 +2327,12 @@ for the supremum over the side, that is, for large volume at fixed mesh; in one 
 the free theory itself bounds the fine detail by the energy. The proposition and its proof are due to an
 OpenAI GPT model used as reviewer.
 
-So the choice of coarse variables matters
-for the one-step form even in the free theory, and the sums along lines that the lattice gauge theory
-suggests are a poor choice at large blocking factor; the refinement by factors of two of
-Section~\ref{s:arch} does not meet this difficulty.
+So the choice of coarse variables matters for the one-step form even in the free theory, and the sums
+along lines that the lattice gauge theory suggests are a poor choice at large blocking factor. The
+refinement by factors of two of Section~\ref{s:arch} does not meet this difficulty.
 
-So in the free theory the three hypotheses hold together along an infinite refinement, and the architecture
-closes in a fixed box, with a bound about six times smaller than the truth at $N=64$.
-
-\emph{What the example does not show.} The free theory has no mass gap. Its gap in a box of side $L$ tends
+\subsection*{What the free theory does not show}
+The free theory has no mass gap. Its gap in a box of side $L$ tends
 to $2\pi/L$ and vanishes as the box grows. The table uses the time $t=L/2$, which grows with the box; at that
 time the continuum deficit is $1-e^{-\pi}=0.9568$ whatever the box. At a fixed physical time the deficit is
 $1-e^{-2\pi t/L}$ and tends to zero. The example therefore separates two things that must not be confused:
@@ -2218,7 +2340,8 @@ control of the refinement in a fixed box, which the free theory has, and a gap i
 lacks. Analogues of Hypotheses~\ref{h:mix} to~\ref{h:budget} for the interacting theory, even if proved, would
 leave the second untouched.
 
-\emph{A compact interacting example at the smallest size.} The exact form of Remark~\ref{r:forms}(a) can also
+\subsection*{A compact abelian example at the smallest size}
+The exact form of Remark~\ref{r:forms}(a) can also
 be evaluated in one interacting compact model: $\mathrm U(1)$ lattice gauge theory in $2+1$ dimensions with
 weight $\exp(\beta\sum_p\cos\theta_p)$ on a $2\times2$ spatial torus, blocked to a single site, so that the
 coarse field is the pair of holonomies of the two lines through the origin. This is a toy and bears on no
@@ -2226,7 +2349,10 @@ hypothesis of the paper. The transfer operator splits into sectors of electric f
 coarse projection is the projection onto the vacuum function. Table~\ref{tab:u1} gives the lattice gap and
 $\gamma_{\mathrm{opt}}=\|G(I-A^2)^{-1}G\|^{-1}$ with no exceptional set.
 
-\begin{table}[ht]
+\begin{table}[htbp]
+\caption{Compact $\mathrm U(1)$ on a $2\times2$ torus blocked to one site (Supplement~S12). The lattice gap is
+the energy of one unit of electric flux; the third column is the weight of that state in the fine detail
+divided by its energy. Floating-point values from two programs that agree to seven figures; not proved bounds.}\label{tab:u1}
 \centering\small
 \begin{tabular}{@{}rccc@{}}
 \toprule
@@ -2239,10 +2365,6 @@ $\beta$ & lattice gap & weight / energy & $\gamma_{\mathrm{opt}}$ \\
 16 & 0.0320 & 0.350 & 0.8352 \\
 \bottomrule
 \end{tabular}
-\caption{Compact $\mathrm U(1)$ on a $2\times2$ torus blocked to one site (Supplement~S12). The lattice gap is
-the energy of one unit of electric flux; the third column is the weight of that state in the fine detail
-divided by its energy. Floating-point values from two programs that agree to seven figures; not proved bounds.}
-\label{tab:u1}
 \end{table}
 
 The lattice gap closes like $1/(2\beta)$, and the rate stays above $0.83$ over the range computed. The slow
@@ -2250,7 +2372,9 @@ state is one unit of electric flux. It is almost a function of the coarse field,
 fine detail has weight proportional to its energy; the ratio tends to $1/\sqrt8=0.35355$, the analogue in two
 dimensions of the constant of Remark~\ref{r:weight} (extrapolated from $\beta=64$ and $128$: $0.353557$). This
 is the linear order of that remark, attained again, and it is why the rate settles below the free value $0.9706$, which
-leaves the winding modes out. A quadratic approximation written down before the runs gave the limits
+leaves the winding modes out.
+
+\emph{The weak-coupling limit.} A quadratic approximation written down before the runs gave the limits
 $\tfrac12$ for $\beta$ times the gap, $0.354$ for the ratio and a rate of at most about $0.83$
 (Supplement~S12). Carried one step further, that approximation gives
 $\|G(I-A^2)^{-1}G\|\to(1-(3-\sqrt8)^2)^{-1}+\tfrac1{4\sqrt2}=\tfrac12(1+\sqrt2)$, that is, a rate tending to
@@ -2262,12 +2386,14 @@ a single alias: $h(3)+\tfrac14\cdot\tfrac{2}{\sqrt8}$. So the flux state of the 
 that the soft photon plays in the free one. The limit is an extrapolation and a heuristic, not a proof, and for the rate only sectors with at most two
 units of flux in each direction were examined.
 
-The constant $\kappa=\|GH^{-1}G\|$ of the inequality
+\emph{The fine detail and the energy.} The constant $\kappa=\|GH^{-1}G\|$ of the inequality
 $G\le\kappa H$, in lattice units, is $0.352$, $0.577$, $0.740$, $0.803$, $0.833$ and $0.863$ at
 $\beta=\tfrac12,1,2,3,4,6$, by diagonalisation in the flux sectors; an expectation written before the
 run was $\kappa<1$ with limit $1/\!\operatorname{arcosh}3+1/(2\sqrt2)=0.9208$, and $(0.9208-\kappa)\beta$ is
 $0.353$, $0.349$, $0.347$ at the last three couplings. So in this example the bound~\eqref{e:wlin} holds with a
-constant that stays bounded as the coupling grows, over the range computed. The minorisation of
+constant that stays bounded as the coupling grows, over the range computed.
+
+\emph{The minorisation.} The sufficient condition for statement~(ii) of
 Proposition~\ref{p:onestep} can be compared with the truth here, because the law of the two coarse holonomies
 at one time is uniform: at $\beta=4$ the lower bound of their joint density after $n$ steps against the
 product of the marginals is $10^{-8}$, $0.15$, $0.63$, $0.96$ for $n=1,8,16,32$, where the true decorrelation is
@@ -2276,7 +2402,8 @@ times.
 
 All of this is one model at one size: nothing is shown for a larger lattice or another group.
 
-\emph{A non-abelian example.} The same quantities were computed for lattice gauge theory in $2+1$
+\subsection*{A non-abelian example}
+The same quantities were computed for lattice gauge theory in $2+1$
 dimensions on a torus of $2\times1$ sites, blocked by two in the long direction, first with the binary
 octahedral and binary icosahedral subgroups of $\SU(2)$ in place of the group, where everything is a finite
 matrix computation, and then for $\SU(2)$ itself in a basis of spin networks cut off at spin $6$
@@ -2285,7 +2412,13 @@ with the finite groups is a numerical check, not a bound. The icosahedral group 
 $5\times10^{-9}$ in the lattice gap at $\beta=1$, to $0.3$ per cent at $\beta=3$ and to $4.5$ per cent at
 $\beta=4$, and then falls away.
 
-\begin{table}[ht]
+\begin{table}[htbp]
+\caption{$\SU(2)$ on a $2\times1$ torus in $2+1$ dimensions, blocked by two, in a spin-network basis cut off
+at spin $6$ (Supplement~S14). The weight is that of the lowest excited state in the fine detail, computed
+with a coarse space generated by polynomials of degree $12$ in the coarse loops; at $\beta=4,5,6$ it was still
+decreasing with the degree, by $1$, $5$ and $11$ per cent from degree $10$ to $12$. The last column is computed
+with the same coarse space and with iterative solvers. All entries are numerical estimates in a truncated
+model, not bounds; see the text for what was and was not checked.}\label{tab:su2}
 \centering\small
 \begin{tabular}{@{}rcccc@{}}
 \toprule
@@ -2299,16 +2432,9 @@ $\beta$ & lattice gap & icosahedral / $\SU(2)$ & weight / energy & rate $\gamma_
 6 & 0.00030 & 0.333 & 0.495 & 0.800 \\
 \bottomrule
 \end{tabular}
-\caption{$\SU(2)$ on a $2\times1$ torus in $2+1$ dimensions, blocked by two, in a spin-network basis cut off
-at spin $6$ (Supplement~S14). The weight is that of the lowest excited state in the fine detail, computed
-with a coarse space generated by polynomials of degree $12$ in the coarse loops; at $\beta=4,5,6$ it was still
-decreasing with the degree, by $1$, $5$ and $11$ per cent from degree $10$ to $12$. The last column is computed
-with the same coarse space and with iterative solvers. All entries are numerical estimates in a truncated
-model, not bounds; see the text for what was and was not checked.}
-\label{tab:su2}
 \end{table}
 
-The gap falls by a factor $3{,}400$ between $\beta=1$ and $6$; between $\beta=3$ and $6$ its logarithm is closer
+\emph{What is seen.} The gap falls by a factor $3{,}400$ between $\beta=1$ and $6$; between $\beta=3$ and $6$ its logarithm is closer
 to linear in $\sqrt\beta$ than in $\beta$, which describes four numbers and is not a law. The state that
 becomes light is one unit of centre flux through the short direction, odd under multiplication of the links
 in that direction by $-1$. In a separate run at cut-off $5$ for $\beta=2$ to $5$, the lowest state odd under
@@ -2321,20 +2447,22 @@ $0.511$. The computed rate falls from $0.949$ to $0.7998$. Where the comparison 
 $0.252$ and $0.308$ at $\beta=1,2$, are close to the abelian values $0.245$ and $0.310$ of
 Table~\ref{tab:u1}.
 
-Three limits of these numbers were pointed out by a reviewing GPT model and checked. The coarse space is
+\emph{Limits of these numbers.} Three limits were pointed out by a reviewing GPT model and checked. The coarse space is
 generated by products of truncated multiplication matrices, which are not truncations of products, so the
 computed weight is not a one-sided value for the true one; comparing with the space obtained by multiplying
 at a cut-off high enough to be exact and then projecting, in four cases at cut-offs $3$ and $4$, the two
 spaces differ visibly but the weight of the lowest state differs by at most $0.6$ per cent, the generated
 space giving the smaller value each time. The weight itself changes by at most $0.7$ per cent between
 cut-offs $4$ and $5$ for $\beta\le5$. And the rate comes from iterative solvers and is not certified.
-Expectations written before the runs were partly wrong: we had expected the flux to be through the long
+
+\emph{Expectations and reading.} Expectations written before the runs were partly wrong: we had expected the flux to be through the long
 direction, and had left open whether the ratio would stay bounded or grow with the collapse of the energy;
 over this range it grows slowly. What the example shows is a mechanism in one small model: a very small gap
 need not make the constant of the first statement of Proposition~\ref{p:onestep} large, because the slow
 state's weight in the fine detail is small for the same reason as its energy.
 
-At spin cut-offs $3$ and $4$ the four sectors of the two flips can be diagonalised completely, and the
+\emph{The one-step criterion against the truth.} At spin cut-offs $3$ and $4$ the four sectors of the two
+flips can be diagonalised completely, and the
 one-step criterion can then be compared with the truth in the truncated model. With the coarse space of
 degree $10$ the best constant $\kappa$ in $I-P\le\kappa H$ at cut-off $4$ is $0.63$, $0.78$, $0.78$, $0.76$,
 $0.78$ at $\beta=1,\dots,5$ on the whole centred space, and $0.54$ to $0.59$ for $\beta=2$ to $5$ in the
@@ -2344,10 +2472,12 @@ deficit at $t=1$ and at least $0.95$ of it at $t=16$. Between the two cut-offs t
 most $3.4$ per cent up to $\beta=4$ and by $17$ per cent at $\beta=5$, so the last value is not established
 to better than that.
 
-\medskip\noindent\emph{An interacting class in which the first statement holds with the free constant.}
-The next proposition is not about gauge fields. It shows that the first statement of
-Proposition~\ref{p:onestep} can survive an interaction of any strength, uniformly in the volume and in the
-fine mesh, and it isolates the property of the vacuum that makes it do so.
+\subsection*{A scalar field with a convex interaction}
+The two propositions of this part are not about gauge fields. They show that the first statement of
+Proposition~\ref{p:onestep}, and with a time step the inequality of Hypothesis~\ref{h:mix}, can survive an
+interaction of any strength, uniformly in the volume and in the fine mesh, and they isolate the property of
+the vacuum that makes this so. The first is for the Hamiltonian in continuous time and the second for a
+transfer operator with a time step.
 
 \begin{proposition}[Convex interactions of a scalar field]\label{p:convex}
 Let $\Lambda$ be a finite set, $K$ a positive definite real symmetric matrix on $\R^\Lambda$,
@@ -2472,60 +2602,69 @@ $1/(2a\lambda_N)$. The bound for $I-P$ is Remark~\ref{r:forms}(a) in the form
 $\|(I-P)H^{-1}(I-P)\|\le2a(1/\gamma_0-\tfrac12)$.
 \end{proof}
 
-So for these fields the inequality of Hypothesis~\ref{h:mix} holds at every lattice with the rate of the
-free field, whatever the convex interaction, the volume and the mass; with blocks of side two and the time
-step equal to the mesh, $\gamma_0\ge4\sin(\pi/4)/(1+4\sin(\pi/4))>0.73$. The two propositions were found
-in this order: the second is Proposition~\ref{p:dir} applied with the weight that the convexity provides, and
-it is the first instance we have in which the weighted inequality~\eqref{e:wpi} holds with useful constants
-for a measure that is not Gaussian. On two sites the best rate was computed on a grid for the same list of
-convex interactions and time steps $1$ and $\tfrac12$: its ratio to $\gamma_0$ is $1.000000$ for $V=0$ and
-for $V=(\phi_1+\phi_2)^4$, between $1.01$ and $1.06$ for the others at time step $1$ and between $1.04$ and
-$1.25$ at time step $\tfrac12$; for the double well in the fine direction it is $0.51$ and $0.39$.
-On three sites the run was stopped early: the value for $V=0$ at time step $1$ agrees with $\gamma_0$ to
-eight figures and one quartic case gives $1.009$; the remaining three-site cases were not computed
-(Supplement~S15 keeps the log of the interrupted run). The proof of the proposition uses of $e^{-aV/2}$ only
-that it is log-concave, so it holds as well with any log-concave function in its place, for instance the
-indicator of a convex set.
+\emph{What the two propositions say.} For these fields the inequality of Hypothesis~\ref{h:mix} holds at
+every lattice with the rate of the free field, whatever the convex interaction, the volume and the mass;
+with blocks of side two and the time step equal to the mesh,
+$\gamma_0\ge4\sin(\pi/4)/(1+4\sin(\pi/4))>0.73$. Nothing new is learned about the gap: in this class the gap
+is at least the lowest eigenvalue of $\omega$, by Proposition~\ref{p:convex} applied without block
+variables. What is new is that the constant of the first statement of Proposition~\ref{p:onestep} does not
+depend on the mass, on the interaction or on the volume, so that for these fields the whole dependence on
+the infrared is in the second statement.
+
+\emph{What the proofs use.} Convexity of $V$ enters through one consequence only: along the fibres of the
+block map the vacuum measure is at least as log-concave as the free one. The second proposition is then
+Proposition~\ref{p:dir} applied with the weight that this provides, and it is the first instance in this
+paper in which the weighted inequality~\eqref{e:wpi} holds with useful constants for a measure that is not
+Gaussian. Its proof uses of $e^{-aV/2}$ only that it is log-concave, so it holds as well with any
+log-concave function in its place, for instance the indicator of a convex set.
+
+\emph{Numerical tests} (Supplement~S15). Convexity is not necessary for the conclusion, and its failure
+along the fibres is fatal to it. The best constants were computed on a grid.
+\begin{itemize}
+\item \emph{Continuous time, two sites,} with
+$K=\tfrac14+\big(\begin{smallmatrix}1&-1\\-1&1\end{smallmatrix}\big)$ and the block variable
+$\phi_1+\phi_2$, where $1/\lambda_N=\tfrac23$. The best constant is $0.667$ for $V=0$ and between $0.25$ and
+$0.60$ for $V=\lambda\sum_x\phi_x^4$ with $\lambda=10,1,0.1$. It is still below $\tfrac23$ for two on-site
+double wells $\lambda\sum_x(\phi_x^2-v^2)^2$, which we had expected to violate the bound and which do not,
+because their slow motion is a common change of sign of both sites and the block variable sees it.
+\item \emph{A double well in the fine direction,} $V=\lambda((\phi_1-\phi_2)^2-v^2)^2$. The constant is
+$1/(E_1-E_0)$, the inverse of the tunnelling splitting: $2.50$ at $(\lambda,v)=(\tfrac14,2)$ and $5845$ at
+$(\tfrac12,\tfrac52)$. A third case was below the resolution of the program, and the predicate that included
+it is recorded as failed.
+\item \emph{Continuous time, three sites,} with the block variables $\phi_1+\phi_2$ and $\phi_3$. The
+constants are $1.000$, $0.92$, $0.71$, $0.41$ of $1/\lambda_N$ for $V=0$ and the three quartic couplings. A
+control in that program asserted a different value for $V=0$ and failed; the assertion was wrong, and the
+computed value is what led to the statement about the free case in Proposition~\ref{p:convex}.
+\item \emph{With a time step, two sites,} time steps $1$ and $\tfrac12$, the same convex interactions. The
+ratio of the best rate to $\gamma_0$ is $1.000000$ for $V=0$ and for $V=(\phi_1+\phi_2)^4$, between $1.01$
+and $1.06$ for the others at time step $1$ and between $1.04$ and $1.25$ at time step $\tfrac12$. For the
+double well in the fine direction it is $0.51$ and $0.39$.
+\item \emph{With a time step, three sites: incomplete.} The run was stopped early. The value for $V=0$ at
+time step $1$ agrees with $\gamma_0$ to eight figures and one quartic case gives $1.009$; the remaining
+three-site cases were not computed, and the supplement keeps the log of the interrupted run.
+\end{itemize}
 
 \emph{Abelian gauge fields with a convex interaction.} The two propositions apply as they stand to a
 non-compact abelian gauge field in a finite box with free boundary conditions, restricted to gauge-invariant
-functions: these are the functions on the quotient of the space of link variables by the gauge
-transformations, a Euclidean space on which the form $\langle A,KA\rangle$ of the squared plaquette field
-is positive definite, the heat kernel in the link variables acts on them as the heat kernel of the quotient,
-and block averages of the plaquette field are linear maps on it. So if a convex function of the plaquette
-field of each slice is added to the free action, the inequality of Hypothesis~\ref{h:mix} and the bound of
-the fine detail by the energy hold with the constants of the free field in that box. This is the nearest
-that the argument comes to the subject of this paper. It does not reach a compact group, for which the
-weight of the Wilson action is not log-concave and the sum over windings of the Villain form is a mixture
-of log-concave weights, not one of them.
+functions. These are the functions on the quotient of the space of link variables by the gauge
+transformations. The quotient is a Euclidean space on which the form $\langle A,KA\rangle$ of the squared
+plaquette field is positive definite; the heat kernel in the link variables acts on these functions as the
+heat kernel of the quotient; and block averages of the plaquette field are linear maps on it. So if a
+convex function of the plaquette field of each slice is added to the free action, the inequality of
+Hypothesis~\ref{h:mix} and the bound of the fine detail by the energy hold with the constants of the free
+field in that box. This is the nearest that the argument comes to the subject of this paper. The argument
+for the quotient is given here in outline only.
 
-Three remarks on the two propositions. First, in this class the gap itself is at least the lowest eigenvalue of $\omega$, by the same
-inequality applied without block variables, so nothing new is learned about the gap; what the proposition says is that the constant of
-the first statement does not depend on the mass, on the interaction or on the volume, so that for these
-fields the whole dependence on the infrared is in the second statement of Proposition~\ref{p:onestep}.
-Secondly, the proof uses the convexity of $V$ only through one consequence:
-along the fibres of the block map the vacuum measure is at least as log-concave as the free one. Convexity is
-not necessary for the conclusion and its failure along the fibres is fatal to it. On two sites with
-$K=\tfrac14+\big(\begin{smallmatrix}1&-1\\-1&1\end{smallmatrix}\big)$ and the block variable
-$\phi_1+\phi_2$, where $1/\lambda_N=\tfrac23$, the best constant computed on a grid is $0.667$ for $V=0$,
-between $0.25$ and $0.60$ for $V=\lambda\sum_x\phi_x^4$ with $\lambda=10,1,0.1$, and still below $\tfrac23$
-for two on-site double wells $\lambda\sum_x(\phi_x^2-v^2)^2$, which we had expected to violate the bound and
-which do not, because their slow motion is a common change of sign of both sites and the block variable sees
-it. For $V=\lambda((\phi_1-\phi_2)^2-v^2)^2$, a double well in the fine direction, the constant is
-$1/(E_1-E_0)$, the inverse of the tunnelling splitting: $2.50$ at $(\lambda,v)=(\tfrac14,2)$ and $5845$ at
-$(\tfrac12,\tfrac52)$ (Supplement~S15; a third case was below the resolution of the program, and the
-predicate that included it is recorded as failed). On three sites with the block variables $\phi_1+\phi_2$ and $\phi_3$ the computed
-constants are $1.000$, $0.92$, $0.71$, $0.41$ of $1/\lambda_N$ for $V=0$ and the three quartic couplings. A
-control in that program asserted a different value for $V=0$ and failed; the assertion was wrong, and the
-computed value is what led to the statement about the free case in the proposition.
-Thirdly, for a gauge field none of the hypotheses holds as stated: the configuration space is compact, the
-action is not convex, the block variables of interest are not linear and the statement is wanted on
-gauge-invariant functions. What the proposition suggests for that case is the form a proof of the first
-statement could take: a lower bound, uniform in the fine mesh, for the convexity of minus the logarithm of
-the vacuum density along the fibres of the block map and transversally to the gauge orbits, to which the
-Ricci curvature of the group contributes with the favourable sign. We do not know such a bound. Statements
-of this kind for the effective actions of block variables at weak coupling are what renormalisation-group
-analyses of the small-field region aim at; the vacuum density is a different object.
+\emph{Why this does not reach a compact group.} For a gauge field with a compact group none of the
+hypotheses holds as stated: the configuration space is compact, the weight of the Wilson action is not
+log-concave (and the sum over windings of the Villain form is a mixture of log-concave weights, not one of
+them), the block variables of interest are not linear, and the statement is wanted on gauge-invariant
+functions. What the propositions suggest for that case is the form a proof of the first statement could
+take: a lower bound, uniform in the fine mesh, for the convexity of minus the logarithm of the vacuum
+density along the fibres of the block map and transversally to the gauge orbits, to which the Ricci
+curvature of the group contributes with the favourable sign. We do not know such a bound. Statements of this
+kind for the effective actions of block variables at weak coupling are what renormalisation-group analyses
+of the small-field region aim at; the vacuum density is a different object.
 
 \begin{thebibliography}{99}\raggedright
 \bibitem{BL76} H.~J.~Brascamp and E.~H.~Lieb, \emph{On extensions of the Brunn--Minkowski and
@@ -2536,14 +2675,14 @@ $\R^n$, for Pr\'ekopa's theorem and for the log-concavity of ground states; not 
 \bibitem{GOVW09} N.~Grunewald, F.~Otto, C.~Villani and M.~G.~Westdickenberg, \emph{A two-scale approach to
 logarithmic Sobolev inequalities and the hydrodynamic limit}, Ann. Inst. H. Poincar\'e Probab. Stat.
 \textbf{45} (2009), 302--351. Read: Sections 2.1, 2.2 and 3 (the criterion and its proof).
-\bibitem{Ka78} T.~Kato, \emph{Trotter's product formula for an arbitrary pair of self-adjoint contraction
-semigroups}, in Topics in Functional Analysis, Adv. Math. Suppl. Stud. \textbf{3}, Academic Press (1978),
-185--195. Cited for the statement; not reread.
 \bibitem{JSTV04} M.~Jerrum, J.-B.~Son, P.~Tetali and E.~Vigoda, \emph{Elementary bounds on Poincar\'e and
 log-Sobolev constants for decomposable Markov chains}, Ann. Appl. Probab. \textbf{14} (2004), 1741--1765.
 Cited for the existence of this line of work; only the abstract was read.
 \bibitem{JW} A.~Jaffe and E.~Witten, \emph{Quantum Yang--Mills theory}, Clay Mathematics Institute problem
 description, \url{https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf}. Sections 4 and 5 read.
+\bibitem{Ka78} T.~Kato, \emph{Trotter's product formula for an arbitrary pair of self-adjoint contraction
+semigroups}, in Topics in Functional Analysis, Adv. Math. Suppl. Stud. \textbf{3}, Academic Press (1978),
+185--195. Cited for the statement; not reread.
 \bibitem{Lel09} T.~Leli\`evre, \emph{A general two-scale criteria for logarithmic Sobolev inequalities},
 J. Funct. Anal. \textbf{256} (2009), 2211--2221. Read: the statement and its set-up.
 \bibitem{Lu77} M.~L\"uscher, \emph{Construction of a selfadjoint, strictly positive transfer matrix for
@@ -2568,6 +2707,5 @@ issued edition, \url{https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-P
 \bibitem{Supp} K.~Justus, supplementary material to this paper,
 \url{https://github.com/KirtusJ/Millennium-Prize-Problems}, folder
 \texttt{yang-mills/papers/spectral-criteria/}; catalogued in Appendix~\ref{app:supp}.
-\enlargethispage{3\baselineskip}
 \end{thebibliography}
 \end{document}
