@@ -1,0 +1,21 @@
+PREDICATES (fixed 2026-11-24 before any production run; copied into src/analysis.py docstring)
+Ensembles: c2 (N5,T10), c4 (N5,T20), f2 (N10,T20), f4 (N10,T40); 16 chains each, even=cold odd=hot.
+Split: TRAIN = chains with i%4 in {0,1}; HELD = i%4 in {2,3} (each half 4 cold + 4 hot).
+P1 thermalisation (per ensemble): |mean plaq(hot chains) - mean plaq(cold chains)| < 3 * combined SE
+   (SE from chain-to-chain scatter, 8 chains per group) AND |first-half - second-half production mean| < 3 SE
+   (SE from chain scatter of the difference). Tolerance 3 SE = conventional ~0.3% false-alarm per test, my choice.
+P2 autocorrelation: integrated autocorrelation time (Sokal window c=6) of per-config time-averaged Pa1 (x3..5 mean)
+   and Wa1 (x0..2 mean), pooled over chains, in measurement units, < 500/20 = 25 (so each chain >= ~10 independent
+   samples). Errors do not rely on it (chain jackknife), so P2 failing affects efficiency, not validity.
+P3 the hot/cold-agreement of every single-observable R (R_hot vs R_cold over 8 chains each) within 3 combined SE:
+   reported as "measured only" count of disagreements; not a gate.
+Main measurement (no pass/fail; numbers reported): for each pair (c2,f2) and (c4,f4):
+  train fine-optimal f (min R_fine), coarse-optimal f (min R_coarse), ratio-optimal f (min E_fine/E_coarse,
+  generalized eigenproblem on TRAIN pooled), each in the standardized span with eigen cutoff 1e-10 of max of
+  the training correlation matrix; freeze; evaluate R_fine, R_coarse, ratio R_f/R_c, E_f/E_c, Var_f/Var_c on HELD,
+  delete-one-chain jackknife over HELD chains (8 per lattice, lattices independent: errors combined by jackknife
+  of each lattice separately and added in quadrature on the log ratio).
+Interpretation rule (written before runs): a single frozen eligible test with held-out R_fine/R_coarse < x at both
+  temporal circumferences 'defeats an energy comparison with constant c >= x for that pair' (in the R form, alpha>=x);
+  it does NOT defeat the spectral deficit inequality (needs a certified lower bound on the full coarse deficit).
+  "Significantly below" y means ratio + 2*SE < y (2 SE: one-sided ~2.3%, my choice).

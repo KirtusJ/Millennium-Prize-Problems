@@ -1,0 +1,21 @@
+# Findings
+
+```
+control R = 1.500000
+eigh eigenvalues: 0.9999999999999998, 0.06186528489785906, 0.00043799889240447816, -6.955638616051412e-05
+charpoly roots: 1.0000000000000002, 0.06186528489785904, 0.00043799889240448564, -6.955638616051544e-05
+lambda2 eigh = np.float64(0.06186528489785906)
+lambda2 charpoly = np.float64(0.06186528489785904)
+lambda2 deflated power = np.float64(0.06186528489785914)
+diff eigh-charpoly = 2.082e-17; eigh-power = -8.327e-17
+LOO remove chain-2: eigh np.float64(0.06184745330195554) charpoly np.float64(0.0618474533019557)
+LOO remove chain-3: eigh np.float64(0.062114227618768836) charpoly np.float64(0.062114227618768954)
+LOO remove chain-6: eigh np.float64(0.061969063799259004) charpoly np.float64(0.06196906379925917)
+LOO remove chain-7: eigh np.float64(0.061628923008690294) charpoly np.float64(0.06162892300869027)
+LOO remove chain-10: eigh np.float64(0.0618842786816463) charpoly np.float64(0.06188427868164624)
+LOO remove chain-11: eigh np.float64(0.06185394776868265) charpoly np.float64(0.06185394776868256)
+LOO remove chain-14: eigh np.float64(0.06174686313520358) charpoly np.float64(0.06174686313520353)
+LOO remove chain-15: eigh np.float64(0.061872412204033896) charpoly np.float64(0.06187241220403391)
+LOO mean np.float64(0.061864646189780007)
+jackknife SE np.float64(0.00035433316448589487)
+```

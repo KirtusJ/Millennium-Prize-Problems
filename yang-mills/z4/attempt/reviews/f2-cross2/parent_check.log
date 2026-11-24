@@ -1,0 +1,2 @@
+check K130: exit 0 (expected 0) in 2133565 ms | output 2038f34a5c78 | event 132 head 272c2557ff6f
+  /home/user/z4-workers/f2-cross2/report.md — verdicts: STANDS 6, DEFECT 4, NOT CHECKED 1 (predicates: met 37, failed 2, measured only 10)

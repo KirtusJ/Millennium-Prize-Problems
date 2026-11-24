@@ -1,0 +1,30 @@
+PREDICATES f2-cross2 (worker T239), fixed 2026-11-24 ~02:03Z BEFORE any production run. Copied into src/analysis2.py docstring.
+Ensembles: c2 (N5,T10,beta 3.196581051), f2 (N10,T20,beta 3.493705679); optional c4 (N5,T20), f4 (N10,T40).
+  16 chains each, even i cold / odd i hot, seed = BASE + 7919 i; burn 500 HB sweeps; NMEAS meas every 3 HB sweeps.
+  Planned NMEAS=2000 at 2l; 4l only if time allows (NMEAS stated in REPLAY).
+Split: TRAIN = chains i%4 in {0,1}; HELD = i%4 in {2,3} (4 cold + 4 hot each).
+Q0 self-test (gauge/center): for every one of the 54 local fields at every site and slice, max |change| < 1e-12 under
+   (a) a random Haar gauge transformation on every fine site, (b) a center flip of all links in direction mu on one
+   hyperplane, mu = 0..3, on N=10 T=6 and N=5 T=4 thermalised (20 sweeps) hot configurations. Tolerance: double precision
+   with <= 20 quaternion products of unit norm gives ~1e-14; 1e-12 is a 100x margin. Sensitivity controls (a raw
+   link component under gauge, the x-winding half-trace under the mu=0 flip) must change by > 1e-3 (else the test is blind).
+P1 thermalisation (per ensemble): |mean plaq hot - cold| < 3 combined SE (chain scatter) AND |first half - second half|
+   < 3 SE. 3 SE: my choice (~0.3% two-sided per test).
+P2 tau_int (Sokal window c=6) of per-measurement time-averaged Wa1 and Pa1, pooled over chains, < NMEAS/20.
+Q1 reconciliation (G4 statistic): lambda2 from the explicit pooled joint histogram J equals 1 - R_min over the centred
+   4-bin span computed from the LOCAL moment matrices (indicator block, pooled over directions), to 1e-6 absolute
+   (both are the same estimator up to symmetrisation; 1e-6 allows for eigen-solver rounding and the one-time mean
+   convention difference, which is zero in the periodic sum). Measured only: G4-quantity values on c2, f2 compared
+   with G4's .06197(257) and .00408(72): agreement within 3 combined SE is reported, not gated (different seeds/length).
+MAIN (numbers): for each class X in {L (local), Z (zero momentum = slice averages), P0,P1,P2 (lowest momentum along k)}:
+   on TRAIN: fine-optimal (min R_fine), coarse-optimal (min R_coarse), ratio-optimal (min R_fine/R_coarse: generalised
+   min of a^T E_f a / a^T V_f a divided by a^T E_c a / a^T V_c a -- solved by a search: minimise E_f/(V_f) * V_c/E_c
+   over a by projected eigen iteration on the TRAIN matrices, see code), standardized span, eigen cutoff 1e-9 relative
+   of the TRAIN fine and coarse covariance. Frozen; evaluated on HELD: R_f, R_c, R_f/R_c, Var_f/Var_c, E_f/E_c,
+   delete-one-chain jackknife per lattice, SE combined in quadrature on log ratio.
+PREDICATE D (fixed by the brief): 'a frozen eligible test defeats the quotient comparison with constant alpha' :=
+   held-out R_fine/R_coarse + 2 SE < alpha at 2l (and at 4l if run). Report the smallest alpha defeated (the minimum
+   over frozen tests of ratio+2SE, if < 1). Expectation (mine, before runs): no test defeats alpha=1.
+PREDICATE S (measured, with my expectation): slowest inherited mode on fine: 1 - R_fine(fine-optimal) on HELD with SE.
+   'Resolved' := 1 - R_fine - 2 SE > 0. Expectation (mine): resolved in the LOCAL class (G4 saw .004 in 4-bin span),
+   unresolved or tiny in Z.

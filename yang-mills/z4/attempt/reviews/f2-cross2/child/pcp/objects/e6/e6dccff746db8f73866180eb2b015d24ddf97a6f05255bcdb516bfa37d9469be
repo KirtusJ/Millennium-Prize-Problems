@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/f2-cross2/child/analyze.py", line 76, in <module>
+    json.dump(res,open('results.json','x'),indent=1)
+                  ~~~~^^^^^^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: 'results.json'

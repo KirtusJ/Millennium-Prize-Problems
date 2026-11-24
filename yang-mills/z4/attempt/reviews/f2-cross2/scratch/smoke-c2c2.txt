@@ -1,0 +1,75 @@
+f2-cross2 analysis (worker T239).  Usage: python3 -I src/analysis2.py COARSE FINE OUTFILE
+pair coarse=c2 fine=c2
+chains: 16, 16; NMEAS 2000, 2000
+[c2] P1 hot-cold 2.849e-05 vs 3SE 1.122e-04: MET; half diff 4.639e-05 vs 3SE 9.904e-05: MET
+[c2] P2 tau_int(Wa1) = 14.43 (limit 100): MET
+[c2] P2 tau_int(Pa1) = 0.50 (limit 100): MET
+[c2] P1 hot-cold 2.849e-05 vs 3SE 1.122e-04: MET; half diff 4.639e-05 vs 3SE 9.904e-05: MET
+[c2] P2 tau_int(Wa1) = 14.43 (limit 100): MET
+[c2] P2 tau_int(Pa1) = 0.50 (limit 100): MET
+
+== Q1 reconciliation: G4 four-bin statistic (all 16 chains; jackknife over chains) and HELD ==
+[c2] lambda2(J) = 0.062147 +- 0.000275 (all 16) ; HELD 0.061865 +- 0.000354 ; 1-Rmin(pooled local indicators) = 0.062147; |diff| = 2.36e-16: MET
+[c2] pooled J =
+[[7246479 2840536 1867370  947813]
+ [2841502 1230431  867502  465605]
+ [1866216  868319  638724  353511]
+ [ 948001  465754  353174  199063]]
+[c2] lambda2(J) = 0.062147 +- 0.000275 (all 16) ; HELD 0.061865 +- 0.000354 ; 1-Rmin(pooled local indicators) = 0.062147; |diff| = 2.36e-16: MET
+[c2] pooled J =
+[[7246479 2840536 1867370  947813]
+ [2841502 1230431  867502  465605]
+ [1866216  868319  638724  353511]
+ [ 948001  465754  353174  199063]]
+G4 reference (measurements.md, 2l, 4 streams x 128 meas): side 5 .06197 +- .00257 ; side 10 .00408 +- .00072
+
+[L] reduced span dim 48 of 54; TRAIN: min R_f 0.83724, min R_c 0.83724, min R_f/R_c 1.00000
+
+[Z] reduced span dim 48 of 54; TRAIN: min R_f 0.43262, min R_c 0.43262, min R_f/R_c 1.00000
+
+[P0] reduced span dim 39 of 54; TRAIN: min R_f 0.86405, min R_c 0.86405, min R_f/R_c 1.00000
+
+[P1] reduced span dim 39 of 54; TRAIN: min R_f 0.86316, min R_c 0.86316, min R_f/R_c 1.00000
+
+[P2] reduced span dim 39 of 54; TRAIN: min R_f 0.86567, min R_c 0.86567, min R_f/R_c 1.00000
+
+== MAIN: frozen tests evaluated on HELD (8+8 chains), delete-one-chain jackknife ==
+test                           R_fine           R_coarse            R_f/R_c  Var_f/Var_c    E_f/E_c  ratio+2SE              1-R_f
+L:fine-opt           0.84631(0.00259)   0.84631(0.00259)   1.00000(0.00433)            1          1    1.00866   0.15369(0.00259)
+L:coarse-opt         0.84631(0.00259)   0.84631(0.00259)   1.00000(0.00433)            1          1    1.00866   0.15369(0.00259)
+L:ratio-opt          0.84631(0.00259)   0.84631(0.00259)   1.00000(0.00433)            1          1    1.00866   0.15369(0.00259)
+L:Wsum               0.93897(0.00039)   0.93897(0.00039)   1.00000(0.00059)            1          1    1.00119   0.06103(0.00039)
+L:Psum               0.97413(0.00013)   0.97413(0.00013)   1.00000(0.00019)            1          1    1.00037   0.02587(0.00013)
+Z:fine-opt           0.46659(0.00875)   0.46659(0.00875)   1.00000(0.02652)            1          1    1.05304   0.53341(0.00875)
+Z:coarse-opt         0.46659(0.00875)   0.46659(0.00875)   1.00000(0.02652)            1          1    1.05304   0.53341(0.00875)
+Z:ratio-opt          0.46659(0.00875)   0.46659(0.00875)   1.00000(0.02652)            1          1    1.05304   0.53341(0.00875)
+Z:Wsum               0.68353(0.00440)   0.68353(0.00440)   1.00000(0.00911)            1          1    1.01822   0.31647(0.00440)
+Z:Psum               0.95518(0.00202)   0.95518(0.00202)   1.00000(0.00299)            1          1    1.00599   0.04482(0.00202)
+P0:fine-opt          0.86593(0.00119)   0.86593(0.00119)   1.00000(0.00194)            1          1    1.00388   0.13407(0.00119)
+P0:coarse-opt        0.86593(0.00119)   0.86593(0.00119)   1.00000(0.00194)            1          1    1.00388   0.13407(0.00119)
+P0:ratio-opt         0.86593(0.00119)   0.86593(0.00119)   1.00000(0.00194)            1          1    1.00388   0.13407(0.00119)
+P0:Wsum              0.91995(0.00237)   0.91995(0.00237)   1.00000(0.00364)            1          1    1.00727   0.08005(0.00237)
+P0:Psum              0.96511(0.00262)   0.96511(0.00262)   1.00000(0.00383)            1          1    1.00767   0.03489(0.00262)
+P1:fine-opt          0.86466(0.00238)   0.86466(0.00238)   1.00000(0.00389)            1          1    1.00778   0.13534(0.00238)
+P1:coarse-opt        0.86466(0.00238)   0.86466(0.00238)   1.00000(0.00389)            1          1    1.00778   0.13534(0.00238)
+P1:ratio-opt         0.86466(0.00238)   0.86466(0.00238)   1.00000(0.00389)            1          1    1.00778   0.13534(0.00238)
+P1:Wsum              0.91920(0.00238)   0.91920(0.00238)   1.00000(0.00366)            1          1    1.00732   0.08080(0.00238)
+P1:Psum              0.96160(0.00179)   0.96160(0.00179)   1.00000(0.00264)            1          1    1.00528   0.03840(0.00179)
+P2:fine-opt          0.86901(0.00158)   0.86901(0.00158)   1.00000(0.00257)            1          1    1.00514   0.13099(0.00158)
+P2:coarse-opt        0.86901(0.00158)   0.86901(0.00158)   1.00000(0.00257)            1          1    1.00514   0.13099(0.00158)
+P2:ratio-opt         0.86901(0.00158)   0.86901(0.00158)   1.00000(0.00257)            1          1    1.00514   0.13099(0.00158)
+P2:Wsum              0.91953(0.00156)   0.91953(0.00156)   1.00000(0.00240)            1          1    1.00480   0.08047(0.00156)
+P2:Psum              0.96610(0.00218)   0.96610(0.00218)   1.00000(0.00320)            1          1    1.00639   0.03390(0.00218)
+
+== PREDICATE D (defeat of quotient comparison with constant alpha: ratio + 2SE < alpha) ==
+min over 25 frozen tests of ratio+2SE = 1.00037 (L:Psum): no alpha <= 1 is defeated
+
+== PREDICATE S (slowest inherited mode on fine: 1 - R_f of the fine-optimal tests, HELD) ==
+L:fine-opt         1-R_f = 0.15369 +- 0.00259 : RESOLVED ; coarse 1-R_c = 0.15369 +- 0.00259
+Z:fine-opt         1-R_f = 0.53341 +- 0.00875 : RESOLVED ; coarse 1-R_c = 0.53341 +- 0.00875
+P0:fine-opt        1-R_f = 0.13407 +- 0.00119 : RESOLVED ; coarse 1-R_c = 0.13407 +- 0.00119
+P1:fine-opt        1-R_f = 0.13534 +- 0.00238 : RESOLVED ; coarse 1-R_c = 0.13534 +- 0.00238
+P2:fine-opt        1-R_f = 0.13099 +- 0.00158 : RESOLVED ; coarse 1-R_c = 0.13099 +- 0.00158
+largest significance of 1-R_f among all frozen tests: L:Psum 0.02587 +- 0.00013
+
+Predicates (P1,P2,Q1 gated): met 10, failed 0; D and S are measured with expectation (see report)
