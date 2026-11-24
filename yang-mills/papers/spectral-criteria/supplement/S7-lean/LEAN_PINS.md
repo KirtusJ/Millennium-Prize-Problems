@@ -126,3 +126,12 @@ The file gained the form of the hypothesis used in the paper (`0 ≤ ⟪w, A w�
 | `RefinementHilbert.refinement_complex` | `d2166dfd3c6ab9cf0d27b296c182208da2716d9bda51d507a546227c6d8bb326` | exit 0 | exit 1 |
 | `RefinementHilbert.refinement_hilbert_form` | `aedefc7c7957300841a3a88607ea850d56c55eddd6fd704314ecd4873eca44c8` | exit 0 | exit 1 |
 | `RefinementHilbert.norm_le_one_of_form` | `af9c9ec8d9174ab6a929b3313c436d416bdd77e04b3f3ba1ea0c62518692d153` | exit 0 | exit 1 |
+
+## Added 24 November 2026: `SeparationHilbert.lean`
+
+The test at one time separation on complex Hilbert spaces, by the continuous functional calculus of Mathlib: for bounded self-adjoint `S` and `r ≤ 1`, the real spectrum of `S` misses `(r,1)` if and only if the quadratic inequality holds on a dense set of vectors. File SHA-256 `b2abf603832590c2a7b8c0a95ae5877f8c3a47938f873c4cb0f5880ec6b8b54c`. Lean 4.19.0: exit 0, no `sorry`, no warning, standard axioms. Not formalised: the passage from the Hamiltonian to `S = e^{-τH}`.
+
+| Theorem | SHA-256 of the statement (pinned) | With pin | Wrong pin |
+|---|---|---|---|
+| `SeparationHilbert.one_separation_hilbert` | `1bfc2882b1a8acdc5b4115a69e749ce8082e973bd63f3fc1e434a7ea69049f81` | exit 0 | exit 1 |
+| `SeparationHilbert.one_separation_dense` | `e80ea0fe0171a66b3282b5c5bf1f2af319c16757ef7b4aca13496afeae680ceb` | exit 0 | exit 1 |

@@ -1,0 +1,2 @@
+'SeparationHilbert.one_separation_hilbert' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SeparationHilbert.one_separation_dense' depends on axioms: [propext, Classical.choice, Quot.sound]
