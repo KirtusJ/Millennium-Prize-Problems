@@ -1,0 +1,10 @@
+C1 stream 0 seed 1800451 hot 0: byte-identical=False
+C2 stream 0: first-5-columns identical=False (144 rows)
+C1 stream 1 seed 1808370 hot 1: byte-identical=False
+C2 stream 1: first-5-columns identical=False (144 rows)
+C1 stream 2 seed 1816289 hot 0: byte-identical=False
+C2 stream 2: first-5-columns identical=False (144 rows)
+C1 stream 3 seed 1824208 hot 1: byte-identical=False
+C2 stream 3: first-5-columns identical=False (144 rows)
+C1 FAILED
+C2 FAILED

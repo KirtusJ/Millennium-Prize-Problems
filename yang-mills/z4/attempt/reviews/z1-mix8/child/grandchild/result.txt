@@ -1,0 +1,6 @@
+Var(f1)=0.25006 +- 0.00040 (pred 0.25)
+J_colour=0.25029 +- 0.00049 (pred 0.25)
+J (24-colour avg)=0.010429 +- 0.000020
+J/Var=0.041705 +- 0.000081 (pred 0.041667)
+Assumption: other 23 colours use disjoint independent links, so only this colour's (u,v) enters f1; J=J_colour/24.
+Var estimated from fA only (N=400000, seed 12345).

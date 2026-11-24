@@ -1,0 +1,22 @@
+I ran the full protocol (4 streams, 200 sweeps discarded, 80 measurements 6 sweeps apart), and three of the four reference numbers agree within 2 combined σ. The mean spread does not.
+
+**Control:** 0.250000 (written to `control.txt`).
+
+| Quantity | Mine (jackknife) | Reference | z | Within 2σ? |
+|---|---|---|---|---|
+| Mean spread | .36843(.00439) | .3442(.0084) | 2.56 | No |
+| Var(f4) | .04908(.00361) | .06182(.00732) | −1.56 | Yes |
+| J/Var, f1 | .07131(.00442) | .0639(.0023) | 1.49 | Yes |
+| J/Var, f4 | .05740(.00375) | .0464(.0055) | 1.65 | Yes |
+
+I also got Var(f1) = .10816(.00561), J(f1) = .00771(.00033) and J(f4) = .00282(.00017). The cold and hot streams agree with each other. Per-stream means are in `report.md`.
+
+- **Failed predicate:** the spread prediction failed. I can't say whether that is a defect in the reference, in my code, or a fluctuation. The jackknife over 4 streams has only 3 degrees of freedom, so the error bars are noisy.
+- **Not checked:** I did not test the heat bath against a known plaquette value, and I did not test J at beta=0. Your suggested "J equals Var at beta=0" is not expected, since only one colour is resampled per J term.
+- **Structure checks:** all passed. There are 24 colours with 27 pairs each, no frozen link in any pair, and no plaquette shared between pairs of a colour. The frozen holonomies come out as W = −I and B = i.
+- **Sub-agent (T210):** it was admitted and released. Its control was E[a⁴] = 0.125. At beta=0 with independent Haar links on a 2x2 square it found E[f1²] = .250770(396), E[f4²] = .062408(131) and E[spread] = .750273(242). The exact values are 1/4, 1/16 and 3/4, and all agree within 2σ (largest 1.94σ). I read its `results.md` but did not rerun its code.
+- **PCP register:** both `verify` commands report PASS.
+  - Last line of the Python `verify`: "result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)".
+  - Last line of the Rust `pcpos verify`: "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+
+`report.md` has the full verdict table and the exact rerun commands. Everything is in `/home/user/z4-workers/z1-mix6/child/`. I also ran a 40-measurement pilot, kept in `results/`.

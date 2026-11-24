@@ -1,0 +1,19 @@
+R1 stream 0 byte-identical True
+R1 stream 1 byte-identical True
+R2 d0 True
+R2 d0.5 True
+R2 d1 True
+R2 d2 True
+R2 d4 True
+R3 d0 True
+R3 d0.5 True
+R3 d1 True
+R3 d2 True
+R3 L-d0 True
+R3 L-d0.5 True
+R3 L-d1 True
+R3 L-d2 True
+R3 L-d4 True
+R3 clear0 True
+R3 clear2 True
+R3 clear4 True

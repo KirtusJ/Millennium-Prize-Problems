@@ -1,0 +1,2 @@
+check K119: exit 0 (expected 0) in 895903 ms | output 181338b0f5d1 | event 121 head 35952fb72c47
+  /home/user/z4-workers/z1-mix8/report.md — verdicts: 10 STANDS, 2 DEFECT, 2 NOT CHECKED (predicates: 25 met, 4 failed, 9 measured only).

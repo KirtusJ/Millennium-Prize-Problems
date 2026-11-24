@@ -1,0 +1,6 @@
+C2' MET
+G4 archive reduced: {'spread': [0.332634, 0.006538], 'var_single': [0.12131, 0.003734], 'var_average': [0.058769, 0.004854], 'J_single': [0.007187, 0.000361], 'J_average': [0.002594, 9.7e-05], 'ratio_single': [0.059244, 0.002856], 'ratio_average': [0.044143, 0.002026]}
+C3a MET
+my replay reduced: {'spread': [0.330986, 0.003279], 'var_single': [0.1138, 0.005852], 'var_average': [0.047569, 0.001317], 'J_single': [0.007574, 0.000461], 'J_average': [0.002806, 0.000111], 'ratio_single': [0.066552, 0.006638], 'ratio_average': [0.05899, 0.003837]}
+per-stream four-face ratios: [0.0487, 0.0649, 0.0629, 0.0608]
+C4 FAILED

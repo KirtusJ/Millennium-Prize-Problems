@@ -1,0 +1,28 @@
+At reduced statistics my own code agrees with the reference. I used 4 streams (cold, hot, cold, hot), 288 burn-in sweeps, then 500 measurements per stream every 6 sweeps (2000 total), with seed 2026.
+
+The control answer is E[a0²] = 1/4, written to `control.txt` as 0.250000.
+
+| quantity | mine | reference | agrees? |
+|---|---|---|---|
+| J/Var, f1 | 0.0589 ± 0.0017 | 0.0639 ± 0.0023 | yes (1.8σ) |
+| J/Var, f4 | 0.0501 ± 0.0019 | 0.0464 ± 0.0055 | yes (0.6σ) |
+| mean spread | 0.3417 ± 0.0028 | 0.344 ± 0.008 | yes |
+| Var f4 | 0.0569 ± 0.0021 | 0.062 ± 0.007 | yes |
+
+For f1 I also got Var = 0.1298 ± 0.0035 (the reference gives none), J = 0.00764 for f1 and J = 0.00285 for f4. Errors are jackknife over blocks of 50 samples. The raw output is in `out_main.csv`.
+
+**One predicate failed, and the fault was in my expectation.**
+- **What I expected:** at beta=0 I expected J/Var for f1 to be 1/24. I got 0.129 ± 0.0023.
+- **Why it was wrong:** three colours, not one, contain the links of the f1 plaquette, so the Haar prediction is 3/24 = 0.125. That is 1.7σ from my value.
+- **Same error in the sub-agent's check:** it reproduced 1/24 = 0.0417 because it assumed only one colour touches f1.
+
+**Sub-agent.** Task T209 ran the beta=0 Haar check and is released. I reran its script in a scratch copy and got identical numbers.
+
+**Not checked directly:**
+- The pair-refresh law at beta>0. I only checked that the pairs within a colour are independent (24/24 pass) and that beta=0 is consistent.
+- The heat-bath update itself. I only compared the final numbers with the reference.
+- Autocorrelation beyond the block jackknife.
+
+**PCP OS.** `pcp_os.py verify --ws pcp` and `pcpos verify pcp/register.jsonl` both reported "result: PASS". Both end on the same last line: "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+
+`report.md` has the verdict table, what I did not check, and the rerun commands. The code is `mc.rs` and `analyze.py`. Everything is in `/home/user/z4-workers/z1-mix8/child`.

@@ -1,0 +1,16 @@
+spread    0.36562 +- 0.00573
+Var(f4)   0.05041 +- 0.00396
+Var(f1)   0.09436 +- 0.01652
+J/Var f1  0.08392 +- 0.01483
+J/Var f4  0.05741 +- 0.00402
+J f1      0.00792 +- 0.00014
+J f4      0.00289 +- 0.00004
+spread ref 0.3442 0.0084 z=2.11 FAIL
+Var4 ref 0.06182 0.00732 z=-1.37 AGREE
+JV1 ref 0.0639 0.0023 z=1.33 AGREE
+JV4 ref 0.0464 0.0055 z=1.62 AGREE
+stream 0 cold means f1,f4,spread,J1,J4 [-0.34596 -0.38168  0.3733   0.00751  0.00282]
+stream 1 hot means f1,f4,spread,J1,J4 [-0.25168 -0.30195  0.37147  0.00809  0.00298]
+stream 2 cold means f1,f4,spread,J1,J4 [-0.31168 -0.32324  0.34861  0.0081   0.00294]
+stream 3 hot means f1,f4,spread,J1,J4 [-0.36322 -0.38225  0.36907  0.00797  0.00284]
+structure_ok True

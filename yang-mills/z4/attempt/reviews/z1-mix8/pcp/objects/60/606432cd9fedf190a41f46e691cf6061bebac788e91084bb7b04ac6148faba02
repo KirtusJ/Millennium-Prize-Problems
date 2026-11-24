@@ -1,0 +1,44 @@
+{
+ "chains": {
+  "chainA": {
+   "plaq_first_half": 0.7596359975383333,
+   "plaq_second_half": 0.7600141663925334,
+   "P_gen": "MET"
+  },
+  "chainB": {
+   "plaq_first_half": 0.7607287118141334,
+   "plaq_second_half": 0.7601910618283334,
+   "P_gen": "MET"
+  }
+ },
+ "n_sampled": 60,
+ "n_qualifying": {
+  "pi/4": 31,
+  "pi/8": 58
+ },
+ "rule_used": "pi/4",
+ "kept": [
+  {
+   "chain": "chainA",
+   "cfg": 0,
+   "min_angle": 0.830987249521,
+   "mean_angle": 2.052473305461,
+   "n_le_pi4": 0
+  },
+  {
+   "chain": "chainA",
+   "cfg": 1,
+   "min_angle": 0.828327753633,
+   "mean_angle": 2.095106854347,
+   "n_le_pi4": 0
+  },
+  {
+   "chain": "chainA",
+   "cfg": 4,
+   "min_angle": 0.969517982132,
+   "mean_angle": 2.112410143871,
+   "n_le_pi4": 0
+  }
+ ]
+}
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

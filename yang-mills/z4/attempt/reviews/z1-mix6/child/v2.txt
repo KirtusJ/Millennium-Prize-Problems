@@ -1,0 +1,1 @@
+A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.
