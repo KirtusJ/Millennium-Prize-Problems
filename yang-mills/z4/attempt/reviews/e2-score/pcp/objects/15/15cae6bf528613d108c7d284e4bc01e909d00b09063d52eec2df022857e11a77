@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/e2-score/e2b.py", line 9, in <module>
+    sys.argv += [] ; exec(open('e2_lib.py').read())
+                     ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 24, in <module>
+NameError: name 'pred' is not defined. Did you mean: 'prod'?

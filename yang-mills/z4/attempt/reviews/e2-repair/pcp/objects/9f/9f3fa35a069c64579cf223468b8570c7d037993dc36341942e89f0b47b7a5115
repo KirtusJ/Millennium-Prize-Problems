@@ -1,0 +1,39 @@
+The reduction is finished and `report.md` is written. Everything in this session ran from `child/`.
+
+The control is -ln(tanh(1/2)) = 0.771937, in `control.txt`.
+
+**Numbers** (value ± delete-one-stream jackknife, n = 32):
+
+| | N-d2 | N-d0 |
+|---|---|---|
+| r1 | 0.062689 ± 0.000472 | 0.062463 ± 0.000494 |
+| r4 | 0.048912 ± 0.000380 | 0.047327 ± 0.000456 |
+| z(r1) | 0.104 | -0.425 |
+| z(r4) | -0.532 | -0.280 |
+| d(r1) | 1.712 | 1.607 |
+| d(r4) | 0.773 | **2.110** |
+
+- **Ratios:** Q1 = 1.0036 ± 0.0110 and Q4 = 1.0335 ± 0.0128.
+- **Other values:** J1, Var1, J4 and Var4 with errors, and the per-stratum and per-half values, are in `report.md` and `results_run3.json`.
+
+**Predicates**
+- **|z| ≤ 2:** met on all four marks.
+- **Meta hot flag equals ID parity:** met for all 64 streams. I tested it per stream and every stream qualified.
+- **|d| ≤ 2:** met on 3 of 4 marks and failed on N-d0 r4 (d = 2.110). This is my own 2-sigma expectation missing, not a defect in the data or the code.
+- **Tolerance source:** the 2 comes from the task statement. Nothing else in the reduction is a tolerance.
+
+**Failed runs kept:** the first run (`pcp check` K1, exit 1) and a second direct run both died on my own bug, a numpy bool that JSON can't serialize. I left their partial outputs (`results.json`, `results_run2.json`), fixed the bug, and the third run wrote `results_run3.json` (K2, exit 0).
+
+**Sub-agent check**
+- **Task:** admitted as T237, then released after it returned.
+- **Question:** an independent recomputation of Var1 for N-d0 without numpy.
+- **Control:** it passed its known-answer control (variance of 1, 2, 3, 4 = 1.25).
+- **Result:** it returned 36864 rows, Var1 = 0.123747700718 and mean j_single = 0.00772964793526.
+- **My recomputation:** my own plain-Python recomputation gave Var1 = 0.12374770071831, the same value as my numpy run.
+- **Rerun:** rerunning its `var1.py` is refused because `out.txt` already exists (mode "x"), so I recomputed inline instead.
+
+**Verify, last line of each**
+- Python `verify --ws pcp`: "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right." The line above it reads "result: PASS".
+- Rust `pcpos verify pcp/register.jsonl`: I captured only its final line, the same disclaimer, so the PASS result for this one is not quoted. It is not shown in `v2.txt` or in `report.md`'s quoted line.
+
+The exact rerun commands are in `report.md`. `reduce.py` writes to a fixed output name, so edit the name before rerunning.

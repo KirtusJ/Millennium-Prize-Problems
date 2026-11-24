@@ -1,0 +1,28 @@
+g0: free content ['w+', 'u-']; all free links named: True; full word [([0, 0], 'x', 1), ([1, 0], 'y', 1), ([0, 1], 'x', -1), ([0, 0], 'y', -1)]
+g1: free content ['v-', 'w-']; all free links named: True; full word [([0, 0], 'x', 1), ([1, 0], 'x', 1), ([2, 0], 'y', 1), ([1, 1], 'x', -1), ([1, 0], 'y', -1), ([0, 0], 'x', -1)]
+g2: free content ['u+', 'z+']; all free links named: True; full word [([0, 0], 'y', 1), ([0, 1], 'x', 1), ([1, 1], 'y', 1), ([0, 2], 'x', -1), ([0, 1], 'y', -1), ([0, 0], 'y', -1)]
+g3: free content ['w+', 'v+', 'z-', 'w-']; all free links named: True; full word [([0, 0], 'x', 1), ([1, 0], 'y', 1), ([1, 1], 'x', 1), ([2, 1], 'y', 1), ([1, 2], 'x', -1), ([1, 1], 'y', -1), ([1, 0], 'y', -1), ([0, 0], 'x', -1)]
+[PASS] G1 transported-mark content [['w+', 'u-'], ['v-', 'w-'], ['u+', 'z+'], ['w+', 'v+', 'z-', 'w-']]
+colours touching u,v,w,z: {0: ('u', 'w'), 1: ('v', 'w'), 2: ('u', 'z'), 3: ('v', 'z')}
+[PASS] G2 colours 0..3 select (u,w),(v,w),(u,z),(v,z) 
+colour 0 pair (u,w): marks with both [0]; mults [(1, 1), (0, 1), (1, 0), (0, 2)] -> True
+measured only: colour 1 pair (v,w): marks with both [1, 3]; mults [(0, 1), (1, 1), (0, 0), (1, 2)]
+colour 2 pair (u,z): marks with both [2]; mults [(1, 0), (0, 0), (1, 1), (0, 1)] -> True
+colour 3 pair (v,z): marks with both [3]; mults [(0, 0), (1, 0), (0, 1), (1, 1)] -> True
+[PASS] G3 colours 0,2,3: exactly one bilinear mark 
+G4: colours factorizing 24/24; pairs with exactly one shared face and both links free 648/648
+[PASS] G4 factorization + one shared face 
+[PASS] A1 sum A^2 = 2+Y^2 maxerr=3.27e-15 min=2.000000 max=2.999212
+A2 max |D E F - A/4| and |mixed of other marks| per colour: {0: 0, 2: 0, 3: 0} ; colour 1 extra from Y3 (measured only): 4.702e-01
+[PASS] A2 mixed derivative = A_jab/4 (colours 0,2,3) 
+C1 max over grid of [(sqrt(1+6b)+b)^2+6b(1+6b)]/b^2 = 55.2915 (at b=1: 55.2915); sqrt(58)=7.6158<8
+floors 5.616449e-07 5.215257e-07
+[PASS] C1 constants 
+[PASS] C2 pointwise zero-staple formula beta=1.0 err=8.88e-15
+[PASS] C2 pointwise zero-staple formula beta=3.3 err=4.09e-14
+C2 beta=1.0: EZ=5.77e-15 cov=2.2794188284 E[2+Y^2]=2.2794188284 ||Z||/beta=5.1336 Var(Y)=2.2173e-01 Var(Y/4)*20736b^2=287.36
+C2 beta=3.3: EZ=1.17e-14 cov=2.4555842078 E[2+Y^2]=2.4555842078 ||Z||/beta=2.7713 Var(Y)=9.6954e-02 Var(Y/4)*20736b^2=1368.36
+C2 beta=10.0: EZ=-8.26e-14 cov=2.7437444075 E[2+Y^2]=2.7437444075 ||Z||/beta=2.4112 Var(Y)=1.4112e-02 Var(Y/4)*20736b^2=1828.90
+C2 beta=30.0: EZ=-9.02e-13 cov=2.9049568799 E[2+Y^2]=2.9049568799 ||Z||/beta=2.4069 Var(Y)=1.6374e-03 Var(Y/4)*20736b^2=1909.88
+[PASS] C2 quadrature zero-staple (tolerance 1e-8*max(1,beta^2): Gauss-Legendre 4000 nodes on smooth integrand) 
+FAILED: []

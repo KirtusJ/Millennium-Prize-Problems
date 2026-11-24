@@ -1,0 +1,26 @@
+All four claims held in all 20 cases (4 values of beta × 5 random exteriors), so I found no counterexample. Both verifies passed. `report.md` has the full table, the failed run and the rerun commands.
+
+- **Control:** 6·(1/3) − 1 = 1.000000, written to `control.txt`.
+- **Sampling:** exact conditional heat-bath Gibbs, not importance weights. I used 1000 independent chains per case, 400 burn-in sweeps and 100 recorded sweeps each, giving 1e5 samples per case. Standard errors come from chain means.
+- **(i) E Z = 0:** holds within 4 SE in every case. The check is weak at β=30, where the SE on E Z is up to about 0.5.
+- **(ii) IBP identity:** E[(Y−EY)Z] equals E[2+Y²] within 4 SE in every case. The pointwise identity ΣA² = 2+Y² holds to 1e-15.
+- **(iii) ‖Z‖ ≤ 72β:** ‖Z‖/β is never above 6.9, so the bound is loose by about a factor of 10. The mean over exteriors is 6.32, 4.53, 4.28 and 4.23 at β = 1, 3.3, 10 and 30, a log-log slope of −0.11. So ‖Z‖ grows linearly in β.
+- **(iv) Variance floor:** the smallest ratio Var(Y/4)·20736β² is 240, against a required 1. Var(Y) falls roughly as β⁻¹ (slope −0.89), not β⁻². The claimed β⁻² floor is true but far from tight.
+- **Cauchy–Schwarz bound:** Var(Y) ≥ E[2+Y²]²/E[Z²] also holds in every case.
+- **Failed run:** my first run (K1) exited 1 because of a numpy bool JSON bug in my own code. I fixed it without changing any predicate, and no predicate failed.
+- **Grandchild T234:** it did the zero-staple β=1 check. E[(Y−EY)Z] came out at 2.2794 ± 0.0018 against E[2+Y²] = 2.2797 ± 0.0002, with z = −0.16. It also checked A_ab against finite differences (max error 5.8e-9). Its first run had a conjugation bug, which its own finite-difference check caught. I released T234 and reran its `check.py` as K3; the numbers are identical.
+
+Limits: five exteriors per beta is a sample, not a proof. I checked Gibbs mixing only by comparing the first and second halves of the recorded sweeps.
+
+Last lines of the two verifies:
+- `pcp_os.py verify --ws pcp`: "result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)"
+- `pcpos verify pcp/register.jsonl`: "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+
+Files are in /home/user/z4-workers/e2-score/child:
+- report.md
+- zscore.py
+- zscore_results.json
+- zscore_rows.jsonl
+- control.txt
+- notes.md
+- grandchild/

@@ -1,0 +1,4 @@
+rows=36864
+mean_single=-0.272463284093
+pop_var_single=0.123747700718
+mean_j_single=0.00772964793526

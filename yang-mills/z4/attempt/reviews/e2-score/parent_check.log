@@ -1,0 +1,2 @@
+check K126: exit 0 (expected 0) in 400332 ms | output f1d1a005a58e | event 128 head f5495d046297
+  /home/user/z4-workers/e2-score/report.md — 6 STANDS, 0 DEFECT, 0 NOT CHECKED (predicates: 13 met, 0 failed, 3 measured only)

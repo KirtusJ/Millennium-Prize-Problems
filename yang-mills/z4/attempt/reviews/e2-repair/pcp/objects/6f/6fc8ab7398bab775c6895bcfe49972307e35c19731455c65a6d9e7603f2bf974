@@ -1,0 +1,40 @@
+/home/user/z4-workers/z1-mix6/results/d0: n=8 hot=4 J1=0.007761(0.000140) Var1=0.12461(0.00405) J4=0.0029018(0.0000375) Var4=0.05975(0.00171) r1=0.06228(0.00232) r4=0.04857(0.00124) r1tl=0.06228(0.00232) r4tl=0.04857(0.00124)
+   hot-cold z numeric: r1 +0.03 MET, r4 +1.28 MET, r1tl +0.03, r4tl +1.28 | legacy cold-hot r1 -0.03 r4 -1.28
+   drift d: r1 +1.24 MET, r4 +1.09 MET
+/home/user/z4-workers/z1-mix6/results/d0.5: n=8 hot=4 J1=0.007919(0.000111) Var1=0.12802(0.00111) J4=0.0029402(0.0000495) Var4=0.06502(0.00084) r1=0.06186(0.00111) r4=0.04522(0.00106) r1tl=0.06186(0.00111) r4tl=0.04522(0.00106)
+   hot-cold z numeric: r1 +1.30 MET, r4 -0.19 MET, r1tl +1.30, r4tl -0.19 | legacy cold-hot r1 -1.30 r4 +0.19
+   drift d: r1 -2.08 FAILED, r4 -0.50 MET
+/home/user/z4-workers/z1-mix6/results/d1: n=8 hot=4 J1=0.007890(0.000129) Var1=0.12414(0.00143) J4=0.0029848(0.0000510) Var4=0.06376(0.00146) r1=0.06356(0.00093) r4=0.04681(0.00128) r1tl=0.06356(0.00093) r4tl=0.04681(0.00128)
+   hot-cold z numeric: r1 +0.66 MET, r4 +0.69 MET, r1tl +0.66, r4tl +0.69 | legacy cold-hot r1 -0.66 r4 -0.69
+   drift d: r1 +0.65 MET, r4 +1.07 MET
+/home/user/z4-workers/z1-mix6/results/d2: n=8 hot=4 J1=0.007884(0.000075) Var1=0.12757(0.00220) J4=0.0028998(0.0000318) Var4=0.05949(0.00090) r1=0.06180(0.00103) r4=0.04875(0.00086) r1tl=0.06180(0.00103) r4tl=0.04875(0.00086)
+   hot-cold z numeric: r1 -0.94 MET, r4 +0.68 MET, r1tl -0.94, r4tl +0.68 | legacy cold-hot r1 +0.94 r4 -0.68
+   drift d: r1 +0.08 MET, r4 -0.89 MET
+/home/user/z4-workers/z1-mix6/results/clear0: n=8 hot=4 J1=0.003861(0.000053) Var1=0.04795(0.00110) J4=0.0007083(0.0000081) Var4=0.00770(0.00020) r1=0.08052(0.00208) r4=0.09201(0.00241) r1tl=0.07003(0.00153) r4tl=0.08476(0.00340)
+   hot-cold z numeric: r1 -0.66 MET, r4 -1.49 MET, r1tl -0.38, r4tl -1.17 | legacy cold-hot r1 +0.66 r4 +1.49
+   drift d: r1 +0.07 MET, r4 -0.60 MET
+/home/user/z4-workers/z1-mix6/results/clear2: n=8 hot=4 J1=0.005804(0.000076) Var1=0.08109(0.00138) J4=0.0008355(0.0000120) Var4=0.00972(0.00019) r1=0.07157(0.00146) r4=0.08599(0.00203) r1tl=0.06828(0.00075) r4tl=0.08266(0.00254)
+   hot-cold z numeric: r1 -1.52 MET, r4 -0.93 MET, r1tl -2.00, r4tl -0.74 | legacy cold-hot r1 +1.52 r4 +0.93
+   drift d: r1 -0.08 MET, r4 +1.48 MET
+/home/user/z4-workers/z1-mix6/results/clear4: n=8 hot=4 J1=0.007367(0.000076) Var1=0.10319(0.00254) J4=0.0007178(0.0000087) Var4=0.00773(0.00017) r1=0.07140(0.00206) r4=0.09281(0.00228) r1tl=0.07068(0.00183) r4tl=0.09546(0.00343)
+   hot-cold z numeric: r1 -1.13 MET, r4 +0.02 MET, r1tl -1.54, r4tl -0.44 | legacy cold-hot r1 +1.13 r4 -0.02
+   drift d: r1 +0.55 MET, r4 -0.03 MET
+/home/user/z4-workers/z1-mix6/results/L-d0: n=24 hot=12 J1=0.007632(0.000041) Var1=0.12451(0.00082) J4=0.0028755(0.0000169) Var4=0.06131(0.00088) r1=0.06130(0.00039) r4=0.04690(0.00055) r1tl=0.06130(0.00039) r4tl=0.04690(0.00055)
+   hot-cold z numeric: r1 +1.21 MET, r4 +0.34 MET, r1tl +1.21, r4tl +0.34 | legacy cold-hot r1 -1.62 r4 -0.85
+   drift d: r1 -0.71 MET, r4 -0.02 MET
+/home/user/z4-workers/z1-mix6/results/L-d0.5: n=24 hot=12 J1=0.007752(0.000040) Var1=0.12570(0.00096) J4=0.0029478(0.0000181) Var4=0.06313(0.00061) r1=0.06167(0.00055) r4=0.04669(0.00046) r1tl=0.06167(0.00055) r4tl=0.04669(0.00046)
+   hot-cold z numeric: r1 -0.58 MET, r4 +1.20 MET, r1tl -0.58, r4tl +1.20 | legacy cold-hot r1 +0.67 r4 -0.59
+   drift d: r1 +0.56 MET, r4 +0.52 MET
+/home/user/z4-workers/z1-mix6/results/L-d1: n=24 hot=12 J1=0.007873(0.000040) Var1=0.12954(0.00117) J4=0.0029919(0.0000159) Var4=0.06617(0.00079) r1=0.06077(0.00066) r4=0.04522(0.00059) r1tl=0.06077(0.00066) r4tl=0.04522(0.00059)
+   hot-cold z numeric: r1 -0.30 MET, r4 -0.52 MET, r1tl -0.30, r4tl -0.52 | legacy cold-hot r1 +0.42 r4 +0.14
+   drift d: r1 -0.51 MET, r4 +0.48 MET
+/home/user/z4-workers/z1-mix6/results/L-d2: n=24 hot=12 J1=0.008006(0.000037) Var1=0.12858(0.00097) J4=0.0028575(0.0000169) Var4=0.05963(0.00037) r1=0.06227(0.00052) r4=0.04793(0.00040) r1tl=0.06227(0.00052) r4tl=0.04793(0.00040)
+   hot-cold z numeric: r1 -2.68 FAILED, r4 -0.33 MET, r1tl -2.68, r4tl -0.33 | legacy cold-hot r1 +1.64 r4 -0.42
+   drift d: r1 -0.11 MET, r4 -0.90 MET
+/home/user/z4-workers/z1-mix6/results/L-d4: n=24 hot=12 J1=0.008017(0.000033) Var1=0.12171(0.00091) J4=0.0021291(0.0000078) Var4=0.03687(0.00036) r1=0.06587(0.00050) r4=0.05775(0.00066) r1tl=0.06587(0.00050) r4tl=0.05775(0.00066)
+   hot-cold z numeric: r1 +0.66 MET, r4 +0.21 MET, r1tl +0.66, r4tl +0.21 | legacy cold-hot r1 -1.14 r4 -0.79
+   drift d: r1 +0.07 MET, r4 +0.03 MET
+Q_r1 = 1.0158 +- 0.0106 (indep)  [paired-index 0.0093]
+Q_r4 = 1.0218 +- 0.0146 (indep)  [paired-index 0.0174]
+Q_r1_tl = 1.0158 +- 0.0106 (indep)  [paired-index 0.0093]
+Q_r4_tl = 1.0218 +- 0.0146 (indep)  [paired-index 0.0174]

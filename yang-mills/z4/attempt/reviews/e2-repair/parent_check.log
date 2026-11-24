@@ -1,0 +1,2 @@
+check K127: exit 0 (expected 0) in 584340 ms | output afe05e070761 | event 129 head fb12b0c0d4d7
+  /home/user/z4-workers/e2-repair/report.md — 13 items: 7 STANDS, 5 DEFECT, 1 measured only (12 partly not checked); predicates: 71 met, 3 failed, 9 measured only. G4 was right: with the numeric split, L-d2's one-face hot/cold check fails (z −2.68). The new run fits the prior 1.016(11) (new value 1.0036(110)) but is just as consistent with no excess over 1. The four-face mark at δ = 0 drifted past the limit (d = +2.11) even with the doubled burn-in.
