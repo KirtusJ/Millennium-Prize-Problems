@@ -1,0 +1,14 @@
+[
+  {
+    "label": "negative_relative",
+    "find": "b ≤ (1+eta)*d := by nlinarith",
+    "replace": "b ≤ d := by nlinarith",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_additive",
+    "find": "b-loss ≤ d := by linarith",
+    "replace": "b+loss ≤ d := by linarith",
+    "diagnostic": "error:"
+  }
+]
