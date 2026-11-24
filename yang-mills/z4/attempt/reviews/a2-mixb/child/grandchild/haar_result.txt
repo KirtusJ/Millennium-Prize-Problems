@@ -1,0 +1,4 @@
+quadrature=0.27446856
+closed_form=0.27446856
+MC=0.274334 +- 0.000315 (N=2000000, seed 12345)
+pull(MC-quad)/se=-0.43

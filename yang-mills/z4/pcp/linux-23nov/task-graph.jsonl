@@ -421,3 +421,9 @@
 {"actor":"principal","auth":"DECLARED","body":{"id":"T207"},"kind":"TASK_RELEASED","prev":"5c6e271c8f95e5e170bb9388c3e181e471f7e67afe545d7aaf0f60175163980c","seq":420,"ts":"2026-11-23T23:55:26Z"}
 {"actor":"principal","auth":"DECLARED","body":{"id":"T208"},"kind":"TASK_RELEASED","prev":"ad27aced4afff2bc81110bb064548e0b13d199551103de5ba57025954d627a1a","seq":421,"ts":"2026-11-23T23:55:29Z"}
 {"actor":"principal","auth":"DECLARED","body":{"id":"T206"},"kind":"TASK_RELEASED","prev":"441d3091a779e005ad95b29fa6e48e0cdf6a3a9d7fc86a8977f761a185b06baa","seq":422,"ts":"2026-11-24T00:02:35Z"}
+{"actor":"principal","auth":"DECLARED","body":{"depth":1,"id":"T211","label":"a2-mixb","parent":"T1"},"kind":"TASK_ADMITTED","prev":"8d99941bb904810f9a2c82bcee41ebe755b21e2e7443475482fae73b72905a46","seq":423,"ts":"2026-11-24T00:15:15Z"}
+{"actor":"principal","auth":"DECLARED","body":{"depth":2,"id":"T212","label":"a2-mixb-child","parent":"T211"},"kind":"TASK_ADMITTED","prev":"489a604d1d454e743234cea61ff21616238b1cbcd94bde37c29b1cbfe7632645","seq":424,"ts":"2026-11-24T00:16:21Z"}
+{"actor":"principal","auth":"DECLARED","body":{"depth":3,"id":"T213","label":"a2-mixb-grandchild","parent":"T212"},"kind":"TASK_ADMITTED","prev":"b4d251c6e161f19e0b83ca88a14c0af63f61b5f41eab6d49602289bf43cae958","seq":425,"ts":"2026-11-24T00:16:50Z"}
+{"actor":"principal","auth":"DECLARED","body":{"id":"T213"},"kind":"TASK_RELEASED","prev":"5f09f1a995aea2e9c608711e8b92d22ecfdd45782383fecb7fac27710ae5aea4","seq":426,"ts":"2026-11-24T00:18:20Z"}
+{"actor":"principal","auth":"DECLARED","body":{"id":"T212"},"kind":"TASK_RELEASED","prev":"639d6c0badf49771c70939685dbf2bd8e1159434d101aa77f4944f2023692ce9","seq":427,"ts":"2026-11-24T00:25:55Z"}
+{"actor":"principal","auth":"DECLARED","body":{"id":"T211"},"kind":"TASK_RELEASED","prev":"f3b46268d52dcda6774d58cab45e45a6b5351aa0b3be37464c8e2edbc9b5fa7a","seq":428,"ts":"2026-11-24T00:42:27Z"}

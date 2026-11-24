@@ -1,0 +1,2 @@
+check K120: exit 0 (expected 0) in 1630712 ms | output f003e9fcd5ab | event 122 head 68b9d2da2bbb
+  /home/user/z4-workers/a2-mixb/report.md — verdicts: 5 STANDS, 1 DEFECT (the four-face ratio is not flat at β 6 and 12), 2 NOT CHECKED (the rise at 1.22 is not resolved; no number for β=12 at 0.61048); predicates: 161 met, 7 failed, 22 measured only.

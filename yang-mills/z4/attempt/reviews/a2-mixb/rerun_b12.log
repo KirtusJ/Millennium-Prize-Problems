@@ -1,0 +1,4 @@
+check K32: exit 0 (expected 0) in 57551 ms | output 2b13df73546c | event 33 head b8bbdd61551d
+check K33: exit 0 (expected 0) in 63666 ms | output a02cb0789be1 | event 34 head 7275bb0ded94
+check K34: exit 0 (expected 0) in 41944 ms | output 5abb28d1306e | event 35 head bbe1f8886cd9
+RERUN12DONE

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/a2-mixb/reduce_q2.py", line 81, in <module>
+    main(sys.argv[1])
+    ~~~~^^^^^^^^^^^^^
+  File "/home/user/z4-workers/a2-mixb/reduce_q2.py", line 46, in main
+    idx = sorted(int(p.stem[1:]) for p in d.glob("c*.txt"))
+  File "/home/user/z4-workers/a2-mixb/reduce_q2.py", line 46, in <genexpr>
+    idx = sorted(int(p.stem[1:]) for p in d.glob("c*.txt"))
+                 ~~~^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'ommands'

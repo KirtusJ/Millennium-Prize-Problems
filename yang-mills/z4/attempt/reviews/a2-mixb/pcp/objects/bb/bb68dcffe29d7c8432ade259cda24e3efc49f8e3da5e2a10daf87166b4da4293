@@ -1,0 +1,21 @@
+Everything is done and `report.md` is written. Both PCP verifiers passed.
+
+- **Control:** P(θ<1.2) = (1.2 − sin 2.4 / 2)/π = **0.274469**, written to `control.txt`.
+- **Run:** 6 hot-start chains with heat bath only (no over-relaxation), 150 configurations per chain, 10 sweeps apart. That is 900 configurations, with errors from a delete-one-chain jackknife.
+- **Average plaquette:** 0.750028 ± 0.000080.
+
+| mark | C(1)/C(0) | C(2)/C(0) | gate fraction |
+|---|---|---|---|
+| ungated | 0.0130 ± 0.0011 | −0.0008 ± 0.0010 | 1 |
+| gate 1.2 | 0.0021 ± 0.0027 | 0.0005 ± 0.0027 | 0.0402 ± 0.0005 |
+| clear (θ>1.2) | 0.0122 ± 0.0013 | −0.0016 ± 0.0008 | 0.9598 ± 0.0005 |
+| gate 0.6 | −0.0003 ± 0.0000 | −0.0011 ± 0.0008 | 0.0020 ± 0.0000 |
+
+- **What the table says:** ungated and clear C(1)/C(0) are small but clearly positive. Everything else is consistent with zero at its error.
+- **Gate 0.6 error:** only 0.2% of squares pass that gate, so the ±0.0000 on its C(1)/C(0) is an underestimate. Don't trust that error.
+- **Predicates:** the first test run failed one check, P4. I had expected θ = 0 for a cold start, but W = I sits at distance π from −I, so the code was right and my expectation was wrong. The corrected rerun passed all five checks (heat bath against the exact single-link value, hot/cold agreement, gauge invariance of the marks, cold-start sanity, Haar control).
+- **Grandchild (T213):** its control gave 0.5 as it should. Its exact single-link ⟨a0⟩ of 0.5965322 and Haar value of 0.27446856 match mine. I reran its script and got identical numbers, then released T213.
+- **PCP verify:** both verifiers end on the same line: "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right." The Python one also reports `result: PASS`.
+- **Not checked:** the 10-sweep separation was never tested for independence, and only one β was run. Beyond the cold start and gauge invariance, the marks have no known-answer check.
+
+Everything is in `/home/user/z4-workers/a2-mixb/child`. Start with `report.md`, which also has the exact rerun commands. The raw numbers are in `analysis_v1.txt`.

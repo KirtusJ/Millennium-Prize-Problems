@@ -26,7 +26,7 @@ What that is worth: authors, gap-closers, challengers and referees are all sessi
 
 Two defects found, both real, both repaired in `tun_lower.tex`:
 1. Corollary B is false for a one-step chain (exact two-point counterexample); it now requires n ≥ 2. The assembly's chains have n of order √β.
-2. The choice C = 1 in L = √(C log β) does not give the error rate stated in the proposition on the local estimates (the outer term is then at least of order L β^(−1/2) e^(ΛL)); the rate needs C > π²/4, and C = 4 is now chosen. The assembly only uses that the errors tend to zero, which holds for any C.
+2. The choice C = 1 in L = √(C log β) does not give the error rate stated in the proposition on the local estimates (the outer term is then at least of order L β^(−1/2) e^(ΛL)); the displayed envelope guarantees the rate for C > π²/4 (a sufficient threshold, not shown necessary; C = 1 fails), and C = 4 is now chosen. The assembly only uses that the errors tend to zero, which holds for any C.
 
 G4 also checked the Schur step, the weighted bound for sign-changing eigenfunctions and the corner algebra, found no obstruction to the exponent, and states that this is not a complete independent review. Two same-lineage referees had passed both defects.
 

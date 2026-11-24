@@ -1,0 +1,16 @@
+/home/user/z4-workers/a2-mixb/build/q2 3.276133577 9100001 0 1000 30000 1 6 12 /home/user/z4-workers/a2-mixb/results_q2/main/c0
+/home/user/z4-workers/a2-mixb/build/q2 3.276133577 9107920 1 1000 30000 1 6 12 /home/user/z4-workers/a2-mixb/results_q2/main/c1
+/home/user/z4-workers/a2-mixb/build/q2 3.276133577 9115839 0 1000 30000 1 6 12 /home/user/z4-workers/a2-mixb/results_q2/main/c2
+/home/user/z4-workers/a2-mixb/build/q2 3.276133577 9123758 1 1000 30000 1 6 12 /home/user/z4-workers/a2-mixb/results_q2/main/c3
+/home/user/z4-workers/a2-mixb/build/q2 3.276133577 9131677 0 1000 30000 1 6 12 /home/user/z4-workers/a2-mixb/results_q2/main/c4
+/home/user/z4-workers/a2-mixb/build/q2 3.276133577 9139596 1 1000 30000 1 6 12 /home/user/z4-workers/a2-mixb/results_q2/main/c5
+/home/user/z4-workers/a2-mixb/build/q2 3.276133577 9147515 0 1000 30000 1 6 12 /home/user/z4-workers/a2-mixb/results_q2/main/c6
+/home/user/z4-workers/a2-mixb/build/q2 3.276133577 9155434 1 1000 30000 1 6 12 /home/user/z4-workers/a2-mixb/results_q2/main/c7
+/home/user/z4-workers/a2-mixb/build/q2 3.276133577 9163353 0 1000 30000 1 6 12 /home/user/z4-workers/a2-mixb/results_q2/main/c8
+/home/user/z4-workers/a2-mixb/build/q2 3.276133577 9171272 1 1000 30000 1 6 12 /home/user/z4-workers/a2-mixb/results_q2/main/c9
+/home/user/z4-workers/a2-mixb/build/q2 3.276133577 9179191 0 1000 30000 1 6 12 /home/user/z4-workers/a2-mixb/results_q2/main/c10
+/home/user/z4-workers/a2-mixb/build/q2 3.276133577 9187110 1 1000 30000 1 6 12 /home/user/z4-workers/a2-mixb/results_q2/main/c11
+/home/user/z4-workers/a2-mixb/build/q2 3.276133577 9195029 0 1000 30000 1 6 12 /home/user/z4-workers/a2-mixb/results_q2/main/c12
+/home/user/z4-workers/a2-mixb/build/q2 3.276133577 9202948 1 1000 30000 1 6 12 /home/user/z4-workers/a2-mixb/results_q2/main/c13
+/home/user/z4-workers/a2-mixb/build/q2 3.276133577 9210867 0 1000 30000 1 6 12 /home/user/z4-workers/a2-mixb/results_q2/main/c14
+/home/user/z4-workers/a2-mixb/build/q2 3.276133577 9218786 1 1000 30000 1 6 12 /home/user/z4-workers/a2-mixb/results_q2/main/c15
