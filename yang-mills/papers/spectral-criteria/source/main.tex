@@ -16,7 +16,11 @@ Suppose a Yang--Mills theory is known only through its correlation functions. Ho
 recognised in it, and what would let a gap survive when a lattice is refined? For the first question we prove
 a spectral criterion. For the second we prove an inequality that reduces one refinement step to three
 estimates, and we prove one of the three for $\SU(2)$, for exceptional sets of a particular kind. The other two are open, and so is a further condition
-needed to chain the steps. The criterion, in its form for the bounded operator $e^{-\tau H}$, and the inequality are machine-checked
+needed to chain the steps. We also show that a gap in a box that is uniform in the regulator is equivalent to two
+statements on a single fine lattice, for coarse variables of one's choice: the part of a function that the
+coarse variables do not determine is bounded by its energy, and the coarse variables decorrelate in time.
+Both hold in the free theory, the first for a suitable block average uniformly in the blocking factor;
+neither is known for the Wilson measure. The criterion, in its form for the bounded operator $e^{-\tau H}$, and the inequality are machine-checked
 in Lean. No mass
 gap is proved.
 \end{abstract}
@@ -195,10 +199,17 @@ choice suggested by those trials, not a result.
 Corollary~\ref{c:vac} carries the bound to the vacuum on an infinite time axis, where it becomes the second
 inequality of~\eqref{e:hyp}.
 
-Two further results are proved. Proposition~\ref{p:three} in Section~\ref{s:crit} is a form of the criterion
+Further results are proved. Proposition~\ref{p:three} in Section~\ref{s:crit} is a form of the criterion
 that uses a single time separation. Proposition~\ref{p:haar} in Appendix~\ref{s:haar} gives an explicit lower
 bound for the conditional variance of a single link; it bounds one term of the auxiliary statement of
-Section~\ref{s:arch} and is not an input of Theorem~\ref{t:inh}.
+Section~\ref{s:arch} and is not an input of Theorem~\ref{t:inh}. Three propositions restate what is open.
+Proposition~\ref{p:dir} reduces statement~(b) to an inequality on the fibres of the coarse field.
+Proposition~\ref{p:wstep} replaces~(b) by a bound on how much of a low-energy state lies in the fine detail.
+Proposition~\ref{p:onestep} dispenses with the chain of lattices: on one fine lattice, with coarse
+variables of one's choice, a gap in a box is equivalent to a bound of the fine detail by the energy together
+with decorrelation of the coarse variables; Remark~\ref{r:where} explains why the chain does not separate the
+infrared problem from its conclusion. Appendix~\ref{app:free} proves all of these statements in the free
+theory and computes them in one compact interacting example at the smallest size.
 
 \subsection{What is not claimed}\label{s:not}
 \begin{enumerate}
@@ -1218,6 +1229,13 @@ axioms. The construction~\cite{OAI} is a candidate that we have not connected to
 \item A finite mass.
 \item All of this for every compact simple group.
 \end{enumerate}
+By Proposition~\ref{p:onestep}, items~1 and~2 may be replaced by two statements on a single fine lattice,
+uniform in the regulator: for some finite set of gauge-invariant coarse variables, that the part of a function
+they do not determine is bounded by its energy, and that the coarse variables decorrelate over a fixed
+physical time. In the free theory the first holds for a twice-averaged block field strength and fails to be
+uniform for sums of links (Appendix~\ref{app:free}); what the corresponding variables are for a non-abelian
+group, where averaging needs parallel transport, is not settled here. Items~3 to~6 are unchanged.
+
 We cannot estimate the distance to any of these, and we do not know that this route is the right one.
 
 \begin{table}[ht]

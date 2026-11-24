@@ -102,6 +102,8 @@ On the Principal's instruction the worker tests were stopped (two background che
 
 - **Proposition E.5 (24 November, later; 39 pages).** For the plaquette field averaged twice over blocks of side `r`, `I − P_r ≤ c_r a H` with `c_r ≤ 1056 r` for every factor and every side: statement (i) of Proposition 5.9 is proved in the free theory uniformly in the blocking factor. The proof bounds the weight of the soft mode in the fine detail by a convergent series over aliases; the single average gives a series like `Σ 1/j`, matching the slow growth computed. The constant is about 3000 times the computed one. Steps checked in `supplement/S11-free-theory/onestep4.py` (three predicates met; a fourth, a hand evaluation of the series as below 1055, FAILED by 0.2 and is kept; the stated bound stands).
 
+- **Abstract, introduction and Section 9 brought up to date (24 November, later).** The abstract states the one-step equivalence; the paragraph on further results names Propositions 3.7, 5.7, 5.9 and Remark 5.8; Section 9 says that items 1 and 2 may be replaced by the two statements of Proposition 5.9. No statement added or changed.
+
 ## Sixth draft (24 November)
 
 A first-time-reader review of the fifth draft (`../../papers/spectral-criteria/supplement/S10-review-records/first-reader/report.md`, sub-agent of the same family) supplied a replacement abstract, introduction and Measurements section; the director read them, adjusted them and spliced them in. No theorem, number or claim was added or removed in the Measurements section (its 162 numerals were compared by script before and after; the later edits only add two clarifying values, 1.14 and the unrounded 0.93574 + 2 x 0.00271).
