@@ -60,6 +60,8 @@ On the Principal's instruction the worker tests were stopped (two background che
 
 - **Remark 5.6 and abstract.** The paper now states in Section 5 the idea of the second proof of Theorem 1.2 (approximate eigenvectors, no spectral projection, no completeness), which is the one formalised, and the abstract says the inequality is machine-checked for real inner product spaces. Placed after Remark 5.5 so that no existing number changes.
 
+- **Complex scalars and the form hypothesis (24 November, later).** `Hilbert.lean` now also proves that a symmetric operator with 0 ≤ ⟨w,Aw⟩ ≤ ⟨w,w⟩ has norm at most one, and the theorem on complex inner product spaces (`refinement_complex`), deduced from the real case. The two limits stated earlier in Appendix C (complex scalars; A ≤ I entering as a norm bound) are removed. Totals: seven files, 74 theorems, 28 pinned.
+
 ## Sixth draft (24 November)
 
 A first-time-reader review of the fifth draft (`../../papers/spectral-criteria/supplement/S10-review-records/first-reader/report.md`, sub-agent of the same family) supplied a replacement abstract, introduction and Measurements section; the director read them, adjusted them and spliced them in. No theorem, number or claim was added or removed in the Measurements section (its 162 numerals were compared by script before and after; the later edits only add two clarifying values, 1.14 and the unrounded 0.93574 + 2 x 0.00271).

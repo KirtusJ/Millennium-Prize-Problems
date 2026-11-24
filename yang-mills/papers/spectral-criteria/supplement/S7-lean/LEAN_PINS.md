@@ -116,3 +116,13 @@ The algebra of the exceptional projection built from a gate (last sentence of th
 ## Added 24 November 2026: `OneSeparation.lean`
 
 The test at one time separation on finite-dimensional real spaces (symmetric `S`, `r ≤ 1`): no eigenvalue in `(r,1)` if and only if the quadratic inequality holds for every vector. File SHA-256 `a00fd234d6d26f650d1358005d2eee7b41b7492c919e0e881e953e2eca9d0af5`. Lean 4.19.0: exit 0, no `sorry`, no warning, standard axioms. Statement `OneSeparation.one_separation` pinned at `2f31cae1cfa1eedf47d806a0460f328953a508fb2d69457d590674d628a08e64`: with pin exit 0, wrong pin exit 1.
+
+## Hilbert.lean extended (24 November 2026, later)
+
+The file gained the form of the hypothesis used in the paper (`0 ≤ ⟪w, A w⟫ ≤ ⟪w, w⟫` implies norm at most one) and the theorem for complex inner product spaces, obtained from the real one through the real part of the inner product. New file SHA-256 `eb79240f1e080832be7387fbcf096dc44f1640ef2ffef0d5aa42d6ef14f26da5` (the digest given above for this file is superseded; the six statement pins above still hold against the new file, rechecked). Lean 4.19.0: exit 0, no `sorry`, no warning, standard axioms.
+
+| Theorem | SHA-256 of the statement (pinned) | With pin | Wrong pin |
+|---|---|---|---|
+| `RefinementHilbert.refinement_complex` | `d2166dfd3c6ab9cf0d27b296c182208da2716d9bda51d507a546227c6d8bb326` | exit 0 | exit 1 |
+| `RefinementHilbert.refinement_hilbert_form` | `aedefc7c7957300841a3a88607ea850d56c55eddd6fd704314ecd4873eca44c8` | exit 0 | exit 1 |
+| `RefinementHilbert.norm_le_one_of_form` | `af9c9ec8d9174ab6a929b3313c436d416bdd77e04b3f3ba1ea0c62518692d153` | exit 0 | exit 1 |

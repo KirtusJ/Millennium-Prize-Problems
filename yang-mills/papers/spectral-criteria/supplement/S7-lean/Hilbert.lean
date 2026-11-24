@@ -425,9 +425,113 @@ theorem refinement_hilbert_norm [Nontrivial E] (A : E →L[ℝ] E)
   calc ‖(A ^ m) w‖ ≤ ‖A‖ ^ m * ‖w‖ := pow_norm_le A m w
     _ ≤ _ := mul_le_mul_of_nonneg_right (by linarith) (norm_nonneg _)
 
+/-! ## The hypothesis `0 ≤ A ≤ I` in form language -/
+
+/-- A symmetric operator with `0 ≤ ⟪w, A w⟫ ≤ ⟪w, w⟫` has norm at most one. -/
+theorem norm_le_one_of_form (A : E →L[ℝ] E)
+    (hsym : ∀ x y, ⟪A x, y⟫_ℝ = ⟪x, A y⟫_ℝ) (hpos : ∀ x, 0 ≤ ⟪x, A x⟫_ℝ)
+    (hle : ∀ x, ⟪x, A x⟫_ℝ ≤ ⟪x, x⟫_ℝ) : ‖A‖ ≤ 1 := by
+  refine A.opNorm_le_bound zero_le_one fun w => ?_
+  rw [one_mul]
+  have hcs := cs_form (fun x => A x) (fun x y => map_add _ x y) (fun c x => map_smul _ c x)
+    hsym hpos (A w) w
+  simp only at hcs
+  have e1 : ⟪A w, A w⟫_ℝ = ‖A w‖ ^ 2 := real_inner_self_eq_norm_sq _
+  have h2 : ⟪A w, A (A w)⟫_ℝ ≤ ‖A w‖ ^ 2 := by
+    have := hle (A w); rwa [real_inner_self_eq_norm_sq] at this
+  have h3 : ⟪w, A w⟫_ℝ ≤ ‖w‖ ^ 2 := by
+    have := hle w; rwa [real_inner_self_eq_norm_sq] at this
+  have h4 : 0 ≤ ⟪w, A w⟫_ℝ := hpos w
+  have h5 : 0 ≤ ⟪A w, A (A w)⟫_ℝ := hpos (A w)
+  rw [e1] at hcs
+  have hmain : (‖A w‖ ^ 2) ^ 2 ≤ ‖A w‖ ^ 2 * ‖w‖ ^ 2 :=
+    hcs.trans (mul_le_mul h2 h3 h4 (sq_nonneg _))
+  rcases (sq_nonneg ‖A w‖).eq_or_lt with h0 | h0
+  · have : ‖A w‖ = 0 := by nlinarith [norm_nonneg (A w)]
+    rw [this]; exact norm_nonneg _
+  · have h6 : ‖A w‖ ^ 2 ≤ ‖w‖ ^ 2 := by
+      have : ‖A w‖ ^ 2 * ‖A w‖ ^ 2 ≤ ‖A w‖ ^ 2 * ‖w‖ ^ 2 := by nlinarith
+      exact le_of_mul_le_mul_left this h0
+    exact (sq_le_sq₀ (norm_nonneg _) (norm_nonneg _)).mp h6
+
+/-- The theorem with the hypothesis `0 ≤ A ≤ I` stated through the quadratic form, as in the
+paper. -/
+theorem refinement_hilbert_form [Nontrivial E] (A : E →L[ℝ] E)
+    (hsym : ∀ x y, ⟪A x, y⟫_ℝ = ⟪x, A y⟫_ℝ) (hpos : ∀ x, 0 ≤ ⟪x, A x⟫_ℝ)
+    (hle : ∀ x, ⟪x, A x⟫_ℝ ≤ ⟪x, x⟫_ℝ)
+    (P B : E → E)
+    (hPsa : ∀ x y, ⟪P x, y⟫_ℝ = ⟪x, P y⟫_ℝ) (hPid : ∀ x, P (P x) = P x)
+    (hBsa : ∀ x y, ⟪B x, y⟫_ℝ = ⟪x, B y⟫_ℝ) (hBid : ∀ x, B (B x) = B x)
+    (hBP : ∀ x, B (P x) = 0)
+    (k j m : ℕ) (hm : 1 ≤ m) (hjm : j ≤ m) (γ κ b : ℝ) (hγ : 0 < γ)
+    (H1 : ∀ w, γ * ‖w - P w - B w‖ ^ 2 ≤ ⟪w, w⟫_ℝ - ⟪w, (A ^ (2 * k)) w⟫_ℝ)
+    (H2 : ∀ u, ‖B ((A ^ j) (B u))‖ ≤ κ * ‖u‖)
+    (H3 : ∀ u, ‖P ((A ^ m) (P u))‖ ≤ (1 - b) * ‖u‖) (w : E) :
+    ‖(A ^ m) w‖ ≤ (1 - max (b - κ) 0 / (1 + 2 * (k : ℝ) / (γ * (m : ℝ)))) * ‖w‖ :=
+  refinement_hilbert_norm A hsym hpos (norm_le_one_of_form A hsym hpos hle) P B hPsa hPid hBsa hBid
+    hBP k j m hm hjm γ κ b hγ H1 H2 H3 w
+
+/-! ## Complex scalars
+
+A complex inner product space is a real inner product space under the real part of its inner
+product, with the same norm; the theorem transfers. -/
+
+section ComplexCase
+variable {F : Type*} [NormedAddCommGroup F] [InnerProductSpace ℂ F]
+
+theorem restrict_pow (A : F →L[ℂ] F) (n : ℕ) (x : F) :
+    ((A.restrictScalars ℝ) ^ n) x = (A ^ n) x := by
+  induction n generalizing x with
+  | zero => simp
+  | succ n ih =>
+    rw [pow_succ, pow_succ]
+    show ((A.restrictScalars ℝ) ^ n) ((A.restrictScalars ℝ) x) = (A ^ n) (A x)
+    rw [ih]; rfl
+
+/-- Refinement with an exceptional set on a non-zero complex inner product space. -/
+theorem refinement_complex [Nontrivial F] (A : F →L[ℂ] F)
+    (hsym : ∀ x y, ⟪A x, y⟫_ℂ = ⟪x, A y⟫_ℂ) (hpos : ∀ x, 0 ≤ (⟪x, A x⟫_ℂ).re)
+    (hle : ∀ x, (⟪x, A x⟫_ℂ).re ≤ ‖x‖ ^ 2)
+    (P B : F → F)
+    (hPsa : ∀ x y, ⟪P x, y⟫_ℂ = ⟪x, P y⟫_ℂ) (hPid : ∀ x, P (P x) = P x)
+    (hBsa : ∀ x y, ⟪B x, y⟫_ℂ = ⟪x, B y⟫_ℂ) (hBid : ∀ x, B (B x) = B x)
+    (hBP : ∀ x, B (P x) = 0)
+    (k j m : ℕ) (hm : 1 ≤ m) (hjm : j ≤ m) (γ κ b : ℝ) (hγ : 0 < γ)
+    (H1 : ∀ w, γ * ‖w - P w - B w‖ ^ 2 ≤ ‖w‖ ^ 2 - (⟪w, (A ^ (2 * k)) w⟫_ℂ).re)
+    (H2 : ∀ u, ‖B ((A ^ j) (B u))‖ ≤ κ * ‖u‖)
+    (H3 : ∀ u, ‖P ((A ^ m) (P u))‖ ≤ (1 - b) * ‖u‖) (w : F) :
+    ‖(A ^ m) w‖ ≤ (1 - max (b - κ) 0 / (1 + 2 * (k : ℝ) / (γ * (m : ℝ)))) * ‖w‖ := by
+  letI : InnerProductSpace ℝ F := InnerProductSpace.rclikeToReal ℂ F
+  have hin : ∀ x y : F, ⟪x, y⟫_ℝ = (⟪x, y⟫_ℂ).re := fun x y => real_inner_eq_re_inner ℂ x y
+  have hA : ∀ x, (A.restrictScalars ℝ) x = A x := fun x => rfl
+  have hre : ∀ x : F, (((‖x‖ : ℝ) : ℂ) ^ 2).re = ‖x‖ ^ 2 := fun x => by
+    rw [← Complex.ofReal_pow]; exact Complex.ofReal_re _
+  have := refinement_hilbert_form (A.restrictScalars ℝ)
+    (fun x y => by rw [hin, hin, hA, hA, hsym])
+    (fun x => by rw [hin, hA]; exact hpos x)
+    (fun x => by
+      rw [hin, hin, hA, inner_self_eq_norm_sq_to_K]
+      refine (hle x).trans_eq ?_
+      norm_cast)
+    P B
+    (fun x y => by rw [hin, hin, hPsa]) hPid
+    (fun x y => by rw [hin, hin, hBsa]) hBid hBP k j m hm hjm γ κ b hγ
+    (fun w => by
+      rw [hin, hin, restrict_pow, inner_self_eq_norm_sq_to_K]
+      refine (H1 w).trans_eq ?_
+      congr 1
+      norm_cast)
+    (fun u => by rw [restrict_pow]; exact H2 u)
+    (fun u => by rw [restrict_pow]; exact H3 u) w
+  rwa [restrict_pow] at this
+
+end ComplexCase
+
 end RefinementHilbert
 
 #print axioms RefinementHilbert.refinement_hilbert
 #print axioms RefinementHilbert.refinement_hilbert_norm
 #print axioms RefinementHilbert.exists_approx_eig
 #print axioms RefinementHilbert.proj_step
+#print axioms RefinementHilbert.refinement_hilbert_form
+#print axioms RefinementHilbert.refinement_complex
