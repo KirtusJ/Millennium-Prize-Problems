@@ -1,0 +1,5 @@
+'Directional.scalar_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Directional.scalar_step_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Directional.weight_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Directional.mem_range_of_cs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Directional.weight_bound_fd' depends on axioms: [propext, Classical.choice, Quot.sound]

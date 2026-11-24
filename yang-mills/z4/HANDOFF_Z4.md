@@ -2,6 +2,18 @@
 
 Written for the next session of this director. Read this, then `infrared/README.md` (change record) and `solution-attempt/ATTEMPT.md`.
 
+## 0. Update at the end of the following session (24 November 2026, later)
+
+Read this section first; sections 1 to 5 are the earlier note and are kept as written, with the corrections below.
+
+- **Still no mass gap. Hypotheses 3.1, 3.2, 3.3 are open.** The paper is 33 pages. The audit of revision `7c8cb1b` (relayed by the Principal) was checked point by point by calculation and adopted; the list is in `infrared/README.md` (entry "After the audit of revision 7c8cb1b") and in `solution-attempt/ATTEMPT.md` §4.5 and §4.6.
+- **New in the paper:** Proposition 3.7 (directional sufficient form), Remarks 3.8 and 3.9, Remark 6.5(g), additions to 3.6(b), 6.5(f), Section 8 and Appendix E. Nothing was renumbered.
+- **Correction to item 4 of section 4 below:** "P_c of order 1/β" is impossible for all functions on the fibre (the constant is at least 1/3, Remark 3.8); it can only be meant for gauge-invariant functions, and bounded constants would already suffice. The target is now the weighted inequality of Proposition 3.7.
+- **Tools in a new container.** LaTeX: `apt-get update && apt-get install -y texlive-latex-extra texlive-fonts-recommended texlive-science texlive-pictures cm-super` (without `cm-super` the PDF gets bitmap fonts). Python: `pip install numpy scipy`. Lean: elan with toolchain `leanprover/lean4:v4.19.0`; a project with `lakefile.toml` requiring `mathlib` at `rev = "v4.19.0"`, then `lake update` and `lake exe cache get` (about ten minutes); `lake env lean <file>`. The `pcpos` binary is not available; statement pins are computed with `papers/spectral-criteria/supplement/S7-lean/statement_digest.py` (same convention, seven recorded pins reproduced).
+- **External sources.** `git clone --filter=blob:none --no-checkout https://github.com/yang-mills-group/OpenAI-YM-20261028.git`, then `git checkout 3456e5e75cf8d4cd558955a5c7638fba2d68f464 -- README.md YM/EveryPhase/Light.lean YM/EveryPhase/Decay.lean YM/EveryPhase/Extension.lean` fetches only those files. Read and remove; store nothing.
+- **Open, in the order I would take them:** (1) any bound, even numerical and for one small lattice, on the quantity `‖Σ^{1/2} M Σ^{1/2}‖` of Proposition 3.7 for gauge-invariant functions of SU(2); (2) an estimate of the low-energy weight `F_i(u)` of Remark 3.9 beyond the free theory; (3) the relation between the external construction's blocking kernel and the coarse field used here; (4) "sum of influences is 2" in `ATTEMPT.md` §4 is still unchecked; (5) items 5 to 7 of section 4 below are unchanged.
+- **A mistake of this session:** a convergence predicate compared grid maxima, which do not converge geometrically, with a tolerance meant for integrals. The failed result is kept (`weightedtoy_result.txt`) with a follow-up. Fix the basis of a tolerance per quantity.
+
 ## 1. Where things stand
 
 **No mass gap is proved. Never say otherwise.** The interacting hypotheses 3.1, 3.2, 3.3 are open for SU(2); volume uniformity, identification with a continuum theory and all other groups are untouched. Rendezvous issue: `KirtusJ/Millennium-Prize-Problems#1` (keep open). Last comment of mine: 7122902283.

@@ -1,0 +1,18 @@
+N=4 beta*P=0.288675 beta*L=0.267949 scalar bound=0.928203 gamma_opt=0.928203 max|gamma_matrix-gamma_opt|=1.78e-15 argmin gamma [(0, 0, 1), (0, 1, 0), (1, 0, 0)] argmax P [(0, 0, 1), (0, 1, 0), (1, 0, 0)]
+N=8 beta*P=0.360882 beta*L=0.473398 scalar bound=0.854087 gamma_opt=0.876241 max|gamma_matrix-gamma_opt|=2.22e-15 argmin gamma [(0, 0, 1), (0, 0, 3), (0, 1, 0), (0, 3, 0), (1, 0, 0), (3, 0, 0)] argmax P [(0, 0, 1), (0, 0, 3), (0, 1, 0), (0, 3, 0), (1, 0, 0), (3, 0, 0)]
+N=16 beta*P=0.455276 beta*L=0.678584 scalar bound=0.763975 gamma_opt=0.801969 max|gamma_matrix-gamma_opt|=2.22e-15 argmin gamma [(0, 0, 1), (0, 0, 7), (0, 1, 0), (0, 7, 0), (1, 0, 0), (7, 0, 0)] argmax P [(0, 0, 1), (0, 0, 7), (0, 1, 0), (0, 7, 0), (1, 0, 0), (7, 0, 0)]
+N=32 beta*P=0.524321 beta*L=0.822241 scalar bound=0.698754 gamma_opt=0.746285 max|gamma_matrix-gamma_opt|=2.22e-15 argmin gamma [(0, 0, 1), (0, 0, 15), (0, 1, 0), (0, 15, 0), (1, 0, 0), (15, 0, 0)] argmax P [(0, 0, 1), (0, 0, 15), (0, 1, 0), (0, 15, 0), (1, 0, 0), (15, 0, 0)]
+N=64 beta*P=0.567142 beta*L=0.906562 scalar bound=0.660437 gamma_opt=0.712724 max|gamma_matrix-gamma_opt|=2.22e-15 argmin gamma [(0, 0, 1), (0, 0, 31), (0, 1, 0), (0, 31, 0), (1, 0, 0), (31, 0, 0)] argmax P [(0, 0, 1), (0, 0, 31), (0, 1, 0), (0, 31, 0), (1, 0, 0), (31, 0, 0)]
+axial limit matrix: lambda_max=0.617600778 ; N=2^20 (1,0,0): beta*P=0.617597419 beta*L(this momentum)=0.999994008 scalar bound=0.6182022 gamma_opt=0.6749438
+M5 worst excess of w(k) over c sinh/(1+c sinh): N=8 -9.404e-02 N=16 -9.404e-02 N=32 -9.404e-02
+(1,0,0) N=2^4 sinh(w_k)=3.975365e-01 one-particle weight w=2.667534e-01 ratio=0.671016
+(1,0,0) N=2^8 sinh(w_k)=2.454492e-02 one-particle weight w=2.187710e-02 ratio=0.891308
+(1,0,0) N=2^12 sinh(w_k)=1.533981e-03 one-particle weight w=1.395860e-03 ratio=0.909959
+(1,0,0) N=2^16 sinh(w_k)=9.587380e-05 one-particle weight w=8.735554e-05 ratio=0.911151
+slope between 2^12 and 2^16: 0.999528
+M1 MET
+M2 MET
+M3 MET
+M4 MET
+M5 MET
+M6 MET

@@ -145,3 +145,19 @@ The spectral criterion for a bounded self-adjoint operator `S` on a complex Hilb
 | `Criterion.spectral_criterion` | `36868f7a4e3d9c2bfbff7554ea122aeba7b3c30438c5caa82d9c666e2c10ba4a` | exit 0 | exit 1 |
 | `Criterion.gap_implies_rate` | `9ac6ac5862777a86ea9c694ec8b5cdc18a112a3f8c8190457e1b050606c38dca` | exit 0 | exit 1 |
 | `Criterion.rate_implies_gap` | `be239f28454efeb60008b506efda200e9c7ca8f74f8baea61155eeb51a1bed3b` | exit 0 | exit 1 |
+
+## Added 24 November 2026 (later): `Directional.lean`, and the digest tool
+
+The algebraic steps of the directional sufficient form (Proposition 3.7): the scalar minimisation (`scalar_step`, with the case `z = 0` separately) and the weight bound `⟪b, M b⟫ ≤ J V` from the Cauchy–Schwarz inequality for covariances, stated without square roots of matrices (`weight_bound`; in finite dimension the range condition is proved, `mem_range_of_cs`, `weight_bound_fd`). File SHA-256 `2cc917b68adfbb40618610a4cd5455a0c4e7cb034e9dd0372aaa654a774bf7a7`. Lean 4.19.0, Mathlib v4.19.0, project recreated in a new container: exit 0, no `sorry`, no warning, standard axioms (`Directional.axioms.txt`). Not formalised: the conditional laws, the derivative of the conditional expectation, the weighted Poincaré inequality (a hypothesis of the proposition) and the integration over coarse fields.
+
+The instrument used for the earlier pins was not available in this container. The digests below were computed with `statement_digest.py` in this folder (SHA-256 `25d3776b625bccd8badd30b7205c460fef0b7579c58eb683da3770826923f878`), which implements the same convention: the text between `theorem <name>` and the first `:=`, comments removed, white space collapsed. It does not run the instrument's three textual probes. Controls, answered first: it reproduces the recorded pins of `Prediction.conditional_prediction`, `Criterion.spectral_criterion`, `RefinementHilbert.refinement_complex`, `Discrete.refinement_fin`, `SeparationHilbert.one_separation_dense`, `B2Haar.first_zero` and `F2Lean.gated_main` (7 of 7, exit 0), and rejects the pin `000…0` for `Gates.gate_projection` (exit 1).
+
+| Theorem | SHA-256 of the statement (pinned) | With pin | Wrong pin |
+|---|---|---|---|
+| `Directional.scalar_step` | `688387898c16e1e336f6c851f0513397fddf56a7aea98c39349b802069254379` | exit 0 | exit 1 |
+| `Directional.weight_bound` | `74d798df47d01c87b258fe375fbbd72aed7d8d79b4e5289e4833cde84b53f8e5` | exit 0 | exit 1 |
+| `Directional.weight_bound_fd` | `e93af8b676be1e2aae1abd10babc14f14719a282c70629499b63b4d0565780de` | exit 0 | exit 1 |
+
+Not pinned: `scalar_step_zero`, `mem_range_of_cs`.
+
+The seven earlier Mathlib files (`Criterion`, `Hilbert`, `Discrete`, `Gates`, `Prediction`, `SeparationHilbert`, `OneSeparation`) were recompiled in the same new project on this occasion: exit 0 each, no warning.

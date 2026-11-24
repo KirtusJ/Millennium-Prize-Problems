@@ -489,13 +489,142 @@ law of total variance
 \gamma\ge\frac1{1+\beta^2\operatorname*{ess\,sup}_{c\in\mathcal G}P_cL_c}
 \]
 in Proposition~\ref{p:pred}. With Remark~\ref{r:rate}, bounds $P_c\le C_1e^{p\beta}$ and
-$L_c\le C_2e^{q\beta}$, uniform in the volume, would suffice when $p+q<1/s$. Since $h$ is gauge invariant when $g$ is, the Poincar\'e
-inequality is needed only for gauge-invariant functions on the fibre. Neither bound is known for the Wilson
-measure at weak coupling. In the free theory the reduction loses little: there $\beta P_c$ tends to $0.617$
-and $\beta L_c$ to $1$ as the side grows, which gives $\gamma\ge0.618$ where the true value is $0.675$
-(Appendix~\ref{app:free}, Supplement~S11).
+$L_c\le C_2e^{q\beta}$, uniform in the volume, would suffice when $p+q<1/s$. The displayed bound on
+$\varrho(c)$, which is a supremum over all functions, uses the Poincar\'e inequality for all functions on the
+fibre. If the inequality is assumed only for gauge-invariant functions, that bound does not follow, but the
+conclusion of Proposition~\ref{p:pred} for gauge-invariant $f$ does (Proposition~\ref{p:dir}); and the
+restriction is forced if $P_c$ is to be small (Remark~\ref{r:gaugedir}). Neither bound is known for the Wilson
+measure at weak coupling. In the free theory the reduction loses little: along the lowest axial momentum
+$\beta P_c$ tends to $0.6176$ and $\beta L_c$ to $1$ as the side grows, which gives $\gamma\ge0.6182$ where the
+value along that momentum tends to $0.6749$; at every side computed, $4$ to $64$, that momentum carries the
+largest $\beta P_c$ and the smallest $\gamma$ (Appendix~\ref{app:free}, Supplement~S11).
 \end{enumerate}
 Both forms were proposed by an OpenAI GPT model used as reviewer.
+\end{remark}
+
+The sufficient form (b) replaces two matrices by their largest eigenvalues. Keeping the matrices gives a
+stronger statement, in which only the directions that matter have to be controlled.
+
+\begin{proposition}[A directional sufficient form]\label{p:dir}
+In the setting of Remark~\ref{r:forms}(b), let $\Sigma_x$ be the covariance matrix of $Y$ given $X=x$, the
+links being vectors in $\R^4$; let $\mathcal X_c$ be the set of configurations of a slice with coarse field
+$c$, and $\mu_c$ the law of $X$ given $C=c$. Let $\mathcal G$ be as in Proposition~\ref{p:pred}. Suppose that
+for almost every $c\in\mathcal G$ there is a measurable field $x\mapsto M_c(x)$ of positive semidefinite
+matrices, each vanishing on the vectors orthogonal to the tangent space of $\mathcal X_c$ at $x$, such that
+\begin{equation}\label{e:wpi}
+\operatorname{Var}_{\mu_c}(h)\ \le\ \E_{\mu_c}\big\langle\nabla h,\,M_c\,\nabla h\big\rangle
+\end{equation}
+for every smooth gauge-invariant function $h$ of a slice, and put
+$J_c=\operatorname*{ess\,sup}_x\big\|\Sigma_x^{1/2}M_c(x)\Sigma_x^{1/2}\big\|$, the essential supremum being
+over $\mu_c$. Then for every gauge-invariant $f$
+\[
+\langle f,(I-A^2)f\rangle\ \ge\ \gamma\,\|Gf\|^2,\qquad
+\gamma=\Big(1+\beta^2\operatorname*{ess\,sup}_{c\in\mathcal G}J_c\Big)^{-1}.
+\]
+\end{proposition}
+\begin{proof}
+Let $f$ be gauge invariant and $g=Af$. The kernel $\mathsf C$ and the function $\phi$ are invariant under a
+gauge transformation applied to both slices, so $g$ is gauge invariant, and so is
+$h(x)=\E[g(Y)\mid X=x]$. At a finite lattice $\mathsf C$ is smooth and bounded below by a positive constant,
+so $h$ is smooth. As in the proof of Proposition~\ref{p:pred},
+$\langle f,(I-A^2)f\rangle=\E|f(X)-g(Y)|^2\ge\E\big[\mathbf 1_{\mathcal G}(C)\,\E[\,|f(X)-g(Y)|^2\mid C]\big]$.
+
+Fix $c$ and write $V_f$, $V_h$ for the variances of $f(X)$ and $h(X)$ given $C=c$, and
+$W=\E[\operatorname{Var}(g(Y)\mid X)\mid C=c]$. Since $C$ is a function of $X$, the covariance of $f(X)$ and
+$g(Y)$ given $C=c$ is that of $f(X)$ and $h(X)$, of modulus at most $(V_fV_h)^{1/2}$, and the variance of
+$g(Y)$ given $C=c$ is $V_h+W$. Hence
+\begin{equation}\label{e:dir1}
+\E[\,|f(X)-g(Y)|^2\mid C=c]\ \ge\ V_f+V_h+W-2(V_fV_h)^{1/2}.
+\end{equation}
+Let $b_x=\Cov(Y,g(Y)\mid X=x)$, a vector with one entry in $\mathbb C^4$ for each link. For a tangent vector $v$ at
+$x$ the derivative of $h$ along $v$ is $\beta\langle v,b_x\rangle$, so the gradient of $h$ on the product of
+spheres is $\beta$ times the tangential part of $b_x$, and because $M_c(x)$ vanishes on the vectors orthogonal
+to the fibre, $\langle\nabla h,M_c\nabla h\rangle=\beta^2\langle b_x,M_c(x)b_x\rangle$. For every real vector
+$w$ the Cauchy--Schwarz inequality for covariances gives
+$|\langle w,b_x\rangle|^2\le\langle w,\Sigma_xw\rangle\operatorname{Var}(g(Y)\mid X=x)$. So
+$b_x=\Sigma_x^{1/2}u$ with $|u|^2\le\operatorname{Var}(g(Y)\mid X=x)$, and
+$\langle b_x,M_c(x)b_x\rangle\le J_c\operatorname{Var}(g(Y)\mid X=x)$. With~\eqref{e:wpi} this is
+$V_h\le\beta^2J_cW$. Put $z=\beta^2J_c$. Then the right side of~\eqref{e:dir1} is at least
+$V_f+(1+1/z)V_h-2(V_fV_h)^{1/2}\ge V_f/(1+z)$, the minimum over $V_h\ge0$. Integrating over
+$c\in\mathcal G$ gives the claim, since $\|Gf\|^2=\E[\mathbf 1_{\mathcal G}(C)\operatorname{Var}(f(X)\mid C)]$.
+\end{proof}
+
+With $M_c(x)=P_c$ times the projection $\Pi_x$ onto the tangent space of the fibre, \eqref{e:wpi} is the
+Poincar\'e inequality of Remark~\ref{r:forms}(b) for gauge-invariant functions, and
+\[J_c\ \le\ P_c\operatorname*{ess\,sup}_x\|\Pi_x\Sigma_x\Pi_x\|\ \le\ P_cL_c .\]
+So the proposition contains that
+remark in its gauge-invariant form, with $L_c$ replaced by the covariance of the next slice along the fibre
+directions alone. Its interest is that fluctuations which are large in some direction do no harm if the
+weight $M_c$ is small there, or if the next slice varies little along it. Inequalities of the
+form~\eqref{e:wpi} with a matrix weight are known for measures on $\R^n$ with a strictly convex potential,
+where the inverse Hessian of the potential is a weight and the inequality is an equality for linear
+functions of a Gaussian vector~\cite{BL76}. The fibres here are compact and the action is not convex, so
+that is an indication of what $M_c$ might be, not a result that applies. No inequality~\eqref{e:wpi} with
+useful constants is known for the Wilson measure at weak coupling, and the proposition, like
+Proposition~\ref{p:pred}, replaces one open estimate by another.
+
+Two checks were made. In the free theory, with $M_c$ the covariance of the fibre, the proposition gives the
+exact rate: there $\beta^2J_c=\|Q(I-R^2)^{-1}Q\|-1$ in the notation of Appendix~\ref{app:free}, so that
+$\gamma=\gamma_{\mathrm{opt}}$ (computed at every coarse momentum for sides $4$ to $64$; the largest
+difference is $2\times10^{-15}$). And in a compact model that is not Gaussian, two $\mathrm U(1)$ links with
+a random positive weight in place of $\phi$ and the product of the links as coarse field, the squared maximal
+correlation, the bound with the best weight along the fibre, the bound with $P_c$ and the covariance along
+the fibre, and the bound with $P_cL_c$ were computed by quadrature at $54$ instances; they are ordered as the
+proposition says in every instance (Supplement~S11; a first run failed a convergence test that we had set
+wrongly, and is kept there with its successor). The proposition and the first check were proposed by an
+OpenAI GPT model used as reviewer; the proof was checked and written out here.
+
+\begin{remark}[Gauge directions, and how small the constants need to be]\label{r:gaugedir}
+\leavevmode
+\begin{enumerate}
+\item[(a)] \emph{For all functions on the fibre the Poincar\'e constant is at least $1/3$}, at every
+coupling, volume and coarse field. Take a vertex of the fine lattice that is not a vertex of the coarse one
+and a link $e$ at that vertex. A gauge transformation at the vertex changes no coarse link: the vertex is
+either the midpoint of one coarse link, whose two halves change by factors that cancel, or on no coarse link.
+The law of $X$ is gauge invariant, so $\mu_c$ is invariant under these transformations, which multiply
+$U_e$ by an arbitrary group element. Hence $U_e$ is uniformly distributed on $S^3$ under $\mu_c$. For a unit
+vector $v$ of $\R^4$ and $F(x)=v\cdot U_e$ this gives $\operatorname{Var}_{\mu_c}(F)=\tfrac14$ and
+$\E_{\mu_c}|\nabla F|^2=\E[1-(v\cdot U_e)^2]=\tfrac34$, and the gradient along the fibre is no longer than the
+full gradient. So $P_c\ge\tfrac13$ if all functions are admitted. The function $F$ is not gauge invariant,
+and the argument says nothing about gauge-invariant functions. A constant $P_c$ of order $1/\beta$, which is
+what the free theory has, can therefore hold at weak coupling only for gauge-invariant functions; this is
+why Proposition~\ref{p:dir} is stated for them. Counting dimensions per coarse cell of a slice: the fibre has
+$63$, of which $21$ are these gauge directions (seven vertices) and $42$ remain, three times the $14$
+fine-detail modes that the free theory has at each coarse momentum. (In the free theory the gauge directions carry no
+probability law at all, and Appendix~\ref{app:free} works with the transverse potential from the start.)
+\item[(b)] \emph{Constants of order $1/\beta$ are not needed.} If $J_c\le J$ on $\mathcal G$, uniformly in
+the volume and along the trajectory, then $\gamma_i\ge1/(1+J\beta_i^2)$, and under the growth condition of
+Remark~\ref{r:rate} the sum $\sum_ia_i(1+J\beta_i^2)$ converges. Bounded constants would do, and so would
+constants growing like $e^{p\beta}$ with $p<1/s$.
+\end{enumerate}
+Part (a) and the observation (b) are due to an OpenAI GPT model used as reviewer.
+\end{remark}
+
+\begin{remark}[Hypothesis~\ref{h:mix} and the low-energy weight of the fine detail]\label{r:weight}
+Let $E_i$ be the spectral measure of $H_i$ on the centred gauge-invariant functions and
+$F_i(u)=\|G_iE_i((0,u])G_i\|$, the largest weight at energies up to $u$ of a unit vector in the range of
+$G_i$. Two inequalities relate it to the inverse-Hamiltonian form of Remark~\ref{r:forms}(a):
+\[
+\sup_{u>0}\frac{F_i(u)}u\ \le\ \big\|G_iH_i^{-1}G_i\big\|\ \le\ \int_0^\infty\frac{F_i(u)}{u^2}\,du .
+\]
+The first holds because $E_i((0,u])\le uH_i^{-1}$. For the second, $1/s=\int_s^\infty u^{-2}\,du$ and
+Tonelli's theorem give $\langle h,H_i^{-1}h\rangle=\int_0^\infty\mu_h((0,u])\,u^{-2}\,du$ for the spectral
+measure $\mu_h$ of $h$, and $\mu_h((0,u])\le F_i(u)$ for a unit vector $h$ in the range of $G_i$. So
+Hypothesis~\ref{h:mix} requires the weight of the fine detail to vanish at least linearly at low energy,
+with $\sum_i\sup_uF_i(u)/u<\infty$, and it holds if $\sum_i\int_0^\infty F_i(u)u^{-2}\,du<\infty$. For
+instance, if $F_i(u)\le K(u/\Lambda_i)^\alpha$ for $u\le\Lambda_i$ with some $\alpha>1$, then
+$\|G_iH_i^{-1}G_i\|\le(1+K/(\alpha-1))/\Lambda_i$, and $\sum_i\Lambda_i^{-1}<\infty$ suffices. This is a
+condition on the fine detail alone; it does not ask for a gap, and a theory without a gap can meet it. The
+power bound was proposed by an OpenAI GPT model used as reviewer; the lower inequality and the following
+calibration were added here.
+
+In the free theory the linear order is attained. For linear functions of the fine detail at the lowest
+axial momentum, the weight on the soft mode is $0.91$ times $\sinh\omega_k$, to two figures, for sides
+$2^{12}$ and $2^{16}$ (Supplement~S11), that is, about $0.91\,a\,u$ at the energy $u$ of that mode. So in that
+example an exponent $\alpha>1$ can hold only with a constant that depends on the box, through the lowest
+energy $2\pi/L$; the hypothesis holds there all the same (Proposition~\ref{p:freemix}), because the supremum
+defining $\|G_iH_i^{-1}G_i\|$ is taken momentum by momentum. We have no estimate of $F_i$ for the Wilson
+measure.
 \end{remark}
 
 \section{The spectral criterion}\label{s:crit}
@@ -792,7 +921,17 @@ occupation does not by itself make that weight large, since a region that is oft
 its fine detail quickly. Nothing is shown this way near $-I$.
 \item[(f)] Theorem~\ref{t:ret} and Corollary~\ref{c:vac} use only that the loop contains a link that it
 traverses once. They hold, with the same proof and the same constant, for a square of any side $r$ in place of
-the coarse plaquette, on a lattice of side at least $2r$.
+the coarse plaquette, on a lattice of side at least $2r$. The probability bound needs nothing about the
+position of the square. The last statement of Corollary~\ref{c:vac} does: for $B=\chi(I-P)$ to be a
+projection the gate must be measurable with respect to the coarse field, which holds when the corners of the
+square are vertices of the lattice blocked by the factor $r$ and may fail otherwise.
+\item[(g)] For $n$ loops of a slice, each containing a link that it traverses once and that lies on none of
+the others, the probability given the other slice that all $n$ holonomies lie in their gates is at most
+$p_{6\beta}(\theta)^n$: condition on all links but the distinguished link of the last loop, on which the
+other $n-1$ events do not depend, and repeat. The proofs of Theorem~\ref{t:ret} and Corollary~\ref{c:vac}
+then give $p_{6\beta}(\theta)^n$ for the gate that is the intersection. No independence is assumed. This
+bounds the return to a set of simultaneous defects; it says nothing about decay off that set. (Pointed out
+by an OpenAI GPT model used as reviewer.)
 \end{enumerate}
 \end{remark}
 
@@ -865,10 +1004,23 @@ agreement of the operator product expansion to all orders remains unproved.
 \item No mass gap is proved. What the submission has at low energy is polynomial. For each finite sum of
 words of smeared fields the spectral weight of its vector at energies in $(0,u]$ is at most a constant times
 $u^2$ for $u\le1$, and after the zero-energy projection is removed its heat matrix element at time $s\ge1$ is at
-most a constant times $s^{-2}$. We read these two statements in the sources (\texttt{light\_bound} and
-\texttt{inverse\_square} in \texttt{YM/EveryPhase/}, revision \texttt{3456e5e}) and did not build them. By
+most a constant times $s^{-2}$. The constant depends on the sum of words and is the same in every component
+theory. We read these two statements in the sources (\texttt{light\_bound} and
+\texttt{inverse\_square} in \texttt{YM/EveryPhase/}, revision \texttt{3456e5e}) and did not build them. The
+proof of the first, as far as we read it, uses positivity of the energy and the vanishing of commutators at
+spacelike separation, with a constant fixed by the norms of the vector and of its reversed word and by the
+radius beyond which the commutator vanishes; these are properties that theories without a gap also have. By
 Remark~\ref{r:crit}(b) such bounds do not give the common exponential rate of Theorem~\ref{t:crit}; a gap
 needs an interval above zero with no spectral weight at all.
+\item What the polynomial bound does give is a finite inverse-energy moment for each of those vectors. If
+$\mu_v((0,u])\le M_vu^2$ for $u\le1$ and $v_+$ is the part of $v$ orthogonal to the zero-energy vectors, then
+by the identity in Remark~\ref{r:weight} $\|H^{-1/2}v_+\|^2\le M_v+\|v_+\|^2$. This is the quantity of
+Remark~\ref{r:forms}(a), but for one continuum vector at a time. Hypothesis~\ref{h:mix} asks for a bound
+uniform over the unit vectors of the fine detail at each regulator, and bounds of the first kind on a dense
+set do not give one: on $L^2((0,1),2E\,dE)$ with $H$ multiplication by $E$, every bounded function $f$ has
+$\mu_f((0,u])\le\|f\|_\infty^2u^2$, while the unit vectors $\varepsilon^{-1}\mathbf 1_{(0,\varepsilon)}$ have
+$\langle h,H^{-1}h\rangle=2/\varepsilon$, and the spectrum is $[0,1]$. (This item is due to an OpenAI GPT
+model used as reviewer.)
 \item The assessors' own independent check of the Osterwalder--Schrader axioms concerns a selected family of
 stress-tensor trace correlations, tested against functions that vanish to all orders where points coincide,
 and so does not see contact terms~\cite[Part~II]{YMG}. The wider reconstruction rests on the submission.
@@ -898,14 +1050,19 @@ not that sequence. Theorem~\ref{t:inh} does not need factors of two, the return 
 \item The order of the limits. The construction takes the mesh to zero on a four-dimensional periodic torus
 of fixed size and then the size to infinity along a subsequence. This paper takes the time extent to infinity
 first, at a fixed spatial lattice. The two orders are not known to agree.
-\item The growth of the coupling. On its own trajectory the construction has
-$\beta_{n,p}/\log(1/a_n)\to11C_{\mathfrak g}/(24\pi^2)$ uniformly in the volume index
+\item The growth of the coupling. On its own trajectory the construction has the limit
+$\beta_{n,p}/\log(1/a_n)\to11C_{\mathfrak g}/(24\pi^2)$, uniformly in the volume index
 \cite[Theorem~4.1, eq.~(7)]{YMG}, which is the growth condition of Remark~\ref{r:rate} there. For
 $\SU(2)$ its action~\cite[eq.~(3)]{YMG} has the weight $\exp(\beta\sum_p\tfrac12\operatorname{Re}\Tr U_p)$
 up to a constant, as here, and with its inner product $-\tfrac12\operatorname{Re}\Tr(XY)$ the matrices
 $i\sigma_a$ are orthonormal with structure constants $-2\epsilon_{abc}$, so $C_{\mathfrak g}=8$ and the limit
 is $11/(3\pi^2)$, the one-loop value of Remark~\ref{r:rate}. So on that trajectory, by the assessment's
 account, the growth condition holds for every $s>11/(3\pi^2)$.
+\item The blocking. The detailed theorem of the construction is stated for every positive value of a
+penalty in a blocking kernel (its README). In this paper the coarse field is the ordered product of fine
+links and $P$ is the conditional expectation given it. Matching the action and the couplings does not match
+these two notions of a coarse field, and an estimate from the renormalisation of the construction could be
+used in Hypothesis~\ref{h:mix} or~\ref{h:coarse} only after they are related.
 \item The class of observables on which convergence holds, and the component theory selected.
 \item The relation between the lattice transfer semigroup at fixed regulator, to which
 Theorems~\ref{t:inh} and~\ref{t:ret} refer, and the Hamiltonian of the limit.
@@ -942,6 +1099,7 @@ Lemma~\ref{l:scal}, Lemma~\ref{l:cap} & proved; Lemma~\ref{l:scal} checked in Le
 Lemma~\ref{l:trace}, Proposition~\ref{p:vac}, Corollary~\ref{c:vac} & proved, $\beta>0$ (positive character coefficients, Peter--Weyl); the algebra of $B=\chi(I-P)$ checked in Lean \\
 Proposition~\ref{p:haar} & proved; scalar steps checked in Lean \\
 Proposition~\ref{p:pred} & proved (a reduction between open estimates; it bounds nothing in the theory); its Hilbert-space core checked in Lean \\
+Proposition~\ref{p:dir} & proved (a reduction of the same kind); exact in the free theory; its two algebraic steps checked in Lean \\
 Hypothesis~\ref{h:mix} & open; not measured (Appendix~\ref{s:time} tests one combination's carry-over in time and gives no bound) \\
 Auxiliary local mixing & open; estimates for trial functions on two frozen backgrounds, one lattice, one coupling (Table~\ref{tab:local}) \\
 Hypothesis~\ref{h:coarse} & open; not measured; one trial function compared on one pair of lattices (Appendix~\ref{s:cross}) \\
@@ -970,8 +1128,8 @@ The author is responsible for the content of this paper. It was prepared with su
 large language models of two families, and they are not authors.
 \begin{itemize}
 \item \emph{OpenAI GPT models}, used as reviewers, proposed Theorem~\ref{t:crit} in this form, the
-monotonicity statements of Proposition~\ref{p:haar}, Proposition~\ref{p:pred} and Remark~\ref{r:lag}, with
-proofs. They also reviewed successive versions of the paper, and their corrections are incorporated.
+monotonicity statements of Proposition~\ref{p:haar}, Proposition~\ref{p:pred}, Proposition~\ref{p:dir} and
+Remark~\ref{r:lag}, with proofs, and the statements credited to them where they appear. They also reviewed successive versions of the paper, and their corrections are incorporated.
 \item \emph{OpenAI Codex} proposed Theorem~\ref{t:inh} and Theorem~\ref{t:ret} in its vacuum form, with proofs
 (Supplement~S8), and reduced part of the raw data of Appendix~\ref{s:local} a second time, correcting an error
 in the first reduction.
@@ -1367,7 +1525,7 @@ links and whose variances it does not control.
 \end{remark}
 
 \section{Machine-checked parts}\label{s:lean}
-Nine Lean~4 files with Mathlib accompany the paper (Supplement~S7; Lean 4.19.0, Mathlib v4.19.0); all compile with no \texttt{sorry} and use
+Ten Lean~4 files with Mathlib accompany the paper (Supplement~S7; Lean 4.19.0, Mathlib v4.19.0); all compile with no \texttt{sorry} and use
 only the axioms \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}.
 \begin{itemize}
 \item \texttt{Criterion.lean}: Theorem~\ref{t:crit} in the following form. Let $S$ be a bounded self-adjoint
@@ -1405,6 +1563,16 @@ tower property and the commutation they have. If the squared norm of the second,
 $(1-\gamma)\|Gf\|^2$, then $\|f\|^2-\|\E[f\mid Y]\|^2\ge\gamma\|Gf\|^2$. The measure theory, that is, the
 identification of these operators and the passage from the maximal correlation to that hypothesis, is not
 formalised.
+\item \texttt{Directional.lean}: the two algebraic steps of the proof of Proposition~\ref{p:dir}. First, for
+real numbers $V_f,V_h\ge0$, $z>0$ and $W$ with $V_h\le zW$,
+$V_f+V_h+W-2(V_fV_h)^{1/2}\ge V_f/(1+z)$. Second, on a real inner product space, for linear maps $\Sigma$ and
+$M$ with $\langle x,\Sigma x\rangle\ge0$ and $\langle\Sigma u,M\Sigma u\rangle\le J\langle u,\Sigma u\rangle$
+for all $u$ (which is $\|\Sigma^{1/2}M\Sigma^{1/2}\|\le J$ written without square roots), and a vector $b$ in
+the range of $\Sigma$ with $\langle w,b\rangle^2\le\langle w,\Sigma w\rangle V$ for all $w$, one has
+$\langle b,Mb\rangle\le JV$; in finite dimension, for symmetric $\Sigma$, the range condition is proved from
+the last inequality. The conditional laws, the derivative of the conditional expectation and the integration
+over coarse fields are not formalised, and the weighted Poincar\'e inequality is a hypothesis of the
+proposition.
 \item \texttt{SeparationHilbert.lean}: Proposition~\ref{p:three} on complex Hilbert spaces. For a bounded
 self-adjoint operator $S$, a real $r\le1$ and a dense set $D_0$ of vectors, the real spectrum of $S$ does not
 meet $(r,1)$ if and only if
@@ -1427,7 +1595,7 @@ formalised.
 \end{itemize}
 Theorem~\ref{t:ret}, Proposition~\ref{p:vac}, Lemmas~\ref{l:cap}
 and~\ref{l:trace}, and the analytic part of Corollary~\ref{c:vac} are not formalised.
-The nine files contain $88$ theorems. For $33$ of them, those cited above and their main lemmas, a digest of the statement text is recorded
+The ten files contain $93$ theorems. For $36$ of them, those cited above and their main lemmas, a digest of the statement text is recorded
 with the digests of the files (Supplement~S7), so that a later change of a statement or a file can be
 detected; a digest of a statement does not cover the definitions it depends on.
 
@@ -1452,7 +1620,7 @@ S7 & Lean files, statement and file digests & Appendix~\ref{s:lean} \\
 S8 & Working notes with the source derivations of Theorems~\ref{t:inh} and~\ref{t:ret}, the bound of the transfer form by local losses, and strong-coupling estimates & Sections~\ref{s:arch}, \ref{s:disc} \\
 S9 & Working notes with related hypotheses on the centre-neutral space & Section~\ref{s:not} \\
 S10 & Records of the internal reviews of this paper and their test programs & Section~\ref{s:disc} \\
-S11 & Programs and outputs for the free theory & Appendix~\ref{app:free} \\
+S11 & Programs and outputs for the free theory, and for the two-link test of Proposition~\ref{p:dir} & Section~\ref{s:arch}, Appendix~\ref{app:free} \\
 \bottomrule
 \end{tabular}
 \caption{Supplementary material.}\label{tab:supp}
@@ -1569,7 +1737,12 @@ every coarse momentum for $N=8$, $16$ and $32$ (Supplement~S11). The limit $0.67
 $\lambda$ the largest eigenvalue of $\operatorname{diag}(h(3),h(3),h(5))+\tfrac14vv^{\mathsf T}$,
 $h(c)=(1-(c-\sqrt{c^2-1})^2)^{-1}$ and $v=(8^{-1/4}\sqrt2,\,8^{-1/4}\sqrt2,\,24^{-1/4}\sqrt2)$; this is
 the limit along the lowest axial momentum, which is the minimiser in every case computed; we have not proved
-that it is the minimiser for every $N$, and Proposition~\ref{p:freemix} does not need it. Both propositions, the identity, the limiting matrix and Proposition~\ref{p:freer} below were proposed by an
+that it is the minimiser for every $N$, and Proposition~\ref{p:freemix} does not need it. The constants of
+Remark~\ref{r:forms}(b) are limits of the same kind: along the lowest axial momentum $\beta P_c$ tends to the
+largest eigenvalue of
+$\operatorname{diag}\big(\tfrac1{2\sqrt8},\tfrac1{2\sqrt8},\tfrac1{2\sqrt{24}}\big)+\tfrac14vv^{\mathsf T}$,
+which is $0.617601$, and the bound $1/(1+\beta^2P_cL_c)$ to $0.618200$; that momentum carries the largest
+$\beta P_c$ at every side from $8$ to $64$, and we have not proved that it does so for every side. Both propositions, the identity, the limiting matrix and Proposition~\ref{p:freer} below were proposed by an
 OpenAI GPT model used as reviewer; the proofs were checked and written out here.
 
 \begin{proposition}[Other blocking factors]\label{p:freer}
@@ -1596,8 +1769,10 @@ The bound is uniform in the side but not in the factor. It was checked at every 
 $r=2,\dots,5$ and sides up to $24$ (Supplement~S11); the computed rates lie well above it, for instance
 $0.609$ at $r=3$, $N=24$. Its interest is that the construction~\cite{OAI} does not refine by factors of
 two (Section~\ref{s:ext}). If the factors $r_n$ satisfy $\log r_n/\log(1/a_n)\to0$, as reported there, then
-$a_{n+1}/\gamma_{r_n,N}$ is of order $r_n^2a_n$ and is summable, so the free theory also satisfies
-Hypothesis~\ref{h:mix} along such a schedule. Theorem~\ref{t:inh} itself does not depend on the factor.
+$a_{n+1}/\gamma_{r_n,N}$ is at most a constant times $r_n^2a_n$ and is summable, so the free theory also satisfies
+Hypothesis~\ref{h:mix} along such a schedule. The proof of Proposition~\ref{p:freecoarse} uses only that
+$\Delta_N$ increases with $N$, so it holds for any integer ratio of the sides, at a physical time that is a
+whole number of steps on every lattice of the schedule. Theorem~\ref{t:inh} itself does not depend on the factor.
 
 So in the free theory the three hypotheses hold together along an infinite refinement, and the architecture
 closes in a fixed box, with a bound about six times smaller than the truth at $N=64$.
@@ -1611,6 +1786,10 @@ lacks. Analogues of Hypotheses~\ref{h:mix} to~\ref{h:budget} for the interacting
 leave the second untouched.
 
 \begin{thebibliography}{9}\raggedright
+\bibitem{BL76} H.~J.~Brascamp and E.~H.~Lieb, \emph{On extensions of the Brunn--Minkowski and
+Pr\'ekopa--Leindler theorems, including inequalities for log concave functions, and with an application to
+the diffusion equation}, J. Funct. Anal. \textbf{22} (1976), 366--389. Cited for the weighted inequality on
+$\R^n$; not reread for this paper.
 \bibitem{DLMF} \emph{NIST Digital Library of Mathematical Functions}, \S10.29, \url{https://dlmf.nist.gov/10.29}.
 \bibitem{JW} A.~Jaffe and E.~Witten, \emph{Quantum Yang--Mills theory}, Clay Mathematics Institute problem
 description, \url{https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf}. Sections 4 and 5 read.
@@ -1619,7 +1798,7 @@ Euclidean lattice gauge theories}, Comm. Math. Phys. \textbf{54} (1977), 283--29
 of the temporal-gauge transfer operator; not reread by the author.
 \bibitem{OAI} OpenAI, Lean formalisation of a construction of continuum Yang--Mills theory, submitted
 28 October 2026, repository \texttt{yang-mills-group/OpenAI-YM-20261028} (GitHub). Cited through~\cite{YMG}; of the
-sources only the README and the two declarations named in Section~\ref{s:ext} were read, and nothing was built.
+sources only the README, the two declarations named in Section~\ref{s:ext} and the proof of the first were read, and nothing was built.
 \bibitem{OS78} K.~Osterwalder and E.~Seiler, \emph{Gauge field theories on a lattice}, Ann. Physics
 \textbf{110} (1978), 440--471. Cited for the lattice framework; not reread for this paper.
 \bibitem{YMG} Yang--Mills group, \emph{Validation of the OpenAI Yang--Mills construction}, release of
