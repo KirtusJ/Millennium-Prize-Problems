@@ -1,0 +1,2 @@
+check K128: exit 0 (expected 0) in 731101 ms | output 38bc2e20c1f3 | event 130 head 7993eeb7ab54
+  /home/user/z4-workers/e2-cross/report.md — verdicts: 6 STANDS, 1 DEFECT, 3 NOT CHECKED (predicates: 20 met, 0 failed, 9 measured only)

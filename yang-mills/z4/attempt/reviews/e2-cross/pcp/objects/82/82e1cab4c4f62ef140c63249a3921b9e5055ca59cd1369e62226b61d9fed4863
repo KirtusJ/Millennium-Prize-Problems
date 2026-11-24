@@ -1,0 +1,32 @@
+I finished all four tests for both ensembles. The f2 files were all present (16 of 16 ending in END), so nothing was skipped. The control answer is R = 1.2 (C0 = 1.25, C1 = −0.25), written to `control.txt`.
+
+Results on the 8 held-out chains, with jackknife SE (n = 8):
+
+| ens | test | R | SE | Var |
+|---|---|---|---|---|
+| c2 | t1 | 0.701337 | 0.005869 | 0.00159708 |
+| c2 | t2 | 0.956860 | 0.005765 | 0.000171082 |
+| c2 | t3 | 0.706880 | 0.005101 | 0.000567706 |
+| c2 | t4 | 0.968748 | 0.004502 | 0.000607844 |
+| f2 | t1 | 0.988970 | 0.004601 | 0.000860081 |
+| f2 | t2 | 0.999851 | 0.003652 | 0.000504789 |
+| f2 | t3 | 0.988906 | 0.004534 | 0.000231551 |
+| f2 | t4 | 0.999851 | 0.002570 | 0.00197936 |
+
+The ratio R_f2/R_c2 is 1.4101 for t1, 1.0449 for t2, 1.3990 for t3 and 1.0321 for t4.
+
+The grandchild was task T236, now released. Its question was to recompute R(t1) on the c2 held-out chains with an independent script. Its control answer was 1.2. It returned R = 0.7013370728 and Var = 0.0015970815, which match my c2 t1 numbers. I reread its answer files and reran its script, which reproduced the same values. The rerun then crashed on a `FileExistsError`, because the script opens its output files in write-once mode and they already existed.
+
+The program's predicates all passed, so there were no failed predicates. The tolerance for the control check is 1e-12, which is double-precision rounding on numbers of order 1.
+
+PCP OS:
+- **Init:** the method-not-found message appeared, as expected.
+- **Python verify, last line:** `result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)`
+- **Rust verify, last line:** `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.`
+
+Files are in `/home/user/z4-workers/e2-cross/child/`:
+- `report.md`
+- `results.txt`
+- `control.txt`
+- `notes.md`
+- `analyze.py`

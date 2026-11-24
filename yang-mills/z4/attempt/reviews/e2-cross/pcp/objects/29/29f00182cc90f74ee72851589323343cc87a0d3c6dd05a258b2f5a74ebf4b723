@@ -1,0 +1,3 @@
+n5 lambda2=0.0619674 se=0.0025710 C1=met C2=met
+n10 lambda2=0.0040821 se=0.0007179 C1=met C2=met
+4l: long-streams.zip absent from g4/cyclic-transfer -> .06157/.00169 NOT reproducible from files

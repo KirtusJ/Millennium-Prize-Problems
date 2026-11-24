@@ -1,0 +1,12 @@
+trained 2l evaluated 2l fine-opt  : R_f=0.98633+-0.00237 R_c=0.67262+-0.01371 R_f/R_c=1.4664+-0.0301 E_f/E_c=0.25799+-0.00335
+trained 2l evaluated 2l coarse-opt: R_f=0.98917+-0.00518 R_c=0.60896+-0.01769 R_f/R_c=1.6244+-0.0479 E_f/E_c=1.00602+-0.01225
+trained 2l evaluated 2l ratio-opt : R_f=0.99586+-0.00529 R_c=0.82152+-0.00506 R_f/R_c=1.2122+-0.0099 E_f/E_c=0.00407+-0.00005
+trained 2l evaluated 4l fine-opt  : R_f=0.97896+-0.00279 R_c=0.67830+-0.01786 R_f/R_c=1.4432+-0.0382 E_f/E_c=0.25092+-0.00289
+trained 2l evaluated 4l coarse-opt: R_f=0.98241+-0.00182 R_c=0.59880+-0.02053 R_f/R_c=1.6406+-0.0563 E_f/E_c=1.00063+-0.01040
+trained 2l evaluated 4l ratio-opt : R_f=0.99739+-0.00292 R_c=0.80818+-0.00531 R_f/R_c=1.2341+-0.0089 E_f/E_c=0.00409+-0.00007
+trained 4l evaluated 2l fine-opt  : R_f=0.99288+-0.00243 R_c=0.62759+-0.01957 R_f/R_c=1.5820+-0.0495 E_f/E_c=0.97508+-0.00885
+trained 4l evaluated 2l coarse-opt: R_f=0.99081+-0.00188 R_c=0.60951+-0.01480 R_f/R_c=1.6256+-0.0396 E_f/E_c=0.93752+-0.00959
+trained 4l evaluated 2l ratio-opt : R_f=0.99569+-0.00510 R_c=0.81292+-0.00501 R_f/R_c=1.2248+-0.0098 E_f/E_c=0.00407+-0.00005
+trained 4l evaluated 4l fine-opt  : R_f=0.98275+-0.00304 R_c=0.64621+-0.01135 R_f/R_c=1.5208+-0.0271 E_f/E_c=0.94288+-0.00762
+trained 4l evaluated 4l coarse-opt: R_f=0.97754+-0.00196 R_c=0.62076+-0.01096 R_f/R_c=1.5747+-0.0280 E_f/E_c=0.90806+-0.01228
+trained 4l evaluated 4l ratio-opt : R_f=0.99722+-0.00285 R_c=0.79981+-0.00561 R_f/R_c=1.2468+-0.0094 E_f/E_c=0.00409+-0.00007
