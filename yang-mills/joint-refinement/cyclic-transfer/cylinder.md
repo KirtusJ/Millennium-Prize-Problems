@@ -1,0 +1,25 @@
+# A compact Wilson comparison with an exact neutral spectral endpoint
+
+On a two-dimensional SU(2) Wilson cylinder of spatial circumference $N$ sites, the gauge-invariant slice is the conjugacy class of its winding $U$. Straight spatial blocking retains that full winding. The normalized character of dimension $n$ has transfer multiplier $r_n(\beta)^A$, where $A=Nk$ is the number of plaquettes in $k$ time steps and $r_n=I_n(\beta)/I_1(\beta)$. Indeed Haar class measure is $(2/\pi)\sin^2\theta\,d\theta$. Integrating the Wilson factor $e^{\beta\cos\theta}$ against $\sin(n\theta)/\sin\theta$, dividing by the dimension and the vacuum coefficient, gives $r_n$. Schur orthogonality multiplies coefficients when plaquettes are glued. The characters form an orthonormal basis for class functions when the unscaled characters are used, with one copy per irrep. Center neutrality keeps only odd $n$. The vacuum is $n=1$. The recurrence $I_{n-1}-I_{n+1}=2n I_n/\beta>0$ shows that the largest centered neutral eigenvalue is exactly $r_3^A$ for every finite coupling. This identifies the whole-sector norm without a truncation in spin. [Exact SU(2) character expansion](https://arxiv.org/abs/2107.14149) · [Bessel recurrences](https://dlmf.nist.gov/10.29)
+
+Let the fine spatial circumference and time-step count both double, at the same physical length and time. The fine plaquette count is $4A$. Put $B=\beta_c$. Two different coupling prescriptions predict opposite signs for the change in the neutral transfer norm.
+
+**Bare area scaling.** Put $\beta_f=4B$ and $A=\alpha B$ with $\alpha>0$ fixed along allowed integer areas. With $C=n^2-1$, the fixed-order large-argument expansion gives
+$$\log r_n(B)=-\frac{C}{2B}-\frac{C}{4B^2}+
+\frac{C(2C-9)}{48B^3}+O_n(B^{-4}).$$
+Hence $\log(\lambda_f/\lambda_c)=3\alpha C/(16B)+O(B^{-2})$ for the neutral endpoint $C=8$. In this compact model the zero-error cross-lattice comparison fails for all sufficiently large $B$. The minimal additive error is $e^{-4\alpha}\,3\alpha/(2B)+O(B^{-2})$, summable along $B\propto4^i$. [Large-argument expansion](https://dlmf.nist.gov/10.40)
+
+**Match the fundamental winding.** Choose $F=\beta_f$ from $r_2(F)^4=r_2(B)$, independently of the neutral channel being tested. There is exactly one solution, since $r_2(\beta)=\mathbb E_\beta\cos\theta$ increases strictly from zero to one with derivative $\operatorname{Var}_\beta(\cos\theta)$. Expanding the matching equation first gives $F/B\to4$, then $F=4B+O(1)$. Subtract $C/3$ times the fundamental log multiplier from the fixed-order formula. The residual per plaquette is $C(C-3)/(24B^3)+O_n(B^{-4})$. Taking four fine plaquettes minus one coarse yields
+$$4\log r_n(F)-\log r_n(B)
+=-\frac{5C(C-3)}{128B^3}+O_n(B^{-4}).$$
+For $n=3$ the leading term is strictly negative. It follows that the *entire centered neutral norm* satisfies the zero-error comparison for sufficiently large $B$ under this tuning. The argument uses the exact location of the largest neutral eigenvalue. It requires no uniform large-order Bessel expansion. The Wilson action on the four-dimensional matched sequence does not have this character diagonalization, and the Schrödinger-functional tuning there uses a different observable.
+
+| Coarse $B$, $A=B/4$ | Matched $F$ | Coarse norm | Fine minus coarse with $4B$ | Fine minus coarse with $F$ |
+|---:|---:|---:|---:|---:|
+| 16 | 62.535954 | .357126 | +.00791847 | −.00065833 |
+| 64 | 254.507695 | .365045 | +.00211839 | −.00003652 |
+| 256 | 1022.501854 | .367163 | +.00053666 | −.00000221 |
+
+These integer areas can be realized with coarse sides 4, 8 and 16 and temporal counts 1, 2 and 4, respectively. The [independent quadratures](cylinder.py) use orders 256 and 384. At the matched $F$ the eighth centered power sum of the fine cylinder divided by the coarse adjoint's eighth power is less than one in all three cases. This gives an upper bound for the full fine norm even without using its exact maximizing eigenfunction.
+
+**Finite checks with enclosures.** The [outward-rounded calculation](intervals.py) brackets $F$ by bisection, then bounds numerator and denominator Bessel functions separately at its two endpoints using the positive Taylor series. Once consecutive terms decrease by at least a factor two the remaining sum is at most twice the next term. In the power sum, include odd dimensions 3 through 15. Step-two monotonicity bounds subsequent terms by the dimension-17 term until $n\ge F$. From then on the positive series gives $I_{n+2}/I_n\le F^2/[4(n+1)(n+2)]\le1/4$. The entire omitted tail in a positive integer power $h$ is therefore at most $(\lceil F\rceil+2)r_{17}(F)^h$. Directed arithmetic checks that the coarse adjoint's eighth power exceeds the upper bound on the fine sum by more than $3.87\times10^{-6}$, $2.52\times10^{-7}$ and $1.59\times10^{-8}$, respectively. Keeping only half the fine temporal lag reverses the norm comparison in all three checks. These are sign tests of the finite inequalities, separate from the asymptotic proof.
