@@ -324,16 +324,16 @@ continuum theory would meet the criterion of Theorem~\ref{t:crit} without it.
  ext/.style={prov,dotted,thick},
  >={Stealth[length=2mm]}]
 \node[prov] (ret) {Return to a gate\\ Thm~\ref{t:ret}, Cor.~\ref{c:vac}};
-\node[open,right=of ret] (mix) {Short-time decay off the gates\\ Hyp.~\ref{h:mix}};
+\node[open,right=of ret] (mix) {Short-time decay\\ off the gates\\ Hyp.~\ref{h:mix}};
 \node[open,right=of mix] (coarse) {Coarse comparison\\ Hyp.~\ref{h:coarse}};
 \node[open,right=of coarse] (budget) {Weighted budget\\ Hyp.~\ref{h:budget}};
 \node[prov,below=9mm of mix,xshift=19mm] (inh) {Refinement inequality\\ Thm~\ref{t:inh}, Cor.~\ref{c:acc}};
-\node[open,above=of mix] (aux) {Local mixing (auxiliary)\\ Section~\ref{s:arch}; trials in \S\ref{s:local}};
+\node[open,above=of mix] (aux) {Local mixing\\ (auxiliary)\\ trials in \S\ref{s:local}};
 \node[prov,above=of ret] (haar) {One-link covariance\\ Prop.~\ref{p:haar}};
-\node[open,below=of inh] (box) {Positive deficit in a fixed\\ physical box};
-\node[open,below=of box] (vol) {Uniform in the volume\\ (a further estimate, not supplied)};
+\node[open,below=of inh] (box) {Positive deficit in a\\ fixed physical box};
+\node[open,below=of box] (vol) {Uniform in the volume\\ (a further estimate,\\ not supplied)};
 \node[open,below=of vol] (same) {Same theory as~\cite{OAI}};
-\node[ext,left=of same] (ext) {Continuum Wightman theory\\ \cite{OAI,YMG} (cited)};
+\node[ext,left=of same] (ext) {Continuum\\ Wightman theory\\ \cite{OAI,YMG} (cited)};
 \node[prov,right=of same] (crit) {Spectral criterion\\ Thm~\ref{t:crit}};
 \node[open,below=of same] (gap) {Mass gap};
 \draw[->] (ret) -- (inh);
@@ -362,6 +362,34 @@ $Q_i=I-P_i$ the complement of the coarse projection $P_i$ and $G_i=Q_i-B_i$, the
 $\sum_ia_i/\gamma_i<\infty$.
 \end{hypothesis}
 
+\begin{hypothesis}[Coarse comparison; open]\label{h:coarse}
+Fix a physical time $t$ that is a multiple of $a_0$, and let $m_i=t/a_i$. For $i\ge1$ let $P_i$ be the conditional
+expectation given the coarse links (of mesh $2a_i$) of the lattice of mesh $a_i$, on the centred gauge-invariant functions. With $d_{i-1}=1-\|A_{i-1}^{m_{i-1}}\|$
+the deficit of the lattice of mesh $2a_i$ at matched coupling, $\|P_iA_i^{m_i}P_i\|\le1-b_i$ with
+$b_i\ge d_{i-1}-\varepsilon_i$, for real numbers $b_i$ and $\varepsilon_i\ge0$ that are constrained only through
+Hypothesis~\ref{h:budget}.
+\end{hypothesis}
+
+\begin{hypothesis}[Weighted budget; open]\label{h:budget}
+With $\gamma_i$ as in Hypothesis~\ref{h:mix}, $K_i=1+2/(m_i\gamma_i)=1+2a_i/(\gamma_it)$, $M_0=1$, $M_i=K_1\cdots K_i$, $\kappa_i\ge0$ such
+that $\|B_iA_i^{j_i}B_i\|\le\kappa_i$ for some integer $1\le j_i\le m_i$, and $\varepsilon_i$ as in
+Hypothesis~\ref{h:coarse}, the series below converges and
+\[
+\sum_{i=1}^\infty M_{i-1}(\varepsilon_i+\kappa_i)\ <\ d_0 .
+\]
+\end{hypothesis}
+
+At a fixed finite lattice each $A_i$ is compact and, on the centred functions, has norm below one (the eigenvalue
+one of the full operator is simple and belongs to the constants; the largest eigenvalue on the centred
+functions may be degenerate). So some $\gamma_i>0$ and some deficit exist, with no uniformity; and at strong coupling
+there are estimates of this kind (working notes, Supplement~S8; not used here). What is
+not proved is the three statements together, with the stated sums, on one trajectory of matched couplings
+tending to weak coupling. If all held on one trajectory, Corollaries~\ref{c:acc} and~\ref{c:vac} would give a positive lower limit of the deficits in a
+fixed physical box. Summability of the $\kappa_i$ and $\varepsilon_i$ alone would not: the budget is a
+separate condition (Remark~\ref{r:budget}). Uniformity in the volume and the identification of the limit with
+a continuum theory would remain.
+
+\subsection{Two ways one might approach Hypothesis~\ref{h:mix}}
 Hypothesis~\ref{h:mix} is about the transfer semigroup. One route to it uses the local updates of
 Section~\ref{s:set}. A derivation in the working notes (Supplement~S8), not reproduced or checked here, bounds
 $\langle f,(I-A^2)f\rangle$ from below by the expected loss of $f$ under those updates. Given that, it would
@@ -403,33 +431,6 @@ analogue $\varrho_T(c)$ for period $T$, not the vacuum quantity $\varrho(c)$ of 
 no estimate of their difference. And a Monte Carlo estimate at one coarse field is neither a certified bound
 there nor a statement about almost every field. A small mutual information of $X$ and $Y$ given $C$ is not enough, since $\varrho$ is a supremum over
 normalised functions, including those concentrated on rare configurations.
-
-\begin{hypothesis}[Coarse comparison; open]\label{h:coarse}
-Fix a physical time $t$ that is a multiple of $a_0$, and let $m_i=t/a_i$. For $i\ge1$ let $P_i$ be the conditional
-expectation given the coarse links (of mesh $2a_i$) of the lattice of mesh $a_i$, on the centred gauge-invariant functions. With $d_{i-1}=1-\|A_{i-1}^{m_{i-1}}\|$
-the deficit of the lattice of mesh $2a_i$ at matched coupling, $\|P_iA_i^{m_i}P_i\|\le1-b_i$ with
-$b_i\ge d_{i-1}-\varepsilon_i$, for real numbers $b_i$ and $\varepsilon_i\ge0$ that are constrained only through
-Hypothesis~\ref{h:budget}.
-\end{hypothesis}
-
-\begin{hypothesis}[Weighted budget; open]\label{h:budget}
-With $\gamma_i$ as in Hypothesis~\ref{h:mix}, $K_i=1+2/(m_i\gamma_i)=1+2a_i/(\gamma_it)$, $M_0=1$, $M_i=K_1\cdots K_i$, $\kappa_i\ge0$ such
-that $\|B_iA_i^{j_i}B_i\|\le\kappa_i$ for some integer $1\le j_i\le m_i$, and $\varepsilon_i$ as in
-Hypothesis~\ref{h:coarse}, the series below converges and
-\[
-\sum_{i=1}^\infty M_{i-1}(\varepsilon_i+\kappa_i)\ <\ d_0 .
-\]
-\end{hypothesis}
-
-At a fixed finite lattice each $A_i$ is compact and, on the centred functions, has norm below one (the eigenvalue
-one of the full operator is simple and belongs to the constants; the largest eigenvalue on the centred
-functions may be degenerate). So some $\gamma_i>0$ and some deficit exist, with no uniformity; and at strong coupling
-there are estimates of this kind (working notes, Supplement~S8; not used here). What is
-not proved is the three statements together, with the stated sums, on one trajectory of matched couplings
-tending to weak coupling. If all held on one trajectory, Corollaries~\ref{c:acc} and~\ref{c:vac} would give a positive lower limit of the deficits in a
-fixed physical box. Summability of the $\kappa_i$ and $\varepsilon_i$ alone would not: the budget is a
-separate condition (Remark~\ref{r:budget}). Uniformity in the volume and the identification of the limit with
-a continuum theory would remain.
 
 \section{The spectral criterion}\label{s:crit}
 \begin{proof}[Proof of Theorem~\ref{t:crit}]

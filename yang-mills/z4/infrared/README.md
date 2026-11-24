@@ -12,9 +12,9 @@ It is a separate manuscript from the upper-bound paper in `../attempt/paper/`, w
 | Thm 1.2 refinement inequality; Cor 5.2 | positive self-adjoint contraction A on a Hilbert space, integers m ≥ j ≥ 1, three operator hypotheses | §5 | `yang-mills/joint-refinement/rare-coarse-fields/inheritance.md` (Codex session); discrete form suggested by a GPT auditor session | `y1-g4ret`, `mod-math` (265,000 random instances); Lean for the finite-dimensional semigroup case only: `f2-lean/Inheritance.lean` |
 | Thm 1.3 return bound | SU(2), Wilson action, periodic lattice, even N ≥ 6, two slices distinct modulo T | §6 | `rare-coarse-fields/return.md` (Codex session) | `y1-g4ret`, `mod-math` |
 | Lemma 6.2 trace formula; Prop 6.3; Cor 6.4 (return bound in the vacuum) | SU(2), β > 0, gauge-averaged transfer operator | §6.1, self-contained (Peter–Weyl and positive character coefficients; Lüscher's paper is referred to, not relied on, and was not reread) | this side | `ref2-math`, `mod-math` (full enumeration on Z₂ and Z₃ toy lattices) |
-| Prop 3.2 conditional prediction; Remark 5.5 longer lag | reversible stationary one-step operator; any measurable set of coarse fields | §3, §5 | a GPT auditor session (pass 2, relayed) | `aud5-check` (finite-state program) |
+| Prop 3.4 conditional prediction (numbered 3.2 until the final ordering); Remark 5.5 longer lag | reversible stationary one-step operator; any measurable set of coarse fields | §3, §5 | a GPT auditor session (pass 2, relayed) | `aud5-check` (finite-state program) |
 | Prop 7.1 one-link covariance | tilted law on S³, all k > 0 | §7 | GPT auditor sessions (issue comments 7117411812, 7117416203) | `b2-haar` (partly formalised) |
-| Hypotheses 3.1 (short-time decay), 3.3 (coarse comparison), 3.4 (budget); auxiliary local mixing | — | open | — | not measured; trial estimates only: `b2-matrix`, `c2-grow`, `d2-time`, `e2-repair`, `e2-cross`, `f2-cross2`; their statistics reviewed in `mod-sci` |
+| Hypotheses 3.1 (short-time decay), 3.2 (coarse comparison), 3.3 (budget); auxiliary local mixing | — | open | — | not measured; trial estimates only: `b2-matrix`, `c2-grow`, `d2-time`, `e2-repair`, `e2-cross`, `f2-cross2`; their statistics reviewed in `mod-sci` |
 
 The records named in the last column are now under `../../papers/spectral-criteria/supplement/` (see `SUPPLEMENT.md` there for the present names; the Lean digests are in `S7-lean/LEAN_PINS.md`).
 
@@ -44,7 +44,7 @@ On the Principal's instruction the worker tests were stopped (two background che
 
 - **Tidying (same day).** The source, the reading copy and every record the paper cites were moved into `yang-mills/papers/spectral-criteria/` under neutral names (S1 to S10), so that the paper and its catalogue point to no working label. Items S6, S8 and S9 are copies of notes maintained by the other side of the project, whose originals were not moved. Links in the working notes were updated; records keep the path names of their day inside their own text.
 
-- **Presentation (same day, no change of content).** A figure of the fine and coarse grids in the introduction; a paragraph on how the paper is organised and what to read for the mathematics or for the state of the question; the summary of the external construction, the compatibility requirements and the list of what remains set as lists; contents reduced to sections.
+- **Presentation (same day, no change of content).** A figure of the fine and coarse grids in the introduction; a paragraph on how the paper is organised and what to read for the mathematics or for the state of the question; the summary of the external construction, the compatibility requirements and the list of what remains set as lists; contents reduced to sections. Section 3 now states the three hypotheses together and then, in a subsection, the two possible approaches to the first; this renumbers the conditional-prediction proposition from 3.2 to 3.4 and the coarse-comparison and budget hypotheses from 3.3, 3.4 to 3.2, 3.3. Comments on the discussion thread written before this use the old numbers.
 
 ## Sixth draft (24 November)
 
