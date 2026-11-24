@@ -1254,9 +1254,9 @@ Three Lean~4 files with Mathlib accompany the paper (Supplement~S7; Lean 4.19.0,
 only the axioms \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}.
 \begin{itemize}
 \item \texttt{Discrete.lean}: Theorem~\ref{t:inh} as stated, together with the longer lag of
-Remark~\ref{r:lag}, on every finite-dimensional real inner product space. The formal statement
-(\texttt{refinement\_fin}) takes an arbitrary symmetric linear map $A$ with $0\le\langle w,Aw\rangle\le\|w\|^2$,
-which may have a kernel, self-adjoint idempotent maps $P$ and $B$ with $BP=0$, integers $k$, $m\ge1$ and
+Remark~\ref{r:lag}, on every finite-dimensional real inner product space. Its main statement, named
+\texttt{refinement\_fin}, takes an arbitrary symmetric linear map $A$ with
+$0\le\langle w,Aw\rangle\le\|w\|^2$ for all $w$, which may have a kernel, self-adjoint idempotent maps $P$ and $B$ with $BP=0$, integers $k$, $m\ge1$ and
 $j\le m$, and the three inequalities~\eqref{e:hyp} with $A^{2k}$ in the first, and concludes
 $\|A^mw\|\le\big(1-(b-\kappa)_+/(1+2k/(\gamma m))\big)\|w\|$ for every $w$. The eigenbasis comes from the
 spectral theorem of Mathlib and is not assumed. Infinite-dimensional and complex spaces are not formalised.
