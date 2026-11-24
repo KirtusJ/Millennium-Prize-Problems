@@ -1,0 +1,45 @@
+S1 control: gamma_opt 0.9602938576 exact 0.9602938576 : MET
+beta 0.50 n 12: gamma_opt = 0.99650064 in sector (1, 0) ; sector sups: w=(0,0) 1.000033  (1,0) 1.003512  (0,1) 1.003512  (1,1) 1.000035  (2,0) 1.000012
+    one unit of flux: energy 2.69893775 (beta*energy 1.349469) fine-detail weight 4.408840e-01 (beta*weight 0.220442) weight/energy 0.163355 ; plaquette gap in the sector w=0: 5.153649
+beta 0.50 n 16: gamma_opt = 0.99650064 in sector (1, 0) ; sector sups: w=(0,0) 1.000033  (1,0) 1.003512  (0,1) 1.003512  (1,1) 1.000035  (2,0) 1.000012
+    one unit of flux: energy 2.69893775 (beta*energy 1.349469) fine-detail weight 4.408840e-01 (beta*weight 0.220442) weight/energy 0.163355 ; plaquette gap in the sector w=0: 5.153649
+beta 0.50: relative difference between n=12 and n=16: 1.34e-15 (tolerance 3.22e-06) ; five-dimensional program (n=12) gave 0.99650064, relative difference 2.30e-09
+beta 1.00 n 12: gamma_opt = 0.96091307 in sector (1, 0) ; sector sups: w=(0,0) 1.003952  (1,0) 1.040677  (0,1) 1.040677  (1,1) 1.007296  (2,0) 1.001808
+    one unit of flux: energy 1.16222184 (beta*energy 1.162222) fine-detail weight 2.844684e-01 (beta*weight 0.284468) weight/energy 0.244763 ; plaquette gap in the sector w=0: 2.768749
+beta 1.00 n 16: gamma_opt = 0.96091307 in sector (1, 0) ; sector sups: w=(0,0) 1.003952  (1,0) 1.040677  (0,1) 1.040677  (1,1) 1.007296  (2,0) 1.001808
+    one unit of flux: energy 1.16222184 (beta*energy 1.162222) fine-detail weight 2.844684e-01 (beta*weight 0.284468) weight/energy 0.244763 ; plaquette gap in the sector w=0: 2.768749
+beta 1.00: relative difference between n=12 and n=16: 3.51e-12 (tolerance 1.78e-04) ; five-dimensional program (n=12) gave 0.96091307, relative difference 4.47e-09
+beta 2.00 n 16: gamma_opt = 0.89000348 in sector (0, 1) ; sector sups: w=(0,0) 1.025633  (1,0) 1.123591  (0,1) 1.123591  (1,1) 1.077192  (2,0) 1.033472
+    one unit of flux: energy 0.32935544 (beta*energy 0.658711) fine-detail weight 1.020941e-01 (beta*weight 0.204188) weight/energy 0.309981 ; plaquette gap in the sector w=0: 1.844601
+beta 2.00 n 24: gamma_opt = 0.89000348 in sector (0, 1) ; sector sups: w=(0,0) 1.025633  (1,0) 1.123591  (0,1) 1.123591  (1,1) 1.077192  (2,0) 1.033472
+    one unit of flux: energy 0.32935544 (beta*energy 0.658711) fine-detail weight 1.020941e-01 (beta*weight 0.204188) weight/energy 0.309981 ; plaquette gap in the sector w=0: 1.844601
+beta 2.00: relative difference between n=16 and n=24: 2.95e-11 (tolerance 1.22e-04) ; five-dimensional program (n=16) gave 0.89000348, relative difference 2.77e-11
+beta 3.00 n 16: gamma_opt = 0.86672444 in sector (1, 0) ; sector sups: w=(0,0) 1.028491  (1,0) 1.153769  (0,1) 1.153769  (1,1) 1.117197  (2,0) 1.068984
+    one unit of flux: energy 0.19349236 (beta*energy 0.580477) fine-detail weight 6.404989e-02 (beta*weight 0.192150) weight/energy 0.331020 ; plaquette gap in the sector w=0: 1.793135
+beta 3.00 n 24: gamma_opt = 0.86672442 in sector (0, 1) ; sector sups: w=(0,0) 1.028491  (1,0) 1.153769  (0,1) 1.153769  (1,1) 1.117197  (2,0) 1.068984
+    one unit of flux: energy 0.19349236 (beta*energy 0.580477) fine-detail weight 6.404990e-02 (beta*weight 0.192150) weight/energy 0.331020 ; plaquette gap in the sector w=0: 1.793135
+beta 3.00: relative difference between n=16 and n=24: 2.04e-08 (tolerance 1.67e-03) ; five-dimensional program (n=16) gave 0.86672444, relative difference 2.01e-08
+beta 4.00 n 24: gamma_opt = 0.85651115 in sector (1, 0) ; sector sups: w=(0,0) 1.029140  (1,0) 1.167527  (0,1) 1.167527  (1,1) 1.138082  (2,0) 1.094220
+    one unit of flux: energy 0.13873865 (beta*energy 0.554955) fine-detail weight 4.690176e-02 (beta*weight 0.187607) weight/energy 0.338058 ; plaquette gap in the sector w=0: 1.782181
+beta 4.00 n 32: gamma_opt = 0.85651115 in sector (0, 1) ; sector sups: w=(0,0) 1.029140  (1,0) 1.167527  (0,1) 1.167527  (1,1) 1.138082  (2,0) 1.094220
+    one unit of flux: energy 0.13873865 (beta*energy 0.554955) fine-detail weight 4.690176e-02 (beta*weight 0.187607) weight/energy 0.338058 ; plaquette gap in the sector w=0: 1.782181
+beta 4.00: relative difference between n=24 and n=32: 2.27e-13 (tolerance 1.03e-05) ; five-dimensional program (n=20) gave 0.85651116, relative difference 5.93e-09
+beta 6.00 n 24: gamma_opt = 0.84684769 in sector (1, 0) ; sector sups: w=(0,0) 1.029618  (1,0) 1.180850  (0,1) 1.180850  (1,1) 1.159864  (2,0) 1.125129
+    one unit of flux: energy 0.08899580 (beta*energy 0.533975) fine-detail weight 3.060167e-02 (beta*weight 0.183610) weight/energy 0.343855 ; plaquette gap in the sector w=0: 1.774273
+beta 6.00 n 32: gamma_opt = 0.84684769 in sector (0, 1) ; sector sups: w=(0,0) 1.029618  (1,0) 1.180850  (0,1) 1.180850  (1,1) 1.159864  (2,0) 1.125129
+    one unit of flux: energy 0.08899580 (beta*energy 0.533975) fine-detail weight 3.060167e-02 (beta*weight 0.183610) weight/energy 0.343855 ; plaquette gap in the sector w=0: 1.774273
+beta 6.00: relative difference between n=24 and n=32: 8.65e-10 (tolerance 3.24e-04) ; five-dimensional program (n=24) gave 0.84684769, relative difference 4.81e-09
+beta 8.00 n 32: gamma_opt = 0.84214953 in sector (1, 0) ; sector sups: w=(0,0) 1.029821  (1,0) 1.187438  (0,1) 1.187438  (1,1) 1.171182  (2,0) 1.142922
+    one unit of flux: energy 0.06558016 (beta*energy 0.524641) fine-detail weight 2.272163e-02 (beta*weight 0.181773) weight/energy 0.346471 ; plaquette gap in the sector w=0: 1.770970
+beta 8.00 n 48: gamma_opt = 0.84214953 in sector (0, 1) ; sector sups: w=(0,0) 1.029821  (1,0) 1.187438  (0,1) 1.187438  (1,1) 1.171182  (2,0) 1.142922
+    one unit of flux: energy 0.06558016 (beta*energy 0.524641) fine-detail weight 2.272163e-02 (beta*weight 0.181773) weight/energy 0.346471 ; plaquette gap in the sector w=0: 1.770970
+beta 8.00: relative difference between n=32 and n=48: 6.02e-13 (tolerance 1.20e-05) ; five-dimensional program (n=24) gave 0.84214962, relative difference 1.09e-07
+beta 16.00 n 48: gamma_opt = 0.83522731 in sector (1, 0) ; sector sups: w=(0,0) 1.030091  (1,0) 1.197279  (0,1) 1.197279  (1,1) 1.188756  (2,0) 1.172851
+    one unit of flux: energy 0.03198506 (beta*energy 0.511761) fine-detail weight 1.119916e-02 (beta*weight 0.179187) weight/energy 0.350137 ; plaquette gap in the sector w=0: 1.766588
+beta 16.00 n 64: gamma_opt = 0.83522731 in sector (1, 0) ; sector sups: w=(0,0) 1.030091  (1,0) 1.197279  (0,1) 1.197279  (1,1) 1.188756  (2,0) 1.172851
+    one unit of flux: energy 0.03198506 (beta*energy 0.511761) fine-detail weight 1.119916e-02 (beta*weight 0.179187) weight/energy 0.350137 ; plaquette gap in the sector w=0: 1.766588
+beta 16.00: relative difference between n=48 and n=64: 3.72e-15 (tolerance 9.85e-07)
+S2 MET (7 couplings compared)
+S3 MET
+S4 MET
+expectation (PREDICTION.md): beta*energy -> 0.5, weight/energy -> 0.354, gamma_opt -> at most about 0.83

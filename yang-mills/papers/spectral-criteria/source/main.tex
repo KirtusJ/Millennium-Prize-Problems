@@ -1621,6 +1621,7 @@ S8 & Working notes with the source derivations of Theorems~\ref{t:inh} and~\ref{
 S9 & Working notes with related hypotheses on the centre-neutral space & Section~\ref{s:not} \\
 S10 & Records of the internal reviews of this paper and their test programs & Section~\ref{s:disc} \\
 S11 & Programs and outputs for the free theory, and for the two-link test of Proposition~\ref{p:dir} & Section~\ref{s:arch}, Appendix~\ref{app:free} \\
+S12 & Programs and outputs for the compact $\mathrm U(1)$ example, with the expectation written before the runs & Appendix~\ref{app:free} \\
 \bottomrule
 \end{tabular}
 \caption{Supplementary material.}\label{tab:supp}
@@ -1784,6 +1785,42 @@ $1-e^{-2\pi t/L}$ and tends to zero. The example therefore separates two things 
 control of the refinement in a fixed box, which the free theory has, and a gap in infinite volume, which it
 lacks. Analogues of Hypotheses~\ref{h:mix} to~\ref{h:budget} for the interacting theory, even if proved, would
 leave the second untouched.
+
+\emph{A compact interacting example at the smallest size.} The exact form of Remark~\ref{r:forms}(a) can also
+be evaluated in one interacting compact model: $\mathrm U(1)$ lattice gauge theory in $2+1$ dimensions with
+weight $\exp(\beta\sum_p\cos\theta_p)$ on a $2\times2$ spatial torus, blocked to a single site, so that the
+coarse field is the pair of holonomies of the two lines through the origin. This is a toy and bears on no
+hypothesis of the paper. The transfer operator splits into sectors of electric flux, and in each sector the
+coarse projection is the projection onto the vacuum function. Table~\ref{tab:u1} gives the lattice gap and
+$\gamma_{\mathrm{opt}}=\|G(I-A^2)^{-1}G\|^{-1}$ with no exceptional set.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}rccc@{}}
+\toprule
+$\beta$ & lattice gap & weight / energy & $\gamma_{\mathrm{opt}}$ \\
+\midrule
+1 & 1.1622 & 0.245 & 0.9609 \\
+2 & 0.3294 & 0.310 & 0.8900 \\
+4 & 0.1387 & 0.338 & 0.8565 \\
+8 & 0.0656 & 0.346 & 0.8421 \\
+16 & 0.0320 & 0.350 & 0.8352 \\
+\bottomrule
+\end{tabular}
+\caption{Compact $\mathrm U(1)$ on a $2\times2$ torus blocked to one site (Supplement~S12). The lattice gap is
+the energy of one unit of electric flux; the third column is the weight of that state in the fine detail
+divided by its energy. Floating-point values from two programs that agree to seven figures; not proved bounds.}
+\label{tab:u1}
+\end{table}
+
+The lattice gap closes like $1/(2\beta)$, and the rate stays above $0.83$ over the range computed. The slow
+state is one unit of electric flux. It is almost a function of the coarse field, and the part of it in the
+fine detail has weight proportional to its energy, with ratio near $0.35$; this is the linear order of
+Remark~\ref{r:weight}, attained again, and it is why the rate settles below the free value $0.9706$, which
+leaves the winding modes out. A quadratic approximation written down before the runs gave the limits
+$\tfrac12$ for $\beta$ times the gap, $0.354$ for the ratio and a rate of at most about $0.83$
+(Supplement~S12). The limit of the rate as $\beta\to\infty$ is not computed, sectors with more than two units
+of flux were not examined, and nothing is shown for a larger lattice or another group.
 
 \begin{thebibliography}{9}\raggedright
 \bibitem{BL76} H.~J.~Brascamp and E.~H.~Lieb, \emph{On extensions of the Brunn--Minkowski and
