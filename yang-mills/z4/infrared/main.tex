@@ -141,12 +141,14 @@ statements of Proposition~\ref{p:haar}, were proposed with proofs by sessions of
 auditors of the repository; the same sessions reviewed the first draft of this paper, and their corrections
 are incorporated. Theorems~\ref{t:inh} and~\ref{t:ret}, the latter in its vacuum form, were proposed with
 proofs by a session of OpenAI Codex~\cite{RepoRet,RepoInh}. Sessions of Claude (Anthropic) attacked those
-source derivations and Proposition~\ref{p:haar} at their authors' request and found no defect, wrote the
+source derivations and Proposition~\ref{p:haar} at their authors' request and found no defect in the steps
+they checked (three items of the return derivation, which needed data archives that were absent, were not
+checked), wrote the
 proofs as they appear here, including the periodic-time form of Theorem~\ref{t:ret} and
 Proposition~\ref{p:vac}, and made the measurements of Section~\ref{s:evid}; a session of OpenAI Codex reduced
-part of the raw data again and corrected it. The finite-dimensional algebra of Theorem~\ref{t:inh} and the
-scalar steps of Proposition~\ref{p:haar} are checked in Lean~4 with Mathlib (Section~\ref{s:lean}); nothing
-else is. No one other than the author has read the paper, and no mathematician has reviewed it. Agreement
+part of the raw data again and corrected it. Lemma~\ref{l:scal}, the inequality of Corollary~\ref{c:acc}, the
+finite-dimensional form of Theorem~\ref{t:inh} and the scalar steps of Proposition~\ref{p:haar} are checked
+in Lean~4 with Mathlib (Section~\ref{s:lean}); nothing else is. No one other than the author has read the paper, and no mathematician has reviewed it. Agreement
 among such sessions, within one family or across two, is not peer review.
 
 \section{Setting and notation}\label{s:set}
@@ -294,8 +296,9 @@ If that construction is accepted as existence in the sense of~\cite{JW}, which a
 short-distance behaviour that the assessment discusses and we do not, then what remains is a spectral
 statement: for each compact simple $G$, in at least one of its non-trivial component theories, a $\Delta_G>0$
 with no spectrum of the Hamiltonian in $(0,\Delta_G)$, and some spectrum above it, so that the mass is finite.
-A constant depending on $G$ suffices; the value of the mass, uniqueness of the limit and a gap in every
-component are not required. Theorem~\ref{t:crit} is a form of the first half of that statement suited to a
+On our reading of~\cite{JW}, which neither it nor the assessment states in this form, a constant depending
+on $G$ in one non-trivial component would suffice, and the value of the mass is not asked for; the
+assessment records uniqueness of the limit and agreement of the components as unresolved. Theorem~\ref{t:crit} is a form of the first half of that statement suited to a
 theory given by correlation functions: a common exponential rate for the differences $d_{v,n}$ on a family of
 vectors with dense span, for instance those generated from the vacuum by the smeared fields.
 
@@ -533,7 +536,8 @@ the tail (33 terms).
 \begin{remark}\label{r:haar}
 The conditional law of one link given the others is of this form with $k\le6\beta$, as in the proof of
 Theorem~\ref{t:ret}. So for $\beta\ge1$ every unit linear functional of one link has conditional variance at
-least $R'(6)/\beta^2$, which is $0.00344$ and $0.00319$ at the two couplings of Section~\ref{s:local}. This is
+least $R'(6)/\beta^2$, which is $0.00344$ at $\beta=3.276133577$ (Section~\ref{s:local}) and $0.00319$ at
+$\beta=3.399810242$ (Remark~\ref{r:ret}(b)). This is
 a lower bound for the loss of a one-link functional under the resampling of that link. It is not a bound for
 the local quotient of the multi-link combinations of Section~\ref{s:local}, whose losses involve pairs of
 links and whose variances it does not control.
@@ -569,13 +573,14 @@ background sampled from the measure, every coarse plaquette at distance $>1.1$ f
 \end{tabular}
 \caption{Local quotient $\mathcal J/\mathcal V$ of the combination selected on training streams, evaluated on
 held-out streams. For comparison, the average of the four plaquette marks of one coarse plaquette gives
-$.047$ and $.09$ on the two backgrounds, and a single plaquette mark gives $.062$ on the first.}
+$.047$ and $.086$ on the two backgrounds, and a single plaquette mark gives $.062$ on the first.}
 \label{tab:local}
 \end{table}
 
 (i) The selected combination is collective. In the basis of marks used, $81$ per cent of the sum of its
 squared coefficients, each scaled by the standard deviation of its mark, belongs to the three coarse
-plaquettes with holonomy $-I$, with opposite signs on neighbouring plaquettes. The marks are correlated, so
+plaquettes with holonomy $-I$; in the $15$-mark span the coefficients on one of the three have the sign
+opposite to those on the other two. The marks are correlated, so
 this is a statement about coefficients and not a decomposition of the variance.
 
 (ii) The values decrease as the span grows, on both backgrounds, and a comparison paired on the same held-out
