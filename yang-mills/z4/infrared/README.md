@@ -86,6 +86,8 @@ On the Principal's instruction the worker tests were stopped (two background che
 
 - **Wider test of the axial minimiser (24 November, later).** `supplement/S11-free-theory/minimiser.py`: all coarse momenta of side 256 and the small momenta at side 2²⁰. Predicate Z1 FAILED as written (it ignored the reflection k → π − k, under which (127,0,0) ties with (1,0,0)); kept, with a note. Up to that reflection the minimum is at the lowest axial momentum; at small momentum the excess over the limit goes with the length of the momentum (ratio 1.41 between (1,1,0) and (1,0,0)). Appendix E says so, as an observation. Handoff item 7 stands: not proved.
 
+- **The small-momentum limit of the free rate does not depend on the direction (24 November, later).** Argument from the constraint (the limiting form is `diag(h) ⊗ I₃ + vvᵀ ⊗ Π / 4`), written into Appendix E; numerically the rate is `0.674941 + 0.407|k|` in six directions at side 2²² (`supplement/S11-free-theory/directions.py`, exploratory, no predicate). Still not proved: that the rate at every momentum is at least its limit at zero.
+
 ## Sixth draft (24 November)
 
 A first-time-reader review of the fifth draft (`../../papers/spectral-criteria/supplement/S10-review-records/first-reader/report.md`, sub-agent of the same family) supplied a replacement abstract, introduction and Measurements section; the director read them, adjusted them and spliced them in. No theorem, number or claim was added or removed in the Measurements section (its 162 numerals were compared by script before and after; the later edits only add two clarifying values, 1.14 and the unrounded 0.93574 + 2 x 0.00271).
