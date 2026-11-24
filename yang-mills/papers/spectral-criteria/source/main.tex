@@ -237,7 +237,7 @@ shows, in Figure~\ref{f:arch}, how the proved and the open statements fit togeth
 Sections~\ref{s:crit} to~\ref{s:ret}. Section~\ref{s:evid} summarises the measurements, Section~\ref{s:ext}
 relates the paper to the external construction, and Section~\ref{s:rem} lists what remains. The appendices
 hold the measurements in full, the one-link covariance bound, the machine-checked parts and the catalogue of
-supplementary material. A reader who wants only the mathematics can read Sections~\ref{s:set}
+supplementary material, and a check of the outline in the free theory. A reader who wants only the mathematics can read Sections~\ref{s:set}
 to~\ref{s:ret}; a reader who wants only the state of the question can read this introduction,
 Section~\ref{s:arch} and Section~\ref{s:rem}.
 
@@ -1370,10 +1370,66 @@ S7 & Lean files, statement and file digests & Appendix~\ref{s:lean} \\
 S8 & Working notes with the source derivations of Theorems~\ref{t:inh} and~\ref{t:ret}, the bound of the transfer form by local losses, and strong-coupling estimates & Sections~\ref{s:arch}, \ref{s:disc} \\
 S9 & Working notes with related hypotheses on the centre-neutral space & Section~\ref{s:not} \\
 S10 & Records of the internal reviews of this paper and their test programs & Section~\ref{s:disc} \\
+S11 & Programs and outputs for the free theory & Appendix~\ref{app:free} \\
 \bottomrule
 \end{tabular}
 \caption{Supplementary material.}\label{tab:supp}
 \end{table}
+
+\section{The free theory as a check of the architecture}\label{app:free}
+The outline of Section~\ref{s:arch} can be tested in full where everything is computable: the free
+(non-compact $\mathrm U(1)$) lattice gauge theory in $3+1$ dimensions, with infinite time and a spatial
+torus of side $N$. This is the theory obtained from the Wilson action by keeping the quadratic term. It is
+not Yang--Mills theory, and nothing here bears on the open hypotheses for $\SU(2)$; the purpose is to see
+whether the hypotheses and the budget are mutually consistent in one example with a gap in a fixed box.
+
+\emph{Setting.} We take the gauge-invariant functions of the spatial plaquettes of one slice (winding modes
+are left out). The measure is Gaussian. For jointly Gaussian vectors the conditional expectation is the
+second quantisation of a contraction, so every maximal correlation below is the largest canonical correlation
+of linear functionals, which is a finite matrix computation at each spatial momentum. The plaquette field at
+spatial momentum $p$ and time lag $\tau$ has covariance $M(p)e^{-\omega_p\tau}/(2\sinh\omega_p)$, with
+$\cosh\omega_p=1+\tfrac12\sum_i4\sin^2(p_i/2)$ and $M(p)$ the matrix of the lattice curl. A coarse plaquette
+is the sum of its four fine plaquettes. The physical time is half the side of the box, so $m=N/2$.
+
+\emph{Result.} Table~\ref{tab:free} gives, for each fine side $N$: the deficit $d_{\mathrm c}$ of the coarser
+lattice of side $N/2$; the deficit $b$ of the coarse part, from the largest canonical correlation of the
+coarse plaquettes at lag $m$; the rate $\gamma$, equal to one minus the largest squared canonical correlation
+between a slice and the next given the coarse plaquettes of the first (Proposition~\ref{p:pred}); and the
+factor $K=1+2/(m\gamma)$.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}rccccc@{}}
+\toprule
+$N$ & $d_{\mathrm c}$ & $b$ & $b-d_{\mathrm c}$ & $\gamma$ & $K$ \\
+\midrule
+4 & 0.8284 & 0.9454 & 0.1170 & 0.9282 & 2.0774 \\
+8 & 0.9282 & 0.9712 & 0.0430 & 0.8762 & 1.5706 \\
+16 & 0.9498 & 0.9670 & 0.0173 & 0.8020 & 1.3117 \\
+32 & 0.9550 & 0.9630 & 0.0080 & 0.7463 & 1.1675 \\
+64 & 0.9564 & 0.9602 & 0.0039 & 0.7127 & 1.0877 \\
+\bottomrule
+\end{tabular}
+\caption{The free theory on a spatial torus of side $N$, physical time half the side. Values computed in
+floating point from the formulas above (Supplement~S11); they are exact up to rounding, not proved bounds.}
+\label{tab:free}
+\end{table}
+
+Three things are seen.
+\begin{itemize}
+\item \emph{Hypothesis~\ref{h:mix} holds without any exceptional set.} The smallest $\gamma$ is attained at the
+lowest non-zero coarse momentum, and along that momentum it decreases to a limit near $0.675$ (computed up to
+$N=4096$). So $\gamma$ is bounded below uniformly in the volume.
+\item \emph{Hypothesis~\ref{h:coarse} holds with no loss.} In every row $b\ge d_{\mathrm c}$: the coarse part
+of the fine lattice decays at least as fast as the coarser lattice does, so $\varepsilon_i=0$ is allowed.
+\item \emph{The budget is met and the conclusion is valid but weak.} With $\varepsilon_i=\kappa_i=0$ the
+budget of Hypothesis~\ref{h:budget} is empty. The products $M_i$ reach $5.43$ at $N=64$ and converge.
+Corollary~\ref{c:acc} then gives a deficit of at least $0.828/5.43=0.152$ at $N=64$, where the true deficit
+is $0.957$.
+\end{itemize}
+So in the free theory the three hypotheses hold together and the architecture closes in a fixed box, with a
+bound about six times smaller than the truth. The gap of the free theory in a box is that of the lowest
+photon momentum and vanishes as the box grows, so this example says nothing about infinite volume.
 
 \begin{thebibliography}{9}\raggedright
 \bibitem{DLMF} \emph{NIST Digital Library of Mathematical Functions}, \S10.29, \url{https://dlmf.nist.gov/10.29}.

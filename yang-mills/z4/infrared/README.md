@@ -68,6 +68,8 @@ On the Principal's instruction the worker tests were stopped (two background che
 
 - **Two remarks from the solution attempt (24 November, later).** Remark 3.5: under logarithmic growth of the coupling, a mixing rate exponentially small in β with exponent below 1/s suffices for Hypothesis 3.1 (arithmetic; the growth condition is not proved). Remark 6.6: the vacuum transfer step is a product kernel reweighted by φ = WΩ (checked numerically on random finite instances in `../solution-attempt/`). The attempt itself produced no proof; its record is `../solution-attempt/ATTEMPT.md`.
 
+- **Appendix E (24 November, later).** The outline is tested exactly in the free lattice gauge theory: Hypothesis 3.1 holds with γ ≥ about 0.675 uniformly in the side (no exceptional set), Hypothesis 3.2 holds with no loss for sides 4 to 64, and Corollary 5.2 gives a valid bound about six times below the true deficit. Programs in supplement S11, with a position-space cross-check at sides 4 and 6. Appendices A to D keep their letters.
+
 ## Sixth draft (24 November)
 
 A first-time-reader review of the fifth draft (`../../papers/spectral-criteria/supplement/S10-review-records/first-reader/report.md`, sub-agent of the same family) supplied a replacement abstract, introduction and Measurements section; the director read them, adjusted them and spliced them in. No theorem, number or claim was added or removed in the Measurements section (its 162 numerals were compared by script before and after; the later edits only add two clarifying values, 1.14 and the unrounded 0.93574 + 2 x 0.00271).

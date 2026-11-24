@@ -2,8 +2,8 @@
 
 For the paper *Spectral criteria and conditional infrared estimates for four-dimensional lattice Yang–Mills theory* (Kirtus Justus, 24 November 2026), part of the research program [From Prephysical Hypotheses to Physical Models](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models).
 
-- Reading copy: [`Spectral criteria and conditional infrared estimates for four-dimensional lattice Yang-Mills theory.pdf`](Spectral%20criteria%20and%20conditional%20infrared%20estimates%20for%20four-dimensional%20lattice%20Yang-Mills%20theory.pdf) (SHA-256 `147104b26687daa06da3bfe08811127697e62648308e8cae8dba26596dfc9bd4`)
-- Source: [`source/main.tex`](source/main.tex) (SHA-256 `e47228b6fb3411be47d9a2bb923957a6b252f630e14ced778fc8e7b89f4bbe62`) with [`source/preamble.tex`](source/preamble.tex); three passes of `pdflatex`.
+- Reading copy: [`Spectral criteria and conditional infrared estimates for four-dimensional lattice Yang-Mills theory.pdf`](Spectral%20criteria%20and%20conditional%20infrared%20estimates%20for%20four-dimensional%20lattice%20Yang-Mills%20theory.pdf) (SHA-256 `0fc3e8cc37b60d4ea540ba505b1df736424917a5cc2c4970db8b40a3bc343a06`)
+- Source: [`source/main.tex`](source/main.tex) (SHA-256 `d47368ee0ac8ee9fa47c286ef2cf907746bcb77eaa0da50e5823d0c9c9f424f0`) with [`source/preamble.tex`](source/preamble.tex); three passes of `pdflatex`.
 - The paper does not prove a mass gap and has not been peer reviewed.
 
 The paper cites the items below as "Supplement S*n*". Locations are relative to this folder. A digest is given for single files; folders carry their own records.
@@ -20,6 +20,7 @@ The paper cites the items below as "Supplement S*n*". Locations are relative to 
 | S8 | Working notes: source derivations of Theorems 1.2 and 1.3, the bound of the transfer form by local losses, strong-coupling estimates | [`supplement/S8-source-derivations/inheritance.md`](supplement/S8-source-derivations/inheritance.md)<br>[`supplement/S8-source-derivations/return.md`](supplement/S8-source-derivations/return.md)<br>[`supplement/S8-source-derivations/bound-by-local-losses/`](supplement/S8-source-derivations/bound-by-local-losses/) | `462dfbe4f0cc706adf9d3d80d668124f43d53c2d246f607b131881d083070206` inheritance.md<br>`9e0161065ff426cbc3e626fa8fcf89054ca0ebf410df3d7177ca8a295cfa8579` return.md |
 | S9 | Working notes: related hypotheses on the centre-neutral space | [`supplement/S9-related-hypotheses/`](supplement/S9-related-hypotheses/) |  |
 | S10 | Records of the internal reviews of the paper and their test programs | [`supplement/S10-review-records/`](supplement/S10-review-records/) |  |
+| S11 | Programs and outputs for the free-theory check (Appendix E) | [`supplement/S11-free-theory/`](supplement/S11-free-theory/) | `795372adec3489329e8f211a200b29b6a4b9c44ad781d28e8a586304a304bb02` maxwell.py<br>`3b90bb069758056954f9bf130bc673bc05a145c3eaf5e0c7ed41b8eb526fe858` worstq.py |
 
 ## Reading the records
 

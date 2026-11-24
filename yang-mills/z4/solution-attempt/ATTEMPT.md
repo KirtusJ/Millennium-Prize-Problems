@@ -71,6 +71,16 @@ Both need the following, which I state as the distilled missing lemma. *It is a 
 
 In the small-field region this is the statement that a field pinned to the present slice with strength β has mass of order one in lattice units. Outside it I have no argument.
 
+## 4.2 The architecture closes in the free theory (computed)
+
+To see whether the hypotheses can hold together at all, I computed them exactly in the free (non-compact U(1)) lattice gauge theory, on the plaquette sector, infinite time, spatial side N up to 64 (single momenta up to 4096). Programs and outputs: `../../papers/spectral-criteria/supplement/S11-free-theory/`; the momentum-block computation agrees with a dense position-space computation at N = 4 and 6 to nine digits. Result, now Appendix E of the paper:
+
+- the mixing rate γ is bounded below by about 0.675 uniformly in N, with no exceptional set;
+- the coarse part decays at least as fast as the coarser lattice (b ≥ d_c in every case computed), so no loss is needed in the comparison;
+- the products of the loss factors converge (5.43 at N = 64), and the corollary gives a deficit of at least 0.152 where the truth is 0.957.
+
+So the route is at least consistent in the one case where everything is computable. This is the quadratic part of the Wilson action, it has no gap in infinite volume, and it says nothing about the interacting hypotheses.
+
 ## 5. What would be worth doing next (not done)
 
 1. State the missing estimate as a single conjecture: a Poincaré inequality for the vacuum slice measure conditioned on the coarse field, with constant at most `C e^{cβ}`, `c < 2.33`, uniform in volume and in the coarse field. Test it numerically as a function of β and of the side at fixed β, which the existing programs can do.

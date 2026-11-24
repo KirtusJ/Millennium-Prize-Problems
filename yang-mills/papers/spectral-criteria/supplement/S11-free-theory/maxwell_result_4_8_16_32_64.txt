@@ -1,0 +1,10 @@
+N=4 m=2 d_f=0.928203 d_c=0.828427 b=0.945404 gamma=0.928203 (worst coarse momentum (0, 1, 0)) K=2.077350 b/K=0.455101 eps=d_c-b=-0.116977  P1 MET  P2 MET
+N=8 m=4 d_f=0.949777 d_c=0.928203 b=0.971199 gamma=0.876241 (worst coarse momentum (0, 0, 1)) K=1.570619 b/K=0.618354 eps=d_c-b=-0.042996  P1 MET  P2 MET
+N=16 m=8 d_f=0.955040 d_c=0.949777 b=0.967033 gamma=0.801969 (worst coarse momentum (0, 7, 0)) K=1.311733 b/K=0.737218 eps=d_c-b=-0.017256  P1 MET  P2 MET
+N=32 m=16 d_f=0.956350 d_c=0.955040 b=0.962998 gamma=0.746285 (worst coarse momentum (1, 0, 0)) K=1.167496 b/K=0.824840 eps=d_c-b=-0.007958  P1 MET  P2 MET
+N=64 m=32 d_f=0.956677 d_c=0.956350 b=0.960238 gamma=0.712724 (worst coarse momentum (1, 0, 0)) K=1.087692 b/K=0.882822 eps=d_c-b=-0.003888  P1 MET  P2 MET
+chain up to N=4: sum M_{i-1} eps_i^+ = 0.000000, d_0 = 0.828427, product M = 2.0774, corollary bound on d_f: 0.398790 (true 0.928203)
+chain up to N=8: sum M_{i-1} eps_i^+ = 0.000000, d_0 = 0.828427, product M = 3.2627, corollary bound on d_f: 0.253906 (true 0.949777)
+chain up to N=16: sum M_{i-1} eps_i^+ = 0.000000, d_0 = 0.828427, product M = 4.2798, corollary bound on d_f: 0.193566 (true 0.955040)
+chain up to N=32: sum M_{i-1} eps_i^+ = 0.000000, d_0 = 0.828427, product M = 4.9967, corollary bound on d_f: 0.165795 (true 0.956350)
+chain up to N=64: sum M_{i-1} eps_i^+ = 0.000000, d_0 = 0.828427, product M = 5.4348, corollary bound on d_f: 0.152429 (true 0.956677)

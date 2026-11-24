@@ -1,0 +1,2 @@
+N=4 position b=0.945404210 gamma=0.928203230 | block b=0.945404210 gamma=0.928203230 | MET
+N=6 position b=0.970347111 gamma=0.905376004 | block b=0.970347111 gamma=0.905376004 | MET
