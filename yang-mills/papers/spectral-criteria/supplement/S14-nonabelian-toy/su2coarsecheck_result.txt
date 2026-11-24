@@ -1,0 +1,5 @@
+J=3 D=6 beta=2 (J'=6): w_trunc 7.478434e-02  w_exact 7.478728e-02  rel diff 3.93e-05  dims 84/84  theta 4.574e-01  leak 8.343e-02
+J=3 D=6 beta=3 (J'=6): w_trunc 1.382878e-02  w_exact 1.386004e-02  rel diff 2.26e-03  dims 84/84  theta 6.924e-01  leak 1.307e-01
+J=4 D=4 beta=3 (J'=6): w_trunc 1.660210e-02  w_exact 1.660683e-02  rel diff 2.85e-04  dims 35/35  theta 1.941e-02  leak 1.012e-02
+J=4 D=4 beta=4 (J'=6): w_trunc 5.746959e-03  w_exact 5.782074e-03  rel diff 6.07e-03  dims 35/35  theta 5.394e-02  leak 2.364e-02
+K1 MET
