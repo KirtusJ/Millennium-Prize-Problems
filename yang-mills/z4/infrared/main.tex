@@ -4,7 +4,11 @@
 \title[Spectral criteria and conditional infrared estimates]{Spectral criteria and conditional infrared estimates\\ for four-dimensional lattice Yang--Mills theory}
 \author{Kirtus Justus}
 \address{Theoretical Physicist, Port Coquitlam, British Columbia, Canada}
-\date{24 November 2026. Fourth draft.}
+\date{24 November 2026}
+\thanks{This paper belongs to the research program \emph{From Prephysical Hypotheses to Physical
+Models}~\cite{Prog}, as part of its study of the Millennium Prize problems. It has not been peer reviewed.}
+\subjclass[2020]{Primary 81T13; Secondary 81T25, 47A10, 60J05}
+\keywords{Yang--Mills theory, lattice gauge theory, mass gap, transfer operator, spectral gap}
 \begin{document}
 \begin{abstract}
 Suppose a Yang--Mills theory is known only through its correlation functions. How could a mass gap be
@@ -70,7 +74,8 @@ the time considered. Theorem~\ref{t:inh} makes this precise.
 
 The exceptions are allowed for a reason. A natural way to prove~(b) goes through local updates of the fine
 links, and in our trials that route meets slow directions on selected coarse fields (Section~\ref{s:local}).
-This is motivation only; the trials are not evidence for or against any hypothesis.
+This is motivation only: the trials are statistical evidence about the particular functions tried, and
+certify nothing about all functions.
 
 Where this stands: Theorem~\ref{t:ret} proves a bound of the kind~(c) for $\SU(2)$, for exceptional sets
 built from narrow neighbourhoods of one group element (we call them gates); it is not shown that~(b) can
@@ -188,12 +193,13 @@ are special to it; that constant is the largest value over the conditional laws 
 is not shown to be attained on any Wilson background. For other groups only a cruder return bound is available (Remark~\ref{r:ret}(d)), and
 whether a useful exceptional set exists is open.
 \item The refinement step is stated on the centred gauge-invariant functions of a slice. Related hypotheses
-in~\cite{RepoInh} are stated on the smaller space that is also neutral under the centre of the group. A
+in the working notes (Supplement~S9) are stated on the smaller space that is also neutral under the centre of the group. A
 result on one of these spaces is not a result on the other, and which space matters depends on the domain of
 the continuum theory one compares with.
 \item The measurements of Section~\ref{s:evid} are Monte Carlo estimates on lattices of side $5$ to $10$,
 one coupling each, with statistical errors. The exact value of a trial function limits a constant from one
-side; an estimate of it is not a bound. No measurement is evidence for or against a hypothesis, and none is
+side; an estimate of it is not a bound. The estimates are statistical evidence about the functions tried; they do
+not certify an inequality over all functions or its limit, and none is
 used in a proof.
 \end{enumerate}
 
@@ -239,7 +245,8 @@ of the sequence; such a sequence of lattices and couplings is a \emph{trajectory
 
 \emph{Local updates.} A \emph{colour} is one of $24$ classes of pairs of fine links inside coarse cells, such
 that the pairs of one class can be resampled together from their conditional law given all other links,
-leaving the coarse links unchanged; the classes are those of the sampler in~\cite{RepoData}. For a function
+leaving the coarse links unchanged; the classes are those of the sampling program (Supplement~S1; the supplement is catalogued in
+Appendix~\ref{app:supp}). For a function
 $F$ of a slice, on a fixed coarse background, $\mathcal J(F)$ is the average over the $24$ colours of the
 expected conditional variance of $F$ under the resampling of that colour, and $\mathcal V(F)$ is the
 conditional variance of $F$ given the coarse links. We call $\mathcal J(F)/\mathcal V(F)$ the \emph{local
@@ -327,7 +334,7 @@ $\sum_ia_i/\gamma_i<\infty$.
 \end{hypothesis}
 
 Hypothesis~\ref{h:mix} is about the transfer semigroup. One route to it uses the local updates of
-Section~\ref{s:set}. A derivation in~\cite{RepoInh}, not reproduced or checked here, bounds
+Section~\ref{s:set}. A derivation in the working notes (Supplement~S8), not reproduced or checked here, bounds
 $\langle f,(I-A^2)f\rangle$ from below by the expected loss of $f$ under those updates. Given that, it would
 suffice to bound the local quotient $\mathcal J(F)/\mathcal V(F)$ from below for every function $F$ on every
 background outside the gates. We call this the \emph{auxiliary local mixing statement}. It is stronger than
@@ -360,9 +367,12 @@ So Hypothesis~\ref{h:mix} would follow from a bound on the conditional maximal c
 with $\sum_ia_i/\gamma_i<\infty$. We have no such bound for the Wilson measure at weak coupling; the
 proposition replaces one open estimate by another and proves nothing about the theory. It does say what the
 measurement of Section~\ref{s:time} is a trial for: a correlation between a function of one slice and a
-function of the next, given the coarse field of the first, is a lower trial value for $\varrho(c)$ on that
-coarse field. Here $g$ must be a function of the next slice alone, and the measurement is on a periodic lattice
-with one slice frozen, not in the vacuum. A small mutual information of $X$ and $Y$ given $C$ is not enough, since $\varrho$ is a supremum over
+function of the next, given the coarse field of the first, is, in the population, a lower value for the conditional maximal
+correlation on that coarse field. Three reservations apply. Here $g$ must be a function of the next slice
+alone. The measurement is on a periodic lattice with one slice frozen, so the quantity concerned is the
+analogue $\varrho_T(c)$ for period $T$, not the vacuum quantity $\varrho(c)$ of the proposition, and we have
+no estimate of their difference. And a Monte Carlo estimate at one coarse field is neither a certified bound
+there nor a statement about almost every field. A small mutual information of $X$ and $Y$ given $C$ is not enough, since $\varrho$ is a supremum over
 normalised functions, including those concentrated on rare configurations.
 
 \begin{hypothesis}[Coarse comparison; open]\label{h:coarse}
@@ -384,7 +394,8 @@ Hypothesis~\ref{h:coarse}, the series below converges and
 
 At a fixed finite lattice each $A_i$ is compact and, on the centred functions, has norm below one (the eigenvalue
 one of the full operator is simple and belongs to the constants; the largest eigenvalue on the centred
-functions may be degenerate). So some $\gamma_i>0$ and some deficit exist, with no uniformity; and there are estimates at strong coupling in~\cite{RepoInh} and in the literature. What is
+functions may be degenerate). So some $\gamma_i>0$ and some deficit exist, with no uniformity; and at strong coupling
+there are estimates of this kind (working notes, Supplement~S8; not used here). What is
 not proved is the three statements together, with the stated sums, on one trajectory of matched couplings
 tending to weak coupling. If all held on one trajectory, Corollaries~\ref{c:acc} and~\ref{c:vac} would give a positive lower limit of the deficits in a
 fixed physical box. Summability of the $\kappa_i$ and $\varepsilon_i$ alone would not: the budget is a
@@ -730,10 +741,10 @@ and does not include the variability of the selection.
 \item One coupling per lattice; lattices of side $5$ to $10$ with periodic time; heat-bath sampling.
 \item Thermalisation was checked only by comparing hot with cold starts and first with second halves, and
 some of these checks failed; they are named where they bear on a number.
-\item Couplings were taken from a calibration in~\cite{RepoData} and not recalibrated, so every statement at
+\item Couplings were taken from an earlier calibration (Supplement~S6) and not recalibrated, so every statement at
 ``matched'' couplings inherits it.
 \item Programs, seeds, the rules fixed before each run, the rules that failed and summary files are
-in~\cite{RepoData}. Per-stream data are deposited for Section~\ref{s:cross} and for the single-mark runs; for
+in Supplement S1 to S5. Per-stream data are stored there for Section~\ref{s:cross} and for the single-mark runs; for
 the others they are regenerated from the seeds, which reproduces them statistically but, across rebuilds of
 the sampler, not byte for byte.
 \end{itemize}
@@ -772,7 +783,7 @@ no selection; they share no stream with the selection \\
 \bottomrule
 \end{tabular}
 \caption{Design of the main runs. The runs on displaced backgrounds and the single-mark runs of
-Section~\ref{s:local} are described there and in~\cite{RepoData}.}\label{tab:runs}
+Section~\ref{s:local} are described there and in Supplement~S3.}\label{tab:runs}
 \end{table}
 
 \subsection{The local quotient on a frozen coarse background}\label{s:local}
@@ -794,7 +805,7 @@ coarse plaquettes, the fourth among them, then have holonomy $\pm\mathbf i$.
 \item \emph{Background~\textsf{B}.} A single configuration: the first of $60$ drawn from the unconditioned measure
 whose coarse plaquettes are all farther than $\pi/4$ from $-I$ ($40$ qualified), a rule fixed in advance.
 \item \emph{Marks.} A \emph{mark} is a gauge-invariant function of the fine plaquettes inside one coarse
-plaquette; the list of marks is in~\cite{RepoData}.
+plaquette; the list of marks is in Supplement~S2.
 \item \emph{Spans.} Four nested spans were fixed before the runs: the $15$ marks on the three $-I$
 plaquettes; $49$ marks on the seven coarse plaquettes that contain an altered link; $181$ and $308$ marks
 that add the $33$ plaquettes sharing a coarse edge with those.
@@ -861,7 +872,7 @@ stated round distance from $-I$.
 \item \emph{The same $15$ marks.} At distance $1/\beta$ they give $.0207(2)$, against $.0216(5)$ at $-I$ in a
 separate, earlier run of the same design.
 \item \emph{The single plaquette mark.} The ratio of the quotient at distance $2/\beta$ to that at $-I$ is
-$1.016(11)$ in a first run and $1.004(11)$ in a second run whose rules were registered beforehand; at
+$1.016(11)$ in a first run and $1.004(11)$ in a second run whose rules were written down and time-stamped beforehand; at
 $4/\beta$ it is $1.075(11)$.
 \item \emph{The four-mark average.} The ratio at $2/\beta$ is $1.034(13)$.
 \end{itemize}
@@ -907,9 +918,10 @@ background \textsf{B} by three standard errors;
 held-out streams with the fitted coefficients fixed; the uncertainty of the fit is not included).
 
 \emph{Why no verdict is drawn.} With $308$ regressors and $18432$ fitting measurements an uncorrelated target
-gives about $-0.017$, and the same fit at a lag of three slices, where no correlation is seen, gives
+would give about $-0.017$ in an idealised regression with independent Gaussian data (a benchmark, not a
+calibrated correction for these correlated streams), and the same fit at a lag of three slices, where no correlation is seen, gives
 $-0.016(2)$ and $-0.019(2)$ in the same order. The second clause of the rule is therefore met formally, but with this offset it
-cannot exclude a coefficient of determination up to about $0.03$, and we draw no verdict from it.
+cannot exclude a coefficient of determination of a few hundredths, and we draw no verdict from it.
 
 \emph{Outside the rule} (chosen after the data were seen).
 \begin{itemize}
@@ -923,16 +935,17 @@ $-0.003(6)$ in the later-slice form.
 \item The unselected four-mark average gives $0.076(5)$ on \textsf{A} and $0.009(6)$ on \textsf{B} in the transported form, so,
 in these estimates, the larger correlation on \textsf{A} is not particular to the selected combination.
 \end{itemize}
-The result files of this run are not in the deposit; these numbers are those of the run's
-report~\cite{RepoData}.
+The result files of this run were not kept; these numbers are those of the run's
+report (Supplement~S4).
 
 \emph{What this does not show.}
 \begin{itemize}
 \item The later slice is not frozen, so its coarse background is not the one for which the combination was
 selected.
 \item The test is a correlation conditional on the coarse links of one slice, not a matrix element of the
-transfer operator. In the later-slice form it is a lower trial value for the conditional maximal correlation
-of Proposition~\ref{p:pred} on this one coarse field.
+transfer operator. In the later-slice form it estimates a lower value for the periodic analogue of the
+conditional maximal correlation of Proposition~\ref{p:pred} on this one coarse field (see the reservations
+after that proposition).
 \item It does not bound the best prediction from the later slice, and it does not exclude other combinations
 that propagate slowly.
 \item The local quotient and a correlation over one time step are not on a common scale, so the two are not
@@ -969,9 +982,10 @@ must account for the change of variance. In this span no test had a quotient rat
 
 \emph{{\upshape(ii)} Normalised quotients.} The second study used a span of $54$ functions ($48$ linearly
 independent among the slice-averaged ones on the selection streams) and five classes of test. Of the $25$
-tests fixed on the selection streams, one has a ratio below one on the held-out streams: the test selected to
-minimise $\mathsf R_{10}/\mathsf R_5$ among slice-averaged functions. The other $24$ have ratio plus two
-standard errors above one. The same fixed test was then evaluated on the longer ensembles.
+tests fixed on the selection streams, three have point estimates of the ratio below one on the held-out
+streams ($0.941$, $0.9988$ and $0.9991$). Only one meets the criterion fixed in advance, ratio plus two
+standard errors below one: the test selected to minimise $\mathsf R_{10}/\mathsf R_5$ among slice-averaged
+functions. For the other $24$ that sum is above one. The same fixed test was then evaluated on the longer ensembles.
 Table~\ref{tab:cross} gives both evaluations.
 
 \begin{table}[ht]
@@ -999,7 +1013,7 @@ a stated level, and it inherits the coupling match.
 
 \emph{A check that failed: an unexplained discrepancy.} For a different statistic on the same finer lattice (the largest lag correlation among functions of the
 squared winding of a line, binned in four bins),
-an earlier and shorter run by another program in~\cite{RepoData} gives $0.0041(7)$ where these ensembles give
+an earlier and shorter run by another program of the project gives $0.0041(7)$ where these ensembles give
 $0.0016(1)$, $3.4$ combined standard errors apart. The cause is not determined.
 
 \emph{What this does not show.}
@@ -1012,27 +1026,6 @@ renormalised coupling and one lag were used.
 \item The first span contained no such test, so the outcome depends on the span, and a larger span could
 change it again.
 \end{itemize}
-
-\section{Machine-checked parts}\label{s:lean}
-Two Lean~4 files with Mathlib accompany the paper~\cite{RepoLean} (Lean 4.19.0, Mathlib v4.19.0); both compile with no \texttt{sorry} and use
-only the axioms \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}.
-\begin{itemize}
-\item \texttt{Inheritance.lean}: Lemma~\ref{l:scal} for real exponents; the scalar conclusion of
-Theorem~\ref{t:inh}; the inequality of Corollary~\ref{c:acc} (not its statement about boundedness of the
-products, nor the limit inferior); and Theorem~\ref{t:inh} in the special case of a real finite-dimensional
-space with $A=e^{-aH}$ injective, $H$ given by an orthonormal eigenbasis and non-negative eigenvalues. The
-three inequalities~\eqref{e:hyp} are hypotheses of the formal statement. The general case proved above
-(infinite dimension; $A$ with a kernel) is not formalised. The formal statement has real times $t>0$,
-$\tau\le t$ and $a\ge0$, hypotheses for $e^{-2aH}$, $e^{-\tau H}$ and $e^{-tH}$, and denominator
-$1+2a/(\gamma t)$; Theorem~\ref{t:inh} for $A=e^{-aH}$ is the case $t=ma$, $\tau=ja$. The file also checks the
-example of Remark~\ref{r:reset}.
-\item \texttt{haar.lean}: the algebra at the zeros in the proof of Proposition~\ref{p:haar}, with the
-derivative formulas entered as algebraic expressions in real variables; the reduction
-$\beta^2\lambda_{\min}(k)\ge R'(\ell)$ given the monotonicities; and the first-zero principle. The Bessel identities are not
-formalised.
-\end{itemize}
-Theorems~\ref{t:crit} and~\ref{t:ret}, Propositions~\ref{p:three} and~\ref{p:vac}, Lemma~\ref{l:trace} and
-Corollary~\ref{c:vac} are not formalised.
 
 \section{The external construction and what compatibility would require}\label{s:ext}
 According to its assessors~\cite[pp.~1, 3]{YMG}, the construction~\cite{OAI} obtains continuum correlation
@@ -1062,24 +1055,7 @@ couplings and the physical units; the order of the limits (mesh at fixed volume,
 observables on which convergence holds; the component theory selected; and the relation between the lattice
 transfer semigroup at fixed regulator, to which Theorems~\ref{t:inh} and~\ref{t:ret} refer, and the
 Hamiltonian of the limit. The lattices of Section~\ref{s:evid} are matched to one another by a renormalised
-coupling~\cite{RepoData}; they are not known to lie on the sequence of~\cite{OAI}.
-
-\section{Sources of the results and status of verification}\label{s:disc}
-This paper was assembled by the author with the assistance of sessions of two artificial-intelligence model
-families working in a shared repository~\cite{Repo}. Theorem~\ref{t:crit} in this form, and the monotonicity
-statements of Proposition~\ref{p:haar}, were proposed with proofs by sessions of OpenAI GPT models acting as
-auditors of the repository; the same sessions reviewed the drafts of this paper, and their corrections
-are incorporated; Proposition~\ref{p:pred} and Remark~\ref{r:lag} were proposed by one of them. Theorems~\ref{t:inh} and~\ref{t:ret}, the latter in its vacuum form, were proposed with
-proofs by a session of OpenAI Codex~\cite{RepoInh,RepoRet}. Sessions of Claude (Anthropic) attacked those
-source derivations and Proposition~\ref{p:haar} at their authors' request and found no defect in the steps
-they checked (three items of the return derivation, which needed data archives that were absent, were not
-checked), wrote the
-proofs as they appear here, including the periodic-time form of Theorem~\ref{t:ret}, Lemma~\ref{l:trace}, Proposition~\ref{p:vac} and
-Corollary~\ref{c:vac}, and made the measurements of Section~\ref{s:evid}; a session of OpenAI Codex reduced
-part of the raw data again and corrected it. The machine-checked parts are listed in
-Section~\ref{s:lean}; nothing else is machine-checked. No person other than the author has read the paper, and there has been no independent human
-mathematical review. Agreement
-among such sessions, within one family or across two, is not peer review.
+coupling (Supplement~S6); they are not known to lie on the sequence of~\cite{OAI}.
 
 \section{What remains}\label{s:rem}
 Table~\ref{tab:status} lists the numbered statements and the steps of Figure~\ref{f:arch} with their status. To turn Figure~\ref{f:arch} into a proof of a
@@ -1118,42 +1094,119 @@ Mass gap & not proved \\
 proof is written in this paper; none has been independently reviewed (Section~\ref{s:disc}).}\label{tab:status}
 \end{table}
 
-Two other manuscripts from the same project are in the repository~\cite{Repo} and are not used here; neither has
-been independently reviewed. They are: an argument for an
-upper bound on the gap of four-dimensional $\SU(2)$ lattice gauge theory in lattice units at weak coupling,
-along infinite-volume limits of periodic states; and results on a reduced model, the theory on a single
-spatial site.
+\section{Provenance, use of AI systems, and availability}\label{s:disc}
+\subsection*{Relation to the research program}
+This paper is part of the research program \emph{From Prephysical Hypotheses to Physical
+Models}~\cite{Prog} and was written within its study of the Millennium Prize problems. No result of the
+program's other papers is used in a proof here. Two other manuscripts from the same study are in the
+supplementary repository~\cite{Supp} and are also not used; neither has been independently reviewed. They
+are an argument for an upper bound on the gap of four-dimensional $\SU(2)$ lattice gauge theory in lattice
+units at weak coupling, along infinite-volume limits of periodic states, and results on a reduced model, the
+theory on a single spatial site.
 
-\begin{thebibliography}{99}
+\subsection*{Use of artificial-intelligence systems}
+The author is responsible for the content of this paper. It was prepared with substantial assistance from
+large language models of two families, and they are not authors.
+\begin{itemize}
+\item \emph{OpenAI GPT models}, used as reviewers, proposed Theorem~\ref{t:crit} in this form, the
+monotonicity statements of Proposition~\ref{p:haar}, Proposition~\ref{p:pred} and Remark~\ref{r:lag}, with
+proofs. They also reviewed successive versions of the paper, and their corrections are incorporated.
+\item \emph{OpenAI Codex} proposed Theorem~\ref{t:inh} and Theorem~\ref{t:ret} in its vacuum form, with proofs
+(Supplement~S8), and reduced part of the raw data of Section~\ref{s:local} a second time, correcting an error
+in the first reduction.
+\item \emph{Claude} (Anthropic) checked those source derivations and Proposition~\ref{p:haar} and found no
+defect in the steps it checked (three items of the return derivation, which needed data archives that were
+absent, were not checked). It wrote the proofs as they appear here, including the periodic-time form of
+Theorem~\ref{t:ret}, Lemma~\ref{l:trace}, Proposition~\ref{p:vac} and Corollary~\ref{c:vac}, made the
+measurements of Section~\ref{s:evid}, and drafted the text.
+\end{itemize}
+
+\subsection*{Status of verification}
+The machine-checked parts are listed in Appendix~\ref{s:lean}; nothing else is machine-checked. No person
+other than the author has read the paper, and there has been no independent human mathematical review.
+Agreement among language models, within one family or across two, is not peer review. The records of the
+internal reviews are in Supplement~S10.
+
+\subsection*{Data and code availability}
+Programs, seeds, summary files, the formal proofs and the review records are public in the supplementary
+repository~\cite{Supp} and are catalogued in Appendix~\ref{app:supp}. Two limits apply: the run of
+Section~\ref{s:time} left no result file, and the per-stream data of Table~\ref{tab:local} are regenerated
+from seeds and not stored.
+
+\appendix
+\section{Machine-checked parts}\label{s:lean}
+Two Lean~4 files with Mathlib accompany the paper (Supplement~S7; Lean 4.19.0, Mathlib v4.19.0); both compile with no \texttt{sorry} and use
+only the axioms \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}.
+\begin{itemize}
+\item \texttt{Inheritance.lean}: Lemma~\ref{l:scal} for real exponents; the scalar conclusion of
+Theorem~\ref{t:inh}; the inequality of Corollary~\ref{c:acc} (not its statement about boundedness of the
+products, nor the limit inferior); and Theorem~\ref{t:inh} in the special case of a real finite-dimensional
+space with $A=e^{-aH}$ injective, $H$ given by an orthonormal eigenbasis and non-negative eigenvalues. The
+three inequalities~\eqref{e:hyp} are hypotheses of the formal statement. The general case proved above
+(infinite dimension; $A$ with a kernel) is not formalised. The formal statement has real times $t>0$,
+$\tau\le t$ and $a\ge0$, hypotheses for $e^{-2aH}$, $e^{-\tau H}$ and $e^{-tH}$, and denominator
+$1+2a/(\gamma t)$; Theorem~\ref{t:inh} for $A=e^{-aH}$ is the case $t=ma$, $\tau=ja$. The file also checks the
+example of Remark~\ref{r:reset}.
+\item \texttt{haar.lean}: the algebra at the zeros in the proof of Proposition~\ref{p:haar}, with the
+derivative formulas entered as algebraic expressions in real variables; the reduction
+$\beta^2\lambda_{\min}(k)\ge R'(\ell)$ given the monotonicities; and the first-zero principle. The Bessel identities are not
+formalised.
+\end{itemize}
+Theorems~\ref{t:crit} and~\ref{t:ret}, Propositions~\ref{p:three} and~\ref{p:vac}, Lemma~\ref{l:trace} and
+Corollary~\ref{c:vac} are not formalised.
+The two files contain $30$ theorems. For the $11$ cited above, a digest of the statement text is recorded
+with the digests of the files (Supplement~S7), so that a later change of a statement or a file can be
+detected; a digest of a statement does not cover the definitions it depends on.
+
+\section{Catalogue of the supplementary material}\label{app:supp}
+The supplementary material is in the repository~\cite{Supp}. Its file \texttt{SUPPLEMENT.md}, in the folder
+named there, gives for every item below the exact location, the revision and SHA-256 digests. Items are cited
+in the text as ``Supplement S$n$''.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}l>{\raggedright\arraybackslash}p{0.60\textwidth}>{\raggedright\arraybackslash}p{0.24\textwidth}@{}}
+\toprule
+Item & Content & Used in \\
+\midrule
+S1 & Sampling programs (Rust), with digests, seeds and the commands of every run & Sections~\ref{s:set}, \ref{s:evid} \\
+S2 & Local quotients on frozen backgrounds: programs, lists of marks, rules fixed in advance, summary files, reports & Section~\ref{s:local}, Table~\ref{tab:local} \\
+S3 & Single-mark runs on displaced backgrounds, per-stream data, and the second reduction of those data & Section~\ref{s:local}\,(iii) \\
+S4 & Time carry-over run: programs, selected weights, report (no result file) & Section~\ref{s:time} \\
+S5 & Cross-lattice runs: programs, per-stream archive, the coefficient vector of the reported test, and a recipe that reproduces Table~\ref{tab:cross} from the archive & Section~\ref{s:cross} \\
+S6 & Calibration of the matched couplings & Sections~\ref{s:evid}, \ref{s:ext} \\
+S7 & Lean files, statement and file digests & Appendix~\ref{s:lean} \\
+S8 & Working notes with the source derivations of Theorems~\ref{t:inh} and~\ref{t:ret}, the bound of the transfer form by local losses, and strong-coupling estimates & Sections~\ref{s:arch}, \ref{s:disc} \\
+S9 & Working notes with related hypotheses on the centre-neutral space & Section~\ref{s:not} \\
+S10 & Records of the internal reviews of this paper and their test programs & Section~\ref{s:disc} \\
+\bottomrule
+\end{tabular}
+\caption{Supplementary material.}\label{tab:supp}
+\end{table}
+
+\begin{thebibliography}{9}\raggedright
 \bibitem{DLMF} \emph{NIST Digital Library of Mathematical Functions}, \S10.29, \url{https://dlmf.nist.gov/10.29}.
 \bibitem{JW} A.~Jaffe and E.~Witten, \emph{Quantum Yang--Mills theory}, Clay Mathematics Institute problem
 description, \url{https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf}. Sections 4 and 5 read.
 \bibitem{Lu77} M.~L\"uscher, \emph{Construction of a selfadjoint, strictly positive transfer matrix for
-Euclidean lattice gauge theories}, Comm. Math. Phys. \textbf{54} (1977), 283--292. Cited for positivity of the
-temporal-gauge transfer operator; not reread by us (a reviewing session reports reading Propositions 1--2 of
-the preprint version).
+Euclidean lattice gauge theories}, Comm. Math. Phys. \textbf{54} (1977), 283--292. Referred to for positivity
+of the temporal-gauge transfer operator; not reread by the author.
 \bibitem{OAI} OpenAI, Lean formalisation of a construction of continuum Yang--Mills theory, submitted
-28 October 2026, repository \texttt{yang-mills-group/OpenAI-YM-20261028}. Not read by us; cited through~\cite{YMG}.
+28 October 2026, repository \texttt{yang-mills-group/OpenAI-YM-20261028} (GitHub). Not read by the author;
+cited through~\cite{YMG}.
 \bibitem{OS78} K.~Osterwalder and E.~Seiler, \emph{Gauge field theories on a lattice}, Ann. Physics
 \textbf{110} (1978), 440--471. Cited for the lattice framework; not reread for this paper.
-\bibitem{Repo} K.~Justus, research repository \texttt{KirtusJ/Millennium-Prize-Problems} (GitHub); the
-entries below are paths in it at commit \texttt{c7c2a16}.
-\bibitem{RepoData} \cite{Repo}, \texttt{yang-mills/z4/attempt/reviews/}: \texttt{b2-matrix}, \texttt{c2-grow}
-(Section~\ref{s:local}); \texttt{d2-time} (Section~\ref{s:time}); \texttt{e2-cross}, \texttt{f2-cross2}
-(Section~\ref{s:cross}); \texttt{e2-repair}, \texttt{z1-mix6}, \texttt{z1-mix8} (single-mark runs and their
-repair); \texttt{sampler-sources} (programs); coupling calibration in
-\texttt{yang-mills/g4/full-attempt/physical-refinement/}.
-\bibitem{RepoInh} \cite{Repo}, \texttt{yang-mills/joint-refinement/rare-coarse-fields/inheritance.md} and
-\texttt{yang-mills/joint-refinement/full-complement/} (source derivation of Theorem~\ref{t:inh} and of the
-bound of the transfer form by local losses).
-\bibitem{RepoLean} \cite{Repo}, \texttt{yang-mills/z4/attempt/reviews/f2-lean/Inheritance.lean} and
-\texttt{b2-haar/haar.lean} in the same folder \texttt{reviews/}; statement digests in \texttt{LEAN\_PINS.md}
-beside the source of this paper.
-\bibitem{RepoRet} \cite{Repo}, \texttt{yang-mills/joint-refinement/rare-coarse-fields/return.md} (source
-derivation of Theorem~\ref{t:ret} in vacuum form).
 \bibitem{YMG} Yang--Mills group, \emph{Validation of the OpenAI Yang--Mills construction}, release of
 10 November 2026, \url{https://alexisdpc.github.io/yang-mills/references/assessment-1-2026-11-10.pdf}. Read:
 p.~1, Part~I \S\S1--2 (requirements; what the construction provides), and the paragraph on the independent
 OS comparison.
+
+\medskip
+\item[] \emph{Self-citations (same author and research program; not peer reviewed).}
+\bibitem{Prog} K.~Justus, \emph{From Prephysical Hypotheses to Physical Models}, research program: papers and
+issued edition, \url{https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models}.
+\bibitem{Supp} K.~Justus, supplementary material to this paper,
+\url{https://github.com/KirtusJ/Millennium-Prize-Problems}, folder
+\texttt{yang-mills/papers/spectral-criteria/}; catalogued in Appendix~\ref{app:supp}.
 \end{thebibliography}
 \end{document}

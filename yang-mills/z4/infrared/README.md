@@ -1,10 +1,10 @@
 # Spectral criteria and conditional infrared estimates (manuscript)
 
-**Current state: sixth draft, 24 November 2026, 21 pages** (`main.tex`, `main.pdf`). Earlier drafts are `main_draft1.tex` to `main_draft5.tex`. This is a rough draft under revision. It states what is proved, what is conditional and what is open. It does not claim a mass gap, and no reader outside the two model families, and no person other than the author, has checked it.
+**Current state: seventh version, 24 November 2026, 22 pages** (`main.tex`, `main.pdf`). Earlier versions are `main_draft1.tex` to `main_draft6.tex`. The reading copy and the catalogue of supplementary material are in [`../../papers/spectral-criteria/`](../../papers/spectral-criteria/). This is a rough draft under revision. It states what is proved, what is conditional and what is open. It does not claim a mass gap, and no reader outside the two model families, and no person other than the author, has checked it.
 
 It is a separate manuscript from the upper-bound paper in `../attempt/paper/`, which is unchanged.
 
-## Statement-to-proof ledger (sixth draft)
+## Statement-to-proof ledger (seventh version)
 
 | Statement | Domain | Proof | Origin | Checks (none is independent review) |
 |---|---|---|---|---|
@@ -31,6 +31,16 @@ Paths in the last column are under `../attempt/reviews/`. Lean statement digests
 - Theorems 1.1 and 1.3, Lemma 6.2, Propositions 4.2 and 6.3 and Corollary 6.4 are not formalised.
 
 # History of the drafts
+
+## Seventh version (24 November): finalisation
+
+On the Principal's instruction the worker tests were stopped (two background checks cancelled without result) and the paper was put into final form.
+
+- **Label.** The title page states that the paper belongs to the research program *From Prephysical Hypotheses to Physical Models*, with subject classification and keywords; the draft label is removed.
+- **References.** External literature first. Self-citations are two entries under an explicit heading: the research program, and one entry for the supplementary material. The five path-by-path repository entries are gone; the text cites "Supplement S1" to "S10", catalogued in Appendix B, with locations and digests in `papers/spectral-criteria/SUPPLEMENT.md`. No program paper is cited individually because none is used in a proof.
+- **Internal names.** No project alias, folder name or process word appears in the paper. Contributions are attributed to Claude (Anthropic), OpenAI Codex and OpenAI GPT models in a statement "Use of artificial-intelligence systems", which says they are not authors. This follows common publisher practice (AI systems are not authors; their use is disclosed in a dedicated statement, methods or acknowledgments), checked against a web search of current policies rather than taken on instruction.
+- **Appendices.** A: machine-checked parts (moved from the body; now says 11 of 30 theorems are pinned and that a statement digest does not cover dependencies). B: catalogue of supplementary material. A "Data and code availability" statement names the two things not stored.
+- **GPTAuditor5's closing corrections** (issue comment 7121386048): the time test concerns the periodic analogue of the conditional correlation, not the vacuum quantity, and an estimate at one coarse field is not a certified bound; three of the 25 cross-lattice tests have point estimates below one and only one meets the criterion fixed in advance; the -0.017 offset is an idealised benchmark; "no measurement is evidence for or against" replaced by a statement of what trial estimates are evidence about.
 
 ## Sixth draft (24 November)
 
