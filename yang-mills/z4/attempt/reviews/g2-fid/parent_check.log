@@ -1,0 +1,2 @@
+check K131: exit 0 (expected 0) in 475704 ms | output 08fe195d9c41 | event 133 head 4c6d34b5f428
+  /home/user/z4-workers/g2-fid/report.md: proofs 15 STANDS, 1 DEFECT, 1 GAP + 3 gaps (G1–G3), 3 overstated framing (D1–D3, t:ret→t:inh); fidelity 13 MATCHES, 3 WRONG, 4 OVERSTATED, 1 UNSUPPORTED, 1 NOT CHECKED; my predicates met 7, failed 1 (own bug), measured only 2.

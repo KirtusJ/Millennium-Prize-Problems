@@ -1,0 +1,20 @@
+C = pi^2 sqrt(e)/4 = 4.068056677367906
+Q1: MET max rel dev 4.44e-16
+Q2: MET cases 1647, qualifying 1647, violations 0, max p/bound 1.000000
+Q3 values: ['0.003072388', '0.156180437', '0.934803630']
+Q3: MET 
+   cubic envelope at these theta: ['0.05034', '3.222', '86.98']
+Q4: MET max rel dev 2.0e-15; 3pi^2sqrt(e)/32 = 1.525521254
+R series: [(1, '1/4'), (3, '-1/96'), (5, '1/1536')]
+p-q: [(2, '-1/48'), (4, '1/384'), (6, '-1/3840')]
+p': [(1, '-1/16'), (3, '5/384')]
+w': [(1, '1/2'), (3, '-1/8')]
+Q5: MET 
+Q6: MET random exact identities all hold: True; ODE rel dev 7.3e-59
+R'(6) in [0.036885895497642221, 0.036885895497642221], width 1.0e-45
+   decimal: 368858954976422227980718
+Q7: MET 
+M1 beta=3.276133577: R'(6)/beta^2=0.00343666; J-floor 1/(165888 b^2)=5.61645e-07; J1/(R'(6)/b^2)=2.25, J4/(R'(6)/b^2)=0.847; J1/floor=1.38e+04, J4/floor=5.18e+03
+M1 beta=3.399810242: R'(6)/beta^2=0.00319118; J-floor 1/(165888 b^2)=5.21526e-07; J1/(R'(6)/b^2)=2.42, J4/(R'(6)/b^2)=0.912; J1/floor=1.48e+04, J4/floor=5.58e+03
+M2 1/0.0034 = 294.1; E-ratio 0.00407+2*0.00005 = 0.00417
+COUNTS met 7 failed 0 measured-only 2

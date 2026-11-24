@@ -1,0 +1,2 @@
+dir-sum min R = 0.943850; child 0.943850; |diff| 4.1e-07: MET
+pooled one-line 1-lambda2 = 0.938135

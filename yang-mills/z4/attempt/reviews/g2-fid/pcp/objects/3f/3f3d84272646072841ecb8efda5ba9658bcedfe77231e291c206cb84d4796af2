@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/user/z4-workers/g2-fid/recompute.py", line 120, in <module>
+    and pp[0] == 0 and pp[1] == F(-1, 16) and pp[2] == 0 and wp[0] == 0 and wp[1] == F(1, 2) and wp[2] == 0)
+                                                             ~~^^^
+KeyError: 0

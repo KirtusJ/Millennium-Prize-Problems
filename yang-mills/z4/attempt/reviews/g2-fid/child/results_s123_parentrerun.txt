@@ -1,0 +1,13 @@
+C=pi^2 sqrt(e)/4 = 4.068056677368
+S1a: cases=3808, qualifying (p<=min(1,B)+1e-12)=3808, violations=0
+S1a: max p/B = 0.065008916 at (k,theta)=(200, 0.001)
+S1b: max rel diff of bound-ratio vs C(1+k)^1.5 th^3 = 4.43e-16 (PASS if <1e-13)
+S1c: side conditions hold for 32/32 values of k
+S2: k=6beta=20.398861452
+S2: p_k(0.05) = 0.003072388  stated 0.00307  |diff|=2.39e-06 tol=5.0e-06 PASS
+S2: p_k(0.2) = 0.156180437  stated 0.156  |diff|=1.80e-04 tol=5.0e-04 PASS
+S2: p_k(0.6) = 0.934803630  stated 0.935  |diff|=1.96e-04 tol=5.0e-04 PASS
+S2 overall PASS
+S3: 72 cases, max rel diff 1.85e-15 (PASS if <1e-12). Algebra: 3N^3/8 * C * c^3 N^-4 = 3 pi^2 sqrt(e) c^3/(32 N) since (1+6b)^1.5*(1+6b)^-1.5=1, (N^-4/3)^3=N^-4.
+S3 PASS
+S1 verdict: PASS

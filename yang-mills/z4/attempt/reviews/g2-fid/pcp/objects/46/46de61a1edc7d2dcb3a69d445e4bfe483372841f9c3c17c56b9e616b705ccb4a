@@ -1,0 +1,24 @@
+All five statements (S1–S5) hold in my recomputation, with no failed predicates. mpmath, scipy and sympy aren't installed here. So I used numpy, exact fractions and 60-digit decimal arithmetic instead. For S5 that means the "mpmath at 30 digits" run is a decimal-60 run, which departs from your spec.
+
+The control is I_1(1) = 0.565159104, in `control.txt`.
+
+| S | Result | Evidence |
+|---|---|---|
+| S1 | PASS | π²√e/4 = 4.068056677. All 3808 grid cases (k in [0,200], θ in [0,π]) satisfy p ≤ min(1, bound). The maximum ratio is 0.065008916, at k=200, θ=0.001. The ratio of the two derivation bounds equals (π²√e/4)(1+k)^{3/2}θ³ exactly (4e-16 numerically). |
+| S2 | PASS | p_k(0.05)=0.003072388, p_k(0.2)=0.156180437, p_k(0.6)=0.934803630. They round to the stated 0.00307, 0.156, 0.935. |
+| S3 | PASS | 72 (N, c, β) cases, maximum relative difference 1.9e-15. The algebra gives 3π²√e c³/(32N). |
+| S4 | PASS | Exact coefficients: p−q = −k²/48 + k⁴/384, p′ = −k/16 + 5k³/384, w′ = k/2 − k³/8. The identity R′ = 1−3R/k−R² holds at k = 0.5, 2, 6, 20 to within 1.3e-59. |
+| S5 | PASS | R′(6) = 0.0368858954976422228. The exact-rational enclosure (33 terms plus a tail bound) has width 1e-45 and lies strictly inside (0.036885895, 0.036885896). |
+
+- **S1 caveat:** this is grid evidence, not a proof. I did not test k > 200.
+- **Tolerances:** S2 uses half a unit of the last stated digit, S1 and S3 use 1e-12 for float rounding, and S4 and S5 use 1e-40 and 1e-20 from the 60-digit working precision.
+- **One expected non-pass:** re-running `control.py` exits 1 because `control.txt` already exists (never-overwrite rule). I registered it with `--expect-exit 1`.
+
+**Grandchild (T246):** it rechecked R′(6) by a different method: a continued fraction plus the identity, and Richardson differentiation. It got 0.036885895497642, so the enclosure holds. I reread its script, reran it in a scratch copy and got identical output. That value agrees with mine to 15 digits. I released T246 (event 492).
+
+**PCP OS:**
+- `init` reported the method as not pinned, as expected. The three checks are recorded.
+- Python `verify`, last line: `result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)`
+- Rust `verify`, last line: `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.`
+
+`report.md` has the full table, the not-checked list and the exact rerun commands. I also wrote `notes.md`, the three scripts (`control.py`, `s1_s2_s3.py`, `s4_s5.py`) and the two results files. The results files are `results_s123_run1.txt` and `results_s45_run1.txt`, plus `results_s123_chk.txt` and `results_s45_chk.txt` from the PCP OS checks. The grandchild's files are in `grandchild/`.

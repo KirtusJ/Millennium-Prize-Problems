@@ -1,0 +1,11 @@
+# notes g2-fid
+- step0: control.txt = 0.272341 (-ln tanh 1). Lean READY exists.
+- step1: read main.tex, return.md, inheritance.md. Register pcp initialised.
+- step2: child T245 admitted, PROMPT written (numerics S1-S5, control I_1(1)=0.565159104), launched in background 02:43:00
+- step3: Lean files copied to lean/, 0 sorry by grep; run launched (lean-both)
+- step4: Lean K2 exit 0; 30 '#print axioms' lines all [propext, Classical.choice, Quot.sound] (18 Inheritance + 12 haar); no error/sorry.
+- step5: child returned (K1 exit 0, ~98 s). Control graded FIRST: 0.565159104 = I_1(1) correct. Child claims S1-S5 PASS; grandchild T246 (R'(6) by continued fraction). Released T245 (event 493).
+- step6 findings so far: Thm ret periodic vs source vacuum (honest, but line 63 + Rem r:ret(c) + figure solid arrow overstate); local setup 'one coarse plaquette -I' WRONG (three); caption .047 = f4 vs (iii) ratio 1.004 = f1 (f4 ratio 1.034(13)); cross item1 c<=0.005 vs record 0.0042, '0.0034 times smaller'; Rem r:haar 3-4 orders conflates R'(6)/beta^2 (3.4e-3) with J floor 5.6e-7.
+- step7: recompute.py run1 crashed (KeyError wp[0], my bug; K3 kept, results_run1.txt kept); fixed with .get, run2
+- step8: reran child scripts (K5,K6) identical; Q1-Q7 met (run2); M1: R'(6)/b^2=3.4e-3 vs J4=2.9e-3 => Rem r:haar 'three to four orders' wrong
+- step9: report.md written (D1-D4, F1-F9, G1-G3)
