@@ -1,0 +1,8 @@
+free, N=2^20: weight/sinh(w_k) = 0.911225951
+free, N=2^24: weight/sinh(w_k) = 0.911230615
+free, N=2^28: weight/sinh(w_k) = 0.911230909
+closed form 0.911230926 ; difference at 2^28: -1.75e-08 : P1 MET
+compact, beta=64 n=96: energy 0.0078569763 beta*energy 0.50284649 weight 2.77131269e-03 weight/energy 0.35272000
+compact, beta=128 n=128: energy 0.0039173112 beta*energy 0.50141583 weight 1.38335267e-03 weight/energy 0.35313832
+extrapolated weight/energy 0.35355663 ; closed form 0.35355339 : P2 MET
+extrapolated beta*energy 0.49998517 : P3 MET

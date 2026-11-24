@@ -619,8 +619,14 @@ power bound was proposed by an OpenAI GPT model used as reviewer; the lower ineq
 calibration were added here.
 
 In the free theory the linear order is attained. For linear functions of the fine detail at the lowest
-axial momentum, the weight on the soft mode is $0.91$ times $\sinh\omega_k$, to two figures, for sides
-$2^{12}$ and $2^{16}$ (Supplement~S11), that is, about $0.91\,a\,u$ at the energy $u$ of that mode. So in that
+axial momentum, the weight on the soft mode divided by $\sinh\omega_k$ tends to
+$\tfrac1{\sqrt2}+\tfrac1{2\sqrt6}=0.911231$ as the side grows, which is $\tfrac12|v|^2$ for the vector $v$ of
+Appendix~\ref{app:free}; it is $0.911230909$ at side $2^{28}$ (Supplements~S11, S12). The reason is one line
+of the coarse constraint: for a soft photon along the first axis with polarisation $e_2$, the constraint
+reads $f_0u_0+\sum_ig_iu_i=0$ with $f_0^2=2/\sinh\omega_k$ and with three aliases entering, those shifted by
+$\pi$ along the first axis, along the third, and along both, with $g_i^2=2/\sinh\omega_i$, $\sinh\omega_i=\sqrt8$,
+$\sqrt8$, $\sqrt{24}$ in the limit; the weight of the soft direction in the kernel is
+$|g|^2/(f_0^2+|g|^2)$. That is about $0.91\,a\,u$ at the energy $u$ of that mode. So in that
 example an exponent $\alpha>1$ can hold only with a constant that depends on the box, through the lowest
 energy $2\pi/L$; the hypothesis holds there all the same (Proposition~\ref{p:freemix}), because the supremum
 defining $\|G_iH_i^{-1}G_i\|$ is taken momentum by momentum. We have no estimate of $F_i$ for the Wilson
@@ -1815,8 +1821,9 @@ divided by its energy. Floating-point values from two programs that agree to sev
 
 The lattice gap closes like $1/(2\beta)$, and the rate stays above $0.83$ over the range computed. The slow
 state is one unit of electric flux. It is almost a function of the coarse field, and the part of it in the
-fine detail has weight proportional to its energy, with ratio near $0.35$; this is the linear order of
-Remark~\ref{r:weight}, attained again, and it is why the rate settles below the free value $0.9706$, which
+fine detail has weight proportional to its energy; the ratio tends to $1/\sqrt8=0.35355$, the analogue in two
+dimensions of the constant of Remark~\ref{r:weight} (extrapolated from $\beta=64$ and $128$: $0.353557$). This
+is the linear order of that remark, attained again, and it is why the rate settles below the free value $0.9706$, which
 leaves the winding modes out. A quadratic approximation written down before the runs gave the limits
 $\tfrac12$ for $\beta$ times the gap, $0.354$ for the ratio and a rate of at most about $0.83$
 (Supplement~S12). The limit of the rate as $\beta\to\infty$ is not computed, sectors with more than two units
