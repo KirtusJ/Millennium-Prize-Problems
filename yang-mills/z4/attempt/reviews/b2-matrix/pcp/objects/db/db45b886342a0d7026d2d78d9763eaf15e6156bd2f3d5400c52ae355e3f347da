@@ -1,0 +1,3 @@
+marks 22 names ["B.g00", "B.g10", "B.g01", "B.g11", "B.Rv", "B.Rh", "B.L_no00", "B.L_no10", "B.L_no01", "B.L_no11", "B.n00", "B.n10", "B.n01", "B.n11", "Wt.g00", "Wt.g10", "Wt.g01", "Wt.g11", "Ct.g00", "Ct.g10", "Ct.g01", "Ct.g11"]
+P6 max |mark change| under random full gauge transformation = 1.221e-15
+global exp(i pi/8): max frozen-link change 2.125e-1; Re(j g1) -0.535573335 -> -0.210212996; Re(k g1) -0.238287265 -> -0.547202078

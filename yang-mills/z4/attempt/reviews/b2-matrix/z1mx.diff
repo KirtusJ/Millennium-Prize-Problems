@@ -1,0 +1,125 @@
+12a13,23
+> // z1mx (b2-matrix, T217): MINIMAL extension of z1m6.rs. The original outputs (.csv, .colours.csv,
+> // .meta.txt) and every RNG call are unchanged; added: a LIST of gauge-invariant marks X_1..X_n
+> // (marks()), written per measurement to <prefix>.X.csv, and per colour c the mean over measurements of
+> // (X'-X'')(X'-X'')^T/2 from the SAME two-copy refresh already used for f1,f4 (<prefix>.Dc.txt), so that
+> // D = mean over the 24 colours = (1/48) sum_c E[(X'-X'')(X'-X'')^T]. Mode "gauge" checks invariance.
+> // Added predicates (fixed before the first run):
+> //  P5 mark B.g1 equals column "single" and mean of B.g1..B.g4 equals column "average" to 1e-12 every
+> //     measurement (assert); tolerance: float rounding of a few quaternion products.
+> //  P6 (gauge mode) every mark is unchanged to 1e-10 under a random gauge transformation at all sites
+> //     (including skeleton sites, frozen links transformed); tolerance: rounding of ~20 products.
+> //  P7 (checked outside, ctl) columns of <prefix>.csv byte-identical to build/z1m6 at the same arguments.
+152a164,254
+> 
+>     // ---- b2-matrix marks ----
+>     // step codes: 0..3 = +x,+y,+z,+t ; 4..7 = -x,-y,-z,-t
+>     fn path(lat: &Lattice, x0: usize, steps: &[usize]) -> (Q, usize) {
+>         let mut h = ONE; let mut y = x0;
+>         for &s in steps {
+>             if s < 4 { h = mul(h, lat.links[y][s]); y = lat.plus[y][s]; }
+>             else { y = lat.minus[y][s - 4]; h = mul(h, conj(lat.links[y][s - 4])); }
+>         }
+>         (h, y)
+>     }
+>     fn closed(lat: &Lattice, steps: &[usize]) -> Q {
+>         let (h, y) = path(lat, 0, steps); assert_eq!(y, 0, "loop not closed"); h
+>     }
+>     fn inv(steps: &[usize]) -> Vec<usize> { steps.iter().rev().map(|&s| (s + 4) % 8).collect() }
+>     const XP: usize = 0; const YP: usize = 1; const XM: usize = 4; const YM: usize = 5;
+>     // loops based at the root 0, in the order of mark_names
+>     fn mark_loops() -> Vec<(String, Vec<usize>)> {
+>         let mut v: Vec<(String, Vec<usize>)> = Vec::new();
+>         let plaq = |tail: Vec<usize>| { let mut s = tail.clone(); s.extend([XP, YP, XM, YM]); s.extend(inv(&tail)); s };
+>         for (cx, cy) in [(0, 0), (1, 0), (0, 1), (1, 1)] {   // (i) g_j, j=1..4: tail +x^cx then +y^cy (fixed.md)
+>             let mut t = vec![XP; cx]; t.extend(vec![YP; cy]); v.push((format!("g{}{}", cx, cy), plaq(t)));
+>         }
+>         // (iii) partial regions: two halves (2 plaquettes) and four L-shapes (3 plaquettes)
+>         v.push(("Rv".into(), vec![XP, YP, YP, XM, YM, YM]));              // x in [0,1], y in [0,2]
+>         v.push(("Rh".into(), vec![XP, XP, YP, XM, XM, YM]));              // x in [0,2], y in [0,1]
+>         v.push(("L_no00".into(), vec![XP, XP, YP, YP, XM, XM, YM, XP, YM, XM]));
+>         v.push(("L_no10".into(), vec![XP, YP, XP, YP, XM, XM, YM, YM]));
+>         v.push(("L_no01".into(), vec![XP, XP, YP, YP, XM, YM, XM, YM]));
+>         v.push(("L_no11".into(), vec![XP, XP, YP, XM, YP, XM, YM, YM]));
+>         for (cx, cy) in [(0, 0), (1, 0), (0, 1), (1, 1)] {   // (iv) neighbour coarse xy square at (2,0,0)
+>             let mut t = vec![XP, XP]; t.extend(vec![XP; cx]); t.extend(vec![YP; cy]); v.push((format!("n{}{}", cx, cy), plaq(t)));
+>         }
+>         v
+>     }
+>     fn unit_im(q: Q) -> Option<Q> {
+>         let im = [0., q[1], q[2], q[3]]; let n = dot(im, im).sqrt();
+>         if n > 1e-6 { Some(im.map(|c| c / n)) } else { None }
+>     }
+>     // references: B = full xz holonomy (as f1,f4). If the marked xy holonomy W has a traceless part
+>     // (W != +-I), also Wt = unit Im W and Ct = unit Im(Bt Wt) (both closed loops at the root -> invariant).
+>     fn refs(lat: &Lattice) -> Vec<(String, Q)> {
+>         let b = loop_hol(lat, 0, 0, 2, 2);
+>         let w = loop_hol(lat, 0, 0, 1, 2);
+>         let mut r = vec![("B".to_string(), b)];
+>         if let (Some(bt), Some(wt)) = (unit_im(b), unit_im(w)) {
+>             r.push(("Wt".into(), wt));
+>             if let Some(ct) = unit_im(mul(bt, wt)) { r.push(("Ct".into(), ct)); }
+>         }
+>         r
+>     }
+>     fn mark_names(lat: &Lattice) -> Vec<String> {
+>         let mut out = Vec::new();
+>         for (rn, _) in refs(lat) { for (k, (ln, _)) in mark_loops().iter().enumerate() {
+>             if rn == "B" || k < 4 { out.push(format!("{rn}.{ln}")); } } }   // (ii) only for the four plaquettes
+>         out
+>     }
+>     fn marks(lat: &Lattice) -> Vec<f64> {
+>         let loops: Vec<Q> = mark_loops().iter().map(|(_, s)| closed(lat, s)).collect();
+>         let mut out = Vec::new();
+>         for (rn, r) in refs(lat) { for (k, l) in loops.iter().enumerate() {
+>             if rn == "B" || k < 4 { out.push(mul(r, *l)[0]); } } }
+>         out
+>     }
+>     fn gauge(a: &[String]) {
+>         // gauge <seed> <n> <T> <skeleton>
+>         let seed: u64 = a[2].parse().unwrap(); let n: usize = a[3].parse().unwrap(); let tp: usize = a[4].parse().unwrap();
+>         let skel = read_skeleton(&a[5], n);
+>         let mut rng = Rng { state: seed };
+>         let mut lat = Lattice::new(n, tp, false, true, &mut rng);
+>         for &(x, i, q) in &skel { lat.links[x][i] = q; }
+>         let m0 = marks(&lat); let names = mark_names(&lat);
+>         let g: Vec<Q> = (0..lat.links.len()).map(|_| unit([rng.u() - 0.5, rng.u() - 0.5, rng.u() - 0.5, rng.u() - 0.5])).collect();
+>         let orig = lat.links.clone();
+>         for x in 0..orig.len() { for mu in 0..4 { lat.links[x][mu] = mul(mul(g[x], orig[x][mu]), conj(g[lat.plus[x][mu]])); } }
+>         let m1 = marks(&lat);
+>         lat.links = orig.clone();
+>         let mut worst = 0f64; for k in 0..m0.len() { worst = worst.max((m0[k] - m1[k]).abs()); }
+>         println!("marks {} names {:?}", m0.len(), names);
+>         println!("P6 max |mark change| under random full gauge transformation = {worst:.3e}");
+>         assert!(worst < 1e-10, "P6 failed");
+>         // residual stabiliser of the frozen skeleton: global constant h = exp(i pi/8) (rotation about B=i axis)
+>         let h = [(std::f64::consts::PI / 8.).cos(), (std::f64::consts::PI / 8.).sin(), 0., 0.];
+>         let g1a = closed(&lat, &mark_loops()[0].1);
+>         for x in 0..orig.len() { for mu in 0..4 { lat.links[x][mu] = mul(mul(h, orig[x][mu]), conj(h)); } }
+>         let mut fz = 0f64; for &(x, i, q) in &skel { for k in 0..4 { fz = fz.max((lat.links[x][i][k] - q[k]).abs()); } }
+>         let g1b = closed(&lat, &mark_loops()[0].1);
+>         println!("global exp(i pi/8): max frozen-link change {fz:.3e}; Re(j g1) {:.9} -> {:.9}; Re(k g1) {:.9} -> {:.9}",
+>             mul([0., 0., 1., 0.], g1a)[0], mul([0., 0., 1., 0.], g1b)[0], mul([0., 0., 0., 1.], g1a)[0], mul([0., 0., 0., 1.], g1b)[0]);
+>     }
+> 
+196a299,303
+>         let mut fx = open(".X.csv");
+>         let mut fd = open(".Dc.txt");
+>         let names = mark_names(&lat); let nm = names.len();
+>         writeln!(fx, "{}", names.join(",")).unwrap();
+>         let mut dsum = vec![vec![0f64; nm * nm]; 24];
+210a318,320
+>             let x0 = marks(&lat);
+>             assert!((x0[0] - r[0]).abs() < 1e-12 && ((x0[0] + x0[1] + x0[2] + x0[3]) / 4. - r[1]).abs() < 1e-12, "P5");
+>             writeln!(fx, "{}", x0.iter().map(|v| format!("{v:.12}")).collect::<Vec<_>>().join(",")).unwrap();
+215a326
+>                 let xa = marks(&lat);
+217a329,330
+>                 let xb = marks(&lat);
+>                 for u in 0..nm { for v in 0..nm { dsum[k][u * nm + v] += (xa[u] - xb[u]) * (xa[v] - xb[v]) / 2.; } }
+229a343,345
+>         // per colour: mean over measurements of (X'-X'')(X'-X'')^T/2, row-major n x n, one line per colour
+>         writeln!(fd, "# marks {} measurements {} ; line c = colour c (8*plane+px+2py+4pz), row-major {}x{} mean of (X'-X'')(X'-X'')^T/2", names.join(","), samples, nm, nm).unwrap();
+>         for k in 0..24 { writeln!(fd, "{}", dsum[k].iter().map(|v| format!("{:.12e}", v / samples as f64)).collect::<Vec<_>>().join(" ")).unwrap(); }
+269a386
+>             Some("gauge") => { assert_eq!(a.len(), 6, "gauge seed n T skel"); gauge(&a) }

@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/numpy/linalg/_linalg.py", line 253, in _assert_stacked_square
+    m, n = a.shape[-2:]
+    ^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/user/z4-workers/b2-matrix/child/an.py", line 34, in <module>
+    Li=np.linalg.inv(L)
+  File "/usr/local/lib/python3.13/site-packages/numpy/linalg/_linalg.py", line 653, in inv
+    _assert_stacked_square(a)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/local/lib/python3.13/site-packages/numpy/linalg/_linalg.py", line 255, in _assert_stacked_square
+    raise LinAlgError(f'{a.ndim}-dimensional array given. Array must be '
+                      'at least two-dimensional')
+numpy.linalg.LinAlgError: 0-dimensional array given. Array must be at least two-dimensional

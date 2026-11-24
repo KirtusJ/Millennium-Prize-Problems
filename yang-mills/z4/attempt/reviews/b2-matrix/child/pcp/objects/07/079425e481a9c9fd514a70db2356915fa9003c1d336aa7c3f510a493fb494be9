@@ -1,0 +1,6 @@
+P2 finite True rows [1152, 1152, 1152]
+D sym err 0.0
+cond(C_train) 2-norm 2.5828635460352605e+17 sv min 2.552763711213959e-18 sv max 0.6593440331336218
+eig C train [-5.62960004e-17 -3.04450390e-17  3.99389163e-17  1.47936787e-02
+  5.42663703e-02]
+P3 cholesky FAIL Matrix is not positive definite

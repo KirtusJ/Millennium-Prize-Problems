@@ -1,0 +1,20 @@
+13c13
+< // z1mx (b2-matrix, T217): MINIMAL extension of z1m6.rs. The original outputs (.csv, .colours.csv,
+---
+> // z1mx2 = z1mx with a larger mark list (extra run). z1mx (b2-matrix, T217): MINIMAL extension of z1m6.rs. The original outputs (.csv, .colours.csv,
+190,192c190
+<         v.push(("L_no00".into(), vec![XP, XP, YP, YP, XM, XM, YM, XP, YM, XM]));
+<         v.push(("L_no10".into(), vec![XP, YP, XP, YP, XM, XM, YM, YM]));
+<         v.push(("L_no01".into(), vec![XP, XP, YP, YP, XM, YM, XM, YM]));
+---
+>         // z1mx2: L_no00, L_no10, L_no01 omitted (exactly degenerate with g00, g10, g01 at W = -I)
+194,195c192,197
+<         for (cx, cy) in [(0, 0), (1, 0), (0, 1), (1, 1)] {   // (iv) neighbour coarse xy square at (2,0,0)
+<             let mut t = vec![XP, XP]; t.extend(vec![XP; cx]); t.extend(vec![YP; cy]); v.push((format!("n{}{}", cx, cy), plaq(t)));
+---
+>         // z1mx2 (extra, outside the brief): fine plaquettes of the SIX coarse xy squares adjacent to the marked one
+>         // in x, y and z (bases (2,0,0),(4,0,0),(0,2,0),(0,4,0),(0,0,2),(0,0,4)), transported to the root along frozen links.
+>         for (lab, tail0) in [("xp", vec![XP, XP]), ("xm", vec![XM, XM]), ("yp", vec![YP, YP]), ("ym", vec![YM, YM]), ("zp", vec![2usize, 2]), ("zm", vec![6usize, 6])] {
+>             for (cx, cy) in [(0, 0), (1, 0), (0, 1), (1, 1)] {
+>                 let mut t = tail0.clone(); t.extend(vec![XP; cx]); t.extend(vec![YP; cy]); v.push((format!("n{lab}{}{}", cx, cy), plaq(t)));
+>             }

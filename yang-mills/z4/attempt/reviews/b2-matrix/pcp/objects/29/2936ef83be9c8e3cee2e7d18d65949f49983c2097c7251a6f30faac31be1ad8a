@@ -1,0 +1,6 @@
+plaquettes(i) 4 cond 3.44 drop 0 train 0.03946 held 0.03926(0.00059) S1 True
+marked(i+iii) 10 cond 4.14e+17 drop 3 train 0.03287 held 0.03281(0.00061) S1 None
+marked_nondeg 7 cond 40.5 drop 0 train 0.03287 held 0.03281(0.00061) S1 True
+neighbour(iv) 4 cond 2.87 drop 0 train 0.03887 held 0.03845(0.00076) S1 True
+nondeg(i+iii'+iv) 11 cond 43.4 drop 0 train 0.02691 held 0.02675(0.00069) S1 True
+all 14 cond 9.03e+16 drop 3 train 0.02691 held 0.02675(0.00069) S1 None

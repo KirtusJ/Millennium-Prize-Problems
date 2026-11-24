@@ -1,0 +1,37 @@
+The main analysis is finished, and the sub-agent T222 is running its independent check. Next I'll compare its numbers with mine, release T222, write report.md and run the PCP verifies.
+
+Results so far:
+- **Control:** 0.929632.
+- **Singular C:** C(TRAIN) is exactly singular. B.L_no00, L_no10 and L_no01 duplicate B.g00, g10 and g01, so the rank is 11 of 14. D annihilates the same three null directions, which makes the full 14-mark eigenproblem 0/0 there.
+- **Workaround:** I solved it on the 11 independent marks, with w set to zero on the three duplicate marks.
+- **Reduced-problem results:**
+  - lambda_min is 0.02691319.
+  - q on HELD is 0.02674971 ± 0.00069346.
+  - The smallest single-mark quotient is B.Rh, at 0.04807613.
+  - cond(C) is 43.44 on the reduced problem, and about 2.6e17 on the full singular matrix.
+
+I've finished T221. report.md and notes.md are in `child/`. The 14-mark problem is ill-posed as stated, so I solved it on the 11 independent marks, which departs from the literal statement.
+
+**The problem with the statement:** C(TRAIN) is exactly singular, with rank 11 of 14. B.L_no00, L_no10 and L_no01 are exact duplicates of B.g00, g10 and g01. D vanishes on the same three null directions, so the eigenproblem is 0/0 there.
+
+**What I did about it:** I dropped the three duplicate marks and set w to 0 on them. Adding null vectors to w changes neither lambda nor q, and I checked that.
+
+**Results:**
+- **Control:** 0.929632.
+- **lambda_min:** 0.02691319.
+- **w:** B.g00 −0.568319, g10 −0.805731, g01 −0.546735, g11 0.049551, Rv −0.517439, Rh −0.630043, L_no00 0, L_no10 0, L_no01 0, L_no11 −0.811886, n00 1, n10 0.661133, n01 0.924056, n11 0.122737.
+- **q on HELD:** 0.02674971 ± 0.00069346 (jackknife, n = 16).
+- **Smallest single-mark quotient on HELD:** B.Rh, 0.04807613.
+- **cond(C(TRAIN)):** numerically 2.58e17 on the full 14×14, where the true value is infinite. On the reduced 11×11 it is 43.44.
+
+**Predicates:** my first expectation, that C(TRAIN) is positive definite, failed. That was my wrong expectation, and the cause is the duplicate marks in the target. I kept that run. The diagnostic run and the final run both passed all their predicates.
+
+**Sub-agent T222:** its control answer, 2.000000 for A = diag(2,5) and B = I, was correct. It returned a single-mark quotient on HELD of 0.06172628688 for B.g00 and cond(C(TRAIN)) = 2.582863546e17. I reread its program and reran it, and the numbers were identical to mine. T222 is released.
+
+**PCP verification:**
+- The `pcp_os.py verify --ws pcp` run printed `result: PASS`.
+- The last line of that run, as the report records it, is the standard disclaimer "A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right."
+- The last line of the Rust `pcpos verify` is the same disclaimer. I did not capture a separate result line from the Rust run, only the disclaimer.
+- `init` reported that the ACR method packet was not found, as expected.
+
+The exact rerun commands are at the end of report.md.

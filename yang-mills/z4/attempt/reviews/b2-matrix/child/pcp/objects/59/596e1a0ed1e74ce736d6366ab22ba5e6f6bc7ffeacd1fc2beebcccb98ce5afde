@@ -1,0 +1,40 @@
+P2 finite True rows [1152, 1152, 1152]
+P2 sym True True
+P1 cond reduced C(TRAIN) 43.43536310598569 ok True
+cond full 14x14 C(TRAIN) numerical 2.5828635460352605e+17 (true value infinite: rank 11)
+lambda_min 0.02691319114  next [0.0517332  0.06930387] P4 True
+P3 residual 1.019472146002867e-15
+  w[B.g00] = -0.568319
+  w[B.g10] = -0.805731
+  w[B.g01] = -0.546735
+  w[B.g11] = 0.049551
+  w[B.Rv] = -0.517439
+  w[B.Rh] = -0.630043
+  w[B.L_no00] = -0.000000
+  w[B.L_no10] = -0.000000
+  w[B.L_no01] = -0.000000
+  w[B.L_no11] = -0.811886
+  w[B.n00] = 1.000000
+  w[B.n10] = 0.661133
+  w[B.n01] = 0.924056
+  w[B.n11] = 0.122737
+q_HELD = 0.02674971 +- 0.00069346 (jackknife, n=16)  loo mean 0.02675119 P6 denom>0 True
+P5 null-shift invariance True
+P7 lam<=train single quotients (reduced) True
+  single HELD B.g00 0.06172629
+  single HELD B.g10 0.05166775
+  single HELD B.g01 0.06253892
+  single HELD B.g11 0.08059708
+  single HELD B.Rv 0.05026102
+  single HELD B.Rh 0.04807613
+  single HELD B.L_no00 0.06172629
+  single HELD B.L_no10 0.05166775
+  single HELD B.L_no01 0.06253892
+  single HELD B.L_no11 0.05411656
+  single HELD B.n00 0.05177426
+  single HELD B.n10 0.06092955
+  single HELD B.n01 0.05349302
+  single HELD B.n11 0.08937895
+smallest single HELD: B.Rh 0.04807613
+first mark B.g00 single HELD 0.061726286884  D_kk 7.690112399525e-03 C_kk 1.245840757273e-01
+cond(C_TRAIN) full numerical 2.582864e+17 ; reduced 43.435363

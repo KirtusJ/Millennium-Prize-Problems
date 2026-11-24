@@ -1,0 +1,2 @@
+check K123: exit 0 (expected 0) in 1443564 ms | output 4bd2f48882a1 | event 125 head fcf8c4723d4d
+  /home/user/z4-workers/b2-matrix/report.md — verdicts: 7 STANDS, 2 DEFECT, 2 NOT CHECKED (predicates: 51 met, 5 failed, the tabulated values measured only).

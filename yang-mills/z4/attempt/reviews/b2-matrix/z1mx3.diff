@@ -1,0 +1,11 @@
+13c13
+< // z1mx2 = z1mx with a larger mark list (extra run). z1mx (b2-matrix, T217): MINIMAL extension of z1m6.rs. The original outputs (.csv, .colours.csv,
+---
+> // z1mx3 = z1mx2 + 4 yz plaquettes of the face (2,0,4). z1mx2 = z1mx with a larger mark list (extra run). z1mx (b2-matrix, T217): MINIMAL extension of z1m6.rs. The original outputs (.csv, .colours.csv,
+197a198,203
+>         }
+>         // z1mx3 (extra): fine yz plaquettes of the coarse yz square based at (2,0,4) (the third coarse face that
+>         // contains the W edge), transported to the root along frozen links +x,+x,-z,-z then +y^cy,+z^cz.
+>         for (cy, cz) in [(0, 0), (1, 0), (0, 1), (1, 1)] {
+>             let mut t = vec![XP, XP, 6, 6]; t.extend(vec![YP; cy]); t.extend(vec![2usize; cz]);
+>             let mut st = t.clone(); st.extend([YP, 2, YM, 6]); st.extend(inv(&t)); v.push((format!("yz{}{}", cy, cz), st));
