@@ -1,6 +1,6 @@
 # Spectral criteria and conditional infrared estimates (manuscript)
 
-**Current state: fifth draft, 24 November 2026, 17 pages** (`main.tex`, `main.pdf`). Earlier drafts are `main_draft1.tex` to `main_draft4.tex`. This is a rough draft under revision. It states what is proved, what is conditional and what is open. It does not claim a mass gap, and no reader outside the two model families, and no person other than the author, has checked it.
+**Current state: fifth draft with later additions, 24 November 2026, 19 pages** (`main.tex`, `main.pdf`). Earlier drafts are `main_draft1.tex` to `main_draft4.tex`. This is a rough draft under revision. It states what is proved, what is conditional and what is open. It does not claim a mass gap, and no reader outside the two model families, and no person other than the author, has checked it.
 
 It is a separate manuscript from the upper-bound paper in `../attempt/paper/`, which is unchanged.
 
@@ -12,8 +12,9 @@ It is a separate manuscript from the upper-bound paper in `../attempt/paper/`, w
 | Thm 1.2 refinement inequality; Cor 5.2 | positive self-adjoint contraction A on a Hilbert space, integers m ≥ j ≥ 1, three operator hypotheses | §5 | `yang-mills/joint-refinement/rare-coarse-fields/inheritance.md` (Codex session); discrete form suggested by a GPT auditor session | `y1-g4ret`, `mod-math` (265,000 random instances); Lean for the finite-dimensional semigroup case only: `f2-lean/Inheritance.lean` |
 | Thm 1.3 return bound | SU(2), Wilson action, periodic lattice, even N ≥ 6, two slices distinct modulo T | §6 | `rare-coarse-fields/return.md` (Codex session) | `y1-g4ret`, `mod-math` |
 | Lemma 6.2 trace formula; Prop 6.3; Cor 6.4 (return bound in the vacuum) | SU(2), β > 0, gauge-averaged transfer operator | §6.1, self-contained (Peter–Weyl and positive character coefficients; Lüscher's paper is referred to, not relied on, and was not reread) | this side | `ref2-math`, `mod-math` (full enumeration on Z₂ and Z₃ toy lattices) |
+| Prop 3.2 conditional prediction; Remark 5.5 longer lag | reversible stationary one-step operator; any measurable set of coarse fields | §3, §5 | a GPT auditor session (pass 2, relayed) | `aud5-check` (finite-state program) |
 | Prop 7.1 one-link covariance | tilted law on S³, all k > 0 | §7 | GPT auditor sessions (issue comments 7117411812, 7117416203) | `b2-haar` (partly formalised) |
-| Hyp 3.1, 3.2, 3.3; auxiliary local mixing | — | open | — | not measured; trial estimates only: `b2-matrix`, `c2-grow`, `d2-time`, `e2-repair`, `e2-cross`, `f2-cross2`; their statistics reviewed in `mod-sci` |
+| Hypotheses 3.1 (short-time decay), 3.3 (coarse comparison), 3.4 (budget); auxiliary local mixing | — | open | — | not measured; trial estimates only: `b2-matrix`, `c2-grow`, `d2-time`, `e2-repair`, `e2-cross`, `f2-cross2`; their statistics reviewed in `mod-sci` |
 
 Paths in the last column are under `../attempt/reviews/`. Lean statement digests: `LEAN_PINS.md`.
 
