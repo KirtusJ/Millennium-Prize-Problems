@@ -1,0 +1,11 @@
+E1 values [np.float64(0.0030723875798488736), np.float64(0.15618043661642256), np.float64(0.9348036299695822)]
+E1 PASS ['0.00307', '0.156', '0.935']
+E2 values [np.float64(0.02224763977085712), np.float64(0.1491001257643021), np.float64(0.3940376788258631), np.float64(0.9341804536687388)]
+E2 PASS ['0.02', '0.15', '0.39', '0.93']
+E3 instances 60 qualifying 60 PASS
+E4 largest n_g p / claimed bound = 0.064180 PASS
+  constant 3 pi^2 sqrt(e)/32 = 1.5255212540129648
+E5 largest p/envelope = 0.064773 at (k,theta)=(300, 0.007853981633974483) PASS
+E6 largest (off-centre cap - centred cap) = -4.180e-11; monotone in k: True PASS
+E7 beta=3.399810242: (6beta)^-1/2=0.2214 p there=0.2008; p at half that=0.0314
+E7 beta=3.276133577: (6beta)^-1/2=0.2256 p there=0.2009; p at half that=0.0314

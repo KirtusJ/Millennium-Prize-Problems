@@ -1,0 +1,10 @@
+C1 unforced: 20000 instances, qualifying 343, failures 0 PASS
+C1 forced: 20000 instances, qualifying 20000, failures 0 PASS
+C5(i) variant with M_i in the sum (not claimed): failures 5194 of 20000 FAILED PREDICATE (kept)
+C2 exact: all equalities True; d_60=1.819e-19; M_60=2.384231; sum_60/d_0=1.0 PASS
+C3: 2000 instances, qualifying 1629, failures 0, smallest d_n/((d0-s)/M_200) = 1.000000 PASS
+C4: 4000 instances, qualifying 3436, failures 0, smallest slack -4.663e-15 PASS
+C5(ii) variant j in m+1..2m (not claimed): failures 211 of 3436, most negative slack -1.686e-01 FAILED PREDICATE (kept)
+A1: 2000 kernels; failures {'chi': 0, 'proj': 0, 'rng_': 0, 'B': 0, 'const': 0}; smallest (p - ||chi S^n chi||) = -5.551e-17 PASS
+A1 control (Gamma not coarse-measurable): chi(I-P) not a projection in 1913 cases
+D1: ||PA^mP||=0.500000 ||QA^2Q||=0.500000 ||A^m||=1.000000; <v,(I-A^2)v>=4.58e-16, ||Gv||^2=0.500 -> gamma_max=0 PASS

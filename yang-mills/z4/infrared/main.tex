@@ -43,8 +43,8 @@ positive energy present in $v$. A gap is the same thing as a common rate for a f
 For the second question we follow one route. Consider a fine lattice and, inside it, the coarse lattice of
 twice the mesh. Each coarse link is the product of two consecutive fine links. A function of the fine links at
 one time splits into the part that can be predicted from the coarse links and the remainder. Suppose the
-predictable part decays in time as it does on the coarse lattice, and the remainder decays within a few
-lattice steps. Then the fine lattice inherits the coarse decay with a small loss. A natural way to prove the second supposition goes through local updates of the fine links, and that
+predictable part decays in time as it does on the coarse lattice, and every function loses, within a few
+lattice steps, a fixed fraction of the squared norm of its remainder. Then the fine lattice inherits the coarse decay with a small loss. A natural way to prove the second supposition goes through local updates of the fine links, and that
 route meets slow trial directions on selected coarse backgrounds (Section~\ref{s:local}). This is a reason to allow exceptions. Theorem~\ref{t:inh} shows
 that the inheritance survives if some backgrounds are put in an exceptional set to which the dynamics seldom
 returns,
@@ -59,8 +59,8 @@ on the coarse grid: multiply the two fine links under each coarse link. With six
 are three coarse ones, and a coarse square has eight fine links on its boundary. Any observable of the fine
 field is the sum of its best guess from the coarse field and a remainder, the detail that the coarse field
 does not see. Suppose three things. The guess decays in time as on the coarse lattice. Every observable, whatever its guess,
-loses within two steps a fixed fraction of its detail, except for detail carried by rare coarse fields. And
-those rare fields seldom recur. Then the fine lattice keeps the coarse decay up to two losses, which must both
+loses within two steps a fixed fraction of its detail, except for detail carried by an exceptional set of coarse fields. And
+the dynamics seldom returns to that set. Then the fine lattice keeps the coarse decay up to two losses, which must both
 be small: the recurrence of the rare fields, and a factor that is close to one when the detail is lost in few
 steps compared with the time considered. Theorem~\ref{t:inh} makes this precise.
 
@@ -298,14 +298,15 @@ background outside the gates. We call this the \emph{auxiliary local mixing stat
 Hypothesis~\ref{h:mix}: a function that the local updates relax slowly may still decay quickly in time.
 
 \begin{hypothesis}[Coarse comparison; open]\label{h:coarse}
-Fix a physical time $t$ that is a multiple of $a_0$, and let $m_i=t/a_i$. Let $P_i$ be the conditional
-expectation given the coarse links at mesh $a_i$, on the centred gauge-invariant functions. With $d_{i-1}=1-\|A_{i-1}^{m_{i-1}}\|$
+Fix a physical time $t$ that is a multiple of $a_0$, and let $m_i=t/a_i$. For $i\ge1$ let $P_i$ be the conditional
+expectation given the coarse links (of mesh $2a_i$) of the lattice of mesh $a_i$, on the centred gauge-invariant functions. With $d_{i-1}=1-\|A_{i-1}^{m_{i-1}}\|$
 the deficit of the lattice of mesh $2a_i$ at matched coupling, $\|P_iA_i^{m_i}P_i\|\le1-b_i$ with
-$b_i\ge d_{i-1}-\varepsilon_i$.
+$b_i\ge d_{i-1}-\varepsilon_i$, for real numbers $b_i$ and $\varepsilon_i\ge0$ that are constrained only through
+Hypothesis~\ref{h:budget}.
 \end{hypothesis}
 
 \begin{hypothesis}[Weighted budget; open]\label{h:budget}
-With $K_i=1+2/(m_i\gamma_i)=1+2a_i/(\gamma_it)$, $M_0=1$, $M_i=K_1\cdots K_i$, $\kappa_i\ge0$ such
+With $\gamma_i$ as in Hypothesis~\ref{h:mix}, $K_i=1+2/(m_i\gamma_i)=1+2a_i/(\gamma_it)$, $M_0=1$, $M_i=K_1\cdots K_i$, $\kappa_i\ge0$ such
 that $\|B_iA_i^{j_i}B_i\|\le\kappa_i$ for some integer $1\le j_i\le m_i$, and $\varepsilon_i$ as in
 Hypothesis~\ref{h:coarse}, the series below converges and
 \[
@@ -410,8 +411,8 @@ $d_i\ge(b_i-\kappa_i)/K_i$ and $b_i\ge d_{i-1}-\varepsilon_i$. With $M_0=1$ and 
 d_n\ \ge\ M_n^{-1}\Big(d_0-\sum_{i=1}^nM_{i-1}(\varepsilon_i+\kappa_i)\Big).
 \]
 For an infinite sequence with $K_i=1+2/(m_i\gamma_i)$, $m_i\ge1$ and $\gamma_i>0$, the products $M_n$ are
-bounded if and only if $\sum_i1/(m_i\gamma_i)<\infty$; in that case, and under Hypothesis~\ref{h:budget},
-$\liminf_nd_n>0$.
+bounded if and only if $\sum_i1/(m_i\gamma_i)<\infty$; in that case, if moreover the series $\sum_iM_{i-1}(\varepsilon_i+\kappa_i)$ converges to a sum $s<d_0$
+(Hypothesis~\ref{h:budget}), $\liminf_nd_n\ge(d_0-s)/\sup_nM_n>0$.
 \end{corollary}
 \begin{proof}
 $M_id_i\ge M_{i-1}(b_i-\kappa_i)\ge M_{i-1}d_{i-1}-M_{i-1}(\varepsilon_i+\kappa_i)$; sum over $i$. The product of
@@ -443,9 +444,9 @@ equals $p_k(\theta)$ and is non-decreasing in $k$.
 \begin{proof}
 The superlevel sets $\{f_k>s\}$ are caps centred at $v$. For a cap $\mathrm{Cap}_c$ centred at $c$ and the cap $\mathrm{Cap}_v$ of the
 same radius centred at $v$, the uniform measure of $\{f_k>s\}\cap\mathrm{Cap}_c$ is at most the smaller of the measures of
-the two sets, which is the measure of $\{f_k>s\}\cap C$ because those two caps are concentric. Integrating
+the two sets, which is the measure of $\{f_k>s\}\cap\mathrm{Cap}_v$ because those two caps are concentric. Integrating
 over $s$ gives $\int_{\mathrm{Cap}_c}f_k\le\int_{\mathrm{Cap}_v}f_k$. In the polar angle $r$ from $v$ the uniform measure is
-$\tfrac2\pi\sin^2r\,dr$, which gives the formula for $p_k$. Finally $\frac{d}{dk}\P_k(C)=
+$\tfrac2\pi\sin^2r\,dr$, which gives the formula for $p_k$. Finally $\frac{d}{dk}\P_k(\mathrm{Cap}_v)=
 \Cov_k(\mathbf 1_{\{r\le\theta\}},\cos r)\ge0$, because both are non-increasing functions of $r$.
 \end{proof}
 
@@ -555,7 +556,7 @@ centred functions to themselves. (d) For a general compact group with the Wilson
 $[-1,1]$, the conditional density of one link given the others is at most $e^{12\beta}$ times Haar measure,
 so for a measurable set $\Gamma$ of holonomies (conjugation-invariant, so that the event does not depend on the
 base point) the event is a two-sided translate of $\Gamma$ for the link, and the conditional probability of return
-is at most $\min\{1,e^{12\beta}\mu_{\mathrm{Haar}}(A)\}$. This crude bound shows that the mechanism is not tied to a
+is at most $\min\{1,e^{12\beta}\mu_{\mathrm{Haar}}(\Gamma)\}$. This crude bound shows that the mechanism is not tied to a
 centre; it is far from the sharp $\SU(2)$ estimate and we make no use of it.
 \end{remark}
 

@@ -1,0 +1,3 @@
+F1 max abs err / m(0) = 6.397e-15 PASS
+F2 max abs err / m(0) = 1.020e-14 PASS
+F3 instances 102, max rel err = 4.737e-12 PASS

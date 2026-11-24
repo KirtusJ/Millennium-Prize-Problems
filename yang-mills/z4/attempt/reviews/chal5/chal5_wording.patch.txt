@@ -1,0 +1,3 @@
+chal5_wording.patch: unified diff (a/main.tex -> b/main.tex) against yang-mills/z4/infrared/main.tex, eight wording changes.
+Introduction sentence on the remainder (false as worded, see D1 in c_recursion.py); notation slips in Lemma l:cap and Remark r:ret(d); quantifier wording in h:coarse, h:budget, c:acc.
+Apply with: patch -p1 < chal5_wording.patch from the infrared directory. No mathematics of any proof changes.
