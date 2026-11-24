@@ -1,0 +1,14 @@
+[
+  {
+    "label": "negative_gaussian",
+    "find": "v/2688 ≤ sumJ/24",
+    "replace": "v/2687 ≤ sumJ/24",
+    "diagnostic": "error:"
+  },
+  {
+    "label": "negative_score",
+    "find": "c/64 ≤ v",
+    "replace": "c/63 ≤ v",
+    "diagnostic": "error:"
+  }
+]

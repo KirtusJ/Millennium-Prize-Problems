@@ -6,3 +6,4 @@ The paper proves a spectral criterion for a mass gap, an inequality that reduces
 
 - [Paper (PDF)](Spectral%20criteria%20and%20conditional%20infrared%20estimates%20for%20four-dimensional%20lattice%20Yang-Mills%20theory.pdf)
 - [Supplementary material: catalogue with locations and digests](SUPPLEMENT.md)
+- [Source (LaTeX)](source/)

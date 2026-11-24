@@ -15,8 +15,8 @@ Lean, and it does not say that the statement means what the paper says.
 
 | File | Deposited path (under `yang-mills/z4/attempt/reviews/`) | SHA-256 of the file | Byte-identical to worker copy |
 |---|---|---|---|
-| `Inheritance.lean` | `f2-lean/Inheritance.lean` | `74e9337dd18a9095754967635c18817780679eed46c3d1e8f8ea5634114ddf2b` | yes (`/home/user/z4-workers/f2-lean/Inheritance.lean`; also `g2-fid/lean/Inheritance.lean`) |
-| `haar.lean` | `b2-haar/haar.lean` | `47ff4a24b0fb9dae1d84b6592eb658113c9fd763ae4e7ce2a744586d3d0f2eec` | yes (`/home/user/z4-workers/b2-haar/haar.lean`; also `g2-fid/lean/haar.lean`) |
+| `Inheritance.lean` | `refinement-inequality/Inheritance.lean` | `74e9337dd18a9095754967635c18817780679eed46c3d1e8f8ea5634114ddf2b` | yes (`/home/user/z4-workers/f2-lean/Inheritance.lean`; also `g2-fid/lean/Inheritance.lean`) |
+| `haar.lean` | `haar.lean` | `47ff4a24b0fb9dae1d84b6592eb658113c9fd763ae4e7ce2a744586d3d0f2eec` | yes (`/home/user/z4-workers/b2-haar/haar.lean`; also `g2-fid/lean/haar.lean`) |
 
 ## Instrument results
 
@@ -55,8 +55,8 @@ Toolchain `leanprover/lean4:v4.19.0` (Lean 4.19.0, commit 6caaee842e94), Mathlib
 
 | File | Exit code | `sorry` / `admit` / `axiom` / `native_decide` in the text | Errors | Warnings | `#print axioms` |
 |---|---|---|---|---|---|
-| `f2-lean/Inheritance.lean` | 0 (14 s) | none | none | none | 18 theorems, each `[propext, Classical.choice, Quot.sound]` |
-| `b2-haar/haar.lean` | 0 (8 s) | none | none | 1: `haar.lean:29:44: unused variable hp` (in `b_at_zero`) | 12 theorems, each `[propext, Classical.choice, Quot.sound]` |
+| `refinement-inequality/Inheritance.lean` | 0 (14 s) | none | none | none | 18 theorems, each `[propext, Classical.choice, Quot.sound]` |
+| `haar.lean` | 0 (8 s) | none | none | 1: `haar.lean:29:44: unused variable hp` (in `b_at_zero`) | 12 theorems, each `[propext, Classical.choice, Quot.sound]` |
 
 ## What is pinned and what is not
 
