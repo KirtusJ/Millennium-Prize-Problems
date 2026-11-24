@@ -1,0 +1,4 @@
+d_2 = 13/300
+RHS C = 13/300  d2>=RHS: True
+RHS C' = 0  d2>=RHS: True
+RHS C'' = 4/75  d2>=RHS: False

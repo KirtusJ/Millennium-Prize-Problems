@@ -1,0 +1,2 @@
+check K129: exit 0 (expected 0) in 540203 ms | output 5f847589fb84 | event 131 head 1d807e3a2002
+  /home/user/z4-workers/f2-lean/report.md — verdicts: 7 STANDS, 0 DEFECT, 2 NOT CHECKED (predicates: 8 met, 0 failed, 3 measured only); Inheritance.lean (18 declarations) compiles with exit 0, no `sorry`, axioms only propext/Classical.choice/Quot.sound.

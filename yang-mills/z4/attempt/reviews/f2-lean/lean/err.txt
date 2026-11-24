@@ -1,0 +1,49 @@
+Try this: ring_nf
+/home/user/z4-workers/f2-lean/Inheritance.lean:281:40: error: unsolved goals
+ι : Type u_1
+E : Type u_2
+inst✝³ : Fintype ι
+inst✝² : DecidableEq ι
+inst✝¹ : NormedAddCommGroup E
+inst✝ : InnerProductSpace ℝ E
+e : OrthonormalBasis ι ℝ E
+lam : ι → ℝ
+hlam : ∀ (i : ι), 0 ≤ lam i
+i0 : ι
+P B : E →ₗ[ℝ] E
+hPsa : ∀ (x y : E), ⟪P x, y⟫_ℝ = ⟪x, P y⟫_ℝ
+hPid : ∀ (x : E), P (P x) = P x
+hBsa : ∀ (x y : E), ⟪B x, y⟫_ℝ = ⟪x, B y⟫_ℝ
+hBid : ∀ (x : E), B (B x) = B x
+hBP : ∀ (x : E), B (P x) = 0
+a t τ γ κ b : ℝ
+ha : 0 ≤ a
+ht : 0 < t
+hτt : τ ≤ t
+hγ : 0 < γ
+h1 : ∀ (w : E), γ * ‖w - P w - B w‖ ^ 2 ≤ ⟪w, w⟫_ℝ - ⟪w, S e lam (2 * a) w⟫_ℝ
+h2 : ∀ (u : E), ‖B (S e lam τ (B u))‖ ≤ κ * ‖u‖
+h3 : ∀ (u : E), ‖P (S e lam t (P u))‖ ≤ (1 - b) * ‖u‖
+v : E := e i0
+hvdef : v = e i0
+hv : ‖v‖ = 1
+x : ℝ := rexp (-t * lam i0)
+hxdef : x = rexp (-t * lam i0)
+r : ℝ := 2 * a / t
+hrdef : r = 2 * a / t
+hx0 : 0 ≤ x
+hx1 : x ≤ 1
+hr : 0 ≤ r
+hκ : 0 ≤ κ
+hP : x * ‖P v‖ ^ 2 ≤ 1 - b
+q1 : 1 ^ 2 = ‖P v‖ ^ 2 + ‖v - P v‖ ^ 2
+g : ℝ := ‖v - P v - B v‖ ^ 2
+hA : γ * g ≤ 1 - x ^ r
+β : ℝ := ‖B v‖ ^ 2
+hB : rexp (-τ * lam i0) * β ≤ κ
+q2 : ‖v - P v‖ ^ 2 = g + β
+hg : x * g ≤ x * (1 - x ^ r) / γ
+hxβ : x * β ≤ κ
+hb : b ≤ 1 - x + x * (1 - x ^ r) / γ + κ
+this : (b - κ) / (1 + r / γ) ≤ 1 - x
+⊢ True ∨ a * 2 = 0

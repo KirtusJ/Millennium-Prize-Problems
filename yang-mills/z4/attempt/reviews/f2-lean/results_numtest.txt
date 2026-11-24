@@ -1,0 +1,4 @@
+N1 cases 200000 max(lhs-rhs)=0.000e+00 fail=0
+N2 qualifying 200000/200000 max viol=-6.095e-06 fail=0
+N3 cases 20000 fail(M_{i-1})=0 minslack=-3.331e-16; variant M_i fails=634 (K_i in (0.3,4))
+N4 qualifying 1863 fail=0 minslack=6.995e-05

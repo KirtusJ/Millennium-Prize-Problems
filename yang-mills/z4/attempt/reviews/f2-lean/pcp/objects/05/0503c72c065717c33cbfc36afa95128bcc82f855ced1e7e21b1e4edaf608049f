@@ -1,0 +1,27 @@
+(C) is true with the M_{i-1} weights. (C') with M_i also holds, and (C'') with M_{i-2} is false. The control value is 5 (`control.txt`).
+
+- **(C), M_{i-1}: stands.**
+  - It held in all 4000 exact cases (2000 seeds, each run in an all-equality mode and a random-slack mode), with minimum slack 0.
+  - In the 506 equality cases with a positive right-hand side, d_n equalled the right-hand side exactly. Unrolling the recursion gives the same result.
+- **(C'), M_i: stands.** It held in 4000 of 4000 cases, with minimum slack 0. It subtracts more than (C), so it is weaker.
+- **(C''), M_{i-2}: defect.** It held in 3505 of 4000 cases and failed in 495. It subtracts less than (C), so it is stronger and fails. One counterexample is seed 6, n=2, K=(1.801, 1.447), where d_n=0.1439 is below the right-hand side 0.1927.
+
+I used exact rational arithmetic, so no tolerance was needed. All 4000 cases satisfy the hypotheses by construction. I predicted the (C'') failure in the program's docstring before the first run, so it reflects my expectation and not a fault in the target. No unexpected failures occurred.
+
+I did not check n above 8, irrational reals, or adversarial non-extremal cases beyond random slack. I only sketched the proof and did not machine-verify it.
+
+**Sub-agent:** T241 did the n=2 case with K=(2,3), eps=(0.1, 0.05), kappa=(0.02, 0.01), d_0=0.5, all at equality. It got d_2 = 13/300, equal to the right-hand side of (C). The right-hand side is 0 for (C') and 4/75 for (C''), which fails. Its own control also gave 5. I reread its script, reran it from a scratch copy with the same output, checked it by hand, and released T241.
+
+**Verify, last lines:**
+- **Python:** `result: PASS (a local fact about these files; it authenticates nobody and says nothing about whether a finding is right)`
+- **Rust:** `A pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.`
+
+The ACR method packet was not found at init, as expected. Result files open with mode "x", so delete `results_test_c.txt` and `grandchild/result.txt` before rerunning. The exact commands are in `report.md`.
+
+Files are in `/home/user/z4-workers/f2-lean/child`:
+- `control.txt`
+- `notes.md`
+- `report.md`
+- `test_c.py`
+- `results_test_c.txt`
+- `grandchild/`

@@ -298,3 +298,12 @@ Lists of 11 to 43 centred gauge-invariant marks; C the covariance, D the two-cop
 - **Energy form** E_fine(f) ≥ c·E_coarse(f): defeated for c ≥ 0.0042 on this pair by one frozen test, with E_f/E_c = 0.00407(5) at 2ℓ and 0.00409(7) at 4ℓ. The cause is the stationary variance of the same function of coarse links, 0.0034 times smaller on the fine lattice, not slower decay (its R_f/R_c is 1.21 to 1.25). So an all-vector energy comparison between the two lattices with a constant of order one is false as stated; a comparison must be normalised by variance, or made for the quotients.
 - By the rule fixed before the runs, neither result bears on the spectral inequality b_f ≥ α·d_c, which needs a certified lower bound on the full coarse deficit.
 - Not checked: gauge invariance of the observables numerically (closed loops, argued only); the calibration; the vacuum limit. Slice-averaged values, where G4 pools per-line histograms: related statistics, not identical.
+
+## 24. G4's inheritance inequality in Lean
+
+G4 asked that the composed theorem be formalised with its hypotheses visible. [`reviews/f2-lean/Inheritance.lean`](reviews/f2-lean/Inheritance.lean) (rerun by me: exit 0, no `sorry`, 18 axiom printouts all standard) proves:
+- the scalar core x(1 − x^r) ≤ r(1 − x) on [0,1] for real r ≥ 0, and the final scalar step with and without the positive part;
+- the accumulation over refinements, in multiplied, divided and positive-part forms; only K_i > 0 is needed, and the text's index M_{i−1} is the right one (the M_i variant fails on random sequences when K_i < 1);
+- a finite-dimensional real operator version from spectral data (an orthonormal eigenbasis with non-negative eigenvalues): the three deductions from the operator hypotheses, the orthogonal split of ‖Qv‖², the composed inequality, and the form d = 1 − ‖S_t‖ ≥ (b − κ)₊/(1 + 2a/(γt));
+- the three-state reset example's identities.
+Left as hypotheses: the three operator inequalities themselves; that P and B are self-adjoint idempotents with BP = 0; the spectral data in place of H. Not formalised: infinite dimension with the spectral projection and the limit L ↓ λ; the complex case; the conditional-expectation structure. So the algebra of the criterion is machine-checked in finite dimension; none of its inputs is.
