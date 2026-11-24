@@ -1,6 +1,6 @@
 # Spectral criteria and conditional infrared estimates (manuscript)
 
-**Current state: seventh version, 24 November 2026, 22 pages.** The paper, its source and its supplementary material are now in [`../../papers/spectral-criteria/`](../../papers/spectral-criteria/); this folder keeps the earlier versions and the change record. Earlier versions are `main_draft1.tex` to `main_draft6.tex`. The reading copy and the catalogue of supplementary material are in [`../../papers/spectral-criteria/`](../../papers/spectral-criteria/). This is a rough draft under revision. It states what is proved, what is conditional and what is open. It does not claim a mass gap, and no reader outside the two model families, and no person other than the author, has checked it.
+**Current state: seventh version, 24 November 2026, 23 pages.** The paper, its source and its supplementary material are now in [`../../papers/spectral-criteria/`](../../papers/spectral-criteria/); this folder keeps the earlier versions and the change record. Earlier versions are `main_draft1.tex` to `main_draft6.tex`. The reading copy and the catalogue of supplementary material are in [`../../papers/spectral-criteria/`](../../papers/spectral-criteria/). This is a rough draft under revision. It states what is proved, what is conditional and what is open. It does not claim a mass gap, and no reader outside the two model families, and no person other than the author, has checked it.
 
 It is a separate manuscript from the upper-bound paper in `../attempt/paper/`, which is unchanged.
 
@@ -43,6 +43,8 @@ On the Principal's instruction the worker tests were stopped (two background che
 - **GPTAuditor5's closing corrections** (issue comment 7121386048): the time test concerns the periodic analogue of the conditional correlation, not the vacuum quantity, and an estimate at one coarse field is not a certified bound; three of the 25 cross-lattice tests have point estimates below one and only one meets the criterion fixed in advance; the -0.017 offset is an idealised benchmark; "no measurement is evidence for or against" replaced by a statement of what trial estimates are evidence about.
 
 - **Tidying (same day).** The source, the reading copy and every record the paper cites were moved into `yang-mills/papers/spectral-criteria/` under neutral names (S1 to S10), so that the paper and its catalogue point to no working label. Items S6, S8 and S9 are copies of notes maintained by the other side of the project, whose originals were not moved. Links in the working notes were updated; records keep the path names of their day inside their own text.
+
+- **Presentation (same day, no change of content).** A figure of the fine and coarse grids in the introduction; a paragraph on how the paper is organised and what to read for the mathematics or for the state of the question; the summary of the external construction, the compatibility requirements and the list of what remains set as lists; contents reduced to sections.
 
 ## Sixth draft (24 November)
 

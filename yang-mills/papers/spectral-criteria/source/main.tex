@@ -19,6 +19,7 @@ estimates, and we prove one of the three for $\SU(2)$, for exceptional sets of a
 needed to chain the steps. No mass gap is proved.
 \end{abstract}
 \maketitle
+\setcounter{tocdepth}{1}
 \tableofcontents
 
 \section{Introduction}\label{s:intro}
@@ -60,7 +61,25 @@ Draw a square grid, and over it a second grid with squares twice as wide. A latt
 element on each edge of the grid; the edges are called \emph{links}. A field on the fine grid gives one on
 the coarse grid: multiply the two fine links under each coarse link. Any function of the fine field at one
 time is then the sum of its best guess from the coarse field and a remainder, the detail that the coarse
-field does not see.
+field does not see (Figure~\ref{f:grid}).
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[scale=0.62]
+\draw[gray!70,line width=0.4pt] (0,0) grid (6,4);
+\draw[black,line width=1.5pt] (0,0) grid[step=2] (6,4);
+\foreach \x in {0,...,6} \foreach \y in {0,...,4} \fill[gray!70] (\x,\y) circle (1.3pt);
+\foreach \x in {0,2,4,6} \foreach \y in {0,2,4} \fill (\x,\y) circle (2.4pt);
+\draw[line width=2.6pt,-{Stealth[length=2.6mm]}] (2,2) -- (2.95,2);
+\draw[line width=2.6pt,-{Stealth[length=2.6mm]}] (3.05,2) -- (4,2);
+\node[above,font=\footnotesize] at (2.5,2) {$U_1$};
+\node[above,font=\footnotesize] at (3.5,2) {$U_2$};
+\node[right,font=\footnotesize,align=left] at (6.6,3.1) {thin lines: fine links\\ thick lines: coarse links\\ coarse link $=U_1U_2$};
+\node[right,font=\footnotesize,align=left] at (6.6,0.9) {a coarse square has\\ eight fine links\\ on its boundary};
+\end{tikzpicture}
+\caption{A fine lattice and the coarse lattice of twice the mesh, in one spatial plane. The coarse field
+keeps the product of the two fine links under each coarse link and forgets the rest.}\label{f:grid}
+\end{figure}
 
 Suppose three things.
 \begin{enumerate}
@@ -69,7 +88,8 @@ Suppose three things.
 except for detail carried by an exceptional set of coarse fields.
 \item[(c)] The dynamics seldom returns to that exceptional set.
 \end{enumerate}
-Then the fine lattice keeps the decay of its guesses up to two losses, which must both be small: the return to
+Then every function on the fine lattice decays almost as fast as the guesses do, up to two losses, which must
+both be small: the return to
 the exceptional set, and a factor that is close to one when the detail is lost in few steps compared with
 the time considered. Theorem~\ref{t:inh} makes this precise.
 
@@ -206,6 +226,14 @@ used in a proof.
 
 How the results were obtained, which parts are machine-checked, and the fact that the paper has not been
 peer reviewed are set out in Section~\ref{s:disc}.
+
+\subsection{Organisation}
+Section~\ref{s:set} fixes the setting and the notation. Section~\ref{s:arch} states the open hypotheses and
+shows, in Figure~\ref{f:arch}, how the proved and the open statements fit together. The proofs follow in
+Sections~\ref{s:crit} to~\ref{s:haar}. Section~\ref{s:evid} reports the measurements. Section~\ref{s:ext}
+relates the paper to the external construction, and Section~\ref{s:rem} lists what remains. A reader who
+wants only the mathematics can read Sections~\ref{s:set} to~\ref{s:haar}; a reader who wants only the state
+of the question can read this introduction, Section~\ref{s:arch} and Section~\ref{s:rem}.
 
 
 \section{Setting and notation}\label{s:set}
@@ -1029,45 +1057,60 @@ change it again.
 \end{itemize}
 
 \section{The external construction and what compatibility would require}\label{s:ext}
-According to its assessors~\cite[pp.~1, 3]{YMG}, the construction~\cite{OAI} obtains continuum correlation
-functions as a scaling limit of Wilson lattice correlation functions at a fixed physical volume, then an
-infinite-volume limit along a subsequence, not proved unique; any such limit decomposes into component
-theories, each satisfying the Osterwalder--Schrader axioms and hence, by reconstruction, the Wightman axioms;
-renormalised local operators corresponding to gauge-invariant polynomials in the curvature are defined, with
-an operator product expansion that is not shown to match perturbation theory; and there is no evidence for or
-against a mass gap. The assessors' own independent check of the Osterwalder--Schrader axioms concerns a
-selected family of stress-tensor trace correlations, tested against functions that vanish to all orders where
-points coincide, and so does not see contact terms~\cite[Part~II]{YMG}; the wider reconstruction rests on
-the submission. We take all of this from the assessment and have not examined the construction.
+We summarise the construction~\cite{OAI} as its assessors describe it~\cite[pp.~1, 3]{YMG}; we have not
+examined it ourselves.
+\begin{itemize}
+\item Continuum correlation functions are obtained as a scaling limit of Wilson lattice correlation
+functions at a fixed physical volume, followed by an infinite-volume limit along a subsequence, which is not
+proved unique.
+\item Any such limit decomposes into component theories. Each satisfies the Osterwalder--Schrader axioms and
+hence, by reconstruction, the Wightman axioms.
+\item Renormalised local operators corresponding to gauge-invariant polynomials in the curvature are defined.
+Their operator product expansion is not shown to match perturbation theory.
+\item No mass gap is proved.
+\item The assessors' own independent check of the Osterwalder--Schrader axioms concerns a selected family of
+stress-tensor trace correlations, tested against functions that vanish to all orders where points coincide,
+and so does not see contact terms~\cite[Part~II]{YMG}. The wider reconstruction rests on the submission.
+\end{itemize}
 
-If that construction is accepted as existence in the sense of~\cite{JW}, which also asks for local fields and
-short-distance behaviour that the assessment discusses and we do not, then what remains is a spectral
-statement: for each compact simple $G$, in at least one of its non-trivial component theories, a $\Delta_G>0$
-with no spectrum of the Hamiltonian in $(0,\Delta_G)$, and some spectrum in $[\Delta_G,\infty)$, so that the mass is finite.
-On our reading of~\cite{JW}, which neither it nor the assessment states in this form, a constant depending
-on $G$ in one non-trivial component would suffice, and the value of the mass is not asked for; the
-assessment records uniqueness of the limit and agreement of the components as unresolved. Theorem~\ref{t:crit} is a form of the first half of that statement suited to a
+\emph{What would remain.} The problem of~\cite{JW} also asks for local fields and short-distance behaviour,
+which the assessment discusses and we do not. Suppose the construction is accepted as existence in that
+sense. What remains is then a spectral statement: for each compact simple $G$, in at least one of its
+non-trivial component theories, a $\Delta_G>0$ with no spectrum of the Hamiltonian in $(0,\Delta_G)$ and some
+spectrum in $[\Delta_G,\infty)$, so that the mass is finite. This is our reading of~\cite{JW}; neither it nor
+the assessment states it in this form. On that reading a constant depending on $G$, in one non-trivial
+component, would suffice, and the value of the mass is not asked for. The assessment records uniqueness of
+the limit and agreement of the components as unresolved. Theorem~\ref{t:crit} is a form of the first half of that statement suited to a
 theory given by correlation functions: a common exponential rate for the differences $d_{v,n}$ on a family of
 vectors with dense span, for instance those generated from the vacuum by the smeared fields.
 
-For anything in this paper to bear on it, the following would have to be fixed and matched to the
-construction, and none of it is done here: the group and the lattice action; the sequence of meshes and
-couplings and the physical units; the order of the limits (mesh at fixed volume, then volume); the class of
-observables on which convergence holds; the component theory selected; and the relation between the lattice
-transfer semigroup at fixed regulator, to which Theorems~\ref{t:inh} and~\ref{t:ret} refer, and the
-Hamiltonian of the limit. The lattices of Section~\ref{s:evid} are matched to one another by a renormalised
+\emph{What compatibility would require.} For anything in this paper to bear on that statement, the following
+would have to be fixed and matched to the construction. None of it is done here.
+\begin{itemize}
+\item The group and the lattice action.
+\item The sequence of meshes and couplings, and the physical units.
+\item The order of the limits (mesh at fixed volume, then volume).
+\item The class of observables on which convergence holds, and the component theory selected.
+\item The relation between the lattice transfer semigroup at fixed regulator, to which
+Theorems~\ref{t:inh} and~\ref{t:ret} refer, and the Hamiltonian of the limit.
+\end{itemize} The lattices of Section~\ref{s:evid} are matched to one another by a renormalised
 coupling (Supplement~S6); they are not known to lie on the sequence of~\cite{OAI}.
 
 \section{What remains}\label{s:rem}
-Table~\ref{tab:status} lists the numbered statements and the steps of Figure~\ref{f:arch} with their status. To turn Figure~\ref{f:arch} into a proof of a
-mass gap by this route one would need, at least: Hypothesis~\ref{h:mix}, with gates wide enough to contain
-whatever backgrounds, if any, have slow decay in time (none has been identified: Section~\ref{s:local}
-concerns the local updates only, on two backgrounds) and still within the budget of Hypothesis~\ref{h:budget};
-Hypothesis~\ref{h:coarse}; estimates uniform in the physical volume; the identification of the limiting
-semigroup with the Hamiltonian of a continuum theory satisfying the axioms, for which~\cite{OAI} is a
-candidate that we have not connected to these lattices; a finite mass; and all of this for every compact
-simple group. We cannot estimate the distance to any of these, and we do not know that this route is the
-right one.
+Table~\ref{tab:status} lists the numbered statements and the steps of Figure~\ref{f:arch} with their status. To turn
+Figure~\ref{f:arch} into a proof of a mass gap by this route one would need, at least, the following.
+\begin{enumerate}
+\item Hypothesis~\ref{h:mix}, with gates wide enough to contain whatever backgrounds, if any, have slow decay
+in time, and still within the budget of Hypothesis~\ref{h:budget}. No such background has been identified:
+Section~\ref{s:local} concerns the local updates only, on two backgrounds.
+\item Hypothesis~\ref{h:coarse}.
+\item Estimates uniform in the physical volume.
+\item The identification of the limiting semigroup with the Hamiltonian of a continuum theory satisfying the
+axioms. The construction~\cite{OAI} is a candidate that we have not connected to these lattices.
+\item A finite mass.
+\item All of this for every compact simple group.
+\end{enumerate}
+We cannot estimate the distance to any of these, and we do not know that this route is the right one.
 
 \begin{table}[ht]
 \centering\small
