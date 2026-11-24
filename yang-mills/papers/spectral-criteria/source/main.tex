@@ -820,8 +820,10 @@ below $u$ has at most the fraction $c_{\mathrm w}\,a\,u$ of its squared norm in 
 gates. That is a statement about how well low-energy states are determined by the coarse field. It neither
 asks for a gap nor follows from one. In the free theory the soft photon has the fraction
 $0.911\,a\,u$ (Remark~\ref{r:weight}), and in the compact example of Appendix~\ref{app:free} the flux state has
-$0.35$ times its energy in lattice units; these are values on particular vectors, not bounds
-on~\eqref{e:wlin}, which is not established in either example and is open for the Wilson measure. The
+$0.35$ times its energy in lattice units; these are values on particular vectors. In the free theory the
+bound~\eqref{e:wlin} is proved on the whole space, with $c_{\mathrm w}<15.94$ and a computed value near $1.45$
+(Proposition~\ref{p:freeweight}). It is not established in the compact example and is open for the Wilson
+measure. The
 inequalities of the proposition were tested on $20{,}000$ random finite-dimensional instances
 (Supplement~S13), and the step from the first claim to the second is checked in Lean
 (Appendix~\ref{s:lean}).
@@ -1153,7 +1155,7 @@ Lemma~\ref{l:trace}, Proposition~\ref{p:vac}, Corollary~\ref{c:vac} & proved, $\
 Proposition~\ref{p:haar} & proved; scalar steps checked in Lean \\
 Proposition~\ref{p:pred} & proved (a reduction between open estimates; it bounds nothing in the theory); its Hilbert-space core checked in Lean \\
 Proposition~\ref{p:dir} & proved (a reduction of the same kind); exact in the free theory; its two algebraic steps checked in Lean \\
-Proposition~\ref{p:wstep} & proved (a refinement step from the weight bound~\eqref{e:wlin}, which is open); its last step checked in Lean \\
+Proposition~\ref{p:wstep} & proved (a refinement step from the weight bound~\eqref{e:wlin}, which is open for the Wilson measure and proved in the free theory, Proposition~\ref{p:freeweight}); its last step checked in Lean \\
 Hypothesis~\ref{h:mix} & open; not measured (Appendix~\ref{s:time} tests one combination's carry-over in time and gives no bound) \\
 Auxiliary local mixing & open; estimates for trial functions on two frozen backgrounds, one lattice, one coupling (Table~\ref{tab:local}) \\
 Hypothesis~\ref{h:coarse} & open; not measured; one trial function compared on one pair of lattices (Appendix~\ref{s:cross}) \\
@@ -1848,6 +1850,40 @@ $a_{n+1}/\gamma_{r_n,N}$ is at most a constant times $r_n^2a_n$ and is summable,
 Hypothesis~\ref{h:mix} along such a schedule. The proof of Proposition~\ref{p:freecoarse} uses only that
 $\Delta_N$ increases with $N$, so it holds for any integer ratio of the sides, at a physical time that is a
 whole number of steps on every lattice of the schedule. Theorem~\ref{t:inh} itself does not depend on the factor.
+
+\begin{proposition}[The fine detail is dominated by the energy in the free theory]\label{p:freeweight}
+In the setting of this appendix, for every even $N\ge4$, on the square-integrable functions of a slice,
+\[
+I-P\ \le\ c\,a\,H,\qquad c=\sup_k\big\|Q\,\omega^{-1}Q\big\|\ \le\ \frac{14}{\sqrt3}\cdot\frac{\sqrt{15}}{\operatorname{arcosh}4}+\frac1{\operatorname{arcosh}2}\ <\ 15.94 ,
+\]
+where $\omega$ is the one-particle energy in lattice units, $Q$ the projection of~\eqref{e:freeres} and the
+supremum is over coarse momenta. Consequently $\|(I-P)H^{-1}(I-P)\|\le c\,a$ and
+$\|(I-P)E((0,u])(I-P)\|\le c\,a\,u$ for every $u>0$: the bound~\eqref{e:wlin} holds with $c_{\mathrm w}=c$ and
+no exceptional set.
+\end{proposition}
+\begin{proof}
+The functions of the Gaussian field form the symmetric Fock space over the space of linear functionals, on
+which $aH$ is the second quantisation $d\Gamma(\omega)$ and the conditional expectation given the coarse
+field, which consists of linear functionals, is $\Gamma(p)$ with $p=I-Q$. On the $n$-particle space
+$I-p^{\otimes n}=\sum_jp^{\otimes(j-1)}\otimes Q\otimes I^{\otimes(n-j)}\le\sum_jQ_j$, so
+$I-\Gamma(p)\le d\Gamma(Q)$. If $Q\le c\,\omega$ on the one-particle space then
+$d\Gamma(Q)\le c\,d\Gamma(\omega)$, and $Q\le c\,\omega$ is the same as $\|Q\omega^{-1}Q\|\le c$. For the bound
+on $c$ take $u=(u_0,u_H)$ in the fine detail at a coarse momentum $k\ne0$, as in the proof of
+Proposition~\ref{p:freemix}: $\langle u,\omega^{-1}u\rangle\le\|u_0\|^2/\omega_k+\|u_H\|^2/\operatorname{arcosh}2$
+and $\|u_0\|^2\le\tfrac{14}{\sqrt3}\sinh\omega_k\|u_H\|^2$, while $\sinh\omega_k/\omega_k$ is largest at
+$\cosh\omega_k=4$. At $k=0$ only the second term is present. The two consequences follow from
+$\|GH^{-1}G\|=\|H^{-1/2}GH^{-1/2}\|$ and from $E((0,u])H\le u$.
+\end{proof}
+
+The computed value of $c$ is $1.335$ at $N=64$, attained at the lowest axial momentum, where it tends to the
+largest eigenvalue of
+$\operatorname{diag}(1/\!\operatorname{arcosh}3,1/\!\operatorname{arcosh}3,1/\!\operatorname{arcosh}5)+\tfrac12vv^{\mathsf T}$,
+which is $1.4522$ (Supplement~S11). So Proposition~\ref{p:wstep} applies in the free theory, on the whole
+space of functions and not only on linear ones. In general the inequality $G\le\kappa H$ between a projection
+and the Hamiltonian is the same as $\|GH^{-1}G\|\le\kappa$, so by Remark~\ref{r:forms}(a)
+Hypothesis~\ref{h:mix} is the statement that $G_i\le\kappa_iH_i$ with $\sum_i\kappa_i<\infty$: the variance of
+a function given the coarse field, off the gates, is bounded by its energy. The free theory has
+$\kappa_i=c\,a_i$.
 
 So in the free theory the three hypotheses hold together along an infinite refinement, and the architecture
 closes in a fixed box, with a bound about six times smaller than the truth at $N=64$.
