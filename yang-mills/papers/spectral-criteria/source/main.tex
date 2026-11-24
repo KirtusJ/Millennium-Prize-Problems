@@ -822,8 +822,8 @@ asks for a gap nor follows from one. In the free theory the soft photon has the 
 $0.911\,a\,u$ (Remark~\ref{r:weight}), and in the compact example of Appendix~\ref{app:free} the flux state has
 $0.35$ times its energy in lattice units; these are values on particular vectors. In the free theory the
 bound~\eqref{e:wlin} is proved on the whole space, with $c_{\mathrm w}<15.94$ and a computed value near $1.45$
-(Proposition~\ref{p:freeweight}). It is not established in the compact example and is open for the Wilson
-measure. The
+(Proposition~\ref{p:freeweight}). In the compact example it is computed, not proved, with a constant below
+$0.87$ up to $\beta=6$. It is open for the Wilson measure. The
 inequalities of the proposition were tested on $20{,}000$ random finite-dimensional instances
 (Supplement~S13), and the step from the first claim to the second is checked in Lean
 (Appendix~\ref{s:lean}).
@@ -1937,7 +1937,12 @@ The computed norms at $\beta=8$ and $16$, $1.187438$ and $1.197279$, extrapolate
 $1.20712$, against $1.20711$. The limit has the form of the limiting matrix
 $\operatorname{diag}(h(3),h(3),h(5))+\tfrac14vv^{\mathsf T}$ of the free theory in three dimensions, here with
 a single alias: $h(3)+\tfrac14\cdot\tfrac{2}{\sqrt8}$. So the flux state of the compact model plays the part
-that the soft photon plays in the free one. This is an extrapolation and a heuristic, not a proof; sectors with more than two units
+that the soft photon plays in the free one. The constant $\kappa=\|GH^{-1}G\|$ of the inequality
+$G\le\kappa H$, in lattice units, is $0.352$, $0.577$, $0.740$, $0.803$, $0.833$ and $0.863$ at
+$\beta=\tfrac12,1,2,3,4,6$, by diagonalisation in the flux sectors; an expectation written before the
+run was $\kappa<1$ with limit $1/\!\operatorname{arcosh}3+1/(2\sqrt2)=0.9208$, and $(0.9208-\kappa)\beta$ is
+$0.353$, $0.349$, $0.347$ at the last three couplings. So in this example the bound~\eqref{e:wlin} holds with a
+constant that stays bounded as the coupling grows, over the range computed. This is an extrapolation and a heuristic, not a proof; sectors with more than two units
 of flux were not examined, and nothing is shown for a larger lattice or another group.
 
 \begin{thebibliography}{9}\raggedright

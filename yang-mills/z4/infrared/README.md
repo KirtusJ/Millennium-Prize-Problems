@@ -92,6 +92,8 @@ On the Principal's instruction the worker tests were stopped (two background che
 
 - **Proposition E.4 (24 November, later).** In the free theory `I − P ≤ c·a·H` on the whole space of functions, with `c = sup_k ‖Q ω⁻¹ Q‖ < 15.94` (proved; computed 1.335 at side 64, limit 1.4522 along the lowest axial momentum). Proof by second quantisation: `I − Γ(p) ≤ dΓ(1 − p)`. So the weight bound of Proposition 5.7 holds there with no exceptional set, and Proposition 5.7 is not vacuous. The text also records that Hypothesis 3.1 is the same as `G_i ≤ κ_i H_i` with `Σκ_i < ∞`. Program `supplement/S11-free-theory/weightfree.py`, three predicates met.
 
+- **The constant in `G ≤ κH` for the compact toy (24 November, later).** `κ` = 0.352, 0.577, 0.740, 0.803, 0.833, 0.863 at β = 0.5, 1, 2, 3, 4, 6; below 1 and consistent with the limit 0.9208 written before the run (approach like 0.35/β). Appendix E says so. `supplement/S12-compact-toy/u1kappa.py`, three predicates met.
+
 ## Sixth draft (24 November)
 
 A first-time-reader review of the fifth draft (`../../papers/spectral-criteria/supplement/S10-review-records/first-reader/report.md`, sub-agent of the same family) supplied a replacement abstract, introduction and Measurements section; the director read them, adjusted them and spliced them in. No theorem, number or claim was added or removed in the Measurements section (its 162 numerals were compared by script before and after; the later edits only add two clarifying values, 1.14 and the unrounded 0.93574 + 2 x 0.00271).

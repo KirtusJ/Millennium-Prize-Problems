@@ -39,3 +39,13 @@ Compact U(1) lattice gauge theory in 2+1 dimensions on a 2 × 2 spatial torus, b
 ## The limit of the rate (added later the same day; an extrapolation, not a proof)
 
 The quadratic approximation of `PREDICTION.md`, evaluated exactly, gives `‖G(I − A²)⁻¹G‖ → 1/(1 − (3 − √8)²) + 1/(4√2) = (1 + √2)/2 = 1.207107`, so `γ_opt → 2(√2 − 1) = 0.828427`. The sector suprema in `u1sector_result.txt` at β = 8 and 16 (1.187438, 1.197279) differ from that value by 0.01967 and 0.00983, a ratio of 2.00, and extrapolate linearly in 1/β to 1.207120. No program was run for this; it is arithmetic on the deposited file.
+
+## The constant in G ≤ κH (added later the same day)
+
+`u1kappa.py`, `u1kappa_result.txt`: `κ = ‖GH⁻¹G‖` in lattice units, by dense diagonalisation in six flux sectors; predicates D1 to D3 met. Command: `python3 u1kappa.py u1kappa_result.txt 0.5:8:12 1.0:8:12 2.0:12:16 3.0:12:16 4.0:16:20 6.0:16:20`.
+
+| β | 0.5 | 1 | 2 | 3 | 4 | 6 |
+|---|---|---|---|---|---|---|
+| κ | 0.3523 | 0.5774 | 0.7398 | 0.8032 | 0.8335 | 0.8629 |
+
+The maximum is in the sector with one unit of flux at every coupling. The expectation committed before the run was `κ < 1` throughout and `κ → 1/arcosh 3 + 1/(2√2) = 0.9208`. The values are below 1 and increase; `(0.9208 − κ)·β` is 0.353, 0.349, 0.347 at β = 3, 4, 6, so they are consistent with that limit approached like `0.35/β`. The limit itself is not computed. So in this toy `G ≤ κH` holds with a constant bounded in the coupling over the range computed, which is the weight bound of Proposition 5.7 with `c_w = κ` and no exceptional set, for a = 1.

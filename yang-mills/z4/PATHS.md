@@ -129,3 +129,7 @@ Bearing. (i) The coupling is measured by a derivative of the mean force along th
 **Solovay 1970 and Shelah 1984.** Not read beyond the journal records; nothing in the Yang–Mills work depends on their details.
 
 Changes to the order of §4. B1 is done and counts against Path B in its scalar form. B3 (one link pair, gauge-invariant Poincaré constant against β and staples) is still worth doing, now with the specific question whether the fibre constant behaves like `1/β`, like `β^{-1/2}` near degenerate staples, or worse. Path A is unchanged and stays first.
+
+## 8. Outcome of test A1 (24 November 2026)
+
+The compact toy over all low states: `κ = ‖GH⁻¹G‖` is 0.352, 0.577, 0.740, 0.803, 0.833, 0.863 at β = 0.5, 1, 2, 3, 4, 6. It is below 1 throughout, and `(0.9208 − κ)·β` is 0.353, 0.349, 0.347 at the last three couplings, so the values are consistent with the limit written before the run. The outcome that would have counted against Path A, a constant growing without bound in β, is not seen. This is one toy with a single coarse site; test A2 (the next size, in quadratic approximation, with the coarse comparison of Path E) is next.
