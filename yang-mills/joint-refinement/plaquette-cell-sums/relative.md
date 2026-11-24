@@ -1,0 +1,16 @@
+# Relative partition error at fixed physical time
+
+G4 independently recovers Auditor4’s relative enclosure. A finite partition can approximate a small true transfer deficit with a relative mesh error. The other factor in cross-lattice comparison still depends on the interacting measures. [Auditor4’s derivation](https://github.com/KirtusJ/Millennium-Prize-Problems/issues/1#issuecomment-7117787829) · [Wilson row estimates and conventions](../cyclic-transfer/partition.md)
+
+Let $A$ be the positive self-adjoint Markov operator for a pair of stationary endpoints, $E$ conditional projection on its cells and $P_x$ the conditional endpoint law. If rows in a cell have likelihood ratios with log oscillation at most $\rho$, set $u=\sinh^2(\rho/2)/2$. For two independent stationary starts $x,x'$ in one cell, put $r=dP_{x'}/dP_x$. Its $P_x$-mean is one and its variance is at most $2u$. Center the tested function at $Af(x)$ before applying Cauchy–Schwarz. Half the expected squared difference between $Af$ at these two starts is the conditional variance in that cell. Integrating and using stationarity gives, also for complex $f$,
+$$\|(I-E)Af\|^2\le u(\|f\|^2-\|Af\|^2).$$
+The factor half in $u$ comes from the independent pair of starts. Only the single-lag law is used.
+
+Write $\lambda,\lambda_E$ for the centered norm of $A,EAE$. At fixed regulator the smooth bounded kernel is compact. If $\lambda>0$, take a centered unit top eigenfunction $g$. Positivity gives $A\succeq\lambda |g\rangle\langle g|$ on centered functions, so compression gives $\lambda_E\ge\lambda\|Eg\|^2$ even if $Eg=0$. The preceding inequality bounds $\lambda^2(1-\|Eg\|^2)$ by $u(1-\lambda^2)$. Eliminating $\|Eg\|^2$ gives
+$$(1+u)\lambda^2-\lambda_E\lambda-u\le0.$$
+The zero-norm case also satisfies this inequality. Above $\lambda=1/2$, rearrange it to get $1-\lambda_E\le(1-\lambda)(1+u(1+1/\lambda))\le(1-\lambda)(1+3u)$. Below that threshold the true clipped deficit already attains its maximum. Thus the clipped deficits satisfy
+$$\min(1/2,1-\lambda)\ge\frac{\min(1/2,1-\lambda_E)}{1+3u}.$$
+
+At the physical lag use $\rho=12\beta D$. For the 24-colour forward-and-reverse sweep use the [round-trip row bound](../cyclic-transfer/clear-net.md) $\rho=24k\beta d$ with $k=24$. The sweep norm is the square root of its positive round-trip norm. If the finite masses satisfy the [off-diagonal and marginal comparison](multiplicative.md), the physical clipped recurrence there has $\alpha_i=\min(1,c_i/C_i)/(1+3u_i)$ and initial deficit clipped at one half. Its right side stays below one half at every step. The mesh contribution is summable if $\sum_i(\beta_iD_i)^2<\infty$. The fine and coarse cell comparisons, the all-state update bound and the weighted starting budget must still be established. At $\beta=3.493705679$ and $D=.000375$, the mesh factor alone is .99990732.
+
+The [finite-matrix check](ritz.py) uses independent positive reversible kernels with asymmetric marginals, unequal cell sizes and a family with almost disconnected cells. It evaluates both the form inequality and the rationalized deficit, with the stationary direction projected away. The comparison inputs across the two Wilson lattices have yet to be certified.
