@@ -8,7 +8,7 @@ It is a separate manuscript from the upper-bound paper in `../attempt/paper/`, w
 
 | Statement | Domain | Proof | Origin | Checks (none is independent review) |
 |---|---|---|---|---|
-| Thm 1.1 spectral criterion; Prop 4.2 test at one separation | any self-adjoint H ≥ 0, τ > 0; a set with dense span (1.1), a dense linear subspace (4.2) | §4 | GPT auditor sessions (issue comments 7119587014, 7119986944) | `../../papers/spectral-criteria/supplement/S10-review-records/mathematics-review` |
+| Thm 1.1 spectral criterion; Prop 4.2 test at one separation | any self-adjoint H ≥ 0, τ > 0; a set with dense span (1.1), a dense linear subspace (4.2) | §4 | GPT auditor sessions (issue comments 7119587014, 7119986944) | earlier same-family checks; **Lean, for the bounded operator e^{−τH} on complex Hilbert spaces: `S7-lean/Criterion.lean`, `S7-lean/SeparationHilbert.lean`** |
 | Thm 1.2 refinement inequality; Cor 5.2 | positive self-adjoint contraction A on a Hilbert space, integers m ≥ j ≥ 1, three operator hypotheses | §5 | `yang-mills/joint-refinement/rare-coarse-fields/inheritance.md` (Codex session); discrete form suggested by a GPT auditor session | earlier same-family checks and 265,000 random instances; **Lean, all non-zero real inner product spaces: `S7-lean/Hilbert.lean`**; a second Lean proof in finite dimension: `S7-lean/Discrete.lean` |
 | Thm 1.3 return bound | SU(2), Wilson action, periodic lattice, even N ≥ 6, two slices distinct modulo T | §6 | `rare-coarse-fields/return.md` (Codex session) | `y1-g4ret`, `mod-math` |
 | Lemma 6.2 trace formula; Prop 6.3; Cor 6.4 (return bound in the vacuum) | SU(2), β > 0, gauge-averaged transfer operator | §6.1, self-contained (Peter–Weyl and positive character coefficients; Lüscher's paper is referred to, not relied on, and was not reread) | this side | `ref2-math`, `mod-math` (full enumeration on Z₂ and Z₃ toy lattices) |
@@ -28,7 +28,7 @@ The records named in the last column are now under `../../papers/spectral-criter
 
 - The time-carry-over run (`d2-time`) left no result file in the deposit; its numbers are those of its report.
 - Per-stream data of the local-quotient run (`c2-grow`) are not deposited (regenerated from seeds; across rebuilds of the sampler this is statistical, not byte for byte).
-- Theorems 1.1 and 1.3, Lemma 6.2, Propositions 4.2 and 6.3 and Corollary 6.4 are not formalised.
+- Not formalised: Theorem 1.3 and Lemma 6.1 (the return bound), Lemma 6.2 and Proposition 6.3 (trace formula and vacuum limit), the analytic part of Corollary 6.4, the measure theory of Proposition 3.4, the Bessel identities of Proposition B.1, and for Theorem 1.1 the passage from H to e^{−τH} and the limsup form.
 
 # History of the drafts
 
