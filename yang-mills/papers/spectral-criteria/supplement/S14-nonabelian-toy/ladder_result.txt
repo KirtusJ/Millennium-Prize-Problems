@@ -1,0 +1,119 @@
+L0 group 2T order 24 closed with inverses: MET
+L0 group 2O order 48 closed with inverses: MET
+L0 group 2I order 120 closed with inverses: MET
+L0 symmetry of K on orbits (2T): 3.2e-16 : MET
+L1 control (2T, beta=1, M=1, 1312 orbits): top centred eigenvalue 0.240309730367, lambda_f 0.240309730367; gamma_opt 0.942251233491, 1-lambda_f^2 0.942251233491 : MET
+2O beta 1.00 (4888 orbits): gamma_opt = 0.94891739 ; lattice gap = 1.00890530 ; kappa = 0.630913
+    state 1 energy 1.00890530 fine-detail weight 2.540542e-01 weight/energy 0.251812
+    state 2 energy 1.96690944 fine-detail weight 7.457163e-01 weight/energy 0.379131
+    state 3 energy 2.48786788 fine-detail weight 5.650888e-01 weight/energy 0.227138
+    state 4 energy 2.78814621 fine-detail weight 4.910203e-04 weight/energy 0.000176
+    state 5 energy 3.32116395 fine-detail weight 5.710670e-01 weight/energy 0.171948
+    state 6 energy 3.82550967 fine-detail weight 2.566203e-01 weight/energy 0.067081
+    state 7 energy 3.87359584 fine-detail weight 8.622342e-01 weight/energy 0.222593
+    state 8 energy 3.87572927 fine-detail weight 2.766660e-01 weight/energy 0.071384
+2O beta 2.00 (4888 orbits): gamma_opt = 0.87734716 ; lattice gap = 0.23895429 ; kappa = 0.782301
+    state 1 energy 0.23895429 fine-detail weight 7.368657e-02 weight/energy 0.308371
+    state 2 energy 1.16095933 fine-detail weight 2.981221e-01 weight/energy 0.256789
+    state 3 energy 1.48931074 fine-detail weight 5.357457e-03 weight/energy 0.003597
+    state 4 energy 1.80752565 fine-detail weight 8.165882e-02 weight/energy 0.045177
+    state 5 energy 1.90802999 fine-detail weight 9.039980e-01 weight/energy 0.473786
+    state 6 energy 1.99026127 fine-detail weight 1.653849e-01 weight/energy 0.083097
+    state 7 energy 2.02374523 fine-detail weight 4.741953e-01 weight/energy 0.234316
+    state 8 energy 2.31927767 fine-detail weight 7.047643e-01 weight/energy 0.303872
+2O beta 3.00 (4888 orbits): gamma_opt = 0.83748361 ; lattice gap = 0.02404702 ; kappa = 0.783732
+    state 1 energy 0.02404702 fine-detail weight 9.111064e-03 weight/energy 0.378885
+    state 2 energy 0.81520650 fine-detail weight 2.055935e-01 weight/energy 0.252198
+    state 3 energy 0.98031475 fine-detail weight 8.654183e-03 weight/energy 0.008828
+    state 4 energy 1.04437398 fine-detail weight 1.649118e-02 weight/energy 0.015790
+    state 5 energy 1.12429290 fine-detail weight 2.894815e-01 weight/energy 0.257479
+    state 6 energy 1.41443006 fine-detail weight 1.658298e-01 weight/energy 0.117241
+    state 7 energy 1.63188827 fine-detail weight 2.010999e-01 weight/energy 0.123231
+    state 8 energy 1.67796921 fine-detail weight 2.236158e-01 weight/energy 0.133266
+2O beta 4.00 (4888 orbits): gamma_opt = 0.77959783 ; lattice gap = 0.00053273 ; kappa = 0.857412
+    state 1 energy 0.00053273 fine-detail weight 2.989859e-04 weight/energy 0.561236
+    state 2 energy 0.79063500 fine-detail weight 2.103263e-03 weight/energy 0.002660
+    state 3 energy 0.79347615 fine-detail weight 2.326808e-03 weight/energy 0.002932
+    state 4 energy 1.00772788 fine-detail weight 2.369406e-01 weight/energy 0.235124
+    state 5 energy 1.10747931 fine-detail weight 2.675563e-01 weight/energy 0.241590
+    state 6 energy 1.44001465 fine-detail weight 2.280640e-01 weight/energy 0.158376
+    state 7 energy 1.46735690 fine-detail weight 2.395439e-01 weight/energy 0.163249
+    state 8 energy 1.57632180 fine-detail weight 2.659058e-01 weight/energy 0.168688
+2O beta 5.00 (4888 orbits): gamma_opt = 0.74800514 ; lattice gap = 0.00001194 ; kappa = 0.914861
+    state 1 energy 0.00001194 fine-detail weight 8.031455e-06 weight/energy 0.672687
+    state 2 energy 0.62885402 fine-detail weight 2.612019e-04 weight/energy 0.000415
+    state 3 energy 0.62893177 fine-detail weight 2.744612e-04 weight/energy 0.000436
+    state 4 energy 1.22131686 fine-detail weight 2.737261e-01 weight/energy 0.224124
+    state 5 energy 1.26353023 fine-detail weight 2.871013e-01 weight/energy 0.227222
+    state 6 energy 1.44921295 fine-detail weight 2.696297e-01 weight/energy 0.186052
+    state 7 energy 1.50650890 fine-detail weight 2.895054e-01 weight/energy 0.192170
+    state 8 energy 1.50870892 fine-detail weight 2.852518e-01 weight/energy 0.189070
+2I beta 1.00 (29288 orbits): gamma_opt = 0.94892150 ; lattice gap = 1.00896023 ; kappa in [0.1077, 2.1077] (from gamma_opt)
+    state 1 energy 1.00896023 fine-detail weight 2.540642e-01 weight/energy 0.251808
+    state 2 energy 1.96694237 fine-detail weight 7.457079e-01 weight/energy 0.379120
+    state 3 energy 2.48900240 fine-detail weight 5.655359e-01 weight/energy 0.227214
+    state 4 energy 2.78817797 fine-detail weight 4.909925e-04 weight/energy 0.000176
+    state 5 energy 3.32357923 fine-detail weight 5.710594e-01 weight/energy 0.171821
+    state 6 energy 3.82556632 fine-detail weight 2.566346e-01 weight/energy 0.067084
+    state 7 energy 3.87526312 fine-detail weight 8.620680e-01 weight/energy 0.222454
+    state 8 energy 3.87576741 fine-detail weight 2.766715e-01 weight/energy 0.071385
+2I beta 2.00 (29288 orbits): gamma_opt = 0.87801598 ; lattice gap = 0.24307687 ; kappa in [0.2779, 2.2779] (from gamma_opt)
+    state 1 energy 0.24307687 fine-detail weight 7.479229e-02 weight/energy 0.307690
+    state 2 energy 1.19330336 fine-detail weight 3.076935e-01 weight/energy 0.257850
+    state 3 energy 1.48962409 fine-detail weight 5.295907e-03 weight/energy 0.003555
+    state 4 energy 1.81009706 fine-detail weight 8.273362e-02 weight/energy 0.045707
+    state 5 energy 1.91320790 fine-detail weight 9.058638e-01 weight/energy 0.473479
+    state 6 energy 1.98991644 fine-detail weight 1.655825e-01 weight/energy 0.083211
+    state 7 energy 2.19236832 fine-detail weight 5.069241e-01 weight/energy 0.231222
+    state 8 energy 2.36944664 fine-detail weight 7.030702e-01 weight/energy 0.296723
+2I beta 3.00 (29288 orbits): gamma_opt = 0.84533953 ; lattice gap = 0.03843853 ; kappa in [0.3659, 2.3659] (from gamma_opt)
+    state 1 energy 0.03843853 fine-detail weight 1.375369e-02 weight/energy 0.357810
+    state 2 energy 0.92130019 fine-detail weight 2.397904e-01 weight/energy 0.260274
+    state 3 energy 0.94440987 fine-detail weight 7.426674e-03 weight/energy 0.007864
+    state 4 energy 1.02498478 fine-detail weight 2.048544e-02 weight/energy 0.019986
+    state 5 energy 1.34615102 fine-detail weight 1.523719e-01 weight/energy 0.113191
+    state 6 energy 1.48563651 fine-detail weight 3.606400e-01 weight/energy 0.242751
+    state 7 energy 1.60052234 fine-detail weight 2.039071e-01 weight/energy 0.127400
+    state 8 energy 1.70555783 fine-detail weight 2.457893e-01 weight/energy 0.144111
+2I beta 4.00 (29288 orbits): gamma_opt = 0.82223322 ; lattice gap = 0.00589253 ; kappa in [0.4324, 2.4324] (from gamma_opt)
+    state 1 energy 0.00589253 fine-detail weight 2.497343e-03 weight/energy 0.423815
+    state 2 energy 0.67802862 fine-detail weight 4.652245e-03 weight/energy 0.006861
+    state 3 energy 0.69473770 fine-detail weight 6.952374e-03 weight/energy 0.010007
+    state 4 energy 0.91648646 fine-detail weight 2.371752e-01 weight/energy 0.258787
+    state 5 energy 1.11297175 fine-detail weight 1.572743e-01 weight/energy 0.141310
+    state 6 energy 1.19648223 fine-detail weight 2.945396e-01 weight/energy 0.246171
+    state 7 energy 1.20831471 fine-detail weight 1.737248e-01 weight/energy 0.143774
+    state 8 energy 1.39085553 fine-detail weight 2.462154e-01 weight/energy 0.177024
+2I beta 5.00 (29288 orbits): gamma_opt = 0.79979913 ; lattice gap = 0.00092039 ; kappa in [0.5006, 2.5006] (from gamma_opt)
+    state 1 energy 0.00092039 fine-detail weight 4.549200e-04 weight/energy 0.494270
+    state 2 energy 0.52772596 fine-detail weight 3.118702e-03 weight/energy 0.005910
+    state 3 energy 0.53090392 fine-detail weight 3.619007e-03 weight/energy 0.006817
+    state 4 energy 0.90542795 fine-detail weight 2.270120e-01 weight/energy 0.250723
+    state 5 energy 1.00188412 fine-detail weight 2.424136e-01 weight/energy 0.241958
+    state 6 energy 1.01157019 fine-detail weight 1.614696e-01 weight/energy 0.159623
+    state 7 energy 1.04509347 fine-detail weight 1.669013e-01 weight/energy 0.159700
+    state 8 energy 1.26634254 fine-detail weight 2.441516e-01 weight/energy 0.192801
+2I beta 6.00 (29288 orbits): gamma_opt = 0.77579444 ; lattice gap = 0.00009913 ; kappa in [0.5780, 2.5780] (from gamma_opt)
+    state 1 energy 0.00009913 fine-detail weight 5.688540e-05 weight/energy 0.573865
+    state 2 energy 0.45570616 fine-detail weight 2.316473e-03 weight/energy 0.005083
+    state 3 energy 0.45616146 fine-detail weight 2.391948e-03 weight/energy 0.005244
+    state 4 energy 0.86050888 fine-detail weight 2.028913e-01 weight/energy 0.235781
+    state 5 energy 0.87979473 fine-detail weight 2.049651e-01 weight/energy 0.232969
+    state 6 energy 1.01946310 fine-detail weight 1.806116e-01 weight/energy 0.177163
+    state 7 energy 1.03178989 fine-detail weight 1.825619e-01 weight/energy 0.176937
+    state 8 energy 1.17590181 fine-detail weight 2.225316e-01 weight/energy 0.189243
+2I beta 8.00 (29288 orbits): gamma_opt = 0.74125766 ; lattice gap = 0.00000024 ; kappa in [0.6981, 2.6981] (from gamma_opt)
+    state 1 energy 0.00000024 fine-detail weight 1.707321e-07 weight/energy 0.697108
+    state 2 energy 0.38370386 fine-detail weight 2.382658e-04 weight/energy 0.000621
+    state 3 energy 0.38370540 fine-detail weight 2.386195e-04 weight/energy 0.000622
+    state 4 energy 0.98823279 fine-detail weight 6.703094e-02 weight/energy 0.067829
+    state 5 energy 0.98859066 fine-detail weight 6.593824e-02 weight/energy 0.066699
+    state 6 energy 1.13227352 fine-detail weight 2.150222e-01 weight/energy 0.189903
+    state 7 energy 1.13403496 fine-detail weight 2.166484e-01 weight/energy 0.191042
+    state 8 energy 1.22840751 fine-detail weight 2.631787e-01 weight/energy 0.214244
+compare beta 1.00 2O vs 2I: gamma_opt rel diff 4.33e-06, gap rel diff 5.44e-05
+compare beta 2.00 2O vs 2I: gamma_opt rel diff 7.62e-04, gap rel diff 1.70e-02
+compare beta 3.00 2O vs 2I: gamma_opt rel diff 9.29e-03, gap rel diff 3.74e-01
+compare beta 4.00 2O vs 2I: gamma_opt rel diff 5.19e-02, gap rel diff 9.10e-01
+compare beta 5.00 2O vs 2I: gamma_opt rel diff 6.48e-02, gap rel diff 9.87e-01
+L2 MET
