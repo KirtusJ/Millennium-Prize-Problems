@@ -1,0 +1,4 @@
+R1 max |gamma_cc - gamma_resolvent| = 3.33e-15  MET
+R2 max(||u0||^2 - (14/sqrt3) sinh w ||uH||^2) = -2.164e+01  MET
+R3 min gamma over N<=64 = 0.712724  MET
+R4 axial limit 0.674941363 (claimed 0.674941363); gamma(N=65536,q=(1,0,0)) = 0.674980  MET

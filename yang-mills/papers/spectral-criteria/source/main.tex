@@ -448,8 +448,41 @@ $a_i^{1-cs}$, which is summable over dyadic meshes. Logarithmic growth is what a
 at one loop $s=11/(3\pi^2)\approx0.37$ for $\SU(2)$, and the matched couplings of
 Appendix~\ref{app:meas} give $s\approx0.43$ between sides $5$ and $10$. We do not prove the growth
 condition. The remark says that the difficulty of Hypothesis~\ref{h:mix} is not the size of the rate, for
-which a bound exponentially small in $\beta$ with $c$ below about $2.3$ would do, but its uniformity in the
-volume and in the coarse field.
+which a bound exponentially small in $\beta$ would do if the growth condition holds, but its uniformity in
+the volume and in the coarse field. (The measured slope is an illustration, not a bound on the trajectory;
+and any $\gamma_i$ with $\sum_ia_i/\gamma_i<\infty$ would do, for instance $\gamma_i=a_i\,i^{1+\delta}$.)
+\end{remark}
+
+\begin{remark}[An exact form and a sufficient form of Hypothesis~\ref{h:mix}]\label{r:forms}
+\leavevmode
+\begin{enumerate}
+\item[(a)] \emph{Exact.} At a fixed lattice $\|A\|<1$ on the centred functions, so $I-A^2$ is invertible, and
+for a projection $G\ne0$ the best constant in $I-A^2\ge\gamma G$ is
+\[
+\gamma_{\mathrm{opt}}=\big\|G(I-A^2)^{-1}G\big\|^{-1},\qquad
+\gamma_{\mathrm{opt}}^{-1}=\sup_{h\in\operatorname{ran}G,\ \|h\|=1}\ \sum_{n\ge0}\langle h,A^{2n}h\rangle .
+\]
+Indeed the inequality is equivalent to $I\ge\gamma(I-A^2)^{-1/2}G(I-A^2)^{-1/2}$, and the operator on the
+right has the norm of $G(I-A^2)^{-1}G$. So Hypothesis~\ref{h:mix} is the statement that
+$\sum_ia_i\|G_i(I-A_i^2)^{-1}G_i\|<\infty$: the fine detail off the gates must not retain too much
+correlation summed over time. It does not ask for more.
+\item[(b)] \emph{Sufficient.} By Remark~\ref{r:doob} below, the next slice $Y$ given $X=x$ has density
+proportional to $\exp(\beta\sum_ex_e\cdot y_e)\phi(y)$, links being unit vectors in $\R^4$. For a function $g$
+of $Y$ and $h(x)=\E[g(Y)\mid X=x]$, the derivative of $h$ along a tangent vector $v$ is
+$\beta\Cov(g(Y),\sum_ev_e\cdot Y_e\mid X=x)$. Suppose that on a coarse field $c$ the covariance of $Y$ given
+$X=x$ has operator norm at most $L_c$, and that the law of $X$ given $C=c$ satisfies a Poincar\'e inequality
+$\operatorname{Var}(h)\le P_c\,\E|\nabla h|^2$ along the fibre. Then
+$\operatorname{Var}(h(X)\mid C=c)\le\beta^2P_cL_c\,\E[\operatorname{Var}(g(Y)\mid X)\mid C=c]$, and by the
+law of total variance
+\[
+\varrho(c)^2\le\frac{\beta^2P_cL_c}{1+\beta^2P_cL_c},\qquad\text{so that}\qquad
+\gamma\ge\frac1{1+\beta^2\sup_cP_cL_c}
+\]
+in Proposition~\ref{p:pred}. With Remark~\ref{r:rate}, bounds $P_c\le C_1e^{p\beta}$ and
+$L_c\le C_2e^{q\beta}$, uniform in the volume, would suffice when $p+q<1/s$. Neither bound is known for the
+Wilson measure at weak coupling.
+\end{enumerate}
+Both forms were proposed by an OpenAI GPT model used as reviewer.
 \end{remark}
 
 \section{The spectral criterion}\label{s:crit}
@@ -1415,21 +1448,89 @@ floating point from the formulas above (Supplement~S11); they are exact up to ro
 \label{tab:free}
 \end{table}
 
-Three things are seen.
+Three things are seen in the table, and each can be proved for all sides.
 \begin{itemize}
 \item \emph{Hypothesis~\ref{h:mix} holds without any exceptional set.} The smallest $\gamma$ is attained at the
-lowest non-zero coarse momentum, and along that momentum it decreases to a limit near $0.675$ (computed up to
-$N=4096$). So $\gamma$ is bounded below uniformly in the volume.
-\item \emph{Hypothesis~\ref{h:coarse} holds with no loss.} In every row $b\ge d_{\mathrm c}$: the coarse part
-of the fine lattice decays at least as fast as the coarser lattice does, so $\varepsilon_i=0$ is allowed.
+lowest non-zero coarse momentum, and along that momentum it decreases to the limit $0.674941$.
+Proposition~\ref{p:freemix} below proves $\gamma\ge0.195$ for every even side.
+\item \emph{Hypothesis~\ref{h:coarse} holds with no loss.} In every row $b\ge d_{\mathrm c}$.
+Proposition~\ref{p:freecoarse} proves this for every side.
 \item \emph{The budget is met and the conclusion is valid but weak.} With $\varepsilon_i=\kappa_i=0$ the
-budget of Hypothesis~\ref{h:budget} is empty. The products $M_i$ reach $5.43$ at $N=64$ and converge.
-Corollary~\ref{c:acc} then gives a deficit of at least $0.828/5.43=0.152$ at $N=64$, where the true deficit
-is $0.957$.
+budget of Hypothesis~\ref{h:budget} is empty. The products $M_i$ reach $5.43$ at $N=64$, and they are bounded
+along an infinite dyadic refinement because $\gamma$ is bounded below. Corollary~\ref{c:acc} gives a deficit
+of at least $0.828/5.43=0.152$ at $N=64$, where the true deficit is $0.957$.
 \end{itemize}
-So in the free theory the three hypotheses hold together and the architecture closes in a fixed box, with a
-bound about six times smaller than the truth. The gap of the free theory in a box is that of the lowest
-photon momentum and vanishes as the box grows, so this example says nothing about infinite volume.
+
+\begin{proposition}[Coarse comparison in the free theory]\label{p:freecoarse}
+For every even $N\ge4$, $b_N\ge d_N\ge d_{N/2}$ at a common physical time.
+\end{proposition}
+\begin{proof}
+A compression has norm at most that of the operator, so $b_N\ge d_N$ (this holds in any theory). The lowest
+non-zero energy on side $N$ is $\omega_N=2\operatorname{arsinh}(\sin(\pi/N))$ in lattice units, that is,
+$\Delta_N=(2N/L)\operatorname{arsinh}(\sin(\pi/N))$ in physical units. With $x=\pi/N$,
+$\operatorname{arsinh}(\sin x)/x$ is the product of $\operatorname{arsinh}(\sin x)/\sin x$ and $\sin x/x$,
+both decreasing on $(0,\pi/2]$. So $\Delta_N$ increases with $N$ and $d_N=1-e^{-t\Delta_N}\ge d_{N/2}$.
+\end{proof}
+
+\begin{proposition}[Uniform mixing in the free theory]\label{p:freemix}
+In the setting of this appendix, for every even $N\ge4$,
+\[
+\gamma_N\ \ge\ \Big(\frac1{1-(2-\sqrt3)^2}+\frac7{\sqrt3}\Big)^{-1}\ >\ 0.195 .
+\]
+\end{proposition}
+\begin{proof}
+Work at one coarse momentum, in the coordinates in which the transverse potential of each fine momentum has
+unit covariance; the time step then acts as multiplication by $R=e^{-\omega_p}$. Let $Q$ be the projection
+onto the fine detail, the kernel of the coarse observation. Given the coarse field the fine detail is
+standard Gaussian on the range of $Q$, and observing the next slice leaves the covariance
+$\big(Q(I-R^2)^{-1}Q\big)^{-1}$ there, so
+\begin{equation}\label{e:freeres}
+\gamma=1-\varrho^2=\big\|Q(I-R^2)^{-1}Q\big\|^{-1}.
+\end{equation}
+Let $k\in[-\pi/2,\pi/2)^3$ be the low representative of the coarse momentum and $p_\eta=k+\pi\eta$,
+$\eta\in\{0,1\}^3$, its eight fine momenta. Put $\mathsf d_j(p)=e^{ip_j}-1$ and
+$\mathsf D(p)=\operatorname{diag}(1+e^{ip_j})$, so that $\mathsf D(p)\mathsf d(p)=\mathsf d(2p)$. A coarse
+link is the sum of its two fine links, so the coarse observation is $F=\sum_\eta F_\eta$ with
+$F_\eta=\Pi\,\mathsf D(p_\eta)(2\sinh\omega_{p_\eta})^{-1/2}$ on the vectors orthogonal to $\mathsf d(p_\eta)$,
+where $\Pi$ projects orthogonally to $\mathsf d(2k)$.
+
+\emph{Low momentum.} For $k\ne0$ the entries of $\mathsf D(k)$ have modulus $2\cos(k_j/2)\ge\sqrt2$. For $u_0$
+orthogonal to $\mathsf d(k)$, $\|\Pi\mathsf D(k)u_0\|=\min_\lambda\|\mathsf D(k)(u_0-\lambda\mathsf d(k))\|
+\ge\sqrt2\,\|u_0\|$. Hence $\|F_0u_0\|^2\ge\|u_0\|^2/\sinh\omega_k$.
+
+\emph{High momenta.} For $\eta\ne0$ some component of $p_\eta$ has modulus at least $\pi/2$, so
+$\cosh\omega_{p_\eta}\ge2$, $\sinh\omega_{p_\eta}\ge\sqrt3$ and $e^{-\omega_{p_\eta}}\le2-\sqrt3$. Since
+$\|\mathsf D\|\le2$, $\|F_\eta\|^2\le2/\sqrt3$.
+
+\emph{Fine detail.} Let $u=(u_0,u_H)$ be in the kernel of $F$, with $u_H$ its seven high components. Then
+$F_0u_0=-\sum_{\eta\ne0}F_\eta u_\eta$, and by the Cauchy--Schwarz inequality
+$\|u_0\|^2\le\tfrac{14}{\sqrt3}\sinh\omega_k\,\|u_H\|^2$: fine detail cannot concentrate on the soft mode.
+
+\emph{Resolvent.} On the high components $(1-R^2)^{-1}\le C_*=(1-(2-\sqrt3)^2)^{-1}$. On the low one,
+$(1-e^{-2\omega})^{-1}=1+e^{-\omega}/(2\sinh\omega)$, so its contribution is at most
+$\|u_0\|^2+\tfrac{7}{\sqrt3}\|u_H\|^2$. Altogether
+$\langle u,(I-R^2)^{-1}u\rangle\le(C_*+7/\sqrt3)\|u\|^2$. For $k=0$ the low momentum is absent from the
+plaquette sector and the bound $C_*$ applies to all components. By~\eqref{e:freeres} this proves the claim.
+\end{proof}
+
+The identity~\eqref{e:freeres}, the inequality for the fine detail and the bound were checked numerically at
+every coarse momentum for $N=8$, $16$ and $32$ (Supplement~S11). The limit $0.674941$ is $1/\lambda$ with
+$\lambda$ the largest eigenvalue of $\operatorname{diag}(h(3),h(3),h(5))+\tfrac14vv^{\mathsf T}$,
+$h(c)=(1-(c-\sqrt{c^2-1})^2)^{-1}$ and $v=(8^{-1/4}\sqrt2,\,8^{-1/4}\sqrt2,\,24^{-1/4}\sqrt2)$; we have not
+proved that the lowest axial momentum is the minimiser for every $N$, and Proposition~\ref{p:freemix} does not
+need it. Both propositions, the identity and the limiting matrix were proposed by an OpenAI GPT model used
+as reviewer; the proofs were checked and written out here.
+
+So in the free theory the three hypotheses hold together along an infinite refinement, and the architecture
+closes in a fixed box, with a bound about six times smaller than the truth at $N=64$.
+
+\emph{What the example does not show.} The free theory has no mass gap. Its gap in a box of side $L$ tends
+to $2\pi/L$ and vanishes as the box grows. The table uses the time $t=L/2$, which grows with the box; at that
+time the continuum deficit is $1-e^{-\pi}=0.9568$ whatever the box. At a fixed physical time the deficit is
+$1-e^{-2\pi t/L}$ and tends to zero. The example therefore separates two things that must not be confused:
+control of the refinement in a fixed box, which the free theory has, and a gap in infinite volume, which it
+lacks. Analogues of Hypotheses~\ref{h:mix} to~\ref{h:budget} for the interacting theory, even if proved, would
+leave the second untouched.
 
 \begin{thebibliography}{9}\raggedright
 \bibitem{DLMF} \emph{NIST Digital Library of Mathematical Functions}, \S10.29, \url{https://dlmf.nist.gov/10.29}.
