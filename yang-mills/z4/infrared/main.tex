@@ -158,6 +158,10 @@ infinite volume.
 are special to it; that constant is the largest value over the conditional laws that one link can have, and
 is not shown to be attained on any Wilson background. For other groups only a cruder return bound is available (Remark~\ref{r:ret}(d)), and
 whether a useful exceptional set exists is open.
+\item The refinement step is stated on the centred gauge-invariant functions of a slice. Related hypotheses
+in~\cite{RepoInh} are stated on the smaller space that is also neutral under the centre of the group. A
+result on one of these spaces is not a result on the other, and which space matters depends on the domain of
+the continuum theory one compares with.
 \item The measurements of Section~\ref{s:evid} are Monte Carlo estimates on lattices of side $5$ to $10$,
 one coupling each, with statistical errors. The exact value of a trial function limits a constant from one
 side; an estimate of it is not a bound. No measurement is evidence for or against a hypothesis, and none is
@@ -297,6 +301,35 @@ suffice to bound the local quotient $\mathcal J(F)/\mathcal V(F)$ from below for
 background outside the gates. We call this the \emph{auxiliary local mixing statement}. It is stronger than
 Hypothesis~\ref{h:mix}: a function that the local updates relax slowly may still decay quickly in time.
 
+There is also a sufficient condition that involves only the physical time step. It asks how well the next
+time slice predicts the fine detail of the present one when the coarse field of the present slice is known.
+
+\begin{proposition}[Conditional prediction]\label{p:pred}
+At a fixed lattice let $X$ and $Y$ be consecutive time slices of the stationary process with one-step operator
+$A=S_1$, so that $(Af)(x)=\E[f(Y)\mid X=x]$, and let $C$ be the coarse field of $X$. For a coarse field $c$ let
+$\varrho(c)$ be the maximal correlation of $X$ and $Y$ given $C=c$, that is, the supremum of the correlation
+of $f(X)$ and $g(Y)$ under the conditional law, over square-integrable $f$ and $g$. Let $\mathcal G$ be a
+measurable set of coarse fields and $G=\mathbf 1_{\mathcal G}(C)\,(I-P)$. If $\varrho(c)^2\le1-\gamma$ for
+almost every $c\in\mathcal G$, then $\langle f,(I-A^2)f\rangle\ge\gamma\|Gf\|^2$ for every $f$.
+\end{proposition}
+\begin{proof}
+The pair $(X,Y)$ is exchangeable because $A$ is self-adjoint, so $\|Af\|^2=\E\,|\E[f(X)\mid Y]|^2$ and
+$\langle f,(I-A^2)f\rangle=\E\operatorname{Var}(f(X)\mid Y)$. Conditioning on more cannot increase the expected
+conditional variance, so this is at least $\E\operatorname{Var}(f(X)\mid Y,C)$. Under the conditional law given
+$C=c$, the expected conditional variance of $f(X)$ given $Y$ equals its variance minus the variance of its
+best prediction from $Y$, which is at least $(1-\varrho(c)^2)\operatorname{Var}(f(X)\mid C=c)$. Integrating
+over $c\in\mathcal G$ and discarding the rest gives
+$\gamma\,\E[\mathbf 1_{\mathcal G}(C)\operatorname{Var}(f(X)\mid C)]=\gamma\|Gf\|^2$.
+\end{proof}
+
+So Hypothesis~\ref{h:mix} would follow from a bound on the conditional maximal correlation outside the gates,
+with $\sum_ia_i/\gamma_i<\infty$. We have no such bound for the Wilson measure at weak coupling; the
+proposition replaces one open estimate by another and proves nothing about the theory. It does say what the
+measurement of Section~\ref{s:time} is a trial for: a correlation between a function of one slice and a
+function of the next, given the coarse field of the first, is a lower trial value for $\varrho(c)$ on that
+coarse field. A small average amount of shared information is not enough, since $\varrho$ is a supremum over
+normalised functions, including those concentrated on rare configurations.
+
 \begin{hypothesis}[Coarse comparison; open]\label{h:coarse}
 Fix a physical time $t$ that is a multiple of $a_0$, and let $m_i=t/a_i$. For $i\ge1$ let $P_i$ be the conditional
 expectation given the coarse links (of mesh $2a_i$) of the lattice of mesh $a_i$, on the centred gauge-invariant functions. With $d_{i-1}=1-\|A_{i-1}^{m_{i-1}}\|$
@@ -432,6 +465,14 @@ The second hypothesis in~\eqref{e:hyp} is about return at a later time, not abou
 exceptional set. For the reversible process $S_t=e^{-\ell t}I+(1-e^{-\ell t})\E$ with $\ell>0$ and an exceptional event of
 arbitrarily small positive probability carrying two equally likely fine labels, the difference of the labels
 gives $\|BS_tB\|=e^{-\ell t}$ whatever the probability of the event.
+\end{remark}
+
+\begin{remark}[A longer mixing lag]\label{r:lag}
+If the first hypothesis in~\eqref{e:hyp} is replaced by $\langle f,(I-A^{2k})f\rangle\ge\gamma\|Gf\|^2$ for an
+integer $k\ge1$, the same proof, with $\rho=2k/m$ in Lemma~\ref{l:scal}, gives~\eqref{e:inh} with denominator
+$1+2k/(m\gamma)$. Along a refinement the products in Corollary~\ref{c:acc} then stay bounded when
+$\sum_ik_ia_i/\gamma_i<\infty$, so the detail may take a number of steps that grows, provided the physical
+time $k_ia_i$ it takes is summable.
 \end{remark}
 
 \section{Return to a coarse plaquette gate}\label{s:ret}
@@ -747,8 +788,9 @@ run's report~\cite{RepoData}.
 \emph{Reading.} For this one combination on this one frozen slice, the linear predictors that were tried
 recover at most a few per cent of its variance one slice later. The later slice is not frozen, so its coarse
 background is not the one for which the combination was selected. The test is a correlation conditional on
-the coarse links of one slice, not a matrix element of the transfer operator, and it is not a measurement of
-Hypothesis~\ref{h:mix}. It does not bound the best prediction from the later slice, and it does not exclude
+the coarse links of one slice. In the later-slice form it is a lower trial value for the conditional maximal
+correlation of Proposition~\ref{p:pred} on this one coarse field; it is not a matrix element of the transfer
+operator and it is not a measurement of Hypothesis~\ref{h:mix}. It does not bound the best prediction from the later slice, and it does not exclude
 other combinations that propagate slowly. The local quotient and a correlation over one time step are not on
 a common scale, so the two are not compared. The distinction between Hypothesis~\ref{h:mix} and the auxiliary
 statement is the logical one of Section~\ref{s:arch}; this measurement neither supports nor contradicts
@@ -853,8 +895,8 @@ coupling~\cite{RepoData}; they are not known to lie on the sequence of~\cite{OAI
 This paper was assembled by the author with the assistance of sessions of two artificial-intelligence model
 families working in a shared repository~\cite{Repo}. Theorem~\ref{t:crit} in this form, and the monotonicity
 statements of Proposition~\ref{p:haar}, were proposed with proofs by sessions of OpenAI GPT models acting as
-auditors of the repository; the same sessions reviewed the first draft of this paper, and their corrections
-are incorporated. Theorems~\ref{t:inh} and~\ref{t:ret}, the latter in its vacuum form, were proposed with
+auditors of the repository; the same sessions reviewed the drafts of this paper, and their corrections
+are incorporated; Proposition~\ref{p:pred} and Remark~\ref{r:lag} were proposed by one of them. Theorems~\ref{t:inh} and~\ref{t:ret}, the latter in its vacuum form, were proposed with
 proofs by a session of OpenAI Codex~\cite{RepoInh,RepoRet}. Sessions of Claude (Anthropic) attacked those
 source derivations and Proposition~\ref{p:haar} at their authors' request and found no defect in the steps
 they checked (three items of the return derivation, which needed data archives that were absent, were not
@@ -889,6 +931,7 @@ Theorem~\ref{t:ret} & proved; $\SU(2)$, periodic time \\
 Lemma~\ref{l:scal}, Lemma~\ref{l:cap} & proved; Lemma~\ref{l:scal} checked in Lean \\
 Lemma~\ref{l:trace}, Proposition~\ref{p:vac}, Corollary~\ref{c:vac} & proved, $\beta>0$ (positive character coefficients, Peter--Weyl) \\
 Proposition~\ref{p:haar} & proved; scalar steps checked in Lean \\
+Proposition~\ref{p:pred}, Remark~\ref{r:lag} & proved (reductions between open estimates; they bound nothing in the theory) \\
 Hypothesis~\ref{h:mix} & open; not measured (Section~\ref{s:time} tests one combination's carry-over in time and gives no bound) \\
 Auxiliary local mixing & open; estimates for trial functions on two frozen backgrounds, one lattice, one coupling (Table~\ref{tab:local}) \\
 Hypothesis~\ref{h:coarse} & open; not measured; one trial function compared on one pair of lattices (Section~\ref{s:cross}) \\
