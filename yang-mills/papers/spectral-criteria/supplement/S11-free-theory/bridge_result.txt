@@ -1,0 +1,5 @@
+N=4 beta*P=0.28868 beta*L=0.26795 beta^2PL=0.07735 bridge bound=0.92820 exact gamma=0.92820
+N=8 beta*P=0.36088 beta*L=0.47340 beta^2PL=0.17084 bridge bound=0.85409 exact gamma=0.87624
+N=16 beta*P=0.45528 beta*L=0.67858 beta^2PL=0.30894 bridge bound=0.76398 exact gamma=0.80197
+N=32 beta*P=0.52432 beta*L=0.82224 beta^2PL=0.43112 bridge bound=0.69875 exact gamma=0.74629
+predicate MET

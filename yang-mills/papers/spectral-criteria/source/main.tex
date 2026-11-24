@@ -489,8 +489,11 @@ law of total variance
 \gamma\ge\frac1{1+\beta^2\operatorname*{ess\,sup}_{c\in\mathcal G}P_cL_c}
 \]
 in Proposition~\ref{p:pred}. With Remark~\ref{r:rate}, bounds $P_c\le C_1e^{p\beta}$ and
-$L_c\le C_2e^{q\beta}$, uniform in the volume, would suffice when $p+q<1/s$. Neither bound is known for the
-Wilson measure at weak coupling.
+$L_c\le C_2e^{q\beta}$, uniform in the volume, would suffice when $p+q<1/s$. Since $h$ is gauge invariant when $g$ is, the Poincar\'e
+inequality is needed only for gauge-invariant functions on the fibre. Neither bound is known for the Wilson
+measure at weak coupling. In the free theory the reduction loses little: there $\beta P_c$ tends to $0.617$
+and $\beta L_c$ to $1$ as the side grows, which gives $\gamma\ge0.618$ where the true value is $0.675$
+(Appendix~\ref{app:free}, Supplement~S11).
 \end{enumerate}
 Both forms were proposed by an OpenAI GPT model used as reviewer.
 \end{remark}
@@ -787,6 +790,9 @@ for each time slice separately. So such configurations cannot be excluded on gro
 are put in the exceptional set, its return weight $\|BA^jB\|$ has to be controlled separately, and frequent
 occupation does not by itself make that weight large, since a region that is often occupied may still forget
 its fine detail quickly. Nothing is shown this way near $-I$.
+\item[(f)] Theorem~\ref{t:ret} and Corollary~\ref{c:vac} use only that the loop contains a link that it
+traverses once. They hold, with the same proof and the same constant, for a square of any side $r$ in place of
+the coarse plaquette, on a lattice of side at least $2r$.
 \end{enumerate}
 \end{remark}
 
@@ -880,8 +886,9 @@ would have to be fixed and matched to the construction. None of it is done here.
 \item The sequence of meshes and couplings, and the physical units. The construction uses meshes
 $a_n=1/D_n$ with $D_n=\prod_{k<n}b_k$, the $b_k\ge3$ odd and non-decreasing with $\log b_n/\log D_n\to0$
 (appendix of~\cite{YMG}, entry on the lattice spacings). No two of these meshes differ by a power of two, so the dyadic sequence of this paper is
-not that sequence; Theorem~\ref{t:inh} does not need factors of two, but Theorem~\ref{t:ret} and the
-hypotheses are stated for them here.
+not that sequence. Theorem~\ref{t:inh} does not need factors of two, the return bound holds for any factor
+(Remark~\ref{r:ret}(f)), and the free theory satisfies the mixing hypothesis for any factor
+(Proposition~\ref{p:freer}); the hypotheses are stated here for factors of two.
 \item The order of the limits. The construction takes the mesh to zero on a four-dimensional periodic torus
 of fixed size and then the size to infinity along a subsequence. This paper takes the time extent to infinity
 first, at a fixed spatial lattice. The two orders are not known to agree.

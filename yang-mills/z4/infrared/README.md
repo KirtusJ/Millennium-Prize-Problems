@@ -74,6 +74,8 @@ On the Principal's instruction the worker tests were stopped (two background che
 
 - **After the audit of revision 93c7a41 (24 November, later).** All points checked by calculation or against the assessment text and applied: Remark 3.6(a) gains the inverse-Hamiltonian form; 3.6(b) states the temporal-gauge kernel; 6.5(e) no longer says Hypothesis 3.1 must hold on large-angle slices; Appendix E states the zero-momentum convention, calls the axial minimiser computed and not proved, and gains Proposition E.3 (integer blocking factor r, bound uniform in the side), checked by `supplement/S11-free-theory/blockr.py`; Section 8 names the non-dyadic meshes, the different order of limits and the coupling asymptotics of the external construction.
 
+- **Further calculations (24 November, later).** In the free theory the sufficient form of Remark 3.6(b) is nearly sharp: βP tends to 0.617 and βL to 1, giving 0.618 against the exact 0.675 (`supplement/S11-free-theory/bridge.py`). Remark 6.5(f): the return bound holds for squares of any side. The external trajectory's normalisation is matched for SU(2).
+
 ## Sixth draft (24 November)
 
 A first-time-reader review of the fifth draft (`../../papers/spectral-criteria/supplement/S10-review-records/first-reader/report.md`, sub-agent of the same family) supplied a replacement abstract, introduction and Measurements section; the director read them, adjusted them and spliced them in. No theorem, number or claim was added or removed in the Measurements section (its 162 numerals were compared by script before and after; the later edits only add two clarifying values, 1.14 and the unrounded 0.93574 + 2 x 0.00271).
